@@ -19,8 +19,10 @@ describe('POST /account_requests', async () => {
 
     // defualt product
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
+
     // product with options
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
+// Temp comment
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')

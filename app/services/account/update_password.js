@@ -8,7 +8,6 @@ const NotFoundError = require('../../errors/not_found')
 
 const knex = app.db.knex
 const Account = app.repositories.account
-// Temp comment
 const AccountRecovery = app.repositories.accountRecovery
 const UserAuthModel = app.models.userAuth
 const validator = app.plugins.validator

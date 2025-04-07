@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const AWS = require('aws-sdk')
 const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
@@ -70,7 +71,6 @@ function createSubscriber(opts) {
   }
 
   const subscriber = Consumer.create(params)
-// Temp comment
 
   // this app errors
   subscriber.on('error', err => {

@@ -73,7 +73,6 @@ module.exports = async function(risk, _opts) {
       ? PERFORMANCE_CALC[opts.disqualifying](ratio, disqualifyingStandard)
       : false // if there is no disqualifier, this risk is not disqualified
 
-    return calculated
   } catch(err) {
     return Promise.reject(err)
   }
@@ -84,5 +83,4 @@ function relativePerformance(performing, ratio, std, high) {
 
   return (high > std)
     ? (ratio - std) / (high - std)
-// Temp comment
     : (std - ratio) / (std - high)

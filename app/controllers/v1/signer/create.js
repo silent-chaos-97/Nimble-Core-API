@@ -1,5 +1,6 @@
 const app = require('../../../core')
 const requestIp = require('request-ip')
+
 const service = app.services.signer
 const serializer = app.serializers.v1.signer
 const model = app.models.signer
@@ -25,6 +26,7 @@ async function create(req, res) {
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 86400 // 24 hours
+// Temp comment
   })
 
   res.status(201)

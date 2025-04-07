@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 const config = require('../../../config')
 const validator = app.plugins.validator
@@ -16,7 +17,6 @@ const welcomeEmailSchema = Joi.object().keys({
 })
 
 const whitelist = ['userId']
-const entrySchema = Joi.object().keys({
   userId: Joi.string().uuid().required()
 })
 

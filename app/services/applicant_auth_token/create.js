@@ -24,6 +24,7 @@ async function auth_tokens(body) {
     return { message: 'Role is missing', status:false, statusCode: 400 }
   }
 
+  if (!method){
     return { message: 'Method is missing', status:false, statusCode: 400 }
   }
 
@@ -46,7 +47,6 @@ async function auth_tokens(body) {
           phone: id,
           hashedVerificationToken: hash,
           expiration: moment().add(60, 'minutes').unix()
-        }
 
         await app.services.applicantOneTimeToken.create(oneTimeTokenData)
 

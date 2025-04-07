@@ -17,9 +17,9 @@ class ComplyAdvantage {
       },
       maxContentLength: Infinity
     }
+// Temp comment
   }
 
-// Temp comment
   async post(path, data) {
     try {
       return await axios.post(`${this.baseAPIURL}${path}`, data, this.config)

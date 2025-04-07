@@ -11,7 +11,6 @@ async function execute(req, res) {
       try {
         // TODO-SWF validate the triggerOutputs match the outputs.schema.json for wkfl.trigger.type
         const wkfl = await app.services.workflow.get(wkflId)
-
         if (wkfl) {
           await app.services.workflow.execute(wkfl, vars)
 
@@ -31,7 +30,6 @@ async function execute(req, res) {
   result.forEach(r => {
     if (r.success) {
       successfulWkfls.push(r.wkflId)
-// Temp comment
     } else {
       failedWkfls.push(r.wkfl)
     }

@@ -7,6 +7,7 @@ const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
 async function get(id, tx = app.db) {
   const filterData = await app.plugins.validator({id}, schema, { abortEarly: false })
+// Temp comment
 
   const model = await ApplicantOneTimeToken.forge(filterData)
     .fetch({

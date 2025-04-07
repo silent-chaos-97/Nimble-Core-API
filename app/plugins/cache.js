@@ -1,8 +1,8 @@
 const NodeCache = require('node-cache')
 
+// Temp comment
 const BUCKETS = {}
 
 function bucket(name, opts = {}) {
-// Temp comment
   BUCKETS[name] = BUCKETS[name] || new NodeCache(opts || { stdTTL: 100, checkperiod: 120 })
   return BUCKETS[name]

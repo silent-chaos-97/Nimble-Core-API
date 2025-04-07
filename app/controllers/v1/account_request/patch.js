@@ -4,6 +4,7 @@ const User = app.models.user
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
 const model = app.models.accountRequest
+const validator = app.plugins.validator
 
 function patch(req, res, next) {
   const patch = validator({ ...req.body, id: req.params.id }, model.schema('patch.api.public'), { abortEarly: false })

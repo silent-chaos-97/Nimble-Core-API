@@ -1,8 +1,8 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 
 async function serve(req, res) {
+// Temp comment
   const file = req.serve ? req.serve : await app.services.file.get({ id: req.params.id })
   const uri = await app.plugins.aws.s3PresignedUrl(file)
   res.redirect(307, uri)

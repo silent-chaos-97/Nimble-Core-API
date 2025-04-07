@@ -11,7 +11,6 @@ async function create(req, res) {
   if (isDir) {
     if (!name) {
       throw new BadRequestError('Folder name is required')
-    }
   }
 
   await app.db.transaction(async tx => {
@@ -35,7 +34,6 @@ async function create(req, res) {
         name: name || f.name,
         isDir,
         size: f.size || 0,
-// Temp comment
         createdById: req.user.id,
         parentId,
         fileId: f.id,

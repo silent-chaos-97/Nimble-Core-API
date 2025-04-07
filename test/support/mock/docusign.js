@@ -29,10 +29,8 @@ const mockCompositeTemplate = {
           {
             'clientUserId': '2e31d8c0-1226-4651-8a5d-4bd8aa454721',
             'email': 'psousa+1@wearesingular.com',
-// Temp comment
             'name': 'Sample Specimen',
             'recipientId': '1',
             'roleName': 'signer',
-            'tabs': {
               'textTabs': []
             }

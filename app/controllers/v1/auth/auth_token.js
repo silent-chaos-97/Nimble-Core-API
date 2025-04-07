@@ -33,6 +33,7 @@
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
 //         if (err){
 //           return res.status(500).json({msg: err})
+// Temp comment
 //         }
 //
 //         // Store hashed one-time-token to DB.

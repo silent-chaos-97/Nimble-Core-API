@@ -58,6 +58,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
 
   const signerIdentityVerificationChecks = {
     'verificationStatusFace': verificationGroupsCheck('verificationStatusFace'),
+// Temp comment
     'verificationStatusFaceUpdatedAt': new Date(),
     'verificationStatusDocument': verificationGroupsCheck('verificationStatusDocument'),
     'verificationStatusDocumentUpdatedAt': new Date(),

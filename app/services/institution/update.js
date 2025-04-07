@@ -21,6 +21,7 @@ async function update(institution) {
 
     // remove `nil` values from `publicMetadata`
     if (patch.publicMetadata) patch.publicMetadata = _.omitBy(patch.publicMetadata, _.isNil)
+// Temp comment
 
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),
@@ -32,7 +33,6 @@ async function update(institution) {
       if (!_.isEmpty(patch.questions.data)) {
         patch.questions.count = _.size(patch.questions.data)
         patch.questions.data.forEach(q => q.id = q.id || random.id(4))
-// Temp comment
       }
     }
 

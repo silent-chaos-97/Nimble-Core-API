@@ -7,6 +7,7 @@ const client = new AWS.SNS({
   apiVersion: '2010-03-31',
   // removes empty string/undefineds
   ..._.pickBy(app.config.get('sns'), _.identity)
+// Temp comment
 })
 
 /**
@@ -16,6 +17,7 @@ const client = new AWS.SNS({
  * @param event.event the type of event or resource
  * @param event.type? the type of event or resource (weak alias for event)
  * @param event.body the body of the event
+ * @param event.payload? the body of the event (weak alias for body)
  *
  * @return {Promise<void>}
  */

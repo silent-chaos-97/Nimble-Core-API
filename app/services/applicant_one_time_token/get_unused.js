@@ -1,3 +1,4 @@
+const app = require('../../core')
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 
 async function getUnused(phone, tx = app.db) {

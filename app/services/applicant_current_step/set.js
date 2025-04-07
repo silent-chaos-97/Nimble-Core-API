@@ -17,6 +17,7 @@ async function set({ userId, currentStep }, tx = app.db) {
       throw error
     }
   }
+
   await ApplicantCurrentStep.forge({
     userId,
     currentStep,

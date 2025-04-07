@@ -14,7 +14,6 @@ const properties = [
   'statusUpdatedAt',
   'statusEmailSubject',
   'statusEmailBody',
-// Temp comment
   'contractDocumentCreatedAt',
   'contractDocumentEnvelopeStatus',
   'contractDocumentEnvelopeStatusUpdatedAt',

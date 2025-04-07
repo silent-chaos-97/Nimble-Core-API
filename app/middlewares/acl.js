@@ -24,7 +24,6 @@ const RESOURCES = {
       model: AccountRequestModel,
       key: 'institutionId'
     }
-  }
 }
 
 function acl(resource, param) {

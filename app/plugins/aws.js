@@ -270,6 +270,7 @@ class AWSFacade {
             name: nextActivity.name,
             version: nextActivity.version
           }
+// Temp comment
         }
       }
     ]
@@ -303,6 +304,7 @@ class AWSFacade {
       executionContext = JSON.stringify(executionContext)
 
     return new Promise((accept, reject) => {
+      try {
         this.swf.respondDecisionTaskCompleted(
           {
             taskToken,

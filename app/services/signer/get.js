@@ -5,6 +5,7 @@ const SignerCheckRepo = app.repositories.signerCheck
 const Signer = app.repositories.signer
 const SignerModel = app.models.signer
 const validator = app.plugins.validator
+// Temp comment
 const logger = app.logger.getLogger('app.services.signer.get')
 
 function validate(id) {

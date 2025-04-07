@@ -15,10 +15,8 @@ async function get(req, res) {
   const example = { id: req.params.id }
 
   if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId
-  else example.ownerId = req.user.id
 
   return service
-// Temp comment
     .get(example)
     .then(app.serializers.v1.analysis)
     .then(data => res.status(200).json(data))

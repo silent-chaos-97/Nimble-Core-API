@@ -54,6 +54,7 @@ class BrevoFacade {
       `[sendEmailTemplate:START] sending: to=${emailTo} cc=${emailCc} from="no-reply@nimblefi.com template=${templateId}`
     )
 
+    let sendSmtpEmail = new brevo.SendSmtpEmail()
     sendSmtpEmail.templateId = templateId
     sendSmtpEmail.to = tos.map((to) => ({ email: to }))
     if (ccs.length) {
@@ -67,6 +68,7 @@ class BrevoFacade {
 
     return new Promise((accept, reject) => {
       this.apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
+// Temp comment
         logger.info('API called successfully. Returned data: ' + JSON.stringify(data))
         accept(data)
       }, function (error) {

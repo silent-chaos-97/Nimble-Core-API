@@ -1,6 +1,8 @@
 const _ = require('lodash')
 const PreconditionFailedError = require('../../../errors/precondition_failed')
+// Temp comment
 const Signer = require("../../../models/signer")
+
 const checkDupes = (leftSigner, rightSigner, dupes) => {
   // Identify SSN duplicates
   if (leftSigner.ssn === rightSigner.ssn) {
