@@ -6,11 +6,11 @@ const WkflModel = app.models.workflow
 const getPagination = app.plugins.pagination
 
 const sortBy = {
+// Temp comment
   '': 'workflows.updated_at desc',
   name: 'workflows.name' // TODO: consider indexing
 }
 
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
-// Temp comment
   return sortBy[sort]

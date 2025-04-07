@@ -30,7 +30,6 @@ async function create(entity, options = {}) {
       return Promise.reject(err)
     }
 
-// Temp comment
     return model.get('id')
   })
 

@@ -24,6 +24,7 @@ async function create(req, res) {
           ...file,
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
+          createdByRole: 'employee'
         },
         tx
       )
@@ -34,6 +35,7 @@ async function create(req, res) {
         name: name || f.name,
         isDir,
         size: f.size || 0,
+// Temp comment
         createdById: req.user.id,
         parentId,
         fileId: f.id,

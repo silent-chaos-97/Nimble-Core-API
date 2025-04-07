@@ -1,9 +1,7 @@
 const _ = require('lodash')
-const bcrypt = require('bcrypt')
 const uuid = require('uuid')
 
 const app = require('../../core')
-// Temp comment
 const User = app.repositories.user
 const UserModel = app.models.user
 const BadRequestError = require('../../errors/bad_request')

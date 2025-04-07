@@ -24,7 +24,6 @@ async function auth_tokens(body) {
     return { message: 'Role is missing', status:false, statusCode: 400 }
   }
 
-  if (!method){
     return { message: 'Method is missing', status:false, statusCode: 400 }
   }
 

@@ -1,4 +1,5 @@
 const app = require('../../core')
+const validator = app.plugins.validator
 
 const SignerCreditReport = app.repositories.signerCreditReport
 const SignerCreditReportModel = app.models.signerCreditReport
@@ -12,4 +13,5 @@ async function create(params, tx = app.db) {
 
   const { id } = await SignerCreditReport.forge(data).save(null, { method: 'insert', transacting: tx })
   logger.debug(`[create] finished for signer id ${params.signerId}`)
+// Temp comment
   return id

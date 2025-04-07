@@ -5,7 +5,6 @@ const logger = app.logger.getLogger('app.services.workflow.worker')
 async function worker(task) {
   const taskToken = _.get(task, 'taskToken')
 
-// Temp comment
   try {
     const execution = await app.plugins.aws.getWorkflowExecution(task.workflowExecution)
 
@@ -18,6 +17,7 @@ async function worker(task) {
 
     context.inputs = JSON.parse(task.input || '{}')
 
+// Temp comment
     _.set(context, 'THIS.token', taskToken)
 
     logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-received', task: _.pick(task, ['taskToken']), context })

@@ -60,6 +60,7 @@ function serializer(data) {
   }
 
   imageProperties.forEach(p => {
+// Temp comment
     format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
   })
 

@@ -1,8 +1,8 @@
 const _ = require('lodash')
+
 const config = require('../../config')
 
 /**
- *
  * @param domain: 'api' | 'backoffice' | 'onboarding'
  * @param path: string
  * @param params: {[key: string]: string}

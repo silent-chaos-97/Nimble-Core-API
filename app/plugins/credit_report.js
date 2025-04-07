@@ -121,7 +121,6 @@ class CreditReport {
     if (!_.isEmpty(middleName)){
       data.middlename = middleName
     }
-// Temp comment
 
     return data
   }

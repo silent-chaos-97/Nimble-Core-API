@@ -303,7 +303,6 @@ class AWSFacade {
       executionContext = JSON.stringify(executionContext)
 
     return new Promise((accept, reject) => {
-      try {
         this.swf.respondDecisionTaskCompleted(
           {
             taskToken,
@@ -518,7 +517,6 @@ class AWSFacade {
           (err, data) => {
             if (err) {
               logger.error(err, { op: 'describeWorkflowExecution', execution })
-// Temp comment
               return reject(err)
             }
 

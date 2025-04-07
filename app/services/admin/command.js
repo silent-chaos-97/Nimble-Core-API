@@ -1,5 +1,6 @@
 const app = require('../../core')
 const log = app.logger.getLogger('app.services.admin.command')
+
 async function command(cmd, params) {
   log.info(cmd, params)
 

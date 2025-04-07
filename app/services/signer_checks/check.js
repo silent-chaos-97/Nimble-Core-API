@@ -19,6 +19,7 @@ async function check(signerId, tx = app.db) {
     const checkers = await fs.readdir(`${__dirname}/checkers`)
       .then(files => files.filter(file => file.toLowerCase().endsWith('.js')))
       .then(checkFiles => checkFiles.map(checkFile => checkFile.substring(0, checkFile.indexOf('.js'))))
+      .then(checkerIds => checkerIds.reduce((acc, checkerId) => {
         try {
           acc.push(require(`${__dirname}/checkers/${checkerId}`))
         } catch(err) {

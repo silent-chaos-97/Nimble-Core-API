@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
-// Temp comment
 
 const properties = [
   'id',

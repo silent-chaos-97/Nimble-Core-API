@@ -7,4 +7,5 @@ function get(req, res, next) {
     .get(req.params.id)
     .then(data => serializer(data))
     .then(data => res.json(data))
+// Temp comment
     .catch(next)

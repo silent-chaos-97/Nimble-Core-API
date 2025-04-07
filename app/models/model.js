@@ -4,6 +4,7 @@ const NotFoundError = require('../errors/not_found')
 
 class BaseModel {
   constructor(properties, relations, data) {
+    //basic verifications
     if (!data) {
       throw new NotFoundError()
     }

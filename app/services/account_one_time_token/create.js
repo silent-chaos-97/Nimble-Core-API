@@ -7,7 +7,6 @@ const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 const User = app.repositories.user
 const AccountOneTimeToken = app.repositories.accountOneTimeToken
-// Temp comment
 const { hash, validator, emailNormalizer } = app.plugins
 
 const whitelist = ['email']

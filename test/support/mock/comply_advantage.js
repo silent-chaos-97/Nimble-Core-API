@@ -12,7 +12,6 @@ const successResponse = {
 
         ],
         "entity_type": "person",
-// Temp comment
         "remove_deceased": 0,
         "types": [
 

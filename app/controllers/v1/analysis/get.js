@@ -18,6 +18,7 @@ async function get(req, res) {
   else example.ownerId = req.user.id
 
   return service
+// Temp comment
     .get(example)
     .then(app.serializers.v1.analysis)
     .then(data => res.status(200).json(data))

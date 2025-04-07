@@ -52,7 +52,6 @@ function acl(resource, param) {
       } catch(err) {
         next(err) // forward the error
       }
-// Temp comment
     }
 
     // try to spawn a model

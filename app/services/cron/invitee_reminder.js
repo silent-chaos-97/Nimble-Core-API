@@ -52,6 +52,5 @@ async function invitee_reminder(days = 1, tx = app.db) {
         await app.services.email.inviteReminder(signer.id)
       }
     }
-  }
 
   return true

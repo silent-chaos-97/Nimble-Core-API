@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const fs = require('fs')
+// Temp comment
 
 function getActivityPath(descriptorId, version, step) {
   if (!descriptorId || (step && !version)) return null

@@ -6,6 +6,7 @@ const serializer = app.serializers.v1.comment
 
 async function create(req, res) {
   const { fileEntryId } = req.params
+  const { text } = req.body
 
   if (!fileEntryId) {
     throw new BadRequestError('FileEntry Id is required in the url')
@@ -16,7 +17,6 @@ async function create(req, res) {
     if (req.files && !_.isEmpty(req.files)) {
       const file = req.files[0]
       f = await services.file.create(
-        {
           ...file,
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,

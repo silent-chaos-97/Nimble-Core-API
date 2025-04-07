@@ -18,6 +18,7 @@ async function verify_code(data, transacting = app.db) {
   const phone = user.get('phone')
 
   if (!phone) {
+    return { verified: false }
   }
 
   const verified = await mfaVerify.isApproved(phone, code)

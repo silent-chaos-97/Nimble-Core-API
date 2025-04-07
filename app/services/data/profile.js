@@ -6,7 +6,6 @@ const InternalServerError = require('../../errors/internal_server')
 const logger = app.logger.getLogger('app.services.data.profile')
 
 async function profile(params) {
-// Temp comment
   logger.info({ op: 'profile', phase: 'started', params })
 
   const endpoint = app.config.get('nimbleData.apiEndpoint')

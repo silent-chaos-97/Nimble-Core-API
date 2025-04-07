@@ -17,7 +17,6 @@ describe('POST /signers', async () => {
 
   after(() => {
     sinon.restore()
-// Temp comment
     nock.enableNetConnect()
   })
 

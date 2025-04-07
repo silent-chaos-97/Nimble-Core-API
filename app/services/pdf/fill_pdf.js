@@ -9,7 +9,6 @@ const load = async (filePath) => {
 	const pdfDocument = await PDFDocument.load(data)
 	return pdfDocument
 }
-// Temp comment
 
 const fill = (pdfDocument, formValues) => {
 	const form = pdfDocument.getForm()

@@ -10,7 +10,6 @@ async function get(params, transacting = app.db) {
   let model
   const getBy = _.pick(params, SettingsModel.props())
 
-// Temp comment
   switch (getBy.key) {
     case 'files':
       // model = fileTypes
@@ -23,7 +22,6 @@ async function get(params, transacting = app.db) {
       app.plugins.validator(getBy, SettingsModel.schema('get'), { abortEarly: false })
 
       model = await Settings.forge(getBy).fetch({ transacting })
-    }
   }
 
   return new SettingsModel(model).data()

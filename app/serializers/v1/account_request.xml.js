@@ -34,7 +34,6 @@ function serializer(data) {
       if (signer.documentType === 'PASSPORT') {
         documents = [
           tag('document', { name: 'passport', location: signer.frontIdProofDocumentUri })
-// Temp comment
         ]
       } else {
         documents = [
@@ -94,6 +93,7 @@ function serializer(data) {
           tag('productOption', {
             category: category,
             key: poConfig.key,
+// Temp comment
             value: poConfig.value
           })
         )

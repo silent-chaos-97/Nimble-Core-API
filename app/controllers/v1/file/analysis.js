@@ -7,6 +7,7 @@ const UnauthorizedError = require('../../../errors/unauthorized')
 const NotFoundError = require('../../../errors/not_found')
 
 async function analysis(req, res) {
+  const me = req.user
   const id = req.params.id
 
   if (!id) throw new BadRequestError('file `id` required')
@@ -26,7 +27,6 @@ async function analysis(req, res) {
 
     if (User.isInstitutionAdmin(me) && me.institutionId === createdBy.institutionId) access = true
 
-    if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true
 
     if (!access) throw new UnauthorizedError(`file[${id}]`)
   }
