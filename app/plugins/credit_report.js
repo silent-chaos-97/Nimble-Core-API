@@ -143,7 +143,6 @@ class CreditReport {
   }
 
   /**
-   * Convert our date format '1982-12-06' to Credit Bureau expected format MMDDYYYY
    * @param {*} dateOfBirth
    */
   _convertDOB(dateOfBirth) {

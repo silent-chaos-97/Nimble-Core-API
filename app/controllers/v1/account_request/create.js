@@ -9,6 +9,7 @@ async function create(req, res) {
     scopes: ['account_requests'],
     resources: [`account_requests#${data.id}`],
     expiration: 86400 // 24 hours
+// Temp comment
   })
 
   res

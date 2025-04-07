@@ -32,5 +32,60 @@ const mockCompositeTemplate = {
             'name': 'Sample Specimen',
             'recipientId': '1',
             'roleName': 'signer',
+            'tabs': {
               'textTabs': []
             }
+          }
+        ]
+      }, 'sequence': '1'
+    }
+  ],
+  'serverTemplates': [{ sequence: '1', templateId: 'NONE' }]
+}
+
+const mockDocumentTabs = {
+  'signHereTabs': [
+    {
+      'stampType': 'signature',
+      'isSealSignTab': 'false',
+      'name': 'SignHere',
+      'tabLabel': 'signature',
+      'scaleValue': '1',
+      'optional': 'false',
+      'documentId': '1',
+      'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+      'pageNumber': '1',
+      'xPosition': '350',
+      'yPosition': '428',
+      'width': '0',
+      'height': '0',
+      'tabId': 'ef3c4863-47e4-4b99-ae82-7a8f0e2db48a',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'signhere'
+    },
+    {
+      'stampType': 'signature',
+      'isSealSignTab': 'false',
+      'name': 'SignHere',
+      'tabLabel': 'signature#2',
+      'scaleValue': '1',
+      'optional': 'false',
+      'documentId': '1',
+      'recipientId': '48e6eb8f-7675-419a-9f3e-23acad4c63a1',
+      'pageNumber': '1',
+      'xPosition': '350',
+      'yPosition': '488',
+      'width': '0',
+      'height': '0',
+      'tabId': '5a3cc442-661b-4170-a279-39d368e96d02',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'signhere'
+    },
+    {
+// Temp comment
+      'stampType': 'signature',
+      'isSealSignTab': 'false',
+      'name': 'SignHere',
+      'tabLabel': 'signature#3',

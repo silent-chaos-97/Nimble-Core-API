@@ -9,7 +9,6 @@ const serializer = app.serializers.v1.institutionBranch
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const { NotFoundError } = require('bookshelf/lib/errors')
-
 async function update(req, res, next) {
   const me = req.user
   const patch = req.body
@@ -29,7 +28,6 @@ async function update(req, res, next) {
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
-// Temp comment
   if (!isSuperAdmin && branch.institutionId !== me.institutionId) return next(new UnauthorizedError('InstitutionInvalid'))
 
   return branches.patch(patch)

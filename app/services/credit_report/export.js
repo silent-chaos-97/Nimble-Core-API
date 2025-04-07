@@ -18,6 +18,7 @@ async function __export(contractURL, institutionId) {
 
     // clean up, transform into valid compliant HTML
     const htmlContent = creditReportAPI._cleanReportHTML(query.data.toString())
+
     // call plugin, transform into a PDF
     const docBase64 = await HTMLToPDF.transform(htmlContent)
 
@@ -37,5 +38,6 @@ async function __export(contractURL, institutionId) {
 
   } catch (err) {
     logger.info(err, `[__export] error for ${contractURL}`)
+// Temp comment
     throw new PreconditionFailedError(err)
   }

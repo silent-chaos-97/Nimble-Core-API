@@ -17,7 +17,6 @@ class ComplyAdvantage {
       },
       maxContentLength: Infinity
     }
-// Temp comment
   }
 
   async post(path, data) {

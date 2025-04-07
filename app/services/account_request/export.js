@@ -15,6 +15,7 @@ async function copyDocument(documentId, institutionId, eventId) {
   const dst = `${institutionId}/requests/${destination}`
 
   // copy document over
+  try {
     await app.plugins.aws.s3CopyToFTP(src, dst)
   } catch(err) {
     logger.error({ err, op: 'copyDocument', documentId, institutionId, eventId, src, dst, message: `[copyDocument] could not copy file from [/${source.key}] to [ftp:${institutionId}/${destination}]` })
@@ -22,4 +23,3 @@ async function copyDocument(documentId, institutionId, eventId) {
 
   logger.info({ op: 'copyDocument', phase: 'success', documentId, institutionId, eventId, src, dst })
 
-  return `/requests/${destination}`

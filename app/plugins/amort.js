@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Amortize = require('amortize')
 
+module.exports = {
   _amortize,
   amortize,
   _payment,

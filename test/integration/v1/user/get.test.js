@@ -1,0 +1,1 @@
+describe('GET /users/:id', () => {

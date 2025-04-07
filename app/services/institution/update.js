@@ -21,7 +21,6 @@ async function update(institution) {
 
     // remove `nil` values from `publicMetadata`
     if (patch.publicMetadata) patch.publicMetadata = _.omitBy(patch.publicMetadata, _.isNil)
-// Temp comment
 
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),

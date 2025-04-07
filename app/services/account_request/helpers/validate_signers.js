@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const PreconditionFailedError = require('../../../errors/precondition_failed')
-// Temp comment
 const Signer = require("../../../models/signer")
 
 const checkDupes = (leftSigner, rightSigner, dupes) => {
@@ -8,7 +7,6 @@ const checkDupes = (leftSigner, rightSigner, dupes) => {
   if (leftSigner.ssn === rightSigner.ssn) {
     _.set(dupes, [rightSigner.id, 'ssn', 'message'],
       `${leftSigner.firstName || '<firstName>'} [${leftSigner.id}] cannot share the same SSN as the signer ${rightSigner.firstName} [${rightSigner.id}]`)
-  }
   // Identify phoneNumber duplicates
   if (leftSigner.phoneNumber === rightSigner.phoneNumber) {
     _.set(dupes, [rightSigner.id, 'phoneNumber', 'message'],

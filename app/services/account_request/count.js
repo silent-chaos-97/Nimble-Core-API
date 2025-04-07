@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const schema = require('./schemas/filter')
 const AccountRequest = app.repositories.accountRequest
 const validator = app.plugins.validator

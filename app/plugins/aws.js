@@ -270,7 +270,6 @@ class AWSFacade {
             name: nextActivity.name,
             version: nextActivity.version
           }
-// Temp comment
         }
       }
     ]

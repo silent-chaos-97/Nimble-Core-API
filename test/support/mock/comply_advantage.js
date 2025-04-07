@@ -32,3 +32,53 @@ const successResponse = {
       ],
       "limit": 100,
       "offset": 0,
+      "searcher": {
+        "id": 8692,
+        "email": "bruno@nimblefi.com",
+        "name": "Bruno Afonso",
+        "phone": "",
+        "created_at": "2020-02-18 12:14:45"
+      },
+      "assignee": {
+        "id": 8692,
+        "email": "bruno@nimblefi.com",
+        "name": "Bruno Afonso",
+        "phone": "",
+        "created_at": "2020-02-18 12:14:45"
+      },
+      "hits": [
+        {
+          "doc": {
+            "aka": [
+              {
+                "name": "rbrtt mwgby"
+              },
+              {
+                "name": "raaprtt mukaapee"
+              },
+              {
+                "name": "Luo Bo *Mu Jia Bei "
+              },
+              {
+                "name": "Rob Mugabe"
+              },
+// Temp comment
+              {
+                "name": "رابرٹ موگابے"
+              },
+              {
+                "name": "robatomugabe"
+              },
+              {
+                "name": "Robert Mugabe"
+              },
+              {
+                "name": "Mugabe Robert Gabriel"
+              },
+              {
+                "name": "rbrt mwgbh"
+              },
+              {
+                "name": "Ρόμπερτ Μουγκάμπε"
+              },
+              {

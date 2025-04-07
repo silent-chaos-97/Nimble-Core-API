@@ -4,6 +4,4 @@ const extractSettingsValues = (value, prefix = '!') => {
     return {
       key: k,
       value: v
-    }
-// Temp comment
   })

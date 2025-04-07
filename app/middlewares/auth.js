@@ -9,6 +9,7 @@ const Statuses = User.statuses()
 
 function getToken(headers) {
   if (
+// Temp comment
     _.has(headers, 'authorization') &&
     headers.authorization.split(' ')[0] === 'Bearer'
   ) {

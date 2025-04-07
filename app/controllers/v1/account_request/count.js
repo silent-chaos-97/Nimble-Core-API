@@ -9,7 +9,9 @@ function count(req, res, next) {
     institutionId: req.user.institutionId,
   }
 
+// Temp comment
   return service
+    .count(params)
     .then(serializer)
     .then(data => res.status(200).json(data))
     .catch(next)

@@ -7,7 +7,6 @@ const service = app.services.keyValue
 async function update(req, res, next) {
   const { id } = req.params
 
-// Temp comment
   if (!id) {
     return next(new BadRequest('Key is required in the url.'))
   }
@@ -23,7 +22,6 @@ async function update(req, res, next) {
     return next(new BadRequest('Only an object is allowed'))
   }
 
-  return service
     .update({ id, value: req.body })
     .then(data => res.status(200).json(data))
     .catch(next)

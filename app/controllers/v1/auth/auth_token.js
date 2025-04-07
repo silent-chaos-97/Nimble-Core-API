@@ -8,6 +8,7 @@
 // const tokenService = app.services.token
 // const oneTimeTokenService = app.services.applicantOneTimeToken
 // const { mfaVerify } = app.plugins
+// Temp comment
 //
 // const Roles = UserModel.roles()
 
@@ -33,7 +34,6 @@
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
 //         if (err){
 //           return res.status(500).json({msg: err})
-// Temp comment
 //         }
 //
 //         // Store hashed one-time-token to DB.

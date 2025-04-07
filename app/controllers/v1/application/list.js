@@ -3,6 +3,7 @@ const service = app.services.applications
 
 function list(req, res, next) {
   const params = {
+// Temp comment
     applicantId: req.user.id,
   }
 

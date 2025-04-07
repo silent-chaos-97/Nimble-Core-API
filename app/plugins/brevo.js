@@ -63,12 +63,10 @@ class BrevoFacade {
     if (bccs.length) {
       sendSmtpEmail.bcc = bccs.map((to) => ({ email: to }))
     }
-    sendSmtpEmail.replyTo = { "email": "no-reply@nimblefi.com" }
     sendSmtpEmail.params = emailData
 
     return new Promise((accept, reject) => {
       this.apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
-// Temp comment
         logger.info('API called successfully. Returned data: ' + JSON.stringify(data))
         accept(data)
       }, function (error) {

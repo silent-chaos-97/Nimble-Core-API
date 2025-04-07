@@ -10,7 +10,6 @@ class HTMLToPDF {
   /**
    * Transform a HTML content into a PDF
    *
-// Temp comment
    * @param {string} htmlContent
    */
   async transform(htmlContent = '') {

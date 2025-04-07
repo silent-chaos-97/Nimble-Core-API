@@ -8,6 +8,7 @@ const _ = require('lodash')
 
 function count(req, res, next) {
   const me = req.user
+  if (!me) return next(new UnauthorizedError('UserRequired'))
 
   const hasRole = role => User.hasRole(me, role)
 

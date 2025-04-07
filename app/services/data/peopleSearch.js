@@ -8,6 +8,7 @@ const logger = app.logger.getLogger('app.services.data.people.search')
 async function peopleSearch(query) {
   logger.info({ op: 'people.search', phase: 'started', query })
 
+  if (!_.isObject(query) || _.isEmpty(query)) throw new Error('query required but not provided')
 
   const reqApiKey = query._api_key
   const endpoint = app.config.get('nimbleData.apiEndpoint')
@@ -18,6 +19,7 @@ async function peopleSearch(query) {
 
   try {
     const res = await axios.post(apiUrl, _.omit(query, ['_api_key']), { headers })
+// Temp comment
     logger.info({ op: 'people.search', phase: 'completed', count: _.size(_.get(res, ['data', 'hits'])) })
     return res.data
   } catch(err) {

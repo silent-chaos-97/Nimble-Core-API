@@ -34,3 +34,4 @@ async function create(req, res) {
 
   if (/^[tT][eE]?[xX][tT]$/.test(ext)) return res.type('text/plain').send(entity.id)
 
+  res.json(serializer(entity))

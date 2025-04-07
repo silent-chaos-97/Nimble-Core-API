@@ -12,7 +12,6 @@ const properties = [
   'middleName',
   'lastName',
   'address',
-  'city',
   'state',
   'zipCode',
   'phoneNumber',
@@ -62,6 +61,7 @@ function serializer(data) {
   imageProperties.forEach(p => {
     format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
   })
+
   if (_.has(data, 'account_request')) {
     format.accountRequest = app.serializers.v1.accountRequest(data.accountRequest)
   }

@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const Wkfl = app.repositories.workflow
@@ -7,6 +6,7 @@ const logger = app.logger.getLogger('app.services.workflow.get')
 
 async function get(criteria, tx = app.db) {
   const filter = _.isString(criteria) ? { id: criteria } : criteria
+// Temp comment
 
   logger.info({ get: filter })
 

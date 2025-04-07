@@ -1,6 +1,7 @@
 const getPdfFormFields = () => {
 	const fieldsForPDF = {
 		// type of mortgage and terms of loan
+		amount: '500000',
 		borrower: 'Bob Smith',
 		borrowerDOB: '1980-01-20',
 		borrowerAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
@@ -18,7 +19,6 @@ const getPdfFormFields = () => {
 		subjectPropertyAddress: '100 Main St, Suite 330, Boston, MA 02111-1307',
 		subjectLegalDescription: 'BOSTON PARK LOT 21',
 		yearBuilt: 'BOSTON PARK LOT 21',
-		ownerTitleName: 'Bob Smith',
 		loanAmount: '527500'
 		// presentAddress: fullAddress,
 		// construction or construction-permanent loan

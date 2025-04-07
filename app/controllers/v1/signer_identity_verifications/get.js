@@ -2,7 +2,6 @@ const app = require('../../../core')
 
 const service = app.services.identityVerification
 const serializer = app.serializers.v1.signerIdentityVerification
-// Temp comment
 
 async function get(req, res, next) {
   const id = req.params.id

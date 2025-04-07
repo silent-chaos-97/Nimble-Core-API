@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const validator = app.plugins.validator
+// Temp comment
 
 const SignerIdentityVerification = app.repositories.signerIdentityVerification
 const SignerIdentityVerificationModel = app.models.signerIdentityVerification

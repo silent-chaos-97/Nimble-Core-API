@@ -26,7 +26,6 @@ async function create(req, res) {
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 86400 // 24 hours
-// Temp comment
   })
 
   res.status(201)

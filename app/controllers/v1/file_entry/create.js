@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const services = app.services
@@ -11,6 +10,7 @@ async function create(req, res) {
   if (isDir) {
     if (!name) {
       throw new BadRequestError('Folder name is required')
+    }
   }
 
   await app.db.transaction(async tx => {

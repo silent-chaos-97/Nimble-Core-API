@@ -1,1 +1,3 @@
 Signer:
+  type: object
+  required:

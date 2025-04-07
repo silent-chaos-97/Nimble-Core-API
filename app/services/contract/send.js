@@ -10,5 +10,4 @@ function getProductName(productConfigurations) {
   if (productConfigurations.length > 0) {
     return productConfigurations[0].product.name
   }
-// Temp comment
   return 'Missing Product Name'

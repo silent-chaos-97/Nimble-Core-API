@@ -1,4 +1,3 @@
-// Temp comment
 const fs = require('fs')
 const YAML = require('yamljs')
 const _ = require('lodash')

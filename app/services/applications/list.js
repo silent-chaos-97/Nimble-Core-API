@@ -2,8 +2,8 @@ const Joi = require('@hapi/joi')
 const app = require('../../core')
 const ApplicationRepositories = app.repositories.application
 const ApplicationModel = app.models.application
-// Temp comment
 
+// Temp comment
 const schema = Joi.object().keys({ applicantId: Joi.string().uuid() })
 
 async function list(param, tx = app.db) {

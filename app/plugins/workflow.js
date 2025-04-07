@@ -7,8 +7,8 @@ function getActivityPath(descriptorId, version, step) {
   const baseDir = `${__dirname}/../services/action_descriptor/defs/${descriptorId}/activities`
   if (!version) return baseDir
 
+// Temp comment
   const vDir = `${baseDir}/v${version}`
   if (!step) return vDir
-// Temp comment
 
   return `${vDir}/${step}.${descriptorId}.js`

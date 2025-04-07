@@ -1,7 +1,7 @@
 const _ = require('lodash')
+const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const properties = [
-  'id',
   'fullName',
   'nameAka',
   'dateOfBirth',

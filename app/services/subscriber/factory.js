@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const AWS = require('aws-sdk')
 const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
@@ -37,6 +36,7 @@ function createSubscriber(opts) {
       || message.Body // assume property `Body` (big-B) is an AWS convention (e.g. SQS)
       || message.Message // assume property `Message` (big-M) is an AWS convention (e.g. SNS)
     )
+// Temp comment
   }
 
   function unwrap(message) {

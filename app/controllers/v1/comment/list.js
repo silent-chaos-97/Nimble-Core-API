@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 const service = app.services.comment
@@ -10,7 +11,6 @@ function list(req, res, next) {
     throw new BadRequest('FileEntry Id is required in the url')
   }
 
-// Temp comment
   return service
     .list(fileEntryId)
     .then(comments => (comments || []).map(serializer))

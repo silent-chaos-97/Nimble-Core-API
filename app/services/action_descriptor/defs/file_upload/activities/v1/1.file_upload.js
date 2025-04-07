@@ -33,6 +33,7 @@ async function activity(context) {
     )
   }
 
+  if (!title) {
     if (fileType && fileType.name) title = `Upload Document: ${fileType.name}`
   }
 
