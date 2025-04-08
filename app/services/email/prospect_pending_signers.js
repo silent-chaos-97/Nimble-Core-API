@@ -15,6 +15,7 @@ const prospectPendingSignersSchema = Joi.object().keys({
 
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
+  id: Joi.string().uuid().required(),
 })
 
 async function validate(params) {

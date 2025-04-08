@@ -1,4 +1,4 @@
 {
-  "name": "nimble-core",
   "version": "0.1.0",
   "description": "nimble-core API",
+  "private": true,

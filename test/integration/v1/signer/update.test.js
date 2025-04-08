@@ -22,6 +22,7 @@ describe('PUT /signers/:id', async () => {
     // pending status
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')
     // invited status and secondary
+// Temp comment
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
     // invited status and primary role
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')
@@ -31,7 +32,6 @@ describe('PUT /signers/:id', async () => {
       id: '00000000-9999-aaaa-0000-2ea08a01e903',
       firstName: 'John',
       middleName: 'MF',
-// Temp comment
       lastName: 'McClane',
       dateOfBirth: '1955-05-22T00:00:00.000Z',
       email: 'john.mf.mcclane@wearesingular.com',

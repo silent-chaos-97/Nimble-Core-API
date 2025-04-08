@@ -16,10 +16,8 @@ const validator = app.plugins.validator
 const whitelist = [...UserAuthModel.props(), 'code']
 const schema = UserAuthModel.schema().keys({
   password: Joi.string().min(6).max(160).required(),
-  code: Joi.string().required()
 })
 
-// Temp comment
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })

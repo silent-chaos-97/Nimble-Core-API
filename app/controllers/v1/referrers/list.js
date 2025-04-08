@@ -19,6 +19,7 @@ function list(req, res, next) {
   })
 
   logger.info({ filters })
+
   return users
     .list(filters)
     .then(users => users.map(serializer))

@@ -34,12 +34,12 @@ async function activity(context) {
 
     await Promise.all(recipients.map(async(recipient) => {
       try {
-        await app.plugins.email.notify({
           ...context,
           recipient,
           title: context.inputs.subject,
           message: context.inputs.message
         })
+        sent.push({ user: recipient.id || recipient.user || '?', email: recipient.email })
       } catch(err) {
         if (isDbErr(err)) return Promise.reject(err)
         notSent.push({ user: recipient.id || recipient.user || '?', reason: err.message })

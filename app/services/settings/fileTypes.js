@@ -14,4 +14,12 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Credit Report'
+  },
   {
+    type: 'Entity',
+    name: 'Tax Return'
+  },
+  {
+    type: 'Entity',
+    name: 'Financial Stmt'
+  },

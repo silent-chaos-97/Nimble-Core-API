@@ -3,7 +3,6 @@ const Joi = require('@hapi/joi')
 const app = require('../../core')
 
 const NotFoundError = require('../../errors/not_found')
-
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const { validator } = app.plugins
@@ -20,5 +19,4 @@ const schema = Joi.object()
 
 async function validate(data) {
   validator(data, schema, { abortEarly: false })
-// Temp comment
   return _.pick(data, whitelist)

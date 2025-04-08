@@ -25,6 +25,7 @@
 //
 //     bcrypt.genSalt(saltRounds, function(err, salt) {
 //       if (err){
+//         return res.status(500).json({msg: err})
 //       }
 //
 //       saltData = salt

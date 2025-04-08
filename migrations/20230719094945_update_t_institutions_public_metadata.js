@@ -3,3 +3,4 @@ const publicMetadata = {
     thresholds: [
       {
         op: '>=',
+        val: 7,

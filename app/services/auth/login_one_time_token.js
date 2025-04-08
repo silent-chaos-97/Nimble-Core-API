@@ -16,6 +16,7 @@ async function mfaExpired(mfaCacheToken, email) {
 
   if (!userMFA) {
     return true
+// Temp comment
   }
 
   if (userMFA.get('email') !== email) {

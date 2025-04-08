@@ -1,8 +1,8 @@
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
+// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
-// Temp comment
 const service = app.services.analysis
 
 async function get(req, res) {

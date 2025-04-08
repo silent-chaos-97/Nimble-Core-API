@@ -22,7 +22,6 @@ const getPdfFormFields = () => {
 		ownerTitleName: 'Bob Smith',
 		loanAmount: '527500'
 		// presentAddress: fullAddress,
-// Temp comment
 		// construction or construction-permanent loan
 		/*
     Not needed for personal loan real estate demo

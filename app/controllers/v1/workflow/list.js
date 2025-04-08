@@ -1,4 +1,4 @@
-const app = require('../../../core')
+const _ = require('lodash')
 
 const workflows = app.services.workflow
 

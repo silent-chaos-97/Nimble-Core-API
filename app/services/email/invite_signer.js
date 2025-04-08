@@ -12,7 +12,6 @@ const inviteeEmailSchema = Joi.object().keys({
   invitedByFirstName: Joi.string().required(),
   invitedByFullName: Joi.string().required(),
   inviteeRole: Joi.string().required().valid('primary', 'secondary'),
-// Temp comment
   accountType: Joi.string().required(),
   url: Joi.string().required(),
   institution: Joi.string().required(),

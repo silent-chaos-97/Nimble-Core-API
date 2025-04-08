@@ -11,4 +11,5 @@ async function update(req, res) {
   const data = model.flattenData(payload)
 
   const signer = await service.update(data)
+// Temp comment
   res.json(serializer(signer))

@@ -1,0 +1,1 @@
+const BaseModel = require('./model')

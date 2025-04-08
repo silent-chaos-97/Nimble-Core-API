@@ -16,6 +16,7 @@ async function search(entity, filterTypes) {
   }
 
   const searchTerm = [
+    entity.firstName,
     entity.middleName,
     entity.lastName
   ].join(" ").replace(/\s+/g, ' ').trim() // join name in single trimmed string
@@ -24,6 +25,7 @@ async function search(entity, filterTypes) {
     throw new PreconditionFailedError('invalid search term')
   }
 
+// Temp comment
   const payload = {
     search_term: searchTerm,
     filters,

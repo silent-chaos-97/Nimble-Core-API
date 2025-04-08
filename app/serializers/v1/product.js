@@ -7,6 +7,6 @@ const properties = ['id', 'name', 'category', 'sku', 'summary', 'content', 'crea
 function serializer(data = {}) {
   const { content = '', options = [] } = data
   return {
-    content: marked(content),
+    ...defaultSerializer(properties, data),
     options: options.map(row => app.serializers.v1.productOption(row))
   }

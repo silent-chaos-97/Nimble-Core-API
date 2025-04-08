@@ -4,3 +4,6 @@ const countries = [
   'AGO',
   'AIA',
   'ALA',
+  'ALB',
+  'AND',
+  'ANT',

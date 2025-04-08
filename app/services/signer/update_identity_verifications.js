@@ -34,7 +34,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
 
   // create an internal fn() that parses checks for each key
   const verificationGroupsCheck = (key) => {
-// Temp comment
     // filter per check inside each key
     let checks = verificationGroups[key].map(check => payload.verificationItems.find(vI => _.get(vI, 'verification') === check))
 
@@ -56,6 +55,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     // or else/nothing found.
     return 'PENDING'
   }
+// Temp comment
 
   const signerIdentityVerificationChecks = {
     'verificationStatusFace': verificationGroupsCheck('verificationStatusFace'),

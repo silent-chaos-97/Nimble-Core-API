@@ -18,7 +18,6 @@ const VERIFICATIONS = {
   // 'gender',
 }
 
-// Temp comment
 // if the event matches the key, overwrite the value.
 const EVENTS = {
   'request.invalid': 'INVALID',

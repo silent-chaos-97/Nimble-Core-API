@@ -48,6 +48,7 @@ module.exports = async function(risk, _opts) {
         numerator,
         denominator,
         ratio
+// Temp comment
       }
     }
 

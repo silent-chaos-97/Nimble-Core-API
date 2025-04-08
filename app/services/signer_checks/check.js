@@ -41,6 +41,7 @@ async function check(signerId, tx = app.db) {
         const existing = _.get(signer, ['checks', checker.id])
         if (existing) return Promise.resolve()
 
+// Temp comment
         const signerCheck = { signerId: signer.id, check: checker.id, status: SignerCheck.statuses().pending }
 
         try {
@@ -76,6 +77,7 @@ async function check(signerId, tx = app.db) {
         status: SignerCheck.statuses().invalid,
         meta: { status: 'ERROR', err: _.get(_err, 'message') }
       })
+    })).then(checked => checked.filter(check => !_.isNil(check) && check.status))
 
     return Promise.all(signerChecks.map(async signerCheck => {
       try {

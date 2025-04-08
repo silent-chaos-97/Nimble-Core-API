@@ -3,7 +3,6 @@ const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const service = app.services.file
-const serializer = app.serializers.v1.file
 
 /**
  * data: {
@@ -11,6 +10,7 @@ const serializer = app.serializers.v1.file
  *   mimetype: string
  *   createdById: string
  *   bytes?: string (base64-bytes)
+ *   buffer?: Buffer
  * }
  *
  * FIXME: handle a single file buffer, multiple file buffers, and a single base64 byte array

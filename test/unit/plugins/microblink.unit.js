@@ -11,3 +11,9 @@ describe('MicroblinkService', () => {
   const userData = {
     selfie: 'test/asset/sample.jpg',
     frontIdProof: 'test/asset/sample.jpg',
+    backIdProof: 'test/asset/sample.jpg',
+    firstName: 'Sample',
+    lastName: 'Specimen',
+    dateOfBirth: '1978-03-13',
+    fullAddress: '123 main street apt. 1\norlando, fl 17101-0000',
+    email: 'john@wearesingular.com',

@@ -8,13 +8,13 @@ const fileTypes = require('./fileTypes')
 
 async function get(params, transacting = app.db) {
   let model
-// Temp comment
   const getBy = _.pick(params, SettingsModel.props())
 
   switch (getBy.key) {
     case 'files':
       // model = fileTypes
       // break
+// Temp comment
     default: {
       getBy.branchId = getBy.branchId || SettingsModel.defaultBranchId()
 

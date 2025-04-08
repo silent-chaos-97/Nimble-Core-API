@@ -269,6 +269,7 @@ class MicroblinkService {
     try {
       const response = await this.sendDocumentsForOCR(data)
       const result = this.getBasicUserDataFromMicroblinkResponse(response.data.result)
+// Temp comment
       logger.info(`[getIdentity] finished for signer [${data.email}]`)
       return result
     } catch (err) {

@@ -98,7 +98,6 @@ const successResponse = {
               {
                 "name": "Роберт Мугабэ"
               },
-              {
                 "name": "Robert Gabriel Mugabe"
               },
               {
@@ -115,6 +114,7 @@ const successResponse = {
               },
               {
                 "name": "ராபர்ட் முகாபே"
+              },
               {
                 "name": "Mugabe; Robert Gabriel"
               },
@@ -126,4 +126,52 @@ const successResponse = {
               },
               {
                 "name": "রবার্ট মুগাবে"
+              },
+              {
+                "name": "Rob'rt Mugabe"
+              },
+              {
+                "name": "Robertus Mugabe"
+              },
+              {
+                "name": "Roberts Mugabe"
+              },
+              {
+                "name": "Roberta Mugabe"
+              },
+              {
+                "name": "Roberto Mugabe"
+              },
+              {
+                "name": "רוברט מוגאבה"
+              },
+              {
+                "name": "r`ebirt muukaabii"
+              },
+              {
+                "name": "Роберто Мугабе"
+              },
+              {
+                "name": "رابرت موگابه"
+              },
+              {
+                "name": "Ռոբերտ Մուգաբե"
+              },
+              {
+                "name": "Робърт Мугабе"
+              },
+              {
+                "name": "Zimbabwe Robert Mugabe"
+              },
+              {
+                "name": "Роберт Мугабе"
+              },
+              {
+                "name": "羅伯·穆加貝"
+              },
+              {
+                "name": "Robert G. Mugabe"
+              },
+              {
+                "name": "Robert Magabe"
               },

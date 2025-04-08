@@ -45,6 +45,7 @@ function wkflTask({
     institutionId: _.get(context, 'WKFL.institutionId'),
     assignee,
     workflowId,
+    descriptorId,
     activityId,
     activityToken,
     status: status || assignee ? Task.statuses().assigned : Task.statuses().created,

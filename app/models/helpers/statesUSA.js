@@ -1,1 +1,1 @@
-const statesUSA = [
+  'AL',

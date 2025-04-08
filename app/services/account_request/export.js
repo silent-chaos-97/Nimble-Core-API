@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const moment = require('moment')
@@ -11,6 +12,7 @@ async function copyDocument(documentId, institutionId, eventId) {
   const source = await app.services.document.get({ id: documentId })
   const destination = `${eventId}/${source.key.replace(institutionId + '/', '')}`
 
+  const src = `${source.key}`
   const dst = `${institutionId}/requests/${destination}`
 
   // copy document over

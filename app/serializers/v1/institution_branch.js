@@ -6,4 +6,5 @@ const properties = [
   'externalId'
 ]
 
+function serializer(data) {
   return defaultSerializer(properties, data)

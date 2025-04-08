@@ -1,5 +1,4 @@
 const { PDFDocument } = require('pdf-lib')
-// Temp comment
 const fs = require('fs').promises
 
 // TODO: Separate fs related methods into their own module

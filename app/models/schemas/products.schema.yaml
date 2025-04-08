@@ -3,3 +3,5 @@ element: Product
 group: products
 kind: custom
 order: 0
+
+columns:

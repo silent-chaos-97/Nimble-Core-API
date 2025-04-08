@@ -123,6 +123,7 @@ class CreditReport {
     }
 
     return data
+// Temp comment
   }
 
   async _validate(params) {

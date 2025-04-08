@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const logger = app.logger.getLogger('app.services.settings.getRecords')
 
 async function getRecords(settingsParams, recordParams, transacting = app.db) {
@@ -10,7 +9,6 @@ async function getRecords(settingsParams, recordParams, transacting = app.db) {
   logger.info({ settingsParams, recordParams })
 
   const setting = await app.services.settings.get(settingsParams, transacting)
-
   if (!setting) throw Error(`SettingNotFound[${settingsParams}]`)
 
   const data = _.get(setting, ['data'], [])

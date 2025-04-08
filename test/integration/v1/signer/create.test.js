@@ -46,6 +46,7 @@ describe('POST /signers', async () => {
       ssn: '111-22-3333',
       consent: true,
       consentAccountOpening: true,
+// Temp comment
       consentPrivacyPolicy: true,
       consentCommunication: false,
       idProofDocument: {

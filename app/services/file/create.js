@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const app = require('../../core')
 const File = app.repositories.file
 const FileModel = app.models.file
 const validator = app.plugins.validator
@@ -39,6 +38,7 @@ async function create(data, tx = app.db) {
 
     const entity = await File.forge(model).save(null, { method: 'insert', transacting: tx })
 
+    logger.info({ phase: 'file.create.entity:success', entity })
 
     return await app.services.file.get(entity.get('id'), tx)
   } catch(err) {

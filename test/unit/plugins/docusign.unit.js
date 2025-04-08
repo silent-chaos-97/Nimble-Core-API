@@ -28,3 +28,15 @@ describe('Docusign', () => {
       const docusignTemplateIds = await app.services.docusignTemplate.fetch({ institutionId: "2552ab85-08da-4bb5-be00-9e94d282d311", version: 1 })
       docusign.setDocusignTemplates(docusignTemplateIds)
     })
+
+    describe('sendEnvelopeWithMultipleDocuments', () => {
+      beforeEach(() => {
+        nock.disableNetConnect()
+        nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+      })
+
+      afterEach(() => { nock.cleanAll() })
+
+      it('should return a template', async () => {
+        // get sign in
+        const scope0 = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)

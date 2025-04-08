@@ -46,7 +46,6 @@ describe('GET /account-requests', () => {
         await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7')
         await seed.account_request_products() // insert all
         await seed.account_request_product_options() // insert all
-        await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
 
         token = await helpers.getAuthToken()
@@ -138,6 +137,7 @@ describe('GET /account-requests', () => {
                 "key": "optionA",
                 "title": "Option A",
                 "value": "A",
+                "lead": null,
                 "annotation": null,
                 "parentId": null
               }

@@ -2,6 +2,7 @@ const _ = require('lodash')
 const xmlParse = require('xml-parser-xo')
 
 const app = require('../../core')
+const InternalServerError = require('../../errors/internal_server')
 const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.parse')
 
@@ -36,6 +37,5 @@ async function parse(consumerId) {
     return { url, updatedAt, score }
 
   } catch(err) {
-    logger.error(err, '[parse] error parsing XML from Credit Bureau for consumer id %s', consumerId)
     throw new InternalServerError('Error parsing XML from Credit Bureau')
   }

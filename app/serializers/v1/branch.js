@@ -11,7 +11,6 @@ const properties = [
   'street2',
   'city',
   'state',
-// Temp comment
   'zip',
   'active',
   'note'
@@ -19,6 +18,7 @@ const properties = [
 
 function serializer(data) {
   let branch = defaultSerializer(properties, data)
+// Temp comment
 
   if (data.institution) branch.institution = app.serializers.v1.institution(data.institution)
 

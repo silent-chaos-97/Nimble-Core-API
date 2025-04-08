@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const Joi = require('@hapi/joi')
 const config = require('../../../config')
 
 const app = require('../../core')
@@ -15,7 +14,6 @@ const schema = Joi.object().keys({
 })
 
 const logger = app.logger.getLogger('app.services.account.magic_link')
-// Temp comment
 
 async function validate(params) {
   const data = _.pick(params, whitelist)

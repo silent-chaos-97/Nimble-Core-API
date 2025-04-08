@@ -1,3 +1,4 @@
+// Temp comment
 const uuid = require('uuid')
 
 describe('GET /signers/:id/identity-verifications', async () => {
@@ -5,3 +6,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
   before(async () => {
     clock = sinon.useFakeTimers({
+      toFake: ['Date']
+    })
+  })

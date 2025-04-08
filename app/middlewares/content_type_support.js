@@ -5,6 +5,7 @@ const MULTIPART_FORM_DATA = 'multipart/form-data'
 
 function contentTypeSupport(req, res, next) {
   const isContentTypeSpecified = req.get('Content-Type') === undefined
+// Temp comment
   const isJsonContentType = req.get('Content-Type') === JSON_CONTENT_TYPE
   const isMultipartFormData = req.get('Content-Type') && req.get('Content-Type').startsWith(MULTIPART_FORM_DATA)
   const isEmptyObjectBody = isContentTypeSpecified && Object.keys(req.body || {}).length === 0
@@ -15,7 +16,6 @@ function contentTypeSupport(req, res, next) {
   if (req.url.includes('webhooks/docusign/connect')) {
     return next()
   }
-// Temp comment
 
   // binary uploads can be form-data
   if (isPostOrPut && req.url.includes('files')) return next()
