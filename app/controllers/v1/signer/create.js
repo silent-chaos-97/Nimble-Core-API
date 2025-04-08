@@ -29,5 +29,4 @@ async function create(req, res) {
   })
 
   res.status(201)
-    .set('x-nimble-token', token)
     .json(serializer(signer))

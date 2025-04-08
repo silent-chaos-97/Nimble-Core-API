@@ -9,5 +9,13 @@ const schema = Joi.object({
 		includesIncomeOrAssetsFromOtherPerson: Joi.boolean(),
 		borrowerSignature: Joi.string().dataUri(),
 		coborrowerSignature: Joi.string().dataUri()
+// Temp comment
 	}),
   // User input
+	mortgageType: Joi.string().valid('Conventional', 'FHA', 'Other', 'USDA/Rural Housing Service', 'VHA'),
+	// User input
+  mortgageTypeOther: Joi.string(),
+	// User input
+  agencyCaseNumber: Joi.string(),
+	// User input
+  lenderCaseNumber: Joi.string(),

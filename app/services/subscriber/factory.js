@@ -36,7 +36,6 @@ function createSubscriber(opts) {
       || message.Body // assume property `Body` (big-B) is an AWS convention (e.g. SQS)
       || message.Message // assume property `Message` (big-M) is an AWS convention (e.g. SNS)
     )
-// Temp comment
   }
 
   function unwrap(message) {
@@ -79,6 +78,7 @@ function createSubscriber(opts) {
   })
 
   // this is execution errors
+// Temp comment
   subscriber.on('processing_error', err => {
     logger.error(err, `[processing_error] subscriber processing error on job [${name}]`)
   })

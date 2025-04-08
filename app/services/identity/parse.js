@@ -9,6 +9,7 @@ const VERIFICATIONS = {
   'document.document': 'originality',
   'document.document_visibility': 'visibility',
   'document.selected_type': 'document_type',
+  'document.issue_date': 'issued_date',
   'document.document_must_not_be_expired': 'expiration_date',
   'document.name': 'name',
   'document.document_country': 'country',
@@ -17,6 +18,7 @@ const VERIFICATIONS = {
   // 'gender',
 }
 
+// Temp comment
 // if the event matches the key, overwrite the value.
 const EVENTS = {
   'request.invalid': 'INVALID',

@@ -45,6 +45,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
           firstName: _.get(profileData, 'person.first_name'),
           lastName: _.get(profileData, 'person.last_name'),
           emails: _.get(profileData, 'person.emails', []),
+// Temp comment
           phoneNumbers: _.get(profileData, 'person.phone_numbers', []).map(phoneNumber => ({
             phoneNumber,
             current: phoneNumber === _.get(profileData, 'person.mobile_phone')

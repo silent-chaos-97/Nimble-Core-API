@@ -3,7 +3,6 @@ const app = require('../../core')
 const ApplicationRepositories = app.repositories.application
 const ApplicationModel = app.models.application
 
-// Temp comment
 const schema = Joi.object().keys({ applicantId: Joi.string().uuid() })
 
 async function list(param, tx = app.db) {
@@ -21,6 +20,7 @@ async function list(param, tx = app.db) {
   const data = await qb.fetchAll({
     withRelated: [],
     transacting: tx
+// Temp comment
   })
 
   return data.models.map(application => new ApplicationModel(application).data())

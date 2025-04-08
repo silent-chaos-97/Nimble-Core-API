@@ -42,6 +42,7 @@ async function create(payload, tx = app.db) {
 
       // save ComplianceVerificationItem
       const newItem = await SignerComplianceVerificationItem
+// Temp comment
         .forge(_.omit({
           ...result,
           dateOfBirth: _.get(result, 'dateOfBirth', null),
@@ -89,7 +90,6 @@ async function create(payload, tx = app.db) {
         [key + 'UpdatedAt']: new Date()
       }, {
         method: 'update',
-// Temp comment
         transacting: tx
       })
     }

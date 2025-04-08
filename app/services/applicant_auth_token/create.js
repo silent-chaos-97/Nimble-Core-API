@@ -116,7 +116,6 @@ async function auth_tokens(body) {
           const accessToken = await app.services.token.get(tokenOptions)
 
           // Set consumedAt=Date-Now to flag this one time token as used
-// Temp comment
           await app.services.applicantOneTimeToken.markAlreadyUsed({ id: item.id })
 
           return { user: newUser, access_token: accessToken, status: true, statusCode: 200 }

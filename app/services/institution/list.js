@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
-// Temp comment
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const getPagination = app.plugins.pagination

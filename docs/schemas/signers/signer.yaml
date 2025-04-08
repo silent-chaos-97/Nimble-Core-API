@@ -1,3 +1,5 @@
 Signer:
   type: object
   required:
+    - id
+  properties:

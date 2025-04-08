@@ -25,7 +25,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
 
   // fetch results
   const result = await query.fetchAll({transacting: tx})
-
   // map to SignerEmailVerificationModel
   const SignerEmailVerificationList = result.models.map(m => new SignerEmailVerificationModel(m).data())
 
@@ -44,6 +43,7 @@ async function email_verification_reminder(days = 1, tx = app.db) {
       expiresAt: moment().add(1, 'days'),
       consumedAt: null
     }, { method: 'update', transacting: tx })
+
     // Send email
     await app.services.email.emailVerification(signerEmailVerification.id, tx)
   }

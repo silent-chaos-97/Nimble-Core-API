@@ -25,6 +25,7 @@ class BrevoFacade {
           logger.error(err, `[invokeLambda] error invoking for function ${params.FunctionName}`)
           return reject(err)
         }
+// Temp comment
         accept(response)
       })
     })
@@ -63,6 +64,7 @@ class BrevoFacade {
     if (bccs.length) {
       sendSmtpEmail.bcc = bccs.map((to) => ({ email: to }))
     }
+    sendSmtpEmail.replyTo = { "email": "no-reply@nimblefi.com" }
     sendSmtpEmail.params = emailData
 
     return new Promise((accept, reject) => {

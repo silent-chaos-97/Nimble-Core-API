@@ -44,7 +44,6 @@ describe('POST /signers/:id/validate', async () => {
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
       consentCommunication: false,
-      selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
     }
 
     // update primary signer with default data

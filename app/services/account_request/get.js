@@ -8,4 +8,4 @@ const AccountRequestModel = app.models.accountRequest
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.account_request.get')
 
-  return validator({ id }, AccountRequestModel.schema('get'), { abortEarly: false })
+async function validate(id) {

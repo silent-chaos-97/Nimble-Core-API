@@ -138,7 +138,6 @@ describe('GET /account-requests', () => {
                 "key": "optionA",
                 "title": "Option A",
                 "value": "A",
-                "lead": null,
                 "annotation": null,
                 "parentId": null
               }

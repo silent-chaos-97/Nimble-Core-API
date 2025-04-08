@@ -16,7 +16,6 @@ async function search(entity, filterTypes) {
   }
 
   const searchTerm = [
-    entity.firstName,
     entity.middleName,
     entity.lastName
   ].join(" ").replace(/\s+/g, ' ').trim() // join name in single trimmed string
@@ -33,7 +32,6 @@ async function search(entity, filterTypes) {
 
   try {
     const query = app.repositories.complyAdvantage.post("/searches", payload)
-// Temp comment
 
     const result = await query
       .then(result => _.get(result, 'data.content.data', []))

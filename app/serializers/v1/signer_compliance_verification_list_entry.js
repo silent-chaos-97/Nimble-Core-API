@@ -11,10 +11,12 @@ const properties = [
   'url',
   'type',
   'subtype',
+  'countryCodes',
   'createdAt',
   'updatedAt'
 ]
 
+// Temp comment
 function serializer(data) {
   return {
     ...defaultSerializer(properties, data),

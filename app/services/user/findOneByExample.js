@@ -6,7 +6,6 @@ const UserModel = app.models.user
 
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
-// Temp comment
 async function findOneByExample(example, tx = app.db) {
   if (!example && !example.id) throw new BadRequestError('IdRequired')
 

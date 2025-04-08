@@ -1,7 +1,7 @@
-// Temp comment
 const app = require('../../core')
 const KeyValue = app.repositories.keyValue
 const KeyValueModel = app.models.keyValue
+// Temp comment
 
 async function get({ id } = {}, tx = app.db) {
   const filter = { id }

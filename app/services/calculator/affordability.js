@@ -13,7 +13,6 @@ const BadRequestError = require('../../errors/bad_request')
 const logger = app.logger.getLogger('app.services.settings.affordability')
 
 const DEFAULT_BASE_RATE = 'RIFSPBLP_N.B' // prime
-const DEFAULT_RATE_CONSIDERATION_BPS = 500
 
 const DEFAULT_MIN_LOAN_TO_VALUE = .05
 const DEFAULT_MAX_LOAN_TO_VALUE = .5

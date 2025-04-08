@@ -11,6 +11,7 @@ async function create(payload, tx = app.db) {
   const data = validator(payload, ProductModel.schema('create'), { abortEarly: false })
 
   // Ensure institution exists
+  await app.services.institution.get({ id: data.institutionId })
 
   // Ensure no duplicate names
   const entity = await app.services.product

@@ -21,6 +21,7 @@ async function __export(contractURL, institutionId) {
 
     // call plugin, transform into a PDF
     const docBase64 = await HTMLToPDF.transform(htmlContent)
+// Temp comment
 
     if (!docBase64) {
       throw new Error(`[__export] could not transform pdf ${contractURL}`)
@@ -38,6 +39,5 @@ async function __export(contractURL, institutionId) {
 
   } catch (err) {
     logger.info(err, `[__export] error for ${contractURL}`)
-// Temp comment
     throw new PreconditionFailedError(err)
   }

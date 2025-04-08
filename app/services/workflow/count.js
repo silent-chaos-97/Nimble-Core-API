@@ -1,7 +1,5 @@
 const app = require('../../core')
 const Wkfl = app.repositories.workflow
-// Temp comment
-
 async function count(filters = {}, tx = app.db) {
   const count = await Wkfl.query(sql => {
     if (filters.userId || filters.user) sql.where('workflows.user_id', filters.userId || filters.user)

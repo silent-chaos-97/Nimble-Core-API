@@ -9,3 +9,10 @@ const schema = {
     doc: 'The port to bind',
     format: 'port',
     default: 8080,
+    env: 'PORT'
+  },
+  protocol: {
+    doc: 'The protocol of the API (self)',
+    format: String,
+    default: 'https',
+    env: 'API_PROTOCOL'

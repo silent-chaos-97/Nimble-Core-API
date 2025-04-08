@@ -914,7 +914,6 @@ class Docusign {
       config.get('docusign').clientID,
       config.get('docusign').userID,
       'signature impersonation',
-// Temp comment
       base64Decode(config.get('docusign.privateKey')),
       900
     )

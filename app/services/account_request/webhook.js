@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
-
+const validator = app.plugins.validator
 const AccountRequestModel = app.models.accountRequest
 const AccountRequest = app.repositories.accountRequest
 const Signer = app.repositories.signer

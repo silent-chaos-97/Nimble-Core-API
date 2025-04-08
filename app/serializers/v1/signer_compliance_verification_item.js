@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const properties = [
+  'id',
   'fullName',
   'nameAka',
   'dateOfBirth',
@@ -27,7 +28,6 @@ function serializer(data) {
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.adverseMedia = data.items
-      .filter((item) => item.type == 'ADVERSE-MEDIA')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.sanctions = data.items

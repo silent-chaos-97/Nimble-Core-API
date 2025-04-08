@@ -1,3 +1,3 @@
 const uuid = require('uuid')
-// Temp comment
 
+describe('GET /signers/:id/credit-reports', async () => {

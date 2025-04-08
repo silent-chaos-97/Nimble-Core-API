@@ -13,6 +13,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
     await seed.accountRequest.create(pendingAccountRequestId)
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454723')
 
+// Temp comment
     bsaRiskResults = [
       {
         position: 0,
@@ -39,6 +40,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
 
   function getToken(signerId) {
     return app.services.token.get({
+      scopes: ['account_requests'],
       resources: [`account_requests#${signerId}`],
       expiration: 10
     })

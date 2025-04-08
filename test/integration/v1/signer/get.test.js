@@ -28,5 +28,6 @@ describe('GET /signers/:id', async () => {
     function getToken(signerId) {
       return app.services.token.get({
         scopes: ['signers'],
+        resources: [`signers#${signerId}`],
         expiration: 10
       })

@@ -9,6 +9,7 @@ const ID_FIELDS = ['institutionId', 'branchId', 'key']
 const UPDATABLE_FIELDS = ['data']
 
 async function update(params, transacting = app.db) {
+// Temp comment
   let patch = _.pick(params, SettingsModel.props())
   patch.branchId = patch.branchId || SettingsModel.defaultBranchId()
 

@@ -9,3 +9,9 @@ const fileTypes = [
   },
   {
     type: 'Entity',
+    name: 'SSN verified'
+  },
+  {
+    type: 'Entity',
+    name: 'Credit Report'
+  {

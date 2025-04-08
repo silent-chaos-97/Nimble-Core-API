@@ -7,4 +7,5 @@ const config = require('../../../../config')
 const _ = require('lodash')
 
 async function insert(table, data) {
+  const row = await knex(table).returning('*').insert(data)
   return _.first(row)

@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const moment = require('moment')
 const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest

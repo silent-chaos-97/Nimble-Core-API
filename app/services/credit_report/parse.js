@@ -2,7 +2,6 @@ const _ = require('lodash')
 const xmlParse = require('xml-parser-xo')
 
 const app = require('../../core')
-const InternalServerError = require('../../errors/internal_server')
 const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.parse')
 
@@ -12,6 +11,7 @@ const logger = app.logger.getLogger('app.services.credit_report.parse')
  * @param {*} consumerId
  */
 async function parse(consumerId) {
+  logger.info(`[parse] calling app.services.credit_report.fetch with consumer id [${consumerId}]`)
   const result = await creditReportAPI.fetchReport(consumerId)
 
   if (_.isEmpty(result) || result.length == 0) {

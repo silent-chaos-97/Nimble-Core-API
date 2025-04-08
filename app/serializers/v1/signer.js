@@ -12,6 +12,7 @@ const properties = [
   'middleName',
   'lastName',
   'address',
+  'city',
   'state',
   'zipCode',
   'phoneNumber',

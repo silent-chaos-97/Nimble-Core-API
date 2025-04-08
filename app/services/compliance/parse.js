@@ -1,7 +1,6 @@
 const _ = require('lodash')
 
 const TYPES = {
-// Temp comment
   adverseMedia: [
     "adverse-media-financial-crime",
     "adverse-media-fraud",

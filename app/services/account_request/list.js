@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../../core')
 const schema = require('./schemas/filter')
 const enrichProductOptions = require('./helpers/enrich_product_options')
@@ -11,6 +12,7 @@ const sortBy = {
   createdAt: 'account_requests.created_at ASC',
   '-createdAt': 'account_requests.created_at DESC',
   status: 'account_requests.status ASC',
+  '-status': 'account_requests.status DESC'
 }
 
 function getSqlSort(sort) {

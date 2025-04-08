@@ -25,4 +25,5 @@ async function set({ userId, currentStep }, tx = app.db) {
   })
     .where('user_id', userId)
     .save(null, { method: currentStepRecord ? 'update' : 'insert', transacting: tx})
+
   return { currentStep }

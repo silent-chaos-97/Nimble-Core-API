@@ -1,0 +1,1 @@
+const ErrorClass = require('../../../app/errors/unauthorized_token')

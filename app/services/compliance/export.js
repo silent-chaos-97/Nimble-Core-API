@@ -1,3 +1,4 @@
+const PreconditionFailedError = require('../../errors/precondition_failed')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.export')
 
@@ -13,7 +14,6 @@ async function __export(searchId, institutionId) {
       format: 'pdf',
       content: query.data.toString('base64'),
       institutionId: institutionId
-    }, {
       ContentType: 'application/pdf'
     })
 

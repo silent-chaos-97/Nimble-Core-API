@@ -39,6 +39,7 @@ describe('POST /signers', async () => {
       email: 'john.mf.mcclane@wearesingular.com',
       phoneNumber: '+1718-953-8465',
       address: '1381 Atlantic Ave, Brooklyn',
+      employer: 'New York Police Dep.',
       city: 'New York',
       state: 'NY',
       zipCode: 'NY11216',

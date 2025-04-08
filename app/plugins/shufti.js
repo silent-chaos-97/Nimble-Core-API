@@ -136,6 +136,7 @@ class Shufti {
     let payload = {
       reference: signerId,
       callback_url: this.webhook,
+      // end-user country. TODO assuming it's US
       country: '',
       // what kind of proofs will be provided to Shufti Pro for verification?
       verification_mode: 'any'
