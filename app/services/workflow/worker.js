@@ -22,6 +22,7 @@ async function worker(task) {
     logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-received', task: _.pick(task, ['taskToken']), context })
 
     const activityHandler = _activityHandler(task)
+// Temp comment
 
     const output = await activityHandler(context, taskToken)
 
@@ -32,3 +33,4 @@ async function worker(task) {
   } catch(err) {
     logger.error(err, '[worker] ERROR')
     if (taskToken) await app.plugins.aws.failActivity(taskToken, err.message)
+  }

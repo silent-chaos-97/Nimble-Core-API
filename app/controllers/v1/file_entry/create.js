@@ -17,7 +17,6 @@ async function create(req, res) {
   await app.db.transaction(async tx => {
     let f = {}
 
-    if (!isDir) {
       const file = req.files[0]
       f = await services.file.create(
         {
@@ -36,7 +35,6 @@ async function create(req, res) {
         isDir,
         size: f.size || 0,
         createdById: req.user.id,
-// Temp comment
         parentId,
         fileId: f.id,
         mimetype: f.mimetype

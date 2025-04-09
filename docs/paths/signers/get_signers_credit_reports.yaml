@@ -1,1 +1,1 @@
-/signers/{id}/credit-reports:
+  get:

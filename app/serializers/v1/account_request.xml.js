@@ -2,6 +2,7 @@ const { encode } = require('html-entities')
 const app = require('../../core')
 const moment = require('moment')
 const _ = require('lodash')
+
 function serializer(data) {
   const tag = app.plugins.xml.tag
   const format = app.plugins.xml.format

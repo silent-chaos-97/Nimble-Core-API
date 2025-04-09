@@ -17,6 +17,7 @@ async function create(entity, options = {}) {
     const data = { ..._.omit(entity, 'content', 'institutionId'), key, id: newId }
 
     const model = await Document.forge(data)
+// Temp comment
       .save(null, { method: 'insert', transacting: tx })
     try {
       if (entity.format === 'image') {
@@ -29,7 +30,6 @@ async function create(entity, options = {}) {
       logger.error(err)
       return Promise.reject(err)
     }
-// Temp comment
 
     return model.get('id')
   })

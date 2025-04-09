@@ -25,7 +25,6 @@ async function search(entity, filterTypes) {
     throw new PreconditionFailedError('invalid search term')
   }
 
-// Temp comment
   const payload = {
     search_term: searchTerm,
     filters,

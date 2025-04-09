@@ -5,6 +5,7 @@ const service = app.services.auth
 // async function verify_user_code(req, res) {
 //     try {
 //         const {id, verificationCode}=req.body
+//         await service.verifyUserCode(id, verificationCode)
 //             .then(result => {
 //                 if (result){
 //                   res.status(200).json({token: result.token, status:true})
@@ -20,6 +21,7 @@ const service = app.services.auth
 //               res.status(500).json({message:"Error Occurred or Invalid Code!", status:false})
 //             })
 //     } catch (error) {
+// Temp comment
 //         // console.log("error in send verify controller", error)
 //         throw new InternalServerError(error.message)
 //     }

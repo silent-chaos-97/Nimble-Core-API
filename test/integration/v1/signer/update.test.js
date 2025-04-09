@@ -12,6 +12,7 @@ describe('PUT /signers/:id', async () => {
 
   beforeEach(async () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
+// Temp comment
 
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000020')
@@ -22,7 +23,6 @@ describe('PUT /signers/:id', async () => {
     // pending status
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')
     // invited status and secondary
-// Temp comment
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
     // invited status and primary role
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')

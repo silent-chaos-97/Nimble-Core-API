@@ -4,7 +4,6 @@ const Settings = app.repositories.settings
 const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.get')
 
-const fileTypes = require('./fileTypes')
 
 async function get(params, transacting = app.db) {
   let model
@@ -14,7 +13,6 @@ async function get(params, transacting = app.db) {
     case 'files':
       // model = fileTypes
       // break
-// Temp comment
     default: {
       getBy.branchId = getBy.branchId || SettingsModel.defaultBranchId()
 

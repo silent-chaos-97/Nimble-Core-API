@@ -98,6 +98,7 @@ const successResponse = {
               {
                 "name": "Роберт Мугабэ"
               },
+              {
                 "name": "Robert Gabriel Mugabe"
               },
               {
@@ -175,3 +176,28 @@ const successResponse = {
               {
                 "name": "Robert Magabe"
               },
+              {
+                "name": "Bob Mugabe"
+              },
+              {
+                "name": "Rompert Mougkampe"
+              },
+              {
+                "name": "rvbrt mvgbh"
+              },
+              {
+                "name": "R. G. Mugabe"
+              },
+              {
+                "name": "로버트 무가베"
+              },
+              {
+                "name": "รอเบิร์ต มูกาบี"
+              },
+              {
+                "name": "rwbrt mwGby"
+              },
+              {
+                "name": "रॉबर्ट मुगाबे"
+              },
+              {

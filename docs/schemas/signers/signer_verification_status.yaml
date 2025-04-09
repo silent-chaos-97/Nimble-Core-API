@@ -1,1 +1,2 @@
 SignerVerificationStatus:
+  type: object

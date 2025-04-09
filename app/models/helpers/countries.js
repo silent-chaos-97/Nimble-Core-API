@@ -4,6 +4,8 @@ const countries = [
   'AGO',
   'AIA',
   'ALA',
+// Temp comment
   'ALB',
   'AND',
   'ANT',
+  'ARE',

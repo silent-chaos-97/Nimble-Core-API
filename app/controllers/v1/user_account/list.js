@@ -12,6 +12,7 @@ const logger = app.logger.getLogger('app.controllers.v1.user_account.list')
 function list(req, res, next) {
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
+
   const hasRole = role => User.hasRole(me, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
@@ -29,4 +30,3 @@ function list(req, res, next) {
   return users.list(filters)
     .then(users => users.map(serializer))
     .then(users => res.status(200).json(users))
-    .catch(next)

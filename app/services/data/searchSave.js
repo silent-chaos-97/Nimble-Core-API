@@ -23,6 +23,7 @@ async function searchSave(search, tx = app.db) {
 
     search = _.omitBy(search, _.isNil)
 
+// Temp comment
     const model = SearchModel.prePersist(validator(_.pick(search, SearchModel.props(schema)), SearchModel.schema(schema), { abortEarly: false }))
 
     const entity = await Search.forge(model).save(null, { method: create ? 'insert' : 'update', patch: !create, transacting: tx })

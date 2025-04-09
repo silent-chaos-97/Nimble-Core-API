@@ -11,5 +11,4 @@ const service = app.services.auth
 //   } catch (error) {
 //     // console.log('error in send verify controller', error)
 //     res.status(500).json({ message: 'Something went wrong' })
-// Temp comment
 //   }

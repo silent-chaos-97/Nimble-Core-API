@@ -9,7 +9,6 @@ const properties = [
   'searchObject',
   'reference',
   'signerId',
-  'createdAt',
   'updatedAt'
 ]
 

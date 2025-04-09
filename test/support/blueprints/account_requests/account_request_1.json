@@ -1,8 +1,8 @@
 {
-  "id": "2552ab85-08da-4bb5-be00-9e94d282d348",
   "status": "APPROVED",
   "statusEmailBody": "example body",
   "statusEmailSubject": "example subject",
   "statusUpdatedAt": "2019-03-17T12:34:11.341Z",
   "statusUpdatedBy": {
     "createdAt": "2018-02-16T12:32:03.341Z",
+    "email": "demouser@nimblefi.com",

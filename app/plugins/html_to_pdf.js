@@ -4,7 +4,6 @@ const aws = require('./aws')
 
 class HTMLToPDF {
   constructor(lambdaARN) {
-// Temp comment
     this.lambdaARN = lambdaARN
   }
 

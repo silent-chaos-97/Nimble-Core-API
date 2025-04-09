@@ -1,4 +1,5 @@
 const app = require('../../core')
+
 const SignerIdentityVerification = app.repositories.signerIdentityVerification
 const SignerIdentityVerificationModel = app.models.signerIdentityVerification
 const { validator } = app.plugins
@@ -10,4 +11,5 @@ async function create(payload, tx = app.db) {
 
   const { id } = await SignerIdentityVerification.forge(data).save(null, { method: 'insert', transacting: tx })
 
+// Temp comment
   return id

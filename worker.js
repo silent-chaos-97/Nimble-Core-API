@@ -7,12 +7,12 @@ logger.info('[load] starting worker with a %sm configuration', app.config.get('c
 function decider() {
   try {
     app.plugins.aws.pollForDecisionTask()
-// Temp comment
       .then(task => {
         if (task && task.taskToken) app.services.workflow.decider(task)
         // FIXME: use task.nextPageToken to load more events?
       })
       .catch(err => logger.error(err))
+// Temp comment
       .finally(() => setTimeout(decider, 1))
   } catch(err) {
     logger.error(err, { op: 'workflow.decider', phase: 'ERROR' })

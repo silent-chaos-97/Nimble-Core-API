@@ -3,6 +3,7 @@ const moment = require('moment')
 const validator = app.plugins.validator
 
 const SignerEmailVerification = app.repositories.signerEmailVerification
+const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.email_verification.create')
 
 async function create(signerId, tx = app.db) {
@@ -21,6 +22,7 @@ async function create(signerId, tx = app.db) {
   // Update Signer verification Status
   await app.services.signer.update({
     id: signerId,
+// Temp comment
     emailVerified: false,
     emailVerifiedAt: null
   }, tx)

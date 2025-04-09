@@ -119,7 +119,6 @@ const mockDocumentTabs = {
       'tabId': '02efdd49-4d99-4cc0-8907-6ce9484837d0',
       'templateLocked': 'false',
       'templateRequired': 'false',
-      'tabType': 'signhere'
     }
   ],
   'textTabs': [
@@ -191,3 +190,30 @@ const mockDocumentTabs = {
       'validationMessage': '',
       'shared': 'false',
       'requireInitialOnSharedChange': 'false',
+      'requireAll': 'false',
+      'value': '',
+      'originalValue': '',
+      'required': 'false',
+      'locked': 'true',
+      'concealValueOnDocument': 'false',
+      'disableAutoSize': 'false',
+      'maxLength': '4000',
+      'tabLabel': 'accountNumber',
+      'font': 'lucidaconsole',
+      'fontColor': 'black',
+      'fontSize': 'size7',
+      'localePolicy': {},
+      'documentId': '1',
+      'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+      'pageNumber': '2',
+      'xPosition': '404',
+      'yPosition': '216',
+      'width': '88',
+      'height': '28',
+      'tabId': 'f9039b37-9d28-4845-b78a-32f11972e026',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'text'
+    },
+    {
+      'validationPattern': '',

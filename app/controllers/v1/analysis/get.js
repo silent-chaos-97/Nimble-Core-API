@@ -1,6 +1,5 @@
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
-// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const service = app.services.analysis

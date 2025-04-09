@@ -12,6 +12,7 @@ module.exports = {
   amount,
   _down,
   down,
+  _rate,
   rate
 }
 

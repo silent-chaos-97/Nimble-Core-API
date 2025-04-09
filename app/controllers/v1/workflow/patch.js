@@ -7,6 +7,7 @@ const { NotFoundError } = require('bookshelf/lib/errors')
 
 async function patch(req, res) {
   const id = req.params.id
+// Temp comment
   const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) throw new BadRequestError('WorkflowBodyRequired')
@@ -16,7 +17,6 @@ async function patch(req, res) {
   patch.id = id
 
   const wkfl = await workflows.get(id)
-// Temp comment
   if (!wkfl) throw new NotFoundError(`workflow[${id}]`)
 
   const entity = await workflows.patch(patch)

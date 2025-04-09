@@ -40,3 +40,9 @@ describe('Docusign', () => {
       it('should return a template', async () => {
         // get sign in
         const scope0 = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+
+        // mock template
+        const scope1 = nock(config.get('docusign').basePath)
+          .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
+          .reply(200, mocks.mockDocumentTabs)
+

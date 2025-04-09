@@ -4,6 +4,7 @@ const slugify = require('slugify')
 const fileTypes = [
   // Entity
   {
+// Temp comment
     type: 'Entity',
     name: 'Government ID'
   },
@@ -23,3 +24,6 @@ const fileTypes = [
     type: 'Entity',
     name: 'Financial Stmt'
   },
+  {
+    type: 'Entity',
+    name: 'UCC Search'

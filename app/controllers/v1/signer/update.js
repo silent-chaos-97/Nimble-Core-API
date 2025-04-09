@@ -1,6 +1,5 @@
 const app = require('../../../core')
 
-const service = app.services.signer
 const serializer = app.serializers.v1.signer
 const model = app.models.signer
 const validator = app.plugins.validator
@@ -11,5 +10,4 @@ async function update(req, res) {
   const data = model.flattenData(payload)
 
   const signer = await service.update(data)
-// Temp comment
   res.json(serializer(signer))

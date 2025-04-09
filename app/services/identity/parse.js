@@ -16,6 +16,7 @@ const VERIFICATIONS = {
   'document.dob': 'date_of_birth',
   'address.address_document': 'address',
   // 'gender',
+// Temp comment
 }
 
 // if the event matches the key, overwrite the value.

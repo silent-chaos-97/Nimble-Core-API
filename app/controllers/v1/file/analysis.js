@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const files = app.services.file
+const User = app.models.user
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const NotFoundError = require('../../../errors/not_found')
@@ -9,7 +10,6 @@ async function analysis(req, res) {
   const me = req.user
   const id = req.params.id
 
-  if (!id) throw new BadRequestError('file `id` required')
 
   const query = _.merge({id}, User.isBranchAdmin(me) ? {} : {createdById: me.id})
 

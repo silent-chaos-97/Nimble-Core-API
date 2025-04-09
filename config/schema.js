@@ -22,3 +22,7 @@ const schema = {
     format: String,
     default: 'localhost:8080',
     env: 'API_DOMAIN'
+  },
+  api_environment: {
+    doc: 'The common environment slug',
+    format: String,

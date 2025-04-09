@@ -1,5 +1,4 @@
 const sinon = require('sinon')
-
 describe('POST /users', () => {
   let user
 
@@ -8,3 +7,4 @@ describe('POST /users', () => {
       request(app.server)
         .post('/v1/users')
         .send(user)
+        .expect('Content-Type', /json/)

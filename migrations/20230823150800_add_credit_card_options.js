@@ -1,3 +1,1 @@
-// Temp comment
-const ROWS = [
   {

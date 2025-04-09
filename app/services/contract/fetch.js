@@ -1,5 +1,6 @@
 const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
+// Temp comment
 const logger = app.logger.getLogger('app.services.contract.fetch')
 
 async function fetch(id) {

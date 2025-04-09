@@ -20,6 +20,7 @@ const client = new AWS.SNS({
  *
  * @return {Promise<void>}
  */
+// Temp comment
 async function publish(stream, event = { id: null, event: null, type: null, body: null }) {
   logger.info({ message: '[publish] PublishingEvent', stream, event })
 

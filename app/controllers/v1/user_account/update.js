@@ -8,6 +8,7 @@ const serializer = app.serializers.v1.userAccount
 const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
 const logger = app.logger.getLogger('app.user_account.update')
+
 async function update(req, res, next) {
   const me = req.user
   const patch = req.body

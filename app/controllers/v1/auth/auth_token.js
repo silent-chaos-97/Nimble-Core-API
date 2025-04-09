@@ -9,7 +9,6 @@
 // const oneTimeTokenService = app.services.applicantOneTimeToken
 // const { mfaVerify } = app.plugins
 //
-// const Roles = UserModel.roles()
 
 // async function verifyCode(res,id){
 //   const sentSuccess = await mfaVerify.sendVerificationCode(id)

@@ -41,14 +41,12 @@ async function check(signerId, tx = app.db) {
         const existing = _.get(signer, ['checks', checker.id])
         if (existing) return Promise.resolve()
 
-// Temp comment
         const signerCheck = { signerId: signer.id, check: checker.id, status: SignerCheck.statuses().pending }
 
         try {
           await SignerCheckRepo.forge(signerCheck).save(null, { method: 'insert', transacting: tx })
           return Promise.resolve()
         } catch(err) {
-          log.error(err, { msg: 'ErrorSavingPendingSignerCheck', signerCheck })
           return Promise.resolve()
         }
       }

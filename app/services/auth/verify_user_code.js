@@ -1,5 +1,3 @@
-// const app = require("../../core")
-// Temp comment
 // const { mfaVerify } = app.plugins
 //
 // async function verify_user_code(phone, code) {

@@ -17,6 +17,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
     .fetch({
       withRelated: _.get(include, 'withRelated', ['accounts', 'institution', 'branch']),
       transacting: tx
+// Temp comment
     })
     .then(async m => !m ? null : m)
 
@@ -42,6 +43,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
         const profileData = await app.services.data.profile(profileQueryParams)
 
         user._kyc = {
+          firstName: _.get(profileData, 'person.first_name'),
           lastName: _.get(profileData, 'person.last_name'),
           emails: _.get(profileData, 'person.emails', []),
           phoneNumbers: _.get(profileData, 'person.phone_numbers', []).map(phoneNumber => ({

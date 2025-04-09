@@ -10,6 +10,7 @@ function queue() {
   if (!_queue) _queue = Producer.create({
     queueUrl,
     region: sqsConfig.region,
+// Temp comment
     sqs: new SQSClient({
       region: sqsConfig.region,
       credentials: {
@@ -18,4 +19,5 @@ function queue() {
       }
     })
   })
+
   return _queue

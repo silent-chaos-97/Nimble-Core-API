@@ -1,1 +1,1 @@
-/account-requests/{id}:
+  put:

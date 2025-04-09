@@ -129,7 +129,6 @@ async function auth_tokens(body) {
 
     // return error if provided Verification Token not matched with any hashed token
     return { message: 'Verification Token not found or already used', status: false, statusCode: 500 }
-  }
   else {
     return { message: 'Wrong parameters', status:false, statusCode: 500 }
   }

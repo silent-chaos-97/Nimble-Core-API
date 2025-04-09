@@ -1,0 +1,1 @@
+const defaultSerializer = require('../serializer')

@@ -10,7 +10,6 @@ async function __export(searchId, institutionId) {
       throw new Error('__export() Could not fetch certificate')
     }
 
-    return await app.services.document.create({
       format: 'pdf',
       content: query.data.toString('base64'),
       institutionId: institutionId
@@ -18,7 +17,6 @@ async function __export(searchId, institutionId) {
       ContentType: 'application/pdf'
     })
 
-// Temp comment
   } catch (err) {
     logger.info(err, `[__export] failed for search id [${searchId}] and institution id [${institutionId}]`)
     throw new PreconditionFailedError(err)

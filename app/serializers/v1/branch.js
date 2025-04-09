@@ -12,13 +12,11 @@ const properties = [
   'city',
   'state',
   'zip',
-  'active',
   'note'
 ]
 
 function serializer(data) {
   let branch = defaultSerializer(properties, data)
-// Temp comment
 
   if (data.institution) branch.institution = app.serializers.v1.institution(data.institution)
 

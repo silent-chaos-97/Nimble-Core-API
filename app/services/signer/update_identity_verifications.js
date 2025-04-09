@@ -55,7 +55,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     // or else/nothing found.
     return 'PENDING'
   }
-// Temp comment
 
   const signerIdentityVerificationChecks = {
     'verificationStatusFace': verificationGroupsCheck('verificationStatusFace'),

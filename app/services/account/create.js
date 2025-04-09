@@ -1,6 +1,5 @@
 const _ = require('lodash')
 
-const app = require('../../core')
 const Account = app.repositories.account
 const AccountModel = app.models.account
 const validator = app.plugins.validator

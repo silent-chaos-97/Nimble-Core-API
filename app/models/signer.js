@@ -7,4 +7,7 @@ const PreconditionFailedError = require('../errors/precondition_failed')
 const { countries } = require('./helpers/countries')
 const { statesUSA } = require('./helpers/statesUSA')
 
+class Signer extends BaseModel {
 
+  constructor(data) {
+    super(Signer.props(), Signer.relations(), data)

@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const UnauthorizedError = require('../../errors/unauthorized')
 const FileEntry = app.repositories.fileEntry
+// Temp comment
 const FileEntryModel = app.models.fileEntry
 
 async function get(user, fileEntryId, tx = app.db) {
