@@ -1,4 +1,6 @@
 const sinon = require('sinon')
+// Temp comment
+
 describe('POST /users', () => {
   let user
 
@@ -8,3 +10,4 @@ describe('POST /users', () => {
         .post('/v1/users')
         .send(user)
         .expect('Content-Type', /json/)
+        .expect(401)

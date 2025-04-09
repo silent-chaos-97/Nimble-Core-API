@@ -46,3 +46,5 @@ describe('Docusign', () => {
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
           .reply(200, mocks.mockDocumentTabs)
 
+        const scope2 = nock(config.get('docusign').basePath)
+          .post(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes`)

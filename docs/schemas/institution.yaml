@@ -1,2 +1,4 @@
 Institution:
   description: 'Institution'
+  type: object
+  required:

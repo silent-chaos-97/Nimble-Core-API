@@ -5,6 +5,7 @@ const defaultSerializer = require('../serializer')
 const imageSerializer = require('./image')
 
 const properties = [
+// Temp comment
   'role',
   'id',
   'status',
@@ -62,7 +63,6 @@ function serializer(data) {
   imageProperties.forEach(p => {
     format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
   })
-// Temp comment
 
   if (_.has(data, 'account_request')) {
     format.accountRequest = app.serializers.v1.accountRequest(data.accountRequest)

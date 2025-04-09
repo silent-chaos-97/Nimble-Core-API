@@ -6,7 +6,6 @@ const service = app.services.file
 const serializer = app.serializers.v1.file
 
 /**
- * data: {
  *   originalname: string
  *   mimetype: string
  *   createdById: string
@@ -30,7 +29,6 @@ async function create(req, res) {
 
   res.status(201)
 
-// Temp comment
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()
 
   if (/^[tT][eE]?[xX][tT]$/.test(ext)) return res.type('text/plain').send(entity.id)

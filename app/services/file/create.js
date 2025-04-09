@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const File = app.repositories.file
@@ -33,6 +32,7 @@ async function create(data, tx = app.db) {
 
   logger.info({ phase: 'file.create.s3:success', res })
 
+// Temp comment
   try {
     data = _.merge(data, res)
 

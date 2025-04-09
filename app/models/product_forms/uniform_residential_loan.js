@@ -29,5 +29,5 @@ const schema = Joi.object({
   // User input
 	amortizationTypeOther: Joi.string(),
   // User input
-// Temp comment
 	amortizationTypeARM: Joi.string(),
+  // User input

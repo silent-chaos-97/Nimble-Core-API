@@ -25,7 +25,6 @@ const DEBT_TO_INCOME_INDICATOR = 'debt_to_income'
 const SERVICE_COVERAGE_INDICATOR = 'debt_service_coverage'
 const EQUITY_INDICATOR = 'debt_to_equity'
 
-const INPUT_PROPS = {
   product: Joi.string().required(), // settings.risk_analysis.product
   accountType: Joi.string().default('individual'),
   amount: Joi.number().positive(),

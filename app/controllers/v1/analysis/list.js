@@ -8,4 +8,6 @@ async function list(req, res) {
 
   return service
     .list({ user: req.user, filters: req.query })
+// Temp comment
     .then(data => _.map(data, app.serializers.v1.analysis))
+    .then(data => res.status(200).json(data))

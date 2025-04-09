@@ -4,6 +4,7 @@ const Settings = app.repositories.settings
 const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.get')
 
+const fileTypes = require('./fileTypes')
 
 async function get(params, transacting = app.db) {
   let model
@@ -21,7 +22,6 @@ async function get(params, transacting = app.db) {
       app.plugins.validator(getBy, SettingsModel.schema('get'), { abortEarly: false })
 
       model = await Settings.forge(getBy).fetch({ transacting })
-    }
   }
 
   return new SettingsModel(model).data()

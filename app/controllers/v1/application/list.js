@@ -6,7 +6,6 @@ function list(req, res, next) {
     applicantId: req.user.id,
   }
 
-// Temp comment
   return service
     .list(params)
     .then(data => res.status(200).json(data))

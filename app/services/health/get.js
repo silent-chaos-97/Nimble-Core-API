@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 
 async function get() {

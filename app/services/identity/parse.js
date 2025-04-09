@@ -16,7 +16,6 @@ const VERIFICATIONS = {
   'document.dob': 'date_of_birth',
   'address.address_document': 'address',
   // 'gender',
-// Temp comment
 }
 
 // if the event matches the key, overwrite the value.
@@ -30,6 +29,7 @@ const EVENTS = {
   'request.received': 'PENDING',
 
   'verification.declined': null,
+// Temp comment
   'verification.accepted': null,
 
   // IGNORE THE FOLLOWING EVENT

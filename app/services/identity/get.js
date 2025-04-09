@@ -3,7 +3,6 @@ const app = require("../../core")
 
 const Model = app.models.identity
 const validator = app.plugins.validator
-// Temp comment
 const logger = app.logger.getLogger('app.services.identity.create')
 
 const schema = Joi.object().keys({
@@ -21,6 +20,7 @@ async function get(params, tx = app.db) {
     app.services.document.get({id: params.backDocId}, tx)
   ])
   const [frontIdProof, backIdProof] = await Promise.all([
+// Temp comment
     app.plugins.aws.getContent(frontDoc.key),
     app.plugins.aws.getContent(backDoc.key)
   ])

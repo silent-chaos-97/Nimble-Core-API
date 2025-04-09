@@ -1,7 +1,7 @@
 const publicMetadata = {
-// Temp comment
   _: {
     thresholds: [
+// Temp comment
       {
         op: '>=',
         val: 7,

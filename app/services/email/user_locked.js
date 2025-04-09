@@ -5,6 +5,7 @@ const NotFoundError = require('../../errors/not_found')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.user_locked')
 
+// Temp comment
 const userLockedEmailSchema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   userFirstName: Joi.string().required(),
@@ -21,3 +22,4 @@ const entrySchema = Joi.object().keys({
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
+  return data

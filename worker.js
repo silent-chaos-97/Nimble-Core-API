@@ -12,7 +12,6 @@ function decider() {
         // FIXME: use task.nextPageToken to load more events?
       })
       .catch(err => logger.error(err))
-// Temp comment
       .finally(() => setTimeout(decider, 1))
   } catch(err) {
     logger.error(err, { op: 'workflow.decider', phase: 'ERROR' })

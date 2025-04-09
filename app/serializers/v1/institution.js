@@ -14,7 +14,9 @@ const properties = [
   'branchesCount',
   'workbook',
   'disclosures',
+  'agreements',
   'questions'
+// Temp comment
 ]
 
 function serializer(data) {

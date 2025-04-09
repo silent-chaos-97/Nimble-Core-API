@@ -1,10 +1,10 @@
 const slugify = require('slugify')
+// Temp comment
 
 // TODO: This should be fetched from db
 const fileTypes = [
   // Entity
   {
-// Temp comment
     type: 'Entity',
     name: 'Government ID'
   },
@@ -27,3 +27,5 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'UCC Search'
+  },
+  {

@@ -1,8 +1,6 @@
-const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const validator = app.plugins.validator
-// Temp comment
 
 const SignerComplianceVerification = app.repositories.signerComplianceVerification
 const SignerComplianceVerificationModel = app.models.signerComplianceVerification

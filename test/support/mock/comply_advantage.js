@@ -126,7 +126,6 @@ const successResponse = {
                 "name": "Mugabe Robert"
               },
               {
-                "name": "রবার্ট মুগাবে"
               },
               {
                 "name": "Rob'rt Mugabe"
@@ -201,3 +200,14 @@ const successResponse = {
                 "name": "रॉबर्ट मुगाबे"
               },
               {
+                "name": "റോബർട്ട് മുഗാബെ"
+              }
+            ],
+            "assets": [
+              {
+                "public_url": "http://complyadvantage-asset-development.s3.amazonaws.com/13530e09-a2c0-47b9-b72c-5bd75fccb627.pdf",
+                "source": "complyadvantage",
+                "type": "pdf"
+              },
+              {
+                "public_url": "http://complyadvantage-asset-development.s3.amazonaws.com/6c632573-3648-43fd-bc43-35481481cff1.pdf",

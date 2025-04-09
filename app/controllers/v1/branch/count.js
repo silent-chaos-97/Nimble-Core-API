@@ -20,7 +20,6 @@ function count(req, res, next) {
     institutionId: isSuperAdmin ? null : me.institutionId
   })
 
-  return service
     .count(filters)
     .then(serializer)
     .then(data => res.status(200).json(data))

@@ -22,6 +22,7 @@ function interpolateString(str, state) {
   // if the whole string is a single reference without interpolation then return the resolved value
   if (SINGLE_VARIABLE_REG_EXP.test(str)) {
     return get(state, str) || str
+  }
 
   // otherwise find all the variable references and interpolate them
   const references = Array.from(str.matchAll(MULTI_VARIABLE_REG_EXP))

@@ -1,3 +1,4 @@
+// Temp comment
 const axios = require('axios')
 const nock  = require('nock')
 const config = require('../../../config')
@@ -7,7 +8,6 @@ const microblink = require('../../../app/plugins/microblink')
 const mocks = require('../../support/mock/microblink')
 
 describe('MicroblinkService', () => {
-// Temp comment
   const service = microblink
   const userData = {
     selfie: 'test/asset/sample.jpg',
@@ -21,3 +21,4 @@ describe('MicroblinkService', () => {
     documentNumber: 'S123-456-78-123-0',
   }
 
+  describe('given a valid data', () => {

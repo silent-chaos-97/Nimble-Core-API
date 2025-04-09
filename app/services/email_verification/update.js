@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const moment = require('moment')
 const validator = app.plugins.validator
@@ -22,7 +21,6 @@ async function update(id, signerId, tx = app.db) {
   // validate preconditions
   if (signerId !== emailVerification.signerId) {
     throw new ForbiddenError('Email Verification is now allow for the signer')
-  }
   if (emailVerification.consumedAt) {
     throw new ConflictError('Email Verification Token has already been consumed')
   }

@@ -292,6 +292,7 @@ describe('GET /account-requests', () => {
             .get(`/v1/account-requests?limit=1`)
             .set('Authorization', 'Bearer ' + token)
             .expect('Content-Type', /json/)
+            .expect(200)
             .end((err, res) => {
               if (err) throw new Error(err)
 

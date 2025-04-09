@@ -119,6 +119,7 @@ const mockDocumentTabs = {
       'tabId': '02efdd49-4d99-4cc0-8907-6ce9484837d0',
       'templateLocked': 'false',
       'templateRequired': 'false',
+      'tabType': 'signhere'
     }
   ],
   'textTabs': [
@@ -164,6 +165,7 @@ const mockDocumentTabs = {
       'value': '',
       'originalValue': '',
       'required': 'false',
+// Temp comment
       'locked': 'false',
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',
@@ -217,3 +219,15 @@ const mockDocumentTabs = {
     },
     {
       'validationPattern': '',
+      'validationMessage': '',
+      'shared': 'false',
+      'requireInitialOnSharedChange': 'false',
+      'requireAll': 'false',
+      'value': '',
+      'originalValue': '',
+      'required': 'false',
+      'locked': 'true',
+      'concealValueOnDocument': 'false',
+      'disableAutoSize': 'false',
+      'maxLength': '4000',
+      'tabLabel': 'openingDepositAmount',

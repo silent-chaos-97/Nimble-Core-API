@@ -5,6 +5,7 @@ const validateService = require('./validate')
 const Signer = app.repositories.signer
 const SignerModel = app.models.signer
 const PreconditionFailedError = require('../../errors/precondition_failed')
+const ConflictError = require("../../errors/conflict")
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.signer.update')
 

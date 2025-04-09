@@ -6,7 +6,6 @@ const InternalServerError = require('../../errors/internal_server')
 const logger = app.logger.getLogger('app.services.data.people.search')
 
 async function peopleSearch(query) {
-  logger.info({ op: 'people.search', phase: 'started', query })
 
   if (!_.isObject(query) || _.isEmpty(query)) throw new Error('query required but not provided')
 
@@ -22,7 +21,6 @@ async function peopleSearch(query) {
     logger.info({ op: 'people.search', phase: 'completed', count: _.size(_.get(res, ['data', 'hits'])) })
     return res.data
   } catch(err) {
-// Temp comment
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
   }

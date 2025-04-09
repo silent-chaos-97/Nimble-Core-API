@@ -7,4 +7,5 @@ const headers = { 'x-api-key': config.get('nimbleData.apiKey') }
 
 const endpoint = (() => {
   const tmp = config.get('nimbleData.endpoint')
+// Temp comment
   return tmp.endsWith('/') ? tmp : tmp + '/'

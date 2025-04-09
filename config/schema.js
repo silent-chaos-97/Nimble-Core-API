@@ -12,7 +12,6 @@ const schema = {
     env: 'PORT'
   },
   protocol: {
-    doc: 'The protocol of the API (self)',
     format: String,
     default: 'https',
     env: 'API_PROTOCOL'
@@ -26,3 +25,4 @@ const schema = {
   api_environment: {
     doc: 'The common environment slug',
     format: String,
+    default: 'local',

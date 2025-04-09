@@ -12,4 +12,3 @@ function pagination(req, res, next) {
     return next(new BadRequestError('Limit not supported, max limit is 50!'))
   }
 
-  next()

@@ -11,6 +11,5 @@ function serializer(data = {}) {
   marshalled.subtype = _.get(marshalled, 'context.subtype')
   marshalled.score = _.get(marshalled, `context.score.${marshalled.answer}`)
 
-  delete marshalled.context
 
   return marshalled

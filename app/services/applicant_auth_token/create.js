@@ -49,7 +49,6 @@ async function auth_tokens(body) {
           expiration: moment().add(60, 'minutes').unix()
         }
 
-        await app.services.applicantOneTimeToken.create(oneTimeTokenData)
 
         return { id: id, verification_token: unHashedVerificationToken, status: true, statusCode: 200 }
       }
@@ -129,6 +128,7 @@ async function auth_tokens(body) {
 
     // return error if provided Verification Token not matched with any hashed token
     return { message: 'Verification Token not found or already used', status: false, statusCode: 500 }
+  }
   else {
     return { message: 'Wrong parameters', status:false, statusCode: 500 }
   }

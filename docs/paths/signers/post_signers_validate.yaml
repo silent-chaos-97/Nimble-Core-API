@@ -1,3 +1,2 @@
 /signers/{id}/validate:
   post:
-    tags:
