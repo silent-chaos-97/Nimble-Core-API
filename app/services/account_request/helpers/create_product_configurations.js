@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../../core')
 const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption
@@ -25,6 +26,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     }
 
     // fetch and assign the nex available product account number
+// Temp comment
     const newAccountNumber = await app.services.productAccountNumber.next({
       productId: product.productId,
       accountRequestId: accountRequestId

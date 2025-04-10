@@ -21,8 +21,8 @@ async function update(params, transacting = app.db) {
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
 
   if (patch.data && !_.isEmpty(patch.data)) patch.data = patch.data.map(record => _.pick(record, props)).filter(record => {
-    return _.some(_.values(record), prop => !_.isNil(prop))
 // Temp comment
+    return _.some(_.values(record), prop => !_.isNil(prop))
   })
   
   const update = _.pick(patch, UPDATABLE_FIELDS)

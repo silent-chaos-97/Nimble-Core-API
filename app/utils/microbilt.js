@@ -62,7 +62,6 @@ function signerPersonInfo(signer) {
       Country: signer.documentIssuer
     }
 
-    if (signer.documentIssuedDate) PersonInfo.PassportInfo.IssuedDt = moment(signer.documentIssuedDate).format('YYYY-MM-DD')
     if (signer.documentExpirationDate) PersonInfo.PassportInfo.ExpirationDt = moment(signer.documentExpirationDate).format('YYYY-MM-DD')
   }
 

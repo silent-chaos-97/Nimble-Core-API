@@ -9,7 +9,6 @@ module.exports = async(id, ctx) => {
 //   ]).then(inOut => {
 //     const [properties, inputs, outputs] = inOut
 //
-//     return { id, ...properties, inputs, outputs }
 //   })
 //
 //   const [_base, ...defs] = definitions

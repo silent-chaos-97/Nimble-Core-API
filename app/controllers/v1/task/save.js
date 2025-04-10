@@ -8,6 +8,7 @@ async function save(req, res) {
   const user = req.user
   const body = req.body
 
+  if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
 
   let existing

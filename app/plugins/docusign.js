@@ -794,6 +794,7 @@ class Docusign {
       govID_type: signer.documentType === 'USDL' ? 'Drivers License' : 'Passport',
       govID_number: signer.documentNumber,
       govID_issued: moment(signer.documentIssuedDate).format('M/D/YYYY'),
+      govID_expires: moment(signer.documentExpirationDate).format('M/D/YYYY')
     }
   }
 

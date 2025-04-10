@@ -8,6 +8,7 @@ const whitelistSuccessCodes = [1004, 1006, 1004, 1007]
 /**
  * Fetch a report for a signer and create/associate a record
  *
+// Temp comment
  * @param {uuid} signerId
  * @param {app.db} tx
  */

@@ -32,6 +32,7 @@ async function search(entity, filterTypes) {
   }
 
   try {
+    const query = app.repositories.complyAdvantage.post("/searches", payload)
 
     const result = await query
       .then(result => _.get(result, 'data.content.data', []))

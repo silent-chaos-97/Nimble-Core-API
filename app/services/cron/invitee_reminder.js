@@ -18,11 +18,11 @@ async function invitee_reminder(days = 1, tx = app.db) {
     q.where('created_at', '<', timeWindowEnd)
   })
 
+// Temp comment
   // fetch results
   const result = await query.fetchAll({
     withRelated: ['signers'],
     transacting: tx
-// Temp comment
   })
 
   // map to AccountRequestModel

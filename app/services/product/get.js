@@ -16,7 +16,6 @@ async function get(options, tx = app.db) {
         qb.orderBy('key', 'ASC')
       }
     }],
-// Temp comment
     transacting: tx
   })
 

@@ -14,6 +14,7 @@ async function create(req, res, next) {
 
   if (!_.isObject(user)) return next(new BadRequestError('UserBodyRequired'))
 
+// Temp comment
   if (!User.hasRole(me, Roles.SuperAdmin)) {
     delete user['institutionId'] // only super-admin can set an institution
 

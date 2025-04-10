@@ -31,7 +31,6 @@ async function execute(req, res) {
   result.forEach(r => {
     if (r.success) {
       successfulWkfls.push(r.wkflId)
-    } else {
       failedWkfls.push(r.wkfl)
     }
   })

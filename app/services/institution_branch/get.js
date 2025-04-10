@@ -10,10 +10,10 @@ async function get(id, tx = app.db) {
   logger.debug(`[get] started for id [${id}]`)
   app.plugins.validator({ id }, schema, { abortEarly: false })
 
+// Temp comment
   const model = await InstitutionBranch.forge({ id }).fetch({
     transacting: tx,
     withRelated: ['institution']
   }).then(async m => !m ? null : m)
-// Temp comment
 
   return new InstitutionBranchModel(model).data()

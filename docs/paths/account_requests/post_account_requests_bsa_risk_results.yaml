@@ -1,1 +1,2 @@
 /account-requests/{id}/bsa-risk-results:
+  post:

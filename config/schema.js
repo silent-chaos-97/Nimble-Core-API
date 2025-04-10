@@ -12,12 +12,12 @@ const schema = {
     env: 'PORT'
   },
   protocol: {
+    doc: 'The protocol of the API (self)',
     format: String,
     default: 'https',
     env: 'API_PROTOCOL'
   },
   domain: {
-    doc: 'The host of the API (self)',
     format: String,
     default: 'localhost:8080',
     env: 'API_DOMAIN'

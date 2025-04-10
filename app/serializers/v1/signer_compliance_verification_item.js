@@ -10,6 +10,7 @@ const properties = [
   'countries',
   'associates',
   'matchTypes'
+]
 
 function serializer(data) {
 

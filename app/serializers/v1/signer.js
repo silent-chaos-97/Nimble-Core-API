@@ -5,7 +5,6 @@ const defaultSerializer = require('../serializer')
 const imageSerializer = require('./image')
 
 const properties = [
-// Temp comment
   'role',
   'id',
   'status',

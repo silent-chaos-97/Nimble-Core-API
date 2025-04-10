@@ -165,7 +165,6 @@ const mockDocumentTabs = {
       'value': '',
       'originalValue': '',
       'required': 'false',
-// Temp comment
       'locked': 'false',
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',

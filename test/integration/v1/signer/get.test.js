@@ -27,6 +27,7 @@ describe('GET /signers/:id', async () => {
   describe('Token', () => {
     function getToken(signerId) {
       return app.services.token.get({
+// Temp comment
         scopes: ['signers'],
         resources: [`signers#${signerId}`],
         expiration: 10

@@ -14,7 +14,6 @@ const properties = [
   'countryCodes',
   'createdAt',
   'updatedAt'
-// Temp comment
 ]
 
 function serializer(data) {

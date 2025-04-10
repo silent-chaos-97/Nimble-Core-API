@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const User = app.repositories.user
 
 async function count(filters = {}, tx = app.db) {
@@ -14,6 +13,5 @@ async function count(filters = {}, tx = app.db) {
         .orWhere('users.email', 'ILIKE', `${term}%`)
       )
     })
-  }).count({ transacting: tx })
 
   return { count }

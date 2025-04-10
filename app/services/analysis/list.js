@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const Analysis = app.repositories.analysis
@@ -15,7 +14,6 @@ async function list(args, tx = app.db) {
     if (!User.isInstitutionAdmin(user)) sql.where('owner_id', user.id)
 
     sql.where('institution_id', user.institutionId)
-    sql.where('status', filters.status ? '=' : '!=', filters.status || AnalysisModel.statuses().deleted)
 
     sql.orderBy(_.get(args, 'orderBy.column', 'updated_at'), _.get(args, 'orderBy.direction', 'DESC'))
   })

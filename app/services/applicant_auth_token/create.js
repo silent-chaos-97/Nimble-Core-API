@@ -49,6 +49,7 @@ async function auth_tokens(body) {
           expiration: moment().add(60, 'minutes').unix()
         }
 
+        await app.services.applicantOneTimeToken.create(oneTimeTokenData)
 
         return { id: id, verification_token: unHashedVerificationToken, status: true, statusCode: 200 }
       }

@@ -9,7 +9,6 @@ const properties = [
   'report',
   'signerId',
   'createdAt',
-  'updatedAt'
 ]
 
 function serializer(data) {

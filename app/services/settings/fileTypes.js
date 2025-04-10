@@ -1,5 +1,4 @@
 const slugify = require('slugify')
-// Temp comment
 
 // TODO: This should be fetched from db
 const fileTypes = [
@@ -20,7 +19,6 @@ const fileTypes = [
     type: 'Entity',
     name: 'Tax Return'
   },
-  {
     type: 'Entity',
     name: 'Financial Stmt'
   },

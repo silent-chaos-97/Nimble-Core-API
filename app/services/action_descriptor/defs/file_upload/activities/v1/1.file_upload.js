@@ -5,6 +5,7 @@ const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
 
 const log = app.logger.getLogger('action.file_upload.1')
+
 const version = 1
 
 async function activity(context) {
@@ -22,6 +23,7 @@ async function activity(context) {
     const [a, b] = fileTypeId.split('!')
     fileType = await app.services.settings.getRecord(
       {
+// Temp comment
         key: 'files',
         institutionId: _.get(context, 'WKFL.institutionId')
       },

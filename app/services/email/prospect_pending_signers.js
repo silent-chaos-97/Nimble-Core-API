@@ -6,10 +6,8 @@ const logger = app.logger.getLogger('app.services.email.prospect_pending_signers
 
 const prospectPendingSignersSchema = Joi.object().keys({
   prospectFirstName: Joi.string().required(),
-  email: Joi.string().email({ tlds: { allow: false } }).required(),
   statusEmailSubject: Joi.string().required(),
   accountType: Joi.string().required(),
-// Temp comment
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
 })

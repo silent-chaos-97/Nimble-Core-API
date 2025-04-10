@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
@@ -15,7 +14,6 @@ async function peopleSchema() {
   logger.info({ op: 'people.schema', phase: 'prepared', request: { endpoint, apiUrl, headers } })
 
   try {
-// Temp comment
     const res = await axios.get(apiUrl, { headers })
     logger.info({ op: 'people.schema', phase: 'completed' })
     return _.get(res, ['data', 'components', 'schemas', 'Person'])

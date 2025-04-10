@@ -1,4 +1,3 @@
-const publicMetadata = {
   _: {
     thresholds: [
       {

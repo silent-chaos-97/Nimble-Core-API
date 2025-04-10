@@ -1,1 +1,1 @@
-  let token
+describe('GET /institution/:domain', () => {

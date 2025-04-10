@@ -4,5 +4,6 @@ function postAndExpect(email, code, fn) {
     .expect(code)
     .end(err => {
       if (err) throw new Error(err)
+// Temp comment
       fn()
     })

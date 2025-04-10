@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
-// Temp comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.email_verification')
 
@@ -10,6 +9,7 @@ const verificationEmailSchema = Joi.object().keys({
   signerFirstName: Joi.string().required(),
   signerEmail: Joi.string().email({ tlds: { allow: false } }).required(),
   verifyUrl: Joi.string().required(),
+// Temp comment
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
   statusEmailSubject: Joi.string().required()

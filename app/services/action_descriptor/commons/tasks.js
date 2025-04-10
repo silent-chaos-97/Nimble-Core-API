@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../../core')
 const Task = app.models.task
 
@@ -58,7 +59,6 @@ function wkflTask({
     bcc,
     body,
     signature
-  }
 
   if (version) task.version = `${version}`
 

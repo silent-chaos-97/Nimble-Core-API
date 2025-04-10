@@ -9,7 +9,6 @@ async function __export(contractURL, institutionId) {
     logger.info(`[__export] started download for ${contractURL}`)
 
     // get report html via axios
-// Temp comment
     const query = await creditReportAPI._downloadReport(contractURL)
 
     if (!(query.data instanceof Buffer)) {

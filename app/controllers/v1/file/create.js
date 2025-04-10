@@ -6,6 +6,7 @@ const service = app.services.file
 const serializer = app.serializers.v1.file
 
 /**
+ * data: {
  *   originalname: string
  *   mimetype: string
  *   createdById: string
@@ -23,6 +24,7 @@ async function create(req, res) {
   const entity = await service.create({
     ...file,
     name: file.name || file.originalname || file.filename || '',
+// Temp comment
     createdById: req.user.id,
     createdByRole: User.isApplicant(req.user) ? 'applicant' : 'employee'
   })
