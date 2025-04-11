@@ -50,7 +50,6 @@ function wkflTask({
     activityToken,
     status: status || assignee ? Task.statuses().assigned : Task.statuses().created,
     title,
-    description,
     type,
     expiresAt,
     meta,
@@ -59,6 +58,7 @@ function wkflTask({
     bcc,
     body,
     signature
+  }
 
   if (version) task.version = `${version}`
 

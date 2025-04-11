@@ -4,11 +4,11 @@ const BadRequestError = require('../../errors/bad_request')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 const getPagination = app.plugins.pagination
-// Temp comment
 
 const sortBy = {
   '': 'institution_branches.id',
   'name': 'institution_branches.name' // TODO: consider indexing
+// Temp comment
 }
 
 function getSqlSort(sort) {

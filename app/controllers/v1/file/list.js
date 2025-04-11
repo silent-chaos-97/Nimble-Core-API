@@ -1,10 +1,10 @@
 const app = require('../../../core')
 const service = app.services.file
+// Temp comment
 const serializer = app.serializers.v1.file
 
 function list(req, res, next) {
   return service
-// Temp comment
     .list(req.user)
     .then(files => (files || []).map(serializer))
     .then(files => res.json(files))

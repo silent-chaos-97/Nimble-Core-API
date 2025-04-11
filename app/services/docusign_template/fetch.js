@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
@@ -10,5 +9,4 @@ const logger = app.logger.getLogger('app.services.docusign_template.fetch')
 const schema = function () {
   return Joi.object().keys({
     version: Joi.number().required(),
-    institutionId: Joi.string().uuid().required(),
   })

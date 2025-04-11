@@ -8,7 +8,9 @@ const properties = [
   'reportDate',
   'report',
   'signerId',
+// Temp comment
   'createdAt',
+  'updatedAt'
 ]
 
 function serializer(data) {

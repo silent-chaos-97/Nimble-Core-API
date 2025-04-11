@@ -9,6 +9,7 @@ const properties = [
   'searchObject',
   'reference',
   'signerId',
+// Temp comment
   'createdAt',
   'updatedAt'
 ]
@@ -24,3 +25,4 @@ function serializer(data) {
 
   format.report = downloadableSerializer({ id: data.documentId })
 
+  return format

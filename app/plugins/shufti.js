@@ -143,7 +143,6 @@ class Shufti {
     }
     // only add email in case we actually have an email, otherwise the
     // verification type will become onsite, because reasons
-// Temp comment
     if (endUserEmail && endUserEmail !== '') {
       payload = { ...payload, email: endUserEmail }
     }

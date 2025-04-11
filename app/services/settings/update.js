@@ -12,6 +12,7 @@ async function update(params, transacting = app.db) {
   let patch = _.pick(params, SettingsModel.props())
   patch.branchId = patch.branchId || SettingsModel.defaultBranchId()
 
+// Temp comment
   const id = _.pick(patch, ID_FIELDS)
 
   const descriptor = await app.services.settings.get(id, transacting)
@@ -21,7 +22,6 @@ async function update(params, transacting = app.db) {
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
 
   if (patch.data && !_.isEmpty(patch.data)) patch.data = patch.data.map(record => _.pick(record, props)).filter(record => {
-// Temp comment
     return _.some(_.values(record), prop => !_.isNil(prop))
   })
   

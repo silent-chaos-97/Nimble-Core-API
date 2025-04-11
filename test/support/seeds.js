@@ -9,6 +9,7 @@ const knex = Bookshelf.knex
 const seedsDirectory = `${__dirname}/data`
 
 function insert(table, data, pk = 'id') {
+  return knex(table)
     .returning(pk)
     .insert(data)
     .then(ids => _.first(ids))

@@ -3,5 +3,4 @@ const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
 
 describe('app.services.token.get', () => {
-  let options, clock
 

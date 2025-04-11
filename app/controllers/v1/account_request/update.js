@@ -1,7 +1,6 @@
 const app = require('../../../core')
 const _ = require('lodash')
 const service = app.services.accountRequest
-// Temp comment
 const serializer = app.serializers.v1.accountRequest
 const model = app.models.accountRequest
 const validator = app.plugins.validator
@@ -16,4 +15,5 @@ function update(req, res, next) {
     .update(payload, userId)
     .then(data => serializer(data))
     .then(data => res.json(data))
+// Temp comment
     .catch(next)

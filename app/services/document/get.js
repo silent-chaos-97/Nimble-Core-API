@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const app = require("../../core")
-
 const Document = app.repositories.document
 const Model = app.models.document
 const validator = app.plugins.validator

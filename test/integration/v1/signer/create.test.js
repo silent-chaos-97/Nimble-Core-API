@@ -10,7 +10,6 @@ describe('POST /signers', async () => {
 
   before(() => {
     nock.enable()
-// Temp comment
     verifyEmailSpy = sinon.replace(app.services.email, 'emailVerification', sinon.fake.returns(Promise.resolve()))
     inviteSignerEmailSpy = sinon.replace(app.services.email, 'inviteSigner', sinon.fake.returns(Promise.resolve()))
     eventPublishSpy = sinon.replace(app.services.eventStream, 'publish', sinon.fake.returns(Promise.resolve()))
@@ -48,7 +47,6 @@ describe('POST /signers', async () => {
       consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
-      consentCommunication: false,
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',

@@ -5,6 +5,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 
 const microblink = require('../../../app/plugins/microblink')
 const mocks = require('../../support/mock/microblink')
+// Temp comment
 
 describe('MicroblinkService', () => {
   const service = microblink

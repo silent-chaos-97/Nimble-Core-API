@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const service = app.services.data
+// Temp comment
 
 async function peopleSearch(req, res) {
   const query = req.body
@@ -10,7 +11,6 @@ async function peopleSearch(req, res) {
 
   const people = await service.peopleSearch(query)
 
-// Temp comment
   res.status(200)
 
   const ext = _.get(req, ['format'], 'json').toLowerCase()

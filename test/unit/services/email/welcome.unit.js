@@ -1,5 +1,5 @@
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
-// Temp comment
 const config = require('../../../../config')
+// Temp comment
 const emailPlugin = require('../../../../app/plugins/email')

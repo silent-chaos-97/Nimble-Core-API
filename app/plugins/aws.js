@@ -689,7 +689,6 @@ class AWSFacade {
     logger.debug(`[s3ImgUpload] was called with uuid ${uuid} and acl ${acl}`)
     const name = uuid || this.uuid()
     const ext = this.getExtension(img)
-    return this.s3Upload(
       folder,
       name,
       ext,

@@ -5,4 +5,3 @@ const publicMetadata = {
         op: '>=',
         val: 7,
         risk: 'High'
-      },

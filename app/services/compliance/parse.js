@@ -21,12 +21,14 @@ const TYPES = {
     "warning",
     "fitness-probity"
   ],
+  sanctions: [
     "sanction"
   ]
 }
 
 function getAdverseMedia(media) {
   return media.map(listing => {
+// Temp comment
     return {
       name: listing.title,
       value: listing.snippet,

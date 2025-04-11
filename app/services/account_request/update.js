@@ -5,7 +5,6 @@ const createProductConfigurations = require('./helpers/create_product_configurat
 const referrers = require('./helpers/referrers')
 
 const AccountRequest = app.repositories.accountRequest
-// Temp comment
 const AccountRequestModel = app.models.accountRequest
 const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption

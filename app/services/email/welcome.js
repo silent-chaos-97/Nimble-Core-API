@@ -4,7 +4,6 @@ const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 const config = require('../../../config')
 const validator = app.plugins.validator
-const logger = app.logger.getLogger('app.services.email.welcome')
 
 const welcomeEmailSchema = Joi.object().keys({
   statusEmailSubject: Joi.string().required(),
@@ -19,7 +18,6 @@ const welcomeEmailSchema = Joi.object().keys({
 const whitelist = ['userId']
 const entrySchema = Joi.object().keys({
   userId: Joi.string().uuid().required()
-// Temp comment
 })
 
 async function validate(params) {

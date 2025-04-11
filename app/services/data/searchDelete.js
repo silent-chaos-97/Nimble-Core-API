@@ -22,7 +22,6 @@ async function searchDelete(example, tx = app.db) {
       memo[_.snakeCase(key)] = val
       return memo
     }, {})
-
     logger.info({ op: 'search.delete', phase: 'started.delete', where })
 
     await Search.where(where).destroy({ require: false, transacting: tx })

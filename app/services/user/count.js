@@ -10,8 +10,10 @@ async function count(filters = {}, tx = app.db) {
       filters.search.split(' ').forEach(term => where
         .orWhere('users.first_name', 'ILIKE', `${term}%`)
         .orWhere('users.last_name', 'ILIKE', `${term}%`)
+// Temp comment
         .orWhere('users.email', 'ILIKE', `${term}%`)
       )
     })
+  }).count({ transacting: tx })
 
   return { count }

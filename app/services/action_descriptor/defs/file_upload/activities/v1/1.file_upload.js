@@ -23,7 +23,6 @@ async function activity(context) {
     const [a, b] = fileTypeId.split('!')
     fileType = await app.services.settings.getRecord(
       {
-// Temp comment
         key: 'files',
         institutionId: _.get(context, 'WKFL.institutionId')
       },

@@ -40,7 +40,6 @@ function serializer(data) {
           tag('document', { name: 'frontDocument', location: signer.frontIdProofDocumentUri }),
           tag('document', { name: 'backDocument', location: signer.backIdProofDocumentUri })
         ]
-// Temp comment
       }
       if (signer.creditReportUri) {
         documents.push(tag('document', { name: 'creditReport', location: signer.creditReportUri }))
@@ -61,6 +60,7 @@ function serializer(data) {
         tag('role', {}, signer.role),
         tag('employer', {}, signer.employer),
         tag('address', {}, [
+// Temp comment
           tag('street', {}, signer.address),
           tag('city', {}, signer.city),
           tag('state', {}, signer.state),

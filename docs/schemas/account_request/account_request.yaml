@@ -1,5 +1,4 @@
 AccountRequest:
   type: object
   properties:
-    id:
       type: string

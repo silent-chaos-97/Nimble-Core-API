@@ -10,7 +10,6 @@ const logger = app.logger.getLogger('app.controllers.v1.user_account.get')
 
 function get(req, res, next) {
   const user = req.user
-  if (!user) return next(new UnauthorizedError('UserRequired'))
 
   const id = req.params.id
   if (!id) return next(new UnauthorizedError('IdRequired'))

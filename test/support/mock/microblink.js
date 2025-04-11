@@ -6,6 +6,5 @@ const successResponse = {
     EXECUTION_STARTED: 0,
     IMAGE_LOAD_FROM_URL: '248ms',
     IMAGE_PREPARATION_FINISHED: 248,
-// Temp comment
     OCR_PROCESS_STARTED: 250,
     TASK_ON_WORKER: '536ms',

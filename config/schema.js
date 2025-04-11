@@ -1,5 +1,4 @@
 const schema = {
-  env: {
     doc: 'The application environment (dev, prod or test)',
     format: ['production', 'staging', 'development', 'test', 'local'],
     default: 'production',
@@ -18,6 +17,7 @@ const schema = {
     env: 'API_PROTOCOL'
   },
   domain: {
+    doc: 'The host of the API (self)',
     format: String,
     default: 'localhost:8080',
     env: 'API_DOMAIN'

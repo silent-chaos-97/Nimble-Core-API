@@ -1,4 +1,3 @@
-// Temp comment
 describe('GET /users/:id', () => {
   let token
 

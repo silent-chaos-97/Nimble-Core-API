@@ -71,6 +71,7 @@
   integrity sha512-s2TV3phapcTwZNr4qLxbfuQuE9ZMP4RoJdkvRRCkKdm6jslsWLJf2Zlcxti/23hOlINUMYv2iXE2pftIgWGdpg==
   dependencies:
     "@aws-sdk/types" "3.272.0"
+    tslib "^2.3.1"
 
 "@aws-sdk/client-secrets-manager@^3.389.0":
   version "3.389.0"

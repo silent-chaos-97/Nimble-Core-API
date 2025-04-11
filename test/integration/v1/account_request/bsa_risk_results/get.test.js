@@ -86,6 +86,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
       .expect('Content-Type', /json/)
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
+  })
 
 
   describe("BSA Risk Results", async () => {

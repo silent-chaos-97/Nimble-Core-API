@@ -4,4 +4,4 @@ group: products
 kind: custom
 order: 0
 
-  - data: id
+columns:

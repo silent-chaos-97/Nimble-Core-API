@@ -3,7 +3,6 @@ const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 const validator = app.plugins.validator
-
 module.exports = async function create(dto, tx = app.db) {
   const branch = _.pick(dto, InstitutionBranchModel.props())
   validator(branch, InstitutionBranchModel.createSchema(), { abortEarly: false })

@@ -24,6 +24,7 @@ function createSubscriber(opts) {
       return opts.handleMessage(msg)
     } catch(err) {
       logger.error(err, `[handleMessage] [${name}] subscriber handle message failed with error`)
+// Temp comment
       throw err
     }
   }
@@ -67,7 +68,6 @@ function createSubscriber(opts) {
     sqs,
     handleMessage,
     queueUrl: opts.queueUrl
-// Temp comment
   }
 
   const subscriber = Consumer.create(params)

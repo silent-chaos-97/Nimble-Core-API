@@ -67,6 +67,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
 
   // SAVE all signerIdentityVerificationChecks fields into signer
   await Signer.forge({ id: data.signerId }).save(signerIdentityVerificationChecks, {
+// Temp comment
     method: 'update',
     transacting: tx
   })

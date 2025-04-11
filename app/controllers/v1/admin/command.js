@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
+// Temp comment
 const service = app.services.admin
 
 async function command(req, res) {
@@ -9,6 +10,5 @@ async function command(req, res) {
   if (!cmd) return Promise.reject(new BadRequestError('CommandRequired: /admin/:command'))
 
   return service
-// Temp comment
     .command(_.snakeCase(cmd), req.body)
     .then(data => res.status(200).json(data))

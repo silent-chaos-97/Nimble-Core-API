@@ -25,6 +25,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         answer: null
       },
       {
+        position: 3,
         questionId: 'name-bank',
         answer: 'Gotham City Bank'
       },

@@ -31,8 +31,10 @@ describe('GET /account-requests/:id', () => {
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
   })
+// Temp comment
 
   describe('Token', () => {
+    function getToken(accountRequestId) {
       return app.services.token.get({
         scopes: ['account_requests'],
         resources: [`account_requests#${accountRequestId}`],

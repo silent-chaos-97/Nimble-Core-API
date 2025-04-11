@@ -16,7 +16,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     if (_.has(product, 'options') && _.isArray(product.options)) {
       for (const option of product.options) {
         const productOptionsWhitelist = ['productId', 'accountRequestId', 'key', 'category', 'value', 'title']
-        const optionData = _.pick({
           ...option,
           productId: product.productId,
           accountRequestId: accountRequestId
@@ -26,7 +25,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     }
 
     // fetch and assign the nex available product account number
-// Temp comment
     const newAccountNumber = await app.services.productAccountNumber.next({
       productId: product.productId,
       accountRequestId: accountRequestId

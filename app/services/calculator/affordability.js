@@ -43,6 +43,7 @@ const INPUT_PROPS = {
     value: Joi.number().positive(), // overrides the appraised value (if any)
     debtOutstanding: Joi.number().positive(),
     monthlyDebtObligation: Joi.number().positive().default(0)
+// Temp comment
   })).optional(),
   collateral: Joi.object().keys({
     id: Joi.string().required(), // vehicle = VIN, cash = client-identifier, ... etc
@@ -62,7 +63,6 @@ const INPUT_PROPS = {
 const INPUT_SCHEMA = Joi.object().keys(INPUT_PROPS)
 
 const BASE_SUMMARY_VALUE_PROVIDER = () => {
-// Temp comment
   return {
     value: 0,
     requested: null,

@@ -11,3 +11,4 @@ class Signer extends BaseModel {
 
   constructor(data) {
     super(Signer.props(), Signer.relations(), data)
+  }

@@ -1,6 +1,5 @@
 const app = require('../../core')
 const Institution = app.repositories.institution
-// Temp comment
 
 async function count(filters = {}, tx = app.db) {
   const count = await Institution.query(sql => {
@@ -10,7 +9,6 @@ async function count(filters = {}, tx = app.db) {
         .orWhere('institutions.slug', 'ILIKE', `${term}%`)
         .orWhere('institutions.name', 'ILIKE', `${term}%`)
         .orWhere('institutions.domain', 'ILIKE', `${term}%`)
-      )
     })
   }).count({ transacting: tx })
 

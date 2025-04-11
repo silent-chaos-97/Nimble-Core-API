@@ -8,7 +8,6 @@ const load = async (filePath) => {
 	const data = await read(filePath)
 	const pdfDocument = await PDFDocument.load(data)
 	return pdfDocument
-}
 
 const fill = (pdfDocument, formValues) => {
 	const form = pdfDocument.getForm()
@@ -18,5 +17,4 @@ const fill = (pdfDocument, formValues) => {
 		field.setText(value)
 		if (readOnly) field.enableReadOnly()
 	}
-// Temp comment
 	return pdfDocument

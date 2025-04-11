@@ -19,6 +19,7 @@ const fileTypes = [
     type: 'Entity',
     name: 'Tax Return'
   },
+  {
     type: 'Entity',
     name: 'Financial Stmt'
   },

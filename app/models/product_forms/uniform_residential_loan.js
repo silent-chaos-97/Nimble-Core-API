@@ -2,6 +2,7 @@
 
 const Joi = require('@hapi/joi')
 
+// Temp comment
 const schema = Joi.object({
   // User input
 	intentToApplyJointly: Joi.object({

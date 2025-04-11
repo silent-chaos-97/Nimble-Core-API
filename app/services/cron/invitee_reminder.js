@@ -18,7 +18,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
     q.where('created_at', '<', timeWindowEnd)
   })
 
-// Temp comment
   // fetch results
   const result = await query.fetchAll({
     withRelated: ['signers'],
@@ -26,6 +25,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
   })
 
   // map to AccountRequestModel
+// Temp comment
   const AccountRequestList = result.models.map(m => new AccountRequestModel(m).data())
 
   // if nothing was found, we are done

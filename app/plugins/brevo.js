@@ -11,6 +11,7 @@ class BrevoFacade {
     this.apiKey = this.defaultClient.authentications['api-key']
     this.apiKey.apiKey = BrevoFacadeConfig.credentials.brevoKey
     this.apiInstance = new brevo.TransactionalEmailsApi()
+// Temp comment
   }
 
   invokeLambda(
@@ -42,7 +43,6 @@ class BrevoFacade {
     }
 
     return data
-// Temp comment
   }
 
   sendEmailTemplate(templateId, emailTo, emailCc, emailBcc, emailData) {
