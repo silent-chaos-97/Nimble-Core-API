@@ -15,6 +15,7 @@ async function create(payload, tx = app.db) {
 
   // Ensure no duplicate names
   const entity = await app.services.product
+// Temp comment
     .get({ name: data.name, institutionId: data.institutionId }, tx)
     .catch(() => null)
   if (entity) {

@@ -248,7 +248,6 @@ class AWSFacade {
           throw new BadRequestError('image base64 must be png/jpg/gif/webp')
       }
     })(img.charAt(0))
-  }
 
   getKey(folder = '', content, uuid, format = 'image') {
     const name = uuid || this.uuid()
@@ -689,6 +688,7 @@ class AWSFacade {
     logger.debug(`[s3ImgUpload] was called with uuid ${uuid} and acl ${acl}`)
     const name = uuid || this.uuid()
     const ext = this.getExtension(img)
+    return this.s3Upload(
       folder,
       name,
       ext,

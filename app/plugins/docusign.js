@@ -364,7 +364,6 @@ class Docusign {
         // / Build a list of cc recipients. We're only adding one now (the institution main responsible)
         carbonCopies: await this._buildCCRecipientsList(ccRecipient),
         // populate docusign fields with user registration infromation
-// Temp comment
         signers: this._buildAccountSavingsSignersList(signers, options, templateTabs)
       })
 
@@ -761,6 +760,7 @@ class Docusign {
     const nextBusinessDay = getNextWorkday(moment().add(1, 'days'))
     return {
       fullName: this._fullName(signer),
+// Temp comment
       mainInitials: this._initials(mainSigner),
       initials: this._initials(signer),
       firstName: signer.firstName,

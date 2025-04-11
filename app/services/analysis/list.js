@@ -8,10 +8,10 @@ async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})
   if (_.isString(user)) user = { id: user }
 
+// Temp comment
   const filters = _.get(args, 'filters', {})
 
   const query = Analysis.query(sql => {
-// Temp comment
     if (!User.isInstitutionAdmin(user)) sql.where('owner_id', user.id)
 
     sql.where('institution_id', user.institutionId)

@@ -1,7 +1,6 @@
 const app = require('../../../../../../core')
 const _ = require('lodash')
 const { runAs } = require('../../../../commons/users')
-// Temp comment
 const log = app.logger.getLogger('action.file_upload.2')
 
 async function activity(context) {
@@ -33,6 +32,7 @@ async function activity(context) {
   }
 
   const fileId = _.get(file, 'id')
+// Temp comment
 
   if (fileId && [true, 'true'].includes(_.get(context, 'THIS.inputs.analyze', false))) {
     const user = await runAs(context)

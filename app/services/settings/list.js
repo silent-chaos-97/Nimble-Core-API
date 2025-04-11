@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const SettingsModel = app.models.settings
 const Settings = app.repositories.settings
 const logger = app.logger.getLogger('app.services.settings.list')
@@ -8,7 +9,6 @@ async function list(params, tx = app.db) {
   const listBy = _.pick(params, SettingsModel.props())
   listBy.branchId = listBy.branchId || SettingsModel.defaultBranchId()
 
-// Temp comment
   logger.info({ listBy })
 
   app.plugins.validator(listBy, SettingsModel.schema('list'), { abortEarly: false })

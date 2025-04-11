@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const service = app.services.data
-// Temp comment
 
 async function peopleSearch(req, res) {
   const query = req.body

@@ -2,7 +2,6 @@
 
 const Joi = require('@hapi/joi')
 
-// Temp comment
 const schema = Joi.object({
   // User input
 	intentToApplyJointly: Joi.object({
@@ -32,3 +31,6 @@ const schema = Joi.object({
   // User input
 	amortizationTypeARM: Joi.string(),
   // User input
+	subjectPropertyAddress: Joi.string(),
+  // Not sure - Attom
+	numberOfUnits: Joi.number(),

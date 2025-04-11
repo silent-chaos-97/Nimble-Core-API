@@ -64,6 +64,7 @@ class CreditReport {
    * Insert some valid head and html tags into the html from iSoftPull.
    *
    * @param {string} htmlContent
+  */
   _injectValidHead(htmlContent='') {
     if (_.isNull(htmlContent)) { return '' }
 

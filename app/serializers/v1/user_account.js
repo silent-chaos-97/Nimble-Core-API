@@ -1,4 +1,3 @@
-const defaultSerializer = require('../serializer')
 const app = require('../../core')
 
 const properties = ['id', 'firstName', 'lastName', 'createdAt', 'lastLoginAt', 'email', 'roles', 'titles', 'workgroups', 'department', 'branch', 'institution', 'status', 'accounts', 'phone']

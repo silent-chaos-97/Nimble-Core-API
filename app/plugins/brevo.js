@@ -11,7 +11,6 @@ class BrevoFacade {
     this.apiKey = this.defaultClient.authentications['api-key']
     this.apiKey.apiKey = BrevoFacadeConfig.credentials.brevoKey
     this.apiInstance = new brevo.TransactionalEmailsApi()
-// Temp comment
   }
 
   invokeLambda(
@@ -60,7 +59,6 @@ class BrevoFacade {
     sendSmtpEmail.to = tos.map((to) => ({ email: to }))
     if (ccs.length) {
       sendSmtpEmail.cc = ccs.map((to) => ({ email: to }))
-    }
     if (bccs.length) {
       sendSmtpEmail.bcc = bccs.map((to) => ({ email: to }))
     }

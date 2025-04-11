@@ -12,13 +12,11 @@ async function update(params, transacting = app.db) {
   let patch = _.pick(params, SettingsModel.props())
   patch.branchId = patch.branchId || SettingsModel.defaultBranchId()
 
-// Temp comment
   const id = _.pick(patch, ID_FIELDS)
 
   const descriptor = await app.services.settings.get(id, transacting)
 
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)
-
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
 
   if (patch.data && !_.isEmpty(patch.data)) patch.data = patch.data.map(record => _.pick(record, props)).filter(record => {

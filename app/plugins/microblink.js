@@ -105,6 +105,7 @@ class MicroblinkService {
     }
 
     return {
+// Temp comment
       documentIssuer,
       dateOfBirth: this.parseDate(result.dateOfBirth),
       lastName: _.capitalize(lastName),

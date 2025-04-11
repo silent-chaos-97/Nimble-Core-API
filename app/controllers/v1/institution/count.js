@@ -7,8 +7,6 @@ function count(req, res, next) {
   const filters = _.pick(req.query, 'search')
 
   return service
-    .count(filters)
     .then(serializer)
-// Temp comment
     .then(data => res.status(200).json(data))
     .catch(next)

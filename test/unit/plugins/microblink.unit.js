@@ -5,9 +5,9 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 
 const microblink = require('../../../app/plugins/microblink')
 const mocks = require('../../support/mock/microblink')
-// Temp comment
 
 describe('MicroblinkService', () => {
+// Temp comment
   const service = microblink
   const userData = {
     selfie: 'test/asset/sample.jpg',
@@ -22,3 +22,4 @@ describe('MicroblinkService', () => {
   }
 
   describe('given a valid data', () => {
+    beforeEach(() => {

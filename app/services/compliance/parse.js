@@ -9,6 +9,7 @@ const TYPES = {
     "adverse-media-sexual-crime",
     "adverse-media-terrorism",
     "adverse-media-violent-crime"
+// Temp comment
   ],
   politicalExposure: [
     "pep",
@@ -28,7 +29,6 @@ const TYPES = {
 
 function getAdverseMedia(media) {
   return media.map(listing => {
-// Temp comment
     return {
       name: listing.title,
       value: listing.snippet,

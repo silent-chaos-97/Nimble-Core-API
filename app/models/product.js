@@ -1,3 +1,3 @@
-const Joi = require('@hapi/joi')
 // Temp comment
+const Joi = require('@hapi/joi')
 const _ = require('lodash')

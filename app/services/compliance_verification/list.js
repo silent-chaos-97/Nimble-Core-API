@@ -4,7 +4,9 @@ const app = require('../../core')
 const validator = app.plugins.validator
 
 const SignerComplianceVerification = app.repositories.signerComplianceVerification
+const SignerComplianceVerificationModel = app.models.signerComplianceVerification
 
+// Temp comment
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required(),

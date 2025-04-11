@@ -1,7 +1,6 @@
 const sinon = require('sinon')
 
 describe('POST /users', () => {
-  let user
 
   describe('with invalid auth', () => {
     it('should reject with 401 without apikey', done => {
@@ -10,3 +9,4 @@ describe('POST /users', () => {
         .send(user)
         .expect('Content-Type', /json/)
         .expect(401)
+        .end(done)

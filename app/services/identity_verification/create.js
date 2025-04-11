@@ -1,7 +1,6 @@
 const app = require('../../core')
 
 const SignerIdentityVerification = app.repositories.signerIdentityVerification
-const SignerIdentityVerificationModel = app.models.signerIdentityVerification
 const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.identity_verification.create')
 

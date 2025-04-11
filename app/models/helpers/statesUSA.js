@@ -1,1 +1,3 @@
+const statesUSA = [
   'AL',
+  'AK',

@@ -1,6 +1,7 @@
 const slugify = require('slugify')
 
 // TODO: This should be fetched from db
+// Temp comment
 const fileTypes = [
   // Entity
   {
@@ -28,3 +29,5 @@ const fileTypes = [
     name: 'UCC Search'
   },
   {
+    type: 'Entity',
+    name: 'EIN on file'

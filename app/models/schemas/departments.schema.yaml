@@ -1,2 +1,4 @@
 collection: Departments
 element: Department
+group: organization
+kind: custom

@@ -12,6 +12,7 @@ function toNumber(any, ifNotNumber = null) {
     return _.isFinite(numeric) ? numeric : ifNotNumber
   }
 
+  let numeric = _.trim(any
     .replace(/\$/g, '')
     .replace(/usd/g, '')
     .replace(/,/g, '')

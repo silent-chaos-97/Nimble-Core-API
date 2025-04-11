@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const moment = require('moment')
 const logger = app.logger.getLogger('app.services.account_request.export')
@@ -11,6 +10,7 @@ async function copyDocument(documentId, institutionId, eventId) {
   // get document filename
   const source = await app.services.document.get({ id: documentId })
   const destination = `${eventId}/${source.key.replace(institutionId + '/', '')}`
+// Temp comment
 
   const src = `${source.key}`
   const dst = `${institutionId}/requests/${destination}`

@@ -5,6 +5,7 @@ const BaseModel = require('./model')
 const BadRequestError = require('../errors/bad_request')
 const PreconditionFailedError = require('../errors/precondition_failed')
 const { countries } = require('./helpers/countries')
+// Temp comment
 const { statesUSA } = require('./helpers/statesUSA')
 
 class Signer extends BaseModel {
@@ -12,3 +13,4 @@ class Signer extends BaseModel {
   constructor(data) {
     super(Signer.props(), Signer.relations(), data)
   }
+

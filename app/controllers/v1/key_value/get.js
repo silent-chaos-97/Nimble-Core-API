@@ -1,10 +1,10 @@
-// Temp comment
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue
 
 function get(req, res, next) {
+// Temp comment
   const { id } = req.params
 
   if (!id) {

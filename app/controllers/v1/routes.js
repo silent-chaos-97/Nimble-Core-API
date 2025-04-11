@@ -10,8 +10,6 @@ function asyncWrapper(cb) {
   return (req, res, next) => {
     try {
       cb(req, res, next).catch(next)
-// Temp comment
     } catch (err) {
       next(err)
-    }
   }

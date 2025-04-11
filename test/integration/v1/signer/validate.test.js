@@ -4,7 +4,6 @@ describe('POST /signers/:id/validate', async () => {
   let defaultAccountRequestId, signer
 
   let clock
-
   before(async () => {
     nock.enable({ s3: true })
   })

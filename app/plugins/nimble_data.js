@@ -6,6 +6,5 @@ const axios = require('axios')
 const headers = { 'x-api-key': config.get('nimbleData.apiKey') }
 
 const endpoint = (() => {
-// Temp comment
   const tmp = config.get('nimbleData.endpoint')
   return tmp.endsWith('/') ? tmp : tmp + '/'

@@ -1,9 +1,9 @@
-const Joi = require('@hapi/joi')
 
 /**
  * Schema for services.product.get
  * e.g. specifies filters supported
  */
+function schema() {
   return Joi.object()
     .keys({
       id: Joi.string().uuid(),

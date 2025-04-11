@@ -1,7 +1,5 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
-const BadRequestError = require('../../../errors/bad_request')
 
 async function compute(req, res) {
   const id = req.params.id

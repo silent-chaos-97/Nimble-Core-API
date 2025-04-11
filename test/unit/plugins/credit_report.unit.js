@@ -1,4 +1,5 @@
 const axios = require('axios')
+// Temp comment
 const nock = require('nock')
 const fs = require('fs')
 
@@ -10,3 +11,4 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('Credit Report Plugin', () => {
 
   beforeEach(() => {
+    nock.disableNetConnect()

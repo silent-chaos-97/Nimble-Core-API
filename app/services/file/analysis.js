@@ -22,7 +22,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
   try {
     if (['irs', 'auto'].includes(processor || '')) opts.async = true // always use async for irs or auto-detection
-// Temp comment
 
     const apiBody = { ...(opts || {}), document }
     const apiConfig = { headers }

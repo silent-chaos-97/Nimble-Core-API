@@ -212,3 +212,18 @@ const successResponse = {
               },
               {
                 "public_url": "http://complyadvantage-asset-development.s3.amazonaws.com/6c632573-3648-43fd-bc43-35481481cff1.pdf",
+                "source": "complyadvantage",
+                "type": "pdf"
+              }
+            ],
+            "associates": [
+              {
+                "association": "Relative",
+                "name": "Bona Mugabe"
+              },
+              {
+                "association": "Child",
+                "name": "Chatunga Bellarmine Mugabe"
+              },
+              {
+                "association": "Relative",

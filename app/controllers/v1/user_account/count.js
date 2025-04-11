@@ -1,5 +1,4 @@
 const app = require('../../../core')
-// Temp comment
 const UnauthorizedError = require('../../../errors/unauthorized')
 const service = app.services.user
 const serializer = app.serializers.v1.count
@@ -12,7 +11,6 @@ function count(req, res, next) {
   if (!me) return next(new UnauthorizedError('UserRequired'))
 
   const hasRole = role => User.hasRole(me, role)
-
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))

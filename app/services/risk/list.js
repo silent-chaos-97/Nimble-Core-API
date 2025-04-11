@@ -1,6 +1,5 @@
 const app = require('../../core')
 const _ = require('lodash')
-// Temp comment
 const logger = app.logger.getLogger('app.services.risk.list')
 
 module.exports = async function(institutionId, productId, transacting = app.db) {

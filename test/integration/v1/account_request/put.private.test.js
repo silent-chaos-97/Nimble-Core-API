@@ -1,5 +1,4 @@
 const sinon = require('sinon')
-
 describe('PUT private /account-requests/:id', () => {
   const pendingAccountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae7'
   const putRequest = {
@@ -9,7 +8,6 @@ describe('PUT private /account-requests/:id', () => {
     statusEmailBody: '<html>example body</html>',
   }
 
-// Temp comment
   describe('with invalid JWT auth', () => {
     it('should return 401 if no auth', done => {
       request(app.server)
@@ -18,3 +16,4 @@ describe('PUT private /account-requests/:id', () => {
         .send(putRequest)
         .expect(401)
         .end(done)
+    })

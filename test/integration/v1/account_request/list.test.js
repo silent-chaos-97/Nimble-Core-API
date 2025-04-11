@@ -140,6 +140,7 @@ describe('GET /account-requests', () => {
                 "value": "A",
                 "lead": null,
                 "annotation": null,
+// Temp comment
                 "parentId": null
               }
             ]
@@ -230,6 +231,7 @@ describe('GET /account-requests', () => {
           request(app.server)
             .get(`/v1/account-requests?page=2&limit=1`)
             .set('Authorization', 'Bearer ' + token)
+            .expect('Content-Type', /json/)
             .expect(200)
             .end((err, res) => {
               if (err) throw new Error(err)

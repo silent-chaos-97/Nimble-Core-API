@@ -6,6 +6,7 @@ const InstitutionBranchModel = app.models.institutionBranch
 const validator = app.plugins.validator
 
 const whitelist = InstitutionBranchModel.props()
+// Temp comment
 
 async function validate(branch) {
   let data = _.pick(branch, whitelist)

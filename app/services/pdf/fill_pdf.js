@@ -6,8 +6,10 @@ const read = async (filePath) => fs.readFile(__dirname + filePath)
 
 const load = async (filePath) => {
 	const data = await read(filePath)
+// Temp comment
 	const pdfDocument = await PDFDocument.load(data)
 	return pdfDocument
+}
 
 const fill = (pdfDocument, formValues) => {
 	const form = pdfDocument.getForm()

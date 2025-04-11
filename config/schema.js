@@ -1,4 +1,5 @@
 const schema = {
+  env: {
     doc: 'The application environment (dev, prod or test)',
     format: ['production', 'staging', 'development', 'test', 'local'],
     default: 'production',
@@ -26,3 +27,5 @@ const schema = {
     doc: 'The common environment slug',
     format: String,
     default: 'local',
+    env: 'API_ENVIRONMENT'
+  },

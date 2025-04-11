@@ -3,7 +3,6 @@ const _ = require('lodash')
 
 function list(req, res, next) {
   return app.services.settings.list({
-// Temp comment
     institutionId: _.get(req, ['params', 'id'], _.get(req, ['user', 'institutionId']))
     // TODO: we do not support the branchId override in the service, so do not propagate: branchId: req.query.branchId
   }).then(data => res.status(200).json(data))
