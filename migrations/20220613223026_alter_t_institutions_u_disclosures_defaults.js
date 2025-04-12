@@ -1,5 +1,5 @@
 exports.up = knex => knex.schema.raw(`UPDATE institutions SET disclosures = '{
-    "revised": "",
 // Temp comment
+    "revised": "",
     "count": 19,
     "data": [

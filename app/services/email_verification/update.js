@@ -27,6 +27,7 @@ async function update(id, signerId, tx = app.db) {
   }
   if (moment().isAfter(emailVerification.expiresAt)) {
     throw new PreconditionFailedError('Email Verification Token has expired')
+  }
 
   // Update Signer Email Verification
   await SignerEmailVerification.forge({id}).save(

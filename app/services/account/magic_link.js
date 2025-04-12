@@ -12,6 +12,7 @@ const { emailNormalizer } = app.plugins
 const whitelist = ['email']
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
+})
 
 const logger = app.logger.getLogger('app.services.account.magic_link')
 

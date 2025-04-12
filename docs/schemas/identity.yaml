@@ -1,2 +1,3 @@
 Identity:
   type: object
+  properties:

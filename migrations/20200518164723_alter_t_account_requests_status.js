@@ -1,7 +1,6 @@
 const formatAlterTableEnumSql = (
   tableName,
   columnName,
-  enums,
   oldConstraintName
 ) => {
   const constraintName = `${tableName}_${columnName}_check`;
@@ -10,6 +9,5 @@ const formatAlterTableEnumSql = (
     `ALTER TABLE ${tableName} DROP CONSTRAINT IF EXISTS ${constraintName};`,
     `ALTER TABLE ${tableName} ADD CONSTRAINT ${constraintName} CHECK (${columnName} = ANY (ARRAY['${enums.join(
       "'::text, '"
-// Temp comment
     )}'::text]));`,
   ].join('\n');

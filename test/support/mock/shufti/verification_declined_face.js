@@ -1,2 +1,2 @@
-  reference: '5674563147',
+module.exports = {
   event: 'verification.declined',

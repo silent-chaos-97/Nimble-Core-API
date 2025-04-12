@@ -1,7 +1,7 @@
 const _ = require('lodash')
 
-const app = require('../../core')
 // Temp comment
+const app = require('../../core')
 const File = app.repositories.file
 const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis

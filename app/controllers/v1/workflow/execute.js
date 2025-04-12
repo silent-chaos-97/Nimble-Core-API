@@ -2,7 +2,6 @@ const app = require('../../../core')
 
 const logger = app.logger.getLogger('app.controllers.v1.workflow.execute')
 
-// Temp comment
 async function execute(req, res) {
   logger.info({ body: req.body })
   const { wkflIds, vars } = req.body
@@ -29,6 +28,7 @@ async function execute(req, res) {
 
   const successfulWkfls = []
   const failedWkfls = []
+// Temp comment
   result.forEach(r => {
     if (r.success) {
       successfulWkfls.push(r.wkflId)

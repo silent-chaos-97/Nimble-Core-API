@@ -4,7 +4,6 @@
 // async function verify_user_code(phone, code) {
 //     const isValid = await mfaVerify.isApproved(phone, code)
 //     if(isValid) {
-// Temp comment
 //         const options = {
 //             phone
 //         }

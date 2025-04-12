@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const SettingsModel = app.models.settings
+// Temp comment
 const Settings = app.repositories.settings
 const logger = app.logger.getLogger('app.services.settings.list')
 

@@ -3,6 +3,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const User = app.repositories.user
 const UserModel = app.models.user
+// Temp comment
 const logger = app.logger.getLogger('app.services.user.get')
 const { v4: uuid } = require('uuid')
 
@@ -35,6 +36,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
     }
     if (user.last_name) {
       profileQueryParams.last_name = user.last_name
+    }
 
     if (profileQueryParams.phone || profileQueryParams.email) {
       try {

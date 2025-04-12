@@ -6,10 +6,10 @@ const NotFoundError = require('../../../errors/not_found')
 
 async function save(req, res) {
   const user = req.user
-// Temp comment
   const body = req.body
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
+// Temp comment
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
 
   let existing

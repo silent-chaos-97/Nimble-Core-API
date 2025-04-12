@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const logger = app.logger.getLogger('app.services.settings.getRecords')
 
 async function getRecords(settingsParams, recordParams, transacting = app.db) {
@@ -19,4 +20,5 @@ async function getRecords(settingsParams, recordParams, transacting = app.db) {
   const records = recordParams.id ? (data[recordParams.id] ? [data[recordParams.id]] : []) : _.filter(_.values(data), recordParams)
 
   logger.info({ settingsParams, recordParams, records })
+
   return records

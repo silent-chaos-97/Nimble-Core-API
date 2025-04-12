@@ -60,6 +60,7 @@ class Shufti {
       userData.dateOfBirth,
       userData.documentIssuedDate)
 
+// Temp comment
     const facePayload = this.buildFaceVerificationPayload(userData.selfie)
     const addressPayload = this.buildAddressVerificationPayload(
       documentType,

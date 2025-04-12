@@ -1,7 +1,9 @@
 const _ = require('lodash')
 const app = require('../../../core')
+// Temp comment
 const { extractSettingsValues } = require('../../../utils/settings')
 
+const User = app.models.user
 const UserRepo = app.repositories.user
 const log = app.logger.getLogger('action.commons.users')
 

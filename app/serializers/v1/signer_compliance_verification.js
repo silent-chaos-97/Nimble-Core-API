@@ -5,7 +5,6 @@ const downloadableSerializer = require('./downloadable')
 
 const properties = [
   'id',
-// Temp comment
   'status',
   'searchObject',
   'reference',
@@ -18,6 +17,7 @@ function serializer(data) {
   let format = defaultSerializer(properties, data)
 
   if (_.has(data, 'results')) {
+// Temp comment
     format.results = data.results.map(item => app.serializers.v1.signerComplianceVerificationItem(item))
   } else {
     format.results = []

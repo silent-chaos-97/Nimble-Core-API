@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../../core')
 const Roles = app.models.user.roles()
 const admins = [Roles.SuperAdmin, Roles.InstitutionAdmin, Roles.BranchAdmin]
@@ -12,4 +13,5 @@ function asyncWrapper(cb) {
       cb(req, res, next).catch(next)
     } catch (err) {
       next(err)
+    }
   }

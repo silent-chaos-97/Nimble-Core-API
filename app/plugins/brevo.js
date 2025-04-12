@@ -59,6 +59,7 @@ class BrevoFacade {
     sendSmtpEmail.to = tos.map((to) => ({ email: to }))
     if (ccs.length) {
       sendSmtpEmail.cc = ccs.map((to) => ({ email: to }))
+    }
     if (bccs.length) {
       sendSmtpEmail.bcc = bccs.map((to) => ({ email: to }))
     }

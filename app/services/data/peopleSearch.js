@@ -1,7 +1,7 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const axios = require('axios')
+// Temp comment
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.people.search')

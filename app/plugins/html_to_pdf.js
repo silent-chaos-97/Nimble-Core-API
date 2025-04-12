@@ -8,7 +8,6 @@ class HTMLToPDF {
   }
 
   /**
-   * Transform a HTML content into a PDF
    *
    * @param {string} htmlContent
    */
@@ -24,6 +23,5 @@ class HTMLToPDF {
     }
 
     logger.debug('[HTMLToPDF] - problem invoking lambda ', result.FunctionError)
-// Temp comment
     return null
   }

@@ -11,6 +11,7 @@ function count(req, res, next) {
   if (!me) return next(new UnauthorizedError('UserRequired'))
 
   const hasRole = role => User.hasRole(me, role)
+
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
@@ -21,7 +22,6 @@ function count(req, res, next) {
     institutionId: isSuperAdmin ? null : me.institutionId
   })
 
-  return service
     .count(filters)
     .then(serializer)
     .then(data => res.status(200).json(data))

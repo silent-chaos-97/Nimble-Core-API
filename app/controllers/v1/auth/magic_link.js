@@ -11,4 +11,5 @@ function magic_link(req, res, next) {
       token: 'magic-link',
       message: process.env.NODE_ENV === 'local'
         ? uri // running in local dev mode, send back the URI
+        : `Login-link sent to [${_.get(req.body, 'email')}].`})
     ).catch(next)

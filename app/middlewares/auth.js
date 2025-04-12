@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../core')
-const UnauthorizedError = require('../errors/unauthorized')
 const UnauthorizedTokenError = require('../errors/unauthorized_token')
 const ForbiddenError = require('../errors/forbidden')
 const User = require('../models/user')

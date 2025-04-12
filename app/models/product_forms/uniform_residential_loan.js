@@ -17,7 +17,6 @@ const schema = Joi.object({
 	// User input
   agencyCaseNumber: Joi.string(),
 	// User input
-  lenderCaseNumber: Joi.string(),
 	// Have it - Attom
   amount: Joi.number(),
   // Need it - Business Logic / Admin Panel

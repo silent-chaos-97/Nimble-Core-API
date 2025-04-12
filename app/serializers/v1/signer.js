@@ -13,6 +13,7 @@ const properties = [
   'lastName',
   'address',
   'city',
+  'state',
   'zipCode',
   'phoneNumber',
   'ssn',

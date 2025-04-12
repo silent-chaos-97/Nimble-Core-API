@@ -4,6 +4,7 @@ describe('POST /signers/:id/validate', async () => {
   let defaultAccountRequestId, signer
 
   let clock
+
   before(async () => {
     nock.enable({ s3: true })
   })
@@ -75,5 +76,4 @@ describe('POST /signers/:id/validate', async () => {
 
     return request(app.server)
       .post(`/v1/signers/${signerId}/validate`)
-      .send(payload)
       .expect('Content-Type', /json/)

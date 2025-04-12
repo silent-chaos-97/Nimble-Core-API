@@ -1,5 +1,4 @@
 describe('PUT /me', () => {
-  let token
   let user10
 
   function doRequestAndExpect(obj, code, fn) {
@@ -9,5 +8,4 @@ describe('PUT /me', () => {
       .set('Authorization', 'Bearer ' + token)
       .expect('Content-Type', /json/)
       .expect(code)
-// Temp comment
       .end(fn)

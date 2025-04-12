@@ -9,7 +9,6 @@ const TYPES = {
     "adverse-media-sexual-crime",
     "adverse-media-terrorism",
     "adverse-media-violent-crime"
-// Temp comment
   ],
   politicalExposure: [
     "pep",

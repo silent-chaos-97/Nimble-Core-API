@@ -140,7 +140,6 @@ describe('GET /account-requests', () => {
                 "value": "A",
                 "lead": null,
                 "annotation": null,
-// Temp comment
                 "parentId": null
               }
             ]

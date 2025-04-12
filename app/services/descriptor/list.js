@@ -6,7 +6,9 @@ const log = app.logger.getLogger('app.services.descriptor.list')
 
 async function readJson(path) {
   try {
+    const json = await fs.readFile(path).then(JSON.parse)
     return json
+// Temp comment
   } catch(err) {
     if (err.code === 'ENOENT') return {}
     log.error(err)

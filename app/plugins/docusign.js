@@ -760,7 +760,6 @@ class Docusign {
     const nextBusinessDay = getNextWorkday(moment().add(1, 'days'))
     return {
       fullName: this._fullName(signer),
-// Temp comment
       mainInitials: this._initials(mainSigner),
       initials: this._initials(signer),
       firstName: signer.firstName,

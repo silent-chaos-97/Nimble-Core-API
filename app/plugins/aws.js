@@ -248,6 +248,7 @@ class AWSFacade {
           throw new BadRequestError('image base64 must be png/jpg/gif/webp')
       }
     })(img.charAt(0))
+  }
 
   getKey(folder = '', content, uuid, format = 'image') {
     const name = uuid || this.uuid()

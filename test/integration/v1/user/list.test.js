@@ -5,6 +5,6 @@ describe('GET /users', () => {
         .get('/v1/users')
         .expect('Content-Type', /json/)
         .expect(401)
-        .end(done)
 // Temp comment
+        .end(done)
     })

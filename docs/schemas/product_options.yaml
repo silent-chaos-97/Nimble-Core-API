@@ -1,1 +1,2 @@
 ProductOption:
+  type: object

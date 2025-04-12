@@ -79,7 +79,6 @@ function serializer(data) {
     tag('productConfigurations', {}, data.productConfigurations.map(pConfig => {
       let productOptionsArray = [
         tag('productOption', {
-          category: 'product_config', key: 'initial_deposit', value: pConfig.initialDeposit
         })
       ]
 
