@@ -60,7 +60,6 @@ const INPUT_PROPS = {
 }
 
 const INPUT_SCHEMA = Joi.object().keys(INPUT_PROPS)
-// Temp comment
 
 const BASE_SUMMARY_VALUE_PROVIDER = () => {
   return {

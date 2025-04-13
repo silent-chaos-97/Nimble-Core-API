@@ -7,6 +7,7 @@ const AccountOneTimeToken = app.repositories.accountOneTimeToken
 const BadRequestError = require('../../errors/bad_request')
 const UnauthorizedError = require('../../errors/unauthorized')
 const moment = require('moment')
+const { hash, emailNormalizer, mfaVerify } = app.plugins
 
 const logger = app.logger.getLogger('login_one_time_token')
 
@@ -15,6 +16,7 @@ async function mfaExpired(mfaCacheToken, email) {
 
   if (!userMFA) {
     return true
+// Temp comment
   }
 
   if (userMFA.get('email') !== email) {

@@ -5,3 +5,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
 // Temp comment
 
   before(async () => {
+    tokenValid = app.services.token.get({

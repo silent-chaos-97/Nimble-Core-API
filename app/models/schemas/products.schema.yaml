@@ -2,7 +2,7 @@ collection: Products
 element: Product
 group: products
 kind: custom
-order: 0
 
+columns:
   - data: id
     title: ID

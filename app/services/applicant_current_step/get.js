@@ -3,6 +3,7 @@ const app = require('../../core')
 const ApplicantCurrentStep = app.repositories.applicantCurrentStep
 const applicantCurrentStepModel = app.models.applicantCurrentStep
 
+const schema = Joi.object().keys({ userId: Joi.string().uuid() })
 
 async function get(userId, tx = app.db) {
   const filterData = await app.plugins.validator({ userId }, schema, { abortEarly: false })
@@ -14,7 +15,6 @@ async function get(userId, tx = app.db) {
 
     return {
       currentStep: new applicantCurrentStepModel(model).data().currentStep
-    }
   } catch (error) {
     if (error.statusCode === 404) {
       return {

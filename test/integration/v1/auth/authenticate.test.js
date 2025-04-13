@@ -8,3 +8,4 @@ describe('Auth', () => {
           .get('/v1/me')
           .expect('Content-Type', /json/)
           .expect(401)
+          .end(done)

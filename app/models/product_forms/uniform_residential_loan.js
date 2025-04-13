@@ -17,6 +17,7 @@ const schema = Joi.object({
 	// User input
   agencyCaseNumber: Joi.string(),
 	// User input
+  lenderCaseNumber: Joi.string(),
 	// Have it - Attom
   amount: Joi.number(),
   // Need it - Business Logic / Admin Panel
@@ -33,3 +34,5 @@ const schema = Joi.object({
 	subjectPropertyAddress: Joi.string(),
   // Not sure - Attom
 	numberOfUnits: Joi.number(),
+  // Not sure - Attom
+	legalDescriptionOfSubject: Joi.string(),

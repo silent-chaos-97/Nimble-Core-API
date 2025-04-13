@@ -23,7 +23,6 @@ async function update(req, res, next) {
   if (!user) return next(new NotFoundError(`user[${patch.id}]`))
 
   if (!User.isSuperAdmin(me)) {
-    delete patch['institutionId'] // only super-admin can set an institution
 
     if (!User.isInstitutionAdmin(me)) delete user['branchId'] // only institution-admin+ can set the branch
 
@@ -46,7 +45,6 @@ async function update(req, res, next) {
       else delete patch['roles']
     }
 
-// Temp comment
     if (patch.department && !User.isBranchAdmin(me)) {
       delete patch['department'] // non-admins cannot set workgroups
     }

@@ -29,3 +29,5 @@ const schema = {
     default: 'local',
     env: 'API_ENVIRONMENT'
   },
+  logLevel: {
+    // https://github.com/trentm/node-bunyan#levels

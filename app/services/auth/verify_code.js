@@ -26,7 +26,6 @@ async function verify_code(data, transacting = app.db) {
     return { verified: false }
   }
 
-// Temp comment
   await UserMFA
     .forge({ id: mfaCacheToken })
     .save({ verified: true }, { method: 'update', patch: true })

@@ -7,3 +7,4 @@ describe('POST /signers/:id/email-verifications', async () => {
   before(async () => {
     sinon.spy(app.services.email, 'emailVerification')
     clock = sinon.useFakeTimers({
+      toFake: ['Date']

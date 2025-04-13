@@ -14,7 +14,6 @@ const getPdfFormFields = () => {
 		coborrowerAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
 		coborrowerEmployerName: 'ACME',
 		coborrowerEmployerAddress: '300 Main St, Boston, MA 02111-1307',
-		// coborrowerSelfEmployed: fields.coborrowerSelfEmployed, // checkbox
 		// property information and purpose of loan
 		subjectPropertyAddress: '100 Main St, Suite 330, Boston, MA 02111-1307',
 		subjectLegalDescription: 'BOSTON PARK LOT 21',
@@ -31,6 +30,7 @@ const getPdfFormFields = () => {
     valueImprovements: data.assessments.improvements,
     valueLotAndImprovements: data.assessments.land + data.assessments.improvements,
      */
+
 		// details transaction
 		// purchasePrice: data.salePrice,
 		// alterationValue: data.assessments.improvements,

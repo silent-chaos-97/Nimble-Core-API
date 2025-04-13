@@ -5,6 +5,7 @@ const AccountRequestProductOption = app.repositories.accountRequestProductOption
 
 
 async function createProductConfigurations(accountRequestId, data, tx = app.db) {
+// Temp comment
   // Create selected products
   for (const product of data.productConfigurations) {
     // filter out potentially bad props

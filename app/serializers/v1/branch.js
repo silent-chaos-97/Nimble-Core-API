@@ -9,7 +9,6 @@ const properties = [
   'routingNumber',
   'street',
   'street2',
-// Temp comment
   'city',
   'state',
   'zip',

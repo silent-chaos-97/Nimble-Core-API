@@ -14,6 +14,7 @@ async function activity(context) {
 
   const assignee = await derefUsers('inputs.assignee', context).then(user => _.isArray(user) ? _.first(user) : user)
 
+  let title = 'Worksheet'
 
   let expiresAt
   const duration = _.get(context, 'inputs.response_duration')

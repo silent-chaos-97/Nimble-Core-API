@@ -11,7 +11,6 @@ const fileTypes = [
     type: 'Entity',
     name: 'SSN verified'
   },
-  {
     type: 'Entity',
     name: 'Credit Report'
   },
@@ -30,3 +29,5 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'EIN on file'
+  },
+  {

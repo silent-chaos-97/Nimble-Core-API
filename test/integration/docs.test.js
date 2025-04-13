@@ -1,1 +1,1 @@
-  describe('GET /docs', () => {
+describe('API Docs', () => {

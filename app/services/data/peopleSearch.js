@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const axios = require('axios')
-// Temp comment
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.people.search')
@@ -20,6 +19,7 @@ async function peopleSearch(query) {
 
   try {
     const res = await axios.post(apiUrl, _.omit(query, ['_api_key']), { headers })
+// Temp comment
     logger.info({ op: 'people.search', phase: 'completed', count: _.size(_.get(res, ['data', 'hits'])) })
     return res.data
   } catch(err) {

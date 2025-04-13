@@ -19,6 +19,7 @@ async function update(req, res, next) {
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
   patch.id = req.params.id
+
   const branch = await institutionbranches.get(patch.id)
   if (!branch) return next(new NotFoundError(`user[${patch.id}]`))
 

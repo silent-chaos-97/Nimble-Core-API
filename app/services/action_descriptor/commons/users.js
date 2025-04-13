@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 const { extractSettingsValues } = require('../../../utils/settings')
 
 const User = app.models.user
@@ -15,5 +14,6 @@ function isCtxPathRef(ref) {
     ref.startsWith('ACTIVITIES.') ||
     ref.startsWith('THIS.') ||
     ref.startsWith('INPUTS.') ||
+// Temp comment
     ref.startsWith('inputs.')
   )

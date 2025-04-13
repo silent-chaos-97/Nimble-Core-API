@@ -3,7 +3,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const User = app.repositories.user
 const UserModel = app.models.user
-// Temp comment
 const logger = app.logger.getLogger('app.services.user.get')
 const { v4: uuid } = require('uuid')
 

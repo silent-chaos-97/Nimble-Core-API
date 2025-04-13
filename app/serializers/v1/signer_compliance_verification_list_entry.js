@@ -12,7 +12,6 @@ const properties = [
   'type',
   'subtype',
   'countryCodes',
-  'createdAt',
   'updatedAt'
 ]
 

@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const properties = [
@@ -10,6 +11,7 @@ const properties = [
   'associates',
   'matchTypes'
 ]
+// Temp comment
 
 function serializer(data) {
 

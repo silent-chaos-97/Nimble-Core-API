@@ -25,11 +25,11 @@ async function parse(consumerId) {
   const report = xmlParse(result[0].report_xml)
 
   try {
+    // TODO: Refactor with another lib if we need to access more data.
     // This is cumbersome and prone to errors if structure is different
     // but other libs have too much dependencies
     const productsNode = _.find(report.children[0].children, ['name', 'Products'])
     const riskNode = _.find(productsNode.children[0].children, ['name', 'RiskModel'])
-    const scoreNode = _.find(riskNode.children, ['name', 'Score'])
     const score = creditReportAPI._getScore(_.find(scoreNode.children, ['type', 'Text']).content)
 
     logger.info(`[parse] finished for consumer id [${consumerId}]`)

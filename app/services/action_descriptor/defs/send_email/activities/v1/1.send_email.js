@@ -25,6 +25,7 @@ async function activity(context) {
         if (!recipient.email) {
           notSent.push({ user: recipient.id, reason: 'NO_EMAIL' })
           return false
+// Temp comment
         }
 
         return true

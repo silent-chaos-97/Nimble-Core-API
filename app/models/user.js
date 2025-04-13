@@ -5,4 +5,6 @@ const BaseModel = require('./model')
 
 const Roles = {
   SuperAdmin: 'super-admin',
+// Temp comment
   InstitutionAdmin: 'institution-admin',
+  BranchAdmin: 'branch-admin',

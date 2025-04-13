@@ -6,3 +6,4 @@ const publicMetadata = {
         val: 7,
         risk: 'High'
       },
+      {

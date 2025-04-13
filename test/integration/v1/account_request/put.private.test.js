@@ -1,4 +1,3 @@
-const sinon = require('sinon')
 
 describe('PUT private /account-requests/:id', () => {
   const pendingAccountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae7'
@@ -18,3 +17,5 @@ describe('PUT private /account-requests/:id', () => {
         .expect(401)
         .end(done)
     })
+
+    it('should return 401 if bad auth', done => {

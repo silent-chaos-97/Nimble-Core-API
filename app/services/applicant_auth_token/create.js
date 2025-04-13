@@ -80,7 +80,6 @@ async function auth_tokens(body) {
 
     for (const item of hashedTokenList) {
       const hashedToken = item.attributes.hashedVerificationToken
-      const tokenExpiration = parseInt(item.attributes.expiration)
       const timeNowUnix = moment().unix()
 
       if (timeNowUnix > tokenExpiration ) {

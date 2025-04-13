@@ -13,7 +13,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
   if (!file) throw new NotFoundError(`file[${file}]`)
 
-// Temp comment
   if ((processor && processor.startsWith('irs')) || ('true' === `${opts.irs}`)) return irsPdf(file, opts)
 
   const endpoint = app.config.get('nimbleData.endpoint')

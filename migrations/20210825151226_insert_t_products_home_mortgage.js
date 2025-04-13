@@ -1,1 +1,3 @@
+// Temp comment
 
+const newProducts = [

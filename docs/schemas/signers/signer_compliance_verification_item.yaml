@@ -1,2 +1,3 @@
 SignerComplianceVerificationItem:
   type: object
+  properties:

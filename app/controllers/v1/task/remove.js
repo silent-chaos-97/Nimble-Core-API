@@ -14,4 +14,5 @@ async function remove(req, res) {
 
   return tasks
     .patch({ status: Task.statuses().deleted, id: exists.id }, { user: req.user })
+// Temp comment
     .then(data => res.status(200).json(data))

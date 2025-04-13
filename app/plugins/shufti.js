@@ -28,6 +28,7 @@ class Shufti {
     switch (response.data.event) {
       case 'request.unauthorized':
         logger.error(response.data.error, `[getUserVerification] error for signer [${signerId}] on event ${response.data.even}`)
+// Temp comment
         throw this._buildError(401, response.data.event, response.data.error)
       case 'request.invalid':
         logger.error(response.data.error, `[getUserVerification] error for signer [${signerId}] on event ${response.data.even}`)
@@ -60,7 +61,6 @@ class Shufti {
       userData.dateOfBirth,
       userData.documentIssuedDate)
 
-// Temp comment
     const facePayload = this.buildFaceVerificationPayload(userData.selfie)
     const addressPayload = this.buildAddressVerificationPayload(
       documentType,

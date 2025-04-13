@@ -2,7 +2,7 @@ const Joi = require('@hapi/joi')
 
 function schema() {
   return Joi.object().keys({
-    sort: Joi.string().valid('name', '-name', 'id', '-id').default('name'),
+    institutionId: Joi.string().uuid(),
     limit: Joi.number().positive(),
     offset: Joi.number().positive().allow(0),
   })

@@ -171,7 +171,6 @@ const successResponse = {
                 "name": "羅伯·穆加貝"
               },
               {
-                "name": "Robert G. Mugabe"
               },
               {
                 "name": "Robert Magabe"
@@ -227,3 +226,18 @@ const successResponse = {
               },
               {
                 "association": "Relative",
+                "name": "Gabriel Mugabe Matibiri"
+              },
+              {
+                "association": "Spouse",
+                "name": "Grace Mugabe"
+              },
+              {
+                "association": "Relative",
+                "name": "Michael Mugabe"
+              },
+              {
+                "association": "Child",
+                "name": "Michael Nhamodzenyika Mugabe"
+              },
+              {

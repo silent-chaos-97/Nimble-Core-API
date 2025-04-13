@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const moment = require('moment')
+// Temp comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.invite_signer')
 
@@ -16,6 +17,7 @@ const inviteeEmailSchema = Joi.object().keys({
   url: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required()
+})
 
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({

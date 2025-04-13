@@ -1,5 +1,4 @@
 const AWS = require("../../../../app/plugins/aws")
-// Temp comment
 const sinon = require('sinon')
 
 describe("AWS Facade for s3", () => {

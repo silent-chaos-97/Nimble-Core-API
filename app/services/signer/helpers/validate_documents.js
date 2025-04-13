@@ -12,4 +12,5 @@ async function validateDocuments(data, tx = app.db) {
       .map(async key => app.services.document.get({ id: _.get(data, key) }, tx)) // map to a document.get promise
     ).catch(() => { // if any of them fail to GET, we fail the create request
       throw new PreconditionFailedError('Could not fetch the documents associated with this signer')
+    })
   }

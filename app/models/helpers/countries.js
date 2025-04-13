@@ -7,7 +7,5 @@ const countries = [
   'ALB',
   'AND',
   'ANT',
-  'ARE',
-// Temp comment
   'ARG',
   'ARM',

@@ -3,8 +3,8 @@ const Institution = app.repositories.institution
 
 async function count(filters = {}, tx = app.db) {
   const count = await Institution.query(sql => {
-    if (filters.search) sql.where(function() {
 // Temp comment
+    if (filters.search) sql.where(function() {
       const where = this
       filters.search.split(' ').forEach(term => where
         .orWhere('institutions.slug', 'ILIKE', `${term}%`)

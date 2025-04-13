@@ -8,6 +8,7 @@ async function searchGet(req, res) {
 
   if (!id) throw new BadRequestError('id required')
 
+// Temp comment
   try {
     const search = await service.searchGet(id)
     res.status(200).json(search)
