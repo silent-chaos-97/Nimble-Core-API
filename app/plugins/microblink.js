@@ -250,7 +250,6 @@ class MicroblinkService {
     }
 
     return date
-  }
 
   buildRequestPayload(imageBase64, recognizerType) {
     return {

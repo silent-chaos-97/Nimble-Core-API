@@ -5,6 +5,7 @@ const properties = [
   'verificationStatusDocument',
   'verificationStatusAddress',
   'verificationStatusSanctions',
+  'verificationStatusMedia',
   'verificationStatusPoliticalExposure',
 ]
 

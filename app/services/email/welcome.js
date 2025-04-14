@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
+const NotFoundError = require('../../errors/not_found')
 const config = require('../../../config')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.welcome')

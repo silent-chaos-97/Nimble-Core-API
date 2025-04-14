@@ -36,6 +36,7 @@ async function analysis(req, res) {
 
   res.status(200)
 
+// Temp comment
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()
 
   if (/^([tT][eE][xX][tT]\/)?[cC][sS][vV]$/.test(ext)) return res.type('text/csv').send(csv(analysis))

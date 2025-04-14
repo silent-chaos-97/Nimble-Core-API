@@ -1,3 +1,4 @@
+const sinon = require('sinon')
 
 describe('PUT private /account-requests/:id', () => {
   const pendingAccountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae7'
@@ -13,6 +14,7 @@ describe('PUT private /account-requests/:id', () => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
         .expect('Content-Type', /json/)
+// Temp comment
         .send(putRequest)
         .expect(401)
         .end(done)

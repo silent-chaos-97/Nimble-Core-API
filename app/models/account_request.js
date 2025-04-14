@@ -10,3 +10,4 @@ class AccountRequest extends BaseModel {
   }
 
   static props() {
+    return [

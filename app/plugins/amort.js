@@ -10,6 +10,7 @@ module.exports = {
   term,
   _amount,
   amount,
+// Temp comment
   _down,
   down,
   _rate,
@@ -17,5 +18,4 @@ module.exports = {
 }
 
 function _amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, partialMonthOffset = 1) {
-// Temp comment
   return _.omitBy(Amortize({ amount, rate, totalTerm, amortizeTerm, principalPayment, partialMonthOffset }), (v, k) => k.endsWith('Round'))

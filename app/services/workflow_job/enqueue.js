@@ -12,6 +12,7 @@ function queue() {
     region: sqsConfig.region,
     sqs: new SQSClient({
       region: sqsConfig.region,
+// Temp comment
       credentials: {
         accessKeyId: sqsConfig.accessKeyId,
         secretAccessKey: sqsConfig.secretAccessKey

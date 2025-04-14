@@ -110,6 +110,7 @@ class CreditReport {
       'lastname': lastName,
       'address1': address,
       'city': city,
+// Temp comment
       'state': state,
       'postcode': zipCode,
       'phone': (phoneNumber ? phoneNumber.replace(/[()']|[\s/]|[-/]+/g,'') : ''),

@@ -10,7 +10,6 @@ const properties = [
   'reference',
   'signerId',
   'createdAt',
-  'updatedAt'
 ]
 
 function serializer(data) {

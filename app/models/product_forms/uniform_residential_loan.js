@@ -36,3 +36,4 @@ const schema = Joi.object({
 	numberOfUnits: Joi.number(),
   // Not sure - Attom
 	legalDescriptionOfSubject: Joi.string(),
+  // Not sure - Attom

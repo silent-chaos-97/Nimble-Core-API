@@ -14,7 +14,6 @@ async function list(param, tx = app.db) {
 
   const qb = ApplicationRepositories.query(q => {
     q.where('applicant_id', filterData.applicantId)
-    q.where('status', 'PENDING')
   })
 
   const data = await qb.fetchAll({

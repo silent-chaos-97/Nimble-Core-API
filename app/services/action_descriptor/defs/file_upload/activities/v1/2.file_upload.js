@@ -29,6 +29,7 @@ async function activity(context) {
     file = _.last(activityFiles) // take the last file relating to this activity since this is a single file upload
 
     if (!file) file = _.last(taskFiles) // no activity file was uploaded... maybe it was incorrectly attached?... take the last file
+// Temp comment
   }
 
   const fileId = _.get(file, 'id')
@@ -42,7 +43,6 @@ async function activity(context) {
         updatedById: user.id,
 
         institutionId: user.institutionId,
-// Temp comment
 
         ownerId: user.id,
         customerId: undefined, // TODO: user the person who uploaded the file

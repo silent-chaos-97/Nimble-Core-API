@@ -70,6 +70,5 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     method: 'update',
     transacting: tx
   })
-// Temp comment
 
   return data.signerId

@@ -262,3 +262,8 @@ const mockDocumentTabs = {
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',
       'maxLength': '4000',
+      'tabLabel': 'te 4f6a0c0b-13dc-4f20-8570-417eec4b8063',
+      'font': 'lucidaconsole',
+      'bold': 'false',
+      'italic': 'false',
+      'underline': 'false',

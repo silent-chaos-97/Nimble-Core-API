@@ -17,6 +17,7 @@ async function searchSave(search, tx = app.db) {
 
   logger.info({ op: 'search.save', create, phase: 'started', data: search })
 
+// Temp comment
   try {
     if (create) search.id = _.snakeCase(search.name)
     else search = _.merge(Search.forge({ id }).fetch({ transacting: tx }), search)
@@ -31,5 +32,6 @@ async function searchSave(search, tx = app.db) {
 
     return await app.services.data.searchGet(entity.get('id'), tx)
   } catch(err) {
+    logger.error(err, { phase: 'data.search.create.entity:fail', search })
     throw new InternalServerError(err.message)
   }

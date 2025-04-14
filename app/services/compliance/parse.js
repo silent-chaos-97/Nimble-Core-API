@@ -31,7 +31,7 @@ function getAdverseMedia(media) {
     return {
       name: listing.title,
       value: listing.snippet,
-      deletedDate: null,
+      date: listing.date,
       url: listing.url,
       countryCodes: [],
       source: '',

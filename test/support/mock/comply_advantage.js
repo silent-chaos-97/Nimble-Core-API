@@ -171,6 +171,7 @@ const successResponse = {
                 "name": "羅伯·穆加貝"
               },
               {
+                "name": "Robert G. Mugabe"
               },
               {
                 "name": "Robert Magabe"
@@ -241,3 +242,8 @@ const successResponse = {
                 "name": "Michael Nhamodzenyika Mugabe"
               },
               {
+                "association": "nephew",
+                "name": "Patrick Zhuwao"
+              },
+              {
+                "association": "Child",

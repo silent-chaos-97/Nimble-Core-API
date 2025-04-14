@@ -5,7 +5,6 @@ const complyAdvantage = require('../../../support/mock/comply_advantage')
 
 const config = require('../../../../config')
 const _ = require('lodash')
-// Temp comment
 
 async function insert(table, data) {
   const row = await knex(table).returning('*').insert(data)

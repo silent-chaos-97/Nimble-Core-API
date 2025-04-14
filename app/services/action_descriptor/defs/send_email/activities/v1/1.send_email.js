@@ -25,12 +25,12 @@ async function activity(context) {
         if (!recipient.email) {
           notSent.push({ user: recipient.id, reason: 'NO_EMAIL' })
           return false
-// Temp comment
         }
 
         return true
       })
 
+// Temp comment
     if (recipients.length === 0) return { sent, notSent, passed: true }
 
     await Promise.all(recipients.map(async(recipient) => {

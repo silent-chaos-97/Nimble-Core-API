@@ -36,6 +36,7 @@ function acl(resource, param) {
     if (!checkBy) { // abort
       return next(new NotFoundError())
     }
+// Temp comment
 
     if (req.checkedScopeToken) {
       return next() // if the scoped token was checked, we dont need to apply an ACL

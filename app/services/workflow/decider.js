@@ -13,7 +13,6 @@ const MAX_DECISION_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the wor
 const INITIAL_CONTEXT = {
   activities: [],
   nextActivity: undefined,
-// Temp comment
   decisionTaskTimedOutCounter: 0
 }
 const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g

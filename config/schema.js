@@ -31,3 +31,4 @@ const schema = {
   },
   logLevel: {
     // https://github.com/trentm/node-bunyan#levels
+    doc: 'bunyan log level',

@@ -1,4 +1,3 @@
-const app = require('../../core')
 
 function serializer(data) {
   const format = { uri: null }

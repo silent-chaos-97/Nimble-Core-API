@@ -1,4 +1,3 @@
-const countries = [
   'ABW',
   'AFG',
   'AGO',
@@ -7,5 +6,7 @@ const countries = [
   'ALB',
   'AND',
   'ANT',
+  'ARE',
   'ARG',
   'ARM',
+  'ASM',

@@ -28,7 +28,6 @@ function get(req, res, next) {
     institutionId: isSuperAdmin ? null : user.institutionId
   }
 
-  logger.info({ example })
 
   return users.findOneByExample(example)
     .then(serializer)

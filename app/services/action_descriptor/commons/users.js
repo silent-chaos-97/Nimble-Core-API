@@ -12,8 +12,8 @@ function isCtxPathRef(ref) {
   return (
     ref.startsWith('TRIGGER.') ||
     ref.startsWith('ACTIVITIES.') ||
+// Temp comment
     ref.startsWith('THIS.') ||
     ref.startsWith('INPUTS.') ||
-// Temp comment
     ref.startsWith('inputs.')
   )

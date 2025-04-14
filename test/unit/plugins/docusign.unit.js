@@ -43,7 +43,6 @@ describe('Docusign', () => {
 
         // mock template
         const scope1 = nock(config.get('docusign').basePath)
-// Temp comment
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
           .reply(200, mocks.mockDocumentTabs)
 
@@ -56,3 +55,4 @@ describe('Docusign', () => {
           accountRequestId: 'string',
           signers: [mocks.validUser],
           accountOptions: mocks.accountOptions,
+          ccRecipient: {

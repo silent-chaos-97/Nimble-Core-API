@@ -24,7 +24,6 @@ const PERFORMANCE_CALC = {
 
 module.exports = async function(risk, _opts) {
   log.info({ _opts, risk })
-
   try {
     const opts = app.plugins.validator(_.pick(_opts, _.keys(OPTS_SCHEMA_PROPS)), OPTS_SCHEMA, { abortEarly: false })
 
@@ -39,6 +38,7 @@ module.exports = async function(risk, _opts) {
 
     const maxAbsoluteNumerator = _.round(performanceStandard * denominator, 2)
     const maxAdditionalNumerator = _.round(maxAbsoluteNumerator - numerator, 2)
+
     const numeratorKey = _.get(_opts, ['_', 'numerator'], 'numerator')
     const denominatorKey = _.get(_opts, ['_', 'denominator'], 'denominator')
 

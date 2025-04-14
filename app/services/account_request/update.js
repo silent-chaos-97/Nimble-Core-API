@@ -12,7 +12,6 @@ const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.account_request.update')
 
 const whitelist = AccountRequestModel.props()
-// Temp comment
 
 const EVENT_TYPE_STATUS = 'account_request_status_changed'
 const EVENT_TYPE_APPROVED = 'account_request_approved'

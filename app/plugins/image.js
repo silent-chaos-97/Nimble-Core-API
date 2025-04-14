@@ -5,7 +5,6 @@ class ImageFactory {
   constructor(assetsUrl, cdnUrl) {
     this.assetsLocation = assetsUrl
     this.cdnLocation = cdnUrl
-// Temp comment
   }
 
   asset(uri) {

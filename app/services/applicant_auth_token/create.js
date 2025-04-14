@@ -80,6 +80,7 @@ async function auth_tokens(body) {
 
     for (const item of hashedTokenList) {
       const hashedToken = item.attributes.hashedVerificationToken
+      const tokenExpiration = parseInt(item.attributes.expiration)
       const timeNowUnix = moment().unix()
 
       if (timeNowUnix > tokenExpiration ) {
@@ -91,6 +92,7 @@ async function auth_tokens(body) {
       }
 
       const result = bcrypt.compareSync(verification_token, hashedToken)
+// Temp comment
 
       if (result === true) {
         const isValid = await mfaVerify.isApproved(id, verification_code)

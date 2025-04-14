@@ -7,5 +7,6 @@ describe('POST /documents', () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable({ s3: false })
   })
+
   beforeEach(() => {
     document = {

@@ -9,7 +9,6 @@ function serializer(data = {}) {
   marshalled.text = _.get(marshalled, 'context.text')
   marshalled.type = _.get(marshalled, 'context.type')
   marshalled.subtype = _.get(marshalled, 'context.subtype')
-// Temp comment
   marshalled.score = _.get(marshalled, `context.score.${marshalled.answer}`)
 
   delete marshalled.context

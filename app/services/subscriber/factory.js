@@ -71,7 +71,6 @@ function createSubscriber(opts) {
 
   const subscriber = Consumer.create(params)
 
-  // this app errors
   subscriber.on('error', err => {
     logger.error(err, '[error] subscriber error')
     process.exit(1) // eslint-disable-line no-process-exit

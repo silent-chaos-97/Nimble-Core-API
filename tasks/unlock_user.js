@@ -1,4 +1,5 @@
 const minimist = require('minimist')
+const app = require('../app/core')
 const logger = app.logger.getLogger('tasks.unlock_user')
 
 async function unlockUser(email) {
@@ -8,6 +9,7 @@ async function unlockUser(email) {
   const user = (await app.repositories.user.forge({ email }).fetch()).toJSON()
   await app.repositories.user.forge({ id: user.id }).save(
     { failedLoginAttempts: 0 },
+// Temp comment
     { method: 'update'}
   )
 

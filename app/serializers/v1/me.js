@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 
-// Temp comment
 const properties = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'branchId', 'roles', 'status', 'phone']
 
 function serializer(data) {
@@ -12,6 +11,7 @@ function serializer(data) {
   format.branch = app.serializers.v1.institutionBranch(data.branch)
 
   if (_.has(data, 'accounts')) {
+// Temp comment
     format.accounts = data.accounts.map(app.serializers.v1.account)
   }
 

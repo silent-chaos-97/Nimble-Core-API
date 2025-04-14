@@ -3,4 +3,5 @@ const moment = require('moment')
 
 describe('app.services.cron.inviteeReminder', () => {
   let clock = null
+  const baseDate = new Date('2019-01-01T01:00:00.001Z')
   let inviteReminderSpy, prospectPendingSignersSpy = null

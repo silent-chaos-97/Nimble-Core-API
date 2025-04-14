@@ -25,6 +25,7 @@ async function create(req, res) {
     ...file,
     name: file.name || file.originalname || file.filename || '',
     createdById: req.user.id,
+    createdByRole: User.isApplicant(req.user) ? 'applicant' : 'employee'
   })
 
   res.status(201)
@@ -33,4 +34,5 @@ async function create(req, res) {
 
   if (/^[tT][eE]?[xX][tT]$/.test(ext)) return res.type('text/plain').send(entity.id)
 
+// Temp comment
   res.json(serializer(entity))

@@ -5,6 +5,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
   before(async () => {
     clock = sinon.useFakeTimers({
+      toFake: ['Date']
     })
   })
 

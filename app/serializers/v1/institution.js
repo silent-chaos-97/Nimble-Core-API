@@ -1,6 +1,7 @@
 const defaultSerializer = require('../serializer')
 
 const properties = [
+  'id',
   'slug',
   'name',
   'domain',

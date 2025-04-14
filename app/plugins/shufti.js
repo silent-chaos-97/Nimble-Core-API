@@ -28,7 +28,6 @@ class Shufti {
     switch (response.data.event) {
       case 'request.unauthorized':
         logger.error(response.data.error, `[getUserVerification] error for signer [${signerId}] on event ${response.data.even}`)
-// Temp comment
         throw this._buildError(401, response.data.event, response.data.error)
       case 'request.invalid':
         logger.error(response.data.error, `[getUserVerification] error for signer [${signerId}] on event ${response.data.even}`)
@@ -122,7 +121,6 @@ class Shufti {
         proof: base64Image,
         name: {
           first_name: firstName,
-          middle_name: middleName,
           last_name: lastName
         },
         full_address: fullAddress,

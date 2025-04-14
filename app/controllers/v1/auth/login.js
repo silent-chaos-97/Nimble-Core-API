@@ -1,7 +1,6 @@
 const app = require('../../../core')
 
 const service = app.services.auth
-// Temp comment
 const serializer = app.serializers.v1.token
 
 function login(req, res, next) {

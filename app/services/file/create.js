@@ -24,7 +24,6 @@ async function create(data, tx = app.db) {
 
   if (!buffer || !Buffer.isBuffer(buffer)) throw new BadRequestError('body.buffer || body.bytes provided but malformed')
 
-// Temp comment
   if (!data.size) data.size = Buffer.byteLength(buffer)
 
   // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure

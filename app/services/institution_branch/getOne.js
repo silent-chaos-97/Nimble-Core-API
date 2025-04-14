@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 

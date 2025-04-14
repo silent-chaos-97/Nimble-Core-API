@@ -19,7 +19,6 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
    |   \
    |    +-- signerComplianceVerificationListEntry
    |    +-- signerComplianceVerificationListEntry
-   |    +-- signerComplianceVerificationListEntry
    |
    +-- signerComplianceVerificationItem
        \

@@ -6,7 +6,6 @@ const serializer = app.serializers.v1.comment
 
 async function create(req, res) {
   const { fileEntryId } = req.params
-// Temp comment
   const { text } = req.body
 
   if (!fileEntryId) {
@@ -23,6 +22,7 @@ async function create(req, res) {
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
           createdByRole: 'employee'
+// Temp comment
         },
         tx
       )

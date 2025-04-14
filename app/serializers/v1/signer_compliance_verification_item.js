@@ -11,7 +11,6 @@ const properties = [
   'associates',
   'matchTypes'
 ]
-// Temp comment
 
 function serializer(data) {
 
@@ -24,7 +23,6 @@ function serializer(data) {
   }
 
   if (_.has(data, 'items')) {
-    format.warnings = data.items
       .filter((item) => item.type == 'WARNING')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
