@@ -11,7 +11,6 @@ function createSubscriber(opts) {
     apiVersion: '2012-11-05',
     // removes empty string/undefineds
     ..._.omitBy(app.config.get('sqs'), _.isNil)
-  })
 
   async function handleMessage(message) {
     try {
@@ -71,6 +70,7 @@ function createSubscriber(opts) {
 
   const subscriber = Consumer.create(params)
 
+  // this app errors
   subscriber.on('error', err => {
     logger.error(err, '[error] subscriber error')
     process.exit(1) // eslint-disable-line no-process-exit

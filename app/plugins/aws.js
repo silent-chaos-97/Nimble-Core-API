@@ -626,6 +626,7 @@ class AWSFacade {
       const ACL = acl || 'authenticated-read'
 
       const s3Req = {
+        Key,
         ACL,
         Body,
         Bucket: this.config.s3.upload_bucket

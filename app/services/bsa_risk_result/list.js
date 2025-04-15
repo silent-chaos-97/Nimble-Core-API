@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
-const BsaRiskResult = app.repositories.bsaRiskResult
 // Temp comment
+const BsaRiskResult = app.repositories.bsaRiskResult
 const BsaRiskResultModel = app.models.bsaRiskResult
 const schema = require('./schemas/filter')
 const validator = app.plugins.validator

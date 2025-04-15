@@ -6,6 +6,7 @@ describe('POST /signers', async () => {
     newSigner,
     inviteSignerEmailSpy,
     eventPublishSpy,
+    verifyEmailSpy
 
   before(() => {
     nock.enable()

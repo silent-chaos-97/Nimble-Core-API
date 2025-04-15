@@ -12,6 +12,7 @@ const OPS = {
  * google sheets as an executor of business computations (create form template, update with data, read back in)
  * and perform other direct computations on analyses.
  */
+async function compute(operation, opts, tx = app.db) {
   const computer = _.get(OPS, operation)
 
   if (!computer) return Promise.reject(new Error(`OperationNotSupported[${operation}]`))

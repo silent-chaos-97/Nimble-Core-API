@@ -7,3 +7,4 @@ order: 0
 columns:
   - data: id
     title: ID
+    readOnly: true

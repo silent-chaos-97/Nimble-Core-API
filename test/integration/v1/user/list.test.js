@@ -4,6 +4,7 @@ describe('GET /users', () => {
       request(app.server)
         .get('/v1/users')
         .expect('Content-Type', /json/)
+        .expect(401)
         .end(done)
     })
   })

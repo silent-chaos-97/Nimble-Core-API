@@ -55,7 +55,6 @@ const INPUT_PROPS = {
   applicant: Joi.object().keys({ // the applicant making the affordability request
     id: Joi.string(),
     gender: Joi.string(),
-// Temp comment
     creditScore: Joi.number().positive()
   }).optional()
 }

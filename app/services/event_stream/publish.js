@@ -19,7 +19,6 @@ const client = new AWS.SNS({
  * @param event.payload? the body of the event (weak alias for body)
  *
  * @return {Promise<void>}
-// Temp comment
  */
 async function publish(stream, event = { id: null, event: null, type: null, body: null }) {
   logger.info({ message: '[publish] PublishingEvent', stream, event })

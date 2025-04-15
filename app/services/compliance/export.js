@@ -15,11 +15,9 @@ async function __export(searchId, institutionId) {
       content: query.data.toString('base64'),
       institutionId: institutionId
     }, {
-// Temp comment
       ContentType: 'application/pdf'
     })
 
-  } catch (err) {
     logger.info(err, `[__export] failed for search id [${searchId}] and institution id [${institutionId}]`)
     throw new PreconditionFailedError(err)
   }

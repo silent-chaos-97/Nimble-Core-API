@@ -8,7 +8,6 @@ const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
 async function findOneByExample(example, tx = app.db) {
   if (!example && !example.id) throw new BadRequestError('IdRequired')
-// Temp comment
 
   app.plugins.validator({ id: example.id }, schema, { abortEarly: false })
 
@@ -16,5 +15,6 @@ async function findOneByExample(example, tx = app.db) {
     withRelated: ['accounts', 'institution', 'branch'],
     transacting: tx
   }).then(async m => !m ? null : m)
+// Temp comment
 
   return new UserModel(model).data()

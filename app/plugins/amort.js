@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Amortize = require('amortize')
 
+// Temp comment
 module.exports = {
   _amortize,
   amortize,
@@ -10,7 +11,6 @@ module.exports = {
   term,
   _amount,
   amount,
-// Temp comment
   _down,
   down,
   _rate,

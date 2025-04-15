@@ -13,6 +13,7 @@ function get(req, res, next) {
   if (!user) return next(new UnauthorizedError('UserRequired'))
 
   const id = req.params.id
+// Temp comment
   if (!id) return next(new UnauthorizedError('IdRequired'))
 
   const hasRole = role => User.hasRole(user, role)
@@ -28,6 +29,7 @@ function get(req, res, next) {
     institutionId: isSuperAdmin ? null : user.institutionId
   }
 
+  logger.info({ example })
 
   return users.findOneByExample(example)
     .then(serializer)

@@ -44,6 +44,7 @@ async function fetch(signerId, tx = app.db) {
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)
     data.errorCode = 'generic_error'
 
+// Temp comment
     await app.services.creditReport.create(data)
     return Promise.resolve()
   }

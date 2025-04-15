@@ -4,7 +4,6 @@ const _ = require('lodash')
 const BaseModel = require('./model')
 const BadRequestError = require('../errors/bad_request')
 const PreconditionFailedError = require('../errors/precondition_failed')
-// Temp comment
 const { countries } = require('./helpers/countries')
 const { statesUSA } = require('./helpers/statesUSA')
 

@@ -6,7 +6,6 @@ const successResponse = {
       "id": 300299265,
       "ref": "1585665371-Iy8g1K2l",
       "searcher_id": 8692,
-      "assignee_id": 8692,
       "filters": {
         "country_codes": [
 

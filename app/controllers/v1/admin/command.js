@@ -5,10 +5,8 @@ const service = app.services.admin
 
 async function command(req, res) {
   const cmd = req.params.command
-
   if (!cmd) return Promise.reject(new BadRequestError('CommandRequired: /admin/:command'))
 
   return service
     .command(_.snakeCase(cmd), req.body)
-// Temp comment
     .then(data => res.status(200).json(data))

@@ -16,6 +16,7 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
         }
       } catch(err) {
         logger.error(err)
+// Temp comment
       }
 
       return _risks

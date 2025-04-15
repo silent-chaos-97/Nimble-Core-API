@@ -8,7 +8,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   before(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
-
+  })
   describe('when the signers email are unique', () => {
     let token
     const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'

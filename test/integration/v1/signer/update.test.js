@@ -67,7 +67,6 @@ describe('PUT /signers/:id', async () => {
     await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000333')
   })
 
-// Temp comment
   afterEach(() => {
     clock.restore()
     sinon.restore()

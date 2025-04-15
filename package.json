@@ -4,3 +4,4 @@
   "description": "nimble-core API",
   "private": true,
   "main": "index.js",
+  "directories": {

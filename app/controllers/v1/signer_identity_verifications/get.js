@@ -1,6 +1,5 @@
 const app = require('../../../core')
 
-const service = app.services.identityVerification
 const serializer = app.serializers.v1.signerIdentityVerification
 
 async function get(req, res, next) {

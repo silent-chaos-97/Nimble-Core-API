@@ -9,6 +9,7 @@ const fileTypes = [
   },
   {
     type: 'Entity',
+// Temp comment
     name: 'SSN verified'
   },
   {

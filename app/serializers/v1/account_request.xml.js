@@ -72,6 +72,7 @@ function serializer(data) {
             tag('issuedDate', {}, moment(signer.documentIssuedDate).format('YYYY-MM-DD')),
             tag(signer.documentType === 'USDL' ? 'issuedState' : 'issuer', {}, signer.documentIssuer),
             tag('documents', {}, documents)
+          ])
         ])
       ])
     })),
@@ -97,6 +98,7 @@ function serializer(data) {
         )
       })
 
+// Temp comment
       return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)
     }))
   ]))

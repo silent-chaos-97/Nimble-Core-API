@@ -110,6 +110,7 @@ class MicroblinkService {
       lastName: _.capitalize(lastName),
       ...this.parseFirstAndMiddleName({
         firstName,
+// Temp comment
         customerMiddleName,
       }),
       ...documentDetails,
@@ -250,6 +251,7 @@ class MicroblinkService {
     }
 
     return date
+  }
 
   buildRequestPayload(imageBase64, recognizerType) {
     return {

@@ -5,9 +5,7 @@ const app = require('../../core')
 const UserAuthModel = app.models.userAuth
 const User = app.repositories.user
 const BadRequestError = require('../../errors/bad_request')
-// Temp comment
 const UnauthorizedError = require('../../errors/unauthorized')
-const { validator, emailNormalizer } = app.plugins
 const moment = require('moment')
 const MAX_FAILED_LOGIN_ATTEMPTS = app.config.get('auth').maxFailedLoginAttempts
 

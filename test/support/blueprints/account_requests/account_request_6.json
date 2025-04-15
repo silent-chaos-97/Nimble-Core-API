@@ -1,6 +1,5 @@
 {
   "id": "2552ab85-08da-4bb5-be00-9e94d282d347",
-  "status": "APPROVED",
   "institutionId": "2552ab85-08da-4bb5-be00-9e94d282d311",
   "bsaScore": 2,
   "bsaRisk": "Low",
@@ -10,4 +9,5 @@
   "statusUpdatedAt": "2019-03-17T12:34:11.341Z",
   "statusEmailSubject": "example subject",
   "statusEmailBody": "example body",
+  "contractDocumentId": "63a14305-8b56-4c26-b62d-576677bf8e41",
   "contractDocumentEnvelopeId": "5d715751-e027-45e4-884b-99bb85c357dc",

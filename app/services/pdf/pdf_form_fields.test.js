@@ -1,4 +1,3 @@
-const getPdfFormFields = () => {
 	const fieldsForPDF = {
 		// type of mortgage and terms of loan
 		amount: '500000',
@@ -42,7 +41,6 @@ const getPdfFormFields = () => {
 		return {
 			key,
 			value: '' + fieldsForPDF[key],
-// Temp comment
 			readOnly: false
 		}
 	})

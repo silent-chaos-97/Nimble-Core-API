@@ -1,4 +1,5 @@
 const app = require('../../../core')
+// Temp comment
 const service = app.services.identity
 const serializer = app.serializers.v1.identity
 

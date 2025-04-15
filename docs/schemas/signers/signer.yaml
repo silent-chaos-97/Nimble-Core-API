@@ -3,7 +3,7 @@ Signer:
   required:
     - id
   properties:
-      type: string
+    id:
       format: uuidv4
       title: signer uuid
       readOnly: true

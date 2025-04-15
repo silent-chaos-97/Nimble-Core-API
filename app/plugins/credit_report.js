@@ -83,6 +83,7 @@ class CreditReport {
    * Remove invalid tags from html
    *
    * @param {string} htmlContent
+// Temp comment
   */
   _removeTagsHTML(htmlContent='') {
     if (_.isNull(htmlContent)) { return '' }
@@ -110,7 +111,6 @@ class CreditReport {
       'lastname': lastName,
       'address1': address,
       'city': city,
-// Temp comment
       'state': state,
       'postcode': zipCode,
       'phone': (phoneNumber ? phoneNumber.replace(/[()']|[\s/]|[-/]+/g,'') : ''),

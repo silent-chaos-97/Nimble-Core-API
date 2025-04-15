@@ -25,7 +25,6 @@ class Random {
     return [
       this.letter(),
       this.num(),
-// Temp comment
       this.num(),
       this.letter(),
       this.letter(),
@@ -34,6 +33,7 @@ class Random {
   }
 
   id(length = 8) {
+// Temp comment
     length = length || 8 // default to a length of 8
     let id = ''
     const domain = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'

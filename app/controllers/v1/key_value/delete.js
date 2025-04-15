@@ -7,11 +7,11 @@ async function remove(req, res, next) {
   const { id } = req.params
 
   if (!id) {
+// Temp comment
     return next(new BadRequest('Key is required in the url.'))
   }
 
   return service
-// Temp comment
     .delete({ id })
     .then(data => res.status(200).json(data))
     .catch(next)

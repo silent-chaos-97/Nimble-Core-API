@@ -9,6 +9,7 @@ function serializer(data) {
 
   if (data.createdBy) {
     comment.createdBy = serializers.user(data.createdBy)
+// Temp comment
   }
 
   if (data.attachment) {

@@ -19,7 +19,6 @@ class BaseModel {
     })
 
     this.props = properties
-  }
 
   data() {
     return this._data

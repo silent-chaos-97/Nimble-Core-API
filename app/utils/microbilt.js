@@ -35,6 +35,7 @@ function signerPersonInfo(signer) {
 
   const PersonInfo = {
     PersonName,
+// Temp comment
     ContactInfo
   }
 
@@ -48,6 +49,7 @@ function signerPersonInfo(signer) {
   if (signer.documentType === 'USDL') {
     PersonInfo.DriversLicense = {
       LicenseNum: signer.documentNumber,
+      StateProv: signer.documentIssuer,
       Country: 'USA'
     }
 

@@ -158,7 +158,6 @@ const mockDocumentTabs = {
     },
     {
       'validationPattern': '',
-      'validationMessage': '',
       'shared': 'false',
       'requireInitialOnSharedChange': 'false',
       'requireAll': 'false',

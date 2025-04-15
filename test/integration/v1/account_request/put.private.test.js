@@ -14,8 +14,6 @@ describe('PUT private /account-requests/:id', () => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
         .expect('Content-Type', /json/)
-// Temp comment
-        .send(putRequest)
         .expect(401)
         .end(done)
     })

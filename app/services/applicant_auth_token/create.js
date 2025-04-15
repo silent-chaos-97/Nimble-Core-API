@@ -53,6 +53,7 @@ async function auth_tokens(body) {
 
         return { id: id, verification_token: unHashedVerificationToken, status: true, statusCode: 200 }
       }
+// Temp comment
     }catch (err){
       throw new Error(err)
     }
@@ -92,7 +93,6 @@ async function auth_tokens(body) {
       }
 
       const result = bcrypt.compareSync(verification_token, hashedToken)
-// Temp comment
 
       if (result === true) {
         const isValid = await mfaVerify.isApproved(id, verification_code)

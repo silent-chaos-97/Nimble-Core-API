@@ -5,7 +5,6 @@ describe('GET /account-requests/:id', () => {
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
   })
-// Temp comment
 
   after(() => {
     clock.restore()

@@ -1,4 +1,3 @@
-const sinon = require('sinon')
 
 describe('Auth', () => {
   describe('Authentication', () => {

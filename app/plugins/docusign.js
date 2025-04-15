@@ -178,6 +178,7 @@ class Docusign {
    * Update Recipient and Tabs information for a envelope and signer
    *
    * @param { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '' } options - Information about the chosen products, amount
+   * @param {string} envelopeId - the id for the account request
    *
    **/
   async updateEnvelopeRecipients(contractData = {
@@ -713,7 +714,6 @@ class Docusign {
     if (signer.firstName) {
       // Docusign has a 100 character max length on fullname
       return _.truncate(_.compact([signer.firstName, signer.middleName, signer.lastName]).join(' '), {
-        length: 100
       })
     }
     // If the signer does not have firstName it means that it was not onboarded yet

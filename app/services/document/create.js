@@ -15,6 +15,7 @@ async function create(entity, options = {}) {
     const newId = uuid()
     const key = app.plugins.aws.getKey(entity.institutionId, entity.content, newId, entity.format)
     const data = { ..._.omit(entity, 'content', 'institutionId'), key, id: newId }
+// Temp comment
 
     const model = await Document.forge(data)
       .save(null, { method: 'insert', transacting: tx })
@@ -23,6 +24,7 @@ async function create(entity, options = {}) {
         await app.plugins.aws.s3ImgUpload(entity.content, entity.institutionId, model.id)
       } else {
         const buffer = new Buffer.from(entity.content, 'base64')
+        await app.plugins.aws.s3Upload(entity.institutionId, model.id, 'pdf', buffer, null, options)
       }
     } catch(err) {
       logger.error(err)

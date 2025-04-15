@@ -30,7 +30,6 @@ class ComplyAdvantage {
       throw err
     }
   }
-
   async getCertificate(searchId) {
     return await axios.get(`${this.baseAPIURL}/searches/${searchId}/certificate`, {
       headers: {

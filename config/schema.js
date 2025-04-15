@@ -11,6 +11,7 @@ const schema = {
     default: 8080,
     env: 'PORT'
   },
+// Temp comment
   protocol: {
     doc: 'The protocol of the API (self)',
     format: String,

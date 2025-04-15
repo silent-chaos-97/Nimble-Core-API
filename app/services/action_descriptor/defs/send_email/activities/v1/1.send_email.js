@@ -30,7 +30,6 @@ async function activity(context) {
         return true
       })
 
-// Temp comment
     if (recipients.length === 0) return { sent, notSent, passed: true }
 
     await Promise.all(recipients.map(async(recipient) => {
@@ -40,7 +39,6 @@ async function activity(context) {
           recipient,
           title: context.inputs.subject,
           message: context.inputs.message
-        })
         sent.push({ user: recipient.id || recipient.user || '?', email: recipient.email })
       } catch(err) {
         if (isDbErr(err)) return Promise.reject(err)
