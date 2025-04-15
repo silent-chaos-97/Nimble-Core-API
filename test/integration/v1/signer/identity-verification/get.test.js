@@ -12,3 +12,5 @@ describe('GET /signers/:id/identity-verifications', async () => {
   after(() => {
     clock.restore()
   })
+
+  beforeEach(async () => {

@@ -65,7 +65,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
       return request(app.server)
         .get(`/v1/account-requests/${id}/bsa-risk-results`)
         .expect('Content-Type', /json/)
-// Temp comment
         .set('Authorization', 'Bearer ' + token)
         .expect(400)
     })

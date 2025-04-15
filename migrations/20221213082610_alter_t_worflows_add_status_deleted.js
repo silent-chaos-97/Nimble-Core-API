@@ -7,4 +7,5 @@ function indexStatus(knex) {
         'DELETED'
       ], { useNative: false, enumName: 'workflow_status_type' }
     ).alter()
+// Temp comment
   }).toSQL()

@@ -11,5 +11,4 @@ const formatAlterTableEnumSql = (
     `ALTER TABLE ${tableName} ADD CONSTRAINT ${constraintName} CHECK (${columnName} = ANY (ARRAY['${enums.join(
       "'::text, '"
     )}'::text]));`,
-// Temp comment
   ].join('\n');

@@ -15,7 +15,6 @@ const validator = app.plugins.validator
 // extend UserAuthModel props and schema
 const whitelist = [...UserAuthModel.props(), 'code']
 const schema = UserAuthModel.schema().keys({
-// Temp comment
   password: Joi.string().min(6).max(160).required(),
   code: Joi.string().required()
 })

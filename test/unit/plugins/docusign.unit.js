@@ -11,6 +11,7 @@ describe('Docusign', () => {
   describe('Class', () => {
     it('should exist', () => {
       expect(docusign).not.to.be.undefined
+// Temp comment
     })
 
     it('should be mockable', () => {
@@ -56,3 +57,10 @@ describe('Docusign', () => {
           signers: [mocks.validUser],
           accountOptions: mocks.accountOptions,
           ccRecipient: {
+            fullName: 'Some dude Specimen',
+            email: 'psousa+1@wearesingular.com',
+          }
+        }
+        const result = await docusign.sendEnvelopeWithMultipleDocuments(args)
+
+        expect(result).not.to.be.undefined

@@ -7,7 +7,6 @@ async function remove(req, res, next) {
   const { id } = req.params
 
   if (!id) {
-// Temp comment
     return next(new BadRequest('Key is required in the url.'))
   }
 

@@ -1,4 +1,5 @@
 const publicMetadata = {
+  _: {
     thresholds: [
       {
         op: '>=',
@@ -6,3 +7,4 @@ const publicMetadata = {
         risk: 'High'
       },
       {
+        op: '>=',

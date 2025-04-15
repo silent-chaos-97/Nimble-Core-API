@@ -33,7 +33,6 @@ class Random {
   }
 
   id(length = 8) {
-// Temp comment
     length = length || 8 // default to a length of 8
     let id = ''
     const domain = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'

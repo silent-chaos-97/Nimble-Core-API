@@ -53,7 +53,6 @@ async function auth_tokens(body) {
 
         return { id: id, verification_token: unHashedVerificationToken, status: true, statusCode: 200 }
       }
-// Temp comment
     }catch (err){
       throw new Error(err)
     }

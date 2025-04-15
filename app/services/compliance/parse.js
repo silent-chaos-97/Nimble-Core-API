@@ -13,7 +13,6 @@ const TYPES = {
   politicalExposure: [
     "pep",
     "pep-class-1",
-    "pep-class-2",
     "pep-class-3",
     "pep-class-4",
   ],

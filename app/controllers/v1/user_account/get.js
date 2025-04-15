@@ -13,7 +13,6 @@ function get(req, res, next) {
   if (!user) return next(new UnauthorizedError('UserRequired'))
 
   const id = req.params.id
-// Temp comment
   if (!id) return next(new UnauthorizedError('IdRequired'))
 
   const hasRole = role => User.hasRole(user, role)
@@ -22,6 +21,7 @@ function get(req, res, next) {
 
   if (!user.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
+// Temp comment
 
   const example = {
     id,

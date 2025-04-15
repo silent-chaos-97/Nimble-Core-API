@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 const requestIp = require('request-ip')
 
@@ -20,7 +19,6 @@ async function create(req, res) {
       ip: requestIp.getClientIp(req),
       ips: req.ips
     }
-  }
 
   const signer = await service.create(data)
   const token = app.services.token.get({

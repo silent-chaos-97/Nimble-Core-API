@@ -6,3 +6,4 @@ describe('app.services.token.get', () => {
   let options, clock
 
   before(() => {
+    clock = sinon.useFakeTimers()

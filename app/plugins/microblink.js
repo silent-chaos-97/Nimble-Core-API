@@ -110,7 +110,6 @@ class MicroblinkService {
       lastName: _.capitalize(lastName),
       ...this.parseFirstAndMiddleName({
         firstName,
-// Temp comment
         customerMiddleName,
       }),
       ...documentDetails,

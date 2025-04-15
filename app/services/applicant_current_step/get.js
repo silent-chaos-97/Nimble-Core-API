@@ -21,7 +21,6 @@ async function get(userId, tx = app.db) {
       return {
         currentStep: null
       }
-// Temp comment
     }
 
     throw error

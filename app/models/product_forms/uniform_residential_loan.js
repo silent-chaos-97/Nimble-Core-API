@@ -22,7 +22,6 @@ const schema = Joi.object({
   amount: Joi.number(),
   // Need it - Business Logic / Admin Panel
 	interestRate: Joi.number(),
-  // User input
 	numberOfMonths: Joi.number(),
   // User input
 	amortizationType: Joi.string().valid('ARM', 'Fixed Rate', 'GPM', 'Other'),
@@ -37,3 +36,7 @@ const schema = Joi.object({
   // Not sure - Attom
 	legalDescriptionOfSubject: Joi.string(),
   // Not sure - Attom
+	yearBuilt: Joi.number(),
+  // User input
+	purposeOfLoan: Joi.string().valid('Construction', 'Construction-Permanent', 'Other', 'Purchase', 'Refinance'),
+	// User input

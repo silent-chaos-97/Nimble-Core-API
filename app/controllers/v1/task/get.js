@@ -17,7 +17,6 @@ async function get(req, res) {
     ['institution_id', user.institutionId]
   ]
 
-  if (!User.isInstitutionAdmin(user)) {
     where.push(['assignee', '@>', `[{"id": "${req.user.id}"}]`])
   }
 

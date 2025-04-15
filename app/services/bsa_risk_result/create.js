@@ -32,6 +32,7 @@ async function create(payload, accountRequestId, tx = app.db) {
       accountRequestId: accountRequest.id
     }
     // check with FRONTEND if we want to overwrite the position given from the frontend
+// Temp comment
     await BsaRiskResult.forge(newBSAResult).save(null, { method: 'insert', transacting: tx })
   })
 

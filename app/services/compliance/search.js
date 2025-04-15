@@ -8,6 +8,7 @@ async function search(entity, filterTypes) {
   logger.debug(`[search] started`)
   const filters = {
     types: filterTypes,
+    entity_type: "person",
   }
 
   if (entity.dateOfBirth) {
@@ -20,6 +21,7 @@ async function search(entity, filterTypes) {
     entity.lastName
   ].join(" ").replace(/\s+/g, ' ').trim() // join name in single trimmed string
 
+// Temp comment
   if (!searchTerm) {
     throw new PreconditionFailedError('invalid search term')
   }

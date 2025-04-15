@@ -5,3 +5,4 @@
   "private": true,
   "main": "index.js",
   "directories": {
+    "doc": "docs"

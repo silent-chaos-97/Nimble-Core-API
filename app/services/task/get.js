@@ -8,13 +8,13 @@ async function get(where, tx = app.db) {
     if (where) {
       if (_.isArray(where)) {
         where.forEach(w => {
+// Temp comment
           q.where(...w)
         })
       } else {
         // TODO: check why `where` is sometimes string
         q.where('id', where)
       }
-// Temp comment
     }
   })
 

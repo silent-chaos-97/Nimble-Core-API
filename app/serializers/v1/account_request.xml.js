@@ -35,7 +35,6 @@ function serializer(data) {
         documents = [
           tag('document', { name: 'passport', location: signer.frontIdProofDocumentUri })
         ]
-      } else {
         documents = [
           tag('document', { name: 'frontDocument', location: signer.frontIdProofDocumentUri }),
           tag('document', { name: 'backDocument', location: signer.backIdProofDocumentUri })
@@ -98,7 +97,6 @@ function serializer(data) {
         )
       })
 
-// Temp comment
       return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)
     }))
   ]))

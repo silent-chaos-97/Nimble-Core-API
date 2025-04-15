@@ -8,7 +8,6 @@ const Account = app.repositories.account
 const UserModel = app.models.user
 const validator = app.plugins.validator
 
-// Temp comment
 const whitelist = UserModel.props()
 
 async function validate(user) {

@@ -35,7 +35,6 @@ function signerPersonInfo(signer) {
 
   const PersonInfo = {
     PersonName,
-// Temp comment
     ContactInfo
   }
 

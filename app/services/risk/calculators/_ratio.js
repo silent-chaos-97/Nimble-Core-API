@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const Joi = require('@hapi/joi')
 const app = require('../../../core')
 const numbers = app.plugins.numbers
@@ -61,7 +60,6 @@ module.exports = async function(risk, _opts) {
       calculated.high_performing = performing(ratio, highPerformanceStandard)
       calculated.relativePerformance = relativePerformance(performing, ratio, performanceStandard, highPerformanceStandard)
     }
-    calculated[`max${_.upperFirst(_.camelCase(numeratorKey))}`] = {
       absolute: maxAbsoluteNumerator,
       additional: maxAdditionalNumerator
     }

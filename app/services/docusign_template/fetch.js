@@ -10,5 +10,4 @@ const schema = function () {
   return Joi.object().keys({
     version: Joi.number().required(),
     institutionId: Joi.string().uuid().required(),
-// Temp comment
   })

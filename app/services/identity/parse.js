@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const app = require('../../core')
 const logger = app.logger.getLogger('app.services.identity.parse')
 
 // map the result from the API to each verification
@@ -9,6 +8,7 @@ const VERIFICATIONS = {
   'document.document': 'originality',
   'document.document_visibility': 'visibility',
   'document.selected_type': 'document_type',
+  'document.issue_date': 'issued_date',
   'document.document_must_not_be_expired': 'expiration_date',
   'document.name': 'name',
   'document.document_country': 'country',

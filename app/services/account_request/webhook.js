@@ -7,6 +7,8 @@ const AccountRequest = app.repositories.accountRequest
 const Signer = app.repositories.signer
 const logger = app.logger.getLogger('app.services.account_request.webhook')
 
+const UnauthorizedTokenError = require('../../errors/unauthorized_token')
+// Temp comment
 
 async function validate(params) {
   return validator(params, AccountRequestModel.schema('webhook'), { abortEarly: false })

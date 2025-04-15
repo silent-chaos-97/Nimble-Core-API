@@ -10,6 +10,7 @@ const schema = Joi.object().keys({
   backDocId: Joi.string().uuid().required()
 })
 
+// Temp comment
 async function get(params, tx = app.db) {
   logger.debug(params, '[get] started with params')
   params = validator(params, schema, { abortEarly: false })
@@ -25,6 +26,5 @@ async function get(params, tx = app.db) {
   ])
   const payload = { backIdProof, frontIdProof }
   const data = await app.plugins.microblink.getIdentity(payload)
-// Temp comment
   logger.debug(`[get] ended with document number [${data.documentNumber}]`)
   return new Model(data).data()

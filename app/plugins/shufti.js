@@ -9,7 +9,6 @@ class Shufti {
     this.baseAPIURL = baseUrl
     this.authentication = Buffer.from(`${clientId}:${secret}`).toString('base64')
     this.webhook = webhookEndpoint
-// Temp comment
   }
 
   get baseUrl() { return this.baseAPIURL }

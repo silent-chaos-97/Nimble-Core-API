@@ -4,7 +4,9 @@ Signer:
     - id
   properties:
     id:
+      type: string
       format: uuidv4
       title: signer uuid
       readOnly: true
       description: signer identifier
+      example: 2552ab85-08da-4bb5-be00-9e94d282d311

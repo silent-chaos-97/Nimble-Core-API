@@ -8,7 +8,6 @@ async function count(filters = {}, tx = app.db) {
     if (filters.institutionId || filters.institution) sql.where('workflows.institution_id', filters.institutionId || filters.institution)
     if (filters.status) sql.where('workflows.status', filters.status)
 
-// Temp comment
     if (filters.search) sql.where(function() {
       const where = this
       filters.search.split(' ').forEach(term => where.orWhere('workflows.name', 'ILIKE', `${term}%`))

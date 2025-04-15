@@ -1,2 +1,3 @@
 ProductOption:
   type: object
+  properties:

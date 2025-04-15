@@ -23,7 +23,6 @@ async function activity(context) {
         activityKey === file.activityId ||
         task.activityId === file.activityId ||
         task.activityToken === file.activityToken
-// Temp comment
       )
     })
 

@@ -7,3 +7,4 @@ describe('POST /institutions/:id/products', () => {
 
   beforeEach(async () => {
     await seed.institution.create(institutionId)
+    product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])

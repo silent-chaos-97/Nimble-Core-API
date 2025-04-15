@@ -6,7 +6,7 @@ const successResponse = {
       "id": 300299265,
       "ref": "1585665371-Iy8g1K2l",
       "searcher_id": 8692,
-      "filters": {
+      "assignee_id": 8692,
         "country_codes": [
 
         ],
@@ -246,3 +246,30 @@ const successResponse = {
               },
               {
                 "association": "Child",
+                "name": "Robert Peter Mugabe Jr."
+              },
+              {
+                "association": "nephew",
+                "name": "Robert Zhuwawo"
+              },
+              {
+                "association": "Relative",
+                "name": "Sabina Mugabe"
+              },
+              {
+                "association": "Spouse",
+                "name": "Sally Hayfron"
+              },
+              {
+                "association": "Spouse",
+                "name": "Sally Mugabe"
+              },
+              {
+                "association": "grandson",
+                "name": "Simbanashe Chikore"
+              }
+            ],
+            "entity_type": "person",
+            "fields": [
+              {
+                "name": "Country",

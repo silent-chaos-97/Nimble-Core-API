@@ -1,2 +1,3 @@
 <?xml-model href="metadata.xsd"?>
+<event name="account_request_approved" rid="10203040-1010-1010-1010-050607080900" timestamp="1970-01-01T00:01:00">
   <accountRequest updatedAt="2019-03-17T12:03:34" updatedBy="userfromotherbankforqueues@nimblefi.com" branchCode="b050">

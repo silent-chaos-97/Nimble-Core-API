@@ -6,3 +6,4 @@ const docusign = require('../../../../app/plugins/docusign')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.contract.send', () => {
+  describe('send', async () => {

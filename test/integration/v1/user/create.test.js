@@ -1,5 +1,6 @@
 const sinon = require('sinon')
 
+// Temp comment
 describe('POST /users', () => {
   let user
 
@@ -12,3 +13,4 @@ describe('POST /users', () => {
         .expect(401)
         .end(done)
     })
+  })

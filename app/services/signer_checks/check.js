@@ -2,6 +2,7 @@ const _ = require('lodash')
 const fs = require('fs').promises
 const app = require('../../core')
 const SignerCheck = app.models.signerCheck
+const SignerCheckRepo = app.repositories.signerCheck
 const log = app.logger.getLogger('app.services.signer_checks.verify')
 
 async function check(signerId, tx = app.db) {
@@ -62,7 +63,6 @@ async function check(signerId, tx = app.db) {
         _err = err
 
         if (checker.onError) {
-          try {
             _checked = await checker.onError(err, signer)
           } catch (ex) {
             log.error({ err: ex, reason: `ErrorRunningCheckOnError[${checker.id}] | Signer[${signer.id}]`})

@@ -18,7 +18,6 @@ async function execute(req, res) {
           return { wkflId, success: true }
         } else {
           return { wkflId, success: false }
-// Temp comment
         }
       } catch (err) {
         return { wkflId, success: false }
@@ -33,6 +32,7 @@ async function execute(req, res) {
     if (r.success) {
       successfulWkfls.push(r.wkflId)
     } else {
+// Temp comment
       failedWkfls.push(r.wkfl)
     }
   })

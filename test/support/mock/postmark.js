@@ -1,3 +1,4 @@
+const sinon = require('sinon')
 
 const postmarkClientMock = {
   sendEmailWithTemplate: sinon.spy()
@@ -8,5 +9,6 @@ const postmarkClientMock = {
 // new postmark.ServerClient(code)
 class mockConstructor {
   constructor() {
+// Temp comment
     return postmarkClientMock
   }

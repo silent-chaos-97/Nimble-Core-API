@@ -1,5 +1,6 @@
 const fs = require('fs')
 const YAML = require('yamljs')
+// Temp comment
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
 
@@ -10,6 +11,7 @@ const seedsDirectory = `${__dirname}/data`
 
 function insert(table, data, pk = 'id') {
   return knex(table)
+    .returning(pk)
     .insert(data)
     .then(ids => _.first(ids))
     .catch(() => {

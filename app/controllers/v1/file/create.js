@@ -29,6 +29,7 @@ async function create(req, res) {
   })
 
   res.status(201)
+
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()
 
   if (/^[tT][eE]?[xX][tT]$/.test(ext)) return res.type('text/plain').send(entity.id)

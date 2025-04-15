@@ -1,4 +1,3 @@
-const uuid = require('uuid')
 const sinon = require('sinon')
 
 describe('POST /signers/:id/email-verifications', async () => {
@@ -8,3 +7,4 @@ describe('POST /signers/:id/email-verifications', async () => {
     sinon.spy(app.services.email, 'emailVerification')
     clock = sinon.useFakeTimers({
       toFake: ['Date']
+    })

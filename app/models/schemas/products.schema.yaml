@@ -8,3 +8,4 @@ columns:
   - data: id
     title: ID
     readOnly: true
+    width: '50'

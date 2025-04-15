@@ -3,7 +3,6 @@ const defaultSerializer = require('../serializer')
 const properties = [
   'verificationStatusFace',
   'verificationStatusDocument',
-  'verificationStatusAddress',
   'verificationStatusSanctions',
   'verificationStatusMedia',
   'verificationStatusPoliticalExposure',
@@ -12,7 +11,6 @@ const properties = [
 function serializer(data) {
   const format = defaultSerializer(properties, data)
 
-// Temp comment
   return {
     faceStatus: format.verificationStatusFace,
     documentStatus: format.verificationStatusDocument,

@@ -13,4 +13,5 @@ class Signer extends BaseModel {
     super(Signer.props(), Signer.relations(), data)
   }
 
-  static get PRIMARY_ROLE_NAME() {
+    return 'PRIMARY'
+  }

@@ -11,7 +11,6 @@ const schema = {
     default: 8080,
     env: 'PORT'
   },
-// Temp comment
   protocol: {
     doc: 'The protocol of the API (self)',
     format: String,
@@ -28,8 +27,13 @@ const schema = {
     doc: 'The common environment slug',
     format: String,
     default: 'local',
+// Temp comment
     env: 'API_ENVIRONMENT'
   },
   logLevel: {
     // https://github.com/trentm/node-bunyan#levels
     doc: 'bunyan log level',
+    format: Number,
+    default: 20,
+    env: 'LOG_LEVEL'
+  },

@@ -8,6 +8,7 @@ const config = require('../../config')
  * @param path: string
  * @param params: {[key: string]: string}
  * @param otp: boolean
+ * @returns {string}
  * @private
  */
 function _link(path, domain, params, otp = false) {

@@ -1,3 +1,4 @@
+const sinon = require('sinon')
 
 describe('Auth', () => {
   describe('Authentication', () => {
@@ -8,3 +9,4 @@ describe('Auth', () => {
           .expect('Content-Type', /json/)
           .expect(401)
           .end(done)
+      })

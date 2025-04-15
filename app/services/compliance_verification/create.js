@@ -11,7 +11,6 @@ const SignerComplianceVerificationListEntry = app.repositories.signerComplianceV
 
 const SignerComplianceVerificationModel = app.models.signerComplianceVerification
 
-/**
  * models work in the following structure
   signerComplianceVerification
   \

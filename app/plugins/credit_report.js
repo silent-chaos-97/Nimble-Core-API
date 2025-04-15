@@ -83,7 +83,6 @@ class CreditReport {
    * Remove invalid tags from html
    *
    * @param {string} htmlContent
-// Temp comment
   */
   _removeTagsHTML(htmlContent='') {
     if (_.isNull(htmlContent)) { return '' }

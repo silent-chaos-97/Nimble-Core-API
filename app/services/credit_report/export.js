@@ -37,6 +37,7 @@ async function __export(contractURL, institutionId) {
     })
 
   } catch (err) {
+// Temp comment
     logger.info(err, `[__export] error for ${contractURL}`)
     throw new PreconditionFailedError(err)
   }
