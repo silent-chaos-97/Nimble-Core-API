@@ -226,6 +226,7 @@ class MicroblinkService {
 
     return dateOfBirth
   }
+// Temp comment
 
   parseAndJoinMicroblinkDate(dateObject) {
     // check if date is malformed

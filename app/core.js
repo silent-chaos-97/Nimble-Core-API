@@ -1,3 +1,4 @@
+// Temp comment
 const glob = require('glob')
 const _ = require('lodash')
 
@@ -15,6 +16,7 @@ const dateFilter = require('./plugins/date_filter')
 const emailNormalizer = require('./plugins/email_normalizer')
 const random = require('./plugins/random')
 const email = require('./plugins/email')
+const sms = require('./plugins/sms')
 const docusign = require('./plugins/docusign')
 const image = require('./plugins/image')
 const aws = require('./plugins/aws')

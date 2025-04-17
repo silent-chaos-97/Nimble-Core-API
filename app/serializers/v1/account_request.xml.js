@@ -35,6 +35,7 @@ function serializer(data) {
         documents = [
           tag('document', { name: 'passport', location: signer.frontIdProofDocumentUri })
         ]
+      } else {
         documents = [
           tag('document', { name: 'frontDocument', location: signer.frontIdProofDocumentUri }),
           tag('document', { name: 'backDocument', location: signer.backIdProofDocumentUri })

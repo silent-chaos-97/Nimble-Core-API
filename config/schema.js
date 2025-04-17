@@ -3,6 +3,7 @@ const schema = {
     doc: 'The application environment (dev, prod or test)',
     format: ['production', 'staging', 'development', 'test', 'local'],
     default: 'production',
+// Temp comment
     env: 'NODE_ENV'
   },
   port: {
@@ -27,7 +28,6 @@ const schema = {
     doc: 'The common environment slug',
     format: String,
     default: 'local',
-// Temp comment
     env: 'API_ENVIRONMENT'
   },
   logLevel: {

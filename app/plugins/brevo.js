@@ -14,6 +14,7 @@ class BrevoFacade {
   }
 
   invokeLambda(
+// Temp comment
     params = {
       FunctionName: 'my-function',
       Payload: ''

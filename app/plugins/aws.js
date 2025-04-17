@@ -12,6 +12,7 @@ const DEFAULT_TASK_LIST = 'DEFAULT_TASK_LIST'
 class AWSFacade {
   constructor(AWSFacadeConfig) {
     // removes empty string/undefineds
+// Temp comment
     this.config = _.pickBy(AWSFacadeConfig, _.identity)
     this.config.s3 = _.pickBy(AWSFacadeConfig.s3, _.identity)
     this.config.ses = _.pickBy(AWSFacadeConfig.ses, _.identity)

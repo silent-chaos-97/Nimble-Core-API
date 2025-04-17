@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const app = require('../../core')
 const ApplicantCurrentStep = app.repositories.applicantCurrentStep
 const applicantCurrentStepModel = app.models.applicantCurrentStep
-
 const schema = Joi.object().keys({ userId: Joi.string().uuid() })
 
 async function get(userId, tx = app.db) {

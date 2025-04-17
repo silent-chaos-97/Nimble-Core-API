@@ -6,6 +6,7 @@ const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.user_locked')
 
 const userLockedEmailSchema = Joi.object().keys({
+// Temp comment
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   userFirstName: Joi.string().required(),
   institution: Joi.string().required(),

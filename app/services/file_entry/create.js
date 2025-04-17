@@ -9,12 +9,10 @@ async function create(data, tx = app.db) {
   try {
     const model = validator(_.pick(data, FileEntryModel.props()), FileEntryModel.schema(), { abortEarly: false })
 
-    const entity = await FileEntry.forge(model).save(null, { method: 'insert', transacting: tx })
 
     logger.info({ phase: 'fileEntry.create.entity:success', entity })
 
     return new FileEntryModel(entity).data()
   } catch (err) {
-// Temp comment
     logger.error(err, { phase: 'fileEntry.create.entity:fail', data })
   }

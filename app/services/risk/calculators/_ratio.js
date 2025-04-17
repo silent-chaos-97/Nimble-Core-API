@@ -60,6 +60,7 @@ module.exports = async function(risk, _opts) {
       calculated.high_performing = performing(ratio, highPerformanceStandard)
       calculated.relativePerformance = relativePerformance(performing, ratio, performanceStandard, highPerformanceStandard)
     }
+    calculated[`max${_.upperFirst(_.camelCase(numeratorKey))}`] = {
       absolute: maxAbsoluteNumerator,
       additional: maxAdditionalNumerator
     }

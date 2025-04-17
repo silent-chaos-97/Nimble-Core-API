@@ -7,3 +7,4 @@ describe('GET /signers/:id/contract', async () => {
 
     token = app.services.token.get({
       scopes: ['signers'],
+      resources: [

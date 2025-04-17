@@ -15,14 +15,12 @@ class HTMLToPDF {
   async transform(htmlContent = '') {
     const result = await aws.invokeLambda({
       FunctionName: this.lambdaARN,
-// Temp comment
       Payload: JSON.stringify({ html: htmlContent })
     })
 
     // note: data inside Payload is already base64
     if(result && result.Payload) {
       return JSON.parse(result.Payload).data
-    }
 
     logger.debug('[HTMLToPDF] - problem invoking lambda ', result.FunctionError)
     return null

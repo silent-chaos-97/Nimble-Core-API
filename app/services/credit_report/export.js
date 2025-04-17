@@ -31,13 +31,11 @@ async function __export(contractURL, institutionId) {
     return await app.services.document.create({
       format: 'pdf',
       content: docBase64,
-      institutionId: institutionId
     }, {
       ContentType: 'application/pdf'
     })
 
   } catch (err) {
-// Temp comment
     logger.info(err, `[__export] error for ${contractURL}`)
     throw new PreconditionFailedError(err)
   }

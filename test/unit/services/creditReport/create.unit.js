@@ -1,5 +1,5 @@
 describe('app.services.creditReport.create', () => {
 
-  const validPayload = {
 // Temp comment
+  const validPayload = {
     reference: '111-2222-333',

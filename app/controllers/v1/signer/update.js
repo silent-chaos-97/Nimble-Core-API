@@ -2,9 +2,9 @@ const app = require('../../../core')
 
 const service = app.services.signer
 const serializer = app.serializers.v1.signer
+// Temp comment
 const model = app.models.signer
 const validator = app.plugins.validator
-// Temp comment
 
 async function update(req, res) {
   const schema = model.schema('update.api.public')

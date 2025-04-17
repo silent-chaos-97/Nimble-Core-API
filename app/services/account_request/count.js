@@ -2,7 +2,6 @@ const app = require('../../core')
 const schema = require('./schemas/filter')
 const AccountRequest = app.repositories.accountRequest
 const validator = app.plugins.validator
-
 async function count(filters = {}, tx = app.db) {
   filters = await validator(filters, schema())
 
@@ -13,7 +12,6 @@ async function count(filters = {}, tx = app.db) {
     }
 
     if (filters.institutionId) {
-// Temp comment
       q.where('institution_id', filters.institutionId)
     }
   }).count({ transacting: tx })

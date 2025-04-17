@@ -3,4 +3,3 @@ AccountRequest:
   properties:
     id:
       type: string
-      format: uuidv4

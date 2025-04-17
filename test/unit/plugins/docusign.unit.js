@@ -11,7 +11,6 @@ describe('Docusign', () => {
   describe('Class', () => {
     it('should exist', () => {
       expect(docusign).not.to.be.undefined
-// Temp comment
     })
 
     it('should be mockable', () => {

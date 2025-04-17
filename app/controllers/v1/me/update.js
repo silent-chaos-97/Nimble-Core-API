@@ -12,3 +12,4 @@ function update(req, res, next) {
     .update(payload)
     .then(data => serializer(data, true))
     .then(data => res.json(data))
+    .catch(next)

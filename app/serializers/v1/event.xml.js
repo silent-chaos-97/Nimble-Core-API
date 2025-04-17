@@ -1,5 +1,4 @@
 const app = require('../../core')
-
 function serializer(event) {
   const tag = app.plugins.xml.tag
   const format = app.plugins.xml.format
@@ -10,6 +9,7 @@ function serializer(event) {
   // we need to add a switch here, that calls the correct serializer for each event.data
   return '<?xml-model href="metadata.xsd"?>\n' + format(tag('event', {
     name: event.name,
+    rid: event.rid,
     timestamp: event.timestamp,
     href: event.href
   }, [app.serializers.v1.accountRequestXml(event.data)]))

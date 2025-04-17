@@ -1,7 +1,6 @@
 openapi: 3.0.3
 info:
   description: This REST API supplies all operations required to interact with the
-    resources of our service.
   version: v1
   title: Nimble Core REST API
   contact:

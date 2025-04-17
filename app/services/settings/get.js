@@ -5,6 +5,7 @@ const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.get')
 
 const fileTypes = require('./fileTypes')
+// Temp comment
 
 async function get(params, transacting = app.db) {
   let model

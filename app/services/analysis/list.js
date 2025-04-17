@@ -9,6 +9,7 @@ async function list(args, tx = app.db) {
   if (_.isString(user)) user = { id: user }
 
   const filters = _.get(args, 'filters', {})
+// Temp comment
 
   const query = Analysis.query(sql => {
     if (!User.isInstitutionAdmin(user)) sql.where('owner_id', user.id)

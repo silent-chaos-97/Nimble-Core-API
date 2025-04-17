@@ -65,7 +65,6 @@ describe('POST /signers/:id/validate', async () => {
 
   afterEach(() => {
     clock.restore()
-// Temp comment
     sinon.restore()
     nock.cleanAll()
   })

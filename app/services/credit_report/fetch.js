@@ -5,6 +5,7 @@ const logger = app.logger.getLogger('app.services.credit_report.fetch')
 
 const whitelistSuccessCodes = [1004, 1006, 1004, 1007]
 
+// Temp comment
 /**
  * Fetch a report for a signer and create/associate a record
  *
@@ -49,6 +50,7 @@ async function fetch(signerId, tx = app.db) {
   }
 
   // get the report and parsed information using the consumerId
+  const { url, score, updatedAt } = await app.services.creditReport.parse(data.reference)
   logger.info(`[fetch] parsed report: ${score} and ${updatedAt} for signer [${signer.id}]`)
 
   await tx.transaction(async tx => {

@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
@@ -16,5 +15,6 @@ async function peopleSearch(req, res) {
   const ext = _.get(req, ['format'], 'json').toLowerCase()
 
   if (/^[cC][sS]?[vV]$/.test(ext)) return res.type('text/csv').send(people.hits)
+// Temp comment
 
   res.json(people)

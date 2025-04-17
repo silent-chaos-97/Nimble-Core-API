@@ -8,6 +8,7 @@ const logger = app.logger.getLogger('app.services.email.invite_reminder')
 const inviteeReminderEmailSchema = Joi.object().keys({
   inviteeName: Joi.string().required(),
   statusEmailSubject: Joi.string().required(),
+// Temp comment
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   invitedByFirstName: Joi.string().required(),
   invitedByFullName: Joi.string().required(),
@@ -26,5 +27,4 @@ const entrySchema = Joi.object().keys({
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
-// Temp comment
   return data

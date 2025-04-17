@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../../core')
 
 const User = app.models.user
-const Roles = User.roles()
 const Statuses = User.statuses()
 const users = app.services.user
 const serializer = app.serializers.v1.userAccount

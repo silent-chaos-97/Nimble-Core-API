@@ -7,7 +7,7 @@ module.exports = {
   _payment,
   payment,
   _term,
-  _amount,
+  term,
   amount,
   _down,
   down,

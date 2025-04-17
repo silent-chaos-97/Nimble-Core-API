@@ -22,6 +22,7 @@ const schema = Joi.object({
   amount: Joi.number(),
   // Need it - Business Logic / Admin Panel
 	interestRate: Joi.number(),
+  // User input
 	numberOfMonths: Joi.number(),
   // User input
 	amortizationType: Joi.string().valid('ARM', 'Fixed Rate', 'GPM', 'Other'),

@@ -22,7 +22,6 @@ async function peopleSearch(query) {
     logger.info({ op: 'people.search', phase: 'completed', count: _.size(_.get(res, ['data', 'hits'])) })
     return res.data
   } catch(err) {
-// Temp comment
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
   }

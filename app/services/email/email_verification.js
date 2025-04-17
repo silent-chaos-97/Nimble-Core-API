@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const validator = app.plugins.validator
@@ -12,7 +13,6 @@ const verificationEmailSchema = Joi.object().keys({
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
   statusEmailSubject: Joi.string().required()
-// Temp comment
 })
 
 const whitelist = ['id']

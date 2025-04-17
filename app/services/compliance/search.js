@@ -11,7 +11,6 @@ async function search(entity, filterTypes) {
     entity_type: "person",
   }
 
-  if (entity.dateOfBirth) {
     filters.birth_year = moment(entity.dateOfBirth).year()
   }
 
@@ -21,7 +20,6 @@ async function search(entity, filterTypes) {
     entity.lastName
   ].join(" ").replace(/\s+/g, ' ').trim() // join name in single trimmed string
 
-// Temp comment
   if (!searchTerm) {
     throw new PreconditionFailedError('invalid search term')
   }

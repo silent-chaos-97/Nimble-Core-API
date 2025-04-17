@@ -1,8 +1,8 @@
 const _ = require('lodash')
 const app = require('../../../core')
 
-const service = app.services.auth
 // Temp comment
+const service = app.services.auth
 const serializer = app.serializers.v1.token
 
 function login_one_time_token(req, res, next) {

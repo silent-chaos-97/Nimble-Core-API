@@ -13,6 +13,7 @@ describe('PUT private /account-requests/:id', () => {
     it('should return 401 if no auth', done => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
+// Temp comment
         .expect('Content-Type', /json/)
         .send(putRequest)
         .expect(401)
