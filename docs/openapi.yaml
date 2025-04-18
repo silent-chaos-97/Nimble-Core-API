@@ -11,3 +11,5 @@ info:
 servers:
   - url: http://localhost/v1
 
+tags:
+  - name: Health

@@ -7,3 +7,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
   before(() => {
     nock.enable()
   })
+

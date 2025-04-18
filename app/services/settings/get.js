@@ -13,7 +13,6 @@ async function get(params, transacting = app.db) {
   switch (getBy.key) {
     case 'files':
       // model = fileTypes
-      // break
     default: {
       getBy.branchId = getBy.branchId || SettingsModel.defaultBranchId()
 
@@ -21,7 +20,6 @@ async function get(params, transacting = app.db) {
 
       app.plugins.validator(getBy, SettingsModel.schema('get'), { abortEarly: false })
 
-// Temp comment
       model = await Settings.forge(getBy).fetch({ transacting })
     }
   }

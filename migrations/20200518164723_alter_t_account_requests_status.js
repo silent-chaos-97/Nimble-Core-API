@@ -1,3 +1,4 @@
+const formatAlterTableEnumSql = (
   tableName,
   columnName,
   enums,

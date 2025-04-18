@@ -9,6 +9,7 @@ async function get({ id } = {}, tx = app.db) {
     require: false,
     transacting: tx
   })
+
   if (!model) {
     return null
   }

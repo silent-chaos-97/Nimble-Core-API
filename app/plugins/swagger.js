@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const swaggerUi = require('swagger-ui-express')
 const glob = require('glob')
@@ -7,7 +8,6 @@ const logger = app.logger.getLogger('app.plugins.swagger')
 
 // will look for files insite $path
 function loadAndMergeFromPath(spec, path, parent) {
-// Temp comment
   glob
     .sync(`${__dirname}/../../docs/${path}/**/*.yaml`)
     .map(file => YAML.load(file))

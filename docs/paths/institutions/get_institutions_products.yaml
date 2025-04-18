@@ -1,3 +1,4 @@
 /institutions/{id}/products:
   get:
     tags:
+      - Institution

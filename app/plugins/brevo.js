@@ -29,6 +29,7 @@ class BrevoFacade {
       })
     })
   }
+
   sanitizeEmailData(emailData) {
     if (!emailData) return emailData
 
@@ -43,7 +44,6 @@ class BrevoFacade {
     return data
   }
 
-  sendEmailTemplate(templateId, emailTo, emailCc, emailBcc, emailData) {
     const tos = _.compact(_.take(emailTo, 50))
     const ccs = _.compact(_.take(emailCc, 50 - emailTo.length))
     const bccs = _.compact(_.take(emailBcc, 50 - emailTo.length - emailCc.length))

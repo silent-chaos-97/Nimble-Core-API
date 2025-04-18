@@ -9,7 +9,6 @@ async function save(req, res) {
   const body = req.body
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
-// Temp comment
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
 
   let existing

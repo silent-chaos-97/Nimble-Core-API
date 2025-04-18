@@ -5,6 +5,7 @@ const AccountRequestProductOption = app.repositories.accountRequestProductOption
 
 
 async function createProductConfigurations(accountRequestId, data, tx = app.db) {
+// Temp comment
   // Create selected products
   for (const product of data.productConfigurations) {
     // filter out potentially bad props
@@ -22,7 +23,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
           accountRequestId: accountRequestId
         }, productOptionsWhitelist)
         await AccountRequestProductOption.forge(optionData).save(null, { method: 'insert', transacting: tx })
-// Temp comment
       }
     }
 

@@ -1,3 +1,1 @@
 const ROWS = [
-// Temp comment
-  {

@@ -35,6 +35,7 @@ const schema = {
     format: Number,
     default: 20,
     env: 'LOG_LEVEL'
+  },
   frontend: {
     backoffice_domain: {
       doc: 'The domain of the backoffice/crm web-app',
@@ -47,3 +48,11 @@ const schema = {
       format: String,
       default: 'localhost:3001',
       env: 'ONBOARDING_DOMAIN'
+    },
+    recovery_password_uri: {
+      doc: 'Backoffice password recovery endpoint',
+      format: String,
+      default: ':protocol://:backoffice_domain/auth/:email/recover-password/:code/:expiresAt',
+      env: 'PASSWORD_RECOVERY_URI'
+    },
+    magic_link_uri: {

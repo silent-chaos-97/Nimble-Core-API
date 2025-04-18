@@ -13,3 +13,5 @@ describe('POST /signers/:id/email-verifications', async () => {
 
   afterEach(() => sinon.reset())
 
+  after(() => {
+    sinon.restore()

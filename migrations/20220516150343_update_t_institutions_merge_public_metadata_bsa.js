@@ -1,4 +1,3 @@
-exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = (public_metadata ||
   '{
     "bsa": {
       "_": {
@@ -8,3 +7,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
           {"risk": "Low"}
         ]
       },
+      "usCitizen": {
+        "order": 0,

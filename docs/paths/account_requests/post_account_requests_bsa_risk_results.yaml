@@ -1,3 +1,4 @@
 /account-requests/{id}/bsa-risk-results:
   post:
     tags:
+      - Account Request

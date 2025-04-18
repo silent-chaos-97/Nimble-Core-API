@@ -1,10 +1,8 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const PreconditionFailedError = require('../../../errors/precondition_failed')
-
 async function validateDocuments(data, tx = app.db) {
   if (_.has(data, 'documentType')) { // if we are sending document data
-// Temp comment
     await Promise.all([ // array with document keys
       ...(data.documentType === 'USDL' ? ['backIdProofDocumentId'] : []),
       'selfieDocumentId',

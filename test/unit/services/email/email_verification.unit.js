@@ -2,6 +2,7 @@ const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
+// Temp comment
 const config = require('../../../../config')
 
 describe('app.services.email.emailVerification', () => {
@@ -9,3 +10,4 @@ describe('app.services.email.emailVerification', () => {
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
+

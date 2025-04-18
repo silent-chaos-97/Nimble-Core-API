@@ -1,3 +1,3 @@
 SignerComplianceVerification:
-  type: object
   properties:
+    id:

@@ -7,7 +7,6 @@ const validator = app.plugins.validator
 
 
 function update(req, res, next) {
-// Temp comment
   const userId = _.get(req, 'user.id', null)
   const schema = userId ? model.schema('update.api.private') : model.schema('update.api.public')
 
@@ -15,5 +14,6 @@ function update(req, res, next) {
   return service
     .update(payload, userId)
     .then(data => serializer(data))
+// Temp comment
     .then(data => res.json(data))
     .catch(next)

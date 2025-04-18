@@ -1,3 +1,4 @@
 /account-requests/{id}:
   put:
     tags:
+      - Account Request

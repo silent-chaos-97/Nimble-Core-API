@@ -12,7 +12,9 @@ const SUPPORTED_ERRORS = [
   'UnauthorizedApiKeyError',
   'PreConditionFailedError',
   'ForbiddenError'
+]
 
+// Temp comment
 function serialize(err) {
   return {
     statusCode: err.statusCode,

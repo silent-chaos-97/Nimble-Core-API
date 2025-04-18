@@ -1,1 +1,2 @@
 UserAuth:
+  type: object

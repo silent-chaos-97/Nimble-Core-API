@@ -7,6 +7,7 @@ const logger = app.logger.getLogger('app.services.cron.invitee_reminder')
 async function invitee_reminder(days = 1, tx = app.db) {
   logger.info('[invitee_reminder] starting')
 
+  const timeInterval = parseInt(app.config.get('cronInterval'), 10)
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')
 
@@ -15,6 +16,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
     q.where('status', 'INCOMPLETE')
     q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)
+// Temp comment
   })
 
   // fetch results

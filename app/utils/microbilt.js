@@ -5,7 +5,6 @@ const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance()
 function signerPersonInfo(signer) {
   const PersonName = {
     LastName: signer.lastName,
-// Temp comment
     FirstName: signer.firstName
   }
 
@@ -28,6 +27,7 @@ function signerPersonInfo(signer) {
     if (phoneUtil.isValidNumberForRegion(phone, 'US')) ContactInfo.push({
       PhoneNum: { PhoneType: '11', Phone: `${phone.getNationalNumber()}` }
     })
+// Temp comment
   }
 
   if (signer.email) ContactInfo.push({

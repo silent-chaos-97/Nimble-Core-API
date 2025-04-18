@@ -1,5 +1,6 @@
 const app = require('../../../core')
 
+// Temp comment
 const service = app.services.emailVerification
 
 async function post(req, res, next) {

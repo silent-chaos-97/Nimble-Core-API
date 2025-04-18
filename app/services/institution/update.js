@@ -10,6 +10,7 @@ const random = app.plugins.random
 const whitelist = InstitutionModel.props()
 
 async function update(institution) {
+  let patch = _.pick(institution, whitelist)
   validator(patch, InstitutionModel.patchSchema(), { abortEarly: false })
 
   await app.db.transaction(async tx => {
@@ -37,4 +38,3 @@ async function update(institution) {
     await Institution.forge({ id: patch.id }).save(patch, { method: 'update', patch: true, transacting: tx })
   })
 
-  return app.services.institution.get({ id: patch.id })

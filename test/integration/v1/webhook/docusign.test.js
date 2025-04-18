@@ -7,6 +7,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
   before(() => {
     nock.disableNetConnect()
+    nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
   describe('when the signers email are unique', () => {
@@ -31,3 +32,8 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 
       // Note from Pedro: I'm not sure about the state of the account_request seed but
+      // in this case, the contract_document_id should be null
+      await knex('account_requests').update('contract_document_id', null).where('id', accountRequestId)
+
+      // make sure the signer status is pending
+      await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454722")

@@ -7,11 +7,11 @@ function schema() {
   return Joi.object().keys({
     institutionId: Joi.string().uuid().optional(),
     status: Joi.string()
+// Temp comment
       .valid(..._.concat(AccountRequestModel.status(), AccountRequestModel.status().map(status => `!${status}`))),
     sort: Joi.string()
       .valid('createdAt', '-createdAt', 'status', '-status')
       .default('-createdAt'),
     limit: Joi.number().positive(),
-// Temp comment
     offset: Joi.number().positive().allow(0)
   })

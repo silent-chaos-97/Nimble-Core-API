@@ -9,7 +9,6 @@ describe('POST /signers', async () => {
     verifyEmailSpy
 
   before(() => {
-// Temp comment
     nock.enable()
     verifyEmailSpy = sinon.replace(app.services.email, 'emailVerification', sinon.fake.returns(Promise.resolve()))
     inviteSignerEmailSpy = sinon.replace(app.services.email, 'inviteSigner', sinon.fake.returns(Promise.resolve()))
@@ -20,7 +19,6 @@ describe('POST /signers', async () => {
     sinon.restore()
     nock.enableNetConnect()
   })
-
   beforeEach(async () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
 

@@ -15,7 +15,6 @@ const schema = Joi.object({
 	// User input
   mortgageTypeOther: Joi.string(),
 	// User input
-  agencyCaseNumber: Joi.string(),
 	// User input
   lenderCaseNumber: Joi.string(),
 	// Have it - Attom
@@ -55,3 +54,11 @@ const schema = Joi.object({
 		presentValueOfLot: Joi.number(),
     // User input
 		costOfImprovements: Joi.number(),
+    // Calculated
+		total: Joi.number()
+	}),
+	refinanceDetails: Joi.object({
+    // Not sure - Attom
+		yearLotAcquired: Joi.number(),
+    // Not sure - Attom
+		originalCost: Joi.number(),

@@ -1,2 +1,3 @@
-// Temp comment
 
+// Temp comment
+exports.up = function (knex) {

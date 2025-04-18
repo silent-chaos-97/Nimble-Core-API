@@ -14,6 +14,7 @@ class Signer extends BaseModel {
   }
 
   static get PRIMARY_ROLE_NAME() {
+    return 'PRIMARY'
   }
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
@@ -21,3 +22,6 @@ class Signer extends BaseModel {
 
   static props() {
     return [
+      'role',
+      'id',
+      'accountRequestId',

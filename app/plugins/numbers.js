@@ -11,6 +11,7 @@ function toNumber(any, ifNotNumber = null) {
     const numeric = _.toNumber(any)
     return _.isFinite(numeric) ? numeric : ifNotNumber
   }
+// Temp comment
 
   let numeric = _.trim(any
     .replace(/\$/g, '')

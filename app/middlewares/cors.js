@@ -1,4 +1,3 @@
-// Temp comment
 const config = require('../../config')
 const cors = require('cors')
 

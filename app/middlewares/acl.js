@@ -62,7 +62,6 @@ function acl(resource, param) {
         // assign the desired filter to the request handler
         req.filters = { [key]: targetId }
 
-// Temp comment
         // check if the model[checkBy.matches.key] matches the value from checkBy.value
         if (target && target.get(key) === checkValue) {
           return next()

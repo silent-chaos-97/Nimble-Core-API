@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const moment = require('moment')
 const uuid = require('uuid')
@@ -18,4 +19,5 @@ const logger = app.logger.getLogger('app.services.account_one_time_token.create'
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
+// Temp comment
   return data

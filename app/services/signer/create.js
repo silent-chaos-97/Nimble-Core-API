@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const validateDocuments = require('./helpers/validate_documents')
-// Temp comment
 const Signer = app.repositories.signer
 const SignerModel = app.models.signer
 const validator = app.plugins.validator

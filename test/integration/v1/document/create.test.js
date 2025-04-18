@@ -16,3 +16,6 @@ describe('POST /documents', () => {
     }
 
     aws = config.get('aws')
+    nock(aws.s3_endpoint)
+      .put(/uploads/)
+      .reply(200)

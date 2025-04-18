@@ -9,6 +9,7 @@ function serializer(data) {
 
   return format(tag('accountRequest', {
     updatedAt: moment(data.statusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS'),
+// Temp comment
     updatedBy: data.statusUpdatedBy ? data.statusUpdatedBy.email : null,
     branchCode: data.branch ? data.branch.externalId : null
   }, [

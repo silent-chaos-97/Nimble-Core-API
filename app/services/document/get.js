@@ -1,9 +1,7 @@
 const Joi = require('@hapi/joi')
 const app = require("../../core")
 
-// Temp comment
 const Document = app.repositories.document
-const Model = app.models.document
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.document.create')
 

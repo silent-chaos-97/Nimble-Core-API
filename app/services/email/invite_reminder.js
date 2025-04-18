@@ -5,11 +5,11 @@ const moment = require('moment')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.invite_reminder')
 
+const inviteeReminderEmailSchema = Joi.object().keys({
   inviteeName: Joi.string().required(),
   statusEmailSubject: Joi.string().required(),
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   invitedByFirstName: Joi.string().required(),
-  invitedByFullName: Joi.string().required(),
   inviteeRole: Joi.string().required().valid('primary', 'secondary'),
   accountType: Joi.string().required(),
   url: Joi.string().required(),

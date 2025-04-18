@@ -232,7 +232,6 @@ const successResponse = {
               {
                 "association": "Spouse",
                 "name": "Grace Mugabe"
-// Temp comment
               },
               {
                 "association": "Relative",
@@ -334,6 +333,7 @@ const successResponse = {
                 "value": "European Union"
               },
               {
+// Temp comment
                 "name": "Original Place of Birth Text",
                 "source": "complyadvantage",
                 "value": "Harare"
@@ -364,3 +364,57 @@ const successResponse = {
                 "value": "Zambia"
               },
               {
+                "name": "Original Country Text",
+                "source": "tresor-direction-generale",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Nationality",
+                "source": "complyadvantage",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Countries",
+                "tag": "country_names",
+                "value": "Egypt, Kenya, Nigeria, South Africa, Spain, United Kingdom, United States, Zambia, Zimbabwe"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "complyadvantage-adverse-media",
+                "tag": "date_of_birth",
+                "value": "1914"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "complyadvantage-adverse-media",
+                "tag": "date_of_birth",
+                "value": "1921"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "complyadvantage-adverse-media",
+                "tag": "date_of_birth",
+                "value": "1924"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "complyadvantage",
+                "tag": "date_of_birth",
+                "value": "1924"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "complyadvantage",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },

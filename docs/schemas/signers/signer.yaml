@@ -14,3 +14,5 @@ Signer:
       type: string
       readOnly: true
       title: Status
+      enum: ['INVITED', 'INCOMPLETE', 'PENDING', 'SIGNED']
+      description: >-

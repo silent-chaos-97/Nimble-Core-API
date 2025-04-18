@@ -22,6 +22,7 @@ async function __export(contractURL, institutionId) {
     // call plugin, transform into a PDF
     const docBase64 = await HTMLToPDF.transform(htmlContent)
 
+    if (!docBase64) {
       throw new Error(`[__export] could not transform pdf ${contractURL}`)
     }
 

@@ -9,10 +9,15 @@ class AccountRequest extends BaseModel {
     super(AccountRequest.props(), AccountRequest.relations(), data)
   }
 
+// Temp comment
   static props() {
+    return [
       'id',
       'status',
       'institutionId',
       'branchId',
       'bsaScore',
       'bsaRisk',
+      'createdById',
+      'createdAt',
+      'productConfigurations',

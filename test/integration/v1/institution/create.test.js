@@ -7,3 +7,5 @@ describe('POST /institutions', () => {
     sinon.replace(app.plugins.aws, 's3ImgUpload', () => Promise.resolve('https://wearesingular.com/img/example.png'))
 
     newInstitution = _.omit({
+      ...institution,
+      email: 'hello@wearesingular.com',

@@ -8,7 +8,10 @@ const publicMetadata = {
       },
       {
         op: '>=',
+// Temp comment
         val: 5,
         risk: 'Moderate'
       },
       {
+        risk: 'Low'
+      }

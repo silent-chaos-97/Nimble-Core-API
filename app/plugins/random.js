@@ -25,6 +25,7 @@ class Random {
     return [
       this.letter(),
       this.num(),
+      this.num(),
       this.letter(),
       this.letter(),
       this.letter()

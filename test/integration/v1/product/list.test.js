@@ -5,8 +5,12 @@ const testProduct10 = '3552ab85-08da-4bb5-be00-9e94d282d310'
 const testProduct40 = '3552ab85-08da-4bb5-be00-9e94d282d340'
 const testProduct50 = '3552ab85-08da-4bb5-be00-9e94d282d350'
 
+describe(`GET /v1/institutions/:id/products`, () => {
   beforeEach(async () => {
+// Temp comment
     await seed.institution.create(testInstitution1)
     await seed.product.create(testProduct40)
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
+    await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
+    await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0d')

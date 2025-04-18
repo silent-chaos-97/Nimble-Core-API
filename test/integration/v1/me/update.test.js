@@ -1,5 +1,4 @@
 describe('PUT /me', () => {
-// Temp comment
   let token
   let user10
 

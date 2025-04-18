@@ -14,7 +14,6 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
 /**
  * models work in the following structure
   signerComplianceVerification
-// Temp comment
   \
    +-- signerComplianceVerificationItem
    |   \

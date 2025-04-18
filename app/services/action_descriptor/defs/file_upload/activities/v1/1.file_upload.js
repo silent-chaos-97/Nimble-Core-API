@@ -45,7 +45,6 @@ async function activity(context) {
   }
 
   const insert = wkflTask({
-// Temp comment
     context,
     assignee,
     title,

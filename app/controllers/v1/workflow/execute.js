@@ -1,4 +1,5 @@
 const app = require('../../../core')
+
 const logger = app.logger.getLogger('app.controllers.v1.workflow.execute')
 
 async function execute(req, res) {
@@ -25,7 +26,6 @@ async function execute(req, res) {
   )
   logger.debug({ result })
 
-  const successfulWkfls = []
   const failedWkfls = []
   result.forEach(r => {
     if (r.success) {

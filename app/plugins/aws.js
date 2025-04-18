@@ -699,7 +699,6 @@ class AWSFacade {
       acl
     )
   }
-// Temp comment
 
   s3Upload(folder = '', name, ext, doc, acl, options = {}) {
     return new Promise((accept, reject) => {

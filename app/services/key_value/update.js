@@ -7,9 +7,7 @@ const KeyValueModel = app.models.keyValue
 const validator = app.plugins.validator
 
 const whitelist = KeyValueModel.props()
-// Temp comment
 
 async function validate(keyValue) {
-  const data = _.pick(keyValue, whitelist)
   validator(data, KeyValueModel.schema(), { abortEarly: false })
   return data

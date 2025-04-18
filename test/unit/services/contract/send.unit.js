@@ -9,3 +9,5 @@ describe('app.services.contract.send', () => {
   describe('send', async () => {
 
     it('should exist as a method', ()=>{
+      expect(app.services.contract).to.have.ownProperty('send')
+      expect(app.services.contract.send).to.be.an('Function')

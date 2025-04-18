@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const defaultSerializer = require('../serializer')
-
 const properties = ['position', 'questionId', 'answer', 'context']
 
 function serializer(data = {}) {

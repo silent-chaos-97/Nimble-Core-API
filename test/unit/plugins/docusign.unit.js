@@ -38,7 +38,6 @@ describe('Docusign', () => {
       afterEach(() => { nock.cleanAll() })
 
       it('should return a template', async () => {
-        // get sign in
         const scope0 = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
         // mock template
@@ -84,3 +83,15 @@ describe('Docusign', () => {
           ccRecipient: {
             fullName: 'Some dude Specimen',
             email: 'psousa+1@wearesingular.com',
+          }
+        }
+
+        try {
+          await docusign.sendEnvelopeWithMultipleDocuments(args)
+        } catch (error) {
+          expect(error).to.be.an.instanceof(Error)
+        }
+
+        scope.done()
+        scope1.done()
+      })

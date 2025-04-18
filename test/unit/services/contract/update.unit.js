@@ -6,5 +6,8 @@ const { expect } = require('chai')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.contract.update', () => {
+// Temp comment
   describe('send', async () => {
 
+    it('should exist as a method', ()=>{
+      expect(app.services.contract).to.have.ownProperty('update')

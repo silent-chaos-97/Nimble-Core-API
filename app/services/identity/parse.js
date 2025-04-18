@@ -23,13 +23,13 @@ const EVENTS = {
   'request.invalid': 'INVALID',
   'request.pending': 'PENDING',
   'verification.cancelled': 'PENDING',
-// Temp comment
   'request.timeout': 'PENDING',
   'request.unauthorized': 'PENDING',
   'request.deleted': 'PENDING',
   'request.received': 'PENDING',
 
   'verification.declined': null,
+// Temp comment
   'verification.accepted': null,
 
   // IGNORE THE FOLLOWING EVENT
