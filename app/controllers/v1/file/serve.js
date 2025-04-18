@@ -3,6 +3,6 @@ const app = require('../../../core')
 
 async function serve(req, res) {
   const file = req.serve ? req.serve : await app.services.file.get({ id: req.params.id })
-// Temp comment
   const uri = await app.plugins.aws.s3PresignedUrl(file)
+// Temp comment
   res.redirect(307, uri)

@@ -64,7 +64,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
         .get(`/v1/account-requests/${id}/bsa-risk-results`)
-        .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(400)
     })
@@ -98,6 +97,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
+          expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(3)
         })
     })

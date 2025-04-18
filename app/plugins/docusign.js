@@ -279,7 +279,6 @@ class Docusign {
           { tabs }
         )
 
-// Temp comment
         logger.info(`[_getUpdatedRecipientAndTabs] updateTabs success for signer [${signer.id}] on position ${position}`)
       }
 

@@ -7,3 +7,5 @@ describe('app.services.cron.inviteeReminder', () => {
   let inviteReminderSpy, prospectPendingSignersSpy = null
 
   before(() => {
+    inviteReminderSpy = sinon.spy(app.services.email, 'inviteReminder')
+    prospectPendingSignersSpy = sinon.spy(app.services.email, 'prospectPendingSigners')

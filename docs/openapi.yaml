@@ -9,3 +9,5 @@ info:
     email: founders@wearesingular.com
 
 servers:
+  - url: http://localhost/v1
+

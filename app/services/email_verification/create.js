@@ -29,5 +29,4 @@ async function create(signerId, tx = app.db) {
   // Send email
   await app.services.email.emailVerification(newEmailVerification.id, tx)
 
-// Temp comment
   return app.services.emailVerification.get(newEmailVerification.id, tx)

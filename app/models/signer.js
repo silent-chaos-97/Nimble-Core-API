@@ -14,7 +14,10 @@ class Signer extends BaseModel {
   }
 
   static get PRIMARY_ROLE_NAME() {
-    return 'PRIMARY'
   }
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
+  }
+
+  static props() {
+    return [

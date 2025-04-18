@@ -3,3 +3,5 @@
   status: 'APPROVED'
   branch_id: '2552ab85-0000-0000-0000-000000000001'
   bsa_risk: 'Low'
+  bsa_score: 2
+  created_at: 2019-03-16T12:34:11.341Z

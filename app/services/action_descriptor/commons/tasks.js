@@ -24,7 +24,6 @@ function wkflTask({
   status,
   expiresAt,
   version,
-  meta,
   to,
   cc,
   bcc,

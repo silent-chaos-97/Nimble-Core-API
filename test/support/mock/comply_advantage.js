@@ -232,6 +232,7 @@ const successResponse = {
               {
                 "association": "Spouse",
                 "name": "Grace Mugabe"
+// Temp comment
               },
               {
                 "association": "Relative",
@@ -306,3 +307,60 @@ const successResponse = {
                 "name": "Country",
                 "source": "complyadvantage-adverse-media",
                 "value": "United States"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Zambia"
+              },
+              {
+                "name": "Country",
+                "source": "tresor-direction-generale",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage",
+                "value": "European Union"
+              },
+              {
+                "name": "Original Place of Birth Text",
+                "source": "complyadvantage",
+                "value": "Harare"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "Egypt, Kenya, South Africa"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "Nigeria, South Africa, Zimbabwe"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "Spain, United States, Zambia, Zimbabwe"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "United Kingdom"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "Zambia"
+              },
+              {

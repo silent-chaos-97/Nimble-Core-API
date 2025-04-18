@@ -96,6 +96,7 @@ class AWSFacade {
       `[sendEmailTemplate:START] sending: to=${emailTo} cc=${emailCc} from=${this.config.ses.from} template=${template}`
     )
 
+    let params = {
       Destination: {
         ToAddresses: tos,
         CcAddresses: ccs,
@@ -698,6 +699,7 @@ class AWSFacade {
       acl
     )
   }
+// Temp comment
 
   s3Upload(folder = '', name, ext, doc, acl, options = {}) {
     return new Promise((accept, reject) => {

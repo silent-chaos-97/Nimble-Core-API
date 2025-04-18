@@ -34,7 +34,6 @@ const getPdfFormFields = () => {
 
 		// details transaction
 		// purchasePrice: data.salePrice,
-		// alterationValue: data.assessments.improvements,
 		// landValue: data.assessments.land,
 	}
 

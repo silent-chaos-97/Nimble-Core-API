@@ -11,7 +11,6 @@ const properties = [
   'createdById',
   'fileId',
   'createdAt',
-  'updatedAt'
 ]
 
 function serializer(data) {

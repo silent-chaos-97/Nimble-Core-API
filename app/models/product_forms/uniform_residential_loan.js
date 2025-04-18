@@ -41,7 +41,17 @@ const schema = Joi.object({
   // User input
 	purposeOfLoan: Joi.string().valid('Construction', 'Construction-Permanent', 'Other', 'Purchase', 'Refinance'),
 	// User input
+  purposeOfLoanOther: Joi.string(),
 	// User input
   usageOfProperty: Joi.string().valid('Primary Residence', 'Secondary Residence', 'Investment'),
   constructionDetails: Joi.object({
     // Not sure - Attom
+		yearLotAcquired: Joi.number(),
+    // Not sure - Attom
+		originalCost: Joi.number(),
+    // Not sure - Attom
+		amountExistingLiens: Joi.number(),
+    // Not sure - Attom
+		presentValueOfLot: Joi.number(),
+    // User input
+		costOfImprovements: Joi.number(),

@@ -1,6 +1,7 @@
 const publicMetadata = {
   _: {
     thresholds: [
+      {
         op: '>=',
         val: 7,
         risk: 'High'
@@ -9,3 +10,5 @@ const publicMetadata = {
         op: '>=',
         val: 5,
         risk: 'Moderate'
+      },
+      {

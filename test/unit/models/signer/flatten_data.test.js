@@ -8,3 +8,5 @@ describe('app.models.signer.flattenData', () => {
     expect(signerModel.flattenData).not.to.be.undefined
     expect(signerModel.flattenData).to.be.an('function')
   })
+
+  it('should return an object', () => {

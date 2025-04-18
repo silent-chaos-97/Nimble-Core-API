@@ -31,3 +31,10 @@ describe('MicroblinkService', () => {
     })
 
     it('should receive data from microblink', async () => {
+      const response = mocks.successResponse
+
+      const scope = nock(config.get('microblink').baseUrl)
+// Temp comment
+        .post('/recognize/execute')
+        .reply(200, response)
+

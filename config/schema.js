@@ -35,8 +35,15 @@ const schema = {
     format: Number,
     default: 20,
     env: 'LOG_LEVEL'
-  },
   frontend: {
     backoffice_domain: {
       doc: 'The domain of the backoffice/crm web-app',
       format: String,
+      default: 'localhost:3000',
+      env: 'BACKOFFICE_DOMAIN'
+    },
+    onboarding_domain: {
+      doc: 'The domain of the onboarding web-app',
+      format: String,
+      default: 'localhost:3001',
+      env: 'ONBOARDING_DOMAIN'

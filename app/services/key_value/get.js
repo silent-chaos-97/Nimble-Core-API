@@ -9,10 +9,10 @@ async function get({ id } = {}, tx = app.db) {
     require: false,
     transacting: tx
   })
-
   if (!model) {
     return null
   }
 
+  const keyValue = new KeyValueModel(model).data()
 
   return keyValue

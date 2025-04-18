@@ -26,3 +26,8 @@ describe('PUT private /account-requests/:id', () => {
         .expect('Content-Type', /json/)
         .send(putRequest)
         .expect(401)
+        .end(done)
+    })
+
+
+  })

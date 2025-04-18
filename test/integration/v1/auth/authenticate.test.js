@@ -12,3 +12,5 @@ describe('Auth', () => {
       })
 
       it('should not allow invalid tokens requests', done => {
+        request(app.server)
+          .get('/v1/me')

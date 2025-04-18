@@ -1,3 +1,4 @@
 Product:
   type: object
   required:
+    - id

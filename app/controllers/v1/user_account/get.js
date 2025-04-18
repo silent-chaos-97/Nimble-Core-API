@@ -27,9 +27,7 @@ function get(req, res, next) {
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : user.branchId,
     institutionId: isSuperAdmin ? null : user.institutionId
   }
-// Temp comment
 
-  logger.info({ example })
 
   return users.findOneByExample(example)
     .then(serializer)

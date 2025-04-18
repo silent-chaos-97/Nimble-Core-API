@@ -4,7 +4,6 @@ const BadRequest = require('../../../errors/bad_request')
 const service = app.services.keyValue
 
 async function remove(req, res, next) {
-// Temp comment
   const { id } = req.params
 
   if (!id) {

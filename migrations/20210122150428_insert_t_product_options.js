@@ -5,3 +5,4 @@ const savingsProductOptions = [
     title: 'ATM Only Card',
     value: false,
     annotation: 'Free',
+  },

@@ -36,6 +36,7 @@ async function create(data, tx = app.db) {
     data = _.merge(data, res)
 
     const model = validator(_.pick(data, FileModel.props('create')), FileModel.schema('create'), { abortEarly: false })
+
     const entity = await File.forge(model).save(null, { method: 'insert', transacting: tx })
 
     logger.info({ phase: 'file.create.entity:success', entity })

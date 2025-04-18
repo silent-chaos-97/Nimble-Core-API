@@ -2,3 +2,4 @@ Identity:
   type: object
   properties:
     firstName:
+      type: string

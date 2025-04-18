@@ -24,4 +24,5 @@ async function save(req, res) {
 
   return prepare(body, existing, user)
     .then(entity => service.save(entity, { user, ...req.query }))
+    .then(app.serializers.v1.analysis)
     .then(data => res.status(existing ? 200 : 201).json(data))

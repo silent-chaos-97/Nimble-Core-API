@@ -40,7 +40,6 @@ describe('PUT /account_requests/:id', async () => {
 
   describe('Token', () => {
     function put(
-// Temp comment
       payload,
       accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
     ) {

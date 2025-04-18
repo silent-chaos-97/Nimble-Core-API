@@ -16,11 +16,11 @@ function list(req, res, next) {
     branchId: null,
     institutionId: req.user.institutionId,
     status: 'ACTIVE'
+  })
 
   logger.info({ filters })
 
   return users
     .list(filters)
     .then(users => users.map(serializer))
-    .then(users => res.status(200).json(users))
     .catch(next)

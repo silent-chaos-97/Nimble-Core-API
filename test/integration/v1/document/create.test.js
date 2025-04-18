@@ -13,3 +13,6 @@ describe('POST /documents', () => {
       format: 'image',
       institutionId: '016099fd-dcce-49ac-87db-b54d5426242e',
       content: 'isomebase64'
+    }
+
+    aws = config.get('aws')

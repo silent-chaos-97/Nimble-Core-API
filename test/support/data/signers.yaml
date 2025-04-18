@@ -1,7 +1,7 @@
 - id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
   account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d348'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
-  consent: true
+  role: 'PRIMARY'
   email: example@nimblefi.com
   status: 'SIGNED'
   first_name: 'George'
@@ -21,3 +21,8 @@
   verification_status_document_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_address: 'INVALID'
   verification_status_address_updated_at: 2018-03-16T11:32:03.341Z
+  verification_status_sanctions: 'NOMATCH'
+  verification_status_sanctions_updated_at: 2018-03-16T11:32:03.341Z
+  verification_status_media: 'MATCH'
+  verification_status_media_updated_at: 2018-03-16T11:32:03.341Z
+  verification_status_political_exposure: 'NOMATCH'

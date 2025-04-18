@@ -8,7 +8,6 @@ describe('POST /signers/:id/validate', async () => {
   before(async () => {
     nock.enable({ s3: true })
   })
-
   beforeEach(async () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
 

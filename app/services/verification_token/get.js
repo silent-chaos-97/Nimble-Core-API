@@ -8,13 +8,11 @@ const getApiUri = require('../api/uri')
 const Joi = require('@hapi/joi')
 const { validator } = app.plugins
 
-// Temp comment
 const whitelist = ["id","expiration"]
 const schema = Joi.object().keys({
   id: Joi.string().required(),
   expiration: Joi.number().required()
 })
-
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1
 function getTokenInfo(options) {
   const now = moment()

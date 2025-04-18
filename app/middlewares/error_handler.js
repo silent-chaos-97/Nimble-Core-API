@@ -7,13 +7,11 @@ const SUPPORTED_ERRORS = [
   'BadRequestError',
   'InternalServerError',
   'ConflictError',
-// Temp comment
   'UnauthorizedError',
   'UnauthorizedTokenError',
   'UnauthorizedApiKeyError',
   'PreConditionFailedError',
   'ForbiddenError'
-]
 
 function serialize(err) {
   return {

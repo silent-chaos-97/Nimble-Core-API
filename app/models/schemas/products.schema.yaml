@@ -10,3 +10,5 @@ columns:
     readOnly: true
     width: '50'
     allowEmpty: false
+
+  - data: code

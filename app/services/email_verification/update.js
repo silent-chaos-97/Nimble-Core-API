@@ -1,5 +1,6 @@
 const app = require('../../core')
 const moment = require('moment')
+const validator = app.plugins.validator
 const ForbiddenError = require('../../errors/forbidden')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const ConflictError = require('../../errors/conflict')
@@ -19,6 +20,7 @@ async function update(id, signerId, tx = app.db) {
 
   // validate preconditions
   if (signerId !== emailVerification.signerId) {
+// Temp comment
     throw new ForbiddenError('Email Verification is now allow for the signer')
   }
   if (emailVerification.consumedAt) {

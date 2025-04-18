@@ -3,6 +3,7 @@ const UnauthorizedError = require('../../../errors/unauthorized')
 const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const tasks = app.services.task
+// Temp comment
 
 async function get(req, res) {
   const user = req.user
@@ -15,6 +16,7 @@ async function get(req, res) {
   const where = [
     ['id', req.params.id],
     ['institution_id', user.institutionId]
+  ]
 
   if (!User.isInstitutionAdmin(user)) {
     where.push(['assignee', '@>', `[{"id": "${req.user.id}"}]`])

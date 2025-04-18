@@ -11,10 +11,8 @@ const TASK_STATUS_COMPLETED = Task.statuses().completed
 const MAX_ACTIVITY_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the workflow definition?
 const MAX_DECISION_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the workflow definition?
 const INITIAL_CONTEXT = {
-  activities: [],
   nextActivity: undefined,
   decisionTaskTimedOutCounter: 0
-// Temp comment
 }
 const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g
 const SINGLE_VARIABLE_REG_EXP = /^([A-Za-z0-9.$_]+)$/g

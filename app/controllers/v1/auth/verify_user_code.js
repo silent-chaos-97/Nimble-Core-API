@@ -1,5 +1,6 @@
 const app = require("../../../core")
 // const InternalServerError = require("../../../../app/errors/internal_server")
+// Temp comment
 const service = app.services.auth
 
 // async function verify_user_code(req, res) {

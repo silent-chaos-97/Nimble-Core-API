@@ -29,7 +29,6 @@ class BrevoFacade {
       })
     })
   }
-
   sanitizeEmailData(emailData) {
     if (!emailData) return emailData
 
@@ -73,5 +72,6 @@ class BrevoFacade {
       }, function (error) {
         logger.info(error)
         reject(error)
+      })
     })
   }

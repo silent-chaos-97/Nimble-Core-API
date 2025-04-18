@@ -1,7 +1,7 @@
 const defaultSerializer = require('../serializer')
 
-// Temp comment
 const properties = ['strategy', 'remoteId', 'createdAt']
 
+// Temp comment
 function serializer(data) {
   return defaultSerializer(properties, data)

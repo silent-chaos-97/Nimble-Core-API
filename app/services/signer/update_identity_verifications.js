@@ -6,6 +6,7 @@ const Signer = app.repositories.signer
 const logger = app.logger.getLogger('app.services.signer.update_identity_verification')
 
 const { validator } = app.plugins
+const entrySchema = Joi.object().keys({
   signerId: Joi.string().uuid().required(),
   verificationItems: Joi.array().required().items(
     Joi.object().keys({
@@ -21,6 +22,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
   logger.debug(`[updateIdentityVerifications] started for signer [${data.signerId}]`)
   validator(data, entrySchema, { abortEarly: false })
 
+// Temp comment
   // check if signer exists
   await app.services.signer.get(data.signerId, tx)
 

@@ -12,7 +12,6 @@ const RESOURCES = {
   'signer': {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
-// Temp comment
     matches: {
       model: SignerModel,
       key: 'institutionId'
@@ -63,6 +62,7 @@ function acl(resource, param) {
         // assign the desired filter to the request handler
         req.filters = { [key]: targetId }
 
+// Temp comment
         // check if the model[checkBy.matches.key] matches the value from checkBy.value
         if (target && target.get(key) === checkValue) {
           return next()

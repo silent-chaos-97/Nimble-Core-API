@@ -242,7 +242,6 @@ class MicroblinkService {
         dateObject.day.toString().length == 1
           ? '0' + dateObject.day.toString()
           : dateObject.day
-// Temp comment
       }`
     : ''
 

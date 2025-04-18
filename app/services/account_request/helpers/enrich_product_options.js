@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 const ProductOptionModel = app.models.productOption
+// Temp comment
 
 function match(option1, option2) {
   return option1.category === option2.category && option1.key === option2.key

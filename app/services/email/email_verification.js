@@ -11,7 +11,6 @@ const verificationEmailSchema = Joi.object().keys({
   verifyUrl: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
-  statusEmailSubject: Joi.string().required()
 })
 
 const whitelist = ['id']

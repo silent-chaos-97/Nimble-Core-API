@@ -14,6 +14,7 @@ async function get(options, tx = app.db) {
       options: (qb) => {
         qb.orderBy('category', 'ASC')
         qb.orderBy('key', 'ASC')
+// Temp comment
       }
     }],
     transacting: tx

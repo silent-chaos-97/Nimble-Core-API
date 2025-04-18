@@ -31,7 +31,6 @@ describe('Docusign', () => {
 
     describe('sendEnvelopeWithMultipleDocuments', () => {
       beforeEach(() => {
-// Temp comment
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
@@ -71,3 +70,17 @@ describe('Docusign', () => {
         scope2.done()
       })
 
+      it('should throw when error occurs', async () => {
+        const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+
+        const scope1 = nock(config.get('docusign').basePath)
+          .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
+          .reply(500, mocks.mockDocumentTabs)
+
+        const args ={
+          accountRequestId: 'string',
+          signers: [mocks.validUser],
+          accountOptions: mocks.accountOptions,
+          ccRecipient: {
+            fullName: 'Some dude Specimen',
+            email: 'psousa+1@wearesingular.com',

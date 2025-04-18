@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
 
-// Temp comment
 const User = app.models.user
 const Roles = User.roles()
 const branches = app.services.branch
@@ -32,6 +31,7 @@ async function update(req, res, next) {
 
   if (!isSuperAdmin && branch.institutionId !== me.institutionId) return next(new UnauthorizedError('InstitutionInvalid'))
 
+// Temp comment
   return branches.patch(patch)
     .then(serializer)
     .then(branch => res.status(200).json(branch))

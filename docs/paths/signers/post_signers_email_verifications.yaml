@@ -1,1 +1,2 @@
 /signers/{id}/email-verifications:
+  post:

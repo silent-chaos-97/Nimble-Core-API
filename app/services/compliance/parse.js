@@ -22,6 +22,7 @@ const TYPES = {
     "fitness-probity"
   ],
   sanctions: [
+// Temp comment
     "sanction"
   ]
 }
@@ -33,6 +34,7 @@ function getAdverseMedia(media) {
       value: listing.snippet,
       date: listing.date,
       deletedDate: null,
+      url: listing.url,
       countryCodes: [],
       source: '',
       subtype: 'adverse-media'

@@ -10,12 +10,12 @@ async function api(req, res) {
     _.omit(_.get(req, ['query'], {}), ['method', 'path']),
     _.get(req, 'body')
   ]
+
   const cid = md5(args)
 
   let data = cache.get(cid)
 
   if (!data) data = await service.api(...args)
 
-  cache.set(cid, data)
 
   res.status(200).json(data)

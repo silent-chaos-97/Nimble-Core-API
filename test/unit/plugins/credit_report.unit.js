@@ -15,3 +15,6 @@ describe('Credit Report Plugin', () => {
   })
 
   afterEach(() => { nock.cleanAll() })
+
+  describe('_cleanReportHTML', () => {
+    it('should return clean html', async () => {

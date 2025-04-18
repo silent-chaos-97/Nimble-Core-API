@@ -12,3 +12,6 @@
     "lastName": "User",
     "roles": [
       "employee"
+    ],
+    "status": "ACTIVE",
+    "phone": null,

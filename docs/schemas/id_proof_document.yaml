@@ -1,3 +1,4 @@
+IdProofDocument:
   type: object
   required:
     - type

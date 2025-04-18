@@ -9,3 +9,4 @@ function callSafe(op, promiserProvider) {
     log.error(err, op)
   }
 
+  return Promise.resolve()

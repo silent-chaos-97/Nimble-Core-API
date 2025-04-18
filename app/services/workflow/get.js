@@ -4,6 +4,7 @@ const Wkfl = app.repositories.workflow
 const WkflModel = app.models.workflow
 const logger = app.logger.getLogger('app.services.workflow.get')
 
+async function get(criteria, tx = app.db) {
   const filter = _.isString(criteria) ? { id: criteria } : criteria
 
   logger.info({ get: filter })
@@ -14,5 +15,4 @@ const logger = app.logger.getLogger('app.services.workflow.get')
     withRelated: ['user', 'branch', 'institution'],
     transacting: tx
   })
-
   return new WkflModel(wkfl).data()

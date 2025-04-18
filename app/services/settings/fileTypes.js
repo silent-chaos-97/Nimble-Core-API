@@ -16,7 +16,6 @@ const fileTypes = [
     name: 'Credit Report'
   },
   {
-    type: 'Entity',
     name: 'Tax Return'
   },
   {
@@ -38,6 +37,14 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Articles of Incorporation'
+  },
+  {
+    type: 'Entity',
+    name: 'Operating Agreement'
+  },
+  {
+    type: 'Entity',
+    name: 'Borrowing Resolution'
   },
   {
     type: 'Entity',

@@ -10,7 +10,6 @@ const whitelistSuccessCodes = [1004, 1006, 1004, 1007]
  *
  * @param {uuid} signerId
  * @param {app.db} tx
- */
 async function fetch(signerId, tx = app.db) {
   logger.info(`[fetch] called with signer [${signerId}]`)
   const signer = await app.services.signer.get(signerId, tx)

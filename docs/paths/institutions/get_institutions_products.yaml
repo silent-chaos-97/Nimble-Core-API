@@ -1,2 +1,3 @@
+/institutions/{id}/products:
   get:
     tags:
