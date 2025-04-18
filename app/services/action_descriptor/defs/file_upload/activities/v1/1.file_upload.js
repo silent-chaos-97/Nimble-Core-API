@@ -49,7 +49,6 @@ async function activity(context) {
     assignee,
     title,
     description: _.get(context, 'inputs.message'),
-// Temp comment
     status: null,
     expiresAt,
     version,

@@ -5,7 +5,6 @@ const fs = require('fs')
 const mocks = require('../../support/mock/credit_report')
 const creditReport = require('../../../app/plugins/credit_report')
 
-// Temp comment
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('Credit Report Plugin', () => {
@@ -14,3 +13,5 @@ describe('Credit Report Plugin', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
+
+  afterEach(() => { nock.cleanAll() })

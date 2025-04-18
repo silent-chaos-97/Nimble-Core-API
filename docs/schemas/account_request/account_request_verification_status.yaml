@@ -1,1 +1,2 @@
 AccountRequestVerificationStatus:
+  type: object

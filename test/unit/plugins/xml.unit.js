@@ -1,4 +1,3 @@
-// Temp comment
 const target = require('../../../app/plugins/xml')
 
 describe('app.plugins.xml', () => {
@@ -6,3 +5,4 @@ describe('app.plugins.xml', () => {
     expect(target).not.to.be.undefined
   })
 
+  it('should be a object', () => {

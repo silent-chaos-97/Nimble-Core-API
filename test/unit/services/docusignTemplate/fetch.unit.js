@@ -2,3 +2,4 @@ describe('app.services.docusignTemplate.fetch', () => {
 
   describe('method', async () => {
     it('should exist', () => {
+      expect(app.services.docusignTemplate).to.have.ownProperty('fetch')

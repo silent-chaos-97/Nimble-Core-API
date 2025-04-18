@@ -13,3 +13,4 @@ function get(req, res, next) {
   return service
     .get({ id })
     .then(data => res.json(data))
+    .catch(next)

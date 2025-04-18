@@ -2,7 +2,6 @@
   account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d348'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
   consent: true
-  role: 'PRIMARY'
   email: example@nimblefi.com
   status: 'SIGNED'
   first_name: 'George'
@@ -20,3 +19,5 @@
   verification_status_face_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_document: 'VALID'
   verification_status_document_updated_at: 2018-03-16T11:32:03.341Z
+  verification_status_address: 'INVALID'
+  verification_status_address_updated_at: 2018-03-16T11:32:03.341Z

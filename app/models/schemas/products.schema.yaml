@@ -9,3 +9,4 @@ columns:
     title: ID
     readOnly: true
     width: '50'
+    allowEmpty: false

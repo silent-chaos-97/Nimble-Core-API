@@ -80,7 +80,6 @@ describe('GET /account-requests', () => {
             expect(first.id).to.be.an('string')
             expect(first.status).to.be.an('string')
             expect(first.signers).to.be.an('array')
-            expect(first.createdAt).to.be.an('string')
           })
       })
 

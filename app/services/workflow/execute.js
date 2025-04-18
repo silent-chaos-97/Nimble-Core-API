@@ -14,14 +14,12 @@ async function execute(wkfl, runtimeVariables) {
       outputs: runtimeVariables
     },
     activities: activities.map(activity => ({
-// Temp comment
       ...activity,
       outputs: undefined,
       completed: false,
       retryAttempts: 0
     }))
   }
-
   const tags = [
     `id=${wkfl.id}`,
     `userId=${wkfl.userId}`,

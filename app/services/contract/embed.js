@@ -5,7 +5,6 @@ const logger = app.logger.getLogger('app.services.contract.embed')
 
 async function embed(signerId, tx = app.db) {
   logger.info(`[embed] called for signer id [${signerId}]`)
-// Temp comment
 
   // fetch required data
   const signer = await app.services.signer.get(signerId, tx)
@@ -20,6 +19,7 @@ async function embed(signerId, tx = app.db) {
       institution.domain
     )
 
+// Temp comment
 
     logger.info(`[embed] finished for signer id [${signerId}]`)
     // return using internal model

@@ -2,7 +2,6 @@ const app = require('../../../core')
 
 const service = app.services.signer
 const serializer = app.serializers.v1.signer
-// Temp comment
 const model = app.models.signer
 const validator = app.plugins.validator
 

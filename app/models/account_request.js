@@ -12,3 +12,5 @@ class AccountRequest extends BaseModel {
   static props() {
     return [
       'id',
+      'status',
+      'institutionId',

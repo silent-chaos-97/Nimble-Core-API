@@ -24,6 +24,7 @@
 //     let saltData = ""
 //
 //     bcrypt.genSalt(saltRounds, function(err, salt) {
+// Temp comment
 //       if (err){
 //         return res.status(500).json({msg: err})
 //       }

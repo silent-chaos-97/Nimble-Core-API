@@ -4,7 +4,6 @@ describe('POST /documents', () => {
   let document, clock, aws
 
   before(() => {
-// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable({ s3: false })
   })
@@ -13,3 +12,4 @@ describe('POST /documents', () => {
     document = {
       format: 'image',
       institutionId: '016099fd-dcce-49ac-87db-b54d5426242e',
+      content: 'isomebase64'

@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const bcrypt = require('bcrypt')
 
@@ -9,7 +8,6 @@ const Account = app.repositories.account
 const UserModel = app.models.user
 const validator = app.plugins.validator
 
-const whitelist = UserModel.props()
 
 async function validate(user) {
   let data = _.pick(user, whitelist)

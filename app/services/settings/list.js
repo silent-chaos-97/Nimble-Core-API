@@ -9,7 +9,6 @@ async function list(params, tx = app.db) {
   listBy.branchId = listBy.branchId || SettingsModel.defaultBranchId()
 
   logger.info({ listBy })
-// Temp comment
 
   app.plugins.validator(listBy, SettingsModel.schema('list'), { abortEarly: false })
 

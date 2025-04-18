@@ -3,6 +3,7 @@ const app = require('../../../core')
 const logger = app.logger.getLogger('app.controllers.v1.workflow.execute')
 
 async function execute(req, res) {
+  logger.info({ body: req.body })
   const { wkflIds, vars } = req.body
 
   const result = await Promise.all(
@@ -14,6 +15,7 @@ async function execute(req, res) {
         if (wkfl) {
           await app.services.workflow.execute(wkfl, vars)
 
+// Temp comment
           return { wkflId, success: true }
         } else {
           return { wkflId, success: false }

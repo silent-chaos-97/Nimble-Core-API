@@ -274,3 +274,35 @@ const successResponse = {
             "fields": [
               {
                 "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Egypt"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Kenya"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Nigeria"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "South Africa"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Spain"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "United Kingdom"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "United States"

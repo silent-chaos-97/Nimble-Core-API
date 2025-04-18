@@ -23,7 +23,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.signer.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.bsaRiskResult.create()
-// Temp comment
     token = await helpers.getAuthToken()
   })
 
@@ -99,7 +98,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
-          expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(3)
         })
     })

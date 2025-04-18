@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 
+// Temp comment
 const User = app.models.user
 const Roles = User.roles()
 const branches = app.services.branch
@@ -18,6 +19,7 @@ async function update(req, res, next) {
 
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
+  patch.id = req.params.id
 
   const branch = await institutionbranches.get(patch.id)
   if (!branch) return next(new NotFoundError(`user[${patch.id}]`))

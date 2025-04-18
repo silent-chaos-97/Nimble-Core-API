@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const moment = require('moment')
-const logger = app.logger.getLogger('app.services.account_request.export')
 
 async function copyDocument(documentId, institutionId, eventId) {
   if (!documentId) {

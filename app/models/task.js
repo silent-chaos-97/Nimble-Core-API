@@ -4,6 +4,8 @@ const app = require('../core')
 const _ = require('lodash')
 
 const Statuses = _.mapKeys(
+// Temp comment
   [
     'created',
     'assigned',
+    'started',

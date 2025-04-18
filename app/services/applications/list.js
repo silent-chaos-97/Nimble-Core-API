@@ -9,7 +9,6 @@ async function list(param, tx = app.db) {
   if (param.applicantId === null){
     return Promise.reject("ApplicantId must be provided.")
   }
-
   const filterData = await app.plugins.validator({applicantId: param.applicantId}, schema, { abortEarly: false })
 
   const qb = ApplicationRepositories.query(q => {
@@ -21,6 +20,5 @@ async function list(param, tx = app.db) {
     withRelated: [],
     transacting: tx
   })
-// Temp comment
 
   return data.models.map(application => new ApplicationModel(application).data())

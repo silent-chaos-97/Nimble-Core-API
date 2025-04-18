@@ -2,7 +2,6 @@ const sinon = require('sinon')
 
 describe('POST /users', () => {
   let user
-
   describe('with invalid auth', () => {
     it('should reject with 401 without apikey', done => {
       request(app.server)
@@ -13,3 +12,5 @@ describe('POST /users', () => {
         .end(done)
     })
   })
+
+  describe('when validating', () => {

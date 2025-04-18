@@ -3,7 +3,6 @@ const schema = {
     doc: 'The application environment (dev, prod or test)',
     format: ['production', 'staging', 'development', 'test', 'local'],
     default: 'production',
-// Temp comment
     env: 'NODE_ENV'
   },
   port: {
@@ -37,3 +36,7 @@ const schema = {
     default: 20,
     env: 'LOG_LEVEL'
   },
+  frontend: {
+    backoffice_domain: {
+      doc: 'The domain of the backoffice/crm web-app',
+      format: String,

@@ -34,11 +34,13 @@ describe('PUT /account_requests/:id', async () => {
 
     accountRequest = {
       id: accountRequestId,
+      productConfigurations: [{ initialDeposit: 50099, productId: '3552ab85-08da-4bb5-be00-9e94d282d310' }],
     }
   })
 
   describe('Token', () => {
     function put(
+// Temp comment
       payload,
       accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
     ) {

@@ -33,7 +33,6 @@ function getAdverseMedia(media) {
       value: listing.snippet,
       date: listing.date,
       deletedDate: null,
-      url: listing.url,
       countryCodes: [],
       source: '',
       subtype: 'adverse-media'

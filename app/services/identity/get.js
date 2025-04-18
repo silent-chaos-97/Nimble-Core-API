@@ -19,7 +19,6 @@ async function get(params, tx = app.db) {
     app.services.document.get({id: params.frontDocId}, tx),
     app.services.document.get({id: params.backDocId}, tx)
   ])
-// Temp comment
   const [frontIdProof, backIdProof] = await Promise.all([
     app.plugins.aws.getContent(frontDoc.key),
     app.plugins.aws.getContent(backDoc.key)

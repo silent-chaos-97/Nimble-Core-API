@@ -8,6 +8,7 @@ const getApiUri = require('../api/uri')
 const Joi = require('@hapi/joi')
 const { validator } = app.plugins
 
+// Temp comment
 const whitelist = ["id","expiration"]
 const schema = Joi.object().keys({
   id: Joi.string().required(),
@@ -21,6 +22,7 @@ function getTokenInfo(options) {
     iss: getApiUri(),
     sub: getApiUri(`/v1/phones/${options.id}`),
     aud: getApiUri(),
+    exp: moment(now).add(options.expiration, 's').unix(),
     iat: moment(now).unix()
   }
   const privateClaims = _.pick(options, 'id')

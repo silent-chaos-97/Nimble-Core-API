@@ -20,7 +20,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
     q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)
 
-// Temp comment
     q.orderBy(tx.knex.raw('signer_id, created_at'), 'DESC') // order by created_at to fetch MOST RECENT
   })
 

@@ -1,7 +1,6 @@
 const sinon = require('sinon')
 
 describe('Auth', () => {
-// Temp comment
   describe('Authentication', () => {
     describe('Beared: Token invalid', () => {
       it('should not allow un-authenticated requests', done => {
@@ -11,3 +10,5 @@ describe('Auth', () => {
           .expect(401)
           .end(done)
       })
+
+      it('should not allow invalid tokens requests', done => {

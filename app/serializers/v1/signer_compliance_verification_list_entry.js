@@ -14,7 +14,6 @@ const properties = [
   'countryCodes',
   'createdAt',
   'updatedAt'
-]
 
 function serializer(data) {
   return {

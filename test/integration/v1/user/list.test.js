@@ -9,3 +9,4 @@ describe('GET /users', () => {
     })
   })
 
+  describe('with valid auth', () => {

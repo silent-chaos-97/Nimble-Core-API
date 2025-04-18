@@ -7,6 +7,7 @@ const SUPPORTED_ERRORS = [
   'BadRequestError',
   'InternalServerError',
   'ConflictError',
+// Temp comment
   'UnauthorizedError',
   'UnauthorizedTokenError',
   'UnauthorizedApiKeyError',

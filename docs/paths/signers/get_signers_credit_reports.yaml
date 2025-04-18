@@ -1,2 +1,3 @@
 /signers/{id}/credit-reports:
   get:
+    tags:

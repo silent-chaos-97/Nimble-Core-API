@@ -31,6 +31,7 @@ describe('Docusign', () => {
 
     describe('sendEnvelopeWithMultipleDocuments', () => {
       beforeEach(() => {
+// Temp comment
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
@@ -63,3 +64,10 @@ describe('Docusign', () => {
         const result = await docusign.sendEnvelopeWithMultipleDocuments(args)
 
         expect(result).not.to.be.undefined
+        expect(result.results.envelopeId).to.equal(mocks.mockCreateEnvelope.envelopeId)
+        expect(result.results.status).to.equal(mocks.mockCreateEnvelope.status)
+        scope0.done()
+        scope1.done()
+        scope2.done()
+      })
+

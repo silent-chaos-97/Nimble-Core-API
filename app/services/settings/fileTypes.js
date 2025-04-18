@@ -36,3 +36,8 @@ const fileTypes = [
     name: 'SOS Filings'
   },
   {
+    type: 'Entity',
+    name: 'Articles of Incorporation'
+  },
+  {
+    type: 'Entity',

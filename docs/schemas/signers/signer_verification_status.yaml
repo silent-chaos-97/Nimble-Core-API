@@ -1,2 +1,2 @@
-SignerVerificationStatus:
   type: object
+  properties:

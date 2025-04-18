@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user

@@ -12,6 +12,9 @@ class Signer extends BaseModel {
   constructor(data) {
     super(Signer.props(), Signer.relations(), data)
   }
+
   static get PRIMARY_ROLE_NAME() {
     return 'PRIMARY'
   }
+  static get SECONDARY_ROLE_NAME() {
+    return 'SECONDARY'

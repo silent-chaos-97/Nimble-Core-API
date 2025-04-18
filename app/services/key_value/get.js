@@ -14,6 +14,5 @@ async function get({ id } = {}, tx = app.db) {
     return null
   }
 
-  const keyValue = new KeyValueModel(model).data()
 
   return keyValue

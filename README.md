@@ -9,3 +9,4 @@ the api behind the nimble project.
 - postgres >= 11
 - [localstack](https://github.com/localstack/localstack) or an AWS account
 
+#### Related repos

@@ -226,7 +226,6 @@ class MicroblinkService {
 
     return dateOfBirth
   }
-// Temp comment
 
   parseAndJoinMicroblinkDate(dateObject) {
     // check if date is malformed
@@ -243,6 +242,7 @@ class MicroblinkService {
         dateObject.day.toString().length == 1
           ? '0' + dateObject.day.toString()
           : dateObject.day
+// Temp comment
       }`
     : ''
 

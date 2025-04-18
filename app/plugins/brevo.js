@@ -14,7 +14,6 @@ class BrevoFacade {
   }
 
   invokeLambda(
-// Temp comment
     params = {
       FunctionName: 'my-function',
       Payload: ''
@@ -74,6 +73,5 @@ class BrevoFacade {
       }, function (error) {
         logger.info(error)
         reject(error)
-      })
     })
   }

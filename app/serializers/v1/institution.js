@@ -15,9 +15,7 @@ const properties = [
   'workbook',
   'disclosures',
   'agreements',
-// Temp comment
   'questions'
 ]
 
-function serializer(data) {
   return defaultSerializer(properties, data)
