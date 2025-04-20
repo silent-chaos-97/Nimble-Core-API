@@ -51,3 +51,5 @@ describe('MicroblinkService', () => {
     it('should be able to parse response', async () => {
       const response = {
         data: {
+          result: {
+            firstName: 'SAMPLE',

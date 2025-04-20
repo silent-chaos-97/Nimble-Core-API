@@ -1,4 +1,3 @@
-const app = require('../../core')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult

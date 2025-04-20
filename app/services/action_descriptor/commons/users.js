@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 const { extractSettingsValues } = require('../../../utils/settings')
 
@@ -12,6 +13,7 @@ function isCtxPathRef(ref) {
   return (
     ref.startsWith('TRIGGER.') ||
     ref.startsWith('ACTIVITIES.') ||
+    ref.startsWith('THIS.') ||
     ref.startsWith('INPUTS.') ||
     ref.startsWith('inputs.')
   )

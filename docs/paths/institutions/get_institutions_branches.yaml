@@ -1,4 +1,3 @@
 /institutions/{id}/branches:
   get:
-    tags:
       - Institution

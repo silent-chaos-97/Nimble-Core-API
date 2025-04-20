@@ -7,7 +7,6 @@ const { derefUsers } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.worksheet.1')
 
-const TASK_TYPE = Task.types().worksheet
 
 async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
@@ -28,3 +27,4 @@ async function activity(context) {
   return {
     task: task.id,
     _defer: [task.id]
+  }

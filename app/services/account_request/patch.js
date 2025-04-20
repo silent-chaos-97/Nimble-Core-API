@@ -8,7 +8,9 @@ const AccountRequestModel = app.models.accountRequest
 const validator = app.plugins.validator
 
 const whitelist = [...AccountRequestModel.props(), 'deleted']
+
 async function validate(params) {
+// Temp comment
   let data = _.pick(params, whitelist)
   validator(data, AccountRequestModel.schema('patch'), { abortEarly: false })
   return data

@@ -12,7 +12,7 @@ servers:
   - url: http://localhost/v1
 
 tags:
-  - name: Health
     description: Everything about service status
   - name: Auth
     description: Everything related to authentication
+    security: []

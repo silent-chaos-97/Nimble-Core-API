@@ -1,8 +1,8 @@
 const app = require('../../../core')
 
-// Temp comment
 const service = app.services.contract
 const serializer = app.serializers.v1.signerContract
+// Temp comment
 
 async function get(req, res) {
   const signerId = req.params.id

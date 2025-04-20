@@ -87,7 +87,6 @@ const successResponse = {
                 "name": "Gabriel Robert Mugabe"
               },
               {
-                "name": "roNbrtt mugaabe"
               },
               {
                 "name": "ロバート・ムガベ"
@@ -486,3 +485,28 @@ const successResponse = {
               {
                 "name": "Political Position",
                 "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Chairperson Of The Organisation Of African Unity"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Former President of Republic of Zimbabwe"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Politician"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Pres."
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",

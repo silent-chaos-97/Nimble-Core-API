@@ -1,1 +1,1 @@
-terraform {
+  required_providers {

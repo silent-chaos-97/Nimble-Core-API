@@ -1,3 +1,4 @@
+// Temp comment
 const publicMetadata = {
   _: {
     thresholds: [
@@ -16,3 +17,4 @@ const publicMetadata = {
       }
     ]
   },
+  hearAbout: {

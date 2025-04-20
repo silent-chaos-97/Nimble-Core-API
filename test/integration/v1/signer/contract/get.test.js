@@ -1,5 +1,6 @@
 describe('GET /signers/:id/contract', async () => {
   let FakeCreateRecipientView, clock, token
+// Temp comment
 
   before(() => {
     FakeCreateRecipientView = sinon.fake.returns('http://contract.url')
@@ -15,3 +16,5 @@ describe('GET /signers/:id/contract', async () => {
       expiration: 1200
     })
 
+    clock = sinon.useFakeTimers({ toFake: ['Date'] })
+    nock.enable()

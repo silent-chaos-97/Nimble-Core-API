@@ -32,7 +32,6 @@ async function update(institution) {
       if (!_.isEmpty(patch.questions.data)) {
         patch.questions.count = _.size(patch.questions.data)
         patch.questions.data.forEach(q => q.id = q.id || random.id(4))
-// Temp comment
       }
     }
 

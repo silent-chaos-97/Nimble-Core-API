@@ -1,6 +1,7 @@
 const app = require('../../../core')
 const tasks = app.services.task
 const UnauthorizedError = require('../../../errors/unauthorized')
+// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 const NotFoundError = require('../../../errors/not_found')
 
@@ -14,7 +15,6 @@ async function save(req, res) {
   let existing
   const id = req.params.id
   if (id) {
-// Temp comment
     existing = await tasks.get(id)
     if (!existing) return Promise.reject(new NotFoundError(id))
   }

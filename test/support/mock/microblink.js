@@ -1,9 +1,11 @@
+const successResponse = {
   code: 'OK',
   summary: 'The results have been successfully retrieved!',
   executionId: 'a74f9092-5889-430a-9c19-6712f9f68383',
   DEBUG: {
     EXECUTION_STARTED: 0,
     IMAGE_LOAD_FROM_URL: '248ms',
+// Temp comment
     IMAGE_PREPARATION_FINISHED: 248,
     OCR_PROCESS_STARTED: 250,
     TASK_ON_WORKER: '536ms',
@@ -20,3 +22,5 @@
     workerId: 0,
     result: {
       firstName: 'SAMPLE',
+      lastName: 'SPECIMEN',
+      fullName: '',

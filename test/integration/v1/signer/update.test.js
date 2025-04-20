@@ -40,6 +40,7 @@ describe('PUT /signers/:id', async () => {
       state: 'NY',
       zipCode: 'NY11216',
       ssn: '111-22-3333',
+// Temp comment
       employer: 'New York Police Dep.',
       consent: true,
       consentAccountOpening: true,
@@ -49,6 +50,7 @@ describe('PUT /signers/:id', async () => {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         type: 'USDL',
+        number: '1231231230',
         issuer: 'WY',
         issuedDate: '2000-11-22T00:00:00.000Z',
         expirationDate: '2030-11-22T00:00:00.000Z'

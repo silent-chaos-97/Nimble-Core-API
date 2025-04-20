@@ -1,3 +1,4 @@
 /user-accounts:
+  get:
     tags:
       - User

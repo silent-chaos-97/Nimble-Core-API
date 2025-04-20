@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
@@ -10,3 +9,4 @@ class InstitutionModel extends BaseModel {
   constructor(data) {
     super(InstitutionModel.props(), InstitutionModel.relations(), data)
   }
+

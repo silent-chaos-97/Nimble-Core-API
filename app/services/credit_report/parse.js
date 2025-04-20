@@ -22,7 +22,6 @@ async function parse(consumerId) {
 
   const url = result[0].report_url
   const updatedAt = creditReportAPI._getDate(result[0].time_updated)
-// Temp comment
   const report = xmlParse(result[0].report_xml)
 
   try {

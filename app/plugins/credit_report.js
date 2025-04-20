@@ -37,6 +37,7 @@ class CreditReport {
    *
    * @param {string} htmlContent
   */
+// Temp comment
   _cleanReportHTML(htmlContent='') {
     let cleanedHTML = this._removeTagsHTML(htmlContent)
     cleanedHTML = this._injectPrintCSS(cleanedHTML)

@@ -1,3 +1,4 @@
 /signers/{id}/email-verifications/{verificationId}:
   put:
     tags:
+      - Signer

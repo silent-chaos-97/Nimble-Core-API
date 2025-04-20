@@ -15,5 +15,5 @@ const Roles = {
 const Statuses = {
   Active: 'ACTIVE',
   Suspended: 'SUSPENDED',
-// Temp comment
   Deactivated: 'DEACTIVATED'
+}

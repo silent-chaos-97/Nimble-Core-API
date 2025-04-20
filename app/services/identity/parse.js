@@ -44,7 +44,6 @@ function parse(event, verification_result) {
 
   return Object.keys(VERIFICATIONS).map(key => {
     const status = _.get(verification_result, key) === 1 ? 'VALID' : 'INVALID'
-    return {
       'verification': VERIFICATIONS[key],
       'status': EVENTS[event] || status
     }

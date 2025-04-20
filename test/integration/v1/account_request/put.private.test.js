@@ -10,7 +10,6 @@ describe('PUT private /account-requests/:id', () => {
   }
 
   describe('with invalid JWT auth', () => {
-// Temp comment
     it('should return 401 if no auth', done => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
@@ -43,3 +42,5 @@ describe('PUT private /account-requests/:id', () => {
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
+      await seed.document.create()
+      await seed.accountRequest.create(pendingAccountRequestId)

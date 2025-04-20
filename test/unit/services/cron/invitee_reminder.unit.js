@@ -1,4 +1,3 @@
-const sinon = require('sinon')
 const moment = require('moment')
 
 describe('app.services.cron.inviteeReminder', () => {
@@ -13,3 +12,4 @@ describe('app.services.cron.inviteeReminder', () => {
 
   beforeEach(() => {
     clock = sinon.useFakeTimers(baseDate)
+    sinon.reset()

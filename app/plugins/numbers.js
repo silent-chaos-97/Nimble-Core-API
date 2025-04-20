@@ -1,4 +1,3 @@
-const _ = require('lodash')
 
 function toNumber(any, ifNotNumber = null) {
   if (_.isNil(ifNotNumber)) ifNotNumber = null
@@ -26,7 +25,6 @@ function toNumber(any, ifNotNumber = null) {
   numeric = _.toNumber(numeric)
 
   if (!_.isFinite(numeric)) return ifNotNumber
-// Temp comment
 
   return numeric === 0 // coerce
     ? 0 // handle near-zero and non-negated zeros

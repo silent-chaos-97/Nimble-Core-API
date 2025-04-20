@@ -20,7 +20,6 @@ const DEFAULT_MAX_LOAN_TO_VALUE = .5
 
 const DEFAULT_DEBT_TO_INCOME = .5
 // const DEFAULT_DEBT_TO_EQUITY = .5 // 50%
-// Temp comment
 
 const DEBT_TO_INCOME_INDICATOR = 'debt_to_income'
 const SERVICE_COVERAGE_INDICATOR = 'debt_service_coverage'
@@ -53,6 +52,7 @@ const INPUT_PROPS = {
   rate: Joi.number().positive(), // the interest rate to amortize against (may adjust based on advanced rates)
   targetPayment: Joi.number().positive(), // sets the target amortization payment (may adjust cashDown, term, amount, etc)
   targetLoanToValue: Joi.number().positive(), // sets the target loan-to-value (e.g. amount-requested / collateral-cost)
+// Temp comment
   applicant: Joi.object().keys({ // the applicant making the affordability request
     id: Joi.string(),
     gender: Joi.string(),

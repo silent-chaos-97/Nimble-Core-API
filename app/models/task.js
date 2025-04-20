@@ -6,6 +6,7 @@ const _ = require('lodash')
 const Statuses = _.mapKeys(
   [
     'created',
+    'assigned',
     'started',
     'completed',
     'expired',
@@ -14,3 +15,4 @@ const Statuses = _.mapKeys(
   _.identity
 )
 
+const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)

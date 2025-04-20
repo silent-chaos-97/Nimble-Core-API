@@ -2,6 +2,7 @@
 
 ## Docusign requirements
 
+The app uses a third-party SAAS called Docusign to send and allow prospects to sign contracts.
 To use this api, you need to fill several variables in the env:
 
 - DOCUSIGN_BASE_OAUTH_PATH - this is the oath server url. It's going to be different depending if it's sandbox or live.
@@ -14,3 +15,4 @@ To use this api, you need to fill several variables in the env:
 
 - DOCUSIGN_CLIENT_ID - This is the integration key. You can find it in docusign -> api and keys -> the name of the app/environment.
 
+- DOCUSIGN_TEMPLATE_ID - This is the id for the template we are using it to build the contracts.

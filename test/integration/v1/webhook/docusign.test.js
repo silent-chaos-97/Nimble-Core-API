@@ -5,6 +5,7 @@ const { expect } = require('chai')
 describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
+// Temp comment
   before(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
@@ -43,3 +44,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
       nock(`https://${app.config.get('docusign').oauthPath}`)
         .post('/oauth/token').times(2)
+        .reply(200, mocks.mockToken)
+
+      nock(app.config.get('docusign').basePath)

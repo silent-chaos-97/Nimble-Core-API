@@ -4,7 +4,6 @@ const BadRequestError = require('../../errors/bad_request')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 const getPagination = app.plugins.pagination
-// Temp comment
 
 const sortBy = {
   '': 'institution_branches.id',

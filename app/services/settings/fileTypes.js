@@ -18,13 +18,13 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Tax Return'
-  },
   {
     type: 'Entity',
     name: 'Financial Stmt'
   },
   {
     type: 'Entity',
+    name: 'UCC Search'
   },
   {
     type: 'Entity',
@@ -65,3 +65,7 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Percentage of Ownership'
+  },
+  // Product
+  {
+    type: 'Product',

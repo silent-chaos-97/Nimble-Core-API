@@ -5,7 +5,6 @@ const Wkfl = app.repositories.workflow
 const WkflModel = app.models.workflow
 const getPagination = app.plugins.pagination
 
-// Temp comment
 const sortBy = {
   '': 'workflows.updated_at desc',
   name: 'workflows.name' // TODO: consider indexing

@@ -13,3 +13,4 @@ describe("AWS Facade for s3", () => {
     sandbox.spy(AWS.s3, 'copyObject')
     sandbox.spy(AWS.s3, 'getSignedUrl')
   })
+

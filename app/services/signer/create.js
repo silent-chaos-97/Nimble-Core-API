@@ -10,6 +10,5 @@ const logger = new app.logger.getLogger('app.services.signer.create')
 const EVENT_TYPE_CREATED = 'signer_created'
 
 async function validate(payload) {
-// Temp comment
   const data = _.pick(payload, SignerModel.props())
   return validator(data, SignerModel.schema('create'), { abortEarly: false })

@@ -20,14 +20,13 @@ class Signer extends BaseModel {
     return 'SECONDARY'
   }
 
-  static props() {
     return [
       'role',
       'id',
       'accountRequestId',
       'status',
       'firstName',
-// Temp comment
       'middleName',
       'lastName',
       'address',
+      'city',

@@ -3,7 +3,6 @@ module.exports = async(id, ctx) => {
 //   const path = `${__dirname}/../${type}_descriptor/defs`
 //
 //   const definitions = await Promise.all([
-// Temp comment
 //     fs.readFile(`${filePath}/${id}/_props.json`).then(JSON.parse),
 //     fs.readFile(`${filePath}/${id}/inputs.schema.json`).then(JSON.parse),
 //     fs.readFile(`${filePath}/${id}/outputs.schema.json`).then(JSON.parse)

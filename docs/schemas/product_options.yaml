@@ -1,3 +1,4 @@
+ProductOption:
   type: object
   properties:
     id:

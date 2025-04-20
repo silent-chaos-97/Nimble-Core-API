@@ -24,7 +24,6 @@ async function create(data, tx = app.db) {
 
   if (!buffer || !Buffer.isBuffer(buffer)) throw new BadRequestError('body.buffer || body.bytes provided but malformed')
 
-  if (!data.size) data.size = Buffer.byteLength(buffer)
 
   // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure
 
@@ -33,7 +32,6 @@ async function create(data, tx = app.db) {
   logger.info({ phase: 'file.create.s3:success', res })
 
   try {
-// Temp comment
     data = _.merge(data, res)
 
     const model = validator(_.pick(data, FileModel.props('create')), FileModel.schema('create'), { abortEarly: false })

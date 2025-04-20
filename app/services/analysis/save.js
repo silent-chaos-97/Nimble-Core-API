@@ -11,5 +11,4 @@ const log = app.logger.getLogger('app.services.analysis.save')
 
 function validate(analysis) {
   let data = _.pick(analysis, AnalysisModel.props())
-  validator(data, AnalysisModel.schema(data.id ? 'update' : 'create'), { abortEarly: false })
   return data

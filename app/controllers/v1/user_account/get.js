@@ -25,6 +25,7 @@ function get(req, res, next) {
   const example = {
     id,
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : user.branchId,
+    institutionId: isSuperAdmin ? null : user.institutionId
   }
 
   logger.info({ example })

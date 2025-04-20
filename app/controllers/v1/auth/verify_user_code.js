@@ -19,7 +19,6 @@ const service = app.services.auth
 //             // eslint-disable-next-line no-console
 //               console.log("Error:", err)
 //               res.status(500).json({message:"Error Occurred or Invalid Code!", status:false})
-// Temp comment
 //             })
 //     } catch (error) {
 //         // console.log("error in send verify controller", error)

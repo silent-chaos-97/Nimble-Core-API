@@ -5,7 +5,6 @@ const uuid = require('uuid')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
-const fakeUser = {
   'id': uuid.v4(),
   'firstName': 'George',
   'lastName': 'Constanza',

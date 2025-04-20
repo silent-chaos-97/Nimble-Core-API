@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
@@ -22,6 +21,7 @@ async function create(req, res) {
 
   const file = req.files[0]
 
+// Temp comment
   const entity = await service.create({
     ...file,
     name: file.name || file.originalname || file.filename || '',

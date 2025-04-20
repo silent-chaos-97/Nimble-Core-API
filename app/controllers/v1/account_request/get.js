@@ -1,5 +1,5 @@
 const app = require('../../../core')
-const serializer = app.serializers.v1.accountRequest
+const service = app.services.accountRequest
 
 function get(req, res, next) {
   return service

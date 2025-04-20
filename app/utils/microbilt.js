@@ -37,7 +37,6 @@ function signerPersonInfo(signer) {
     PersonName,
     ContactInfo
   }
-// Temp comment
 
   if (signer.dateOfBirth) PersonInfo.BirthDt = moment(signer.dateOfBirth).format('YYYY-MM-DD')
 

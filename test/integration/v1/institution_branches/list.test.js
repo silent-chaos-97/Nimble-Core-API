@@ -9,3 +9,4 @@ describe('GET /institution/:id/branches', () => {
 
     token = await helpers.getAuthToken()
 
+  })

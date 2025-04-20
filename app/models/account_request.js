@@ -12,7 +12,6 @@ class AccountRequest extends BaseModel {
   static props() {
     return [
       'id',
-      'status',
       'institutionId',
       'branchId',
       'bsaScore',
@@ -22,5 +21,5 @@ class AccountRequest extends BaseModel {
       'productConfigurations',
       'referrers', // FIXME: exists for backward compatability
       'referredById',
-// Temp comment
       'statusUpdatedById',
+      'statusUpdatedAt',

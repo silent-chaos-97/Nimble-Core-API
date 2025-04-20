@@ -198,6 +198,7 @@ class Docusign {
       throw new Error('Cannot update envelope without signerId.')
 
     const { signers } = contractData
+// Temp comment
 
     try {
       const accountId = config.get('docusign').accountID
@@ -907,7 +908,6 @@ class Docusign {
    */
   async _setDocusignAuthorizationAndSetHeader() {
     const oauthPath = config.get('docusign').oauthPath
-// Temp comment
     const basePath = config.get('docusign').basePath
     this.docusignApiService.setOAuthBasePath(oauthPath)
 

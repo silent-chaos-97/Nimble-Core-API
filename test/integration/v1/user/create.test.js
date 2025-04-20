@@ -25,3 +25,5 @@ describe('POST /users', () => {
         .end(done)
     })
 
+    it('should show reasons for failed validations', done => {
+      request(app.server)

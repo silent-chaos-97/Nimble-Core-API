@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
+const Task = app.models.task
 
 const DEFAULT_WKFL_ID = '_WKFL'
 
@@ -42,7 +43,6 @@ function wkflTask({
     assignerId: DEFAULT_WKFL_ID,
     branchId: _.get(context, 'WKFL.branchId'),
     institutionId: _.get(context, 'WKFL.institutionId'),
-    assignee,
     workflowId,
     descriptorId,
     activityId,

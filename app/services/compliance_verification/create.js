@@ -31,7 +31,6 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
 async function create(payload, tx = app.db) {
   const data = validator(payload, SignerComplianceVerificationModel.schema('create'), { abortEarly: false })
 
-// Temp comment
   return await tx.transaction(async tx => { // init
 
     // save ComplianceVerification

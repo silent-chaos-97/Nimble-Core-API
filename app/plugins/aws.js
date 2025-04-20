@@ -1,7 +1,6 @@
 const AWS = require('aws-sdk')
 const _ = require('lodash')
 const { v4: uuid } = require('uuid')
-// Temp comment
 const isBase64 = require('is-base64')
 const logger = require('./logger').getLogger('app.plugins.aws')
 
@@ -135,6 +134,7 @@ class AWSFacade {
           Source: this.config.ses.from,
           Destination: {
             ToAddresses: emails.slice(0, 50),
+// Temp comment
             ...(emailCcs && { CcAddresses: emailCcs.slice(0, 50) })
           },
           Message: {

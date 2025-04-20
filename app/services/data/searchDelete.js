@@ -8,6 +8,7 @@ const InternalServerError = require('../../errors/internal_server')
 const PROPS = SearchModel.props('delete')
 const SCHEMA = SearchModel.schema('delete')
 
+const logger = app.logger.getLogger('app.services.data.search.delete')
 
 async function searchDelete(example, tx = app.db) {
   example = _.omitBy(example, _.isNil)
@@ -31,5 +32,4 @@ async function searchDelete(example, tx = app.db) {
     return model
   } catch(err) {
     logger.error(err, { phase: 'ended.delete:fail', example })
-    throw new InternalServerError(err.message)
   }

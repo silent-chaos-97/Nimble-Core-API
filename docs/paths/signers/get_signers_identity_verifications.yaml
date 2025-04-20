@@ -1,2 +1,1 @@
 /signers/{id}/identity-verifications:
-  get:

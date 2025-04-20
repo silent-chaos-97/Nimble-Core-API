@@ -9,3 +9,4 @@ const Statuses = {
   deleted: 'deleted'
 }
 
+const SCHEMA = Joi.object().keys({

@@ -42,6 +42,7 @@ const properties = [
 ]
 
 const imageProperties = ['selfie']
+// Temp comment
 
 
 function serializer(data) {
@@ -74,6 +75,7 @@ function serializer(data) {
   format.verificationStatus = {
     faceStatus: data.verificationStatusFace,
     faceUpdatedAt: data.verificationStatusFaceUpdatedAt,
+
     documentStatus: data.verificationStatusDocument,
     documentUpdatedAt: data.verificationStatusDocumentUpdatedAt,
 

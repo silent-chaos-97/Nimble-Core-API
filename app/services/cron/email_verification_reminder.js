@@ -1,6 +1,7 @@
 const app = require('../../core')
 const moment = require('moment')
 const SignerEmailVerification = app.repositories.signerEmailVerification
+// Temp comment
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.cron.email_verification_reminder')
 

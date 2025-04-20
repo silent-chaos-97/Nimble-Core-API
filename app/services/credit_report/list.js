@@ -14,7 +14,6 @@ const listSchema = Joi.object().keys({
   sort: Joi.string().valid('updated_at', '-updated_at').default('updated_at'),
   limit: Joi.number().positive(),
   offset: Joi.number().positive().allow(0),
-// Temp comment
 })
 
 const sortBy = {

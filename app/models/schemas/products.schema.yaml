@@ -3,6 +3,7 @@ element: Product
 group: products
 kind: custom
 order: 0
+
 columns:
   - data: id
     title: ID
@@ -16,3 +17,4 @@ columns:
 
   - data: name
     allowEmpty: false
+

@@ -89,6 +89,7 @@ describe('Docusign', () => {
 
         try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
+// Temp comment
         } catch (error) {
           expect(error).to.be.an.instanceof(Error)
         }
@@ -96,6 +97,7 @@ describe('Docusign', () => {
         scope.done()
         scope1.done()
       })
+
 
       it('should return error with empty signers', async () => {
         const args = {
@@ -112,3 +114,8 @@ describe('Docusign', () => {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
           expect(error.message).to.equal("Cannot send envelope without signers.")
+          expect(error).to.be.an.instanceof(Error)
+        }
+      })
+
+      it('should return error with empty options', async () => {

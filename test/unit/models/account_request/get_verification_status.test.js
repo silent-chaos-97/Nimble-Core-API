@@ -7,3 +7,4 @@ const testSigners = [
     "verificationStatusDocument": "VALID",
     "verificationStatusAddress": "VALID",
     "verificationStatusSanctions": "NOMATCH",
+    "verificationStatusMedia": "NOMATCH",
