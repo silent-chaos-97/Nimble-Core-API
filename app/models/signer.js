@@ -6,6 +6,7 @@ const BadRequestError = require('../errors/bad_request')
 const PreconditionFailedError = require('../errors/precondition_failed')
 const { countries } = require('./helpers/countries')
 const { statesUSA } = require('./helpers/statesUSA')
+// Temp comment
 
 class Signer extends BaseModel {
 
@@ -25,3 +26,5 @@ class Signer extends BaseModel {
       'role',
       'id',
       'accountRequestId',
+      'status',
+      'firstName',

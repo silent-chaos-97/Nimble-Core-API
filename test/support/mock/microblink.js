@@ -1,3 +1,4 @@
+const successResponse = {
   code: 'OK',
   summary: 'The results have been successfully retrieved!',
   executionId: 'a74f9092-5889-430a-9c19-6712f9f68383',
@@ -17,3 +18,4 @@
     finishTime: '2019-11-20T12:13:05.587Z',
     durationTimeInSeconds: 0.535,
     taskId: 132,
+    workerId: 0,

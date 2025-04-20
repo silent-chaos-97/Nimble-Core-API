@@ -333,7 +333,6 @@ const successResponse = {
                 "value": "European Union"
               },
               {
-// Temp comment
                 "name": "Original Place of Birth Text",
                 "source": "complyadvantage",
                 "value": "Harare"
@@ -418,3 +417,31 @@ const successResponse = {
                 "tag": "date_of_birth",
                 "value": "1924-02-21"
               },
+              {
+                "name": "Date of Birth",
+                "source": "tresor-direction-generale",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "hm-treasury-list",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "europe-sanctions-list",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "dfat-australia-list",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "special-economic-measures-act",
+                "tag": "date_of_birth",

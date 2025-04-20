@@ -276,7 +276,6 @@ class AWSFacade {
   }
 
   getCompleteWorkflowDecision(result) {
-    return [
       {
         decisionType: 'CompleteWorkflowExecution',
         completeWorkflowExecutionDecisionAttributes: {

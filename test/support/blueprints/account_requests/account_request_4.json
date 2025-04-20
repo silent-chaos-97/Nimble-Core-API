@@ -17,3 +17,4 @@
   "contractDocumentEnvelopeStatusUpdatedAt": "2019-03-17T13:34:11.341Z",
   "signers": [
     {
+      "role": "PRIMARY",

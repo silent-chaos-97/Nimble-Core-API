@@ -56,3 +56,6 @@ const schema = {
       env: 'PASSWORD_RECOVERY_URI'
     },
     magic_link_uri: {
+      doc: 'Backoffice magic-link endpoint',
+      format: String,
+      default: ':protocol://:backoffice_domain/login/:email/:token',

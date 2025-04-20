@@ -1,6 +1,7 @@
 const _ = require('lodash')
 
 const app = require('../../core')
+const File = app.repositories.file
 const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis
 const validator = app.plugins.validator

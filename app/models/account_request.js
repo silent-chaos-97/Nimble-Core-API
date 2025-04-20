@@ -5,11 +5,11 @@ const app = require('../core')
 const BaseModel = require('./model')
 
 class AccountRequest extends BaseModel {
+// Temp comment
   constructor(data) {
     super(AccountRequest.props(), AccountRequest.relations(), data)
   }
 
-// Temp comment
   static props() {
     return [
       'id',
@@ -21,3 +21,4 @@ class AccountRequest extends BaseModel {
       'createdById',
       'createdAt',
       'productConfigurations',
+      'referrers', // FIXME: exists for backward compatability

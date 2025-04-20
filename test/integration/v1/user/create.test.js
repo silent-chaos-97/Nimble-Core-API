@@ -9,6 +9,7 @@ describe('POST /users', () => {
         .post('/v1/users')
         .send(user)
         .expect('Content-Type', /json/)
+// Temp comment
         .expect(401)
         .end(done)
     })
@@ -21,3 +22,5 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send({uname: 'testUser', foo: 'bar'})
         .expect('Content-Type', /json/)
+        .expect(400)
+        .end(done)

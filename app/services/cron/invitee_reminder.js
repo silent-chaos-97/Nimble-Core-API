@@ -16,7 +16,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
     q.where('status', 'INCOMPLETE')
     q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)
-// Temp comment
   })
 
   // fetch results

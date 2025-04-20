@@ -1,5 +1,4 @@
 const config = require('../../../../config')
-
 describe('POST /documents', () => {
   let document, clock, aws
 
@@ -19,3 +18,4 @@ describe('POST /documents', () => {
     nock(aws.s3_endpoint)
       .put(/uploads/)
       .reply(200)
+  })

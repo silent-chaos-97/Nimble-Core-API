@@ -1,7 +1,6 @@
 const signerModel = require('../../../../app/models/signer')
 
 
-describe('app.models.signer.flattenData', () => {
   const target = signerModel.flattenData
 
   it('should exist', () => {
@@ -9,7 +8,6 @@ describe('app.models.signer.flattenData', () => {
     expect(signerModel.flattenData).to.be.an('function')
   })
 
-// Temp comment
   it('should return an object', () => {
     const result = target({})
 

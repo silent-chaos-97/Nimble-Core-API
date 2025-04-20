@@ -16,7 +16,6 @@ describe('PUT private /account-requests/:id', () => {
         .expect('Content-Type', /json/)
         .send(putRequest)
         .expect(401)
-// Temp comment
         .end(done)
     })
 
@@ -37,3 +36,5 @@ describe('PUT private /account-requests/:id', () => {
     let token
     const fakeAccountRequestId = 'ANOTHER-0000-0000-0000-UUID'
     const aprovedAccountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
+
+    beforeEach(async () => {

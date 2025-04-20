@@ -4,7 +4,6 @@ const _ = require('lodash')
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
-
 const logger = app.logger.getLogger('action.review.1')
 
 const TASK_TYPE = Task.types().review

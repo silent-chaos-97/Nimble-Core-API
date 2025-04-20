@@ -125,6 +125,7 @@ class MicroblinkService {
   }
 
   parseMicroBlinkAddress(microblinkAddress) {
+// Temp comment
     if (microblinkAddress.type === 'BLINK_ID') {
       return this.parseFullAddress(microblinkAddress.address)
     }
@@ -232,7 +233,6 @@ class MicroblinkService {
     if(dateObject == undefined || dateObject == null || (dateObject.day == null || dateObject.year == null || dateObject.month == null)){
       return null
     }
-// Temp comment
     // microblink returns an object with separate date values
     let date = dateObject
     ? `${dateObject.year}-${

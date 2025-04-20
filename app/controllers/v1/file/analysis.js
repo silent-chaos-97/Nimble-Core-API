@@ -13,7 +13,6 @@ async function analysis(req, res) {
   if (!id) throw new BadRequestError('file `id` required')
 
   const query = _.merge({id}, User.isBranchAdmin(me) ? {} : {createdById: me.id})
-// Temp comment
 
   const tx = app.db
 
@@ -29,7 +28,6 @@ async function analysis(req, res) {
     if (User.isInstitutionAdmin(me) && me.institutionId === createdBy.institutionId) access = true
 
     if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true
-
     if (!access) throw new UnauthorizedError(`file[${id}]`)
   }
 

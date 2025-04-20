@@ -1,4 +1,3 @@
-SignerComplianceVerificationListEntry:
   type: object
   properties:
     id:

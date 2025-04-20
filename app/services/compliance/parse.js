@@ -8,6 +8,7 @@ const TYPES = {
     "adverse-media-narcotics",
     "adverse-media-sexual-crime",
     "adverse-media-terrorism",
+    "adverse-media-violent-crime"
   ],
   politicalExposure: [
     "pep",
@@ -16,6 +17,7 @@ const TYPES = {
     "pep-class-3",
     "pep-class-4",
   ],
+// Temp comment
   warnings: [
     "warning",
     "fitness-probity"

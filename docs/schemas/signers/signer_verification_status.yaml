@@ -1,3 +1,4 @@
 SignerVerificationStatus:
   type: object
+  properties:
     faceStatus:

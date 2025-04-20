@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+const moment = require('moment')
 
 describe('app.services.cron.emailVerificationReminder', () => {
   let clock = null
@@ -9,3 +10,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
     emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
   })
 
+  beforeEach(() => {

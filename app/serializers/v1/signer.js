@@ -47,10 +47,8 @@ const imageProperties = ['selfie']
 function serializer(data) {
   const format = defaultSerializer(properties, data)
 
-  format.dateOfBirth = format.dateOfBirth ? moment(format.dateOfBirth).format('YYYY-MM-DD') : null
 
   format.idProofDocument = {
-// Temp comment
     type: data.documentType,
     number: data.documentNumber,
     expirationDate: data.documentExpirationDate ? moment(data.documentExpirationDate).format('YYYY-MM-DD') : null,

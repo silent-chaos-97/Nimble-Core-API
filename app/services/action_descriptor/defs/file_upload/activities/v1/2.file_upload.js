@@ -1,3 +1,4 @@
+const app = require('../../../../../../core')
 const _ = require('lodash')
 const { runAs } = require('../../../../commons/users')
 const log = app.logger.getLogger('action.file_upload.2')
@@ -62,7 +63,6 @@ async function activity(context) {
       } catch (err) {
         log.error(err, { op: 'analysis.save', analysisArg: _analysis })
       }
-    }
   }
 
   return { file: fileId, analysis: _.get(analysis, 'id'), response_expired: false }

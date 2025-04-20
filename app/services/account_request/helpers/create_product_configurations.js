@@ -5,7 +5,6 @@ const AccountRequestProductOption = app.repositories.accountRequestProductOption
 
 
 async function createProductConfigurations(accountRequestId, data, tx = app.db) {
-// Temp comment
   // Create selected products
   for (const product of data.productConfigurations) {
     // filter out potentially bad props
@@ -30,6 +29,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     const newAccountNumber = await app.services.productAccountNumber.next({
       productId: product.productId,
       accountRequestId: accountRequestId
+// Temp comment
     })
 
     // save the account number as generic product option

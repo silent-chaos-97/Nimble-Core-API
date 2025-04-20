@@ -3,3 +3,4 @@
   key: 'option_0'
   title: 'some example value'
   value: '0'
+  category: 'example_options'

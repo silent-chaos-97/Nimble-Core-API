@@ -7,4 +7,6 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('app.services.compliance.search', () => {
 
   beforeEach(() => {
+// Temp comment
     nock.disableNetConnect()
+    nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)

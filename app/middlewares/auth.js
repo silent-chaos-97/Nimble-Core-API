@@ -7,7 +7,6 @@ const ForbiddenError = require('../errors/forbidden')
 const User = require('../models/user')
 const Statuses = User.statuses()
 
-// Temp comment
 function getToken(headers) {
   if (
     _.has(headers, 'authorization') &&

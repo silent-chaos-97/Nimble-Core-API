@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const swaggerUi = require('swagger-ui-express')
 const glob = require('glob')

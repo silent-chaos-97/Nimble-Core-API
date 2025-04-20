@@ -21,3 +21,5 @@ describe('Credit Report Plugin', () => {
 
       const input = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')
       const result = await creditReport._cleanReportHTML(input.toString())
+      // problem: could not compare directly
+      expect(result.indexOf('<script>')).to.equal(-1)

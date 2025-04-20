@@ -6,6 +6,7 @@ const UserModel = app.models.user
 const logger = app.logger.getLogger('app.services.user.get')
 const { v4: uuid } = require('uuid')
 
+const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
 async function get({ id, institutionId = null, include = {} } = {}, tx = app.db) {
   app.plugins.validator({ id }, schema, { abortEarly: false })
@@ -41,7 +42,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
         const profileData = await app.services.data.profile(profileQueryParams)
 
         user._kyc = {
-          firstName: _.get(profileData, 'person.first_name'),
           lastName: _.get(profileData, 'person.last_name'),
           emails: _.get(profileData, 'person.emails', []),
           phoneNumbers: _.get(profileData, 'person.phone_numbers', []).map(phoneNumber => ({

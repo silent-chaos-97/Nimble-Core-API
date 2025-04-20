@@ -12,4 +12,3 @@ const sortBy = {
 }
 
 function getSqlSort(sort) {
-  return _.get(sortBy, sort, sortBy['position'])

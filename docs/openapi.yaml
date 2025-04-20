@@ -13,3 +13,4 @@ servers:
 
 tags:
   - name: Health
+    description: Everything about service status

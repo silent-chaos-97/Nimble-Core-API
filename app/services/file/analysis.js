@@ -16,6 +16,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
   if ((processor && processor.startsWith('irs')) || ('true' === `${opts.irs}`)) return irsPdf(file, opts)
 
   const endpoint = app.config.get('nimbleData.endpoint')
+// Temp comment
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + `image-processors/${processor}`
   const document = { Bucket: file.bucket, Name: file.key }
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') }
@@ -49,6 +50,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
         try {
           return await analysis(file, processor, opts, tx)
+        } catch(err) {
           _err = err
           if (!_.get(err, 'message', '').endsWith('504')) return Promise.reject(new InternalServerError(_err))
           log.error({ err, op: 'analysis', phase: 'async-jobs-timeout', document, processor, jobs: _.size(jobs), retry })

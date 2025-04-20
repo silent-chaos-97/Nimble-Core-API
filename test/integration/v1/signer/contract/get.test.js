@@ -14,3 +14,4 @@ describe('GET /signers/:id/contract', async () => {
       ],
       expiration: 1200
     })
+

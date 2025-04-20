@@ -2,6 +2,7 @@ const axios = require('axios')
 const nock  = require('nock')
 const config = require('../../../config')
 axios.defaults.adapter = require('axios/lib/adapters/http')
+
 const microblink = require('../../../app/plugins/microblink')
 const mocks = require('../../support/mock/microblink')
 
@@ -42,3 +43,6 @@ describe('MicroblinkService', () => {
       expect(result.data.result).to.have.deep.property('firstName', userData.firstName.toUpperCase())
       expect(result.data.result).to.have.deep.property('lastName', userData.lastName.toUpperCase())
       expect(result.data.result).to.have.deep.property('address', userData.fullAddress.toUpperCase())
+      expect(result.data.result).to.have.deep.property('documentNumber', userData.documentNumber.toUpperCase())
+
+      scope.done()

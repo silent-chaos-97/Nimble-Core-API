@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-
 const User = app.models.user
 const Roles = User.roles()
 const branches = app.services.branch

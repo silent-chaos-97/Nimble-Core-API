@@ -1,4 +1,4 @@
 const ErrorClass = require('../../../app/errors/unauthorized_token')
-// Temp comment
 
+// Temp comment
 describe('UnauthorizedTokenError', () => {

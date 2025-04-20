@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
-// Temp comment
 const NotFoundError = require('../../errors/not_found')
 const config = require('../../../config')
 const validator = app.plugins.validator
@@ -15,6 +14,7 @@ const welcomeEmailSchema = Joi.object().keys({
   uri: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
+// Temp comment
 })
 
 const whitelist = ['userId']

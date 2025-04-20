@@ -33,6 +33,7 @@ async function update(req, res, next) {
       delete patch['workgroups']
       delete patch['department']
     }
+
     if (patch.roles && !_.isEmpty(patch.roles)) {
 
       // an institution-admin can set the institution-admin, branch-admin and employee role

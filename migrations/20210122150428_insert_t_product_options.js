@@ -7,3 +7,4 @@ const savingsProductOptions = [
     annotation: 'Free',
   },
   {
+    key: 'e_statements',

@@ -1,6 +1,5 @@
 {
   "id": "2552ab85-08da-4bb5-be00-9e94d282d348",
-  "status": "APPROVED",
   "institutionId": "2552ab85-08da-4bb5-be00-9e94d282d311",
   "bsaScore": 2,
   "bsaRisk": "Low",
@@ -17,3 +16,4 @@
   "contractDocumentEnvelopeStatusUpdatedAt": "2019-03-17T13:34:11.341Z",
   "signers": [
     {
+      "role": "PRIMARY",

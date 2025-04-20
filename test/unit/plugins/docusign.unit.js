@@ -38,6 +38,7 @@ describe('Docusign', () => {
       afterEach(() => { nock.cleanAll() })
 
       it('should return a template', async () => {
+        // get sign in
         const scope0 = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
         // mock template
@@ -95,3 +96,10 @@ describe('Docusign', () => {
         scope.done()
         scope1.done()
       })
+
+
+      it('should return error with empty signers', async () => {
+        const args = {
+          accountRequestId: 'string',
+          signers: [],
+          accountOptions: mocks.accountOptions,

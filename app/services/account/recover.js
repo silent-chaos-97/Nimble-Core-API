@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const Joi = require('@hapi/joi')
 const config = require('../../../config')
 
@@ -8,6 +9,7 @@ const Institution = app.repositories.institution
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.account.recover')
 
+const whitelist = ['email']
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })

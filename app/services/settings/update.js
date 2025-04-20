@@ -1,5 +1,6 @@
 const _ = require('lodash')
 
+// Temp comment
 const app = require('../../core')
 const Settings = app.repositories.settings
 const SettingsModel = app.models.settings
@@ -13,6 +14,7 @@ async function update(params, transacting = app.db) {
   patch.branchId = patch.branchId || SettingsModel.defaultBranchId()
 
   const id = _.pick(patch, ID_FIELDS)
+
   const descriptor = await app.services.settings.get(id, transacting)
 
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)

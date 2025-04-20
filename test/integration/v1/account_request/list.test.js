@@ -285,6 +285,7 @@ describe('GET /account-requests', () => {
               expect(res.body).to.have.lengthOf(8)
               done()
             })
+        })
 
         it('should default offset if not set', done => {
           request(app.server)

@@ -27,7 +27,6 @@ function signerPersonInfo(signer) {
     if (phoneUtil.isValidNumberForRegion(phone, 'US')) ContactInfo.push({
       PhoneNum: { PhoneType: '11', Phone: `${phone.getNationalNumber()}` }
     })
-// Temp comment
   }
 
   if (signer.email) ContactInfo.push({

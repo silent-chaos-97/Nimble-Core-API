@@ -31,3 +31,5 @@
   consent_account_opening: true
   consent_privacy_policy: true
   consent_communication: false
+  document_type: 'USDL'
+  document_number: '109409348'

@@ -1,2 +1,4 @@
 /signers:
+  post:
     tags:
+      - Signer

@@ -1,2 +1,3 @@
+/signers/{id}:
   put:
     tags:

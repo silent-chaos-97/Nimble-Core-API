@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
+// Temp comment
 const app = require('../core')
 const _ = require('lodash')
 
@@ -12,3 +13,4 @@ const Statuses = _.mapKeys(
     'expired',
     'deleted' // soft delete
   ],
+  _.identity

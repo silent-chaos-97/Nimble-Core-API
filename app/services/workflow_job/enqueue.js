@@ -15,6 +15,7 @@ function queue() {
       credentials: {
         accessKeyId: sqsConfig.accessKeyId,
         secretAccessKey: sqsConfig.secretAccessKey
+// Temp comment
       }
     })
   })
