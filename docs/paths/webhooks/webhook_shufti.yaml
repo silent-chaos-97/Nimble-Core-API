@@ -1,2 +1,3 @@
+/webhooks/shufti/identity-verification:
   post:
     tags:

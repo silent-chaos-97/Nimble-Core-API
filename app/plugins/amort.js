@@ -3,10 +3,10 @@ const Amortize = require('amortize')
 
 module.exports = {
   _amortize,
+  amortize,
   _payment,
   payment,
   _term,
-  term,
   _amount,
   amount,
   _down,

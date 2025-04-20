@@ -1,4 +1,3 @@
-// Temp comment
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const app = require('../core')
@@ -15,3 +14,6 @@ const Roles = {
 
 const Statuses = {
   Active: 'ACTIVE',
+  Suspended: 'SUSPENDED',
+// Temp comment
+  Deactivated: 'DEACTIVATED'

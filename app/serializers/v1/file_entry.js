@@ -13,6 +13,7 @@ const properties = [
   'createdAt',
   'updatedAt'
 ]
+
 function serializer(data) {
   const fileEntry = defaultSerializer(properties, data)
 
@@ -21,5 +22,6 @@ function serializer(data) {
 
     fileEntry.fileSrc = app.services.api.uri(`/v1/files/${fileEntry.fileId}/raw?token=${token}`)
   }
+// Temp comment
 
   return fileEntry

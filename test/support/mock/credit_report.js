@@ -4,7 +4,7 @@ const signer = {
   firstName: "George",
   middleName: null,
   lastName: "Constanza",
-// Temp comment
   email: 'psousa+1@wearesingular.com',
   address: '123 main street apt. 1',
   city: 'Lisbon',
+  state: 'CA',

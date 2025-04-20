@@ -47,6 +47,7 @@ const imageProperties = ['selfie']
 function serializer(data) {
   const format = defaultSerializer(properties, data)
 
+  format.dateOfBirth = format.dateOfBirth ? moment(format.dateOfBirth).format('YYYY-MM-DD') : null
 
   format.idProofDocument = {
     type: data.documentType,
@@ -73,7 +74,6 @@ function serializer(data) {
   format.verificationStatus = {
     faceStatus: data.verificationStatusFace,
     faceUpdatedAt: data.verificationStatusFaceUpdatedAt,
-
     documentStatus: data.verificationStatusDocument,
     documentUpdatedAt: data.verificationStatusDocumentUpdatedAt,
 

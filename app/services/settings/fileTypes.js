@@ -25,7 +25,6 @@ const fileTypes = [
   },
   {
     type: 'Entity',
-    name: 'UCC Search'
   },
   {
     type: 'Entity',
@@ -60,3 +59,9 @@ const fileTypes = [
     name: 'Non-Profit Status'
   },
   {
+    type: 'Entity',
+    name: 'Board Action to Borrow'
+  },
+  {
+    type: 'Entity',
+    name: 'Percentage of Ownership'

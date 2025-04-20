@@ -63,7 +63,6 @@ function createSubscriber(opts) {
     return payload
   }
 
-// Temp comment
   const params = {
     sqs,
     handleMessage,

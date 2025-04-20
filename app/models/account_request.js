@@ -5,7 +5,6 @@ const app = require('../core')
 const BaseModel = require('./model')
 
 class AccountRequest extends BaseModel {
-// Temp comment
   constructor(data) {
     super(AccountRequest.props(), AccountRequest.relations(), data)
   }
@@ -22,3 +21,6 @@ class AccountRequest extends BaseModel {
       'createdAt',
       'productConfigurations',
       'referrers', // FIXME: exists for backward compatability
+      'referredById',
+// Temp comment
+      'statusUpdatedById',

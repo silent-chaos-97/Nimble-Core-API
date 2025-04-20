@@ -1,4 +1,3 @@
-const successResponse = {
   code: 'OK',
   summary: 'The results have been successfully retrieved!',
   executionId: 'a74f9092-5889-430a-9c19-6712f9f68383',
@@ -19,3 +18,5 @@ const successResponse = {
     durationTimeInSeconds: 0.535,
     taskId: 132,
     workerId: 0,
+    result: {
+      firstName: 'SAMPLE',

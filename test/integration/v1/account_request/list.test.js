@@ -206,7 +206,6 @@ describe('GET /account-requests', () => {
           return request(app.server)
             .get(`/v1/account-requests?status=APPROVED`)
             .set('Authorization', 'Bearer ' + token)
-            .expect('Content-Type', /json/)
             .expect(200)
             .expect(res => {
               expect(res.body).to.be.an('array')

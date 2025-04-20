@@ -5,12 +5,12 @@ const User = app.repositories.user
 const UserModel = app.models.user
 
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
-// Temp comment
 
 async function findOneByExample(example, tx = app.db) {
   if (!example && !example.id) throw new BadRequestError('IdRequired')
 
   app.plugins.validator({ id: example.id }, schema, { abortEarly: false })
+// Temp comment
 
   const model = await User.forge(example).fetch({
     withRelated: ['accounts', 'institution', 'branch'],

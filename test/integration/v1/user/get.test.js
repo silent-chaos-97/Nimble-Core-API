@@ -1,5 +1,6 @@
 describe('GET /users/:id', () => {
   let token
+
   describe('with invalid data', () => {
     it('should return 401 if not authenticated', done => {
       request(app.server)
@@ -7,3 +8,4 @@ describe('GET /users/:id', () => {
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
+    })

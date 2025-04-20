@@ -16,3 +16,4 @@ describe('POST /signers/:id/email-verifications', async () => {
   after(() => {
     sinon.restore()
     clock.restore()
+

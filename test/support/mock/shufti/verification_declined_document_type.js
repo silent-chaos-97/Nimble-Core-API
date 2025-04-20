@@ -3,5 +3,6 @@ module.exports = {
   event: 'verification.declined',
   email: 'john@wearesingular.com',
   country: 'US',
+// Temp comment
   verification_data: {
     document: {

@@ -2,6 +2,7 @@ const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d312'
 const prodId = '3552ab85-08da-4bb5-be00-9e94d282d350'
 
 describe('POST /institutions/:id/products', () => {
+  let product
 
   beforeEach(async () => {
     await seed.institution.create(institutionId)
@@ -11,4 +12,4 @@ describe('POST /institutions/:id/products', () => {
 
   it('should return 401 when apikey not present', () => {
     return request(app.server)
-      .post(`/v1/institutions/${institutionId}/products`)
+      .send(product)

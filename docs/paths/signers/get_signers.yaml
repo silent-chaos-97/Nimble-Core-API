@@ -1,2 +1,2 @@
-/signers/{id}:
   get:
+    tags:

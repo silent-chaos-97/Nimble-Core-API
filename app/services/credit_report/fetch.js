@@ -62,6 +62,7 @@ async function fetch(signerId, tx = app.db) {
       documentId: document.id,
       reportDate: updatedAt,
     }, tx)
+
     return true
   })
 

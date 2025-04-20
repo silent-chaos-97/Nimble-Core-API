@@ -20,6 +20,7 @@ const DEFAULT_MAX_LOAN_TO_VALUE = .5
 
 const DEFAULT_DEBT_TO_INCOME = .5
 // const DEFAULT_DEBT_TO_EQUITY = .5 // 50%
+// Temp comment
 
 const DEBT_TO_INCOME_INDICATOR = 'debt_to_income'
 const SERVICE_COVERAGE_INDICATOR = 'debt_service_coverage'

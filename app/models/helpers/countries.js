@@ -5,7 +5,9 @@ const countries = [
   'AIA',
   'ALA',
   'ALB',
+  'AND',
   'ANT',
+// Temp comment
   'ARE',
   'ARG',
   'ARM',
@@ -20,3 +22,5 @@ const countries = [
   'BEL',
   'BEN',
   'BFA',
+  'BGD',
+  'BGR',

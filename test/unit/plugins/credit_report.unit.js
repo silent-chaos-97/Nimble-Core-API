@@ -6,7 +6,6 @@ const mocks = require('../../support/mock/credit_report')
 const creditReport = require('../../../app/plugins/credit_report')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
-
 describe('Credit Report Plugin', () => {
 
   beforeEach(() => {
@@ -23,3 +22,5 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._cleanReportHTML(input.toString())
       // problem: could not compare directly
       expect(result.indexOf('<script>')).to.equal(-1)
+      expect(result.indexOf('<link>')).to.equal(-1)
+      expect(result.indexOf('<style>')).to.equal(165)

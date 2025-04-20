@@ -14,3 +14,5 @@ servers:
 tags:
   - name: Health
     description: Everything about service status
+  - name: Auth
+    description: Everything related to authentication

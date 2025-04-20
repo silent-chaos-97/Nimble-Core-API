@@ -18,7 +18,6 @@ async function mfaExpired(mfaCacheToken, email) {
     return true
   }
 
-  if (userMFA.get('email') !== email) {
     return true
   }
 

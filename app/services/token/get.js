@@ -4,6 +4,7 @@ const _ = require('lodash')
 
 const app = require('../../core')
 const getApiUri = require('../api/uri')
+const jwt = app.plugins.jwt
 
 function schema() {
   return Joi.object().keys({
@@ -12,4 +13,3 @@ function schema() {
     resources: Joi.array().items(Joi.string()).min(1).default(['*']),
     expiration: Joi.number().positive().default(900),
     phone: Joi.string().optional()
-  })

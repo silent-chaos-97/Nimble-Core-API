@@ -4,6 +4,7 @@ const files = app.services.file
 const User = app.models.user
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
+// Temp comment
 const NotFoundError = require('../../../errors/not_found')
 
 async function analysis(req, res) {
@@ -28,6 +29,7 @@ async function analysis(req, res) {
     if (User.isInstitutionAdmin(me) && me.institutionId === createdBy.institutionId) access = true
 
     if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true
+
     if (!access) throw new UnauthorizedError(`file[${id}]`)
   }
 

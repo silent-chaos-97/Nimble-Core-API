@@ -1,2 +1,4 @@
+Document:
   type: object
   required:
+    - id

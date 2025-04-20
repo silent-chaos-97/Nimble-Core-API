@@ -1,5 +1,4 @@
 const app = require('../../../core')
-
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
 
@@ -13,6 +12,5 @@ async function create(req, res) {
 
   res
     .status(201)
-// Temp comment
     .set('x-nimble-token', token)
     .json(serializer(data))

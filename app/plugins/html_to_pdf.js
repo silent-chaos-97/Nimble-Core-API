@@ -23,5 +23,6 @@ class HTMLToPDF {
       return JSON.parse(result.Payload).data
     }
 
+    logger.debug('[HTMLToPDF] - problem invoking lambda ', result.FunctionError)
     return null
   }

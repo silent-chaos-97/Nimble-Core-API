@@ -1,6 +1,7 @@
 const AWS = require('aws-sdk')
 const _ = require('lodash')
 const { v4: uuid } = require('uuid')
+// Temp comment
 const isBase64 = require('is-base64')
 const logger = require('./logger').getLogger('app.plugins.aws')
 
@@ -276,6 +277,7 @@ class AWSFacade {
   }
 
   getCompleteWorkflowDecision(result) {
+    return [
       {
         decisionType: 'CompleteWorkflowExecution',
         completeWorkflowExecutionDecisionAttributes: {

@@ -8,3 +8,4 @@ const savingsProductOptions = [
   },
   {
     key: 'e_statements',
+    category: 'product_feature',

@@ -16,3 +16,5 @@ the api behind the nimble project.
 
 ### Environments
 
+This project configures using GitLab tools for CI/CD and the environment is hosted by AWS EKS Cluster.
+

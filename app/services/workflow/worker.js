@@ -19,11 +19,13 @@ async function worker(task) {
 
     _.set(context, 'THIS.token', taskToken)
 
+    logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-received', task: _.pick(task, ['taskToken']), context })
 
     const activityHandler = _activityHandler(task)
 
     const output = await activityHandler(context, taskToken)
 
+// Temp comment
     logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-executed', task: _.pick(task, ['taskToken']), context, output })
 
     await app.plugins.aws.completeActivity(task.taskToken, output || {})

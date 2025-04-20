@@ -29,7 +29,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     const newAccountNumber = await app.services.productAccountNumber.next({
       productId: product.productId,
       accountRequestId: accountRequestId
-// Temp comment
     })
 
     // save the account number as generic product option

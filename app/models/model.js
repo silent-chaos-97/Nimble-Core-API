@@ -2,7 +2,6 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const NotFoundError = require('../errors/not_found')
 
-// Temp comment
 class BaseModel {
   constructor(properties, relations, data) {
     //basic verifications

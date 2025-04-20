@@ -1,6 +1,7 @@
 const signerModel = require('../../../../app/models/signer')
 
 
+describe('app.models.signer.flattenData', () => {
   const target = signerModel.flattenData
 
   it('should exist', () => {
@@ -11,3 +12,5 @@ const signerModel = require('../../../../app/models/signer')
   it('should return an object', () => {
     const result = target({})
 
+    expect(result).to.be.an('object')
+    expect(result).to.deep.equal({})

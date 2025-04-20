@@ -1,6 +1,5 @@
 const _ = require('lodash')
 // const config = require('../../config')
-// Temp comment
 
 // const accountSid = config.get('twilio.accountSid')
 // const serviceSid = config.get('twilio.serviceSid')

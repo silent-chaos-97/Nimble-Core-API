@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
@@ -14,7 +15,6 @@ const welcomeEmailSchema = Joi.object().keys({
   uri: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
-// Temp comment
 })
 
 const whitelist = ['userId']

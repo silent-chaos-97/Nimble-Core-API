@@ -15,7 +15,6 @@ const RESOURCES = {
     matches: {
       model: SignerModel,
       key: 'institutionId'
-    }
   },
   'account_request': {
     check: 'institutionId',

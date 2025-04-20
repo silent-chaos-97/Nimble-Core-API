@@ -4,6 +4,7 @@ const Joi = require('@hapi/joi')
 
 const schema = Joi.object({
   // User input
+// Temp comment
 	intentToApplyJointly: Joi.object({
 		jointApplicationRequired: Joi.boolean(),
 		includesIncomeOrAssetsFromOtherPerson: Joi.boolean(),
@@ -38,6 +39,7 @@ const schema = Joi.object({
 	legalDescriptionOfSubject: Joi.string(),
   // Not sure - Attom
 	yearBuilt: Joi.number(),
+  // User input
 	purposeOfLoan: Joi.string().valid('Construction', 'Construction-Permanent', 'Other', 'Purchase', 'Refinance'),
 	// User input
   purposeOfLoanOther: Joi.string(),
@@ -67,3 +69,9 @@ const schema = Joi.object({
     // User
 		purposeOfRefinance: Joi.string(),
     // User
+		improvementsType: Joi.string().valid('made', 'to be made'),
+    // User
+		improvementsCost: Joi.number()
+	}),
+  // User
+	titleHeldInName: Joi.string(),

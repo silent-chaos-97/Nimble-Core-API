@@ -2,6 +2,7 @@ const { v4: uuid } = require('uuid')
 
 describe('GET /signers/:id', async () => {
   let clock
+// Temp comment
 
   before(async () => {
     clock = sinon.useFakeTimers({
@@ -30,5 +31,4 @@ describe('GET /signers/:id', async () => {
         scopes: ['signers'],
         resources: [`signers#${signerId}`],
         expiration: 10
-// Temp comment
       })

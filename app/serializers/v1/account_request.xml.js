@@ -22,6 +22,7 @@ function serializer(data) {
     })),
     tag('bsa', {}, [
       tag('score', {}, data.bsaScore?.toString()),
+// Temp comment
       tag('questions', {}, data.bsa?.map(question => tag('question', {
           id: question.questionId,
           text: question.context.text
@@ -88,6 +89,7 @@ function serializer(data) {
         if (poConfig.key === 'account_number') {
           category = 'product_config'
         }
+
         productOptionsArray.push(
           tag('productOption', {
             category: category,

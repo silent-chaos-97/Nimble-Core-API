@@ -1,2 +1,3 @@
 /prospects/identities/{driverLicenseFrontDocumentId}/{driverLicenseBackDocumentId}:
   get:
+    tags:

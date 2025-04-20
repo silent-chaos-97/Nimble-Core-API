@@ -6,7 +6,6 @@ const logger = require('./logger').getLogger('app.plugins.shufti')
 class Shufti {
 
   constructor(baseUrl, webhookEndpoint, clientId, secret) {
-    this.baseAPIURL = baseUrl
     this.authentication = Buffer.from(`${clientId}:${secret}`).toString('base64')
     this.webhook = webhookEndpoint
   }

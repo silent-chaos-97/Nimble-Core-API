@@ -1,5 +1,5 @@
-// Temp comment
 const target = require('../../../../app/services/token/get')
+// Temp comment
 const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
 
@@ -14,3 +14,4 @@ describe('app.services.token.get', () => {
     clock.restore()
   })
 
+  beforeEach(() => {

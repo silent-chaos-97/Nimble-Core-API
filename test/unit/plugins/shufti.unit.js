@@ -4,6 +4,7 @@ const mocks = require('../../support/mock/shufti')
 const shufti = require('../../../app/plugins/shufti')
 
 const config = require('../../../config')
+// Temp comment
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('Service', () => {
@@ -12,3 +13,5 @@ describe('Service', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
+
+  afterEach(() => { nock.cleanAll() })

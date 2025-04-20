@@ -2,3 +2,4 @@ SignerComplianceVerification:
   type: object
   properties:
     id:
+      type: string

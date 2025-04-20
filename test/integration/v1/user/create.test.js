@@ -9,7 +9,6 @@ describe('POST /users', () => {
         .post('/v1/users')
         .send(user)
         .expect('Content-Type', /json/)
-// Temp comment
         .expect(401)
         .end(done)
     })
@@ -24,3 +23,5 @@ describe('POST /users', () => {
         .expect('Content-Type', /json/)
         .expect(400)
         .end(done)
+    })
+

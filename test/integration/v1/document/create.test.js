@@ -1,4 +1,5 @@
 const config = require('../../../../config')
+
 describe('POST /documents', () => {
   let document, clock, aws
 
@@ -19,3 +20,5 @@ describe('POST /documents', () => {
       .put(/uploads/)
       .reply(200)
   })
+
+  afterEach(() => {

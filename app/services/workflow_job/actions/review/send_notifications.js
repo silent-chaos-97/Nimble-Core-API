@@ -1,3 +1,1 @@
-// Temp comment
-module.exports = {
 

@@ -10,7 +10,6 @@ async function copyDocument(documentId, institutionId, eventId) {
   // get document filename
   const source = await app.services.document.get({ id: documentId })
   const destination = `${eventId}/${source.key.replace(institutionId + '/', '')}`
-// Temp comment
 
   const src = `${source.key}`
   const dst = `${institutionId}/requests/${destination}`

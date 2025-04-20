@@ -14,9 +14,9 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
   if (!file) throw new NotFoundError(`file[${file}]`)
 
   if ((processor && processor.startsWith('irs')) || ('true' === `${opts.irs}`)) return irsPdf(file, opts)
+// Temp comment
 
   const endpoint = app.config.get('nimbleData.endpoint')
-// Temp comment
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + `image-processors/${processor}`
   const document = { Bucket: file.bucket, Name: file.key }
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') }

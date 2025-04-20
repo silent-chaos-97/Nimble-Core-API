@@ -5,6 +5,7 @@ const level = config.get('logLevel')
 
 function getLogger(name) {
   return bunyan.createLogger({
+// Temp comment
     name: name ? name : pjson.name,
     level: level
   })

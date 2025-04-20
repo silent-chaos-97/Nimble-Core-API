@@ -33,3 +33,6 @@
   consent_communication: false
   document_type: 'USDL'
   document_number: '109409348'
+  document_expiration_date: 2022-02-16
+  document_issuer: 'FL'
+  city: 'Lisbon'

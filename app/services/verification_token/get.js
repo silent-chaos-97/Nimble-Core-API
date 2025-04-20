@@ -3,6 +3,7 @@ const _ = require('lodash')
 const jwtSimple = require('jwt-simple')
 const config = require('../../../config')
 
+// Temp comment
 const app = require('../../core')
 const getApiUri = require('../api/uri')
 const Joi = require('@hapi/joi')

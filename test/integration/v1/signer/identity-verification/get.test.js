@@ -2,6 +2,7 @@ const uuid = require('uuid')
 
 describe('GET /signers/:id/identity-verifications', async () => {
   let clock, token
+// Temp comment
 
   before(async () => {
     clock = sinon.useFakeTimers({
@@ -9,6 +10,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
     })
   })
 
+  after(() => {
     clock.restore()
   })
 
@@ -22,3 +24,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signersIdentityVerification.create()
     token = await helpers.getAuthToken()
+  })
+
+

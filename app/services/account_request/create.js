@@ -8,7 +8,7 @@ const referrers = require('./helpers/referrers')
 const validator = app.plugins.validator
 
 const whitelist = AccountRequestModel.props()
+
 async function validate(params) {
-  let data = _.pick(params, whitelist)
   validator(data, AccountRequestModel.schema('create'), { abortEarly: false })
   return data

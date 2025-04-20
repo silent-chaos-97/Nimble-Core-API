@@ -10,3 +10,4 @@ describe('app.plugins.xml', () => {
   })
 
   it('should explose format() method', () => {
+    expect(target.format).not.to.be.undefined

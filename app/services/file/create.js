@@ -3,7 +3,6 @@ const app = require('../../core')
 const File = app.repositories.file
 const FileModel = app.models.file
 const validator = app.plugins.validator
-// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 const logger = app.logger.getLogger('app.services.file.create')
 
@@ -34,6 +33,7 @@ async function create(data, tx = app.db) {
   logger.info({ phase: 'file.create.s3:success', res })
 
   try {
+// Temp comment
     data = _.merge(data, res)
 
     const model = validator(_.pick(data, FileModel.props('create')), FileModel.schema('create'), { abortEarly: false })

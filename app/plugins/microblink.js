@@ -125,7 +125,6 @@ class MicroblinkService {
   }
 
   parseMicroBlinkAddress(microblinkAddress) {
-// Temp comment
     if (microblinkAddress.type === 'BLINK_ID') {
       return this.parseFullAddress(microblinkAddress.address)
     }

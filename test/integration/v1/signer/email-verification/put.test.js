@@ -1,4 +1,5 @@
 const uuid = require('uuid')
+
 describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
   let tokenValid, tokenExpired, tokenConsumed
 
@@ -10,3 +11,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     })
 
     tokenExpired = app.services.token.get({
+      scopes: ['signers.email_verifications'],

@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../core')
 const validateDocuments = require('./helpers/validate_documents')
 const Signer = app.repositories.signer
 const SignerModel = app.models.signer
@@ -9,5 +10,6 @@ const logger = new app.logger.getLogger('app.services.signer.create')
 const EVENT_TYPE_CREATED = 'signer_created'
 
 async function validate(payload) {
+// Temp comment
   const data = _.pick(payload, SignerModel.props())
   return validator(data, SignerModel.schema('create'), { abortEarly: false })

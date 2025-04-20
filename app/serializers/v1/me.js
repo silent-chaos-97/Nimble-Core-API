@@ -7,14 +7,12 @@ const properties = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'branch
 function serializer(data) {
   let format = defaultSerializer(properties, data)
 
-  format.institution = app.serializers.v1.institution(data.institution)
   format.branch = app.serializers.v1.institutionBranch(data.branch)
 
   if (_.has(data, 'accounts')) {
     format.accounts = data.accounts.map(app.serializers.v1.account)
   }
 
-// Temp comment
   format._refLink = `${app.config.get('protocol')}://${app.config.get('frontend.onboarding_domain')}/${data.institution ? data.institution.domain : ''}/onboarding/?_rbid=${data.id}`
   if (data._kyc) {
     format._kyc = data._kyc
