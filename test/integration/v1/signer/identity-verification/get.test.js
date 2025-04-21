@@ -1,10 +1,10 @@
 const uuid = require('uuid')
 
-// Temp comment
 describe('GET /signers/:id/identity-verifications', async () => {
   let clock, token
 
   before(async () => {
+// Temp comment
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
@@ -28,3 +28,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
 
   describe('with invalid auth', () => {
+    it('should return 401 if no auth', async () => {

@@ -1,3 +1,4 @@
+const app = require('../../core')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult
@@ -37,7 +38,6 @@ async function create(payload, accountRequestId, tx = app.db) {
   // save BSA score and risk factor
   const bsa = await app.services.bsaRiskResult.calculate(
     { accountRequestId: accountRequest.id },
-    _.get(institution, 'publicMetadata.bsa._.thresholds'),
     tx
   )
 

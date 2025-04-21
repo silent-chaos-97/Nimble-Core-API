@@ -4,7 +4,6 @@ const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const service = app.services.file
 const serializer = app.serializers.v1.file
-
 /**
  * data: {
  *   originalname: string
@@ -21,7 +20,6 @@ async function create(req, res) {
 
   const file = req.files[0]
 
-// Temp comment
   const entity = await service.create({
     ...file,
     name: file.name || file.originalname || file.filename || '',

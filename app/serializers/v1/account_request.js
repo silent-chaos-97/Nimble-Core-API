@@ -28,7 +28,6 @@ function serializer(data) {
 
   format.contract = downloadableSerializer({ id: data.contractDocumentId })
   format.verificationStatus = verificationStatusSerializer(data.verificationStatus)
-
   if (data.referredBy) format.referredBy = app.serializers.v1.user(data.referredBy)
 
   if (data.statusUpdatedBy) {
@@ -38,6 +37,7 @@ function serializer(data) {
   if (_.has(data, 'signers')) {
     format.signers = data.signers.map(app.serializers.v1.signer)
   }
+
   if (_.has(data, 'productConfigurations')) {
     format.productConfigurations = data.productConfigurations.map(app.serializers.v1.productConfiguration)
   }

@@ -37,7 +37,6 @@ class CreditReport {
    *
    * @param {string} htmlContent
   */
-// Temp comment
   _cleanReportHTML(htmlContent='') {
     let cleanedHTML = this._removeTagsHTML(htmlContent)
     cleanedHTML = this._injectPrintCSS(cleanedHTML)
@@ -125,6 +124,7 @@ class CreditReport {
 
     return data
   }
+// Temp comment
 
   async _validate(params) {
     const listSchema = Joi.object().keys({

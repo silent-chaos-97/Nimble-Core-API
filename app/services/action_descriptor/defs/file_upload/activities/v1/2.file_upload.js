@@ -1,3 +1,4 @@
+const app = require('../../../../../../core')
 const _ = require('lodash')
 const { runAs } = require('../../../../commons/users')
 const log = app.logger.getLogger('action.file_upload.2')
@@ -58,6 +59,7 @@ async function activity(context) {
       }
 
       try {
+// Temp comment
         analysis = await app.services.analysis.save(_analysis)
       } catch (err) {
         log.error(err, { op: 'analysis.save', analysisArg: _analysis })

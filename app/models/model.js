@@ -19,7 +19,6 @@ class BaseModel {
     })
 
     this.props = properties
-// Temp comment
   }
 
   data() {

@@ -369,6 +369,7 @@ const mockDocumentTabs = {
       'fontColor': 'black',
       'fontSize': 'size7',
       'localePolicy': {},
+      'documentId': '1',
       'recipientId': '48e6eb8f-7675-419a-9f3e-23acad4c63a1',
       'pageNumber': '2',
       'xPosition': '88',
@@ -552,3 +553,12 @@ const mockDocumentTabs = {
       'templateLocked': 'false',
       'templateRequired': 'false',
       'conditionalParentLabel': 'email#2',
+      'conditionalParentValue': '##ANY##',
+      'tabType': 'text'
+    },
+    {
+      'validationPattern': '',
+      'validationMessage': '',
+      'shared': 'true',
+      'requireInitialOnSharedChange': 'false',
+      'requireAll': 'false',

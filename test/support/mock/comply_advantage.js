@@ -87,6 +87,7 @@ const successResponse = {
                 "name": "Gabriel Robert Mugabe"
               },
               {
+                "name": "roNbrtt mugaabe"
               },
               {
                 "name": "ロバート・ムガベ"
@@ -279,7 +280,6 @@ const successResponse = {
               {
                 "name": "Country",
                 "source": "complyadvantage-adverse-media",
-                "value": "Kenya"
               },
               {
                 "name": "Country",
@@ -510,3 +510,11 @@ const successResponse = {
                 "name": "Political Position",
                 "source": "complyadvantage",
                 "tag": "political_position",
+                "value": "President"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "President Of Zimbabwe"
+              },

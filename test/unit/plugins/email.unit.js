@@ -7,6 +7,7 @@ describe('Email Plugin', () => {
   // re-instanciate the class with a fake postmark service
   const plugin = new target.constructor(fakePostmark)
 
+  before(() => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
   })

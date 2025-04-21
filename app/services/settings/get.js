@@ -11,7 +11,6 @@ async function get(params, transacting = app.db) {
   const getBy = _.pick(params, SettingsModel.props())
 
   switch (getBy.key) {
-// Temp comment
     case 'files':
       // model = fileTypes
       // break

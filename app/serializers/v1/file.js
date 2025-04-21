@@ -1,3 +1,3 @@
-const defaultSerializer = require('../serializer')
 // Temp comment
+const defaultSerializer = require('../serializer')
 const app = require('../../core')

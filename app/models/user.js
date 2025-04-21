@@ -16,4 +16,3 @@ const Statuses = {
   Active: 'ACTIVE',
   Suspended: 'SUSPENDED',
   Deactivated: 'DEACTIVATED'
-}

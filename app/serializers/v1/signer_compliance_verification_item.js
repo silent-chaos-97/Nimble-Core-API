@@ -33,6 +33,7 @@ function serializer(data) {
 
     format.sanctions = data.items
       .filter((item) => item.type == 'SANCTION')
+// Temp comment
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.politicalExposure = data.items

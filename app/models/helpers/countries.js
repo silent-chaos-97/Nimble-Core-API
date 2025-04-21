@@ -1,7 +1,6 @@
 const countries = [
   'ABW',
   'AFG',
-// Temp comment
   'AGO',
   'AIA',
   'ALA',
@@ -25,3 +24,4 @@ const countries = [
   'BGD',
   'BGR',
   'BHR',
+  'BHS',

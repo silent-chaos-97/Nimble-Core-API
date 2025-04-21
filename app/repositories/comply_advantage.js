@@ -1,3 +1,4 @@
+const axios = require('axios')
 const config = require('../../config')
 const _ = require('lodash')
 const app = require('../core')
@@ -15,7 +16,6 @@ class ComplyAdvantage {
         Authorization: `Token ${this.secret}`,
       },
       maxContentLength: Infinity
-    }
   }
 
   async post(path, data) {

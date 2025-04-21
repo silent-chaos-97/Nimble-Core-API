@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-const File = app.repositories.file
 const FileModel = app.models.file
 const validator = app.plugins.validator
 const BadRequestError = require('../../errors/bad_request')
@@ -24,6 +23,7 @@ async function create(data, tx = app.db) {
 
   if (!buffer || !Buffer.isBuffer(buffer)) throw new BadRequestError('body.buffer || body.bytes provided but malformed')
 
+  if (!data.size) data.size = Buffer.byteLength(buffer)
 
   // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure
 

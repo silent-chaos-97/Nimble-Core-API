@@ -44,3 +44,4 @@ describe('PUT private /account-requests/:id', () => {
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
       await seed.accountRequest.create(pendingAccountRequestId)
+      await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454723')

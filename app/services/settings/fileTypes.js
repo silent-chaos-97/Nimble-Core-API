@@ -18,6 +18,7 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Tax Return'
+  },
   {
     type: 'Entity',
     name: 'Financial Stmt'
@@ -69,3 +70,4 @@ const fileTypes = [
   // Product
   {
     type: 'Product',
+    name: 'Loan Agreement'

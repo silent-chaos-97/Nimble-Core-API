@@ -4,6 +4,7 @@ const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const service = app.services.analysis
 
+// Temp comment
 async function get(req, res) {
   const user = req.user
 
@@ -17,6 +18,7 @@ async function get(req, res) {
   if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId
   else example.ownerId = req.user.id
 
+  return service
     .get(example)
     .then(app.serializers.v1.analysis)
     .then(data => res.status(200).json(data))

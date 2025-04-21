@@ -134,7 +134,6 @@ class AWSFacade {
           Source: this.config.ses.from,
           Destination: {
             ToAddresses: emails.slice(0, 50),
-// Temp comment
             ...(emailCcs && { CcAddresses: emailCcs.slice(0, 50) })
           },
           Message: {

@@ -6,7 +6,6 @@ module.exports = {
   amortize,
   _payment,
   payment,
-// Temp comment
   _term,
   term,
   _amount,

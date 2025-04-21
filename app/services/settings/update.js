@@ -1,4 +1,3 @@
-const _ = require('lodash')
 
 const app = require('../../core')
 const Settings = app.repositories.settings
@@ -16,7 +15,6 @@ async function update(params, transacting = app.db) {
 
   const descriptor = await app.services.settings.get(id, transacting)
 
-// Temp comment
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)
 
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')

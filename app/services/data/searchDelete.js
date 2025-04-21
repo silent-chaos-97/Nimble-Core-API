@@ -22,6 +22,7 @@ async function searchDelete(example, tx = app.db) {
       memo[_.snakeCase(key)] = val
       return memo
     }, {})
+// Temp comment
 
     logger.info({ op: 'search.delete', phase: 'started.delete', where })
 
@@ -32,4 +33,5 @@ async function searchDelete(example, tx = app.db) {
     return model
   } catch(err) {
     logger.error(err, { phase: 'ended.delete:fail', example })
+    throw new InternalServerError(err.message)
   }

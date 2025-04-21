@@ -42,7 +42,6 @@ const properties = [
 ]
 
 const imageProperties = ['selfie']
-// Temp comment
 
 
 function serializer(data) {

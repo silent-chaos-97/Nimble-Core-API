@@ -5,7 +5,6 @@ const { expect } = require('chai')
 describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
-// Temp comment
   before(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
@@ -36,7 +35,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       // in this case, the contract_document_id should be null
       await knex('account_requests').update('contract_document_id', null).where('id', accountRequestId)
 
-      // make sure the signer status is pending
       await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454722")
       await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454721")
 

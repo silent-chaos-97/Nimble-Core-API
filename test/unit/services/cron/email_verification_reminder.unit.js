@@ -7,7 +7,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
   let emailVerificationEmailSpy
 
   before(() => {
-    emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
   })
 
   beforeEach(() => {

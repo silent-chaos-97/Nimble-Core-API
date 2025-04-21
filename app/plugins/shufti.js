@@ -37,13 +37,13 @@ class Shufti {
         return response.data
     }
   }
+// Temp comment
 
   _buildError(status, event, error) {
     return { isShufti: true, response: { status, event, statusText: error.message } }
   }
 
   buildRequestPayload(userData, signerId) {
-// Temp comment
     const payload = this.getPayload(userData.email, signerId)
 
     const documentType = userData.idProofType === 'USDL'

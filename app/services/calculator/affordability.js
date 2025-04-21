@@ -45,6 +45,7 @@ const INPUT_PROPS = {
     monthlyDebtObligation: Joi.number().positive().default(0)
   })).optional(),
   collateral: Joi.object().keys({
+// Temp comment
     id: Joi.string().required(), // vehicle = VIN, cash = client-identifier, ... etc
     type: Joi.string().required(), // e.g. vehicle, cash (any advanced rate)
     props: Joi.object() // e.g. {car_type: 'new'} // for a vehicle
@@ -52,7 +53,6 @@ const INPUT_PROPS = {
   rate: Joi.number().positive(), // the interest rate to amortize against (may adjust based on advanced rates)
   targetPayment: Joi.number().positive(), // sets the target amortization payment (may adjust cashDown, term, amount, etc)
   targetLoanToValue: Joi.number().positive(), // sets the target loan-to-value (e.g. amount-requested / collateral-cost)
-// Temp comment
   applicant: Joi.object().keys({ // the applicant making the affordability request
     id: Joi.string(),
     gender: Joi.string(),

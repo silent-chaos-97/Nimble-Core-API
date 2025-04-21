@@ -3,3 +3,4 @@ Product:
   required:
     - id
     - name
+    - category

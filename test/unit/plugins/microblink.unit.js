@@ -53,3 +53,4 @@ describe('MicroblinkService', () => {
         data: {
           result: {
             firstName: 'SAMPLE',
+            lastName: 'SPECIMEN',

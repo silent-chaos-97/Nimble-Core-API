@@ -3,12 +3,10 @@
 const Joi = require('@hapi/joi')
 
 const schema = Joi.object({
-// Temp comment
   // User input
 	intentToApplyJointly: Joi.object({
 		jointApplicationRequired: Joi.boolean(),
 		includesIncomeOrAssetsFromOtherPerson: Joi.boolean(),
-		borrowerSignature: Joi.string().dataUri(),
 		coborrowerSignature: Joi.string().dataUri()
 	}),
   // User input
@@ -79,3 +77,5 @@ const schema = Joi.object({
 	titleHeldInManner: Joi.string(),
   // User
 	estateHeldIn: Joi.string().valid('Fee Simple', 'Leasehold'),
+  // User
+	sourceOfPayments: Joi.string(),

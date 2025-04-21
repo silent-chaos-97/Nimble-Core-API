@@ -14,6 +14,7 @@ async function create(req, res, next) {
 
   if (!_.isObject(user)) return next(new BadRequestError('UserBodyRequired'))
 
+  if (!User.hasRole(me, Roles.SuperAdmin)) {
     delete user['institutionId'] // only super-admin can set an institution
 
     if (!User.hasRole(me, Roles.InstitutionAdmin)) delete user['branchId'] // only institution-admin+ can set the branch
@@ -26,7 +27,6 @@ async function create(req, res, next) {
 
   if (!user.status) user['status'] = Statuses.Active
   if (!user.branchId) user['branchId'] = me.branchId
-  if (!user.institutionId) user['institutionId'] = me.institutionId
   if (_.isEmpty(user.roles)) user['roles'] = [Roles.Employee]
 
   return users.register(user, 'local', false)

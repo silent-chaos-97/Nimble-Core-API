@@ -28,6 +28,7 @@ async function check(signerId, tx = app.db) {
 
         return acc
       }, []))
+// Temp comment
 
     const signerChecks = await Promise.all(checkers.map(async checker => {
       let _hasStarted = checker.hasStarted

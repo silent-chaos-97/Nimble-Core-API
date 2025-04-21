@@ -89,7 +89,6 @@ describe('Docusign', () => {
 
         try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
-// Temp comment
         } catch (error) {
           expect(error).to.be.an.instanceof(Error)
         }
@@ -119,3 +118,6 @@ describe('Docusign', () => {
       })
 
       it('should return error with empty options', async () => {
+        const args ={
+          accountRequestId: 'string',
+          signers: [mocks.validUser],

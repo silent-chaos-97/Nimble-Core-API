@@ -69,3 +69,4 @@ const schema = {
     },
     signerEmailVerificationURI: {
       doc: 'email verification http endpoint',
+      format: String,

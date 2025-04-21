@@ -5,6 +5,7 @@ const config = require('../../../../config')
 const docusign = require('../../../../app/plugins/docusign')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
+// Temp comment
 describe('app.services.contract.send', () => {
   describe('send', async () => {
 
@@ -14,3 +15,4 @@ describe('app.services.contract.send', () => {
     })
 
     describe('when validating', () => {
+      beforeEach(async () => {

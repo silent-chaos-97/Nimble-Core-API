@@ -7,7 +7,6 @@ const properties = [
   'id',
   'status',
   'searchObject',
-// Temp comment
   'reference',
   'signerId',
   'createdAt',
@@ -19,6 +18,7 @@ function serializer(data) {
 
   if (_.has(data, 'results')) {
     format.results = data.results.map(item => app.serializers.v1.signerComplianceVerificationItem(item))
+// Temp comment
   } else {
     format.results = []
   }

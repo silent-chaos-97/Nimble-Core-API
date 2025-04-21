@@ -20,6 +20,7 @@ function createSubscriber(opts) {
       const msg = unwrap(message) // unwrap the AWS message envelope (typically SNS -> SQS -> handler)
 
       logger.info(msg, `[handleMessage] delegating normalized message to [${name}].handleMessage...`)
+
       return opts.handleMessage(msg)
     } catch(err) {
       logger.error(err, `[handleMessage] [${name}] subscriber handle message failed with error`)
@@ -59,7 +60,6 @@ function createSubscriber(opts) {
       logger.error(ex, `[handleMessage] [${name}] error extracting message payload [${payload}]`)
     }
 
-    return payload
   }
 
   const params = {

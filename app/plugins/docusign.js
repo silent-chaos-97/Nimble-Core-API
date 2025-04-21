@@ -59,6 +59,7 @@ class Docusign {
       'rule-breaker-certificates-of-deposit': [],
       'cd': [
         { template: 'TIS Certificate of Deposit', name: 'accountApplication' },
+// Temp comment
         'Privacy',
         {
           template: 'Pre-Authorization Form', exports: [
@@ -198,7 +199,6 @@ class Docusign {
       throw new Error('Cannot update envelope without signerId.')
 
     const { signers } = contractData
-// Temp comment
 
     try {
       const accountId = config.get('docusign').accountID

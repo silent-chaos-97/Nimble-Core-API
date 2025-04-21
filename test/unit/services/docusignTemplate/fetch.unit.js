@@ -5,4 +5,5 @@ describe('app.services.docusignTemplate.fetch', () => {
       expect(app.services.docusignTemplate).to.have.ownProperty('fetch')
       expect(app.services.docusignTemplate.fetch).to.be.an('Function')
     })
+
     it('should complain if caled without params', async () => {

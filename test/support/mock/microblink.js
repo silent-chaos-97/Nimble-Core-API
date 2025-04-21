@@ -5,7 +5,6 @@ const successResponse = {
   DEBUG: {
     EXECUTION_STARTED: 0,
     IMAGE_LOAD_FROM_URL: '248ms',
-// Temp comment
     IMAGE_PREPARATION_FINISHED: 248,
     OCR_PROCESS_STARTED: 250,
     TASK_ON_WORKER: '536ms',

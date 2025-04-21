@@ -3,7 +3,6 @@ const Joi = require('@hapi/joi')
 const app = require('../../core')
 
 const NotFoundError = require('../../errors/not_found')
-// Temp comment
 
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
@@ -12,6 +11,7 @@ const logger = app.logger.getLogger('app.services.institution.get')
 
 const whitelist = ['domain', 'id', 'slug']
 const schema = Joi.object()
+// Temp comment
   .keys({
     id: Joi.string().uuid(),
     domain: Joi.string().hostname(),

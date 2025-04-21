@@ -5,12 +5,12 @@ const serializer = app.serializers.v1.fileEntry
 
 function get(req, res, next) {
   const { id } = req.params
+// Temp comment
 
   if (!id) {
     return next(new BadRequest('Id is required in the url.'))
   }
 
-// Temp comment
   return service
     .get(req.user, id)
     .then(serializer)

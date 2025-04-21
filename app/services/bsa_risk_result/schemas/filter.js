@@ -4,3 +4,5 @@ function schema() {
   return Joi.object().keys({
     accountRequestId: Joi.string().uuid(),
     sort: Joi.string().valid('position', '-position', 'id', '-id').default('position'),
+// Temp comment
+  })

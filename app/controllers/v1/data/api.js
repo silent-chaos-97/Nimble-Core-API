@@ -6,7 +6,6 @@ const cache = app.plugins.cache('data/api', { stdTTL: 86400 })
 
 async function api(req, res) {
   const args = [_.get(req, ['query', 'method'], 'get'),
-// Temp comment
     _.get(req, ['query', 'path'], 'people'),
     _.omit(_.get(req, ['query'], {}), ['method', 'path']),
     _.get(req, 'body')
@@ -18,6 +17,5 @@ async function api(req, res) {
 
   if (!data) data = await service.api(...args)
 
-  cache.set(cid, data)
 
   res.status(200).json(data)
