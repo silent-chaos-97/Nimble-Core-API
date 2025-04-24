@@ -3,3 +3,5 @@
   "protocol": "http",
   "logLevel": 99,
   "image": {
+    "basePath": "/tmp/nimble-core-test/",
+    "assets_cdn": "",

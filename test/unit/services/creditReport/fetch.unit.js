@@ -10,6 +10,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('app.services.creditReport.fetch', () => {
   afterEach(() => { nock.cleanAll() })
 
+  beforeEach(async () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
@@ -18,3 +19,4 @@ describe('app.services.creditReport.fetch', () => {
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
+    await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')

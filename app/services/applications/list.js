@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const app = require('../../core')
-// Temp comment
 const ApplicationRepositories = app.repositories.application
 const ApplicationModel = app.models.application
 
@@ -16,7 +15,6 @@ async function list(param, tx = app.db) {
   const qb = ApplicationRepositories.query(q => {
     q.where('applicant_id', filterData.applicantId)
     q.where('status', 'PENDING')
-  })
 
   const data = await qb.fetchAll({
     withRelated: [],

@@ -18,6 +18,7 @@ function list(req, res, next) {
     status: 'ACTIVE'
   })
 
+// Temp comment
   logger.info({ filters })
 
   return users

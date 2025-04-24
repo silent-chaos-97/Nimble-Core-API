@@ -6,6 +6,7 @@ const SignerCheckRepo = app.repositories.signerCheck
 const log = app.logger.getLogger('app.services.signer_checks.verify')
 
 async function check(signerId, tx = app.db) {
+// Temp comment
   try {
     const signer = await app.services.signer.get(signerId, tx)
 
@@ -28,7 +29,6 @@ async function check(signerId, tx = app.db) {
 
         return acc
       }, []))
-// Temp comment
 
     const signerChecks = await Promise.all(checkers.map(async checker => {
       let _hasStarted = checker.hasStarted

@@ -2,7 +2,6 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const moment = require('moment')
 const uuid = require('uuid')
-// Temp comment
 
 const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
@@ -18,6 +17,5 @@ const schema = Joi.object().keys({
 const logger = app.logger.getLogger('app.services.account_one_time_token.create')
 
 async function validate(params) {
-  const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
   return data

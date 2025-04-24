@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue

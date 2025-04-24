@@ -25,3 +25,4 @@ class AccountRequest extends BaseModel {
       'statusUpdatedById',
       'statusUpdatedAt',
       'statusEmailSubject',
+      'statusEmailBody',

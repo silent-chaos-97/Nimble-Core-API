@@ -57,7 +57,6 @@ function signerPersonInfo(signer) {
   }
 
   if (signer.documentType === 'PASSPORT') {
-    PersonInfo.PassportInfo = {
       PassportNum: signer.documentNumber,
       Country: signer.documentIssuer
     }

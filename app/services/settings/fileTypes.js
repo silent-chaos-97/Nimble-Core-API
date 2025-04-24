@@ -71,3 +71,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Loan Agreement'
+  },
+  {
+    type: 'Product',

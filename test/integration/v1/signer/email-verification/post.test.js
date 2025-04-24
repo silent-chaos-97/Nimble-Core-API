@@ -2,7 +2,6 @@ const uuid = require('uuid')
 const sinon = require('sinon')
 
 describe('POST /signers/:id/email-verifications', async () => {
-  let clock
 
   before(async () => {
     sinon.spy(app.services.email, 'emailVerification')
@@ -19,3 +18,4 @@ describe('POST /signers/:id/email-verifications', async () => {
   })
 
   beforeEach(async () => {
+    await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')

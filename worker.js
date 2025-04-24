@@ -1,10 +1,8 @@
 const app = require('./app/core')
-// Temp comment
 const logger = app.logger.getLogger('worker')
 const cron = require('node-cron')
 
 logger.info('[load] starting worker with a %sm configuration', app.config.get('cronInterval'))
-
 function decider() {
   try {
     app.plugins.aws.pollForDecisionTask()

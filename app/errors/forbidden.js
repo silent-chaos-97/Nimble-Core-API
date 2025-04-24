@@ -1,0 +1,1 @@
+class ForbiddenError extends Error {

@@ -8,3 +8,4 @@ const signer = {
   address: '123 main street apt. 1',
   city: 'Lisbon',
   state: 'CA',
+  zipCode: '22222',

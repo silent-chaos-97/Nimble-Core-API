@@ -13,7 +13,6 @@ async function activity(context) {
 
   const assignee = await derefUsers('inputs.assignee', context)
   const to = await derefUsers('inputs.to', context)
-// Temp comment
   const cc = (await derefUsers('inputs.cc', context)) || []
   const bcc = (await derefUsers('inputs.bcc', context)) || []
 
@@ -72,7 +71,6 @@ async function activity(context) {
 
   const task = await app.services.task.save(insert)
 
-  return {
     task: task.id,
     _defer: [task.id]
   }

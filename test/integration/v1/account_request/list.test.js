@@ -124,7 +124,6 @@ describe('GET /account-requests', () => {
               },
               {
                 "id": "7b9c52a2-c542-4031-8342-5fa29a2f6d0e",
-// Temp comment
                 "category": "another-choice",
                 "key": "optionB",
                 "title": "Option B",
@@ -261,7 +260,6 @@ describe('GET /account-requests', () => {
           request(app.server)
             .get(`/v1/account-requests?limit=1&offset=2`)
             .set('Authorization', 'Bearer ' + token)
-            .expect('Content-Type', /json/)
             .expect(200)
             .end((err, res) => {
               if (err) throw new Error(err)

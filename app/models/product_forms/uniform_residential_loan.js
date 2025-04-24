@@ -7,6 +7,7 @@ const schema = Joi.object({
 	intentToApplyJointly: Joi.object({
 		jointApplicationRequired: Joi.boolean(),
 		includesIncomeOrAssetsFromOtherPerson: Joi.boolean(),
+		borrowerSignature: Joi.string().dataUri(),
 		coborrowerSignature: Joi.string().dataUri()
 	}),
   // User input
@@ -79,3 +80,6 @@ const schema = Joi.object({
 	estateHeldIn: Joi.string().valid('Fee Simple', 'Leasehold'),
   // User
 	sourceOfPayments: Joi.string(),
+	applicantDetails: Joi.array().items(
+		Joi.object({
+      // User

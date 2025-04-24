@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const { v4: uuid } = require('uuid')
 const validator = app.plugins.validator
@@ -18,7 +17,6 @@ async function create(entity, options = {}) {
     const data = { ..._.omit(entity, 'content', 'institutionId'), key, id: newId }
 
     const model = await Document.forge(data)
-      .save(null, { method: 'insert', transacting: tx })
     try {
       if (entity.format === 'image') {
         await app.plugins.aws.s3ImgUpload(entity.content, entity.institutionId, model.id)

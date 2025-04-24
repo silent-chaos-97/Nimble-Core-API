@@ -28,6 +28,7 @@ async function search(entity, filterTypes) {
   const payload = {
     search_term: searchTerm,
     filters,
+// Temp comment
     exact_match: true
   }
 
@@ -43,6 +44,7 @@ async function search(entity, filterTypes) {
       .then(hits => _.orderBy(hits, (item) => item.score, ['desc'])) // order by score
 
     return { search: payload, result, hits }
+  } catch (err) {
     logger.info(err, `[search] error searching for searchTerm: [${searchTerm}]`)
     throw new PreconditionFailedError(err)
   }

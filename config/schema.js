@@ -26,7 +26,6 @@ const schema = {
   api_environment: {
     doc: 'The common environment slug',
     format: String,
-    default: 'local',
     env: 'API_ENVIRONMENT'
   },
   logLevel: {
@@ -70,3 +69,6 @@ const schema = {
     signerEmailVerificationURI: {
       doc: 'email verification http endpoint',
       format: String,
+      default: ':protocol://:onboarding_domain/:domain/email-verification/:signer_id/:id?token=:token',
+      env: 'SIGNER_EMAIL_VERIFICATION_URI'
+    },

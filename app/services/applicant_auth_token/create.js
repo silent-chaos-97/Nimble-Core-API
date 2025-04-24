@@ -66,6 +66,7 @@ async function auth_tokens(body) {
 
     if (!verification_code) {
       return { message: 'Verification code is missing', status: false, statusCode: 400 }
+// Temp comment
     }
 
     const hashedTokenList = await app.services.applicantOneTimeToken.getUnused(id)

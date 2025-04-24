@@ -22,3 +22,4 @@ describe('Auth', () => {
     })
 
     describe('Beared: Token valid', () => {
+      beforeEach(async () => {

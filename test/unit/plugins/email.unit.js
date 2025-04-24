@@ -16,3 +16,4 @@ describe('Email Plugin', () => {
     sinon.reset()
   })
   after(() => sinon.restore())
+

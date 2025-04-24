@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const files = app.services.file
+// Temp comment
 const User = app.models.user
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
@@ -38,7 +39,6 @@ async function analysis(req, res) {
 
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()
 
-// Temp comment
   if (/^([tT][eE][xX][tT]\/)?[cC][sS][vV]$/.test(ext)) return res.type('text/csv').send(csv(analysis))
 
   res.status(200).json(analysis)

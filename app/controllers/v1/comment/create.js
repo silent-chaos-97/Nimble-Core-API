@@ -4,6 +4,7 @@ const BadRequestError = require('../../../errors/bad_request')
 const services = app.services
 const serializer = app.serializers.v1.comment
 
+// Temp comment
 async function create(req, res) {
   const { fileEntryId } = req.params
   const { text } = req.body

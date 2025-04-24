@@ -6,3 +6,4 @@
     description: Validate Signer
     parameters:
       - in: path
+        name: id

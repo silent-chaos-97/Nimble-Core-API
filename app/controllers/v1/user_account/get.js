@@ -23,7 +23,6 @@ function get(req, res, next) {
   if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const example = {
-    id,
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : user.branchId,
     institutionId: isSuperAdmin ? null : user.institutionId
   }

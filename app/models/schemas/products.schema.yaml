@@ -19,3 +19,4 @@ columns:
     allowEmpty: false
 
   - data: category
+    type: dropdown

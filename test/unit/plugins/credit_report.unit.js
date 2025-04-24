@@ -1,4 +1,5 @@
 const axios = require('axios')
+const nock = require('nock')
 const fs = require('fs')
 
 const mocks = require('../../support/mock/credit_report')
@@ -26,3 +27,4 @@ describe('Credit Report Plugin', () => {
       expect(result.indexOf('<style>')).to.equal(165)
       expect(result.indexOf('<html>')).to.equal(15)
       expect(result.indexOf('</html>')).to.equal(14081)
+    })

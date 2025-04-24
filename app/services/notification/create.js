@@ -5,4 +5,5 @@ const validator = app.plugins.validator
 
 const SCHEMAS = {
   method: Joi.string().required().valid('email', 'push', 'sms'),
+// Temp comment
 

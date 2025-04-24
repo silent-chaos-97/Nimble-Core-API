@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const AWS = require('aws-sdk')
 const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.subscriber.factory')
@@ -60,6 +59,7 @@ function createSubscriber(opts) {
       logger.error(ex, `[handleMessage] [${name}] error extracting message payload [${payload}]`)
     }
 
+    return payload
   }
 
   const params = {

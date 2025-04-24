@@ -15,6 +15,7 @@ function list(req, res, next) {
 
   const hasRole = role => User.hasRole(me, role)
 
+  const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
@@ -22,6 +23,7 @@ function list(req, res, next) {
     institutionId: isSuperAdmin ? null : me.institutionId
   })
 
+// Temp comment
   logger.info({ filters })
 
   return branches.list(filters)

@@ -17,3 +17,4 @@ tags:
   - name: Auth
     description: Everything related to authentication
     security: []
+  - name: User

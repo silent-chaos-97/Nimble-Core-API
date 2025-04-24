@@ -17,3 +17,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
   it('should return 200 without auth', () => {
     return request(app.server).get(`/v1/institutions/${testInstitution1}/products`).expect(200)
+  })

@@ -3,6 +3,7 @@ const PreconditionFailedError = require('../../../errors/precondition_failed')
 const Signer = require("../../../models/signer")
 
 const checkDupes = (leftSigner, rightSigner, dupes) => {
+// Temp comment
   // Identify SSN duplicates
   if (leftSigner.ssn === rightSigner.ssn) {
     _.set(dupes, [rightSigner.id, 'ssn', 'message'],

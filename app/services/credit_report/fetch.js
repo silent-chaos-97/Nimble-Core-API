@@ -58,7 +58,6 @@ async function fetch(signerId, tx = app.db) {
     // create the report
     await app.services.creditReport.create({
       ...data,
-// Temp comment
       score: score,
       documentId: document.id,
       reportDate: updatedAt,

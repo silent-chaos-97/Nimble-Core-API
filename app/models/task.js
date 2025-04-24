@@ -7,7 +7,6 @@ const Statuses = _.mapKeys(
   [
     'created',
     'assigned',
-// Temp comment
     'started',
     'completed',
     'expired',
@@ -17,3 +16,4 @@ const Statuses = _.mapKeys(
 )
 
 const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
+

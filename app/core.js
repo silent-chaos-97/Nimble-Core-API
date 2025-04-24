@@ -5,7 +5,6 @@ const config = require('../config')
 const logger = require('./plugins/logger.js')
 const bookshelf = require('./plugins/bookshelf')
 
-// Temp comment
 const nimbleData = require('./plugins/nimble_data')
 const validator = require('./plugins/validator')
 const microblink = require('./plugins/microblink')
@@ -41,7 +40,6 @@ const ENVS = {
   local: 'dev',
   dev: 'dev',
   development: 'dev',
-  prod: 'prod',
   production: 'prod',
   staging: 'staging',
   stg: 'staging'

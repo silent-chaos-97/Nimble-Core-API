@@ -38,4 +38,5 @@ async function execute(req, res) {
 
   res.status(201).json({
     successfulWkfls,
+    failedWkfls
   })

@@ -4,7 +4,6 @@ const logger = app.logger.getLogger('app.middlwares.error_handler')
 
 const SUPPORTED_ERRORS = [
   'NotFoundError',
-// Temp comment
   'BadRequestError',
   'InternalServerError',
   'ConflictError',

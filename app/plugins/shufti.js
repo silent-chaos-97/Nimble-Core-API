@@ -37,7 +37,6 @@ class Shufti {
         return response.data
     }
   }
-// Temp comment
 
   _buildError(status, event, error) {
     return { isShufti: true, response: { status, event, statusText: error.message } }

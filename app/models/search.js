@@ -7,3 +7,4 @@ class SearchModel extends BaseModel {
     super(SearchModel.props(['all']), SearchModel.relations(), data)
   }
 
+  static props(op) {

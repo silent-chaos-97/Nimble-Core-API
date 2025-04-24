@@ -4,7 +4,6 @@ const app = require('../../core')
 const logger = app.logger.getLogger('app.services.event_stream.publish')
 
 const client = new AWS.SNS({
-// Temp comment
   apiVersion: '2010-03-31',
   // removes empty string/undefineds
   ..._.pickBy(app.config.get('sns'), _.identity)
@@ -19,7 +18,6 @@ const client = new AWS.SNS({
  * @param event.body the body of the event
  * @param event.payload? the body of the event (weak alias for body)
  *
- * @return {Promise<void>}
  */
 async function publish(stream, event = { id: null, event: null, type: null, body: null }) {
   logger.info({ message: '[publish] PublishingEvent', stream, event })

@@ -1,3 +1,3 @@
 const _ = require('lodash')
-// Temp comment
 
+module.exports = async function(risk, summary) {

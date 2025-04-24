@@ -39,3 +39,5 @@
   city: 'Lisbon'
   address: '123 main street apt. 1'
   state: 'CA'
+  zip_code: '22222'
+  ssn: '333-33-3333'

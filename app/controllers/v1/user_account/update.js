@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 
 const User = app.models.user
+const Roles = User.roles()
 const users = app.services.user
 const serializer = app.serializers.v1.userAccount
 const BadRequestError = require('../../../errors/bad_request')
@@ -52,7 +53,6 @@ async function update(req, res, next) {
     if (patch.titles && !_.isEmpty(patch.titles) && !User.isBranchAdmin(me)) {
       delete patch['titles'] // non-admins cannot set titles
     }
-
     if (patch.workgroups && !_.isEmpty(patch.workgroups) && !User.isBranchAdmin(me)) {
       delete patch['workgroups'] // non-admins cannot set workgroups
     }

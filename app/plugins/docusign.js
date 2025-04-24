@@ -59,7 +59,6 @@ class Docusign {
       'rule-breaker-certificates-of-deposit': [],
       'cd': [
         { template: 'TIS Certificate of Deposit', name: 'accountApplication' },
-// Temp comment
         'Privacy',
         {
           template: 'Pre-Authorization Form', exports: [

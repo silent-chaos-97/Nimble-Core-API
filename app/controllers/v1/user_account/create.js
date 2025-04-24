@@ -17,7 +17,6 @@ async function create(req, res, next) {
   if (!User.hasRole(me, Roles.SuperAdmin)) {
     delete user['institutionId'] // only super-admin can set an institution
 
-    if (!User.hasRole(me, Roles.InstitutionAdmin)) delete user['branchId'] // only institution-admin+ can set the branch
 
     // an institution-admin can set the branch-admin and employee role
     if (!_.isEmpty(user.roles) && User.hasRole(me, Roles.InstitutionAdmin)) {
@@ -27,6 +26,7 @@ async function create(req, res, next) {
 
   if (!user.status) user['status'] = Statuses.Active
   if (!user.branchId) user['branchId'] = me.branchId
+  if (!user.institutionId) user['institutionId'] = me.institutionId
   if (_.isEmpty(user.roles)) user['roles'] = [Roles.Employee]
 
   return users.register(user, 'local', false)

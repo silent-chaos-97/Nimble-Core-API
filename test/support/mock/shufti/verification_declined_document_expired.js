@@ -5,4 +5,3 @@ module.exports = {
   country: 'US',
   verification_data: {
     document: {
-      issue_date: '1990-01-01',

@@ -10,4 +10,5 @@ async function verifyProcessStarted(signerId, tx = app.db) {
   const query = await tx.transaction(q => {
     return q.count().from('signer_compliance_verifications').where('signer_id', signerId).first()
   })
+
   return query.count > 0

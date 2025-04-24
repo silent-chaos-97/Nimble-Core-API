@@ -11,4 +11,4 @@ describe('GET /signers/:id/credit-reports', async () => {
 
   after(() => {
     clock.restore()
-  })
+

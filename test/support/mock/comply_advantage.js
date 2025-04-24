@@ -280,6 +280,7 @@ const successResponse = {
               {
                 "name": "Country",
                 "source": "complyadvantage-adverse-media",
+                "value": "Kenya"
               },
               {
                 "name": "Country",
@@ -518,3 +519,24 @@ const successResponse = {
                 "tag": "political_position",
                 "value": "President Of Zimbabwe"
               },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Presidents"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Prime Minister Of Zimbabwe"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Secretary General Of The Non-aligned Movement"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",

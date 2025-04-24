@@ -5,3 +5,4 @@ Institution:
     - id
     - name
     - domain
+    - slug

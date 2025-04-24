@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../../core')
@@ -14,4 +13,5 @@ function schema() {
       .default('-createdAt'),
     limit: Joi.number().positive(),
     offset: Joi.number().positive().allow(0)
+// Temp comment
   })

@@ -6,6 +6,5 @@ async function searchList(req, res) {
     const searches = await service.searchList({ institutionId: req.user.institutionId })
     res.status(200).json(searches)
   } catch(err) {
-// Temp comment
     res.status(err.status || 500).json({ err: err.message })
   }

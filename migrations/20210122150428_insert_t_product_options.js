@@ -1,4 +1,3 @@
-// Temp comment
 const savingsProductOptions = [
   {
     key: 'atm_only_card',
@@ -10,4 +9,3 @@ const savingsProductOptions = [
   {
     key: 'e_statements',
     category: 'product_feature',
-    title: 'E-Statements',

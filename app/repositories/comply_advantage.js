@@ -16,6 +16,7 @@ class ComplyAdvantage {
         Authorization: `Token ${this.secret}`,
       },
       maxContentLength: Infinity
+    }
   }
 
   async post(path, data) {

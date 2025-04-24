@@ -28,6 +28,7 @@ const getPdfFormFields = () => {
     yearAcquired: data.assessments.year,
     originalCost: data.salePrice,
     valueLot: data.assessments.land,
+// Temp comment
     valueImprovements: data.assessments.improvements,
     valueLotAndImprovements: data.assessments.land + data.assessments.improvements,
      */

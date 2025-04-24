@@ -11,6 +11,6 @@ const sortBy = {
 }
 
 function getSqlSort(sort) {
-// Temp comment
   if (!sort) return sortBy['']
+// Temp comment
   return sortBy[sort]

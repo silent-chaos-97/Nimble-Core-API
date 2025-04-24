@@ -10,3 +10,4 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  * 3) Package the envelope Buffer and PDF Buffers into a multipart form request
  * 4) Send the multipart form request to docusign via the docusign esign api
  *
+ * Docusign will then create an envelope containing the PDF documents and email

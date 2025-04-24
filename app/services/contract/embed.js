@@ -12,7 +12,6 @@ async function embed(signerId, tx = app.db) {
   const institution = await app.services.institution.get({ id: accountRequest.institutionId }, tx)
 
   try {
-    // build URL using docusing
     const url = await app.plugins.docusign.createRecipientView(
       accountRequest.contractDocumentEnvelopeId,
       signer,

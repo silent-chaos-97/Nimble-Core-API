@@ -17,4 +17,6 @@ the api behind the nimble project.
 ### Environments
 
 This project configures using GitLab tools for CI/CD and the environment is hosted by AWS EKS Cluster.
+
 All application runtime logs for the environments are available through Kibana, follow this [steps](https://gitlab.com/wearesingular/clients/nimble/nimble-ops/-/blob/master/terraform/modules/observability/README.md)
+

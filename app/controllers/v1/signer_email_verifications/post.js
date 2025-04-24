@@ -3,7 +3,6 @@ const app = require('../../../core')
 const service = app.services.emailVerification
 
 async function post(req, res, next) {
-// Temp comment
   const id = req.params.id
 
   return service

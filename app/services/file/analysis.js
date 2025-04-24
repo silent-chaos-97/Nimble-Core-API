@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../core')
 const axios = require('axios')
 const TimeoutError = require('../../errors/timeout')
 const NotFoundError = require('../../errors/not_found')

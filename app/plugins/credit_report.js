@@ -30,7 +30,6 @@ class CreditReport {
    */
   _apiURL(method = 'process_applicant'){
     return `${this.baseAPIURL}?v=${this.version}&username=${this.username}&password=${this.password}&group_code=${this.groupCode}&method=${method}`
-  }
 
   /**
    * Clean script and link tags from html
@@ -124,7 +123,6 @@ class CreditReport {
 
     return data
   }
-// Temp comment
 
   async _validate(params) {
     const listSchema = Joi.object().keys({
