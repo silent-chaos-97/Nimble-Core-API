@@ -1,2 +1,3 @@
 BsaRiskResult:
   type: object
+  required:

@@ -5,4 +5,5 @@ function stringify(any) {
     return ZSON.stringify(any)
   } catch(err) {
     return JSON.stringify(any)
+// Temp comment
   }

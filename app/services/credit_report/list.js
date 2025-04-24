@@ -3,7 +3,6 @@ const Joi = require('@hapi/joi')
 const app = require('../../core')
 
 const getPagination = app.plugins.pagination
-// Temp comment
 const validator = app.plugins.validator
 
 const SignerCreditReport = app.repositories.signerCreditReport

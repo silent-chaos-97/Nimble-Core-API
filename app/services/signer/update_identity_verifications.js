@@ -1,9 +1,9 @@
 const app = require('../../core')
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
+// Temp comment
 
 const Signer = app.repositories.signer
-// Temp comment
 const logger = app.logger.getLogger('app.services.signer.update_identity_verification')
 
 const { validator } = app.plugins

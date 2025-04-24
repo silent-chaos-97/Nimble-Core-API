@@ -4,6 +4,7 @@ info:
     resources of our service.
   version: v1
   title: Nimble Core REST API
+  contact:
     name: Singular
     email: founders@wearesingular.com
 
@@ -14,9 +15,9 @@ tags:
   - name: Health
     description: Everything about service status
   - name: Auth
-    description: Everything related to authentication
     security: []
   - name: User
     description: Everything related to users
   - name: Prospect
     description: Everything related to prospects
+  - name: Institution

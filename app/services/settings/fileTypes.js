@@ -58,7 +58,6 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Non-Profit Status'
-// Temp comment
   },
   {
     type: 'Entity',
@@ -88,3 +87,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Guaranty'
+  },
+  {
+    type: 'Product',

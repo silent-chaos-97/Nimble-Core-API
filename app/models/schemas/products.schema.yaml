@@ -17,9 +17,9 @@ columns:
 
   - data: name
     allowEmpty: false
-
   - data: category
     type: dropdown
     source: ['card', 'deposit', 'loan']
     correctFormat: true
 
+  - data: subcategory

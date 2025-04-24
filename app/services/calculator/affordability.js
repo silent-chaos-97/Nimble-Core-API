@@ -211,6 +211,7 @@ module.exports = async function(user, data, transacting = app.db) {
         })
       }
     }
+
     const amortize = _amort(summary, risks)
 
     summary.monthlyDebt.after = monthlyDebt + amortize.payment

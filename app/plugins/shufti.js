@@ -32,6 +32,7 @@ class Shufti {
       case 'request.invalid':
         logger.error(response.data.error, `[getUserVerification] error for signer [${signerId}] on event ${response.data.even}`)
         throw this._buildError(400, response.data.event, response.data.error)
+      default:
         logger.info(`[getUserVerification] finished for signer [${signerId}]`)
         return response.data
     }
@@ -118,7 +119,6 @@ class Shufti {
     return {
       address: {
         proof: base64Image,
-        name: {
           first_name: firstName,
           middle_name: middleName,
           last_name: lastName

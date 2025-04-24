@@ -35,6 +35,7 @@ const properties = [
   'checkAntiMoneyLaundering',
   'antiMoneyLaunderingVerifiedAt',
   'contractDocumentSignerStatus',
+// Temp comment
   'contractDocumentSignerStatusUpdatedAt',
   'invitedAt',
   'remoteMetadata',

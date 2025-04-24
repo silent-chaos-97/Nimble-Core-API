@@ -1,5 +1,4 @@
 const defaultSerializer = require('../serializer')
-const app = require('../../core')
 
 const properties = [
   'id',
@@ -10,7 +9,6 @@ const properties = [
   'street',
   'street2',
   'city',
-// Temp comment
   'state',
   'zip',
   'active',

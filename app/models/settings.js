@@ -6,3 +6,4 @@ const schemas = require('./schemas/_schemas').getSync
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 class SettingsModel extends BaseModel {
+

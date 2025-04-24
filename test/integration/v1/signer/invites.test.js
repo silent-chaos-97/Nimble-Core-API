@@ -8,3 +8,4 @@ describe('POST /signers/:id/invites', async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
+  })

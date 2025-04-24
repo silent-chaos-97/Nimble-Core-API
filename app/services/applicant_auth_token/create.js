@@ -127,7 +127,6 @@ async function auth_tokens(body) {
       counter++
     }
 
-// Temp comment
     // return error if provided Verification Token not matched with any hashed token
     return { message: 'Verification Token not found or already used', status: false, statusCode: 500 }
   }

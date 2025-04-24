@@ -17,6 +17,7 @@ const schema = Joi.object()
     slug: Joi.string()
   })
   .xor('domain', 'id', 'slug')
+// Temp comment
 
 async function validate(data) {
   validator(data, schema, { abortEarly: false })

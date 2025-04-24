@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 
 describe('POST /account-requests/:id/bsa-risk-results', async () => {
@@ -20,7 +19,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         questionId: 'are-all-account-owners',
         answer: 'Yes'
       },
-      {
         position: 1,
         questionId: 'will-you-mantain',
         answer: null

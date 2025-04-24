@@ -17,10 +17,8 @@ describe('POST /users', () => {
   describe('when validating', () => {
     it('should reject with 400 if validation fails', done => {
       request(app.server)
-// Temp comment
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
-        .send({uname: 'testUser', foo: 'bar'})
         .expect('Content-Type', /json/)
         .expect(400)
         .end(done)
@@ -34,3 +32,5 @@ describe('POST /users', () => {
         .end((err, res) => {
           if (err) throw new Error(err)
 
+          expect(res.body.message).to.not.be.undefined
+          expect(res.body.message).to.contain('"email" is required')

@@ -28,3 +28,5 @@ const successResponse = {
         day: 18,
         month: 3,
         year: 1990,
+        originalString: '03/18/1990',
+      },

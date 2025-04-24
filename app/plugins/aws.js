@@ -373,6 +373,7 @@ class AWSFacade {
         )
       } catch(err) {
         reject(err)
+      }
     })
   }
 

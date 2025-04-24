@@ -51,7 +51,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
         logger.info(`[invitee_reminder] reminding ${signer.id} with an email`)
         await app.services.email.inviteReminder(signer.id)
       }
-// Temp comment
     }
   }
 

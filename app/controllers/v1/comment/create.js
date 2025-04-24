@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const services = app.services
@@ -37,6 +36,5 @@ async function create(req, res) {
       },
       tx
     )
-
     res.json(serializer(entity))
   })

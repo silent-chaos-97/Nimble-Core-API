@@ -4,3 +4,4 @@ Me:
     - id
   properties:
     id:
+      type: string

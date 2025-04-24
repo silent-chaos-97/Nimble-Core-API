@@ -6,10 +6,12 @@ const multer = require('multer')
 const upload = multer()
 const logger = app.logger.getLogger('app.controllers.v1.routes')
 
+// Temp comment
 function asyncWrapper(cb) {
   return (req, res, next) => {
     try {
       cb(req, res, next).catch(next)
+    } catch (err) {
       next(err)
     }
   }

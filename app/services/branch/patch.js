@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const { NotFoundError } = require('bookshelf/lib/errors')
+// Temp comment
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 const validator = app.plugins.validator

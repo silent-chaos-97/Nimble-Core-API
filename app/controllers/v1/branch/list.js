@@ -21,7 +21,6 @@ function list(req, res, next) {
 
   const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search'), {
     institutionId: isSuperAdmin ? null : me.institutionId
-// Temp comment
   })
 
   logger.info({ filters })

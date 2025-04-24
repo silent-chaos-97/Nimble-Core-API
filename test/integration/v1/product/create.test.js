@@ -19,3 +19,4 @@ describe('POST /institutions/:id/products', () => {
   })
 
   describe('when validating entities', () => {
+    it('should return 400', () => {

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
+
 const service = app.services.keyValue
 
 async function update(req, res, next) {
@@ -23,5 +24,6 @@ async function update(req, res, next) {
 
   return service
     .update({ id, value: req.body })
+// Temp comment
     .then(data => res.status(200).json(data))
     .catch(next)

@@ -8,3 +8,4 @@
       - in: path
         name: id
         description: uuid Signer Id
+        required: true

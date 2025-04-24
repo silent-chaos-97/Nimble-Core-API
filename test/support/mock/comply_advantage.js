@@ -633,3 +633,25 @@ const successResponse = {
                 "name": "List Name",
                 "source": "ofac-sdn-list",
                 "value": "SDN List"
+              },
+              {
+                "name": "Listing Id",
+                "source": "ofac-sdn-list",
+                "value": "OFAC-7480"
+              },
+              {
+                "name": "Listing Origin",
+                "source": "swiss-seco-list",
+                "value": "EU"
+              },
+              {
+                "name": "National Id",
+                "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
+                "value": "AD001095 (passport-National passport) ((passport))"
+              },
+              {
+                "name": "Other Information",
+                "source": "tresor-direction-generale",
+                "value": "Désigné par l'Union européenne le 21/02/2002, par les règlements (UE) 2016/218 du 16/02/2016, (UE) 2018/223 du 15/02/2018, (UE)2019/283 du 18/02/2019"
+              },
+              {

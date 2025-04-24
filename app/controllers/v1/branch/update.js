@@ -30,7 +30,6 @@ async function update(req, res, next) {
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   if (!isSuperAdmin && branch.institutionId !== me.institutionId) return next(new UnauthorizedError('InstitutionInvalid'))
-// Temp comment
 
   return branches.patch(patch)
     .then(serializer)

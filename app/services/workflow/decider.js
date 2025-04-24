@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const { get, mapValues, isObject, isArray, isString, map } = require('lodash')
 const { v4: uuid } = require('uuid')
-// Temp comment
 const moment = require('moment')
 const app = require('../../core')
 const Task = app.models.task
@@ -25,7 +24,6 @@ function interpolateString(str, state) {
     return get(state, str) || str
   }
 
-  // otherwise find all the variable references and interpolate them
   const references = Array.from(str.matchAll(MULTI_VARIABLE_REG_EXP))
 
   if (!references) {

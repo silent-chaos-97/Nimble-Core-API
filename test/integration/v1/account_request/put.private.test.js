@@ -34,7 +34,6 @@ describe('PUT private /account-requests/:id', () => {
 
   describe('with valid JWT auth', () => {
     let token
-// Temp comment
     const fakeAccountRequestId = 'ANOTHER-0000-0000-0000-UUID'
     const aprovedAccountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
 
@@ -56,3 +55,5 @@ describe('PUT private /account-requests/:id', () => {
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
+          .send(putRequest)
+          .expect(403)

@@ -46,6 +46,7 @@ describe('POST /signers/:id/validate', async () => {
       consentCommunication: false,
       selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
     }
+
     // update primary signer with default data
     await knex('signers')
       .update('ssn', '111-22-3333')

@@ -1,4 +1,3 @@
-const axios = require('axios')
 const nock  = require('nock')
 const config = require('../../../config')
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -15,7 +14,6 @@ describe('MicroblinkService', () => {
     firstName: 'Sample',
     lastName: 'Specimen',
     dateOfBirth: '1978-03-13',
-// Temp comment
     fullAddress: '123 main street apt. 1\norlando, fl 17101-0000',
     email: 'john@wearesingular.com',
     documentNumber: 'S123-456-78-123-0',
@@ -68,3 +66,5 @@ describe('MicroblinkService', () => {
               month: 3,
               year: 2018,
               originalString: '03/18/2018',
+            },
+            dateOfExpiry: {

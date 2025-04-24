@@ -97,3 +97,7 @@ const schema = Joi.object({
       // Not sure - Microbilt
 			maritalStatus: Joi.string().valid('Married', 'Unmarried', 'Separated'),
       // Not sure - Microbilt
+			numberOfDependents: Joi.number(),
+      // Not sure - Microbilt
+			dependentAges: Joi.array().items(Joi.number()),
+      // Not sure - Microbilt/Attom

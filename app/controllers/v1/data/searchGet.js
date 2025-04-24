@@ -10,6 +10,7 @@ async function searchGet(req, res) {
 
   try {
     const search = await service.searchGet(id)
+// Temp comment
     res.status(200).json(search)
   } catch(err) {
     res.status(err.status || 500).json({ err: err.message })

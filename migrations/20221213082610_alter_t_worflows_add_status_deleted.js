@@ -2,7 +2,6 @@ function indexStatus(knex) {
   return knex.schema.alterTable('workflows', function(table) {
     table.enu('status', [
         'DRAFT',
-// Temp comment
         'ACTIVE',
         'PAUSED',
         'DELETED'

@@ -27,6 +27,7 @@ async function activity(context) {
           return false
         }
 
+// Temp comment
         return true
       })
 
@@ -38,7 +39,6 @@ async function activity(context) {
           ...context,
           recipient,
           title: context.inputs.subject,
-// Temp comment
           message: context.inputs.message
         })
         sent.push({ user: recipient.id || recipient.user || '?', email: recipient.email })

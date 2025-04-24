@@ -64,6 +64,7 @@ async function check(signerId, tx = app.db) {
 
         if (checker.onError) {
           try {
+            _checked = await checker.onError(err, signer)
           } catch (ex) {
             log.error({ err: ex, reason: `ErrorRunningCheckOnError[${checker.id}] | Signer[${signer.id}]`})
             _err = ex

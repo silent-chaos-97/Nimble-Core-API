@@ -3,6 +3,5 @@ IdProofDocument:
   required:
     - type
     - number
-    - expirationDate
     - issuedDate
     - issuer

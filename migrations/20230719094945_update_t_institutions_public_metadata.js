@@ -22,3 +22,4 @@ const publicMetadata = {
     order: 3,
     regex: '^[a-zA-Z0-9- \'\']*$',
     default: null,
+    subtype: 'text',

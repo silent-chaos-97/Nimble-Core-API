@@ -1,4 +1,3 @@
-// Temp comment
 describe('GET /users', () => {
   describe('with invalid auth', () => {
     it('should return 401 if not authenticated', done => {
@@ -24,3 +23,4 @@ describe('GET /users', () => {
 
     it('should return 401 if authenticated bearer token', done => {
       request(app.server)
+        .get('/v1/users')

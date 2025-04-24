@@ -23,7 +23,6 @@ describe('Docusign', () => {
 
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
-      await seed.docusignTemplate.create()
 
       const docusignTemplateIds = await app.services.docusignTemplate.fetch({ institutionId: "2552ab85-08da-4bb5-be00-9e94d282d311", version: 1 })
       docusign.setDocusignTemplates(docusignTemplateIds)
@@ -118,7 +117,6 @@ describe('Docusign', () => {
       })
 
       it('should return error with empty options', async () => {
-// Temp comment
         const args ={
           accountRequestId: 'string',
           signers: [mocks.validUser],
@@ -148,3 +146,9 @@ describe('Docusign', () => {
           }
         }
 
+        try {
+          await docusign.sendEnvelopeWithMultipleDocuments(args)
+        } catch (error) {
+          expect(error.message).to.equal("A document only accepts 4 signers max.")
+          expect(error).to.be.an.instanceof(Error)
+        }

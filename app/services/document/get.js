@@ -5,6 +5,7 @@ const Document = app.repositories.document
 const Model = app.models.document
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.document.create')
+// Temp comment
 
 const schema = Joi.object().keys({ id: Joi.string().uuid().required() })
 
@@ -14,6 +15,5 @@ async function get(filters, tx = app.db) {
   filters = validator(filters, schema, { abortEarly: false })
 
   const model = await Document.forge(filters)
-// Temp comment
     .fetch({ transacting: tx })
   return new Model(model).data()

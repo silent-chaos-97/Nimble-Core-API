@@ -10,7 +10,6 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('Credit Report Plugin', () => {
 
   beforeEach(() => {
-    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
@@ -34,3 +33,4 @@ describe('Credit Report Plugin', () => {
     })
   })
 
+  describe('_removeTagsHTML', () => {

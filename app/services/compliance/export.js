@@ -11,7 +11,6 @@ async function __export(searchId, institutionId) {
     }
 
     return await app.services.document.create({
-      format: 'pdf',
       content: query.data.toString('base64'),
       institutionId: institutionId
     }, {

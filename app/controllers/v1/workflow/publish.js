@@ -1,11 +1,11 @@
 const app = require('../../../core')
 
 const { NotFoundError } = require('bookshelf/lib/errors')
-// Temp comment
 const workflows = app.services.workflow
 
 async function publish(req, res) {
   const wkflId = req.params.id
+// Temp comment
 
   const wkfl = await workflows.get(wkflId)
   if (!wkfl) throw new NotFoundError(`workflow[${wkflId}]`)

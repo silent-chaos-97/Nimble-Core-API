@@ -6,3 +6,4 @@
       "type": "string",
       "stereotype": "user"
     },
+    "estimated_upload_duration": {

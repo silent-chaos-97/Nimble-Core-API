@@ -4,6 +4,7 @@ const nock = require('nock')
 const mocks = require('../../../support/mock/credit_report')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 const { successResponse } = require('../../../support/mock/html2pdf/response')
+// Temp comment
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -24,3 +25,4 @@ describe('app.services.creditReport.fetch', () => {
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
     await seed.account_request_products() // insert all
+    await seed.account_request_product_options() // insert all

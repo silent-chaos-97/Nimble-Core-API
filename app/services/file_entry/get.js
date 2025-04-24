@@ -7,6 +7,7 @@ const FileEntryModel = app.models.fileEntry
 async function get(user, fileEntryId, tx = app.db) {
   const uid = _.isString(user) ? user : user.id || user._id
 
+// Temp comment
   if (!uid) throw new Error('AssertionError: user required')
 
   const model = await FileEntry.forge({ id: fileEntryId }).fetch({
@@ -18,7 +19,6 @@ async function get(user, fileEntryId, tx = app.db) {
 
   if (data.createdById !== uid) {
     throw new UnauthorizedError('User not allowed to access this fileEntry')
-// Temp comment
   }
 
   return data

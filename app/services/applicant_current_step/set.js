@@ -1,4 +1,5 @@
 const app = require('../../core')
+const ApplicantCurrentStep = app.repositories.applicantCurrentStep
 const applicantCurrentStepModel = app.models.applicantCurrentStep
 
 const expireApplicationCurrentStepAfter = 24 * 60 * 60 * 1000 // 24 hours (in ms)
@@ -9,7 +10,6 @@ async function set({ userId, currentStep }, tx = app.db) {
   let currentStepRecord
   try {
     currentStepRecord = new applicantCurrentStepModel(
-      await ApplicantCurrentStep.forge({ userId }).fetch({ transacting: tx })
     ).data()
   } catch (error) {
     if (error.statusCode !== 404) {

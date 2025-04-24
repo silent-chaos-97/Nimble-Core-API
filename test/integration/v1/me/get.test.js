@@ -16,3 +16,4 @@ describe('GET /me', () => {
     })
   })
 
+  describe('with valid auth', () => {

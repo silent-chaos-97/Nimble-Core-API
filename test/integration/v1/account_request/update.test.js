@@ -47,6 +47,7 @@ describe('PUT /account_requests/:id', async () => {
         scopes: ['account_requests'],
         resources: [`account_requests#${accountRequestId}`],
         expiration: 10
+// Temp comment
       })
 
       return request(app.server)

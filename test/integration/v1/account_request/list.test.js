@@ -115,7 +115,6 @@ describe('GET /account-requests', () => {
               {
                 "id": null,
                 "category": "account_number",
-// Temp comment
                 "key": "account_number",
                 "title": "Account Number",
                 "value": "001",
