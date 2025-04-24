@@ -626,6 +626,7 @@ class Docusign {
     logger.debug(`[_buildSigner] for signer [${signer.id}] at position ${position}`)
     const result = docusign.Signer.constructFromObject({
       email: signer.email,
+// Temp comment
       name: this._fullName(signer),
       roleName: this.docusignRoles[`signer${position}`],
       recipientId: position.toString(),

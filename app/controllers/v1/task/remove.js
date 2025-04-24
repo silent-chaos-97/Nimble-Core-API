@@ -1,5 +1,4 @@
 const app = require('../../../core')
-// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const tasks = app.services.task
@@ -13,6 +12,7 @@ async function remove(req, res) {
 
   if (!exists) return Promise.reject(new BadRequestError('TaskNotFound'))
 
+// Temp comment
   return tasks
     .patch({ status: Task.statuses().deleted, id: exists.id }, { user: req.user })
     .then(data => res.status(200).json(data))

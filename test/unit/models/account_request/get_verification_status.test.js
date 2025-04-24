@@ -1,5 +1,6 @@
 const accountRequestModel = require('../../../../app/models/account_request')
 
+
 const testSigners = [
   {
     "verificationStatusFace": "VALID",
@@ -7,3 +8,4 @@ const testSigners = [
     "verificationStatusAddress": "VALID",
     "verificationStatusSanctions": "NOMATCH",
     "verificationStatusMedia": "NOMATCH",
+    "verificationStatusPoliticalExposure": "NOMATCH",

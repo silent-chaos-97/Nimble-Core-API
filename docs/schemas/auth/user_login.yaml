@@ -1,1 +1,2 @@
 UserLogin:
+  type: object

@@ -1,3 +1,4 @@
+// Temp comment
 const glob = require('glob')
 const _ = require('lodash')
 _.mixin(require("lodash-inflection"))

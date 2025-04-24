@@ -27,13 +27,13 @@ module.exports = async(id, ctx) => {
 //   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
 //     const key = basePath ? basePath + '.' + path : path
 //     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
-//     return memo
 //   }, {})
 // }
 //
 // function unwrapJsonSchema(schema) {
 //   if (!schema.properties) return JSON.stringify(schema)
 //
+//   return _.reduce(schema.properties, (_context, _schema, _id) => {
 //     _context[_id] = unwrapJsonSchema(_schema)
 //     return _context
 //   }, {})

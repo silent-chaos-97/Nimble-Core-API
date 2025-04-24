@@ -1,3 +1,4 @@
+const PreconditionFailedError = require('../../errors/precondition_failed')
 const app = require('../../core')
 const creditReportAPI = require('../../plugins/credit_report')
 const HTMLToPDF = require('../../plugins/html_to_pdf')

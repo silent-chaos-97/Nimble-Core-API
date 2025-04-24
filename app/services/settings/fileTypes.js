@@ -74,3 +74,11 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Promissory Note'
+  },
+  {
+    type: 'Product',
+    name: 'Disclosure Statements'
+  },
+  {
+    type: 'Product',

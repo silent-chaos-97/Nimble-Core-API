@@ -1,1 +1,1 @@
-/auth/recover/{email}:
+  post:

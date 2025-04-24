@@ -38,6 +38,7 @@ class BrevoFacade {
     if (config.get('env') === 'prod') {
       // do production redactions
       if (data.uri) data.uri = 'REDACTED' // the URI may contain unmasked tokens
+      if (data.token) data.token = 'REDACTED' // redact tokens
     }
 
     return data

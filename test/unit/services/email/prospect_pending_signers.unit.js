@@ -9,3 +9,4 @@ describe('app.services.email.prospectPendingSigners', () => {
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
+  before(() => {

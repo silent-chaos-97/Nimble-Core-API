@@ -10,3 +10,5 @@ const Statuses = {
 }
 
 const SCHEMA = Joi.object().keys({
+  id: Joi.string().uuid(),
+  createdById: Joi.string().uuid().required(),

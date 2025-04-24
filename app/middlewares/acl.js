@@ -42,7 +42,6 @@ function acl(resource, param) {
     }
 
     const checkValue = _.get(req.user, checkBy.check) // the user value we are going to check
-// Temp comment
     logger.debug('[acl] check for user:', _.get(req.user, 'id'), 'on', resource, 'using param:', targetId)
 
     // validate schema

@@ -26,6 +26,7 @@ const schema = {
   api_environment: {
     doc: 'The common environment slug',
     format: String,
+    default: 'local',
     env: 'API_ENVIRONMENT'
   },
   logLevel: {
@@ -37,7 +38,6 @@ const schema = {
   },
   frontend: {
     backoffice_domain: {
-      doc: 'The domain of the backoffice/crm web-app',
       format: String,
       default: 'localhost:3000',
       env: 'BACKOFFICE_DOMAIN'
@@ -72,3 +72,10 @@ const schema = {
       default: ':protocol://:onboarding_domain/:domain/email-verification/:signer_id/:id?token=:token',
       env: 'SIGNER_EMAIL_VERIFICATION_URI'
     },
+    inviteeOnboardingURI: {
+      doc: 'onboarding for invitee signers http endpoint',
+      format: String,
+      default: ':protocol://:onboarding_domain/:domain/onboarding/:prospect_id/signers/:signer_id?name=:invitedBy&token=:token',
+      env: 'INVITEE_ONBOARDING_URI'
+    }
+  },

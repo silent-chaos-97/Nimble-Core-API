@@ -14,6 +14,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
     clock.restore()
   })
 
+// Temp comment
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -139,7 +140,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
           const second = res.body[1]
           expect(second.position).to.equal(1)
 
-// Temp comment
           const third = res.body[2]
           expect(third.position).to.equal(2)
         })

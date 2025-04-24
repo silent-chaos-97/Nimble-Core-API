@@ -12,6 +12,7 @@ Signer:
       example: 2552ab85-08da-4bb5-be00-9e94d282d311
     status:
       type: string
+      readOnly: true
       title: Status
       enum: ['INVITED', 'INCOMPLETE', 'PENDING', 'SIGNED']
       description: >-
@@ -28,3 +29,5 @@ Signer:
       format: date-time
       title: Invited at
       description: Date time that references latest timestamp from the invite notification.
+    firstName:
+      type: string

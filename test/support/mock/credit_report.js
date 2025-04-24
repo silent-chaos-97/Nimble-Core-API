@@ -9,3 +9,4 @@ const signer = {
   city: 'Lisbon',
   state: 'CA',
   zipCode: '22222',
+  ssn: '333-33-3333',

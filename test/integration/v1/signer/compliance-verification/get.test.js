@@ -10,3 +10,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
   })
 
   after(() => {
+    clock.restore()

@@ -20,3 +20,5 @@ columns:
 
   - data: category
     type: dropdown
+    source: ['card', 'deposit', 'loan']
+    correctFormat: true

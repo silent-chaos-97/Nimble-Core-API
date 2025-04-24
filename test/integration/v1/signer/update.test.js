@@ -17,7 +17,6 @@ describe('PUT /signers/:id', async () => {
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000020')
     await seed.document.create('a74f9092-5889-430a-9c19-6712f9f68090')
     // account request for prospect
-    await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000333')
     // create invited signers for this prospect with different roles and status
     // pending status
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')

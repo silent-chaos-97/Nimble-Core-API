@@ -8,6 +8,5 @@ function getActivityPath(descriptorId, version, step) {
   if (!version) return baseDir
 
   const vDir = `${baseDir}/v${version}`
-  if (!step) return vDir
 
   return `${vDir}/${step}.${descriptorId}.js`

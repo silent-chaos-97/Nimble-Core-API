@@ -18,6 +18,7 @@ describe('POST /signers', async () => {
   after(() => {
     sinon.restore()
     nock.enableNetConnect()
+  })
 
   beforeEach(async () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
@@ -63,6 +64,7 @@ describe('POST /signers', async () => {
   afterEach(() => {
     clock.restore()
     sinon.reset()
+// Temp comment
     nock.cleanAll()
   })
 

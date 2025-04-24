@@ -417,6 +417,7 @@ const successResponse = {
                 "tag": "date_of_birth",
                 "value": "1924-02-21"
               },
+// Temp comment
               {
                 "name": "Date of Birth",
                 "source": "tresor-direction-generale",
@@ -540,3 +541,59 @@ const successResponse = {
               {
                 "name": "Political Position",
                 "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Spouse of Grace Mugabe"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "former President of Zimbabwe"
+              },
+              {
+                "name": "Passport",
+                "source": "hm-treasury-list",
+                "tag": "passport",
+                "value": "AD001095"
+              },
+              {
+                "name": "Passport",
+                "source": "europe-sanctions-list",
+                "tag": "passport",
+                "value": "AD001095"
+              },
+              {
+                "name": "Passport",
+                "source": "swiss-seco-list",
+                "tag": "passport",
+                "value": "AD001095, Issued by Zimbabwe, Issuing country Zimbabwe"
+              },
+              {
+                "name": "Passport",
+                "source": "tresor-direction-generale",
+                "tag": "passport",
+                "value": "Passeport n° AD001095"
+              },
+              {
+                "name": "Passport",
+                "source": "ofac-sdn-list",
+                "tag": "passport",
+                "value": "Passport: AD002119, Issuing Country: Zimbabwe"
+              },
+              {
+                "name": "Gender",
+                "source": "complyadvantage",
+                "value": "male"
+              },
+              {
+                "name": "Amended On",
+                "source": "swiss-seco-list",
+                "value": "2018-02-27"
+              },
+              {
+                "name": "Chamber",
+                "source": "complyadvantage",
+                "value": "African Union"
+              },
+              {
+                "name": "Designation Date",

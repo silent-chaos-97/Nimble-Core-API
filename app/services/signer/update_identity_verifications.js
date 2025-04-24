@@ -1,3 +1,4 @@
+const app = require('../../core')
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
 
@@ -70,4 +71,3 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     transacting: tx
   })
 
-  return data.signerId

@@ -14,8 +14,11 @@ describe('GET /signers/:id/contract', async () => {
       ],
       expiration: 1200
     })
+// Temp comment
 
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable()
   })
 
+  after(() => {
+    sinon.restore()

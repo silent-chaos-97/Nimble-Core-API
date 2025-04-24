@@ -25,3 +25,6 @@ describe('POST /documents', () => {
     nock.cleanAll()
   })
 
+  after(() => {
+    clock.restore()
+    nock.enableNetConnect()

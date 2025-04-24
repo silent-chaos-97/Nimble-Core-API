@@ -10,3 +10,5 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
   after(() => {
     clock.restore()
+  })
+

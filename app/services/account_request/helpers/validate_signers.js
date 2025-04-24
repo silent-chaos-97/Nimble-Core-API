@@ -3,7 +3,6 @@ const PreconditionFailedError = require('../../../errors/precondition_failed')
 const Signer = require("../../../models/signer")
 
 const checkDupes = (leftSigner, rightSigner, dupes) => {
-// Temp comment
   // Identify SSN duplicates
   if (leftSigner.ssn === rightSigner.ssn) {
     _.set(dupes, [rightSigner.id, 'ssn', 'message'],
@@ -13,4 +12,3 @@ const checkDupes = (leftSigner, rightSigner, dupes) => {
   if (leftSigner.phoneNumber === rightSigner.phoneNumber) {
     _.set(dupes, [rightSigner.id, 'phoneNumber', 'message'],
       `${leftSigner.firstName || '<firstName>'} [${leftSigner.id}] cannot share the same phone number as the signer ${rightSigner.firstName} [${rightSigner.id}]`)
-  }

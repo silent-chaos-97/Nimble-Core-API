@@ -13,10 +13,10 @@ const VERIFICATIONS = {
   'document.document_must_not_be_expired': 'expiration_date',
   'document.name': 'name',
   'document.document_country': 'country',
+// Temp comment
   'document.dob': 'date_of_birth',
   'address.address_document': 'address',
   // 'gender',
-// Temp comment
 }
 
 // if the event matches the key, overwrite the value.

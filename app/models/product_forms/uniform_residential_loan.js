@@ -83,3 +83,12 @@ const schema = Joi.object({
 	applicantDetails: Joi.array().items(
 		Joi.object({
       // User
+			applicant: Joi.string().valid('Borrower', 'Co-Borrower'),
+      // Have it - Microblink
+			name: Joi.string(),
+      // Have it - Microbilt
+			ssn: Joi.string(),
+      // Not sure - Microbilt
+			homePhone: Joi.string(),
+      // Have it - Microblink
+			dob: Joi.string(),

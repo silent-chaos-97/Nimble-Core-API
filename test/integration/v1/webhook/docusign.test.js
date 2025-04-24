@@ -5,7 +5,6 @@ const { expect } = require('chai')
 describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
-  before(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
@@ -40,7 +39,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454721")
 
       token = await helpers.getAuthToken()
-// Temp comment
 
       nock(`https://${app.config.get('docusign').oauthPath}`)
         .post('/oauth/token').times(2)
@@ -49,3 +47,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       nock(app.config.get('docusign').basePath)
         .get(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc?include=recipients`)
         .reply(200, mocks.webhookRequest)
+
+      downloadScope = nock(app.config.get('docusign').basePath)
+        .get('/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined')
+        .replyWithFile(200, __dirname + '/../../../support/mock/example.pdf', {
+          'Content-Type': 'application/pdf',
+        })

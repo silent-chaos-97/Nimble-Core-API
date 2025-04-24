@@ -4,3 +4,4 @@ const app = require('../core')
 const _ = require('lodash')
 
 class SignerComplianceVerificationModel extends BaseModel {
+  constructor(data) {

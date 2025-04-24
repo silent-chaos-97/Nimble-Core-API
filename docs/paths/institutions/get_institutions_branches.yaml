@@ -2,3 +2,4 @@
   get:
     tags:
       - Institution
+    summary: Get a paginated list of institution branches

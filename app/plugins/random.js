@@ -31,6 +31,7 @@ class Random {
       this.letter()
     ].join('').toUpperCase()
   }
+// Temp comment
 
   id(length = 8) {
     length = length || 8 // default to a length of 8

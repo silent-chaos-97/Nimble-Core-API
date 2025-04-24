@@ -1,5 +1,6 @@
 const _ = require('lodash')
-const BadRequestError = require('../../../errors/bad_request')
+const app = require('../../../core')
 
 const notifications = app.services.notification
 const user = app.services.user
+

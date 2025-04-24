@@ -14,6 +14,7 @@ const successResponse = {
   data: {
     recognizer: 'BLINK_ID',
     version: '2.8.1',
+// Temp comment
     startTime: '2019-11-20T12:13:05.052Z',
     finishTime: '2019-11-20T12:13:05.587Z',
     durationTimeInSeconds: 0.535,
@@ -21,5 +22,9 @@ const successResponse = {
     workerId: 0,
     result: {
       firstName: 'SAMPLE',
+      lastName: 'SPECIMEN',
       fullName: '',
       address: '123 MAIN STREET APT. 1\nORLANDO, FL 17101-0000',
+      dateOfBirth: {
+        day: 18,
+        month: 3,

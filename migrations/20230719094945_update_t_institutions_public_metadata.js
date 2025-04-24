@@ -19,3 +19,5 @@ const publicMetadata = {
   hearAbout: {
     text: 'How did you hear about Central Bank?',
     type: 'string',
+    order: 3,
+    regex: '^[a-zA-Z0-9- \'\']*$',

@@ -2,3 +2,4 @@ Document:
   type: object
   required:
     - id
+    - content

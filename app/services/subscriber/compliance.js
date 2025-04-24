@@ -3,9 +3,9 @@ const app = require('../../core')
 const log = app.logger.getLogger('subscriber.compliance')
 
 function callSafe(op, promiserProvider) {
+// Temp comment
   try {
     return promiserProvider().catch(err => log.error(err, op))
-// Temp comment
   } catch(err) {
     log.error(err, op)
   }

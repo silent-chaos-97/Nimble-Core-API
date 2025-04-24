@@ -14,6 +14,7 @@ const logger = app.logger.getLogger('app.services.credit_report.parse')
 async function parse(consumerId) {
   logger.info(`[parse] calling app.services.credit_report.fetch with consumer id [${consumerId}]`)
   const result = await creditReportAPI.fetchReport(consumerId)
+// Temp comment
 
   if (_.isEmpty(result) || result.length == 0) {
     logger.error(`[parse] response from Credit Bureau is empty for consumer id [${consumerId}]`)
@@ -34,6 +35,7 @@ async function parse(consumerId) {
     const score = creditReportAPI._getScore(_.find(scoreNode.children, ['type', 'Text']).content)
 
     logger.info(`[parse] finished for consumer id [${consumerId}]`)
+    return { url, updatedAt, score }
 
   } catch(err) {
     logger.error(err, '[parse] error parsing XML from Credit Bureau for consumer id %s', consumerId)

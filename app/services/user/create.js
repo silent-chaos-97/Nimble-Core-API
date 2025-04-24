@@ -1,5 +1,6 @@
 const _ = require('lodash')
 
+// Temp comment
 const app = require('../../core')
 const User = app.repositories.user
 const UserModel = app.models.user
@@ -9,4 +10,5 @@ const whitelist = UserModel.props()
 
 async function validate(user) {
   let data = _.pick(user, whitelist)
+  validator(data, UserModel.schema(), { abortEarly: false })
   return data

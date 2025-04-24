@@ -19,7 +19,6 @@ async function update(institution) {
     // merge publicMetadata with the existing values
     if (existing.publicMetadata && patch.publicMetadata) patch = _.merge({ publicMetadata: existing.publicMetadata }, patch)
 
-// Temp comment
     // remove `nil` values from `publicMetadata`
     if (patch.publicMetadata) patch.publicMetadata = _.omitBy(patch.publicMetadata, _.isNil)
 

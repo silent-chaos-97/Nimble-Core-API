@@ -1,3 +1,2 @@
-/institutions/{id}/products:
   post:
     tags:

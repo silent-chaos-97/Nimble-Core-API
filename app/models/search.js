@@ -8,3 +8,4 @@ class SearchModel extends BaseModel {
   }
 
   static props(op) {
+    return {

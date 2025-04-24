@@ -58,7 +58,6 @@ function serializer(data) {
         tag('phoneNumber', {}, signer.phoneNumber),
         tag('ssn', {}, signer.ssn),
         tag('role', {}, signer.role),
-        tag('employer', {}, signer.employer),
         tag('address', {}, [
           tag('street', {}, signer.address),
           tag('city', {}, signer.city),

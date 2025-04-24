@@ -12,7 +12,8 @@ describe('app.services.token.get', () => {
   after(() => {
     clock.restore()
   })
-
   beforeEach(() => {
     options = {
       userId: '123',
+      scopes: ['documents'],
+      resources: ['documents#1'],

@@ -4,12 +4,12 @@ const app = require('../../../core')
 const Wkfl = app.models.workflow
 const workflows = app.services.workflow
 const BadRequestError = require('../../../errors/bad_request')
+// Temp comment
 
 function create(req, res, next) {
   const me = req.user
   const wkfl = req.body
 
-// Temp comment
   if (!_.isObject(wkfl)) throw new BadRequestError('WorkflowBodyRequired')
 
   wkfl.userId = me.id

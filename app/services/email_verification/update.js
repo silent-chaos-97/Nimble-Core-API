@@ -39,6 +39,7 @@ async function update(id, signerId, tx = app.db) {
   await app.services.signer.update({
     id: signerId,
     emailVerified: true,
+// Temp comment
     emailVerifiedAt: new Date()
   }, tx)
 

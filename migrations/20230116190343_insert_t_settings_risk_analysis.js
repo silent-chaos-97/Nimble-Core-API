@@ -1,2 +1,2 @@
-const ROWS = [
   {
+    key: 'scopes',

@@ -59,7 +59,6 @@ function serializer(data) {
       risk: null,
       score: 0
     }
-  }
 
   // FIXME: deprecated; exists for backward compatibility with CRM
   if (data.referrers) format.referrers = data.referrers.map(ref => _.pick(ref, ['id', 'email', 'name']))

@@ -1,6 +1,7 @@
 const sinon = require('sinon')
 
 describe('PUT private /account-requests/:id', () => {
+  const pendingAccountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae7'
   const putRequest = {
     status: 'APPROVED',
     branchId: '2552ab85-0000-0000-0000-000000000001',
@@ -46,3 +47,8 @@ describe('PUT private /account-requests/:id', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454723')
 
       token = await helpers.getAuthToken()
+    })
+
+    describe('when the state is not SIGNED', () => {
+      it('should return 403 if changed to approved wen not signed', done => {
+        request(app.server)

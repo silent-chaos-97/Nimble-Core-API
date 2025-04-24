@@ -125,3 +125,17 @@ describe('Docusign', () => {
           ccRecipient: {
             fullName: 'Some dude Specimen',
             email: 'psousa+1@wearesingular.com',
+          }
+        }
+
+        try {
+          await docusign.sendEnvelopeWithMultipleDocuments(args)
+        } catch (error) {
+          expect(error.message).to.equal("Cannot send envelope without options.")
+          expect(error).to.be.an.instanceof(Error)
+        }
+      })
+
+      it('should return error with more than 4 signers', async () => {
+        const args ={
+          accountRequestId: 'string',

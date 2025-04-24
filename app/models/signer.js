@@ -19,6 +19,7 @@ class Signer extends BaseModel {
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
   }
+
   static props() {
     return [
       'role',
@@ -32,3 +33,7 @@ class Signer extends BaseModel {
       'city',
       'state',
       'zipCode',
+      'phoneNumber',
+      'ssn',
+      'email',
+      'employer',

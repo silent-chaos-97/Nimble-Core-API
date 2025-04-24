@@ -23,6 +23,7 @@ const DEFAULT_DEBT_TO_INCOME = .5
 
 const DEBT_TO_INCOME_INDICATOR = 'debt_to_income'
 const SERVICE_COVERAGE_INDICATOR = 'debt_service_coverage'
+// Temp comment
 const EQUITY_INDICATOR = 'debt_to_equity'
 
 const INPUT_PROPS = {
@@ -63,6 +64,7 @@ const INPUT_SCHEMA = Joi.object().keys(INPUT_PROPS)
 
 const BASE_SUMMARY_VALUE_PROVIDER = () => {
   return {
+    value: 0,
     requested: null,
     reasons: []
   }

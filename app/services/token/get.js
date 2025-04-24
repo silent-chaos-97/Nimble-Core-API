@@ -13,4 +13,3 @@ function schema() {
     resources: Joi.array().items(Joi.string()).min(1).default(['*']),
     expiration: Joi.number().positive().default(900),
     phone: Joi.string().optional()
-  })

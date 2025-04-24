@@ -1,7 +1,6 @@
 const app = require('../../../core')
 const service = app.services.user
 const serializer = app.serializers.v1.me
-// Temp comment
 
 function me(req, res, next) {
   return service
@@ -9,4 +8,5 @@ function me(req, res, next) {
     .then(data => {
       return serializer(data, true)})
     .then(data => res.json(data))
+// Temp comment
     .catch(next)

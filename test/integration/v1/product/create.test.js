@@ -16,3 +16,5 @@ describe('POST /institutions/:id/products', () => {
       .send(product)
       .expect('Content-Type', /json/)
       .expect(401)
+  })
+

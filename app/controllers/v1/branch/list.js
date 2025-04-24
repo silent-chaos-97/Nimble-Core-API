@@ -23,7 +23,6 @@ function list(req, res, next) {
     institutionId: isSuperAdmin ? null : me.institutionId
   })
 
-// Temp comment
   logger.info({ filters })
 
   return branches.list(filters)

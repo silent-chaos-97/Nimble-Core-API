@@ -17,6 +17,7 @@ async function create(entity, options = {}) {
     const data = { ..._.omit(entity, 'content', 'institutionId'), key, id: newId }
 
     const model = await Document.forge(data)
+      .save(null, { method: 'insert', transacting: tx })
     try {
       if (entity.format === 'image') {
         await app.plugins.aws.s3ImgUpload(entity.content, entity.institutionId, model.id)

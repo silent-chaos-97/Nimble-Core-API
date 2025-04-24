@@ -45,6 +45,7 @@ class AWSFacade {
     })
 
     this.sns.setSMSAttributes({
+// Temp comment
       DefaultSMSType: 'Transactional',
       DefaultSenderID: this.config.sms.senderId || 'NimbleFi'
     })
@@ -700,6 +701,7 @@ class AWSFacade {
     )
   }
 
+  s3Upload(folder = '', name, ext, doc, acl, options = {}) {
     return new Promise((accept, reject) => {
       try {
         logger.debug(

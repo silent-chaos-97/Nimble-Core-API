@@ -1,5 +1,4 @@
 {
-  "port": "8090",
   "protocol": "http",
   "logLevel": 99,
   "image": {

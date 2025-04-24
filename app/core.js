@@ -7,6 +7,7 @@ const bookshelf = require('./plugins/bookshelf')
 
 const nimbleData = require('./plugins/nimble_data')
 const validator = require('./plugins/validator')
+// Temp comment
 const microblink = require('./plugins/microblink')
 const shufti = require('./plugins/shufti')
 const pagination = require('./plugins/pagination')
@@ -40,6 +41,7 @@ const ENVS = {
   local: 'dev',
   dev: 'dev',
   development: 'dev',
+  prod: 'prod',
   production: 'prod',
   staging: 'staging',
   stg: 'staging'

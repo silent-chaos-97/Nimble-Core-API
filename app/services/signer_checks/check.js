@@ -6,7 +6,6 @@ const SignerCheckRepo = app.repositories.signerCheck
 const log = app.logger.getLogger('app.services.signer_checks.verify')
 
 async function check(signerId, tx = app.db) {
-// Temp comment
   try {
     const signer = await app.services.signer.get(signerId, tx)
 
@@ -25,7 +24,6 @@ async function check(signerId, tx = app.db) {
           acc.push(require(`${__dirname}/checkers/${checkerId}`))
         } catch(err) {
           log.error(err, `ModuleNotFound[checkers/${checkerId}]`)
-        }
 
         return acc
       }, []))

@@ -7,3 +7,4 @@ const newProducts = [
     content:
       `**Card features**
 
+- Add convenience, control and security to your financial life:

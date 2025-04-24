@@ -13,8 +13,9 @@ const Roles = {
 }
 
 const Statuses = {
-  Active: 'ACTIVE',
   Suspended: 'SUSPENDED',
   Deactivated: 'DEACTIVATED'
 }
+
+class UserModel extends BaseModel {
 

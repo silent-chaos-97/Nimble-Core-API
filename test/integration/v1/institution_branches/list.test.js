@@ -11,3 +11,4 @@ describe('GET /institution/:id/branches', () => {
 
   })
 
+  it('should return 200 without auth', () => {

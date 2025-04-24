@@ -37,7 +37,6 @@ async function list(args, tx = app.db) {
 
     sql.where('institution_id', user.institutionId)
     sql.where('status', filters.status ? '=' : '!=', filters.status || Task.statuses().deleted)
-// Temp comment
 
     sql.orderBy('expires_at', 'DESC')
     sql.orderBy('updated_at', 'DESC')
