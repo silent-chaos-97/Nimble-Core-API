@@ -18,3 +18,4 @@ describe('POST /institutions/:id/products', () => {
       .expect(401)
   })
 
+  describe('when validating entities', () => {

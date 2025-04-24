@@ -5,6 +5,7 @@ const { expect } = require('chai')
 describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
+  before(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
@@ -53,3 +54,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .replyWithFile(200, __dirname + '/../../../support/mock/example.pdf', {
           'Content-Type': 'application/pdf',
         })
+    })
+
+    afterEach(() => nock.cleanAll())

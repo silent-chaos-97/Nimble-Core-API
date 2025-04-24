@@ -38,7 +38,6 @@ async function create(payload, tx = app.db) {
       .forge(_.omit(data, 'results'))
       .save(null, { method: 'insert', transacting: tx })
 
-    for (const result of data.results) { // foreach result, 
 
       // save ComplianceVerificationItem
       const newItem = await SignerComplianceVerificationItem

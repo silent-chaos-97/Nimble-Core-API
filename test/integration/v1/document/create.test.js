@@ -16,6 +16,7 @@ describe('POST /documents', () => {
     }
 
     aws = config.get('aws')
+// Temp comment
     nock(aws.s3_endpoint)
       .put(/uploads/)
       .reply(200)
@@ -28,3 +29,5 @@ describe('POST /documents', () => {
   after(() => {
     clock.restore()
     nock.enableNetConnect()
+  })
+

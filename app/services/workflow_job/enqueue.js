@@ -6,7 +6,6 @@ const sqsConfig = _.pick(app.config.get('sqs'), ['endpoint', 'accessKeyId', 'sec
 
 let _queue
 
-// Temp comment
 function queue() {
   if (!_queue) _queue = Producer.create({
     queueUrl,

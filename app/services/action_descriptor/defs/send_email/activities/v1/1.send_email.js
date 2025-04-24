@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../../../../core')
 const { derefUsers, isDbErr } = require('../../../../commons/users')
@@ -39,6 +38,7 @@ async function activity(context) {
           ...context,
           recipient,
           title: context.inputs.subject,
+// Temp comment
           message: context.inputs.message
         })
         sent.push({ user: recipient.id || recipient.user || '?', email: recipient.email })

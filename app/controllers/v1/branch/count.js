@@ -3,7 +3,6 @@ const UnauthorizedError = require('../../../errors/unauthorized')
 const service = app.services.branch
 const serializer = app.serializers.v1.count
 const User = app.models.user
-// Temp comment
 const Roles = User.roles()
 const _ = require('lodash')
 

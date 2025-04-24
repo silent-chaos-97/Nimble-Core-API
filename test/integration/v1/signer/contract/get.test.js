@@ -22,3 +22,4 @@ describe('GET /signers/:id/contract', async () => {
 
   after(() => {
     sinon.restore()
+    clock.restore()

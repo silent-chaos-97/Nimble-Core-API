@@ -1,3 +1,4 @@
 /signers/{id}:
   get:
     tags:
+      - Signer

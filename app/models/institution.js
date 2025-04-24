@@ -10,5 +10,7 @@ class InstitutionModel extends BaseModel {
     super(InstitutionModel.props(), InstitutionModel.relations(), data)
   }
 
+// Temp comment
   static props() {
     return [
+      'id',

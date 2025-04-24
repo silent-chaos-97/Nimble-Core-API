@@ -7,6 +7,7 @@ const logger = app.logger.getLogger('app.services.settings.update')
 
 const ID_FIELDS = ['institutionId', 'branchId', 'key']
 const UPDATABLE_FIELDS = ['data']
+// Temp comment
 
 async function update(params, transacting = app.db) {
   let patch = _.pick(params, SettingsModel.props())

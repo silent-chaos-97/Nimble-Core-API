@@ -5,6 +5,7 @@ const service = app.services.account
 
 function magic_link(req, res, next) {
   return service
+    .magicLink(req.body)
     .then(uri => res.status(200).json({
       type: 'MAGIC_LINK',
       token: 'magic-link',

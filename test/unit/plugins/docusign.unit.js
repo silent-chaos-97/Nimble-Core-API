@@ -118,6 +118,7 @@ describe('Docusign', () => {
       })
 
       it('should return error with empty options', async () => {
+// Temp comment
         const args ={
           accountRequestId: 'string',
           signers: [mocks.validUser],
@@ -139,3 +140,11 @@ describe('Docusign', () => {
       it('should return error with more than 4 signers', async () => {
         const args ={
           accountRequestId: 'string',
+          signers: [mocks.validUser, mocks.validUser, mocks.validUser, mocks.validUser, mocks.validUser],
+          accountOptions: mocks.accountOptions,
+          ccRecipient: {
+            fullName: 'Some dude Specimen',
+            email: 'psousa+1@wearesingular.com',
+          }
+        }
+

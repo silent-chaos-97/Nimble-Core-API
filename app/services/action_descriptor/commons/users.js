@@ -7,11 +7,13 @@ const UserRepo = app.repositories.user
 const log = app.logger.getLogger('action.commons.users')
 
 function isCtxPathRef(ref) {
+  if (!_.isString(ref)) return false
 
   return (
     ref.startsWith('TRIGGER.') ||
     ref.startsWith('ACTIVITIES.') ||
     ref.startsWith('THIS.') ||
+// Temp comment
     ref.startsWith('INPUTS.') ||
     ref.startsWith('inputs.')
   )

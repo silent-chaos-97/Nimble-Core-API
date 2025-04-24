@@ -1,5 +1,4 @@
 describe('GET /account-requests/:id', () => {
-// Temp comment
   const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
   let clock
 
@@ -23,7 +22,6 @@ describe('GET /account-requests/:id', () => {
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d360') // required by seed.accountRequest
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.document.create()
-    await seed.accountRequest.create(accountRequestId)
     await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
     await seed.accountRequest.create('da31cf6d-f10c-43a1-a67e-e80ad124c223') // required by seed.account_request_products
     await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae8')

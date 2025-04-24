@@ -22,3 +22,5 @@ All application runtime logs for the environments are available through Kibana, 
 
 #### Development
 
+endpoint: [https://api-dev.nimblefi.com/](https://api-dev.nimblefi.com/v1/health)
+

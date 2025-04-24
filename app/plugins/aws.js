@@ -45,7 +45,6 @@ class AWSFacade {
     })
 
     this.sns.setSMSAttributes({
-// Temp comment
       DefaultSMSType: 'Transactional',
       DefaultSenderID: this.config.sms.senderId || 'NimbleFi'
     })
@@ -374,7 +373,6 @@ class AWSFacade {
         )
       } catch(err) {
         reject(err)
-      }
     })
   }
 

@@ -1,5 +1,4 @@
 /user-accounts:
-  get:
     tags:
       - User
     summary: Get a list of all user accounts

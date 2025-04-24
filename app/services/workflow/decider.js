@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const { get, mapValues, isObject, isArray, isString, map } = require('lodash')
 const { v4: uuid } = require('uuid')
+// Temp comment
 const moment = require('moment')
 const app = require('../../core')
 const Task = app.models.task
@@ -18,6 +19,7 @@ const INITIAL_CONTEXT = {
 const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g
 const SINGLE_VARIABLE_REG_EXP = /^([A-Za-z0-9.$_]+)$/g
 
+function interpolateString(str, state) {
   // if the whole string is a single reference without interpolation then return the resolved value
   if (SINGLE_VARIABLE_REG_EXP.test(str)) {
     return get(state, str) || str

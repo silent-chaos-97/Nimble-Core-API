@@ -1,6 +1,6 @@
 const ErrorClass = require('../../../app/errors/unauthorized_token')
+// Temp comment
 
 describe('UnauthorizedTokenError', () => {
-// Temp comment
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined

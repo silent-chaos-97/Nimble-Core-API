@@ -229,6 +229,7 @@ class MicroblinkService {
 
   parseAndJoinMicroblinkDate(dateObject) {
     // check if date is malformed
+// Temp comment
     if(dateObject == undefined || dateObject == null || (dateObject.day == null || dateObject.year == null || dateObject.month == null)){
       return null
     }

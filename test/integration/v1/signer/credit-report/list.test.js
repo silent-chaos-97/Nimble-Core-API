@@ -14,3 +14,4 @@ describe('GET /signers/:id/credit-reports', async () => {
   })
 
   beforeEach(async () => {
+    await seed.institution.create()

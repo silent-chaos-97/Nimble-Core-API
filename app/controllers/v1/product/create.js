@@ -1,4 +1,3 @@
-const app = require('../../../core')
 
 const service = app.services.product
 const serializer = app.serializers.v1.product

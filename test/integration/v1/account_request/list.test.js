@@ -115,6 +115,7 @@ describe('GET /account-requests', () => {
               {
                 "id": null,
                 "category": "account_number",
+// Temp comment
                 "key": "account_number",
                 "title": "Account Number",
                 "value": "001",
@@ -192,7 +193,6 @@ describe('GET /account-requests', () => {
         await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e701')
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454701')
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454702')
-// Temp comment
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454703')
 
 

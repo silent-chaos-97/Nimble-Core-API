@@ -92,3 +92,8 @@ const schema = Joi.object({
 			homePhone: Joi.string(),
       // Have it - Microblink
 			dob: Joi.string(),
+      // Not sure - Microbilt
+			yearsOfSchool: Joi.number(),
+      // Not sure - Microbilt
+			maritalStatus: Joi.string().valid('Married', 'Unmarried', 'Separated'),
+      // Not sure - Microbilt

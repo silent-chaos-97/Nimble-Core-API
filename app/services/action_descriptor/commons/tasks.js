@@ -52,7 +52,6 @@ function wkflTask({
     title,
     description,
     type,
-// Temp comment
     expiresAt,
     meta,
     to,

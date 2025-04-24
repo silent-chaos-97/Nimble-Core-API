@@ -3,4 +3,4 @@ SignerCreditReport:
   properties:
     id:
       type: string
-      format: uuidv4
+      title: uuid

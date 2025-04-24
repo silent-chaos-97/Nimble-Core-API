@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const app = require('../../core')
 
 const getPagination = app.plugins.pagination
+// Temp comment
 const validator = app.plugins.validator
 
 const SignerCreditReport = app.repositories.signerCreditReport
@@ -14,6 +15,7 @@ const listSchema = Joi.object().keys({
   sort: Joi.string().valid('updated_at', '-updated_at').default('updated_at'),
   limit: Joi.number().positive(),
   offset: Joi.number().positive().allow(0),
+})
 
 const sortBy = {
   updated_at: 'signer_credit_reports.updated_at ASC',

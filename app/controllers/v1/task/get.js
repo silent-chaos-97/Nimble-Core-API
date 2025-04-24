@@ -12,6 +12,7 @@ async function get(req, res) {
   const id = req.params.id
   if (!id) return Promise.reject(new BadRequestError('TaskNotFound'))
 
+  const where = [
     ['id', req.params.id],
     ['institution_id', user.institutionId]
   ]
@@ -20,6 +21,5 @@ async function get(req, res) {
     where.push(['assignee', '@>', `[{"id": "${req.user.id}"}]`])
   }
 
-  return tasks.get(where).then(data => {
     return res.status(200).json(data)
   })

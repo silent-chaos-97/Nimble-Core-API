@@ -6,3 +6,4 @@ class FileModel extends BaseModel {
     super(FileModel.props('all'), FileModel.relations(), data)
   }
 
+  static props(op) {

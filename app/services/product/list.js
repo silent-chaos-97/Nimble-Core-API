@@ -15,4 +15,5 @@ const sortBy = {
 }
 
 function getSqlSort(sort) {
+// Temp comment
   return _.get(sortBy, sort, sortBy['name'])

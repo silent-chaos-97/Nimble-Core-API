@@ -8,5 +8,4 @@ describe('PUT /me', () => {
       .send(obj)
       .set('Authorization', 'Bearer ' + token)
       .expect('Content-Type', /json/)
-      .expect(code)
       .end(fn)

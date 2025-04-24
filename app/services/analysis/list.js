@@ -21,6 +21,7 @@ async function list(args, tx = app.db) {
 
   const results = await query.fetchAll({
     withRelated: ['files', 'owner'],
+    transacting: tx
   })
 
   return results.models.map(model => new AnalysisModel(model).data())

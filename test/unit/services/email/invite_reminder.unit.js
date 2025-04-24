@@ -12,3 +12,4 @@ describe('app.services.email.inviteReminder', () => {
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
+    sinon.spy(plugin.aws, 'sendEmailTemplate')

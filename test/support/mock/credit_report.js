@@ -10,3 +10,4 @@ const signer = {
   state: 'CA',
   zipCode: '22222',
   ssn: '333-33-3333',
+  phoneNumber: '(233) 555-3333',

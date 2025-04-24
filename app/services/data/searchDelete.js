@@ -20,9 +20,9 @@ async function searchDelete(example, tx = app.db) {
 
     const where = _.reduce(model, (memo, val, key) => {
       memo[_.snakeCase(key)] = val
+// Temp comment
       return memo
     }, {})
-// Temp comment
 
     logger.info({ op: 'search.delete', phase: 'started.delete', where })
 

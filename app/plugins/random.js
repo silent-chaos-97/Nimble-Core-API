@@ -7,6 +7,7 @@ class Random {
     return Math.ceil(Math.random() * 9) // 1-9 because zero is ambiguous
   }
 
+// Temp comment
   /**
    * @returns {string} will return a single char excluding `o`, `i` and `l`
    */
@@ -31,7 +32,6 @@ class Random {
       this.letter()
     ].join('').toUpperCase()
   }
-// Temp comment
 
   id(length = 8) {
     length = length || 8 // default to a length of 8

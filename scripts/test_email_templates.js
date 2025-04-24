@@ -10,3 +10,4 @@ app.load().then(async () => {
       statusEmailSubject: "statusEmailSubject",
       firstName: "firstName",
       lastName: "lastName",
+      uri: "uri",

@@ -4,3 +4,5 @@ IdProofDocument:
     - type
     - number
     - expirationDate
+    - issuedDate
+    - issuer

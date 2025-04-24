@@ -10,3 +10,4 @@ describe('app.services.email.prospectPendingSigners', () => {
   let clock = null
 
   before(() => {
+    clock = sinon.useFakeTimers({ toFake: ['Date'] })

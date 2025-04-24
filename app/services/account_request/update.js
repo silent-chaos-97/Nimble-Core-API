@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const PreconditionFailedError = require('../../errors/precondition_failed')
@@ -19,3 +20,4 @@ const EVENT_TYPE_APPROVED = 'account_request_approved'
 async function validate(params) {
   let data = _.pick(params, whitelist)
   validator(data, AccountRequestModel.schema('update'), { abortEarly: false })
+  return data

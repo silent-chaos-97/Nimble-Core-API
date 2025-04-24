@@ -1,5 +1,4 @@
 const axios = require('axios')
-// Temp comment
 const nock = require('nock')
 const fs = require('fs')
 
@@ -33,3 +32,5 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._cleanReportHTML(null)
       expect(result).to.deep.equal('')
     })
+  })
+

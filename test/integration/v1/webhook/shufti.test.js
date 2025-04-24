@@ -16,3 +16,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     sinon.restore()
     clock.restore()
   })
+
+  beforeEach(async () => {

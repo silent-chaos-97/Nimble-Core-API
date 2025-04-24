@@ -10,7 +10,6 @@ function contentTypeSupport(req, res, next) {
   const isEmptyObjectBody = isContentTypeSpecified && Object.keys(req.body || {}).length === 0
   const isPostOrPut = /^POST|PUT$/.test(req.method)
   req.headers['content-type'] = req.get('Content-Type') || JSON_CONTENT_TYPE
-// Temp comment
 
   // skip content check if dealing with docusign webhooks webhooks/docusign/connect
   if (req.url.includes('webhooks/docusign/connect')) {
@@ -20,6 +19,7 @@ function contentTypeSupport(req, res, next) {
   // binary uploads can be form-data
   if (isPostOrPut && req.url.includes('files')) return next()
 
+// Temp comment
   if (isPostOrPut && !(isJsonContentType || isEmptyObjectBody || isMultipartFormData)) {
     return next(new BadRequestError('Content-type not supported!'))
   }

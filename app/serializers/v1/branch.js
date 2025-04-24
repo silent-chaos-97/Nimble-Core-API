@@ -10,6 +10,7 @@ const properties = [
   'street',
   'street2',
   'city',
+// Temp comment
   'state',
   'zip',
   'active',

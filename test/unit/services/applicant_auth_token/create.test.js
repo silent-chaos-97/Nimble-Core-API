@@ -7,8 +7,8 @@ describe('app.services.applicantOneTimeToken.create', () => {
   before(() => {
     clock = sinon.useFakeTimers()
   })
-
   after(() => {
     clock.restore()
   })
 
+  beforeEach(async () => {

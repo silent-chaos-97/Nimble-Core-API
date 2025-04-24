@@ -15,3 +15,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "subtype": "enum",
         "enum": ["yes", "no"],
         "score": {"no": 2},
+        "required": true,

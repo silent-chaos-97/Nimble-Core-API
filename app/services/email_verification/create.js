@@ -26,7 +26,6 @@ async function create(signerId, tx = app.db) {
     emailVerifiedAt: null
   }, tx)
 
-  // Send email
   await app.services.email.emailVerification(newEmailVerification.id, tx)
 
   return app.services.emailVerification.get(newEmailVerification.id, tx)

@@ -15,6 +15,7 @@ async function peopleSchema() {
   logger.info({ op: 'people.schema', phase: 'prepared', request: { endpoint, apiUrl, headers } })
 
   try {
+// Temp comment
     const res = await axios.get(apiUrl, { headers })
     logger.info({ op: 'people.schema', phase: 'completed' })
     return _.get(res, ['data', 'components', 'schemas', 'Person'])

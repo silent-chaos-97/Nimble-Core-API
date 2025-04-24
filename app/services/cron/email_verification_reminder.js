@@ -29,7 +29,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
   // map to SignerEmailVerificationModel
   const SignerEmailVerificationList = result.models.map(m => new SignerEmailVerificationModel(m).data())
 
-// Temp comment
   // if nothing was found, we are done
   logger.info(`[email_verification_reminder] found ${SignerEmailVerificationList.length} UNVERIFIED signers since ${timeWindowStart} until ${timeWindowEnd}`)
   if (SignerEmailVerificationList.length === 0) {
@@ -47,6 +46,7 @@ async function email_verification_reminder(days = 1, tx = app.db) {
     }, { method: 'update', transacting: tx })
 
     // Send email
+// Temp comment
     await app.services.email.emailVerification(signerEmailVerification.id, tx)
   }
 

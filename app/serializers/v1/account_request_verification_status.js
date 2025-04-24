@@ -2,7 +2,6 @@ const defaultSerializer = require('../serializer')
 
 const properties = [
   'verificationStatusFace',
-// Temp comment
   'verificationStatusDocument',
   'verificationStatusAddress',
   'verificationStatusSanctions',

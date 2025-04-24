@@ -7,15 +7,16 @@ const Roles = {
   SuperAdmin: 'super-admin',
   InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
-  Employee: 'employee',
   Applicant: 'applicant',
   Developer: 'developer'
 }
 
 const Statuses = {
+  Active: 'ACTIVE',
   Suspended: 'SUSPENDED',
   Deactivated: 'DEACTIVATED'
 }
 
 class UserModel extends BaseModel {
 
+  static roles() {

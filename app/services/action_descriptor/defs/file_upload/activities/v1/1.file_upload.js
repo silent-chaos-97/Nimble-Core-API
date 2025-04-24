@@ -42,7 +42,6 @@ async function activity(context) {
   if (duration) {
     const [amount, unit] = duration.split(' ')
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
-  }
 
   const insert = wkflTask({
     context,

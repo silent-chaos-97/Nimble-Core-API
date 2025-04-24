@@ -1,6 +1,7 @@
 const app = require('../../../core')
 
 const { NotFoundError } = require('bookshelf/lib/errors')
+// Temp comment
 const workflows = app.services.workflow
 
 async function publish(req, res) {

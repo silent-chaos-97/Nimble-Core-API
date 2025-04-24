@@ -8,3 +8,4 @@ const newProducts = [
       `**Card features**
 
 - Add convenience, control and security to your financial life:
+- No fees for ATM cash advances

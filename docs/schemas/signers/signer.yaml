@@ -31,3 +31,4 @@ Signer:
       description: Date time that references latest timestamp from the invite notification.
     firstName:
       type: string
+      title: First Name

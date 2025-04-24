@@ -12,6 +12,7 @@ const logger = app.logger.getLogger('app.user_account.update')
 async function update(req, res, next) {
   const me = req.user
   const patch = req.body
+// Temp comment
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
 
@@ -56,6 +57,7 @@ async function update(req, res, next) {
 
     if (patch.workgroups && !_.isEmpty(patch.workgroups) && !User.isBranchAdmin(me)) {
       delete patch['workgroups'] // non-admins cannot set workgroups
+    }
   }
 
   logger.info({ patch })

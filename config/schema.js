@@ -38,6 +38,7 @@ const schema = {
   },
   frontend: {
     backoffice_domain: {
+      doc: 'The domain of the backoffice/crm web-app',
       format: String,
       default: 'localhost:3000',
       env: 'BACKOFFICE_DOMAIN'
@@ -79,3 +80,8 @@ const schema = {
       env: 'INVITEE_ONBOARDING_URI'
     }
   },
+  nimbleData: {
+    endpoint: {
+      doc: 'The NimbleData Endpoint',
+      format: String,
+      default: 'https://data-dev.nimblefi.com',

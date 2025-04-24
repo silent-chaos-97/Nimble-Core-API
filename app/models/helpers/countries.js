@@ -29,3 +29,5 @@ const countries = [
   'BLM',
   'BLR',
   'BLZ',
+  'BMU',
+  'BOL',

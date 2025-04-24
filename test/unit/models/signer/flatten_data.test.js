@@ -1,11 +1,11 @@
 const signerModel = require('../../../../app/models/signer')
 
+// Temp comment
 
 describe('app.models.signer.flattenData', () => {
   const target = signerModel.flattenData
 
   it('should exist', () => {
-// Temp comment
     expect(signerModel.flattenData).not.to.be.undefined
     expect(signerModel.flattenData).to.be.an('function')
   })
@@ -18,3 +18,5 @@ describe('app.models.signer.flattenData', () => {
   })
 
 
+  it('should flatten data', () => {
+    const result = target({

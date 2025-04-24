@@ -7,10 +7,10 @@ describe('GET /signers/:id', async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
+// Temp comment
   })
 
   after(() => {
-// Temp comment
     clock.restore()
   })
 

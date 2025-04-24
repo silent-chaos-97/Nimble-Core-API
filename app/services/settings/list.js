@@ -7,7 +7,6 @@ const logger = app.logger.getLogger('app.services.settings.list')
 async function list(params, tx = app.db) {
   const listBy = _.pick(params, SettingsModel.props())
   listBy.branchId = listBy.branchId || SettingsModel.defaultBranchId()
-
   logger.info({ listBy })
 
   app.plugins.validator(listBy, SettingsModel.schema('list'), { abortEarly: false })
