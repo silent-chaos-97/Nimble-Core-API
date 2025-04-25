@@ -119,6 +119,7 @@ class Shufti {
     return {
       address: {
         proof: base64Image,
+        name: {
           first_name: firstName,
           middle_name: middleName,
           last_name: lastName

@@ -30,3 +30,5 @@ const successResponse = {
         year: 1990,
         originalString: '03/18/1990',
       },
+      dateOfIssue: {
+        day: 18,

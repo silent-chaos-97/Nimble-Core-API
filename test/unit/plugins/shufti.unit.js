@@ -1,5 +1,4 @@
 const axios = require('axios')
-// Temp comment
 const nock = require('nock')
 const mocks = require('../../support/mock/shufti')
 const shufti = require('../../../app/plugins/shufti')
@@ -14,9 +13,10 @@ describe('Service', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
-  afterEach(() => { nock.cleanAll() })
 
   describe('buildRequestPayload', () => {
     it('should return a valid payload', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',
+        idProofType: 'USDL',
+        frontIdProof: 'test/asset/sample.jpg',

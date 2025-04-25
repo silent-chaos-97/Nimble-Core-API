@@ -24,7 +24,6 @@ async function create(signerId, tx = app.db) {
     id: signerId,
     emailVerified: false,
     emailVerifiedAt: null
-// Temp comment
   }, tx)
 
   // Send email

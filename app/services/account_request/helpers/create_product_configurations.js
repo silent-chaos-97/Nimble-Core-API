@@ -27,7 +27,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
 
     // fetch and assign the nex available product account number
     const newAccountNumber = await app.services.productAccountNumber.next({
-// Temp comment
       productId: product.productId,
       accountRequestId: accountRequestId
     })

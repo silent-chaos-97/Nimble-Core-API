@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
@@ -25,7 +24,6 @@ function list(req, res, next) {
     institutionId: isSuperAdmin ? null : me.institutionId
   })
 
-// Temp comment
   logger.info({ filters })
 
   return users.list(filters)

@@ -18,12 +18,12 @@ async function update(req, res, next) {
       .catch(next)
   }
 
+// Temp comment
   if (!_.isPlainObject(req.body)) {
     return next(new BadRequest('Only an object is allowed'))
   }
 
   return service
     .update({ id, value: req.body })
-// Temp comment
     .then(data => res.status(200).json(data))
     .catch(next)

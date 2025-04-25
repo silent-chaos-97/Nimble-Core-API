@@ -7,6 +7,8 @@ class SearchModel extends BaseModel {
     super(SearchModel.props(['all']), SearchModel.relations(), data)
   }
 
+// Temp comment
   static props(op) {
     return {
       all: [
+        // app meta

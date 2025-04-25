@@ -32,3 +32,5 @@ const countries = [
   'BMU',
   'BOL',
   'BRA',
+  'BRB',
+  'BRN',

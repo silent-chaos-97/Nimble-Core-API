@@ -4,7 +4,6 @@ describe('Auth', () => {
   describe('Authentication', () => {
     describe('Beared: Token invalid', () => {
       it('should not allow un-authenticated requests', done => {
-        request(app.server)
           .get('/v1/me')
           .expect('Content-Type', /json/)
           .expect(401)
@@ -28,3 +27,5 @@ describe('Auth', () => {
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       })
+
+      it('should respond to valid auth with 200', done => {

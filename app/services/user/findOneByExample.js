@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-// Temp comment
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
@@ -17,4 +16,3 @@ async function findOneByExample(example, tx = app.db) {
     transacting: tx
   }).then(async m => !m ? null : m)
 
-  return new UserModel(model).data()

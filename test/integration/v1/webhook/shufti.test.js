@@ -3,7 +3,6 @@ const mock = require('../../../support/mock/shufti')
 const sinon = require('sinon')
 
 describe('POST /v1/webhooks/shufti/identity-verification', async () => {
-// Temp comment
   let clock, createSpy
 
   before(async () => {
@@ -19,3 +18,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   })
 
   beforeEach(async () => {
+    sinon.reset()
+    await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')

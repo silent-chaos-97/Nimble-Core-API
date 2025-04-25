@@ -28,3 +28,5 @@
       "city": null,
       "state": null,
       "zipCode": null,
+      "phoneNumber": null,
+      "ssn": null,

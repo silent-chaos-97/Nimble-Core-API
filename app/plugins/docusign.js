@@ -119,7 +119,6 @@ class Docusign {
    * @param {Array} signers - Array with personal information about each signer
    * @param { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '', createRecipientView: false } options - Information about the chosen products, amount
    * @param { fullName: '', email: '' } ccRecipient - Information about the copy carbon recipient
-   *
    **/
   async sendEnvelopeWithMultipleDocuments(contractData = {
     accountRequestId: '',

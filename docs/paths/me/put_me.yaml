@@ -2,4 +2,5 @@
   put:
     tags:
       - Me
+    summary: Update the current user
     description: >-

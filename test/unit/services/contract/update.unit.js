@@ -8,7 +8,6 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('app.services.contract.update', () => {
   describe('send', async () => {
 
-    it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('update')
       expect(app.services.contract.send).to.be.an('Function')
     })
@@ -16,3 +15,5 @@ describe('app.services.contract.update', () => {
     describe('when passing information to docusign', () => {
       let docusignSend = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
+
+      before(() => {

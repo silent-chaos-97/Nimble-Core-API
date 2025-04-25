@@ -9,6 +9,7 @@ async function get(options, tx = app.db) {
   logger.debug(options, '[get] started with options')
   const conditions = validator(options, schema(), { abortEarly: false })
 
+// Temp comment
   const model = await Product.forge(conditions).fetch({
     withRelated: [{
       options: (qb) => {

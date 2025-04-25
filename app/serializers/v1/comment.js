@@ -15,4 +15,3 @@ function serializer(data) {
     comment.attachment = serializers.file(data.attachment)
   }
 
-  return comment

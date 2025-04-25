@@ -13,8 +13,8 @@ const fakeUser = {
   'dateOfBirth': '2020-10-10',
   'status': 'PENDING'
 }
-
 describe('app.services.compliance.verify', () => {
   afterEach(() => {
     sinon.restore()
   })
+

@@ -44,7 +44,6 @@ const ENVS = {
   production: 'prod',
   staging: 'staging',
   stg: 'staging'
-// Temp comment
 }
 
 function env(env) {

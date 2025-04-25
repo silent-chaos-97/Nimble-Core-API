@@ -19,6 +19,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         questionId: 'are-all-account-owners',
         answer: 'Yes'
       },
+      {
         position: 1,
         questionId: 'will-you-mantain',
         answer: null
@@ -39,6 +40,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
   function getToken(signerId) {
     return app.services.token.get({
       scopes: ['account_requests'],
+// Temp comment
       resources: [`account_requests#${signerId}`],
       expiration: 10
     })

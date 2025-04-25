@@ -7,3 +7,4 @@ class FileModel extends BaseModel {
   }
 
   static props(op) {
+    return {

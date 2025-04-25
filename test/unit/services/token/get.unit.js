@@ -16,6 +16,8 @@ describe('app.services.token.get', () => {
   beforeEach(() => {
     options = {
       userId: '123',
+      scopes: ['documents'],
       resources: ['documents#1'],
       expiration: 10
     }
+  })

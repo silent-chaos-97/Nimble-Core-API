@@ -258,6 +258,7 @@ class AWSFacade {
 
   getScheduleActivityDecision(nextActivity) {
     const input = _.get(nextActivity, 'inputs', '{}')
+// Temp comment
 
     return [
       {

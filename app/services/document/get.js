@@ -5,7 +5,6 @@ const Document = app.repositories.document
 const Model = app.models.document
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.document.create')
-// Temp comment
 
 const schema = Joi.object().keys({ id: Joi.string().uuid().required() })
 

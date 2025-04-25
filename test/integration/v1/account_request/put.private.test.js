@@ -41,6 +41,7 @@ describe('PUT private /account-requests/:id', () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
+// Temp comment
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
       await seed.accountRequest.create(pendingAccountRequestId)
@@ -57,3 +58,7 @@ describe('PUT private /account-requests/:id', () => {
           .expect('Content-Type', /json/)
           .send(putRequest)
           .expect(403)
+          .end((err, res) => {
+            expect(res.body.message).to.contain('Status can only be changed to APROVED if it was previously SIGNED')
+            done()
+          })

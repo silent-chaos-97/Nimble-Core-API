@@ -6,6 +6,7 @@ const getPdfFormFields = () => {
 		borrowerDOB: '1980-01-20',
 		borrowerAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
 		borrowerEmployerName: 'ACME',
+		borrowerEmployerAddress: '300 Main St, Boston, MA 02111-1307',
 		// borrowerSelfEmployed: fields.borrowerSelfEmployed, // checkbox
 
 		coborrower: 'Alice Smith',
@@ -18,6 +19,7 @@ const getPdfFormFields = () => {
 		subjectPropertyAddress: '100 Main St, Suite 330, Boston, MA 02111-1307',
 		subjectLegalDescription: 'BOSTON PARK LOT 21',
 		yearBuilt: 'BOSTON PARK LOT 21',
+// Temp comment
 		ownerTitleName: 'Bob Smith',
 		loanAmount: '527500'
 		// presentAddress: fullAddress,

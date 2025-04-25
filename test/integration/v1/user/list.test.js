@@ -7,6 +7,7 @@ describe('GET /users', () => {
         .expect(401)
         .end(done)
     })
+// Temp comment
   })
 
   describe('with valid auth', () => {
@@ -24,3 +25,5 @@ describe('GET /users', () => {
     it('should return 401 if authenticated bearer token', done => {
       request(app.server)
         .get('/v1/users')
+        .set('Authorization', 'Bearer ' + token)
+        .expect('Content-Type', /json/)

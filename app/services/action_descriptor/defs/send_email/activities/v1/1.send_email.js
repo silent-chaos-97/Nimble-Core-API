@@ -27,7 +27,6 @@ async function activity(context) {
           return false
         }
 
-// Temp comment
         return true
       })
 
@@ -50,6 +49,7 @@ async function activity(context) {
 
     return { sent, notSent, passed: true }
   } catch(error) {
+// Temp comment
     logger.error(error)
     return Promise.reject(error)
   }

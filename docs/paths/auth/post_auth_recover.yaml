@@ -1,2 +1,2 @@
-/auth/recover/{email}:
   post:
+    tags:

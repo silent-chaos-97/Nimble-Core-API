@@ -655,3 +655,49 @@ const successResponse = {
                 "value": "Désigné par l'Union européenne le 21/02/2002, par les règlements (UE) 2016/218 du 16/02/2016, (UE) 2018/223 du 15/02/2018, (UE)2019/283 du 18/02/2019"
               },
               {
+                "name": "Other Information",
+                "source": "dfat-australia-list",
+                "value": "Former President"
+              },
+              {
+                "name": "Other Information",
+                "source": "hm-treasury-list",
+                "value": "Former President."
+              },
+              {
+                "name": "Other Information",
+                "source": "malta-financial-services-authority-mfsa-national-sanctions",
+                "value": "President; born 21.2.1924"
+              },
+              {
+                "name": "Other Information",
+                "source": "tresor-direction-generale",
+                "value": "Renseignements complémentaires : Ancien président; responsable d'activités qui portent gravement atteinte à la démocratie, au respect des droits de l'homme et à l'État de droit"
+              },
+              {
+                "name": "Other Information",
+                "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
+                "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0283&from=EN"
+              },
+              {
+                "name": "Party",
+                "source": "complyadvantage",
+                "value": "Zimbabwe African National Union"
+              },
+              {
+                "name": "Political Party",
+                "source": "complyadvantage",
+                "tag": "political_party",
+                "value": "ZANU-PF"
+              },
+              {
+                "name": "Program",
+                "source": "dfat-australia-list",
+                "value": "Autonomous (Zimbabwe)"
+              },
+              {
+                "name": "Program",
+                "source": "swiss-seco-list",
+                "value": "Ordinance of 19 March 2002 on measures against Zimbabwe (SR 946.209.2), annex 2"
+              },
+              {

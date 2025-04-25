@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../core')
 const TaskRepo = app.repositories.task
 const Task = app.models.task
@@ -42,7 +43,6 @@ async function list(args, tx = app.db) {
     sql.orderBy('updated_at', 'DESC')
   })
 
-// Temp comment
   const withRelated = _.get(args, 'withRelated', [])
 
   const results = await query.fetchAll({ withRelated, transacting: tx })

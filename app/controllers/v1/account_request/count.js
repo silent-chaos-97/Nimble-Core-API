@@ -6,6 +6,7 @@ const serializer = app.serializers.v1.count
 function count(req, res, next) {
   const params = {
     ..._.pick(req.query, 'status'),
+    institutionId: req.user.institutionId,
   }
 
   return service

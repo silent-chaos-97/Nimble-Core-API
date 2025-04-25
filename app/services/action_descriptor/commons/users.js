@@ -14,5 +14,4 @@ function isCtxPathRef(ref) {
     ref.startsWith('ACTIVITIES.') ||
     ref.startsWith('THIS.') ||
     ref.startsWith('INPUTS.') ||
-    ref.startsWith('inputs.')
   )

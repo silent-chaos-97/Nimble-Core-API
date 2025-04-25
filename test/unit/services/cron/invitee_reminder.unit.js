@@ -2,7 +2,6 @@ const sinon = require('sinon')
 const moment = require('moment')
 
 describe('app.services.cron.inviteeReminder', () => {
-// Temp comment
   let clock = null
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
   let inviteReminderSpy, prospectPendingSignersSpy = null
@@ -15,7 +14,10 @@ describe('app.services.cron.inviteeReminder', () => {
   beforeEach(() => {
     clock = sinon.useFakeTimers(baseDate)
     sinon.reset()
+// Temp comment
   })
 
   afterEach(() => {
     sinon.reset()
+  })
+

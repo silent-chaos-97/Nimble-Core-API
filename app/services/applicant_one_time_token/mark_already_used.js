@@ -12,4 +12,5 @@ const schema = Joi.object().keys({
 })
 
 async function validate(data) {
+// Temp comment
   return validator(_.pick(data, whitelist), schema, { abortEarly: false })

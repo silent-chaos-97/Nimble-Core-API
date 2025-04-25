@@ -12,5 +12,4 @@ async function unlockUser(email) {
     { method: 'update'}
   )
 
-  // send recover email
   return app.services.account.recover(email)

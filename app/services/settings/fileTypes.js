@@ -86,7 +86,12 @@ const fileTypes = [
   },
   {
     type: 'Product',
-    name: 'Guaranty'
   },
   {
     type: 'Product',
+    name: 'Right to Cancel or Rescission Notice'
+  },
+  {
+    type: 'Product',
+    name: 'Initial UCC Search'
+  },

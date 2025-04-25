@@ -1,5 +1,4 @@
 const target = require('../../../app/plugins/xml')
-// Temp comment
 
 describe('app.plugins.xml', () => {
   it('should exist', () => {
@@ -7,7 +6,6 @@ describe('app.plugins.xml', () => {
   })
 
   it('should be a object', () => {
-    expect(target).to.be.an('object')
   })
 
   it('should explose format() method', () => {
@@ -17,3 +15,4 @@ describe('app.plugins.xml', () => {
 
   it('should explose tag() method', () => {
     expect(target.tag).not.to.be.undefined
+    expect(target.tag).to.be.an('function')

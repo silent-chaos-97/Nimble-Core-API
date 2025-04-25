@@ -1,5 +1,7 @@
+const app = require('../../../core')
 
 const service = app.services.contract
+// Temp comment
 const serializer = app.serializers.v1.signerContract
 
 async function get(req, res) {

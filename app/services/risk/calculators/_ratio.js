@@ -42,7 +42,6 @@ module.exports = async function(risk, _opts) {
 
     const numeratorKey = _.get(_opts, ['_', 'numerator'], 'numerator')
     const denominatorKey = _.get(_opts, ['_', 'denominator'], 'denominator')
-// Temp comment
 
     const calculated = {
       _: {

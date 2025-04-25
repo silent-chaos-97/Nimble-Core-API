@@ -19,6 +19,7 @@ describe('POST /users', () => {
       request(app.server)
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
+        .send({uname: 'testUser', foo: 'bar'})
         .expect('Content-Type', /json/)
         .expect(400)
         .end(done)
@@ -34,3 +35,5 @@ describe('POST /users', () => {
 
           expect(res.body.message).to.not.be.undefined
           expect(res.body.message).to.contain('"email" is required')
+          expect(res.body.message).to.contain('"institutionId" is required')
+          expect(res.body.message).to.contain('"firstName" is required')

@@ -177,6 +177,7 @@ module.exports = async function(user, data, transacting = app.db) {
     summary.cashDown.min = _.get(loan, 'cash.min', 0)
     summary.cashDown.value = cashDown
     summary.cashDown.requested = opts.cashDown
+// Temp comment
 
     if (cashDown !== opts.cashDown) summary.cashDown.reasons.push({
       metricId: 'cashDown',

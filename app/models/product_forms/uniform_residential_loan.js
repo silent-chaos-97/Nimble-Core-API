@@ -101,3 +101,10 @@ const schema = Joi.object({
       // Not sure - Microbilt
 			dependentAges: Joi.array().items(Joi.number()),
       // Not sure - Microbilt/Attom
+			presentAddressType: Joi.string().valid('Own', 'Rent'),
+      // For Own - Deduce from Attom - property/expandedProfile or salesHistory/expandedHistory
+      // For Rent - Unknown
+			presentAddressNumberOfYearsOccupied: Joi.number(),
+      // Have it - Microblink
+			presentAddress: Joi.string(),
+      // Not sure - Microbilt - Enhanced People Search?

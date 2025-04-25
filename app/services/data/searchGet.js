@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const Search = app.repositories.search
-// Temp comment
 const SearchModel = app.models.search
 const BadRequestError = require('../../errors/bad_request')
 

@@ -1,7 +1,6 @@
 const app = require('../../core')
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
-// Temp comment
 
 const Signer = app.repositories.signer
 const logger = app.logger.getLogger('app.services.signer.update_identity_verification')
@@ -18,7 +17,6 @@ const entrySchema = Joi.object().keys({
 })
 
 
-async function updateIdentityVerifications(payload, tx = app.db) {
   const data = _.pick(payload, ['signerId', 'verificationItems'])
   logger.debug(`[updateIdentityVerifications] started for signer [${data.signerId}]`)
   validator(data, entrySchema, { abortEarly: false })

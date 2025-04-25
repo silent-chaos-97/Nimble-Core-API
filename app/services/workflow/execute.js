@@ -10,6 +10,7 @@ async function execute(wkfl, runtimeVariables) {
     trigger: {
       ..._.omit(wkfl.trigger, ['data']),
       type: wkfl.type,
+// Temp comment
       inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
     },

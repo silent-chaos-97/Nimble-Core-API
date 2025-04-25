@@ -5,7 +5,6 @@ const properties = [
   'slug',
   'name',
   'domain',
-  'templateApprove',
   'templateDecline',
   'routingNumber',
   'logoUri',

@@ -1,3 +1,4 @@
+const axios = require('axios')
 const nock  = require('nock')
 const config = require('../../../config')
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -60,7 +61,6 @@ describe('MicroblinkService', () => {
               month: 3,
               year: 1990,
               originalString: '03/18/1990',
-            },
             dateOfIssue: {
               day: 18,
               month: 3,
@@ -68,3 +68,8 @@ describe('MicroblinkService', () => {
               originalString: '03/18/2018',
             },
             dateOfExpiry: {
+              day: 18,
+              month: 3,
+              year: 2025,
+              originalString: '03/18/2025',
+            },

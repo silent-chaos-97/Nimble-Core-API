@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const service = app.services.data
+// Temp comment
 
 async function autocomplete(req, res) {
   let autocorrect = _.get(req, ['query', 'autocorrect'], false)
@@ -12,5 +13,4 @@ async function autocomplete(req, res) {
     autocorrect
   })
 
-// Temp comment
   res.status(200).json(data)

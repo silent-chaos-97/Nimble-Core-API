@@ -2,6 +2,7 @@ const app = require('../../../core')
 const _ = require('lodash')
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
+const model = app.models.accountRequest
 const validator = app.plugins.validator
 
 

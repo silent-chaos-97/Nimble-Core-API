@@ -8,3 +8,4 @@ const SCHEMAS = {
 
   email: Joi.object().keys({
     taskId: Joi.string(),
+    method: Joi.string().required().valid('email'),

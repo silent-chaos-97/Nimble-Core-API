@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const TaskRepo = app.repositories.task
-// Temp comment
 const Task = app.models.task
 
 async function get(where, tx = app.db) {
@@ -11,7 +10,6 @@ async function get(where, tx = app.db) {
         where.forEach(w => {
           q.where(...w)
         })
-      } else {
         // TODO: check why `where` is sometimes string
         q.where('id', where)
       }

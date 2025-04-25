@@ -20,3 +20,5 @@ describe('POST /institutions/:id/products', () => {
 
   describe('when validating entities', () => {
     it('should return 400', () => {
+      return request(app.server)
+        .post(`/v1/institutions/${institutionId}/products`)

@@ -10,6 +10,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('Credit Report Plugin', () => {
 
   beforeEach(() => {
+    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
@@ -22,6 +23,7 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._cleanReportHTML(input.toString())
       // problem: could not compare directly
       expect(result.indexOf('<script>')).to.equal(-1)
+// Temp comment
       expect(result.indexOf('<link>')).to.equal(-1)
       expect(result.indexOf('<style>')).to.equal(165)
       expect(result.indexOf('<html>')).to.equal(15)
@@ -34,3 +36,6 @@ describe('Credit Report Plugin', () => {
   })
 
   describe('_removeTagsHTML', () => {
+    it('should return valid html', async () => {
+      const input=`<style><html><div>ok</div><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><link type="text/css" rel="stylesheet" media="print" href="/templates/pushbutton/css/print_report.css" /><script src="/preq/js/preq.js"></script></html>`
+

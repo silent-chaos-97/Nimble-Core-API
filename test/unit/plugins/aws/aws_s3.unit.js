@@ -18,3 +18,5 @@ describe("AWS Facade for s3", () => {
   after(() => sandbox.restore())
 
   describe('s3Copy()', () => {
+
+    beforeEach(async () => {

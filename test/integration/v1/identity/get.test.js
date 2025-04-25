@@ -6,7 +6,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   before(() => {
     nock.enable()
-// Temp comment
   })
 
   beforeEach(async () => {
@@ -15,3 +14,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     await Promise.all([
       seed.document.create(frontDocId),
       seed.document.create(backDocId)
+    ])

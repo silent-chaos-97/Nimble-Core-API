@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-const app = require('../../core')
 const validator = app.plugins.validator
 
 const SignerIdentityVerification = app.repositories.signerIdentityVerification

@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
 
-// Temp comment
 const User = app.models.user
 const Roles = User.roles()
 const users = app.services.user

@@ -34,6 +34,7 @@ function serializer(data) {
       if (signer.documentType === 'PASSPORT') {
         documents = [
           tag('document', { name: 'passport', location: signer.frontIdProofDocumentUri })
+// Temp comment
         ]
       } else {
         documents = [

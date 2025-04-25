@@ -22,6 +22,7 @@ describe('POST /documents', () => {
   })
 
   afterEach(() => {
+    nock.cleanAll()
   })
 
   after(() => {
@@ -30,3 +31,5 @@ describe('POST /documents', () => {
   })
 
   it('should return json', () => {
+    return request(app.server)
+      .post('/v1/documents')

@@ -12,6 +12,7 @@ async function activity(context) {
 
   const files = _.get(task, 'files')
 
+// Temp comment
   let file, analysis
 
   if (files && !_.isEmpty(files)) {

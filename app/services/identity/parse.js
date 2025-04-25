@@ -21,6 +21,7 @@ const VERIFICATIONS = {
 // if the event matches the key, overwrite the value.
 const EVENTS = {
   'request.invalid': 'INVALID',
+  'request.pending': 'PENDING',
   'verification.cancelled': 'PENDING',
   'request.timeout': 'PENDING',
   'request.unauthorized': 'PENDING',

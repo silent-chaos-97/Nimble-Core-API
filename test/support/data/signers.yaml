@@ -40,7 +40,6 @@
   address: '123 main street apt. 1'
   state: 'CA'
   zip_code: '22222'
-  ssn: '333-33-3333'
   phone_number: '(233) 555-3333'
   date_of_birth: 1945-12-06
 
@@ -49,3 +48,8 @@
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
   consent: true
   role: 'SECONDARY'
+  status: 'PENDING'
+  email: 'psousa+dev1@wearesingular.com'
+  first_name: 'John'
+  last_name: 'McClane'
+  contract_document_signer_status: 'SENT'
