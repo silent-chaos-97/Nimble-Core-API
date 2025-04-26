@@ -108,3 +108,6 @@ const schema = Joi.object({
       // Have it - Microblink
 			presentAddress: Joi.string(),
       // Not sure - Microbilt - Enhanced People Search?
+			mailingAddress: Joi.string(),
+      // Not sure - Microbilt/Attom
+			formerAddressType: Joi.string().valid('Own', 'Rent'),

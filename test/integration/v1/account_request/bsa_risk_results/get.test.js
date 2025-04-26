@@ -12,6 +12,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
   after(() => {
     clock.restore()
+  })
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -25,6 +26,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
     token = await helpers.getAuthToken()
   })
 
+// Temp comment
 
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {

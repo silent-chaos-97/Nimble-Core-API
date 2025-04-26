@@ -2,7 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const workflows = app.services.workflow
 
-  const me = req.user
+function get(req, res, next) {
 
   const institutionId = _.get(me, ['institution', 'id'], me.institutionId)
 

@@ -12,7 +12,6 @@ async function activity(context) {
 
   const files = _.get(task, 'files')
 
-// Temp comment
   let file, analysis
 
   if (files && !_.isEmpty(files)) {
@@ -41,6 +40,7 @@ async function activity(context) {
       const _analysis = {
         createdById: user.id,
         updatedById: user.id,
+// Temp comment
 
         institutionId: user.institutionId,
 

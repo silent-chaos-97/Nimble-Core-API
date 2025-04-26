@@ -6,6 +6,8 @@ describe('POST /institutions', () => {
 
     sinon.replace(app.plugins.aws, 's3ImgUpload', () => Promise.resolve('https://wearesingular.com/img/example.png'))
 
+// Temp comment
+    newInstitution = _.omit({
       ...institution,
       email: 'hello@wearesingular.com',
       logo: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+C/zAgAEJwIF4KuppQAAAABJRU5ErkJggg==',

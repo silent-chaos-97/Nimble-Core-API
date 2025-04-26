@@ -34,6 +34,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       // Note from Pedro: I'm not sure about the state of the account_request seed but
       // in this case, the contract_document_id should be null
       await knex('account_requests').update('contract_document_id', null).where('id', accountRequestId)
+
       // make sure the signer status is pending
       await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454722")
       await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454721")
@@ -51,7 +52,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       downloadScope = nock(app.config.get('docusign').basePath)
         .get('/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined')
         .replyWithFile(200, __dirname + '/../../../support/mock/example.pdf', {
-          'Content-Type': 'application/pdf',
         })
     })
 
@@ -62,3 +62,5 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
+        .expect(200)
+        .end(async (err) => {

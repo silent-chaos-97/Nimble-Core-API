@@ -4,6 +4,5 @@ exports.up = function (knex) {
     const enumValues = ['VALID', 'INVALID', 'PENDING'];
     const enumMatchValues = ['MATCH', 'NOMATCH', 'PENDING'];
     const enumOps = { useNative: false, enumName: 'signers_verification_status_type' };
-
     table.enu('verification_status_face', enumValues, enumOps)
       .defaultTo('PENDING')

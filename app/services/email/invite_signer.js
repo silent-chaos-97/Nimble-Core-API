@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-// Temp comment
 const app = require('../../core')
 const moment = require('moment')
 const validator = app.plugins.validator
@@ -15,7 +14,6 @@ const inviteeEmailSchema = Joi.object().keys({
   inviteeRole: Joi.string().required().valid('primary', 'secondary'),
   accountType: Joi.string().required(),
   url: Joi.string().required(),
-  institution: Joi.string().required(),
   institutionUrl: Joi.string().required()
 })
 

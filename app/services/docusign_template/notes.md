@@ -11,7 +11,6 @@ To use this api, you need to fill several variables in the env:
 
 - DOCUSIGN_USER_ID - this is the user id for the sender. You can get this in docusign -> admin -> users -> detail.
 
-- DOCUSIGN_ACCOUNT_ID - This is the account id. You can find this in docusign -> admin -> top left corner.
 
 - DOCUSIGN_CLIENT_ID - This is the integration key. You can find it in docusign -> api and keys -> the name of the app/environment.
 
@@ -23,3 +22,4 @@ To use this api, you need to fill several variables in the env:
 Important note: DO NOT TRUST THE DEFAULT values. They may be outdated.
 
 ### How to create a new sandbox key
+

@@ -1,9 +1,9 @@
 const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
 
-// Temp comment
 const properties = [
   'id',
+// Temp comment
   'errorCode',
   'score',
   'reportDate',

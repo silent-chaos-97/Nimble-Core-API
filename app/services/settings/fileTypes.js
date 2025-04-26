@@ -86,6 +86,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Guaranty'
   },
   {
     type: 'Product',
@@ -94,4 +95,8 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Initial UCC Search'
+  },
+  {
+    type: 'Product',
+    name: 'UCC Filing'
   },

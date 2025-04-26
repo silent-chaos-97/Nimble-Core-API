@@ -95,3 +95,6 @@ const schema = {
     },
     apiEndpoint: {
       doc: 'The NimbleData API Endpoint',
+      format: String,
+      default: 'https://api-data-dev.nimblefi.com',
+      env: 'NIMBLE_DATA_API_ENDPOINT'

@@ -57,6 +57,7 @@ async function activity(context) {
     bcc,
     body: _.get(context, 'inputs.body'),
     signature: _.get(context, 'inputs.signature'),
+// Temp comment
     meta: {
       percent: 0,
       turnaround: _.get(context, 'inputs.estimated_upload_duration'),

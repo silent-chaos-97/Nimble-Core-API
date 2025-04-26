@@ -12,6 +12,7 @@ const service = app.services.auth
 //
 //                   // Todo: Save one-time token (result.token) to DB here
 //
+//                 } else {
 //                   res.status(400).json({message:"Invalid Code!", status:false})
 //                 }
 //             }).catch((err) => {

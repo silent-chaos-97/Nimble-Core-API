@@ -4,9 +4,7 @@ const publicMetadata = {
       {
         op: '>=',
         val: 7,
-        risk: 'High'
       },
-// Temp comment
       {
         op: '>=',
         val: 5,
@@ -26,3 +24,4 @@ const publicMetadata = {
     subtype: 'text',
     required: true,
     dependsOn: {
+      milesAway: 'yes'

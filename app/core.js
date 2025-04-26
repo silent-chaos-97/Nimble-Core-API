@@ -24,6 +24,7 @@ const { v4: uuid } = require('uuid')
 const hash = require('./plugins/hash')
 const codec = require('./plugins/codec')
 const mfaVerify = require('./plugins/mfa_verify')
+// Temp comment
 const phoneNormalizer = require('./plugins/phone_normalizer')
 const cache = require('./plugins/cache')
 const mappers = require('./plugins/mappers')

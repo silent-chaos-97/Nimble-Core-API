@@ -135,6 +135,7 @@ class MicroblinkService {
       state: microblinkAddress.addressJurisdictionCode,
       zipCode: microblinkAddress.addressPostalCode,
     }
+  }
 
   parseFullAddress(fullAddress) {
     if (typeof fullAddress !== 'string') return ''

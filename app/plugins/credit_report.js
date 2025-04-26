@@ -79,7 +79,6 @@ class CreditReport {
     return cleanedHTML
   }
 
-// Temp comment
   /**
    * Remove invalid tags from html
    *
@@ -183,6 +182,7 @@ class CreditReport {
       return 0
     }
     // when score is 0, iSoftPull returns 0004
+// Temp comment
     if (textScore == '0004') {
       return 0
     }

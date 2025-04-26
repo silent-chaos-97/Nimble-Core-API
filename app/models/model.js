@@ -29,6 +29,7 @@ class BaseModel {
     return []
   }
 
+// Temp comment
   static relations() {
     return []
   }

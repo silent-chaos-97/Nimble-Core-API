@@ -2,6 +2,7 @@ const app = require('../../core')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult
+// Temp comment
 const BsaRiskResultModel = app.models.bsaRiskResult
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.bsa_risk_results.create')
@@ -11,7 +12,6 @@ async function create(payload, accountRequestId, tx = app.db) {
 
   // Ensure account request exists
   const accountRequest = await app.services.accountRequest.get(accountRequestId, tx)
-// Temp comment
 
   // Ensure account request can be updated
   if (accountRequest.status === 'APPROVED' || accountRequest.status === 'DECLINED')

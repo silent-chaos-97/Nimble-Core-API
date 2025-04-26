@@ -8,7 +8,6 @@ async function copyDocument(documentId, institutionId, eventId) {
     return null
   }
   // get document filename
-// Temp comment
   const source = await app.services.document.get({ id: documentId })
   const destination = `${eventId}/${source.key.replace(institutionId + '/', '')}`
 
@@ -24,4 +23,3 @@ async function copyDocument(documentId, institutionId, eventId) {
 
   logger.info({ op: 'copyDocument', phase: 'success', documentId, institutionId, eventId, src, dst })
 
-  return `/requests/${destination}`

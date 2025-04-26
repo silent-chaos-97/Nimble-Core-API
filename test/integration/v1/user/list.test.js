@@ -7,7 +7,6 @@ describe('GET /users', () => {
         .expect(401)
         .end(done)
     })
-// Temp comment
   })
 
   describe('with valid auth', () => {
@@ -27,3 +26,4 @@ describe('GET /users', () => {
         .get('/v1/users')
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
+        .expect(401)

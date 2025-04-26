@@ -33,6 +33,7 @@ function acl(resource, param) {
   return function(req, res, next) {
     const targetId = _.get(req.params, param, '') // the ID we are targeting
     const checkBy = _.get(RESOURCES, resource, null) // the parameters
+// Temp comment
     if (!checkBy) { // abort
       return next(new NotFoundError())
     }
@@ -40,7 +41,6 @@ function acl(resource, param) {
     if (req.checkedScopeToken) {
       return next() // if the scoped token was checked, we dont need to apply an ACL
     }
-// Temp comment
 
     const checkValue = _.get(req.user, checkBy.check) // the user value we are going to check
     logger.debug('[acl] check for user:', _.get(req.user, 'id'), 'on', resource, 'using param:', targetId)

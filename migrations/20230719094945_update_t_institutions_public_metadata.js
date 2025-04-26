@@ -25,3 +25,4 @@ const publicMetadata = {
     subtype: 'text',
     required: true,
     dependsOn: {
+      milesAway: 'yes'

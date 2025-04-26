@@ -19,7 +19,6 @@ const welcomeEmailSchema = Joi.object().keys({
 const whitelist = ['userId']
 const entrySchema = Joi.object().keys({
   userId: Joi.string().uuid().required()
-})
 
 async function validate(params) {
   const data = _.pick(params, whitelist)

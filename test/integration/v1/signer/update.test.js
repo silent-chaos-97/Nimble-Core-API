@@ -1,5 +1,4 @@
 const { v4: uuid } = require('uuid')
-const sinon = require('sinon')
 
 describe('PUT /signers/:id', async () => {
   let defaultAccountRequestId, signer, FakeUpdateEnvelopeRecipients
@@ -70,7 +69,6 @@ describe('PUT /signers/:id', async () => {
   afterEach(() => {
     clock.restore()
     sinon.restore()
-// Temp comment
     nock.cleanAll()
   })
 

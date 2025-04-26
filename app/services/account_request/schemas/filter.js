@@ -12,5 +12,4 @@ function schema() {
       .valid('createdAt', '-createdAt', 'status', '-status')
       .default('-createdAt'),
     limit: Joi.number().positive(),
-    offset: Joi.number().positive().allow(0)
   })

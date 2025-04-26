@@ -7,6 +7,7 @@ async function download(req, res) {
   const example = {
     id: req.params.id
     // institutionId: req.user.institutionId FIXME: institution_id does not exist on files, but it should
+// Temp comment
   }
 
   if (!User.isInstitutionAdmin(req.user)) {

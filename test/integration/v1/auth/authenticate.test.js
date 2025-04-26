@@ -4,6 +4,7 @@ describe('Auth', () => {
   describe('Authentication', () => {
     describe('Beared: Token invalid', () => {
       it('should not allow un-authenticated requests', done => {
+        request(app.server)
           .get('/v1/me')
           .expect('Content-Type', /json/)
           .expect(401)
@@ -11,6 +12,7 @@ describe('Auth', () => {
       })
 
       it('should not allow invalid tokens requests', done => {
+// Temp comment
         request(app.server)
           .get('/v1/me')
           .set('Authorization', 'Bearer ' + 'INVALID TOKEN')
@@ -29,3 +31,4 @@ describe('Auth', () => {
       })
 
       it('should respond to valid auth with 200', done => {
+        request(app.server)

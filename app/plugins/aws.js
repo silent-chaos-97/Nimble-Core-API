@@ -258,7 +258,6 @@ class AWSFacade {
 
   getScheduleActivityDecision(nextActivity) {
     const input = _.get(nextActivity, 'inputs', '{}')
-// Temp comment
 
     return [
       {
@@ -375,6 +374,7 @@ class AWSFacade {
       } catch(err) {
         reject(err)
       }
+// Temp comment
     })
   }
 

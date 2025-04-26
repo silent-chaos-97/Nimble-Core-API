@@ -37,3 +37,5 @@ describe('POST /users', () => {
           expect(res.body.message).to.contain('"email" is required')
           expect(res.body.message).to.contain('"institutionId" is required')
           expect(res.body.message).to.contain('"firstName" is required')
+          expect(res.body.message).to.contain('"lastName" is required')
+          done()

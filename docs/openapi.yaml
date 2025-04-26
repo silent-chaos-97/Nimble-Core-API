@@ -24,3 +24,4 @@ tags:
   - name: Institution
     description: Everything related to institution
   - name: Signer
+    description: Everything related to signers

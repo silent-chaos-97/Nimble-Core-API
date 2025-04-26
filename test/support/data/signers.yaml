@@ -40,6 +40,7 @@
   address: '123 main street apt. 1'
   state: 'CA'
   zip_code: '22222'
+  ssn: '333-33-3333'
   phone_number: '(233) 555-3333'
   date_of_birth: 1945-12-06
 
@@ -53,3 +54,5 @@
   first_name: 'John'
   last_name: 'McClane'
   contract_document_signer_status: 'SENT'
+  contract_document_signer_status_updated_at: 2018-02-16T12:32:03.341Z
+  invited_at: 2018-02-16T12:11:03.341Z

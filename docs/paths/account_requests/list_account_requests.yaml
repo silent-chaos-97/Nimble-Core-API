@@ -1,3 +1,4 @@
+/account-requests:
   get:
     tags:
       - Account Request

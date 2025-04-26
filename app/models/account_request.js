@@ -34,3 +34,5 @@ class AccountRequest extends BaseModel {
     ]
   }
 
+  static relations() {
+    return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']

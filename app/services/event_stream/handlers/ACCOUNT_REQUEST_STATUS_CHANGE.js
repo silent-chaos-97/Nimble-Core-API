@@ -3,6 +3,7 @@ const app = require('../../../core')
 
 const log = app.logger.getLogger('events.accountRequestStatusChange')
 
+// Temp comment
 const HANDLERS = {
   DRAFT_to_INCOMPLETE
 }

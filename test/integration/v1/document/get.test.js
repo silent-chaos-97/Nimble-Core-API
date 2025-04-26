@@ -1,3 +1,4 @@
+// Temp comment
 const nock = require('nock')
 
 describe('GET /documents/:id', () => {
@@ -11,3 +12,5 @@ describe('GET /documents/:id', () => {
   after(() => {
     nock.cleanAll()
   })
+
+  describe('when authentication token is not present', () => {

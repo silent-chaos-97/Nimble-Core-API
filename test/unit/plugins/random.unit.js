@@ -8,3 +8,4 @@ describe('Random Plugin', () => {
   describe('num()', () => {
 
     it('should exist', () => {
+      expect(rand.num).not.to.be.undefined

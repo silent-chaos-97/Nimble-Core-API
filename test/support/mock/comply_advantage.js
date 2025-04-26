@@ -701,3 +701,25 @@ const successResponse = {
                 "value": "Ordinance of 19 March 2002 on measures against Zimbabwe (SR 946.209.2), annex 2"
               },
               {
+                "name": "Program",
+                "source": "malta-financial-services-authority-mfsa-national-sanctions",
+                "value": "The lists published on the official site of The Malta Financial Services Authority include United Nations; European Union and United States sanctions; that have been implemented by Malta under its own laws and regulations during the 2010 - 2016 period. However; entities found on the present list are to be considered active (under current sanctions of Malta) only if they are also under current UN and/or EU sanctions. Also; all UN and EU current sanctions; even those that are not on the present list; are to be considered as active in Malta; as the Maltese National Interest (Enabling Powers) Act provides for the direct applicability into Maltese law of all the sanctions issued by the United Nations Security Council and the sanctions imposed by the Council of the European Union."
+              },
+              {
+                "name": "Program",
+                "source": "ofac-sdn-list",
+                "value": "ZIMBABWE"
+              },
+              {
+                "name": "Reason",
+                "source": "malta-financial-services-authority-mfsa-national-sanctions",
+                "value": "COUNCIL REGULATION (EC) No 314/2004 of 19 February 2004"
+              },
+              {
+                "name": "Regime",
+                "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
+                "value": "2019/283 (OJ L47)"
+              },
+              {
+                "name": "Regime",
+                "source": "special-economic-measures-act",

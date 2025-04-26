@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const TaskRepo = app.repositories.task
 const Task = app.models.task
@@ -26,6 +25,7 @@ async function list(args, tx = app.db) {
       )
     } catch (err) {
       // gulp
+// Temp comment
     }
 
     if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution

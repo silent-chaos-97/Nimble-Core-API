@@ -12,8 +12,10 @@ describe('GET /signers/:id/contract', async () => {
         `signers#00000000-9999-aaaa-0000-2ea08a01e902`,
         `signers#00000000-9999-aaaa-0000-2ea08a01e903`,
       ],
+      expiration: 1200
     })
 
+// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable()
   })
@@ -24,3 +26,4 @@ describe('GET /signers/:id/contract', async () => {
     nock.enableNetConnect()
   })
 
+  afterEach(() => {

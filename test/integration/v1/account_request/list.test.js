@@ -137,7 +137,6 @@ describe('GET /account-requests', () => {
                 "category": "some-choice",
                 "key": "optionA",
                 "title": "Option A",
-// Temp comment
                 "value": "A",
                 "lead": null,
                 "annotation": null,

@@ -9,7 +9,6 @@ const checkDupes = (leftSigner, rightSigner, dupes) => {
       `${leftSigner.firstName || '<firstName>'} [${leftSigner.id}] cannot share the same SSN as the signer ${rightSigner.firstName} [${rightSigner.id}]`)
   }
   // Identify phoneNumber duplicates
-  if (leftSigner.phoneNumber === rightSigner.phoneNumber) {
     _.set(dupes, [rightSigner.id, 'phoneNumber', 'message'],
       `${leftSigner.firstName || '<firstName>'} [${leftSigner.id}] cannot share the same phone number as the signer ${rightSigner.firstName} [${rightSigner.id}]`)
   }

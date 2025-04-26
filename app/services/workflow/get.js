@@ -1,9 +1,9 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const Wkfl = app.repositories.workflow
 const WkflModel = app.models.workflow
 const logger = app.logger.getLogger('app.services.workflow.get')
+// Temp comment
 
 async function get(criteria, tx = app.db) {
   const filter = _.isString(criteria) ? { id: criteria } : criteria

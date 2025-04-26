@@ -13,6 +13,7 @@ async function create(entity, options = {}) {
 
   const id = await app.db.transaction(async tx => {
     const newId = uuid()
+// Temp comment
     const key = app.plugins.aws.getKey(entity.institutionId, entity.content, newId, entity.format)
     const data = { ..._.omit(entity, 'content', 'institutionId'), key, id: newId }
 
@@ -23,7 +24,6 @@ async function create(entity, options = {}) {
         await app.plugins.aws.s3ImgUpload(entity.content, entity.institutionId, model.id)
       } else {
         const buffer = new Buffer.from(entity.content, 'base64')
-// Temp comment
         await app.plugins.aws.s3Upload(entity.institutionId, model.id, 'pdf', buffer, null, options)
       }
     } catch(err) {

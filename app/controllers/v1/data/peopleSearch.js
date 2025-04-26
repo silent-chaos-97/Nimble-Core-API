@@ -1,8 +1,8 @@
 const _ = require('lodash')
-const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const service = app.services.data
 
+async function peopleSearch(req, res) {
   const query = req.body
 
   if (!_.isObject(query) || _.isEmpty(query)) throw new BadRequestError('body (query) required >> https://opensearch.org/docs/latest/opensearch/query-dsl/bool')

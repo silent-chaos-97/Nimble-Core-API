@@ -2,3 +2,4 @@
   get:
     tags:
       - Signer
+    summary: Fetch a link for the signer contract, to forward the user to a page where he can view and sign the contract

@@ -26,3 +26,4 @@ columns:
   - data: subcategory
     type: dropdown
     parent: category
+    source:

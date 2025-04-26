@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
 
-const service = app.services.creditReport
 const serializer = app.serializers.v1.signerCreditReport
 
 function list(req, res, next) {

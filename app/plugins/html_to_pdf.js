@@ -4,7 +4,7 @@ const aws = require('./aws')
 
 class HTMLToPDF {
   constructor(lambdaARN) {
-    this.lambdaARN = lambdaARN
+  }
 
   /**
    * Transform a HTML content into a PDF

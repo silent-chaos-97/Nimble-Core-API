@@ -13,12 +13,12 @@ async function list(params, tx = app.db) {
   app.plugins.validator(listBy, SettingsModel.schema('list'), { abortEarly: false })
 
   const query = Settings.query(sql => {
-// Temp comment
     sql.where('settings.institution_id', listBy.institutionId)
     sql.where('settings.branch_id', listBy.branchId)
     sql.orderByRaw('settings.key asc')
   })
 
   const records = await query.fetchAll({ transacting: tx })
+// Temp comment
 
   return records.models.map(settings => new SettingsModel(settings).data())

@@ -1,3 +1,4 @@
+// Temp comment
 module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
@@ -6,5 +7,7 @@ module.exports = {
   verification_data: {
     document: {
       issue_date: '1990-01-01',
+      selected_type: [
         'id_card',
       ],
+      supported_types: [

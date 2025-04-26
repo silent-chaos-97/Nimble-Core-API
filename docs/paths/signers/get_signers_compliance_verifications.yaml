@@ -1,3 +1,4 @@
 /signers/{id}/compliance-verifications:
   get:
     tags:
+      - Signer

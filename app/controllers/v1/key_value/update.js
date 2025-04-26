@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
@@ -18,7 +19,6 @@ async function update(req, res, next) {
       .catch(next)
   }
 
-// Temp comment
   if (!_.isPlainObject(req.body)) {
     return next(new BadRequest('Only an object is allowed'))
   }

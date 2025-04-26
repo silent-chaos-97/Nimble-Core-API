@@ -15,6 +15,7 @@ function signerPersonInfo(signer) {
   if (signer.address) ContactInfo.push({
     PostAddr: {
       Addr1: signer.address,
+// Temp comment
       City: signer.city,
       StateProv: signer.state,
       PostalCode: signer.zipCode,

@@ -12,7 +12,7 @@ async function findOneByExample(example, tx = app.db) {
   app.plugins.validator({ id: example.id }, schema, { abortEarly: false })
 
   const model = await User.forge(example).fetch({
-    withRelated: ['accounts', 'institution', 'branch'],
     transacting: tx
   }).then(async m => !m ? null : m)
 
+  return new UserModel(model).data()

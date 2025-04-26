@@ -19,7 +19,6 @@ describe('MicroblinkService', () => {
     email: 'john@wearesingular.com',
     documentNumber: 'S123-456-78-123-0',
   }
-
   describe('given a valid data', () => {
     beforeEach(() => {
       nock.disableNetConnect()
@@ -61,6 +60,7 @@ describe('MicroblinkService', () => {
               month: 3,
               year: 1990,
               originalString: '03/18/1990',
+            },
             dateOfIssue: {
               day: 18,
               month: 3,
@@ -73,3 +73,5 @@ describe('MicroblinkService', () => {
               year: 2025,
               originalString: '03/18/2025',
             },
+            documentNumber: 'S123-456-78-123-0',
+            sex: 'M',

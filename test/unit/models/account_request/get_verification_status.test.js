@@ -11,3 +11,4 @@ const testSigners = [
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
   },
+  {

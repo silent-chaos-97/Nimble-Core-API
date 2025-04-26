@@ -4,6 +4,7 @@ describe('POST /documents', () => {
   let document, clock, aws
 
   before(() => {
+// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable({ s3: false })
   })
@@ -33,3 +34,4 @@ describe('POST /documents', () => {
   it('should return json', () => {
     return request(app.server)
       .post('/v1/documents')
+      .send(document)

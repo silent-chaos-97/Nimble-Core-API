@@ -1,6 +1,4 @@
-const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
-// Temp comment
 const InstitutionBranchModel = app.models.institutionBranch
 
 async function getOne(filters = {}, tx = app.db) {

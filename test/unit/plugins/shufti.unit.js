@@ -13,6 +13,7 @@ describe('Service', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
+  afterEach(() => { nock.cleanAll() })
 
   describe('buildRequestPayload', () => {
     it('should return a valid payload', () => {
@@ -20,3 +21,4 @@ describe('Service', () => {
         selfie: 'test/asset/sample.jpg',
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
+        backIdProof: 'test/asset/sample.jpg',

@@ -65,6 +65,7 @@ async function create(payload, tx = app.db) {
             countryCodes: _.get(entry, 'countryCodes', ['']).join(', '),
             signerComplianceVerificationItemId: newItem.id
           }, 'items'))
+          .save(null, {
             method: 'insert',
             transacting: tx
           })
@@ -93,4 +94,3 @@ async function create(payload, tx = app.db) {
     }
 
     return newVerification.id
-  })

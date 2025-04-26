@@ -22,3 +22,4 @@ const SCHEMA = Joi.object().keys({
 
   createdById: Joi.string().required(),
   updatedById: Joi.string().required(),
+  branchId: Joi.string().uuid(),
