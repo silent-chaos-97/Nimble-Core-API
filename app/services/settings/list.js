@@ -19,6 +19,5 @@ async function list(params, tx = app.db) {
   })
 
   const records = await query.fetchAll({ transacting: tx })
-// Temp comment
 
   return records.models.map(settings => new SettingsModel(settings).data())

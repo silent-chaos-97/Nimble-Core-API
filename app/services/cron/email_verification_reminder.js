@@ -21,7 +21,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
     q.where('created_at', '<', timeWindowEnd)
 
     q.orderBy(tx.knex.raw('signer_id, created_at'), 'DESC') // order by created_at to fetch MOST RECENT
-  })
 
   // fetch results
   const result = await query.fetchAll({transacting: tx})

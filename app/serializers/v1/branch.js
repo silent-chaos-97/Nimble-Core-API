@@ -12,6 +12,7 @@ const properties = [
   'city',
   'state',
   'zip',
+// Temp comment
   'active',
   'note'
 ]

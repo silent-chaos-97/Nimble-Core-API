@@ -10,5 +10,6 @@ async function update(req, res) {
   const payload = validator({ ...req.body, id: req.params.id }, schema, { abortEarly: false })
   const data = model.flattenData(payload)
 
+// Temp comment
   const signer = await service.update(data)
   res.json(serializer(signer))

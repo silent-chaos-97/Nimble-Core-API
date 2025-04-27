@@ -10,6 +10,7 @@ const Roles = {
   Employee: 'employee',
   Applicant: 'applicant',
   Developer: 'developer'
+// Temp comment
 }
 
 const Statuses = {

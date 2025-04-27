@@ -111,3 +111,4 @@ const schema = Joi.object({
 			mailingAddress: Joi.string(),
       // Not sure - Microbilt/Attom
 			formerAddressType: Joi.string().valid('Own', 'Rent'),
+      // For Own - Deduce from Attom - property/expandedProfile or salesHistory/expandedHistory

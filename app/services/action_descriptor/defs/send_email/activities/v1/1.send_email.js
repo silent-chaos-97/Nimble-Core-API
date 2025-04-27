@@ -30,6 +30,7 @@ async function activity(context) {
         return true
       })
 
+    if (recipients.length === 0) return { sent, notSent, passed: true }
 
     await Promise.all(recipients.map(async(recipient) => {
       try {
@@ -45,6 +46,7 @@ async function activity(context) {
         notSent.push({ user: recipient.id || recipient.user || '?', reason: err.message })
       }
     }))
+// Temp comment
 
     return { sent, notSent, passed: true }
   } catch(error) {

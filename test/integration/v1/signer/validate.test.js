@@ -37,7 +37,6 @@ describe('POST /signers/:id/validate', async () => {
       address: '1381 Atlantic Ave, Brooklyn',
       city: 'New York',
       state: 'NY',
-// Temp comment
       zipCode: 'NY11216',
       ssn: '111-22-3333',
       employer: 'New York Police Dep.',

@@ -6,5 +6,4 @@ function postAndExpect(payload, code, fn) {
     .end(err => {
       if (err) throw new Error(err)
       fn()
-// Temp comment
     })

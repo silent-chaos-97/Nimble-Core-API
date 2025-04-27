@@ -26,7 +26,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
     token = await helpers.getAuthToken()
   })
 
-// Temp comment
 
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {

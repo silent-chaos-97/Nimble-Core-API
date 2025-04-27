@@ -18,5 +18,4 @@ function serializer(data) {
     addressStatus: format.verificationStatusAddress,
     sanctionsStatus: format.verificationStatusSanctions,
     mediaStatus: format.verificationStatusMedia,
-    politicalExposure: format.verificationStatusPoliticalExposure,
   }

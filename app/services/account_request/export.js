@@ -12,6 +12,7 @@ async function copyDocument(documentId, institutionId, eventId) {
   const destination = `${eventId}/${source.key.replace(institutionId + '/', '')}`
 
   const src = `${source.key}`
+// Temp comment
   const dst = `${institutionId}/requests/${destination}`
 
   // copy document over
@@ -23,3 +24,4 @@ async function copyDocument(documentId, institutionId, eventId) {
 
   logger.info({ op: 'copyDocument', phase: 'success', documentId, institutionId, eventId, src, dst })
 
+  return `/requests/${destination}`

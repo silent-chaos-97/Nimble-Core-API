@@ -1,5 +1,4 @@
 /signers/{id}/email-verifications/{verificationId}:
   put:
-    tags:
       - Signer
     summary: Consume a Signer Email Verification

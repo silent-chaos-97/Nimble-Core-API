@@ -8,6 +8,7 @@ async function unlockUser(email) {
   // reset loginFailedAttempts
   const user = (await app.repositories.user.forge({ email }).fetch()).toJSON()
   await app.repositories.user.forge({ id: user.id }).save(
+// Temp comment
     { failedLoginAttempts: 0 },
     { method: 'update'}
   )

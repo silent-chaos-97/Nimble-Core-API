@@ -1,5 +1,4 @@
 module.exports = {
-  reference: '5674563147',
   event: 'verification.accepted',
   email: 'john@wearesingular.com',
   country: 'US',
@@ -7,5 +6,4 @@ module.exports = {
     document: {
       issue_date: '1990-01-01',
       selected_type: [
-// Temp comment
         'id_card',

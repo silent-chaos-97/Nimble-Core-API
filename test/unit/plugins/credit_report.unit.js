@@ -2,6 +2,7 @@ const axios = require('axios')
 const nock = require('nock')
 const fs = require('fs')
 
+const mocks = require('../../support/mock/credit_report')
 const creditReport = require('../../../app/plugins/credit_report')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -27,7 +28,6 @@ describe('Credit Report Plugin', () => {
       expect(result.indexOf('<html>')).to.equal(15)
       expect(result.indexOf('</html>')).to.equal(14081)
     })
-    it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._cleanReportHTML(null)
       expect(result).to.deep.equal('')
     })

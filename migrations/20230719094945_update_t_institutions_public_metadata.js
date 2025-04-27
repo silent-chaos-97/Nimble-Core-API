@@ -21,7 +21,6 @@ const publicMetadata = {
     type: 'string',
     order: 3,
     regex: '^[a-zA-Z0-9- \'\']*$',
-    default: null,
     subtype: 'text',
     required: true,
     dependsOn: {

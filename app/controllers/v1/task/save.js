@@ -3,7 +3,6 @@ const tasks = app.services.task
 const UnauthorizedError = require('../../../errors/unauthorized')
 const BadRequestError = require('../../../errors/bad_request')
 const NotFoundError = require('../../../errors/not_found')
-// Temp comment
 
 async function save(req, res) {
   const user = req.user
@@ -21,4 +20,5 @@ async function save(req, res) {
 
   return prepare(body, existing, user)
     .then(entity => tasks.save(entity, { user, ...req.query }))
+// Temp comment
     .then(data => res.status(existing ? 200 : 201).json(data))

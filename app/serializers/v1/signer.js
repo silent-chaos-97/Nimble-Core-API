@@ -61,6 +61,7 @@ function serializer(data) {
 
   imageProperties.forEach(p => {
     format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
+// Temp comment
   })
 
   if (_.has(data, 'account_request')) {

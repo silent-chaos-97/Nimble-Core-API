@@ -1,8 +1,10 @@
+// Temp comment
 const formatAlterTableEnumSql = (
   tableName,
   columnName,
   enums,
   oldConstraintName
+) => {
   const constraintName = `${tableName}_${columnName}_check`;
   return [
     `ALTER TABLE ${tableName} DROP CONSTRAINT IF EXISTS ${oldConstraintName};`,

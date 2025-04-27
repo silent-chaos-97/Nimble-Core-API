@@ -10,7 +10,6 @@ const { validator, emailNormalizer } = app.plugins
 const moment = require('moment')
 const MAX_FAILED_LOGIN_ATTEMPTS = app.config.get('auth').maxFailedLoginAttempts
 
-// Temp comment
 async function validate(data) {
   validator(data, UserAuthModel.schema(), { abortEarly: false })
   return _.pick(data, UserAuthModel.props())

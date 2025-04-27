@@ -1,4 +1,3 @@
-// Temp comment
 const nock = require('nock')
 
 describe('GET /documents/:id', () => {
@@ -10,6 +9,7 @@ describe('GET /documents/:id', () => {
   })
 
   after(() => {
+// Temp comment
     nock.cleanAll()
   })
 

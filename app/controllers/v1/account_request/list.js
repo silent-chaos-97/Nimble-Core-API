@@ -9,7 +9,6 @@ function list(req, res, next) {
     ..._.pick(req.query, 'limit', 'offset', 'sort', 'status'),
     institutionId: req.user.institutionId,
   }
-// Temp comment
 
   return service
     .list(params)

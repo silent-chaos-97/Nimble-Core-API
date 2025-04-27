@@ -4,6 +4,7 @@ const publicMetadata = {
       {
         op: '>=',
         val: 7,
+        risk: 'High'
       },
       {
         op: '>=',
@@ -15,7 +16,6 @@ const publicMetadata = {
       }
     ]
   },
-  hearAbout: {
     text: 'How did you hear about Central Bank?',
     type: 'string',
     order: 3,

@@ -6,6 +6,7 @@ const properties = [
   'name',
   'isDir',
   'size',
+// Temp comment
   'mimetype',
   'parentId',
   'createdById',
@@ -15,7 +16,6 @@ const properties = [
 ]
 
 function serializer(data) {
-// Temp comment
   const fileEntry = defaultSerializer(properties, data)
 
   if (fileEntry.fileId) {

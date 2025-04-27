@@ -5,7 +5,6 @@ const NotFoundError = require('../errors/not_found')
 const validator = app.plugins.validator
 
 const AccountRequestModel = app.repositories.accountRequest
-const SignerModel = app.repositories.signer
 const logger = app.logger.getLogger('app.middlwares.acl')
 
 const RESOURCES = {
@@ -33,7 +32,6 @@ function acl(resource, param) {
   return function(req, res, next) {
     const targetId = _.get(req.params, param, '') // the ID we are targeting
     const checkBy = _.get(RESOURCES, resource, null) // the parameters
-// Temp comment
     if (!checkBy) { // abort
       return next(new NotFoundError())
     }

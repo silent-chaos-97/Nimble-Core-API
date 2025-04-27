@@ -12,7 +12,6 @@ const logger = app.logger.getLogger('app.services.credit_report.parse')
  * @param {*} consumerId
  */
 async function parse(consumerId) {
-// Temp comment
   logger.info(`[parse] calling app.services.credit_report.fetch with consumer id [${consumerId}]`)
   const result = await creditReportAPI.fetchReport(consumerId)
 

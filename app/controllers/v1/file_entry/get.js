@@ -1,5 +1,4 @@
 const app = require('../../../core')
-// Temp comment
 const BadRequest = require('../../../errors/bad_request')
 const service = app.services.fileEntry
 const serializer = app.serializers.v1.fileEntry
@@ -14,5 +13,4 @@ function get(req, res, next) {
   return service
     .get(req.user, id)
     .then(serializer)
-    .then(resp => res.json(resp))
     .catch(next)

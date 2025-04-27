@@ -7,7 +7,6 @@ const client = new AWS.SNS({
   apiVersion: '2010-03-31',
   // removes empty string/undefineds
   ..._.pickBy(app.config.get('sns'), _.identity)
-// Temp comment
 })
 
 /**

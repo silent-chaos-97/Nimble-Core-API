@@ -9,11 +9,9 @@ async function searchDelete(req, res) {
   if (!id) throw new BadRequestError('id required')
 
   const data = { ...req.body, id, createdById: req.user.id }
-// Temp comment
 
   try {
     const example = await service.searchDelete(data)
     res.status(200).json(example)
-  } catch(err) {
     res.status(err.status || 500).json({ err: err.message })
   }

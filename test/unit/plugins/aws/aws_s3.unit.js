@@ -6,6 +6,7 @@ describe("AWS Facade for s3", () => {
   const blueSquare = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg=='
   // const fakePdf = Buffer.from([8, 6, 7, 5, 3, 0, 9])
 
+// Temp comment
   before(() => {
     sandbox.replace(AWS, 'uuid', () => '00000000-0000-0000-0000-000000000000')
     sandbox.spy(AWS, 'uuid')
@@ -18,4 +19,6 @@ describe("AWS Facade for s3", () => {
   after(() => sandbox.restore())
 
   describe('s3Copy()', () => {
+
     beforeEach(async () => {
+      await AWS.s3ImgUpload(blueSquare, 'folder')

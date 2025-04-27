@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 

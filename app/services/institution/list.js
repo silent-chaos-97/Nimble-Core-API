@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const Institution = app.repositories.institution
@@ -11,6 +10,7 @@ const sortBy = {
   'name': 'institutions.name' // TODO: consider indexing
 }
 
+// Temp comment
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
   return sortBy[sort]

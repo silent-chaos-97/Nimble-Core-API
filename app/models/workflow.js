@@ -10,4 +10,3 @@ const Statuses = {
   Deleted: 'DELETED'
 }
 
-class WorkflowModel extends BaseModel {

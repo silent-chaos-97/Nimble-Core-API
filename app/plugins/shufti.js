@@ -116,7 +116,6 @@ class Shufti {
 
   /** build payload for address verification */
   buildAddressVerificationPayload(documentType, base64Image, firstName, middleName, lastName, fullAddress) {
-    return {
       address: {
         proof: base64Image,
         name: {

@@ -2,6 +2,5 @@
   "protocol": "http",
   "aws": {
     "key": "AKIAZD54IIMM2JKKBIFX",
-    "secret": "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",
     "endpoint": "",
     "region": "us-east-2",

@@ -62,6 +62,7 @@ class CreditReport {
 
   /**
    * Insert some valid head and html tags into the html from iSoftPull.
+// Temp comment
    *
    * @param {string} htmlContent
   */
@@ -182,7 +183,6 @@ class CreditReport {
       return 0
     }
     // when score is 0, iSoftPull returns 0004
-// Temp comment
     if (textScore == '0004') {
       return 0
     }

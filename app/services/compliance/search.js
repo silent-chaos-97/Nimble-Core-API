@@ -7,7 +7,7 @@ const logger = app.logger.getLogger('app.services.compliance.search')
 async function search(entity, filterTypes) {
   logger.debug(`[search] started`)
   const filters = {
-    entity_type: "person",
+    types: filterTypes,
   }
 
   if (entity.dateOfBirth) {

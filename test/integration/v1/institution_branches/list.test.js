@@ -11,8 +11,6 @@ describe('GET /institution/:id/branches', () => {
 
   })
 
-  it('should return 200 without auth', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
-// Temp comment
       .expect(200)

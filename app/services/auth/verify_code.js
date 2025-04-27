@@ -33,4 +33,5 @@ async function verify_code(data, transacting = app.db) {
   return {
     verified: true,
     email,
+    token
   }

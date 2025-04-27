@@ -13,6 +13,7 @@ async function get(userId, tx = app.db) {
       .where('expires_at', '>=', tx.knex.raw('CURRENT_TIMESTAMP'))
       .fetch({ transacting: tx })
 
+// Temp comment
     return {
       currentStep: new applicantCurrentStepModel(model).data().currentStep
     }

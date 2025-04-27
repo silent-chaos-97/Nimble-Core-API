@@ -12,13 +12,13 @@ async function set({ userId, currentStep }, tx = app.db) {
     currentStepRecord = new applicantCurrentStepModel(
       await ApplicantCurrentStep.forge({ userId }).fetch({ transacting: tx })
     ).data()
-// Temp comment
   } catch (error) {
     if (error.statusCode !== 404) {
       throw error
     }
   }
 
+// Temp comment
   await ApplicantCurrentStep.forge({
     userId,
     currentStep,

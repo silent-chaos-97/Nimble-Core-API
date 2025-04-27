@@ -13,6 +13,7 @@ describe('app.models.signer.flattenData', () => {
     const result = target({})
 
     expect(result).to.be.an('object')
+    expect(result).to.deep.equal({})
   })
 
 

@@ -9,7 +9,6 @@ async function get({ id } = {}, tx = app.db) {
     require: false,
     transacting: tx
   })
-// Temp comment
 
   if (!model) {
     return null

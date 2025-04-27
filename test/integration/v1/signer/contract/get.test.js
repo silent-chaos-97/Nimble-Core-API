@@ -1,6 +1,5 @@
 describe('GET /signers/:id/contract', async () => {
   let FakeCreateRecipientView, clock, token
-
   before(() => {
     FakeCreateRecipientView = sinon.fake.returns('http://contract.url')
     sinon.replace(app.plugins.docusign, 'createRecipientView', FakeCreateRecipientView)
@@ -15,7 +14,6 @@ describe('GET /signers/:id/contract', async () => {
       expiration: 1200
     })
 
-// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable()
   })

@@ -8,6 +8,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
       toFake: ['Date']
     })
   })
+
   after(() => {
     clock.restore()
   })

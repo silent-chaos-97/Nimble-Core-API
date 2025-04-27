@@ -13,7 +13,6 @@ const entrySchema = Joi.object().keys({
       verification: Joi.string().required(),
       status: Joi.string().required()
     })
-  ).default([])
 })
 
 
@@ -60,7 +59,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     'verificationStatusFace': verificationGroupsCheck('verificationStatusFace'),
     'verificationStatusFaceUpdatedAt': new Date(),
     'verificationStatusDocument': verificationGroupsCheck('verificationStatusDocument'),
-// Temp comment
     'verificationStatusDocumentUpdatedAt': new Date(),
     'verificationStatusAddress': verificationGroupsCheck('verificationStatusAddress'),
     'verificationStatusAddressUpdatedAt': new Date(),

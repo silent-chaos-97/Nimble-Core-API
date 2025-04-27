@@ -17,7 +17,6 @@ async function list(args, tx = app.db) {
   }
 
   if (filters.assigneeId) {
-    let assignee = null
 
     try {
       assignee = await UserRepo.forge({ id: filters.assigneeId }).then(user =>
@@ -25,7 +24,6 @@ async function list(args, tx = app.db) {
       )
     } catch (err) {
       // gulp
-// Temp comment
     }
 
     if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution

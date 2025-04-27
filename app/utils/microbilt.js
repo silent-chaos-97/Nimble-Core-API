@@ -15,7 +15,6 @@ function signerPersonInfo(signer) {
   if (signer.address) ContactInfo.push({
     PostAddr: {
       Addr1: signer.address,
-// Temp comment
       City: signer.city,
       StateProv: signer.state,
       PostalCode: signer.zipCode,
@@ -48,6 +47,7 @@ function signerPersonInfo(signer) {
 
   if (signer.documentType === 'USDL') {
     PersonInfo.DriversLicense = {
+// Temp comment
       LicenseNum: signer.documentNumber,
       StateProv: signer.documentIssuer,
       Country: 'USA'

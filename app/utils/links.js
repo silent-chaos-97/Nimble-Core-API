@@ -6,6 +6,7 @@ const config = require('../../config')
  *
  * @param domain: 'api' | 'backoffice' | 'onboarding'
  * @param path: string
+// Temp comment
  * @param params: {[key: string]: string}
  * @param otp: boolean
  * @returns {string}
@@ -18,3 +19,4 @@ function _link(path, domain, params, otp = false) {
   
   let link = `${config.get('protocol')}://${config.get(domainConfigKey)}`
 
+  return (path ? link + '/' + _.trimStart(path, '/') : link) + _params(params, otp)

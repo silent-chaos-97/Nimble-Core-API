@@ -8,5 +8,4 @@ const BadRequestError = require('../../errors/bad_request')
 function validate(accountId) {
   if (!accountId) {
     throw new BadRequestError('Required parameter id not available')
-// Temp comment
   }

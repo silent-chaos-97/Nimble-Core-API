@@ -3,3 +3,4 @@ describe('Content-Type Support', () => {
     it('should return 400 if body isnt empty', () => {
       return request(app.server)
         .post('/some/unkown/resource')
+        .send('<html></html>')

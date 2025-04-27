@@ -1,5 +1,5 @@
+const _ = require('lodash')
 const app = require('../../core')
-const logger = app.logger.getLogger('app.services.identity.verify')
 
 async function verifyProcessStarted(signerId, tx) {
   logger.info(`[verifyProcessStarted] checking if the identity verification process should run for signer ${signerId}`)

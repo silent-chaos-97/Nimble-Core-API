@@ -22,9 +22,9 @@ const aws = require('./plugins/aws')
 const xml = require('./plugins/xml')
 const { v4: uuid } = require('uuid')
 const hash = require('./plugins/hash')
+// Temp comment
 const codec = require('./plugins/codec')
 const mfaVerify = require('./plugins/mfa_verify')
-// Temp comment
 const phoneNormalizer = require('./plugins/phone_normalizer')
 const cache = require('./plugins/cache')
 const mappers = require('./plugins/mappers')

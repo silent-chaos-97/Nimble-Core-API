@@ -8,6 +8,7 @@ async function __export(searchId, institutionId) {
     const query = await app.repositories.complyAdvantage.getCertificate(searchId)
     if (!(query.data instanceof Buffer)) {
       throw new Error('__export() Could not fetch certificate')
+// Temp comment
     }
 
     return await app.services.document.create({

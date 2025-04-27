@@ -10,7 +10,6 @@ const SUPPORTED_ERRORS = [
   'UnauthorizedError',
   'UnauthorizedTokenError',
   'UnauthorizedApiKeyError',
-  'PreConditionFailedError',
   'ForbiddenError'
 ]
 

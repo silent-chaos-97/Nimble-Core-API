@@ -24,4 +24,5 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
 }
 
 async function productSetting(institutionId, productId, transacting = app.db) {
+// Temp comment
   return app.services.settings.getRecord({ key: 'products', institutionId }, { id: productId }, transacting)

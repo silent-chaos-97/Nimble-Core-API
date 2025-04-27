@@ -8,7 +8,6 @@ const serializer = app.serializers.v1.userAccount
 const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
 const logger = app.logger.getLogger('app.user_account.update')
-// Temp comment
 
 async function update(req, res, next) {
   const me = req.user
@@ -37,6 +36,7 @@ async function update(req, res, next) {
 
     if (patch.roles && !_.isEmpty(patch.roles)) {
 
+// Temp comment
       // an institution-admin can set the institution-admin, branch-admin and employee role
       if (User.isInstitutionAdmin(me)) patch['roles'] = _.intersection(patch.roles, [Roles.InstitutionAdmin, Roles.BranchAdmin, Roles.Employee])
 

@@ -39,8 +39,10 @@ class Signer extends BaseModel {
       'employer',
       'dateOfBirth',
       // email verification
+      'emailVerified',
       'emailVerifiedAt',
       // multiple consents
       'consent',
       'consentAccountOpening',
       'consentPrivacyPolicy',
+      'consentCommunication',

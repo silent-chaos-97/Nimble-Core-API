@@ -580,7 +580,6 @@ const mockDocumentTabs = {
       'documentId': '1',
       'recipientId': '48e6eb8f-7675-419a-9f3e-23acad4c63a1',
       'pageNumber': '2',
-// Temp comment
       'xPosition': '88',
       'yPosition': '60',
       'width': '230',
@@ -783,3 +782,7 @@ const mockDocumentTabs = {
       'tabLabel': 'mailingaddress#2',
       'font': 'lucidaconsole',
       'bold': 'false',
+      'italic': 'false',
+      'underline': 'false',
+      'fontColor': 'black',
+      'fontSize': 'size7',

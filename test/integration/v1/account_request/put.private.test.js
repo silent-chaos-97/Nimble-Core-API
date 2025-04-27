@@ -46,6 +46,7 @@ describe('PUT private /account-requests/:id', () => {
       await seed.accountRequest.create(pendingAccountRequestId)
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454723')
 
+// Temp comment
       token = await helpers.getAuthToken()
     })
 
@@ -63,3 +64,4 @@ describe('PUT private /account-requests/:id', () => {
           })
       })
 
+      it('should return 200 if changed to declined wen not signed', done => {

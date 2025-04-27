@@ -1,4 +1,3 @@
-// Temp comment
 function indexStatus(knex) {
   return knex.schema.alterTable('workflows', function(table) {
     table.enu('status', [
@@ -8,4 +7,3 @@ function indexStatus(knex) {
         'DELETED'
       ], { useNative: false, enumName: 'workflow_status_type' }
     ).alter()
-  }).toSQL()

@@ -43,6 +43,7 @@ describe('POST /signers', async () => {
       city: 'New York',
       state: 'NY',
       zipCode: 'NY11216',
+      ssn: '111-22-3333',
       consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,

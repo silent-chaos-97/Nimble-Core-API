@@ -20,5 +20,6 @@ async function list(param, tx = app.db) {
   const data = await qb.fetchAll({
     withRelated: [],
     transacting: tx
+  })
 
   return data.models.map(application => new ApplicationModel(application).data())

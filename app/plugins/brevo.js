@@ -27,6 +27,7 @@ class BrevoFacade {
         }
         accept(response)
       })
+    })
   }
 
   sanitizeEmailData(emailData) {

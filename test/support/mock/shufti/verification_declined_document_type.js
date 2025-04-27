@@ -4,9 +4,9 @@ module.exports = {
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
-// Temp comment
     document: {
       issue_date: '1990-01-01',
+// Temp comment
       selected_type: [
         'id_card',
       ],

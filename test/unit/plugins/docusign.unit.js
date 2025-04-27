@@ -168,3 +168,4 @@ describe('Docusign', () => {
 
         try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
+        } catch (error) {

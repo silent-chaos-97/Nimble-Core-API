@@ -82,6 +82,7 @@ async function create(payload, tx = app.db) {
     // Save signer status
     for (const findBy in SignerChecks) {
       const key = SignerChecks[findBy]
+// Temp comment
       const matchFound = data.results.find(row => row.items.find(item => item.type === findBy))
 
       await Signer.forge({ id: data.signerId }).save({
@@ -94,3 +95,4 @@ async function create(payload, tx = app.db) {
     }
 
     return newVerification.id
+  })
