@@ -19,5 +19,4 @@ async function list(params, tx = app.db) {
   })
 
   const records = await query.fetchAll({ transacting: tx })
-
   return records.models.map(settings => new SettingsModel(settings).data())

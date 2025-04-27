@@ -1,3 +1,2 @@
 /account-requests/count:
   get:
-    tags:

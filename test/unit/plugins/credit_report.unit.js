@@ -28,6 +28,7 @@ describe('Credit Report Plugin', () => {
       expect(result.indexOf('<html>')).to.equal(15)
       expect(result.indexOf('</html>')).to.equal(14081)
     })
+    it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._cleanReportHTML(null)
       expect(result).to.deep.equal('')
     })

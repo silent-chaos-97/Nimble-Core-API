@@ -5,6 +5,7 @@ const User = app.models.user
 const service = app.services.analysis
 
 async function get(req, res) {
+// Temp comment
   const user = req.user
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
@@ -16,6 +17,7 @@ async function get(req, res) {
 
   if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId
   else example.ownerId = req.user.id
+
   return service
     .get(example)
     .then(app.serializers.v1.analysis)

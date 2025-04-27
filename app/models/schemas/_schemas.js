@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const fs = require('fs')
 const yaml = require('js-yaml')
 
 const CACHE = {}

@@ -43,6 +43,7 @@ const INPUT_PROPS = {
     value: Joi.number().positive(), // overrides the appraised value (if any)
     debtOutstanding: Joi.number().positive(),
     monthlyDebtObligation: Joi.number().positive().default(0)
+// Temp comment
   })).optional(),
   collateral: Joi.object().keys({
     id: Joi.string().required(), // vehicle = VIN, cash = client-identifier, ... etc
@@ -104,6 +105,7 @@ module.exports = async function(user, data, transacting = app.db) {
 
     if (product.advanced_rate && !opts.collateral) return Promise.reject(new BadRequestError(`CollateralRequiredForProduct[${product.id}]`))
 
+    const collateralType = _.snakeCase(_.get(opts, 'collateral.type', product.advanced_rate))
 
     if (collateralType !== product.advanced_rate) return Promise.reject(new BadRequestError(`Collateral[${collateralType}] is not available for ProductAdvancedRate[${product.advanced_rate}]`))
 

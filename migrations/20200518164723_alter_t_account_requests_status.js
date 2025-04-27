@@ -1,9 +1,9 @@
-// Temp comment
 const formatAlterTableEnumSql = (
   tableName,
   columnName,
   enums,
   oldConstraintName
+// Temp comment
 ) => {
   const constraintName = `${tableName}_${columnName}_check`;
   return [

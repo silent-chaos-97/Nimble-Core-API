@@ -7,7 +7,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     tokenValid = app.services.token.get({
       scopes: ['signers.email_verifications'],
       resources: [`signers.email_verifications#2e31d8c0-1226-4651-8a5d-4bd8aa454721`],
-// Temp comment
       expiration: 86400 // 24h
     })
 
@@ -23,4 +22,3 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       expiration: 86400 // 24h
     })
   })
-

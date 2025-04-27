@@ -57,11 +57,9 @@ function serializer(data) {
     issuer: data.documentIssuer,
     frontIdProof: imageSerializer({ default: data.frontIdProofDocumentId}),
     backIdProof: imageSerializer({ default: data.backIdProofDocumentId})
-  }
 
   imageProperties.forEach(p => {
     format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
-// Temp comment
   })
 
   if (_.has(data, 'account_request')) {

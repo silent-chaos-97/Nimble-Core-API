@@ -6,6 +6,7 @@ const _ = require('lodash')
 const Statuses = _.mapKeys(
   [
     'created',
+    'assigned',
     'started',
     'completed',
     'expired',
@@ -17,7 +18,6 @@ const Statuses = _.mapKeys(
 const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
 
 const SCHEMA = Joi.object().keys({
-  id: Joi.string().uuid(),
 
   createdById: Joi.string().required(),
   updatedById: Joi.string().required(),

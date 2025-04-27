@@ -47,6 +47,7 @@ describe('POST /signers', async () => {
       consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
+// Temp comment
       consentCommunication: false,
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',

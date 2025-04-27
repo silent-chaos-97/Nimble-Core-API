@@ -1,6 +1,7 @@
 const nock = require('nock')
 
 describe('GET /documents/:id', () => {
+// Temp comment
   let token
 
   before(() => {
@@ -9,7 +10,6 @@ describe('GET /documents/:id', () => {
   })
 
   after(() => {
-// Temp comment
     nock.cleanAll()
   })
 

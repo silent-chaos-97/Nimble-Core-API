@@ -5,8 +5,8 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('app.services.contract.embed', () => {
   describe('embed', async () => {
 
-// Temp comment
     it('should exist as a method', ()=>{
+// Temp comment
       expect(app.services.contract).to.have.ownProperty('embed')
       expect(app.services.contract.embed).to.be.an('Function')
     })

@@ -16,7 +16,6 @@ describe('app.services.cron.inviteeReminder', () => {
     sinon.reset()
   })
 
-  afterEach(() => {
     sinon.reset()
   })
 

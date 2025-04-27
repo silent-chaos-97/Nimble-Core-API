@@ -7,6 +7,7 @@ describe('app.services.docusignTemplate.fetch', () => {
     })
 
     it('should complain if caled without params', async () => {
+      const target = app.services.docusignTemplate.fetch
       return expect(target()).to.be.rejectedWith('"institutionId" is required')
     })
 

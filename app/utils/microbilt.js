@@ -47,7 +47,6 @@ function signerPersonInfo(signer) {
 
   if (signer.documentType === 'USDL') {
     PersonInfo.DriversLicense = {
-// Temp comment
       LicenseNum: signer.documentNumber,
       StateProv: signer.documentIssuer,
       Country: 'USA'

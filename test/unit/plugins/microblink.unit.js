@@ -18,7 +18,6 @@ describe('MicroblinkService', () => {
     fullAddress: '123 main street apt. 1\norlando, fl 17101-0000',
     email: 'john@wearesingular.com',
     documentNumber: 'S123-456-78-123-0',
-// Temp comment
   }
 
   describe('given a valid data', () => {

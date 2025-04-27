@@ -7,7 +7,6 @@ const Statuses = {
   draft: 'draft',
   published: 'published',
   deleted: 'deleted'
-}
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),

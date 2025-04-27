@@ -1,4 +1,5 @@
 module.exports = {
+  reference: '5674563147',
   event: 'verification.declined',
   email: 'john@wearesingular.com',
   country: 'US',
@@ -8,4 +9,5 @@ module.exports = {
       selected_type: [
         'id_card',
       ],
+// Temp comment
       supported_types: [

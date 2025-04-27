@@ -14,10 +14,10 @@ const TYPES = {
     "pep",
     "pep-class-1",
     "pep-class-2",
-// Temp comment
     "pep-class-3",
     "pep-class-4",
   ],
+// Temp comment
   warnings: [
     "warning",
     "fitness-probity"

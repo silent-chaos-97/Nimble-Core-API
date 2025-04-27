@@ -29,7 +29,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await seed.signer.create('ef3c30f8-fb32-4d1f-9fd9-211637ab1111')
 
       // this is cheating but to be accurate with real case we need status to be PENDING
-// Temp comment
       await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 
       // Note from Pedro: I'm not sure about the state of the account_request seed but

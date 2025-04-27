@@ -20,7 +20,6 @@ async function create(req, res, next) {
     if (!User.hasRole(me, Roles.InstitutionAdmin)) delete user['branchId'] // only institution-admin+ can set the branch
 
     // an institution-admin can set the branch-admin and employee role
-    if (!_.isEmpty(user.roles) && User.hasRole(me, Roles.InstitutionAdmin)) {
       user['roles'] = _.intersection(user.roles, [Roles.BranchAdmin, Roles.Employee])
     } else delete user['roles'] // neither a super/institution-admin, cannot set roles
   }
@@ -30,6 +29,7 @@ async function create(req, res, next) {
   if (!user.institutionId) user['institutionId'] = me.institutionId
   if (_.isEmpty(user.roles)) user['roles'] = [Roles.Employee]
 
+  return users.register(user, 'local', false)
     .then(serializer)
     .then(user => res.status(201).json(user))
     .catch(next)

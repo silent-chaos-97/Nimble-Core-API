@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis
 const User = app.models.user

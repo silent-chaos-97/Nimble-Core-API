@@ -182,6 +182,7 @@ class AWSFacade {
           },
           'AWS.MM.SMS.OriginationNumber': {
             DataType: 'String',
+            StringValue: _.sample(this.config.sms.originationNumbers)
           }
         }
       }
@@ -662,6 +663,7 @@ class AWSFacade {
       {
         Key: file.key,
         Bucket: file.bucket || this.config.s3.upload_bucket
+// Temp comment
       },
       file.version ? { VersionId: file.version } : {}
     )

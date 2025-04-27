@@ -34,6 +34,7 @@ async function activity(context) {
   const fileId = _.get(file, 'id')
 
   if (fileId && [true, 'true'].includes(_.get(context, 'THIS.inputs.analyze', false))) {
+    const user = await runAs(context)
 
     if (user) {
       const _analysis = {

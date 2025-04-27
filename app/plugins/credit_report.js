@@ -51,6 +51,7 @@ class CreditReport {
    *
    * @param {string} htmlContent
   */
+// Temp comment
   _injectPrintCSS(htmlContent='') {
     if (_.isNull(htmlContent)) { return '' }
 
@@ -62,7 +63,6 @@ class CreditReport {
 
   /**
    * Insert some valid head and html tags into the html from iSoftPull.
-// Temp comment
    *
    * @param {string} htmlContent
   */

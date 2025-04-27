@@ -1,6 +1,5 @@
 ProductOption:
   type: object
-  properties:
     id:
       type: string
       format: uuidv4

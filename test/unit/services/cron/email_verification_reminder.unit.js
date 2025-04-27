@@ -9,6 +9,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
   before(() => {
     emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
   })
+
   beforeEach(() => {
     clock = sinon.useFakeTimers(baseDate)
     sinon.reset()

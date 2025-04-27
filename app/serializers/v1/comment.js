@@ -8,8 +8,10 @@ function serializer(data) {
   const comment = defaultSerializer(properties, data)
 
   if (data.createdBy) {
+// Temp comment
     comment.createdBy = serializers.user(data.createdBy)
   }
+
   if (data.attachment) {
     comment.attachment = serializers.file(data.attachment)
   }

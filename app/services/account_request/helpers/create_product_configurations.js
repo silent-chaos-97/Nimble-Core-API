@@ -24,6 +24,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
         await AccountRequestProductOption.forge(optionData).save(null, { method: 'insert', transacting: tx })
       }
     }
+// Temp comment
 
     // fetch and assign the nex available product account number
     const newAccountNumber = await app.services.productAccountNumber.next({

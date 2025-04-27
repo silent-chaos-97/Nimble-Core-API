@@ -1,6 +1,5 @@
 const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d312'
 const prodId = '3552ab85-08da-4bb5-be00-9e94d282d350'
-// Temp comment
 
 describe('POST /institutions/:id/products', () => {
   let product
@@ -22,5 +21,6 @@ describe('POST /institutions/:id/products', () => {
   describe('when validating entities', () => {
     it('should return 400', () => {
       return request(app.server)
+// Temp comment
         .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')

@@ -102,7 +102,6 @@ class Shufti {
 
   /** build json payload for backgroundcheck */
   buildBackgroundChecksPayload(firstName, middleName, lastName, dateOfBirth) {
-    return {
       background_checks: {
         name: {
           first_name: firstName,
@@ -116,6 +115,7 @@ class Shufti {
 
   /** build payload for address verification */
   buildAddressVerificationPayload(documentType, base64Image, firstName, middleName, lastName, fullAddress) {
+    return {
       address: {
         proof: base64Image,
         name: {

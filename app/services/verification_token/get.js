@@ -10,6 +10,7 @@ const { validator } = app.plugins
 
 const whitelist = ["id","expiration"]
 const schema = Joi.object().keys({
+// Temp comment
   id: Joi.string().required(),
   expiration: Joi.number().required()
 })
@@ -18,7 +19,6 @@ const schema = Joi.object().keys({
 function getTokenInfo(options) {
   const now = moment()
   const publicClaims = {
-// Temp comment
     iss: getApiUri(),
     sub: getApiUri(`/v1/phones/${options.id}`),
     aud: getApiUri(),

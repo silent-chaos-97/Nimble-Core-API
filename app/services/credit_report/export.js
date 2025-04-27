@@ -8,7 +8,6 @@ async function __export(contractURL, institutionId) {
   try {
     logger.info(`[__export] started download for ${contractURL}`)
 
-    // get report html via axios
     const query = await creditReportAPI._downloadReport(contractURL)
 
     if (!(query.data instanceof Buffer)) {
@@ -18,6 +17,7 @@ async function __export(contractURL, institutionId) {
 
     // clean up, transform into valid compliant HTML
     const htmlContent = creditReportAPI._cleanReportHTML(query.data.toString())
+
     // call plugin, transform into a PDF
     const docBase64 = await HTMLToPDF.transform(htmlContent)
 

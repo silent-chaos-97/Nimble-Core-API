@@ -1,4 +1,3 @@
-/account-requests:
   post:
     tags:
       - Account Request

@@ -15,7 +15,6 @@ const properties = [
 function serializer(data) {
 
   const format = {
-// Temp comment
     ...defaultSerializer(properties, data),
     nameAka: _.get(data, 'nameAka', []).split(", "),
     countries: _.get(data, 'countries', []).split(", "),

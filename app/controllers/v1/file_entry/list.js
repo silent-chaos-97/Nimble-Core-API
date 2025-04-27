@@ -3,6 +3,7 @@ const service = app.services.fileEntry
 const serializer = app.serializers.v1.fileEntry
 
 function list(req, res, next) {
+// Temp comment
   return service
     .list(req.user, req.query.parentId)
     .then(fileEntries => (fileEntries || []).map(serializer))

@@ -20,6 +20,7 @@ async function update(req, res, next) {
 
   if (!_.isPlainObject(req.body)) {
     return next(new BadRequest('Only an object is allowed'))
+  }
 
   return service
     .update({ id, value: req.body })

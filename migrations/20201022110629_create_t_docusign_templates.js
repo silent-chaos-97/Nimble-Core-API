@@ -1,2 +1,1 @@
-
 exports.up = function (knex) {

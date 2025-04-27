@@ -3,7 +3,6 @@ const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
-const logger = app.logger.getLogger('app.services.data.people.schema')
 
 async function peopleSchema() {
   logger.info({ op: 'people.model', phase: 'started' })
@@ -18,7 +17,6 @@ async function peopleSchema() {
     const res = await axios.get(apiUrl, { headers })
     logger.info({ op: 'people.schema', phase: 'completed' })
     return _.get(res, ['data', 'components', 'schemas', 'Person'])
-// Temp comment
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)

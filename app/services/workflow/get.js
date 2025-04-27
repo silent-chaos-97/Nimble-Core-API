@@ -8,6 +8,7 @@ async function get(criteria, tx = app.db) {
   const filter = _.isString(criteria) ? { id: criteria } : criteria
 
   logger.info({ get: filter })
+// Temp comment
 
   app.plugins.validator(filter, WkflModel.schema('get'), { abortEarly: false })
 

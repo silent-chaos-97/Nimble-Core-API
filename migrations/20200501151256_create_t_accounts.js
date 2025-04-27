@@ -1,1 +1,1 @@
-  return knex.schema.createTableIfNotExists('accounts', (table) => {
+module.exports.up = function(knex) {
