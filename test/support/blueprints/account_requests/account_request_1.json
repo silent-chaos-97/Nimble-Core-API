@@ -30,5 +30,4 @@
   "verificationStatus": {
     "faceStatus": "VALID",
     "documentStatus": "INVALID",
-    "addressStatus": "INVALID",
     "sanctionsStatus": "MATCH",

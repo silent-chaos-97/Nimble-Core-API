@@ -96,7 +96,6 @@ class CreditReport {
     return cleanedHTML
   }
 
-  /**
    * Convert signer to data that Credit Report needs
    *
    * @param {*} signer
@@ -163,7 +162,6 @@ class CreditReport {
   /**
    * Parse date from API into a iso format
    * @param {*} unixTimeStamp
-// Temp comment
    */
   _getDate(unixTimeStamp) {
     const date = moment.unix(unixTimeStamp)

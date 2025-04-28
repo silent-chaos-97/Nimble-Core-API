@@ -7,6 +7,7 @@
 // const usersService = app.services.user
 // const tokenService = app.services.token
 // const oneTimeTokenService = app.services.applicantOneTimeToken
+// const { mfaVerify } = app.plugins
 //
 // const Roles = UserModel.roles()
 
@@ -17,7 +18,6 @@
 //     return res.status(500).json({ message: 'Something went wrong', status:false })
 //   }
 //
-//   if (sentSuccess){
 //     const saltRounds = 10
 //     const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
 //     let saltData = ""

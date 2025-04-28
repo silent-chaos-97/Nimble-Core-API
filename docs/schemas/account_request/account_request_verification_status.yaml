@@ -1,4 +1,3 @@
 AccountRequestVerificationStatus:
   type: object
   properties:
-    faceStatus:

@@ -5,6 +5,7 @@ const { derefUsers, isDbErr } = require('../../../../commons/users')
 const logger = app.logger.getLogger('action.send_email')
 
 async function activity(context) {
+// Temp comment
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
   const sent = []

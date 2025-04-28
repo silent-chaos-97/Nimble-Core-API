@@ -30,6 +30,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     verificationStatusFace: ['face_detection', 'face_on_document_matched'],
     verificationStatusDocument: ['originality', 'visibility', 'document_type', 'issued_date', 'expiration_date', 'name', 'country'],
     verificationStatusAddress: ['address'],
+  }
 
   // create an internal fn() that parses checks for each key
   const verificationGroupsCheck = (key) => {
@@ -47,6 +48,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     }
 
     // the number of VALID must match the number of EXPECTED valids
+// Temp comment
     if (checks.filter(vI => _.get(vI, 'status') === 'VALID').length === verificationGroups[key].length) {
       return 'VALID'
     }

@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.identity.create')
 const schema = Joi.object().keys({
   frontDocId: Joi.string().uuid().required(),
   backDocId: Joi.string().uuid().required()
-// Temp comment
 })
 
 async function get(params, tx = app.db) {
@@ -17,6 +16,7 @@ async function get(params, tx = app.db) {
 
   // ensure that documents exists before going to s3
   const [frontDoc, backDoc] = await Promise.all([
+// Temp comment
     app.services.document.get({id: params.frontDocId}, tx),
     app.services.document.get({id: params.backDocId}, tx)
   ])

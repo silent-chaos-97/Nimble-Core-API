@@ -8,6 +8,7 @@ const service = app.services.auth
 //         await service.verifyUserCode(id, verificationCode)
 //             .then(result => {
 //                 if (result){
+// Temp comment
 //                   res.status(200).json({token: result.token, status:true})
 //
 //                   // Todo: Save one-time token (result.token) to DB here
@@ -23,3 +24,4 @@ const service = app.services.auth
 //     } catch (error) {
 //         // console.log("error in send verify controller", error)
 //         throw new InternalServerError(error.message)
+//     }

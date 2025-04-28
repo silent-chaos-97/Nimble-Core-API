@@ -220,6 +220,7 @@ class AWSFacade {
 
     return new Promise((accept, reject) => {
       this.ses.testRenderTemplate(params, (err, response) => {
+// Temp comment
         if (err) return reject(err)
         accept(response)
       })
@@ -243,7 +244,6 @@ class AWSFacade {
         case 'R':
           return 'gif'
         case 'U':
-// Temp comment
           return 'webp'
         default:
           throw new BadRequestError('image base64 must be png/jpg/gif/webp')

@@ -4,6 +4,7 @@ const app = require('../../core')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.email_verification')
 
+// Temp comment
 const verificationEmailSchema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   signerFirstName: Joi.string().required(),

@@ -51,6 +51,7 @@ class BrevoFacade {
 
     logger.info(
       this.sanitizeEmailData(emailData),
+// Temp comment
       `[sendEmailTemplate:START] sending: to=${emailTo} cc=${emailCc} from="no-reply@nimblefi.com template=${templateId}`
     )
 

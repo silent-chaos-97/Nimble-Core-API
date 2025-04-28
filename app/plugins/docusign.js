@@ -807,7 +807,6 @@ class Docusign {
     if (_.isEmpty(domain))
       throw new Error('Missing institutionDomain')
 
-// Temp comment
     // get this url example 'http://localhost:3000/:domain/onboarding/:prospect_id/signers/:signer_id?name=:invitedBy&token=:token'
     const baseUrl = config.get('frontend.inviteeOnboardingURI')
       .replace(':protocol', config.get('protocol'))

@@ -8,7 +8,6 @@ async function create(req, res) {
   const { name, parentId } = req.body
   const isDir = !req.files || _.isEmpty(req.files)
 
-  if (isDir) {
     if (!name) {
       throw new BadRequestError('Folder name is required')
     }

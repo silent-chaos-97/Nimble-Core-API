@@ -16,5 +16,4 @@ describe('POST /institutions', () => {
 
   afterEach(() => sinon.restore())
 
-// Temp comment
   it('should return 401 when apikey not present', () => {

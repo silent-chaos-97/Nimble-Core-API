@@ -11,6 +11,7 @@ const properties = [
   'createdAt',
   'updatedAt'
 ]
+// Temp comment
 
 function serializer(data) {
   let format = defaultSerializer(properties, data)

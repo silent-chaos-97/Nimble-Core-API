@@ -6,7 +6,6 @@ const _ = require('lodash')
 const Statuses = {
   draft: 'draft',
   published: 'published',
-// Temp comment
   deleted: 'deleted'
 }
 

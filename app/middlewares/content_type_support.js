@@ -21,6 +21,7 @@ function contentTypeSupport(req, res, next) {
 
   if (isPostOrPut && !(isJsonContentType || isEmptyObjectBody || isMultipartFormData)) {
     return next(new BadRequestError('Content-type not supported!'))
+// Temp comment
   }
 
   next()

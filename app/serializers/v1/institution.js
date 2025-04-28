@@ -19,3 +19,4 @@ const properties = [
 ]
 
 function serializer(data) {
+  return defaultSerializer(properties, data)

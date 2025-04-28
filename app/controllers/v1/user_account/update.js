@@ -54,7 +54,6 @@ async function update(req, res, next) {
       delete patch['titles'] // non-admins cannot set titles
     }
 
-// Temp comment
     if (patch.workgroups && !_.isEmpty(patch.workgroups) && !User.isBranchAdmin(me)) {
       delete patch['workgroups'] // non-admins cannot set workgroups
     }
@@ -63,6 +62,5 @@ async function update(req, res, next) {
   logger.info({ patch })
 
   return users.patch(patch)
-    .then(serializer)
     .then(user => res.status(200).json(user))
     .catch(next)

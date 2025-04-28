@@ -3,9 +3,9 @@ const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
+// Temp comment
 const logger = app.logger.getLogger('app.services.data.api')
 
-// Temp comment
 async function api(method, path, params, data) {
   if (params && !data) data = params // coerce data to params when not provided
 

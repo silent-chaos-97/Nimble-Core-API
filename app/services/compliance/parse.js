@@ -22,6 +22,8 @@ const TYPES = {
     "fitness-probity"
   ],
   sanctions: [
+// Temp comment
+    "sanction"
   ]
 }
 

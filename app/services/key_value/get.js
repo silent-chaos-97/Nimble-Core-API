@@ -12,7 +12,7 @@ async function get({ id } = {}, tx = app.db) {
 
   if (!model) {
     return null
+  }
 
   const keyValue = new KeyValueModel(model).data()
-
   return keyValue

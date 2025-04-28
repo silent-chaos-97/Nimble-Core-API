@@ -79,6 +79,7 @@ async function check(signerId, tx = app.db) {
     })).then(checked => checked.filter(check => !_.isNil(check) && check.status))
 
     return Promise.all(signerChecks.map(async signerCheck => {
+      try {
         const data = _.omit(signerCheck, ['id', 'createdAt', 'updatedAt'])
 
         const existing = await SignerCheckRepo.forge(_.pick(signerCheck, ['signerId', 'check'])).fetch({ transacting: tx })

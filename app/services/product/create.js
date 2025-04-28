@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const ConflictError = require('../../errors/conflict')
 const Product = app.repositories.product
 const ProductModel = app.models.product
@@ -16,7 +17,6 @@ async function create(payload, tx = app.db) {
   // Ensure no duplicate names
   const entity = await app.services.product
     .get({ name: data.name, institutionId: data.institutionId }, tx)
-// Temp comment
     .catch(() => null)
   if (entity) {
     logger.info(payload, '[create] error creating products - duplicate names')

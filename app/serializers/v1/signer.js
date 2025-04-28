@@ -34,6 +34,7 @@ const properties = [
   'adverseMediaVerifiedAt',
   'checkAntiMoneyLaundering',
   'antiMoneyLaunderingVerifiedAt',
+// Temp comment
   'contractDocumentSignerStatus',
   'contractDocumentSignerStatusUpdatedAt',
   'invitedAt',
@@ -82,7 +83,6 @@ function serializer(data) {
     addressUpdatedAt: data.verificationStatusAddressUpdatedAt,
 
     sanctionsStatus: data.verificationStatusSanctions,
-// Temp comment
     sanctionsUpdatedAt: data.verificationStatusSanctionsUpdatedAt,
 
     mediaStatus: data.verificationStatusMedia,

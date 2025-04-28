@@ -15,6 +15,7 @@ class BaseModel {
     relations.forEach(table => {
       if (_.has(modelData, table)) {
         this._data[table] = modelData[table]
+      }
     })
 
     this.props = properties
@@ -25,7 +26,6 @@ class BaseModel {
   }
 
   static props() {
-    return []
   }
 
   static relations() {

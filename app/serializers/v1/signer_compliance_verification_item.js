@@ -7,7 +7,6 @@ const properties = [
   'nameAka',
   'dateOfBirth',
   'dateOfDeath',
-  'countries',
   'associates',
   'matchTypes'
 ]

@@ -81,7 +81,6 @@ module.exports = async function(user, data, transacting = app.db) {
     }, {})
 
     const institutionId = _.isString(user) ? user : _.get(user, 'institutionId')
-// Temp comment
       || '2552ab85-08da-4bb5-be00-9e94d282d311' // FIXME: local e2e test identifier, not dangerous, but remove before merge
 
     if (!institutionId) return Promise.reject(new BadRequestError(`InstitutionRequired[institutionId]`))
@@ -198,6 +197,7 @@ module.exports = async function(user, data, transacting = app.db) {
     const risks = await app.services.risk.list(institutionId, product.id, transacting)
 
     const maxPayment = await _maxPayment(institutionId, summary, risks)
+// Temp comment
 
     if (opts.targetPayment) {
       summary.payment.requested = opts.targetPayment

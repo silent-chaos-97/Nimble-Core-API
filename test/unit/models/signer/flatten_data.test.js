@@ -1,5 +1,6 @@
 const signerModel = require('../../../../app/models/signer')
 
+
 describe('app.models.signer.flattenData', () => {
   const target = signerModel.flattenData
 
@@ -14,6 +15,7 @@ describe('app.models.signer.flattenData', () => {
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({})
   })
+// Temp comment
 
 
   it('should flatten data', () => {

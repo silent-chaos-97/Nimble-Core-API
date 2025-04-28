@@ -3,6 +3,7 @@ const target = require('../../../app/plugins/xml')
 describe('app.plugins.xml', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
+  })
 
   it('should be a object', () => {
     expect(target).to.be.an('object')
@@ -13,7 +14,6 @@ describe('app.plugins.xml', () => {
     expect(target.format).to.be.an('function')
   })
 
-  it('should explose tag() method', () => {
     expect(target.tag).not.to.be.undefined
     expect(target.tag).to.be.an('function')
   })

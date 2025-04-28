@@ -1,4 +1,4 @@
-const Account = app.repositories.account
+const app = require('../../core')
 const AccountModel = app.models.account
 
 //const NotFoudError = require('../../../errors/not_found')

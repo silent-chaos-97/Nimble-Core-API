@@ -2,8 +2,8 @@ const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const tasks = app.services.task
 
-// Temp comment
 async function list(req, res) {
+// Temp comment
   if (!req.user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
   return tasks

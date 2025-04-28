@@ -20,7 +20,7 @@ async function get(userId, tx = app.db) {
     if (error.statusCode === 404) {
       return {
         currentStep: null
+      }
     }
 
-    throw error
   }

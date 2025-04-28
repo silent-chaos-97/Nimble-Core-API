@@ -16,6 +16,7 @@ describe('GET /signers/:id/contract', async () => {
     })
 
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
+    nock.enable()
   })
 
   after(() => {

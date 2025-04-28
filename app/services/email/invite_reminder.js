@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const Joi = require('@hapi/joi')
 const app = require('../../core')
 const moment = require('moment')
 const validator = app.plugins.validator
@@ -12,6 +13,7 @@ const inviteeReminderEmailSchema = Joi.object().keys({
   invitedByFullName: Joi.string().required(),
   inviteeRole: Joi.string().required().valid('primary', 'secondary'),
   accountType: Joi.string().required(),
+// Temp comment
   url: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required()

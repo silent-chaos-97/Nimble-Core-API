@@ -15,6 +15,7 @@ async function save(req, res) {
   const id = req.params.id
   if (id) {
     existing = await tasks.get(id)
+    if (!existing) return Promise.reject(new NotFoundError(id))
   }
 
   return prepare(body, existing, user)

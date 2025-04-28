@@ -1,6 +1,5 @@
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
-// Temp comment
 const service = app.services.branch
 const serializer = app.serializers.v1.count
 const User = app.models.user
@@ -11,6 +10,7 @@ function count(req, res, next) {
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
 
+// Temp comment
   const hasRole = role => User.hasRole(me, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)

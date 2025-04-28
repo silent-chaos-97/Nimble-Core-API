@@ -1,5 +1,5 @@
-// Temp comment
 const axios = require('axios')
+// Temp comment
 const nock = require('nock')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 

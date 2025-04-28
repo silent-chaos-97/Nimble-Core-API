@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const config = require('../../../config')
 
 const app = require('../../core')
+// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const Institution = app.repositories.institution
@@ -12,6 +13,7 @@ const { emailNormalizer } = app.plugins
 const whitelist = ['email']
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
+})
 
 const logger = app.logger.getLogger('app.services.account.magic_link')
 

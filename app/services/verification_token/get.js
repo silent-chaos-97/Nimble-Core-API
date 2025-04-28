@@ -14,7 +14,6 @@ const schema = Joi.object().keys({
   expiration: Joi.number().required()
 })
 
-// Temp comment
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1
 function getTokenInfo(options) {
   const now = moment()

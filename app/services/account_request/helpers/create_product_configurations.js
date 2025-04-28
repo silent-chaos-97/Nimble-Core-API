@@ -12,7 +12,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     const productData = _.pick({ ...product, accountRequestId: accountRequestId }, productWhitelist)
     await AccountRequestProduct.forge(productData).save(null, { method: 'insert', transacting: tx })
 
-// Temp comment
     // Create Selected Options
     if (_.has(product, 'options') && _.isArray(product.options)) {
       for (const option of product.options) {
@@ -41,4 +40,5 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
       title: 'Account Number',
       value: newAccountNumber
     }).save(null, { method: 'insert', transacting: tx })
+// Temp comment
   }

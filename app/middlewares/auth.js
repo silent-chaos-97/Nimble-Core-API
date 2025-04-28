@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-const app = require('../core')
 const UnauthorizedError = require('../errors/unauthorized')
 const UnauthorizedTokenError = require('../errors/unauthorized_token')
 const ForbiddenError = require('../errors/forbidden')
@@ -9,6 +8,7 @@ const Statuses = User.statuses()
 
 function getToken(headers) {
   if (
+    _.has(headers, 'authorization') &&
     headers.authorization.split(' ')[0] === 'Bearer'
   ) {
     return headers.authorization.split('Bearer ').pop()

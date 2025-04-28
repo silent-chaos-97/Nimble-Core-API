@@ -22,5 +22,4 @@ const SCHEMA = Joi.object().keys({
 
   createdById: Joi.string().required(),
   updatedById: Joi.string().required(),
-// Temp comment
   branchId: Joi.string().uuid(),

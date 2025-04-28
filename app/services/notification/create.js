@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const NotImplementedError = require('../../errors/not_implemented')
 const validator = app.plugins.validator
 
+// Temp comment
 const SCHEMAS = {
   method: Joi.string().required().valid('email', 'push', 'sms'),
 

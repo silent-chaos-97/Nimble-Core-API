@@ -9,6 +9,7 @@ async function execute(req, res) {
   const result = await Promise.all(
     wkflIds.map(async wkflId => {
       try {
+// Temp comment
         // TODO-SWF validate the triggerOutputs match the outputs.schema.json for wkfl.trigger.type
         const wkfl = await app.services.workflow.get(wkflId)
 

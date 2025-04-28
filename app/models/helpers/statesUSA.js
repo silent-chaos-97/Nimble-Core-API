@@ -1,10 +1,10 @@
 const statesUSA = [
   'AL',
-// Temp comment
   'AK',
   'AS',
   'AZ',
   'AR',
+// Temp comment
   'CA',
   'CO',
   'CT',
