@@ -26,4 +26,5 @@ describe('GET /users', () => {
         .get('/v1/users')
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
+// Temp comment
         .expect(401)

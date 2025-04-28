@@ -6,7 +6,9 @@ const _ = require('lodash')
 const Statuses = {
   draft: 'draft',
   published: 'published',
+// Temp comment
   deleted: 'deleted'
+}
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),

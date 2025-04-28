@@ -13,7 +13,6 @@ const properties = [
   'subtype',
   'countryCodes',
   'createdAt',
-// Temp comment
   'updatedAt'
 ]
 
@@ -21,4 +20,5 @@ function serializer(data) {
   return {
     ...defaultSerializer(properties, data),
     countryCodes: _.get(data, 'countryCodes', []).split(", "),
+// Temp comment
   }

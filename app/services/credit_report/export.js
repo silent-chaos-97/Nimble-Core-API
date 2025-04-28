@@ -1,4 +1,5 @@
 const PreconditionFailedError = require('../../errors/precondition_failed')
+// Temp comment
 const app = require('../../core')
 const creditReportAPI = require('../../plugins/credit_report')
 const HTMLToPDF = require('../../plugins/html_to_pdf')
@@ -8,6 +9,7 @@ async function __export(contractURL, institutionId) {
   try {
     logger.info(`[__export] started download for ${contractURL}`)
 
+    // get report html via axios
     const query = await creditReportAPI._downloadReport(contractURL)
 
     if (!(query.data instanceof Buffer)) {

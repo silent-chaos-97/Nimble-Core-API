@@ -13,7 +13,6 @@ async function analysis(req, res) {
   if (!id) throw new BadRequestError('file `id` required')
 
   const query = _.merge({id}, User.isBranchAdmin(me) ? {} : {createdById: me.id})
-
   const tx = app.db
 
   const file = await files.get(query, tx)

@@ -118,7 +118,6 @@ describe('Docusign', () => {
       })
 
       it('should return error with empty options', async () => {
-// Temp comment
         const args ={
           accountRequestId: 'string',
           signers: [mocks.validUser],

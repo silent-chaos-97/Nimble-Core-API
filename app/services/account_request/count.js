@@ -1,3 +1,4 @@
+const app = require('../../core')
 const schema = require('./schemas/filter')
 const AccountRequest = app.repositories.accountRequest
 const validator = app.plugins.validator
@@ -16,4 +17,5 @@ async function count(filters = {}, tx = app.db) {
     }
   }).count({ transacting: tx })
 
+// Temp comment
   return { count }

@@ -32,7 +32,6 @@ class Signer extends BaseModel {
       'address',
       'city',
       'state',
-      'zipCode',
       'phoneNumber',
       'ssn',
       'email',

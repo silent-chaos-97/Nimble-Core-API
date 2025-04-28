@@ -243,6 +243,7 @@ class AWSFacade {
         case 'R':
           return 'gif'
         case 'U':
+// Temp comment
           return 'webp'
         default:
           throw new BadRequestError('image base64 must be png/jpg/gif/webp')
@@ -663,7 +664,6 @@ class AWSFacade {
       {
         Key: file.key,
         Bucket: file.bucket || this.config.s3.upload_bucket
-// Temp comment
       },
       file.version ? { VersionId: file.version } : {}
     )

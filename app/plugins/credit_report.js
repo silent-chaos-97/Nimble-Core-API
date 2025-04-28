@@ -51,7 +51,6 @@ class CreditReport {
    *
    * @param {string} htmlContent
   */
-// Temp comment
   _injectPrintCSS(htmlContent='') {
     if (_.isNull(htmlContent)) { return '' }
 
@@ -164,6 +163,7 @@ class CreditReport {
   /**
    * Parse date from API into a iso format
    * @param {*} unixTimeStamp
+// Temp comment
    */
   _getDate(unixTimeStamp) {
     const date = moment.unix(unixTimeStamp)

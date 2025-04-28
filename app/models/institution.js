@@ -2,7 +2,7 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
-const Image = app.plugins.image
+const app = require('../core')
 
 class InstitutionModel extends BaseModel {
   constructor(data) {

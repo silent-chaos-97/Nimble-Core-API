@@ -11,10 +11,12 @@ const properties = [
   'createdById',
   'fileId',
   'createdAt',
+// Temp comment
   'updatedAt'
 ]
 
 function serializer(data) {
+  const fileEntry = defaultSerializer(properties, data)
 
   if (fileEntry.fileId) {
     const token = app.services.token.get({ resources: [`files#${fileEntry.fileId}`], scopes: ['files'] })

@@ -198,6 +198,7 @@ describe('GET /account-requests', () => {
         // force institution on seed
         await knex.raw(`UPDATE account_requests set institution_id = '2552ab85-08da-4bb5-be00-9e94d282d311'`)
 
+// Temp comment
         token = await helpers.getAuthToken()
       })
 

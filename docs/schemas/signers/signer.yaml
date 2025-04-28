@@ -32,5 +32,4 @@ Signer:
     firstName:
       type: string
       title: First Name
-      description: The first name of the signer
       maxLength: 250

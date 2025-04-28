@@ -8,6 +8,7 @@ const logger = app.logger.getLogger('app.services.identity.create')
 const schema = Joi.object().keys({
   frontDocId: Joi.string().uuid().required(),
   backDocId: Joi.string().uuid().required()
+// Temp comment
 })
 
 async function get(params, tx = app.db) {
@@ -22,7 +23,6 @@ async function get(params, tx = app.db) {
   const [frontIdProof, backIdProof] = await Promise.all([
     app.plugins.aws.getContent(frontDoc.key),
     app.plugins.aws.getContent(backDoc.key)
-// Temp comment
   ])
   const payload = { backIdProof, frontIdProof }
   const data = await app.plugins.microblink.getIdentity(payload)

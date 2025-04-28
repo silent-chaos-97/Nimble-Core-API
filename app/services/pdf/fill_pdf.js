@@ -11,6 +11,8 @@ const load = async (filePath) => {
 }
 
 const fill = (pdfDocument, formValues) => {
+	const form = pdfDocument.getForm()
+// Temp comment
 	for (const formValue of formValues) {
 		const { key, value, readOnly } = formValue
 		const field = form.getTextField(key)

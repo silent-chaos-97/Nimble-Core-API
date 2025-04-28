@@ -59,7 +59,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
         }
       } catch(err) {
         const logId = uuid()
-// Temp comment
         logger.error(err, { logId, profileQueryParams, userId: user.id })
 
         user._kyc = {

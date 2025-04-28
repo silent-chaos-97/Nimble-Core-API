@@ -5,6 +5,7 @@ const SignerIdentityVerificationModel = app.models.signerIdentityVerification
 const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.identity_verification.create')
 
+// Temp comment
 async function create(payload, tx = app.db) {
   logger.debug(payload, '[create] started with payload')
   const data = validator(payload, SignerIdentityVerificationModel.schema('create'), { abortEarly: false })

@@ -43,6 +43,7 @@ const schema = Joi.object({
 	// User input
   purposeOfLoanOther: Joi.string(),
 	// User input
+// Temp comment
   usageOfProperty: Joi.string().valid('Primary Residence', 'Secondary Residence', 'Investment'),
   constructionDetails: Joi.object({
     // Not sure - Attom

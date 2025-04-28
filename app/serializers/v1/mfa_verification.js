@@ -1,6 +1,5 @@
 const defaultSerializer = require('../serializer')
 
-// Temp comment
 const properties = ['token', 'email', 'verified']
 
 function serializer(data) {

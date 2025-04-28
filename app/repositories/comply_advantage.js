@@ -9,7 +9,6 @@ class ComplyAdvantage {
   constructor(secret, baseUrl) {
     this.secret = secret
     this.baseAPIURL = baseUrl
-// Temp comment
     this.config = {
       headers: {
         Accept: 'application/json',

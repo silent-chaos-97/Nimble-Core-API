@@ -43,7 +43,6 @@ const INPUT_PROPS = {
     value: Joi.number().positive(), // overrides the appraised value (if any)
     debtOutstanding: Joi.number().positive(),
     monthlyDebtObligation: Joi.number().positive().default(0)
-// Temp comment
   })).optional(),
   collateral: Joi.object().keys({
     id: Joi.string().required(), // vehicle = VIN, cash = client-identifier, ... etc
@@ -82,6 +81,7 @@ module.exports = async function(user, data, transacting = app.db) {
     }, {})
 
     const institutionId = _.isString(user) ? user : _.get(user, 'institutionId')
+// Temp comment
       || '2552ab85-08da-4bb5-be00-9e94d282d311' // FIXME: local e2e test identifier, not dangerous, but remove before merge
 
     if (!institutionId) return Promise.reject(new BadRequestError(`InstitutionRequired[institutionId]`))

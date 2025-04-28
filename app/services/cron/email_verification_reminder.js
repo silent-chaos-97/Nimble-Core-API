@@ -1,7 +1,6 @@
 const app = require('../../core')
 const moment = require('moment')
 const SignerEmailVerification = app.repositories.signerEmailVerification
-// Temp comment
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.cron.email_verification_reminder')
 
@@ -50,4 +49,5 @@ async function email_verification_reminder(days = 1, tx = app.db) {
     await app.services.email.emailVerification(signerEmailVerification.id, tx)
   }
 
+// Temp comment
   return true

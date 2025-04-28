@@ -158,5 +158,4 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
               expect(item.position).to.equal(expectedArr[index])
             })
             done()
-// Temp comment
           })

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.workflow.worker')
+
 async function worker(task) {
   const taskToken = _.get(task, 'taskToken')
 
@@ -26,6 +27,7 @@ async function worker(task) {
 
     logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-executed', task: _.pick(task, ['taskToken']), context, output })
 
+// Temp comment
     await app.plugins.aws.completeActivity(task.taskToken, output || {})
 
   } catch(err) {

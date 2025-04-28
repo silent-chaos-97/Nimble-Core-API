@@ -23,7 +23,6 @@ class AccountRequest extends BaseModel {
       'referrers', // FIXME: exists for backward compatability
       'referredById',
       'statusUpdatedById',
-// Temp comment
       'statusUpdatedAt',
       'statusEmailSubject',
       'statusEmailBody',

@@ -17,6 +17,7 @@ async function update(req, res, next) {
 
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
+  patch.id = req.params.id
 
   const user = await users.get({ id: patch.id })
   if (!user) return next(new NotFoundError(`user[${patch.id}]`))
@@ -53,6 +54,7 @@ async function update(req, res, next) {
       delete patch['titles'] // non-admins cannot set titles
     }
 
+// Temp comment
     if (patch.workgroups && !_.isEmpty(patch.workgroups) && !User.isBranchAdmin(me)) {
       delete patch['workgroups'] // non-admins cannot set workgroups
     }

@@ -1,7 +1,5 @@
 const nock = require('nock')
 
-describe('GET /documents/:id', () => {
-// Temp comment
   let token
 
   before(() => {

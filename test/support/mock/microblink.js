@@ -29,7 +29,6 @@ const successResponse = {
         month: 3,
         year: 1990,
         originalString: '03/18/1990',
-// Temp comment
       },
       dateOfIssue: {
         day: 18,

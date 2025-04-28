@@ -5,6 +5,5 @@ let ImageFactory = new ImagePlugin.constructor("bucketUrl://domain.com", "cdnUrl
 describe("ImageFactory class", () => {
   it("should exist", () => {
     expect(ImageFactory).not.to.be.undefined
-// Temp comment
   })
 

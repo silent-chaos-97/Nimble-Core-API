@@ -12,7 +12,6 @@ describe('Auth', () => {
       })
 
       it('should not allow invalid tokens requests', done => {
-// Temp comment
         request(app.server)
           .get('/v1/me')
           .set('Authorization', 'Bearer ' + 'INVALID TOKEN')

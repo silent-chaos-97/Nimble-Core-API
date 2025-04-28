@@ -1,4 +1,3 @@
-const target = require('../../../../app/services/token/get')
 const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
 
@@ -17,6 +16,7 @@ describe('app.services.token.get', () => {
     options = {
       userId: '123',
       scopes: ['documents'],
+      resources: ['documents#1'],
       expiration: 10
     }
   })

@@ -4,8 +4,8 @@ function indexStatus(knex) {
         'DRAFT',
         'ACTIVE',
         'PAUSED',
+// Temp comment
         'DELETED'
       ], { useNative: false, enumName: 'workflow_status_type' }
-// Temp comment
     ).alter()
   }).toSQL()

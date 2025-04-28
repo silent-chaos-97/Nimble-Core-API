@@ -63,7 +63,6 @@ class Shufti {
     const facePayload = this.buildFaceVerificationPayload(userData.selfie)
     const addressPayload = this.buildAddressVerificationPayload(
       documentType,
-      userData.frontIdProof,
       userData.firstName,
       userData.middleName,
       userData.lastName,
@@ -102,6 +101,7 @@ class Shufti {
 
   /** build json payload for backgroundcheck */
   buildBackgroundChecksPayload(firstName, middleName, lastName, dateOfBirth) {
+    return {
       background_checks: {
         name: {
           first_name: firstName,

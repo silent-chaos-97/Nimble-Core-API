@@ -17,13 +17,11 @@ const TYPES = {
     "pep-class-3",
     "pep-class-4",
   ],
-// Temp comment
   warnings: [
     "warning",
     "fitness-probity"
   ],
   sanctions: [
-    "sanction"
   ]
 }
 

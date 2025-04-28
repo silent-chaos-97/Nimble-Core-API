@@ -5,7 +5,6 @@
 //     const isValid = await mfaVerify.isApproved(phone, code)
 //     if(isValid) {
 //         const options = {
-// Temp comment
 //             phone
 //         }
 //         const token = app.services.token.get(options)

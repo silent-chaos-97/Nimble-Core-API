@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 
 function getUri(path = '') {

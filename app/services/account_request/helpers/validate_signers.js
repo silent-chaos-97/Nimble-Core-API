@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const PreconditionFailedError = require('../../../errors/precondition_failed')
 const Signer = require("../../../models/signer")
 

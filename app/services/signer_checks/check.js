@@ -30,6 +30,7 @@ async function check(signerId, tx = app.db) {
       }, []))
 
     const signerChecks = await Promise.all(checkers.map(async checker => {
+      let _hasStarted = checker.hasStarted
       if (!_hasStarted) _hasStarted = async(_signer, check) => !['NIL', SignerCheck.statuses().pending].includes(_.get(_signer, ['checks', check, 'status'], 'NIL'))
 
       const hasStarted = await _hasStarted(signer, checker.id)
@@ -78,7 +79,6 @@ async function check(signerId, tx = app.db) {
     })).then(checked => checked.filter(check => !_.isNil(check) && check.status))
 
     return Promise.all(signerChecks.map(async signerCheck => {
-      try {
         const data = _.omit(signerCheck, ['id', 'createdAt', 'updatedAt'])
 
         const existing = await SignerCheckRepo.forge(_.pick(signerCheck, ['signerId', 'check'])).fetch({ transacting: tx })

@@ -13,6 +13,7 @@ async function get(options, tx = app.db) {
     withRelated: [{
       options: (qb) => {
         qb.orderBy('category', 'ASC')
+        qb.orderBy('key', 'ASC')
       }
     }],
     transacting: tx

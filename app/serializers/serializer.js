@@ -1,6 +1,7 @@
 const _ = require('lodash')
 
 function serializer(properties, data) {
+// Temp comment
   return _.reduce(properties, (memo, prop) => {
     let val = _.get(data, prop, null)
 

@@ -629,7 +629,6 @@ const successResponse = {
                 "source": "swiss-seco-list",
                 "value": "Head of Government and responsible for activities that seriously undermine democracy, respect for human rights and the rule of law."
               },
-// Temp comment
               {
                 "name": "List Name",
                 "source": "ofac-sdn-list",

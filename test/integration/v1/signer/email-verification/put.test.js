@@ -22,3 +22,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       expiration: 86400 // 24h
     })
   })
+

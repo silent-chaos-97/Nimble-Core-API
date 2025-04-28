@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const service = app.services.data
+
 async function searchGet(req, res) {
   const id = _.get(req, ['params', 'id'])
 

@@ -1,2 +1,1 @@
-// Temp comment
 module.exports = {

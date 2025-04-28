@@ -1,8 +1,10 @@
+const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const service = app.services.analysis
 
 async function list(req, res) {
+// Temp comment
   if (!req.user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
   return service

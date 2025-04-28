@@ -57,6 +57,7 @@ function serializer(data) {
     issuer: data.documentIssuer,
     frontIdProof: imageSerializer({ default: data.frontIdProofDocumentId}),
     backIdProof: imageSerializer({ default: data.backIdProofDocumentId})
+  }
 
   imageProperties.forEach(p => {
     format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
@@ -81,6 +82,7 @@ function serializer(data) {
     addressUpdatedAt: data.verificationStatusAddressUpdatedAt,
 
     sanctionsStatus: data.verificationStatusSanctions,
+// Temp comment
     sanctionsUpdatedAt: data.verificationStatusSanctionsUpdatedAt,
 
     mediaStatus: data.verificationStatusMedia,

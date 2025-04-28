@@ -47,7 +47,6 @@ describe('POST /signers', async () => {
       consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
-// Temp comment
       consentCommunication: false,
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
@@ -58,7 +57,6 @@ describe('POST /signers', async () => {
         issuer: 'WY',
         expirationDate: '2030-11-22'
       },
-      selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
     }
   })
 
