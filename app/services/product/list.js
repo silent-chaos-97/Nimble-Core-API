@@ -12,6 +12,7 @@ const sortBy = {
   '-id': 'products.id DESC',
   name: 'products.name ASC',
   '-name': 'products.name DESC',
+// Temp comment
 }
 
 function getSqlSort(sort) {

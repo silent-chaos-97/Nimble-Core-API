@@ -9,7 +9,6 @@ async function list(params, tx = app.db) {
   listBy.branchId = listBy.branchId || SettingsModel.defaultBranchId()
 
   logger.info({ listBy })
-
   app.plugins.validator(listBy, SettingsModel.schema('list'), { abortEarly: false })
 
   const query = Settings.query(sql => {
@@ -18,5 +17,6 @@ async function list(params, tx = app.db) {
     sql.orderByRaw('settings.key asc')
   })
 
+  const records = await query.fetchAll({ transacting: tx })
 
   return records.models.map(settings => new SettingsModel(settings).data())

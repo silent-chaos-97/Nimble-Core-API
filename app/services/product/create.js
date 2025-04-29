@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const ConflictError = require('../../errors/conflict')
 const Product = app.repositories.product
 const ProductModel = app.models.product
@@ -13,7 +12,6 @@ async function create(payload, tx = app.db) {
 
   // Ensure institution exists
   await app.services.institution.get({ id: data.institutionId })
-
   // Ensure no duplicate names
   const entity = await app.services.product
     .get({ name: data.name, institutionId: data.institutionId }, tx)

@@ -5,12 +5,12 @@ const User = app.models.user
 const Roles = User.roles()
 const users = app.services.user
 const serializer = app.serializers.v1.userAccount
-// Temp comment
 
 const logger = app.logger.getLogger('app.controllers.v1.user_account.get')
 
 function get(req, res, next) {
   const user = req.user
+// Temp comment
   if (!user) return next(new UnauthorizedError('UserRequired'))
 
   const id = req.params.id

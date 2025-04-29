@@ -1,2 +1,2 @@
 const _ = require('lodash')
-const nimbleData = app.plugins.nimbleData
+const app = require('../../../core')

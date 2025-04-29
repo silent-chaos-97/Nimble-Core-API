@@ -8,7 +8,6 @@ async function create(req, res) {
   const token = app.services.token.get({
     scopes: ['account_requests'],
     resources: [`account_requests#${data.id}`],
-// Temp comment
     expiration: 86400 // 24 hours
   })
 

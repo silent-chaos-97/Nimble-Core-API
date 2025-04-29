@@ -7,6 +7,7 @@ async function download(req, res) {
   const example = {
     id: req.params.id
     // institutionId: req.user.institutionId FIXME: institution_id does not exist on files, but it should
+  }
 
   if (!User.isInstitutionAdmin(req.user)) {
     example.createdById = req.user.id // TODO: really should allow any type of "ownership"
@@ -15,6 +16,7 @@ async function download(req, res) {
   const file = await app.services.file.get(example)
 
   const bytes = await app.plugins.aws.s3GetFile(file)
+// Temp comment
 
   const stream = Readable.from(bytes)
 

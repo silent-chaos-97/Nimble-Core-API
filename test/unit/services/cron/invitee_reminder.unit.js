@@ -15,6 +15,7 @@ describe('app.services.cron.inviteeReminder', () => {
     clock = sinon.useFakeTimers(baseDate)
     sinon.reset()
   })
+
   afterEach(() => {
     sinon.reset()
   })

@@ -212,7 +212,6 @@ describe('GET /account-requests', () => {
               expect(res.body).to.be.an('array')
               expect(res.body).to.have.lengthOf(4)
             })
-// Temp comment
         })
 
         it('should 400 on invalid status parameter', () => {
@@ -223,7 +222,6 @@ describe('GET /account-requests', () => {
             .expect(400)
         })
       })
-
       describe('by limit and offset', () => {
         const accountRequestId2 = '17ba2033-1c12-463b-bbc7-72deed747ae7'
 

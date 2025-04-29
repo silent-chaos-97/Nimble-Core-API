@@ -10,7 +10,6 @@ async function remove(req, res) {
 
   const exists = await app.controllers.analysis.get(req, res) // checks access
 
-  if (!exists) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 
   return service
     .save({ status: AnalysisModel.statuses().deleted, id: req.params.id }, { user: req.user })

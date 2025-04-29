@@ -67,7 +67,6 @@ const mockDocumentTabs = {
     {
       'stampType': 'signature',
       'isSealSignTab': 'false',
-      'name': 'SignHere',
       'tabLabel': 'signature#2',
       'scaleValue': '1',
       'optional': 'false',
@@ -247,6 +246,7 @@ const mockDocumentTabs = {
       'tabId': '41a48182-1a4a-424c-b52f-6447d476c79f',
       'templateLocked': 'false',
       'templateRequired': 'false',
+      'tabType': 'text'
     },
     {
       'validationPattern': '',

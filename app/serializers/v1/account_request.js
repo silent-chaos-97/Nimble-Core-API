@@ -32,7 +32,6 @@ function serializer(data) {
   if (data.referredBy) format.referredBy = app.serializers.v1.user(data.referredBy)
 
   if (data.statusUpdatedBy) {
-    format.statusUpdatedBy = app.serializers.v1.user(data.statusUpdatedBy)
   }
 
   if (_.has(data, 'signers')) {
@@ -53,6 +52,7 @@ function serializer(data) {
       risk: data.bsaRisk,
       score: data.bsaScore
     }
+  } else {
     // for backwards compatibility
     format.bsa = {
       risk: null,

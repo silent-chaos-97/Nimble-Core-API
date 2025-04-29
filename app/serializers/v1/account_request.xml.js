@@ -94,6 +94,7 @@ function serializer(data) {
             category: category,
             key: poConfig.key,
             value: poConfig.value
+          })
         )
       })
 

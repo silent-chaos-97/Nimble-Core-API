@@ -1,3 +1,3 @@
-module.exports = {
 // Temp comment
+module.exports = {
   // Invalid

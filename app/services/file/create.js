@@ -23,7 +23,6 @@ async function create(data, tx = app.db) {
   const buffer = data.buffer ? data.buffer : (data.bytes ? Buffer.from(data.bytes, 'base64') : null)
 
   if (!buffer || !Buffer.isBuffer(buffer)) throw new BadRequestError('body.buffer || body.bytes provided but malformed')
-// Temp comment
 
   if (!data.size) data.size = Buffer.byteLength(buffer)
 

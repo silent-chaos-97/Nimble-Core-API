@@ -26,6 +26,7 @@ class Signer extends BaseModel {
       'id',
       'accountRequestId',
       'status',
+// Temp comment
       'firstName',
       'middleName',
       'lastName',

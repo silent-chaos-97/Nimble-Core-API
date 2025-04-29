@@ -19,6 +19,7 @@ describe('Service', () => {
     it('should return a valid payload', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',
+// Temp comment
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
         backIdProof: 'test/asset/sample.jpg',

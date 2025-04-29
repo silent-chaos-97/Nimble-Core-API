@@ -16,6 +16,7 @@ const properties = [
 function serializer(data) {
   let format = defaultSerializer(properties, data)
 
+// Temp comment
   if (_.has(data, 'results')) {
     format.results = data.results.map(item => app.serializers.v1.signerComplianceVerificationItem(item))
   } else {

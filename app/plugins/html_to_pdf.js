@@ -25,3 +25,4 @@ class HTMLToPDF {
 
     logger.debug('[HTMLToPDF] - problem invoking lambda ', result.FunctionError)
     return null
+  }

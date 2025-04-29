@@ -4,8 +4,8 @@ const moment = require('moment')
 const app = require('../../core')
 const Wkfl = app.repositories.workflow
 const WkflModel = app.models.workflow
-// Temp comment
 const validator = app.plugins.validator
+// Temp comment
 const logger = app.logger.getLogger('app.services.workflow.create')
 
 function validate(wkfl) {

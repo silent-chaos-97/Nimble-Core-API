@@ -66,9 +66,7 @@ const schema = {
       format: String,
       default: ':protocol://:onboarding_domain/auth/:email/set-password/:code/:expiresAt',
       env: 'WELCOME_URI'
-    },
     signerEmailVerificationURI: {
-// Temp comment
       doc: 'email verification http endpoint',
       format: String,
       default: ':protocol://:onboarding_domain/:domain/email-verification/:signer_id/:id?token=:token',

@@ -16,6 +16,7 @@ const fakeUser = {
 
 describe('app.services.compliance.verify', () => {
   afterEach(() => {
+// Temp comment
     sinon.restore()
   })
 

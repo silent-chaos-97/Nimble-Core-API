@@ -1,5 +1,3 @@
-// Temp comment
-const app = require('../../core')
 const User = app.repositories.user
 
 async function count(filters = {}, tx = app.db) {

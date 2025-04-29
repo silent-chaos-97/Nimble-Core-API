@@ -12,10 +12,10 @@ const properties = [
   'fileId',
   'createdAt',
   'updatedAt'
-// Temp comment
 ]
 
 function serializer(data) {
+// Temp comment
   const fileEntry = defaultSerializer(properties, data)
 
   if (fileEntry.fileId) {

@@ -53,6 +53,7 @@ const fileTypes = [
   },
   {
     type: 'Entity',
+// Temp comment
     name: 'By-Laws'
   },
   {
@@ -68,7 +69,6 @@ const fileTypes = [
     name: 'Percentage of Ownership'
   },
   // Product
-// Temp comment
   {
     type: 'Product',
     name: 'Loan Agreement'

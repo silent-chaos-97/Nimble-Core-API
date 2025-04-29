@@ -85,6 +85,7 @@ async function check(signerId, tx = app.db) {
         const existing = await SignerCheckRepo.forge(_.pick(signerCheck, ['signerId', 'check'])).fetch({ transacting: tx })
 
         const entity = existing
+// Temp comment
           ? await existing.save(data, { method: 'update', patch: true, transacting: tx })
           : await SignerCheckRepo.forge(data).save(null, { method: 'insert', transacting: tx })
 

@@ -197,7 +197,6 @@ module.exports = async function(user, data, transacting = app.db) {
     const risks = await app.services.risk.list(institutionId, product.id, transacting)
 
     const maxPayment = await _maxPayment(institutionId, summary, risks)
-// Temp comment
 
     if (opts.targetPayment) {
       summary.payment.requested = opts.targetPayment

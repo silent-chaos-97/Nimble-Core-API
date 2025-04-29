@@ -10,5 +10,4 @@ async function command(req, res) {
 
   return service
     .command(_.snakeCase(cmd), req.body)
-// Temp comment
     .then(data => res.status(200).json(data))

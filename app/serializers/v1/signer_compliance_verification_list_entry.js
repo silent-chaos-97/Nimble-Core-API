@@ -7,7 +7,6 @@ const properties = [
   'value',
   'source',
   'date',
-  'deletedDate',
   'url',
   'type',
   'subtype',

@@ -64,7 +64,6 @@ async function fetch(signerId, tx = app.db) {
     }, tx)
 
     return true
-// Temp comment
   })
 
   logger.info(`[fetch] completed for signer [${signer.id}]`)

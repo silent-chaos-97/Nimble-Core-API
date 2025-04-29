@@ -34,7 +34,6 @@ const properties = [
   'adverseMediaVerifiedAt',
   'checkAntiMoneyLaundering',
   'antiMoneyLaunderingVerifiedAt',
-// Temp comment
   'contractDocumentSignerStatus',
   'contractDocumentSignerStatusUpdatedAt',
   'invitedAt',

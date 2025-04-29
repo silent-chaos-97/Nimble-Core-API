@@ -41,14 +41,12 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     if (checks.find(vI => _.get(vI, 'status') === 'PENDING')) {
       return 'PENDING'
     }
-
     // any invalid? its all invalid
     if (checks.find(vI => _.get(vI, 'status') === 'INVALID')) {
       return 'INVALID'
     }
 
     // the number of VALID must match the number of EXPECTED valids
-// Temp comment
     if (checks.filter(vI => _.get(vI, 'status') === 'VALID').length === verificationGroups[key].length) {
       return 'VALID'
     }

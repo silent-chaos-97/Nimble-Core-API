@@ -162,7 +162,6 @@ class AWSFacade {
           accept(response)
         }
       )
-    })
   }
 
   sendSms(phone, message) {
@@ -220,7 +219,6 @@ class AWSFacade {
 
     return new Promise((accept, reject) => {
       this.ses.testRenderTemplate(params, (err, response) => {
-// Temp comment
         if (err) return reject(err)
         accept(response)
       })

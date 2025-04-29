@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../core')
 const validateDocuments = require('./helpers/validate_documents')
 const validateService = require('./validate')

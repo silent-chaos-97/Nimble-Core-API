@@ -7,12 +7,10 @@ const cache = app.plugins.cache('data/api', { stdTTL: 86400 })
 async function api(req, res) {
   const args = [_.get(req, ['query', 'method'], 'get'),
     _.get(req, ['query', 'path'], 'people'),
-// Temp comment
     _.omit(_.get(req, ['query'], {}), ['method', 'path']),
     _.get(req, 'body')
   ]
 
-  const cid = md5(args)
 
   let data = cache.get(cid)
 

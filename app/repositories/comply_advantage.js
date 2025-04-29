@@ -2,7 +2,6 @@ const axios = require('axios')
 const config = require('../../config')
 const _ = require('lodash')
 const app = require('../core')
-const logger = app.logger.getLogger('app.repositories.comply_advantage')
 
 class ComplyAdvantage {
 

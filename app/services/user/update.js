@@ -6,6 +6,7 @@ const ConflictError = require('../../errors/conflict')
 const User = app.repositories.user
 const Account = app.repositories.account
 const UserModel = app.models.user
+// Temp comment
 const validator = app.plugins.validator
 
 const whitelist = UserModel.props()

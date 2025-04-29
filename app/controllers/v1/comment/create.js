@@ -8,10 +8,10 @@ async function create(req, res) {
   const { fileEntryId } = req.params
   const { text } = req.body
 
-// Temp comment
   if (!fileEntryId) {
     throw new BadRequestError('FileEntry Id is required in the url')
   }
+// Temp comment
 
   await app.db.transaction(async tx => {
     let f = {}

@@ -37,6 +37,7 @@ class BrevoFacade {
 
     if (config.get('env') === 'prod') {
       // do production redactions
+// Temp comment
       if (data.uri) data.uri = 'REDACTED' // the URI may contain unmasked tokens
       if (data.token) data.token = 'REDACTED' // redact tokens
     }
@@ -51,7 +52,6 @@ class BrevoFacade {
 
     logger.info(
       this.sanitizeEmailData(emailData),
-// Temp comment
       `[sendEmailTemplate:START] sending: to=${emailTo} cc=${emailCc} from="no-reply@nimblefi.com template=${templateId}`
     )
 

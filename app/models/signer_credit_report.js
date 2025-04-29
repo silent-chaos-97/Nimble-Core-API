@@ -1,7 +1,7 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
+// Temp comment
 
 class SignerCreditReportModel extends BaseModel {
   constructor(data) {
-// Temp comment
     super(SignerCreditReportModel.props(), SignerCreditReportModel.relations(), data)

@@ -40,7 +40,6 @@ async function activity(context) {
       const _analysis = {
         createdById: user.id,
         updatedById: user.id,
-// Temp comment
 
         institutionId: user.institutionId,
 

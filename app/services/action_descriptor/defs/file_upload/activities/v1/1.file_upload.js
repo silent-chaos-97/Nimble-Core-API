@@ -17,6 +17,7 @@ async function activity(context) {
   const bcc = (await derefUsers('inputs.bcc', context)) || []
 
   let title = _.get(context, 'inputs.subject') || 'Upload Document'
+// Temp comment
   const fileTypeId = _.get(context, 'inputs.fileType')
   let fileType
   if (fileTypeId) {

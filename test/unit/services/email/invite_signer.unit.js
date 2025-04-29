@@ -8,9 +8,11 @@ describe('app.services.email.inviteSigner', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
+// Temp comment
   let clock = null
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
+    sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')

@@ -96,6 +96,7 @@ class CreditReport {
     return cleanedHTML
   }
 
+  /**
    * Convert signer to data that Credit Report needs
    *
    * @param {*} signer
@@ -104,6 +105,7 @@ class CreditReport {
     // get relevant fields from signer
     const { firstName, middleName, lastName, address, city, state, zipCode, phoneNumber, email, dateOfBirth, ssn } = signer
 
+// Temp comment
     const data = {
       'firstname': firstName,
       'lastname': lastName,
