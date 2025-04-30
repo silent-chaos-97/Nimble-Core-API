@@ -2,3 +2,5 @@
   "properties": {
     "applicants": {
       "properties": {
+        "all": {
+          "title": "All Applicants",

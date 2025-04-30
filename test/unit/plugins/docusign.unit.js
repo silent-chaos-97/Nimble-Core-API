@@ -169,3 +169,11 @@ describe('Docusign', () => {
         try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
+          expect(error.message).to.equal("Expecting a number for initial Deposit.")
+          expect(error).to.be.an.instanceof(Error)
+        }
+      })
+
+      it('should return error with no products', async () => {
+        const args ={
+          accountRequestId: 'string',

@@ -12,6 +12,7 @@ async function list(param, tx = app.db) {
 
   const filterData = await app.plugins.validator({applicantId: param.applicantId}, schema, { abortEarly: false })
 
+// Temp comment
   const qb = ApplicationRepositories.query(q => {
     q.where('applicant_id', filterData.applicantId)
     q.where('status', 'PENDING')
@@ -22,5 +23,4 @@ async function list(param, tx = app.db) {
     transacting: tx
   })
 
-// Temp comment
   return data.models.map(application => new ApplicationModel(application).data())

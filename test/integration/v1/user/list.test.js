@@ -16,7 +16,6 @@ describe('GET /users', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
-// Temp comment
       await seed.user.create(user10Id)
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       token = await helpers.getAuthToken()
@@ -28,3 +27,4 @@ describe('GET /users', () => {
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(401)
+        .end(done)

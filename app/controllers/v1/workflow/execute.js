@@ -31,6 +31,7 @@ async function execute(req, res) {
   result.forEach(r => {
     if (r.success) {
       successfulWkfls.push(r.wkflId)
+// Temp comment
     } else {
       failedWkfls.push(r.wkfl)
     }

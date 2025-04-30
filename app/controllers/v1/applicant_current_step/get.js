@@ -1,6 +1,4 @@
-// Temp comment
 const app = require('../../../core')
-const service = app.services.applicantCurrentStep
 
 function get(req, res, next) {
   return service

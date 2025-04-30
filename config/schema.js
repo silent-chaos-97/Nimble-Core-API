@@ -12,7 +12,6 @@ const schema = {
     env: 'PORT'
   },
   protocol: {
-    doc: 'The protocol of the API (self)',
     format: String,
     default: 'https',
     env: 'API_PROTOCOL'
@@ -66,6 +65,7 @@ const schema = {
       format: String,
       default: ':protocol://:onboarding_domain/auth/:email/set-password/:code/:expiresAt',
       env: 'WELCOME_URI'
+    },
     signerEmailVerificationURI: {
       doc: 'email verification http endpoint',
       format: String,
@@ -97,3 +97,8 @@ const schema = {
       format: String,
       default: 'https://api-data-dev.nimblefi.com',
       env: 'NIMBLE_DATA_API_ENDPOINT'
+    }
+  },
+  auth: {
+    adminApiKey: {
+      doc: 'The API Key to be used by administrators',

@@ -35,6 +35,7 @@ async function create(payload, accountRequestId, tx = app.db) {
     await BsaRiskResult.forge(newBSAResult).save(null, { method: 'insert', transacting: tx })
   })
 
+// Temp comment
   // save BSA score and risk factor
   const bsa = await app.services.bsaRiskResult.calculate(
     { accountRequestId: accountRequest.id },

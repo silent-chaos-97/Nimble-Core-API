@@ -1,3 +1,2 @@
 /auth/login:
   post:
-    tags:

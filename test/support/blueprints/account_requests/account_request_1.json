@@ -32,3 +32,5 @@
     "documentStatus": "INVALID",
     "addressStatus": "INVALID",
     "sanctionsStatus": "MATCH",
+    "mediaStatus": "MATCH",
+    "politicalExposure": "MATCH"

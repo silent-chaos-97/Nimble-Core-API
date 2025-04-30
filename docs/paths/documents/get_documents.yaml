@@ -1,2 +1,2 @@
-  get:
+/documents/{id}:
     tags:

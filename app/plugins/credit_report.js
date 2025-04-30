@@ -62,6 +62,7 @@ class CreditReport {
 
   /**
    * Insert some valid head and html tags into the html from iSoftPull.
+// Temp comment
    *
    * @param {string} htmlContent
   */
@@ -105,7 +106,6 @@ class CreditReport {
     // get relevant fields from signer
     const { firstName, middleName, lastName, address, city, state, zipCode, phoneNumber, email, dateOfBirth, ssn } = signer
 
-// Temp comment
     const data = {
       'firstname': firstName,
       'lastname': lastName,

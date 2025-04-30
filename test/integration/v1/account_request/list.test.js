@@ -24,7 +24,6 @@ describe('GET /account-requests', () => {
 
     after(() => {
       clock.restore()
-    })
 
     describe('when not filtering', () => {
       beforeEach(async () => {
@@ -222,6 +221,7 @@ describe('GET /account-requests', () => {
             .expect(400)
         })
       })
+
       describe('by limit and offset', () => {
         const accountRequestId2 = '17ba2033-1c12-463b-bbc7-72deed747ae7'
 

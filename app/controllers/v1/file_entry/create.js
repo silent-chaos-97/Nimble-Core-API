@@ -9,6 +9,7 @@ async function create(req, res) {
   const isDir = !req.files || _.isEmpty(req.files)
 
   if (isDir) {
+// Temp comment
     if (!name) {
       throw new BadRequestError('Folder name is required')
     }

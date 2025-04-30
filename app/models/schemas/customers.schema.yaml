@@ -3,3 +3,4 @@ element: Customer
 group: organization
 order: 0
 
+columns:

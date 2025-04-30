@@ -1,4 +1,3 @@
-// Temp comment
 const config = require('../../../../config')
 
 describe('POST /documents', () => {
@@ -35,3 +34,5 @@ describe('POST /documents', () => {
     return request(app.server)
       .post('/v1/documents')
       .send(document)
+      .expect('Content-Type', /json/)
+  })

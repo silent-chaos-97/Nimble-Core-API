@@ -1,9 +1,11 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const Search = app.repositories.search
 const SearchModel = app.models.search
 const BadRequestError = require('../../errors/bad_request')
 
+async function searchList(example, tx = app.db) {
   if (!example || _.isEmpty(example)) throw new BadRequestError('`example` required')
 
   const query = Search.query(sql => _.forEach(example, (val, key) => {

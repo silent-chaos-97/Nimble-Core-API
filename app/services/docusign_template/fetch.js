@@ -1,4 +1,3 @@
-const app = require('../../core')
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const DocusignTemplate = app.repositories.docusignTemplate

@@ -64,3 +64,6 @@ describe('PUT private /account-requests/:id', () => {
       })
 
       it('should return 200 if changed to declined wen not signed', done => {
+        const putRequestDeclined = {
+          status: 'DECLINED',
+          statusEmailSubject: 'example subject',

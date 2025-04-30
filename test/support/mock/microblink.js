@@ -1,7 +1,6 @@
 const successResponse = {
   code: 'OK',
   summary: 'The results have been successfully retrieved!',
-  executionId: 'a74f9092-5889-430a-9c19-6712f9f68383',
   DEBUG: {
     EXECUTION_STARTED: 0,
     IMAGE_LOAD_FROM_URL: '248ms',
@@ -33,3 +32,5 @@ const successResponse = {
       dateOfIssue: {
         day: 18,
         month: 3,
+        year: 2018,
+        originalString: '03/18/2018',

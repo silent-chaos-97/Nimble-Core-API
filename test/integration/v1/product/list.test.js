@@ -25,3 +25,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
       .get(`/v1/institutions/${testInstitution1}/products`)
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
+  })

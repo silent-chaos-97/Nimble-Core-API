@@ -1,3 +1,4 @@
+{
   "port": "8090",
   "protocol": "http",
   "logLevel": 99,
@@ -6,3 +7,4 @@
     "assets_cdn": "",
     "uploads_cdn": ""
   },
+  "email": {

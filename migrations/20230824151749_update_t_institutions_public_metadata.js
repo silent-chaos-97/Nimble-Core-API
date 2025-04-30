@@ -26,3 +26,5 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       milesAway: 'yes'
+    },
+    maxLength: 255

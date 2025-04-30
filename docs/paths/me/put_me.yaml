@@ -1,5 +1,7 @@
 /me:
   put:
+    tags:
       - Me
     summary: Update the current user
     description: >-
+      Method to update the current user.

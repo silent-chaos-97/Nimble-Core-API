@@ -13,4 +13,3 @@ async function validate(req, res) {
   if (results) {
     res.status(409)
   }
-  res.json(results)

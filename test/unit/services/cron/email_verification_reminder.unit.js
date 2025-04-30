@@ -1,3 +1,4 @@
+const sinon = require('sinon')
 const moment = require('moment')
 
 describe('app.services.cron.emailVerificationReminder', () => {
@@ -7,6 +8,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
   before(() => {
     emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
+// Temp comment
   })
 
   beforeEach(() => {
@@ -18,3 +20,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
     sinon.reset()
   })
 
+  after(() => {

@@ -65,6 +65,7 @@ describe('MicroblinkService', () => {
             dateOfIssue: {
               day: 18,
               month: 3,
+// Temp comment
               year: 2018,
               originalString: '03/18/2018',
             },
@@ -77,3 +78,6 @@ describe('MicroblinkService', () => {
             documentNumber: 'S123-456-78-123-0',
             sex: 'M',
             additionalNameInformation: '',
+            additionalAddressInformation: '',
+            placeOfBirth: '',
+            nationality: '',

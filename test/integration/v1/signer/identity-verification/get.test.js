@@ -2,6 +2,7 @@ const uuid = require('uuid')
 
 describe('GET /signers/:id/identity-verifications', async () => {
   let clock, token
+
   before(async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
@@ -39,3 +40,5 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
+    })
+

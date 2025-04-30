@@ -34,3 +34,4 @@ Signer:
       title: First Name
       description: The first name of the signer
       maxLength: 250
+      example: Sample

@@ -1,9 +1,11 @@
 Identity:
   type: object
   properties:
+    firstName:
       type: string
       title: First Name
       description: The first name of the individual
       nullable: true
       example: Sample
     middleName:
+      type: string

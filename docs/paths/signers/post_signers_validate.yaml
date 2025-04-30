@@ -10,3 +10,4 @@
         description: uuid Signer Id
         required: true
         schema:
+          type: string

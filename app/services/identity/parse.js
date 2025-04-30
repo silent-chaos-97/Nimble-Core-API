@@ -26,7 +26,6 @@ const EVENTS = {
   'request.timeout': 'PENDING',
   'request.unauthorized': 'PENDING',
   'request.deleted': 'PENDING',
-  'request.received': 'PENDING',
 
   'verification.declined': null,
   'verification.accepted': null,

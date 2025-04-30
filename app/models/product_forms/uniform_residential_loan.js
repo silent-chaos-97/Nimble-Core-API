@@ -3,6 +3,7 @@
 const Joi = require('@hapi/joi')
 
 const schema = Joi.object({
+  // User input
 	intentToApplyJointly: Joi.object({
 		jointApplicationRequired: Joi.boolean(),
 		includesIncomeOrAssetsFromOtherPerson: Joi.boolean(),
@@ -111,3 +112,8 @@ const schema = Joi.object({
       // Not sure - Microbilt/Attom
 			formerAddressType: Joi.string().valid('Own', 'Rent'),
       // For Own - Deduce from Attom - property/expandedProfile or salesHistory/expandedHistory
+      // For Rent - Unknown
+			formerAddressNumberOfYears: Joi.number(),
+      // Not sure - Microbilt - Enhanced People Search
+			formerAddress: Joi.string(),
+      // Microbilt - Payroll Verification Service (contains employer info, employee info, employee earnings info)

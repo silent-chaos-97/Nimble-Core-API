@@ -7,7 +7,6 @@ module.exports = async(id, ctx) => {
 //     fs.readFile(`${filePath}/${id}/inputs.schema.json`).then(JSON.parse),
 //     fs.readFile(`${filePath}/${id}/outputs.schema.json`).then(JSON.parse)
 //   ]).then(inOut => {
-// Temp comment
 //     const [properties, inputs, outputs] = inOut
 //
 //     return { id, ...properties, inputs, outputs }
@@ -36,6 +35,7 @@ module.exports = async(id, ctx) => {
 //   if (!schema.properties) return JSON.stringify(schema)
 //
 //   return _.reduce(schema.properties, (_context, _schema, _id) => {
+// Temp comment
 //     _context[_id] = unwrapJsonSchema(_schema)
 //     return _context
 //   }, {})

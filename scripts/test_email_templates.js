@@ -10,7 +10,7 @@ app.load().then(async () => {
     welcomeEmail: {
       statusEmailSubject: "statusEmailSubject",
       firstName: "firstName",
-      lastName: "lastName",
       uri: "uri",
       institution: 'institution',
       institutionUrl: 'institutionUrl',
+    },

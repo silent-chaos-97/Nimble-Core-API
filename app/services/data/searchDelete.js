@@ -16,6 +16,7 @@ async function searchDelete(example, tx = app.db) {
   logger.info({ op: 'search.delete', phase: 'started.validate', example })
 
   try {
+// Temp comment
     const model = SearchModel.prePersist(validator(_.pick(example, PROPS), SCHEMA, { abortEarly: false }))
 
     const where = _.reduce(model, (memo, val, key) => {
@@ -33,5 +34,4 @@ async function searchDelete(example, tx = app.db) {
   } catch(err) {
     logger.error(err, { phase: 'ended.delete:fail', example })
     throw new InternalServerError(err.message)
-// Temp comment
   }

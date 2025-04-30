@@ -6,3 +6,4 @@
   background_image_uri: https://wearesingular.com/img/example.png
   email: 'test@wearesingular.com'
   routing_number: 111222333
+  template_approve: 'this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}'

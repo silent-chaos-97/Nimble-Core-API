@@ -9,7 +9,6 @@ describe('app.plugins.xml', () => {
     expect(target).to.be.an('object')
   })
 
-  it('should explose format() method', () => {
     expect(target.format).not.to.be.undefined
     expect(target.format).to.be.an('function')
   })
@@ -18,3 +17,4 @@ describe('app.plugins.xml', () => {
     expect(target.tag).not.to.be.undefined
     expect(target.tag).to.be.an('function')
   })
+

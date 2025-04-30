@@ -6,6 +6,7 @@ describe('app.services.cron.inviteeReminder', () => {
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
   let inviteReminderSpy, prospectPendingSignersSpy = null
 
+// Temp comment
   before(() => {
     inviteReminderSpy = sinon.spy(app.services.email, 'inviteReminder')
     prospectPendingSignersSpy = sinon.spy(app.services.email, 'prospectPendingSigners')
@@ -20,3 +21,4 @@ describe('app.services.cron.inviteeReminder', () => {
     sinon.reset()
   })
 
+  after(() => {

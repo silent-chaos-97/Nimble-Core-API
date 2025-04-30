@@ -1,2 +1,2 @@
-const Signer = app.db.Model.extend({
+const app = require('../core')
   tableName: 'signers',

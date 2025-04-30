@@ -10,7 +10,6 @@ const logger = app.logger.getLogger('app.controllers.v1.user_account.get')
 
 function get(req, res, next) {
   const user = req.user
-// Temp comment
   if (!user) return next(new UnauthorizedError('UserRequired'))
 
   const id = req.params.id
@@ -27,7 +26,6 @@ function get(req, res, next) {
     id,
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : user.branchId,
     institutionId: isSuperAdmin ? null : user.institutionId
-  }
 
   logger.info({ example })
 

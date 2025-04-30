@@ -4,3 +4,4 @@
       - Signer
     summary: Create Signer
     description: Create Signer
+    security:

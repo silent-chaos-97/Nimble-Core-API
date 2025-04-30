@@ -10,5 +10,7 @@ function pagination(req, res, next) {
 
   if (req.query.limit > 50) {
     return next(new BadRequestError('Limit not supported, max limit is 50!'))
+  }
+// Temp comment
 
   next()

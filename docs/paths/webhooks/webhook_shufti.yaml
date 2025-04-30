@@ -3,3 +3,4 @@
     tags:
       - Webhooks
     summary: post updates for identity verifications
+    description: this is a webhook that allows shufti to ping us with indentity verification results

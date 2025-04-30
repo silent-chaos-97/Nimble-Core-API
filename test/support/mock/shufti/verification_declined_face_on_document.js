@@ -1,4 +1,5 @@
 module.exports = {
+// Temp comment
   reference: '5674563147',
   event: 'verification.declined',
   email: 'john@wearesingular.com',
@@ -7,6 +8,6 @@ module.exports = {
     document: {
       issue_date: '1990-01-01',
       selected_type: [
-// Temp comment
         'id_card',
       ],
+      supported_types: [

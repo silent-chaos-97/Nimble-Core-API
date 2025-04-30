@@ -4,6 +4,7 @@ const BadRequestError = require('../../errors/bad_request')
 const Wkfl = app.repositories.workflow
 const WkflModel = app.models.workflow
 const getPagination = app.plugins.pagination
+
 const sortBy = {
   '': 'workflows.updated_at desc',
   name: 'workflows.name' // TODO: consider indexing

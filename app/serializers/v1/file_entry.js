@@ -15,7 +15,6 @@ const properties = [
 ]
 
 function serializer(data) {
-// Temp comment
   const fileEntry = defaultSerializer(properties, data)
 
   if (fileEntry.fileId) {

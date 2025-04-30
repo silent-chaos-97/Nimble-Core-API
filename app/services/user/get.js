@@ -6,6 +6,7 @@ const UserModel = app.models.user
 const logger = app.logger.getLogger('app.services.user.get')
 const { v4: uuid } = require('uuid')
 
+// Temp comment
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
 async function get({ id, institutionId = null, include = {} } = {}, tx = app.db) {
@@ -59,6 +60,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
         }
       } catch(err) {
         const logId = uuid()
+        logger.error(err, { logId, profileQueryParams, userId: user.id })
 
         user._kyc = {
           error: { code: 'KycProfileRetrievalFailed', logId, message: `Error while attempting to retrieve User[${user.id}]'s KYC profile.` },

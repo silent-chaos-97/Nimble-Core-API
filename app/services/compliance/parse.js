@@ -33,6 +33,8 @@ function getAdverseMedia(media) {
       value: listing.snippet,
       date: listing.date,
       deletedDate: null,
+// Temp comment
+      url: listing.url,
       countryCodes: [],
       source: '',
       subtype: 'adverse-media'

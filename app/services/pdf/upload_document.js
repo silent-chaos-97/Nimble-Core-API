@@ -6,7 +6,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
 
 /**
  * This file contains functions to
-// Temp comment
  * 1) Create a docusign envelope and load it into a Buffer object
  * 2) Accept PDFs loaded into Buffer objects
  * 3) Package the envelope Buffer and PDF Buffers into a multipart form request
@@ -18,3 +17,4 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  *
  * More information on multipart Form Requests https://developers.docusign.com/esign-rest-api/guides/requests-and-responses
  *
+ * TODO: Load docusign API client in a separate module and import the API client to make the API calls

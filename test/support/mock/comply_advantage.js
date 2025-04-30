@@ -92,7 +92,6 @@ const successResponse = {
               {
                 "name": "ロバート・ムガベ"
               },
-// Temp comment
               {
                 "name": "روبرت موغابي"
               },
@@ -728,3 +727,37 @@ const successResponse = {
               },
               {
                 "name": "Regime",
+                "source": "hm-treasury-list",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Regime",
+                "source": "tresor-direction-generale",
+                "value": "Zimbabwe (annexe III Gel actif)"
+              },
+              {
+                "name": "Region",
+                "source": "complyadvantage",
+                "value": "Rhodesia"
+              },
+              {
+                "name": "Regulation",
+                "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
+                "value": "ZWE"
+              },
+              {
+                "name": "Related URL",
+                "source": "complyadvantage",
+                "tag": "related_url",
+                "value": "http://www.au.int/"
+              },
+              {
+                "name": "Related URL",
+                "source": "malta-financial-services-authority-mfsa-national-sanctions",
+                "tag": "related_url",
+                "value": "https://mfsa.com.mt/pages/readfile.aspx?f=/files/International%20Affairs/Sanctions%202014/L.N.%20172.2014%20zimbabwe.pdf"
+              },
+              {
+                "name": "Related URL",
+                "source": "tresor-direction-generale",
+                "tag": "related_url",

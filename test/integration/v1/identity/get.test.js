@@ -5,6 +5,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
   let frontDocId, backDocId
 
   before(() => {
+// Temp comment
     nock.enable()
   })
 
@@ -16,3 +17,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       seed.document.create(backDocId)
     ])
 
+    const imageContent = 'iaa'

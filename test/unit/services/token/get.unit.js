@@ -22,3 +22,4 @@ describe('app.services.token.get', () => {
     }
   })
 
+  it('should exist', () => {

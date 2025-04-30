@@ -2,4 +2,3 @@ version: '2.1'
 
 services:
   postgres:
-    image: postgres:11-alpine

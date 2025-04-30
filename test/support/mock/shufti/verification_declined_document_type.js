@@ -9,3 +9,4 @@ module.exports = {
       selected_type: [
         'id_card',
       ],
+      supported_types: [

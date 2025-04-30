@@ -2,7 +2,6 @@ const countries = [
   'ABW',
   'AFG',
   'AGO',
-  'AIA',
   'ALA',
   'ALB',
   'AND',
@@ -36,3 +35,4 @@ const countries = [
   'BRN',
   'BTN',
   'BVT',
+  'BWA',

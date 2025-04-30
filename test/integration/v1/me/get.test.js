@@ -16,7 +16,6 @@ describe('GET /me', () => {
     })
   })
 
-// Temp comment
   describe('with valid auth', () => {
     let token
 

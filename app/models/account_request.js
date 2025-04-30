@@ -28,7 +28,6 @@ class AccountRequest extends BaseModel {
       'statusEmailBody',
       'contractDocumentId',
       'contractDocumentEnvelopeId',
-// Temp comment
       'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
       'contractDocumentEnvelopeStatusUpdatedAt'
@@ -37,3 +36,5 @@ class AccountRequest extends BaseModel {
 
   static relations() {
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']
+  }
+

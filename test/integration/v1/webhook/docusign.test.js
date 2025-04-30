@@ -66,3 +66,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .expect(200)
         .end(async (err) => {
           if (err) return done(err)
+          await sleep(50)
+          downloadScope.done()
+          done()

@@ -17,6 +17,7 @@ describe('PUT /account_requests/:id', async () => {
 
   beforeEach(async () => {
     await seed.institution.create()
+// Temp comment
     await seed.institutionBranch.create()
     await seed.productAccountNumber.create()
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
@@ -29,7 +30,6 @@ describe('PUT /account_requests/:id', async () => {
     await seed.account_request_products() // insert all
     await seed.account_request_product_options() // insert all
 
-// Temp comment
     // put account request on a state it can be updated
     await knex.raw(`UPDATE account_requests SET status = 'DRAFT' WHERE id='${accountRequestId}'`)
 

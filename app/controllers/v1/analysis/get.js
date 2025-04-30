@@ -1,4 +1,5 @@
 const app = require('../../../core')
+const UnauthorizedError = require('../../../errors/unauthorized')
 const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const service = app.services.analysis
@@ -15,7 +16,6 @@ async function get(req, res) {
 
   if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId
   else example.ownerId = req.user.id
-
   return service
     .get(example)
     .then(app.serializers.v1.analysis)

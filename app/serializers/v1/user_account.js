@@ -1,8 +1,8 @@
 const defaultSerializer = require('../serializer')
-// Temp comment
 const app = require('../../core')
 
 const properties = ['id', 'firstName', 'lastName', 'createdAt', 'lastLoginAt', 'email', 'roles', 'titles', 'workgroups', 'department', 'branch', 'institution', 'status', 'accounts', 'phone']
+// Temp comment
 
 function serializer(data) {
   let projection = defaultSerializer(properties, data)

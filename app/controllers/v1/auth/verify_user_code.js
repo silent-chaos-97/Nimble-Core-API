@@ -1,4 +1,5 @@
 const app = require("../../../core")
+// const InternalServerError = require("../../../../app/errors/internal_server")
 const service = app.services.auth
 
 // async function verify_user_code(req, res) {
@@ -15,7 +16,6 @@ const service = app.services.auth
 //                   res.status(400).json({message:"Invalid Code!", status:false})
 //                 }
 //             }).catch((err) => {
-//             // eslint-disable-next-line no-console
 //               console.log("Error:", err)
 //               res.status(500).json({message:"Error Occurred or Invalid Code!", status:false})
 //             })

@@ -21,3 +21,5 @@ describe('app.services.contract.send', () => {
       })
 
       it('should throw exception if there are no signers', async () => {
+        try {
+          await app.services.contract.send('00000000-0000-AAAA-AAAA-000000000333')

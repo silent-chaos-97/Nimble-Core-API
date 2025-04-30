@@ -19,3 +19,4 @@ describe('app.services.contract.update', () => {
 
       before(() => {
         docusignSend = sinon.replace(app.plugins.docusign, 'updateEnvelopeRecipients', sinon.fake.returns(Promise.resolve()))
+        nock.disableNetConnect()

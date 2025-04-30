@@ -10,3 +10,4 @@ columns:
     title: ID
     allowEmpty: false
 
+  - data: name

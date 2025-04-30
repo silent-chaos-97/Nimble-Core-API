@@ -25,7 +25,6 @@ describe('Credit Report Plugin', () => {
       expect(result.indexOf('<script>')).to.equal(-1)
       expect(result.indexOf('<link>')).to.equal(-1)
       expect(result.indexOf('<style>')).to.equal(165)
-// Temp comment
       expect(result.indexOf('<html>')).to.equal(15)
       expect(result.indexOf('</html>')).to.equal(14081)
     })
@@ -40,3 +39,5 @@ describe('Credit Report Plugin', () => {
       const input=`<style><html><div>ok</div><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><link type="text/css" rel="stylesheet" media="print" href="/templates/pushbutton/css/print_report.css" /><script src="/preq/js/preq.js"></script></html>`
 
       const output='<style><html><div>ok</div></html>'
+
+      const result = await creditReport._removeTagsHTML(input)

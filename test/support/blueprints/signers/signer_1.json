@@ -1,8 +1,9 @@
 {
   "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
   "status": "SIGNED",
+  "address": "123 main street apt. 1",
   "city": "Lisbon",
   "emailVerified": true,
-  "emailVerifiedAt": "2018-02-16T11:32:03.341Z",
   "dateOfBirth": "1945-12-06",
   "email": "example@nimblefi.com",
+  "firstName": "George",

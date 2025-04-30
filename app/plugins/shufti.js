@@ -132,6 +132,7 @@ class Shufti {
     }
   }
 
+  getPayload(endUserEmail, signerId) {
     let payload = {
       reference: signerId,
       callback_url: this.webhook,

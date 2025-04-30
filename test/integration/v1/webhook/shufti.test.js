@@ -4,7 +4,6 @@ const sinon = require('sinon')
 
 describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   let clock, createSpy
-// Temp comment
 
   before(async () => {
     createSpy = sinon.spy(app.services.identityVerification, 'create')
@@ -22,3 +21,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     sinon.reset()
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
+    await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')

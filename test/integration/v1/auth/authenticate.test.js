@@ -13,6 +13,7 @@ describe('Auth', () => {
 
       it('should not allow invalid tokens requests', done => {
         request(app.server)
+// Temp comment
           .get('/v1/me')
           .set('Authorization', 'Bearer ' + 'INVALID TOKEN')
           .expect('Content-Type', /json/)
@@ -31,3 +32,5 @@ describe('Auth', () => {
 
       it('should respond to valid auth with 200', done => {
         request(app.server)
+          .post('/v1/auth/login')
+          .send({ email: 'demouser@nimblefi.com', password: 'pwd' })

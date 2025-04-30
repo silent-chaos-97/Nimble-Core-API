@@ -21,3 +21,4 @@ describe("AWS Facade for s3", () => {
 
     beforeEach(async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
+    })

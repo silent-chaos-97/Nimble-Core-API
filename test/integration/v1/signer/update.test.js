@@ -66,7 +66,6 @@ describe('PUT /signers/:id', async () => {
     // set state to INCOMPLETE simulating the end of adding signers
     await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000333')
   })
-
   afterEach(() => {
     clock.restore()
     sinon.restore()

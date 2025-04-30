@@ -162,6 +162,7 @@ class AWSFacade {
           accept(response)
         }
       )
+    })
   }
 
   sendSms(phone, message) {

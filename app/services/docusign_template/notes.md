@@ -24,3 +24,4 @@ Important note: DO NOT TRUST THE DEFAULT values. They may be outdated.
 
 ### How to create a new sandbox key
 
+Follow these steps if you need to create a new key.

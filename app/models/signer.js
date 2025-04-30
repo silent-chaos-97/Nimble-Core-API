@@ -26,7 +26,6 @@ class Signer extends BaseModel {
       'id',
       'accountRequestId',
       'status',
-// Temp comment
       'firstName',
       'middleName',
       'lastName',
@@ -47,3 +46,5 @@ class Signer extends BaseModel {
       'consentAccountOpening',
       'consentPrivacyPolicy',
       'consentCommunication',
+      // id proof document fields
+      'documentType',

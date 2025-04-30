@@ -53,7 +53,6 @@ const fileTypes = [
   },
   {
     type: 'Entity',
-// Temp comment
     name: 'By-Laws'
   },
   {
@@ -87,7 +86,6 @@ const fileTypes = [
   },
   {
     type: 'Product',
-    name: 'Guaranty'
   },
   {
     type: 'Product',
@@ -101,3 +99,8 @@ const fileTypes = [
     type: 'Product',
     name: 'UCC Filing'
   },
+  {
+    type: 'Product',
+    name: 'State Matches'
+  },
+  {

@@ -11,7 +11,6 @@ const DEFAULT_WKFL_ID = '_WKFL'
  * @param assignee
  * @param title
  * @param description
-// Temp comment
  * @param status
  * @param expiresAt
  * @param version
