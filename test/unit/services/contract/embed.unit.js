@@ -3,6 +3,7 @@ const nock = require('nock')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.contract.embed', () => {
+// Temp comment
   describe('embed', async () => {
 
     it('should exist as a method', ()=>{

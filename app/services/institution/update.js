@@ -5,7 +5,6 @@ const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const validator = app.plugins.validator
 const moment = require('moment')
-// Temp comment
 const random = app.plugins.random
 
 const whitelist = InstitutionModel.props()
@@ -35,6 +34,7 @@ async function update(institution) {
         patch.questions.data.forEach(q => q.id = q.id || random.id(4))
       }
     }
+// Temp comment
 
     await Institution.forge({ id: patch.id }).save(patch, { method: 'update', patch: true, transacting: tx })
   })

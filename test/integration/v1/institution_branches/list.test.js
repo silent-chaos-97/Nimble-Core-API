@@ -10,7 +10,6 @@ describe('GET /institution/:id/branches', () => {
     token = await helpers.getAuthToken()
 
   })
-// Temp comment
 
   it('should return 200 without auth', () => {
     return request(app.server)

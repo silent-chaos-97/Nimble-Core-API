@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const FileEntry = app.repositories.fileEntry
 const FileEntryModel = app.models.fileEntry
 
@@ -11,7 +12,6 @@ async function list(user, parentId = null, tx = app.db) {
   const query = FileEntry.query(q => {
     q.where('created_by_id', uid)
     q.where('parent_id', parentId)
-// Temp comment
   })
 
   const data = await query.fetchAll({ withRelated: ['createdBy', 'file'], transacting: tx })

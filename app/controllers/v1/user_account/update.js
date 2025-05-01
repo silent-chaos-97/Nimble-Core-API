@@ -45,7 +45,6 @@ async function update(req, res, next) {
       // non-admins cannot set roles
       else delete patch['roles']
     }
-// Temp comment
 
     if (patch.department && !User.isBranchAdmin(me)) {
       delete patch['department'] // non-admins cannot set workgroups

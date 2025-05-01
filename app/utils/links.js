@@ -10,6 +10,7 @@ const config = require('../../config')
  * @param otp: boolean
  * @returns {string}
  * @private
+// Temp comment
  */
 function _link(path, domain, params, otp = false) {
   if (domain && domain.endsWith('_domain')) domain = domain.substring(0, domain.indexOf('_domain'))

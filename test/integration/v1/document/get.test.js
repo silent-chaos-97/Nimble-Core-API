@@ -9,6 +9,6 @@ describe('GET /documents/:id', () => {
   })
 
   after(() => {
-    nock.cleanAll()
+  })
 
   describe('when authentication token is not present', () => {

@@ -6,6 +6,5 @@ Identity:
       title: First Name
       description: The first name of the individual
       nullable: true
-      example: Sample
     middleName:
       type: string

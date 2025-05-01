@@ -11,4 +11,3 @@ function mapDeep(any, keyMapper = null, valueMapper = null) {
 
   if (_.isArray(any)) return _.map(any, value => mapDeep(valueMapper(value, null), keyMapper, valueMapper))
 
-  return any

@@ -24,6 +24,7 @@ describe('GET /account-requests', () => {
 
     after(() => {
       clock.restore()
+    })
 
     describe('when not filtering', () => {
       beforeEach(async () => {
@@ -110,6 +111,7 @@ describe('GET /account-requests', () => {
           .expect(res => {
             expect(res.body[0].productConfigurations).to.be.an('array')
             const [product] = res.body[0].productConfigurations
+// Temp comment
             const expectedOptions = [
               {
                 "id": null,

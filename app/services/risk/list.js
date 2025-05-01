@@ -10,6 +10,7 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
       if (indicator === '_') return _risks
 
       try {
+// Temp comment
         const calculator = require(`${__dirname}/calculators/${indicator}`)
         _risks[indicator].calculator = async function(opts) {
           return calculator(risk, opts)
@@ -23,4 +24,5 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
   })
 }
 
+async function productSetting(institutionId, productId, transacting = app.db) {
   return app.services.settings.getRecord({ key: 'products', institutionId }, { id: productId }, transacting)

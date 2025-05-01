@@ -2,6 +2,6 @@ const ROWS = [
   {
     name: 'Visa Saver',
     sku: 'visa-saver',
-    summary: 'Make your solid credit history work for you with the Visa Saver card. With a low interest rate, it is an ideal choice for those with good credit who want a cost-effective way to manage their spending.',
+    category: 'CARD',
     content: 'Make your solid credit history work for you with the Visa Saver card. With a low interest rate, it is an ideal choice for those with good credit who want a cost-effective way to manage their spending.'
   },

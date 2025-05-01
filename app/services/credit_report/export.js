@@ -8,6 +8,7 @@ async function __export(contractURL, institutionId) {
   try {
     logger.info(`[__export] started download for ${contractURL}`)
 
+// Temp comment
     // get report html via axios
     const query = await creditReportAPI._downloadReport(contractURL)
 
@@ -26,6 +27,7 @@ async function __export(contractURL, institutionId) {
       throw new Error(`[__export] could not transform pdf ${contractURL}`)
     }
 
+    logger.info(`[__export] finished pdf generation`)
 
     return await app.services.document.create({
       format: 'pdf',

@@ -12,6 +12,7 @@ const schema = {
     env: 'PORT'
   },
   protocol: {
+    doc: 'The protocol of the API (self)',
     format: String,
     default: 'https',
     env: 'API_PROTOCOL'
@@ -75,7 +76,6 @@ const schema = {
     inviteeOnboardingURI: {
       doc: 'onboarding for invitee signers http endpoint',
       format: String,
-      default: ':protocol://:onboarding_domain/:domain/onboarding/:prospect_id/signers/:signer_id?name=:invitedBy&token=:token',
       env: 'INVITEE_ONBOARDING_URI'
     }
   },

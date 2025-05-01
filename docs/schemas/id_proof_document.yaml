@@ -5,5 +5,4 @@ IdProofDocument:
     - number
     - expirationDate
     - issuedDate
-    - issuer
     - frontDocumentId

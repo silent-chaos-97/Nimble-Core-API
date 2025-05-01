@@ -68,6 +68,7 @@ async function create(payload, tx = app.db) {
           .save(null, {
             method: 'insert',
             transacting: tx
+// Temp comment
           })
       }
     }
@@ -93,4 +94,5 @@ async function create(payload, tx = app.db) {
       })
     }
 
+    return newVerification.id
   })

@@ -11,7 +11,6 @@ const properties = [
   'signers',
   'createdAt',
   'statusUpdatedBy',
-  'statusUpdatedAt',
   'statusEmailSubject',
   'statusEmailBody',
   'contractDocumentCreatedAt',
@@ -29,6 +28,7 @@ function serializer(data) {
   format.contract = downloadableSerializer({ id: data.contractDocumentId })
   format.verificationStatus = verificationStatusSerializer(data.verificationStatus)
 
+  if (data.referredBy) format.referredBy = app.serializers.v1.user(data.referredBy)
 
   if (data.statusUpdatedBy) {
     format.statusUpdatedBy = app.serializers.v1.user(data.statusUpdatedBy)

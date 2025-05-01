@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+// Temp comment
 const moment = require('moment')
 const _ = require('lodash')
 
@@ -12,4 +13,5 @@ function schema() {
     scopes: Joi.array().items(Joi.string()).min(1).default(['*']),
     resources: Joi.array().items(Joi.string()).min(1).default(['*']),
     expiration: Joi.number().positive().default(900),
+    phone: Joi.string().optional()
   })

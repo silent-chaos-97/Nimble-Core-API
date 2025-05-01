@@ -9,7 +9,6 @@ class HTMLToPDF {
 
   /**
    * Transform a HTML content into a PDF
-// Temp comment
    *
    * @param {string} htmlContent
    */
@@ -19,6 +18,7 @@ class HTMLToPDF {
       Payload: JSON.stringify({ html: htmlContent })
     })
 
+// Temp comment
     // note: data inside Payload is already base64
     if(result && result.Payload) {
       return JSON.parse(result.Payload).data

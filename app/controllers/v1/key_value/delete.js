@@ -5,7 +5,6 @@ const service = app.services.keyValue
 
 async function remove(req, res, next) {
   const { id } = req.params
-// Temp comment
 
   if (!id) {
     return next(new BadRequest('Key is required in the url.'))
@@ -13,5 +12,4 @@ async function remove(req, res, next) {
 
   return service
     .delete({ id })
-    .then(data => res.status(200).json(data))
     .catch(next)

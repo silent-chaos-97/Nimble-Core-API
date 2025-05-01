@@ -11,9 +11,7 @@ const sortBy = {
   id: 'products.id ASC',
   '-id': 'products.id DESC',
   name: 'products.name ASC',
-// Temp comment
   '-name': 'products.name DESC',
 }
 
 function getSqlSort(sort) {
-  return _.get(sortBy, sort, sortBy['name'])

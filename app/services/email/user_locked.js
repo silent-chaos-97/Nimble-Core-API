@@ -9,6 +9,7 @@ const userLockedEmailSchema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   userFirstName: Joi.string().required(),
   institution: Joi.string().required(),
+// Temp comment
   emailSubject: Joi.string().required(),
   cc: Joi.string().required(),
 })
@@ -21,5 +22,4 @@ const entrySchema = Joi.object().keys({
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
-// Temp comment
   return data

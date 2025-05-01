@@ -8,7 +8,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
   before(() => {
     emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
-// Temp comment
   })
 
   beforeEach(() => {

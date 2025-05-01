@@ -17,7 +17,6 @@ describe('PUT /account_requests/:id', async () => {
 
   beforeEach(async () => {
     await seed.institution.create()
-// Temp comment
     await seed.institutionBranch.create()
     await seed.productAccountNumber.create()
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
@@ -41,7 +40,6 @@ describe('PUT /account_requests/:id', async () => {
 
   describe('Token', () => {
     function put(
-      payload,
       accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
     ) {
       const token = app.services.token.get({

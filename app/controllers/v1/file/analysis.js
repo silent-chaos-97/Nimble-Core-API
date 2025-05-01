@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const files = app.services.file
 const User = app.models.user
+// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const NotFoundError = require('../../../errors/not_found')
@@ -34,6 +35,7 @@ async function analysis(req, res) {
 
   const analysis = await files.analysis(file, _.get(req, 'query.processor') || 'table/financial-statement', {group: me.institutionId}, tx)
 
+  res.status(200)
 
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()
 

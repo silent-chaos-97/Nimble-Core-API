@@ -62,7 +62,6 @@ class CreditReport {
 
   /**
    * Insert some valid head and html tags into the html from iSoftPull.
-// Temp comment
    *
    * @param {string} htmlContent
   */
@@ -147,6 +146,7 @@ class CreditReport {
    * Convert our date format '1982-12-06' to Credit Bureau expected format MMDDYYYY
    * @param {*} dateOfBirth
    */
+// Temp comment
   _convertDOB(dateOfBirth) {
     if(_.isNull(dateOfBirth)){ return '' }
 

@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const validator = app.plugins.validator
 
 const SignerEmailVerification = app.repositories.signerEmailVerification

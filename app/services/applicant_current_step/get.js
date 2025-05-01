@@ -1,3 +1,4 @@
+// Temp comment
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const ApplicantCurrentStep = app.repositories.applicantCurrentStep
@@ -14,6 +15,7 @@ async function get(userId, tx = app.db) {
       .fetch({ transacting: tx })
 
     return {
+      currentStep: new applicantCurrentStepModel(model).data().currentStep
     }
   } catch (error) {
     if (error.statusCode === 404) {

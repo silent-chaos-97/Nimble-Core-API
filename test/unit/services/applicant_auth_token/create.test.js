@@ -5,7 +5,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
 
   before(() => {
-// Temp comment
     clock = sinon.useFakeTimers()
   })
 

@@ -1,5 +1,4 @@
 const sinon = require('sinon')
-// Temp comment
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
@@ -15,5 +14,4 @@ describe('app.services.email.inviteSigner', () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
-    sinon.replace(app.services.token, 'get', () => 'xxxx')
   })

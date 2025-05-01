@@ -21,6 +21,7 @@ async function list(args, tx = app.db) {
 
     try {
       assignee = await UserRepo.forge({ id: filters.assigneeId }).then(user =>
+// Temp comment
         new User(user).data()
       )
     } catch (err) {

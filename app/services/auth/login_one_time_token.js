@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../core')
 const knex = app.db.knex
 const User = app.repositories.user

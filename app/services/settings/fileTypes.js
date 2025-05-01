@@ -26,6 +26,7 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'UCC Search'
+// Temp comment
   },
   {
     type: 'Entity',
@@ -86,6 +87,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Guaranty'
   },
   {
     type: 'Product',

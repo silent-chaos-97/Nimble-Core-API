@@ -26,7 +26,6 @@ Signer:
     invitedAt:
       readOnly: true
       type: string
-      format: date-time
       title: Invited at
       description: Date time that references latest timestamp from the invite notification.
     firstName:

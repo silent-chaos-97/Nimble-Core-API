@@ -10,7 +10,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')
-
   // build query
   const query = SignerEmailVerification.query(q => {
     // we want the MOST RECENT signerEmailVerification grouped by signer_id

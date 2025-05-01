@@ -49,7 +49,6 @@ const schema = Joi.object({
 		yearLotAcquired: Joi.number(),
     // Not sure - Attom
 		originalCost: Joi.number(),
-    // Not sure - Attom
 		amountExistingLiens: Joi.number(),
     // Not sure - Attom
 		presentValueOfLot: Joi.number(),

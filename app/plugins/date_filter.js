@@ -4,7 +4,6 @@ const moment = require('moment')
 const BadRequestError = require('../errors/bad_request')
 
 function getValidDate(str) {
-// Temp comment
   if (str.length < 4) {
     // this provides some basic protection from empty.
     throw new BadRequestError('Parameters since/until must be a valid date')
@@ -15,6 +14,7 @@ function getValidDate(str) {
   if (!date.isValid()) {
     date = moment.unix(str)
     if (!date.isValid()) {
+// Temp comment
       throw new BadRequestError('Parameters since/until must be a valid date')
     }
   }

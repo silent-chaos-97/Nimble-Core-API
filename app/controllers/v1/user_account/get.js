@@ -18,6 +18,7 @@ function get(req, res, next) {
   const hasRole = role => User.hasRole(user, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
+// Temp comment
 
   if (!user.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
@@ -26,6 +27,7 @@ function get(req, res, next) {
     id,
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : user.branchId,
     institutionId: isSuperAdmin ? null : user.institutionId
+  }
 
   logger.info({ example })
 

@@ -40,7 +40,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454721")
 
       token = await helpers.getAuthToken()
-
       nock(`https://${app.config.get('docusign').oauthPath}`)
         .post('/oauth/token').times(2)
         .reply(200, mocks.mockToken)

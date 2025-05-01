@@ -12,7 +12,6 @@ const inviteeReminderEmailSchema = Joi.object().keys({
   invitedByFirstName: Joi.string().required(),
   invitedByFullName: Joi.string().required(),
   inviteeRole: Joi.string().required().valid('primary', 'secondary'),
-  accountType: Joi.string().required(),
   url: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required()

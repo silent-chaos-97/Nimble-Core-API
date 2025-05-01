@@ -13,7 +13,6 @@ describe('Auth', () => {
 
       it('should not allow invalid tokens requests', done => {
         request(app.server)
-// Temp comment
           .get('/v1/me')
           .set('Authorization', 'Bearer ' + 'INVALID TOKEN')
           .expect('Content-Type', /json/)

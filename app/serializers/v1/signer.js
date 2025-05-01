@@ -68,6 +68,7 @@ function serializer(data) {
   }
 
   if (_.has(data, 'institution')) {
+    format.institution = app.serializers.v1.institution(data.institution)
   }
 
   format.verificationStatus = {

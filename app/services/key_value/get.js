@@ -11,10 +11,10 @@ async function get({ id } = {}, tx = app.db) {
   })
 
   if (!model) {
-// Temp comment
     return null
   }
 
   const keyValue = new KeyValueModel(model).data()
 
+// Temp comment
   return keyValue

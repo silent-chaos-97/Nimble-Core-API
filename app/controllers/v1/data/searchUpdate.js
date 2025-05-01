@@ -7,7 +7,6 @@ async function searchCreate(req, res) {
   if (_.isEmpty(req.body)) throw new BadRequestError('body required')
 
   const id = _.get(req, ['params', 'id'])
-// Temp comment
 
   if (!id) throw new BadRequestError('id required')
 

@@ -3,5 +3,5 @@ SignerVerificationStatus:
   properties:
     faceStatus:
       title: The status of the face verification
+      type: string
       enum: ['VALID', 'INVALID', 'PENDING']
-      default: 'PENDING'

@@ -112,7 +112,6 @@ async function auth_tokens(body) {
           const tokenOptions = {
             userId: newUser.id.toString(),
             expiration: 86400 // 24 hours
-          }
           const accessToken = await app.services.token.get(tokenOptions)
 
           // Set consumedAt=Date-Now to flag this one time token as used

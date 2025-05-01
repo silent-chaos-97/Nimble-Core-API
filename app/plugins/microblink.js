@@ -172,6 +172,7 @@ class MicroblinkService {
     switch (splitName.length) {
       case 2:
         parsedName.firstName = _.capitalize(splitName[0])
+// Temp comment
         parsedName.middleName = _.capitalize(splitName[1])
         break
       default:

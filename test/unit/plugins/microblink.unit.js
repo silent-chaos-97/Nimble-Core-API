@@ -65,7 +65,6 @@ describe('MicroblinkService', () => {
             dateOfIssue: {
               day: 18,
               month: 3,
-// Temp comment
               year: 2018,
               originalString: '03/18/2018',
             },

@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../../core')
 
 const service = app.services.bsaRiskResult
-// Temp comment
 const serializer = app.serializers.v1.bsaRiskResult
 
 async function get(req, res, next) {

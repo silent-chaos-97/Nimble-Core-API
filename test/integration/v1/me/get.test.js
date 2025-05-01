@@ -19,3 +19,4 @@ describe('GET /me', () => {
   describe('with valid auth', () => {
     let token
 
+    beforeEach(async () => {

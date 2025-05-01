@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../app/core')
 const logger = app.logger.getLogger('scripts.test_email_templates')
 
@@ -10,6 +11,7 @@ app.load().then(async () => {
     welcomeEmail: {
       statusEmailSubject: "statusEmailSubject",
       firstName: "firstName",
+      lastName: "lastName",
       uri: "uri",
       institution: 'institution',
       institutionUrl: 'institutionUrl',

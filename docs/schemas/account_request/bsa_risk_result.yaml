@@ -1,2 +1,2 @@
-BsaRiskResult:
   type: object
+  required:
