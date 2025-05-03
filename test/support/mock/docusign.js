@@ -71,6 +71,7 @@ const mockDocumentTabs = {
       'tabLabel': 'signature#2',
       'scaleValue': '1',
       'optional': 'false',
+      'documentId': '1',
       'recipientId': '48e6eb8f-7675-419a-9f3e-23acad4c63a1',
       'pageNumber': '1',
       'xPosition': '350',
@@ -218,6 +219,7 @@ const mockDocumentTabs = {
     {
       'validationPattern': '',
       'validationMessage': '',
+// Temp comment
       'shared': 'false',
       'requireInitialOnSharedChange': 'false',
       'requireAll': 'false',
@@ -823,3 +825,5 @@ const mockDocumentTabs = {
       'localePolicy': {},
       'documentId': '1',
       'recipientId': '48e6eb8f-7675-419a-9f3e-23acad4c63a1',
+      'pageNumber': '2',
+      'xPosition': '88',

@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../core')
 const { v4: uuid } = require('uuid')
 const validator = app.plugins.validator
 const Document = app.repositories.document
@@ -10,7 +11,6 @@ async function create(entity, options = {}) {
 
   entity = validator(entity, Model.schema('create'), { abortEarly: false })
 
-  const id = await app.db.transaction(async tx => {
     const newId = uuid()
     const key = app.plugins.aws.getKey(entity.institutionId, entity.content, newId, entity.format)
     const data = { ..._.omit(entity, 'content', 'institutionId'), key, id: newId }

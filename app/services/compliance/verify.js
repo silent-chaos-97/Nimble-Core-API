@@ -1,6 +1,5 @@
 const _ = require('lodash')
 
-const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.verify')
 
 async function verifyProcessStarted(signerId, tx = app.db) {

@@ -1,4 +1,3 @@
 /account-requests/{id}:
   get:
     tags:
-      - Account Request

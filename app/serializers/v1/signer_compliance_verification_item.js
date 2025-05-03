@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
@@ -32,7 +31,6 @@ function serializer(data) {
       .filter((item) => item.type == 'ADVERSE-MEDIA')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
-    format.sanctions = data.items
       .filter((item) => item.type == 'SANCTION')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 

@@ -51,6 +51,7 @@ class Shufti {
         ? 'passport'
         : 'id_card'
     const documentPayload = this.buildDocumentVerificationPayload(
+// Temp comment
       documentType,
       userData.frontIdProof,
       userData.backIdProof,

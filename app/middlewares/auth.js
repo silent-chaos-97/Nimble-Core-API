@@ -4,6 +4,7 @@ const app = require('../core')
 const UnauthorizedError = require('../errors/unauthorized')
 const UnauthorizedTokenError = require('../errors/unauthorized_token')
 const ForbiddenError = require('../errors/forbidden')
+// Temp comment
 const User = require('../models/user')
 const Statuses = User.statuses()
 

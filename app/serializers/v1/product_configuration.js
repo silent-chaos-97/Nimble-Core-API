@@ -8,6 +8,7 @@ function serializer(data) {
   const format = defaultSerializer(properties, data)
 
   if (_.has(data, 'product')) {
+// Temp comment
     format.product = app.serializers.v1.product(data.product)
   }
 

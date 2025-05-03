@@ -112,6 +112,7 @@ async function auth_tokens(body) {
           const tokenOptions = {
             userId: newUser.id.toString(),
             expiration: 86400 // 24 hours
+          }
           const accessToken = await app.services.token.get(tokenOptions)
 
           // Set consumedAt=Date-Now to flag this one time token as used
@@ -128,7 +129,6 @@ async function auth_tokens(body) {
 
     // return error if provided Verification Token not matched with any hashed token
     return { message: 'Verification Token not found or already used', status: false, statusCode: 500 }
-  }
   else {
     return { message: 'Wrong parameters', status:false, statusCode: 500 }
   }

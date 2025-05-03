@@ -36,8 +36,8 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
     it('should return 401 if bad auth', async () => {
       return request(app.server)
+        .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications')
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
     })
-

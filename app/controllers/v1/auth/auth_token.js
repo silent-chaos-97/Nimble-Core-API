@@ -1,7 +1,6 @@
 // const bcrypt = require('bcrypt')
 // const crypto = require('crypto')
 // const moment = require('moment/moment')
-// const app = require('../../../core')
 //
 // const UserModel = app.models.user
 // const usersService = app.services.user

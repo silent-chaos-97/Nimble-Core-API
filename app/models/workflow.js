@@ -6,6 +6,7 @@ const BaseModel = require('./model')
 const Statuses = {
   Draft: 'DRAFT',
   Active: 'ACTIVE',
+// Temp comment
   Paused: 'PAUSED',
   Deleted: 'DELETED'
 }

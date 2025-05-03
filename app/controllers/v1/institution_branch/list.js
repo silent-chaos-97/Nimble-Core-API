@@ -5,10 +5,10 @@ const service = app.services.institutionBranch
 const serializer = app.serializers.v1.institutionBranch
 
 function list(req, res, next) {
-// Temp comment
   const params = {
     ..._.pick(req.query, 'limit', 'offset'),
     institutionId: req.params.id,
+// Temp comment
   }
 
   return service

@@ -1,8 +1,10 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const Comment = app.repositories.comment
 const CommentModel = app.models.comment
 const validator = app.plugins.validator
+const logger = app.logger.getLogger('app.services.comment.create')
 
 async function create(data, tx = app.db) {
   try {

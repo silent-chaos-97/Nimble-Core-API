@@ -49,6 +49,7 @@ const schema = Joi.object({
 		yearLotAcquired: Joi.number(),
     // Not sure - Attom
 		originalCost: Joi.number(),
+    // Not sure - Attom
 		amountExistingLiens: Joi.number(),
     // Not sure - Attom
 		presentValueOfLot: Joi.number(),
@@ -116,3 +117,4 @@ const schema = Joi.object({
       // Not sure - Microbilt - Enhanced People Search
 			formerAddress: Joi.string(),
       // Microbilt - Payroll Verification Service (contains employer info, employee info, employee earnings info)
+			employment: Joi.object({

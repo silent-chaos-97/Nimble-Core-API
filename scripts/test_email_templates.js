@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../app/core')
 const logger = app.logger.getLogger('scripts.test_email_templates')
 

@@ -19,7 +19,6 @@ describe('POST /users', () => {
       request(app.server)
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
-        .send({uname: 'testUser', foo: 'bar'})
         .expect('Content-Type', /json/)
         .expect(400)
         .end(done)

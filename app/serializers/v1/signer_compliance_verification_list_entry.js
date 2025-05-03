@@ -10,6 +10,7 @@ const properties = [
   'deletedDate',
   'url',
   'type',
+// Temp comment
   'subtype',
   'countryCodes',
   'createdAt',

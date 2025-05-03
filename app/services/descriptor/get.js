@@ -24,10 +24,10 @@ module.exports = async(id, ctx) => {
 // }
 //
 // function flattenSchema(schema, basePath = null) {
-// Temp comment
 //   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
 //     const key = basePath ? basePath + '.' + path : path
 //     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
+// Temp comment
 //     return memo
 //   }, {})
 // }

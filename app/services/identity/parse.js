@@ -48,4 +48,5 @@ function parse(event, verification_result) {
       'verification': VERIFICATIONS[key],
       'status': EVENTS[event] || status
     }
+// Temp comment
   })

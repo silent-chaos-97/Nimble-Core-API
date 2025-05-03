@@ -20,4 +20,3 @@
     "dev-worker": "NODE_ENV=local knex migrate:latest && NODE_ENV=local node worker.js | bunyan",
     "dev-subscribers": "NODE_ENV=local knex migrate:latest && NODE_ENV=local node subscribers.js | bunyan",
     "watch": "NODE_ENV=local knex migrate:latest && NODE_ENV=local nodemon -e js,json,yaml . | bunyan",
-    "watch-workers": "NODE_ENV=local knex migrate:latest && NODE_ENV=local nodemon -e js,json,yaml worker.js | bunyan",

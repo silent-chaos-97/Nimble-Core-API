@@ -9,7 +9,6 @@ describe('PUT private /account-requests/:id', () => {
     statusEmailBody: '<html>example body</html>',
   }
 
-  describe('with invalid JWT auth', () => {
     it('should return 401 if no auth', done => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
@@ -57,7 +56,6 @@ describe('PUT private /account-requests/:id', () => {
           .expect('Content-Type', /json/)
           .send(putRequest)
           .expect(403)
-// Temp comment
           .end((err, res) => {
             expect(res.body.message).to.contain('Status can only be changed to APROVED if it was previously SIGNED')
             done()

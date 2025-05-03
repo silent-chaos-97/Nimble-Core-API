@@ -49,6 +49,7 @@ class BrevoFacade {
     const ccs = _.compact(_.take(emailCc, 50 - emailTo.length))
     const bccs = _.compact(_.take(emailBcc, 50 - emailTo.length - emailCc.length))
 
+    logger.info(
       this.sanitizeEmailData(emailData),
       `[sendEmailTemplate:START] sending: to=${emailTo} cc=${emailCc} from="no-reply@nimblefi.com template=${templateId}`
     )
@@ -66,6 +67,7 @@ class BrevoFacade {
     sendSmtpEmail.params = emailData
 
     return new Promise((accept, reject) => {
+// Temp comment
       this.apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
         logger.info('API called successfully. Returned data: ' + JSON.stringify(data))
         accept(data)

@@ -9,7 +9,6 @@ describe('POST /institutions/:id/products', () => {
     product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])
     product.contentRaw = 'An **example** markdown'
   })
-
   it('should return 401 when apikey not present', () => {
     return request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)

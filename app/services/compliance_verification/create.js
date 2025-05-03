@@ -53,7 +53,6 @@ async function create(payload, tx = app.db) {
         }, 'items'))
         .save(null, {
           method: 'insert',
-          transacting: tx
         })
 
 
@@ -68,7 +67,6 @@ async function create(payload, tx = app.db) {
           .save(null, {
             method: 'insert',
             transacting: tx
-// Temp comment
           })
       }
     }

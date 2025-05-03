@@ -1,4 +1,3 @@
-// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
@@ -9,7 +8,6 @@ const Statuses = _.mapKeys(
     'created',
     'assigned',
     'started',
-    'completed',
     'expired',
     'deleted' // soft delete
   ],

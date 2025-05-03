@@ -20,3 +20,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
   })
 
   after(() => {
+    clock.restore()

@@ -1,11 +1,11 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const TaskRepo = app.repositories.task
 const Task = app.models.task
 
 async function get(where, tx = app.db) {
   const query = TaskRepo.query(q => {
+// Temp comment
     if (where) {
       if (_.isArray(where)) {
         where.forEach(w => {

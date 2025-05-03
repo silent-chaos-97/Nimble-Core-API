@@ -13,3 +13,4 @@ const signer = {
   phoneNumber: '(233) 555-3333',
   dateOfBirth: '1982-12-06',
   documentNumber: '123213',
+  documentExpirationDate: '2021-12-12',

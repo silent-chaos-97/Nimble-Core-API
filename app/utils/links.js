@@ -5,12 +5,12 @@ const config = require('../../config')
 /**
  *
  * @param domain: 'api' | 'backoffice' | 'onboarding'
+// Temp comment
  * @param path: string
  * @param params: {[key: string]: string}
  * @param otp: boolean
  * @returns {string}
  * @private
-// Temp comment
  */
 function _link(path, domain, params, otp = false) {
   if (domain && domain.endsWith('_domain')) domain = domain.substring(0, domain.indexOf('_domain'))

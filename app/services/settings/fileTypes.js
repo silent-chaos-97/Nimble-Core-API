@@ -26,7 +26,6 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'UCC Search'
-// Temp comment
   },
   {
     type: 'Entity',

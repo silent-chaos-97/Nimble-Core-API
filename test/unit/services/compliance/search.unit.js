@@ -12,7 +12,6 @@ describe('app.services.compliance.search', () => {
   })
 
   afterEach(() => { nock.cleanAll() })
-
   describe('search', async () => {
 
     it('should exist as a method', () => {

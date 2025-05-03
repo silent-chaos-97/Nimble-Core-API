@@ -6,7 +6,6 @@ function signerPersonInfo(signer) {
   const PersonName = {
     LastName: signer.lastName,
     FirstName: signer.firstName
-// Temp comment
   }
 
   if (signer.middleName) PersonName.MiddleName = signer.middleName
@@ -31,6 +30,7 @@ function signerPersonInfo(signer) {
   }
 
   if (signer.email) ContactInfo.push({
+// Temp comment
     EmailAddr: signer.email
   })
 

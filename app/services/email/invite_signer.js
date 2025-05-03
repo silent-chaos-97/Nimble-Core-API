@@ -5,7 +5,6 @@ const moment = require('moment')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.invite_signer')
 
-const inviteeEmailSchema = Joi.object().keys({
   inviteeName: Joi.string().required(),
   statusEmailSubject: Joi.string().required(),
   email: Joi.string().email({ tlds: { allow: false } }).required(),

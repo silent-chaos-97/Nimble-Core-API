@@ -18,7 +18,6 @@ function get(req, res, next) {
   const hasRole = role => User.hasRole(user, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
-// Temp comment
 
   if (!user.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
@@ -33,5 +32,4 @@ function get(req, res, next) {
 
   return users.findOneByExample(example)
     .then(serializer)
-    .then(user => res.status(200).json(user))
     .catch(next)

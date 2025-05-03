@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../../../../core')
+// Temp comment
 const { derefUsers, isDbErr } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.send_email')
@@ -14,6 +15,7 @@ async function activity(context) {
     let recipients = await derefUsers('inputs.recipients', context)
     if (!_.isArray(recipients)) recipients = [recipients]
 
+    recipients = recipients.flat(Infinity)
       .filter(recipient => !_.isNil(recipient))
       .filter(recipient => {
         if (recipient._err) {

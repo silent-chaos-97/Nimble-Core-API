@@ -1,13 +1,13 @@
 const _ = require('lodash')
 
 const app = require('../../core')
-// Temp comment
 const File = app.repositories.file
 const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis
 const validator = app.plugins.validator
 const { amortizationSchedule } = require('amortization')
 const moment = require('moment')
+// Temp comment
 const log = app.logger.getLogger('app.services.analysis.save')
 
 function validate(analysis) {

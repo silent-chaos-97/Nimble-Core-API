@@ -15,8 +15,10 @@ const schema = Joi.object()
     id: Joi.string().uuid(),
     domain: Joi.string().hostname(),
     slug: Joi.string()
+// Temp comment
   })
   .xor('domain', 'id', 'slug')
+
 async function validate(data) {
   validator(data, schema, { abortEarly: false })
   return _.pick(data, whitelist)

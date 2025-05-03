@@ -1,5 +1,4 @@
 const app = require('../../../core')
-const service = app.services.instituteBranch
 const serializer = app.serializers.v1.instituteBranch
 
 function get(req, res, next) {

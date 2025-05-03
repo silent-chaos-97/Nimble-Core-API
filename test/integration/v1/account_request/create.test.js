@@ -2,7 +2,6 @@ const _ = require('lodash')
 
 describe('POST /account_requests', async () => {
   let newAccountRequest
-// Temp comment
 
   before(() => {
     nock.enable()
@@ -40,6 +39,7 @@ describe('POST /account_requests', async () => {
   })
 
   function post(payload) {
+// Temp comment
     return request(app.server)
       .post('/v1/account-requests')
       .send(payload)

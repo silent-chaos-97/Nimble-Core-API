@@ -32,11 +32,9 @@ async function create(req, res) {
 
     const dir = await services.fileEntry.create(
       {
-        name: name || f.name,
         isDir,
         size: f.size || 0,
         createdById: req.user.id,
-// Temp comment
         parentId,
         fileId: f.id,
         mimetype: f.mimetype

@@ -1,6 +1,7 @@
 const app = require('../../core')
 const _ = require('lodash')
 const logger = app.logger.getLogger('app.services.risk.list')
+// Temp comment
 
 module.exports = async function(institutionId, productId, transacting = app.db) {
   return riskSettings(institutionId, productId, transacting).then(risks => {
@@ -10,7 +11,6 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
       if (indicator === '_') return _risks
 
       try {
-// Temp comment
         const calculator = require(`${__dirname}/calculators/${indicator}`)
         _risks[indicator].calculator = async function(opts) {
           return calculator(risk, opts)

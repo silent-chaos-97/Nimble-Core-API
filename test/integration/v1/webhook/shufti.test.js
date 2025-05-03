@@ -18,7 +18,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   })
 
   beforeEach(async () => {
-// Temp comment
     sinon.reset()
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')

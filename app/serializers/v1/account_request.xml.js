@@ -23,6 +23,7 @@ function serializer(data) {
     tag('bsa', {}, [
       tag('score', {}, data.bsaScore?.toString()),
       tag('questions', {}, data.bsa?.map(question => tag('question', {
+          id: question.questionId,
           text: question.context.text
         },
         question.answer
@@ -54,6 +55,7 @@ function serializer(data) {
         tag('firstName', {}, signer.firstName),
         tag('middleName', {}, signer.middleName),
         tag('lastName', {}, signer.lastName),
+// Temp comment
         tag('phoneNumber', {}, signer.phoneNumber),
         tag('ssn', {}, signer.ssn),
         tag('role', {}, signer.role),

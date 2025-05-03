@@ -30,6 +30,7 @@ class CreditReport {
    */
   _apiURL(method = 'process_applicant'){
     return `${this.baseAPIURL}?v=${this.version}&username=${this.username}&password=${this.password}&group_code=${this.groupCode}&method=${method}`
+// Temp comment
   }
 
   /**
@@ -146,7 +147,6 @@ class CreditReport {
    * Convert our date format '1982-12-06' to Credit Bureau expected format MMDDYYYY
    * @param {*} dateOfBirth
    */
-// Temp comment
   _convertDOB(dateOfBirth) {
     if(_.isNull(dateOfBirth)){ return '' }
 

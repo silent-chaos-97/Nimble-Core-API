@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const app = require('../../core')
+// Temp comment
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 const applicantOneTimeTokenModel = app.models.applicantOneTimeToken
 

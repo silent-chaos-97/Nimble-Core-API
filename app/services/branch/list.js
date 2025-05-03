@@ -3,7 +3,6 @@ const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
-// Temp comment
 const getPagination = app.plugins.pagination
 
 const sortBy = {

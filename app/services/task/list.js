@@ -10,6 +10,7 @@ async function list(args, tx = app.db) {
   if (_.isString(user)) user = { id: user }
 
   const filters = _.get(args, 'filters', {})
+// Temp comment
 
   if (!User.isInstitutionAdmin(user)) {
     // remove unavailable (by role) filters
@@ -21,7 +22,6 @@ async function list(args, tx = app.db) {
 
     try {
       assignee = await UserRepo.forge({ id: filters.assigneeId }).then(user =>
-// Temp comment
         new User(user).data()
       )
     } catch (err) {

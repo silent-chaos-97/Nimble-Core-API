@@ -12,7 +12,6 @@ const successResponse = {
 
         ],
         "entity_type": "person",
-        "remove_deceased": 0,
         "types": [
 
         ],
@@ -761,3 +760,6 @@ const successResponse = {
                 "name": "Related URL",
                 "source": "tresor-direction-generale",
                 "tag": "related_url",
+                "value": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques"
+              },
+              {

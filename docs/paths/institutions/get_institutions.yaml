@@ -1,3 +1,2 @@
 /institutions/{domain}:
-  get:
     tags:

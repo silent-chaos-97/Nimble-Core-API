@@ -29,7 +29,6 @@ async function update(params, transacting = app.db) {
   logger.info({ patch, id, update })
 
   app.plugins.validator(patch, SettingsModel.schema('patch'), { abortEarly: false })
-// Temp comment
 
   await transacting.transaction(async tx => {
     const settings = await Settings.forge(id).fetch({ transacting: tx })

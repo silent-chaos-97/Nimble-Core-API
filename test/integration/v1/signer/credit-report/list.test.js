@@ -1,5 +1,4 @@
 const uuid = require('uuid')
-// Temp comment
 
 describe('GET /signers/:id/credit-reports', async () => {
   let clock, token
@@ -10,6 +9,7 @@ describe('GET /signers/:id/credit-reports', async () => {
     })
   })
 
+// Temp comment
   after(() => {
     clock.restore()
   })

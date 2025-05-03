@@ -26,6 +26,7 @@ async function create(req, res) {
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 86400 // 24 hours
+  })
 
   res.status(201)
     .set('x-nimble-token', token)

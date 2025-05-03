@@ -7,7 +7,6 @@ const microblink = require('../../../app/plugins/microblink')
 const mocks = require('../../support/mock/microblink')
 
 describe('MicroblinkService', () => {
-  const service = microblink
   const userData = {
     selfie: 'test/asset/sample.jpg',
     frontIdProof: 'test/asset/sample.jpg',
@@ -80,3 +79,4 @@ describe('MicroblinkService', () => {
             additionalAddressInformation: '',
             placeOfBirth: '',
             nationality: '',
+            race: '',

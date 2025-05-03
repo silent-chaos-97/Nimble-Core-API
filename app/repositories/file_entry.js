@@ -1,4 +1,4 @@
 const app = require('../core')
-// Temp comment
 
+// Temp comment
 const FileEntry = app.db.Model.extend({

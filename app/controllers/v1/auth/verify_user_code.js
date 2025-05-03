@@ -6,6 +6,7 @@ const service = app.services.auth
 //     try {
 //         const {id, verificationCode}=req.body
 //         await service.verifyUserCode(id, verificationCode)
+//             .then(result => {
 //                 if (result){
 //                   res.status(200).json({token: result.token, status:true})
 //
@@ -19,7 +20,6 @@ const service = app.services.auth
 //               console.log("Error:", err)
 //               res.status(500).json({message:"Error Occurred or Invalid Code!", status:false})
 //             })
-//     } catch (error) {
 //         // console.log("error in send verify controller", error)
 //         throw new InternalServerError(error.message)
 //     }

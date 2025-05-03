@@ -177,3 +177,4 @@ describe('Docusign', () => {
       it('should return error with no products', async () => {
         const args ={
           accountRequestId: 'string',
+          signers: [mocks.validUser],

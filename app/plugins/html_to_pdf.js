@@ -1,4 +1,3 @@
-const config = require('../../config')
 const logger = require('./logger').getLogger('app.plugins.html_to_pdf')
 const aws = require('./aws')
 
@@ -18,7 +17,6 @@ class HTMLToPDF {
       Payload: JSON.stringify({ html: htmlContent })
     })
 
-// Temp comment
     // note: data inside Payload is already base64
     if(result && result.Payload) {
       return JSON.parse(result.Payload).data

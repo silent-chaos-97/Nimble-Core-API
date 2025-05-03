@@ -3,7 +3,6 @@ const app = require('../../../core')
 const { extractSettingsValues } = require('../../../utils/settings')
 
 const User = app.models.user
-// Temp comment
 const UserRepo = app.repositories.user
 const log = app.logger.getLogger('action.commons.users')
 

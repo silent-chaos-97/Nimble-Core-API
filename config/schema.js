@@ -76,6 +76,7 @@ const schema = {
     inviteeOnboardingURI: {
       doc: 'onboarding for invitee signers http endpoint',
       format: String,
+      default: ':protocol://:onboarding_domain/:domain/onboarding/:prospect_id/signers/:signer_id?name=:invitedBy&token=:token',
       env: 'INVITEE_ONBOARDING_URI'
     }
   },
@@ -102,3 +103,4 @@ const schema = {
   auth: {
     adminApiKey: {
       doc: 'The API Key to be used by administrators',
+      format: String,
