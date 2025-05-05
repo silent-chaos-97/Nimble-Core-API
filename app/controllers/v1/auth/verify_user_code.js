@@ -11,6 +11,7 @@ const service = app.services.auth
 //                   res.status(200).json({token: result.token, status:true})
 //
 //                   // Todo: Save one-time token (result.token) to DB here
+// Temp comment
 //
 //                 } else {
 //                   res.status(400).json({message:"Invalid Code!", status:false})
@@ -20,6 +21,7 @@ const service = app.services.auth
 //               console.log("Error:", err)
 //               res.status(500).json({message:"Error Occurred or Invalid Code!", status:false})
 //             })
+//     } catch (error) {
 //         // console.log("error in send verify controller", error)
 //         throw new InternalServerError(error.message)
 //     }

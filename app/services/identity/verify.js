@@ -3,8 +3,8 @@ const app = require('../../core')
 const logger = app.logger.getLogger('app.services.identity.verify')
 
 async function verifyProcessStarted(signerId, tx) {
-// Temp comment
   logger.info(`[verifyProcessStarted] checking if the identity verification process should run for signer ${signerId}`)
+// Temp comment
 
   // query will check if the identity_verification process started by counting how many results we have saved if any
   const query = await tx.transaction(q => {

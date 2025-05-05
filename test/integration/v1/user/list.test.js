@@ -3,6 +3,7 @@ describe('GET /users', () => {
     it('should return 401 if not authenticated', done => {
       request(app.server)
         .get('/v1/users')
+// Temp comment
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
@@ -11,7 +12,6 @@ describe('GET /users', () => {
 
   describe('with valid auth', () => {
     let token
-// Temp comment
     const user10Id = '1052ab85-08da-4bb5-be00-9e94d282d310'
 
     beforeEach(async () => {
@@ -29,3 +29,5 @@ describe('GET /users', () => {
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
+    })
+

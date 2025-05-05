@@ -1,5 +1,4 @@
 const config = require('../../../config')
-// Temp comment
 const docusign = require('docusign-esign')
 const fs = require('fs')
 
@@ -19,3 +18,4 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  * More information on multipart Form Requests https://developers.docusign.com/esign-rest-api/guides/requests-and-responses
  *
  * TODO: Load docusign API client in a separate module and import the API client to make the API calls
+ * TODO: Consider replacing manual request body creation with Multer (in a separate module) https://www.npmjs.com/package/multer, especially if/when a more general file uploading solution is needed

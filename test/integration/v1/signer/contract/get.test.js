@@ -27,3 +27,4 @@ describe('GET /signers/:id/contract', async () => {
 
   afterEach(() => {
     sinon.reset()
+    nock.cleanAll()

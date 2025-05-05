@@ -10,7 +10,6 @@ async function list(args, tx = app.db) {
   if (_.isString(user)) user = { id: user }
 
   const filters = _.get(args, 'filters', {})
-// Temp comment
 
   if (!User.isInstitutionAdmin(user)) {
     // remove unavailable (by role) filters

@@ -57,7 +57,6 @@ module.exports = async function(risk, _opts) {
     const performing = PERFORMANCE_CALC[opts.performing]
     calculated.performing = performing(ratio, performanceStandard)
     if (calculated.performing) {
-// Temp comment
       calculated.high_performing = performing(ratio, highPerformanceStandard)
       calculated.relativePerformance = relativePerformance(performing, ratio, performanceStandard, highPerformanceStandard)
     }

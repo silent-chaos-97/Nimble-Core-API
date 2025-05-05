@@ -27,6 +27,7 @@ const countries = [
   'BHS',
   'BIH',
   'BLM',
+  'BLR',
   'BLZ',
   'BMU',
   'BOL',
@@ -37,3 +38,5 @@ const countries = [
   'BVT',
   'BWA',
   'CAF',
+  'CAN',
+  'CCK',

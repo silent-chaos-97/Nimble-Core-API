@@ -1,7 +1,6 @@
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
-// Temp comment
 const service = app.services.keyValue
 
 function get(req, res, next) {

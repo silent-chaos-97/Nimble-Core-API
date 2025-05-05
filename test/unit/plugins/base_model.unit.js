@@ -11,3 +11,4 @@ describe('BaseModel class', () => {
     class A extends BaseModel {}
     expect(A.prototype).to.be.an.instanceOf(BaseModel)
   })
+

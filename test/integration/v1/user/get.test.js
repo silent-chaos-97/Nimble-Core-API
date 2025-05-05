@@ -15,3 +15,4 @@ describe('GET /users/:id', () => {
         .get('/v1/users/string')
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
+        .expect(400)

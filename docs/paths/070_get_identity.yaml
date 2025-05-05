@@ -2,3 +2,4 @@
   get:
     tags:
       - Prospect
+    summary: Get a prospect identity

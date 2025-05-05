@@ -118,3 +118,10 @@ const schema = Joi.object({
 			formerAddress: Joi.string(),
       // Microbilt - Payroll Verification Service (contains employer info, employee info, employee earnings info)
 			employment: Joi.object({
+				current: Joi.object({
+          // Microbilt - Secretary of State - Only if DBA or established business entity
+          // Won't apply to 1099s
+					selfEmployed: Joi.boolean(),
+          // Microbilt - Payroll Verification Service
+					employerName: Joi.string(),
+          // Microbilt - Payroll Verification Service

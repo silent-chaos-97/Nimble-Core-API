@@ -2,4 +2,6 @@
   put:
     tags:
       - Signer
+    summary: Update Signer by Id
     description: Update Signer by Id
+    parameters:

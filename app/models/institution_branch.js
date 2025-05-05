@@ -7,3 +7,4 @@ class InstitutionBranchModel extends BaseModel {
 
   constructor(data) {
     super(InstitutionBranchModel.props(), InstitutionBranchModel.relations(), data)
+  }

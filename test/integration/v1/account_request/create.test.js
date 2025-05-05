@@ -39,7 +39,6 @@ describe('POST /account_requests', async () => {
   })
 
   function post(payload) {
-// Temp comment
     return request(app.server)
       .post('/v1/account-requests')
       .send(payload)

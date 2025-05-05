@@ -1,1 +1,1 @@
-  table.string('id').primary()
+exports.up = (knex) => knex.schema.createTableIfNotExists('searches', table => {

@@ -61,7 +61,6 @@ async function auth_tokens(body) {
     const { verification_token, verification_code } = body
 
     if (!verification_token) {
-      return { message: 'Verification token is missing', status: false, statusCode: 400 }
     }
 
     if (!verification_code) {
@@ -129,6 +128,7 @@ async function auth_tokens(body) {
 
     // return error if provided Verification Token not matched with any hashed token
     return { message: 'Verification Token not found or already used', status: false, statusCode: 500 }
+  }
   else {
     return { message: 'Wrong parameters', status:false, statusCode: 500 }
   }

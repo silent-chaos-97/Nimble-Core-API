@@ -25,4 +25,5 @@ async function get(params, transacting = app.db) {
     }
   }
 
+// Temp comment
   return new SettingsModel(model).data()

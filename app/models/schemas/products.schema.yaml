@@ -29,3 +29,5 @@ columns:
     source:
       Card: ['Credit', 'Debit', 'Hybrid']
       Deposit: ['Checking', 'Savings', 'Certificate of Deposit']
+      Loan: ['Term', 'LOC']
+    correctFormat: true

@@ -18,3 +18,5 @@ describe('POST /institutions', () => {
 
   it('should return 401 when apikey not present', () => {
     return request(app.server)
+      .post('/v1/institutions')
+      .send(newInstitution)

@@ -9,7 +9,6 @@ async function set({ userId, currentStep }, tx = app.db) {
 
   let currentStepRecord
   try {
-// Temp comment
     currentStepRecord = new applicantCurrentStepModel(
       await ApplicantCurrentStep.forge({ userId }).fetch({ transacting: tx })
     ).data()
@@ -20,6 +19,7 @@ async function set({ userId, currentStep }, tx = app.db) {
   }
 
   await ApplicantCurrentStep.forge({
+// Temp comment
     userId,
     currentStep,
     expiresAt: new Date(Date.now() + expireApplicationCurrentStepAfter)

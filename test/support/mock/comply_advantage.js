@@ -12,6 +12,7 @@ const successResponse = {
 
         ],
         "entity_type": "person",
+        "remove_deceased": 0,
         "types": [
 
         ],
@@ -763,3 +764,50 @@ const successResponse = {
                 "value": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques"
               },
               {
+                "name": "Removal Date",
+                "source": "swiss-seco-list",
+                "value": "2020-03-03"
+              },
+              {
+                "name": "Role",
+                "source": "europe-sanctions-list",
+                "value": "Former President"
+              },
+              {
+                "name": "Sanction Type",
+                "source": "ofac-sdn-list",
+                "value": "Block"
+              },
+              {
+                "name": "Sanction Type",
+                "source": "swiss-seco-list",
+                "value": "article 2 paragraphs 1 and 2 (Financial sanctions) and article 4 paragraph 1 (Travel ban)"
+              },
+              {
+                "name": "Title",
+                "source": "ofac-sdn-list",
+                "value": "President of the Republic of Zimbabwe"
+              },
+              {
+                "name": "Active Start Date",
+                "source": "complyadvantage",
+                "tag": "active_start_date",
+                "value": "1987-12-31"
+              },
+              {
+                "name": "Active End Date",
+                "source": "complyadvantage",
+                "tag": "active_end_date",
+                "value": "2017-11-21"
+              },
+              {
+                "name": "Active Start Date",
+                "source": "complyadvantage",
+                "tag": "active_start_date",
+                "value": "1997-06-02"
+              },
+              {
+                "name": "Active End Date",
+                "source": "complyadvantage",
+                "tag": "active_end_date",
+                "value": "1998-06-08"

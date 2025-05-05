@@ -9,3 +9,4 @@ describe('Random Plugin', () => {
 
     it('should exist', () => {
       expect(rand.num).not.to.be.undefined
+    })

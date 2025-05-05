@@ -5,3 +5,4 @@
     summary: Get a list of products of a institution
     description: Method to get a list of products
     operationId: listProducts
+    parameters:

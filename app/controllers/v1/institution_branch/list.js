@@ -8,7 +8,6 @@ function list(req, res, next) {
   const params = {
     ..._.pick(req.query, 'limit', 'offset'),
     institutionId: req.params.id,
-// Temp comment
   }
 
   return service

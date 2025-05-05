@@ -11,7 +11,6 @@ const properties = [
   'signers',
   'createdAt',
   'statusUpdatedBy',
-  'statusUpdatedAt',
   'statusEmailSubject',
   'statusEmailBody',
   'contractDocumentCreatedAt',
@@ -64,3 +63,4 @@ function serializer(data) {
   // FIXME: deprecated; exists for backward compatibility with CRM
   if (data.referrers) format.referrers = data.referrers.map(ref => _.pick(ref, ['id', 'email', 'name']))
 
+  return format

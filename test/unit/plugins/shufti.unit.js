@@ -8,7 +8,6 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('Service', () => {
 
-  beforeEach(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
@@ -23,3 +22,4 @@ describe('Service', () => {
         frontIdProof: 'test/asset/sample.jpg',
         backIdProof: 'test/asset/sample.jpg',
         firstName: 'John',
+        middleName: 'Carter',

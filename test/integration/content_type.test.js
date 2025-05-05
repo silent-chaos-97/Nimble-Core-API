@@ -4,3 +4,4 @@ describe('Content-Type Support', () => {
       return request(app.server)
         .post('/some/unkown/resource')
         .send('<html></html>')
+        .set('Content-Type', 'text/html')

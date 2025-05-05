@@ -38,3 +38,27 @@ class AccountRequest extends BaseModel {
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']
   }
 
+  data() {
+    const SignerModel = app.models.signer
+    const UserModel = app.models.user
+    const InstitutionBranchModel = app.models.institutionBranch
+    const signers = this._data.signers.map(signerData => new SignerModel(signerData).data())
+
+    return {
+      ..._.omit(this._data, [
+        'signers',
+        'referredBy',
+        'statusUpdatedBy',
+        'verificationStatus',
+        'productConfigurations',
+        'productOptions',
+        'branch'
+      ]),
+      signers: signers,
+      verificationStatus: AccountRequest.getVerificationStatus(signers),
+      referredBy: this._data.referredBy ? new UserModel(this._data.referredBy).data() : null,
+      statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
+      productConfigurations: this.mapProductConfigurations(),
+      branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
+    }
+  }

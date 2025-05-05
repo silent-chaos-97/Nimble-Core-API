@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
-// Temp comment
 const BaseModel = require('./model')
 const schemas = require('./schemas/_schemas').getSync
 

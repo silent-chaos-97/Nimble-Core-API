@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 // const config = require('../../config')
 
@@ -11,6 +10,7 @@ const serviceSid = "VAfc8c1349196f6572c317aaff4a5075b6"
 const authToken = "7fd100bb4d96bbde0718581c7598de47"
 
 /**
+// Temp comment
  * Normalize phone numbers, currently only US numbers supported.
  */
 function normalize(phone) {

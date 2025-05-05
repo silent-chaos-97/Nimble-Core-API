@@ -9,7 +9,6 @@ describe('GET /signers/:id/credit-reports', async () => {
     })
   })
 
-// Temp comment
   after(() => {
     clock.restore()
   })
@@ -20,3 +19,4 @@ describe('GET /signers/:id/credit-reports', async () => {
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
+    await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')

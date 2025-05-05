@@ -16,3 +16,4 @@ describe('GET /institution/:id/branches', () => {
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
   })
+

@@ -1,3 +1,4 @@
 UserAuth:
   type: object
   required:
+    - email

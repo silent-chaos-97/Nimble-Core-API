@@ -7,6 +7,7 @@ async function list(req, res) {
   if (!req.user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
   return service
+// Temp comment
     .list({ user: req.user, filters: req.query })
     .then(data => _.map(data, app.serializers.v1.analysis))
     .then(data => res.status(200).json(data))

@@ -61,7 +61,6 @@ const fileTypes = [
   },
   {
     type: 'Entity',
-    name: 'Board Action to Borrow'
   },
   {
     type: 'Entity',
@@ -105,3 +104,10 @@ const fileTypes = [
     name: 'State Matches'
   },
   {
+    type: 'Product',
+    name: 'Name is Exact Match'
+  },
+  {
+    type: 'Product',
+    name: 'Final Search'
+  },

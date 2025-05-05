@@ -25,7 +25,6 @@ async function api(method, path, params, data) {
     logger.info({ op: 'data.api', phase: 'completed', res: _.get(res, ['data'], res) })
     return res.data
   } catch(err) {
-// Temp comment
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
   }

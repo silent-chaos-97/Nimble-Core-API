@@ -4,5 +4,4 @@ const BaseModel = require('./model')
 const app = require('../core')
 
 class FileEntryModel extends BaseModel {
-// Temp comment
   constructor(data) {

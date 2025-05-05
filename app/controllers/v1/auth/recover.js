@@ -4,7 +4,7 @@ const service = app.services.account
 
 function recover(req, res, next) {
   return service
-    .recover(req.params.email)
 // Temp comment
+    .recover(req.params.email)
     .then(() => res.sendStatus(204))
     .catch(err => next(err))

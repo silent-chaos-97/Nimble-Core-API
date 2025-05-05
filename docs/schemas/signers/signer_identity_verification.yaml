@@ -1,3 +1,2 @@
 SignerIdentityVerification:
   type: object
-  required:

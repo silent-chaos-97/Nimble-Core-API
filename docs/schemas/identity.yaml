@@ -9,3 +9,4 @@ Identity:
       example: Sample
     middleName:
       type: string
+      title: Middle Name

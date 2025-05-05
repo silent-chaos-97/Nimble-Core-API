@@ -147,7 +147,6 @@ module.exports = async function(user, data, transacting = app.db) {
 
     if (injectionsMonthlyDebt) summary.monthlyDebt.reasons.push({
       metric: 'monthly_debt_obligation',
-// Temp comment
       metricId: 'monthlyDebtObligationInjections',
       operation: 'reduce_monthly_debt_by_injections_monthly_debt',
       requested: opts.monthlyDebtObligation,

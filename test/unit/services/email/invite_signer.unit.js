@@ -16,3 +16,4 @@ describe('app.services.email.inviteSigner', () => {
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
+

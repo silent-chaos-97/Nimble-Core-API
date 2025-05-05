@@ -1,3 +1,5 @@
 {
+  "properties": {
     "applicants": {
       "properties": {
+        "all": {

@@ -9,6 +9,7 @@ describe('PUT private /account-requests/:id', () => {
     statusEmailBody: '<html>example body</html>',
   }
 
+  describe('with invalid JWT auth', () => {
     it('should return 401 if no auth', done => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
@@ -66,3 +67,7 @@ describe('PUT private /account-requests/:id', () => {
         const putRequestDeclined = {
           status: 'DECLINED',
           statusEmailSubject: 'example subject',
+          statusEmailBody: '<html>example body</html>',
+        }
+
+        request(app.server)

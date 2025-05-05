@@ -1,4 +1,5 @@
 const axios = require('axios')
+const sinon = require('sinon')
 const mocks = require('../../../support/mock/comply_advantage')
 const uuid = require('uuid')
 
@@ -20,3 +21,5 @@ describe('app.services.compliance.verify', () => {
 
   describe('search', async () => {
 
+    it('should exist as a method', () => {
+      expect(app.services.compliance).to.have.ownProperty('parse')

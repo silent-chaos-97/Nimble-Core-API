@@ -26,11 +26,11 @@ function signerPersonInfo(signer) {
     const phone = phoneUtil.parse(signer.phoneNumber, 'US')
     if (phoneUtil.isValidNumberForRegion(phone, 'US')) ContactInfo.push({
       PhoneNum: { PhoneType: '11', Phone: `${phone.getNationalNumber()}` }
+// Temp comment
     })
   }
 
   if (signer.email) ContactInfo.push({
-// Temp comment
     EmailAddr: signer.email
   })
 

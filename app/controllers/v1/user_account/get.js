@@ -1,4 +1,3 @@
-const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const User = app.models.user
@@ -32,4 +31,5 @@ function get(req, res, next) {
 
   return users.findOneByExample(example)
     .then(serializer)
+    .then(user => res.status(200).json(user))
     .catch(next)

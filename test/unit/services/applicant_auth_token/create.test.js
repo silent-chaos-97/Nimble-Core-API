@@ -4,7 +4,6 @@ const { expect } = require('chai')
 describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
 
-// Temp comment
   before(() => {
     clock = sinon.useFakeTimers()
   })
@@ -17,3 +16,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
     await seed.applicantOneTimeToken.create('2345f171-b3b7-4167-abfb-ff9203514bde')
   })
 
+  it('should exist', () => {

@@ -27,7 +27,6 @@ Signer:
       readOnly: true
       type: string
       format: date-time
-      title: Invited at
       description: Date time that references latest timestamp from the invite notification.
     firstName:
       type: string
@@ -35,3 +34,5 @@ Signer:
       description: The first name of the signer
       maxLength: 250
       example: Sample
+    middleName:
+      type: string

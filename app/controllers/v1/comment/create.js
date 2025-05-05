@@ -27,7 +27,6 @@ async function create(req, res) {
       )
     }
 
-// Temp comment
     const entity = await services.comment.create(
       {
         text,

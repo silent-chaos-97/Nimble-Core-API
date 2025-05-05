@@ -30,7 +30,6 @@ class CreditReport {
    */
   _apiURL(method = 'process_applicant'){
     return `${this.baseAPIURL}?v=${this.version}&username=${this.username}&password=${this.password}&group_code=${this.groupCode}&method=${method}`
-// Temp comment
   }
 
   /**
@@ -163,7 +162,6 @@ class CreditReport {
 
   /**
    * Parse date from API into a iso format
-   * @param {*} unixTimeStamp
    */
   _getDate(unixTimeStamp) {
     const date = moment.unix(unixTimeStamp)

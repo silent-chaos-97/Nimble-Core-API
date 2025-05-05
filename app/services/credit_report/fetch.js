@@ -54,7 +54,6 @@ async function fetch(signerId, tx = app.db) {
 
   await tx.transaction(async tx => {
     // download the report
-// Temp comment
     const document = await app.services.creditReport.export(url, signer.institutionId)
     // create the report
     await app.services.creditReport.create({

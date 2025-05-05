@@ -10,3 +10,4 @@ const THRESHOLDS = [
   { risk: '?' }
 ]
 
+describe('app.services.bsaRiskResult.calculate', () => {

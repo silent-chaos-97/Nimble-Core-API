@@ -26,3 +26,5 @@ class UserModel extends BaseModel {
 
   static statuses() {
     return Statuses
+  }
+

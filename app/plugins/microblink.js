@@ -65,6 +65,7 @@ class MicroblinkService {
         documentIssuedDate: null,
         documentIssuer: ''
       }
+    }
 
     const {
       address,

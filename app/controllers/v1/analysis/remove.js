@@ -9,7 +9,6 @@ async function remove(req, res) {
   if (!req.params.id) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 
   const exists = await app.controllers.analysis.get(req, res) // checks access
-
   if (!exists) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 
   return service

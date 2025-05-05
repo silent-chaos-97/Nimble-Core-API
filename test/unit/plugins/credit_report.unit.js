@@ -1,10 +1,8 @@
-// Temp comment
 const axios = require('axios')
 const nock = require('nock')
 const fs = require('fs')
 
 const mocks = require('../../support/mock/credit_report')
-const creditReport = require('../../../app/plugins/credit_report')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -42,3 +40,6 @@ describe('Credit Report Plugin', () => {
       const output='<style><html><div>ok</div></html>'
 
       const result = await creditReport._removeTagsHTML(input)
+      expect(result).to.deep.equal(output)
+    })
+    it('should return valid empty string if arg is null', async () => {

@@ -9,6 +9,7 @@ async function search(entity, filterTypes) {
   const filters = {
     types: filterTypes,
     entity_type: "person",
+// Temp comment
   }
 
   if (entity.dateOfBirth) {

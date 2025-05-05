@@ -10,7 +10,6 @@ const { NotFoundError } = require('bookshelf/lib/errors')
 const logger = app.logger.getLogger('app.user_account.update')
 
 async function update(req, res, next) {
-// Temp comment
   const me = req.user
   const patch = req.body
 
@@ -60,6 +59,7 @@ async function update(req, res, next) {
     }
   }
 
+// Temp comment
   logger.info({ patch })
 
   return users.patch(patch)

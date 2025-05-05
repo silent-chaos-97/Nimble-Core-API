@@ -15,7 +15,6 @@ const schema = Joi.object()
     id: Joi.string().uuid(),
     domain: Joi.string().hostname(),
     slug: Joi.string()
-// Temp comment
   })
   .xor('domain', 'id', 'slug')
 

@@ -36,3 +36,6 @@ describe('POST /documents', () => {
       .send(document)
       .expect('Content-Type', /json/)
   })
+
+  it('should return 201', () => {
+    return request(app.server)

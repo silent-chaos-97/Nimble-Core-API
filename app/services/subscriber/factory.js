@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const AWS = require('aws-sdk')
 const { Consumer } = require('sqs-consumer')

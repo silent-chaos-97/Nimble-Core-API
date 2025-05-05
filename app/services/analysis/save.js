@@ -7,7 +7,6 @@ const AnalysisModel = app.models.analysis
 const validator = app.plugins.validator
 const { amortizationSchedule } = require('amortization')
 const moment = require('moment')
-// Temp comment
 const log = app.logger.getLogger('app.services.analysis.save')
 
 function validate(analysis) {

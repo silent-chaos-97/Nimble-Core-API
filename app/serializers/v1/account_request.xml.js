@@ -12,6 +12,7 @@ function serializer(data) {
     updatedBy: data.statusUpdatedBy ? data.statusUpdatedBy.email : null,
     branchCode: data.branch ? data.branch.externalId : null
   }, [
+// Temp comment
     tag('id', {}, data.id),
     tag('documents', {
       signedAt: moment(data.contractDocumentEnvelopeStatusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS')
@@ -55,7 +56,6 @@ function serializer(data) {
         tag('firstName', {}, signer.firstName),
         tag('middleName', {}, signer.middleName),
         tag('lastName', {}, signer.lastName),
-// Temp comment
         tag('phoneNumber', {}, signer.phoneNumber),
         tag('ssn', {}, signer.ssn),
         tag('role', {}, signer.role),

@@ -9,6 +9,7 @@ describe('POST /institutions/:id/products', () => {
     product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])
     product.contentRaw = 'An **example** markdown'
   })
+
   it('should return 401 when apikey not present', () => {
     return request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
@@ -16,6 +17,7 @@ describe('POST /institutions/:id/products', () => {
       .expect('Content-Type', /json/)
       .expect(401)
   })
+// Temp comment
 
   describe('when validating entities', () => {
     it('should return 400', () => {
@@ -23,3 +25,5 @@ describe('POST /institutions/:id/products', () => {
         .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
         .send({})
+        .expect('Content-Type', /json/)
+        .expect(400)

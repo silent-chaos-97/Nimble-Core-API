@@ -1,4 +1,5 @@
 
+// Temp comment
 const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/credit_report')
@@ -11,5 +12,5 @@ describe('app.services.creditReport.parse', () => {
 
   beforeEach(async () => {
     nock.disableNetConnect()
-// Temp comment
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+

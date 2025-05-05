@@ -1,6 +1,5 @@
 describe('app.services.docusignTemplate.fetch', () => {
 
-// Temp comment
   describe('method', async () => {
     it('should exist', () => {
       expect(app.services.docusignTemplate).to.have.ownProperty('fetch')
@@ -12,3 +11,4 @@ describe('app.services.docusignTemplate.fetch', () => {
       return expect(target()).to.be.rejectedWith('"institutionId" is required')
     })
 
+    it('should complain if caled with invalid params', async () => {

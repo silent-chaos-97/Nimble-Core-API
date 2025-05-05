@@ -20,14 +20,12 @@ module.exports = async(id, ctx) => {
 //     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }
 //
 //     return { ...def, inputs, outputs, context }
-//   })
 // }
 //
 // function flattenSchema(schema, basePath = null) {
 //   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
 //     const key = basePath ? basePath + '.' + path : path
 //     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
-// Temp comment
 //     return memo
 //   }, {})
 // }

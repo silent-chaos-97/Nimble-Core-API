@@ -178,3 +178,14 @@ describe('Docusign', () => {
         const args ={
           accountRequestId: 'string',
           signers: [mocks.validUser],
+          accountOptions: {...mocks.accountOptions, productConfigurations: []},
+          ccRecipient: {
+            fullName: 'Some dude Specimen',
+            email: 'psousa+1@wearesingular.com',
+          }
+        }
+
+        try {
+          await docusign.sendEnvelopeWithMultipleDocuments(args)
+        } catch (error) {
+          expect(error.message).to.equal("Cannot send envelope without products.")

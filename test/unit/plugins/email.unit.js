@@ -21,3 +21,5 @@ describe('Email Plugin', () => {
     it('should exist', () => {
       expect(target).not.to.be.undefined
     })
+
+    it('should be configured', () => {

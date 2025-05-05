@@ -104,3 +104,9 @@ const schema = {
     adminApiKey: {
       doc: 'The API Key to be used by administrators',
       format: String,
+      default: 'superpowers',
+      env: 'ADMIN_API_KEY'
+    },
+    ttl: {
+      doc: 'The ttl for JWT tokens in seconds',
+      format: Number,

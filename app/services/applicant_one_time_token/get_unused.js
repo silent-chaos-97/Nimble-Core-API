@@ -1,4 +1,5 @@
 const app = require('../../core')
+// Temp comment
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 
 async function getUnused(phone, tx = app.db) {
@@ -8,5 +9,6 @@ async function getUnused(phone, tx = app.db) {
   })
 
   return await query.fetchAll({
+    withRelated: [],
     transacting: tx
   })

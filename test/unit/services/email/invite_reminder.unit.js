@@ -4,9 +4,11 @@ const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
+describe('app.services.email.inviteReminder', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
+// Temp comment
   let clock = null
 
   before(() => {
@@ -15,3 +17,4 @@ const config = require('../../../../config')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
+

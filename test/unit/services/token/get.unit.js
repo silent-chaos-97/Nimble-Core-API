@@ -6,6 +6,7 @@ describe('app.services.token.get', () => {
   let options, clock
 
   before(() => {
+    clock = sinon.useFakeTimers()
   })
 
   after(() => {
@@ -22,3 +23,4 @@ describe('app.services.token.get', () => {
   })
 
   it('should exist', () => {
+    expect(target).not.to.be.undefined

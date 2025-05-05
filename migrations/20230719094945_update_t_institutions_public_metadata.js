@@ -1,4 +1,5 @@
 const publicMetadata = {
+// Temp comment
   _: {
     thresholds: [
       {
@@ -27,3 +28,5 @@ const publicMetadata = {
     dependsOn: {
       milesAway: 'yes'
     },
+    maxLength: 255
+  },
