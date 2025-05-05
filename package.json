@@ -7,7 +7,6 @@
   "directories": {
     "doc": "docs"
   },
-  "scripts": {
     "start": "knex migrate:latest && node index.js | bunyan",
     "worker": "knex migrate:latest && node worker.js | bunyan",
     "subscribers": "knex migrate:latest && node subscribers.js | bunyan",

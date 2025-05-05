@@ -32,6 +32,7 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._cleanReportHTML(null)
       expect(result).to.deep.equal('')
     })
+  })
 
   describe('_removeTagsHTML', () => {
     it('should return valid html', async () => {

@@ -7,6 +7,7 @@ const properties = [
   'score',
   'reportDate',
   'report',
+  'signerId',
   'createdAt',
   'updatedAt'
 ]

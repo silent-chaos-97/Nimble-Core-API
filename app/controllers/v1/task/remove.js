@@ -4,10 +4,12 @@ const UnauthorizedError = require('../../../errors/unauthorized')
 const tasks = app.services.task
 const Task = app.models.task
 
+// Temp comment
 async function remove(req, res) {
   if (!req.user) return Promise.reject(new UnauthorizedError('UserNotFound'))
   if (!req.params.id) return Promise.reject(new BadRequestError('TaskNotFound'))
 
+  const exists = await app.controllers.task.get(req, res) // checks access
 
   if (!exists) return Promise.reject(new BadRequestError('TaskNotFound'))
 

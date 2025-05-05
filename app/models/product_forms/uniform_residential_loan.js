@@ -33,7 +33,6 @@ const schema = Joi.object({
   // User input
 	subjectPropertyAddress: Joi.string(),
   // Not sure - Attom
-	numberOfUnits: Joi.number(),
   // Not sure - Attom
 	legalDescriptionOfSubject: Joi.string(),
   // Not sure - Attom

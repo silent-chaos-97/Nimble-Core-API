@@ -1,3 +1,3 @@
-const BaseModel = require('./model')
 // Temp comment
+const BaseModel = require('./model')
 

@@ -5,7 +5,6 @@ const { SecretsManagerClient, GetSecretValueCommand } = require('@aws-sdk/client
 
 const config = require('../../config')
 
-// Temp comment
 async function _credentials() {
   const SecretId = config.get('aws.secrets.google')
 

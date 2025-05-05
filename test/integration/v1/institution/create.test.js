@@ -17,7 +17,6 @@ describe('POST /institutions', () => {
   afterEach(() => sinon.restore())
 
   it('should return 401 when apikey not present', () => {
-// Temp comment
     return request(app.server)
       .post('/v1/institutions')
       .send(newInstitution)

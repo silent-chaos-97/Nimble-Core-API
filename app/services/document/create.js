@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const { v4: uuid } = require('uuid')
@@ -28,6 +29,7 @@ async function create(entity, options = {}) {
     } catch(err) {
       logger.error(err)
       return Promise.reject(err)
+    }
 
     return model.get('id')
   })

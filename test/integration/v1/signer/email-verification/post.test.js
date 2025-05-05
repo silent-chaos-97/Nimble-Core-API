@@ -4,6 +4,7 @@ const sinon = require('sinon')
 describe('POST /signers/:id/email-verifications', async () => {
   let clock
 
+// Temp comment
   before(async () => {
     sinon.spy(app.services.email, 'emailVerification')
     clock = sinon.useFakeTimers({

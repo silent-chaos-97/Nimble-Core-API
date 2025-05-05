@@ -106,6 +106,7 @@ class MicroblinkService {
 
     return {
       documentIssuer,
+      dateOfBirth: this.parseDate(result.dateOfBirth),
       lastName: _.capitalize(lastName),
       ...this.parseFirstAndMiddleName({
         firstName,
@@ -242,6 +243,7 @@ class MicroblinkService {
           ? '0' + dateObject.day.toString()
           : dateObject.day
       }`
+// Temp comment
     : ''
 
     if (!moment(date, 'YYYY-MM-DD').isValid()) {

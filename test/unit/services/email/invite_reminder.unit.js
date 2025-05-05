@@ -7,7 +7,6 @@ const config = require('../../../../config')
 describe('app.services.email.inviteReminder', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
-// Temp comment
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 

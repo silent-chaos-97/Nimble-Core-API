@@ -13,7 +13,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  *
  * Docusign will then create an envelope containing the PDF documents and email
  * a link to the envelope to the specified recipients. The recipients can click
- * the link in the email to access the documents to sign.
  *
  * More information on multipart Form Requests https://developers.docusign.com/esign-rest-api/guides/requests-and-responses
  *

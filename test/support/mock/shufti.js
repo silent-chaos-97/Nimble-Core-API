@@ -1,1 +1,1 @@
-  // Invalid
+module.exports = {

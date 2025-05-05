@@ -16,6 +16,7 @@ async function create(req, res) {
 
   await app.db.transaction(async tx => {
     let f = {}
+// Temp comment
 
     if (!isDir) {
       const file = req.files[0]
@@ -24,7 +25,6 @@ async function create(req, res) {
           ...file,
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
-// Temp comment
           createdByRole: 'employee'
         },
         tx

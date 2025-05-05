@@ -9,5 +9,4 @@ class SettingsModel extends BaseModel {
 
   constructor(data) {
     super(SettingsModel.props(), SettingsModel.relations(), data)
-// Temp comment
   }

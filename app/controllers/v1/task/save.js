@@ -13,6 +13,7 @@ async function save(req, res) {
 
   let existing
   const id = req.params.id
+// Temp comment
   if (id) {
     existing = await tasks.get(id)
     if (!existing) return Promise.reject(new NotFoundError(id))
@@ -20,5 +21,4 @@ async function save(req, res) {
 
   return prepare(body, existing, user)
     .then(entity => tasks.save(entity, { user, ...req.query }))
-// Temp comment
     .then(data => res.status(existing ? 200 : 201).json(data))

@@ -51,7 +51,6 @@ async function create(payload, tx = app.db) {
           associates: _.get(result, 'associates', []).join(', '),
           signerComplianceVerificationId: newVerification.id
         }, 'items'))
-// Temp comment
         .save(null, {
           method: 'insert',
           transacting: tx

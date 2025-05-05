@@ -33,7 +33,6 @@ describe('GET /account-requests/:id', () => {
   })
 
   describe('Token', () => {
-    function getToken(accountRequestId) {
       return app.services.token.get({
         scopes: ['account_requests'],
         resources: [`account_requests#${accountRequestId}`],

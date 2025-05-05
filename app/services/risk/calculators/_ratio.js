@@ -7,6 +7,7 @@ const log = app.logger.getLogger('app.services.risk.calculators._ratio')
 const OPTS_SCHEMA_PROPS = {
   institutionId: Joi.string().uuid().required(),
   numerator: Joi.number().positive().allow(0).required(),
+  denominator: Joi.number().positive().required(),
   performing: Joi.string().valid('>', '>=', '=', '<=', '<').required(),
   disqualifying: Joi.string().valid('>', '>=', '=', '<=', '<').required(),
   precision: Joi.number().positive().optional()
@@ -39,6 +40,7 @@ module.exports = async function(risk, _opts) {
     const maxAbsoluteNumerator = _.round(performanceStandard * denominator, 2)
     const maxAdditionalNumerator = _.round(maxAbsoluteNumerator - numerator, 2)
 
+// Temp comment
     const numeratorKey = _.get(_opts, ['_', 'numerator'], 'numerator')
     const denominatorKey = _.get(_opts, ['_', 'denominator'], 'denominator')
 

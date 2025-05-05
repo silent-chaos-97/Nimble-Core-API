@@ -10,7 +10,6 @@ describe('GET /users', () => {
   })
 
   describe('with valid auth', () => {
-    let token
     const user10Id = '1052ab85-08da-4bb5-be00-9e94d282d310'
 
     beforeEach(async () => {

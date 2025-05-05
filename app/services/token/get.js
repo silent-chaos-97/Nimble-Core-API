@@ -5,6 +5,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const getApiUri = require('../api/uri')
 const jwt = app.plugins.jwt
+
 function schema() {
   return Joi.object().keys({
     userId: Joi.string().optional().default(null),

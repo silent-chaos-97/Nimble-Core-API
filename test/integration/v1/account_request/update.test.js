@@ -50,6 +50,7 @@ describe('PUT /account_requests/:id', async () => {
       })
 
       return request(app.server)
+        .put(`/v1/account-requests/${accountRequestId}`)
         .set('Authorization', 'Bearer ' + token)
         .send(payload)
         .expect('Content-Type', /json/)

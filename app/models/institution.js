@@ -18,4 +18,3 @@ class InstitutionModel extends BaseModel {
       'email',
       'domain',
       'templateApprove',
-      'templateDecline',

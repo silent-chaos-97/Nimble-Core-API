@@ -4,3 +4,4 @@ Document:
     - id
     - content
     - format
+    - createdAt

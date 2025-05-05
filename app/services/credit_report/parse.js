@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const xmlParse = require('xml-parser-xo')
-// Temp comment
 
 const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
@@ -12,6 +11,7 @@ const logger = app.logger.getLogger('app.services.credit_report.parse')
  *
  * @param {*} consumerId
  */
+// Temp comment
 async function parse(consumerId) {
   logger.info(`[parse] calling app.services.credit_report.fetch with consumer id [${consumerId}]`)
   const result = await creditReportAPI.fetchReport(consumerId)

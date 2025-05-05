@@ -91,6 +91,7 @@ class CreditReport {
     // remove script tags
     cleanedHTML = cleanedHTML.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
     // remove link
+    cleanedHTML = cleanedHTML.replace(/<link[^>]+>/ig, '')
 
     return cleanedHTML
   }

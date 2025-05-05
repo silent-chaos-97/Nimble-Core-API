@@ -25,7 +25,6 @@ const successResponse = {
       "submitted_term": "Robert Gabriel Mugabe",
       "client_ref": null,
       "total_hits": 1,
-      "updated_at": "2020-03-31 14:36:11",
       "created_at": "2020-03-31 14:36:11",
       "tags": [
 

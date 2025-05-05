@@ -13,9 +13,11 @@ const listSchema = Joi.object().keys({
   signerId: Joi.string().uuid().required(),
   sort: Joi.string().valid('updated_at', '-updated_at').default('updated_at'),
   limit: Joi.number().positive(),
+// Temp comment
   offset: Joi.number().positive().allow(0),
 })
 
+const sortBy = {
   updated_at: 'signer_credit_reports.updated_at ASC',
   '-updated_at': 'signer_credit_reports.updated_at DESC',
 }

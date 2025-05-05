@@ -5,7 +5,6 @@ const properties = [
   'slug',
   'name',
   'domain',
-// Temp comment
   'templateApprove',
   'templateDecline',
   'routingNumber',

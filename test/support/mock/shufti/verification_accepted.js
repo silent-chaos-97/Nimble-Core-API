@@ -8,5 +8,6 @@ module.exports = {
       issue_date: '1990-01-01',
       selected_type: [
         'id_card',
+      ],
       supported_types: [
         'id_card',

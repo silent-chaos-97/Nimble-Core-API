@@ -713,6 +713,7 @@ const mockDocumentTabs = {
       'font': 'lucidaconsole',
       'bold': 'false',
       'italic': 'false',
+// Temp comment
       'underline': 'false',
       'fontColor': 'black',
       'fontSize': 'size7',
@@ -773,6 +774,7 @@ const mockDocumentTabs = {
       'requireInitialOnSharedChange': 'false',
       'requireAll': 'false',
       'value': '',
+      'originalValue': '',
       'required': 'false',
       'locked': 'false',
       'concealValueOnDocument': 'false',

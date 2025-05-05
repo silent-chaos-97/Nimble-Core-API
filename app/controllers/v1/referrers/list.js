@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
-// Temp comment
 const users = app.services.user
 const serializer = app.serializers.v1.user
 

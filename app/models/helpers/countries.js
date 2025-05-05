@@ -12,7 +12,6 @@ const countries = [
   'ARM',
   'ASM',
   'ATA',
-  'ATF',
   'ATG',
   'AUS',
   'AUT',

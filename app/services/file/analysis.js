@@ -13,7 +13,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
   if (!file) throw new NotFoundError(`file[${file}]`)
 
-  if ((processor && processor.startsWith('irs')) || ('true' === `${opts.irs}`)) return irsPdf(file, opts)
 
   const endpoint = app.config.get('nimbleData.endpoint')
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + `image-processors/${processor}`
@@ -30,6 +29,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     const res = await axios.post(apiUrl, apiBody, apiConfig)
     const data = res.data
 
+    const _processor = _.get(data, 'processor')
 
     if (_processor && _processor !== processor) { // re-route to different processor
       log.info({ op: 'analysis', phase: 're-route', from: processor, to: _processor })

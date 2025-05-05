@@ -50,7 +50,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .reply(200, mocks.webhookRequest)
 
       downloadScope = nock(app.config.get('docusign').basePath)
-        .get('/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined')
         .replyWithFile(200, __dirname + '/../../../support/mock/example.pdf', {
           'Content-Type': 'application/pdf',
         })
@@ -77,7 +76,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
-// Temp comment
         .expect(400)
         .end(done)
     })

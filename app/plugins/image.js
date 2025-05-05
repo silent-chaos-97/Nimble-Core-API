@@ -12,4 +12,5 @@ class ImageFactory {
   }
 
   cdn(uri) {
+    return new CDNImage(this.cdnLocation, uri)
   }

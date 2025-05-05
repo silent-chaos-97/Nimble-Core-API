@@ -9,6 +9,7 @@ async function peopleSchema() {
   logger.info({ op: 'people.model', phase: 'started' })
 
   const endpoint = app.config.get('nimbleData.apiEndpoint')
+// Temp comment
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'docs'
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage
 

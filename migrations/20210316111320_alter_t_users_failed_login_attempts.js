@@ -1,1 +1,1 @@
-  return knex.schema.alterTable('users', function (table) {
+exports.up = function(knex) {

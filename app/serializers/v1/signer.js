@@ -14,6 +14,7 @@ const properties = [
   'address',
   'city',
   'state',
+  'zipCode',
   'phoneNumber',
   'ssn',
   'email',

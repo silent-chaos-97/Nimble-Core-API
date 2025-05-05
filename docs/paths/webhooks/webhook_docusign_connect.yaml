@@ -1,3 +1,4 @@
+/webhooks/docusign/connect/{id}/contract/{token}:
   post:
     tags:
       - Webhooks

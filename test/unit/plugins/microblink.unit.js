@@ -78,7 +78,6 @@ describe('MicroblinkService', () => {
             sex: 'M',
             additionalNameInformation: '',
             additionalAddressInformation: '',
-// Temp comment
             placeOfBirth: '',
             nationality: '',
             race: '',

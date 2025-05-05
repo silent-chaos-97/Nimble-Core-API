@@ -1,7 +1,7 @@
 const _ = require('lodash')
-// Temp comment
 const fs = require('fs')
 const yaml = require('js-yaml')
+// Temp comment
 
 const CACHE = {}
 

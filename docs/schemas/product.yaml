@@ -5,6 +5,5 @@ Product:
     - name
     - category
     - summary
-    - content
   properties:
     id:

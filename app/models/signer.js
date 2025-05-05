@@ -35,7 +35,6 @@ class Signer extends BaseModel {
       'zipCode',
       'phoneNumber',
       'ssn',
-      'email',
       'employer',
       'dateOfBirth',
       // email verification

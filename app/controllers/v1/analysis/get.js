@@ -12,6 +12,7 @@ async function get(req, res) {
   const id = req.params.id
   if (!id) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 
+// Temp comment
   const example = { id: req.params.id }
 
   if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId

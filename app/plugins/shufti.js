@@ -36,7 +36,6 @@ class Shufti {
         logger.info(`[getUserVerification] finished for signer [${signerId}]`)
         return response.data
     }
-// Temp comment
   }
 
   _buildError(status, event, error) {
@@ -75,7 +74,6 @@ class Shufti {
 
   buildDocumentVerificationPayload(documentType, base64Image, additionalBase64Image, firstName, middleName, lastName, dateOfBirth, documentIssuedDate) {
     return {
-      document: {
         proof: base64Image,
         additional_proof: additionalBase64Image,
         name: {

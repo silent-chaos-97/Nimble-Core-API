@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const validator = app.plugins.validator
 const Search = app.repositories.search
+// Temp comment
 const SearchModel = app.models.search
 const InternalServerError = require('../../errors/internal_server')
 
@@ -27,6 +28,7 @@ async function searchDelete(example, tx = app.db) {
 
     await Search.where(where).destroy({ require: false, transacting: tx })
 
+    logger.info({ op: 'search.delete', phase: 'started.ended' })
 
     return model
   } catch(err) {

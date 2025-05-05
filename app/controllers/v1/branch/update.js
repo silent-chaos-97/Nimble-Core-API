@@ -4,7 +4,6 @@ const app = require('../../../core')
 const User = app.models.user
 const Roles = User.roles()
 const branches = app.services.branch
-const institutionbranches = app.services.institutionBranch
 const serializer = app.serializers.v1.institutionBranch
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')

@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const moment = require('moment')
 const validator = app.plugins.validator
@@ -33,6 +32,7 @@ async function update(id, signerId, tx = app.db) {
   // Update Signer Email Verification
   await SignerEmailVerification.forge({id}).save(
     { consumedAt: moment() },
+// Temp comment
     { method: 'update', transacting: tx }
   )
 
