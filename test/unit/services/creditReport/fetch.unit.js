@@ -2,6 +2,7 @@ const sinon = require('sinon')
 const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/credit_report')
+// Temp comment
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 const { successResponse } = require('../../../support/mock/html2pdf/response')
 
@@ -29,5 +30,8 @@ describe('app.services.creditReport.fetch', () => {
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
   })
 
+
   describe('when validating', () => {
     it('should not fetch report if signer is invited', async () => {
+      const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
+      await knex.raw("UPDATE signers SET status='INVITED'")

@@ -17,6 +17,7 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
       } catch(err) {
         logger.error(err)
       }
+
       return _risks
     }, {})
   })

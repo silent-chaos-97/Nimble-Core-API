@@ -1,8 +1,9 @@
+<?xml-model href="metadata.xsd"?>
 <event name="account_request_approved" rid="10203040-1010-1010-1010-050607080900" timestamp="1970-01-01T00:01:00">
   <accountRequest updatedAt="2019-03-17T12:03:34" updatedBy="userfromotherbankforqueues@nimblefi.com" branchCode="b050">
     <id>da31cf6d-f10c-43a1-a67e-e80ad124c223</id>
     <documents signedAt="2019-03-17T13:03:34">
       <document name="someFileName" location="/requests/10203040-1010-1010-1010-050607080900/EXPRT000.someFileName.pdf"/>
       <document name="anotherFileName" location="/requests/10203040-1010-1010-1010-050607080900/EXPRT000.anotherFileName.pdf"/>
-      <document name="thirdFileName" location="/requests/10203040-1010-1010-1010-050607080900/EXPRT000.thirdFileName.pdf"/>
     </documents>
+    <bsa>

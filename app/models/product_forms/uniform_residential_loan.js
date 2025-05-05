@@ -125,3 +125,14 @@ const schema = Joi.object({
           // Microbilt - Payroll Verification Service
 					employerName: Joi.string(),
           // Microbilt - Payroll Verification Service
+					employerAddress: Joi.string(),
+          // Not sure - Microbilt - Employment Search
+					yearsOnJob: Joi.number(),
+          // Not sure - User input
+					yearsInProfession: Joi.number(),
+          // Not sure - Data Axle - fill rate may be low though (meaning the percentage of people they have this info for) - Data Axle - primaryContactManagementLevel
+					positionOrTypeOfBusiness: Joi.string(),
+          // Not sure - Data Axle - fill rate may be low though
+					businessPhone: Joi.string()
+				}),
+        // Same as above

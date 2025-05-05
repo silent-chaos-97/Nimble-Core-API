@@ -283,7 +283,6 @@ describe('GET /account-requests', () => {
 
               expect(res.body).to.be.an('array')
               expect(res.body).to.have.lengthOf(8)
-// Temp comment
               done()
             })
         })
@@ -319,5 +318,4 @@ describe('GET /account-requests', () => {
               res.body.forEach((item, index) => {
                 expect(item.id).to.equal(expectedArr[index])
               })
-              done()
             })

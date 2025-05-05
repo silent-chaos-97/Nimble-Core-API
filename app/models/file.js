@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+const BaseModel = require('./model')
 
 class FileModel extends BaseModel {
   constructor(data) {
@@ -8,3 +9,4 @@ class FileModel extends BaseModel {
   static props(op) {
     return {
       all: [
+        // app meta

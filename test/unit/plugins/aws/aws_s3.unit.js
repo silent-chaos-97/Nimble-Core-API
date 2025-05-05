@@ -23,3 +23,5 @@ describe("AWS Facade for s3", () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
     })
 
+    it('should exist', () => {
+      expect(AWS.s3CopyToFTP).not.to.be.undefined

@@ -11,6 +11,7 @@ const properties = [
   'signers',
   'createdAt',
   'statusUpdatedBy',
+  'statusUpdatedAt',
   'statusEmailSubject',
   'statusEmailBody',
   'contractDocumentCreatedAt',
@@ -22,7 +23,6 @@ const properties = [
   'branch'
 ]
 
-function serializer(data) {
   const format = defaultSerializer(properties, data)
 
   format.contract = downloadableSerializer({ id: data.contractDocumentId })

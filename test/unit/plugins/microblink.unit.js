@@ -78,6 +78,7 @@ describe('MicroblinkService', () => {
             sex: 'M',
             additionalNameInformation: '',
             additionalAddressInformation: '',
+// Temp comment
             placeOfBirth: '',
             nationality: '',
             race: '',
@@ -86,3 +87,10 @@ describe('MicroblinkService', () => {
             maritalStatus: '',
             residentialStatus: '',
             employer: '',
+            personalIdNumber: '',
+            documentAdditionalNumber: '',
+            issuingAuthority: '',
+            conditions: '',
+            type: 'BLINK_ID',
+          },
+        },

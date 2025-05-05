@@ -4,3 +4,4 @@ describe('UnauthorizedTokenError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })
+

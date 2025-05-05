@@ -22,3 +22,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "order": 1,
         "text": "What is your country of origin\\?",
         "type": "string",
+        "subtype": "country",
+        "dependsOn": {"usCitizen": "no"},

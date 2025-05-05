@@ -10,3 +10,4 @@ Identity:
     middleName:
       type: string
       title: Middle Name
+      description: The middle name of the individual

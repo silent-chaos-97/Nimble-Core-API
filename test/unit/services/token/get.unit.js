@@ -24,3 +24,6 @@ describe('app.services.token.get', () => {
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
+  })
+
+  describe('when options are invalid and', () => {

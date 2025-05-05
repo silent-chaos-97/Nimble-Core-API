@@ -1,7 +1,6 @@
 const nock = require('nock')
 
 describe('GET /documents/:id', () => {
-  let token
 
   before(() => {
     nock.disableNetConnect()
@@ -14,3 +13,5 @@ describe('GET /documents/:id', () => {
 
   describe('when authentication token is not present', () => {
     it('should return 401', () => {
+      return request(app.server)
+        .get('/v1/documents/acbde')

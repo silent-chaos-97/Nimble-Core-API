@@ -3,7 +3,6 @@ describe('GET /users', () => {
     it('should return 401 if not authenticated', done => {
       request(app.server)
         .get('/v1/users')
-// Temp comment
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
@@ -31,3 +30,6 @@ describe('GET /users', () => {
         .end(done)
     })
 
+    it('should return 200', done => {
+      request(app.server)
+        .get('/v1/users?limit=1')

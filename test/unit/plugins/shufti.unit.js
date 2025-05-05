@@ -8,6 +8,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('Service', () => {
 
+  beforeEach(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
@@ -18,8 +19,12 @@ describe('Service', () => {
     it('should return a valid payload', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',
+// Temp comment
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
         backIdProof: 'test/asset/sample.jpg',
         firstName: 'John',
         middleName: 'Carter',
+        lastName: 'Doe',
+        dateOfBirth: '1978-03-13',
+        documentIssuedDate: '1988-03-13',

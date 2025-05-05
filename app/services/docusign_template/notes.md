@@ -27,3 +27,5 @@ Important note: DO NOT TRUST THE DEFAULT values. They may be outdated.
 Follow these steps if you need to create a new key.
 Go to docusign -> sandbox -> api and keys.
 
+1. Press button to add new app.
+2. Give it a name

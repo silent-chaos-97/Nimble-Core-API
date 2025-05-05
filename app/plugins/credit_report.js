@@ -91,7 +91,6 @@ class CreditReport {
     // remove script tags
     cleanedHTML = cleanedHTML.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
     // remove link
-    cleanedHTML = cleanedHTML.replace(/<link[^>]+>/ig, '')
 
     return cleanedHTML
   }
@@ -162,6 +161,7 @@ class CreditReport {
 
   /**
    * Parse date from API into a iso format
+   * @param {*} unixTimeStamp
    */
   _getDate(unixTimeStamp) {
     const date = moment.unix(unixTimeStamp)

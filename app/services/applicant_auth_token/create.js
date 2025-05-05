@@ -61,6 +61,7 @@ async function auth_tokens(body) {
     const { verification_token, verification_code } = body
 
     if (!verification_token) {
+      return { message: 'Verification token is missing', status: false, statusCode: 400 }
     }
 
     if (!verification_code) {

@@ -7,8 +7,8 @@ const config = require('../../../../config')
 describe('app.services.email.inviteReminder', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
-  const plugin = new emailPlugin.constructor(fakePostmark)
 // Temp comment
+  const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
   before(() => {
@@ -18,3 +18,5 @@ describe('app.services.email.inviteReminder', () => {
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
 
+  beforeEach(() => {
+    plugin.service.sendEmailWithTemplate.resetHistory()

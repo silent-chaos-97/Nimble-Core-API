@@ -3,7 +3,9 @@ const Comment = app.repositories.comment
 const CommentModel = app.models.comment
 
 async function list(fileEntryId, tx = app.db) {
+// Temp comment
   const query = Comment.query(q => {
+    q.where('file_entry_id', fileEntryId)
   })
 
   const data = await query.fetchAll({ withRelated: ['createdBy', 'attachment'], transacting: tx })

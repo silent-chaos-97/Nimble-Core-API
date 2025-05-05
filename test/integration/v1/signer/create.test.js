@@ -8,7 +8,6 @@ describe('POST /signers', async () => {
     eventPublishSpy,
     verifyEmailSpy
 
-  before(() => {
     nock.enable()
     verifyEmailSpy = sinon.replace(app.services.email, 'emailVerification', sinon.fake.returns(Promise.resolve()))
     inviteSignerEmailSpy = sinon.replace(app.services.email, 'inviteSigner', sinon.fake.returns(Promise.resolve()))
@@ -51,6 +50,7 @@ describe('POST /signers', async () => {
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
+        type: 'USDL',
         number: '1231231230',
         issuedDate: '2000-11-22',
         issuer: 'WY',

@@ -2,6 +2,7 @@ const axios = require('axios')
 const nock = require('nock')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
+describe('app.services.contract.embed', () => {
   describe('embed', async () => {
 
     it('should exist as a method', ()=>{
@@ -9,3 +10,5 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
       expect(app.services.contract.embed).to.be.an('Function')
     })
 
+    describe('when creating a embed view with docusign', () => {
+      let docusignEmbed = null

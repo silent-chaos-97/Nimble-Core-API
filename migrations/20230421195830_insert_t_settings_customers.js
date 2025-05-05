@@ -1,2 +1,3 @@
 const ROWS = [
   {
+    key: 'customers',

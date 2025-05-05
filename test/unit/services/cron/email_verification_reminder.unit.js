@@ -19,5 +19,8 @@ describe('app.services.cron.emailVerificationReminder', () => {
     sinon.reset()
   })
 
+  after(() => {
     clock.restore()
     sinon.restore()
+  })
+

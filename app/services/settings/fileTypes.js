@@ -61,6 +61,7 @@ const fileTypes = [
   },
   {
     type: 'Entity',
+    name: 'Board Action to Borrow'
   },
   {
     type: 'Entity',
@@ -83,7 +84,6 @@ const fileTypes = [
     type: 'Product',
     name: 'Security Agreement'
   },
-  {
     type: 'Product',
     name: 'Guaranty'
   },
@@ -111,3 +111,12 @@ const fileTypes = [
     type: 'Product',
     name: 'Final Search'
   },
+  {
+    type: 'Product',
+    name: 'Collateral Matches Approval'
+  },
+  {
+    type: 'Product',
+    name: 'Pricing Sheet'
+  },
+  {

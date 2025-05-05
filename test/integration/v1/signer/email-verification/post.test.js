@@ -14,6 +14,7 @@ describe('POST /signers/:id/email-verifications', async () => {
   afterEach(() => sinon.reset())
 
   after(() => {
+    sinon.restore()
     clock.restore()
   })
 
@@ -30,3 +31,6 @@ describe('POST /signers/:id/email-verifications', async () => {
 
   describe('when using header Bearer token', () => {
     let headerToken
+    beforeEach(async () => {
+      headerToken = await helpers.getAuthToken()
+    })

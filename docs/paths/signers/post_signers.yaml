@@ -5,3 +5,4 @@
     summary: Create Signer
     description: Create Signer
     security:
+      - bearer: ['account_requests']

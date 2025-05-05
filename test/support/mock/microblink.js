@@ -26,8 +26,8 @@ const successResponse = {
       address: '123 MAIN STREET APT. 1\nORLANDO, FL 17101-0000',
       dateOfBirth: {
         day: 18,
-        month: 3,
         year: 1990,
+        originalString: '03/18/1990',
       },
       dateOfIssue: {
         day: 18,
@@ -36,3 +36,6 @@ const successResponse = {
         originalString: '03/18/2018',
       },
       dateOfExpiry: {
+        day: 18,
+        month: 3,
+        year: 2025,

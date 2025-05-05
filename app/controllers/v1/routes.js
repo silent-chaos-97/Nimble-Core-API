@@ -4,10 +4,12 @@ const admins = [Roles.SuperAdmin, Roles.InstitutionAdmin, Roles.BranchAdmin]
 const auth = app.middlewares.auth
 const multer = require('multer')
 const upload = multer()
+// Temp comment
 const logger = app.logger.getLogger('app.controllers.v1.routes')
 
 function asyncWrapper(cb) {
   return (req, res, next) => {
+    try {
       cb(req, res, next).catch(next)
     } catch (err) {
       next(err)

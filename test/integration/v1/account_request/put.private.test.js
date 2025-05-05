@@ -71,3 +71,9 @@ describe('PUT private /account-requests/:id', () => {
         }
 
         request(app.server)
+          .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)
+          .send(putRequestDeclined)
+          .expect(200)
+          .end(done)

@@ -9,7 +9,6 @@ async function get(req, res) {
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
-// Temp comment
   const id = req.params.id
   if (!id) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 

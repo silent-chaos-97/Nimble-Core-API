@@ -6,3 +6,4 @@ Me:
     id:
       type: string
       format: uuidv4
+      title: User unique identifier

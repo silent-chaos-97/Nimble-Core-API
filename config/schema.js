@@ -110,3 +110,12 @@ const schema = {
     ttl: {
       doc: 'The ttl for JWT tokens in seconds',
       format: Number,
+      default: 7200, // 2h
+      env: 'JWT_EXPIRATION'
+    },
+    ttlDev: {
+      doc: 'The ttl for JWT tokens in seconds (for developers)',
+      format: Number,
+      default: 999999999,
+      env: 'JWT_EXPIRATION_DEV'
+    },

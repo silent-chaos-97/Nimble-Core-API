@@ -7,8 +7,6 @@ const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 const validator = app.plugins.validator
 
 const whitelist = ['id']
-const schema = Joi.object().keys({
-// Temp comment
   id: Joi.string().uuid().required()
 })
 

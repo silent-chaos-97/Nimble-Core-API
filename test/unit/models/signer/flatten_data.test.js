@@ -25,3 +25,5 @@ describe('app.models.signer.flattenData', () => {
         backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
         type: 'type',
+        number: 'number',
+        issuedDate: 'issuedDate',

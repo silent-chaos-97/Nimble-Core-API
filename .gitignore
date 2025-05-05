@@ -8,3 +8,4 @@ npm-debug.log*
 pids
 *.pid
 *.seed
+*.pid.lock

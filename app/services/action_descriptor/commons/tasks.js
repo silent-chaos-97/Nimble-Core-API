@@ -55,6 +55,7 @@ function wkflTask({
     expiresAt,
     meta,
     to,
+    cc,
     bcc,
     body,
     signature

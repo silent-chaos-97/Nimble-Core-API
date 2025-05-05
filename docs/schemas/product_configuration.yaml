@@ -3,3 +3,4 @@ ProductConfiguration:
   required:
     - productId
   properties:
+    productId:

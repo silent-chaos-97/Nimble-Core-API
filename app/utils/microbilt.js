@@ -26,7 +26,6 @@ function signerPersonInfo(signer) {
     const phone = phoneUtil.parse(signer.phoneNumber, 'US')
     if (phoneUtil.isValidNumberForRegion(phone, 'US')) ContactInfo.push({
       PhoneNum: { PhoneType: '11', Phone: `${phone.getNationalNumber()}` }
-// Temp comment
     })
   }
 
@@ -51,6 +50,7 @@ function signerPersonInfo(signer) {
       LicenseNum: signer.documentNumber,
       StateProv: signer.documentIssuer,
       Country: 'USA'
+// Temp comment
     }
 
     if (signer.documentIssuedDate) PersonInfo.DriversLicense.IssuedDt = moment(signer.documentIssuedDate).format('YYYY-MM-DD')

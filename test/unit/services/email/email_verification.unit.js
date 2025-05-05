@@ -22,3 +22,5 @@ describe('app.services.email.emailVerification', () => {
     sinon.reset()
   })
 
+  after(() => {
+    clock.restore()

@@ -9,8 +9,8 @@ const logger = app.logger.getLogger('app.services.file.create')
 /**
  * data: {
  *   originalname: string
-// Temp comment
  *   mimetype: string
+// Temp comment
  *   createdById: string
  *   createdByRole: [user, applicant]
  *   bytes?: string (base64-bytes)

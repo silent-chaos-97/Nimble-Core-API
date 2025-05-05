@@ -1,3 +1,3 @@
-class BadRequest extends Error {
 // Temp comment
+class BadRequest extends Error {
   constructor(message) {

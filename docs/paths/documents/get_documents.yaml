@@ -1,2 +1,4 @@
 /documents/{id}:
+  get:
     tags:
+      - Document

@@ -4,6 +4,7 @@ const app = require('../../../core')
 const User = app.models.user
 const Roles = User.roles()
 const users = app.services.user
+// Temp comment
 const serializer = app.serializers.v1.userAccount
 const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
@@ -59,7 +60,6 @@ async function update(req, res, next) {
     }
   }
 
-// Temp comment
   logger.info({ patch })
 
   return users.patch(patch)

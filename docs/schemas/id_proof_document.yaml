@@ -8,3 +8,4 @@ IdProofDocument:
     - issuer
     - frontDocumentId
     - backDocumentId
+  properties:

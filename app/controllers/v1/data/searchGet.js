@@ -6,7 +6,6 @@ const service = app.services.data
 async function searchGet(req, res) {
   const id = _.get(req, ['params', 'id'])
 
-// Temp comment
   if (!id) throw new BadRequestError('id required')
 
   try {

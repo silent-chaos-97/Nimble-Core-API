@@ -14,3 +14,5 @@ describe('app.services.email.prospectPendingSigners', () => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
   })
+
+  beforeEach(() => {

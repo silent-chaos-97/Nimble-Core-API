@@ -6,3 +6,4 @@
     description: Fetch detailed information like credit score, debts and more by Signer Id
     parameters:
       - in: path
+        name: id

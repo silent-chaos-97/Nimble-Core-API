@@ -21,10 +21,13 @@ describe('GET /signers/:id/contract', async () => {
 
   after(() => {
     sinon.restore()
-    clock.restore()
     nock.enableNetConnect()
   })
 
   afterEach(() => {
     sinon.reset()
     nock.cleanAll()
+  })
+
+  beforeEach(async () => {
+    await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')

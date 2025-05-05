@@ -16,6 +16,7 @@ const INITIAL_CONTEXT = {
   decisionTaskTimedOutCounter: 0
 }
 const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g
+const SINGLE_VARIABLE_REG_EXP = /^([A-Za-z0-9.$_]+)$/g
 
 function interpolateString(str, state) {
   // if the whole string is a single reference without interpolation then return the resolved value

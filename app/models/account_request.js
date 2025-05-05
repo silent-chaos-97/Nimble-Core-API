@@ -23,7 +23,6 @@ class AccountRequest extends BaseModel {
       'referrers', // FIXME: exists for backward compatability
       'referredById',
       'statusUpdatedById',
-      'statusUpdatedAt',
       'statusEmailSubject',
       'statusEmailBody',
       'contractDocumentId',
@@ -62,3 +61,5 @@ class AccountRequest extends BaseModel {
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
     }
   }
+
+  mapProductConfigurations() {

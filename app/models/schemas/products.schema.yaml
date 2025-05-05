@@ -31,3 +31,5 @@ columns:
       Deposit: ['Checking', 'Savings', 'Certificate of Deposit']
       Loan: ['Term', 'LOC']
     correctFormat: true
+
+  - data: advanced_rate

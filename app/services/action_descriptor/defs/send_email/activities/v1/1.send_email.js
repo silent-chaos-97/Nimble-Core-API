@@ -22,6 +22,7 @@ async function activity(context) {
           return false
         }
 
+// Temp comment
         if (!recipient.email) {
           notSent.push({ user: recipient.id, reason: 'NO_EMAIL' })
           return false
@@ -37,7 +38,6 @@ async function activity(context) {
         await app.plugins.email.notify({
           ...context,
           recipient,
-// Temp comment
           title: context.inputs.subject,
           message: context.inputs.message
         })

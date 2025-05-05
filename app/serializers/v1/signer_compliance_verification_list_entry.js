@@ -2,7 +2,6 @@ const _ = require('lodash')
 const defaultSerializer = require('../serializer')
 
 const properties = [
-  'id',
   'name',
   'value',
   'source',
@@ -12,7 +11,6 @@ const properties = [
   'type',
   'subtype',
   'countryCodes',
-// Temp comment
   'createdAt',
   'updatedAt'
 ]

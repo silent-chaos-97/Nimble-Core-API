@@ -1,3 +1,4 @@
 /signers/{id}/invites:
   post:
+    tags:
       - Signer

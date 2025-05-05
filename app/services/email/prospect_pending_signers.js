@@ -11,7 +11,6 @@ const prospectPendingSignersSchema = Joi.object().keys({
   accountType: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
-// Temp comment
 })
 
 const whitelist = ['id']
@@ -20,6 +19,5 @@ const entrySchema = Joi.object().keys({
 })
 
 async function validate(params) {
-  const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data

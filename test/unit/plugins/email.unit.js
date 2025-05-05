@@ -23,3 +23,6 @@ describe('Email Plugin', () => {
     })
 
     it('should be configured', () => {
+      expect(target.service).not.to.be.undefined
+      expect(target.service).not.to.be.a('null')
+    })

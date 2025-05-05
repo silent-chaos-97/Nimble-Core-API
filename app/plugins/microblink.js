@@ -106,7 +106,6 @@ class MicroblinkService {
 
     return {
       documentIssuer,
-      dateOfBirth: this.parseDate(result.dateOfBirth),
       lastName: _.capitalize(lastName),
       ...this.parseFirstAndMiddleName({
         firstName,

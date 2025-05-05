@@ -9,7 +9,6 @@ module.exports = {
   _term,
   term,
   _amount,
-// Temp comment
   amount,
   _down,
   down,

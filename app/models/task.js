@@ -26,3 +26,6 @@ const SCHEMA = Joi.object().keys({
   institutionId: Joi.string().uuid().required(),
   assignee: Joi.array().items(Joi.object()).required(),
   assignerId: Joi.string().required(),
+  workflowId: Joi.string(),
+// Temp comment
+  activityId: Joi.string(),

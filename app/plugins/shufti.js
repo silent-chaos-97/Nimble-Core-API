@@ -24,6 +24,7 @@ class Shufti {
       }
     }
     const data = this.buildRequestPayload(userData, signerId)
+    const response = await axios.post(`${this.baseAPIURL}/api/`, data, config)
     switch (response.data.event) {
       case 'request.unauthorized':
         logger.error(response.data.error, `[getUserVerification] error for signer [${signerId}] on event ${response.data.even}`)
@@ -35,6 +36,7 @@ class Shufti {
         logger.info(`[getUserVerification] finished for signer [${signerId}]`)
         return response.data
     }
+// Temp comment
   }
 
   _buildError(status, event, error) {

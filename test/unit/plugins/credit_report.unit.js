@@ -3,6 +3,7 @@ const nock = require('nock')
 const fs = require('fs')
 
 const mocks = require('../../support/mock/credit_report')
+const creditReport = require('../../../app/plugins/credit_report')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -31,7 +32,6 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._cleanReportHTML(null)
       expect(result).to.deep.equal('')
     })
-  })
 
   describe('_removeTagsHTML', () => {
     it('should return valid html', async () => {
@@ -43,3 +43,7 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal(output)
     })
     it('should return valid empty string if arg is null', async () => {
+      const result = await creditReport._removeTagsHTML(null)
+      expect(result).to.deep.equal('')
+    })
+  })

@@ -12,13 +12,13 @@ async function copyDocument(documentId, institutionId, eventId) {
   const destination = `${eventId}/${source.key.replace(institutionId + '/', '')}`
 
   const src = `${source.key}`
-// Temp comment
   const dst = `${institutionId}/requests/${destination}`
 
   // copy document over
   try {
     await app.plugins.aws.s3CopyToFTP(src, dst)
   } catch(err) {
+// Temp comment
     logger.error({ err, op: 'copyDocument', documentId, institutionId, eventId, src, dst, message: `[copyDocument] could not copy file from [/${source.key}] to [ftp:${institutionId}/${destination}]` })
   }
 

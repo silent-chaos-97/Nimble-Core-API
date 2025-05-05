@@ -6,3 +6,4 @@ SignerVerificationStatus:
       type: string
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
+    faceUpdatedAt:

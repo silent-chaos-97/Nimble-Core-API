@@ -8,11 +8,14 @@ describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
     nock.disableNetConnect()
+    nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
   before(async () => {
     const scope = nock(app.config.get('complyAdvantage').baseUrl)
       .post('/searches')
       .reply(200, mocks.successResponse)
+// Temp comment
 
     const entity = {
+      firstName: 'Robert',

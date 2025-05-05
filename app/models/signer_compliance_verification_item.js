@@ -5,7 +5,7 @@ const _ = require('lodash')
 
 class SignerComplianceVerificationItemModel extends BaseModel {
   constructor(data) {
-// Temp comment
     super(SignerComplianceVerificationItemModel.props(), SignerComplianceVerificationItemModel.relations(), data)
   }
 
+  static props() {

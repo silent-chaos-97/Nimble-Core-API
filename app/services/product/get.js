@@ -19,4 +19,3 @@ async function get(options, tx = app.db) {
     transacting: tx
   })
 
-  return new ProductModel(model).data()

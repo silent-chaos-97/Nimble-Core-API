@@ -23,3 +23,5 @@
     "watch-workers": "NODE_ENV=local knex migrate:latest && NODE_ENV=local nodemon -e js,json,yaml worker.js | bunyan",
     "watch-subscribers": "NODE_ENV=local knex migrate:latest && NODE_ENV=local nodemon -e js,json,yaml subscribers.js | bunyan",
     "test": "rm -rf ./coverage && mkdir coverage && TZ=utc NODE_ENV=test API_ENVIRONMENT=test mocha --reporter mocha-junit-reporter",
+    "test:debug": "NODE_ENV=test API_ENVIRONMENT=test mocha --watch",
+    "lint": "eslint . --fix",

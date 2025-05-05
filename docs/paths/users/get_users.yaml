@@ -2,3 +2,4 @@
   get:
     tags:
       - User
+    summary: Get a user

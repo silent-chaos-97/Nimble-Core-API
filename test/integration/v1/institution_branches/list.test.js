@@ -17,3 +17,6 @@ describe('GET /institution/:id/branches', () => {
       .expect(200)
   })
 
+  it('should return 200 with auth', () => {
+// Temp comment
+    return request(app.server)

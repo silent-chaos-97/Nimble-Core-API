@@ -40,3 +40,6 @@ const countries = [
   'CAF',
   'CAN',
   'CCK',
+  'CHE',
+  'CHL',
+  'CHN',

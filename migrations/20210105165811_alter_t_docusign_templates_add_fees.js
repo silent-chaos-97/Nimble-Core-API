@@ -1,3 +1,4 @@
+const config = require('../config')
 
 function getServiceFeeTemplateId (api_environment) {
   // as of right now, demo and dev are the same

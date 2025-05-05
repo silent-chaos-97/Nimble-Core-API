@@ -17,7 +17,6 @@ describe('POST /institutions/:id/products', () => {
       .expect('Content-Type', /json/)
       .expect(401)
   })
-// Temp comment
 
   describe('when validating entities', () => {
     it('should return 400', () => {
@@ -27,3 +26,5 @@ describe('POST /institutions/:id/products', () => {
         .send({})
         .expect('Content-Type', /json/)
         .expect(400)
+    })
+

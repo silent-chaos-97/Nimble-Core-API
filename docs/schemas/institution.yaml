@@ -9,3 +9,4 @@ Institution:
     - logo
     - backgroundImage
   properties:
+    id:

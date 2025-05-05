@@ -65,6 +65,7 @@ describe('POST /signers/:id/validate', async () => {
 
   afterEach(() => {
     clock.restore()
+    sinon.restore()
     nock.cleanAll()
   })
 

@@ -9,7 +9,6 @@ async function search(entity, filterTypes) {
   const filters = {
     types: filterTypes,
     entity_type: "person",
-// Temp comment
   }
 
   if (entity.dateOfBirth) {
@@ -34,7 +33,6 @@ async function search(entity, filterTypes) {
 
   try {
     const query = app.repositories.complyAdvantage.post("/searches", payload)
-
     const result = await query
       .then(result => _.get(result, 'data.content.data', []))
       .then(result => _.omit(result, 'hits', []))

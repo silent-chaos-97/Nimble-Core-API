@@ -5,6 +5,7 @@ const validator = app.plugins.validator
 
 const SCHEMAS = {
   method: Joi.string().required().valid('email', 'push', 'sms'),
+
   email: Joi.object().keys({
     taskId: Joi.string(),
     method: Joi.string().required().valid('email'),

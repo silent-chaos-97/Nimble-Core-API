@@ -12,3 +12,4 @@ describe('BaseModel class', () => {
     expect(A.prototype).to.be.an.instanceOf(BaseModel)
   })
 
+  it('should have static Props', () => {

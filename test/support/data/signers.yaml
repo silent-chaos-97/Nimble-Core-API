@@ -63,3 +63,8 @@
   verification_status_address: 'VALID'
   verification_status_address_updated_at: 2018-02-16T12:11:03.341Z
   verification_status_sanctions: 'MATCH'
+  verification_status_sanctions_updated_at: 2018-02-16T12:11:03.341Z
+  verification_status_media: 'NOMATCH'
+  verification_status_media_updated_at: 2018-02-16T12:11:03.341Z
+  verification_status_political_exposure: 'MATCH'
+  verification_status_political_exposure_updated_at: 2018-02-16T12:11:03.341Z

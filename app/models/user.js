@@ -26,5 +26,6 @@ class UserModel extends BaseModel {
 
   static statuses() {
     return Statuses
-  }
 
+  static hasRole(user, role) {
+    return !!(user && user.roles && (_.includes(user.roles, role) || (Roles[role] && _.includes(user.roles, Roles[role]))))

@@ -28,3 +28,5 @@ tags:
   - name: Account Request
     description: Everything related to account requests
   - name: Document
+    description: Everything related to documents
+  - name: Webhooks

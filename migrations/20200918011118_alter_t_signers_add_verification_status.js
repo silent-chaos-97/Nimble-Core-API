@@ -9,3 +9,4 @@ exports.up = function (knex) {
       .defaultTo('PENDING')
       .notNullable()
     table.timestamp('verification_status_face_updated_at')
+      .notNullable()

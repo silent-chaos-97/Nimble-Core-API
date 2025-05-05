@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
@@ -18,3 +17,5 @@ class InstitutionModel extends BaseModel {
       'name',
       'email',
       'domain',
+      'templateApprove',
+      'templateDecline',

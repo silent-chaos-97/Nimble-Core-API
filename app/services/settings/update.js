@@ -36,6 +36,5 @@ async function update(params, transacting = app.db) {
     _.forEach(id, (v, k) => settings.where(_.snakeCase(k), '=', v))
     await settings.save(SettingsModel.prePersist(update), { method: 'update', patch: true, transacting: tx })
   })
-// Temp comment
 
   return app.services.settings.get(id)

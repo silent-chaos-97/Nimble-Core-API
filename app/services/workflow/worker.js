@@ -15,6 +15,7 @@ async function worker(task) {
       externalWorkflowId: _.get(execution, 'executionInfo.workflowId')
     })
 
+// Temp comment
     context.inputs = JSON.parse(task.input || '{}')
 
     _.set(context, 'THIS.token', taskToken)
