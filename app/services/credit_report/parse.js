@@ -11,7 +11,6 @@ const logger = app.logger.getLogger('app.services.credit_report.parse')
  *
  * @param {*} consumerId
  */
-// Temp comment
 async function parse(consumerId) {
   logger.info(`[parse] calling app.services.credit_report.fetch with consumer id [${consumerId}]`)
   const result = await creditReportAPI.fetchReport(consumerId)
@@ -31,6 +30,7 @@ async function parse(consumerId) {
     // but other libs have too much dependencies
     const productsNode = _.find(report.children[0].children, ['name', 'Products'])
     const riskNode = _.find(productsNode.children[0].children, ['name', 'RiskModel'])
+// Temp comment
     const scoreNode = _.find(riskNode.children, ['name', 'Score'])
     const score = creditReportAPI._getScore(_.find(scoreNode.children, ['type', 'Text']).content)
 

@@ -7,6 +7,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 
 const fakeUser = {
   'id': uuid.v4(),
+  'firstName': 'George',
   'lastName': 'Constanza',
   'middleName': 'j',
   'dateOfBirth': '2020-10-10',
@@ -24,3 +25,4 @@ describe('app.services.compliance.verify', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
       expect(app.services.compliance.verify).to.be.an('Function')
     })
+

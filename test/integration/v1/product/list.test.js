@@ -8,7 +8,6 @@ const testProduct50 = '3552ab85-08da-4bb5-be00-9e94d282d350'
 describe(`GET /v1/institutions/:id/products`, () => {
   beforeEach(async () => {
     await seed.institution.create(testInstitution1)
-    await seed.product.create(testProduct40)
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
@@ -23,9 +22,11 @@ describe(`GET /v1/institutions/:id/products`, () => {
     const token = await helpers.getAuthToken()
     return request(app.server)
       .get(`/v1/institutions/${testInstitution1}/products`)
+      .set('Authorization', 'Bearer ' + token)
       .expect(200)
   })
 
   it('should return 404 with non-existent institution id', () => {
     return request(app.server)
       .get(`/v1/institutions/${fakeInstitutionId}/products`)
+      .expect(404)

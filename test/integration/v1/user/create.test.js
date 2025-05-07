@@ -47,3 +47,5 @@ describe('POST /users', () => {
     beforeEach(async () => {
       const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'
       user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')
+    })
+

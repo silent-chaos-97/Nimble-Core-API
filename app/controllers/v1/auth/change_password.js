@@ -1,5 +1,4 @@
 const app = require('../../../core')
-
 const service = app.services.account
 
 function change_password(req, res, next) {

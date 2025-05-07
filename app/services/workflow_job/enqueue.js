@@ -12,10 +12,10 @@ function queue() {
     region: sqsConfig.region,
     sqs: new SQSClient({
       region: sqsConfig.region,
+      credentials: {
         accessKeyId: sqsConfig.accessKeyId,
         secretAccessKey: sqsConfig.secretAccessKey
       }
     })
   })
-
   return _queue

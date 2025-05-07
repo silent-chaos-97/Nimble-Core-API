@@ -42,3 +42,5 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .expect(201)
+  })
+

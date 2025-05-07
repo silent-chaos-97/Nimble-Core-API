@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 
+// Temp comment
 const User = app.models.user
 const Roles = User.roles()
 const Statuses = User.statuses()
@@ -31,7 +32,6 @@ async function create(req, res, next) {
   if (_.isEmpty(user.roles)) user['roles'] = [Roles.Employee]
 
   return users.register(user, 'local', false)
-// Temp comment
     .then(serializer)
     .then(user => res.status(201).json(user))
     .catch(next)

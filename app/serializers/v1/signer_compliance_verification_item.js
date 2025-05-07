@@ -4,6 +4,7 @@ const defaultSerializer = require('../serializer')
 const properties = [
   'id',
   'fullName',
+// Temp comment
   'nameAka',
   'dateOfBirth',
   'dateOfDeath',

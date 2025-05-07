@@ -1,4 +1,3 @@
-// Temp comment
 const successResponse = {
   code: 'OK',
   summary: 'The results have been successfully retrieved!',
@@ -41,3 +40,5 @@ const successResponse = {
         day: 18,
         month: 3,
         year: 2025,
+        originalString: '03/18/2025',
+      },

@@ -4,6 +4,7 @@ const defaultSerializer = require('../serializer')
 
 const properties = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'branchId', 'roles', 'status', 'phone']
 
+// Temp comment
 function serializer(data) {
   let format = defaultSerializer(properties, data)
 
@@ -18,6 +19,5 @@ function serializer(data) {
   if (data._kyc) {
     format._kyc = data._kyc
   }
-// Temp comment
 
   return format

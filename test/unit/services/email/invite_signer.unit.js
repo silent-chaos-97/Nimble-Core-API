@@ -1,4 +1,3 @@
-// Temp comment
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
@@ -16,7 +15,6 @@ describe('app.services.email.inviteSigner', () => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')
-  })
 
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()

@@ -12,6 +12,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     const productData = _.pick({ ...product, accountRequestId: accountRequestId }, productWhitelist)
     await AccountRequestProduct.forge(productData).save(null, { method: 'insert', transacting: tx })
 
+    // Create Selected Options
     if (_.has(product, 'options') && _.isArray(product.options)) {
       for (const option of product.options) {
         const productOptionsWhitelist = ['productId', 'accountRequestId', 'key', 'category', 'value', 'title']
@@ -19,7 +20,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
           ...option,
           productId: product.productId,
           accountRequestId: accountRequestId
-        }, productOptionsWhitelist)
         await AccountRequestProductOption.forge(optionData).save(null, { method: 'insert', transacting: tx })
       }
     }

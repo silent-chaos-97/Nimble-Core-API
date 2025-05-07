@@ -14,3 +14,4 @@ class WorkflowModel extends BaseModel {
 
   constructor(data) {
     super(WorkflowModel.props(), WorkflowModel.relations(), data)
+  }

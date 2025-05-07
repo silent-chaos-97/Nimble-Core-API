@@ -33,6 +33,7 @@ const schema = Joi.object({
   // User input
 	subjectPropertyAddress: Joi.string(),
   // Not sure - Attom
+	numberOfUnits: Joi.number(),
   // Not sure - Attom
 	legalDescriptionOfSubject: Joi.string(),
   // Not sure - Attom
@@ -109,7 +110,6 @@ const schema = Joi.object({
       // Not sure - Microbilt - Enhanced People Search?
 			mailingAddress: Joi.string(),
       // Not sure - Microbilt/Attom
-			formerAddressType: Joi.string().valid('Own', 'Rent'),
       // For Own - Deduce from Attom - property/expandedProfile or salesHistory/expandedHistory
       // For Rent - Unknown
 			formerAddressNumberOfYears: Joi.number(),
@@ -135,3 +135,8 @@ const schema = Joi.object({
 					businessPhone: Joi.string()
 				}),
         // Same as above
+				previous: Joi.array().items(
+					Joi.object({
+						selfEmployed: Joi.boolean(),
+						employerName: Joi.string(),
+						employerAddress: Joi.string(),

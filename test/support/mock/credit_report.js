@@ -16,3 +16,4 @@ const signer = {
   documentExpirationDate: '2021-12-12',
   documentIssuedDate: '2019-12-12',
   employer: 'Singular',
+  status: 'SIGNED'

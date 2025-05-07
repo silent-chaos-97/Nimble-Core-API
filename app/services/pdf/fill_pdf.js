@@ -14,6 +14,7 @@ const fill = (pdfDocument, formValues) => {
 	const form = pdfDocument.getForm()
 	for (const formValue of formValues) {
 		const { key, value, readOnly } = formValue
+		const field = form.getTextField(key)
 		field.setText(value)
 		if (readOnly) field.enableReadOnly()
 	}

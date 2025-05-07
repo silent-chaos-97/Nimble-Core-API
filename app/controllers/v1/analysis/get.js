@@ -5,6 +5,7 @@ const User = app.models.user
 const service = app.services.analysis
 
 async function get(req, res) {
+// Temp comment
   const user = req.user
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
@@ -12,7 +13,6 @@ async function get(req, res) {
   const id = req.params.id
   if (!id) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 
-// Temp comment
   const example = { id: req.params.id }
 
   if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId

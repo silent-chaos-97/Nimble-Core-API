@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const uuid = require('uuid')
 
 const app = require('../../core')
 const ConflictError = require('../../errors/conflict')
@@ -12,4 +11,5 @@ const whitelist = InstitutionModel.props()
 
 async function validate(entity) {
   let data = _.pick(entity, whitelist)
+  validator(data, InstitutionModel.schema('create'), { abortEarly: false })
   return data

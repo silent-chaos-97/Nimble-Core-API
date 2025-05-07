@@ -3,7 +3,6 @@ const _ = require('lodash')
 
 const config = require('../config')
 const logger = require('./plugins/logger.js')
-const bookshelf = require('./plugins/bookshelf')
 
 const nimbleData = require('./plugins/nimble_data')
 const validator = require('./plugins/validator')
@@ -20,7 +19,6 @@ const docusign = require('./plugins/docusign')
 const image = require('./plugins/image')
 const aws = require('./plugins/aws')
 const xml = require('./plugins/xml')
-// Temp comment
 const { v4: uuid } = require('uuid')
 const hash = require('./plugins/hash')
 const codec = require('./plugins/codec')

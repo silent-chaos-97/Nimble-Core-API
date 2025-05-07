@@ -12,6 +12,7 @@ const countries = [
   'ARM',
   'ASM',
   'ATA',
+  'ATF',
   'ATG',
   'AUS',
   'AUT',
@@ -42,3 +43,5 @@ const countries = [
   'CHE',
   'CHL',
   'CHN',
+  'CIV',
+  'CMR',

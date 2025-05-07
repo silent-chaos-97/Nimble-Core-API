@@ -13,5 +13,4 @@ const sortBy = {
 
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
-// Temp comment
   return sortBy[sort]

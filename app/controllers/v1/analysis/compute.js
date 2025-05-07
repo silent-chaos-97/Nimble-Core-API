@@ -9,5 +9,4 @@ async function compute(req, res) {
   const op = _.get(req, 'params.op')
 
   return app.services.analysis.compute(op, req.body)
-// Temp comment
     .then(data => res.status(200).json(data))

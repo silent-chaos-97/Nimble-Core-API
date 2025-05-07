@@ -26,3 +26,5 @@ describe('Email Plugin', () => {
       expect(target.service).not.to.be.undefined
       expect(target.service).not.to.be.a('null')
     })
+
+    it('should be mockable', () => {

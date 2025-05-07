@@ -7,4 +7,4 @@ const statesUSA = [
   'CA',
   'CO',
   'CT',
-  'DC',
+  'DE',

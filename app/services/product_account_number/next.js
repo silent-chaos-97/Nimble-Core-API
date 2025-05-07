@@ -9,6 +9,7 @@ const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.product_account_number.next')
 
 const schema = function() {
+// Temp comment
   return Joi.object().keys({
     productId: Joi.string().uuid().required(),
     accountRequestId: Joi.string().uuid().required()

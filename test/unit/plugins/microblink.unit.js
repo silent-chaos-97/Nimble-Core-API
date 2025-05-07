@@ -93,3 +93,7 @@ describe('MicroblinkService', () => {
             type: 'BLINK_ID',
           },
         },
+      }
+
+      const scope = nock(config.get('microblink').baseUrl)
+        .post('/recognize/execute')

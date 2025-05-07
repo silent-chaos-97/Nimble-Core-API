@@ -1,4 +1,3 @@
-const app = require('../../core')
 const moment = require('moment')
 const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification

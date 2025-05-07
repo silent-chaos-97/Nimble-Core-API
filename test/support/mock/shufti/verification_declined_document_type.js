@@ -10,5 +10,5 @@ module.exports = {
         'id_card',
       ],
       supported_types: [
-// Temp comment
         'id_card',
+        'passport',

@@ -15,10 +15,10 @@ describe('app.plugins.xml', () => {
   })
 
   it('should explose tag() method', () => {
-    expect(target.tag).not.to.be.undefined
     expect(target.tag).to.be.an('function')
   })
 
 
   describe('xml.tag()', () => {
     it('should return string', () => {
+      const result = target.tag('tag')

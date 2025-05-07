@@ -19,7 +19,6 @@ describe('GET /account-requests/:id', () => {
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
     await seed.product_options()
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
-    await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d360') // required by seed.accountRequest
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.document.create()
     await seed.accountRequest.create(accountRequestId)
@@ -33,6 +32,7 @@ describe('GET /account-requests/:id', () => {
   })
 
   describe('Token', () => {
+    function getToken(accountRequestId) {
       return app.services.token.get({
         scopes: ['account_requests'],
         resources: [`account_requests#${accountRequestId}`],

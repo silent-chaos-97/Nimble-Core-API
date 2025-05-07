@@ -121,3 +121,8 @@ const fileTypes = [
     name: 'Pricing Sheet'
   },
   {
+    type: 'Product',
+    name: 'Note Matches Approval'
+  },
+  {
+    type: 'Product',

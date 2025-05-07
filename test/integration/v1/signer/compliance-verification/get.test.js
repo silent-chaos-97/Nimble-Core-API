@@ -9,7 +9,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
     })
   })
 
-// Temp comment
   after(() => {
     clock.restore()
   })

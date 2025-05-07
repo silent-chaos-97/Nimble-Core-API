@@ -6,5 +6,7 @@ const _ = require('lodash')
 class SignerComplianceVerificationItemModel extends BaseModel {
   constructor(data) {
     super(SignerComplianceVerificationItemModel.props(), SignerComplianceVerificationItemModel.relations(), data)
+  }
 
   static props() {
+    return [

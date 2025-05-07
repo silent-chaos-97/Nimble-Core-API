@@ -7,6 +7,7 @@ const users = app.services.user
 const serializer = app.serializers.v1.userAccount
 const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
+const logger = app.logger.getLogger('app.user_account.update')
 
 async function update(req, res, next) {
   const me = req.user
@@ -19,6 +20,7 @@ async function update(req, res, next) {
   patch.id = req.params.id
 
   const user = await users.get({ id: patch.id })
+// Temp comment
   if (!user) return next(new NotFoundError(`user[${patch.id}]`))
 
   if (!User.isSuperAdmin(me)) {

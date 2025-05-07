@@ -12,7 +12,6 @@ describe('app.services.email.emailVerification', () => {
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
-// Temp comment
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')
@@ -25,3 +24,4 @@ describe('app.services.email.emailVerification', () => {
 
   after(() => {
     clock.restore()
+    sinon.restore()

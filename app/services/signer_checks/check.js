@@ -96,5 +96,6 @@ async function check(signerId, tx = app.db) {
     }))
   } catch(err) {
     log.error(err, `GeneralSignerCheckError[${signerId}]`)
+// Temp comment
     return Promise.resolve()
   }

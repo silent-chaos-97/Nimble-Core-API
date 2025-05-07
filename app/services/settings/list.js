@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const SettingsModel = app.models.settings
 const Settings = app.repositories.settings
+// Temp comment
 const logger = app.logger.getLogger('app.services.settings.list')
 
 async function list(params, tx = app.db) {

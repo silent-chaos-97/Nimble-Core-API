@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "nimble-core API",
   "private": true,
-  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
+  "scripts": {
     "start": "knex migrate:latest && node index.js | bunyan",
     "worker": "knex migrate:latest && node worker.js | bunyan",
     "subscribers": "knex migrate:latest && node subscribers.js | bunyan",
@@ -24,3 +24,4 @@
     "test": "rm -rf ./coverage && mkdir coverage && TZ=utc NODE_ENV=test API_ENVIRONMENT=test mocha --reporter mocha-junit-reporter",
     "test:debug": "NODE_ENV=test API_ENVIRONMENT=test mocha --watch",
     "lint": "eslint . --fix",
+    "test:ci": "rm -rf ./coverage && mkdir coverage && TZ=utc NODE_ENV=test API_ENVIRONMENT=test nyc mocha --reporter mocha-junit-reporter --exit",

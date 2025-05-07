@@ -6,6 +6,7 @@ const _ = require('lodash')
 const Statuses = {
   draft: 'draft',
   published: 'published',
+  deleted: 'deleted'
 }
 
 const SCHEMA = Joi.object().keys({
@@ -17,3 +18,4 @@ const SCHEMA = Joi.object().keys({
   institutionId: Joi.string().uuid().required(),
 
   ownerId: Joi.string().uuid().required(),
+  customerId: Joi.string(),

@@ -35,6 +35,7 @@ class Signer extends BaseModel {
       'zipCode',
       'phoneNumber',
       'ssn',
+      'email',
       'employer',
       'dateOfBirth',
       // email verification
@@ -54,3 +55,6 @@ class Signer extends BaseModel {
       // other
       'institutionId',
       'checkSanction',
+      'sanctionVerifiedAt',
+      'checkPoliticalExposure',
+      'politicalExposureVerifiedAt',

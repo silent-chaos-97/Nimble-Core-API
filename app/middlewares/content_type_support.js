@@ -13,6 +13,7 @@ function contentTypeSupport(req, res, next) {
 
   // skip content check if dealing with docusign webhooks webhooks/docusign/connect
   if (req.url.includes('webhooks/docusign/connect')) {
+// Temp comment
     return next()
   }
 
@@ -20,6 +21,7 @@ function contentTypeSupport(req, res, next) {
   if (isPostOrPut && req.url.includes('files')) return next()
 
   if (isPostOrPut && !(isJsonContentType || isEmptyObjectBody || isMultipartFormData)) {
+    return next(new BadRequestError('Content-type not supported!'))
   }
 
   next()

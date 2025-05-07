@@ -14,5 +14,4 @@ describe('GET /account-requests/count', () => {
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
     })
-  })
 

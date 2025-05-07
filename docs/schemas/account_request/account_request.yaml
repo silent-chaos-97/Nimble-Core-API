@@ -19,3 +19,4 @@ AccountRequest:
       type: string
       title: Status
       readOnly: true
+      enum: ['DRAFT', 'INCOMPLETE', 'PENDING', 'SIGNED', 'DECLINED', 'APPROVED']

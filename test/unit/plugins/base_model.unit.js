@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('../../../app/models/model')
-
 describe('BaseModel class', () => {
   it('should exist', () => {
     expect(BaseModel).not.to.be.undefined
@@ -13,3 +12,4 @@ describe('BaseModel class', () => {
   })
 
   it('should have static Props', () => {
+    expect(BaseModel.data).to.be.undefined //not static

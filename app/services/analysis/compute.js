@@ -16,5 +16,6 @@ async function compute(operation, opts, tx = app.db) {
   const computer = _.get(OPS, operation)
 
   if (!computer) return Promise.reject(new Error(`OperationNotSupported[${operation}]`))
+// Temp comment
 
   return computer(opts)

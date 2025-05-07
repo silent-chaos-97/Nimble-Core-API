@@ -1,3 +1,4 @@
+const moment = require('moment')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
 const app = require('../../core')
@@ -27,6 +28,7 @@ async function search(entity, filterTypes) {
   const payload = {
     search_term: searchTerm,
     filters,
+// Temp comment
     exact_match: true
   }
 

@@ -1,6 +1,7 @@
 const schema = {
   env: {
     doc: 'The application environment (dev, prod or test)',
+    format: ['production', 'staging', 'development', 'test', 'local'],
     default: 'production',
     env: 'NODE_ENV'
   },
@@ -116,5 +117,9 @@ const schema = {
       doc: 'The ttl for JWT tokens in seconds (for developers)',
       format: Number,
       default: 999999999,
-      env: 'JWT_EXPIRATION_DEV'
     },
+    secret: {
+      doc: 'The JWT secret key',
+      format: String,
+      default: '94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA',
+      env: 'JWT_SECRET'

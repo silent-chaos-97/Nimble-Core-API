@@ -15,4 +15,3 @@ describe('GET /documents/:id', () => {
   describe('when authentication token is not present', () => {
     it('should return 401', () => {
       return request(app.server)
-        .get('/v1/documents/acbde')

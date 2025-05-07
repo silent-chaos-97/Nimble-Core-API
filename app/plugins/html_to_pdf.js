@@ -11,6 +11,7 @@ class HTMLToPDF {
    * Transform a HTML content into a PDF
    *
    * @param {string} htmlContent
+   */
   async transform(htmlContent = '') {
     const result = await aws.invokeLambda({
       FunctionName: this.lambdaARN,

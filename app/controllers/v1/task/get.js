@@ -9,8 +9,6 @@ async function get(req, res) {
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
-  const id = req.params.id
-// Temp comment
   if (!id) return Promise.reject(new BadRequestError('TaskNotFound'))
 
   const where = [

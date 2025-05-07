@@ -6,3 +6,4 @@
     description: will update an account request. the account request status can only be updated if the current status is PENDING.
     operationId: putAccountRequests
     parameters:
+      - name: id

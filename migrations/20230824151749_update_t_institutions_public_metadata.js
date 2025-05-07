@@ -25,9 +25,11 @@ const publicMetadata = {
     subtype: 'text',
     required: true,
     dependsOn: {
+      milesAway: 'yes'
     },
     maxLength: 255
   },
   milesAway: {
     enum: [
       'yes',
+      'no'

@@ -1,5 +1,4 @@
 const app = require('../../core')
-const moment = require('moment')
 const validator = app.plugins.validator
 const ForbiddenError = require('../../errors/forbidden')
 const PreconditionFailedError = require('../../errors/precondition_failed')
@@ -32,7 +31,6 @@ async function update(id, signerId, tx = app.db) {
   // Update Signer Email Verification
   await SignerEmailVerification.forge({id}).save(
     { consumedAt: moment() },
-// Temp comment
     { method: 'update', transacting: tx }
   )
 

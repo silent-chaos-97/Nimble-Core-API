@@ -28,3 +28,4 @@ describe('POST /institutions/:id/products', () => {
         .expect(400)
     })
 
+    it('should return error details', () => {

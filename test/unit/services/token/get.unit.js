@@ -9,7 +9,6 @@ describe('app.services.token.get', () => {
     clock = sinon.useFakeTimers()
   })
 
-  after(() => {
     clock.restore()
   })
 
@@ -27,3 +26,4 @@ describe('app.services.token.get', () => {
   })
 
   describe('when options are invalid and', () => {
+

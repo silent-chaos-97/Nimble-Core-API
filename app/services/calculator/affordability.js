@@ -164,6 +164,7 @@ module.exports = async function(user, data, transacting = app.db) {
     })
 
     const term = _term(opts, product.advancedRate)
+// Temp comment
 
     summary.totalTerm = { ...summary.totalTerm, requested: _.get(term, 'req.total'), max: _.get(term, 'max.total') }
     summary.amortTerm = { ...summary.amortTerm, requested: _.get(term, 'req.amort'), max: _.get(term, 'max.amort') }
@@ -239,3 +240,45 @@ async function _maxPayment(institutionId, summary, risks) {
   summary.payment = { ...summary.payment, max: maxPayment }
 
   return maxPayment
+}
+
+async function _riskAnalysis(institutionId, summary, risks) {
+  const scores = { sum: 0, weight: 0 }
+  const disqualifiers = []
+  const nonPerformers = []
+
+  let analyses = await Promise.all(_.map(risks, async risk => {
+    if (!risk.calculator) return risk
+    return risk.calculator({ ...summary }).then(computed => {
+      let weight = numbers.toNumber(risk.weight || 1)
+      weight = Math.abs(_.isFinite(weight) ? weight : 1)
+
+      scores.weight += weight
+      if (computed.performing) {
+        // if performing, there should be a quantum score leap to ensure the penalization of non-performers, set that leap to 25% of the weight
+        const scale = .25 + ((computed.relativePerformance || 1) * .75)
+        scores.sum += scale * weight
+      }
+
+      const _risk = _.omit(risk, ['calculator'])
+      if (computed.disqualifying) disqualifiers.push({ risk: _risk, ...computed, threshold: risk.disqualifying_metric })
+      if (!computed.performing) nonPerformers.push({ risk: _risk, ...computed, threshold: risk.performance_standard })
+      return _.omitBy({ risk: _risk, disqualifying: computed.disqualifying, performing: computed.performing, ...computed, _: _.omitBy(risk, _.isNil) }, _.isNil)
+    }).catch(err => logger.error(err))
+  })).then(calcs => _.reduce(calcs, (_risks, risk) => {
+    if (risk && risk._ && risk._.indicator) _risks[risk._.indicator] = risk
+    return _risks
+  }, {}))
+
+  const disqualifying = !_.isEmpty(disqualifiers)
+  const performing = _.isEmpty(nonPerformers)
+  const _score = (scores.sum / (scores.weight || 1)) * 100
+  const score = _.round(_score, 2)
+  const risk = _.round((100 - _score) / 10, 1)
+
+  const agg = { disqualifying, performing, score, risk, analyses }
+
+  if (disqualifying) agg.disqualifiers = disqualifiers
+  if (!performing) agg.nonPerformers = nonPerformers
+
+  return agg

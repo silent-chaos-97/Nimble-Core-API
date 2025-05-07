@@ -12,7 +12,6 @@ async function autocomplete({ type = 'domains', value, autocorrect = false }) {
   }
 
   try {
-    const path = `${type}/${value}`
     const params = { autocomplete: autocorrect ? 0 : 1 }
     logger.info({ op: 'nimbleData', path, params })
     return app.plugins.nimbleData.get(`${type}/${value}`, params)

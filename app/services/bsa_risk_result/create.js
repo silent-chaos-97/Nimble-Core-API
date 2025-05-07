@@ -24,7 +24,6 @@ async function create(payload, accountRequestId, tx = app.db) {
   await BsaRiskResult.where({ account_request_id: accountRequest.id }).destroy({ require: false, transacting: tx })
 
   // for each answer from the BSA test, we insert them into the database
-// Temp comment
   payload.forEach(async(bsaRiskResult) => {
     const newBSAResult = {
       ...bsaRiskResult,
@@ -38,7 +37,6 @@ async function create(payload, accountRequestId, tx = app.db) {
 
   // save BSA score and risk factor
   const bsa = await app.services.bsaRiskResult.calculate(
-    { accountRequestId: accountRequest.id },
     _.get(institution, 'publicMetadata.bsa._.thresholds'),
     tx
   )

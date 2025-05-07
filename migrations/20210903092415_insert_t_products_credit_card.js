@@ -13,3 +13,4 @@ const newProducts = [
 - Local service in person or by phone
 - Emergency cash and card replacement
 - Up to $5 late fee
+- 1% foreign transaction fee

@@ -6,5 +6,7 @@
     "basePath": "/tmp/nimble-core-test/",
     "assets_cdn": "",
     "uploads_cdn": ""
+  },
   "email": {
     "apiKey": "POSTMARK_API_TEST"
+  },

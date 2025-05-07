@@ -8,7 +8,6 @@ class AccountRequest extends BaseModel {
   constructor(data) {
     super(AccountRequest.props(), AccountRequest.relations(), data)
   }
-
   static props() {
     return [
       'id',

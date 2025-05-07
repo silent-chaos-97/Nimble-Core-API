@@ -3,3 +3,4 @@
   "required": ["document"],
   "properties": {
     "fileType": {
+      "title": "Document",

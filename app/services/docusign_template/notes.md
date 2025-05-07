@@ -29,3 +29,4 @@ Go to docusign -> sandbox -> api and keys.
 
 1. Press button to add new app.
 2. Give it a name
+3. Copy the integration key, that's your DOCUSIGN_CLIENT_ID

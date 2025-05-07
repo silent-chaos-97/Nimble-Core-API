@@ -3,7 +3,6 @@ const _ = require('lodash')
 const jwtSimple = require('jwt-simple')
 const config = require('../../../config')
 
-// Temp comment
 const app = require('../../core')
 const getApiUri = require('../api/uri')
 const Joi = require('@hapi/joi')
@@ -20,7 +19,6 @@ function getTokenInfo(options) {
   const now = moment()
   const publicClaims = {
     iss: getApiUri(),
-    sub: getApiUri(`/v1/phones/${options.id}`),
     aud: getApiUri(),
     exp: moment(now).add(options.expiration, 's').unix(),
     iat: moment(now).unix()

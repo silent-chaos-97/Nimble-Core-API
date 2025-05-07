@@ -18,6 +18,7 @@ async function list(args, tx = app.db) {
 
   if (filters.assigneeId) {
     let assignee = null
+
     try {
       assignee = await UserRepo.forge({ id: filters.assigneeId }).then(user =>
         new User(user).data()

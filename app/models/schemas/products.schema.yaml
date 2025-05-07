@@ -17,7 +17,6 @@ columns:
 
   - data: name
     allowEmpty: false
-
   - data: category
     type: dropdown
     source: ['card', 'deposit', 'loan']
@@ -33,3 +32,5 @@ columns:
     correctFormat: true
 
   - data: advanced_rate
+    title: Collateral Type
+    type: key-value-setting

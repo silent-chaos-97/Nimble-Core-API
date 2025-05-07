@@ -1,5 +1,4 @@
 /signers/{id}/email-verifications:
   post:
-    tags:
       - Signer
     summary: Create a Signer Email Verification

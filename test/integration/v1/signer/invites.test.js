@@ -1,3 +1,4 @@
+const uuid = require('uuid')
 
 describe('POST /signers/:id/invites', async () => {
   let clock, token, inviteSignerEmailSpy
@@ -11,3 +12,4 @@ describe('POST /signers/:id/invites', async () => {
 
   after(() => {
     sinon.restore()
+    clock.restore()

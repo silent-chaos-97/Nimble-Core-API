@@ -25,6 +25,7 @@ const successResponse = {
       "submitted_term": "Robert Gabriel Mugabe",
       "client_ref": null,
       "total_hits": 1,
+      "updated_at": "2020-03-31 14:36:11",
       "created_at": "2020-03-31 14:36:11",
       "tags": [
 
@@ -875,3 +876,37 @@ const successResponse = {
                 "url": "https://www.kentonline.co.uk/kent/news/kent-farmer-appeals-to-nelson-ma-a40038/"
               },
               {
+                "date": "2019-07-19T00:00:00Z",
+                "snippet": "I particularly want to thank His Excellency, the President and Commander-In-Chief of the Zimbabwe Defence Forces, Cde. R. G Mugabe, who is also the First Secretary of the revolutionary party ZANU PF, for making it possible for me to be in this House today. I am humbled by the magnitude of the confidence and responsibility placed upon me by my revolutionary party ZANU PF and the people of Lobengula Constituency.",
+                "title": "Lobengula MP blames the mushrooming of Vuzu parties to absentee parents | The Insider",
+                "url": "https://www.insiderzim.com/lobengula-mp-blames-the-mushrooming-of-vuzu-parties-to-absentee-parents/"
+              },
+              {
+                "date": "2020-03-21T00:00:00Z",
+                "snippet": "Mwaya is just the latest of dozens of officials charged under the law. One was arrested for labelling Mugabe a dictator who ruled by the sword and another was jailed for calling him thick-headed. Mugabe has been in power since independence from Britain in 1980.",
+                "title": "Man charged with insulting Mugabe | ZimDaily",
+                "url": "https://www.zimdaily.com/?p=35328"
+              },
+              {
+                "date": "2020-03-22T00:00:00Z",
+                "snippet": "The late former president Robert Mugabe claimed huge amounts of arms had been uncovered on farms owned by Zapu for use to ostensibly overthrow his government to justify the deployment of the Fifth Brigade. After the \"discovery\" of the weapons, Mugabe fired Nkomo, Josiah Chinamano and Joseph Msika (all late), Transport minister and Natural Resources minister respectively, from government on charges of plotting to overthrow his government, culminating in the Gukurahundi massacres which led to the killing of thousands of civilians. However, despite all the persecution and suffering at the hands of government, Nkomo returned home from exile in Britain and subsequently signed the Unity Accord with Mugabe in 1987.",
+                "title": "Mpofu under fire over Nkomo - The Standard",
+                "url": "https://www.thestandard.co.zw/2020/03/22/mpofu-fire-nkomo/amp/"
+              },
+              {
+                "date": "2019-09-18T00:00:00Z",
+                "snippet": "During this period he gained several further degrees from the University of London a Masters in Economics, a Bachelor of Administration, and two Law degrees. While imprisoned, Mugabe learned that his first born son Nhamodzenyika, had died of encephalitis at the age of three. Mugabe was grief-stricken and requested a leave of absence to visit his wife Sally (née Hayfron) in Ghana, but the Prison Warden refused to allow him to bury and mourn for his son.",
+                "title": "Mugabe The Legacy - Bulawayo24 News",
+                "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-170850.html"
+              },
+              {
+                "date": "2019-09-17T00:00:00Z",
+                "snippet": "Mugabe is dead, but old men still run southern Africa FBI still actively working cold case on Calder Road killer Pretoria mall evacuated after bomb threat Australian High Court to consider Cardinal's appeal Mugabe is dead, but old men still run southern Africa The death of Robert Gabriel Mugabe (95) saw another of the first-generation leaders of newly independent southern African states leave the world stage. Southern Africa was the last region on the continent to obtain majority rule.",
+                "title": "Mugabe is dead, but old men still run southern Africa",
+                "url": "https://www.bignewsnetwork.com/news/262444041/mugabe-is-dead-but-old-men-still-run-southern-africa"
+              },
+              {
+                "date": "2019-12-18T00:00:00Z",
+                "snippet": "whose founder president Kwame Nkrumah profoundly influenced him. As a member of various nationalist parties that were banned by the white-minority government, Mugabe was detained with other nationalist leaders in 1964 and spent the next 10 years in prison camps or jail. He used his incarceration to gain three degrees through correspondence courses, but the years in prison left their mark.",
+                "title": "Mugabe still the boss at 89 | ZimDaily",
+                "url": "https://www.zimdaily.com/?p=13016"
