@@ -2,10 +2,10 @@ const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
+// Temp comment
 const service = app.services.analysis
 
 async function get(req, res) {
-// Temp comment
   const user = req.user
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))

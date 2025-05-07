@@ -3,6 +3,7 @@
   "properties": {
     "assignee": {
       "title": "Assignee(s)",
+      "type": "string",
       "stereotype": "user"
     },
     "estimated_upload_duration": {

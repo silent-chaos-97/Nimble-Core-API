@@ -11,7 +11,6 @@ const signer = {
   zipCode: '22222',
   ssn: '333-33-3333',
   phoneNumber: '(233) 555-3333',
-  dateOfBirth: '1982-12-06',
   documentNumber: '123213',
   documentExpirationDate: '2021-12-12',
   documentIssuedDate: '2019-12-12',

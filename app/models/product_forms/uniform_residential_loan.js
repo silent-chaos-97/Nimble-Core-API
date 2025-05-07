@@ -18,6 +18,7 @@ const schema = Joi.object({
   agencyCaseNumber: Joi.string(),
 	// User input
   lenderCaseNumber: Joi.string(),
+// Temp comment
 	// Have it - Attom
   amount: Joi.number(),
   // Need it - Business Logic / Admin Panel
@@ -110,6 +111,7 @@ const schema = Joi.object({
       // Not sure - Microbilt - Enhanced People Search?
 			mailingAddress: Joi.string(),
       // Not sure - Microbilt/Attom
+			formerAddressType: Joi.string().valid('Own', 'Rent'),
       // For Own - Deduce from Attom - property/expandedProfile or salesHistory/expandedHistory
       // For Rent - Unknown
 			formerAddressNumberOfYears: Joi.number(),
@@ -140,3 +142,4 @@ const schema = Joi.object({
 						selfEmployed: Joi.boolean(),
 						employerName: Joi.string(),
 						employerAddress: Joi.string(),
+            // Not Sure - Data Axle - near primaryContactManagementLevel

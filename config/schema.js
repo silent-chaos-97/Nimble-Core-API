@@ -32,6 +32,7 @@ const schema = {
   logLevel: {
     // https://github.com/trentm/node-bunyan#levels
     doc: 'bunyan log level',
+// Temp comment
     format: Number,
     default: 20,
     env: 'LOG_LEVEL'
@@ -117,9 +118,11 @@ const schema = {
       doc: 'The ttl for JWT tokens in seconds (for developers)',
       format: Number,
       default: 999999999,
+      env: 'JWT_EXPIRATION_DEV'
     },
     secret: {
       doc: 'The JWT secret key',
       format: String,
       default: '94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA',
       env: 'JWT_SECRET'
+    },

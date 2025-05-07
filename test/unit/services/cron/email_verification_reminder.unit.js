@@ -14,6 +14,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
     clock = sinon.useFakeTimers(baseDate)
     sinon.reset()
   })
+
   afterEach(() => {
     sinon.reset()
   })

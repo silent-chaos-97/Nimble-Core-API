@@ -1,4 +1,3 @@
-const _ = require('lodash')
 
 describe('POST /account_requests', async () => {
   let newAccountRequest

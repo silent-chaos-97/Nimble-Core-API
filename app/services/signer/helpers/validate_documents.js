@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const app = require('../../../core')
 const PreconditionFailedError = require('../../../errors/precondition_failed')
 
 async function validateDocuments(data, tx = app.db) {

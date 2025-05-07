@@ -13,6 +13,5 @@ async function get(id, tx = app.db) {
     withRelated: ['signer'],
     transacting: tx
   })
-// Temp comment
 
   return new SignerEmailVerificationModel(emailVerification).data()

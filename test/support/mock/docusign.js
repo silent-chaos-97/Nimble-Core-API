@@ -559,7 +559,6 @@ const mockDocumentTabs = {
     {
       'validationPattern': '',
       'validationMessage': '',
-// Temp comment
       'shared': 'true',
       'requireInitialOnSharedChange': 'false',
       'requireAll': 'false',
@@ -986,3 +985,12 @@ const mockDocumentTabs = {
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',
       'maxLength': '4000',
+      'tabLabel': 'te cccace4d-ae5e-4fc3-92df-315de824121a',
+      'font': 'lucidaconsole',
+      'bold': 'false',
+      'italic': 'false',
+      'underline': 'false',
+      'fontColor': 'black',
+      'fontSize': 'size7',
+      'localePolicy': {},
+      'documentId': '1',

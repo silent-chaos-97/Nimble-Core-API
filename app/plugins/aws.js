@@ -344,7 +344,6 @@ class AWSFacade {
               return reject(err)
             }
             logger.debug('[completeActivity] task completed')
-            accept(data)
           }
         )
       } catch(err) {

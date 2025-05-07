@@ -8,7 +8,6 @@ describe('app.services.email.inviteReminder', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
-  let clock = null
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
@@ -19,3 +18,4 @@ describe('app.services.email.inviteReminder', () => {
 
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
+    sinon.reset()

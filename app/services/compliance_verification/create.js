@@ -6,6 +6,7 @@ const validator = app.plugins.validator
 
 const Signer = app.repositories.signer
 const SignerComplianceVerification = app.repositories.signerComplianceVerification
+const SignerComplianceVerificationItem = app.repositories.signerComplianceVerificationItem
 const SignerComplianceVerificationListEntry = app.repositories.signerComplianceVerificationListEntry
 
 const SignerComplianceVerificationModel = app.models.signerComplianceVerification
@@ -88,7 +89,6 @@ async function create(payload, tx = app.db) {
         [key + 'UpdatedAt']: new Date()
       }, {
         method: 'update',
-        transacting: tx
       })
     }
 

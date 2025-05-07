@@ -44,7 +44,6 @@ const INPUT_PROPS = {
     debtOutstanding: Joi.number().positive(),
     monthlyDebtObligation: Joi.number().positive().default(0)
   })).optional(),
-  collateral: Joi.object().keys({
     id: Joi.string().required(), // vehicle = VIN, cash = client-identifier, ... etc
     type: Joi.string().required(), // e.g. vehicle, cash (any advanced rate)
     props: Joi.object() // e.g. {car_type: 'new'} // for a vehicle
@@ -164,7 +163,6 @@ module.exports = async function(user, data, transacting = app.db) {
     })
 
     const term = _term(opts, product.advancedRate)
-// Temp comment
 
     summary.totalTerm = { ...summary.totalTerm, requested: _.get(term, 'req.total'), max: _.get(term, 'max.total') }
     summary.amortTerm = { ...summary.amortTerm, requested: _.get(term, 'req.amort'), max: _.get(term, 'max.amort') }

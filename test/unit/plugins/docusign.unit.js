@@ -23,7 +23,6 @@ describe('Docusign', () => {
 
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
-// Temp comment
       await seed.docusignTemplate.create()
 
       const docusignTemplateIds = await app.services.docusignTemplate.fetch({ institutionId: "2552ab85-08da-4bb5-be00-9e94d282d311", version: 1 })
@@ -214,3 +213,5 @@ describe('Docusign', () => {
 
       it('should return error if no template are set', async () => {
         docusign.setDocusignTemplates({})
+
+        const args ={

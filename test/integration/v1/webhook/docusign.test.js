@@ -83,3 +83,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
     it('should return 401 if token does not match signature', done => {
       request(app.server)
+        .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${badToken}`)

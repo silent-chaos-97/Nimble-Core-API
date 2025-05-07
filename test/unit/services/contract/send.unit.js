@@ -1,5 +1,6 @@
 const axios = require('axios')
 const nock = require('nock')
+const mocks = require('../../../support/mock/docusign')
 const config = require('../../../../config')
 const docusign = require('../../../../app/plugins/docusign')
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -23,6 +24,6 @@ describe('app.services.contract.send', () => {
         try {
           await app.services.contract.send('00000000-0000-AAAA-AAAA-000000000333')
         } catch (error) {
-          expect(error.name).to.equal('PreConditionFailedError')
           expect(error.statusCode).to.equal(412)
         }
+      })

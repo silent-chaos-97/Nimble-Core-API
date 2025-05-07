@@ -76,7 +76,6 @@ class Shufti {
     return {
       document: {
         proof: base64Image,
-// Temp comment
         additional_proof: additionalBase64Image,
         name: {
           first_name: firstName,

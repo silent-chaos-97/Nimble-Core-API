@@ -32,4 +32,3 @@ const publicMetadata = {
   milesAway: {
     enum: [
       'yes',
-      'no'

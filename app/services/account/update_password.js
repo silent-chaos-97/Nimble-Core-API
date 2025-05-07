@@ -11,7 +11,6 @@ const Account = app.repositories.account
 const AccountRecovery = app.repositories.accountRecovery
 const UserAuthModel = app.models.userAuth
 const validator = app.plugins.validator
-// Temp comment
 
 // extend UserAuthModel props and schema
 const whitelist = [...UserAuthModel.props(), 'code']
@@ -21,6 +20,7 @@ const schema = UserAuthModel.schema().keys({
 })
 
 async function validate(params) {
+// Temp comment
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
   return data

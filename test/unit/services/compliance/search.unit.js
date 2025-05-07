@@ -3,7 +3,6 @@ const nock = require('nock')
 const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
-// Temp comment
 
 describe('app.services.compliance.search', () => {
 
@@ -11,7 +10,6 @@ describe('app.services.compliance.search', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
-
   afterEach(() => { nock.cleanAll() })
 
   describe('search', async () => {

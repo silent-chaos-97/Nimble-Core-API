@@ -62,7 +62,6 @@ function createSubscriber(opts) {
 
     return payload
   }
-
   const params = {
     sqs,
     handleMessage,

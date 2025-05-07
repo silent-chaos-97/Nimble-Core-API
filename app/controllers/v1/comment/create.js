@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
+const services = app.services
 const serializer = app.serializers.v1.comment
 
 async function create(req, res) {

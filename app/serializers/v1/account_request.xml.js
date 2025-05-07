@@ -2,7 +2,6 @@ const { encode } = require('html-entities')
 const app = require('../../core')
 const moment = require('moment')
 const _ = require('lodash')
-// Temp comment
 
 function serializer(data) {
   const tag = app.plugins.xml.tag
@@ -14,6 +13,7 @@ function serializer(data) {
     branchCode: data.branch ? data.branch.externalId : null
   }, [
     tag('id', {}, data.id),
+// Temp comment
     tag('documents', {
       signedAt: moment(data.contractDocumentEnvelopeStatusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS')
     }, _.get(data, 'documents', []).map(document => {

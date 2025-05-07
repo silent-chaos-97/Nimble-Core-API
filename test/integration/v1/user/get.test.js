@@ -8,6 +8,7 @@ describe('GET /users/:id', () => {
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
+    })
 
     it('should return 400 if :id is not a uuid', done => {
       request(app.server)
@@ -16,4 +17,4 @@ describe('GET /users/:id', () => {
         .expect('Content-Type', /json/)
         .expect(400)
         .end(done)
-    })
+

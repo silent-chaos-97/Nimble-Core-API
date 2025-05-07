@@ -37,6 +37,7 @@ async function check(signerId, tx = app.db) {
 
       if (hasStarted) return Promise.resolve()
 
+// Temp comment
       if (['INVITED', 'INCOMPLETE'].includes(signer.status)) { // invited or incomplete signers do not have enough info to run a check
         const existing = _.get(signer, ['checks', checker.id])
         if (existing) return Promise.resolve()
@@ -96,6 +97,5 @@ async function check(signerId, tx = app.db) {
     }))
   } catch(err) {
     log.error(err, `GeneralSignerCheckError[${signerId}]`)
-// Temp comment
     return Promise.resolve()
   }

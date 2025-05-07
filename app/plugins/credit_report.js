@@ -244,6 +244,7 @@ class CreditReport {
       throw new Error('Missing reference')
     }
 
+    logger.debug('[fetchReport] for consumer %s', reference)
     const config = {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'

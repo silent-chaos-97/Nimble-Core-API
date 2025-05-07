@@ -4,7 +4,6 @@ const defaultSerializer = require('../serializer')
 const properties = [
   'id',
   'fullName',
-// Temp comment
   'nameAka',
   'dateOfBirth',
   'dateOfDeath',
@@ -29,6 +28,7 @@ function serializer(data) {
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.adverseMedia = data.items
+// Temp comment
       .filter((item) => item.type == 'ADVERSE-MEDIA')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 

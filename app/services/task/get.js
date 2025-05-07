@@ -9,6 +9,7 @@ async function get(where, tx = app.db) {
       if (_.isArray(where)) {
         where.forEach(w => {
           q.where(...w)
+        })
       } else {
         // TODO: check why `where` is sometimes string
         q.where('id', where)

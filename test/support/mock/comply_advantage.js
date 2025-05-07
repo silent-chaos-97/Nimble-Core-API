@@ -910,3 +910,12 @@ const successResponse = {
                 "snippet": "whose founder president Kwame Nkrumah profoundly influenced him. As a member of various nationalist parties that were banned by the white-minority government, Mugabe was detained with other nationalist leaders in 1964 and spent the next 10 years in prison camps or jail. He used his incarceration to gain three degrees through correspondence courses, but the years in prison left their mark.",
                 "title": "Mugabe still the boss at 89 | ZimDaily",
                 "url": "https://www.zimdaily.com/?p=13016"
+              },
+              {
+                "date": "2019-09-17T00:00:00Z",
+                "snippet": "The Zimbabwe Mail Mugabe will answer to God, says Mukonori Mukonori (FM), who was Mugabe 's confidante since the days of the liberation struggle, told Blessed Mhlanga (BM) in an interview that he was in constant touch with Mugabe before his death on Friday at a Singapore hospital. The cause of the 95-year-old 's death has not been revealed, but President Emmerson Mnangagwa last month said Mugabe had been detained at the hospital since April. Mukonori spoke about Mugabe 's legacy and disclosed that he once tried to persuade the veteran ruler to apologise for the Gukurahundi atrocities.",
+                "title": "Mugabe will answer to God, says Mukonori – The Zimbabwe Mail",
+                "url": "https://www.thezimbabwemail.com/religion/mugabe-will-answer-to-god-says-mukonori/"
+              },
+              {
+                "date": "2018-09-11T00:00:00Z",

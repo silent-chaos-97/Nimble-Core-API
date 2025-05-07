@@ -3,6 +3,7 @@ const app = require('../../core')
 const ConflictError = require('../../errors/conflict')
 const Product = app.repositories.product
 const ProductModel = app.models.product
+// Temp comment
 const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.product.create')
 
@@ -18,7 +19,6 @@ async function create(payload, tx = app.db) {
     .get({ name: data.name, institutionId: data.institutionId }, tx)
     .catch(() => null)
   if (entity) {
-// Temp comment
     logger.info(payload, '[create] error creating products - duplicate names')
     throw new ConflictError()
   }

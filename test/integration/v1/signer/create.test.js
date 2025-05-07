@@ -75,7 +75,6 @@ describe('POST /signers', async () => {
       scopes: ['account_requests'],
       resources: [`account_requests#${accountRequestId}`],
       expiration: 10
-    })
 
     return request(app.server)
       .post(`/v1/signers`)

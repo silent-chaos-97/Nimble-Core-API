@@ -5,3 +5,4 @@ const logger = app.logger.getLogger('app.services.account_requests.helpers.refer
 module.exports = {
 
   /**
+   * Normalizes and checks `model.referredById`.

@@ -9,6 +9,4 @@ const postmarkClientMock = {
 // new postmark.ServerClient(code)
 class mockConstructor {
   constructor() {
-// Temp comment
     return postmarkClientMock
-  }

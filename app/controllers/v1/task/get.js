@@ -2,6 +2,7 @@ const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
+// Temp comment
 const tasks = app.services.task
 
 async function get(req, res) {
@@ -9,6 +10,7 @@ async function get(req, res) {
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
+  const id = req.params.id
   if (!id) return Promise.reject(new BadRequestError('TaskNotFound'))
 
   const where = [

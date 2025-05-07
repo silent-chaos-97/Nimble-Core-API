@@ -1,3 +1,4 @@
+const app = require('../../core')
 const moment = require('moment')
 const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
@@ -26,7 +27,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
   const result = await query.fetchAll({transacting: tx})
 
   // map to SignerEmailVerificationModel
-  const SignerEmailVerificationList = result.models.map(m => new SignerEmailVerificationModel(m).data())
 
   // if nothing was found, we are done
   logger.info(`[email_verification_reminder] found ${SignerEmailVerificationList.length} UNVERIFIED signers since ${timeWindowStart} until ${timeWindowEnd}`)

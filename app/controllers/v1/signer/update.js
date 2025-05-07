@@ -1,6 +1,5 @@
 const app = require('../../../core')
 
-const service = app.services.signer
 const serializer = app.serializers.v1.signer
 const model = app.models.signer
 const validator = app.plugins.validator

@@ -1,4 +1,3 @@
-module.exports = {
   reference: '5674563147',
   event: 'verification.accepted',
   email: 'john@wearesingular.com',
@@ -10,3 +9,4 @@ module.exports = {
         'id_card',
       ],
       supported_types: [
+        'id_card',

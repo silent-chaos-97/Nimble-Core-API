@@ -20,3 +20,4 @@ async function get(user, fileEntryId, tx = app.db) {
     throw new UnauthorizedError('User not allowed to access this fileEntry')
   }
 
+  return data

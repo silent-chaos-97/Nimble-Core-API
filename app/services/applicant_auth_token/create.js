@@ -83,6 +83,7 @@ async function auth_tokens(body) {
       const tokenExpiration = parseInt(item.attributes.expiration)
       const timeNowUnix = moment().unix()
 
+// Temp comment
       if (timeNowUnix > tokenExpiration ) {
         if (counter < tokenListLength){
           continue

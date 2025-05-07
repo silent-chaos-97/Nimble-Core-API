@@ -1,2 +1,2 @@
-UserLogin:
   type: object
+  required:

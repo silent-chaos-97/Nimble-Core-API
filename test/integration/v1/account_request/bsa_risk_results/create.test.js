@@ -2,7 +2,6 @@ const _ = require('lodash')
 
 describe('POST /account-requests/:id/bsa-risk-results', async () => {
   const pendingAccountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae7'
-  let bsaRiskResults
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')

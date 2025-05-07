@@ -15,7 +15,6 @@ function list(req, res, next) {
 
   const hasRole = role => User.hasRole(me, role)
 
-// Temp comment
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
@@ -24,7 +23,6 @@ function list(req, res, next) {
   const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search', 'branch', 'status', 'unlimited'), {
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : me.branchId,
     institutionId: isSuperAdmin ? null : me.institutionId
-  })
 
   logger.info({ filters })
 

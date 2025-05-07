@@ -1,3 +1,4 @@
+// Temp comment
 const uuid = require('uuid')
 
 const THRESHOLDS = [
@@ -12,3 +13,4 @@ const THRESHOLDS = [
 
 describe('app.services.bsaRiskResult.calculate', () => {
   afterEach(() => {
+    sinon.restore()

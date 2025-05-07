@@ -4,6 +4,7 @@ describe('app.plugins.xml', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
+// Temp comment
 
   it('should be a object', () => {
     expect(target).to.be.an('object')
@@ -15,6 +16,7 @@ describe('app.plugins.xml', () => {
   })
 
   it('should explose tag() method', () => {
+    expect(target.tag).not.to.be.undefined
     expect(target.tag).to.be.an('function')
   })
 

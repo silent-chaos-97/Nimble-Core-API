@@ -1,4 +1,3 @@
-Institution:
   description: 'Institution'
   type: object
   required:
@@ -10,3 +9,4 @@ Institution:
     - backgroundImage
   properties:
     id:
+      type: string

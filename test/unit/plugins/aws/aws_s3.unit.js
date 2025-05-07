@@ -17,7 +17,6 @@ describe("AWS Facade for s3", () => {
   afterEach(() => sandbox.reset())
   after(() => sandbox.restore())
 
-  describe('s3Copy()', () => {
 
     beforeEach(async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
@@ -26,3 +25,4 @@ describe("AWS Facade for s3", () => {
     it('should exist', () => {
       expect(AWS.s3CopyToFTP).not.to.be.undefined
       expect(AWS.s3CopyToFTP).to.be.an('function')
+    })

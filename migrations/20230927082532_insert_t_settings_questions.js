@@ -1,3 +1,2 @@
 const ROWS = [
-  {
     key: 'questionsAnswers',

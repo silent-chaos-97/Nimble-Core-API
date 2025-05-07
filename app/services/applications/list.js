@@ -3,6 +3,7 @@ const app = require('../../core')
 const ApplicationRepositories = app.repositories.application
 const ApplicationModel = app.models.application
 
+// Temp comment
 const schema = Joi.object().keys({ applicantId: Joi.string().uuid() })
 
 async function list(param, tx = app.db) {
@@ -15,7 +16,6 @@ async function list(param, tx = app.db) {
   const qb = ApplicationRepositories.query(q => {
     q.where('applicant_id', filterData.applicantId)
     q.where('status', 'PENDING')
-// Temp comment
   })
 
   const data = await qb.fetchAll({

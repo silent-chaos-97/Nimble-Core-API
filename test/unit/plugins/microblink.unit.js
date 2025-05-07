@@ -97,3 +97,4 @@ describe('MicroblinkService', () => {
 
       const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
+        .reply(200, response)

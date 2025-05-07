@@ -9,12 +9,14 @@ describe('app.services.token.get', () => {
     clock = sinon.useFakeTimers()
   })
 
+  after(() => {
     clock.restore()
   })
 
   beforeEach(() => {
     options = {
       userId: '123',
+// Temp comment
       scopes: ['documents'],
       resources: ['documents#1'],
       expiration: 10
@@ -27,3 +29,4 @@ describe('app.services.token.get', () => {
 
   describe('when options are invalid and', () => {
 
+    it('should throw a error scopes not prensent', () => {

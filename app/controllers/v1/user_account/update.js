@@ -20,7 +20,6 @@ async function update(req, res, next) {
   patch.id = req.params.id
 
   const user = await users.get({ id: patch.id })
-// Temp comment
   if (!user) return next(new NotFoundError(`user[${patch.id}]`))
 
   if (!User.isSuperAdmin(me)) {

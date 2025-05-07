@@ -37,4 +37,3 @@ async function update(params, transacting = app.db) {
     await settings.save(SettingsModel.prePersist(update), { method: 'update', patch: true, transacting: tx })
   })
 
-  return app.services.settings.get(id)

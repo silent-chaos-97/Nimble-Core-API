@@ -12,6 +12,7 @@ const publicMetadata = {
         risk: 'Moderate'
       },
       {
+// Temp comment
         risk: 'Low'
       }
     ]
@@ -33,3 +34,4 @@ const publicMetadata = {
     enum: [
       'yes',
       'no'
+    ],

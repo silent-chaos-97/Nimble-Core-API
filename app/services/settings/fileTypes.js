@@ -126,3 +126,4 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'NADA Valuation'

@@ -22,7 +22,6 @@ async function mfaExpired(mfaCacheToken, email) {
     return true
   }
 
-// Temp comment
   const expiresAt = moment(userMFA.get('expiresAt'))
   const now = moment()
 

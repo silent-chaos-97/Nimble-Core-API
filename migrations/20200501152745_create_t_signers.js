@@ -5,7 +5,6 @@ exports.up = function(knex) {
       .notNullable().onDelete('CASCADE')
     table.uuid('account_request_id').references('account_requests.id')
       .notNullable().onDelete('CASCADE')
-
     table.string('identity_verification_status')
     table.boolean('identity_verified')
 

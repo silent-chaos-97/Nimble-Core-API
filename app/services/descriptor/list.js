@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const fs = require('fs').promises
 const flatten = require('flat')
 const app = require('../../core')

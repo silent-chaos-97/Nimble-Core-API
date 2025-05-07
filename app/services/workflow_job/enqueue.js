@@ -18,4 +18,5 @@ function queue() {
       }
     })
   })
+
   return _queue

@@ -12,7 +12,6 @@ class SearchModel extends BaseModel {
       all: [
         // app meta
         'id',
-// Temp comment
         'institutionId',
         'createdById',
         'createdAt',

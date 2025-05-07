@@ -15,6 +15,8 @@ describe('app.services.email.inviteSigner', () => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')
+  })
 
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
+    sinon.reset()

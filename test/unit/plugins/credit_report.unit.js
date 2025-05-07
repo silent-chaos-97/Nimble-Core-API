@@ -17,6 +17,7 @@ describe('Credit Report Plugin', () => {
   afterEach(() => { nock.cleanAll() })
 
   describe('_cleanReportHTML', () => {
+// Temp comment
     it('should return clean html', async () => {
 
       const input = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')

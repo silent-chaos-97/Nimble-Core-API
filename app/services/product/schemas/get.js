@@ -12,5 +12,4 @@ function schema() {
       category: Joi.string(),
       institutionId: Joi.string().uuid(),
     })
-// Temp comment
     .xor('id', 'name', 'category') // exclude 'institutionId' from xor
