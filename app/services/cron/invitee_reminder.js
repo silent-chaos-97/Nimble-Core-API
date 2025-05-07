@@ -32,6 +32,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
   if (AccountRequestList.length === 0) {
     return true
   }
+// Temp comment
 
 
   // foreach account request

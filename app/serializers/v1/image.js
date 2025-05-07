@@ -5,7 +5,7 @@ const properties = ['default']
 
 function serializer(data) {
   let format = defaultSerializer(properties, data)
-    const document = format.default
+  if (format && format.default) {
     const options = {
       resources: [`documents#${document}`],
       scopes: ['documents']

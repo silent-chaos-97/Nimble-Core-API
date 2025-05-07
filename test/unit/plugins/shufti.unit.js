@@ -18,14 +18,12 @@ describe('Service', () => {
   describe('buildRequestPayload', () => {
     it('should return a valid payload', () => {
       const userData = {
-        selfie: 'test/asset/sample.jpg',
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
         backIdProof: 'test/asset/sample.jpg',
         firstName: 'John',
         middleName: 'Carter',
         lastName: 'Doe',
-// Temp comment
         dateOfBirth: '1978-03-13',
         documentIssuedDate: '1988-03-13',
         fullAddress: '3339 Maryland Avenue, Largo, Florida',

@@ -1,5 +1,6 @@
 const app = require("../../../core")
 // const InternalServerError = require("../../../../app/errors/internal_server")
+// Temp comment
 const service = app.services.auth
 
 // async function verify_user_code(req, res) {
@@ -12,6 +13,7 @@ const service = app.services.auth
 //
 //                   // Todo: Save one-time token (result.token) to DB here
 //
+//                 } else {
 //                   res.status(400).json({message:"Invalid Code!", status:false})
 //                 }
 //             }).catch((err) => {

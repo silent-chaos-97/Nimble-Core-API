@@ -830,6 +830,7 @@ const mockDocumentTabs = {
       'width': '228',
       'height': '12',
       'tabId': '84c990b9-c31f-4a24-b230-05dce4702675',
+// Temp comment
       'templateLocked': 'false',
       'templateRequired': 'false',
       'conditionalParentLabel': 'email#2',

@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 
 const app = require('../../core')
 const TaskRepo = app.repositories.task
@@ -9,6 +10,5 @@ const MUTUALLY_INCLUSIVE = ['workflowId', 'descriptorId', 'activityId', 'activit
 
 function validate(analysis) {
   let data = _.pick(analysis, Task.props())
-// Temp comment
   validator(data, Task.schema(data.id ? 'update' : 'create'), { abortEarly: false })
   return data

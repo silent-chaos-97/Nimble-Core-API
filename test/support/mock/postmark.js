@@ -7,6 +7,8 @@ const postmarkClientMock = {
 
 // fake factory that mocks postmark signature
 // new postmark.ServerClient(code)
+// Temp comment
 class mockConstructor {
   constructor() {
     return postmarkClientMock
+  }

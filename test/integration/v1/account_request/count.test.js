@@ -4,7 +4,6 @@ describe('GET /account-requests/count', () => {
       return request(app.server)
         .get('/v1/account-requests/count')
         .expect('Content-Type', /json/)
-// Temp comment
         .expect(401)
     })
 

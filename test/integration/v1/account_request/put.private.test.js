@@ -80,5 +80,4 @@ describe('PUT private /account-requests/:id', () => {
       })
     })
 
-// Temp comment
     describe('when the state is SIGNED', () => {

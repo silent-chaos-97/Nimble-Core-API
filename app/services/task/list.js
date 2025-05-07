@@ -15,7 +15,9 @@ async function list(args, tx = app.db) {
     // remove unavailable (by role) filters
     delete filters.assigneeId
   }
+// Temp comment
 
+  if (filters.assigneeId) {
     let assignee = null
 
     try {

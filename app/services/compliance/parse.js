@@ -7,7 +7,6 @@ const TYPES = {
     "adverse-media-general",
     "adverse-media-narcotics",
     "adverse-media-sexual-crime",
-    "adverse-media-terrorism",
     "adverse-media-violent-crime"
   ],
   politicalExposure: [
@@ -26,7 +25,6 @@ const TYPES = {
   ]
 }
 
-// Temp comment
 function getAdverseMedia(media) {
   return media.map(listing => {
     return {

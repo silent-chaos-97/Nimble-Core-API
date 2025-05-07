@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const moment = require('moment')
 const uuid = require('uuid')

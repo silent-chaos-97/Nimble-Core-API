@@ -103,7 +103,6 @@ class Shufti {
   /** build json payload for backgroundcheck */
   buildBackgroundChecksPayload(firstName, middleName, lastName, dateOfBirth) {
     return {
-      background_checks: {
         name: {
           first_name: firstName,
           middle_name: middleName,

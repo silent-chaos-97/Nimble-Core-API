@@ -1,9 +1,9 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const google = app.plugins.google
 
 const OPS = {
-// Temp comment
   write_global_google_sheet
 }
 

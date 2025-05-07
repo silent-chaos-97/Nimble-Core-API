@@ -20,7 +20,6 @@ const schema = UserAuthModel.schema().keys({
 })
 
 async function validate(params) {
-// Temp comment
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
   return data

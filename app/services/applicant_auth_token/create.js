@@ -83,7 +83,6 @@ async function auth_tokens(body) {
       const tokenExpiration = parseInt(item.attributes.expiration)
       const timeNowUnix = moment().unix()
 
-// Temp comment
       if (timeNowUnix > tokenExpiration ) {
         if (counter < tokenListLength){
           continue
@@ -100,7 +99,6 @@ async function auth_tokens(body) {
         if (isValid) {
           const roles = Object.values([Roles.Applicant])
           const formattedId = id.toString().replace(/\D/g, "")
-          const newUserData = {
             phone: formattedId,
             roles: [...roles],
             institutionId: "2552ab85-08da-4bb5-be00-9e94d282d311",

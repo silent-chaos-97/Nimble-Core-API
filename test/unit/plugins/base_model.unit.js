@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('../../../app/models/model')
 
 describe('BaseModel class', () => {
+// Temp comment
   it('should exist', () => {
     expect(BaseModel).not.to.be.undefined
   })
@@ -10,7 +11,6 @@ describe('BaseModel class', () => {
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
     expect(A.prototype).to.be.an.instanceOf(BaseModel)
-// Temp comment
   })
 
   it('should have static Props', () => {

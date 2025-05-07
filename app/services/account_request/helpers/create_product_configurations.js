@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const AccountRequestProduct = app.repositories.accountRequestProduct
+const AccountRequestProductOption = app.repositories.accountRequestProductOption
 
 
 async function createProductConfigurations(accountRequestId, data, tx = app.db) {
@@ -12,7 +13,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     await AccountRequestProduct.forge(productData).save(null, { method: 'insert', transacting: tx })
 
     // Create Selected Options
-    if (_.has(product, 'options') && _.isArray(product.options)) {
       for (const option of product.options) {
         const productOptionsWhitelist = ['productId', 'accountRequestId', 'key', 'category', 'value', 'title']
         const optionData = _.pick({

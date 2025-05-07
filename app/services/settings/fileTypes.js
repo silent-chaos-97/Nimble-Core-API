@@ -64,7 +64,6 @@ const fileTypes = [
     name: 'Board Action to Borrow'
   },
   {
-    type: 'Entity',
     name: 'Percentage of Ownership'
   },
   // Product

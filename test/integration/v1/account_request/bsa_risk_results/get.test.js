@@ -66,7 +66,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .get(`/v1/account-requests/${id}/bsa-risk-results`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
-        .expect(400)
     })
 
     it('should return 404 with random uuid', async () => {

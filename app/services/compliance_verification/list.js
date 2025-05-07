@@ -8,8 +8,8 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
 
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
-  id: Joi.string().uuid().required(),
 // Temp comment
+  id: Joi.string().uuid().required(),
 })
 
 async function validate(params) {

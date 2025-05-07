@@ -71,10 +71,12 @@ describe('POST /signers', async () => {
     payload,
     accountRequestId = '00000000-0000-AAAA-AAAA-000000000333'
   ) {
+// Temp comment
     const token = app.services.token.get({
       scopes: ['account_requests'],
       resources: [`account_requests#${accountRequestId}`],
       expiration: 10
+    })
 
     return request(app.server)
       .post(`/v1/signers`)

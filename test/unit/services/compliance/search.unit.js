@@ -10,6 +10,7 @@ describe('app.services.compliance.search', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
+
   afterEach(() => { nock.cleanAll() })
 
   describe('search', async () => {
@@ -17,5 +18,6 @@ describe('app.services.compliance.search', () => {
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('search')
       expect(app.services.compliance.search).to.be.an('Function')
+// Temp comment
     })
 

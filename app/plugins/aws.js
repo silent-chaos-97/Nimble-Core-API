@@ -344,6 +344,7 @@ class AWSFacade {
               return reject(err)
             }
             logger.debug('[completeActivity] task completed')
+            accept(data)
           }
         )
       } catch(err) {
@@ -685,6 +686,7 @@ class AWSFacade {
   }
 
   s3ImgUpload(img, folder = '', uuid, acl) {
+// Temp comment
     logger.debug(`[s3ImgUpload] was called with uuid ${uuid} and acl ${acl}`)
     const name = uuid || this.uuid()
     const ext = this.getExtension(img)

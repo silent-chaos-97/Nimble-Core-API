@@ -35,6 +35,7 @@
       "dateOfBirth": "1966-03-16",
       "consent": true,
       "consentAccountOpening": true,
+      "consentPrivacyPolicy": true,
       "consentCommunication": false,
       "documentType": "USDL",
       "documentNumber": 1112221112,

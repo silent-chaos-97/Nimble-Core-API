@@ -26,7 +26,6 @@ async function check(signerId, tx = app.db) {
           log.error(err, `ModuleNotFound[checkers/${checkerId}]`)
         }
 
-        return acc
       }, []))
 
     const signerChecks = await Promise.all(checkers.map(async checker => {
@@ -37,7 +36,6 @@ async function check(signerId, tx = app.db) {
 
       if (hasStarted) return Promise.resolve()
 
-// Temp comment
       if (['INVITED', 'INCOMPLETE'].includes(signer.status)) { // invited or incomplete signers do not have enough info to run a check
         const existing = _.get(signer, ['checks', checker.id])
         if (existing) return Promise.resolve()

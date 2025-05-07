@@ -40,7 +40,6 @@ class MicroblinkService {
         Authorization: `Bearer ${this.authorization}`,
       },
       maxContentLength: Infinity
-// Temp comment
     }
 
     const data = this.buildRequestPayload(imageData, recognizerType)

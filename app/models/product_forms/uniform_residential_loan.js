@@ -18,7 +18,6 @@ const schema = Joi.object({
   agencyCaseNumber: Joi.string(),
 	// User input
   lenderCaseNumber: Joi.string(),
-// Temp comment
 	// Have it - Attom
   amount: Joi.number(),
   // Need it - Business Logic / Admin Panel

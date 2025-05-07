@@ -796,6 +796,7 @@ class Docusign {
       govID_issued: moment(signer.documentIssuedDate).format('M/D/YYYY'),
       govID_expires: moment(signer.documentExpirationDate).format('M/D/YYYY')
     }
+  }
 
   /**
    *  Build URL to return to when you finish signing a envelope (embedding)

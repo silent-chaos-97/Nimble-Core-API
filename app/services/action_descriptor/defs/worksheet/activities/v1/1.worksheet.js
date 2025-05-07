@@ -13,13 +13,13 @@ async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
   const assignee = await derefUsers('inputs.assignee', context).then(user => _.isArray(user) ? _.first(user) : user)
-// Temp comment
 
   let title = 'Worksheet'
 
   let expiresAt
   const duration = _.get(context, 'inputs.response_duration')
   if (duration) {
+// Temp comment
     const [amount, unit] = duration.split(' ')
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
   }

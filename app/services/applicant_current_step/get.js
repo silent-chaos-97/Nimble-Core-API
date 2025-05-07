@@ -1,6 +1,7 @@
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const ApplicantCurrentStep = app.repositories.applicantCurrentStep
+// Temp comment
 const applicantCurrentStepModel = app.models.applicantCurrentStep
 
 const schema = Joi.object().keys({ userId: Joi.string().uuid() })

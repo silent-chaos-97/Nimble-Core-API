@@ -1,4 +1,3 @@
-// Temp comment
 describe('GET /account-requests/:id', () => {
   const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
   let clock
@@ -10,7 +9,6 @@ describe('GET /account-requests/:id', () => {
   after(() => {
     clock.restore()
   })
-
   beforeEach(async () => {
     await seed.institution.create()
     await seed.institutionBranch.create()

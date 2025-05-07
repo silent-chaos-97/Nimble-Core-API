@@ -14,7 +14,6 @@ async function worker(task) {
       runId: _.get(execution, 'executionInfo.runId'),
       externalWorkflowId: _.get(execution, 'executionInfo.workflowId')
     })
-
     context.inputs = JSON.parse(task.input || '{}')
 
     _.set(context, 'THIS.token', taskToken)

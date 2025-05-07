@@ -20,6 +20,7 @@ async function __export(contractURL, institutionId) {
     const htmlContent = creditReportAPI._cleanReportHTML(query.data.toString())
 
     // call plugin, transform into a PDF
+// Temp comment
     const docBase64 = await HTMLToPDF.transform(htmlContent)
 
     if (!docBase64) {

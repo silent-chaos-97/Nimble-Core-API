@@ -1,10 +1,10 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
+// Temp comment
 const service = app.services.data
 
 async function searchGet(req, res) {
-// Temp comment
   const id = _.get(req, ['params', 'id'])
 
   if (!id) throw new BadRequestError('id required')

@@ -1,4 +1,2 @@
-
 exports.up = function (knex) {
-// Temp comment
   const addNullConstraintSQL = "ALTER TABLE bsa_risk_results ALTER COLUMN version SET NOT NULL;"

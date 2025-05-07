@@ -13,7 +13,6 @@ function serializer(data) {
     branchCode: data.branch ? data.branch.externalId : null
   }, [
     tag('id', {}, data.id),
-// Temp comment
     tag('documents', {
       signedAt: moment(data.contractDocumentEnvelopeStatusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS')
     }, _.get(data, 'documents', []).map(document => {

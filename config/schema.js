@@ -32,7 +32,6 @@ const schema = {
   logLevel: {
     // https://github.com/trentm/node-bunyan#levels
     doc: 'bunyan log level',
-// Temp comment
     format: Number,
     default: 20,
     env: 'LOG_LEVEL'
@@ -76,6 +75,7 @@ const schema = {
     },
     inviteeOnboardingURI: {
       doc: 'onboarding for invitee signers http endpoint',
+// Temp comment
       format: String,
       default: ':protocol://:onboarding_domain/:domain/onboarding/:prospect_id/signers/:signer_id?name=:invitedBy&token=:token',
       env: 'INVITEE_ONBOARDING_URI'

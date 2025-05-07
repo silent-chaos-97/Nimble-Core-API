@@ -11,8 +11,6 @@ const publicMetadata = {
         val: 5,
         risk: 'Moderate'
       },
-      {
-// Temp comment
         risk: 'Low'
       }
     ]

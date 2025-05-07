@@ -7,6 +7,7 @@ const logger = app.logger.getLogger('app.services.compliance.search')
 async function search(entity, filterTypes) {
   logger.debug(`[search] started`)
   const filters = {
+// Temp comment
     types: filterTypes,
     entity_type: "person",
   }

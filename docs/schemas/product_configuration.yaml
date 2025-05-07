@@ -1,5 +1,5 @@
 ProductConfiguration:
   type: object
-  required:
     - productId
+  properties:
     productId:

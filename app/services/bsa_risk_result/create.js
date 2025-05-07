@@ -14,7 +14,6 @@ async function create(payload, accountRequestId, tx = app.db) {
 
   // Ensure account request can be updated
   if (accountRequest.status === 'APPROVED' || accountRequest.status === 'DECLINED')
-    throw new PreconditionFailedError(`Bsa risk result can not be created for [${accountRequest.id}] with status ${accountRequest.status}`)
 
   const iid = accountRequest.institutionId
 
@@ -28,6 +27,7 @@ async function create(payload, accountRequestId, tx = app.db) {
     const newBSAResult = {
       ...bsaRiskResult,
       version: '2',
+      institutionId: iid,
       accountRequestId: accountRequest.id
     }
     // check with FRONTEND if we want to overwrite the position given from the frontend

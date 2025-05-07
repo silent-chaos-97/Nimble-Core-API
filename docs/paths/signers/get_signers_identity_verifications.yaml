@@ -2,3 +2,4 @@
   get:
     tags:
       - Signer
+    summary: Get Signer identity verifications by Id

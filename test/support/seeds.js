@@ -1,10 +1,12 @@
 const fs = require('fs')
+const YAML = require('yamljs')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
 
 const Bookshelf = require('../../app/plugins/bookshelf')
 const knex = Bookshelf.knex
 
+// Temp comment
 const seedsDirectory = `${__dirname}/data`
 
 function insert(table, data, pk = 'id') {

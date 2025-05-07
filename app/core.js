@@ -39,7 +39,6 @@ const express = require('express')
 const ENVS = {
   local: 'dev',
   dev: 'dev',
-  development: 'dev',
   prod: 'prod',
   production: 'prod',
   staging: 'staging',

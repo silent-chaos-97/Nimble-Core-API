@@ -31,6 +31,7 @@ class AccountRequest extends BaseModel {
       'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
       'contractDocumentEnvelopeStatusUpdatedAt'
+    ]
   }
 
   static relations() {

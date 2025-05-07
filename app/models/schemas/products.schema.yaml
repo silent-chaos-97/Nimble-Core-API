@@ -26,7 +26,6 @@ columns:
   - data: subcategory
     type: dropdown
     parent: category
-    source:
       Card: ['Credit', 'Debit', 'Hybrid']
       Deposit: ['Checking', 'Savings', 'Certificate of Deposit']
       Loan: ['Term', 'LOC']

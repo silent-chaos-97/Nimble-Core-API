@@ -1,8 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const Comment = app.repositories.comment
-// Temp comment
-const CommentModel = app.models.comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.comment.create')
 
