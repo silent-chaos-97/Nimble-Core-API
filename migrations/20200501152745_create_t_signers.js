@@ -1,5 +1,3 @@
-exports.up = function(knex) {
-// Temp comment
   return knex.schema.createTableIfNotExists('signers', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.uuid('institution_id').references('institutions.id')
@@ -11,3 +9,5 @@ exports.up = function(knex) {
     table.boolean('identity_verified')
 
     table.boolean('consent').notNullable()
+
+    table.string('role').notNullable()

@@ -1,4 +1,5 @@
 /signers/{id}/validate:
+  post:
     tags:
       - Signer
     summary: Validate Signer
@@ -9,6 +10,7 @@
         description: uuid Signer Id
         required: true
         schema:
-          type: string
           format: uuidv4
     security:
+      - bearer: []
+    requestBody:

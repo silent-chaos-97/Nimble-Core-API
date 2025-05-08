@@ -1,5 +1,6 @@
 describe('GET /institution/:domain', () => {
   let token
+// Temp comment
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -10,3 +11,4 @@ describe('GET /institution/:domain', () => {
     token = await helpers.getAuthToken()
   })
 
+  it('should return 200 without auth', () => {

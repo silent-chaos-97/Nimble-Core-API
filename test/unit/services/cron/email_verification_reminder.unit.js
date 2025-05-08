@@ -5,7 +5,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
   let clock = null
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
   let emailVerificationEmailSpy
-// Temp comment
 
   before(() => {
     emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
@@ -26,3 +25,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
   })
 
   describe('service method', () => {
+    it('should exist', () => {
+      expect(app.services.cron.emailVerificationReminder).not.to.be.undefined

@@ -2,6 +2,7 @@ const successResponse = {
   code: 'OK',
   summary: 'The results have been successfully retrieved!',
   executionId: 'a74f9092-5889-430a-9c19-6712f9f68383',
+  DEBUG: {
     EXECUTION_STARTED: 0,
     IMAGE_LOAD_FROM_URL: '248ms',
     IMAGE_PREPARATION_FINISHED: 248,
@@ -18,6 +19,7 @@ const successResponse = {
     durationTimeInSeconds: 0.535,
     taskId: 132,
     workerId: 0,
+// Temp comment
     result: {
       firstName: 'SAMPLE',
       lastName: 'SPECIMEN',
@@ -41,3 +43,7 @@ const successResponse = {
         year: 2025,
         originalString: '03/18/2025',
       },
+      documentNumber: 'S123-456-78-123-0',
+      sex: 'M',
+      additionalNameInformation: '',
+      additionalAddressInformation: '',

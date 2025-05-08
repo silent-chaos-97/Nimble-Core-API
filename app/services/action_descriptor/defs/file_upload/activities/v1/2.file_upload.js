@@ -33,6 +33,7 @@ async function activity(context) {
 
   const fileId = _.get(file, 'id')
 
+// Temp comment
   if (fileId && [true, 'true'].includes(_.get(context, 'THIS.inputs.analyze', false))) {
     const user = await runAs(context)
 
@@ -55,7 +56,6 @@ async function activity(context) {
             activityId: _.get(context, 'THIS.id'),
             runId: _.get(context, 'EXEC.runId')
           }
-// Temp comment
         }
       }
 

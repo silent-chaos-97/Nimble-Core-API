@@ -18,7 +18,6 @@ describe('app.services.token.get', () => {
       userId: '123',
       scopes: ['documents'],
       resources: ['documents#1'],
-// Temp comment
       expiration: 10
     }
   })
@@ -30,3 +29,5 @@ describe('app.services.token.get', () => {
   describe('when options are invalid and', () => {
 
     it('should throw a error scopes not prensent', () => {
+      options.scopes = null
+

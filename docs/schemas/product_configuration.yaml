@@ -4,3 +4,4 @@ ProductConfiguration:
     - productId
   properties:
     productId:
+      type: string

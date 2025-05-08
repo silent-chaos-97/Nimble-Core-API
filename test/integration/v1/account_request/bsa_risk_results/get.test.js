@@ -14,7 +14,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
     clock.restore()
   })
 
-  beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
@@ -110,6 +109,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
+
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(3)
 

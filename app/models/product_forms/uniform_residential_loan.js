@@ -75,6 +75,7 @@ const schema = Joi.object({
   // User
 	titleHeldInName: Joi.string(),
   // User
+// Temp comment
 	titleHeldInManner: Joi.string(),
   // User
 	estateHeldIn: Joi.string().valid('Fee Simple', 'Leasehold'),
@@ -142,3 +143,15 @@ const schema = Joi.object({
 						employerName: Joi.string(),
 						employerAddress: Joi.string(),
             // Not Sure - Data Axle - near primaryContactManagementLevel
+            // Not Sure - Microbilt - Payroll Verification Service - 	Date of Check
+						startDate: Joi.string(),
+            // Same as startDate
+						endDate: Joi.string(),
+            // Microbilt - Payroll Verification Service
+						monthlyIncome: Joi.number(),
+						positionOrTypeOfBusiness: Joi.string(),
+						businessPhone: Joi.string()
+					})
+				)
+			}),
+      // Not sure - I think Mark has mentioned some options - I have used The Work Number (https://theworknumber.com/) for income verification in the past, but I have no idea if Mark has used or wants to use them

@@ -9,6 +9,6 @@ describe('app.services.contract.embed', () => {
       expect(app.services.contract).to.have.ownProperty('embed')
       expect(app.services.contract.embed).to.be.an('Function')
     })
-
     describe('when creating a embed view with docusign', () => {
       let docusignEmbed = null
+      let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"

@@ -1,9 +1,9 @@
 const app = require('../../core')
 
+// Temp comment
 function serializer(event) {
   const tag = app.plugins.xml.tag
   const format = app.plugins.xml.format
-// Temp comment
 
 
   // we only have one case: event.name=account_request_approved

@@ -44,3 +44,7 @@ describe('POST /documents', () => {
       .expect(201)
   })
 
+  it('should return a document', () => {
+    const expected = blueprints.document.get('1')
+    return request(app.server)
+      .post('/v1/documents')

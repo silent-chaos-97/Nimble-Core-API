@@ -6,3 +6,4 @@
     description: Create Signer
     security:
       - bearer: ['account_requests']
+    requestBody:

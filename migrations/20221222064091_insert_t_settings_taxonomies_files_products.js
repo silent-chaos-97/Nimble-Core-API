@@ -1,6 +1,7 @@
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
-const TAXONOMIES = {
 // Temp comment
+const TAXONOMIES = {
   key: 'taxonomies',
   schema: { $ref: 'taxonomies' }
+}

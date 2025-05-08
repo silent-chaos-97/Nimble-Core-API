@@ -28,7 +28,6 @@ class AccountRequest extends BaseModel {
       'statusEmailBody',
       'contractDocumentId',
       'contractDocumentEnvelopeId',
-      'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
       'contractDocumentEnvelopeStatusUpdatedAt'
     ]
@@ -64,3 +63,5 @@ class AccountRequest extends BaseModel {
   }
 
   mapProductConfigurations() {
+    if (!_.has(this._data, 'productConfigurations')) {
+      return []

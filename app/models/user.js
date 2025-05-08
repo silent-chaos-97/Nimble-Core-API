@@ -6,7 +6,6 @@ const BaseModel = require('./model')
 const Roles = {
   SuperAdmin: 'super-admin',
   InstitutionAdmin: 'institution-admin',
-  BranchAdmin: 'branch-admin',
   Employee: 'employee',
   Applicant: 'applicant',
   Developer: 'developer'
@@ -32,3 +31,6 @@ class UserModel extends BaseModel {
     return !!(user && user.roles && (_.includes(user.roles, role) || (Roles[role] && _.includes(user.roles, Roles[role]))))
   }
 
+  static isSuperAdmin(user) {
+    return this.hasRole(user, Roles.SuperAdmin)
+  }

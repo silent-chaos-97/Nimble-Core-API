@@ -81,3 +81,10 @@ describe('PUT private /account-requests/:id', () => {
     })
 
     describe('when the state is SIGNED', () => {
+      let emailSpy
+      let eventPublishSpy
+
+      beforeEach(async () => {
+        emailSpy = sinon.spy(app.plugins.email, 'sendAccountRequestStatus')
+        eventPublishSpy = sinon.replace(app.services.eventStream, 'publish', sinon.fake.returns(Promise.resolve()))
+        await knex('account_requests').update('status', 'SIGNED').where('id', pendingAccountRequestId)

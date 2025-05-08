@@ -36,6 +36,5 @@ async function create(req, res) {
       },
       tx
     )
-
     res.json(serializer(entity))
   })

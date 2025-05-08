@@ -127,3 +127,14 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'NADA Valuation'
+  },
+  {
+    type: 'Product',
+    name: 'Bill of Sale / Purchase Agreement'
+  },
+  {
+    type: 'Product',
+    name: 'VIN Matches'
+  },
+  {
+    type: 'Product',

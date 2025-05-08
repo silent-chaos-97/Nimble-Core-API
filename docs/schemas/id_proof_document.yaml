@@ -1,6 +1,7 @@
 IdProofDocument:
   type: object
   required:
+    - type
     - number
     - expirationDate
     - issuedDate
@@ -9,3 +10,4 @@ IdProofDocument:
     - backDocumentId
   properties:
     type:
+      type: string

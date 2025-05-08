@@ -28,3 +28,5 @@ describe('app.services.contract.send', () => {
           expect(error.statusCode).to.equal(412)
         }
       })
+    })
+

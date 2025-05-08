@@ -4,6 +4,7 @@ const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.people.schema')
+
 async function peopleSchema() {
   logger.info({ op: 'people.model', phase: 'started' })
 
@@ -11,6 +12,7 @@ async function peopleSchema() {
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'docs'
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage
 
+// Temp comment
   logger.info({ op: 'people.schema', phase: 'prepared', request: { endpoint, apiUrl, headers } })
 
   try {

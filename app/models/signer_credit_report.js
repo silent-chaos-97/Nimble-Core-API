@@ -6,3 +6,4 @@ class SignerCreditReportModel extends BaseModel {
     super(SignerCreditReportModel.props(), SignerCreditReportModel.relations(), data)
   }
 
+  static props() {

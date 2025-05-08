@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 
 const Wkfl = app.models.workflow
 const workflows = app.services.workflow

@@ -183,6 +183,7 @@ const successResponse = {
                 "name": "Rompert Mougkampe"
               },
               {
+// Temp comment
                 "name": "rvbrt mvgbh"
               },
               {
@@ -625,6 +626,7 @@ const successResponse = {
                 "value": "Former President and responsible for activities that seriously undermine democracy, respect for human rights and the rule of law."
               },
               {
+                "name": "Justification",
                 "source": "swiss-seco-list",
                 "value": "Head of Government and responsible for activities that seriously undermine democracy, respect for human rights and the rule of law."
               },
@@ -918,3 +920,78 @@ const successResponse = {
               },
               {
                 "date": "2018-09-11T00:00:00Z",
+                "snippet": "The war veterans/soldiers had to use a coup in order to push Grace Mugabe away. If Grace Mugabe was a genuine/supporting wife, she should have allowed R.G Mugabe to retire from politics long back but because of her love of planes and money, R.G Mugabe had to be subjected to a long period of political prison. On 11/09/2018, I wrote a piece condemning ZANU PF government for abusing taxpayers' money by chartering a plane for Grace Mugabe from Singapore.",
+                "title": "No difference between Grace Mugabe & Judas Iscariot - Bulawayo24 News",
+                "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-144993.html"
+              },
+              {
+                "date": "2019-09-24T00:00:00Z",
+                "snippet": "Blacklisting of South Africa's Gupta Brothers Means Govt Dept Slams 'Fake News' About Sex Education in South Africa #FeesMustFall Activist Admitted to Hospital in South Africa Relief For HIV/Aids Patients as Legal Battle Ends In Botswana Luyolo Yiba Wins Idols South Africa Season 15 Crown! Mugabe's Family Ordered to Register 'Billion-Dollar' Estate 'No Sympathy' for South African Student's Killer at Court Ruling South African Rail Agency Bleeds 10,000 Security Jobs Watch Bonang Matheba Get Candid on U.S. Radio Show Burna Boy to Donate Proceeds From Concert to Xenophobia Victims Two Die in Tornado in South Africa's KwaZulu-Natal Miss South Africa Asks Men to Write Love Letters Against Violence Prisoners's Lawsuit to Set South African Legal Precedent? Foreign Protesters Not Our Problem",
+                "title": "Prince Harry, Meghan Markle Take 10-Day Tour in Southern Africa - allAfrica.com",
+                "url": "https://allafrica.com/view/group/main/main/id/00070106.html"
+              },
+              {
+                "date": "2019-11-24T00:00:00Z",
+                "snippet": "\"...On Sunday, May 12, my client and his family abandoned their journey to South Africa where he had intended to seek medical attention. \"He went through all formalities at the Robert Gabriel Mugabe International Airport and when he was about to board his flight, a security agent approached him and asked to check his passport,\" he said. Madhuku further told court that after taking the passport, the officer vanished forcing Chombo and his family to abort the journey.",
+                "title": "Shocking details of Chombo passport seizure emerges – The Zimbabwe Mail",
+                "url": "https://www.thezimbabwemail.com/law-crime/shocking-details-of-chombo-passport-seizure-emerges/?share=jetpack-whatsapp"
+              },
+              {
+                "date": "2019-10-10T00:00:00Z",
+                "snippet": ": If you got rid of the gangsters in Sierra Leone, Milosevic, the Taliban and Saddam, why can't you get rid of Mugabe? The answer is",
+                "title": "UK invasion plot: Nujoma speaks out | The Herald",
+                "url": "https://www.herald.co.zw/85007/"
+              },
+              {
+                "date": "2020-03-19T00:00:00Z",
+                "snippet": "President Mugabe, in office since 1987, has been repeatedly criticized by various watchdogs and several Western states for violations of human rights and repression against Zimbabwean people. Mugabe has also been blamed for failure to tackle economic problems in the country, which led to the collapse of the health care system.",
+                "title": "WHO Rescinds Mugabe's Appointment as WHO Ambassador Amid Public Outrage - Sputnik International",
+                "url": "https://sputniknews.com/world/201710221058449815-who-mugabe-ambassador-reaction/"
+              },
+              {
+                "date": "2019-10-23T00:00:00Z",
+                "snippet": "The government critic was later arraigned before a military court and charged for illegal possession of arms, a charge which was condemned by the international community as politically-motivated. When Bobi Wine came to Zimbabwe in May this year, he was detained and interrogated by State security agents at the Robert Gabriel Mugabe International Airport. Boby Wine had been invited to preside as guest of honour at Nelson Chamisa-led MDC congress in Gweru on May 26.",
+                "title": "Walk with the wise to be wise - NewsDay Zimbabwe",
+                "url": "https://www.newsday.co.zw/2019/10/walk-with-the-wise-to-be-wise/amp/"
+              },
+              {
+                "date": "2019-10-08T00:00:00Z",
+                "snippet": "Both Mugabe and Sally were arrested. Mugabe spent a decade imprisoned between the years of 1964-1974. After his release, he travelled to Mozambique in 1975 after the neighbouring country's independence from Portuguese colonialism.",
+                "title": "Zimbabwe proclaims former President Mugabe (1924-2019) a national hero | Pambazuka News",
+                "url": "https://www.pambazuka.org/node/100387"
+              },
+              {
+                "date": "2020-03-17T00:00:00Z",
+                "snippet": "The move came after Mugabe called his cabinet for a meeting at his State House offices despite the parliamentary plan, which could result in Mugabe being kicked out in days. In the draft motion, the party accused Mugabe of being a \"source of instability\", flouting the rule of law and presiding over an \"unprecedented economic tailspin\" in the past 15 years. It also said he had abused his constitutional mandate to favour his unpopular wife Grace, 52, whose tilt at power triggered the backlash from the army that brought tanks onto the streets of the capital last week.",
+                "title": "Zimbabwe ruling party ZANU-PF begins Robert Mugabe impeachment | The West Australian",
+                "url": "https://thewest.com.au/news/africa/zimbabwe-ruling-party-zanu-pf-begins-robert-mugabe-impeachment-ng-b88666171z.amp"
+              },
+              {
+                "date": "2019-03-06T00:00:00Z",
+                "snippet": "The announcement and appointment of Ipsidy come a few months after ex-President Robert G. Mugabe resigned as president in Zimbabwe after several decades in the position. Mugabe had previously been accused of manipulating elections  to stay on as president. Ipsidy has its headquarters in New York and has operating subsidiaries in Colombia and in South Africa.",
+                "title": "Zimbabwe will use fingerprint ID technology for its 2018 general elections – The Zimbabwe Mail",
+                "url": "https://www.thezimbabwemail.com/technology-science/zimbabwe-will-use-fingerprint-id-technology-for-its-2018-general-elections/"
+              },
+              {
+                "date": "2020-03-24T00:00:00Z",
+                "snippet": "The Zimbabwe Electoral Commission will announce official results within five days of the election although the outcome should be known well before then. The winner faces the task of putting Zimbabwe back on track after 37 years under Mugabe which were tainted by corruption, mismanagement and diplomatic isolation that caused a crisis in a country that once had one of Africa's most promising economies. \"The information from our representatives on the ground is extremely positive!\"",
+                "title": "Zimbabwe's president, opponent both confident of win after close vote",
+                "url": "https://thefinancialexpress.com.bd/world/africa/zimbabwes-president-opponent-both-confident-of-win-after-close-vote-1533025719"
+              },
+              {
+                "date": "2018-09-18T00:00:00Z",
+                "snippet": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+                "title": "Новости: ВЛАСТЬ, Зимбабве, все за все время, 1 страница | podrobnosti.ua",
+                "url": "http://podrobnosti.ua/archive/tag/all/vlast/zimbabve/page1/"
+              },
+              {
+                "date": "2018-07-24T00:00:00Z",
+                "snippet": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+                "title": "Новости: ВЛАСТЬ, Перевороты, видео за все время, 1 страница | podrobnosti.ua",
+                "url": "http://podrobnosti.ua/archive/tag/video/vlast/perevoroty-putchi/page1/"
+              },
+              {
+                "date": "2019-02-07T00:00:00Z",
+                "snippet": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+                "title": "Новости: ВЛАСТЬ, Перевороты, все за все время, 1 страница | podrobnosti.ua",
+                "url": "http://podrobnosti.ua/archive/tag/all/vlast/perevoroty-putchi/page1/"

@@ -1,12 +1,12 @@
 const AWS = require("../../../../app/plugins/aws")
 const sinon = require('sinon')
 
-// Temp comment
 describe("AWS Facade for s3", () => {
   const sandbox = sinon.createSandbox()
   const blueSquare = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg=='
   // const fakePdf = Buffer.from([8, 6, 7, 5, 3, 0, 9])
 
+// Temp comment
   before(() => {
     sandbox.replace(AWS, 'uuid', () => '00000000-0000-0000-0000-000000000000')
     sandbox.spy(AWS, 'uuid')
@@ -28,3 +28,5 @@ describe("AWS Facade for s3", () => {
       expect(AWS.s3CopyToFTP).not.to.be.undefined
       expect(AWS.s3CopyToFTP).to.be.an('function')
     })
+
+    it('should return a promise', async () => {

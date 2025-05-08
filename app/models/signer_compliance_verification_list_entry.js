@@ -7,3 +7,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
   }
 
   static props() {
+    return [

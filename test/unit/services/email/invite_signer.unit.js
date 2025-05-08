@@ -20,3 +20,4 @@ describe('app.services.email.inviteSigner', () => {
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
+  })

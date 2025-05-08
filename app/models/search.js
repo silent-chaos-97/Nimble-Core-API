@@ -15,3 +15,4 @@ class SearchModel extends BaseModel {
         'institutionId',
         'createdById',
         'createdAt',
+        'updatedAt',

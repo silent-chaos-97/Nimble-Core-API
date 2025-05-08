@@ -4,6 +4,8 @@ const app = require('../../core')
 const User = app.repositories.user
 const UserModel = app.models.user
 const validator = app.plugins.validator
+
+// Temp comment
 const whitelist = UserModel.props()
 
 async function validate(user) {

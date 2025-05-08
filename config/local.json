@@ -6,3 +6,4 @@
     "endpoint": "",
     "region": "us-east-2",
     "s3_endpoint": "",
+    "s3_upload_bucket": "nimble-core-uploads-dev",

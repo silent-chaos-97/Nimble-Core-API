@@ -10,9 +10,9 @@ describe('Service', () => {
 
   beforeEach(() => {
     nock.disableNetConnect()
+    nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
-  afterEach(() => { nock.cleanAll() })
 
   describe('buildRequestPayload', () => {
     it('should return a valid payload', () => {
@@ -27,3 +27,6 @@ describe('Service', () => {
         dateOfBirth: '1978-03-13',
         documentIssuedDate: '1988-03-13',
         fullAddress: '3339 Maryland Avenue, Largo, Florida',
+        email: 'john@wearesingular.com',
+      }
+

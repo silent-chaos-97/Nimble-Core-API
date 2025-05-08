@@ -10,6 +10,7 @@ const Statuses = {
 }
 
 const SCHEMA = Joi.object().keys({
+  id: Joi.string().uuid(),
   createdById: Joi.string().uuid().required(),
   updatedById: Joi.string().uuid().required(),
 
@@ -18,3 +19,5 @@ const SCHEMA = Joi.object().keys({
 
   ownerId: Joi.string().uuid().required(),
   customerId: Joi.string(),
+
+  fileIds: Joi.array().items(Joi.string().uuid()),

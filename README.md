@@ -36,3 +36,6 @@ endpoint: [https://api.nimblefi.com/](https://api.nimblefi.com/v1/health)
 
 ### Option 1 – Local Node + Docker for Postgres and LocalStack
 
+Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
+
+1. Launch LocalStack and Posgres

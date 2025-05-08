@@ -6,3 +6,4 @@
     description: Upsert the BSA Questionnaire results by account request Id
     operationId: postAccountRequestsBsaRiskResult
     parameters:
+      - in: path

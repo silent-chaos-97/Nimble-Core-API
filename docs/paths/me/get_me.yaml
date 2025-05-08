@@ -1,2 +1,4 @@
+/me:
   get:
     tags:
+      - Me

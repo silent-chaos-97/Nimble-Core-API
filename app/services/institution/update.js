@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 
 const app = require('../../core')
@@ -21,7 +20,6 @@ async function update(institution) {
     if (existing.publicMetadata && patch.publicMetadata) patch = _.merge({ publicMetadata: existing.publicMetadata }, patch)
 
     // remove `nil` values from `publicMetadata`
-    if (patch.publicMetadata) patch.publicMetadata = _.omitBy(patch.publicMetadata, _.isNil)
 
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),

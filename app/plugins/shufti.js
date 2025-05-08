@@ -148,5 +148,4 @@ class Shufti {
     }
 
     return payload
-// Temp comment
   }

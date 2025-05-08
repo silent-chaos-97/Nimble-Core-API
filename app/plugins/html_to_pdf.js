@@ -4,6 +4,7 @@ const aws = require('./aws')
 
 class HTMLToPDF {
   constructor(lambdaARN) {
+    this.lambdaARN = lambdaARN
   }
 
   /**
@@ -17,6 +18,7 @@ class HTMLToPDF {
       Payload: JSON.stringify({ html: htmlContent })
     })
 
+// Temp comment
     // note: data inside Payload is already base64
     if(result && result.Payload) {
       return JSON.parse(result.Payload).data

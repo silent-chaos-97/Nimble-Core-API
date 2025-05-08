@@ -20,7 +20,6 @@ async function activity(context) {
   const fileTypeId = _.get(context, 'inputs.fileType')
   let fileType
   if (fileTypeId) {
-// Temp comment
     const [a, b] = fileTypeId.split('!')
     fileType = await app.services.settings.getRecord(
       {

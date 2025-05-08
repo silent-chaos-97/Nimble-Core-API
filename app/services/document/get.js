@@ -9,7 +9,7 @@ const logger = app.logger.getLogger('app.services.document.create')
 const schema = Joi.object().keys({ id: Joi.string().uuid().required() })
 
 async function get(filters, tx = app.db) {
-  logger.debug(`[get] starting for id ${filters.id}`)
+
   filters = validator(filters, schema, { abortEarly: false })
 
   const model = await Document.forge(filters)

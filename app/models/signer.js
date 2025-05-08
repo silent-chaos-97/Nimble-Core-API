@@ -58,3 +58,8 @@ class Signer extends BaseModel {
       'sanctionVerifiedAt',
       'checkPoliticalExposure',
       'politicalExposureVerifiedAt',
+      'checkAdverseMedia',
+      'adverseMediaVerifiedAt',
+      'checkAntiMoneyLaundering',
+      'antiMoneyLaunderingVerifiedAt',
+      'contractDocumentSignerStatus',

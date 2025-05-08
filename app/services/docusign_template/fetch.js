@@ -1,6 +1,4 @@
-// Temp comment
 const app = require('../../core')
-const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const DocusignTemplate = app.repositories.docusignTemplate
 const InternalServerError = require('../../errors/internal_server')

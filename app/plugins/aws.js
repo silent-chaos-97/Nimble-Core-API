@@ -532,7 +532,6 @@ class AWSFacade {
 
   _s3SaveToFTP(key, doc, options = {}) {
     options = options || {}
-    return new Promise((resolve, reject) => {
         const location = {
           Bucket: options.bucket || options.Bucket || this.config.s3.ftp_bucket,
           Key: key

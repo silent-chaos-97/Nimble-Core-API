@@ -10,7 +10,6 @@ describe('app.services.contract.update', () => {
 
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('update')
-// Temp comment
       expect(app.services.contract.send).to.be.an('Function')
     })
 
@@ -25,3 +24,4 @@ describe('app.services.contract.update', () => {
       })
 
       beforeEach(async () => {
+        await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')

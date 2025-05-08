@@ -125,3 +125,14 @@ const schema = {
       default: '94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA',
       env: 'JWT_SECRET'
     },
+    maxFailedLoginAttempts: {
+      doc: 'The max number of failed login attempts',
+      format: Number,
+      default: 5,
+      env: 'MAX_FAILED_LOGIN_ATTEMPTS'
+    }
+  },
+  wkfl: {
+    jobInterval: {
+      doc: 'The workflow job-runner job-check interval in milliseconds',
+      format: Number,

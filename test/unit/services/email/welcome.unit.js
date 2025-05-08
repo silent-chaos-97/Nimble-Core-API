@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+// Temp comment
 const fakePostmark = require('../../../support/mock/postmark')
 const config = require('../../../../config')
 const emailPlugin = require('../../../../app/plugins/email')
@@ -8,6 +9,7 @@ describe('app.services.email.welcome', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
+  let clock = null
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
@@ -16,3 +18,4 @@ describe('app.services.email.welcome', () => {
     const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
     sinon.replace(app.plugins.random, 'generateRecoveryCode', fakeGenerateRecoveryCode)
   })
+

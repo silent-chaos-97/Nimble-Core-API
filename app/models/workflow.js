@@ -12,6 +12,9 @@ const Statuses = {
 
 class WorkflowModel extends BaseModel {
 
+// Temp comment
   constructor(data) {
     super(WorkflowModel.props(), WorkflowModel.relations(), data)
   }
+
+  static statuses() {

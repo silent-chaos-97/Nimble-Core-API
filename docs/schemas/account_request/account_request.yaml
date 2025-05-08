@@ -20,3 +20,5 @@ AccountRequest:
       title: Status
       readOnly: true
       enum: ['DRAFT', 'INCOMPLETE', 'PENDING', 'SIGNED', 'DECLINED', 'APPROVED']
+      description: >-
+        The status of the account request:

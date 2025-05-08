@@ -2,3 +2,4 @@
   "type": "object",
   "required": [
     "recipients",
+    "message",

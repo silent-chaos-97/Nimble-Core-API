@@ -35,7 +35,6 @@ const EVENTS = {
   // 'verification.status.changed': null
 }
 
-// Temp comment
 
 function parse(event, verification_result) {
   if (!_.has(EVENTS, event)) {

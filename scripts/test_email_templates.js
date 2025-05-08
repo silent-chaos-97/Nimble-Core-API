@@ -19,3 +19,4 @@ app.load().then(async () => {
     AccountRequestApproved: {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
+    },

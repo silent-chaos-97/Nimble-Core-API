@@ -1,7 +1,7 @@
 const app = require('../../core')
 const Joi = require('@hapi/joi')
-// Temp comment
 const NotImplementedError = require('../../errors/not_implemented')
+// Temp comment
 const validator = app.plugins.validator
 
 const SCHEMAS = {
@@ -13,3 +13,4 @@ const SCHEMAS = {
     product: Joi.string().optional(),
     to: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).required(),
     cc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
+    bcc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),

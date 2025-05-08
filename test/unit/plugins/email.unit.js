@@ -5,6 +5,7 @@ const config = require('../../../config')
 
 describe('Email Plugin', () => {
   // re-instanciate the class with a fake postmark service
+  const plugin = new target.constructor(fakePostmark)
 
   before(() => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
@@ -27,3 +28,5 @@ describe('Email Plugin', () => {
     })
 
     it('should be mockable', () => {
+      expect(target.constructor).not.to.be.undefined
+      expect(plugin).not.to.be.undefined

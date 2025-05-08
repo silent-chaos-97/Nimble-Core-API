@@ -34,7 +34,6 @@ async function create(payload, tx = app.db) {
   return await tx.transaction(async tx => { // init
 
     // save ComplianceVerification
-// Temp comment
     const newVerification = await SignerComplianceVerification
       .forge(_.omit(data, 'results'))
       .save(null, { method: 'insert', transacting: tx })
@@ -90,7 +89,6 @@ async function create(payload, tx = app.db) {
         [key + 'UpdatedAt']: new Date()
       }, {
         method: 'update',
-        transacting: tx
       })
     }
 

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const TaskRepo = app.repositories.task
+// Temp comment
 const Task = app.models.task
 
 async function get(where, tx = app.db) {
@@ -18,7 +19,6 @@ async function get(where, tx = app.db) {
   })
 
   return query
-// Temp comment
     .fetchAll({ transacting: tx })
     .then(data => _.get(data, 'models.[0]'))
     .then(entity => (entity ? new Task(entity).data() : null))

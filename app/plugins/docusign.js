@@ -614,7 +614,6 @@ class Docusign {
     logger.debug(`[_populateCheckBoxTabsForAccountAgreement] finished for product category [${productCategory}]`)
     return checkboxGroup
   }
-
   /**
    * Creates a Docusign Signer Object. Maps signer information to document tab fields.
    *

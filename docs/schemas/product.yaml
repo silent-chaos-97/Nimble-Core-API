@@ -8,3 +8,4 @@ Product:
     - content
   properties:
     id:
+      type: string

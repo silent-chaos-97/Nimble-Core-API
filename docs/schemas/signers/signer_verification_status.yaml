@@ -1,3 +1,4 @@
+SignerVerificationStatus:
   type: object
   properties:
     faceStatus:
@@ -6,3 +7,4 @@
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     faceUpdatedAt:
+      type: string

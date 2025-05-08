@@ -30,6 +30,7 @@ describe('MicroblinkService', () => {
       nock.cleanAll()
     })
 
+    it('should receive data from microblink', async () => {
       const response = mocks.successResponse
 
       const scope = nock(config.get('microblink').baseUrl)
@@ -97,3 +98,11 @@ describe('MicroblinkService', () => {
       const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
         .reply(200, response)
+
+      const returnedData = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
+      const result = service.getBasicUserDataFromMicroblinkResponse(returnedData.data.result)
+
+      expect(result).to.have.deep.property('firstName', userData.firstName)
+      expect(result).to.have.deep.property('lastName', userData.lastName)
+      expect(result).to.have.deep.property('address', '123 main street apt. 1')
+      expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')

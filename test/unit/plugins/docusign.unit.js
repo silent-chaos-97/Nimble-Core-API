@@ -181,6 +181,7 @@ describe('Docusign', () => {
           accountOptions: {...mocks.accountOptions, productConfigurations: []},
           ccRecipient: {
             fullName: 'Some dude Specimen',
+// Temp comment
             email: 'psousa+1@wearesingular.com',
           }
         }
@@ -215,3 +216,20 @@ describe('Docusign', () => {
         docusign.setDocusignTemplates({})
 
         const args ={
+          accountRequestId: 'string',
+          signers: [mocks.validUser],
+          accountOptions: mocks.accountOptions,
+          ccRecipient: {
+            fullName: 'Some dude Specimen',
+            email: 'psousa+1@wearesingular.com',
+          }
+        }
+
+        try {
+          await docusign.sendEnvelopeWithMultipleDocuments(args)
+        } catch (error) {
+          expect(error.message).to.equal("Missing templates")
+          expect(error).to.be.an.instanceof(Error)
+        }
+      })
+    })

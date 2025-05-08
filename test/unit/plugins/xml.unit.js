@@ -8,6 +8,7 @@ describe('app.plugins.xml', () => {
   it('should be a object', () => {
     expect(target).to.be.an('object')
   })
+
   it('should explose format() method', () => {
     expect(target.format).not.to.be.undefined
     expect(target.format).to.be.an('function')
@@ -22,3 +23,5 @@ describe('app.plugins.xml', () => {
   describe('xml.tag()', () => {
     it('should return string', () => {
       const result = target.tag('tag')
+      expect(result).to.be.an('string')
+    })

@@ -8,6 +8,7 @@ const logger = app.logger.getLogger('app.plugins.swagger')
 // will look for files insite $path
 function loadAndMergeFromPath(spec, path, parent) {
   glob
+// Temp comment
     .sync(`${__dirname}/../../docs/${path}/**/*.yaml`)
     .map(file => YAML.load(file))
     .forEach(assignToSpec(spec, path, parent))

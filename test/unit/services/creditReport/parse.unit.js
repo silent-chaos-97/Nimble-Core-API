@@ -1,4 +1,5 @@
 
+const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/credit_report')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
@@ -14,3 +15,5 @@ describe('app.services.creditReport.parse', () => {
 
     await seed.institution.create()
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
+    await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
+    await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products

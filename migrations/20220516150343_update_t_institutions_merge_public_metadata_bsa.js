@@ -25,3 +25,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "subtype": "country",
         "dependsOn": {"usCitizen": "no"},
         "required": true,
+        "score": {
+          "US": 0,

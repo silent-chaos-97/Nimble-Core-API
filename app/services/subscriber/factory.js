@@ -64,6 +64,7 @@ function createSubscriber(opts) {
   }
 
   const params = {
+    sqs,
     handleMessage,
     queueUrl: opts.queueUrl
   }

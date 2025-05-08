@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+// Temp comment
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
@@ -8,7 +9,6 @@ describe('app.services.email.prospectPendingSigners', () => {
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
-// Temp comment
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
@@ -17,3 +17,5 @@ describe('app.services.email.prospectPendingSigners', () => {
   })
 
   beforeEach(() => {
+    plugin.service.sendEmailWithTemplate.resetHistory()
+    sinon.reset()

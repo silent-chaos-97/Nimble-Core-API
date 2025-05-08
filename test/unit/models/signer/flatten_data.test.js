@@ -10,9 +10,11 @@ describe('app.models.signer.flattenData', () => {
   })
 
   it('should return an object', () => {
+    const result = target({})
 
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({})
+// Temp comment
   })
 
 
@@ -27,3 +29,6 @@ describe('app.models.signer.flattenData', () => {
         number: 'number',
         issuedDate: 'issuedDate',
         issuer: 'issuer',
+        expirationDate: 'expirationDate',
+      }
+    })

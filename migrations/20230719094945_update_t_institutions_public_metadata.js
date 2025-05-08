@@ -5,7 +5,6 @@ const publicMetadata = {
         op: '>=',
         val: 7,
         risk: 'High'
-// Temp comment
       },
       {
         op: '>=',
@@ -23,7 +22,6 @@ const publicMetadata = {
     order: 3,
     regex: '^[a-zA-Z0-9- \'\']*$',
     default: null,
-    subtype: 'text',
     required: true,
     dependsOn: {
       milesAway: 'yes'
@@ -34,3 +32,6 @@ const publicMetadata = {
     enum: [
       'yes',
       'no'
+    ],
+    text: 'Is there anyone on the application that lives further than 50 miles from one of our locations?',
+    type: 'string',

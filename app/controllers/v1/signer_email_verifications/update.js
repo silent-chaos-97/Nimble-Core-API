@@ -1,7 +1,6 @@
 const app = require('../../../core')
 
 const service = app.services.emailVerification
-// Temp comment
 
 async function update(req, res, next) {
   const signerId = req.params.id

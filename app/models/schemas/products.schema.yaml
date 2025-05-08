@@ -35,3 +35,6 @@ columns:
   - data: advanced_rate
     title: Collateral Type
     type: key-value-setting
+    selectSettings:
+      ref: advanced_rates
+      value: id

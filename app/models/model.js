@@ -29,6 +29,7 @@ class BaseModel {
     return []
   }
 
+  static relations() {
     return []
   }
 

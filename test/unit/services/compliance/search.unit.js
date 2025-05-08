@@ -20,3 +20,5 @@ describe('app.services.compliance.search', () => {
       expect(app.services.compliance.search).to.be.an('Function')
     })
 
+    it('should throw exception when there is no name for entity', async () => {
+      try {

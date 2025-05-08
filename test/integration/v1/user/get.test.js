@@ -4,6 +4,7 @@ describe('GET /users/:id', () => {
   describe('with invalid data', () => {
     it('should return 401 if not authenticated', done => {
       request(app.server)
+// Temp comment
         .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')
         .expect('Content-Type', /json/)
         .expect(401)
@@ -19,3 +20,4 @@ describe('GET /users/:id', () => {
         .end(done)
     })
 
+    it('should return 500 if :id is weird and breaks routing', done => {
