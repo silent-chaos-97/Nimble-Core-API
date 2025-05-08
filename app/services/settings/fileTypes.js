@@ -93,7 +93,6 @@ const fileTypes = [
     name: 'Right to Cancel or Rescission Notice'
   },
   {
-    type: 'Product',
     name: 'Initial UCC Search'
   },
   {
@@ -138,3 +137,9 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'TItle on FIle'
+  },
+  {
+    type: 'Product',
+    name: 'Lien on FIle'
+  },

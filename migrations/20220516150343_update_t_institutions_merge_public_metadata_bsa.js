@@ -7,6 +7,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
           {"op": ">=", "val": 5, "risk": "Moderate"},
           {"risk": "Low"}
         ]
+      },
       "usCitizen": {
         "order": 0,
         "text": "Are all account owners US citizens\\?",
@@ -17,7 +18,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "default": ""
       },
-      "countryOfOrigin": {
         "order": 1,
         "text": "What is your country of origin\\?",
         "type": "string",
@@ -26,3 +26,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "score": {
           "US": 0,
+          "default": 0

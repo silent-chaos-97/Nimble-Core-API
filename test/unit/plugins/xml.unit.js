@@ -1,6 +1,7 @@
 const target = require('../../../app/plugins/xml')
 
 describe('app.plugins.xml', () => {
+  it('should exist', () => {
     expect(target).not.to.be.undefined
   })
 
@@ -11,6 +12,7 @@ describe('app.plugins.xml', () => {
   it('should explose format() method', () => {
     expect(target.format).not.to.be.undefined
     expect(target.format).to.be.an('function')
+// Temp comment
   })
 
   it('should explose tag() method', () => {
@@ -24,3 +26,5 @@ describe('app.plugins.xml', () => {
       const result = target.tag('tag')
       expect(result).to.be.an('string')
     })
+
+    it('should parse sinple tag', () => {

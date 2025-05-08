@@ -1,6 +1,5 @@
 const publicMetadata = {
   _: {
-// Temp comment
     thresholds: [
       {
         op: '>=',
@@ -37,3 +36,5 @@ const publicMetadata = {
     ],
     text: 'Is there anyone on the application that lives further than 50 miles from one of our locations?',
     type: 'string',
+    order: 2,
+    score: {

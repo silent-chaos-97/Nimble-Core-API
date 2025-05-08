@@ -44,3 +44,5 @@ Signer:
     lastName:
       type: string
       title: Last Name
+      description: The last name of the signer
+      maxLength: 250

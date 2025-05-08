@@ -14,8 +14,10 @@ app.load().then(async () => {
       uri: "uri",
       institution: 'institution',
       institutionUrl: 'institutionUrl',
+    },
 
     AccountRequestApproved: {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
     },
+

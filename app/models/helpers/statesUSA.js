@@ -1,6 +1,7 @@
 const statesUSA = [
   'AL',
   'AK',
+  'AS',
   'AZ',
   'AR',
   'CA',
@@ -8,3 +9,4 @@ const statesUSA = [
   'CT',
   'DE',
   'DC',
+  'FM',

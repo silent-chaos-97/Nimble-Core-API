@@ -18,3 +18,4 @@ const signer = {
   employer: 'Singular',
   status: 'SIGNED'
 }
+

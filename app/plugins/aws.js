@@ -469,7 +469,6 @@ class AWSFacade {
         },
         (err, data) => {
           if (err && err.code !== 'TypeAlreadyExistsFault') {
-            logger.error(
               err,
               `[registerWorkflowType] error registering workflow type ${name} version ${version}`
             )

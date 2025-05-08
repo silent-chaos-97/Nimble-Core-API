@@ -10,7 +10,6 @@ const service = app.services.auth
 //                 if (result){
 //                   res.status(200).json({token: result.token, status:true})
 //
-// Temp comment
 //                   // Todo: Save one-time token (result.token) to DB here
 //
 //                 } else {

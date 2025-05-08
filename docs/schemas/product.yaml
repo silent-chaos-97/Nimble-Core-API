@@ -4,7 +4,8 @@ Product:
     - id
     - name
     - category
-    - content
+    - summary
   properties:
     id:
       type: string
+      format: uuidv4

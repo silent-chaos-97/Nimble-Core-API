@@ -5,7 +5,6 @@ describe('GET /signers/:id/contract', async () => {
     FakeCreateRecipientView = sinon.fake.returns('http://contract.url')
     sinon.replace(app.plugins.docusign, 'createRecipientView', FakeCreateRecipientView)
 
-    token = app.services.token.get({
       scopes: ['signers'],
       resources: [
         `signers#00000000-9999-aaaa-0000-2ea08a01e901`,
@@ -21,6 +20,7 @@ describe('GET /signers/:id/contract', async () => {
 
   after(() => {
     sinon.restore()
+    clock.restore()
     nock.enableNetConnect()
   })
 
@@ -35,3 +35,5 @@ describe('GET /signers/:id/contract', async () => {
     await seed.productAccountNumber.create()
 
     // product with options
+    await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340')
+    await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')

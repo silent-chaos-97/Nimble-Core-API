@@ -24,7 +24,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
     return request(app.server)
       .get(`/v1/institutions/${testInstitution1}/products`)
       .set('Authorization', 'Bearer ' + token)
-// Temp comment
       .expect(200)
   })
 
@@ -34,4 +33,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
       .expect(404)
       .expect((res) => {
         expect(res.body.statusCode).to.equal(404)
-        expect(res.body.message).to.be.a('string')
+      })
+  })

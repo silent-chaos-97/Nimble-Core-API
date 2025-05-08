@@ -8,8 +8,10 @@ const THRESHOLDS = [
   { op: '=', val: 1, risk: 'Low' },
   { op: '<=', val: 0, risk: 'Very Low' },
   { risk: '?' }
+]
 
 describe('app.services.bsaRiskResult.calculate', () => {
   afterEach(() => {
     sinon.restore()
   })
+

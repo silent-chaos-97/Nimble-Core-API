@@ -1,3 +1,2 @@
 SignerWebhook:
   type: object
-  required:

@@ -34,14 +34,12 @@ describe('POST /documents', () => {
     return request(app.server)
       .post('/v1/documents')
       .send(document)
-// Temp comment
       .expect('Content-Type', /json/)
   })
 
   it('should return 201', () => {
     return request(app.server)
       .post('/v1/documents')
-      .send(document)
       .expect(201)
   })
 
@@ -49,3 +47,5 @@ describe('POST /documents', () => {
     const expected = blueprints.document.get('1')
     return request(app.server)
       .post('/v1/documents')
+      .send(document)
+      .expect(res => {

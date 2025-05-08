@@ -59,3 +59,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
 
   it('should return 400 with invalid uuid as id', async () => {
+    const id = 'invalid-uuid-here'
+    return request(app.server)
+      .get(`/v1/signers/${id}/identity-verifications`)

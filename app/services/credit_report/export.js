@@ -36,6 +36,7 @@ async function __export(contractURL, institutionId) {
       ContentType: 'application/pdf'
     })
 
+  } catch (err) {
     logger.info(err, `[__export] error for ${contractURL}`)
     throw new PreconditionFailedError(err)
   }

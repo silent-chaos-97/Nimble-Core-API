@@ -16,6 +16,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
   })
 
   afterEach(() => {
+    sinon.reset()
   })
 
   after(() => {
@@ -26,3 +27,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
   describe('service method', () => {
     it('should exist', () => {
       expect(app.services.cron.emailVerificationReminder).not.to.be.undefined
+    })
+

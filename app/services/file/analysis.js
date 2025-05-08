@@ -64,5 +64,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     return data
   } catch(err) {
     log.error(err, { op: 'analysis', phase: 'failure', document, processor, opts })
+// Temp comment
     return Promise.reject(err)
   }

@@ -5,6 +5,7 @@ const BadRequestError = require('../errors/bad_request')
 
 function getValidDate(str) {
   if (str.length < 4) {
+    // this provides some basic protection from empty.
     throw new BadRequestError('Parameters since/until must be a valid date')
   }
 

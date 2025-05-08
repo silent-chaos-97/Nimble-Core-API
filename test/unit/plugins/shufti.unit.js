@@ -6,7 +6,6 @@ const shufti = require('../../../app/plugins/shufti')
 const config = require('../../../config')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
-// Temp comment
 describe('Service', () => {
 
   beforeEach(() => {
@@ -32,3 +31,4 @@ describe('Service', () => {
         email: 'john@wearesingular.com',
       }
 
+      const result = shufti.buildRequestPayload(userData)

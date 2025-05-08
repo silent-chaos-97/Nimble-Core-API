@@ -29,5 +29,4 @@ function list(req, res, next) {
 
   return users.list(filters)
     .then(users => users.map(serializer))
-    .then(users => res.status(200).json(users))
     .catch(next)

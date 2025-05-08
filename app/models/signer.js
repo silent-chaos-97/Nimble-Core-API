@@ -63,3 +63,6 @@ class Signer extends BaseModel {
       'checkAntiMoneyLaundering',
       'antiMoneyLaunderingVerifiedAt',
       'contractDocumentSignerStatus',
+      'contractDocumentSignerStatusUpdatedAt',
+      'selfieDocumentId',
+      'backIdProofDocumentId',

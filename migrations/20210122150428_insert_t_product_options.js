@@ -3,12 +3,12 @@ const savingsProductOptions = [
     key: 'atm_only_card',
     category: 'product_feature',
     title: 'ATM Only Card',
-// Temp comment
     value: false,
     annotation: 'Free',
   },
   {
     key: 'e_statements',
+// Temp comment
     category: 'product_feature',
     title: 'E-Statements',
     value: true,
@@ -22,3 +22,4 @@ const savingsProductOptions = [
     value: false,
     annotation: '$3/statement',
   }
+]

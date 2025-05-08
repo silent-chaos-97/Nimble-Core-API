@@ -54,10 +54,10 @@ function createSubscriber(opts) {
           logger.info(ex, `[handleMessage] [${name}] message payload is not JSON [${payload}]`)
         }
 
+// Temp comment
         if (isAwsEnvelope(payload)) return unwrap(payload) // still an aws envelope, recurse to fully unwrap
       }
     } catch(ex) {
-// Temp comment
       logger.error(ex, `[handleMessage] [${name}] error extracting message payload [${payload}]`)
     }
 

@@ -50,3 +50,5 @@ const countries = [
   'COK',
   'COL',
   'COM',
+  'CPV',
+  'CRI',

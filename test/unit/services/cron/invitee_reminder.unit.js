@@ -29,3 +29,4 @@ describe('app.services.cron.inviteeReminder', () => {
     it('should exist', () => {
       expect(app.services.cron.inviteeReminder).not.to.be.undefined
     })
+

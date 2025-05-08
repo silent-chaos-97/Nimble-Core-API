@@ -9,7 +9,6 @@ const successResponse = {
     OCR_PROCESS_STARTED: 250,
     TASK_ON_WORKER: '536ms',
     OCR_PROCESS_FINISHED: 786,
-    BEFORE_RESPONSE: 789,
   },
   data: {
     recognizer: 'BLINK_ID',
@@ -46,3 +45,5 @@ const successResponse = {
       sex: 'M',
       additionalNameInformation: '',
       additionalAddressInformation: '',
+      placeOfBirth: '',
+      nationality: '',

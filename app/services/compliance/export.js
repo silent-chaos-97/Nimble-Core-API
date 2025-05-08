@@ -4,7 +4,6 @@ const logger = app.logger.getLogger('app.services.compliance.export')
 
 async function __export(searchId, institutionId) {
   logger.debug(`[__export] started for search id [${searchId}] and institution id [${institutionId}]`)
-  try {
     const query = await app.repositories.complyAdvantage.getCertificate(searchId)
     if (!(query.data instanceof Buffer)) {
       throw new Error('__export() Could not fetch certificate')

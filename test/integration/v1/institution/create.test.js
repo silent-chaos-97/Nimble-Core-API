@@ -25,3 +25,4 @@ describe('POST /institutions', () => {
   })
 
   describe('when entity invalid', () => {
+    it('should return 400', () => {

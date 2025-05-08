@@ -12,6 +12,7 @@ async function get(params, transacting = app.db) {
 
   switch (getBy.key) {
     case 'files':
+// Temp comment
       // model = fileTypes
       // break
     default: {

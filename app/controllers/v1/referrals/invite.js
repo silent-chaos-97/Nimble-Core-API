@@ -9,3 +9,4 @@ module.exports = (req, res, next) => {
   const { method, title, message, product, my, recipient = {} } = req.body
 
   return app.db.transaction(async tx => {
+    await app.repositories.user

@@ -7,6 +7,7 @@ order: 0
 columns:
   - data: id
     title: ID
+    readOnly: true
     width: '50'
     allowEmpty: false
 
@@ -37,3 +38,4 @@ columns:
     selectSettings:
       ref: advanced_rates
       value: id
+

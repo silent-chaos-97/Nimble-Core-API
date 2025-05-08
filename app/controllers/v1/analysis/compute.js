@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 
@@ -9,5 +8,6 @@ async function compute(req, res) {
 
   const op = _.get(req, 'params.op')
 
+// Temp comment
   return app.services.analysis.compute(op, req.body)
     .then(data => res.status(200).json(data))

@@ -39,3 +39,5 @@ endpoint: [https://api.nimblefi.com/](https://api.nimblefi.com/v1/health)
 Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 
 1. Launch LocalStack and Posgres
+   `yarn docker-start`
+

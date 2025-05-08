@@ -11,7 +11,6 @@ describe('GET /me', () => {
       return request(app.server)
         .get('/v1/me')
         .expect('Content-Type', /json/)
-// Temp comment
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
     })
@@ -28,3 +27,5 @@ describe('GET /me', () => {
 
       token = await helpers.getAuthToken()
     })
+
+    describe('when token expired', () => {

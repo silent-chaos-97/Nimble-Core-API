@@ -1,7 +1,6 @@
 const app = require('../../core')
 const Joi = require('@hapi/joi')
 
-// Temp comment
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 const getPagination = app.plugins.pagination
@@ -9,6 +8,7 @@ const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.institution_branch.list')
 
 function schema() {
+// Temp comment
   return Joi.object().keys({
     institutionId: Joi.string().uuid().required(),
     limit: Joi.number().positive(),

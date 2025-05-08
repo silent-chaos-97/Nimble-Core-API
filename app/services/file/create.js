@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.file.create')
 
 /**
  * data: {
- *   originalname: string
  *   mimetype: string
  *   createdById: string
  *   createdByRole: [user, applicant]

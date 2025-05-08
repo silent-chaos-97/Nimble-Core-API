@@ -1,4 +1,3 @@
-// Temp comment
 const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/comply_advantage')
@@ -22,3 +21,4 @@ describe('app.services.compliance.parse', () => {
       middleName: 'Gabriel',
       lastName: 'Mugabe'
     }
+

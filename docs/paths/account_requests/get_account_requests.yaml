@@ -1,5 +1,6 @@
 /account-requests/{id}:
   get:
     tags:
+      - Account Request
     summary: Get an account request
     description: Method to get an account request

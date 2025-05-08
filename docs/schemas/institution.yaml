@@ -1,10 +1,10 @@
 Institution:
   description: 'Institution'
   type: object
+  required:
     - id
     - name
     - domain
-    - slug
     - logo
     - backgroundImage
   properties:

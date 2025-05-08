@@ -136,3 +136,9 @@ const schema = {
     jobInterval: {
       doc: 'The workflow job-runner job-check interval in milliseconds',
       format: Number,
+      default: 5000,
+      env: 'WKFL_JOB_RUNNER_INTERVAL_MILLIS'
+    }
+  },
+  admin: {
+    wkfl: {

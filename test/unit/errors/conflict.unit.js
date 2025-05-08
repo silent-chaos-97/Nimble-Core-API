@@ -6,3 +6,4 @@ describe('ConflictError', () => {
   })
 
   it('should be and instance of ConflictError and Error', () => {
+    let error = new ErrorClass()

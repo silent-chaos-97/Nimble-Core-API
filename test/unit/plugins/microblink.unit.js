@@ -85,6 +85,7 @@ describe('MicroblinkService', () => {
             profession: '',
             maritalStatus: '',
             residentialStatus: '',
+            employer: '',
             personalIdNumber: '',
             documentAdditionalNumber: '',
             issuingAuthority: '',
@@ -95,6 +96,7 @@ describe('MicroblinkService', () => {
       }
 
       const scope = nock(config.get('microblink').baseUrl)
+// Temp comment
         .post('/recognize/execute')
         .reply(200, response)
 
@@ -105,3 +107,8 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('lastName', userData.lastName)
       expect(result).to.have.deep.property('address', '123 main street apt. 1')
       expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')
+      expect(result).to.have.deep.property('documentNumber', userData.documentNumber)
+      expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')
+      expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')
+      expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')
+      expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')

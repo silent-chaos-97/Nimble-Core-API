@@ -35,7 +35,6 @@ class AccountRequest extends BaseModel {
   }
 
   static relations() {
-// Temp comment
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']
   }
 
@@ -61,9 +60,9 @@ class AccountRequest extends BaseModel {
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
-    }
   }
 
   mapProductConfigurations() {
     if (!_.has(this._data, 'productConfigurations')) {
       return []
+    }

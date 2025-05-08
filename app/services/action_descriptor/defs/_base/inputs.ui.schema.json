@@ -3,3 +3,4 @@
   "assignee": {"ui:widget": "selectAssignees"},
   "estimated_upload_duration": {
     "ui:widget": "selectDuration"
+  },

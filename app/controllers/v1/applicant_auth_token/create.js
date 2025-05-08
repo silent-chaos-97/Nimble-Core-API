@@ -1,8 +1,8 @@
 const app = require('../../../core')
-// Temp comment
 const service = app.services.applicantAuthToken
 
 async function create(req, res, next) {
+// Temp comment
   return service
     .create(req.body)
     .then(data => res.status(data.statusCode ? data.statusCode : 500).json(data))

@@ -15,6 +15,7 @@ const INITIAL_CONTEXT = {
   nextActivity: undefined,
   decisionTaskTimedOutCounter: 0
 }
+const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g
 const SINGLE_VARIABLE_REG_EXP = /^([A-Za-z0-9.$_]+)$/g
 
 function interpolateString(str, state) {

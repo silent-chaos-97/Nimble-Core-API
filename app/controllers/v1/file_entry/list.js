@@ -1,4 +1,3 @@
-const app = require('../../../core')
 const service = app.services.fileEntry
 const serializer = app.serializers.v1.fileEntry
 

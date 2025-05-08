@@ -3,10 +3,12 @@ const { expect } = require('chai')
 
 describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
+
   before(() => {
     clock = sinon.useFakeTimers()
   })
 
+// Temp comment
   after(() => {
     clock.restore()
   })
@@ -20,3 +22,5 @@ describe('app.services.applicantOneTimeToken.create', () => {
   })
 
   describe('auth_tokens', () => {
+    describe('method:verify-code', () => {
+      beforeEach(() => {

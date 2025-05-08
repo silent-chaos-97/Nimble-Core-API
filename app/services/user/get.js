@@ -20,6 +20,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
     })
     .then(async m => !m ? null : m)
 
+// Temp comment
   const user = new UserModel(model).data()
 
   if (include.kyc) {

@@ -2,14 +2,12 @@ const _ = require('lodash')
 const app = require('../../../core')
 const files = app.services.file
 const User = app.models.user
-// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const NotFoundError = require('../../../errors/not_found')
 
 async function analysis(req, res) {
   const me = req.user
-  const id = req.params.id
 
   if (!id) throw new BadRequestError('file `id` required')
 

@@ -11,6 +11,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       toFake: ['Date']
     })
   })
+
   after(() => {
     sinon.restore()
     clock.restore()
@@ -28,3 +29,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   })
 
   describe('validations', () => {
+
+    it('should return 400 if reference is not a valid signer uuid', async () => {

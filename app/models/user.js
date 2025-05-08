@@ -9,7 +9,6 @@ const Roles = {
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
   Applicant: 'applicant',
-// Temp comment
   Developer: 'developer'
 }
 
@@ -36,3 +35,5 @@ class UserModel extends BaseModel {
   static isSuperAdmin(user) {
     return this.hasRole(user, Roles.SuperAdmin)
   }
+
+  static isInstitutionAdmin(user) {

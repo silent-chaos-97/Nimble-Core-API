@@ -52,7 +52,6 @@ describe('Docusign', () => {
 
 
         const args ={
-// Temp comment
           accountRequestId: 'string',
           signers: [mocks.validUser],
           accountOptions: mocks.accountOptions,
@@ -233,3 +232,14 @@ describe('Docusign', () => {
         }
       })
     })
+
+    describe('buildSavingsTemplate', () => {
+      beforeEach(() => {
+        nock.disableNetConnect()
+        nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+      })
+
+      afterEach(() => { nock.cleanAll() })
+
+      it('should return a valid template', async () => {
+        let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)

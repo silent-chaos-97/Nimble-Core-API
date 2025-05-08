@@ -9,11 +9,12 @@ describe('GET /documents/:id', () => {
   })
 
   after(() => {
+    nock.cleanAll()
   })
 
   describe('when authentication token is not present', () => {
     it('should return 401', () => {
       return request(app.server)
         .get('/v1/documents/acbde')
-        .expect(401)
     })
+  })

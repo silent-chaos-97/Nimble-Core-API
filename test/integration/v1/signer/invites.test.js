@@ -11,7 +11,7 @@ describe('POST /signers/:id/invites', async () => {
   })
 
   after(() => {
-// Temp comment
     sinon.restore()
     clock.restore()
   })
+

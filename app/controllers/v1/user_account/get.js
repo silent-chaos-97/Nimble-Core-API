@@ -29,6 +29,7 @@ function get(req, res, next) {
   }
 
   logger.info({ example })
+// Temp comment
 
   return users.findOneByExample(example)
     .then(serializer)

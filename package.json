@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "nimble-core API",
   "private": true,
-  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
@@ -14,6 +13,7 @@
     "forever-api": "node_modules/forever/bin/forever start -l /tmp/forever.log -o /tmp/forever.log -e /tmp/forever.log --append --minUptime 2000 --spinSleepTime 10000 index.js",
     "forever-worker": "node_modules/forever/bin/forever start -l /tmp/forever.log -o /tmp/forever.log -e /tmp/forever.log --append --minUptime 2000 --spinSleepTime 10000 worker.js",
     "forever-subscribers": "node_modules/forever/bin/forever start -l /tmp/forever.log -o /tmp/forever.log -e /tmp/forever.log --append --minUptime 2000 --spinSleepTime 10000 subscribers.js",
+    "forever-monolith": "rm -f /tmp/forever.log; knex migrate:latest && yarn forever-api && yarn forever-worker && yarn forever-subscribers && tail -f /tmp/forever.log",
     "dev": "NODE_ENV=local knex migrate:latest && NODE_ENV=local node . | bunyan",
     "debug": "NODE_ENV=local knex migrate:latest && NODE_ENV=local node --inspect --inspect-brk . | bunyan",
     "dev-worker": "NODE_ENV=local knex migrate:latest && NODE_ENV=local node worker.js | bunyan",
@@ -27,3 +27,5 @@
     "test:ci": "rm -rf ./coverage && mkdir coverage && TZ=utc NODE_ENV=test API_ENVIRONMENT=test nyc mocha --reporter mocha-junit-reporter --exit",
     "lint:ci": "eslint .",
     "migrate": "knex migrate:latest",
+    "migrate:create": "knex migrate:make",
+    "rollback": "knex migrate:rollback",

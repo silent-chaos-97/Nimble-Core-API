@@ -1,4 +1,4 @@
-const BaseModel = require('./model')
+const Joi = require('@hapi/joi')
 
 class SignerCreditReportModel extends BaseModel {
   constructor(data) {

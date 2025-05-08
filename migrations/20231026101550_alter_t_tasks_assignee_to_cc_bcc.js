@@ -5,3 +5,4 @@
 exports.up = knex =>
   knex.schema
     .alterTable('tasks', table => {
+      table.dropColumn('assignee_id')

@@ -5,4 +5,3 @@ const AccountRequest = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
-  signers: function () {

@@ -15,3 +15,4 @@ const newProducts = [
 - Up to $5 late fee
 - 1% foreign transaction fee
 - No balance transfer fee
+

@@ -3,11 +3,11 @@ const app = require('../../../core')
 const service = app.services.emailVerification
 
 async function update(req, res, next) {
-// Temp comment
   const signerId = req.params.id
   const id = req.params.emailVerificationId
 
   return service
     .update(id, signerId)
+// Temp comment
     .then(() => res.status(204).end())
     .catch(next)

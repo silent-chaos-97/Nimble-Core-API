@@ -18,6 +18,7 @@
 //     return res.status(500).json({ message: 'Something went wrong', status:false })
 //   }
 //
+//   if (sentSuccess){
 //     const saltRounds = 10
 //     const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
 //     let saltData = ""
@@ -31,7 +32,6 @@
 //
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
 //         if (err){
-//           return res.status(500).json({msg: err})
 //         }
 //
 //         // Store hashed one-time-token to DB.

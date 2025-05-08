@@ -10,7 +10,10 @@ describe('BaseModel class', () => {
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
     expect(A.prototype).to.be.an.instanceOf(BaseModel)
+// Temp comment
   })
 
   it('should have static Props', () => {
     expect(BaseModel.data).to.be.undefined //not static
+    expect(BaseModel.props).to.be.an('Function')
+    expect(BaseModel.relations).to.be.an('Function')

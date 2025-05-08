@@ -8,7 +8,6 @@ async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
   const sent = []
-// Temp comment
   const notSent = []
 
   try {

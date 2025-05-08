@@ -22,3 +22,4 @@ class InstitutionModel extends BaseModel {
       'routingNumber',
       'logo',
       'backgroundImage',
+      'logoUri',

@@ -31,3 +31,5 @@ describe('Email Plugin', () => {
       expect(target.constructor).not.to.be.undefined
       expect(plugin).not.to.be.undefined
     })
+  })
+

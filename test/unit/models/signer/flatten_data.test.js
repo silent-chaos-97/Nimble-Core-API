@@ -28,7 +28,7 @@ describe('app.models.signer.flattenData', () => {
         number: 'number',
         issuedDate: 'issuedDate',
         issuer: 'issuer',
-// Temp comment
         expirationDate: 'expirationDate',
       }
     })
+

@@ -6,7 +6,6 @@ IdProofDocument:
     - expirationDate
     - issuedDate
     - issuer
-    - frontDocumentId
     - backDocumentId
   properties:
     type:

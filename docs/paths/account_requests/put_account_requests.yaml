@@ -7,3 +7,4 @@
     operationId: putAccountRequests
     parameters:
       - name: id
+        in: path

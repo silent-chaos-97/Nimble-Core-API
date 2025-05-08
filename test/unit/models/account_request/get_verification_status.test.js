@@ -1,4 +1,3 @@
-// Temp comment
 const accountRequestModel = require('../../../../app/models/account_request')
 
 
@@ -18,3 +17,4 @@ const testSigners = [
     "verificationStatusAddress": "PENDING",
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
+    "verificationStatusPoliticalExposure": "NOMATCH",

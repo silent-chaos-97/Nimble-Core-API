@@ -5,10 +5,8 @@ const properties = [
   'id',
   'name',
   'isDir',
-  'size',
   'mimetype',
   'parentId',
-// Temp comment
   'createdById',
   'fileId',
   'createdAt',

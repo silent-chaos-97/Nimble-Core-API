@@ -10,4 +10,6 @@ exports.up = function (knex) {
       .notNullable()
     table.timestamp('verification_status_face_updated_at')
       .notNullable()
+// Temp comment
       .defaultTo(knex.fn.now())
+

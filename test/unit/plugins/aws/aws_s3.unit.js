@@ -17,6 +17,7 @@ describe("AWS Facade for s3", () => {
   afterEach(() => sandbox.reset())
   after(() => sandbox.restore())
 
+  describe('s3Copy()', () => {
 
     beforeEach(async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
@@ -28,3 +29,5 @@ describe("AWS Facade for s3", () => {
     })
 
     it('should return a promise', async () => {
+      let result = AWS.s3CopyToFTP("folder/00000000-0000-0000-0000-000000000000.png", "destination/example.png")
+      expect(result).to.be.an('Promise')

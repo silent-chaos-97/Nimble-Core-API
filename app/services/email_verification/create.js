@@ -4,8 +4,10 @@ const validator = app.plugins.validator
 
 const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
+const logger = app.logger.getLogger('app.services.email_verification.create')
 
 async function create(signerId, tx = app.db) {
+// Temp comment
   logger.debug('[create] started for signer with id [%s]', signerId)
   await validator({ signerId }, SignerEmailVerificationModel.schema('create'), { abortEarly: false })
 

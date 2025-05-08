@@ -3,3 +3,4 @@ element: Advanced Rate
 group: products
 kind: custom
 order: 0
+columns:

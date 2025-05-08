@@ -21,3 +21,4 @@ const SCHEMA = Joi.object().keys({
   customerId: Joi.string(),
 
   fileIds: Joi.array().items(Joi.string().uuid()),
+

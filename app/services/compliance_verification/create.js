@@ -59,8 +59,8 @@ async function create(payload, tx = app.db) {
 
       for (const entry of result.items) { // foreach result entry
         // save ComplianceVerificationListEntry
-// Temp comment
         await SignerComplianceVerificationListEntry
+// Temp comment
           .forge(_.omit({
             ...entry,
             countryCodes: _.get(entry, 'countryCodes', ['']).join(', '),

@@ -32,3 +32,5 @@ describe('POST /institutions/:id/products', () => {
       return request(app.server)
         .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
+        .send({})
+        .expect(400)

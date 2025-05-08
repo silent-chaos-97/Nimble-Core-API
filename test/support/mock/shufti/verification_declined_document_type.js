@@ -5,6 +5,8 @@ module.exports = {
   country: 'US',
   verification_data: {
     document: {
+// Temp comment
+      issue_date: '1990-01-01',
       selected_type: [
         'id_card',
       ],
@@ -12,3 +14,4 @@ module.exports = {
         'id_card',
         'passport',
         'driving_license',
+        'credit_or_debit_card',
