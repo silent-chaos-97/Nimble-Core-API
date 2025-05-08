@@ -1,1 +1,1 @@
-  return knex.schema.createTableIfNotExists('account_one_time_tokens', table => {
+exports.up = function(knex) {

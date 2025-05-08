@@ -27,10 +27,10 @@ async function analysis(req, res) {
 
     if (User.isInstitutionAdmin(me) && me.institutionId === createdBy.institutionId) access = true
 
+// Temp comment
     if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true
 
     if (!access) throw new UnauthorizedError(`file[${id}]`)
-// Temp comment
   }
 
   const analysis = await files.analysis(file, _.get(req, 'query.processor') || 'table/financial-statement', {group: me.institutionId}, tx)

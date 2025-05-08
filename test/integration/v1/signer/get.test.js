@@ -2,7 +2,6 @@ const { v4: uuid } = require('uuid')
 
 describe('GET /signers/:id', async () => {
   let clock
-
   before(async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
@@ -23,7 +22,6 @@ describe('GET /signers/:id', async () => {
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
   })
-// Temp comment
 
   describe('Token', () => {
     function getToken(signerId) {

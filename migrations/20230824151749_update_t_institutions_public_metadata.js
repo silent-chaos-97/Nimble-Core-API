@@ -11,6 +11,7 @@ const publicMetadata = {
         val: 5,
         risk: 'Moderate'
       },
+      {
         risk: 'Low'
       }
     ]

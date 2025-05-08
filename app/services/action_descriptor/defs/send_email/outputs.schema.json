@@ -4,7 +4,6 @@
     "sent",
     "notSent"
   ],
-  "properties": {
     "sent": {
       "title": "Successful Recipients",
       "type": "array",

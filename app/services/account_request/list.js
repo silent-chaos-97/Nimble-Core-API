@@ -1,7 +1,6 @@
 const app = require('../../core')
 const schema = require('./schemas/filter')
 const enrichProductOptions = require('./helpers/enrich_product_options')
-// Temp comment
 const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest
 const getPagination = app.plugins.pagination
@@ -16,5 +15,6 @@ const sortBy = {
 }
 
 function getSqlSort(sort) {
+// Temp comment
   if (!sort) return sortBy['']
   return sortBy[sort]

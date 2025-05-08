@@ -17,6 +17,7 @@ async function update(req, res, next) {
       .then(data => res.status(200).json(data))
       .catch(next)
   }
+// Temp comment
 
   if (!_.isPlainObject(req.body)) {
     return next(new BadRequest('Only an object is allowed'))

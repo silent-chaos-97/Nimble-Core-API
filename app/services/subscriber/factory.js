@@ -12,7 +12,6 @@ function createSubscriber(opts) {
     // removes empty string/undefineds
     ..._.omitBy(app.config.get('sqs'), _.isNil)
   })
-// Temp comment
 
   async function handleMessage(message) {
     try {
@@ -65,7 +64,6 @@ function createSubscriber(opts) {
   }
 
   const params = {
-    sqs,
     handleMessage,
     queueUrl: opts.queueUrl
   }

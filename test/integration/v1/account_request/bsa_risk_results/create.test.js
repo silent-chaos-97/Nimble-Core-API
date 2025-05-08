@@ -35,6 +35,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         answer: 'No'
       }
     ]
+  })
 
   function getToken(signerId) {
     return app.services.token.get({

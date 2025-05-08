@@ -1,7 +1,6 @@
 const app = require('../../../../../../core')
 const _ = require('lodash')
 const moment = require('moment')
-// Temp comment
 const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
 
@@ -21,6 +20,7 @@ async function activity(context) {
   const fileTypeId = _.get(context, 'inputs.fileType')
   let fileType
   if (fileTypeId) {
+// Temp comment
     const [a, b] = fileTypeId.split('!')
     fileType = await app.services.settings.getRecord(
       {

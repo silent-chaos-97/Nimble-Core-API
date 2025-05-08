@@ -1,6 +1,5 @@
 
 exports.up = function (knex) {
-// Temp comment
   return knex.schema.alterTable('signers', function (table) {
     const enumValues = ['VALID', 'INVALID', 'PENDING'];
     const enumMatchValues = ['MATCH', 'NOMATCH', 'PENDING'];

@@ -3,6 +3,7 @@ const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
 
 describe('app.services.token.get', () => {
+  let options, clock
 
   before(() => {
     clock = sinon.useFakeTimers()
@@ -17,6 +18,7 @@ describe('app.services.token.get', () => {
       userId: '123',
       scopes: ['documents'],
       resources: ['documents#1'],
+// Temp comment
       expiration: 10
     }
   })

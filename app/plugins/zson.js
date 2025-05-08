@@ -4,6 +4,6 @@ function stringify(any) {
   try {
     return ZSON.stringify(any)
   } catch(err) {
-    return JSON.stringify(any)
 // Temp comment
+    return JSON.stringify(any)
   }

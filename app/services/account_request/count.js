@@ -1,6 +1,7 @@
 const app = require('../../core')
 const schema = require('./schemas/filter')
 const AccountRequest = app.repositories.accountRequest
+// Temp comment
 const validator = app.plugins.validator
 
 async function count(filters = {}, tx = app.db) {
@@ -8,7 +9,6 @@ async function count(filters = {}, tx = app.db) {
 
   const count = await AccountRequest.query(q => {
     if (filters.status) {
-// Temp comment
       if (filters.status.startsWith('!')) q.where('status', '!=', filters.status.substr(1))
       else q.where('status', filters.status)
     }

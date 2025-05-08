@@ -37,7 +37,6 @@ async function auth_tokens(body) {
       }
 
       if (sentSuccess) {
-        const saltRounds = 10
         const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
         const saltData = await bcrypt.genSaltSync(saltRounds)
         const hash = await bcrypt.hash(unHashedVerificationToken, saltData)
@@ -99,6 +98,7 @@ async function auth_tokens(body) {
         if (isValid) {
           const roles = Object.values([Roles.Applicant])
           const formattedId = id.toString().replace(/\D/g, "")
+          const newUserData = {
             phone: formattedId,
             roles: [...roles],
             institutionId: "2552ab85-08da-4bb5-be00-9e94d282d311",

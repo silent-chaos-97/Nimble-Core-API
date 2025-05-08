@@ -33,7 +33,6 @@ describe('POST /documents', () => {
   it('should return json', () => {
     return request(app.server)
       .post('/v1/documents')
-// Temp comment
       .send(document)
       .expect('Content-Type', /json/)
   })

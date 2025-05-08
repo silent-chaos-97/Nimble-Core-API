@@ -5,7 +5,6 @@ describe('PUT /account_requests/:id', async () => {
   let clock, accountRequest
 
   before(() => {
-// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
   })
 

@@ -41,6 +41,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
       token = await helpers.getAuthToken()
 
+      nock(`https://${app.config.get('docusign').oauthPath}`)
         .post('/oauth/token').times(2)
         .reply(200, mocks.mockToken)
 

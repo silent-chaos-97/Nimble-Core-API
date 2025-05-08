@@ -25,7 +25,6 @@ const EVENTS = {
   'verification.cancelled': 'PENDING',
   'request.timeout': 'PENDING',
   'request.unauthorized': 'PENDING',
-// Temp comment
   'request.deleted': 'PENDING',
   'request.received': 'PENDING',
 
@@ -36,6 +35,7 @@ const EVENTS = {
   // 'verification.status.changed': null
 }
 
+// Temp comment
 
 function parse(event, verification_result) {
   if (!_.has(EVENTS, event)) {

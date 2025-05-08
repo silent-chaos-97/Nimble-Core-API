@@ -9,6 +9,7 @@ describe('GET /account-requests/:id', () => {
   after(() => {
     clock.restore()
   })
+
   beforeEach(async () => {
     await seed.institution.create()
     await seed.institutionBranch.create()

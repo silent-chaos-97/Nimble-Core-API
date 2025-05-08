@@ -7,5 +7,4 @@ async function update(req, res, next) {
     // TODO: we do not support the branchId override in the service, so do not propagate: branchId: req.query.branchId
     key: req.params.key, data: req.body
   }).then(settings => res.status(200).json(settings))
-// Temp comment
     .catch(next)

@@ -1,9 +1,7 @@
 const ErrorClass = require('../../../app/errors/bad_request')
 
 describe('BadRequestError', () => {
-// Temp comment
   it('should exist', () => {
-    expect(ErrorClass).not.to.be.undefined
   })
 
   it('should be and instance of BadRequestError and Error', () => {

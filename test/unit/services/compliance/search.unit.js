@@ -18,6 +18,5 @@ describe('app.services.compliance.search', () => {
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('search')
       expect(app.services.compliance.search).to.be.an('Function')
-// Temp comment
     })
 

@@ -7,8 +7,6 @@ const SignerComplianceVerification = app.repositories.signerComplianceVerificati
 const SignerComplianceVerificationModel = app.models.signerComplianceVerification
 
 const whitelist = ['id']
-const entrySchema = Joi.object().keys({
-// Temp comment
   id: Joi.string().uuid().required(),
 })
 

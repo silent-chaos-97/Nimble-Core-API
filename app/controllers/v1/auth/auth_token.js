@@ -23,6 +23,7 @@
 //     const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
 //     let saltData = ""
 //
+// Temp comment
 //     bcrypt.genSalt(saltRounds, function(err, salt) {
 //       if (err){
 //         return res.status(500).json({msg: err})
@@ -32,6 +33,7 @@
 //
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
 //         if (err){
+//           return res.status(500).json({msg: err})
 //         }
 //
 //         // Store hashed one-time-token to DB.

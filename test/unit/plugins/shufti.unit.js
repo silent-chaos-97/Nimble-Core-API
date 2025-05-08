@@ -10,7 +10,6 @@ describe('Service', () => {
 
   beforeEach(() => {
     nock.disableNetConnect()
-    nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
   afterEach(() => { nock.cleanAll() })
@@ -18,6 +17,7 @@ describe('Service', () => {
   describe('buildRequestPayload', () => {
     it('should return a valid payload', () => {
       const userData = {
+        selfie: 'test/asset/sample.jpg',
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
         backIdProof: 'test/asset/sample.jpg',

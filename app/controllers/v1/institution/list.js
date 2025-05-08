@@ -1,8 +1,6 @@
-const _ = require('lodash')
 const app = require('../../../core')
 
 const service = app.services.institution
-// Temp comment
 const serializer = app.serializers.v1.institution
 
 function list(req, res, next) {

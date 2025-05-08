@@ -20,6 +20,5 @@ function getToken(headers) {
 function getApiKey(headers) {
   if (_.has(headers, 'x-api-key')) {
     return _.get(headers, 'x-api-key')
-  }
 
   throw new UnauthorizedError()

@@ -67,7 +67,6 @@ const BASE_SUMMARY_VALUE_PROVIDER = () => {
     requested: null,
     reasons: []
   }
-}
 
 const SUMMARY_NAMES = ['monthlyIncome', 'loan', 'equityDown', 'cashDown', 'rate', 'monthlyDebt', 'totalTerm', 'amortTerm', 'payment', 'credit']
 
@@ -162,6 +161,7 @@ module.exports = async function(user, data, transacting = app.db) {
       adjusted: monthlyDebt,
       adjustment: -(collateralMonthlyDebt)
     })
+
     const term = _term(opts, product.advancedRate)
 
     summary.totalTerm = { ...summary.totalTerm, requested: _.get(term, 'req.total'), max: _.get(term, 'max.total') }

@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const File = app.repositories.file
-// Temp comment
 const FileModel = app.models.file
 
 const BadRequestError = require('../../errors/bad_request')

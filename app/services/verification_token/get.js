@@ -10,7 +10,6 @@ const { validator } = app.plugins
 
 const whitelist = ["id","expiration"]
 const schema = Joi.object().keys({
-  id: Joi.string().required(),
   expiration: Joi.number().required()
 })
 

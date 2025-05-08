@@ -40,4 +40,3 @@ Signer:
       title: Last Name
       description: The middle name of the signer
       maxLength: 250
-      example: ''

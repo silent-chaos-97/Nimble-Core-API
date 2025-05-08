@@ -8,7 +8,6 @@ const Statuses = _.mapKeys(
     'created',
     'assigned',
     'started',
-    'completed',
     'expired',
     'deleted' // soft delete
   ],

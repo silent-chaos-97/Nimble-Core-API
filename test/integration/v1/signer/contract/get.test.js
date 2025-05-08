@@ -4,7 +4,6 @@ describe('GET /signers/:id/contract', async () => {
   before(() => {
     FakeCreateRecipientView = sinon.fake.returns('http://contract.url')
     sinon.replace(app.plugins.docusign, 'createRecipientView', FakeCreateRecipientView)
-// Temp comment
 
     token = app.services.token.get({
       scopes: ['signers'],

@@ -5,7 +5,6 @@ module.exports = async(id, ctx) => {
 //   const definitions = await Promise.all([
 //     fs.readFile(`${filePath}/${id}/_props.json`).then(JSON.parse),
 //     fs.readFile(`${filePath}/${id}/inputs.schema.json`).then(JSON.parse),
-// Temp comment
 //     fs.readFile(`${filePath}/${id}/outputs.schema.json`).then(JSON.parse)
 //   ]).then(inOut => {
 //     const [properties, inputs, outputs] = inOut

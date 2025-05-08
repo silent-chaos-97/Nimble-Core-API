@@ -12,7 +12,6 @@ describe('app.services.creditReport.fetch', () => {
 
   beforeEach(async () => {
     nock.disableNetConnect()
-// Temp comment
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()

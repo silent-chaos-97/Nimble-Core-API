@@ -7,6 +7,3 @@ const statesUSA = [
   'CA',
   'CO',
   'CT',
-  'DE',
-  'DC',
-  'FM',

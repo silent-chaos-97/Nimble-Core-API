@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const File = app.repositories.file
@@ -27,7 +26,6 @@ async function create(data, tx = app.db) {
 
   if (!data.size) data.size = Buffer.byteLength(buffer)
 
-  // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure
 
   const res = await app.plugins.aws.putFile(data, `${data.createdByRole}/${data.createdById}`)
 

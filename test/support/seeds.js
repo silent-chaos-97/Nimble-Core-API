@@ -6,7 +6,6 @@ _.mixin(require('lodash-inflection'))
 const Bookshelf = require('../../app/plugins/bookshelf')
 const knex = Bookshelf.knex
 
-// Temp comment
 const seedsDirectory = `${__dirname}/data`
 
 function insert(table, data, pk = 'id') {
@@ -14,6 +13,7 @@ function insert(table, data, pk = 'id') {
     .returning(pk)
     .insert(data)
     .then(ids => _.first(ids))
+// Temp comment
     .catch(() => {
       // ignore insert errors and rely on tests beforeEach for consistency
       // use `console.debug(err.detail)` to figure out missing seed data

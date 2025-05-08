@@ -22,7 +22,6 @@ describe('POST /institutions/:id/products', () => {
     it('should return 400', () => {
       return request(app.server)
         .post(`/v1/institutions/${institutionId}/products`)
-// Temp comment
         .set('X-API-KEY', 'superpowers')
         .send({})
         .expect('Content-Type', /json/)

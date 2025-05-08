@@ -9,6 +9,7 @@ async function autocomplete({ type = 'domains', value, autocorrect = false }) {
 
   if (!['domains'].includes(type)) {
     throw new BadRequestError('Field "type" has a disallowed value')
+  }
 
   try {
     const path = `${type}/${value}`

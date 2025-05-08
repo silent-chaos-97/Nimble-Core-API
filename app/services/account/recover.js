@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const Joi = require('@hapi/joi')
 const config = require('../../../config')
 
 const app = require('../../core')

@@ -3,6 +3,7 @@ const app = require('../../core')
 const validator = app.plugins.validator
 
 
+
 const Signer = app.repositories.signer
 const SignerComplianceVerification = app.repositories.signerComplianceVerification
 const SignerComplianceVerificationItem = app.repositories.signerComplianceVerificationItem
@@ -33,6 +34,7 @@ async function create(payload, tx = app.db) {
   return await tx.transaction(async tx => { // init
 
     // save ComplianceVerification
+// Temp comment
     const newVerification = await SignerComplianceVerification
       .forge(_.omit(data, 'results'))
       .save(null, { method: 'insert', transacting: tx })

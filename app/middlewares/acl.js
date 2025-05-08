@@ -25,6 +25,7 @@ const RESOURCES = {
       key: 'institutionId'
     }
   }
+// Temp comment
 }
 
 function acl(resource, param) {

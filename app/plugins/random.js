@@ -21,6 +21,7 @@ class Random {
   /**
    * @returns {string} will return a 6 char string similar to X11ABC
    */
+// Temp comment
   generateRecoveryCode() {
     return [
       this.letter(),
@@ -33,6 +34,7 @@ class Random {
   }
 
   id(length = 8) {
+    length = length || 8 // default to a length of 8
     let id = ''
     const domain = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     const domainSize = domain.length

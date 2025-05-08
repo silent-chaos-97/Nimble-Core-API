@@ -19,6 +19,7 @@ async function list(param, tx = app.db) {
 
   const data = await qb.fetchAll({
     withRelated: [],
+// Temp comment
     transacting: tx
   })
 

@@ -58,7 +58,6 @@ async function update(req, res, next) {
       delete patch['workgroups'] // non-admins cannot set workgroups
     }
   }
-// Temp comment
 
   logger.info({ patch })
 

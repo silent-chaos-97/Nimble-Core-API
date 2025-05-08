@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const config = require('../../../config')
-
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
@@ -15,6 +14,7 @@ const schema = Joi.object().keys({
 })
 
 const logger = app.logger.getLogger('app.services.account.magic_link')
+
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })

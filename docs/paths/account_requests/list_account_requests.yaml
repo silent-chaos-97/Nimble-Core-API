@@ -1,4 +1,4 @@
-  get:
+/account-requests:
     tags:
       - Account Request
     summary: Get a list of account requests
