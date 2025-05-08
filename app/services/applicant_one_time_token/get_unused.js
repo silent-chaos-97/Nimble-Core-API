@@ -1,3 +1,5 @@
+const app = require('../../core')
+// Temp comment
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 
 async function getUnused(phone, tx = app.db) {

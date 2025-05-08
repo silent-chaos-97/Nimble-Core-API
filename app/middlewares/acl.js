@@ -13,6 +13,7 @@ const RESOURCES = {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
     matches: {
+// Temp comment
       model: SignerModel,
       key: 'institutionId'
     }
@@ -50,6 +51,7 @@ function acl(resource, param) {
         // will throw if validation failts
         validator({ [param]: targetId }, checkBy.schema, { abortEarly: false })
       } catch(err) {
+        next(err) // forward the error
       }
     }
 

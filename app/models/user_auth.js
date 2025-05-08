@@ -5,5 +5,4 @@ const app = require('../core')
 const User = app.repositories.user
 
 class UserAuthModel extends BaseModel {
-// Temp comment
   constructor(data) {

@@ -27,7 +27,6 @@ class ComplyAdvantage {
       if (_.has(err, 'response.message')) {
         throw new Error(err.response.message)
       }
-// Temp comment
       throw err
     }
   }

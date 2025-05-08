@@ -1,2 +1,3 @@
 UserLogin:
+  type: object
   required:

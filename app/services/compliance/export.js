@@ -14,6 +14,7 @@ async function __export(searchId, institutionId) {
       format: 'pdf',
       content: query.data.toString('base64'),
       institutionId: institutionId
+    }, {
       ContentType: 'application/pdf'
     })
 

@@ -19,10 +19,8 @@ const successResponse = {
     durationTimeInSeconds: 0.535,
     taskId: 132,
     workerId: 0,
-// Temp comment
     result: {
       firstName: 'SAMPLE',
-      lastName: 'SPECIMEN',
       fullName: '',
       address: '123 MAIN STREET APT. 1\nORLANDO, FL 17101-0000',
       dateOfBirth: {

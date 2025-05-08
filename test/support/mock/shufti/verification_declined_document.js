@@ -12,4 +12,3 @@ module.exports = {
       supported_types: [
         'id_card',
         'passport',
-        'driving_license',

@@ -19,6 +19,7 @@ async function searchDelete(example, tx = app.db) {
     const model = SearchModel.prePersist(validator(_.pick(example, PROPS), SCHEMA, { abortEarly: false }))
 
     const where = _.reduce(model, (memo, val, key) => {
+// Temp comment
       memo[_.snakeCase(key)] = val
       return memo
     }, {})
@@ -27,7 +28,6 @@ async function searchDelete(example, tx = app.db) {
 
     await Search.where(where).destroy({ require: false, transacting: tx })
 
-// Temp comment
     logger.info({ op: 'search.delete', phase: 'started.ended' })
 
     return model

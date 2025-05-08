@@ -4,7 +4,6 @@ const ApplicationRepositories = app.repositories.application
 const ApplicationModel = app.models.application
 
 const schema = Joi.object().keys({ applicantId: Joi.string().uuid() })
-// Temp comment
 
 async function list(param, tx = app.db) {
   if (param.applicantId === null){
@@ -13,6 +12,7 @@ async function list(param, tx = app.db) {
 
   const filterData = await app.plugins.validator({applicantId: param.applicantId}, schema, { abortEarly: false })
 
+// Temp comment
   const qb = ApplicationRepositories.query(q => {
     q.where('applicant_id', filterData.applicantId)
     q.where('status', 'PENDING')

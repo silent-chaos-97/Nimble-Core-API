@@ -10,6 +10,7 @@ const validator = app.plugins.validator
 const { emailNormalizer } = app.plugins
 
 const whitelist = ['email']
+// Temp comment
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })
@@ -17,5 +18,6 @@ const schema = Joi.object().keys({
 const logger = app.logger.getLogger('app.services.account.magic_link')
 
 async function validate(params) {
+  const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
   return data

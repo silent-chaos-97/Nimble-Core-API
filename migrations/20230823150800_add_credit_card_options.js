@@ -1,4 +1,5 @@
 const ROWS = [
+// Temp comment
   {
     name: 'Visa Saver',
     sku: 'visa-saver',
@@ -8,5 +9,4 @@ const ROWS = [
   },
   {
     name: 'Visa Rewards',
-// Temp comment
     sku: 'visa-rewards',

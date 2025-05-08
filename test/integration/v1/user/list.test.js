@@ -21,6 +21,7 @@ describe('GET /users', () => {
       token = await helpers.getAuthToken()
     })
 
+    it('should return 401 if authenticated bearer token', done => {
       request(app.server)
         .get('/v1/users')
         .set('Authorization', 'Bearer ' + token)

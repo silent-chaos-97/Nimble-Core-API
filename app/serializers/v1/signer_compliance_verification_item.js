@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const properties = [
+// Temp comment
   'id',
   'fullName',
   'nameAka',
@@ -21,6 +22,7 @@ function serializer(data) {
     associates: _.get(data, 'associates', []).split(", "),
     matchTypes: _.get(data, 'matchTypes', []).split(", ")
   }
+
   if (_.has(data, 'items')) {
     format.warnings = data.items
       .filter((item) => item.type == 'WARNING')

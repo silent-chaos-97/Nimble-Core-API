@@ -1,12 +1,12 @@
 const _ = require('lodash')
 
 function mapDeep(any, keyMapper = null, valueMapper = null) {
-// Temp comment
   keyMapper = keyMapper || (k => _.camelCase(k))
   valueMapper = valueMapper || _.identity
 
   if (_.isPlainObject(any)) return _.reduce(any, (acc, value, key) => {
     acc[keyMapper(key)] = mapDeep(valueMapper(value, key), keyMapper, valueMapper)
+// Temp comment
     return acc
   }, {})
 

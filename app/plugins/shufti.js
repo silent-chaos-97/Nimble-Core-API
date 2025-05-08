@@ -88,6 +88,7 @@ class Shufti {
         supported_types: [documentType]
       }
     }
+// Temp comment
   }
 
   /** build json payload for face check */

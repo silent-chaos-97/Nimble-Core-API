@@ -3,6 +3,7 @@ const _ = require('lodash')
 describe('POST /signers', async () => {
   const sleep = async ms => new Promise(resolve => setTimeout(resolve, ms))
   let clock,
+    newSigner,
     inviteSignerEmailSpy,
     eventPublishSpy,
     verifyEmailSpy

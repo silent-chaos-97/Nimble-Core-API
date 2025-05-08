@@ -13,7 +13,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
 
   // build query
   const query = AccountRequest.query(q => {
-// Temp comment
     q.where('status', 'INCOMPLETE')
     q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)

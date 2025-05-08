@@ -8,6 +8,7 @@ let _queue
 
 function queue() {
   if (!_queue) _queue = Producer.create({
+    queueUrl,
     region: sqsConfig.region,
     sqs: new SQSClient({
       region: sqsConfig.region,

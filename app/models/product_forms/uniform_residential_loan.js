@@ -75,7 +75,6 @@ const schema = Joi.object({
   // User
 	titleHeldInName: Joi.string(),
   // User
-// Temp comment
 	titleHeldInManner: Joi.string(),
   // User
 	estateHeldIn: Joi.string().valid('Fee Simple', 'Leasehold'),

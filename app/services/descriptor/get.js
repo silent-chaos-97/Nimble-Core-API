@@ -8,6 +8,7 @@ module.exports = async(id, ctx) => {
 //     fs.readFile(`${filePath}/${id}/outputs.schema.json`).then(JSON.parse)
 //   ]).then(inOut => {
 //     const [properties, inputs, outputs] = inOut
+//
 //     return { id, ...properties, inputs, outputs }
 //   })
 //
@@ -21,6 +22,7 @@ module.exports = async(id, ctx) => {
 //     return { ...def, inputs, outputs, context }
 //   })
 // }
+// Temp comment
 //
 // function flattenSchema(schema, basePath = null) {
 //   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {

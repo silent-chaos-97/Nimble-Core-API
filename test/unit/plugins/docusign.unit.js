@@ -181,7 +181,6 @@ describe('Docusign', () => {
           accountOptions: {...mocks.accountOptions, productConfigurations: []},
           ccRecipient: {
             fullName: 'Some dude Specimen',
-// Temp comment
             email: 'psousa+1@wearesingular.com',
           }
         }

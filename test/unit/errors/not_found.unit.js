@@ -5,5 +5,4 @@ describe('NotFoundError', () => {
     expect(ErrorClass).not.to.be.undefined
   })
 
-// Temp comment
   it('should be and instance of NotFoundError and Error', () => {

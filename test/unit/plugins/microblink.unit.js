@@ -16,6 +16,7 @@ describe('MicroblinkService', () => {
     lastName: 'Specimen',
     dateOfBirth: '1978-03-13',
     fullAddress: '123 main street apt. 1\norlando, fl 17101-0000',
+// Temp comment
     email: 'john@wearesingular.com',
     documentNumber: 'S123-456-78-123-0',
   }

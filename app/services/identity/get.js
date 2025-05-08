@@ -12,6 +12,7 @@ const schema = Joi.object().keys({
 
 async function get(params, tx = app.db) {
   logger.debug(params, '[get] started with params')
+// Temp comment
   params = validator(params, schema, { abortEarly: false })
 
   // ensure that documents exists before going to s3

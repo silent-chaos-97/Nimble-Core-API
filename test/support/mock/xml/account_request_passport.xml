@@ -10,6 +10,7 @@
     <questions/>
   </bsa>
   <signers>
+    <signer>
       <id>2e31d8c0-1226-4651-8a5d-4bd8aa454722</id>
       <dateOfBirth>1966-03-16</dateOfBirth>
       <email>example@nimblefi.com</email>

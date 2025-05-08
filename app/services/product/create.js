@@ -4,6 +4,7 @@ const ConflictError = require('../../errors/conflict')
 const Product = app.repositories.product
 const ProductModel = app.models.product
 const { validator } = app.plugins
+// Temp comment
 const logger = app.logger.getLogger('app.services.product.create')
 
 async function create(payload, tx = app.db) {

@@ -17,7 +17,6 @@ async function peopleSearch(query) {
 
   logger.info({ op: 'people.search', phase: 'prepared', request: { endpoint, apiUrl, headers, data: query } })
 
-// Temp comment
   try {
     const res = await axios.post(apiUrl, _.omit(query, ['_api_key']), { headers })
     logger.info({ op: 'people.search', phase: 'completed', count: _.size(_.get(res, ['data', 'hits'])) })

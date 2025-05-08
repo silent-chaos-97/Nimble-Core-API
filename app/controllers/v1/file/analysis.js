@@ -14,7 +14,6 @@ async function analysis(req, res) {
 
   const query = _.merge({id}, User.isBranchAdmin(me) ? {} : {createdById: me.id})
 
-  const tx = app.db
 
   const file = await files.get(query, tx)
 
@@ -31,6 +30,7 @@ async function analysis(req, res) {
 
     if (!access) throw new UnauthorizedError(`file[${id}]`)
   }
+
   const analysis = await files.analysis(file, _.get(req, 'query.processor') || 'table/financial-statement', {group: me.institutionId}, tx)
 
   res.status(200)

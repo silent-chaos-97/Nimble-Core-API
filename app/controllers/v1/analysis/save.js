@@ -7,6 +7,7 @@ const NotFoundError = require('../../../errors/not_found')
 
 async function save(req, res) {
   const user = req.user
+  const body = req.body
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
@@ -14,7 +15,6 @@ async function save(req, res) {
   // blocking analysis creations have a longer timeout as they wait for file-analysis completion
   if (service.utils.isBlocking(req)) req.setTimeout(service.utils.timeoutMillis())
 
-  let existing
   const id = req.params.id
   if (id) {
     existing = await service.get(id)

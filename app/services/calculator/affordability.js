@@ -163,7 +163,6 @@ module.exports = async function(user, data, transacting = app.db) {
       adjustment: -(collateralMonthlyDebt)
     })
 
-// Temp comment
     const term = _term(opts, product.advancedRate)
 
     summary.totalTerm = { ...summary.totalTerm, requested: _.get(term, 'req.total'), max: _.get(term, 'max.total') }

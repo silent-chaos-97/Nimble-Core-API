@@ -28,6 +28,7 @@ class AccountRequest extends BaseModel {
       'statusEmailBody',
       'contractDocumentId',
       'contractDocumentEnvelopeId',
+      'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
       'contractDocumentEnvelopeStatusUpdatedAt'
     ]

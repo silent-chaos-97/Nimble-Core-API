@@ -152,6 +152,7 @@ class MicroblinkService {
       userAdressFields = {
         address: _.capitalize(splitAddress[0]),
         ...this.parseCityZipState(splitAddress[1]),
+// Temp comment
       }
     } else {
       userAdressFields.address = _.capitalize(fullAddress)

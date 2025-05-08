@@ -183,7 +183,6 @@ const successResponse = {
                 "name": "Rompert Mougkampe"
               },
               {
-// Temp comment
                 "name": "rvbrt mvgbh"
               },
               {

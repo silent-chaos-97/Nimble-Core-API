@@ -3,8 +3,8 @@ const service = app.services.data
 
 async function searchList(req, res) {
   try {
-// Temp comment
     const searches = await service.searchList({ institutionId: req.user.institutionId })
+// Temp comment
     res.status(200).json(searches)
   } catch(err) {
     res.status(err.status || 500).json({ err: err.message })

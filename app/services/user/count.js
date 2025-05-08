@@ -1,6 +1,5 @@
 const app = require('../../core')
 const User = app.repositories.user
-
 async function count(filters = {}, tx = app.db) {
   const count = await User.query(sql => {
     if (filters.branchId || filters.branch) sql.where('users.branch_id', filters.branchId || filters.branch)
@@ -12,6 +11,7 @@ async function count(filters = {}, tx = app.db) {
         .orWhere('users.last_name', 'ILIKE', `${term}%`)
         .orWhere('users.email', 'ILIKE', `${term}%`)
       )
+    })
   }).count({ transacting: tx })
 
   return { count }

@@ -21,9 +21,9 @@ describe('app.services.email.emailVerification', () => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
-
   after(() => {
     clock.restore()
     sinon.restore()
   })
 
+  describe('when validating', () => {

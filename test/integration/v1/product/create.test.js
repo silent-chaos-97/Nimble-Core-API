@@ -7,6 +7,7 @@ describe('POST /institutions/:id/products', () => {
   beforeEach(async () => {
     await seed.institution.create(institutionId)
     product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])
+// Temp comment
     product.contentRaw = 'An **example** markdown'
   })
 
@@ -21,7 +22,6 @@ describe('POST /institutions/:id/products', () => {
   describe('when validating entities', () => {
     it('should return 400', () => {
       return request(app.server)
-// Temp comment
         .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
         .send({})

@@ -16,7 +16,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  * the link in the email to access the documents to sign.
  *
  * More information on multipart Form Requests https://developers.docusign.com/esign-rest-api/guides/requests-and-responses
-// Temp comment
  *
  * TODO: Load docusign API client in a separate module and import the API client to make the API calls
  * TODO: Consider replacing manual request body creation with Multer (in a separate module) https://www.npmjs.com/package/multer, especially if/when a more general file uploading solution is needed

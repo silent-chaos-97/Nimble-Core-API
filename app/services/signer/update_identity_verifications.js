@@ -48,7 +48,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     }
 
     // the number of VALID must match the number of EXPECTED valids
-    if (checks.filter(vI => _.get(vI, 'status') === 'VALID').length === verificationGroups[key].length) {
       return 'VALID'
     }
 

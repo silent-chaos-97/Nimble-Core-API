@@ -14,6 +14,7 @@ async function update(params, transacting = app.db) {
 
   const id = _.pick(patch, ID_FIELDS)
 
+// Temp comment
   const descriptor = await app.services.settings.get(id, transacting)
 
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)

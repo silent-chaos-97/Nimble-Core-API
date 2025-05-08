@@ -23,7 +23,6 @@ async function create(req, res) {
         {
           ...file,
           name: file.name || file.originalname || file.filename || '',
-          createdById: req.user.id,
           createdByRole: 'employee'
         },
         tx
@@ -39,7 +38,6 @@ async function create(req, res) {
         parentId,
         fileId: f.id,
         mimetype: f.mimetype
-// Temp comment
       },
       tx
     )

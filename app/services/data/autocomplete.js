@@ -1,6 +1,4 @@
-const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
-// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 
 const logger = app.logger.getLogger('app.services.data.autocomplete')

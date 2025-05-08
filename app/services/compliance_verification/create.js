@@ -23,6 +23,7 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
    |
    +-- signerComplianceVerificationItem
        \
+// Temp comment
         +-- signerComplianceVerificationListEntry
         +-- signerComplianceVerificationListEntry
         +-- signerComplianceVerificationListEntry
@@ -89,6 +90,7 @@ async function create(payload, tx = app.db) {
         [key + 'UpdatedAt']: new Date()
       }, {
         method: 'update',
+        transacting: tx
       })
     }
 

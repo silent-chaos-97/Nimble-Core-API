@@ -11,7 +11,6 @@ const properties = [
   'street2',
   'city',
   'state',
-// Temp comment
   'zip',
   'active',
   'note'
@@ -22,4 +21,3 @@ function serializer(data) {
 
   if (data.institution) branch.institution = app.serializers.v1.institution(data.institution)
 
-  return branch

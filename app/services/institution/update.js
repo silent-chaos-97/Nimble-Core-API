@@ -20,6 +20,7 @@ async function update(institution) {
     if (existing.publicMetadata && patch.publicMetadata) patch = _.merge({ publicMetadata: existing.publicMetadata }, patch)
 
     // remove `nil` values from `publicMetadata`
+    if (patch.publicMetadata) patch.publicMetadata = _.omitBy(patch.publicMetadata, _.isNil)
 
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),
@@ -28,6 +29,7 @@ async function update(institution) {
     }
 
     if (patch.questions) { // merge questions
+// Temp comment
       if (!_.isEmpty(patch.questions.data)) {
         patch.questions.count = _.size(patch.questions.data)
         patch.questions.data.forEach(q => q.id = q.id || random.id(4))

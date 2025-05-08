@@ -19,5 +19,4 @@ async function get(req, res) {
 
   return service
     .get(example)
-    .then(app.serializers.v1.analysis)
     .then(data => res.status(200).json(data))
