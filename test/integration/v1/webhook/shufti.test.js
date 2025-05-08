@@ -11,7 +11,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       toFake: ['Date']
     })
   })
-
   after(() => {
     sinon.restore()
     clock.restore()

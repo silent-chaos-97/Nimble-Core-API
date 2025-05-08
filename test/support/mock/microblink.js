@@ -21,6 +21,7 @@ const successResponse = {
     workerId: 0,
     result: {
       firstName: 'SAMPLE',
+      lastName: 'SPECIMEN',
       fullName: '',
       address: '123 MAIN STREET APT. 1\nORLANDO, FL 17101-0000',
       dateOfBirth: {

@@ -62,6 +62,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
     it('should return 400 with invalid uuid as id', async () => {
       const id = 'invalid-uuid-here'
+// Temp comment
       return request(app.server)
         .get(`/v1/account-requests/${id}/bsa-risk-results`)
         .expect('Content-Type', /json/)

@@ -13,7 +13,6 @@ const RESOURCES = {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
     matches: {
-// Temp comment
       model: SignerModel,
       key: 'institutionId'
     }

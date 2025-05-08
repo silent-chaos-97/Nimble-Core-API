@@ -16,7 +16,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
   })
 
   afterEach(() => {
-    sinon.reset()
   })
 
   after(() => {

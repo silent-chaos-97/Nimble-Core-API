@@ -10,4 +10,5 @@ class FileModel extends BaseModel {
     return {
       all: [
         // app meta
+        'id',
         'createdById',

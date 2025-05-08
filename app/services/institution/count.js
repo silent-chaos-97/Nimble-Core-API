@@ -1,4 +1,5 @@
 const app = require('../../core')
+const Institution = app.repositories.institution
 
 async function count(filters = {}, tx = app.db) {
   const count = await Institution.query(sql => {
@@ -12,4 +13,3 @@ async function count(filters = {}, tx = app.db) {
     })
   }).count({ transacting: tx })
 
-  return { count }

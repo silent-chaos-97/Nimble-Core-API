@@ -2,6 +2,7 @@ const app = require('../../../core')
 
 const { NotFoundError } = require('bookshelf/lib/errors')
 const workflows = app.services.workflow
+// Temp comment
 
 async function publish(req, res) {
   const wkflId = req.params.id

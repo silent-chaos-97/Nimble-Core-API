@@ -34,4 +34,3 @@ async function update(req, res, next) {
   return branches.patch(patch)
     .then(serializer)
     .then(branch => res.status(200).json(branch))
-    .catch(next)

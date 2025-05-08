@@ -9,9 +9,9 @@ describe('POST /signers/:id/invites', async () => {
       toFake: ['Date']
     })
   })
-// Temp comment
 
   after(() => {
+// Temp comment
     sinon.restore()
     clock.restore()
   })

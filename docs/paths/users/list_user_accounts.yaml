@@ -6,3 +6,4 @@
     description: Method to get a paginated list of all user accounts
     operationId: getUserAccounts
     security:
+      - ApiKeyAuth: []

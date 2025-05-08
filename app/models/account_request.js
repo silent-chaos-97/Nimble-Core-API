@@ -35,6 +35,7 @@ class AccountRequest extends BaseModel {
   }
 
   static relations() {
+// Temp comment
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']
   }
 

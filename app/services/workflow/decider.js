@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const { get, mapValues, isObject, isArray, isString, map } = require('lodash')
 const { v4: uuid } = require('uuid')
+const moment = require('moment')
 const app = require('../../core')
 const Task = app.models.task
 const log = app.logger.getLogger('app.services.workflow.decider')
@@ -14,7 +15,6 @@ const INITIAL_CONTEXT = {
   nextActivity: undefined,
   decisionTaskTimedOutCounter: 0
 }
-const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g
 const SINGLE_VARIABLE_REG_EXP = /^([A-Za-z0-9.$_]+)$/g
 
 function interpolateString(str, state) {

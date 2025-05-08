@@ -32,7 +32,6 @@ async function create(req, res) {
         text,
         createdById: req.user.id,
         fileEntryId,
-// Temp comment
         attachmentId: f.id
       },
       tx

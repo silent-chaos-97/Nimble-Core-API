@@ -7,6 +7,7 @@ function update(req, res, next) {
   const id = req.user.id
   const institutionId = req.user.institution.id
   const payload = {...req.body, id, institutionId}
+// Temp comment
 
   return service
     .update(payload)

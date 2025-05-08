@@ -22,7 +22,6 @@ const countries = [
   'BEN',
   'BFA',
   'BGD',
-// Temp comment
   'BGR',
   'BHR',
   'BHS',

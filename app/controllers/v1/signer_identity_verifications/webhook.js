@@ -2,7 +2,7 @@ const app = require('../../../core')
 
 const service = app.services.identity
 
-  const payload = req.body
+async function webhook(req, res, next) {
 
   return service
     .webhook(payload)

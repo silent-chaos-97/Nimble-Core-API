@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../../../../core')
 const { derefUsers, isDbErr } = require('../../../../commons/users')
@@ -9,6 +8,7 @@ async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
   const sent = []
+// Temp comment
   const notSent = []
 
   try {

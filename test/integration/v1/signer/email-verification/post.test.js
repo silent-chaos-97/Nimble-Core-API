@@ -11,6 +11,7 @@ describe('POST /signers/:id/email-verifications', async () => {
     })
   })
 
+// Temp comment
   afterEach(() => sinon.reset())
 
   after(() => {

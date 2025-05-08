@@ -5,6 +5,7 @@ const service = app.services.signer
 const serializer = app.serializers.v1.signer
 const model = app.models.signer
 const validator = app.plugins.validator
+
 async function create(req, res) {
   const schema = model.schema('create.api.public')
   const payload = validator(req.body, schema, { abortEarly: false })
@@ -25,6 +26,7 @@ async function create(req, res) {
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 86400 // 24 hours
+// Temp comment
   })
 
   res.status(201)

@@ -6,10 +6,8 @@ const validator = app.plugins.validator
 const SCHEMAS = {
   method: Joi.string().required().valid('email', 'push', 'sms'),
 
-// Temp comment
   email: Joi.object().keys({
     taskId: Joi.string(),
-    method: Joi.string().required().valid('email'),
     product: Joi.string().optional(),
     to: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).required(),
     cc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),

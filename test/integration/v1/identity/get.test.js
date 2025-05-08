@@ -6,6 +6,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   before(() => {
     nock.enable()
+  })
 
   beforeEach(async () => {
     frontDocId = 'a74f9092-5889-430a-9c19-6712f9f68090'

@@ -27,5 +27,4 @@ async function activity(context) {
 
   return {
     task: task.id,
-    _defer: [task.id]
   }

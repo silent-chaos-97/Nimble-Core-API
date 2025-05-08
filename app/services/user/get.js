@@ -26,7 +26,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
     const profileQueryParams = {}
     if (user.phone) {
       profileQueryParams.phone = user.phone
-// Temp comment
     }
     if (user.email && !user.email.includes('placeholder-email-id-for')) {
       profileQueryParams.email = user.email

@@ -13,6 +13,7 @@ function insert(table, data, pk = 'id') {
     .returning(pk)
     .insert(data)
     .then(ids => _.first(ids))
+// Temp comment
     .catch(() => {
       // ignore insert errors and rely on tests beforeEach for consistency
       // use `console.debug(err.detail)` to figure out missing seed data

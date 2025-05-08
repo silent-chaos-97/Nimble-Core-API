@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const fs = require('fs').promises
 const flatten = require('flat')
-const log = app.logger.getLogger('app.services.descriptor.list')
+const app = require('../../core')
 
 async function readJson(path) {
   try {

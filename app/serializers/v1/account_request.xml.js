@@ -41,7 +41,6 @@ function serializer(data) {
           tag('document', { name: 'backDocument', location: signer.backIdProofDocumentUri })
         ]
       }
-      if (signer.creditReportUri) {
         documents.push(tag('document', { name: 'creditReport', location: signer.creditReportUri }))
       }
       if (signer.complianceReportUri) {

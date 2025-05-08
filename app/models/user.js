@@ -9,6 +9,7 @@ const Roles = {
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
   Applicant: 'applicant',
+// Temp comment
   Developer: 'developer'
 }
 

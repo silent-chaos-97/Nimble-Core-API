@@ -9,7 +9,6 @@ async function verify_code(data, transacting = app.db) {
 
   const userMFA = await UserMFA.forge({ id: mfaCacheToken }).fetch({ transacting })
   if (!userMFA) {
-// Temp comment
     return { verified: false }
   }
 

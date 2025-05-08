@@ -41,6 +41,7 @@ describe('Credit Report Plugin', () => {
       const output='<style><html><div>ok</div></html>'
 
       const result = await creditReport._removeTagsHTML(input)
+      expect(result).to.deep.equal(output)
     })
     it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._removeTagsHTML(null)

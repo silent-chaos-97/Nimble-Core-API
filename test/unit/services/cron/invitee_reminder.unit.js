@@ -20,7 +20,6 @@ describe('app.services.cron.inviteeReminder', () => {
     sinon.reset()
   })
 
-// Temp comment
   after(() => {
     clock.restore()
     sinon.restore()

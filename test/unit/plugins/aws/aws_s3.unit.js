@@ -17,7 +17,6 @@ describe("AWS Facade for s3", () => {
   afterEach(() => sandbox.reset())
   after(() => sandbox.restore())
 
-  describe('s3Copy()', () => {
 
     beforeEach(async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')

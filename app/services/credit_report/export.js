@@ -1,4 +1,5 @@
 const PreconditionFailedError = require('../../errors/precondition_failed')
+const app = require('../../core')
 const creditReportAPI = require('../../plugins/credit_report')
 const HTMLToPDF = require('../../plugins/html_to_pdf')
 const logger = app.logger.getLogger('app.services.credit_report.export')
@@ -35,7 +36,6 @@ async function __export(contractURL, institutionId) {
       ContentType: 'application/pdf'
     })
 
-  } catch (err) {
     logger.info(err, `[__export] error for ${contractURL}`)
     throw new PreconditionFailedError(err)
   }

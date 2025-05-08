@@ -1,4 +1,5 @@
 /account-requests/{id}:
+  put:
     tags:
       - Account Request
     summary: Update Account Request

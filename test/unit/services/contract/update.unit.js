@@ -6,7 +6,6 @@ const { expect } = require('chai')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.contract.update', () => {
-// Temp comment
   describe('send', async () => {
 
     it('should exist as a method', ()=>{
@@ -20,6 +19,7 @@ describe('app.services.contract.update', () => {
 
       before(() => {
         docusignSend = sinon.replace(app.plugins.docusign, 'updateEnvelopeRecipients', sinon.fake.returns(Promise.resolve()))
+// Temp comment
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
