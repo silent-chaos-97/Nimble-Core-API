@@ -243,3 +243,15 @@ describe('Docusign', () => {
 
       it('should return a valid template', async () => {
         let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+        await docusign._setDocusignAuthorizationAndSetHeader()
+        scope.done()
+
+        scope = nock(config.get('docusign').basePath)
+          .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
+          .reply(200, mocks.mockDocumentTabs)
+
+        const ccRecipient = {
+          fullName: 'Some dude Specimen',
+          email: 'psousa+1@wearesingular.com',
+        }
+

@@ -9,6 +9,7 @@ const random = app.plugins.random
 
 const whitelist = InstitutionModel.props()
 
+async function update(institution) {
   let patch = _.pick(institution, whitelist)
   validator(patch, InstitutionModel.patchSchema(), { abortEarly: false })
 

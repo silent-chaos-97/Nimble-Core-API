@@ -8,6 +8,7 @@ const NotFoundError = require('../../../errors/not_found')
 
 async function analysis(req, res) {
   const me = req.user
+  const id = req.params.id
 
   if (!id) throw new BadRequestError('file `id` required')
 

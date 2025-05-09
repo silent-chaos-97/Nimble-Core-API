@@ -15,3 +15,4 @@
     security:
       - bearer: []
     requestBody:
+      description: Signer information

@@ -6,7 +6,6 @@ const validator = app.plugins.validator
 const SignerIdentityVerification = app.repositories.signerIdentityVerification
 const SignerIdentityVerificationModel = app.models.signerIdentityVerification
 const logger = app.logger.getLogger('app.services.identity_verification.list')
-// Temp comment
 
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
@@ -15,5 +14,4 @@ const entrySchema = Joi.object().keys({
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
-  validator(data, entrySchema, { abortEarly: false })
   return data

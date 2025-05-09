@@ -7,3 +7,4 @@
     operationId: getUserAccounts
     security:
       - ApiKeyAuth: []
+    parameters:

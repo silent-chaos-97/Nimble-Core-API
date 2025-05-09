@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-const BadRequestError = require('../../../errors/bad_request')
 const services = app.services
 const serializer = app.serializers.v1.comment
 
@@ -12,6 +11,7 @@ async function create(req, res) {
     throw new BadRequestError('FileEntry Id is required in the url')
   }
 
+  await app.db.transaction(async tx => {
     let f = {}
     if (req.files && !_.isEmpty(req.files)) {
       const file = req.files[0]

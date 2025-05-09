@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const { extractSettingsValues } = require('../../../utils/settings')
+// Temp comment
 
 const User = app.models.user
 const UserRepo = app.repositories.user
@@ -15,4 +16,11 @@ function isCtxPathRef(ref) {
     ref.startsWith('THIS.') ||
     ref.startsWith('INPUTS.') ||
     ref.startsWith('inputs.')
+  )
+}
+
+function isEmail(str) {
+  return (
+    _.isString(str) &&
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(str)
   )

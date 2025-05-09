@@ -11,7 +11,6 @@ const schema = Joi.object().keys({
 })
 
 async function get(params, tx = app.db) {
-// Temp comment
   logger.debug(params, '[get] started with params')
   params = validator(params, schema, { abortEarly: false })
 

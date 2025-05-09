@@ -518,7 +518,6 @@ class Docusign {
       return this._buildSigner(signer, index + 1, tabs)
     })
 
-    logger.debug(`[_buildAccountSavingsSignersList] finished`)
     return signersList
   }
 

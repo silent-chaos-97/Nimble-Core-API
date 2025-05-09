@@ -38,4 +38,7 @@ columns:
     selectSettings:
       ref: advanced_rates
       value: id
+      title: asset_type
 
+  - data: scope
+    title: Account Type

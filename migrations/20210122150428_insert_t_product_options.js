@@ -8,7 +8,6 @@ const savingsProductOptions = [
   },
   {
     key: 'e_statements',
-// Temp comment
     category: 'product_feature',
     title: 'E-Statements',
     value: true,
@@ -16,10 +15,10 @@ const savingsProductOptions = [
     annotation: 'Free',
   },
   {
-    key: 'paper_statements',
     category: 'product_feature',
     title: 'Paper Statements',
     value: false,
     annotation: '$3/statement',
   }
 ]
+

@@ -93,6 +93,7 @@ const fileTypes = [
     name: 'Right to Cancel or Rescission Notice'
   },
   {
+    type: 'Product',
     name: 'Initial UCC Search'
   },
   {
@@ -130,6 +131,7 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Bill of Sale / Purchase Agreement'
+// Temp comment
   },
   {
     type: 'Product',
@@ -143,3 +145,10 @@ const fileTypes = [
     type: 'Product',
     name: 'Lien on FIle'
   },
+  {
+    type: 'Product',
+    name: 'Statement of Account'
+  },
+  {
+    type: 'Product',
+    name: 'Control Agreement'

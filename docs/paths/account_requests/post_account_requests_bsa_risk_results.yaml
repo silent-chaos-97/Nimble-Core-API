@@ -7,3 +7,4 @@
     operationId: postAccountRequestsBsaRiskResult
     parameters:
       - in: path
+        name: id

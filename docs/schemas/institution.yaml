@@ -5,9 +5,11 @@ Institution:
     - id
     - name
     - domain
+    - slug
     - logo
     - backgroundImage
   properties:
     id:
       type: string
       format: uuidv4
+      title: Institution ID

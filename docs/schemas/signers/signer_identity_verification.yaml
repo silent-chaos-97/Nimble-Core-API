@@ -2,3 +2,4 @@ SignerIdentityVerification:
   type: object
   required:
     - verification
+    - category

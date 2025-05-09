@@ -5,11 +5,11 @@ const properties = [
   'id',
   'name',
   'isDir',
+  'size',
   'mimetype',
   'parentId',
   'createdById',
   'fileId',
-  'createdAt',
   'updatedAt'
 ]
 

@@ -6,6 +6,5 @@ const properties = [
   'externalId'
 ]
 
-// Temp comment
 function serializer(data) {
   return defaultSerializer(properties, data)

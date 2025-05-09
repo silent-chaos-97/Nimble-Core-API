@@ -1,4 +1,4 @@
 //const _ = require('lodash')
-const BaseModel = require('./model')
+const Joi = require('@hapi/joi')
 
 class AccountModel extends BaseModel {

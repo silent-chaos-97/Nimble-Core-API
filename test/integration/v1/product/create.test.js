@@ -6,6 +6,7 @@ describe('POST /institutions/:id/products', () => {
 
   beforeEach(async () => {
     await seed.institution.create(institutionId)
+// Temp comment
     product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])
     product.contentRaw = 'An **example** markdown'
   })
@@ -34,3 +35,4 @@ describe('POST /institutions/:id/products', () => {
         .set('X-API-KEY', 'superpowers')
         .send({})
         .expect(400)
+        .expect((res) => {

@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-// Temp comment
 const _ = require('lodash')
 
 const app = require('../core')
@@ -10,3 +9,4 @@ class ProductModel extends BaseModel {
     super(ProductModel.props(), ProductModel.relations(), data)
   }
 
+  static props() {

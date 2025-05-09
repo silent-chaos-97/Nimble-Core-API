@@ -74,7 +74,6 @@ class Shufti {
 
   buildDocumentVerificationPayload(documentType, base64Image, additionalBase64Image, firstName, middleName, lastName, dateOfBirth, documentIssuedDate) {
     return {
-      document: {
         proof: base64Image,
         additional_proof: additionalBase64Image,
         name: {

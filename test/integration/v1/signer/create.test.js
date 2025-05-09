@@ -45,6 +45,7 @@ describe('POST /signers', async () => {
       zipCode: 'NY11216',
       ssn: '111-22-3333',
       consent: true,
+      consentAccountOpening: true,
       consentPrivacyPolicy: true,
       consentCommunication: false,
       idProofDocument: {
@@ -54,7 +55,6 @@ describe('POST /signers', async () => {
         number: '1231231230',
         issuedDate: '2000-11-22',
         issuer: 'WY',
-        expirationDate: '2030-11-22'
       },
       selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
     }

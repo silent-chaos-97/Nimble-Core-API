@@ -18,6 +18,5 @@ const properties = [
 
 function serializer(data) {
   return {
-    ...defaultSerializer(properties, data),
     countryCodes: _.get(data, 'countryCodes', []).split(", "),
   }

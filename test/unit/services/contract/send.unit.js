@@ -19,6 +19,7 @@ describe('app.services.contract.send', () => {
         await seed.document.create('a74f9092-5889-430a-9c19-6712f9f68090')
         await seed.accountRequest.create("00000000-0000-AAAA-AAAA-000000000333")
       })
+
       it('should throw exception if there are no signers', async () => {
         try {
           await app.services.contract.send('00000000-0000-AAAA-AAAA-000000000333')
@@ -31,3 +32,4 @@ describe('app.services.contract.send', () => {
 
     describe('when passing information to docusign', () => {
       let docusignSend = null
+      let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"

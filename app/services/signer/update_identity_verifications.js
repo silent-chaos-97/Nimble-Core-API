@@ -71,4 +71,3 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     transacting: tx
   })
 
-  return data.signerId

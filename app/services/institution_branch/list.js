@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../../core')
 const Joi = require('@hapi/joi')
 
@@ -8,7 +9,6 @@ const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.institution_branch.list')
 
 function schema() {
-// Temp comment
   return Joi.object().keys({
     institutionId: Joi.string().uuid().required(),
     limit: Joi.number().positive(),

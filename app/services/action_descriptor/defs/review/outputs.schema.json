@@ -2,3 +2,4 @@
   "type": "object",
   "required": ["reviews", "tasks"],
   "properties": {
+    "tasks": {

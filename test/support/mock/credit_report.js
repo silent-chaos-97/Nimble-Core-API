@@ -19,3 +19,4 @@ const signer = {
   status: 'SIGNED'
 }
 
+const validApplicant = {

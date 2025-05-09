@@ -6,7 +6,6 @@ const app = require('../../core')
 const { mfaVerify } = app.plugins
 
 const Roles = {
-  SuperAdmin: 'super-admin',
   InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
@@ -64,7 +63,6 @@ async function auth_tokens(body) {
       return { message: 'Verification token is missing', status: false, statusCode: 400 }
     }
 
-// Temp comment
     if (!verification_code) {
       return { message: 'Verification code is missing', status: false, statusCode: 400 }
     }

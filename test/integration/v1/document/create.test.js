@@ -40,6 +40,7 @@ describe('POST /documents', () => {
   it('should return 201', () => {
     return request(app.server)
       .post('/v1/documents')
+      .send(document)
       .expect(201)
   })
 
@@ -49,3 +50,6 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .expect(res => {
+        expected.id = _.get(res, 'body.id')
+        expect(res.body).to.deep.eq(expected)
+      })

@@ -12,7 +12,6 @@ describe('app.plugins.xml', () => {
   it('should explose format() method', () => {
     expect(target.format).not.to.be.undefined
     expect(target.format).to.be.an('function')
-// Temp comment
   })
 
   it('should explose tag() method', () => {
@@ -28,3 +27,4 @@ describe('app.plugins.xml', () => {
     })
 
     it('should parse sinple tag', () => {
+      const result = target.tag('tag')

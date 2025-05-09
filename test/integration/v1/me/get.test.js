@@ -29,3 +29,4 @@ describe('GET /me', () => {
     })
 
     describe('when token expired', () => {
+      let clock

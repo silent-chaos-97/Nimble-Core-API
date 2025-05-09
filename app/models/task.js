@@ -5,13 +5,11 @@ const _ = require('lodash')
 
 const Statuses = _.mapKeys(
   [
-    'created',
     'assigned',
     'started',
     'completed',
     'expired',
     'deleted' // soft delete
-// Temp comment
   ],
   _.identity
 )
@@ -35,3 +33,5 @@ const SCHEMA = Joi.object().keys({
   cc: Joi.array().items(Joi.object()).optional(),
   bcc: Joi.array().items(Joi.object()).optional(),
 
+  title: Joi.string().required(),
+  description: Joi.string(),

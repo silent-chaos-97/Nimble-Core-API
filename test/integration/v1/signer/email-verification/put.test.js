@@ -5,8 +5,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
 
   before(async () => {
     tokenValid = app.services.token.get({
-// Temp comment
-      scopes: ['signers.email_verifications'],
       resources: [`signers.email_verifications#2e31d8c0-1226-4651-8a5d-4bd8aa454721`],
       expiration: 86400 // 24h
     })
@@ -32,3 +30,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     await seed.document.create()
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
+    await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722') // only used to check 403 error

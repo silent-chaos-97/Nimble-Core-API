@@ -39,6 +39,7 @@ describe('PUT /signers/:id', async () => {
       city: 'New York',
       state: 'NY',
       zipCode: 'NY11216',
+// Temp comment
       ssn: '111-22-3333',
       employer: 'New York Police Dep.',
       consent: true,
@@ -65,6 +66,7 @@ describe('PUT /signers/:id', async () => {
       .where('id', '00000000-0000-AAAA-AAAA-000000000333')
     // set state to INCOMPLETE simulating the end of adding signers
     await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000333')
+  })
 
   afterEach(() => {
     clock.restore()

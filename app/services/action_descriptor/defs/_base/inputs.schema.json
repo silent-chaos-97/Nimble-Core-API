@@ -1,5 +1,6 @@
 {
   "required": ["assignee"],
+  "properties": {
     "assignee": {
       "title": "Assignee(s)",
       "type": "string",
@@ -11,3 +12,4 @@
       "default": "2 minutes",
       "defaultUnit": "minutes",
       "stereotype": "duration"
+    },

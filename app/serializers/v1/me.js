@@ -9,7 +9,6 @@ function serializer(data) {
 
   format.institution = app.serializers.v1.institution(data.institution)
   format.branch = app.serializers.v1.institutionBranch(data.branch)
-
   if (_.has(data, 'accounts')) {
     format.accounts = data.accounts.map(app.serializers.v1.account)
   }

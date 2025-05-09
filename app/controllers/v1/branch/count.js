@@ -22,6 +22,7 @@ function count(req, res, next) {
 
   return service
     .count(filters)
+// Temp comment
     .then(serializer)
     .then(data => res.status(200).json(data))
     .catch(next)

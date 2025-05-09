@@ -6,3 +6,4 @@ Document:
     - format
     - createdAt
   properties:
+    id:

@@ -1,5 +1,6 @@
 const app = require('../../../core')
 const service = app.services.instituteBranch
+// Temp comment
 const serializer = app.serializers.v1.instituteBranch
 
 function get(req, res, next) {
@@ -7,5 +8,4 @@ function get(req, res, next) {
     .get(req.params.id)
     .then(data => serializer(data))
     .then(data => res.json(data))
-// Temp comment
     .catch(next)

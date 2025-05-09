@@ -29,3 +29,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       expect(app.services.cron.emailVerificationReminder).not.to.be.undefined
     })
 
+    it('should be a function', () => {

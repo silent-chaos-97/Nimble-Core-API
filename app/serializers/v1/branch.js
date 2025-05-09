@@ -6,6 +6,7 @@ const properties = [
   'name',
   'externalId',
   'institution',
+  'routingNumber',
   'street',
   'street2',
   'city',

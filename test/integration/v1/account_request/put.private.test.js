@@ -34,6 +34,7 @@ describe('PUT private /account-requests/:id', () => {
 
   describe('with valid JWT auth', () => {
     let token
+    const fakeAccountRequestId = 'ANOTHER-0000-0000-0000-UUID'
     const aprovedAccountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
 
     beforeEach(async () => {
@@ -80,7 +81,6 @@ describe('PUT private /account-requests/:id', () => {
     })
 
     describe('when the state is SIGNED', () => {
-      let emailSpy
       let eventPublishSpy
 
       beforeEach(async () => {
@@ -91,3 +91,8 @@ describe('PUT private /account-requests/:id', () => {
 
       afterEach(async () => {
         emailSpy.restore()
+        sinon.restore()
+      })
+
+      it('should return 200', done => {
+        request(app.server)

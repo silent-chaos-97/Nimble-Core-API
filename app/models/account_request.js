@@ -66,3 +66,4 @@ class AccountRequest extends BaseModel {
     if (!_.has(this._data, 'productConfigurations')) {
       return []
     }
+

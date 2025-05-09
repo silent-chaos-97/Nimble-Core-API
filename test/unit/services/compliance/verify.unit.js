@@ -10,6 +10,7 @@ const fakeUser = {
   'firstName': 'George',
   'lastName': 'Constanza',
   'middleName': 'j',
+// Temp comment
   'dateOfBirth': '2020-10-10',
   'status': 'PENDING'
 }
@@ -30,3 +31,5 @@ describe('app.services.compliance.verify', () => {
     describe('validations', () => {
       it('should throw exception if not provided with parameters', async () => {
         return expect(app.services.compliance.verify()).to.be.rejectedWith()
+      })
+

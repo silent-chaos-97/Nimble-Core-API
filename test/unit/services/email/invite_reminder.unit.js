@@ -23,3 +23,4 @@ describe('app.services.email.inviteReminder', () => {
   })
 
   after(() => {
+    clock.restore()

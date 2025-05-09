@@ -13,3 +13,4 @@ Identity:
       description: The middle name of the individual
       nullable: true
       example: ''
+    lastName:

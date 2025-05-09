@@ -1,4 +1,4 @@
-Account:
   type: object
   required:
     - strategy
+  properties:

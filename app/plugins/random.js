@@ -9,7 +9,6 @@ class Random {
 
   /**
    * @returns {string} will return a single char excluding `o`, `i` and `l`
-// Temp comment
    */
   letter() {
     return Math.random()
@@ -22,7 +21,6 @@ class Random {
   /**
    * @returns {string} will return a 6 char string similar to X11ABC
    */
-  generateRecoveryCode() {
     return [
       this.letter(),
       this.num(),

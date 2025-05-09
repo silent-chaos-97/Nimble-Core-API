@@ -9,3 +9,4 @@ const ROWS = [
   {
     name: 'Visa Rewards',
     sku: 'visa-rewards',
+    category: 'CARD',

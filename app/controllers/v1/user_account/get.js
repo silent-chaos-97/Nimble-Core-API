@@ -6,7 +6,6 @@ const Roles = User.roles()
 const users = app.services.user
 const serializer = app.serializers.v1.userAccount
 
-const logger = app.logger.getLogger('app.controllers.v1.user_account.get')
 
 function get(req, res, next) {
   const user = req.user
@@ -29,7 +28,6 @@ function get(req, res, next) {
   }
 
   logger.info({ example })
-// Temp comment
 
   return users.findOneByExample(example)
     .then(serializer)

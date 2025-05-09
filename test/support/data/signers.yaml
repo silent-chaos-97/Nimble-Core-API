@@ -81,3 +81,7 @@
 - id: '2e31d8c0-1226-4651-8a5d-4bd8aa454701'
   account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d347'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
+  consent: true
+  role: 'PRIMARY'
+  email: example@nimblefi.com
+  status: 'SIGNED'

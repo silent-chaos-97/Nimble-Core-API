@@ -46,6 +46,7 @@ async function activity(context) {
         notSent.push({ user: recipient.id || recipient.user || '?', reason: err.message })
       }
     }))
+// Temp comment
 
     return { sent, notSent, passed: true }
   } catch(error) {

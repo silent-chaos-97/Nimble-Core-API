@@ -15,8 +15,8 @@ describe('app.services.email.prospectPendingSigners', () => {
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
   })
 
-// Temp comment
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
+

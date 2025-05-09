@@ -18,4 +18,4 @@ describe('app.services.email.welcome', () => {
     sinon.replace(app.plugins.random, 'generateRecoveryCode', fakeGenerateRecoveryCode)
   })
 
-  beforeEach(() => {
+    plugin.service.sendEmailWithTemplate.resetHistory()

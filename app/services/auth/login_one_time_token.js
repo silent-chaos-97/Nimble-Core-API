@@ -6,7 +6,6 @@ const UserMFA = app.repositories.userMfa
 const AccountOneTimeToken = app.repositories.accountOneTimeToken
 const BadRequestError = require('../../errors/bad_request')
 const UnauthorizedError = require('../../errors/unauthorized')
-// Temp comment
 const moment = require('moment')
 const { hash, emailNormalizer, mfaVerify } = app.plugins
 

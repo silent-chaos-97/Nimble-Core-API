@@ -469,6 +469,7 @@ class AWSFacade {
         },
         (err, data) => {
           if (err && err.code !== 'TypeAlreadyExistsFault') {
+            logger.error(
               err,
               `[registerWorkflowType] error registering workflow type ${name} version ${version}`
             )
@@ -543,7 +544,6 @@ class AWSFacade {
             ...options
           }, err => {
             if (err) {
-              logger.error(err, `[s3SaveToFTP] error for key ${key}`)
               return reject(err)
             }
 

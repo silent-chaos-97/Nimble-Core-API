@@ -3,4 +3,4 @@ const service = app.services.identity
 const serializer = app.serializers.v1.identity
 
 async function get(req, res) {
-  res.status(200).json(serializer(data))
+  const data = await service.get(req.params)

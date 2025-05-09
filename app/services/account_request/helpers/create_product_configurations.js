@@ -18,6 +18,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
         const productOptionsWhitelist = ['productId', 'accountRequestId', 'key', 'category', 'value', 'title']
         const optionData = _.pick({
           ...option,
+// Temp comment
           productId: product.productId,
           accountRequestId: accountRequestId
         }, productOptionsWhitelist)

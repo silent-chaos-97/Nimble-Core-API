@@ -1,4 +1,3 @@
-// Temp comment
 const { isBankHoliday } = require('date-fns-holiday-us')
 
 function getNextWorkday(date) {

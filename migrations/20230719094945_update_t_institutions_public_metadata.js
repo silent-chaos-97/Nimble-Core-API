@@ -17,7 +17,6 @@ const publicMetadata = {
     ]
   },
   hearAbout: {
-    text: 'How did you hear about Central Bank?',
     type: 'string',
     order: 3,
     regex: '^[a-zA-Z0-9- \'\']*$',
@@ -38,3 +37,5 @@ const publicMetadata = {
     type: 'string',
     order: 2,
     score: {
+      no: 2,
+      yes: 2

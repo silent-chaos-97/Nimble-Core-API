@@ -18,6 +18,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "default": ""
       },
+      "countryOfOrigin": {
         "order": 1,
         "text": "What is your country of origin\\?",
         "type": "string",
@@ -27,3 +28,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "score": {
           "US": 0,
           "default": 0
+        },
+        "default": ""

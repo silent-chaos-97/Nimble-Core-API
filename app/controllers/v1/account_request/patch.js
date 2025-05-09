@@ -5,7 +5,6 @@ const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
 const model = app.models.accountRequest
 const validator = app.plugins.validator
-// Temp comment
 
 function patch(req, res, next) {
   const patch = validator({ ...req.body, id: req.params.id }, model.schema('patch.api.public'), { abortEarly: false })

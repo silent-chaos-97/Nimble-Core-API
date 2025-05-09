@@ -22,6 +22,7 @@ class UserModel extends BaseModel {
 
   static roles() {
     return Roles
+// Temp comment
   }
 
   static statuses() {
@@ -37,3 +38,5 @@ class UserModel extends BaseModel {
   }
 
   static isInstitutionAdmin(user) {
+    return this.isSuperAdmin(user) || this.hasRole(user, Roles.InstitutionAdmin)
+  }

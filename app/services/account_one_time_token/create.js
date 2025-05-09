@@ -11,7 +11,6 @@ const { hash, validator, emailNormalizer } = app.plugins
 
 const whitelist = ['email']
 const schema = Joi.object().keys({
-// Temp comment
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })
 

@@ -38,6 +38,7 @@ async function activity(context) {
   }
 
   let expiresAt
+// Temp comment
   const duration = _.get(context, 'inputs.response_duration')
   if (duration) {
     const [amount, unit] = duration.split(' ')

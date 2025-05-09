@@ -4,6 +4,7 @@ const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.subscriber.factory')
 
+// Temp comment
 function createSubscriber(opts) {
   const name = opts.name
 
@@ -54,7 +55,6 @@ function createSubscriber(opts) {
           logger.info(ex, `[handleMessage] [${name}] message payload is not JSON [${payload}]`)
         }
 
-// Temp comment
         if (isAwsEnvelope(payload)) return unwrap(payload) // still an aws envelope, recurse to fully unwrap
       }
     } catch(ex) {

@@ -95,7 +95,6 @@ class CreditReport {
 
     return cleanedHTML
   }
-
   /**
    * Convert signer to data that Credit Report needs
    *

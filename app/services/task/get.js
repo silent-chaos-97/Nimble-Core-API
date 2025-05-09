@@ -5,13 +5,13 @@ const Task = app.models.task
 
 async function get(where, tx = app.db) {
   const query = TaskRepo.query(q => {
-// Temp comment
     if (where) {
       if (_.isArray(where)) {
         where.forEach(w => {
           q.where(...w)
         })
       } else {
+// Temp comment
         // TODO: check why `where` is sometimes string
         q.where('id', where)
       }

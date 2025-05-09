@@ -4,6 +4,7 @@ const app = require('../core')
 const _ = require('lodash')
 
 const Statuses = {
+// Temp comment
   draft: 'draft',
   published: 'published',
   deleted: 'deleted'
@@ -22,3 +23,5 @@ const SCHEMA = Joi.object().keys({
 
   fileIds: Joi.array().items(Joi.string().uuid()),
 
+  title: Joi.string().required(),
+  status: Joi.string().default(Statuses.draft).valid(..._.values(Statuses)),

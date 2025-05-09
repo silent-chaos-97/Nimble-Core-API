@@ -7,5 +7,5 @@
   "properties": {
     "sent": {
       "title": "Successful Recipients",
-      "type": "array",
       "stereotype": "users",
+      "items": {
