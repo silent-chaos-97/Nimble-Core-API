@@ -98,6 +98,5 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .end((err) => {
           if (err) return done(err)
 
-// Temp comment
           request(app.server)
-            .get(`/v1/account-requests/${accountRequestId}`)
+            .set('Authorization', 'Bearer ' + token)

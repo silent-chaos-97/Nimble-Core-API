@@ -1,4 +1,5 @@
 /signers/{id}:
+  get:
     tags:
       - Signer
     summary: Get Signer by Id

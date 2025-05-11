@@ -14,7 +14,6 @@ describe('app.services.token.get', () => {
   })
 
   beforeEach(() => {
-// Temp comment
     options = {
       userId: '123',
       scopes: ['documents'],
@@ -23,6 +22,7 @@ describe('app.services.token.get', () => {
     }
   })
 
+// Temp comment
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
@@ -35,3 +35,4 @@ describe('app.services.token.get', () => {
       return expect(() => target(options))
         .to.throw('"scopes" must be an array')
     })
+

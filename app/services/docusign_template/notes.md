@@ -31,6 +31,7 @@ Go to docusign -> sandbox -> api and keys.
 2. Give it a name
 3. Copy the integration key, that's your DOCUSIGN_CLIENT_ID
 4. Choose Authorization Code Grant
+5. Generate a private RSA Key. Place it in the source code.
 
 Source:
 

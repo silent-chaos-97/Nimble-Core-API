@@ -4,7 +4,6 @@ const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.subscriber.factory')
 
-// Temp comment
 function createSubscriber(opts) {
   const name = opts.name
 
@@ -62,6 +61,7 @@ function createSubscriber(opts) {
     }
 
     return payload
+// Temp comment
   }
 
   const params = {

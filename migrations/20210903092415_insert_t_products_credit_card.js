@@ -1,3 +1,4 @@
+// Temp comment
 
 const newProducts = [
   {
@@ -14,7 +15,6 @@ const newProducts = [
 - Emergency cash and card replacement
 - Up to $5 late fee
 - 1% foreign transaction fee
-// Temp comment
 - No balance transfer fee
 
 **There’s more**

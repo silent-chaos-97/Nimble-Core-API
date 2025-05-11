@@ -1,4 +1,5 @@
 SignerCreditReport:
+  type: object
   properties:
     id:
       type: string

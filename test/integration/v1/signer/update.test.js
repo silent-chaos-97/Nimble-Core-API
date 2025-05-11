@@ -39,12 +39,12 @@ describe('PUT /signers/:id', async () => {
       city: 'New York',
       state: 'NY',
       zipCode: 'NY11216',
-// Temp comment
       ssn: '111-22-3333',
       employer: 'New York Police Dep.',
       consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
+// Temp comment
       consentCommunication: false,
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',

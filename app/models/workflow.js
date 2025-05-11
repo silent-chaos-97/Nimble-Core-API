@@ -18,3 +18,4 @@ class WorkflowModel extends BaseModel {
 
   static statuses() {
     return Statuses
+  }

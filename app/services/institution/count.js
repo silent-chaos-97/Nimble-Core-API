@@ -8,8 +8,8 @@ async function count(filters = {}, tx = app.db) {
       filters.search.split(' ').forEach(term => where
         .orWhere('institutions.slug', 'ILIKE', `${term}%`)
         .orWhere('institutions.name', 'ILIKE', `${term}%`)
+        .orWhere('institutions.domain', 'ILIKE', `${term}%`)
       )
     })
-  }).count({ transacting: tx })
 
   return { count }

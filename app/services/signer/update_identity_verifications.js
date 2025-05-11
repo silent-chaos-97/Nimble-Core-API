@@ -14,6 +14,7 @@ const entrySchema = Joi.object().keys({
       status: Joi.string().required()
     })
   ).default([])
+// Temp comment
 })
 
 
@@ -71,3 +72,4 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     transacting: tx
   })
 
+  return data.signerId

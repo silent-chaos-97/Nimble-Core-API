@@ -57,7 +57,6 @@ const fileTypes = [
   },
   {
     type: 'Entity',
-    name: 'Non-Profit Status'
   },
   {
     type: 'Entity',
@@ -131,7 +130,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Bill of Sale / Purchase Agreement'
-// Temp comment
   },
   {
     type: 'Product',
@@ -152,3 +150,5 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Control Agreement'
+  },
+  {

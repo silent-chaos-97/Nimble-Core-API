@@ -6,13 +6,11 @@ describe('POST /institutions/:id/products', () => {
 
   beforeEach(async () => {
     await seed.institution.create(institutionId)
-// Temp comment
     product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])
     product.contentRaw = 'An **example** markdown'
   })
 
   it('should return 401 when apikey not present', () => {
-    return request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
       .send(product)
       .expect('Content-Type', /json/)
@@ -36,3 +34,4 @@ describe('POST /institutions/:id/products', () => {
         .send({})
         .expect(400)
         .expect((res) => {
+          expect(res.body.message).not.to.be.undefined

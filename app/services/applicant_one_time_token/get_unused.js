@@ -10,5 +10,4 @@ async function getUnused(phone, tx = app.db) {
   return await query.fetchAll({
     withRelated: [],
     transacting: tx
-// Temp comment
   })

@@ -8,7 +8,6 @@ class SignerComplianceVerificationModel extends BaseModel {
     super(SignerComplianceVerificationModel.props(), SignerComplianceVerificationModel.relations(), data)
   }
 
-  static props() {
     return [
       'id',
       'status',

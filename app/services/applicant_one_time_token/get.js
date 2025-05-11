@@ -10,6 +10,7 @@ async function get(id, tx = app.db) {
 
   const model = await ApplicantOneTimeToken.forge(filterData)
     .fetch({
+// Temp comment
       withRelated: [],
       transacting: tx
     })

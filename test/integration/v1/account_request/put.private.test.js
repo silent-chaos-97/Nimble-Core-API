@@ -31,6 +31,7 @@ describe('PUT private /account-requests/:id', () => {
 
 
   })
+// Temp comment
 
   describe('with valid JWT auth', () => {
     let token
@@ -81,6 +82,7 @@ describe('PUT private /account-requests/:id', () => {
     })
 
     describe('when the state is SIGNED', () => {
+      let emailSpy
       let eventPublishSpy
 
       beforeEach(async () => {
@@ -96,3 +98,4 @@ describe('PUT private /account-requests/:id', () => {
 
       it('should return 200', done => {
         request(app.server)
+          .put('/v1/account-requests/' + pendingAccountRequestId)

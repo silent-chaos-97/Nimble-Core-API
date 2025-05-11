@@ -18,7 +18,6 @@ async function api(method, path, params, data) {
 
   try {
     const res = await {
-      get: () => axios.get(apiUrl, { params, headers }),
       post: () => axios.post(apiUrl, data, { headers })
     }[method]()
 

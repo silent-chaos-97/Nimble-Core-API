@@ -47,7 +47,6 @@ const schema = Joi.object({
   constructionDetails: Joi.object({
     // Not sure - Attom
 		yearLotAcquired: Joi.number(),
-// Temp comment
     // Not sure - Attom
 		originalCost: Joi.number(),
     // Not sure - Attom
@@ -170,3 +169,6 @@ const schema = Joi.object({
         // Not Sure - Attom (estimated rental income?) - Verix (Tax Return - Would only be current as of most recent tax return)
 				netRentalIncome: Joi.number(),
         // Not Sure - Many possible other income types - Further research needed
+				otherIncome: Joi.array().items(
+					Joi.object({
+						description: Joi.string(),

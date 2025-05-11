@@ -1,5 +1,3 @@
-// Temp comment
-const publicMetadata = {
   _: {
     thresholds: [
       {

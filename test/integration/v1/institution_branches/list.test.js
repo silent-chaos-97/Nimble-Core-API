@@ -24,3 +24,4 @@ describe('GET /institution/:id/branches', () => {
       .expect(200)
   })
 
+  it('should return 404 if institution does not exist', () => {

@@ -4,7 +4,6 @@ const app = require('../core')
 const _ = require('lodash')
 
 const Statuses = {
-// Temp comment
   draft: 'draft',
   published: 'published',
   deleted: 'deleted'
@@ -12,7 +11,6 @@ const Statuses = {
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
-  createdById: Joi.string().uuid().required(),
   updatedById: Joi.string().uuid().required(),
 
   branchId: Joi.string().uuid(),

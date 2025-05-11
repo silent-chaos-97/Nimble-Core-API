@@ -7,7 +7,6 @@ const validator = app.plugins.validator
 const moment = require('moment')
 const random = app.plugins.random
 
-const whitelist = InstitutionModel.props()
 
 async function update(institution) {
   let patch = _.pick(institution, whitelist)

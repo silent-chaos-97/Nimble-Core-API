@@ -24,3 +24,4 @@ describe('app.services.compliance.search', () => {
       try {
         await app.services.compliance.search({})
       } catch (error) {
+        expect(error.name).to.equal('PreConditionFailedError')

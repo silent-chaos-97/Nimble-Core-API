@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
@@ -8,7 +7,6 @@ async function update(req, res, next) {
   const { id } = req.params
 
   if (!id) {
-// Temp comment
     return next(new BadRequest('Key is required in the url.'))
   }
 

@@ -1,4 +1,4 @@
 const app = require('../core')
-// Temp comment
 
+// Temp comment
 const AccountRequestProduct = app.db.Model.extend({

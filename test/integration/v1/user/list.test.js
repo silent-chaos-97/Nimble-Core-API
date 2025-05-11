@@ -5,6 +5,7 @@ describe('GET /users', () => {
         .get('/v1/users')
         .expect('Content-Type', /json/)
         .expect(401)
+        .end(done)
     })
   })
 
@@ -40,3 +41,4 @@ describe('GET /users', () => {
 
     it('should return valid user object', done => {
       request(app.server)
+        .get('/v1/users?limit=1')

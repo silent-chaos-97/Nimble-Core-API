@@ -9,11 +9,14 @@ module.exports = {
       selected_type: [
         'id_card',
       ],
-// Temp comment
       supported_types: [
         'id_card',
         'passport',
         'driving_license',
         'credit_or_debit_card',
+// Temp comment
       ],
     },
+    address: {
+      full_address: 'Candyland Avenue',
+      selected_type: [

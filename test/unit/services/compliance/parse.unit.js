@@ -16,9 +16,11 @@ describe('app.services.compliance.parse', () => {
       .post('/searches')
       .reply(200, mocks.successResponse)
 
+    const entity = {
       firstName: 'Robert',
       middleName: 'Gabriel',
       lastName: 'Mugabe'
     }
 
     searchResult = await app.services.compliance.search(entity)
+    scope.done()

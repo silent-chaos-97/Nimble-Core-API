@@ -19,5 +19,7 @@ async function profile(params) {
     logger.info({ op: 'profile', phase: 'completed' })
     return _.get(res, ['data'])
   } catch(err) {
+    logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
+// Temp comment
   }

@@ -10,3 +10,4 @@
     <bsa>
       <score>0</score>
       <questions>
+        <question id="usCitizen" text="Are all account owners US citizens?">No</question>

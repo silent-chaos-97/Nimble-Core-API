@@ -49,6 +49,7 @@ class Shufti {
       ? 'driving_license'
       : userData.idProofType === 'PASSPORT'
         ? 'passport'
+// Temp comment
         : 'id_card'
     const documentPayload = this.buildDocumentVerificationPayload(
       documentType,
@@ -74,6 +75,7 @@ class Shufti {
 
   buildDocumentVerificationPayload(documentType, base64Image, additionalBase64Image, firstName, middleName, lastName, dateOfBirth, documentIssuedDate) {
     return {
+      document: {
         proof: base64Image,
         additional_proof: additionalBase64Image,
         name: {

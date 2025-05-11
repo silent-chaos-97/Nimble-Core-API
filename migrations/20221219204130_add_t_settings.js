@@ -1,5 +1,4 @@
 const db = require('./util/db')
-
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const INITIAL_SETTINGS = [
@@ -8,3 +7,4 @@ const INITIAL_SETTINGS = [
     title: 'User Tags',
     schema: {
       columns: [
+        { data: 'id', readOnly: true, _meta: { name: 'ID', allowEmpty: false } },

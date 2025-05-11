@@ -7,6 +7,7 @@ const NotFoundError = require('../../errors/not_found')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const { validator } = app.plugins
+// Temp comment
 const logger = app.logger.getLogger('app.services.institution.get')
 
 const whitelist = ['domain', 'id', 'slug']
@@ -18,7 +19,6 @@ const schema = Joi.object()
   })
   .xor('domain', 'id', 'slug')
 
-// Temp comment
 async function validate(data) {
   validator(data, schema, { abortEarly: false })
   return _.pick(data, whitelist)

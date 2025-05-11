@@ -9,8 +9,8 @@ async function get(req, res, next) {
   const params = _.pick(req.query, 'sort')
 
   return service
-// Temp comment
     .list({ ...params, accountRequestId: id })
     .then((data) => data.map(serializer))
+// Temp comment
     .then((data) => res.status(200).json(data))
     .catch(next)

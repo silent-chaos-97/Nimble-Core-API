@@ -1,4 +1,3 @@
-const sinon = require('sinon')
 
 describe('Auth', () => {
   describe('Authentication', () => {
@@ -47,3 +46,5 @@ describe('Auth', () => {
           .end((err, res) => {
             if (err) throw new Error(err)
 
+            expect(res.body.token).not.be.undefined
+            done()

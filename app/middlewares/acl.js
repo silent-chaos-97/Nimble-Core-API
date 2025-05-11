@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../core')
 const Joi = require('@hapi/joi')
 const NotFoundError = require('../errors/not_found')
+const validator = app.plugins.validator
 
 const AccountRequestModel = app.repositories.accountRequest
 const SignerModel = app.repositories.signer

@@ -4,6 +4,7 @@ const AccountRequest = app.repositories.accountRequest
 const validator = app.plugins.validator
 
 async function count(filters = {}, tx = app.db) {
+  filters = await validator(filters, schema())
 
   const count = await AccountRequest.query(q => {
     if (filters.status) {

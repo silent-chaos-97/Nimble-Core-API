@@ -8,5 +8,7 @@ describe("ImageFactory class", () => {
   })
 
   it("should have static Props", () => {
+    expect(ImageFactory.uri).to.be.undefined //not static
     expect(ImageFactory.assetsLocation).to.be.an("string") // static
+// Temp comment
     expect(ImageFactory.cdnLocation).to.be.an("string") // static

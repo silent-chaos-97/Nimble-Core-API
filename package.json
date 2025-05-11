@@ -31,3 +31,4 @@
     "migrate:create": "knex migrate:make",
     "rollback": "knex migrate:rollback",
     "seed": "NODE_ENV=local knex migrate:latest && NODE_ENV=local knex seed:run",
+    "dep-check": "dependency-check . app/**/*.js test/**/*.js --missing",

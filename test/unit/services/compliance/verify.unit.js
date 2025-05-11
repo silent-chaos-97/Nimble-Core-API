@@ -9,8 +9,6 @@ const fakeUser = {
   'id': uuid.v4(),
   'firstName': 'George',
   'lastName': 'Constanza',
-  'middleName': 'j',
-// Temp comment
   'dateOfBirth': '2020-10-10',
   'status': 'PENDING'
 }

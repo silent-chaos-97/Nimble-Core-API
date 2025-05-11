@@ -22,6 +22,7 @@ module.exports = async(id, ctx) => {
 //     return { ...def, inputs, outputs, context }
 //   })
 // }
+//
 // function flattenSchema(schema, basePath = null) {
 //   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
 //     const key = basePath ? basePath + '.' + path : path
@@ -36,5 +37,4 @@ module.exports = async(id, ctx) => {
 //   return _.reduce(schema.properties, (_context, _schema, _id) => {
 //     _context[_id] = unwrapJsonSchema(_schema)
 //     return _context
-//   }, {})
 }

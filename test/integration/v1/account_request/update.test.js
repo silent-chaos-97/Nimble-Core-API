@@ -49,6 +49,7 @@ describe('PUT /account_requests/:id', async () => {
         expiration: 10
       })
 
+      return request(app.server)
         .put(`/v1/account-requests/${accountRequestId}`)
         .set('Authorization', 'Bearer ' + token)
         .send(payload)

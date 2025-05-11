@@ -53,7 +53,6 @@ class Signer extends BaseModel {
       'documentIssuedDate',
       'documentIssuer',
       // other
-      'institutionId',
       'checkSanction',
       'sanctionVerifiedAt',
       'checkPoliticalExposure',
@@ -70,3 +69,4 @@ class Signer extends BaseModel {
       'createdAt',
       'invitedAt',
       'verificationStatusFace',
+      'verificationStatusFaceUpdatedAt',

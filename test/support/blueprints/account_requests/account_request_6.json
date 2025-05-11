@@ -38,7 +38,6 @@
       "consentPrivacyPolicy": true,
       "consentCommunication": false,
       "documentType": "PASSPORT",
-      "documentNumber": 1112221112,
       "documentExpirationDate": "2022-02-16",
       "documentIssuedDate": "2011-02-16",
       "documentIssuer": "PRT",
@@ -61,3 +60,4 @@
       "createdAt": "2020-11-17T19:03:45.903Z",
       "invitedAt": "2018-02-16T11:32:03.341Z",
       "verificationStatusFace": "VALID",
+      "verificationStatusFaceUpdatedAt": "2018-03-16T11:32:03.341Z",

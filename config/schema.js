@@ -137,9 +137,9 @@ const schema = {
       doc: 'The workflow job-runner job-check interval in milliseconds',
       format: Number,
       default: 5000,
+      env: 'WKFL_JOB_RUNNER_INTERVAL_MILLIS'
     }
   },
-  admin: {
     wkfl: {
       jobsEnabled: {
         doc: 'Whether to enable the workflow job runner',
@@ -148,3 +148,5 @@ const schema = {
         env: 'ADMIN_WKFL_JOBS_ENABLED'
       }
     }
+  },
+  aws: {

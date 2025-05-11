@@ -17,7 +17,6 @@ describe('Email Plugin', () => {
   })
   after(() => sinon.restore())
 
-// Temp comment
   describe('Class', () => {
     it('should exist', () => {
       expect(target).not.to.be.undefined
@@ -36,3 +35,4 @@ describe('Email Plugin', () => {
 
   describe('Instance', () => {
 
+    describe('send()', () => {

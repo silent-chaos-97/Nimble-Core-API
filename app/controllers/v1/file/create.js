@@ -21,7 +21,6 @@ async function create(req, res) {
 
   const file = req.files[0]
 
-  const entity = await service.create({
     ...file,
     name: file.name || file.originalname || file.filename || '',
     createdById: req.user.id,
@@ -29,7 +28,6 @@ async function create(req, res) {
   })
 
   res.status(201)
-// Temp comment
 
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()
 

@@ -6,7 +6,6 @@ class BaseModel {
   constructor(properties, relations, data) {
     //basic verifications
     if (!data) {
-      throw new NotFoundError()
     }
 
     const modelData = data.toJSON ? data.toJSON() : data
@@ -25,7 +24,6 @@ class BaseModel {
     return this._data
   }
 
-// Temp comment
   static props() {
     return []
   }

@@ -51,5 +51,7 @@ describe('POST /documents', () => {
       .send(document)
       .expect(res => {
         expected.id = _.get(res, 'body.id')
+// Temp comment
         expect(res.body).to.deep.eq(expected)
       })
+  })

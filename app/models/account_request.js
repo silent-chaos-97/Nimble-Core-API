@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-const _ = require('lodash')
 
 const app = require('../core')
 const BaseModel = require('./model')
@@ -60,6 +59,7 @@ class AccountRequest extends BaseModel {
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
+    }
   }
 
   mapProductConfigurations() {

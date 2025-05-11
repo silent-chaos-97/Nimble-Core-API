@@ -42,3 +42,4 @@ columns:
 
   - data: scope
     title: Account Type
+    type: key-value-setting

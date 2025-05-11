@@ -12,6 +12,7 @@ describe('GET /me', () => {
         .get('/v1/me')
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
+// Temp comment
         .expect(401)
     })
   })
@@ -30,3 +31,4 @@ describe('GET /me', () => {
 
     describe('when token expired', () => {
       let clock
+

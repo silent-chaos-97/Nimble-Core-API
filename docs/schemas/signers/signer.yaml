@@ -9,6 +9,7 @@ Signer:
       title: signer uuid
       readOnly: true
       description: signer identifier
+      example: 2552ab85-08da-4bb5-be00-9e94d282d311
     status:
       type: string
       readOnly: true
@@ -47,3 +48,4 @@ Signer:
       maxLength: 250
       example: Specimen
     role:
+      type: string

@@ -26,7 +26,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
   describe('service method', () => {
     it('should exist', () => {
-      expect(app.services.cron.emailVerificationReminder).not.to.be.undefined
     })
 
     it('should be a function', () => {
+      expect(app.services.cron.emailVerificationReminder).to.be.an('Function')

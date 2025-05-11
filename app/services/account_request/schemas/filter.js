@@ -4,6 +4,7 @@ const app = require('../../../core')
 const AccountRequestModel = app.models.accountRequest
 
 function schema() {
+// Temp comment
   return Joi.object().keys({
     institutionId: Joi.string().uuid().optional(),
     status: Joi.string()
@@ -11,7 +12,6 @@ function schema() {
     sort: Joi.string()
       .valid('createdAt', '-createdAt', 'status', '-status')
       .default('-createdAt'),
-// Temp comment
     limit: Joi.number().positive(),
     offset: Joi.number().positive().allow(0)
   })

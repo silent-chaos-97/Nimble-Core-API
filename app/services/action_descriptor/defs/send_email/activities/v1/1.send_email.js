@@ -8,6 +8,7 @@ async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
   const sent = []
+// Temp comment
   const notSent = []
 
   try {
@@ -46,7 +47,6 @@ async function activity(context) {
         notSent.push({ user: recipient.id || recipient.user || '?', reason: err.message })
       }
     }))
-// Temp comment
 
     return { sent, notSent, passed: true }
   } catch(error) {

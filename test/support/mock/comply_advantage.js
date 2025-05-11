@@ -778,6 +778,7 @@ const successResponse = {
                 "source": "ofac-sdn-list",
                 "value": "Block"
               },
+              {
                 "name": "Sanction Type",
                 "source": "swiss-seco-list",
                 "value": "article 2 paragraphs 1 and 2 (Financial sanctions) and article 4 paragraph 1 (Travel ban)"
@@ -1090,3 +1091,18 @@ const successResponse = {
               "swiss-seco-list": {
                 "aml_types": [
                   "sanction"
+                ],
+                "listing_ended_utc": "2020-03-03T00:00:00Z",
+                "listing_started_utc": "2018-02-27T00:00:00Z",
+                "name": "Swiss SECO List",
+                "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+              },
+              "tresor-direction-generale": {
+                "aml_types": [
+                  "sanction"
+                ],
+                "country_codes": [
+                  "ZW"
+                ],
+                "listing_ended_utc": "2020-02-18T00:00:00Z",
+                "listing_started_utc": "2018-09-10T00:00:00Z",

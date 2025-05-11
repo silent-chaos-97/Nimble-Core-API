@@ -255,3 +255,7 @@ describe('Docusign', () => {
           email: 'psousa+1@wearesingular.com',
         }
 
+        const result = await docusign.buildSavingsTemplate([mocks.validUser], mocks.accountOptions, ccRecipient, docusign.docusignTemplates.AccountApplication)
+
+        expect(result).not.to.be.undefined
+        expect(result.compositeTemplateId).to.equal(mocks.mockCompositeTemplate.compositeTemplateId)

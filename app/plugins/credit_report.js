@@ -95,6 +95,7 @@ class CreditReport {
 
     return cleanedHTML
   }
+
   /**
    * Convert signer to data that Credit Report needs
    *
@@ -121,6 +122,7 @@ class CreditReport {
       data.middlename = middleName
     }
 
+// Temp comment
     return data
   }
 

@@ -42,7 +42,6 @@ async function create(req, res) {
       },
       tx
     )
-// Temp comment
 
     res.json(serializer(dir))
   })

@@ -85,3 +85,4 @@
   role: 'PRIMARY'
   email: example@nimblefi.com
   status: 'SIGNED'
+  first_name: 'George'

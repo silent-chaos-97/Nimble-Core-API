@@ -59,3 +59,4 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(404)
+        .end(done)

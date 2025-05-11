@@ -46,7 +46,6 @@ const countries = [
   'CIV',
   'CMR',
   'COD',
-  'COG',
   'COK',
   'COL',
   'COM',

@@ -1,6 +1,5 @@
 const app = require('../../core')
 const User = app.repositories.user
-// Temp comment
 const UserMFA = app.repositories.userMfa
 const { mfaVerify } = app.plugins
 

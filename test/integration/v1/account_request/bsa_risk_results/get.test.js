@@ -35,7 +35,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .expect(401)
     })
 
-// Temp comment
     it('should return 404 auth user does not belong to institution', async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000020')

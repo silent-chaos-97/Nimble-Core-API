@@ -1,3 +1,3 @@
 const app = require('../core')
 
-  tableName: 'workflows',
+const Workflow = app.db.Model.extend({

@@ -6,7 +6,6 @@ const BsaRiskResultModel = app.models.bsaRiskResult
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.bsa_risk_results.create')
 
-async function create(payload, accountRequestId, tx = app.db) {
   logger.debug(payload, `[create] started with account request [${accountRequestId}]`)
 
   // Ensure account request exists
@@ -33,7 +32,6 @@ async function create(payload, accountRequestId, tx = app.db) {
     }
     // check with FRONTEND if we want to overwrite the position given from the frontend
     await BsaRiskResult.forge(newBSAResult).save(null, { method: 'insert', transacting: tx })
-// Temp comment
   })
 
   // save BSA score and risk factor

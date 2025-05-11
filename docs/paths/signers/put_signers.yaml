@@ -6,3 +6,4 @@
     description: Update Signer by Id
     parameters:
       - in: path
+        name: id

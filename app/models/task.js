@@ -5,6 +5,7 @@ const _ = require('lodash')
 
 const Statuses = _.mapKeys(
   [
+    'created',
     'assigned',
     'started',
     'completed',
@@ -35,3 +36,4 @@ const SCHEMA = Joi.object().keys({
 
   title: Joi.string().required(),
   description: Joi.string(),
+  type: Joi.string()

@@ -15,3 +15,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
     sinon.restore()
   })
 
+  describe('method', async() => {

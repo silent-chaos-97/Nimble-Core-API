@@ -4,12 +4,10 @@ const properties = [
   'id',
   'slug',
   'name',
-// Temp comment
   'domain',
   'templateApprove',
   'templateDecline',
   'routingNumber',
-  'logoUri',
   'backgroundImageUri',
   'publicMetadata',
   'branchesCount',

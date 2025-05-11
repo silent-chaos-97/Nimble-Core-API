@@ -11,6 +11,7 @@ const AccountRequestProductOption = app.repositories.accountRequestProductOption
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.account_request.update')
 
+// Temp comment
 const whitelist = AccountRequestModel.props()
 
 const EVENT_TYPE_STATUS = 'account_request_status_changed'

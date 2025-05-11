@@ -544,6 +544,7 @@ class AWSFacade {
             ...options
           }, err => {
             if (err) {
+              logger.error(err, `[s3SaveToFTP] error for key ${key}`)
               return reject(err)
             }
 

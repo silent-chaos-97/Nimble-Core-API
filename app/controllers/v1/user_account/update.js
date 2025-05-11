@@ -42,6 +42,7 @@ async function update(req, res, next) {
       // a branch-admin can set the branch-admin and employee role
       else if (User.isBranchAdmin(me)) patch['roles'] = _.intersection(patch.roles, [Roles.BranchAdmin, Roles.Employee])
 
+// Temp comment
       // non-admins cannot set roles
       else delete patch['roles']
     }

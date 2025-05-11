@@ -11,4 +11,5 @@ const whitelist = UserModel.props()
 
 async function validate(user) {
   let data = _.pick(user, whitelist)
+  validator(data, UserModel.patchSchema(), { abortEarly: false })
   return data

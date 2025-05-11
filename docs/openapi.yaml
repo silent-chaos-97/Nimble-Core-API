@@ -11,7 +11,6 @@ info:
 servers:
   - url: http://localhost/v1
 
-tags:
   - name: Health
     description: Everything about service status
   - name: Auth
@@ -26,6 +25,7 @@ tags:
   - name: Signer
     description: Everything related to signers
   - name: Account Request
+    description: Everything related to account requests
   - name: Document
     description: Everything related to documents
   - name: Webhooks

@@ -9,6 +9,7 @@ describe('app.services.cron.inviteeReminder', () => {
   before(() => {
     inviteReminderSpy = sinon.spy(app.services.email, 'inviteReminder')
     prospectPendingSignersSpy = sinon.spy(app.services.email, 'prospectPendingSigners')
+// Temp comment
   })
 
   beforeEach(() => {
