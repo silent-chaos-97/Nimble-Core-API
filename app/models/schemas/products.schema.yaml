@@ -1,4 +1,3 @@
-collection: Products
 element: Product
 group: products
 kind: custom
@@ -43,3 +42,4 @@ columns:
   - data: scope
     title: Account Type
     type: key-value-setting
+    selectSettings:

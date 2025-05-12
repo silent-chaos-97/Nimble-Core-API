@@ -122,7 +122,6 @@ class CreditReport {
       data.middlename = middleName
     }
 
-// Temp comment
     return data
   }
 

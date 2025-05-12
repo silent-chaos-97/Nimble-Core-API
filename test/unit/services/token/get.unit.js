@@ -12,6 +12,7 @@ describe('app.services.token.get', () => {
   after(() => {
     clock.restore()
   })
+// Temp comment
 
   beforeEach(() => {
     options = {
@@ -22,7 +23,6 @@ describe('app.services.token.get', () => {
     }
   })
 
-// Temp comment
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
@@ -36,3 +36,4 @@ describe('app.services.token.get', () => {
         .to.throw('"scopes" must be an array')
     })
 
+    it('should throw a error scopes are empty', () => {

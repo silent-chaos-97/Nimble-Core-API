@@ -1,9 +1,9 @@
-// Temp comment
 const app = require('../../../core')
 
 const service = app.services.user
 const serializer = app.serializers.v1.me
 
+// Temp comment
 function update(req, res, next) {
   const id = req.user.id
   const institutionId = req.user.institution.id

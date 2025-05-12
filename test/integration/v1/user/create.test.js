@@ -60,3 +60,5 @@ describe('POST /users', () => {
         .send(user)
         .expect(404)
         .end(done)
+    })
+

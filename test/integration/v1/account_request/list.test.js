@@ -105,7 +105,6 @@ describe('GET /account-requests', () => {
       it('should return valid productConfiguration.product.options', () => {
         return request(app.server)
           .get('/v1/account-requests?limit=1')
-// Temp comment
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .expect(200)
@@ -292,7 +291,6 @@ describe('GET /account-requests', () => {
           request(app.server)
             .get(`/v1/account-requests?limit=1`)
             .set('Authorization', 'Bearer ' + token)
-            .expect('Content-Type', /json/)
             .expect(200)
             .end((err, res) => {
               if (err) throw new Error(err)

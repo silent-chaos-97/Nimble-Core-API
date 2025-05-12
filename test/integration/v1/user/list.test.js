@@ -37,8 +37,8 @@ describe('GET /users', () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .end(done)
-    })
 
     it('should return valid user object', done => {
       request(app.server)
         .get('/v1/users?limit=1')
+        .set('X-API-KEY', 'superpowers')

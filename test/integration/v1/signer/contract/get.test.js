@@ -25,6 +25,7 @@ describe('GET /signers/:id/contract', async () => {
     nock.enableNetConnect()
   })
 
+// Temp comment
   afterEach(() => {
     sinon.reset()
     nock.cleanAll()
@@ -40,3 +41,5 @@ describe('GET /signers/:id/contract', async () => {
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
+
+

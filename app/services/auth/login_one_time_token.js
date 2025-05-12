@@ -13,6 +13,7 @@ const logger = app.logger.getLogger('login_one_time_token')
 
 async function mfaExpired(mfaCacheToken, email) {
   const userMFA = await UserMFA.forge({ id: mfaCacheToken }).fetch()
+
   if (!userMFA) {
     return true
   }

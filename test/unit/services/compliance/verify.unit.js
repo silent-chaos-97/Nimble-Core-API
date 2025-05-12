@@ -5,10 +5,10 @@ const uuid = require('uuid')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
-const fakeUser = {
   'id': uuid.v4(),
   'firstName': 'George',
   'lastName': 'Constanza',
+  'middleName': 'j',
   'dateOfBirth': '2020-10-10',
   'status': 'PENDING'
 }
@@ -31,3 +31,4 @@ describe('app.services.compliance.verify', () => {
         return expect(app.services.compliance.verify()).to.be.rejectedWith()
       })
 
+      it('should throw exception if not provided with a valid uuid', async () => {

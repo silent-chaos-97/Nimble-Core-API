@@ -3,7 +3,6 @@ const Account = app.repositories.account
 const AccountModel = app.models.account
 
 //const NotFoudError = require('../../../errors/not_found')
-// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 
 function validate(accountId) {

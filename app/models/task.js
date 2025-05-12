@@ -37,3 +37,4 @@ const SCHEMA = Joi.object().keys({
   title: Joi.string().required(),
   description: Joi.string(),
   type: Joi.string()
+    .default(Types.generic)

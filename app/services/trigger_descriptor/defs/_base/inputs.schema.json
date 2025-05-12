@@ -2,5 +2,5 @@
   "properties": {
     "memo": {
       "title": "Memo",
-      "type": "string"
     },
+    "scope": {

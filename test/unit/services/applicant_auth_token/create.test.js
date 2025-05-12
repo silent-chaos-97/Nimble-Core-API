@@ -18,10 +18,11 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
-// Temp comment
   })
 
   describe('auth_tokens', () => {
     describe('method:verify-code', () => {
       beforeEach(() => {
+// Temp comment
         body = {
+          id: '5856878184',

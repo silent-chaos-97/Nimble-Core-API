@@ -6,3 +6,4 @@
     operationId: getAccountRequests
     security:
       - bearer: []
+    parameters:

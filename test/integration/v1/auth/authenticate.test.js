@@ -1,3 +1,4 @@
+const sinon = require('sinon')
 
 describe('Auth', () => {
   describe('Authentication', () => {
@@ -29,7 +30,6 @@ describe('Auth', () => {
       })
 
       it('should respond to valid auth with 200', done => {
-        request(app.server)
           .post('/v1/auth/login')
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
@@ -48,3 +48,4 @@ describe('Auth', () => {
 
             expect(res.body.token).not.be.undefined
             done()
+          })

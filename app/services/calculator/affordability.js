@@ -38,6 +38,7 @@ const INPUT_PROPS = {
   monthlyDebtObligation: Joi.number().positive().default(0),
   injections: Joi.array().items(Joi.object().keys({
     id: Joi.string().required(), // vehicle = VIN, cash = client-identifier, ... etc
+    type: Joi.string().required(), // e.g. vehicle, down-payment-cash (any advanced rate)
     props: Joi.object(), // e.g. {car_type: 'used', miles: 12000, zip: 85254} // for a vehicle trade-in
     value: Joi.number().positive(), // overrides the appraised value (if any)
     debtOutstanding: Joi.number().positive(),
@@ -227,6 +228,7 @@ module.exports = async function(user, data, transacting = app.db) {
     return Promise.reject(err)
   }
 }
+// Temp comment
 
 async function _maxPayment(institutionId, summary, risks) {
   const dtiRisk = risks[DEBT_TO_INCOME_INDICATOR]

@@ -1,4 +1,3 @@
-// const bcrypt = require('bcrypt')
 // const crypto = require('crypto')
 // const moment = require('moment/moment')
 // const app = require('../../../core')
@@ -31,6 +30,7 @@
 //       saltData = salt
 //
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
+//         if (err){
 //           return res.status(500).json({msg: err})
 //         }
 //

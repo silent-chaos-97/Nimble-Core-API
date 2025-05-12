@@ -10,5 +10,7 @@
       "title": "Turnaround",
       "type": "string",
       "default": "2 minutes",
+      "defaultUnit": "minutes",
       "stereotype": "duration"
     },
+    "response_duration": {

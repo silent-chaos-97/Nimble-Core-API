@@ -5,5 +5,6 @@ const app = require('../core')
 
 class FileEntryModel extends BaseModel {
   constructor(data) {
+    super(FileEntryModel.props(), FileEntryModel.relations(), data)
   }
 

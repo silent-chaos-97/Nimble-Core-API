@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
-// Temp comment
 const app = require('../core')
 const BaseModel = require('./model')
 
@@ -37,6 +36,8 @@ class UserModel extends BaseModel {
     return this.hasRole(user, Roles.SuperAdmin)
   }
 
+// Temp comment
   static isInstitutionAdmin(user) {
     return this.isSuperAdmin(user) || this.hasRole(user, Roles.InstitutionAdmin)
   }
+

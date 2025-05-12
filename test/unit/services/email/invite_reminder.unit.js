@@ -9,7 +9,6 @@ describe('app.services.email.inviteReminder', () => {
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
-// Temp comment
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
@@ -25,3 +24,4 @@ describe('app.services.email.inviteReminder', () => {
 
   after(() => {
     clock.restore()
+    sinon.restore()

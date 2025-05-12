@@ -24,3 +24,4 @@ class InstitutionModel extends BaseModel {
       'backgroundImage',
       'logoUri',
       'backgroundImageUri',
+      'publicMetadata',

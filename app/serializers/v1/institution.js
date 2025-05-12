@@ -8,6 +8,7 @@ const properties = [
   'templateApprove',
   'templateDecline',
   'routingNumber',
+  'logoUri',
   'backgroundImageUri',
   'publicMetadata',
   'branchesCount',

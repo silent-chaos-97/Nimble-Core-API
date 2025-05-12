@@ -18,3 +18,4 @@ class SearchModel extends BaseModel {
         'updatedAt',
 
         //info
+        'name',

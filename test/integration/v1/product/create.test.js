@@ -11,6 +11,7 @@ describe('POST /institutions/:id/products', () => {
   })
 
   it('should return 401 when apikey not present', () => {
+    return request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
       .send(product)
       .expect('Content-Type', /json/)
@@ -35,3 +36,4 @@ describe('POST /institutions/:id/products', () => {
         .expect(400)
         .expect((res) => {
           expect(res.body.message).not.to.be.undefined
+          expect(res.body.message).not.to.contain('"id" is required')

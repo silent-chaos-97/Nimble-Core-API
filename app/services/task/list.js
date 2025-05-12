@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const TaskRepo = app.repositories.task
@@ -24,6 +23,7 @@ async function list(args, tx = app.db) {
       assignee = await UserRepo.forge({ id: filters.assigneeId }).then(user =>
         new User(user).data()
       )
+// Temp comment
     } catch (err) {
       // gulp
     }

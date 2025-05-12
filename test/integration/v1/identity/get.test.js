@@ -8,6 +8,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     nock.enable()
   })
 
+  beforeEach(async () => {
     frontDocId = 'a74f9092-5889-430a-9c19-6712f9f68090'
     backDocId = 'a74f9092-5889-430a-9c19-6712f9f68091'
     await Promise.all([
@@ -25,3 +26,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${frontDocId}.png`)
       .reply(200, imageContent)
+    nock(config.get('aws').s3_endpoint)

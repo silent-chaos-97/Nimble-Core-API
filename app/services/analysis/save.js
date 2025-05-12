@@ -35,6 +35,7 @@ async function save(analysis, opts, tx = app.db) {
     id = entity.id
 
     const files = await Promise.all(_.map(fileIds, async fileId => {
+      let file = (await File.forge({ id: fileId }).fetch({ transacting: tx })).toJSON()
       if (file.analysisId !== entity.id) file = (await File.forge({ ...file, analysisId: entity.id }).save(null, { transacting })).toJSON()
       return file
     }))

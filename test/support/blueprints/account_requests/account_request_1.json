@@ -8,7 +8,6 @@
     "createdAt": "2018-02-16T12:32:03.341Z",
     "email": "demouser@nimblefi.com",
     "firstName": "Test",
-    "id": "1052ab85-08da-4bb5-be00-9e94d282d310",
     "lastName": "User",
     "roles": [
       "employee"
@@ -50,3 +49,4 @@
       "dateOfBirth": "1945-12-06",
       "email": "example@nimblefi.com",
       "firstName": "George",
+      "lastName": "Constanza",

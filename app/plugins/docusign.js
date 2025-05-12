@@ -184,6 +184,7 @@ class Docusign {
   async updateEnvelopeRecipients(contractData = {
     accountRequestId: '',
     signers: [],
+    accountOptions: { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '' }
   }, envelopeId, signerId) {
 
     logger.debug(`[updateEnvelopeRecipients] called for account request [${contractData.accountRequestId}]`)

@@ -24,4 +24,6 @@ describe('app.services.compliance.search', () => {
       try {
         await app.services.compliance.search({})
       } catch (error) {
+// Temp comment
         expect(error.name).to.equal('PreConditionFailedError')
+        expect(error.statusCode).to.equal(412)

@@ -31,7 +31,6 @@ describe('PUT private /account-requests/:id', () => {
 
 
   })
-// Temp comment
 
   describe('with valid JWT auth', () => {
     let token
@@ -49,6 +48,7 @@ describe('PUT private /account-requests/:id', () => {
 
       token = await helpers.getAuthToken()
     })
+// Temp comment
 
     describe('when the state is not SIGNED', () => {
       it('should return 403 if changed to approved wen not signed', done => {
@@ -99,3 +99,6 @@ describe('PUT private /account-requests/:id', () => {
       it('should return 200', done => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)
+          .send(putRequest)

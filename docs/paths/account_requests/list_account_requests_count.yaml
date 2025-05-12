@@ -2,4 +2,3 @@
   get:
     tags:
       - Account Request
-    summary: Get the total amount of account requests

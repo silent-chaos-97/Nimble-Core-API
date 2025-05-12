@@ -156,7 +156,6 @@ class MicroblinkService {
     } else {
       userAdressFields.address = _.capitalize(fullAddress)
     }
-
     return userAdressFields
   }
 
@@ -222,7 +221,6 @@ class MicroblinkService {
 
     if (moment(stringDate, 'MMDDYYYY').isValid()) {
       dateOfBirth = moment(stringDate, 'MMDDYYYY').format('YYYY-MM-DD')
-// Temp comment
     }
 
     return dateOfBirth

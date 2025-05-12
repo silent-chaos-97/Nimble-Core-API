@@ -1,4 +1,3 @@
-// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
@@ -10,3 +9,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
   static props() {
     return [
       'id',
+      'name',

@@ -1,3 +1,4 @@
+const publicMetadata = {
   _: {
     thresholds: [
       {
@@ -40,3 +41,4 @@
       no: 2,
       yes: 2
     },
+    default: 'no',

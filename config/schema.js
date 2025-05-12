@@ -110,7 +110,6 @@ const schema = {
     ttl: {
       doc: 'The ttl for JWT tokens in seconds',
       format: Number,
-      default: 7200, // 2h
       env: 'JWT_EXPIRATION'
     },
     ttlDev: {
@@ -140,6 +139,7 @@ const schema = {
       env: 'WKFL_JOB_RUNNER_INTERVAL_MILLIS'
     }
   },
+  admin: {
     wkfl: {
       jobsEnabled: {
         doc: 'Whether to enable the workflow job runner',
@@ -150,3 +150,7 @@ const schema = {
     }
   },
   aws: {
+    key: {
+      doc: 'the AWS access ID for the app',
+      format: String,
+      default: '',

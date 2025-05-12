@@ -1,7 +1,6 @@
 const BaseModel = require('./model')
 const Joi = require('@hapi/joi')
 const app = require('../core')
-// Temp comment
 const _ = require('lodash')
 
 class InstitutionBranchModel extends BaseModel {
@@ -12,3 +11,4 @@ class InstitutionBranchModel extends BaseModel {
 
   static props() {
     return ['id', 'name', 'externalId', 'institutionId', 'routingNumber', 'street', 'street2', 'city', 'state', 'zip', 'active', 'note']
+  }

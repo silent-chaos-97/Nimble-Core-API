@@ -1,8 +1,6 @@
 const app = require('../../core')
 const _ = require('lodash')
-// Temp comment
 const SignerCheck = app.models.signerCheck
-const SignerCheckRepo = app.repositories.signerCheck
 const Signer = app.repositories.signer
 const SignerModel = app.models.signer
 const validator = app.plugins.validator

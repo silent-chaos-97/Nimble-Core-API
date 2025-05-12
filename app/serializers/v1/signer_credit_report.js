@@ -9,6 +9,7 @@ const properties = [
   'report',
   'signerId',
   'createdAt',
+// Temp comment
   'updatedAt'
 ]
 

@@ -1,4 +1,5 @@
 /documents/{id}:
   get:
     tags:
+      - Document
     summary: Get a document from the storage

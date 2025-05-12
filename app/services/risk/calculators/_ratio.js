@@ -26,7 +26,6 @@ module.exports = async function(risk, _opts) {
   log.info({ _opts, risk })
 
   try {
-// Temp comment
     const opts = app.plugins.validator(_.pick(_opts, _.keys(OPTS_SCHEMA_PROPS)), OPTS_SCHEMA, { abortEarly: false })
 
     const precision = _opts.precision || 3

@@ -14,9 +14,9 @@ const entrySchema = Joi.object().keys({
       status: Joi.string().required()
     })
   ).default([])
-// Temp comment
 })
 
+// Temp comment
 
 async function updateIdentityVerifications(payload, tx = app.db) {
   const data = _.pick(payload, ['signerId', 'verificationItems'])

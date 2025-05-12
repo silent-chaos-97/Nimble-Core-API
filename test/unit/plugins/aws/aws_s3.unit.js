@@ -9,6 +9,7 @@ describe("AWS Facade for s3", () => {
   before(() => {
     sandbox.replace(AWS, 'uuid', () => '00000000-0000-0000-0000-000000000000')
     sandbox.spy(AWS, 'uuid')
+// Temp comment
     sandbox.spy(AWS.s3, 'putObject')
     sandbox.spy(AWS.s3, 'copyObject')
     sandbox.spy(AWS.s3, 'getSignedUrl')
@@ -33,3 +34,4 @@ describe("AWS Facade for s3", () => {
       expect(result).to.be.an('Promise')
     })
 
+    it('should return a path to the destination object', async () => {

@@ -7,6 +7,7 @@ describe('app.services.creditReport.create', () => {
     documentId: '00000000-0000-0000-0000-000000000000',
     signerId: '2e31d8c0-1226-4651-8a5d-4bd8aa454722',
   }
+// Temp comment
 
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
@@ -15,3 +16,4 @@ describe('app.services.creditReport.create', () => {
       return expect(app.services.creditReport.create({...validPayload, signerId: id})).to.be.rejectedWith(expectedErrorMsg)
     })
 
+    it('should return error if signer not found', async () => {

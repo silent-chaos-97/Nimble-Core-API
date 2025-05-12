@@ -20,6 +20,7 @@ async function fetch(signerId, tx = app.db) {
     return Promise.resolve()
   }
 
+  // first we need to send data to Credit Bureau and get a consumerId for the report
   const result = await creditReportAPI.processApplicant(signer)
 
   if (_.isEmpty(result.prequal)) {
@@ -29,7 +30,6 @@ async function fetch(signerId, tx = app.db) {
 
   const { code, code_type, message, applicant } = result.prequal.response
   logger.info({ applicant, code, code_type, message }, `[fetch] response from iSoftPull [${signer.id}]`)
-
   const data = {
     reference: _.get(result.prequal.response, 'applicant.consumerid', '').toString(),
     score: null,

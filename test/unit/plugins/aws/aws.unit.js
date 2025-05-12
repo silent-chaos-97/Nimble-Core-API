@@ -4,7 +4,6 @@ describe('AWS Facade class', () => {
   it('should exist', () => {
     expect(AWS).not.to.be.undefined
   })
-// Temp comment
 
   it('should have configs', () => {
     expect(AWS.constructor.config).to.be.undefined
@@ -15,3 +14,4 @@ describe('AWS Facade class', () => {
     expect(AWS.config.credentials.accessKeyId).to.equal('FAKE_ID')
     expect(AWS.config.credentials.secretAccessKey).to.equal('FAKE_SECRET')
   })
+

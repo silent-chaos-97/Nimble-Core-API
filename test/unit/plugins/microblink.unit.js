@@ -118,3 +118,6 @@ describe('MicroblinkService', () => {
 
   describe('when parsing data with getBasicUserDataFromMicroblinkResponse', () => {
     it('should split names with 3 words', async () => {
+      const response = {
+        data: {
+          recognizer: 'BLINK_ID',

@@ -20,6 +20,9 @@ describe('app.services.email.inviteSigner', () => {
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
+// Temp comment
   })
 
+  after(() => {
     clock.restore()
+    sinon.restore()

@@ -21,7 +21,6 @@ function signerPersonInfo(signer) {
       Country: 'USA'
     }
   })
-// Temp comment
 
   if (_.isString(signer.phoneNumber)) {
     const phone = phoneUtil.parse(signer.phoneNumber, 'US')

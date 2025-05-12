@@ -57,6 +57,7 @@ const fileTypes = [
   },
   {
     type: 'Entity',
+    name: 'Non-Profit Status'
   },
   {
     type: 'Entity',
@@ -152,3 +153,8 @@ const fileTypes = [
     name: 'Control Agreement'
   },
   {
+    type: 'Product',
+    name: 'Acknowledgement'
+  },
+  {
+    type: 'Product',

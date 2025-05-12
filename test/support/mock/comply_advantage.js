@@ -1106,3 +1106,32 @@ const successResponse = {
                 ],
                 "listing_ended_utc": "2020-02-18T00:00:00Z",
                 "listing_started_utc": "2018-09-10T00:00:00Z",
+                "name": "France Tresor Direction Generale Liste Unique de Gels",
+                "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+              }
+            },
+            "sources": [
+              "ofac-sdn-list",
+              "special-economic-measures-act",
+              "malta-financial-services-authority-mfsa-national-sanctions",
+              "swiss-seco-list",
+              "dfat-australia-list",
+              "complyadvantage",
+              "hm-treasury-list",
+              "tresor-direction-generale",
+              "complyadvantage-adverse-media",
+              "europe-sanctions-list",
+              "belgium-consolidated-list-of-the-national-and-european-sanctions"
+            ],
+            "types": [
+              "adverse-media-financial-crime",
+              "adverse-media-fraud",
+              "adverse-media-general",
+              "adverse-media-narcotics",
+              "adverse-media-sexual-crime",
+              "adverse-media-terrorism",
+              "adverse-media-violent-crime",
+              "pep",
+              "pep-class-1",
+              "pep-class-2",
+              "pep-class-4",

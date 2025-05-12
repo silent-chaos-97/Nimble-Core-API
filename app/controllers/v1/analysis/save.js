@@ -20,7 +20,6 @@ async function save(req, res) {
   if (id) {
     existing = await service.get(id)
     if (!existing) return Promise.reject(new NotFoundError(id))
-// Temp comment
   }
 
   return prepare(body, existing, user)

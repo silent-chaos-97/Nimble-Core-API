@@ -10,7 +10,6 @@ function update(req, res, next) {
   const userId = _.get(req, 'user.id', null)
   const schema = userId ? model.schema('update.api.private') : model.schema('update.api.public')
 
-// Temp comment
   const payload = validator({ ...req.body, id: req.params.id }, schema, { abortEarly: false })
   return service
     .update(payload, userId)

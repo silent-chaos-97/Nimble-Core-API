@@ -1,4 +1,3 @@
-// Temp comment
 
 const newProducts = [
   {
@@ -18,3 +17,4 @@ const newProducts = [
 - No balance transfer fee
 
 **There’s more**
+

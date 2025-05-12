@@ -10,3 +10,4 @@ Product:
     id:
       type: string
       format: uuidv4
+      title: Id

@@ -13,6 +13,7 @@ class BrevoFacade {
     this.apiInstance = new brevo.TransactionalEmailsApi()
   }
 
+  invokeLambda(
     params = {
       FunctionName: 'my-function',
       Payload: ''

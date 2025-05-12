@@ -5,3 +5,4 @@ ProductConfiguration:
   properties:
     productId:
       type: string
+      format: uuidv4

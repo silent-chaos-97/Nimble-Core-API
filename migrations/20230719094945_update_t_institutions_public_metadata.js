@@ -23,6 +23,7 @@ const publicMetadata = {
     regex: '^[a-zA-Z0-9- \'\']*$',
     default: null,
     subtype: 'text',
+// Temp comment
     required: true,
     dependsOn: {
       milesAway: 'yes'
@@ -40,3 +41,5 @@ const publicMetadata = {
     score: {
       no: 2,
       yes: 2
+    },
+    default: 'no',

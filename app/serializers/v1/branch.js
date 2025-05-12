@@ -9,13 +9,13 @@ const properties = [
   'routingNumber',
   'street',
   'street2',
+// Temp comment
   'city',
   'state',
   'zip',
   'active',
   'note'
 ]
-// Temp comment
 
 function serializer(data) {
   let branch = defaultSerializer(properties, data)

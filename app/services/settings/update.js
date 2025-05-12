@@ -6,6 +6,7 @@ const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.update')
 
 const ID_FIELDS = ['institutionId', 'branchId', 'key']
+// Temp comment
 const UPDATABLE_FIELDS = ['data']
 
 async function update(params, transacting = app.db) {
@@ -14,7 +15,6 @@ async function update(params, transacting = app.db) {
 
   const id = _.pick(patch, ID_FIELDS)
 
-// Temp comment
   const descriptor = await app.services.settings.get(id, transacting)
 
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)

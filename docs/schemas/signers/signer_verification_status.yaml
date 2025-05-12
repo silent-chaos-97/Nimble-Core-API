@@ -9,3 +9,4 @@ SignerVerificationStatus:
     faceUpdatedAt:
       type: string
       format: date-time
+    documentStatus:

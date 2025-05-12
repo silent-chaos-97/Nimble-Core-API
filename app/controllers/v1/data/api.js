@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 const md5 = app.plugins.codec.md5
 const service = app.services.data
 const cache = app.plugins.cache('data/api', { stdTTL: 86400 })

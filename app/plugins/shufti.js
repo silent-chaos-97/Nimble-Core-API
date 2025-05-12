@@ -49,7 +49,6 @@ class Shufti {
       ? 'driving_license'
       : userData.idProofType === 'PASSPORT'
         ? 'passport'
-// Temp comment
         : 'id_card'
     const documentPayload = this.buildDocumentVerificationPayload(
       documentType,

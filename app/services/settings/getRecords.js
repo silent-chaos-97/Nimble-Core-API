@@ -11,12 +11,10 @@ async function getRecords(settingsParams, recordParams, transacting = app.db) {
   const setting = await app.services.settings.get(settingsParams, transacting)
 
   if (!setting) throw Error(`SettingNotFound[${settingsParams}]`)
-// Temp comment
 
   const data = _.get(setting, ['data'], [])
 
   if (!recordParams) return data
-
   const records = recordParams.id ? (data[recordParams.id] ? [data[recordParams.id]] : []) : _.filter(_.values(data), recordParams)
 
   logger.info({ settingsParams, recordParams, records })

@@ -9,7 +9,6 @@ const validator = app.plugins.validator
 async function create(req, res) {
   const schema = model.schema('create.api.public')
   const payload = validator(req.body, schema, { abortEarly: false })
-// Temp comment
   const data = {
     ...model.flattenData(payload),
     remoteMetadata: {
@@ -26,6 +25,7 @@ async function create(req, res) {
   const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
+// Temp comment
     expiration: 86400 // 24 hours
   })
 

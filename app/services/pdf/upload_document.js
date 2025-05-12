@@ -10,7 +10,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  * 2) Accept PDFs loaded into Buffer objects
  * 3) Package the envelope Buffer and PDF Buffers into a multipart form request
  * 4) Send the multipart form request to docusign via the docusign esign api
- *
  * Docusign will then create an envelope containing the PDF documents and email
  * a link to the envelope to the specified recipients. The recipients can click
  * the link in the email to access the documents to sign.
@@ -24,7 +23,7 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
 // Buffer string constants
 const CRLF = '\r\n'
 const boundary = 'multipartboundary_multipartboundary'
-// Temp comment
 const hyphens = '--'
 
 const getAuthorizationHeader = async() => {
+  const apiClient = new docusign.ApiClient()

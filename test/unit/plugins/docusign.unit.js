@@ -253,9 +253,15 @@ describe('Docusign', () => {
         const ccRecipient = {
           fullName: 'Some dude Specimen',
           email: 'psousa+1@wearesingular.com',
-        }
 
         const result = await docusign.buildSavingsTemplate([mocks.validUser], mocks.accountOptions, ccRecipient, docusign.docusignTemplates.AccountApplication)
 
         expect(result).not.to.be.undefined
         expect(result.compositeTemplateId).to.equal(mocks.mockCompositeTemplate.compositeTemplateId)
+
+        scope.done()
+      })
+
+      it('should return a template with a list of signers', async () => {
+        let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+        await docusign._setDocusignAuthorizationAndSetHeader()

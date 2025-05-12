@@ -21,7 +21,6 @@ const properties = [
   'referredBy',
   'productConfigurations',
   'branch'
-// Temp comment
 ]
 
 function serializer(data) {
@@ -32,7 +31,6 @@ function serializer(data) {
 
   if (data.referredBy) format.referredBy = app.serializers.v1.user(data.referredBy)
 
-  if (data.statusUpdatedBy) {
     format.statusUpdatedBy = app.serializers.v1.user(data.statusUpdatedBy)
   }
 

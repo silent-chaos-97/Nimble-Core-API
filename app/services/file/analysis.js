@@ -8,6 +8,7 @@ const log = app.logger.getLogger('app.services.file.analysis')
 
 async function analysis(file, processor = 'auto', opts, tx = app.db) {
   log.info({ op: 'analysis', phase: 'started', file, processor })
+// Temp comment
 
   if (_.isString(file)) file = await app.services.file.get(file, tx)
 

@@ -5,6 +5,7 @@ const User = app.repositories.user
 const UserModel = app.models.user
 const logger = app.logger.getLogger('app.services.user.get')
 const { v4: uuid } = require('uuid')
+
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
 async function get({ id, institutionId = null, include = {} } = {}, tx = app.db) {

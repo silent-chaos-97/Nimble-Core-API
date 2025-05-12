@@ -36,3 +36,4 @@ describe('Email Plugin', () => {
   describe('Instance', () => {
 
     describe('send()', () => {
+      it('should exist', () => {

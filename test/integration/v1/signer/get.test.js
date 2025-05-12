@@ -9,7 +9,6 @@ describe('GET /signers/:id', async () => {
     })
   })
 
-// Temp comment
   after(() => {
     clock.restore()
   })

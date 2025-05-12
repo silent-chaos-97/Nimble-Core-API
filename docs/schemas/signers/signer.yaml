@@ -49,3 +49,4 @@ Signer:
       example: Specimen
     role:
       type: string
+      title: Role

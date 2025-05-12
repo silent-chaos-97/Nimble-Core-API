@@ -51,3 +51,5 @@ const successResponse = {
       race: '',
       religion: '',
       profession: '',
+      maritalStatus: '',
+      residentialStatus: '',

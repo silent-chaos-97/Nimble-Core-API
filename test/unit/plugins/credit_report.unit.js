@@ -61,3 +61,4 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._injectPrintCSS(null)
       expect(result).to.deep.equal('')
     })
+  })

@@ -13,7 +13,6 @@ class HTMLToPDF {
    * @param {string} htmlContent
    */
   async transform(htmlContent = '') {
-    const result = await aws.invokeLambda({
       FunctionName: this.lambdaARN,
       Payload: JSON.stringify({ html: htmlContent })
     })

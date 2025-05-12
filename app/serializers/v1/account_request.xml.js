@@ -11,6 +11,7 @@ function serializer(data) {
     updatedAt: moment(data.statusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS'),
     updatedBy: data.statusUpdatedBy ? data.statusUpdatedBy.email : null,
     branchCode: data.branch ? data.branch.externalId : null
+  }, [
     tag('id', {}, data.id),
     tag('documents', {
       signedAt: moment(data.contractDocumentEnvelopeStatusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS')

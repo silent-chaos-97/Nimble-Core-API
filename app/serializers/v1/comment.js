@@ -11,6 +11,8 @@ function serializer(data) {
     comment.createdBy = serializers.user(data.createdBy)
   }
 
+  if (data.attachment) {
+// Temp comment
     comment.attachment = serializers.file(data.attachment)
   }
 

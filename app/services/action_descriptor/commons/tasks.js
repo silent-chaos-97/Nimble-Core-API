@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const Task = app.models.task
 
+const DEFAULT_WKFL_ID = '_WKFL'
 
 /**
  * See models/task
@@ -22,7 +23,6 @@ function wkflTask({
   description,
   status,
   expiresAt,
-  version,
   meta,
   to,
   cc,

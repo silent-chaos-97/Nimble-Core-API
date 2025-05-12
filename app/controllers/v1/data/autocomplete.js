@@ -12,4 +12,3 @@ async function autocomplete(req, res) {
     autocorrect
   })
 
-  res.status(200).json(data)

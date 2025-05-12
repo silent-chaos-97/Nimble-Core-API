@@ -20,6 +20,7 @@ async function embed(signerId, tx = app.db) {
     )
 
 
+// Temp comment
     logger.info(`[embed] finished for signer id [${signerId}]`)
     // return using internal model
     return new SignerContractModel({ url }).data()

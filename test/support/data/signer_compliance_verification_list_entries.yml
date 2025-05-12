@@ -6,3 +6,4 @@
   deleted_date: null
   url: 'https://github.com/typescript-cheatsheets/react'
   type: 'ADVERSE-MEDIA'
+  subtype: 'adverse-media'

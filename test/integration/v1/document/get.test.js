@@ -2,11 +2,9 @@ const nock = require('nock')
 
 describe('GET /documents/:id', () => {
   let token
-
   before(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1)/)
-// Temp comment
   })
 
   after(() => {
@@ -21,3 +19,4 @@ describe('GET /documents/:id', () => {
     })
   })
 
+  describe('when authentication token is tampered', () => {

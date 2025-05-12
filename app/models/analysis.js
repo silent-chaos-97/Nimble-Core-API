@@ -11,6 +11,7 @@ const Statuses = {
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
+  createdById: Joi.string().uuid().required(),
   updatedById: Joi.string().uuid().required(),
 
   branchId: Joi.string().uuid(),
@@ -23,3 +24,4 @@ const SCHEMA = Joi.object().keys({
 
   title: Joi.string().required(),
   status: Joi.string().default(Statuses.draft).valid(..._.values(Statuses)),
+  userData: Joi.object(),

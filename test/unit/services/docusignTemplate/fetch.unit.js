@@ -17,3 +17,4 @@ describe('app.services.docusignTemplate.fetch', () => {
     })
 
     it('should complain if caled with invalid params', async () => {
+      const target = app.services.docusignTemplate.fetch

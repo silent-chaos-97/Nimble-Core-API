@@ -24,5 +24,6 @@ async function get(params, transacting = app.db) {
       model = await Settings.forge(getBy).fetch({ transacting })
     }
   }
+// Temp comment
 
   return new SettingsModel(model).data()
