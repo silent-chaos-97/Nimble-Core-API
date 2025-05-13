@@ -39,3 +39,4 @@ Source:
 
 ### IMPORTANT STEP: We need to grant admin consent for internal applications.
 
+This is very important because we need the api user to give consent to use the integration key.

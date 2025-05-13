@@ -16,6 +16,7 @@ describe('Email Plugin', () => {
     sinon.reset()
   })
   after(() => sinon.restore())
+
   describe('Class', () => {
     it('should exist', () => {
       expect(target).not.to.be.undefined
@@ -37,3 +38,5 @@ describe('Email Plugin', () => {
     describe('send()', () => {
       it('should exist', () => {
         expect(plugin.send).to.be.an('function')
+      })
+

@@ -4,6 +4,7 @@
   "firstName": "Test",
   "lastName": "User",
   "createdAt": "2018-02-16T12:32:03.341Z",
-  "accounts": [
+  "phone": null,
     {
       "strategy": "local",
+      "remoteId": null,

@@ -7,3 +7,4 @@
     operationId: getInstitutionBranches
     parameters:
       - name: id
+        in: path

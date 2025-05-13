@@ -18,3 +18,4 @@ describe('BaseModel class', () => {
     expect(BaseModel.relations).to.be.an('Function')
     expect(BaseModel.schema).to.be.an('Function')
   })
+

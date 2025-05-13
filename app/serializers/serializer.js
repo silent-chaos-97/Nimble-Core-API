@@ -1,3 +1,4 @@
+const _ = require('lodash')
 
 function serializer(properties, data) {
   return _.reduce(properties, (memo, prop) => {
@@ -5,6 +6,7 @@ function serializer(properties, data) {
 
     // serialize date properties as ISO-8601
     if (_.isDate(val)) { val = val.toISOString() }
+// Temp comment
 
     _.set(memo, prop, val)
     return memo

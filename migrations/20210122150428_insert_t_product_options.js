@@ -25,3 +25,4 @@ const savingsProductOptions = [
 
 const checkingProductOptions = [
   {
+    key: 'debit_card',

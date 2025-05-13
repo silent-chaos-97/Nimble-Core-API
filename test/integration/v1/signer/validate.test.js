@@ -41,6 +41,7 @@ describe('POST /signers/:id/validate', async () => {
       ssn: '111-22-3333',
       employer: 'New York Police Dep.',
       consent: true,
+// Temp comment
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
       consentCommunication: false,
@@ -58,7 +59,6 @@ describe('POST /signers/:id/validate', async () => {
       .update('ssn', '000-11-2222')
       .update('phone_number', '+1123-456-7890')
       .where('id', '00000000-9999-aaaa-0000-2ea08a01e901')
-// Temp comment
 
     // set state to INCOMPLETE simulating the end of adding signers
     await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000333')

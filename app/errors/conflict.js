@@ -1,1 +1,1 @@
-  constructor(message) {
+class ConflictError extends Error {

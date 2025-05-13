@@ -13,6 +13,5 @@ module.exports = {
     if (handler) return handler(event)
   }
 }
-
 async function DRAFT_to_INCOMPLETE(event) {
 

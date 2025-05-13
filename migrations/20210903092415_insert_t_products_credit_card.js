@@ -1,4 +1,5 @@
 
+// Temp comment
 const newProducts = [
   {
     name: 'Visa® Classic Credit Card',
@@ -18,3 +19,4 @@ const newProducts = [
 
 **There’s more**
 
+The <INSTITUTION NAME> CardManager allows you anytime access to easily manage your Central Bank credit card.

@@ -1,6 +1,7 @@
 {
   "type": "object",
   "required": [
+    "sent",
     "notSent"
   ],
   "properties": {
@@ -9,3 +10,4 @@
       "type": "array",
       "stereotype": "users",
       "items": {
+        "type": "object",

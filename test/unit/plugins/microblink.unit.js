@@ -41,6 +41,7 @@ describe('MicroblinkService', () => {
 
       expect(result).to.have.deep.property('code', 'OK')
       expect(result.data.result).to.have.deep.property('firstName', userData.firstName.toUpperCase())
+      expect(result.data.result).to.have.deep.property('lastName', userData.lastName.toUpperCase())
       expect(result.data.result).to.have.deep.property('address', userData.fullAddress.toUpperCase())
       expect(result.data.result).to.have.deep.property('documentNumber', userData.documentNumber.toUpperCase())
 
@@ -96,7 +97,6 @@ describe('MicroblinkService', () => {
 
       const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
-        .reply(200, response)
 
       const returnedData = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
       const result = service.getBasicUserDataFromMicroblinkResponse(returnedData.data.result)
@@ -121,3 +121,8 @@ describe('MicroblinkService', () => {
         data: {
           recognizer: 'BLINK_ID',
           result: {
+            firstName: 'MARK JAMES',
+            lastName: 'BROWN',
+            fullName: '',
+            type: 'BLINK_ID',
+            customerMiddleName: '',

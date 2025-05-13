@@ -6,7 +6,6 @@ const Joi = require('@hapi/joi')
  */
 function schema() {
   return Joi.object()
-    .keys({
       id: Joi.string().uuid(),
       name: Joi.string(),
       category: Joi.string(),

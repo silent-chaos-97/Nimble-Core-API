@@ -18,11 +18,10 @@ describe('app.services.email.inviteReminder', () => {
   })
 
   beforeEach(() => {
-// Temp comment
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
 
   after(() => {
-    clock.restore()
     sinon.restore()
+  })

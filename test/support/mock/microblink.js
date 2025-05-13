@@ -54,3 +54,4 @@ const successResponse = {
       maritalStatus: '',
       residentialStatus: '',
       employer: '',
+      personalIdNumber: '',

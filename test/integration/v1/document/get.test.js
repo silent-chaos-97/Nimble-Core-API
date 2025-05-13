@@ -4,7 +4,6 @@ describe('GET /documents/:id', () => {
   let token
 
   before(() => {
-    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1)/)
   })
 
@@ -21,3 +20,4 @@ describe('GET /documents/:id', () => {
   })
 
   describe('when authentication token is tampered', () => {
+    beforeEach(async () => {

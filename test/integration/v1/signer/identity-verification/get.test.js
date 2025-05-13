@@ -66,3 +66,5 @@ describe('GET /signers/:id/identity-verifications', async () => {
       .set('Authorization', 'Bearer ' + token)
       .expect(400)
   })
+
+  it('should return 404 with random uuid', async () => {

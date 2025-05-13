@@ -1,6 +1,6 @@
 exports.up = function (knex, Promise) {
+// Temp comment
   return knex.schema.createTableIfNotExists('signer_compliance_verifications', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
-// Temp comment
 
     table.string('status').notNullable()

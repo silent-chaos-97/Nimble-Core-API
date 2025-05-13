@@ -1148,3 +1148,41 @@ const successResponse = {
                   "name_exact"
                 ],
                 "mugabe": [
+                  "name_exact"
+                ],
+                "robert": [
+                  "name_exact"
+                ]
+              },
+              "type": "aka"
+            },
+            "Mugabe Robert Gabriel": {
+              "match_types": {
+                "gabriel": [
+                  "name_exact"
+                ],
+                "mugabe": [
+                  "name_exact"
+                ],
+                "robert": [
+                  "name_exact"
+                ]
+              },
+              "type": "name"
+            },
+            "Robert Gabriel Mugabe": {
+              "match_types": {
+                "gabriel": [
+                  "name_exact"
+                ],
+                "mugabe": [
+                  "name_exact"
+                ],
+                "robert": [
+                  "name_exact"
+                ]
+              },
+              "type": "aka"
+            }
+          },
+          "score": 21.71565

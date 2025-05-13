@@ -3,3 +3,4 @@
   "required": [
     "recipients",
     "message",
+    "type"

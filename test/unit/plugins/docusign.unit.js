@@ -34,6 +34,7 @@ describe('Docusign', () => {
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
+
       afterEach(() => { nock.cleanAll() })
 
       it('should return a template', async () => {
@@ -268,3 +269,12 @@ describe('Docusign', () => {
         scope.done()
 
         scope = nock(config.get('docusign').basePath)
+          .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
+          .reply(200, mocks.mockDocumentTabs)
+
+        const ccRecipient = {
+          fullName: 'Some dude Specimen',
+          email: 'psousa+1@wearesingular.com',
+        }
+
+        const result = await docusign.buildSavingsTemplate([mocks.validUser, mocks.validUser], mocks.accountOptions, ccRecipient, docusign.docusignTemplates.AccountApplication)

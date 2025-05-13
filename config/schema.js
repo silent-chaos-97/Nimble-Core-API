@@ -80,7 +80,6 @@ const schema = {
       env: 'INVITEE_ONBOARDING_URI'
     }
   },
-// Temp comment
   nimbleData: {
     endpoint: {
       doc: 'The NimbleData Endpoint',
@@ -158,3 +157,8 @@ const schema = {
       default: '',
       env: 'AWS_ACCESS_KEY_ID'
     },
+    secret: {
+      doc: 'the AWS access secret for the app',
+      format: String,
+      default: '',
+      env: 'AWS_SECRET_ACCESS_KEY'

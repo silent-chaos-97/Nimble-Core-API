@@ -33,3 +33,4 @@
     "seed": "NODE_ENV=local knex migrate:latest && NODE_ENV=local knex seed:run",
     "dep-check": "dependency-check . app/**/*.js test/**/*.js --missing",
     "dep-check-unused": "dependency-check app/**/*.js test/**/*.js --unused",
+    "docs": "spectacle -t docs/dist docs/openapi.yaml",

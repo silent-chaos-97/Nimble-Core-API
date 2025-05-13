@@ -22,9 +22,9 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  */
 
 // Buffer string constants
-const CRLF = '\r\n'
 const boundary = 'multipartboundary_multipartboundary'
 const hyphens = '--'
 
 const getAuthorizationHeader = async() => {
   const apiClient = new docusign.ApiClient()
+  apiClient.setOAuthBasePath(oauthPath)

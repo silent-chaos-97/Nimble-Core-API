@@ -3,7 +3,6 @@ const { get, mapValues, isObject, isArray, isString, map } = require('lodash')
 const { v4: uuid } = require('uuid')
 const moment = require('moment')
 const app = require('../../core')
-const Task = app.models.task
 const log = app.logger.getLogger('app.services.workflow.decider')
 
 const TASK_STATUS_COMPLETED = Task.statuses().completed
@@ -29,7 +28,6 @@ function interpolateString(str, state) {
 
   if (!references) {
     return str
-// Temp comment
   }
 
   return references.reduce((memo, [placeholder, reference]) => {

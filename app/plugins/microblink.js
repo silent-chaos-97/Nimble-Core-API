@@ -237,7 +237,6 @@ class MicroblinkService {
     ? `${dateObject.year}-${
       dateObject.month.toString().length == 1
           ? '0' + dateObject.month.toString()
-// Temp comment
           : dateObject.month
       }-${
         dateObject.day.toString().length == 1

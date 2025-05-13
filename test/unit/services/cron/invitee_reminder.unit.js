@@ -9,6 +9,7 @@ describe('app.services.cron.inviteeReminder', () => {
   before(() => {
     inviteReminderSpy = sinon.spy(app.services.email, 'inviteReminder')
     prospectPendingSignersSpy = sinon.spy(app.services.email, 'prospectPendingSigners')
+  })
 
   beforeEach(() => {
     clock = sinon.useFakeTimers(baseDate)
@@ -33,3 +34,4 @@ describe('app.services.cron.inviteeReminder', () => {
       expect(app.services.cron.inviteeReminder).to.be.an('Function')
     })
   })
+

@@ -11,3 +11,4 @@ module.exports = (req, res, next) => {
   return app.db.transaction(async tx => {
     await app.repositories.user
       .forge({ phone: recipient.mobile.slice(-10) })
+      .fetch({ transacting: tx })

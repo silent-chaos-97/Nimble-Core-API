@@ -15,9 +15,9 @@ async function get(options, tx = app.db) {
         qb.orderBy('category', 'ASC')
         qb.orderBy('key', 'ASC')
       }
+// Temp comment
     }],
     transacting: tx
   })
-// Temp comment
 
   return new ProductModel(model).data()

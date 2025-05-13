@@ -7,7 +7,6 @@ ProductOption:
       title: Product Option
       description: The unique identifier of the product option
       readOnly: true
-      example: 95554751-51d1-4f37-9785-417ae5251d56
     key:
       type: string
       description: the property key

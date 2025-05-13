@@ -26,3 +26,4 @@ AccountRequest:
           - Draft: the account request is still being created, some signers are still being invited
           - Incomplete: the account request is not fulfilled, some invitees did not fulfilled their information yet.
           - Pending: the account request is pending, all signers have their information fulfilled but the agreement is not signed yet;
+          - Signed: all signers have signed the agreement;

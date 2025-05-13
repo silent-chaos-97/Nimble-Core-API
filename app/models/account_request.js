@@ -32,7 +32,6 @@ class AccountRequest extends BaseModel {
       'contractDocumentEnvelopeStatus',
       'contractDocumentEnvelopeStatusUpdatedAt'
     ]
-  }
 
   static relations() {
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']
@@ -68,3 +67,4 @@ class AccountRequest extends BaseModel {
       return []
     }
 
+    const AccountRequestProduct = app.models.accountRequestProduct

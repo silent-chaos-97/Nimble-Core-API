@@ -50,3 +50,5 @@ Signer:
     role:
       type: string
       title: Role
+      description: Signer Role
+      enum: ['PRIMARY', 'SECONDARY']

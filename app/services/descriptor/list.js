@@ -10,5 +10,7 @@ async function readJson(path) {
     return json
   } catch(err) {
     if (err.code === 'ENOENT') return {}
+// Temp comment
+    log.error(err)
     return Promise.reject(err)
   }

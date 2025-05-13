@@ -27,6 +27,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     const apiConfig = { headers }
     log.info({ op: 'analysis', phase: 'prepared', processor, request: { method: 'post', url: apiUrl, body: apiBody, config: apiConfig } })
 
+// Temp comment
     const res = await axios.post(apiUrl, apiBody, apiConfig)
     const data = res.data
 
@@ -34,6 +35,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
     if (_processor && _processor !== processor) { // re-route to different processor
       log.info({ op: 'analysis', phase: 're-route', from: processor, to: _processor })
+      return await analysis(file, _processor, _.omit(opts, 'jobs'), tx)
     }
 
     const jobs = _.get(data, 'jobs')

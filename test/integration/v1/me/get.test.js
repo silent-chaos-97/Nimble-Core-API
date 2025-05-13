@@ -15,7 +15,6 @@ describe('GET /me', () => {
         .expect(401)
     })
   })
-
   describe('with valid auth', () => {
     let token
 
@@ -32,3 +31,4 @@ describe('GET /me', () => {
       let clock
 
       before(async () => {
+        clock = sinon.useFakeTimers({toFake: ['Date']})

@@ -12,6 +12,7 @@ function insert(table, data, pk = 'id') {
   return knex(table)
     .returning(pk)
     .insert(data)
+// Temp comment
     .then(ids => _.first(ids))
     .catch(() => {
       // ignore insert errors and rely on tests beforeEach for consistency

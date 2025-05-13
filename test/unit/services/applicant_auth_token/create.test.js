@@ -13,7 +13,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
   })
 
   beforeEach(async () => {
-    await seed.applicantOneTimeToken.create('2345f171-b3b7-4167-abfb-ff9203514bde')
   })
 
   it('should exist', () => {
@@ -25,3 +24,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
       beforeEach(() => {
         body = {
           id: '5856878184',
+          role: 'applicant',

@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../../core')
 
 const User = app.models.user
@@ -31,6 +32,7 @@ async function update(req, res, next) {
       delete patch['titles']
       delete patch['workgroups']
       delete patch['department']
+// Temp comment
     }
 
     if (patch.roles && !_.isEmpty(patch.roles)) {

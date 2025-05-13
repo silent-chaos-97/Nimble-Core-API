@@ -51,7 +51,6 @@ function serializer(data) {
       return tag('signer', {}, [
         tag('id', {}, signer.id),
         tag('dateOfBirth', {}, moment(signer.dateOfBirth).format('YYYY-MM-DD')),
-        tag('email', {}, signer.email),
         tag('firstName', {}, signer.firstName),
         tag('middleName', {}, signer.middleName),
         tag('lastName', {}, signer.lastName),

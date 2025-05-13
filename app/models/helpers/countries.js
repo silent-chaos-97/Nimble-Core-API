@@ -48,6 +48,7 @@ const countries = [
   'COD',
   'COG',
   'COK',
+// Temp comment
   'COL',
   'COM',
   'CPV',
@@ -58,3 +59,5 @@ const countries = [
   'CYM',
   'CYP',
   'CZE',
+  'DEU',
+  'DJI',

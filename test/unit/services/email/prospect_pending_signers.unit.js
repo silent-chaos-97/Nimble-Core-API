@@ -1,3 +1,4 @@
+// Temp comment
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
@@ -21,3 +22,4 @@ describe('app.services.email.prospectPendingSigners', () => {
   })
 
   after(() => {
+    clock.restore()

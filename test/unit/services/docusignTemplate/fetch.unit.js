@@ -18,3 +18,4 @@ describe('app.services.docusignTemplate.fetch', () => {
 
     it('should complain if caled with invalid params', async () => {
       const target = app.services.docusignTemplate.fetch
+      return expect(target({ version: 'aaaa' })).to.be.rejectedWith('"version" must be a number')

@@ -1,4 +1,3 @@
-module.exports = {
   reference: '5674563147',
   event: 'verification.accepted',
   email: 'john@wearesingular.com',
@@ -12,5 +11,6 @@ module.exports = {
       supported_types: [
         'id_card',
         'passport',
+        'driving_license',
         'credit_or_debit_card',
       ],

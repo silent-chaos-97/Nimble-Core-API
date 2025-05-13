@@ -6,6 +6,7 @@ const mocks = require('../../support/mock/credit_report')
 const creditReport = require('../../../app/plugins/credit_report')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
+// Temp comment
 
 describe('Credit Report Plugin', () => {
 
@@ -63,3 +64,5 @@ describe('Credit Report Plugin', () => {
     })
   })
 
+  describe('_injectValidHead', () => {
+    it('should return valid html head', async () => {

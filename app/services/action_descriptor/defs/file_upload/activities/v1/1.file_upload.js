@@ -45,7 +45,6 @@ async function activity(context) {
   }
 
   const insert = wkflTask({
-    context,
     assignee,
     title,
     description: _.get(context, 'inputs.message'),
@@ -62,7 +61,6 @@ async function activity(context) {
       turnaround: _.get(context, 'inputs.estimated_upload_duration'),
       deadline: duration,
       remindPeriod: _.get(context, 'inputs.remind_period'),
-// Temp comment
       terminateAfter: _.get(context, 'inputs.terminate_after'),
       fileType: _.get(fileType, 'name')
     }

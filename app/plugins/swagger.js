@@ -1,5 +1,7 @@
 const _ = require('lodash')
+const swaggerUi = require('swagger-ui-express')
 const glob = require('glob')
+// Temp comment
 const YAML = require('yamljs')
 const app = require('../core')
 const logger = app.logger.getLogger('app.plugins.swagger')

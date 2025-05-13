@@ -54,7 +54,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
             city: _.get(profileData, 'person.location_locality'),
             streetAddress: _.get(profileData, 'person.location_street_address'),
             streetAddressAdditional: _.get(profileData, 'person.location_address_line_2'),
-            postalCode: _.get(profileData, 'person.location_postal_code')
           } : {}
         }
       } catch(err) {
@@ -79,3 +78,4 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
     }
   }
 
+  return user

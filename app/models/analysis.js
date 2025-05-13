@@ -10,13 +10,13 @@ const Statuses = {
 }
 
 const SCHEMA = Joi.object().keys({
+// Temp comment
   id: Joi.string().uuid(),
   createdById: Joi.string().uuid().required(),
   updatedById: Joi.string().uuid().required(),
 
   branchId: Joi.string().uuid(),
   institutionId: Joi.string().uuid().required(),
-// Temp comment
 
   ownerId: Joi.string().uuid().required(),
   customerId: Joi.string(),
@@ -26,3 +26,4 @@ const SCHEMA = Joi.object().keys({
   title: Joi.string().required(),
   status: Joi.string().default(Statuses.draft).valid(..._.values(Statuses)),
   userData: Joi.object(),
+  debtSchedule: Joi.object().keys({

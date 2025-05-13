@@ -7,9 +7,9 @@ const Statuses = User.statuses()
 const users = app.services.user
 const serializer = app.serializers.v1.userAccount
 const BadRequestError = require('../../../errors/bad_request')
+
 async function create(req, res, next) {
   const me = req.user
-  const user = req.body
 
   if (!_.isObject(user)) return next(new BadRequestError('UserBodyRequired'))
 

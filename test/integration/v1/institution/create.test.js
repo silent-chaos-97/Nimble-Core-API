@@ -1,5 +1,4 @@
 describe('POST /institutions', () => {
-// Temp comment
   let institution, newInstitution
 
   beforeEach(() => {
@@ -30,3 +29,4 @@ describe('POST /institutions', () => {
       return request(app.server)
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
+        .send({})

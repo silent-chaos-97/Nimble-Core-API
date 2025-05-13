@@ -7,3 +7,4 @@ Document:
     - createdAt
   properties:
     id:
+      type: string

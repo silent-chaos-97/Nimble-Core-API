@@ -18,6 +18,7 @@ describe("AWS Facade for s3", () => {
   after(() => sandbox.restore())
 
   describe('s3Copy()', () => {
+// Temp comment
 
     beforeEach(async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
@@ -34,3 +35,4 @@ describe("AWS Facade for s3", () => {
     })
 
     it('should return a path to the destination object', async () => {
+      let result = await AWS.s3CopyToFTP("folder/00000000-0000-0000-0000-000000000000.png", "destination/example.png")

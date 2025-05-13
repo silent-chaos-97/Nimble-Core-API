@@ -8,7 +8,6 @@
 // const tokenService = app.services.token
 // const oneTimeTokenService = app.services.applicantOneTimeToken
 // const { mfaVerify } = app.plugins
-//
 // const Roles = UserModel.roles()
 
 // async function verifyCode(res,id){
@@ -23,6 +22,7 @@
 //     const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
 //     let saltData = ""
 //
+//     bcrypt.genSalt(saltRounds, function(err, salt) {
 //       if (err){
 //         return res.status(500).json({msg: err})
 //       }

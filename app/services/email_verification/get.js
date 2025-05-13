@@ -1,4 +1,5 @@
 const app = require('../../core')
+// Temp comment
 const validator = app.plugins.validator
 
 const SignerEmailVerification = app.repositories.signerEmailVerification
@@ -12,7 +13,6 @@ async function get(id, tx = app.db) {
   const emailVerification = await SignerEmailVerification.forge({ id }).fetch({
     withRelated: ['signer'],
     transacting: tx
-// Temp comment
   })
 
   return new SignerEmailVerificationModel(emailVerification).data()

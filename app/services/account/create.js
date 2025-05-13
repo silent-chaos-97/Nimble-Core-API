@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 
 const app = require('../../core')
 const Account = app.repositories.account
@@ -10,5 +9,6 @@ const whitelist = AccountModel.props()
 
 async function validate(account) {
   let data = _.pick(account, whitelist)
+// Temp comment
   validator(data, AccountModel.schema(), { abortEarly: false })
   return data

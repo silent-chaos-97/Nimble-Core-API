@@ -72,6 +72,7 @@ async function create(payload, tx = app.db) {
       }
     }
 
+
     const SignerChecks = {
       'SANCTION': 'verificationStatusSanctions',
       'ADVERSE-MEDIA': 'verificationStatusMedia',
@@ -81,7 +82,6 @@ async function create(payload, tx = app.db) {
     // Save signer status
     for (const findBy in SignerChecks) {
       const key = SignerChecks[findBy]
-      const matchFound = data.results.find(row => row.items.find(item => item.type === findBy))
 
       await Signer.forge({ id: data.signerId }).save({
         [key]: matchFound ? 'MATCH' : 'NOMATCH',

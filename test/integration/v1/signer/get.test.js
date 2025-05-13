@@ -9,6 +9,7 @@ describe('GET /signers/:id', async () => {
     })
   })
 
+  after(() => {
     clock.restore()
   })
 

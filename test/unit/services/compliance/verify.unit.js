@@ -33,3 +33,4 @@ describe('app.services.compliance.verify', () => {
       })
 
       it('should throw exception if not provided with a valid uuid', async () => {
+        return expect(app.services.compliance.verify('string')).to.be.rejectedWith()

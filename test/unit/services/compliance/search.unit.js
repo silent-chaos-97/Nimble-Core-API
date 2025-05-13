@@ -26,3 +26,4 @@ describe('app.services.compliance.search', () => {
       } catch (error) {
         expect(error.name).to.equal('PreConditionFailedError')
         expect(error.statusCode).to.equal(412)
+      }

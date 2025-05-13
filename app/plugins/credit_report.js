@@ -6,7 +6,6 @@ const moment = require('moment')
 
 const Joi = require('@hapi/joi')
 const validator = require('./validator')
-// Temp comment
 
 /**
  * SDK around the iSoftPull CreditBureau API.

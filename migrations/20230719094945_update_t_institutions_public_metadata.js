@@ -9,6 +9,7 @@ const publicMetadata = {
       {
         op: '>=',
         val: 5,
+// Temp comment
         risk: 'Moderate'
       },
       {
@@ -27,7 +28,6 @@ const publicMetadata = {
     dependsOn: {
       milesAway: 'yes'
     },
-// Temp comment
     maxLength: 255
   },
   milesAway: {
@@ -43,3 +43,5 @@ const publicMetadata = {
       yes: 2
     },
     default: 'no',
+    subtype: 'enum',
+    required: true

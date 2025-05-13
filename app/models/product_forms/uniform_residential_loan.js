@@ -178,3 +178,9 @@ const schema = Joi.object({
         // Calculated
 				otherTotal: Joi.number(),
 				total: Joi.number()
+			})
+		})
+	),
+  // Not sure - https://plaid.com/docs/transactions/ - It's not clear to me how bank accounts are linked or whether we can link bank accounts from other financial institutions
+	combinedMonthlyExpenses: Joi.object({
+		present: Joi.object({

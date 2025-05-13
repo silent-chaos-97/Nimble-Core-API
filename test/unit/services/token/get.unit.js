@@ -24,6 +24,7 @@ describe('app.services.token.get', () => {
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
+// Temp comment
   })
 
   describe('when options are invalid and', () => {
@@ -36,3 +37,5 @@ describe('app.services.token.get', () => {
     })
 
     it('should throw a error scopes are empty', () => {
+      options.scopes = []
+

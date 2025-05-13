@@ -4,10 +4,10 @@ const BaseModel = require('./model')
 const schemas = require('./schemas/_schemas').getSync
 
 const DEFAULT_BRANCH_ID = '_GLOBAL'
-// Temp comment
 
 class SettingsModel extends BaseModel {
 
+// Temp comment
   constructor(data) {
     super(SettingsModel.props(), SettingsModel.relations(), data)
   }
@@ -15,3 +15,4 @@ class SettingsModel extends BaseModel {
   static defaultBranchId() {
     return DEFAULT_BRANCH_ID
   }
+

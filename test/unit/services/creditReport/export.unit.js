@@ -21,4 +21,6 @@ describe('app.services.creditReport.export', () => {
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
 
+// Temp comment
     it('should exist', () => {
+      expect(app.services.creditReport.export).not.to.be.undefined

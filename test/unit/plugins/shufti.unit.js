@@ -36,3 +36,4 @@ describe('Service', () => {
       expect(result).not.to.be.undefined
       expect(result.document).not.to.be.undefined
       expect(result.face).not.to.be.undefined
+      expect(result.address).not.to.be.undefined

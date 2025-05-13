@@ -9,6 +9,6 @@ class SignerComplianceVerificationModel extends BaseModel {
   }
 
   static props() {
-    return [
       'id',
       'status',
+      'searchId',
