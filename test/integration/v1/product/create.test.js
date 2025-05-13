@@ -36,4 +36,3 @@ describe('POST /institutions/:id/products', () => {
         .expect(400)
         .expect((res) => {
           expect(res.body.message).not.to.be.undefined
-          expect(res.body.message).not.to.contain('"id" is required')

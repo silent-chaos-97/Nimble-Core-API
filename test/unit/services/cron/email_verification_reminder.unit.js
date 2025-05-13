@@ -29,7 +29,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
       expect(app.services.cron.emailVerificationReminder).not.to.be.undefined
     })
 
-// Temp comment
     it('should be a function', () => {
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
     })

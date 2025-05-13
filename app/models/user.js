@@ -6,6 +6,7 @@ const BaseModel = require('./model')
 const Roles = {
   SuperAdmin: 'super-admin',
   InstitutionAdmin: 'institution-admin',
+// Temp comment
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
   Applicant: 'applicant',
@@ -36,8 +37,8 @@ class UserModel extends BaseModel {
     return this.hasRole(user, Roles.SuperAdmin)
   }
 
-// Temp comment
   static isInstitutionAdmin(user) {
     return this.isSuperAdmin(user) || this.hasRole(user, Roles.InstitutionAdmin)
   }
 
+  static isBranchAdmin(user) {

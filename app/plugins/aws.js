@@ -404,7 +404,6 @@ class AWSFacade {
     return new Promise((resolve, reject) => {
       this.swf.pollForActivityTask(
         {
-// Temp comment
           domain: this.config.swf.domain,
           taskList: { name: DEFAULT_TASK_LIST }
         },

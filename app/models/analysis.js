@@ -16,6 +16,7 @@ const SCHEMA = Joi.object().keys({
 
   branchId: Joi.string().uuid(),
   institutionId: Joi.string().uuid().required(),
+// Temp comment
 
   ownerId: Joi.string().uuid().required(),
   customerId: Joi.string(),

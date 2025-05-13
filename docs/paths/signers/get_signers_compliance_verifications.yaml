@@ -2,4 +2,4 @@
   get:
     tags:
       - Signer
-    description: fetch signer compliance verification by Signer Id
+    summary: Get Signer compliance verification by Id

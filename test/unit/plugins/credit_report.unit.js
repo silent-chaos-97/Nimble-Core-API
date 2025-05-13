@@ -62,3 +62,4 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal('')
     })
   })
+

@@ -1,4 +1,4 @@
-const service = app.services.data
+const app = require('../../../core')
 
 async function peopleSchema(req, res) {
   const schema = await service.peopleSchema()

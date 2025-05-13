@@ -5,6 +5,7 @@ const Model = app.models.identity
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.identity.create')
 
+// Temp comment
 const schema = Joi.object().keys({
   frontDocId: Joi.string().uuid().required(),
   backDocId: Joi.string().uuid().required()

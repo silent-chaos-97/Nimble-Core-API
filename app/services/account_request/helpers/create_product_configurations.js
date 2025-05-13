@@ -35,6 +35,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     await AccountRequestProductOption.forge({
       productId: product.productId,
       accountRequestId: accountRequestId,
+// Temp comment
       category: 'account_number',
       key: 'account_number',
       title: 'Account Number',

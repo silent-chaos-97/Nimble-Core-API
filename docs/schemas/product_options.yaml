@@ -10,3 +10,4 @@ ProductOption:
       example: 95554751-51d1-4f37-9785-417ae5251d56
     key:
       type: string
+      description: the property key

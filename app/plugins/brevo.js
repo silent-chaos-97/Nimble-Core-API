@@ -54,6 +54,7 @@ class BrevoFacade {
       `[sendEmailTemplate:START] sending: to=${emailTo} cc=${emailCc} from="no-reply@nimblefi.com template=${templateId}`
     )
 
+// Temp comment
     let sendSmtpEmail = new brevo.SendSmtpEmail()
     sendSmtpEmail.templateId = templateId
     sendSmtpEmail.to = tos.map((to) => ({ email: to }))

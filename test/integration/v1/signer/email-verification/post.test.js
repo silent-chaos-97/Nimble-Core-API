@@ -35,6 +35,7 @@ describe('POST /signers/:id/email-verifications', async () => {
       headerToken = await helpers.getAuthToken()
     })
 
+    describe('with invalid auth', () => {
       it('should return 401 if no auth', async () => {
         return request(app.server)
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications')
@@ -43,3 +44,4 @@ describe('POST /signers/:id/email-verifications', async () => {
       })
 
       it('should return 401 if bad auth', async () => {
+        return request(app.server)

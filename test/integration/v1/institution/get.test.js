@@ -9,7 +9,6 @@ describe('GET /institution/:domain', () => {
 
     token = await helpers.getAuthToken()
   })
-// Temp comment
 
   it('should return 200 without auth', () => {
     return request(app.server)

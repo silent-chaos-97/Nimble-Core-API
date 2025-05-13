@@ -73,7 +73,6 @@ function createSubscriber(opts) {
 
   // this app errors
   subscriber.on('error', err => {
-// Temp comment
     logger.error(err, '[error] subscriber error')
     process.exit(1) // eslint-disable-line no-process-exit
   })

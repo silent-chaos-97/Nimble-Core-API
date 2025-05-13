@@ -6,7 +6,6 @@ class BaseModel {
   constructor(properties, relations, data) {
     //basic verifications
     if (!data) {
-      throw new NotFoundError()
     }
 
     const modelData = data.toJSON ? data.toJSON() : data

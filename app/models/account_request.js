@@ -38,6 +38,7 @@ class AccountRequest extends BaseModel {
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']
   }
 
+  data() {
     const SignerModel = app.models.signer
     const UserModel = app.models.user
     const InstitutionBranchModel = app.models.institutionBranch

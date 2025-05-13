@@ -80,6 +80,7 @@ const schema = {
       env: 'INVITEE_ONBOARDING_URI'
     }
   },
+// Temp comment
   nimbleData: {
     endpoint: {
       doc: 'The NimbleData Endpoint',
@@ -110,6 +111,7 @@ const schema = {
     ttl: {
       doc: 'The ttl for JWT tokens in seconds',
       format: Number,
+      default: 7200, // 2h
       env: 'JWT_EXPIRATION'
     },
     ttlDev: {
@@ -154,3 +156,5 @@ const schema = {
       doc: 'the AWS access ID for the app',
       format: String,
       default: '',
+      env: 'AWS_ACCESS_KEY_ID'
+    },

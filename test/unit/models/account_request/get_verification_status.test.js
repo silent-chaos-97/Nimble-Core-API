@@ -8,7 +8,6 @@ const testSigners = [
     "verificationStatusAddress": "VALID",
     "verificationStatusSanctions": "NOMATCH",
     "verificationStatusMedia": "NOMATCH",
-    "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
   },
   {

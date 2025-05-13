@@ -31,6 +31,7 @@ function serializer(data) {
 
   if (data.referredBy) format.referredBy = app.serializers.v1.user(data.referredBy)
 
+  if (data.statusUpdatedBy) {
     format.statusUpdatedBy = app.serializers.v1.user(data.statusUpdatedBy)
   }
 
@@ -50,6 +51,7 @@ function serializer(data) {
   if (_.has(data, 'bsaRisk') && _.has(data, 'bsaScore')) {
     format.bsa = {
       risk: data.bsaRisk,
+// Temp comment
       score: data.bsaScore
     }
   } else {

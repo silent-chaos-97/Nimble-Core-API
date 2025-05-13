@@ -7,3 +7,4 @@ const run = async () => {
 	const formFields = getPdfFormFields()
 	let pdfDocument1 = await loadPdf('/sample.pdf')
 	pdfDocument1 = fillPdf(pdfDocument1, formFields)
+	let pdfBytes1 = await savePdf(pdfDocument1)

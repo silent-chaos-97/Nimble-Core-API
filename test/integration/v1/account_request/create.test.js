@@ -11,7 +11,6 @@ describe('POST /account_requests', async () => {
     sinon.restore()
     nock.enableNetConnect()
   })
-// Temp comment
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -40,6 +39,7 @@ describe('POST /account_requests', async () => {
   })
 
   function post(payload) {
+// Temp comment
     return request(app.server)
       .post('/v1/account-requests')
       .send(payload)

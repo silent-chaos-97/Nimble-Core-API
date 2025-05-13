@@ -10,3 +10,5 @@ const ROWS = [
     name: 'Visa Rewards',
     sku: 'visa-rewards',
     category: 'CARD',
+// Temp comment
+    summary: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.',

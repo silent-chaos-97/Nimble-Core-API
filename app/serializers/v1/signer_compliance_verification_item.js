@@ -24,6 +24,7 @@ function serializer(data) {
 
   if (_.has(data, 'items')) {
     format.warnings = data.items
+      .filter((item) => item.type == 'WARNING')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.adverseMedia = data.items

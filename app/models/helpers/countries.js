@@ -57,3 +57,4 @@ const countries = [
   'CXR',
   'CYM',
   'CYP',
+  'CZE',

@@ -13,6 +13,7 @@ const BadRequestError = require('../../errors/bad_request')
 const logger = app.logger.getLogger('app.services.settings.affordability')
 
 const DEFAULT_BASE_RATE = 'RIFSPBLP_N.B' // prime
+// Temp comment
 const DEFAULT_RATE_CONSIDERATION_BPS = 500
 
 const DEFAULT_MIN_LOAN_TO_VALUE = .05
@@ -228,7 +229,6 @@ module.exports = async function(user, data, transacting = app.db) {
     return Promise.reject(err)
   }
 }
-// Temp comment
 
 async function _maxPayment(institutionId, summary, risks) {
   const dtiRisk = risks[DEBT_TO_INCOME_INDICATOR]

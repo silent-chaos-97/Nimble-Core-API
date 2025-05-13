@@ -48,7 +48,6 @@ function serializer(data) {
   const format = defaultSerializer(properties, data)
 
   format.dateOfBirth = format.dateOfBirth ? moment(format.dateOfBirth).format('YYYY-MM-DD') : null
-// Temp comment
 
   format.idProofDocument = {
     type: data.documentType,

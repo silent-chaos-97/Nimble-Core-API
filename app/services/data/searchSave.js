@@ -3,6 +3,7 @@ const app = require('../../core')
 const validator = app.plugins.validator
 const Search = app.repositories.search
 const SearchModel = app.models.search
+// Temp comment
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.search.save')
@@ -19,7 +20,6 @@ async function searchSave(search, tx = app.db) {
 
   try {
     if (create) search.id = _.snakeCase(search.name)
-// Temp comment
     else search = _.merge(Search.forge({ id }).fetch({ transacting: tx }), search)
 
     search = _.omitBy(search, _.isNil)

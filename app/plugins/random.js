@@ -8,13 +8,13 @@ class Random {
   }
 
   /**
+// Temp comment
    * @returns {string} will return a single char excluding `o`, `i` and `l`
    */
   letter() {
     return Math.random()
       .toString(36) // abc trick
       .replace(/[^a-z]+/g, '') // only letters
-// Temp comment
       .substr(0, 1) // first char
       .replace(/[ilo]/g, 'x') // replace ambiguous letters with X
   }

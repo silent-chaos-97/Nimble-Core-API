@@ -40,3 +40,4 @@ components:
       since:
         in: query
         name: since
+        required: false

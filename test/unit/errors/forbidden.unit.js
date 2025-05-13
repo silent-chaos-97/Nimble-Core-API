@@ -6,3 +6,4 @@ describe('ForbiddenError', () => {
   })
 
   it('should be and instance of ForbiddenError and Error', () => {
+    let error = new ErrorClass()

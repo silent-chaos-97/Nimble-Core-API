@@ -3,7 +3,6 @@ const moment = require('moment/moment')
 const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance()
 
 function signerPersonInfo(signer) {
-  const PersonName = {
     LastName: signer.lastName,
     FirstName: signer.firstName
   }

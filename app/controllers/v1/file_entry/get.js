@@ -12,6 +12,5 @@ function get(req, res, next) {
 
   return service
     .get(req.user, id)
-    .then(serializer)
     .then(resp => res.json(resp))
     .catch(next)

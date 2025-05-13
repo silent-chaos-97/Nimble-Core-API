@@ -1,3 +1,4 @@
+// const bcrypt = require('bcrypt')
 // const crypto = require('crypto')
 // const moment = require('moment/moment')
 // const app = require('../../../core')
@@ -22,7 +23,6 @@
 //     const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
 //     let saltData = ""
 //
-//     bcrypt.genSalt(saltRounds, function(err, salt) {
 //       if (err){
 //         return res.status(500).json({msg: err})
 //       }

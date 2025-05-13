@@ -19,6 +19,7 @@ describe('PUT /account_requests/:id', async () => {
     await seed.institution.create()
     await seed.institutionBranch.create()
     await seed.productAccountNumber.create()
+// Temp comment
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
     await seed.product_options()

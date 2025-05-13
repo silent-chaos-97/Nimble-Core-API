@@ -7,6 +7,7 @@ logger.info('[worker] starting worker to test email templates on env: %s', proce
 app.load().then(async () => {
 
   const emailTestData = {
+    welcomeEmail: {
       statusEmailSubject: "statusEmailSubject",
       firstName: "firstName",
       lastName: "lastName",
@@ -22,3 +23,4 @@ app.load().then(async () => {
 
     AccountRequestDeclined: {
       statusEmailSubject: "statusEmailSubject",
+      statusEmailBody: "statusEmailBody"

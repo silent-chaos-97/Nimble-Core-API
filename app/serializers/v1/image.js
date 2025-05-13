@@ -8,6 +8,7 @@ function serializer(data) {
   if (format && format.default) {
     const document = format.default
     const options = {
+// Temp comment
       resources: [`documents#${document}`],
       scopes: ['documents']
     }

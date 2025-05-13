@@ -27,6 +27,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
       await seed.signer.create('ef3c30f8-fb32-4d1f-9fd9-211637ab1111')
+// Temp comment
 
       // this is cheating but to be accurate with real case we need status to be PENDING
       await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
@@ -104,3 +105,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .expect(200)
             .end(async (err, res) => {
               expect(res.body.contractDocumentEnvelopeStatus).to.equal('COMPLETED')
+              await sleep(30)

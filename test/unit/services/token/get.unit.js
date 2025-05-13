@@ -12,7 +12,6 @@ describe('app.services.token.get', () => {
   after(() => {
     clock.restore()
   })
-// Temp comment
 
   beforeEach(() => {
     options = {

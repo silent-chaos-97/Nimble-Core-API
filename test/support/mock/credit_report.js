@@ -5,7 +5,6 @@ const signer = {
   middleName: null,
   lastName: "Constanza",
   email: 'psousa+1@wearesingular.com',
-// Temp comment
   address: '123 main street apt. 1',
   city: 'Lisbon',
   state: 'CA',
@@ -22,3 +21,4 @@ const signer = {
 
 const validApplicant = {
   'firstname': 'ADRIENNE',
+  'lastname': 'BRAKE',

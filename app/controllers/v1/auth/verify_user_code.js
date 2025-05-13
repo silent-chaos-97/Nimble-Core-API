@@ -9,7 +9,6 @@ const service = app.services.auth
 //             .then(result => {
 //                 if (result){
 //                   res.status(200).json({token: result.token, status:true})
-//
 //                   // Todo: Save one-time token (result.token) to DB here
 //
 //                 } else {

@@ -55,6 +55,7 @@ function acl(resource, param) {
     }
 
     // try to spawn a model
+    new checkBy.matches.model({ id: targetId }).fetch()
       .then(target => {
         const key = _.get(checkBy, 'matches.key', '')
 

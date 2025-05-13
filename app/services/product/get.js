@@ -10,6 +10,7 @@ async function get(options, tx = app.db) {
   const conditions = validator(options, schema(), { abortEarly: false })
 
   const model = await Product.forge(conditions).fetch({
+    withRelated: [{
       options: (qb) => {
         qb.orderBy('category', 'ASC')
         qb.orderBy('key', 'ASC')
@@ -17,5 +18,6 @@ async function get(options, tx = app.db) {
     }],
     transacting: tx
   })
+// Temp comment
 
   return new ProductModel(model).data()

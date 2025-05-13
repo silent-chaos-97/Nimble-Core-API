@@ -16,7 +16,6 @@ describe('GET /account-requests/count', () => {
     })
   })
 
-// Temp comment
   describe('with valid auth', () => {
     let token
 

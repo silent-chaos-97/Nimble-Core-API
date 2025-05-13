@@ -58,7 +58,6 @@ async function activity(context) {
         }
       }
 
-// Temp comment
       try {
         analysis = await app.services.analysis.save(_analysis)
       } catch (err) {

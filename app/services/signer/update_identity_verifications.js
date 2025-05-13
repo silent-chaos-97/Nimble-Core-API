@@ -9,14 +9,12 @@ const { validator } = app.plugins
 const entrySchema = Joi.object().keys({
   signerId: Joi.string().uuid().required(),
   verificationItems: Joi.array().required().items(
-    Joi.object().keys({
       verification: Joi.string().required(),
       status: Joi.string().required()
     })
   ).default([])
 })
 
-// Temp comment
 
 async function updateIdentityVerifications(payload, tx = app.db) {
   const data = _.pick(payload, ['signerId', 'verificationItems'])

@@ -1,7 +1,6 @@
 
 const axios = require('axios')
 const nock = require('nock')
-const mocks = require('../../../support/mock/credit_report')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -19,3 +18,4 @@ describe('app.services.creditReport.parse', () => {
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
+    await seed.document.create()

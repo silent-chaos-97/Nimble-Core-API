@@ -2,3 +2,4 @@
   post:
     tags:
       - Auth
+    description: Requests an account recovery code via email

@@ -1135,3 +1135,16 @@ const successResponse = {
               "pep-class-1",
               "pep-class-2",
               "pep-class-4",
+              "sanction"
+            ]
+          },
+          "match_types": [
+            "name_exact"
+          ],
+          "match_types_details": {
+            "Gabriel Robert Mugabe": {
+              "match_types": {
+                "gabriel": [
+                  "name_exact"
+                ],
+                "mugabe": [

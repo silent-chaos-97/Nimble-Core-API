@@ -6,6 +6,7 @@ const schema = Joi.object({
   // User input
 	intentToApplyJointly: Joi.object({
 		jointApplicationRequired: Joi.boolean(),
+		includesIncomeOrAssetsFromOtherPerson: Joi.boolean(),
 		borrowerSignature: Joi.string().dataUri(),
 		coborrowerSignature: Joi.string().dataUri()
 	}),
@@ -175,3 +176,5 @@ const schema = Joi.object({
 					})
 				),
         // Calculated
+				otherTotal: Joi.number(),
+				total: Joi.number()

@@ -62,3 +62,4 @@ describe('POST /users', () => {
         .end(done)
     })
 
+    it('should return 404 when branchId not valid', done => {

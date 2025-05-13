@@ -1,3 +1,5 @@
 /institutions/{domain}:
+  get:
     tags:
       - Institution
+    summary: Get an institution

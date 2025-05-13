@@ -8,7 +8,6 @@ const log = app.logger.getLogger('app.services.file.analysis')
 
 async function analysis(file, processor = 'auto', opts, tx = app.db) {
   log.info({ op: 'analysis', phase: 'started', file, processor })
-// Temp comment
 
   if (_.isString(file)) file = await app.services.file.get(file, tx)
 
@@ -35,7 +34,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
     if (_processor && _processor !== processor) { // re-route to different processor
       log.info({ op: 'analysis', phase: 're-route', from: processor, to: _processor })
-      return await analysis(file, _processor, _.omit(opts, 'jobs'), tx)
     }
 
     const jobs = _.get(data, 'jobs')

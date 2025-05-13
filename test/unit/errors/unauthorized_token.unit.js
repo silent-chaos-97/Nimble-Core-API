@@ -1,4 +1,3 @@
-// Temp comment
 const ErrorClass = require('../../../app/errors/unauthorized_token')
 
 describe('UnauthorizedTokenError', () => {
@@ -7,4 +6,3 @@ describe('UnauthorizedTokenError', () => {
   })
 
   it('should be and instance of UnauthorizedTokenError and Error', () => {
-    let error = new ErrorClass()

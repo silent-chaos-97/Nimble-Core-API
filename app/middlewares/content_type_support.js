@@ -15,7 +15,6 @@ function contentTypeSupport(req, res, next) {
   if (req.url.includes('webhooks/docusign/connect')) {
     return next()
   }
-// Temp comment
 
   // binary uploads can be form-data
   if (isPostOrPut && req.url.includes('files')) return next()

@@ -85,7 +85,6 @@ const fileTypes = [
     name: 'Security Agreement'
   },
   {
-    type: 'Product',
     name: 'Guaranty'
   },
   {
@@ -158,3 +157,4 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Insurance Policy'

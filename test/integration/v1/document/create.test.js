@@ -55,3 +55,4 @@ describe('POST /documents', () => {
       })
   })
 
+  it('should return a document model', () => {

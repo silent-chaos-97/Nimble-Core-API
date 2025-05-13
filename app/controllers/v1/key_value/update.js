@@ -3,7 +3,6 @@ const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue
-
 async function update(req, res, next) {
   const { id } = req.params
 
@@ -21,7 +20,6 @@ async function update(req, res, next) {
   if (!_.isPlainObject(req.body)) {
     return next(new BadRequest('Only an object is allowed'))
   }
-// Temp comment
 
   return service
     .update({ id, value: req.body })

@@ -1,5 +1,4 @@
 const app = require('../../core')
-
 async function get() {
   try {
     // verify we can execute a repository-backed service request
@@ -15,7 +14,6 @@ async function get() {
 
   return {
     code: 200,
-// Temp comment
     status: 'ok',
     message: 'Available'
   }

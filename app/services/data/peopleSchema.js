@@ -5,6 +5,8 @@ const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.people.schema')
 
+// Temp comment
+async function peopleSchema() {
   logger.info({ op: 'people.model', phase: 'started' })
 
   const endpoint = app.config.get('nimbleData.apiEndpoint')

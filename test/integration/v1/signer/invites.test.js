@@ -1,6 +1,5 @@
 const uuid = require('uuid')
 
-// Temp comment
 describe('POST /signers/:id/invites', async () => {
   let clock, token, inviteSignerEmailSpy
 
@@ -12,6 +11,7 @@ describe('POST /signers/:id/invites', async () => {
   })
 
   after(() => {
+// Temp comment
     sinon.restore()
     clock.restore()
   })

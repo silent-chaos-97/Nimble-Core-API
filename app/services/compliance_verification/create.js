@@ -72,7 +72,6 @@ async function create(payload, tx = app.db) {
       }
     }
 
-
     const SignerChecks = {
       'SANCTION': 'verificationStatusSanctions',
       'ADVERSE-MEDIA': 'verificationStatusMedia',

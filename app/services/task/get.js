@@ -15,7 +15,6 @@ async function get(where, tx = app.db) {
         q.where('id', where)
       }
     }
-// Temp comment
   })
 
   return query

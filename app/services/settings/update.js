@@ -6,7 +6,6 @@ const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.update')
 
 const ID_FIELDS = ['institutionId', 'branchId', 'key']
-// Temp comment
 const UPDATABLE_FIELDS = ['data']
 
 async function update(params, transacting = app.db) {

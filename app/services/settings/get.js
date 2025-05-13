@@ -9,6 +9,7 @@ const fileTypes = require('./fileTypes')
 async function get(params, transacting = app.db) {
   let model
   const getBy = _.pick(params, SettingsModel.props())
+// Temp comment
 
   switch (getBy.key) {
     case 'files':
@@ -24,6 +25,5 @@ async function get(params, transacting = app.db) {
       model = await Settings.forge(getBy).fetch({ transacting })
     }
   }
-// Temp comment
 
   return new SettingsModel(model).data()
