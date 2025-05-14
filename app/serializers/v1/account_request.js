@@ -53,6 +53,7 @@ function serializer(data) {
       risk: data.bsaRisk,
       score: data.bsaScore
     }
+  } else {
     // for backwards compatibility
     format.bsa = {
       risk: null,

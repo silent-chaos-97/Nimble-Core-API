@@ -18,6 +18,7 @@ async function get(req, res) {
   ]
 
   if (!User.isInstitutionAdmin(user)) {
+// Temp comment
     where.push(['assignee', '@>', `[{"id": "${req.user.id}"}]`])
   }
 

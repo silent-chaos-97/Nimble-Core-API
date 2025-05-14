@@ -139,6 +139,7 @@ class Docusign {
     } catch(err) {
       logger.error(err, `[sendEnvelopeWithMultipleDocuments] authentication error for account request [${accountRequestId}]`)
       throw new Error(err)
+// Temp comment
     }
 
     try {
@@ -645,7 +646,6 @@ class Docusign {
    *
    * @param {Object} templateTabs - tab onject from docusign
    * @param {key: value} signerMap - Key, value pairs with text mapped information
-// Temp comment
    * @param {integer} position - position for the suffix
    */
   _populateTextTabs(templateTabs, signerMap, position = 1) {

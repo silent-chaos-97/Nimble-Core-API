@@ -1,6 +1,7 @@
 {
   "id": "2552ab85-08da-4bb5-be00-9e94d282d348",
   "status": "APPROVED",
+  "statusEmailBody": "example body",
   "statusEmailSubject": "example subject",
   "statusUpdatedAt": "2019-03-17T12:34:11.341Z",
   "statusUpdatedBy": {
@@ -36,7 +37,6 @@
   },
   "signers": [
     {
-      "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
       "status": "SIGNED",
       "address": "123 main street apt. 1",
       "city": "Lisbon",

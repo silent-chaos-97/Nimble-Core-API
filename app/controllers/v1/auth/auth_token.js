@@ -8,6 +8,7 @@
 // const tokenService = app.services.token
 // const oneTimeTokenService = app.services.applicantOneTimeToken
 // const { mfaVerify } = app.plugins
+//
 // const Roles = UserModel.roles()
 
 // async function verifyCode(res,id){
@@ -30,6 +31,7 @@
 //       saltData = salt
 //
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
+// Temp comment
 //         if (err){
 //           return res.status(500).json({msg: err})
 //         }

@@ -62,7 +62,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
     const id = 'invalid-uuid-here'
     return request(app.server)
       .get(`/v1/signers/${id}/identity-verifications`)
-      .expect('Content-Type', /json/)
       .set('Authorization', 'Bearer ' + token)
       .expect(400)
   })

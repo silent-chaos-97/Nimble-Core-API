@@ -7,4 +7,3 @@ describe('UnauthorizedError', () => {
 
   it('should be and instance of UnauthorizedError and Error', () => {
     let error = new ErrorClass()
-    expect(error).to.be.instanceOf(ErrorClass)

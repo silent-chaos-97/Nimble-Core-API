@@ -55,7 +55,6 @@ async function activity(context) {
             activityId: _.get(context, 'THIS.id'),
             runId: _.get(context, 'EXEC.runId')
           }
-        }
       }
 
       try {

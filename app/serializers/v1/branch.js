@@ -3,6 +3,8 @@ const app = require('../../core')
 
 const properties = [
   'id',
+  'name',
+// Temp comment
   'externalId',
   'institution',
   'routingNumber',

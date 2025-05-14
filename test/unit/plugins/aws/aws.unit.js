@@ -1,6 +1,5 @@
 const AWS = require('../../../../app/plugins/aws')
 
-// Temp comment
 describe('AWS Facade class', () => {
   it('should exist', () => {
     expect(AWS).not.to.be.undefined
@@ -8,6 +7,7 @@ describe('AWS Facade class', () => {
 
   it('should have configs', () => {
     expect(AWS.constructor.config).to.be.undefined
+// Temp comment
     expect(AWS.config).not.to.be.undefined //not static
   })
 

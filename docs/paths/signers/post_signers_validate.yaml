@@ -4,7 +4,6 @@
       - Signer
     summary: Validate Signer
     description: Validate Signer
-    parameters:
       - in: path
         name: id
         description: uuid Signer Id

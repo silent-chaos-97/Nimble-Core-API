@@ -21,7 +21,6 @@ module.exports = async(id, ctx) => {
 //
 //     return { ...def, inputs, outputs, context }
 //   })
-// Temp comment
 // }
 //
 // function flattenSchema(schema, basePath = null) {
@@ -31,6 +30,7 @@ module.exports = async(id, ctx) => {
 //     return memo
 //   }, {})
 // }
+// Temp comment
 //
 // function unwrapJsonSchema(schema) {
 //   if (!schema.properties) return JSON.stringify(schema)

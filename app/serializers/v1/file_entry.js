@@ -13,6 +13,7 @@ const properties = [
   'createdAt',
   'updatedAt'
 ]
+
 function serializer(data) {
   const fileEntry = defaultSerializer(properties, data)
 

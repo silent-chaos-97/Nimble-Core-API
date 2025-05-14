@@ -18,6 +18,7 @@ describe('GET /users/:id', () => {
         .expect(400)
         .end(done)
     })
+
     it('should return 500 if :id is weird and breaks routing', done => {
       request(app.server)
         .get('/v1/users/(*&^*(&^%))')

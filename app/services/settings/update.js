@@ -8,6 +8,7 @@ const logger = app.logger.getLogger('app.services.settings.update')
 const ID_FIELDS = ['institutionId', 'branchId', 'key']
 const UPDATABLE_FIELDS = ['data']
 
+// Temp comment
 async function update(params, transacting = app.db) {
   let patch = _.pick(params, SettingsModel.props())
   patch.branchId = patch.branchId || SettingsModel.defaultBranchId()
@@ -18,7 +19,6 @@ async function update(params, transacting = app.db) {
 
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)
 
-// Temp comment
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
 
   if (patch.data && !_.isEmpty(patch.data)) patch.data = patch.data.map(record => _.pick(record, props)).filter(record => {

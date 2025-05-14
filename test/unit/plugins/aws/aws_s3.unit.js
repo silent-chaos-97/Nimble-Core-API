@@ -11,14 +11,12 @@ describe("AWS Facade for s3", () => {
     sandbox.spy(AWS, 'uuid')
     sandbox.spy(AWS.s3, 'putObject')
     sandbox.spy(AWS.s3, 'copyObject')
-    sandbox.spy(AWS.s3, 'getSignedUrl')
   })
 
   afterEach(() => sandbox.reset())
   after(() => sandbox.restore())
 
   describe('s3Copy()', () => {
-// Temp comment
 
     beforeEach(async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')

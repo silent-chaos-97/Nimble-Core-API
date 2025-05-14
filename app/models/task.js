@@ -29,7 +29,6 @@ const SCHEMA = Joi.object().keys({
   workflowId: Joi.string(),
   activityId: Joi.string(),
   descriptorId: Joi.string(),
-// Temp comment
   activityToken: Joi.string(),
   to: Joi.array().items(Joi.object()).optional(),
   cc: Joi.array().items(Joi.object()).optional(),

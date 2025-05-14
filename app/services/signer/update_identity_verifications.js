@@ -18,7 +18,6 @@ const entrySchema = Joi.object().keys({
 
 
 async function updateIdentityVerifications(payload, tx = app.db) {
-  const data = _.pick(payload, ['signerId', 'verificationItems'])
   logger.debug(`[updateIdentityVerifications] started for signer [${data.signerId}]`)
   validator(data, entrySchema, { abortEarly: false })
 

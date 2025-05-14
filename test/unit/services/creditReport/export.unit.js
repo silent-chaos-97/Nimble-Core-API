@@ -14,13 +14,11 @@ describe('app.services.creditReport.export', () => {
   beforeEach(async () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
-
     await seed.institution.create()
   })
 
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
 
-// Temp comment
     it('should exist', () => {
       expect(app.services.creditReport.export).not.to.be.undefined

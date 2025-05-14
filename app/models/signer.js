@@ -22,7 +22,6 @@ class Signer extends BaseModel {
 
   static props() {
     return [
-      'role',
       'id',
       'accountRequestId',
       'status',

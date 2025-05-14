@@ -45,6 +45,7 @@ async function activity(context) {
   }
 
   const insert = wkflTask({
+    context,
     assignee,
     title,
     description: _.get(context, 'inputs.message'),

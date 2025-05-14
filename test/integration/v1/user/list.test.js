@@ -8,7 +8,6 @@ describe('GET /users', () => {
         .end(done)
     })
   })
-
   describe('with valid auth', () => {
     let token
     const user10Id = '1052ab85-08da-4bb5-be00-9e94d282d310'
@@ -44,3 +43,4 @@ describe('GET /users', () => {
         .get('/v1/users?limit=1')
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
+        .expect(200)

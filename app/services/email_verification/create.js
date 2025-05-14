@@ -21,7 +21,6 @@ async function create(signerId, tx = app.db) {
 
   // Update Signer verification Status
   await app.services.signer.update({
-// Temp comment
     id: signerId,
     emailVerified: false,
     emailVerifiedAt: null

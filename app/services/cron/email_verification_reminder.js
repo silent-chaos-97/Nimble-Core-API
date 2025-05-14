@@ -26,6 +26,7 @@ async function email_verification_reminder(days = 1, tx = app.db) {
   // fetch results
   const result = await query.fetchAll({transacting: tx})
 
+// Temp comment
   // map to SignerEmailVerificationModel
   const SignerEmailVerificationList = result.models.map(m => new SignerEmailVerificationModel(m).data())
 

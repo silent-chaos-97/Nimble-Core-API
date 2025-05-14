@@ -9,6 +9,7 @@ exports.up = function(knex) {
     table.string('identity_verification_status')
     table.boolean('identity_verified')
 
+    table.boolean('consent').notNullable()
 
     table.string('role').notNullable()
 

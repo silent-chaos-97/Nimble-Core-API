@@ -10,7 +10,6 @@ async function get(user, fileEntryId, tx = app.db) {
   if (!uid) throw new Error('AssertionError: user required')
 
   const model = await FileEntry.forge({ id: fileEntryId }).fetch({
-    withRelated: ['createdBy', 'file'],
     transacting: tx
   })
 
@@ -18,5 +17,6 @@ async function get(user, fileEntryId, tx = app.db) {
 
   if (data.createdById !== uid) {
     throw new UnauthorizedError('User not allowed to access this fileEntry')
+  }
 
   return data

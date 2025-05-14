@@ -24,13 +24,13 @@ describe('app.services.token.get', () => {
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
-// Temp comment
   })
 
   describe('when options are invalid and', () => {
 
     it('should throw a error scopes not prensent', () => {
       options.scopes = null
+// Temp comment
 
       return expect(() => target(options))
         .to.throw('"scopes" must be an array')

@@ -5,7 +5,6 @@ describe('POST /signers/:id/email-verifications', async () => {
   let clock
 
   before(async () => {
-// Temp comment
     sinon.spy(app.services.email, 'emailVerification')
     clock = sinon.useFakeTimers({
       toFake: ['Date']

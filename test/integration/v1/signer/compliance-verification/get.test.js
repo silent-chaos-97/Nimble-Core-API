@@ -5,7 +5,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
 
   before(async () => {
     clock = sinon.useFakeTimers({
-// Temp comment
       toFake: ['Date']
     })
   })

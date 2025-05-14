@@ -19,7 +19,6 @@ class AccountRequest extends BaseModel {
       'bsaRisk',
       'createdById',
       'createdAt',
-      'productConfigurations',
       'referrers', // FIXME: exists for backward compatability
       'referredById',
       'statusUpdatedById',
@@ -32,6 +31,7 @@ class AccountRequest extends BaseModel {
       'contractDocumentEnvelopeStatus',
       'contractDocumentEnvelopeStatusUpdatedAt'
     ]
+  }
 
   static relations() {
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']

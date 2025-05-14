@@ -10,7 +10,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')
-// Temp comment
 
   // build query
   const query = AccountRequest.query(q => {
@@ -24,6 +23,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
     withRelated: ['signers'],
     transacting: tx
   })
+// Temp comment
 
   // map to AccountRequestModel
   const AccountRequestList = result.models.map(m => new AccountRequestModel(m).data())

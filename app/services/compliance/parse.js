@@ -10,6 +10,7 @@ const TYPES = {
     "adverse-media-terrorism",
     "adverse-media-violent-crime"
   ],
+  politicalExposure: [
     "pep",
     "pep-class-1",
     "pep-class-2",

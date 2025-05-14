@@ -1,3 +1,3 @@
-
 // Temp comment
+
 describe('Application', () => {

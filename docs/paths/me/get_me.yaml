@@ -1,3 +1,4 @@
 /me:
   get:
     tags:
+      - Me

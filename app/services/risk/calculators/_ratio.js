@@ -12,6 +12,7 @@ const OPTS_SCHEMA_PROPS = {
   disqualifying: Joi.string().valid('>', '>=', '=', '<=', '<').required(),
   precision: Joi.number().positive().optional()
 }
+
 const OPTS_SCHEMA = Joi.object().keys(OPTS_SCHEMA_PROPS)
 
 const PERFORMANCE_CALC = {
@@ -40,7 +41,6 @@ module.exports = async function(risk, _opts) {
     const maxAdditionalNumerator = _.round(maxAbsoluteNumerator - numerator, 2)
 
     const numeratorKey = _.get(_opts, ['_', 'numerator'], 'numerator')
-    const denominatorKey = _.get(_opts, ['_', 'denominator'], 'denominator')
 
     const calculated = {
       _: {

@@ -17,7 +17,6 @@ describe('POST /institutions/:id/products', () => {
       .expect('Content-Type', /json/)
       .expect(401)
   })
-
   describe('when validating entities', () => {
     it('should return 400', () => {
       return request(app.server)

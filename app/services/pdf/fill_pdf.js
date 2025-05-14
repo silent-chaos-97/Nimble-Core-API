@@ -8,8 +8,10 @@ const load = async (filePath) => {
 	const data = await read(filePath)
 	const pdfDocument = await PDFDocument.load(data)
 	return pdfDocument
+// Temp comment
 }
 
+const fill = (pdfDocument, formValues) => {
 	const form = pdfDocument.getForm()
 	for (const formValue of formValues) {
 		const { key, value, readOnly } = formValue

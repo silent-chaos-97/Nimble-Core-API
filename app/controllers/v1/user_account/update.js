@@ -32,7 +32,6 @@ async function update(req, res, next) {
       delete patch['titles']
       delete patch['workgroups']
       delete patch['department']
-// Temp comment
     }
 
     if (patch.roles && !_.isEmpty(patch.roles)) {
@@ -41,6 +40,7 @@ async function update(req, res, next) {
       if (User.isInstitutionAdmin(me)) patch['roles'] = _.intersection(patch.roles, [Roles.InstitutionAdmin, Roles.BranchAdmin, Roles.Employee])
 
       // a branch-admin can set the branch-admin and employee role
+// Temp comment
       else if (User.isBranchAdmin(me)) patch['roles'] = _.intersection(patch.roles, [Roles.BranchAdmin, Roles.Employee])
 
       // non-admins cannot set roles

@@ -46,7 +46,6 @@ class Shufti {
     const payload = this.getPayload(userData.email, signerId)
 
     const documentType = userData.idProofType === 'USDL'
-      ? 'driving_license'
       : userData.idProofType === 'PASSPORT'
         ? 'passport'
         : 'id_card'

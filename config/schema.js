@@ -120,7 +120,6 @@ const schema = {
       env: 'JWT_EXPIRATION_DEV'
     },
     secret: {
-      doc: 'The JWT secret key',
       format: String,
       default: '94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA',
       env: 'JWT_SECRET'

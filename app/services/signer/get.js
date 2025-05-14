@@ -6,7 +6,7 @@ const Signer = app.repositories.signer
 const SignerModel = app.models.signer
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.signer.get')
-// Temp comment
 
+// Temp comment
 function validate(id) {
   return validator(id, SignerModel.schema('get'), { abortEarly: false })

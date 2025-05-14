@@ -100,6 +100,7 @@ const schema = Joi.object({
 			numberOfDependents: Joi.number(),
       // Not sure - Microbilt
 			dependentAges: Joi.array().items(Joi.number()),
+// Temp comment
       // Not sure - Microbilt/Attom
 			presentAddressType: Joi.string().valid('Own', 'Rent'),
       // For Own - Deduce from Attom - property/expandedProfile or salesHistory/expandedHistory

@@ -22,5 +22,4 @@ function getApiKey(headers) {
     return _.get(headers, 'x-api-key')
   }
 
-// Temp comment
   throw new UnauthorizedError()

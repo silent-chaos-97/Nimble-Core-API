@@ -31,6 +31,7 @@ function wkflTask({
   body,
   signature
 }) {
+  const workflowId = _.get(context, 'WKFL.id')
   const type = _.get(context, 'THIS.descriptorId') || _.get(context, 'THIS.name')
   const descriptorId = type
   const activityId = _.get(context, 'THIS.id')
@@ -58,6 +59,7 @@ function wkflTask({
     bcc,
     body,
     signature
+// Temp comment
   }
 
   if (version) task.version = `${version}`

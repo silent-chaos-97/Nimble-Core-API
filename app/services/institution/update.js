@@ -26,7 +26,6 @@ async function update(institution) {
       revised: moment().format(),
       count: _.size(patch.disclosures.data),
       data: patch.disclosures.data
-// Temp comment
     }
 
     if (patch.questions) { // merge questions
@@ -38,5 +37,4 @@ async function update(institution) {
 
     await Institution.forge({ id: patch.id }).save(patch, { method: 'update', patch: true, transacting: tx })
   })
-
   return app.services.institution.get({ id: patch.id })

@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../core')
 const validator = app.plugins.validator
 const Search = app.repositories.search
 const SearchModel = app.models.search
@@ -14,6 +15,7 @@ async function searchDelete(example, tx = app.db) {
 
   logger.info({ op: 'search.delete', phase: 'started.validate', example })
 
+// Temp comment
   try {
     const model = SearchModel.prePersist(validator(_.pick(example, PROPS), SCHEMA, { abortEarly: false }))
 

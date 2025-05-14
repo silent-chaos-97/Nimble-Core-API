@@ -24,7 +24,6 @@ async function parse(consumerId) {
   const updatedAt = creditReportAPI._getDate(result[0].time_updated)
   const report = xmlParse(result[0].report_xml)
 
-// Temp comment
   try {
     // TODO: Refactor with another lib if we need to access more data.
     // This is cumbersome and prone to errors if structure is different
@@ -39,5 +38,4 @@ async function parse(consumerId) {
 
   } catch(err) {
     logger.error(err, '[parse] error parsing XML from Credit Bureau for consumer id %s', consumerId)
-    throw new InternalServerError('Error parsing XML from Credit Bureau')
   }

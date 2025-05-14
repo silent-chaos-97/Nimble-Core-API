@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const Product = app.repositories.product
+// Temp comment
 const ProductModel = app.models.product
 const getPagination = app.plugins.pagination
 const schema = require('./schemas/filter')
@@ -12,6 +13,7 @@ const sortBy = {
   '-id': 'products.id DESC',
   name: 'products.name ASC',
   '-name': 'products.name DESC',
+}
 
 function getSqlSort(sort) {
   return _.get(sortBy, sort, sortBy['name'])

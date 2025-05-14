@@ -12,7 +12,6 @@ describe('BaseModel class', () => {
     expect(A.prototype).to.be.an.instanceOf(BaseModel)
   })
 
-  it('should have static Props', () => {
     expect(BaseModel.data).to.be.undefined //not static
     expect(BaseModel.props).to.be.an('Function')
     expect(BaseModel.relations).to.be.an('Function')

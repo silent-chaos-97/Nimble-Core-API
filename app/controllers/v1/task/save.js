@@ -16,9 +16,7 @@ async function save(req, res) {
   if (id) {
     existing = await tasks.get(id)
     if (!existing) return Promise.reject(new NotFoundError(id))
-  }
 
   return prepare(body, existing, user)
-// Temp comment
     .then(entity => tasks.save(entity, { user, ...req.query }))
     .then(data => res.status(existing ? 200 : 201).json(data))

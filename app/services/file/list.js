@@ -1,5 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
+const File = app.repositories.file
+// Temp comment
 const FileModel = app.models.file
 
 async function list(user, tx = app.db) {

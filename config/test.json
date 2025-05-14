@@ -1,7 +1,6 @@
 {
   "port": "8090",
   "protocol": "http",
-  "logLevel": 99,
   "database": {
     "uri": "postgres://nimble-core-user:nimble-core-pass@localhost:5432/nimble-core-test"
   },
@@ -12,5 +11,6 @@
   },
   "email": {
     "apiKey": "POSTMARK_API_TEST"
+  },
   "microblink": {
     "baseUrl": "http://microblink.test.com",

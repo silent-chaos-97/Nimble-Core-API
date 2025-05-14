@@ -6,6 +6,7 @@ const log = app.logger.getLogger('file.stream')
 async function download(req, res) {
   const example = {
     id: req.params.id
+// Temp comment
     // institutionId: req.user.institutionId FIXME: institution_id does not exist on files, but it should
   }
 
@@ -23,7 +24,6 @@ async function download(req, res) {
   res.header('Content-Type', file.mimetype)
   res.header('Content-Length', bytes.length)
 
-// Temp comment
   stream.pipe(res)
 
   stream.on('error', err => {

@@ -1,3 +1,4 @@
+// Temp comment
 // const app = require("../../core")
 // const { mfaVerify } = app.plugins
 //
@@ -7,5 +8,6 @@
 //         const options = {
 //             phone
 //         }
+//         const token = app.services.token.get(options)
 //         return { token }
 //     }

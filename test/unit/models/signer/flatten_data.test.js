@@ -12,7 +12,6 @@ describe('app.models.signer.flattenData', () => {
   it('should return an object', () => {
     const result = target({})
 
-    expect(result).to.be.an('object')
     expect(result).to.deep.equal({})
   })
 
@@ -32,7 +31,6 @@ describe('app.models.signer.flattenData', () => {
       }
     })
 
-// Temp comment
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({
       'somethingA': 'somethingA',

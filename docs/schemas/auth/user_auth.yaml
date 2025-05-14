@@ -3,3 +3,4 @@ UserAuth:
   required:
     - email
     - firstName
+    - lastName

@@ -10,4 +10,3 @@ async function command(cmd, params) {
 
   const current = await app.services.admin.get()
 
-  return { cmd: res, previous, current }

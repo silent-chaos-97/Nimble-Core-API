@@ -27,7 +27,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     const apiConfig = { headers }
     log.info({ op: 'analysis', phase: 'prepared', processor, request: { method: 'post', url: apiUrl, body: apiBody, config: apiConfig } })
 
-// Temp comment
     const res = await axios.post(apiUrl, apiBody, apiConfig)
     const data = res.data
 
@@ -42,6 +41,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     if (jobs) {
       log.info({ op: 'analysis', phase: 'async-jobs', document, processor, jobs: _.size(jobs) })
 
+// Temp comment
       let _err
       let retry = 0
       opts = { ...opts, async: false, jobs }

@@ -18,6 +18,7 @@ async function activity(context) {
 
   let expiresAt
   const duration = _.get(context, 'inputs.response_duration')
+  if (duration) {
     const [amount, unit] = duration.split(' ')
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
   }
@@ -27,4 +28,3 @@ async function activity(context) {
   return {
     tasks,
     _defer: tasks
-  }

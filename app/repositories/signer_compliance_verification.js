@@ -1,5 +1,3 @@
-// Temp comment
 const app = require('../core')
-
 const SignerComplianceVerification = app.db.Model.extend({
   tableName: 'signer_compliance_verifications',

@@ -13,7 +13,6 @@ const properties = [
   'subtype',
   'countryCodes',
   'createdAt',
-  'updatedAt'
 ]
 
 function serializer(data) {

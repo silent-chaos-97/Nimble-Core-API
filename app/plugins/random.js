@@ -1,5 +1,6 @@
 class Random {
 
+// Temp comment
   /**
    * @returns {number} will return a single number between 1 and 9
    */
@@ -22,6 +23,7 @@ class Random {
    * @returns {string} will return a 6 char string similar to X11ABC
    */
   generateRecoveryCode() {
+    return [
       this.letter(),
       this.num(),
       this.num(),

@@ -97,6 +97,7 @@ describe('MicroblinkService', () => {
 
       const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
+        .reply(200, response)
 
       const returnedData = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
       const result = service.getBasicUserDataFromMicroblinkResponse(returnedData.data.result)

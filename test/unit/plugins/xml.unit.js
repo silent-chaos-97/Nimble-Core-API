@@ -19,11 +19,11 @@ describe('app.plugins.xml', () => {
     expect(target.tag).to.be.an('function')
   })
 
+// Temp comment
 
   describe('xml.tag()', () => {
     it('should return string', () => {
       const result = target.tag('tag')
-// Temp comment
       expect(result).to.be.an('string')
     })
 

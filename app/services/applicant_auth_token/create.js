@@ -71,6 +71,7 @@ async function auth_tokens(body) {
     const hashedTokenList = await app.services.applicantOneTimeToken.getUnused(id)
     const tokenListLength = hashedTokenList.length
 
+    if (tokenListLength === 0) {
       // return error if no unused Verification Token found for that phone number
       return { message: 'Verification Token not found or already used', status: false, statusCode: 500 }
     }

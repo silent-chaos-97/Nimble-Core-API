@@ -175,7 +175,6 @@ class MicroblinkService {
         parsedName.middleName = _.capitalize(splitName[1])
         break
       default:
-        parsedName.firstName = _.capitalize(splitName[0])
     }
     // sometimes we receive middleName in the OCR. not always
     if (joinedName.customerMiddleName) parsedName.middleName = _.capitalize(joinedName.customerMiddleName)

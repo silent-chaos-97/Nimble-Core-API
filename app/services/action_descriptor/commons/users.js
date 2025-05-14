@@ -10,6 +10,7 @@ function isCtxPathRef(ref) {
   if (!_.isString(ref)) return false
 
   return (
+    ref.startsWith('TRIGGER.') ||
     ref.startsWith('ACTIVITIES.') ||
     ref.startsWith('THIS.') ||
     ref.startsWith('INPUTS.') ||

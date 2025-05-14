@@ -21,6 +21,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     nock(config.get('microblink').baseUrl)
       .post('/recognize/execute', match)
       .reply(200, microblink.successResponse)
+
     const bucket = config.get('aws').s3_upload_bucket
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${frontDocId}.png`)

@@ -11,6 +11,7 @@ async function list(user, parentId = null, tx = app.db) {
   const query = FileEntry.query(q => {
     q.where('created_by_id', uid)
     q.where('parent_id', parentId)
+  })
 
   const data = await query.fetchAll({ withRelated: ['createdBy', 'file'], transacting: tx })
 

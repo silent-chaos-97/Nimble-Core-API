@@ -1,5 +1,6 @@
 /institutions/{id}/products:
   post:
+    tags:
       - Institution
     summary: Create a Product
     description: Create a Product under the specified Institution
