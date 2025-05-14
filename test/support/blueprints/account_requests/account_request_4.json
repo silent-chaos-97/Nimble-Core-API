@@ -33,7 +33,6 @@
       "email": "example@nimblefi.com",
       "employer": "Singular",
       "dateOfBirth": "1966-03-16",
-      "consent": true,
       "consentAccountOpening": true,
       "consentPrivacyPolicy": true,
       "consentCommunication": false,
@@ -52,3 +51,4 @@
       "checkAntiMoneyLaundering": null,
       "antiMoneyLaunderingVerifiedAt": null,
       "contractDocumentSignerStatus": "SIGNED",
+      "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",

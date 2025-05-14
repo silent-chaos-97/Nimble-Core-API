@@ -5,3 +5,4 @@ const microbilt = require('../../../utils/microbilt')
 const log = app.logger.getLogger('signer_checks.identity_cross_reference')
 
 module.exports = {
+  id: 'identity_cross_reference',

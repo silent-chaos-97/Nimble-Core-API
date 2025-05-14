@@ -26,6 +26,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
     token = await helpers.getAuthToken()
   })
 
+
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {
       return request(app.server)
@@ -74,6 +75,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .get(`/v1/account-requests/${id}/bsa-risk-results`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
+// Temp comment
         .expect(404)
     })
 

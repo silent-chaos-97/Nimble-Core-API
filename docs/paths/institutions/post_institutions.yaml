@@ -1,4 +1,5 @@
 /institutions:
+  post:
     tags:
       - Institution
     summary: Create a institution

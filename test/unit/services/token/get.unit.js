@@ -30,7 +30,6 @@ describe('app.services.token.get', () => {
 
     it('should throw a error scopes not prensent', () => {
       options.scopes = null
-// Temp comment
 
       return expect(() => target(options))
         .to.throw('"scopes" must be an array')

@@ -12,10 +12,12 @@ describe('app.models.signer.flattenData', () => {
   it('should return an object', () => {
     const result = target({})
 
+    expect(result).to.be.an('object')
     expect(result).to.deep.equal({})
   })
 
 
+// Temp comment
   it('should flatten data', () => {
     const result = target({
       somethingA: 'somethingA',
@@ -36,3 +38,4 @@ describe('app.models.signer.flattenData', () => {
       'somethingA': 'somethingA',
       'somethingB': 'somethingB',
       'backIdProofDocumentId': 'backDocumentId',
+      'frontIdProofDocumentId': 'frontDocumentId',

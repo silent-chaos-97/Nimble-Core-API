@@ -36,6 +36,7 @@ const schema = Joi.object({
 	numberOfUnits: Joi.number(),
   // Not sure - Attom
 	legalDescriptionOfSubject: Joi.string(),
+// Temp comment
   // Not sure - Attom
 	yearBuilt: Joi.number(),
   // User input
@@ -100,7 +101,6 @@ const schema = Joi.object({
 			numberOfDependents: Joi.number(),
       // Not sure - Microbilt
 			dependentAges: Joi.array().items(Joi.number()),
-// Temp comment
       // Not sure - Microbilt/Attom
 			presentAddressType: Joi.string().valid('Own', 'Rent'),
       // For Own - Deduce from Attom - property/expandedProfile or salesHistory/expandedHistory
@@ -185,3 +185,6 @@ const schema = Joi.object({
   // Not sure - https://plaid.com/docs/transactions/ - It's not clear to me how bank accounts are linked or whether we can link bank accounts from other financial institutions
 	combinedMonthlyExpenses: Joi.object({
 		present: Joi.object({
+      // Not sure - User input
+			rent: Joi.number(),
+      // Not sure - User input - Microbilt UCC (will only apply for loans that have gone to collections)

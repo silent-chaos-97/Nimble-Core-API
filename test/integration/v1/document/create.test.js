@@ -4,6 +4,7 @@ describe('POST /documents', () => {
   let document, clock, aws
 
   before(() => {
+    clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable({ s3: false })
   })
 
@@ -17,7 +18,6 @@ describe('POST /documents', () => {
     aws = config.get('aws')
     nock(aws.s3_endpoint)
       .put(/uploads/)
-      .reply(200)
   })
 
   afterEach(() => {

@@ -17,10 +17,10 @@ async function execute(req, res) {
 
           return { wkflId, success: true }
         } else {
+          return { wkflId, success: false }
         }
       } catch (err) {
         return { wkflId, success: false }
-      }
     })
   )
   logger.debug({ result })

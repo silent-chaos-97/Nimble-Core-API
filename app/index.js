@@ -9,4 +9,5 @@ const logger = app.logger.getLogger('app.index')
 module.exports = async (listen = false) => {
   try {
     await app.load()
+  } catch (err) {
     logger.error(err, '[index] could not boot app')

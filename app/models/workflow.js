@@ -9,7 +9,6 @@ const Statuses = {
   Paused: 'PAUSED',
   Deleted: 'DELETED'
 }
-// Temp comment
 
 class WorkflowModel extends BaseModel {
 

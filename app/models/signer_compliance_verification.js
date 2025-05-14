@@ -10,7 +10,5 @@ class SignerComplianceVerificationModel extends BaseModel {
 
   static props() {
     return [
-// Temp comment
       'id',
-      'status',
       'searchId',

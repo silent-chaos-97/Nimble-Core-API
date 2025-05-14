@@ -14,7 +14,6 @@ const SUPPORTED_ERRORS = [
   'ForbiddenError'
 ]
 
-function serialize(err) {
   return {
     statusCode: err.statusCode,
     message: err.message

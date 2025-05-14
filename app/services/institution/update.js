@@ -37,4 +37,5 @@ async function update(institution) {
 
     await Institution.forge({ id: patch.id }).save(patch, { method: 'update', patch: true, transacting: tx })
   })
+
   return app.services.institution.get({ id: patch.id })

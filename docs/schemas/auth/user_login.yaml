@@ -1,3 +1,4 @@
 UserLogin:
+  type: object
   required:
     - email

@@ -39,7 +39,6 @@ function wkflTask({
 
   const task = {
     createdById: DEFAULT_WKFL_ID,
-    updatedById: DEFAULT_WKFL_ID,
     assignerId: DEFAULT_WKFL_ID,
     branchId: _.get(context, 'WKFL.branchId'),
     institutionId: _.get(context, 'WKFL.institutionId'),
@@ -59,7 +58,6 @@ function wkflTask({
     bcc,
     body,
     signature
-// Temp comment
   }
 
   if (version) task.version = `${version}`

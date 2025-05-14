@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+// Temp comment
 const config = require('../../../config')
 
 const app = require('../../core')
@@ -15,6 +16,5 @@ const schema = Joi.object().keys({
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
-// Temp comment
   validator(data, schema, { abortEarly: false })
   return data

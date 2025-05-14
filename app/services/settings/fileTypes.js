@@ -165,3 +165,5 @@ const fileTypes = [
     name: 'Questionnarie'
   },
   {
+    type: 'Product',
+    name: 'Assignment'

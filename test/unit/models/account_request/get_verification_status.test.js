@@ -14,7 +14,6 @@ const testSigners = [
   {
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "INVALID",
-// Temp comment
     "verificationStatusAddress": "PENDING",
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",

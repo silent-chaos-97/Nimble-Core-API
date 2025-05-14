@@ -19,6 +19,5 @@ describe('GET /documents/:id', () => {
         .expect(401)
     })
   })
-
   describe('when authentication token is tampered', () => {
     beforeEach(async () => {

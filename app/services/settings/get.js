@@ -11,10 +11,10 @@ async function get(params, transacting = app.db) {
   const getBy = _.pick(params, SettingsModel.props())
 
   switch (getBy.key) {
+    case 'files':
       // model = fileTypes
       // break
     default: {
-      getBy.branchId = getBy.branchId || SettingsModel.defaultBranchId()
 
       logger.info({ getBy })
 

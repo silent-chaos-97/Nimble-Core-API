@@ -12,6 +12,7 @@ const THRESHOLDS = [
 
 describe('app.services.bsaRiskResult.calculate', () => {
   afterEach(() => {
+    sinon.restore()
   })
 
   describe('method', async() => {

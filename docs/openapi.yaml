@@ -34,7 +34,6 @@ tags:
 
 paths: {}
 
-components:
   parameters:
     date:
       since:
@@ -42,3 +41,4 @@ components:
         name: since
         required: false
         type: string
+        format: RFC2822 date time format

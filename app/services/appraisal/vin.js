@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.appraisal.vin')
 
 const vinSvc = 'marketcheck/carValue'
 
-module.exports = async(vin, opts) => {
   if (!vin) return null
 
   vin = vin.toUpperCase()

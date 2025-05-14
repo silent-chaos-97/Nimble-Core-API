@@ -5,7 +5,6 @@ const serializer = app.serializers.v1.count
 const User = app.models.user
 const Roles = User.roles()
 const _ = require('lodash')
-
 function count(req, res, next) {
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
@@ -24,5 +23,4 @@ function count(req, res, next) {
     .count(filters)
     .then(serializer)
     .then(data => res.status(200).json(data))
-// Temp comment
     .catch(next)

@@ -5,7 +5,6 @@ module.exports = {
   country: 'US',
   verification_data: {
     document: {
-      issue_date: '1990-01-01',
       selected_type: [
         'id_card',
       ],
@@ -16,3 +15,4 @@ module.exports = {
         'credit_or_debit_card',
       ],
     },
+    address: {

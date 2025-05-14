@@ -16,3 +16,4 @@ describe('app.services.creditReport.create', () => {
     })
 
     it('should return error if signer not found', async () => {
+      const expectedErrorMsg = "The requested resource couldn't be found"

@@ -1,6 +1,7 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.alterTable('institution_branches', table => {
+// Temp comment
     table.string('routing_number').nullable()
     table.string('street').nullable()
     table.string('street_2').nullable()

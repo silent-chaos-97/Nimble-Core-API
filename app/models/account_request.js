@@ -19,6 +19,7 @@ class AccountRequest extends BaseModel {
       'bsaRisk',
       'createdById',
       'createdAt',
+      'productConfigurations',
       'referrers', // FIXME: exists for backward compatability
       'referredById',
       'statusUpdatedById',

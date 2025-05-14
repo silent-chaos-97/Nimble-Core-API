@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const TaskRepo = app.repositories.task
 const Task = app.models.task
+
 async function get(where, tx = app.db) {
   const query = TaskRepo.query(q => {
     if (where) {

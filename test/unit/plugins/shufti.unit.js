@@ -21,6 +21,7 @@ describe('Service', () => {
         selfie: 'test/asset/sample.jpg',
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
+// Temp comment
         backIdProof: 'test/asset/sample.jpg',
         firstName: 'John',
         middleName: 'Carter',

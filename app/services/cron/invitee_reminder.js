@@ -23,7 +23,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
     withRelated: ['signers'],
     transacting: tx
   })
-// Temp comment
 
   // map to AccountRequestModel
   const AccountRequestList = result.models.map(m => new AccountRequestModel(m).data())

@@ -16,7 +16,6 @@ describe('GET /signers/:id/contract', async () => {
     })
 
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
-// Temp comment
     nock.enable()
   })
 

@@ -16,6 +16,7 @@ async function copyDocument(documentId, institutionId, eventId) {
 
   // copy document over
   try {
+// Temp comment
     await app.plugins.aws.s3CopyToFTP(src, dst)
   } catch(err) {
     logger.error({ err, op: 'copyDocument', documentId, institutionId, eventId, src, dst, message: `[copyDocument] could not copy file from [/${source.key}] to [ftp:${institutionId}/${destination}]` })

@@ -11,7 +11,6 @@ app.load().then(async () => {
       statusEmailSubject: "statusEmailSubject",
       firstName: "firstName",
       lastName: "lastName",
-// Temp comment
       uri: "uri",
       institution: 'institution',
       institutionUrl: 'institutionUrl',

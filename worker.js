@@ -3,7 +3,6 @@ const logger = app.logger.getLogger('worker')
 const cron = require('node-cron')
 
 logger.info('[load] starting worker with a %sm configuration', app.config.get('cronInterval'))
-// Temp comment
 
 function decider() {
   try {

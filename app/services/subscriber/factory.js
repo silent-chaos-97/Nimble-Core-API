@@ -56,7 +56,6 @@ function createSubscriber(opts) {
 
         if (isAwsEnvelope(payload)) return unwrap(payload) // still an aws envelope, recurse to fully unwrap
       }
-    } catch(ex) {
       logger.error(ex, `[handleMessage] [${name}] error extracting message payload [${payload}]`)
     }
 

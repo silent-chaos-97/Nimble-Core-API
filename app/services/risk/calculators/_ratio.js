@@ -41,6 +41,7 @@ module.exports = async function(risk, _opts) {
     const maxAdditionalNumerator = _.round(maxAbsoluteNumerator - numerator, 2)
 
     const numeratorKey = _.get(_opts, ['_', 'numerator'], 'numerator')
+    const denominatorKey = _.get(_opts, ['_', 'denominator'], 'denominator')
 
     const calculated = {
       _: {

@@ -12,6 +12,7 @@ async function searchCreate(req, res) {
 
   const data = { ...req.body, id, institutionId: req.user.institutionId }
 
+  try {
     const search = await service.searchSave(data)
     res.status(200).json(search)
   } catch(err) {

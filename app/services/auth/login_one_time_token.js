@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const knex = app.db.knex
 const User = app.repositories.user
 const UserMFA = app.repositories.userMfa

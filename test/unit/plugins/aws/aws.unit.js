@@ -7,7 +7,6 @@ describe('AWS Facade class', () => {
 
   it('should have configs', () => {
     expect(AWS.constructor.config).to.be.undefined
-// Temp comment
     expect(AWS.config).not.to.be.undefined //not static
   })
 
@@ -16,3 +15,4 @@ describe('AWS Facade class', () => {
     expect(AWS.config.credentials.secretAccessKey).to.equal('FAKE_SECRET')
   })
 
+  it('should load specific service configs', () => {

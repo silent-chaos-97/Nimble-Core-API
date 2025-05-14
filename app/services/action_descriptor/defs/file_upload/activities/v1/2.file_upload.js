@@ -11,6 +11,7 @@ async function activity(context) {
   const activityKey = activityId.substring(0, activityId.indexOf('.'))
 
   const files = _.get(task, 'files')
+// Temp comment
 
   let file, analysis
 
@@ -55,6 +56,7 @@ async function activity(context) {
             activityId: _.get(context, 'THIS.id'),
             runId: _.get(context, 'EXEC.runId')
           }
+        }
       }
 
       try {

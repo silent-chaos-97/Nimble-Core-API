@@ -106,6 +106,7 @@ module.exports = async function(user, data, transacting = app.db) {
 
     const collateralType = _.snakeCase(_.get(opts, 'collateral.type', product.advanced_rate))
 
+    if (collateralType !== product.advanced_rate) return Promise.reject(new BadRequestError(`Collateral[${collateralType}] is not available for ProductAdvancedRate[${product.advanced_rate}]`))
 
     const [rate, injections, collateral] = await Promise.all([
       _rate(product),

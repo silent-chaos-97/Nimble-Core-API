@@ -11,6 +11,7 @@ describe("AWS Facade for s3", () => {
     sandbox.spy(AWS, 'uuid')
     sandbox.spy(AWS.s3, 'putObject')
     sandbox.spy(AWS.s3, 'copyObject')
+    sandbox.spy(AWS.s3, 'getSignedUrl')
   })
 
   afterEach(() => sandbox.reset())
@@ -34,3 +35,4 @@ describe("AWS Facade for s3", () => {
 
     it('should return a path to the destination object', async () => {
       let result = await AWS.s3CopyToFTP("folder/00000000-0000-0000-0000-000000000000.png", "destination/example.png")
+      expect(result).to.contain('/uploads/destination/example.png')

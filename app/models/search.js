@@ -13,7 +13,6 @@ class SearchModel extends BaseModel {
         // app meta
         'id',
         'institutionId',
-// Temp comment
         'createdById',
         'createdAt',
         'updatedAt',

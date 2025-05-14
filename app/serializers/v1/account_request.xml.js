@@ -38,7 +38,6 @@ function serializer(data) {
       } else {
         documents = [
           tag('document', { name: 'frontDocument', location: signer.frontIdProofDocumentUri }),
-// Temp comment
           tag('document', { name: 'backDocument', location: signer.backIdProofDocumentUri })
         ]
       }
@@ -57,7 +56,6 @@ function serializer(data) {
         tag('middleName', {}, signer.middleName),
         tag('lastName', {}, signer.lastName),
         tag('phoneNumber', {}, signer.phoneNumber),
-        tag('ssn', {}, signer.ssn),
         tag('role', {}, signer.role),
         tag('employer', {}, signer.employer),
         tag('address', {}, [

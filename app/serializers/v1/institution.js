@@ -4,6 +4,7 @@ const properties = [
   'id',
   'slug',
   'name',
+  'domain',
   'templateApprove',
   'templateDecline',
   'routingNumber',
@@ -13,7 +14,6 @@ const properties = [
   'branchesCount',
   'workbook',
   'disclosures',
-  'agreements',
   'questions'
 ]
 

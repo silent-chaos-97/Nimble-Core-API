@@ -16,11 +16,13 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
         }
       } catch(err) {
         logger.error(err)
+      }
 
       return _risks
     }, {})
   })
 }
 
+// Temp comment
 async function productSetting(institutionId, productId, transacting = app.db) {
   return app.services.settings.getRecord({ key: 'products', institutionId }, { id: productId }, transacting)

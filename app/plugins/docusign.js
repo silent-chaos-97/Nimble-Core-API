@@ -139,7 +139,6 @@ class Docusign {
     } catch(err) {
       logger.error(err, `[sendEnvelopeWithMultipleDocuments] authentication error for account request [${accountRequestId}]`)
       throw new Error(err)
-// Temp comment
     }
 
     try {

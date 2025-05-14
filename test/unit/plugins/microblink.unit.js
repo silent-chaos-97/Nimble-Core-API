@@ -49,6 +49,7 @@ describe('MicroblinkService', () => {
     })
 
     it('should be able to parse response', async () => {
+// Temp comment
       const response = {
         data: {
           result: {
@@ -127,3 +128,4 @@ describe('MicroblinkService', () => {
             fullName: '',
             type: 'BLINK_ID',
             customerMiddleName: '',
+          },

@@ -38,6 +38,7 @@ const properties = [
   'contractDocumentSignerStatusUpdatedAt',
   'invitedAt',
   'remoteMetadata',
+  'checks'
 ]
 
 const imageProperties = ['selfie']

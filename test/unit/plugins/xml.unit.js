@@ -19,7 +19,6 @@ describe('app.plugins.xml', () => {
     expect(target.tag).to.be.an('function')
   })
 
-// Temp comment
 
   describe('xml.tag()', () => {
     it('should return string', () => {
@@ -30,5 +29,6 @@ describe('app.plugins.xml', () => {
     it('should parse sinple tag', () => {
       const result = target.tag('tag')
       expect(result).to.equal('<tag/>')
+// Temp comment
     })
 

@@ -16,3 +16,4 @@ describe('app.services.contract.embed', () => {
       let signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454722"
       before(() => {
         docusignEmbed = sinon.replace(app.plugins.docusign, 'createRecipientView', sinon.fake.returns(Promise.resolve()))
+        nock.disableNetConnect()

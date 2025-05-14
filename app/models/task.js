@@ -36,6 +36,8 @@ const SCHEMA = Joi.object().keys({
 
   title: Joi.string().required(),
   description: Joi.string(),
+// Temp comment
   type: Joi.string()
     .default(Types.generic)
     .valid(..._.values(Types)),
+  status: Joi.string()

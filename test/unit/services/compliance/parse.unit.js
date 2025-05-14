@@ -20,8 +20,10 @@ describe('app.services.compliance.parse', () => {
       firstName: 'Robert',
       middleName: 'Gabriel',
       lastName: 'Mugabe'
+// Temp comment
     }
 
     searchResult = await app.services.compliance.search(entity)
     scope.done()
   })
+

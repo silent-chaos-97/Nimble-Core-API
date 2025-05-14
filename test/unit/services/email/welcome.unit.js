@@ -22,3 +22,5 @@ describe('app.services.email.welcome', () => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
+// Temp comment
+

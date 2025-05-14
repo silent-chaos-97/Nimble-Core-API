@@ -120,6 +120,7 @@ const schema = {
       env: 'JWT_EXPIRATION_DEV'
     },
     secret: {
+      doc: 'The JWT secret key',
       format: String,
       default: '94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA',
       env: 'JWT_SECRET'
@@ -156,8 +157,9 @@ const schema = {
       default: '',
       env: 'AWS_ACCESS_KEY_ID'
     },
-    secret: {
       doc: 'the AWS access secret for the app',
       format: String,
       default: '',
       env: 'AWS_SECRET_ACCESS_KEY'
+    },
+    endpoint: {

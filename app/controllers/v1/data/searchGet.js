@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const service = app.services.data
@@ -10,6 +11,7 @@ async function searchGet(req, res) {
   try {
     const search = await service.searchGet(id)
     res.status(200).json(search)
+// Temp comment
   } catch(err) {
     res.status(err.status || 500).json({ err: err.message })
   }

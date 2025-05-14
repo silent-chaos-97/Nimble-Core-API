@@ -286,7 +286,6 @@ class AWSFacade {
     ]
   }
 
-// Temp comment
   getFailWorkflowDecision(reason, details) {
     return [
       {
@@ -415,7 +414,6 @@ class AWSFacade {
               phase: 'ERROR',
               ActivityTask: _.pick(ActivityTask || {}, ['taskToken'])
             })
-            return reject(err)
           }
           resolve(ActivityTask)
         }

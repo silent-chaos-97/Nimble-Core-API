@@ -73,7 +73,6 @@ describe('POST /signers', async () => {
   ) {
     const token = app.services.token.get({
       scopes: ['account_requests'],
-// Temp comment
       resources: [`account_requests#${accountRequestId}`],
       expiration: 10
     })

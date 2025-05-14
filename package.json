@@ -9,7 +9,6 @@
   },
   "scripts": {
     "start": "knex migrate:latest && node index.js | bunyan",
-    "worker": "knex migrate:latest && node worker.js | bunyan",
     "subscribers": "knex migrate:latest && node subscribers.js | bunyan",
     "forever-api": "node_modules/forever/bin/forever start -l /tmp/forever.log -o /tmp/forever.log -e /tmp/forever.log --append --minUptime 2000 --spinSleepTime 10000 index.js",
     "forever-worker": "node_modules/forever/bin/forever start -l /tmp/forever.log -o /tmp/forever.log -e /tmp/forever.log --append --minUptime 2000 --spinSleepTime 10000 worker.js",
@@ -34,3 +33,4 @@
     "dep-check": "dependency-check . app/**/*.js test/**/*.js --missing",
     "dep-check-unused": "dependency-check app/**/*.js test/**/*.js --unused",
     "docs": "spectacle -t docs/dist docs/openapi.yaml",
+    "task/unlock-user": "node tasks/unlock_user.js",

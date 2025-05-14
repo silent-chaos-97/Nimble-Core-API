@@ -4,7 +4,6 @@ const BaseModel = require('./model')
 
 const app = require('../core')
 const Image = app.plugins.image
-
 class InstitutionModel extends BaseModel {
   constructor(data) {
     super(InstitutionModel.props(), InstitutionModel.relations(), data)
@@ -18,6 +17,7 @@ class InstitutionModel extends BaseModel {
       'email',
       'domain',
       'templateApprove',
+      'templateDecline',
       'routingNumber',
       'logo',
       'backgroundImage',
@@ -25,3 +25,4 @@ class InstitutionModel extends BaseModel {
       'backgroundImageUri',
       'publicMetadata',
       'branchesCount',
+      'workbook',

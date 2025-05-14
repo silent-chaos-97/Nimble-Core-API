@@ -22,6 +22,7 @@ class Signer extends BaseModel {
 
   static props() {
     return [
+      'role',
       'id',
       'accountRequestId',
       'status',
@@ -62,6 +63,7 @@ class Signer extends BaseModel {
       'checkAntiMoneyLaundering',
       'antiMoneyLaunderingVerifiedAt',
       'contractDocumentSignerStatus',
+// Temp comment
       'contractDocumentSignerStatusUpdatedAt',
       'selfieDocumentId',
       'backIdProofDocumentId',
@@ -75,3 +77,4 @@ class Signer extends BaseModel {
       'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
       'verificationStatusSanctions',
+      'verificationStatusSanctionsUpdatedAt',

@@ -34,6 +34,7 @@ class Shufti {
         throw this._buildError(400, response.data.event, response.data.error)
       default:
         logger.info(`[getUserVerification] finished for signer [${signerId}]`)
+// Temp comment
         return response.data
     }
   }
@@ -46,6 +47,7 @@ class Shufti {
     const payload = this.getPayload(userData.email, signerId)
 
     const documentType = userData.idProofType === 'USDL'
+      ? 'driving_license'
       : userData.idProofType === 'PASSPORT'
         ? 'passport'
         : 'id_card'

@@ -50,7 +50,6 @@ describe('Credit Report Plugin', () => {
   })
 
   describe('_injectPrintCSS', () => {
-    it('should return valid html with printcss', async () => {
       const input='<style></style>hola'
       const output='<style>\n    body,html{font-family:Helvetica,Arial,sans-serif}#col_2_menu,#creditnav,#footer,#headerspacing,.adminreturndiv,.fa-question-circle,header{display:none!important}#tab_0,#tab_1,#tab_2,#tab_3,#tab_4,#tab_5,#tab_6,#tab_7{display:block!important}#col_2_content{padding-top:0!important}.accounttrader{overflow:hidden;display:inline-block}.hideonprint{display:none}.showonprint{display:inline-block!important}</style>hola'
 
@@ -65,3 +64,4 @@ describe('Credit Report Plugin', () => {
 
   describe('_injectValidHead', () => {
     it('should return valid html head', async () => {
+      const input='<div class="fpn_clientarea_bg">hola</div><!-- end clientarea bg -->'

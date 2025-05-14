@@ -8,6 +8,7 @@ describe('GET /users', () => {
         .end(done)
     })
   })
+
   describe('with valid auth', () => {
     let token
     const user10Id = '1052ab85-08da-4bb5-be00-9e94d282d310'
@@ -17,7 +18,6 @@ describe('GET /users', () => {
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.user.create(user10Id)
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
-      token = await helpers.getAuthToken()
     })
 
     it('should return 401 if authenticated bearer token', done => {
@@ -44,3 +44,4 @@ describe('GET /users', () => {
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
         .expect(200)
+        .end((err, res) => {

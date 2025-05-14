@@ -8,7 +8,6 @@ const load = async (filePath) => {
 	const data = await read(filePath)
 	const pdfDocument = await PDFDocument.load(data)
 	return pdfDocument
-// Temp comment
 }
 
 const fill = (pdfDocument, formValues) => {

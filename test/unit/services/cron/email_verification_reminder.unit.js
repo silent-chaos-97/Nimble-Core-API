@@ -12,7 +12,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
   beforeEach(() => {
     clock = sinon.useFakeTimers(baseDate)
-    sinon.reset()
   })
 
   afterEach(() => {
@@ -31,6 +30,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
     it('should be a function', () => {
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
-// Temp comment
     })
   })
+

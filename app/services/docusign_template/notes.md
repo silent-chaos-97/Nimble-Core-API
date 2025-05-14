@@ -19,6 +19,7 @@ To use this api, you need to fill several variables in the env:
   Note: this will be deprecated when we introduce Products table.
 
 - DOCUSIGN_KEY - This is the private key for the environment used. We have local, dev, qa & production.
+
 Important note: DO NOT TRUST THE DEFAULT values. They may be outdated.
 
 ### How to create a new sandbox key
@@ -39,3 +40,4 @@ Source:
 ### IMPORTANT STEP: We need to grant admin consent for internal applications.
 
 This is very important because we need the api user to give consent to use the integration key.
+

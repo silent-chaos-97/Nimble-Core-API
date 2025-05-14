@@ -41,7 +41,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     if (jobs) {
       log.info({ op: 'analysis', phase: 'async-jobs', document, processor, jobs: _.size(jobs) })
 
-// Temp comment
       let _err
       let retry = 0
       opts = { ...opts, async: false, jobs }

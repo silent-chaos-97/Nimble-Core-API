@@ -12,7 +12,6 @@ const fakeUser = {
   'middleName': 'j',
   'dateOfBirth': '2020-10-10',
   'status': 'PENDING'
-}
 
 describe('app.services.compliance.verify', () => {
   afterEach(() => {
@@ -34,3 +33,4 @@ describe('app.services.compliance.verify', () => {
 
       it('should throw exception if not provided with a valid uuid', async () => {
         return expect(app.services.compliance.verify('string')).to.be.rejectedWith()
+      })

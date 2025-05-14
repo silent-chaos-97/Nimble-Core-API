@@ -47,8 +47,8 @@ describe('Auth', () => {
           .end((err, res) => {
             if (err) throw new Error(err)
 
-            expect(res.body.token).not.be.undefined
             done()
           })
       })
 
+      describe('with email domain case insensitive', () => {

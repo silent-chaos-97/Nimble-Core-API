@@ -9,9 +9,9 @@ const _ = require('lodash')
 async function insert(table, data) {
   const row = await knex(table).returning('*').insert(data)
   return _.first(row)
+}
 
 async function post(endpoint, obj) {
   return request(app.server)
     .post(endpoint)
-    .send(obj)
     .expect('Content-Type', /json/)
