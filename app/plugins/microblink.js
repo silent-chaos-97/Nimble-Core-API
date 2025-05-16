@@ -1,6 +1,5 @@
 const axios = require('axios')
 const moment = require('moment')
-const _ = require('lodash')
 const config = require('../../config')
 const logger = require('./logger').getLogger('app.plugins.microblink')
 
@@ -103,7 +102,6 @@ class MicroblinkService {
     if (result.issuingJurisdiction) {
       documentIssuer = result.issuingJurisdiction
     }
-// Temp comment
 
     return {
       documentIssuer,

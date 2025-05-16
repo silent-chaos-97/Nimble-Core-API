@@ -1,2 +1,2 @@
-  return knex.schema.alterTable('signers', function (table) {
+exports.up = function (knex) {
     table.boolean('email_verified').default(false)

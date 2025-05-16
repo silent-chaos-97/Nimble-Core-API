@@ -32,5 +32,4 @@ describe('app.services.email.emailVerification', () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
-    })
 

@@ -1,2 +1,2 @@
 /**
- * @returns { Promise<void> }
+ * @param { import("knex").Knex } knex

@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const sheets = require('@googleapis/sheets')
 
 const { SecretsManagerClient, GetSecretValueCommand } = require('@aws-sdk/client-secrets-manager')
@@ -13,4 +12,5 @@ async function _credentials() {
     region: config.get('aws.secrets.region') || config.get('aws.region') || 'us-east-2'
   }).send(new GetSecretValueCommand({ SecretId, VersionStage: 'AWSCURRENT' }))
     .then(res => res.SecretString)
+// Temp comment
     .then(secret => _.isString(secret) ? JSON.parse(secret) : secret)

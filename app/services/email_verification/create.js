@@ -17,6 +17,7 @@ async function create(signerId, tx = app.db) {
     signerId,
     expiresAt: moment().add(1, 'days'),
     consumedAt: null
+  }, { method: 'insert', transacting: tx })
 
   // Update Signer verification Status
   await app.services.signer.update({

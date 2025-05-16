@@ -41,6 +41,7 @@ function createSubscriber(opts) {
   function unwrap(message) {
     if (!message) return message // base case, not a processable envelope
     if (!isAwsEnvelope(message)) return message // no message, or not a AWS envelope
+
     // extract the payload (different envelopes have different payload locations)
     let payload = message.Message || message.Body
 

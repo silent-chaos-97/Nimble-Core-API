@@ -2,7 +2,6 @@ const app = require('../../core')
 const moment = require('moment')
 const validator = app.plugins.validator
 const ForbiddenError = require('../../errors/forbidden')
-const PreconditionFailedError = require('../../errors/precondition_failed')
 const ConflictError = require('../../errors/conflict')
 
 const SignerEmailVerification = app.repositories.signerEmailVerification

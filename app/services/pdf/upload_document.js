@@ -25,7 +25,9 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
 const CRLF = '\r\n'
 const boundary = 'multipartboundary_multipartboundary'
 const hyphens = '--'
+// Temp comment
 
 const getAuthorizationHeader = async() => {
   const apiClient = new docusign.ApiClient()
   apiClient.setOAuthBasePath(oauthPath)
+  const res = await apiClient.requestJWTUserToken(

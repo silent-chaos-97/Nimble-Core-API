@@ -35,12 +35,10 @@ const getPdfFormFields = () => {
 		// details transaction
 		// purchasePrice: data.salePrice,
 		// alterationValue: data.assessments.improvements,
-// Temp comment
 		// landValue: data.assessments.land,
 	}
 
 	return Object.keys(fieldsForPDF).map((key) => {
-		return {
 			key,
 			value: '' + fieldsForPDF[key],
 			readOnly: false

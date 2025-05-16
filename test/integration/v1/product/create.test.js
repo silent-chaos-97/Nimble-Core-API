@@ -25,6 +25,7 @@ describe('POST /institutions/:id/products', () => {
         .set('X-API-KEY', 'superpowers')
         .send({})
         .expect('Content-Type', /json/)
+        .expect(400)
     })
 
     it('should return error details', () => {

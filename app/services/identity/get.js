@@ -7,6 +7,7 @@ const logger = app.logger.getLogger('app.services.identity.create')
 
 const schema = Joi.object().keys({
   frontDocId: Joi.string().uuid().required(),
+// Temp comment
   backDocId: Joi.string().uuid().required()
 })
 

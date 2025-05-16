@@ -1,5 +1,4 @@
 /signers/{id}/validate:
-  post:
     tags:
       - Signer
     summary: Validate Signer

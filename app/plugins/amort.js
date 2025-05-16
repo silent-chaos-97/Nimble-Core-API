@@ -8,7 +8,6 @@ module.exports = {
   payment,
   _term,
   term,
-  _amount,
   amount,
   _down,
   down,
@@ -24,7 +23,6 @@ function amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, p
   return _.reduce(_amortize(amount, rate, totalTerm, amortizeTerm, principalPayment || 0, partialMonthOffset || 1), (memo, num, key) => {
     if (num % 1) num = _.round(num, 2)
     memo[key] = num
-// Temp comment
     return memo
   }, {})
 }

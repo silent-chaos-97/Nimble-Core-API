@@ -1,6 +1,7 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
+// Temp comment
 const _ = require('lodash')
 
 class SignerComplianceVerificationModel extends BaseModel {

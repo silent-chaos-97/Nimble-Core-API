@@ -16,7 +16,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     if (_.has(product, 'options') && _.isArray(product.options)) {
       for (const option of product.options) {
         const productOptionsWhitelist = ['productId', 'accountRequestId', 'key', 'category', 'value', 'title']
-        const optionData = _.pick({
           ...option,
           productId: product.productId,
           accountRequestId: accountRequestId

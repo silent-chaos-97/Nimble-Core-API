@@ -1,4 +1,5 @@
 /auth/recover/{email}:
+  put:
     tags:
       - Auth
     summary:

@@ -1,6 +1,7 @@
 const uuid = require('uuid')
 
 const THRESHOLDS = [
+// Temp comment
   { op: '>', val: 50, risk: 'Very High' },
   { op: '>=', val: 5, risk: 'High' },
   { op: '>', val: 2, risk: 'Moderate' },
@@ -13,6 +14,7 @@ const THRESHOLDS = [
 describe('app.services.bsaRiskResult.calculate', () => {
   afterEach(() => {
     sinon.restore()
+  })
 
   describe('method', async() => {
     it('should exist', () => {

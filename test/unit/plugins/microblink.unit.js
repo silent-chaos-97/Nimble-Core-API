@@ -51,7 +51,6 @@ describe('MicroblinkService', () => {
     it('should be able to parse response', async () => {
       const response = {
         data: {
-// Temp comment
           result: {
             firstName: 'SAMPLE',
             lastName: 'SPECIMEN',
@@ -74,6 +73,7 @@ describe('MicroblinkService', () => {
               month: 3,
               year: 2025,
               originalString: '03/18/2025',
+// Temp comment
             },
             documentNumber: 'S123-456-78-123-0',
             sex: 'M',

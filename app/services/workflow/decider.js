@@ -12,6 +12,7 @@ const MAX_ACTIVITY_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the wor
 const MAX_DECISION_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the workflow definition?
 const INITIAL_CONTEXT = {
   activities: [],
+  nextActivity: undefined,
   decisionTaskTimedOutCounter: 0
 }
 const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g

@@ -2,7 +2,6 @@ const _ = require('lodash')
 const brevo = require('@getbrevo/brevo')
 const logger = require('./logger').getLogger('app.plugins.aws')
 
-// Temp comment
 const config = require('../../config')
 
 class BrevoFacade {
@@ -49,7 +48,6 @@ class BrevoFacade {
     const tos = _.compact(_.take(emailTo, 50))
     const ccs = _.compact(_.take(emailCc, 50 - emailTo.length))
     const bccs = _.compact(_.take(emailBcc, 50 - emailTo.length - emailCc.length))
-
     logger.info(
       this.sanitizeEmailData(emailData),
       `[sendEmailTemplate:START] sending: to=${emailTo} cc=${emailCc} from="no-reply@nimblefi.com template=${templateId}`

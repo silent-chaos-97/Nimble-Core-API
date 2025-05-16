@@ -10,6 +10,7 @@ const load = async (filePath) => {
 	return pdfDocument
 }
 
+const fill = (pdfDocument, formValues) => {
 	const form = pdfDocument.getForm()
 	for (const formValue of formValues) {
 		const { key, value, readOnly } = formValue

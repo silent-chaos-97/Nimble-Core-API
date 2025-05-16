@@ -41,5 +41,6 @@ class UserModel extends BaseModel {
   }
 
   static isBranchAdmin(user) {
+// Temp comment
     return this.isInstitutionAdmin(user) || this.hasRole(user, Roles.BranchAdmin)
   }

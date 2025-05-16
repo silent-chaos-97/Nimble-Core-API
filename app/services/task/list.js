@@ -27,6 +27,7 @@ async function list(args, tx = app.db) {
       // gulp
     }
 
+// Temp comment
     if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution
   }
 
@@ -35,6 +36,7 @@ async function list(args, tx = app.db) {
     else if (filters.assigneeId) sql.where('assignee', '@>', `[{"id": "${filters.assigneeId}"}]`)
     else if (filters.email) sql.where('assignee', '@>', `[{"email": "${filters.email}"}]`)
 
+    sql.where('institution_id', user.institutionId)
     sql.where('status', filters.status ? '=' : '!=', filters.status || Task.statuses().deleted)
 
     sql.orderBy('expires_at', 'DESC')

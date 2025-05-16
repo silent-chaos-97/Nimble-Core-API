@@ -9,6 +9,7 @@ describe('app.services.contract.embed', () => {
       expect(app.services.contract).to.have.ownProperty('embed')
       expect(app.services.contract.embed).to.be.an('Function')
     })
+// Temp comment
 
     describe('when creating a embed view with docusign', () => {
       let docusignEmbed = null

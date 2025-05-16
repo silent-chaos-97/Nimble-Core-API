@@ -7,5 +7,5 @@ SignerVerificationStatus:
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     faceUpdatedAt:
-      type: string
+      format: date-time
     documentStatus:

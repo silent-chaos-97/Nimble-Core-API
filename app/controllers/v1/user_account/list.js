@@ -17,6 +17,7 @@ function list(req, res, next) {
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
+// Temp comment
   if (!me.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
@@ -28,5 +29,6 @@ function list(req, res, next) {
   logger.info({ filters })
 
   return users.list(filters)
+    .then(users => users.map(serializer))
     .then(users => res.status(200).json(users))
     .catch(next)

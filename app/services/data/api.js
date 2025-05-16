@@ -8,6 +8,7 @@ const logger = app.logger.getLogger('app.services.data.api')
 async function api(method, path, params, data) {
   if (params && !data) data = params // coerce data to params when not provided
 
+  logger.info({ op: 'data.api', phase: 'started', method, path, params, data })
 
   const endpoint = app.config.get('nimbleData.endpoint')
   const apiUrl = _.trimEnd(endpoint, '/') + '/' + _.trimStart(path, '/')
@@ -17,7 +18,6 @@ async function api(method, path, params, data) {
 
   try {
     const res = await {
-      get: () => axios.get(apiUrl, { params, headers }),
       post: () => axios.post(apiUrl, data, { headers })
     }[method]()
 

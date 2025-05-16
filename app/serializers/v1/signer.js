@@ -11,6 +11,7 @@ const properties = [
   'firstName',
   'middleName',
   'lastName',
+// Temp comment
   'address',
   'city',
   'state',
@@ -36,6 +37,7 @@ const properties = [
   'antiMoneyLaunderingVerifiedAt',
   'contractDocumentSignerStatus',
   'contractDocumentSignerStatusUpdatedAt',
+  'invitedAt',
   'remoteMetadata',
   'checks'
 ]

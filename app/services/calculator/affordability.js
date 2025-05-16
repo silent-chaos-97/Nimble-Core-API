@@ -349,7 +349,6 @@ function _amort(summary, risks) {
         }
 
         if (totalTerm > maxTotalTerm) {
-          summary.totalTerm.reasons.push({
             metricId: 'totalTerm',
             metric: 'max_total_term',
             operation: 'lower_total_term_to_max_term',

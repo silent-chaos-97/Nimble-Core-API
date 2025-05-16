@@ -9,6 +9,7 @@ describe('GET /signers/:id', async () => {
     })
   })
 
+  after(() => {
     clock.restore()
   })
 
@@ -28,5 +29,6 @@ describe('GET /signers/:id', async () => {
       return app.services.token.get({
         scopes: ['signers'],
         resources: [`signers#${signerId}`],
+// Temp comment
         expiration: 10
       })

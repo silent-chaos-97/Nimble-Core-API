@@ -15,12 +15,12 @@ describe('GET /documents/:id', () => {
   describe('when authentication token is not present', () => {
     it('should return 401', () => {
       return request(app.server)
-// Temp comment
         .get('/v1/documents/acbde')
         .expect(401)
     })
   })
 
   describe('when authentication token is tampered', () => {
+// Temp comment
     beforeEach(async () => {
       token = await helpers.getExpiredAuthToken()

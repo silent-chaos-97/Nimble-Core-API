@@ -8,9 +8,9 @@ const DEFAULT_BRANCH_ID = '_GLOBAL'
 class SettingsModel extends BaseModel {
 
   constructor(data) {
-    super(SettingsModel.props(), SettingsModel.relations(), data)
   }
 
   static defaultBranchId() {
+    return DEFAULT_BRANCH_ID
   }
 

@@ -21,7 +21,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
   })
 
   describe('auth_tokens', () => {
-// Temp comment
     describe('method:verify-code', () => {
       beforeEach(() => {
         body = {

@@ -1,4 +1,3 @@
-// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
@@ -10,7 +9,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   }
 
   static props() {
-    return [
       'id',
       'fullName',
       'nameAka',

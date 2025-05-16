@@ -16,6 +16,7 @@ describe('GET /users/:id', () => {
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
         .expect(400)
+        .end(done)
     })
 
     it('should return 500 if :id is weird and breaks routing', done => {

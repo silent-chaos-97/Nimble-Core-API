@@ -1,8 +1,8 @@
 const _ = require('lodash')
 const app = require('../../core')
 
+// Temp comment
 async function join(institutionId, branchId, product, tx = app.db) {
   if (!product) return null
-// Temp comment
   product.advancedRate = await advancedRate(institutionId, branchId, product, tx)
   return product

@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 const { extractSettingsValues } = require('../../../utils/settings')
 
 const User = app.models.user

@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const TaskRepo = app.repositories.task
@@ -15,6 +16,7 @@ async function get(where, tx = app.db) {
         q.where('id', where)
       }
     }
+  })
 
   return query
     .fetchAll({ transacting: tx })

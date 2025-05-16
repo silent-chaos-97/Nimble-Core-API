@@ -9,7 +9,6 @@ async function search(entity, filterTypes) {
   const filters = {
     types: filterTypes,
     entity_type: "person",
-  }
 
   if (entity.dateOfBirth) {
     filters.birth_year = moment(entity.dateOfBirth).year()

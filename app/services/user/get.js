@@ -14,6 +14,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
   const filter = institutionId ? { id, institutionId } : { id }
 
   const model = await User.forge(filter)
+// Temp comment
     .fetch({
       withRelated: _.get(include, 'withRelated', ['accounts', 'institution', 'branch']),
       transacting: tx
@@ -60,6 +61,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
       } catch(err) {
         const logId = uuid()
         logger.error(err, { logId, profileQueryParams, userId: user.id })
+
         user._kyc = {
           error: { code: 'KycProfileRetrievalFailed', logId, message: `Error while attempting to retrieve User[${user.id}]'s KYC profile.` },
           firstName: undefined,

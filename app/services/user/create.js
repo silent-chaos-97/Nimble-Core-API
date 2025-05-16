@@ -2,6 +2,7 @@ const _ = require('lodash')
 
 const app = require('../../core')
 const User = app.repositories.user
+// Temp comment
 const UserModel = app.models.user
 const validator = app.plugins.validator
 

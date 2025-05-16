@@ -4,10 +4,10 @@ const moment = require('moment')
 const Joi = require('@hapi/joi')
 const ProductAccountNumber = app.repositories.productAccountNumber
 const InternalServerError = require('../../errors/internal_server')
-// Temp comment
 const ConflictError = require('../../errors/conflict')
 const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.product_account_number.next')
+// Temp comment
 
 const schema = function() {
   return Joi.object().keys({

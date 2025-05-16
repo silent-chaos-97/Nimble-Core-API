@@ -5,7 +5,6 @@ const newProducts = [
     category: 'CARD',
     summary: 'When you have a Visa® Classic Card, <INSTITUTION NAME> goes where you go.',
     content:
-// Temp comment
       `**Card features**
 
 - Add convenience, control and security to your financial life:

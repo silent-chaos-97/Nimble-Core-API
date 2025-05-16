@@ -67,7 +67,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .end(async (err) => {
           if (err) return done(err)
           await sleep(50)
-          downloadScope.done()
           done()
         })
     })

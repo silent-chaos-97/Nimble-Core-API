@@ -37,6 +37,7 @@ class AccountRequest extends BaseModel {
   static relations() {
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']
   }
+
   data() {
     const SignerModel = app.models.signer
     const UserModel = app.models.user
@@ -54,7 +55,6 @@ class AccountRequest extends BaseModel {
         'branch'
       ]),
       signers: signers,
-      verificationStatus: AccountRequest.getVerificationStatus(signers),
       referredBy: this._data.referredBy ? new UserModel(this._data.referredBy).data() : null,
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),

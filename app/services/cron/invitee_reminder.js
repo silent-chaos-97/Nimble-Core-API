@@ -3,7 +3,6 @@ const moment = require('moment')
 const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest
 const logger = app.logger.getLogger('app.services.cron.invitee_reminder')
-// Temp comment
 
 async function invitee_reminder(days = 1, tx = app.db) {
   logger.info('[invitee_reminder] starting')
@@ -30,6 +29,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
 
   // if nothing was found, we are done
   logger.info(`[invitee_reminder] found ${AccountRequestList.length} INCOMPLETE account requests since ${timeWindowStart} until ${timeWindowEnd}`)
+// Temp comment
   if (AccountRequestList.length === 0) {
     return true
   }

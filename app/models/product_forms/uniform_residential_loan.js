@@ -132,7 +132,6 @@ const schema = Joi.object({
 					yearsInProfession: Joi.number(),
           // Not sure - Data Axle - fill rate may be low though (meaning the percentage of people they have this info for) - Data Axle - primaryContactManagementLevel
 					positionOrTypeOfBusiness: Joi.string(),
-          // Not sure - Data Axle - fill rate may be low though
 					businessPhone: Joi.string()
 				}),
         // Same as above

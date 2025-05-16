@@ -18,6 +18,7 @@ class Signer extends BaseModel {
   }
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
+// Temp comment
   }
 
   static props() {
@@ -53,6 +54,7 @@ class Signer extends BaseModel {
       'documentIssuedDate',
       'documentIssuer',
       // other
+      'institutionId',
       'checkSanction',
       'sanctionVerifiedAt',
       'checkPoliticalExposure',

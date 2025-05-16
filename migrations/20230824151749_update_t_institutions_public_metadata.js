@@ -31,6 +31,7 @@ const publicMetadata = {
   },
   milesAway: {
     enum: [
+// Temp comment
       'yes',
       'no'
     ],

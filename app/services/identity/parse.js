@@ -35,6 +35,7 @@ const EVENTS = {
   // 'verification.status.changed': null
 }
 
+
 function parse(event, verification_result) {
   if (!_.has(EVENTS, event)) {
     logger.info(`[parse] ignoring data from event [${event}] during parse`)

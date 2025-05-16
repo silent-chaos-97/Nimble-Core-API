@@ -13,4 +13,4 @@
       "defaultUnit": "minutes",
       "stereotype": "duration"
     },
-      "title": "Deadline",
+    "response_duration": {

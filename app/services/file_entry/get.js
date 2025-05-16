@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const UnauthorizedError = require('../../errors/unauthorized')
@@ -21,4 +20,3 @@ async function get(user, fileEntryId, tx = app.db) {
     throw new UnauthorizedError('User not allowed to access this fileEntry')
   }
 
-  return data

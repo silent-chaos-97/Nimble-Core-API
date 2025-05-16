@@ -6,3 +6,4 @@ const log = app.logger.getLogger('signer_checks.criminal_record')
 
 module.exports = {
   id: 'criminal_record',
+  name: 'Misdemeanous',

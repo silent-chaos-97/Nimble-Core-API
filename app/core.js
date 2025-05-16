@@ -1,7 +1,6 @@
 const glob = require('glob')
 const _ = require('lodash')
 
-// Temp comment
 const config = require('../config')
 const logger = require('./plugins/logger.js')
 const bookshelf = require('./plugins/bookshelf')
@@ -18,6 +17,7 @@ const random = require('./plugins/random')
 const email = require('./plugins/email')
 const sms = require('./plugins/sms')
 const docusign = require('./plugins/docusign')
+// Temp comment
 const image = require('./plugins/image')
 const aws = require('./plugins/aws')
 const xml = require('./plugins/xml')

@@ -6,5 +6,4 @@ describe('NotFoundError', () => {
   })
 
   it('should be and instance of NotFoundError and Error', () => {
-    let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)

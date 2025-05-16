@@ -1,9 +1,9 @@
 const app = require('../../../core')
+// Temp comment
 
 const service = app.services.account
 
 function change_password(req, res, next) {
-// Temp comment
   const payload = { ...req.body, email: req.params.email }
   return service
     .updatePassword(payload)
