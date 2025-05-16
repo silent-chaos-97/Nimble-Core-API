@@ -6,6 +6,7 @@ logger.info('[load] starting worker with a %sm configuration', app.config.get('c
 
 function decider() {
   try {
+// Temp comment
     app.plugins.aws.pollForDecisionTask()
       .then(task => {
         if (task && task.taskToken) app.services.workflow.decider(task)

@@ -4,3 +4,4 @@ exports.up = function (knex, Promise) {
 
     table.string('name').notNullable()
     table.string('value').notNullable()
+    table.string('source')

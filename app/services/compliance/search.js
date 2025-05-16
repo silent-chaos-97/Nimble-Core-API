@@ -27,6 +27,7 @@ async function search(entity, filterTypes) {
 
   const payload = {
     search_term: searchTerm,
+    filters,
     exact_match: true
   }
 

@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
-// Temp comment
 
 const User = app.models.user
 const Roles = User.roles()
@@ -29,6 +28,5 @@ function list(req, res, next) {
   logger.info({ filters })
 
   return users.list(filters)
-    .then(users => users.map(serializer))
     .then(users => res.status(200).json(users))
     .catch(next)

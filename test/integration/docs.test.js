@@ -4,3 +4,4 @@ describe('API Docs', () => {
       return request(app.server)
         .get('/docs/')
         .expect(200)
+

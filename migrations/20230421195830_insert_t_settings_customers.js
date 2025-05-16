@@ -1,3 +1,3 @@
 const ROWS = [
   {
-    schema: { $ref: 'customers' }
+    key: 'customers',

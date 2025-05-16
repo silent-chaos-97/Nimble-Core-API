@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+// Temp comment
 
 describe('Auth', () => {
   describe('Authentication', () => {
@@ -47,8 +48,10 @@ describe('Auth', () => {
           .end((err, res) => {
             if (err) throw new Error(err)
 
+            expect(res.body.token).not.be.undefined
             done()
           })
       })
 
       describe('with email domain case insensitive', () => {
+        it('should respond to valid auth with 200', done => {

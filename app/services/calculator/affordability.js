@@ -281,3 +281,178 @@ async function _riskAnalysis(institutionId, summary, risks) {
   if (!performing) agg.nonPerformers = nonPerformers
 
   return agg
+}
+
+function _amort(summary, risks) {
+  let loan
+  let rate
+  let totalTerm
+  let amortTerm
+  let targetPayment
+  let additionalCashDown
+  let cashDown
+
+  try {
+    loan = summary.loan.value
+    rate = summary.rate.value
+    totalTerm = summary.totalTerm.requested
+    amortTerm = summary.amortTerm.requested
+    targetPayment = summary.payment.requested
+    const maxTotalTerm = summary.totalTerm.max
+    const maxPayment = summary.payment.max
+    const expectedPayment = amort.payment(loan, rate, totalTerm)
+
+    if (targetPayment && targetPayment > maxPayment) {
+      summary.payment.reasons.push({
+        metricId: 'targetPayment',
+        metric: 'maxPayment',
+        operation: 'target_payment_greater_than_max_payment',
+        message: 'The targeted payment was more than the maximum payment based on risk factors (e.g. DTI).',
+        requested: maxPayment,
+        adjustment: -(targetPayment - maxPayment)
+      })
+
+      summary.payment.requested = maxPayment
+      targetPayment = maxPayment
+    }
+
+    if (!targetPayment && expectedPayment > maxPayment) {
+      summary.payment.reasons.push({
+        metricId: 'targetPayment',
+        metric: 'expectedPayment',
+        operation: 'expected_payment_greater_than_max_payment',
+        message: 'Set the target payment to the maximum payment because the configured payment expectation is greater than the maximum payment based on risk factors (e.g. DTI).',
+        requested: expectedPayment,
+        adjusted: maxPayment
+      })
+
+      summary.payment.requested = maxPayment
+      targetPayment = maxPayment
+    }
+
+    if (targetPayment) { // we have a requested payment, attempt to move term, and cashDown
+      if (totalTerm <= maxTotalTerm) { // adjust term
+        let targetTerm = amort.term(loan, rate, targetPayment)
+
+        if (!targetTerm) targetTerm = maxTotalTerm  // unable to compute a term which can fit the target payment, use max
+
+        if (targetTerm !== totalTerm) {
+          summary.totalTerm.reasons.push({
+            metricId: 'totalTerm',
+            metric: 'targetPayment',
+            operation: 'adjust_term_for_target_payment',
+            requested: totalTerm,
+            adjusted: targetTerm
+          })
+
+          totalTerm = targetTerm
+        }
+
+        if (totalTerm > maxTotalTerm) {
+          summary.totalTerm.reasons.push({
+            metricId: 'totalTerm',
+            metric: 'max_total_term',
+            operation: 'lower_total_term_to_max_term',
+            requested: totalTerm,
+            adjusted: maxTotalTerm
+          })
+
+          totalTerm = maxTotalTerm
+        }
+
+        // both terms the same in the request, assume the requester wants to keep this pattern
+        if (totalTerm !== summary.totalTerm.requested && summary.amortTerm.requested === summary.totalTerm.requested) {
+          summary.amortTerm.reasons.push({
+            metricId: 'amortTerm',
+            metric: 'total_term',
+            operation: 'lock_amort_term_to_total_term',
+            requested: summary.amortTerm.requested,
+            adjusted: totalTerm
+          })
+
+          amortTerm = totalTerm
+        }
+      }
+
+      if (totalTerm === maxTotalTerm) { // term is maxed, attempt to change cashDown
+        const targetLoan = _.round(amort._amount(rate, totalTerm, targetPayment))
+        if (targetLoan < loan) {
+          additionalCashDown = loan - targetLoan
+          cashDown = summary.cashDown.value + additionalCashDown
+
+          summary.cashDown.reasons.push({
+            metricId: 'cashDown',
+            metric: 'target_payment',
+            operation: 'add_cash_down_for_target_payment',
+            adjusted: cashDown,
+            requested: summary.cashDown.value
+          })
+
+          summary.cashDown.value = cashDown
+
+          summary.loan.reasons.push({
+            metricId: 'loan',
+            metric: 'target_payment',
+            operation: 'adjust_loan_for_additional_cash_down_via_target_payment',
+            adjusted: targetLoan,
+            requested: summary.loan.value
+          })
+
+          summary.loan.value = targetLoan
+          loan = targetLoan
+        }
+      }
+    }
+
+    summary.totalTerm.value = totalTerm
+    summary.amortTerm.value = amortTerm
+
+    const loanMin = 0 // FIXME: instead of zero, use set minimum
+    if (loan < loanMin) {
+      additionalCashDown = loan - loanMin
+      cashDown = summary.cashDown.value + additionalCashDown
+
+      summary.cashDown.reasons.push({
+        metricId: 'cashDown',
+        metric: 'loan_minimum',
+        operation: 'subtract_cash_down_for_loan_minimum',
+        adjusted: cashDown,
+        requested: summary.cashDown.value
+      })
+
+      summary.cashDown.value = cashDown
+
+      summary.loan.reasons.push({
+        metricId: 'loan',
+        metric: 'loan_minimum',
+        operation: 'adjust_loan_for_loan_minimum',
+        adjusted: loanMin,
+        requested: summary.loan.value
+      })
+
+      summary.loan.value = loanMin
+      loan = loanMin
+    }
+
+    logger.info({ op: 'amortize', loan, rate, totalTerm, amortTerm })
+
+    const _amort = amort.amortize(loan, rate, totalTerm, amortTerm)
+
+    summary.payment.value = _.round(_amort.payment, 2)
+
+    return {
+      loan,
+      rate,
+      totalTerm,
+      amortTerm,
+      payment: summary.payment.value,
+      amortPeriod: {
+        principal: _amort.principal,
+        interest: _amort.interest,
+        endBalance: _amort.balance
+      }
+    }
+  } catch(err) {
+    logger.error(err, { loan, rate, totalTerm, amortTerm, targetPayment, additionalCashDown, cashDown, summary })
+    throw err
+  }

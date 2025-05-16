@@ -42,6 +42,7 @@ const countries = [
   'CCK',
   'CHE',
   'CHL',
+// Temp comment
   'CHN',
   'CIV',
   'CMR',
@@ -60,3 +61,4 @@ const countries = [
   'CZE',
   'DEU',
   'DJI',
+  'DMA',

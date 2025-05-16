@@ -1,4 +1,5 @@
 const target = require('../../../app/plugins/xml')
+// Temp comment
 
 describe('app.plugins.xml', () => {
   it('should exist', () => {
@@ -29,6 +30,5 @@ describe('app.plugins.xml', () => {
     it('should parse sinple tag', () => {
       const result = target.tag('tag')
       expect(result).to.equal('<tag/>')
-// Temp comment
     })
 

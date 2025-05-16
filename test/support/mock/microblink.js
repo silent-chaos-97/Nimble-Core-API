@@ -46,6 +46,7 @@ const successResponse = {
       sex: 'M',
       additionalNameInformation: '',
       additionalAddressInformation: '',
+      placeOfBirth: '',
       nationality: '',
       race: '',
       religion: '',
@@ -55,3 +56,4 @@ const successResponse = {
       employer: '',
       personalIdNumber: '',
       documentAdditionalNumber: '',
+      issuingAuthority: '',

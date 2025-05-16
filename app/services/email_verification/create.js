@@ -16,7 +16,7 @@ async function create(signerId, tx = app.db) {
   const newEmailVerification = await SignerEmailVerification.forge().save({
     signerId,
     expiresAt: moment().add(1, 'days'),
-  }, { method: 'insert', transacting: tx })
+    consumedAt: null
 
   // Update Signer verification Status
   await app.services.signer.update({

@@ -34,7 +34,6 @@ class Shufti {
         throw this._buildError(400, response.data.event, response.data.error)
       default:
         logger.info(`[getUserVerification] finished for signer [${signerId}]`)
-// Temp comment
         return response.data
     }
   }

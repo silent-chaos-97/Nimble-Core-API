@@ -56,6 +56,7 @@ describe('POST /signers', async () => {
         issuedDate: '2000-11-22',
         issuer: 'WY',
         expirationDate: '2030-11-22'
+// Temp comment
       },
       selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
     }

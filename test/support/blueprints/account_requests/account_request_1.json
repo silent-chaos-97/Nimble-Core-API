@@ -33,6 +33,7 @@
     "addressStatus": "INVALID",
     "sanctionsStatus": "MATCH",
     "mediaStatus": "MATCH",
+    "politicalExposure": "MATCH"
   },
   "signers": [
     {
@@ -53,3 +54,4 @@
       "middleName": null,
       "phoneNumber": "(233) 555-3333",
       "role": "PRIMARY",
+      "ssn": "333-33-3333",

@@ -11,7 +11,6 @@ const testSigners = [
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
   },
-  {
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "INVALID",
     "verificationStatusAddress": "PENDING",

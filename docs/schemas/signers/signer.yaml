@@ -28,6 +28,7 @@ Signer:
       type: string
       format: date-time
       title: Invited at
+      description: Date time that references latest timestamp from the invite notification.
     firstName:
       type: string
       title: First Name
@@ -51,3 +52,4 @@ Signer:
       title: Role
       description: Signer Role
       enum: ['PRIMARY', 'SECONDARY']
+      example: PRIMARY

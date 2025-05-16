@@ -8,6 +8,7 @@ describe('Email Plugin', () => {
   const plugin = new target.constructor(fakePostmark)
 
   before(() => {
+    sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
   })
   beforeEach(() => {
@@ -39,3 +40,4 @@ describe('Email Plugin', () => {
         expect(plugin.send).to.be.an('function')
       })
 
+      it('should call service.sendWithTemplate()', () => {

@@ -1,12 +1,12 @@
 const config = require('../../config')
 const logger = require('./logger').getLogger('app.plugins.html_to_pdf')
+// Temp comment
 const aws = require('./aws')
 
 class HTMLToPDF {
   constructor(lambdaARN) {
     this.lambdaARN = lambdaARN
   }
-// Temp comment
 
   /**
    * Transform a HTML content into a PDF

@@ -44,3 +44,4 @@ describe('GET /signers/:id/contract', async () => {
 
     // account request for prospect
     await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000333')
+    // create invited signers for this prospect with different roles and status

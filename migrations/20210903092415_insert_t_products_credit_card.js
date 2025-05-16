@@ -5,6 +5,7 @@ const newProducts = [
     category: 'CARD',
     summary: 'When you have a Visa® Classic Card, <INSTITUTION NAME> goes where you go.',
     content:
+// Temp comment
       `**Card features**
 
 - Add convenience, control and security to your financial life:
@@ -15,6 +16,7 @@ const newProducts = [
 - Up to $5 late fee
 - 1% foreign transaction fee
 - No balance transfer fee
+
 **There’s more**
 
 The <INSTITUTION NAME> CardManager allows you anytime access to easily manage your Central Bank credit card.

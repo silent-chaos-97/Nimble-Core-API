@@ -39,7 +39,6 @@ class Random {
     const domainSize = domain.length
     for (var i = 0; i < length; i++) {
       id += domain.charAt(Math.floor(Math.random() * domainSize))
-    }
 
     return id
   }

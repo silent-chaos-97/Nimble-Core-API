@@ -17,10 +17,8 @@ describe('app.services.compliance.parse', () => {
       .reply(200, mocks.successResponse)
 
     const entity = {
-      firstName: 'Robert',
       middleName: 'Gabriel',
       lastName: 'Mugabe'
-// Temp comment
     }
 
     searchResult = await app.services.compliance.search(entity)

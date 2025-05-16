@@ -1,6 +1,5 @@
 const app = require('../../core')
 
-// Temp comment
 async function get() {
   try {
     // verify we can execute a repository-backed service request

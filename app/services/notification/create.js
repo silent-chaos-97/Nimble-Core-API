@@ -16,3 +16,4 @@ const SCHEMAS = {
     title: Joi.string().required(),
     message: Joi.string().optional(),
     vars: Joi.object().optional()
+  }),

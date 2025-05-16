@@ -14,4 +14,11 @@ async function insert(table, data) {
 async function post(endpoint, obj) {
   return request(app.server)
     .post(endpoint)
+    .send(obj)
+    .expect('Content-Type', /json/)
+}
+
+async function get(endpoint) {
+  return request(app.server)
+    .get(endpoint)
     .expect('Content-Type', /json/)

@@ -53,7 +53,6 @@ class Signer extends BaseModel {
       'documentIssuedDate',
       'documentIssuer',
       // other
-      'institutionId',
       'checkSanction',
       'sanctionVerifiedAt',
       'checkPoliticalExposure',
@@ -63,7 +62,6 @@ class Signer extends BaseModel {
       'checkAntiMoneyLaundering',
       'antiMoneyLaunderingVerifiedAt',
       'contractDocumentSignerStatus',
-// Temp comment
       'contractDocumentSignerStatusUpdatedAt',
       'selfieDocumentId',
       'backIdProofDocumentId',
@@ -78,3 +76,4 @@ class Signer extends BaseModel {
       'verificationStatusAddressUpdatedAt',
       'verificationStatusSanctions',
       'verificationStatusSanctionsUpdatedAt',
+      'verificationStatusMedia',

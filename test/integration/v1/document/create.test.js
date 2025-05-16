@@ -18,6 +18,7 @@ describe('POST /documents', () => {
     aws = config.get('aws')
     nock(aws.s3_endpoint)
       .put(/uploads/)
+      .reply(200)
   })
 
   afterEach(() => {
@@ -57,3 +58,4 @@ describe('POST /documents', () => {
   it('should return a document model', () => {
     return request(app.server)
       .post('/v1/documents')
+      .send(document)

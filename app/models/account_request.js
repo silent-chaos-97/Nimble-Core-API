@@ -37,7 +37,6 @@ class AccountRequest extends BaseModel {
   static relations() {
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']
   }
-
   data() {
     const SignerModel = app.models.signer
     const UserModel = app.models.user

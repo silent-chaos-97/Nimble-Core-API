@@ -12,7 +12,6 @@ function get(req, res, next) {
   const user = req.user
   if (!user) return next(new UnauthorizedError('UserRequired'))
 
-  const id = req.params.id
   if (!id) return next(new UnauthorizedError('IdRequired'))
 
   const hasRole = role => User.hasRole(user, role)

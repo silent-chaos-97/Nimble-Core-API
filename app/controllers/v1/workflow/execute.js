@@ -21,6 +21,7 @@ async function execute(req, res) {
         }
       } catch (err) {
         return { wkflId, success: false }
+      }
     })
   )
   logger.debug({ result })

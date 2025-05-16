@@ -20,3 +20,4 @@ class WorkflowModel extends BaseModel {
     return Statuses
   }
 
+  static props() {

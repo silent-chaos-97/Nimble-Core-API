@@ -2,7 +2,6 @@ const app = require('../../../core')
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
 
-// Temp comment
 function get(req, res, next) {
   return service
     .get(req.params.id)

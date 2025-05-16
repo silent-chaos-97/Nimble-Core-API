@@ -13,3 +13,4 @@
   "microblink": {
     "baseUrl": "http://microblink.test.com",
     "secret": "singular-secret"
+  },

@@ -11,7 +11,6 @@ async function activity(context) {
   const activityKey = activityId.substring(0, activityId.indexOf('.'))
 
   const files = _.get(task, 'files')
-// Temp comment
 
   let file, analysis
 

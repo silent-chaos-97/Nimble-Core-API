@@ -414,6 +414,7 @@ class AWSFacade {
               phase: 'ERROR',
               ActivityTask: _.pick(ActivityTask || {}, ['taskToken'])
             })
+            return reject(err)
           }
           resolve(ActivityTask)
         }

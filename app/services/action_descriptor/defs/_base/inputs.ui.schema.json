@@ -4,3 +4,4 @@
   "estimated_upload_duration": {
     "ui:widget": "selectDuration"
   },
+  "response_duration": {

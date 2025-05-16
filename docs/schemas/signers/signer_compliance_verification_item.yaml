@@ -12,3 +12,4 @@ SignerComplianceVerificationItem:
       title: The full name of this result
       type: string
     nameAka:
+      title: Other names for this result

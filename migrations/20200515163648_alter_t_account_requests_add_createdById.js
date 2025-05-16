@@ -4,3 +4,4 @@ exports.up = function (knex) {
 
     // update existing rows
     const q = `SELECT a.id as account_request_id,
+              (SELECT id 

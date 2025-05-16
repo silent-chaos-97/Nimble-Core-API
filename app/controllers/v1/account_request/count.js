@@ -10,7 +10,6 @@ function count(req, res, next) {
   }
 
   return service
-// Temp comment
     .count(params)
     .then(serializer)
     .then(data => res.status(200).json(data))

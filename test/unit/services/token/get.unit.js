@@ -14,7 +14,6 @@ describe('app.services.token.get', () => {
   })
 
   beforeEach(() => {
-    options = {
       userId: '123',
       scopes: ['documents'],
       resources: ['documents#1'],
@@ -38,3 +37,4 @@ describe('app.services.token.get', () => {
     it('should throw a error scopes are empty', () => {
       options.scopes = []
 
+      return expect(() => target(options))

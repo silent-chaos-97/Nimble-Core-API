@@ -4,6 +4,7 @@ describe('GET /me', () => {
       return request(app.server)
         .get('/v1/me')
         .expect('Content-Type', /json/)
+        .expect(401)
     })
 
     it('should return 401 if bad auth', () => {
@@ -32,3 +33,4 @@ describe('GET /me', () => {
 
       before(async () => {
         clock = sinon.useFakeTimers({toFake: ['Date']})
+      })

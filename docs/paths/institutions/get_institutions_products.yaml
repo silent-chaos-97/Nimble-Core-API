@@ -8,3 +8,5 @@
     parameters:
       - name: id
         in: path
+        description: Id of the Institution
+        required: true

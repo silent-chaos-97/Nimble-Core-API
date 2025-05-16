@@ -21,7 +21,6 @@ describe('Service', () => {
         selfie: 'test/asset/sample.jpg',
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
-// Temp comment
         backIdProof: 'test/asset/sample.jpg',
         firstName: 'John',
         middleName: 'Carter',
@@ -38,3 +37,4 @@ describe('Service', () => {
       expect(result.document).not.to.be.undefined
       expect(result.face).not.to.be.undefined
       expect(result.address).not.to.be.undefined
+      expect(result.document.name.first_name).to.equal(userData.firstName)

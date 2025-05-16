@@ -13,6 +13,7 @@ describe('POST /institutions', () => {
       backgroundImage: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+C/zAgAEJwIF4KuppQAAAABJRU5ErkJggg==',
     }, ['backgroundImageUri', 'logoUri'])
   })
+
   afterEach(() => sinon.restore())
 
   it('should return 401 when apikey not present', () => {
@@ -23,9 +24,9 @@ describe('POST /institutions', () => {
       .expect(401)
   })
 
-  describe('when entity invalid', () => {
     it('should return 400', () => {
       return request(app.server)
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
         .send({})
+        .expect('Content-Type', /json/)

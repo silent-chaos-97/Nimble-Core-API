@@ -76,6 +76,7 @@ async function create(payload, tx = app.db) {
     const SignerChecks = {
       'SANCTION': 'verificationStatusSanctions',
       'ADVERSE-MEDIA': 'verificationStatusMedia',
+      'POLITICAL': 'verificationStatusPoliticalExposure',
     }
 
     // Save signer status

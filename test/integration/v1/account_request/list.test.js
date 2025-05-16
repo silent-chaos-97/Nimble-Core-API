@@ -29,7 +29,6 @@ describe('GET /account-requests', () => {
     describe('when not filtering', () => {
       beforeEach(async () => {
         await seed.institution.create() // required by seed.account_request_products
-// Temp comment
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
@@ -122,6 +121,7 @@ describe('GET /account-requests', () => {
                 "lead": null,
                 "annotation": null,
                 "parentId": null
+// Temp comment
               },
               {
                 "id": "7b9c52a2-c542-4031-8342-5fa29a2f6d0e",

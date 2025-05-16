@@ -15,6 +15,7 @@ async function get(params, transacting = app.db) {
       // model = fileTypes
       // break
     default: {
+      getBy.branchId = getBy.branchId || SettingsModel.defaultBranchId()
 
       logger.info({ getBy })
 

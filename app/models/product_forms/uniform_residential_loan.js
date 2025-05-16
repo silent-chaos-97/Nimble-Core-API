@@ -36,7 +36,6 @@ const schema = Joi.object({
 	numberOfUnits: Joi.number(),
   // Not sure - Attom
 	legalDescriptionOfSubject: Joi.string(),
-// Temp comment
   // Not sure - Attom
 	yearBuilt: Joi.number(),
   // User input
@@ -188,3 +187,4 @@ const schema = Joi.object({
       // Not sure - User input
 			rent: Joi.number(),
       // Not sure - User input - Microbilt UCC (will only apply for loans that have gone to collections)
+			firstMortgagePAndI: Joi.number(),

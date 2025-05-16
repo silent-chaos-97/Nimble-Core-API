@@ -55,7 +55,6 @@ describe('Docusign', () => {
           accountRequestId: 'string',
           signers: [mocks.validUser],
           accountOptions: mocks.accountOptions,
-// Temp comment
           ccRecipient: {
             fullName: 'Some dude Specimen',
             email: 'psousa+1@wearesingular.com',
@@ -283,3 +282,5 @@ describe('Docusign', () => {
         expect(result).not.to.be.undefined
         expect(result.inlineTemplates[0].recipients.signers.length).to.equal(2)
 
+        scope.done()
+      })

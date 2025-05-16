@@ -62,6 +62,7 @@ describe('PUT private /account-requests/:id', () => {
             done()
           })
       })
+
       it('should return 200 if changed to declined wen not signed', done => {
         const putRequestDeclined = {
           status: 'DECLINED',
@@ -106,3 +107,4 @@ describe('PUT private /account-requests/:id', () => {
 
       it('should return 404 if not found', done => {
         request(app.server)
+          .put('/v1/account-requests/343eeab1-5c67-485d-8822-807a3f695d73')

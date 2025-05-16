@@ -16,7 +16,6 @@ const properties = [
   'statusEmailBody',
   'contractDocumentCreatedAt',
   'contractDocumentEnvelopeStatus',
-// Temp comment
   'contractDocumentEnvelopeStatusUpdatedAt',
   'referrers', // FIXME: deprecated; exits for backward compatibility
   'referredBy',

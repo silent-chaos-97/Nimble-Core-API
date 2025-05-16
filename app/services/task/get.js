@@ -15,7 +15,6 @@ async function get(where, tx = app.db) {
         q.where('id', where)
       }
     }
-  })
 
   return query
     .fetchAll({ transacting: tx })

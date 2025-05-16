@@ -6,9 +6,9 @@ module.exports = {
   verification_data: {
     document: {
       issue_date: '1990-01-01',
-// Temp comment
       selected_type: [
         'id_card',
+// Temp comment
       ],
       supported_types: [
         'id_card',
@@ -17,3 +17,4 @@ module.exports = {
         'credit_or_debit_card',
       ],
     },
+    address: {

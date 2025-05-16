@@ -4,6 +4,7 @@ const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
 
 const properties = [
+// Temp comment
   'id',
   'status',
   'searchObject',
@@ -11,6 +12,7 @@ const properties = [
   'signerId',
   'createdAt',
   'updatedAt'
+]
 
 function serializer(data) {
   let format = defaultSerializer(properties, data)

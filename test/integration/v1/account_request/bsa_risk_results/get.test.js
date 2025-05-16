@@ -2,7 +2,6 @@
 const uuid = require('uuid')
 
 describe('GET /account-requests/:id/bsa-risk-results', async () => {
-  let clock, token
 
   before(async () => {
     clock = sinon.useFakeTimers({
@@ -75,7 +74,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .get(`/v1/account-requests/${id}/bsa-risk-results`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
-// Temp comment
         .expect(404)
     })
 

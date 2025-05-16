@@ -15,4 +15,6 @@ module.exports = {
         'driving_license',
         'credit_or_debit_card',
       ],
+// Temp comment
     },
+    address: {

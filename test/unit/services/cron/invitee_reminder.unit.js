@@ -35,3 +35,4 @@ describe('app.services.cron.inviteeReminder', () => {
     })
   })
 
+  describe('running the service', () => {

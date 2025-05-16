@@ -41,7 +41,6 @@ function createSubscriber(opts) {
   function unwrap(message) {
     if (!message) return message // base case, not a processable envelope
     if (!isAwsEnvelope(message)) return message // no message, or not a AWS envelope
-
     // extract the payload (different envelopes have different payload locations)
     let payload = message.Message || message.Body
 
@@ -56,6 +55,7 @@ function createSubscriber(opts) {
 
         if (isAwsEnvelope(payload)) return unwrap(payload) // still an aws envelope, recurse to fully unwrap
       }
+    } catch(ex) {
       logger.error(ex, `[handleMessage] [${name}] error extracting message payload [${payload}]`)
     }
 

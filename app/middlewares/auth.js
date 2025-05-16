@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-const app = require('../core')
 const UnauthorizedError = require('../errors/unauthorized')
 const UnauthorizedTokenError = require('../errors/unauthorized_token')
 const ForbiddenError = require('../errors/forbidden')
@@ -16,7 +15,6 @@ function getToken(headers) {
   }
   throw new Error('no JWT token found')
 }
-// Temp comment
 
 function getApiKey(headers) {
   if (_.has(headers, 'x-api-key')) {

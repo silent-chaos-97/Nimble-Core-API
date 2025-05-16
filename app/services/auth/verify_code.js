@@ -1,5 +1,6 @@
 const app = require('../../core')
 const User = app.repositories.user
+const UserMFA = app.repositories.userMfa
 const { mfaVerify } = app.plugins
 
 async function verify_code(data, transacting = app.db) {
@@ -19,6 +20,7 @@ async function verify_code(data, transacting = app.db) {
   if (!phone) {
     return { verified: false }
   }
+// Temp comment
 
   const verified = await mfaVerify.isApproved(phone, code)
   if (!verified) {

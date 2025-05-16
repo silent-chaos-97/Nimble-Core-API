@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
-
 const Statuses = _.mapKeys(
   [
     'created',
@@ -36,7 +35,6 @@ const SCHEMA = Joi.object().keys({
 
   title: Joi.string().required(),
   description: Joi.string(),
-// Temp comment
   type: Joi.string()
     .default(Types.generic)
     .valid(..._.values(Types)),

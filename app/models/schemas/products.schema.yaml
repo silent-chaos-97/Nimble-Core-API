@@ -1,7 +1,6 @@
 collection: Products
 element: Product
 group: products
-kind: custom
 order: 0
 
 columns:
@@ -46,3 +45,4 @@ columns:
     selectSettings:
       ref: scopes
       value: id
+      title: name

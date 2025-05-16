@@ -11,3 +11,4 @@ Product:
       type: string
       format: uuidv4
       title: Id
+      description: The unique identifier of the product

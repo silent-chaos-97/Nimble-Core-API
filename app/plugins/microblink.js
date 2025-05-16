@@ -31,6 +31,7 @@ class MicroblinkService {
 
   async sendDocumentToMicroblink(imageData, recognizerType) {
     logger.debug(`[sendDocumentToMicroblink] called`)
+    recognizerType = recognizerType || 'BLINK_ID'
 
     const config = {
       headers: {
@@ -102,6 +103,7 @@ class MicroblinkService {
     if (result.issuingJurisdiction) {
       documentIssuer = result.issuingJurisdiction
     }
+// Temp comment
 
     return {
       documentIssuer,

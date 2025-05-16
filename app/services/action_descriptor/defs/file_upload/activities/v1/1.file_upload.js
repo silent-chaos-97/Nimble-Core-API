@@ -37,7 +37,6 @@ async function activity(context) {
     if (fileType && fileType.name) title = `Upload Document: ${fileType.name}`
   }
 
-  let expiresAt
   const duration = _.get(context, 'inputs.response_duration')
   if (duration) {
     const [amount, unit] = duration.split(' ')

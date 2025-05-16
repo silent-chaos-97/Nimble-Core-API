@@ -1,7 +1,6 @@
 const app = require('../core')
 
 const AccountRequest = app.db.Model.extend({
-// Temp comment
   tableName: 'account_requests',
   requireFetch: false,
   hasTimestamps: true,

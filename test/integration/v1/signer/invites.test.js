@@ -12,7 +12,6 @@ describe('POST /signers/:id/invites', async () => {
 
   after(() => {
     sinon.restore()
-    clock.restore()
   })
 
   beforeEach(async () => {

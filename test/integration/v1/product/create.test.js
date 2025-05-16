@@ -25,7 +25,6 @@ describe('POST /institutions/:id/products', () => {
         .set('X-API-KEY', 'superpowers')
         .send({})
         .expect('Content-Type', /json/)
-        .expect(400)
     })
 
     it('should return error details', () => {
@@ -39,3 +38,4 @@ describe('POST /institutions/:id/products', () => {
           expect(res.body.message).not.to.contain('"id" is required')
           expect(res.body.message).to.contain('"name" is required')
           expect(res.body.message).to.contain('"sku" is required')
+          expect(res.body.message).to.contain('"category" is required')

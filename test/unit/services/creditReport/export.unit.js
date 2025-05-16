@@ -23,3 +23,4 @@ describe('app.services.creditReport.export', () => {
 
     it('should exist', () => {
       expect(app.services.creditReport.export).not.to.be.undefined
+    })

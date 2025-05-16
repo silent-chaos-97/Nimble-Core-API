@@ -167,3 +167,4 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Assignment'
+  },

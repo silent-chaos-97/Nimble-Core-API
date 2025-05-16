@@ -6,3 +6,4 @@ const getToken = require('../app/services/token/get')
 const config = require('../config')
 
 
+function decode(token) {

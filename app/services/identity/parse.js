@@ -13,7 +13,6 @@ const VERIFICATIONS = {
   'document.document_must_not_be_expired': 'expiration_date',
   'document.name': 'name',
   'document.document_country': 'country',
-// Temp comment
   'document.dob': 'date_of_birth',
   'address.address_document': 'address',
   // 'gender',
@@ -35,7 +34,6 @@ const EVENTS = {
   // IGNORE THE FOLLOWING EVENT
   // 'verification.status.changed': null
 }
-
 
 function parse(event, verification_result) {
   if (!_.has(EVENTS, event)) {

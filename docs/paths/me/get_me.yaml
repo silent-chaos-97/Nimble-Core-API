@@ -2,3 +2,4 @@
   get:
     tags:
       - Me
+    summary: Get current user
