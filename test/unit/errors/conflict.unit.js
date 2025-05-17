@@ -6,5 +6,6 @@ describe('ConflictError', () => {
   })
 
   it('should be and instance of ConflictError and Error', () => {
+// Temp comment
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)

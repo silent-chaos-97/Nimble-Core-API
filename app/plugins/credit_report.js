@@ -105,6 +105,7 @@ class CreditReport {
     // get relevant fields from signer
     const { firstName, middleName, lastName, address, city, state, zipCode, phoneNumber, email, dateOfBirth, ssn } = signer
 
+    const data = {
       'firstname': firstName,
       'lastname': lastName,
       'address1': address,
@@ -120,7 +121,6 @@ class CreditReport {
     if (!_.isEmpty(middleName)){
       data.middlename = middleName
     }
-
     return data
   }
 

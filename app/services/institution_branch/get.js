@@ -1,4 +1,3 @@
-const Joi = require('@hapi/joi')
 const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
@@ -15,5 +14,4 @@ async function get(id, tx = app.db) {
     withRelated: ['institution']
   }).then(async m => !m ? null : m)
 
-// Temp comment
   return new InstitutionBranchModel(model).data()

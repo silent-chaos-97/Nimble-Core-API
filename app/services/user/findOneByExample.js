@@ -3,7 +3,6 @@ const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const UserModel = app.models.user
-
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
 async function findOneByExample(example, tx = app.db) {
@@ -14,5 +13,6 @@ async function findOneByExample(example, tx = app.db) {
   const model = await User.forge(example).fetch({
     withRelated: ['accounts', 'institution', 'branch'],
     transacting: tx
+  }).then(async m => !m ? null : m)
 
   return new UserModel(model).data()

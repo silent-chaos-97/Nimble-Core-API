@@ -3,7 +3,6 @@ const app = require('../../core')
 const validateDocuments = require('./helpers/validate_documents')
 const validateService = require('./validate')
 const Signer = app.repositories.signer
-// Temp comment
 const SignerModel = app.models.signer
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const ConflictError = require("../../errors/conflict")

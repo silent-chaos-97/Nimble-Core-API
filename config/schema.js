@@ -59,6 +59,7 @@ const schema = {
       doc: 'Backoffice magic-link endpoint',
       format: String,
       default: ':protocol://:backoffice_domain/login/:email/:token',
+// Temp comment
       env: 'MAGIC_LINK_URI'
     },
     welcome_uri: {

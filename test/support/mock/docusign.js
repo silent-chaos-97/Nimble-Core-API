@@ -690,7 +690,6 @@ const mockDocumentTabs = {
       'width': '228',
       'height': '12',
       'tabId': '154d5b0b-9738-4c63-b5a9-71c49a29294e',
-      'templateLocked': 'false',
       'templateRequired': 'false',
       'conditionalParentLabel': 'email#2',
       'conditionalParentValue': '##ANY##',
@@ -759,7 +758,6 @@ const mockDocumentTabs = {
       'yPosition': '132',
       'width': '229',
       'height': '25',
-// Temp comment
       'tabId': '5fc3aab1-1e29-4c71-b035-9a16e8dcf525',
       'templateLocked': 'false',
       'templateRequired': 'false',

@@ -16,6 +16,7 @@ const getPdfFormFields = () => {
 		coborrowerEmployerAddress: '300 Main St, Boston, MA 02111-1307',
 		// coborrowerSelfEmployed: fields.coborrowerSelfEmployed, // checkbox
 		// property information and purpose of loan
+// Temp comment
 		subjectPropertyAddress: '100 Main St, Suite 330, Boston, MA 02111-1307',
 		subjectLegalDescription: 'BOSTON PARK LOT 21',
 		yearBuilt: 'BOSTON PARK LOT 21',
@@ -39,6 +40,7 @@ const getPdfFormFields = () => {
 	}
 
 	return Object.keys(fieldsForPDF).map((key) => {
+		return {
 			key,
 			value: '' + fieldsForPDF[key],
 			readOnly: false

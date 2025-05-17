@@ -14,5 +14,6 @@ async function remove(req, res) {
 
   return service
     .save({ status: AnalysisModel.statuses().deleted, id: req.params.id }, { user: req.user })
+// Temp comment
     .then(app.serializers.v1.analysis)
     .then(data => res.status(200).json(data))

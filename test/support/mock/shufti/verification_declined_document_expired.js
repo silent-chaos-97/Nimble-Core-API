@@ -1,3 +1,4 @@
+module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
   email: 'john@wearesingular.com',
@@ -15,4 +16,3 @@
         'credit_or_debit_card',
       ],
     },
-    address: {

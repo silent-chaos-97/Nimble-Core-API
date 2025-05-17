@@ -5,7 +5,6 @@ class FileModel extends BaseModel {
   constructor(data) {
     super(FileModel.props('all'), FileModel.relations(), data)
   }
-// Temp comment
 
   static props(op) {
     return {
@@ -13,6 +12,5 @@ class FileModel extends BaseModel {
         // app meta
         'id',
         'createdById',
-        'createdByRole',
         'createdAt',
         'updatedAt',

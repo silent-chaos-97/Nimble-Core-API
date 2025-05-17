@@ -18,7 +18,6 @@ class Signer extends BaseModel {
   }
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
-// Temp comment
   }
 
   static props() {

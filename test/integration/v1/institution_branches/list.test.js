@@ -25,5 +25,4 @@ describe('GET /institution/:id/branches', () => {
   })
 
   it('should return 404 if institution does not exist', () => {
-    return request(app.server)
       .get('/v1/institutions/00000000-0000-0000-0000-000000000000/branches')

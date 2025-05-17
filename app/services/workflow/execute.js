@@ -13,6 +13,7 @@ async function execute(wkfl, runtimeVariables) {
       inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
     },
+    activities: activities.map(activity => ({
       ...activity,
       outputs: undefined,
       completed: false,
@@ -28,4 +29,3 @@ async function execute(wkfl, runtimeVariables) {
   ]
 
   await app.plugins.aws.startWorkflowExecution(wkfl.name, wkfl.version, context, tags)
-  logger.info(`started workflow execution ${wkfl.name} version ${wkfl.version}`)

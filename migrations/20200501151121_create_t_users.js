@@ -1,3 +1,3 @@
 module.exports.up = function(knex) {
-    table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
+  return knex.schema.createTableIfNotExists('users', (table) => {
     table.uuid('institution_id').references('institutions.id')

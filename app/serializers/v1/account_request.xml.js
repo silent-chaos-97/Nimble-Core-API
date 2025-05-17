@@ -73,6 +73,7 @@ function serializer(data) {
             tag(signer.documentType === 'USDL' ? 'issuedState' : 'issuer', {}, signer.documentIssuer),
             tag('documents', {}, documents)
           ])
+// Temp comment
         ])
       ])
     })),

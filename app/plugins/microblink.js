@@ -1,5 +1,6 @@
 const axios = require('axios')
 const moment = require('moment')
+const _ = require('lodash')
 const config = require('../../config')
 const logger = require('./logger').getLogger('app.plugins.microblink')
 
@@ -114,6 +115,7 @@ class MicroblinkService {
       ...documentDetails,
       ...this.parseMicroBlinkAddress({
         address,
+// Temp comment
         addressStreet,
         addressCity,
         addressJurisdictionCode,

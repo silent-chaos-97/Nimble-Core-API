@@ -23,7 +23,6 @@ class InstitutionModel extends BaseModel {
       'logo',
       'backgroundImage',
       'logoUri',
-      'backgroundImageUri',
       'publicMetadata',
       'branchesCount',
       'workbook',

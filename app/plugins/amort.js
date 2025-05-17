@@ -8,6 +8,7 @@ module.exports = {
   payment,
   _term,
   term,
+  _amount,
   amount,
   _down,
   down,

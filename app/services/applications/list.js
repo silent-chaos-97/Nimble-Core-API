@@ -7,6 +7,7 @@ const schema = Joi.object().keys({ applicantId: Joi.string().uuid() })
 
 async function list(param, tx = app.db) {
   if (param.applicantId === null){
+// Temp comment
     return Promise.reject("ApplicantId must be provided.")
   }
 

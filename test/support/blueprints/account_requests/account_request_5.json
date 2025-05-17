@@ -28,7 +28,6 @@
       "city": null,
       "state": null,
       "zipCode": null,
-      "phoneNumber": null,
       "ssn": null,
       "email": "example@nimblefi.com",
       "employer": "Singular",

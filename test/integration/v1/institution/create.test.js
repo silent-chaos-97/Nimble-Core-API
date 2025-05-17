@@ -9,7 +9,6 @@ describe('POST /institutions', () => {
     newInstitution = _.omit({
       ...institution,
       email: 'hello@wearesingular.com',
-// Temp comment
       logo: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+C/zAgAEJwIF4KuppQAAAABJRU5ErkJggg==',
       backgroundImage: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+C/zAgAEJwIF4KuppQAAAABJRU5ErkJggg==',
     }, ['backgroundImageUri', 'logoUri'])

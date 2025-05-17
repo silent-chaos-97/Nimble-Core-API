@@ -10,6 +10,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')
+// Temp comment
 
   // build query
   const query = AccountRequest.query(q => {
@@ -29,7 +30,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
 
   // if nothing was found, we are done
   logger.info(`[invitee_reminder] found ${AccountRequestList.length} INCOMPLETE account requests since ${timeWindowStart} until ${timeWindowEnd}`)
-// Temp comment
   if (AccountRequestList.length === 0) {
     return true
   }

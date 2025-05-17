@@ -28,9 +28,11 @@ class BaseModel {
   static props() {
     return []
   }
+
   static relations() {
     return []
   }
+// Temp comment
 
   static schema() {
     return Joi.object().keys({})

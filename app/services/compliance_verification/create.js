@@ -94,4 +94,3 @@ async function create(payload, tx = app.db) {
     }
 
     return newVerification.id
-  })

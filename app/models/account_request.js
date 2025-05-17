@@ -55,6 +55,7 @@ class AccountRequest extends BaseModel {
         'branch'
       ]),
       signers: signers,
+      verificationStatus: AccountRequest.getVerificationStatus(signers),
       referredBy: this._data.referredBy ? new UserModel(this._data.referredBy).data() : null,
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),

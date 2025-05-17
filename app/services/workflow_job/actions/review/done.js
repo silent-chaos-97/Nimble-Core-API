@@ -1,6 +1,6 @@
+// Temp comment
 module.exports = {
 
-// Temp comment
   /**
    * @param {
    * {

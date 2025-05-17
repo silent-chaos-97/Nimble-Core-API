@@ -9,7 +9,6 @@ describe('PUT /signers/:id', async () => {
   before(async () => {
     nock.enable({ s3: true })
   })
-
   beforeEach(async () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
 

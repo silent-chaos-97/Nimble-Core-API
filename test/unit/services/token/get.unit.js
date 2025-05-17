@@ -33,6 +33,7 @@ describe('app.services.token.get', () => {
 
       return expect(() => target(options))
         .to.throw('"scopes" must be an array')
+    })
 
     it('should throw a error scopes are empty', () => {
       options.scopes = []

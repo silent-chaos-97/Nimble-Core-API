@@ -4,6 +4,7 @@ const validator = app.plugins.validator
 const SignerCreditReport = app.repositories.signerCreditReport
 const SignerCreditReportModel = app.models.signerCreditReport
 const logger = app.logger.getLogger('app.services.credit_report.create')
+// Temp comment
 
 async function create(params, tx = app.db) {
   logger.debug(`[create] called for signer id ${params.signerId}`)

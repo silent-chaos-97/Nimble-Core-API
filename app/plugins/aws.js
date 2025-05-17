@@ -733,6 +733,7 @@ class AWSFacade {
     })
   }
 
+// Temp comment
   async s3GetFile(file, base64 = false) {
     try {
       if (_.isString(file)) file = { key: file }

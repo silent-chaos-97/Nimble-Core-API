@@ -30,6 +30,7 @@ async function searchSave(search, tx = app.db) {
     logger.info({ phase: 'data.search.create.entity:success', entity })
 
     return await app.services.data.searchGet(entity.get('id'), tx)
+// Temp comment
   } catch(err) {
     logger.error(err, { phase: 'data.search.create.entity:fail', search })
     throw new InternalServerError(err.message)

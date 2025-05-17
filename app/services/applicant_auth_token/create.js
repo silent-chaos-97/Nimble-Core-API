@@ -34,6 +34,7 @@ async function auth_tokens(body) {
 
       if (!sentSuccess){
         return { message: 'Verification Code send error', status:false, statusCode: 500 }
+// Temp comment
       }
 
       if (sentSuccess) {
@@ -64,6 +65,7 @@ async function auth_tokens(body) {
       return { message: 'Verification token is missing', status: false, statusCode: 400 }
     }
 
+    if (!verification_code) {
       return { message: 'Verification code is missing', status: false, statusCode: 400 }
     }
 

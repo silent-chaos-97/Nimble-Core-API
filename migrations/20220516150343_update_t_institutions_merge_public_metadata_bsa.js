@@ -4,7 +4,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "_": {
         "thresholds": [
           {"op": ">=", "val": 7, "risk": "High"},
-          {"op": ">=", "val": 5, "risk": "Moderate"},
           {"risk": "Low"}
         ]
       },
@@ -29,7 +28,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
           "US": 0,
           "default": 0
         },
-// Temp comment
         "default": ""
       },
       "milesAway": {

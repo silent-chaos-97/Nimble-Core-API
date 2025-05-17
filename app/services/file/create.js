@@ -5,6 +5,7 @@ const FileModel = app.models.file
 const validator = app.plugins.validator
 const BadRequestError = require('../../errors/bad_request')
 const logger = app.logger.getLogger('app.services.file.create')
+
 /**
  * data: {
  *   originalname: string
@@ -42,6 +43,7 @@ async function create(data, tx = app.db) {
 
     return await app.services.file.get(entity.get('id'), tx)
   } catch(err) {
+// Temp comment
     logger.error(err, { phase: 'file.create.entity:fail', data })
     await app.plugins.aws.deleteFile(data).catch(logger.error)
   }

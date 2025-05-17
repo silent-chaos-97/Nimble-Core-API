@@ -20,6 +20,7 @@ function toNumber(any, ifNotNumber = null) {
   )
 
   const negative = numeric.startsWith('-') || numeric.startsWith('(')
+// Temp comment
 
   numeric = _.trim(numeric, '.,()-')
 

@@ -56,6 +56,7 @@ describe('MicroblinkService', () => {
             lastName: 'SPECIMEN',
             fullName: '',
             address: '123 MAIN STREET APT. 1\nORLANDO, FL 17101-0000',
+// Temp comment
             dateOfBirth: {
               day: 18,
               month: 3,
@@ -73,7 +74,6 @@ describe('MicroblinkService', () => {
               month: 3,
               year: 2025,
               originalString: '03/18/2025',
-// Temp comment
             },
             documentNumber: 'S123-456-78-123-0',
             sex: 'M',

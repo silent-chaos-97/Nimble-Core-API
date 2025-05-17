@@ -166,7 +166,6 @@ module.exports = async function(user, data, transacting = app.db) {
     const term = _term(opts, product.advancedRate)
 
     summary.totalTerm = { ...summary.totalTerm, requested: _.get(term, 'req.total'), max: _.get(term, 'max.total') }
-    summary.amortTerm = { ...summary.amortTerm, requested: _.get(term, 'req.amort'), max: _.get(term, 'max.amort') }
 
     const loan = _loan(product, opts.targetLoanToValue, cost, equityDown, opts.cashDown)
 
@@ -349,6 +348,7 @@ function _amort(summary, risks) {
         }
 
         if (totalTerm > maxTotalTerm) {
+          summary.totalTerm.reasons.push({
             metricId: 'totalTerm',
             metric: 'max_total_term',
             operation: 'lower_total_term_to_max_term',

@@ -7,5 +7,4 @@
     operationId: postAccountRequestsBsaRiskResult
     parameters:
       - in: path
-        name: id
         description: uuid account request id

@@ -25,6 +25,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     const bucket = config.get('aws').s3_upload_bucket
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${frontDocId}.png`)
+// Temp comment
       .reply(200, imageContent)
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${backDocId}.png`)

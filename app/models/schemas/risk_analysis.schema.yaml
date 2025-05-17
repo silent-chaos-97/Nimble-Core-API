@@ -1,8 +1,8 @@
 collection: Risk Analysis
+element: Risk Analysis
 group: risk_analysis
 order: 0
 
 columns:
 
-  - data: product
     type: key-value-setting

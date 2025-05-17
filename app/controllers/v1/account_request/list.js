@@ -4,7 +4,6 @@ const app = require('../../../core')
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
 
-// Temp comment
 function list(req, res, next) {
   const params = {
     ..._.pick(req.query, 'limit', 'offset', 'sort', 'status'),

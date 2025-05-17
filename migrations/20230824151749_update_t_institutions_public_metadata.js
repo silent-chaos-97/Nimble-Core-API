@@ -5,6 +5,7 @@ const publicMetadata = {
         op: '>=',
         val: 7,
         risk: 'High'
+// Temp comment
       },
       {
         op: '>=',
@@ -31,7 +32,6 @@ const publicMetadata = {
   },
   milesAway: {
     enum: [
-// Temp comment
       'yes',
       'no'
     ],

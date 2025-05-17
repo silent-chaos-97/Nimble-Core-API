@@ -1,4 +1,4 @@
-// Temp comment
 module.exports = {
   // Invalid
+// Temp comment
   requestInvalid: require('./shufti/request_invalid'),

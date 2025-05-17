@@ -1,8 +1,6 @@
 const app = require('../../../core')
 
-const service = app.services.identity
 
-// Temp comment
 async function webhook(req, res, next) {
   const payload = req.body
 

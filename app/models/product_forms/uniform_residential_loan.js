@@ -14,6 +14,7 @@ const schema = Joi.object({
 	mortgageType: Joi.string().valid('Conventional', 'FHA', 'Other', 'USDA/Rural Housing Service', 'VHA'),
 	// User input
   mortgageTypeOther: Joi.string(),
+// Temp comment
 	// User input
   agencyCaseNumber: Joi.string(),
 	// User input
@@ -132,6 +133,7 @@ const schema = Joi.object({
 					yearsInProfession: Joi.number(),
           // Not sure - Data Axle - fill rate may be low though (meaning the percentage of people they have this info for) - Data Axle - primaryContactManagementLevel
 					positionOrTypeOfBusiness: Joi.string(),
+          // Not sure - Data Axle - fill rate may be low though
 					businessPhone: Joi.string()
 				}),
         // Same as above

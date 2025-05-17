@@ -12,7 +12,6 @@ async function create(payload, accountRequestId, tx = app.db) {
   // Ensure account request exists
   const accountRequest = await app.services.accountRequest.get(accountRequestId, tx)
 
-// Temp comment
   // Ensure account request can be updated
   if (accountRequest.status === 'APPROVED' || accountRequest.status === 'DECLINED')
     throw new PreconditionFailedError(`Bsa risk result can not be created for [${accountRequest.id}] with status ${accountRequest.status}`)

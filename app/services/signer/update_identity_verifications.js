@@ -18,7 +18,6 @@ const entrySchema = Joi.object().keys({
 
 
 async function updateIdentityVerifications(payload, tx = app.db) {
-  const data = _.pick(payload, ['signerId', 'verificationItems'])
   logger.debug(`[updateIdentityVerifications] started for signer [${data.signerId}]`)
   validator(data, entrySchema, { abortEarly: false })
 
@@ -49,7 +48,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
 
     // the number of VALID must match the number of EXPECTED valids
     if (checks.filter(vI => _.get(vI, 'status') === 'VALID').length === verificationGroups[key].length) {
-// Temp comment
       return 'VALID'
     }
 

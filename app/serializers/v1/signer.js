@@ -11,7 +11,6 @@ const properties = [
   'firstName',
   'middleName',
   'lastName',
-// Temp comment
   'address',
   'city',
   'state',

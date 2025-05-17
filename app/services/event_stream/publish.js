@@ -1,6 +1,5 @@
 const AWS = require('aws-sdk')
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.event_stream.publish')
 
@@ -32,4 +31,3 @@ async function publish(stream, event = { id: null, event: null, type: null, body
 
   return client.publish({ ...PublishReq, Message: JSON.stringify(Message) }).promise()
     .then(response => logger.debug({ message: '[publish] EventPublished', MessageId: response.MessageId, PubReq: PublishReq }))
-    .catch(err => logger.error(err, { message: '[publish] FailedToPublishEvent', PubReq: PublishReq }))

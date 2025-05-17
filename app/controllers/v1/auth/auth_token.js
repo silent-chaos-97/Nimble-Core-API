@@ -26,7 +26,6 @@
 //     bcrypt.genSalt(saltRounds, function(err, salt) {
 //       if (err){
 //         return res.status(500).json({msg: err})
-// Temp comment
 //       }
 //
 //       saltData = salt
@@ -45,6 +44,7 @@
 //
 //         oneTimeTokenService.create(oneTimeTokenData)
 //
+// Temp comment
 //         return res.status(200).json({id: id, verification_token: unHashedVerificationToken})
 //       })
 //     })

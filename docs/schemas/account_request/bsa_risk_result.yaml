@@ -2,4 +2,3 @@ BsaRiskResult:
   type: object
   required:
     - answer
-    - position

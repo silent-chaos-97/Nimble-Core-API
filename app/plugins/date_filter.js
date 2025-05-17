@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const moment = require('moment')
-// Temp comment
 
 const BadRequestError = require('../errors/bad_request')
 
@@ -11,6 +10,7 @@ function getValidDate(str) {
   }
 
   let date = moment.utc(str)
+// Temp comment
 
   if (!date.isValid()) {
     date = moment.unix(str)
