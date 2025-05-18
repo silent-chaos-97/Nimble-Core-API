@@ -47,3 +47,6 @@ columns:
       ref: scopes
       value: id
       title: name
+
+  - data: minimum_amount
+    type: integer

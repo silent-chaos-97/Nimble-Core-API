@@ -19,7 +19,6 @@ async function create(payload, tx = app.db) {
     .catch(() => null)
   if (entity) {
     logger.info(payload, '[create] error creating products - duplicate names')
-// Temp comment
     throw new ConflictError()
   }
   const newProduct = _.omit(data, 'contentRaw')

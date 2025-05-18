@@ -1,6 +1,5 @@
 const app = require('../../../core')
 
-const service = app.services.user
 const serializer = app.serializers.v1.me
 
 function update(req, res, next) {
@@ -10,5 +9,6 @@ function update(req, res, next) {
 
   return service
     .update(payload)
+    .then(data => serializer(data, true))
     .then(data => res.json(data))
     .catch(next)

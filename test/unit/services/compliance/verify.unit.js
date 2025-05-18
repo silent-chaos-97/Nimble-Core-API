@@ -26,7 +26,6 @@ describe('app.services.compliance.verify', () => {
       expect(app.services.compliance.verify).to.be.an('Function')
     })
 
-
     describe('validations', () => {
       it('should throw exception if not provided with parameters', async () => {
         return expect(app.services.compliance.verify()).to.be.rejectedWith()
@@ -35,3 +34,5 @@ describe('app.services.compliance.verify', () => {
       it('should throw exception if not provided with a valid uuid', async () => {
         return expect(app.services.compliance.verify('string')).to.be.rejectedWith()
       })
+
+      it('should throw exception if the user can\'t be found', async () => {

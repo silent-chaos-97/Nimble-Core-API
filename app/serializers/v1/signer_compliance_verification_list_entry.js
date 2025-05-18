@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const defaultSerializer = require('../serializer')
-
 const properties = [
   'id',
   'name',
@@ -16,7 +15,6 @@ const properties = [
   'updatedAt'
 ]
 
-// Temp comment
 function serializer(data) {
   return {
     ...defaultSerializer(properties, data),

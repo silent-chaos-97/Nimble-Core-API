@@ -16,5 +16,4 @@ function decider() {
   } catch(err) {
     logger.error(err, { op: 'workflow.decider', phase: 'ERROR' })
     setTimeout(decider, 1)
-// Temp comment
   }

@@ -168,3 +168,13 @@ const fileTypes = [
     type: 'Product',
     name: 'Assignment'
   },
+  {
+    type: 'Product',
+    name: 'Stock Certificate'
+  },
+  {
+    type: 'Product',
+    name: 'Names Match'
+  },
+  {
+    type: 'Product',

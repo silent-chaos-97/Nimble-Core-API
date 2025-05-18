@@ -67,3 +67,7 @@ describe('Credit Report Plugin', () => {
     it('should return valid html head', async () => {
       const input='<div class="fpn_clientarea_bg">hola</div><!-- end clientarea bg -->'
       const output='<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><meta charset="UTF-8" /></head><body><div class="fpn_clientarea_bg">hola</div><!-- end clientarea bg --></body></html>'
+
+      const result = await creditReport._injectValidHead(input)
+      expect(result).to.equal(output)
+    })

@@ -18,11 +18,13 @@ describe('GET /institution/:id/branches', () => {
   })
 
   it('should return 200 with auth', () => {
-    return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
   })
 
   it('should return 404 if institution does not exist', () => {
+    return request(app.server)
       .get('/v1/institutions/00000000-0000-0000-0000-000000000000/branches')
+      .expect(404)
+  })

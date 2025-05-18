@@ -7,6 +7,7 @@ describe('POST /signers', async () => {
     inviteSignerEmailSpy,
     eventPublishSpy,
     verifyEmailSpy
+
   before(() => {
     nock.enable()
     verifyEmailSpy = sinon.replace(app.services.email, 'emailVerification', sinon.fake.returns(Promise.resolve()))
@@ -36,6 +37,7 @@ describe('POST /signers', async () => {
       lastName: 'McClane',
       dateOfBirth: '1955-05-22T00:00:00.000Z',
       email: 'john.mf.mcclane@wearesingular.com',
+// Temp comment
       phoneNumber: '+1718-953-8465',
       address: '1381 Atlantic Ave, Brooklyn',
       employer: 'New York Police Dep.',

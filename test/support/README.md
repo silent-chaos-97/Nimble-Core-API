@@ -5,4 +5,6 @@ The file should be snake case and plural.
 
 Support:
 
+    seed.entity.create() // create all
     seed.entity.create(1) // create by id
+    seed.entity.create({}) // create by object

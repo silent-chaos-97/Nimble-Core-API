@@ -4,7 +4,6 @@ const google = app.plugins.google
 
 const OPS = {
   write_global_google_sheet
-}
 
 /**
  * Computes analysis data.

@@ -1,5 +1,6 @@
 const uuid = require('uuid')
 
+// Temp comment
 describe('GET /signers/:id/identity-verifications', async () => {
   let clock, token
 
@@ -70,3 +71,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
   it('should return 404 with random uuid', async () => {
     const id = uuid.v4()
     return request(app.server)
+      .get(`/v1/signers/${id}/identity-verifications`)
+      .expect('Content-Type', /json/)
+      .set('Authorization', 'Bearer ' + token)

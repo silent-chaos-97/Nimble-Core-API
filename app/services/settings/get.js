@@ -23,6 +23,5 @@ async function get(params, transacting = app.db) {
 
       model = await Settings.forge(getBy).fetch({ transacting })
     }
-  }
 
   return new SettingsModel(model).data()

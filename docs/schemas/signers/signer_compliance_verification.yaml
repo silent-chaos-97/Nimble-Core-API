@@ -1,5 +1,4 @@
 SignerComplianceVerification:
-  type: object
   properties:
     id:
       type: string
@@ -10,3 +9,4 @@ SignerComplianceVerification:
       example: 2552ab85-08da-4bb5-be00-9e94d282d311
     status:
       title: The status of this compliance query
+      type: string

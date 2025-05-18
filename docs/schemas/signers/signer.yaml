@@ -12,6 +12,7 @@ Signer:
       example: 2552ab85-08da-4bb5-be00-9e94d282d311
     status:
       type: string
+      readOnly: true
       title: Status
       enum: ['INVITED', 'INCOMPLETE', 'PENDING', 'SIGNED']
       description: >-
@@ -52,3 +53,6 @@ Signer:
       description: Signer Role
       enum: ['PRIMARY', 'SECONDARY']
       example: PRIMARY
+    address:
+      type: string
+      title: Address

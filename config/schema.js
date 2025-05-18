@@ -59,7 +59,6 @@ const schema = {
       doc: 'Backoffice magic-link endpoint',
       format: String,
       default: ':protocol://:backoffice_domain/login/:email/:token',
-// Temp comment
       env: 'MAGIC_LINK_URI'
     },
     welcome_uri: {
@@ -167,3 +166,12 @@ const schema = {
     endpoint: {
       doc: 'the AWS SDK endpoint, null means aws-sdk default',
       format: String,
+      default: '',
+      env: 'AWS_ENDPOINT'
+    },
+    region: {
+      doc: 'the AWS SDK region, null means aws-sdk default',
+      format: String,
+      default: 'us-east-2',
+      env: 'AWS_DEFAULT_REGION'
+    },

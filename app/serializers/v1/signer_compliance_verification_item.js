@@ -8,6 +8,7 @@ const properties = [
   'dateOfBirth',
   'dateOfDeath',
   'countries',
+  'associates',
   'matchTypes'
 ]
 

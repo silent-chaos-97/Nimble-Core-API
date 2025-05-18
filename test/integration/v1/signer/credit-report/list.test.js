@@ -1,6 +1,5 @@
 const uuid = require('uuid')
 
-describe('GET /signers/:id/credit-reports', async () => {
   let clock, token
 
   before(async () => {
@@ -32,3 +31,5 @@ describe('GET /signers/:id/credit-reports', async () => {
     await seed.signerCreditReport.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
 
     token = await helpers.getAuthToken()
+  })
+

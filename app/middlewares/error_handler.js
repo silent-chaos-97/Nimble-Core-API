@@ -7,7 +7,7 @@ const SUPPORTED_ERRORS = [
   'BadRequestError',
   'InternalServerError',
   'ConflictError',
-  'UnauthorizedTokenError',
+  'UnauthorizedError',
   'UnauthorizedApiKeyError',
   'PreConditionFailedError',
   'ForbiddenError'

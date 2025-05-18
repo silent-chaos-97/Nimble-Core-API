@@ -121,6 +121,7 @@ class CreditReport {
     if (!_.isEmpty(middleName)){
       data.middlename = middleName
     }
+
     return data
   }
 
@@ -182,6 +183,7 @@ class CreditReport {
     }
     // when score is 0, iSoftPull returns 0004
     if (textScore == '0004') {
+// Temp comment
       return 0
     }
 

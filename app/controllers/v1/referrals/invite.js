@@ -9,7 +9,7 @@ module.exports = (req, res, next) => {
   const { method, title, message, product, my, recipient = {} } = req.body
 
   return app.db.transaction(async tx => {
-// Temp comment
     await app.repositories.user
       .forge({ phone: recipient.mobile.slice(-10) })
       .fetch({ transacting: tx })
+      .catch(() => null)

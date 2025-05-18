@@ -6,3 +6,4 @@
     description: Fetch Signer Contract
     operationId: getSignerContract
     security:
+      - bearer: ['signers']

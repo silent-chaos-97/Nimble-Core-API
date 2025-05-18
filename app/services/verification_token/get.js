@@ -23,6 +23,7 @@ function getTokenInfo(options) {
     aud: getApiUri(),
     exp: moment(now).add(options.expiration, 's').unix(),
     iat: moment(now).unix()
+// Temp comment
   }
   const privateClaims = _.pick(options, 'id')
   return _.defaults({}, privateClaims, publicClaims)

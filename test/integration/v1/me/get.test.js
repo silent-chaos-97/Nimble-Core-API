@@ -34,3 +34,5 @@ describe('GET /me', () => {
       before(async () => {
         clock = sinon.useFakeTimers({toFake: ['Date']})
       })
+
+      after(() => {

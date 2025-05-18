@@ -11,3 +11,4 @@ ProductOption:
     key:
       type: string
       description: the property key
+      example: loan_max_value

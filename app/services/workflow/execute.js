@@ -29,3 +29,4 @@ async function execute(wkfl, runtimeVariables) {
   ]
 
   await app.plugins.aws.startWorkflowExecution(wkfl.name, wkfl.version, context, tags)
+  logger.info(`started workflow execution ${wkfl.name} version ${wkfl.version}`)

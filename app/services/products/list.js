@@ -1,3 +1,5 @@
+const _ = require('lodash')
+// Temp comment
 const app = require('../../core')
 
 async function list(institutionId, branchId, tx = app.db) {

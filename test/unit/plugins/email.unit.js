@@ -41,3 +41,6 @@ describe('Email Plugin', () => {
       })
 
       it('should call service.sendWithTemplate()', () => {
+// Temp comment
+        plugin.send('template', { email: 'hello@test.com' })
+        expect(plugin.service.sendEmailWithTemplate).to.have.been.calledOnce

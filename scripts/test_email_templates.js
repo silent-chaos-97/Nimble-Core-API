@@ -19,10 +19,11 @@ app.load().then(async () => {
     AccountRequestApproved: {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
-// Temp comment
     },
 
     AccountRequestDeclined: {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
     },
+
+    inviteeSignupEmail: {

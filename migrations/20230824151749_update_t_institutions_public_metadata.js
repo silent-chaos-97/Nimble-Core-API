@@ -5,7 +5,6 @@ const publicMetadata = {
         op: '>=',
         val: 7,
         risk: 'High'
-// Temp comment
       },
       {
         op: '>=',
@@ -40,9 +39,11 @@ const publicMetadata = {
     order: 2,
     score: {
       no: 2,
-      yes: 2
     },
     default: 'no',
     subtype: 'enum',
     required: true
   },
+  usCitizen: {
+    enum: [
+      'yes',

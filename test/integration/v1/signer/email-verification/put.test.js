@@ -35,3 +35,5 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     await seed.signerEmailVerification.create('FF000000-0000-0000-1111-4bd8aa454721') // valid
     await seed.signerEmailVerification.create('FF000000-0000-0000-2222-4bd8aa454721') // expired
     await seed.signerEmailVerification.create('FF000000-0000-0000-3333-4bd8aa454721') // consumend
+  })
+

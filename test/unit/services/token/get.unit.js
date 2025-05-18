@@ -39,3 +39,5 @@ describe('app.services.token.get', () => {
       options.scopes = []
 
       return expect(() => target(options))
+        .to.throw('"scopes" must contain at least 1 items')
+    })

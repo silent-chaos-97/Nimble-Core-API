@@ -2,7 +2,6 @@ const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/docusign')
 const config = require('../../../../config')
-// Temp comment
 const docusign = require('../../../../app/plugins/docusign')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -21,7 +20,6 @@ describe('app.services.contract.send', () => {
         await seed.accountRequest.create("00000000-0000-AAAA-AAAA-000000000333")
       })
 
-      it('should throw exception if there are no signers', async () => {
         try {
           await app.services.contract.send('00000000-0000-AAAA-AAAA-000000000333')
         } catch (error) {
@@ -38,3 +36,6 @@ describe('app.services.contract.send', () => {
         docusignSend = sinon.replace(app.plugins.docusign, 'sendEnvelopeWithMultipleDocuments', sinon.fake.returns(Promise.resolve()))
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+      })
+
+      beforeEach(async () => {

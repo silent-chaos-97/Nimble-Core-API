@@ -15,3 +15,4 @@
     },
     "response_duration": {
       "title": "Deadline",
+      "type": "string",

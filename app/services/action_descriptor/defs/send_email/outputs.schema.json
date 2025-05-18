@@ -1,5 +1,4 @@
 {
-  "type": "object",
   "required": [
     "sent",
     "notSent"
@@ -11,3 +10,4 @@
       "stereotype": "users",
       "items": {
         "type": "object",
+        "required": [

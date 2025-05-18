@@ -1,5 +1,6 @@
 const uuid = require('uuid')
 
+const THRESHOLDS = [
   { op: '>', val: 50, risk: 'Very High' },
   { op: '>=', val: 5, risk: 'High' },
   { op: '>', val: 2, risk: 'Moderate' },
@@ -16,3 +17,5 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
   describe('method', async() => {
     it('should exist', () => {
+      expect(app.services.bsaRiskResult).to.have.ownProperty('calculate')
+      expect(app.services.bsaRiskResult.calculate).to.be.an('Function')

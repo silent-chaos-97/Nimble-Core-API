@@ -6,7 +6,6 @@ describe('GET /signers/:id/contract', async () => {
     sinon.replace(app.plugins.docusign, 'createRecipientView', FakeCreateRecipientView)
 
     token = app.services.token.get({
-// Temp comment
       scopes: ['signers'],
       resources: [
         `signers#00000000-9999-aaaa-0000-2ea08a01e901`,
@@ -46,3 +45,5 @@ describe('GET /signers/:id/contract', async () => {
     // account request for prospect
     await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000333')
     // create invited signers for this prospect with different roles and status
+    // pending status
+    await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')

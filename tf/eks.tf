@@ -1,4 +1,3 @@
-module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
   cluster_name                   = "nimble_core_cluster"
@@ -6,3 +5,4 @@ module "eks" {
   cluster_endpoint_public_access = true
 
   cluster_addons = {
+    vpc-cni = {

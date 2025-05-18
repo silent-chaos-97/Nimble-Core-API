@@ -17,6 +17,8 @@ describe('app.services.email.inviteReminder', () => {
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
 
+  beforeEach(() => {
+// Temp comment
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
@@ -26,3 +28,4 @@ describe('app.services.email.inviteReminder', () => {
     sinon.restore()
   })
 
+  describe('when validating', () => {

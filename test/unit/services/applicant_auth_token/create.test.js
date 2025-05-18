@@ -20,10 +20,10 @@ describe('app.services.applicantOneTimeToken.create', () => {
     expect(target).not.to.be.undefined
   })
 
-  describe('auth_tokens', () => {
     describe('method:verify-code', () => {
       beforeEach(() => {
         body = {
           id: '5856878184',
           role: 'applicant',
           method: 'verify-code'
+        }

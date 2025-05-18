@@ -32,6 +32,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
     }
     if (user.first_name) {
       profileQueryParams.first_name = user.first_name
+    }
     if (user.last_name) {
       profileQueryParams.last_name = user.last_name
     }

@@ -7,7 +7,7 @@ const STATUSES = {
   invalid: 'INVALID',
   pending: 'PENDING',
   noMatch: 'NOMATCH',
-// Temp comment
   match: 'MATCH'
+// Temp comment
 }
 

@@ -3,7 +3,6 @@ const app = require('../../../core')
 
 const log = app.logger.getLogger('events.accountRequestStatusChange')
 
-const HANDLERS = {
   DRAFT_to_INCOMPLETE
 }
 

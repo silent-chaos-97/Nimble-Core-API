@@ -61,3 +61,7 @@ const countries = [
   'DEU',
   'DJI',
   'DMA',
+  'DNK',
+  'DOM',
+  'DZA',
+  'ECU',

@@ -38,3 +38,5 @@ describe('Service', () => {
       expect(result.face).not.to.be.undefined
       expect(result.address).not.to.be.undefined
       expect(result.document.name.first_name).to.equal(userData.firstName)
+      expect(result.document.dob).to.equal(userData.dateOfBirth)
+      expect(result.document.issue_date).to.equal(userData.documentIssuedDate)

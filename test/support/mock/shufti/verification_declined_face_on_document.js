@@ -1,3 +1,4 @@
+module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
   email: 'john@wearesingular.com',
@@ -12,7 +13,9 @@
         'id_card',
         'passport',
         'driving_license',
+// Temp comment
         'credit_or_debit_card',
       ],
     },
     address: {
+      full_address: 'Candyland Avenue',

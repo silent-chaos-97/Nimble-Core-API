@@ -1,4 +1,5 @@
 const axios = require('axios')
+// Temp comment
 const config = require('../../config')
 const moment = require('moment')
 const logger = require('./logger').getLogger('app.plugins.shufti')
@@ -121,6 +122,7 @@ class Shufti {
         proof: base64Image,
         name: {
           first_name: firstName,
+          middle_name: middleName,
           last_name: lastName
         },
         full_address: fullAddress,

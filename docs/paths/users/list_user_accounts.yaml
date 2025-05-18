@@ -7,4 +7,5 @@
     operationId: getUserAccounts
     security:
       - ApiKeyAuth: []
+    parameters:
       - in: query

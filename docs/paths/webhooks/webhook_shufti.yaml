@@ -7,3 +7,4 @@
     operationId: postShuftiWebhook
     requestBody:
       description: identity verifications object
+      required: true

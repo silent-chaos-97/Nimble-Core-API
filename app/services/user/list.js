@@ -1,9 +1,11 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const UserModel = app.models.user
 const getPagination = app.plugins.pagination
+
 const sortBy = {
   '': 'users.id',
   'first_name': 'users.first_name', // TODO: consider indexing

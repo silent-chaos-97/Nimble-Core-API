@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
-// Temp comment
 
 const NotFoundError = require('../../errors/not_found')
 
@@ -9,7 +8,6 @@ const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.institution.get')
-
 const whitelist = ['domain', 'id', 'slug']
 const schema = Joi.object()
   .keys({

@@ -10,7 +10,6 @@ function getValidDate(str) {
   }
 
   let date = moment.utc(str)
-// Temp comment
 
   if (!date.isValid()) {
     date = moment.unix(str)

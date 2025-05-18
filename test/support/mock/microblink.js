@@ -57,3 +57,6 @@ const successResponse = {
       personalIdNumber: '',
       documentAdditionalNumber: '',
       issuingAuthority: '',
+      conditions: '',
+      type: 'BLINK_ID',
+    }

@@ -1,4 +1,3 @@
-describe('GET /institution/:domain', () => {
   let token
 
   beforeEach(async () => {
@@ -7,7 +6,6 @@ describe('GET /institution/:domain', () => {
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
 
-// Temp comment
     token = await helpers.getAuthToken()
   })
 
@@ -15,3 +13,4 @@ describe('GET /institution/:domain', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
       .expect(200)
+  })

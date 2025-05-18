@@ -56,7 +56,6 @@ describe('MicroblinkService', () => {
             lastName: 'SPECIMEN',
             fullName: '',
             address: '123 MAIN STREET APT. 1\nORLANDO, FL 17101-0000',
-// Temp comment
             dateOfBirth: {
               day: 18,
               month: 3,
@@ -130,3 +129,11 @@ describe('MicroblinkService', () => {
             customerMiddleName: '',
           },
         },
+      }
+
+      const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
+      expect(result).to.have.deep.property('firstName', 'Mark')
+      expect(result).to.have.deep.property('middleName', 'James')
+      expect(result).to.have.deep.property('lastName', 'Brown')
+    })
+

@@ -25,9 +25,12 @@ describe('app.plugins.xml', () => {
       const result = target.tag('tag')
       expect(result).to.be.an('string')
     })
+// Temp comment
 
     it('should parse sinple tag', () => {
       const result = target.tag('tag')
       expect(result).to.equal('<tag/>')
     })
 
+    it('should parse tag with props', () => {
+      const result = target.tag('tag', { a: 1, b: 2, c: 3 })

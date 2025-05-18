@@ -10,7 +10,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')
-// Temp comment
 
   // build query
   const query = AccountRequest.query(q => {
@@ -41,6 +40,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
     const invitedSigners = accountRequest.signers.filter(signer => signer.status === 'INVITED')
     logger.info(`[invitee_reminder] found ${invitedSigners.length} INVITED signers for account request ${accountRequest.id}`)
     if (invitedSigners.length > 0) {
+// Temp comment
       const originalSigner = accountRequest.signers.find(s => s.id === accountRequest.createdById)
       // SEND warning to the original signer
       if (originalSigner) {

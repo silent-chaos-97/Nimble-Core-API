@@ -11,6 +11,7 @@ const Roles = {
   Applicant: 'applicant',
   Developer: 'developer'
 }
+// Temp comment
 
 const Statuses = {
   Active: 'ACTIVE',
@@ -43,3 +44,6 @@ class UserModel extends BaseModel {
   static isBranchAdmin(user) {
     return this.isInstitutionAdmin(user) || this.hasRole(user, Roles.BranchAdmin)
   }
+
+  static isEmployee(user) {
+    return this.hasRole(user, Roles.Employee)

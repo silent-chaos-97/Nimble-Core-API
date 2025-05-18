@@ -3,3 +3,4 @@ Account:
   required:
     - strategy
   properties:
+    strategy:

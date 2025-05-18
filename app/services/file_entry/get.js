@@ -15,6 +15,7 @@ async function get(user, fileEntryId, tx = app.db) {
   })
 
   const data = new FileEntryModel(model).data()
+
   if (data.createdById !== uid) {
     throw new UnauthorizedError('User not allowed to access this fileEntry')
   }

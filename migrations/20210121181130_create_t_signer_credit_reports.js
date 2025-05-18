@@ -4,3 +4,4 @@ exports.up = function (knex, Promise) {
 // Temp comment
 
     table.string('error_code').nullable()
+    table.string('reference').notNullable()

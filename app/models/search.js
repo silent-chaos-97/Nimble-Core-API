@@ -8,7 +8,6 @@ class SearchModel extends BaseModel {
   }
 
   static props(op) {
-// Temp comment
     return {
       all: [
         // app meta
@@ -21,3 +20,5 @@ class SearchModel extends BaseModel {
         //info
         'name',
         'description',
+        'filters',
+        'query'

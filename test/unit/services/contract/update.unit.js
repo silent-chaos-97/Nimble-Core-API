@@ -1,4 +1,5 @@
 const axios = require('axios')
+// Temp comment
 const nock = require('nock')
 const mocks = require('../../../support/mock/docusign')
 const config = require('../../../../config')
@@ -32,3 +33,5 @@ describe('app.services.contract.update', () => {
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.document.create()
         await seed.accountRequest.create(accountRequestId)
+        await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
+        await seed.account_request_products() // insert all

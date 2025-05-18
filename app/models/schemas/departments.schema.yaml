@@ -19,3 +19,4 @@ columns:
     multiple: true
     selectSettings:
       ref: products
+      value: category

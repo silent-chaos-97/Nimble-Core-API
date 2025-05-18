@@ -31,3 +31,5 @@ describe('POST /institutions', () => {
         .set('X-API-KEY', 'superpowers')
         .send({})
         .expect('Content-Type', /json/)
+        .expect(400)
+    })

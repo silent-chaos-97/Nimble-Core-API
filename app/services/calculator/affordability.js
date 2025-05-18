@@ -166,6 +166,7 @@ module.exports = async function(user, data, transacting = app.db) {
     const term = _term(opts, product.advancedRate)
 
     summary.totalTerm = { ...summary.totalTerm, requested: _.get(term, 'req.total'), max: _.get(term, 'max.total') }
+    summary.amortTerm = { ...summary.amortTerm, requested: _.get(term, 'req.amort'), max: _.get(term, 'max.amort') }
 
     const loan = _loan(product, opts.targetLoanToValue, cost, equityDown, opts.cashDown)
 

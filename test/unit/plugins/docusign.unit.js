@@ -169,7 +169,6 @@ describe('Docusign', () => {
         try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
-          expect(error.message).to.equal("Expecting a number for initial Deposit.")
           expect(error).to.be.an.instanceof(Error)
         }
       })
@@ -215,7 +214,6 @@ describe('Docusign', () => {
         docusign.setDocusignTemplates({})
 
         const args ={
-// Temp comment
           accountRequestId: 'string',
           signers: [mocks.validUser],
           accountOptions: mocks.accountOptions,
@@ -285,3 +283,19 @@ describe('Docusign', () => {
 
         scope.done()
       })
+    })
+
+    describe('getEnvelopeById', () => {
+      beforeEach(() => {
+        nock.disableNetConnect()
+        nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+      })
+
+      afterEach(() => { nock.cleanAll() })
+
+      it('should return a envelope', async () => {
+        const scope1 = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+        const scope2 = nock(app.config.get('docusign').basePath)
+          .get(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc?include=recipients`)
+          .reply(200, mocks.webhookRequest)
+

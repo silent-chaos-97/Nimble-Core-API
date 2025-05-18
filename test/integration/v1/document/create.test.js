@@ -59,3 +59,6 @@ describe('POST /documents', () => {
     return request(app.server)
       .post('/v1/documents')
       .send(document)
+      .expect(res => {
+        ['id', 'format', 'createdAt'].forEach(prop => {
+          expect(res.body).to.have.own.property(prop)

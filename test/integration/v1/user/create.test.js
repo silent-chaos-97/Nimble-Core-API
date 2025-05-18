@@ -66,3 +66,7 @@ describe('POST /users', () => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d319'
       const branchId = '2552ab85-08da-4bb5-be00-9e94d282d319'
       user.institutionId = institutionId
+      user.branchId = branchId
+      request(app.server)
+        .post('/v1/users')
+        .set('X-API-KEY', 'superpowers')

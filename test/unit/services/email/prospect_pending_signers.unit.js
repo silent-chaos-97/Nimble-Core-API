@@ -20,5 +20,6 @@ describe('app.services.email.prospectPendingSigners', () => {
     sinon.reset()
   })
 
-  after(() => {
     clock.restore()
+    sinon.restore()
+  })

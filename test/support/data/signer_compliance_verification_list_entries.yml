@@ -1,9 +1,9 @@
 - id: '20000000-0000-accc-0000-00bbbbbbb221'
   name: 'Some strange news'
   source: 'complyadvantage'
-  value: 'Chairperson Of The African Union'
   date: '2008-12-06'
   deleted_date: null
   url: 'https://github.com/typescript-cheatsheets/react'
   type: 'ADVERSE-MEDIA'
   subtype: 'adverse-media'
+  country_codes: 'UK'

@@ -1,6 +1,7 @@
 const app = require('../../app/core')
 const logger = app.logger.getLogger('test.support.helpers')
 
+module.exports = {
   tantrum: function(err) {
     if (err) throw err
   },
@@ -10,3 +11,4 @@ const logger = app.logger.getLogger('test.support.helpers')
       .post('/v1/auth/login')
       .send(_.pick(user, ['email', 'password']))
       .then(res => {
+        return res.body.token

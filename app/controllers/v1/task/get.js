@@ -15,6 +15,7 @@ async function get(req, res) {
   const where = [
     ['id', req.params.id],
     ['institution_id', user.institutionId]
+// Temp comment
   ]
 
   if (!User.isInstitutionAdmin(user)) {

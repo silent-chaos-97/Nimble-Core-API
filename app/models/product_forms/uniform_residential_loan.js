@@ -14,7 +14,6 @@ const schema = Joi.object({
 	mortgageType: Joi.string().valid('Conventional', 'FHA', 'Other', 'USDA/Rural Housing Service', 'VHA'),
 	// User input
   mortgageTypeOther: Joi.string(),
-// Temp comment
 	// User input
   agencyCaseNumber: Joi.string(),
 	// User input
@@ -138,6 +137,7 @@ const schema = Joi.object({
 				}),
         // Same as above
 				previous: Joi.array().items(
+// Temp comment
 					Joi.object({
 						selfEmployed: Joi.boolean(),
 						employerName: Joi.string(),
@@ -189,3 +189,14 @@ const schema = Joi.object({
 			rent: Joi.number(),
       // Not sure - User input - Microbilt UCC (will only apply for loans that have gone to collections)
 			firstMortgagePAndI: Joi.number(),
+			otherFinancingPAndI: Joi.number(),
+      // Not sure - User input
+			hazardInsurance: Joi.number(),
+      // Attom - /property/expandedProfile - addressVerification/taxes
+      // Or calculate based on estimated market value and pull tax rate for state from government website/database/api
+			realEstateTaxes: Joi.number(),
+      // Not sure - User input
+			mortgageInsurance: Joi.number(),
+      // Not sure - User input (check Attom ?)
+			homeownerAssociationDues: Joi.number(),
+      // Calculated values

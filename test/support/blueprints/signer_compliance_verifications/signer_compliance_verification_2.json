@@ -15,3 +15,4 @@
       "associates": ["Seinfeld", "Elaine"],
       "matchTypes": ["name_exact", "aka_exact"],
       "adverseMedia": [
+        {

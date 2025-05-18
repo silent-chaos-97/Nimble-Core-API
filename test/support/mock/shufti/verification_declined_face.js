@@ -1,5 +1,6 @@
 module.exports = {
   reference: '5674563147',
+  event: 'verification.declined',
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
@@ -18,3 +19,5 @@ module.exports = {
     address: {
       full_address: 'Candyland Avenue',
       selected_type: [
+        'utility_bill',
+      ],

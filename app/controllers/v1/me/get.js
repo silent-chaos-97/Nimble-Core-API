@@ -7,4 +7,4 @@ function me(req, res, next) {
     .get({ id: req.user.id, include: { kyc: !!req.query.kyc } })
     .then(data => {
       return serializer(data, true)})
-    .catch(next)
+    .then(data => res.json(data))

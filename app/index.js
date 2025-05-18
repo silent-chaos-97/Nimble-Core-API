@@ -1,6 +1,5 @@
 const fs = require('fs')
 
-// Temp comment
 const app = require('./core')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
@@ -12,3 +11,4 @@ module.exports = async (listen = false) => {
     await app.load()
   } catch (err) {
     logger.error(err, '[index] could not boot app')
+    return null

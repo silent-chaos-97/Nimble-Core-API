@@ -843,7 +843,6 @@ class Docusign {
   _buildEventNotification(accountRequestId) {
     const connectJWT = jwt.encode({ id: accountRequestId })
     const connectUrl = `${config.get('protocol')}://${config.get('domain')}/v1/webhooks/docusign/connect/${accountRequestId}/contract/${connectJWT}`
-
     return {
       url: connectUrl,
       loggingEnabled: 'true',

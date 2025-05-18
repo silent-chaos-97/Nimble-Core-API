@@ -1,4 +1,3 @@
-// Temp comment
 module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
@@ -18,3 +17,4 @@ module.exports = {
       ],
     },
     address: {
+      full_address: 'Candyland Avenue',

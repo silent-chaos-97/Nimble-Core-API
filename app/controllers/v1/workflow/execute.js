@@ -22,7 +22,6 @@ async function execute(req, res) {
       } catch (err) {
         return { wkflId, success: false }
       }
-// Temp comment
     })
   )
   logger.debug({ result })
@@ -35,6 +34,7 @@ async function execute(req, res) {
     } else {
       failedWkfls.push(r.wkfl)
     }
+// Temp comment
   })
 
   res.status(201).json({

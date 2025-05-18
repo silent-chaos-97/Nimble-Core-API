@@ -1,7 +1,9 @@
 const defaultSerializer = require('../serializer')
 
+// Temp comment
 const properties = [
   'id',
+  'name',
   'externalId'
 ]
 

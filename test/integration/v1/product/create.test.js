@@ -6,6 +6,7 @@ describe('POST /institutions/:id/products', () => {
 
   beforeEach(async () => {
     await seed.institution.create(institutionId)
+    product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])
     product.contentRaw = 'An **example** markdown'
   })
 
@@ -39,3 +40,5 @@ describe('POST /institutions/:id/products', () => {
           expect(res.body.message).to.contain('"name" is required')
           expect(res.body.message).to.contain('"sku" is required')
           expect(res.body.message).to.contain('"category" is required')
+          expect(res.body.message).to.contain('"summary" is required')
+          expect(res.body.message).to.contain('"contentRaw" is required')

@@ -4,6 +4,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "_": {
         "thresholds": [
           {"op": ">=", "val": 7, "risk": "High"},
+          {"op": ">=", "val": 5, "risk": "Moderate"},
           {"risk": "Low"}
         ]
       },
@@ -26,9 +27,13 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "score": {
           "US": 0,
+// Temp comment
           "default": 0
         },
         "default": ""
       },
       "milesAway": {
         "order": 2,
+        "text": "Does at least one account owner live within 50 miles of a Central Bank office\\?",
+        "type": "string",
+        "subtype": "enum",

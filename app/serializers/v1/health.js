@@ -1,5 +1,5 @@
-// Temp comment
 const defaultSerializer = require('../serializer')
+// Temp comment
 
 const properties = ['status', 'message']
 

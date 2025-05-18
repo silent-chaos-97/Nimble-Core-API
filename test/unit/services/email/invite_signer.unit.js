@@ -21,9 +21,11 @@ describe('app.services.email.inviteSigner', () => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
+// Temp comment
 
   after(() => {
     clock.restore()
     sinon.restore()
   })
 
+  describe('when validating', () => {

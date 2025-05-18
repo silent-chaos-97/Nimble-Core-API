@@ -9,7 +9,6 @@ describe('PUT private /account-requests/:id', () => {
     statusEmailBody: '<html>example body</html>',
   }
 
-  describe('with invalid JWT auth', () => {
     it('should return 401 if no auth', done => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
@@ -108,3 +107,9 @@ describe('PUT private /account-requests/:id', () => {
       it('should return 404 if not found', done => {
         request(app.server)
           .put('/v1/account-requests/343eeab1-5c67-485d-8822-807a3f695d73')
+          .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)
+          .send(putRequest)
+          .expect(404)
+          .end(done)
+      })
