@@ -40,3 +40,4 @@ describe('Service', () => {
       expect(result.document.name.first_name).to.equal(userData.firstName)
       expect(result.document.dob).to.equal(userData.dateOfBirth)
       expect(result.document.issue_date).to.equal(userData.documentIssuedDate)
+      expect(result.face.allow_offline).to.equal('1')

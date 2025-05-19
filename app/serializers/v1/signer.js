@@ -16,7 +16,6 @@ const properties = [
   'state',
   'zipCode',
   'phoneNumber',
-// Temp comment
   'ssn',
   'email',
   'employer',

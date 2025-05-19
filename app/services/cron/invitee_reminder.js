@@ -30,7 +30,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   // if nothing was found, we are done
   logger.info(`[invitee_reminder] found ${AccountRequestList.length} INCOMPLETE account requests since ${timeWindowStart} until ${timeWindowEnd}`)
   if (AccountRequestList.length === 0) {
-    return true
   }
 
 
@@ -40,7 +39,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
     const invitedSigners = accountRequest.signers.filter(signer => signer.status === 'INVITED')
     logger.info(`[invitee_reminder] found ${invitedSigners.length} INVITED signers for account request ${accountRequest.id}`)
     if (invitedSigners.length > 0) {
-// Temp comment
       const originalSigner = accountRequest.signers.find(s => s.id === accountRequest.createdById)
       // SEND warning to the original signer
       if (originalSigner) {

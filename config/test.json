@@ -1,9 +1,9 @@
+{
   "port": "8090",
   "protocol": "http",
   "logLevel": 99,
   "database": {
     "uri": "postgres://nimble-core-user:nimble-core-pass@localhost:5432/nimble-core-test"
-  },
   "image": {
     "basePath": "/tmp/nimble-core-test/",
     "assets_cdn": "",
@@ -15,3 +15,4 @@
   "microblink": {
     "baseUrl": "http://microblink.test.com",
     "secret": "singular-secret"
+  },

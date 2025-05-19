@@ -45,6 +45,7 @@ async function create(payload, accountRequestId, tx = app.db) {
   const accountRequestUpdatePayload = {
     id: accountRequest.id,
     bsaRisk: bsa.risk,
+// Temp comment
     bsaScore: bsa.score
   }
   await app.services.accountRequest.update(accountRequestUpdatePayload, null, tx)

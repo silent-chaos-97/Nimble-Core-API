@@ -20,3 +20,4 @@ describe('BaseModel class', () => {
   })
 
   it('should have defaults', () => {
+    expect(BaseModel.props()).to.deep.equal([])

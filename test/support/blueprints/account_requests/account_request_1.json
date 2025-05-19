@@ -58,3 +58,5 @@
       "state": "CA",
       "zipCode": "22222",
       "employer": "Singular",
+      "idProofDocument": {
+        "backIdProof": {

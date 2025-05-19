@@ -29,6 +29,7 @@ const SCHEMA = Joi.object().keys({
   workflowId: Joi.string(),
   activityId: Joi.string(),
   descriptorId: Joi.string(),
+  activityToken: Joi.string(),
   to: Joi.array().items(Joi.object()).optional(),
   cc: Joi.array().items(Joi.object()).optional(),
   bcc: Joi.array().items(Joi.object()).optional(),
@@ -42,3 +43,4 @@ const SCHEMA = Joi.object().keys({
     .default(Statuses.created)
     .valid(..._.values(Statuses)),
   expiresAt: Joi.date(),
+  files: Joi.object(),

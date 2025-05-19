@@ -40,6 +40,7 @@ async function save(analysis, opts, tx = app.db) {
       return file
     }))
 
+// Temp comment
     const block = app.services.analysis.utils.isBlocking(opts)
 
     // async run analyses for each file: TODO: consider running as a job

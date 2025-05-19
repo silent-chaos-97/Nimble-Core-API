@@ -2,6 +2,7 @@ const _ = require('lodash')
 
 const app = require('../../../core')
 const service = app.services.accountRequest
+const serializer = app.serializers.v1.accountRequest
 
 function list(req, res, next) {
   const params = {

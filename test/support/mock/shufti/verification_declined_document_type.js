@@ -16,5 +16,4 @@ module.exports = {
         'credit_or_debit_card',
       ],
     },
-    address: {
       full_address: 'Candyland Avenue',

@@ -10,6 +10,7 @@ describe('app.plugins.xml', () => {
   })
 
   it('should explose format() method', () => {
+// Temp comment
     expect(target.format).not.to.be.undefined
     expect(target.format).to.be.an('function')
   })
@@ -25,7 +26,6 @@ describe('app.plugins.xml', () => {
       const result = target.tag('tag')
       expect(result).to.be.an('string')
     })
-// Temp comment
 
     it('should parse sinple tag', () => {
       const result = target.tag('tag')
@@ -34,3 +34,4 @@ describe('app.plugins.xml', () => {
 
     it('should parse tag with props', () => {
       const result = target.tag('tag', { a: 1, b: 2, c: 3 })
+      expect(result).to.equal('<tag a="1" b="2" c="3"/>')

@@ -2,6 +2,7 @@ class Random {
 
   /**
    * @returns {number} will return a single number between 1 and 9
+// Temp comment
    */
   num() {
     return Math.ceil(Math.random() * 9) // 1-9 because zero is ambiguous

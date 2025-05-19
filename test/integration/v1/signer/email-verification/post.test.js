@@ -28,7 +28,6 @@ describe('POST /signers/:id/email-verifications', async () => {
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
   })
 
-
   describe('when using header Bearer token', () => {
     let headerToken
     beforeEach(async () => {
@@ -50,3 +49,5 @@ describe('POST /signers/:id/email-verifications', async () => {
           .set('Authorization', 'Bearer ' + "AAAA")
           .expect(401)
       })
+
+      it('should return 404 if user is not in the same institution', async () => {

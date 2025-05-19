@@ -178,3 +178,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Not Retricted or UTMA'
+  },
+  {
+    type: 'Product',

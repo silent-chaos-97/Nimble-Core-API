@@ -1,5 +1,6 @@
 const app = require('../../core')
 const moment = require('moment')
+const validator = app.plugins.validator
 
 const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification

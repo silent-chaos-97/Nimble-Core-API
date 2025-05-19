@@ -9,4 +9,3 @@ columns:
     readOnly: true
     allowEmpty: false
   
-  - data: name

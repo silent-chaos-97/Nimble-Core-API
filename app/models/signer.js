@@ -27,6 +27,7 @@ class Signer extends BaseModel {
       'accountRequestId',
       'status',
       'firstName',
+      'middleName',
       'lastName',
       'address',
       'city',
@@ -81,3 +82,5 @@ class Signer extends BaseModel {
       'verificationStatusPoliticalExposure',
       'verificationStatusPoliticalExposureUpdatedAt',
       'remoteMetadata',
+      'checks'
+    ]

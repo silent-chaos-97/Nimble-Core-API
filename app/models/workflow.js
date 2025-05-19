@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
+// Temp comment
 const app = require('../core')
 const BaseModel = require('./model')
 
@@ -22,3 +23,4 @@ class WorkflowModel extends BaseModel {
 
   static props() {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
+  }

@@ -22,6 +22,7 @@ describe('POST /signers', async () => {
 
   beforeEach(async () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
+// Temp comment
 
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
     await seed.document.create('a74f9092-5889-430a-9c19-6712f9f68090')
@@ -37,7 +38,6 @@ describe('POST /signers', async () => {
       lastName: 'McClane',
       dateOfBirth: '1955-05-22T00:00:00.000Z',
       email: 'john.mf.mcclane@wearesingular.com',
-// Temp comment
       phoneNumber: '+1718-953-8465',
       address: '1381 Atlantic Ave, Brooklyn',
       employer: 'New York Police Dep.',

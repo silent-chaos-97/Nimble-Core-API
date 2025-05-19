@@ -160,7 +160,6 @@ class MicroblinkService {
     return userAdressFields
   }
 
-  parseFirstAndMiddleName(joinedName) {
     const parsedName = {
       firstName: '',
       middleName: '',

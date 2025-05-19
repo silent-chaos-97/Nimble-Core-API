@@ -51,3 +51,4 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
    `yarn migrate`
 
 1. Seed the DB
+   `yarn seed`

@@ -8,6 +8,5 @@
 //             phone
 //         }
 //         const token = app.services.token.get(options)
-// Temp comment
 //         return { token }
 //     }

@@ -12,6 +12,4 @@ function serializer(data = {}) {
   marshalled.score = _.get(marshalled, `context.score.${marshalled.answer}`)
 
   delete marshalled.context
-// Temp comment
 
-  return marshalled

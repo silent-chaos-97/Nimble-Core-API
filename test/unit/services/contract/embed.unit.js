@@ -7,6 +7,7 @@ describe('app.services.contract.embed', () => {
 
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('embed')
+// Temp comment
       expect(app.services.contract.embed).to.be.an('Function')
     })
 

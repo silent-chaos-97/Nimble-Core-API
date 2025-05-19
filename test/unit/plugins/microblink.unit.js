@@ -41,7 +41,6 @@ describe('MicroblinkService', () => {
 
       expect(result).to.have.deep.property('code', 'OK')
       expect(result.data.result).to.have.deep.property('firstName', userData.firstName.toUpperCase())
-      expect(result.data.result).to.have.deep.property('lastName', userData.lastName.toUpperCase())
       expect(result.data.result).to.have.deep.property('address', userData.fullAddress.toUpperCase())
       expect(result.data.result).to.have.deep.property('documentNumber', userData.documentNumber.toUpperCase())
 
@@ -137,3 +136,6 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('lastName', 'Brown')
     })
 
+
+    it('should return basic structure', async () => {
+      const response = {

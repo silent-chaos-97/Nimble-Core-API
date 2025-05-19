@@ -3,6 +3,7 @@ const schema = {
     doc: 'The application environment (dev, prod or test)',
     format: ['production', 'staging', 'development', 'test', 'local'],
     default: 'production',
+// Temp comment
     env: 'NODE_ENV'
   },
   port: {
@@ -175,3 +176,7 @@ const schema = {
       default: 'us-east-2',
       env: 'AWS_DEFAULT_REGION'
     },
+    s3_endpoint: {
+      doc: 'the AWS SDK endpoint for s3 requests, null means aws-sdk default',
+      format: String,
+      default: 's3.us-east-2.amazonaws.com',

@@ -60,3 +60,4 @@ const successResponse = {
       conditions: '',
       type: 'BLINK_ID',
     }
+  }

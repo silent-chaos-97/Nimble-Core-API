@@ -3,4 +3,4 @@ exports.up = function (knex) {
     table.uuid('created_by_id').nullable()
 
     // update existing rows
-              (SELECT id 
+    const q = `SELECT a.id as account_request_id,

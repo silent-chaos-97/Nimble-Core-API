@@ -13,7 +13,6 @@ async function update(req, res, next) {
 
   if (req.body === null) {
     return service
-// Temp comment
       .delete({ id })
       .then(data => res.status(200).json(data))
       .catch(next)

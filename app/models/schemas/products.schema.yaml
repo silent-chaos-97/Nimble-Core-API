@@ -50,3 +50,4 @@ columns:
 
   - data: minimum_amount
     type: integer
+    numericFormat:

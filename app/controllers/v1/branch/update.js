@@ -16,7 +16,6 @@ async function update(req, res, next) {
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
 
-  if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
   patch.id = req.params.id
 
@@ -27,6 +26,7 @@ async function update(req, res, next) {
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
+  if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   if (!isSuperAdmin && branch.institutionId !== me.institutionId) return next(new UnauthorizedError('InstitutionInvalid'))
 

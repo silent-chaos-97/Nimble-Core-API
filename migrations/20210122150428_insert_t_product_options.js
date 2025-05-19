@@ -1,3 +1,4 @@
+const savingsProductOptions = [
   {
     key: 'atm_only_card',
     category: 'product_feature',
@@ -27,3 +28,4 @@ const checkingProductOptions = [
     key: 'debit_card',
     category: 'product_feature',
     title: 'Debit Card',
+    value: true,

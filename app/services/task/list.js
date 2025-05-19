@@ -16,7 +16,6 @@ async function list(args, tx = app.db) {
     delete filters.assigneeId
   }
 
-// Temp comment
   if (filters.assigneeId) {
     let assignee = null
 
@@ -47,4 +46,3 @@ async function list(args, tx = app.db) {
 
   const results = await query.fetchAll({ withRelated, transacting: tx })
 
-  return results.models.map(model => new Task(model).data())

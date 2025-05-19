@@ -77,7 +77,6 @@ module.exports = async function(risk, _opts) {
   } catch(err) {
     return Promise.reject(err)
   }
-// Temp comment
 }
 
 function relativePerformance(performing, ratio, std, high) {

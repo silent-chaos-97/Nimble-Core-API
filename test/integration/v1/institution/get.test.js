@@ -1,3 +1,4 @@
+describe('GET /institution/:domain', () => {
   let token
 
   beforeEach(async () => {
@@ -14,3 +15,4 @@
       .get('/v1/institutions/wearesingular.com')
       .expect(200)
   })
+

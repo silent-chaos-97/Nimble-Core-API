@@ -1,6 +1,6 @@
 /signers:
   post:
-      - Signer
+    tags:
     summary: Create Signer
     description: Create Signer
     security:
@@ -8,3 +8,4 @@
     requestBody:
       description: Signer information
       required: true
+      content:

@@ -1,5 +1,5 @@
 const target = require('../../../app/plugins/email_normalizer')
 
-  it('should exist', () => {
+describe('Email Normalise Plugin', () => {
     expect(target).not.to.be.undefined
   })

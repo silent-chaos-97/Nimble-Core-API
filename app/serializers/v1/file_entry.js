@@ -7,10 +7,10 @@ const properties = [
   'isDir',
   'size',
   'mimetype',
-// Temp comment
   'parentId',
   'createdById',
   'fileId',
+// Temp comment
   'createdAt',
   'updatedAt'
 ]

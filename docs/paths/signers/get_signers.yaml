@@ -1,7 +1,7 @@
 /signers/{id}:
   get:
     tags:
-    summary: Get Signer by Id
+      - Signer
     description: fetch signer by Id
     parameters:
       - in: path

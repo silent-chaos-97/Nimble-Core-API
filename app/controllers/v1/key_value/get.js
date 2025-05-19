@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
@@ -9,7 +8,6 @@ function get(req, res, next) {
 
   if (!id) {
     return next(new BadRequest('Key is required in the url.'))
-  }
 
   return service
     .get({ id })

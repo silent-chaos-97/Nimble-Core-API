@@ -8,7 +8,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
 
   static props() {
     return [
-// Temp comment
       'id',
       'name',
       'value',

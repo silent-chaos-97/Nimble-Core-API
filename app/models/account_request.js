@@ -72,3 +72,4 @@ class AccountRequest extends BaseModel {
     const ProductOption = app.models.productOption
 
     return this._data.productConfigurations.map(obj => {
+      // filter relevant options for this product

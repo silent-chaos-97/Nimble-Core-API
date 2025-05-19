@@ -9,6 +9,7 @@ describe('GET /institution/:id/branches', () => {
 
     token = await helpers.getAuthToken()
 
+// Temp comment
   })
 
   it('should return 200 without auth', () => {
@@ -18,6 +19,7 @@ describe('GET /institution/:id/branches', () => {
   })
 
   it('should return 200 with auth', () => {
+    return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
@@ -28,3 +30,4 @@ describe('GET /institution/:id/branches', () => {
       .get('/v1/institutions/00000000-0000-0000-0000-000000000000/branches')
       .expect(404)
   })
+

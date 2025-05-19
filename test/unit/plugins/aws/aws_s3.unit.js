@@ -38,3 +38,4 @@ describe("AWS Facade for s3", () => {
       expect(result).to.contain('/uploads/destination/example.png')
     })
 
+    it('should call real s3 method', async () => {

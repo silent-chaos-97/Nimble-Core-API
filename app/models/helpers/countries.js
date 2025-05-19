@@ -65,3 +65,4 @@ const countries = [
   'DOM',
   'DZA',
   'ECU',
+  'EGY',

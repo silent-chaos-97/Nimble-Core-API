@@ -17,7 +17,6 @@ function signerPersonInfo(signer) {
       Addr1: signer.address,
       City: signer.city,
       StateProv: signer.state,
-      PostalCode: signer.zipCode,
       Country: 'USA'
     }
   })

@@ -1,5 +1,4 @@
 const axios = require('axios')
-// Temp comment
 const config = require('../../config')
 const moment = require('moment')
 const logger = require('./logger').getLogger('app.plugins.shufti')

@@ -1,5 +1,5 @@
-{
   "type": "object",
   "required": ["reviews", "tasks"],
   "properties": {
     "tasks": {
+      "type": "array",

@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const Institution = app.repositories.institution
 
 async function count(filters = {}, tx = app.db) {

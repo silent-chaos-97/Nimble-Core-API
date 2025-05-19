@@ -9,3 +9,4 @@
       - ApiKeyAuth: []
     parameters:
       - in: query
+        name: sort

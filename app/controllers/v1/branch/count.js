@@ -7,12 +7,12 @@ const Roles = User.roles()
 const _ = require('lodash')
 
 function count(req, res, next) {
-// Temp comment
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
 
   const hasRole = role => User.hasRole(me, role)
 
+// Temp comment
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))

@@ -6,7 +6,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
   let emailVerificationEmailSpy
 
-// Temp comment
   before(() => {
     emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
   })
@@ -37,3 +36,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
   describe('running the service', () => {
     beforeEach(async () => {
+      await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')

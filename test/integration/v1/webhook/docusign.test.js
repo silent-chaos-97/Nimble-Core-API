@@ -2,7 +2,6 @@ const nock = require('nock')
 const mocks = require('../../../support/mock/docusign')
 const { expect } = require('chai')
 
-describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
   before(() => {
@@ -118,3 +117,5 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .expect(200)
         .end(async (err) => {
           if (err) return done(err)
+          // I need to sleep because the method that populates the contract is not async
+          await sleep(30)

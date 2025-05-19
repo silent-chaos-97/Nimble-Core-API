@@ -9,6 +9,7 @@ describe('PUT private /account-requests/:id', () => {
     statusEmailBody: '<html>example body</html>',
   }
 
+  describe('with invalid JWT auth', () => {
     it('should return 401 if no auth', done => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
@@ -113,3 +114,6 @@ describe('PUT private /account-requests/:id', () => {
           .expect(404)
           .end(done)
       })
+
+      it('should return 404 if user does not belong to intitution', async () => {
+        await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')

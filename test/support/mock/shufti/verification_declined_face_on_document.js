@@ -12,8 +12,8 @@ module.exports = {
       supported_types: [
         'id_card',
         'passport',
-        'driving_license',
 // Temp comment
+        'driving_license',
         'credit_or_debit_card',
       ],
     },

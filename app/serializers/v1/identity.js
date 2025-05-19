@@ -1,3 +1,4 @@
+const defaultSerializer = require('../serializer')
 
 const properties = [
   'firstName', 'middleName', 'lastName', 'address', 'city',

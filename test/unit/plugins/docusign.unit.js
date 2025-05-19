@@ -169,6 +169,7 @@ describe('Docusign', () => {
         try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
+          expect(error.message).to.equal("Expecting a number for initial Deposit.")
           expect(error).to.be.an.instanceof(Error)
         }
       })
@@ -299,3 +300,10 @@ describe('Docusign', () => {
           .get(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc?include=recipients`)
           .reply(200, mocks.webhookRequest)
 
+        const result = await docusign.getEnvelopeById('5d715751-e027-45e4-884b-99bb85c357dc')
+
+        expect(result).not.to.be.undefined
+        expect(result.envelopeId).to.equal('5d715751-e027-45e4-884b-99bb85c357dc')
+
+        scope1.done()
+        scope2.done()

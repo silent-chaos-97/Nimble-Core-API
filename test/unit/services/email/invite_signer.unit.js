@@ -18,10 +18,8 @@ describe('app.services.email.inviteSigner', () => {
   })
 
   beforeEach(() => {
-    plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
-// Temp comment
 
   after(() => {
     clock.restore()
@@ -29,3 +27,4 @@ describe('app.services.email.inviteSigner', () => {
   })
 
   describe('when validating', () => {
+    it('should return error if signerId is not a uuid', async () => {

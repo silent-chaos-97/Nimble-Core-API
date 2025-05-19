@@ -1,6 +1,7 @@
 /signers/{id}/compliance-verifications:
   get:
     tags:
+      - Signer
     summary: Get Signer compliance verification by Id
     description: fetch signer compliance verification by Signer Id
     parameters:

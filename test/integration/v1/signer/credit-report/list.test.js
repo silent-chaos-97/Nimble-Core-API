@@ -1,5 +1,6 @@
 const uuid = require('uuid')
 
+describe('GET /signers/:id/credit-reports', async () => {
   let clock, token
 
   before(async () => {
@@ -33,3 +34,4 @@ const uuid = require('uuid')
     token = await helpers.getAuthToken()
   })
 
+  describe('with invalid auth', () => {

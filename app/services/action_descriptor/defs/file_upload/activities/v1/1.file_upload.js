@@ -14,7 +14,6 @@ async function activity(context) {
   const assignee = await derefUsers('inputs.assignee', context)
   const to = await derefUsers('inputs.to', context)
   const cc = (await derefUsers('inputs.cc', context)) || []
-  const bcc = (await derefUsers('inputs.bcc', context)) || []
 
   let title = _.get(context, 'inputs.subject') || 'Upload Document'
   const fileTypeId = _.get(context, 'inputs.fileType')

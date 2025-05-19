@@ -7,7 +7,6 @@ class SignerCreditReportModel extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return [
       'id',
       'errorCode',

@@ -28,3 +28,4 @@ describe('app.services.compliance.parse', () => {
 
   afterEach(() => { nock.cleanAll() })
 
+  describe('search', async () => {

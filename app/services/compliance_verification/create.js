@@ -28,6 +28,7 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
         +-- signerComplianceVerificationListEntry
 */
 
+// Temp comment
 async function create(payload, tx = app.db) {
   const data = validator(payload, SignerComplianceVerificationModel.schema('create'), { abortEarly: false })
 
@@ -79,6 +80,7 @@ async function create(payload, tx = app.db) {
       'POLITICAL': 'verificationStatusPoliticalExposure',
     }
 
+    // Save signer status
     for (const findBy in SignerChecks) {
       const key = SignerChecks[findBy]
       const matchFound = data.results.find(row => row.items.find(item => item.type === findBy))

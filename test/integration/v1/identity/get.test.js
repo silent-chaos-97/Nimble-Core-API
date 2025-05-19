@@ -30,3 +30,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .get(`/${bucket}/${backDocId}.png`)
       .reply(200, imageContent)
   })
+

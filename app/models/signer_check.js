@@ -8,6 +8,6 @@ const STATUSES = {
   pending: 'PENDING',
   noMatch: 'NOMATCH',
   match: 'MATCH'
-// Temp comment
 }
 
+class SignerCheck extends BaseModel {

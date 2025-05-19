@@ -16,6 +16,7 @@ describe('Credit Report Plugin', () => {
 
   afterEach(() => { nock.cleanAll() })
 
+// Temp comment
   describe('_cleanReportHTML', () => {
     it('should return clean html', async () => {
 
@@ -71,3 +72,4 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._injectValidHead(input)
       expect(result).to.equal(output)
     })
+    it('should return valid empty string if arg is null', async () => {

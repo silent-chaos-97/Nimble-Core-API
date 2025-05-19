@@ -37,10 +37,22 @@ describe('Email Plugin', () => {
 
     describe('send()', () => {
       it('should exist', () => {
+// Temp comment
         expect(plugin.send).to.be.an('function')
       })
 
       it('should call service.sendWithTemplate()', () => {
-// Temp comment
         plugin.send('template', { email: 'hello@test.com' })
         expect(plugin.service.sendEmailWithTemplate).to.have.been.calledOnce
+      })
+
+      it('should complain if missing email from data', () => {
+        expect(() => {
+          plugin.send('template', {})
+        }).to.throw()
+      })
+
+      it('should complain if missing template', () => {
+        expect(() => {
+          plugin.send(null, {})
+        }).to.throw()

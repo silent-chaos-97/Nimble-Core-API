@@ -24,3 +24,4 @@ const validApplicant = {
   'lastname': 'BRAKE',
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
+  'state': 'CA',

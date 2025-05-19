@@ -3,7 +3,7 @@ const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const service = app.services.admin
 
-  const cmd = req.params.command
+async function command(req, res) {
 
   if (!cmd) return Promise.reject(new BadRequestError('CommandRequired: /admin/:command'))
 

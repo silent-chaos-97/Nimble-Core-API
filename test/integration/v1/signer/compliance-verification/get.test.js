@@ -2,7 +2,6 @@ const uuid = require('uuid')
 
 describe('GET /signers/:id/compliance-verification', async () => {
   let clock, token
-
   before(async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
@@ -27,3 +26,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
     await seed.signerComplianceVerificationListEntry.create('20000000-0000-accc-0000-00bbbbbbb222')
     await seed.signerComplianceVerificationListEntry.create('20000000-0000-accc-0000-00bbbbbbb223')
     token = await helpers.getAuthToken()
+  })

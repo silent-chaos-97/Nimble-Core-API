@@ -13,6 +13,7 @@ async function list(param, tx = app.db) {
   const filterData = await app.plugins.validator({applicantId: param.applicantId}, schema, { abortEarly: false })
 
   const qb = ApplicationRepositories.query(q => {
+    q.where('applicant_id', filterData.applicantId)
     q.where('status', 'PENDING')
   })
 

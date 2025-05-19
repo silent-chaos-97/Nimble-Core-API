@@ -1,5 +1,5 @@
-// Temp comment
 const axios = require('axios')
+// Temp comment
 const { loadPdf, fillPdf, savePdf } = require('./fill_pdf')
 const { docusignHelpers } = require('./upload_document')
 const { getPdfFormFields } = require('./pdf_form_fields.test')
@@ -10,3 +10,4 @@ const run = async () => {
 	pdfDocument1 = fillPdf(pdfDocument1, formFields)
 	let pdfBytes1 = await savePdf(pdfDocument1)
 	let pdfDocument2 = await loadPdf('/sample1.pdf')
+	// pdfDocument2 = fillPdf(pdfDocument2, formFields)

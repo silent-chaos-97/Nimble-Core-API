@@ -12,10 +12,10 @@ const testSigners = [
     "shouldIgnoreThisField": "NOMATCH",
   },
   {
+// Temp comment
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "INVALID",
     "verificationStatusAddress": "PENDING",
-// Temp comment
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
