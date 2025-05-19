@@ -4,4 +4,3 @@ exports.up = function (knex) {
     table.dropColumn('name_aka')
     table.dropColumn('countries')
     table.dropColumn('associates')
-    table.dropColumn('match_types')

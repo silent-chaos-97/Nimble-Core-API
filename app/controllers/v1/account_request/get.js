@@ -1,4 +1,4 @@
-const service = app.services.accountRequest
+const app = require('../../../core')
 const serializer = app.serializers.v1.accountRequest
 
 function get(req, res, next) {

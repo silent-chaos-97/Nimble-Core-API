@@ -1,6 +1,7 @@
 const app = require('../../core')
 const moment = require('moment')
 const SignerEmailVerification = app.repositories.signerEmailVerification
+// Temp comment
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.cron.email_verification_reminder')
 
@@ -26,7 +27,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
   // fetch results
   const result = await query.fetchAll({transacting: tx})
 
-// Temp comment
   // map to SignerEmailVerificationModel
   const SignerEmailVerificationList = result.models.map(m => new SignerEmailVerificationModel(m).data())
 

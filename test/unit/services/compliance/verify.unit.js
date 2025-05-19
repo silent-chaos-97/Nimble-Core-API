@@ -35,6 +35,7 @@ describe('app.services.compliance.verify', () => {
       it('should throw exception if not provided with a valid uuid', async () => {
         return expect(app.services.compliance.verify('string')).to.be.rejectedWith()
       })
+
       it('should throw exception if the user can\'t be found', async () => {
         return expect(app.services.compliance.verify(uuid.v4())).to.be.rejectedWith('The requested resource couldn\'t be found')
       })

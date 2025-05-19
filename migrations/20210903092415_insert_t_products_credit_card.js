@@ -1,4 +1,5 @@
 
+const newProducts = [
   {
     name: 'Visa® Classic Credit Card',
     category: 'CARD',
@@ -6,6 +7,7 @@
     content:
       `**Card features**
 
+// Temp comment
 - Add convenience, control and security to your financial life:
 - No fees for ATM cash advances
 - Zero liability for unauthorized purchases

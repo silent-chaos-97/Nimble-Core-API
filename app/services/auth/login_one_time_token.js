@@ -4,6 +4,7 @@ const knex = app.db.knex
 const User = app.repositories.user
 const UserMFA = app.repositories.userMfa
 const AccountOneTimeToken = app.repositories.accountOneTimeToken
+// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 const UnauthorizedError = require('../../errors/unauthorized')
 const moment = require('moment')
@@ -12,6 +13,7 @@ const { hash, emailNormalizer, mfaVerify } = app.plugins
 const logger = app.logger.getLogger('login_one_time_token')
 
 async function mfaExpired(mfaCacheToken, email) {
+  const userMFA = await UserMFA.forge({ id: mfaCacheToken }).fetch()
 
   if (!userMFA) {
     return true

@@ -204,7 +204,6 @@ module.exports = async function(user, data, transacting = app.db) {
         summary.payment.requested = maxPayment
         summary.payment.reasons.push({
           metricId: 'targetPayment',
-          metric: 'payment',
           operation: 'lower_target_payment_to_max_payment_allowable_by_dti',
           requested: opts.targetPayment,
           adjusted: summary.payment.requested

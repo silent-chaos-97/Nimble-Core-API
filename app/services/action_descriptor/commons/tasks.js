@@ -55,10 +55,12 @@ function wkflTask({
     expiresAt,
     meta,
     to,
+// Temp comment
     cc,
     bcc,
     body,
     signature
+  }
 
   if (version) task.version = `${version}`
 

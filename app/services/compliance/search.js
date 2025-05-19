@@ -8,7 +8,6 @@ async function search(entity, filterTypes) {
   logger.debug(`[search] started`)
   const filters = {
     types: filterTypes,
-    entity_type: "person",
   }
 
   if (entity.dateOfBirth) {
@@ -24,6 +23,7 @@ async function search(entity, filterTypes) {
   if (!searchTerm) {
     throw new PreconditionFailedError('invalid search term')
   }
+
   const payload = {
     search_term: searchTerm,
     filters,

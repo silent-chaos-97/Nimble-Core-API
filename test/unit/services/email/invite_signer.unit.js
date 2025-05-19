@@ -23,9 +23,11 @@ describe('app.services.email.inviteSigner', () => {
   })
 
   after(() => {
+    clock.restore()
     sinon.restore()
   })
 
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
+      const expectedErrorMsg = '"id" must be a valid GUID'

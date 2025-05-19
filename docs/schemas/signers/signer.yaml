@@ -59,3 +59,4 @@ Signer:
       description: Signer address
       maxLength: 250
       example: 123 Main Streey Apt. 1
+    city:

@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const config = require('../../config')
 const postmark = require('postmark')
 const aws = require('./aws')

@@ -12,7 +12,6 @@ class MicroblinkService {
     this.authorization = secret
   }
 
-// Temp comment
   async sendDocumentsForOCR(userData) {
     logger.info(`[sendDocumentsForOCR] called for signer [${userData.email}]`)
 

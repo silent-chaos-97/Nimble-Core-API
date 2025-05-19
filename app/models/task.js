@@ -24,7 +24,6 @@ const SCHEMA = Joi.object().keys({
   updatedById: Joi.string().required(),
   branchId: Joi.string().uuid(),
   institutionId: Joi.string().uuid().required(),
-  assignee: Joi.array().items(Joi.object()).required(),
   assignerId: Joi.string().required(),
   workflowId: Joi.string(),
   activityId: Joi.string(),
@@ -44,6 +43,5 @@ const SCHEMA = Joi.object().keys({
     .valid(..._.values(Statuses)),
   expiresAt: Joi.date(),
   files: Joi.object(),
-// Temp comment
   version: Joi.string(),
   meta: Joi.object(),

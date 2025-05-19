@@ -30,3 +30,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
         }
       })
 
+      describe('body properties are invalid or missing', () => {

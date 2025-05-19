@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.identity.parse')
@@ -13,7 +14,6 @@ const VERIFICATIONS = {
   'document.document_must_not_be_expired': 'expiration_date',
   'document.name': 'name',
   'document.document_country': 'country',
-// Temp comment
   'document.dob': 'date_of_birth',
   'address.address_document': 'address',
   // 'gender',

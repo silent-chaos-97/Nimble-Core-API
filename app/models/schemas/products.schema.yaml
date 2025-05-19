@@ -23,7 +23,6 @@ columns:
     source: ['card', 'deposit', 'loan']
     correctFormat: true
 
-  - data: subcategory
     type: dropdown
     parent: category
     source:

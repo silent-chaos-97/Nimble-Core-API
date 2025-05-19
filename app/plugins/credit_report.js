@@ -200,7 +200,6 @@ class CreditReport {
    */
   async _downloadReport(url) {
     return await axios.get(url, {
-      responseType: 'arraybuffer',
     })
   }
 

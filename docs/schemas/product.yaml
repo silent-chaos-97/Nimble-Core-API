@@ -1,6 +1,7 @@
 Product:
   type: object
   required:
+    - id
     - name
     - category
     - summary

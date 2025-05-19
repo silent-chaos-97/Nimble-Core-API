@@ -125,3 +125,5 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
+            .end(async (err, res) => {
+              expect(res.body.contract.uri).not.be.undefined

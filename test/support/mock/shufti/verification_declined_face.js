@@ -6,8 +6,6 @@ module.exports = {
   verification_data: {
     document: {
       issue_date: '1990-01-01',
-      selected_type: [
-// Temp comment
         'id_card',
       ],
       supported_types: [

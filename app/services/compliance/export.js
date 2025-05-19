@@ -12,7 +12,6 @@ async function __export(searchId, institutionId) {
 
     return await app.services.document.create({
       format: 'pdf',
-// Temp comment
       content: query.data.toString('base64'),
       institutionId: institutionId
     }, {

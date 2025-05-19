@@ -5,4 +5,5 @@ function whenColumn(knex, tableName, columnName, ifExists, ifNotExists) {
       : (ifNotExists ? ifNotExists(knex) : Promise.resolve()))
 }
 
+function ifColumnExists(knex, tableName, columnName, ifExists) {
   return whenColumn(knex, tableName, columnName, ifExists)

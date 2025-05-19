@@ -8,6 +8,7 @@ function getValidDate(str) {
     // this provides some basic protection from empty.
     throw new BadRequestError('Parameters since/until must be a valid date')
   }
+
   let date = moment.utc(str)
 
   if (!date.isValid()) {
@@ -17,4 +18,3 @@ function getValidDate(str) {
     }
   }
 
-  return date.toISOString()

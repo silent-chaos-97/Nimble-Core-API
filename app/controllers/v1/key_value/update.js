@@ -25,3 +25,4 @@ async function update(req, res, next) {
   return service
     .update({ id, value: req.body })
     .then(data => res.status(200).json(data))
+    .catch(next)

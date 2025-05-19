@@ -3,3 +3,4 @@ SignerIdentityVerification:
   required:
     - verification
     - category
+    - date

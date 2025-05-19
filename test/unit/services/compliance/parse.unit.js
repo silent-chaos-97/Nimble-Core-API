@@ -9,7 +9,6 @@ describe('app.services.compliance.parse', () => {
   beforeEach(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
-  })
 
   before(async () => {
     const scope = nock(app.config.get('complyAdvantage').baseUrl)
@@ -18,7 +17,6 @@ describe('app.services.compliance.parse', () => {
 
     const entity = {
       firstName: 'Robert',
-// Temp comment
       middleName: 'Gabriel',
       lastName: 'Mugabe'
     }

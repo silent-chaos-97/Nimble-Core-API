@@ -38,7 +38,6 @@ describe('POST /signers', async () => {
       dateOfBirth: '1955-05-22T00:00:00.000Z',
       email: 'john.mf.mcclane@wearesingular.com',
       phoneNumber: '+1718-953-8465',
-      address: '1381 Atlantic Ave, Brooklyn',
       employer: 'New York Police Dep.',
       city: 'New York',
       state: 'NY',

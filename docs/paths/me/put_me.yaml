@@ -10,3 +10,4 @@
     parameters:
       - in: body
         name: Password
+        description: Password to be updated. (optional)

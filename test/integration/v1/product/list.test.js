@@ -23,7 +23,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
     const token = await helpers.getAuthToken()
     return request(app.server)
       .get(`/v1/institutions/${testInstitution1}/products`)
-      .set('Authorization', 'Bearer ' + token)
       .expect(200)
   })
 
@@ -48,3 +47,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
         expect(res.body).to.have.lengthOf(1)
 
         const [product] = res.body
+        props.forEach((prop) => expect(product).to.have.own.property(prop))

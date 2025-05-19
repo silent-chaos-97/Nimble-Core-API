@@ -13,7 +13,6 @@ const publicMetadata = {
       },
       {
         risk: 'Low'
-      }
     ]
   },
   hearAbout: {
@@ -51,3 +50,4 @@ const publicMetadata = {
       'no'
     ],
     text: 'Are you or any others listed on the account not U.S. citizens?',
+    type: 'string',

@@ -3,12 +3,12 @@
 
 the api behind the nimble project.
 
-### System Requirements
 
 - nodejs = 14
 - postgres >= 11
 - [localstack](https://github.com/localstack/localstack) or an AWS account
 
+#### Related repos
 
 - [nimble-crm](https://gitlab.com/nimblefi/nimble-crm) - CRM and backoffice
 - [nimble-onboarding](https://gitlab.com/nimblefi/nimble-onboarding) - customer onboarding (product requests)
@@ -53,3 +53,4 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
    `yarn seed`
 
 1. Edit the user, in the database, that you will be using for login in the `users` table
+   - edit the `roles` column to look like `["employee", "developer", "institution-admin"]`

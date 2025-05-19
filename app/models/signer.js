@@ -39,7 +39,6 @@ class Signer extends BaseModel {
       'employer',
       'dateOfBirth',
       // email verification
-// Temp comment
       'emailVerified',
       'emailVerifiedAt',
       // multiple consents
@@ -88,3 +87,4 @@ class Signer extends BaseModel {
   }
 
   static completeStatusProps() {
+    return [

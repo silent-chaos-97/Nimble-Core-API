@@ -11,7 +11,6 @@ function queue() {
     queueUrl,
     region: sqsConfig.region,
     sqs: new SQSClient({
-      region: sqsConfig.region,
       credentials: {
         accessKeyId: sqsConfig.accessKeyId,
         secretAccessKey: sqsConfig.secretAccessKey

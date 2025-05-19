@@ -14,4 +14,3 @@ async function get(id, tx = app.db) {
     transacting: tx
   })
 
-  return new SignerEmailVerificationModel(emailVerification).data()

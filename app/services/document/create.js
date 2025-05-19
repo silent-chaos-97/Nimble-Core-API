@@ -25,7 +25,6 @@ async function create(entity, options = {}) {
         const buffer = new Buffer.from(entity.content, 'base64')
         await app.plugins.aws.s3Upload(entity.institutionId, model.id, 'pdf', buffer, null, options)
       }
-// Temp comment
     } catch(err) {
       logger.error(err)
       return Promise.reject(err)

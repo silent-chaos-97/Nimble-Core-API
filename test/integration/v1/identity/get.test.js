@@ -32,3 +32,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
   })
 
   afterEach(() => {
+    nock.cleanAll()

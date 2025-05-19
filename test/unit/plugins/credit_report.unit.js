@@ -75,3 +75,4 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._injectValidHead(null)
       expect(result).to.deep.equal('')
     })
+  })

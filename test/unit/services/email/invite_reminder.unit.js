@@ -22,6 +22,7 @@ describe('app.services.email.inviteReminder', () => {
     sinon.reset()
   })
 
+  after(() => {
     clock.restore()
     sinon.restore()
   })
@@ -29,3 +30,4 @@ describe('app.services.email.inviteReminder', () => {
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
+      const expectedErrorMsg = '"id" must be a valid GUID'

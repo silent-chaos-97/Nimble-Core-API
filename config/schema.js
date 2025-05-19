@@ -1,4 +1,5 @@
 const schema = {
+  env: {
     doc: 'The application environment (dev, prod or test)',
     format: ['production', 'staging', 'development', 'test', 'local'],
     default: 'production',
@@ -185,3 +186,5 @@ const schema = {
       format: String,
       default: 'local-ftp',
       env: 'AWS_S3_FTP_BUCKET'
+    },
+    s3_upload_bucket: {

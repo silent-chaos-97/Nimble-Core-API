@@ -11,11 +11,9 @@ const rand = app.plugins.random
 
 const whitelist = ['email']
 const schema = Joi.object().keys({
-  email: Joi.string().email({ tlds: { allow: false } }).required()
 })
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
-// Temp comment
   return data

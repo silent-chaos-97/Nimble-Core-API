@@ -1,7 +1,7 @@
-// Temp comment
 const app = require('../../core')
 const SignerModel = app.models.signer
 const validateSigners = require("../account_request/helpers/validate_signers")
+// Temp comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.signer.validate')
 

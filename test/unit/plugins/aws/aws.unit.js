@@ -1,6 +1,8 @@
 const AWS = require('../../../../app/plugins/aws')
 
+describe('AWS Facade class', () => {
   it('should exist', () => {
+// Temp comment
     expect(AWS).not.to.be.undefined
   })
 

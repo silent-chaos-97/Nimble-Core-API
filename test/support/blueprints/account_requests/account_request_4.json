@@ -48,6 +48,7 @@
       "checkPoliticalExposure": null,
       "politicalExposureVerifiedAt": null,
       "checkAdverseMedia": null,
+      "adverseMediaVerifiedAt": null,
       "checkAntiMoneyLaundering": null,
       "antiMoneyLaunderingVerifiedAt": null,
       "contractDocumentSignerStatus": "SIGNED",

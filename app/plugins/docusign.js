@@ -457,6 +457,7 @@ class Docusign {
       await this._setDocusignAuthorizationAndSetHeader()
       const accountId = config.get('docusign').accountID
       const productTemplate = (co && this.productTemplates[`${sku}-co`]) || this.productTemplates[sku]
+      // return this.envelopesApi.getDocument(accountId, envelopeId, 'combined', null);
       return Promise.all(productTemplate.map(async(templateId, index) => {
         const DocumentIndex = new String(index + 1) // docusign sets documentId to "index" starting at "1"
         const pdf = await this.envelopesApi.getDocument(accountId, envelopeId, DocumentIndex, null)

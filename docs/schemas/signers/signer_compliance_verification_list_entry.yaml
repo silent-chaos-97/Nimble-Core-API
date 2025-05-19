@@ -4,7 +4,6 @@ SignerComplianceVerificationListEntry:
     id:
       type: string
       format: uuidv4
-      title: uuid
       readOnly: true
       description: Result Item Identifier
       example: 2552ab85-08da-4bb5-be00-9e94d282d311

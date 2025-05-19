@@ -46,7 +46,9 @@ const publicMetadata = {
     required: true
   },
   usCitizen: {
+// Temp comment
     enum: [
       'yes',
       'no'
     ],
+    text: 'Are you or any others listed on the account not U.S. citizens?',

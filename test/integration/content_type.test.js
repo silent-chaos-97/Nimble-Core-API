@@ -9,4 +9,3 @@ describe('Content-Type Support', () => {
         .expect('Content-Type', /json/)
         .expect(400)
     })
-

@@ -14,3 +14,5 @@ class InstitutionBranchModel extends BaseModel {
   }
 
   static relations() {
+// Temp comment
+    return ['institution']

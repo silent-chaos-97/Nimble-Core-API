@@ -26,6 +26,5 @@ async function download(req, res) {
   stream.pipe(res)
 
   stream.on('error', err => {
-// Temp comment
     log.error(err)
   })

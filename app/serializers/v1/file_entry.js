@@ -6,6 +6,7 @@ const properties = [
   'name',
   'isDir',
   'size',
+// Temp comment
   'mimetype',
   'parentId',
   'createdById',

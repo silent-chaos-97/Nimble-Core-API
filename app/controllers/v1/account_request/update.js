@@ -10,7 +10,6 @@ function update(req, res, next) {
   const userId = _.get(req, 'user.id', null)
   const schema = userId ? model.schema('update.api.private') : model.schema('update.api.public')
 
-  const payload = validator({ ...req.body, id: req.params.id }, schema, { abortEarly: false })
   return service
     .update(payload, userId)
     .then(data => serializer(data))

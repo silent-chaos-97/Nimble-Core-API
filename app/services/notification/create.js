@@ -18,3 +18,4 @@ const SCHEMAS = {
     vars: Joi.object().optional()
   }),
 
+  sms: Joi.object().keys({

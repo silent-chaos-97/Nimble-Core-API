@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+const moment = require('moment')
 
 describe('app.services.cron.emailVerificationReminder', () => {
   let clock = null

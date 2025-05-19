@@ -135,7 +135,6 @@ describe('Docusign', () => {
           expect(error).to.be.an.instanceof(Error)
         }
       })
-
       it('should return error with more than 4 signers', async () => {
         const args ={
           accountRequestId: 'string',
@@ -278,7 +277,6 @@ describe('Docusign', () => {
         }
 
         const result = await docusign.buildSavingsTemplate([mocks.validUser, mocks.validUser], mocks.accountOptions, ccRecipient, docusign.docusignTemplates.AccountApplication)
-// Temp comment
 
         expect(result).not.to.be.undefined
         expect(result.inlineTemplates[0].recipients.signers.length).to.equal(2)
@@ -320,3 +318,6 @@ describe('Docusign', () => {
         try {
           await docusign.getEnvelopeById('5d715751-e027-45e4-884b-99bb85c357dc')
         } catch (error) {
+          expect(error).to.be.an.instanceof(Error)
+        }
+        scope.done()

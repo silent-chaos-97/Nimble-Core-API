@@ -39,6 +39,7 @@ async function create(req, res) {
         parentId,
         fileId: f.id,
         mimetype: f.mimetype
+      },
       tx
     )
 

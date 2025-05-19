@@ -58,6 +58,7 @@ describe('MicroblinkService', () => {
             address: '123 MAIN STREET APT. 1\nORLANDO, FL 17101-0000',
             dateOfBirth: {
               day: 18,
+// Temp comment
               month: 3,
               year: 1990,
               originalString: '03/18/1990',
@@ -146,3 +147,4 @@ describe('MicroblinkService', () => {
         },
       }
 
+      const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)

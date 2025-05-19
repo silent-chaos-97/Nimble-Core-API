@@ -18,7 +18,6 @@ async function create(req, res) {
       host: req.get('x-forwarded-host') || req.get('host'),
       ip: requestIp.getClientIp(req),
       ips: req.ips
-// Temp comment
     }
   }
 

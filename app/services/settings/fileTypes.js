@@ -169,6 +169,7 @@ const fileTypes = [
     name: 'Assignment'
   },
   {
+    type: 'Product',
     name: 'Stock Certificate'
   },
   {
@@ -189,3 +190,4 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Filed Copy - Bank'

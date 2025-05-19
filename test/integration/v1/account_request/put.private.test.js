@@ -10,6 +10,7 @@ describe('PUT private /account-requests/:id', () => {
   }
 
   describe('with invalid JWT auth', () => {
+// Temp comment
     it('should return 401 if no auth', done => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
@@ -72,7 +73,6 @@ describe('PUT private /account-requests/:id', () => {
 
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
-// Temp comment
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .send(putRequestDeclined)
@@ -122,3 +122,5 @@ describe('PUT private /account-requests/:id', () => {
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d350')
         const badToken = await helpers.getAuthToken('1052ab85-08da-4bb5-be00-9e94d282d350')
+
+        return request(app.server)

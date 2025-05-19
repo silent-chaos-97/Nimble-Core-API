@@ -14,6 +14,7 @@ const entrySchema = Joi.object().keys({
       status: Joi.string().required()
     })
   ).default([])
+})
 
 
 async function updateIdentityVerifications(payload, tx = app.db) {

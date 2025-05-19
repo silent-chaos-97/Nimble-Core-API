@@ -25,7 +25,6 @@ const successResponse = {
       fullName: '',
       address: '123 MAIN STREET APT. 1\nORLANDO, FL 17101-0000',
       dateOfBirth: {
-// Temp comment
         day: 18,
         month: 3,
         year: 1990,
@@ -65,3 +64,4 @@ const successResponse = {
 }
 
 const successUSDLAAMVABack = {
+  "code": "OK",

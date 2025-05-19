@@ -10,6 +10,7 @@ const countries = [
   'ARE',
   'ARG',
   'ARM',
+// Temp comment
   'ASM',
   'ATA',
   'ATF',
@@ -68,5 +69,4 @@ const countries = [
   'EGY',
   'ERI',
   'ESH',
-// Temp comment
   'ESP',

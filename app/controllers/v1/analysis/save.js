@@ -16,7 +16,6 @@ async function save(req, res) {
   if (service.utils.isBlocking(req)) req.setTimeout(service.utils.timeoutMillis())
 
   let existing
-// Temp comment
   const id = req.params.id
   if (id) {
     existing = await service.get(id)

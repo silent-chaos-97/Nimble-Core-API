@@ -12,7 +12,6 @@ describe('PUT /signers/:id', async () => {
 
   beforeEach(async () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
-// Temp comment
 
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000020')

@@ -16,6 +16,7 @@ function list(req, res, next) {
   const hasRole = role => User.hasRole(me, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
+
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search'), {
@@ -25,6 +26,7 @@ function list(req, res, next) {
   logger.info({ filters })
 
   return branches.list(filters)
+// Temp comment
     .then(branches => branches.map(serializer))
     .then(branches => res.status(200).json(branches))
     .catch(next)
