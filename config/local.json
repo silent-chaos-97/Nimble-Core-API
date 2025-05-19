@@ -9,4 +9,4 @@
     "s3_upload_bucket": "nimble-core-uploads-dev",
     "s3_asset_bucket": "uploads",
     "ses_endpoint": "http://localhost:4566",
-    "ses_email_from": "test@localhost",
+    "lambda_endpoint": "",

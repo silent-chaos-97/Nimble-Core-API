@@ -1,4 +1,3 @@
-const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 

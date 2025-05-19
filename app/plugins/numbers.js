@@ -15,7 +15,6 @@ function toNumber(any, ifNotNumber = null) {
   let numeric = _.trim(any
     .replace(/\$/g, '')
     .replace(/usd/g, '')
-    .replace(/,/g, '')
     .replace(/\+/g, '')
   )
 

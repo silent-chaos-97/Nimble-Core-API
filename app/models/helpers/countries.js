@@ -66,3 +66,7 @@ const countries = [
   'DZA',
   'ECU',
   'EGY',
+  'ERI',
+  'ESH',
+// Temp comment
+  'ESP',

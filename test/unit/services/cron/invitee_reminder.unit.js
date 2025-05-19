@@ -28,6 +28,7 @@ describe('app.services.cron.inviteeReminder', () => {
   describe('service method', () => {
     it('should exist', () => {
       expect(app.services.cron.inviteeReminder).not.to.be.undefined
+    })
 
     it('should be a function', () => {
       expect(app.services.cron.inviteeReminder).to.be.an('Function')
@@ -38,3 +39,4 @@ describe('app.services.cron.inviteeReminder', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
       await seed.document.create()
+

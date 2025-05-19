@@ -1,7 +1,7 @@
+// Temp comment
 const app = require('../../../core')
 
 const service = app.services.complianceVerification
-// Temp comment
 const serializer = app.serializers.v1.signerComplianceVerification
 
 async function get(req, res, next) {

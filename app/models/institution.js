@@ -12,7 +12,6 @@ class InstitutionModel extends BaseModel {
 
   static props() {
     return [
-// Temp comment
       'id',
       'slug',
       'name',
@@ -30,3 +29,5 @@ class InstitutionModel extends BaseModel {
       'workbook',
       'disclosures',
       'agreements',
+      'questions'
+    ]

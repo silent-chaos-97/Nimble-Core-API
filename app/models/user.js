@@ -12,6 +12,7 @@ const Roles = {
   Developer: 'developer'
 }
 
+const Statuses = {
   Active: 'ACTIVE',
   Suspended: 'SUSPENDED',
   Deactivated: 'DEACTIVATED'
@@ -46,3 +47,5 @@ class UserModel extends BaseModel {
   static isEmployee(user) {
     return this.hasRole(user, Roles.Employee)
       || this.isBranchAdmin(user)
+      || this.isInstitutionAdmin(user)
+      || this.isSuperAdmin(user)

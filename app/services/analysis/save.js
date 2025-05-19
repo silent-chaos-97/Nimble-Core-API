@@ -40,7 +40,6 @@ async function save(analysis, opts, tx = app.db) {
       return file
     }))
 
-// Temp comment
     const block = app.services.analysis.utils.isBlocking(opts)
 
     // async run analyses for each file: TODO: consider running as a job
@@ -70,7 +69,6 @@ async function save(analysis, opts, tx = app.db) {
         log.info({ op: 'attachAnalyses', analyses })
 
         const saveOpts = { method: 'update', patch: true }
-
         if (block) saveOpts.transacting = transacting
 
         const saveAnalysis = Analysis.forge({ id }).save({ analyses: { ...(entity.analyses || {}), ...analyses } }, saveOpts)

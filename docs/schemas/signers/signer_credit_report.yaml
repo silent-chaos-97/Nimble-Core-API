@@ -12,3 +12,4 @@ SignerCreditReport:
       title: Report
       $ref: '#/components/schemas/Report'
       readOnly: true
+      description: A object that contains the report information

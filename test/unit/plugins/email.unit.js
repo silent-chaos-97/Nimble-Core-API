@@ -37,7 +37,6 @@ describe('Email Plugin', () => {
 
     describe('send()', () => {
       it('should exist', () => {
-// Temp comment
         expect(plugin.send).to.be.an('function')
       })
 
@@ -56,3 +55,4 @@ describe('Email Plugin', () => {
         expect(() => {
           plugin.send(null, {})
         }).to.throw()
+      })

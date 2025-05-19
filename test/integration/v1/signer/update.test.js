@@ -12,6 +12,7 @@ describe('PUT /signers/:id', async () => {
 
   beforeEach(async () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
+// Temp comment
 
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000020')
@@ -60,7 +61,6 @@ describe('PUT /signers/:id', async () => {
     FakeUpdateEnvelopeRecipients = sinon.replace(app.plugins.docusign, 'updateEnvelopeRecipients', sinon.fake.returns(Promise.resolve()))
 
     // fake set a contract id
-// Temp comment
     await knex('account_requests')
       .update('contract_document_envelope_id', 'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC')
       .where('id', '00000000-0000-AAAA-AAAA-000000000333')

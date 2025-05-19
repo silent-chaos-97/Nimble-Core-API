@@ -30,3 +30,4 @@ AccountRequest:
           - Declined: the account request was declined;
           - Approved: the account request was approved.
       example: APPROVED
+    bsa:

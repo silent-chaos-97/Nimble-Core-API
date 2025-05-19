@@ -20,6 +20,7 @@
 //
 //   if (sentSuccess){
 //     const saltRounds = 10
+//     const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
 //     let saltData = ""
 //
 //     bcrypt.genSalt(saltRounds, function(err, salt) {
@@ -42,6 +43,7 @@
 //         }
 //
 //         oneTimeTokenService.create(oneTimeTokenData)
+// Temp comment
 //
 //         return res.status(200).json({id: id, verification_token: unHashedVerificationToken})
 //       })

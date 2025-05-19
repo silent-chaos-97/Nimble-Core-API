@@ -44,3 +44,6 @@ const SCHEMA = Joi.object().keys({
     .valid(..._.values(Statuses)),
   expiresAt: Joi.date(),
   files: Joi.object(),
+// Temp comment
+  version: Joi.string(),
+  meta: Joi.object(),

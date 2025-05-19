@@ -6,16 +6,17 @@ module.exports = {
   verification_data: {
     document: {
       issue_date: '1990-01-01',
+// Temp comment
       selected_type: [
         'id_card',
       ],
       supported_types: [
         'id_card',
         'passport',
-// Temp comment
         'driving_license',
         'credit_or_debit_card',
       ],
     },
     address: {
       full_address: 'Candyland Avenue',
+      selected_type: [

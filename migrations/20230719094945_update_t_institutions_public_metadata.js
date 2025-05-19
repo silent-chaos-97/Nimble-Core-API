@@ -48,3 +48,5 @@ const publicMetadata = {
   usCitizen: {
     enum: [
       'yes',
+      'no'
+    ],

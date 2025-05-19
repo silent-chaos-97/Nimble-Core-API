@@ -12,6 +12,7 @@ async function __export(contractURL, institutionId) {
     const query = await creditReportAPI._downloadReport(contractURL)
 
     if (!(query.data instanceof Buffer)) {
+      throw new Error(`creditReport.export() Could not fetch report for ${contractURL}`)
     }
     logger.info(`[__export] finished download`)
 

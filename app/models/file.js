@@ -17,3 +17,4 @@ class FileModel extends BaseModel {
         'updatedAt',
         'analysisId',
 
+        // location

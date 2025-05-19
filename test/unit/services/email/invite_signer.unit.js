@@ -18,13 +18,14 @@ describe('app.services.email.inviteSigner', () => {
   })
 
   beforeEach(() => {
+    plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
 
   after(() => {
-    clock.restore()
     sinon.restore()
   })
 
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
+      const id = 'asdsd'

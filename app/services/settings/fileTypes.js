@@ -169,7 +169,6 @@ const fileTypes = [
     name: 'Assignment'
   },
   {
-    type: 'Product',
     name: 'Stock Certificate'
   },
   {
@@ -179,6 +178,14 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Not Retricted or UTMA'
+  },
+  {
+    type: 'Product',
+    name: 'Stock Power'
+  },
+  {
+    type: 'Product',
+    name: 'Vesting Correct'
   },
   {
     type: 'Product',

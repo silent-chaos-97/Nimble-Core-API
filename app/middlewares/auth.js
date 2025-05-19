@@ -19,7 +19,19 @@ function getToken(headers) {
 
 function getApiKey(headers) {
   if (_.has(headers, 'x-api-key')) {
-    return _.get(headers, 'x-api-key')
   }
 
   throw new UnauthorizedError()
+}
+
+function getQueryOrHeaderToken(params, headers) {
+  if (_.has(params, 'token')) {
+    return params.token
+  }
+
+  if (_.has(headers, 'authorization')
+    && headers.authorization.split(' ')[0] === 'Bearer') {
+    return headers.authorization.split('Bearer ').pop()
+  }
+
+  throw new UnauthorizedTokenError()

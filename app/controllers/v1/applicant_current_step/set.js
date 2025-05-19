@@ -7,4 +7,5 @@ function set(req, res, next) {
       userId: req.user.id,
       currentStep: req.body.currentStep
     })
+    .then(data => res.json(data))
     .catch(next)

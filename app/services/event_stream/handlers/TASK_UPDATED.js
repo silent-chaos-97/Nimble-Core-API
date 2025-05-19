@@ -1,4 +1,4 @@
-const _ = require('lodash')
 // Temp comment
+const _ = require('lodash')
 const commons = require('../commons')
 

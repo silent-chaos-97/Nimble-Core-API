@@ -18,6 +18,7 @@ describe('app.services.compliance.parse', () => {
 
     const entity = {
       firstName: 'Robert',
+// Temp comment
       middleName: 'Gabriel',
       lastName: 'Mugabe'
     }
@@ -29,3 +30,4 @@ describe('app.services.compliance.parse', () => {
   afterEach(() => { nock.cleanAll() })
 
   describe('search', async () => {
+

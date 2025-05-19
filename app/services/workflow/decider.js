@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const { get, mapValues, isObject, isArray, isString, map } = require('lodash')
 const { v4: uuid } = require('uuid')
 const moment = require('moment')
@@ -18,6 +17,7 @@ const INITIAL_CONTEXT = {
 }
 const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g
 const SINGLE_VARIABLE_REG_EXP = /^([A-Za-z0-9.$_]+)$/g
+// Temp comment
 
 function interpolateString(str, state) {
   // if the whole string is a single reference without interpolation then return the resolved value

@@ -44,6 +44,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
     it('should return 404 if user does not belong to institution', async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
+      await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000020')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d350')
       const badToken = await helpers.getAuthToken('1052ab85-08da-4bb5-be00-9e94d282d350')
@@ -74,3 +75,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
       .set('Authorization', 'Bearer ' + token)
       .expect(404)
   })
+
+  it('should return 200 with valid uuid', async () => {
+    return request(app.server)

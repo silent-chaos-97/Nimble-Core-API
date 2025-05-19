@@ -11,5 +11,5 @@ function count(req, res, next) {
 
   return service
     .count(params)
-    .then(data => res.status(200).json(data))
+    .then(serializer)
     .catch(next)

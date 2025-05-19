@@ -29,3 +29,4 @@ const checkingProductOptions = [
     category: 'product_feature',
     title: 'Debit Card',
     value: true,
+    lead: 'Shazam®Chek Card',

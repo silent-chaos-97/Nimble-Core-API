@@ -34,6 +34,7 @@ async function execute(req, res) {
     } else {
       failedWkfls.push(r.wkfl)
     }
+  })
 
   res.status(201).json({
     successfulWkfls,

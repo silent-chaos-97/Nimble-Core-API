@@ -13,8 +13,8 @@ describe('app.services.creditReport.create', () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"signerId" must be a valid GUID'
       return expect(app.services.creditReport.create({...validPayload, signerId: id})).to.be.rejectedWith(expectedErrorMsg)
-    })
 
     it('should return error if signer not found', async () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.creditReport.create(validPayload)).to.be.rejectedWith(expectedErrorMsg)
+    })

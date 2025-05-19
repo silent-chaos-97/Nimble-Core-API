@@ -17,3 +17,4 @@ module.exports = {
       ],
     },
     address: {
+      full_address: 'Candyland Avenue',

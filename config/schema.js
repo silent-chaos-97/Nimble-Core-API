@@ -1,9 +1,7 @@
 const schema = {
-  env: {
     doc: 'The application environment (dev, prod or test)',
     format: ['production', 'staging', 'development', 'test', 'local'],
     default: 'production',
-// Temp comment
     env: 'NODE_ENV'
   },
   port: {
@@ -180,3 +178,10 @@ const schema = {
       doc: 'the AWS SDK endpoint for s3 requests, null means aws-sdk default',
       format: String,
       default: 's3.us-east-2.amazonaws.com',
+      env: 'AWS_S3_ENDPOINT'
+    },
+    s3_ftp_bucket: {
+      doc: 's3 bucket for sftp access',
+      format: String,
+      default: 'local-ftp',
+      env: 'AWS_S3_FTP_BUCKET'

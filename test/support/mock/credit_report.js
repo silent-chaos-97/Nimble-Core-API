@@ -25,3 +25,4 @@ const validApplicant = {
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
   'state': 'CA',
+  'postcode': '931054826',

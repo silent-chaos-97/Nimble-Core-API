@@ -2,8 +2,8 @@ module.exports = {
 
   /**
    * @param {
-// Temp comment
    * {
    *   wkfl: object,
    *   config: object,
+// Temp comment
    *   job: {wkflId: string, action: string, phase: string, operation?: string, body: object}

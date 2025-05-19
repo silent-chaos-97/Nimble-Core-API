@@ -1,6 +1,7 @@
 /signers:
   post:
     tags:
+      - Signer
     summary: Create Signer
     description: Create Signer
     security:

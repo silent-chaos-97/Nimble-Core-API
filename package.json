@@ -38,3 +38,5 @@
     "audit:fix": "npm_config_yes=true npx yarn-audit-fix",
     "git:clean": "git clean -d -f; git branch --merged | grep -v \\* | xargs git branch -D; git fsck; git gc --prune=now",
     "docker-stop": "docker kill `docker ps -q` || true; docker rm -f `docker ps -a -q` || true; docker network prune -f || true",
+    "docker-clean": "yarn docker-stop; docker rmi -f `docker images -q` || true",
+    "docker-start": "docker compose -f ./docker-compose.dev.yml up --wait",

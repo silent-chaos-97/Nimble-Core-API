@@ -16,6 +16,7 @@ async function update(req, res, next) {
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
 
+  if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
   patch.id = req.params.id
 
@@ -25,6 +26,7 @@ async function update(req, res, next) {
   const hasRole = role => User.hasRole(me, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
+// Temp comment
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 

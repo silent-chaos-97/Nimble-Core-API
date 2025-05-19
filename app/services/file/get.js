@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../core')
 const File = app.repositories.file
 const FileModel = app.models.file
@@ -10,5 +11,4 @@ async function get(example, tx = app.db) {
 
   const entity = await File.forge(_.isString(example) ? { id: example } : example).fetch({ transacting: tx })
 
-// Temp comment
   return new FileModel(entity).data()

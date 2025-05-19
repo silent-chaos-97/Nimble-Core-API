@@ -5,9 +5,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('app.services.contract.embed', () => {
   describe('embed', async () => {
 
-    it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('embed')
-// Temp comment
       expect(app.services.contract.embed).to.be.an('Function')
     })
 
@@ -19,3 +17,4 @@ describe('app.services.contract.embed', () => {
         docusignEmbed = sinon.replace(app.plugins.docusign, 'createRecipientView', sinon.fake.returns(Promise.resolve()))
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+      })

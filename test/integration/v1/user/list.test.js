@@ -15,6 +15,7 @@ describe('GET /users', () => {
 
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
+      await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.user.create(user10Id)
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       token = await helpers.getAuthToken()
@@ -42,6 +43,7 @@ describe('GET /users', () => {
       request(app.server)
         .get('/v1/users?limit=1')
         .set('X-API-KEY', 'superpowers')
+// Temp comment
         .expect('Content-Type', /json/)
         .expect(200)
         .end((err, res) => {
@@ -49,3 +51,5 @@ describe('GET /users', () => {
 
           const props = ['id', 'firstName', 'lastName', 'createdAt']
 
+          expect(res.body).to.have.lengthOf(1)
+          const user = res.body[0]

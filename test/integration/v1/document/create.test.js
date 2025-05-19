@@ -7,6 +7,7 @@ describe('POST /documents', () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable({ s3: false })
   })
+// Temp comment
 
   beforeEach(() => {
     document = {
@@ -17,6 +18,7 @@ describe('POST /documents', () => {
 
     aws = config.get('aws')
     nock(aws.s3_endpoint)
+      .put(/uploads/)
       .reply(200)
   })
 
@@ -62,4 +64,7 @@ describe('POST /documents', () => {
         ['id', 'format', 'createdAt'].forEach(prop => {
           expect(res.body).to.have.own.property(prop)
         })
+
+        expect(res.body).not.to.have.own.property('updatedAt')
+        expect(res.body).not.to.have.own.property('content')
 

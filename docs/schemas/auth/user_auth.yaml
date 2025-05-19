@@ -4,3 +4,4 @@ UserAuth:
     - email
     - firstName
     - lastName
+    - institutionId

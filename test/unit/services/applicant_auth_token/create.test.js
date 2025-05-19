@@ -29,3 +29,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           method: 'verify-code'
         }
       })
+

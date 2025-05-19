@@ -45,3 +45,5 @@ How can we do this?
 
 > In sandbox. You can use the DocuSign Admin panel to directly grant consent to applications owned by your organization (applications whose Integration Keys are owned by your org) on behalf of all of your users.
 > To directly grant consent to an internal application:
+
+- From the organization dashboard, click the Applications tile.

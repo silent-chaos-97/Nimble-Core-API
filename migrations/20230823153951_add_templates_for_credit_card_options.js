@@ -1,4 +1,3 @@
-// Temp comment
 const ROWS = [
   {
     name: 'Visa Saver',
@@ -6,3 +5,4 @@ const ROWS = [
     version: 1,
   },
   {
+    name: 'Visa Rewards',

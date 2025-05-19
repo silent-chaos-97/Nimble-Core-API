@@ -2,6 +2,7 @@ const nock = require('nock')
 const mocks = require('../../../support/mock/docusign')
 const { expect } = require('chai')
 
+describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
   before(() => {
@@ -119,3 +120,8 @@ const { expect } = require('chai')
           if (err) return done(err)
           // I need to sleep because the method that populates the contract is not async
           await sleep(30)
+
+          request(app.server)
+            .get(`/v1/account-requests/${accountRequestId}`)
+            .set('Authorization', 'Bearer ' + token)
+            .expect(200)

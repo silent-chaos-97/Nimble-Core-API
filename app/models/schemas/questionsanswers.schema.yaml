@@ -1,4 +1,5 @@
 collection: Compliance
 element: Compliance
+kind: custom
 group: products
 order: 0

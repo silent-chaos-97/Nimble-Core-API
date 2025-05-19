@@ -3,3 +3,4 @@ BsaRiskResult:
   required:
     - answer
     - position
+    - questionId

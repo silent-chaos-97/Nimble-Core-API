@@ -4,6 +4,7 @@
   "logLevel": 99,
   "database": {
     "uri": "postgres://nimble-core-user:nimble-core-pass@localhost:5432/nimble-core-test"
+  },
   "image": {
     "basePath": "/tmp/nimble-core-test/",
     "assets_cdn": "",
@@ -16,3 +17,4 @@
     "baseUrl": "http://microblink.test.com",
     "secret": "singular-secret"
   },
+  "shufti": {

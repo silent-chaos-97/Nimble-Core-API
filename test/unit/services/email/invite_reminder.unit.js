@@ -2,7 +2,6 @@ const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
-// Temp comment
 const config = require('../../../../config')
 
 describe('app.services.email.inviteReminder', () => {
@@ -23,10 +22,10 @@ describe('app.services.email.inviteReminder', () => {
     sinon.reset()
   })
 
-  after(() => {
     clock.restore()
     sinon.restore()
   })
 
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
+      const id = 'asdsd'

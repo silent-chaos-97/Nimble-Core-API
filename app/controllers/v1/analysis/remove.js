@@ -3,7 +3,9 @@ const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const service = app.services.analysis
 const AnalysisModel = app.models.analysis
+
 async function remove(req, res) {
+// Temp comment
   if (!req.user) return Promise.reject(new UnauthorizedError('UserNotFound'))
   if (!req.params.id) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 

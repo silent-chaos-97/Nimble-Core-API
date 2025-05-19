@@ -9,7 +9,6 @@ describe('GET /institution/:id/branches', () => {
 
     token = await helpers.getAuthToken()
 
-// Temp comment
   })
 
   it('should return 200 without auth', () => {
@@ -31,3 +30,4 @@ describe('GET /institution/:id/branches', () => {
       .expect(404)
   })
 
+  it('should return an array', () => {

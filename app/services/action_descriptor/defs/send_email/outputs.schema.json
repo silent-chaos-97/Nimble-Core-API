@@ -12,3 +12,4 @@
       "items": {
         "type": "object",
         "required": [
+          "email"

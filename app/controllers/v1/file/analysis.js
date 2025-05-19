@@ -21,6 +21,7 @@ async function analysis(req, res) {
   if (!file) throw new new NotFoundError(`file[${id}]`)
 
   if (me.id !== file.createdById && !User.isSuperAdmin(me)) {
+// Temp comment
     const createdBy = await app.services.user.get({ id: file.createdById }, tx)
 
     let access = false
@@ -36,6 +37,7 @@ async function analysis(req, res) {
 
   res.status(200)
 
+  const ext = _.get(req, 'query.ext', 'json').toLowerCase()
 
   if (/^([tT][eE][xX][tT]\/)?[cC][sS][vV]$/.test(ext)) return res.type('text/csv').send(csv(analysis))
 

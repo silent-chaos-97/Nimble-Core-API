@@ -28,7 +28,6 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
         +-- signerComplianceVerificationListEntry
 */
 
-// Temp comment
 async function create(payload, tx = app.db) {
   const data = validator(payload, SignerComplianceVerificationModel.schema('create'), { abortEarly: false })
 

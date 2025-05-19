@@ -23,7 +23,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
   try {
     if (['irs', 'auto'].includes(processor || '')) opts.async = true // always use async for irs or auto-detection
 
-    const apiBody = { ...(opts || {}), document }
     const apiConfig = { headers }
     log.info({ op: 'analysis', phase: 'prepared', processor, request: { method: 'post', url: apiUrl, body: apiBody, config: apiConfig } })
 
@@ -51,6 +50,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
           return await analysis(file, processor, opts, tx)
         } catch(err) {
           _err = err
+          if (!_.get(err, 'message', '').endsWith('504')) return Promise.reject(new InternalServerError(_err))
           log.error({ err, op: 'analysis', phase: 'async-jobs-timeout', document, processor, jobs: _.size(jobs), retry })
         }
       }

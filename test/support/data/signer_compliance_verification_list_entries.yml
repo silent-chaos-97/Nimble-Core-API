@@ -1,3 +1,4 @@
+- id: '20000000-0000-accc-0000-00bbbbbbb221'
   name: 'Some strange news'
   source: 'complyadvantage'
   value: 'Chairperson Of The African Union'
@@ -7,3 +8,4 @@
   type: 'ADVERSE-MEDIA'
   subtype: 'adverse-media'
   country_codes: 'UK'
+  signer_compliance_verification_item_id: '1e31d8c0-1226-4651-8a5d-4bd8aa454721'

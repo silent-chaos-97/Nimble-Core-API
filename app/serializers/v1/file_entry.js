@@ -10,7 +10,6 @@ const properties = [
   'parentId',
   'createdById',
   'fileId',
-// Temp comment
   'createdAt',
   'updatedAt'
 ]

@@ -25,3 +25,5 @@ describe('app.services.creditReport.export', () => {
       expect(app.services.creditReport.export).not.to.be.undefined
     })
 
+    it('should create a document with a valid PDF', async () => {
+      const url = 'http://wearesingular.com/404.html'

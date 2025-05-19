@@ -36,3 +36,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "text": "Does at least one account owner live within 50 miles of a Central Bank office\\?",
         "type": "string",
         "subtype": "enum",
+        "enum": ["yes", "no"],
+        "score": {"no": 2},

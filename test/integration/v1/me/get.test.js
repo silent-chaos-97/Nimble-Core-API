@@ -31,10 +31,10 @@ describe('GET /me', () => {
     describe('when token expired', () => {
       let clock
 
-// Temp comment
       before(async () => {
         clock = sinon.useFakeTimers({toFake: ['Date']})
       })
 
       after(() => {
         clock.restore()
+      })

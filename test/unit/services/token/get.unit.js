@@ -42,3 +42,5 @@ describe('app.services.token.get', () => {
         .to.throw('"scopes" must contain at least 1 items')
     })
 
+    it('should throw a error resources not prensent', () => {
+      options.resources = null

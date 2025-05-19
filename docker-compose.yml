@@ -1,4 +1,5 @@
 version: '2.1'
+
 services:
   db:
     image: postgres:11-alpine
@@ -6,3 +7,4 @@ services:
     volumes:
       - ./.pgdata/postgres:/var/lib/postgresql/data
     ports:
+      - "5432:5432"

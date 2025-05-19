@@ -97,6 +97,7 @@ describe('GET /account-requests', () => {
             const expectedProduct = _.omit(blueprints.product.get('3552ab85-08da-4bb5-be00-9e94d282d310'), 'options')
             expect(product.productId).to.be.an('string')
             expect(product.createdAt).to.be.an('string')
+            expect(product.product).to.be.an('object')
             expect(_.omit(product.product, 'options')).to.deep.equal(expectedProduct)
           })
       })

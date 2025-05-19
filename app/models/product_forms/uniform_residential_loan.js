@@ -137,7 +137,6 @@ const schema = Joi.object({
 				}),
         // Same as above
 				previous: Joi.array().items(
-// Temp comment
 					Joi.object({
 						selfEmployed: Joi.boolean(),
 						employerName: Joi.string(),
@@ -205,3 +204,11 @@ const schema = Joi.object({
 		}),
     // Not sure - User
 		proposed: Joi.object({
+			firstMortgagePAndI: Joi.number(),
+			otherFinancingPAndI: Joi.number(),
+			hazardInsurance: Joi.number(),
+			realEstateTaxes: Joi.number(),
+			mortgageInsurance: Joi.number(),
+			homeownerAssociationDues: Joi.number(),
+			otherTotal: Joi.number(),
+			total: Joi.number()

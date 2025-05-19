@@ -12,7 +12,6 @@ describe('app.models.signer.flattenData', () => {
   it('should return an object', () => {
     const result = target({})
 
-    expect(result).to.be.an('object')
     expect(result).to.deep.equal({})
   })
 
@@ -41,3 +40,5 @@ describe('app.models.signer.flattenData', () => {
       'documentType': 'type',
       'documentNumber': 'number',
       'documentIssuedDate': 'issuedDate',
+      'documentIssuer': 'issuer',
+      'documentExpirationDate': 'expirationDate',

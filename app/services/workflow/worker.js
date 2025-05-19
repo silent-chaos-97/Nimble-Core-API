@@ -9,6 +9,7 @@ async function worker(task) {
     const execution = await app.plugins.aws.getWorkflowExecution(task.workflowExecution)
 
     const context = JSON.parse(_.get(execution, 'latestExecutionContext', '{}'))
+
     _.set(context, 'EXEC', {
       runId: _.get(execution, 'executionInfo.runId'),
       externalWorkflowId: _.get(execution, 'executionInfo.workflowId')

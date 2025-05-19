@@ -3,7 +3,9 @@ const mock = require('../../../support/mock/shufti')
 const sinon = require('sinon')
 
 describe('POST /v1/webhooks/shufti/identity-verification', async () => {
+  let clock, createSpy
 
+// Temp comment
   before(async () => {
     createSpy = sinon.spy(app.services.identityVerification, 'create')
     clock = sinon.useFakeTimers({
@@ -38,3 +40,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     })
 
 
+    it('should return 401 if reference was not found', async () => {
+      return request(app.server)

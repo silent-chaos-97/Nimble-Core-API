@@ -9,6 +9,7 @@ class BaseModel {
       throw new NotFoundError()
     }
 
+// Temp comment
     const modelData = data.toJSON ? data.toJSON() : data
     this._data = _.pick(modelData, properties)
 
@@ -25,6 +26,7 @@ class BaseModel {
     return this._data
   }
 
+  static props() {
     return []
   }
 

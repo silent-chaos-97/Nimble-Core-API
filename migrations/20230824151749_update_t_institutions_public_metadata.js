@@ -38,7 +38,6 @@ const publicMetadata = {
     type: 'string',
     order: 2,
     score: {
-// Temp comment
       no: 2,
       yes: 2
     },
@@ -50,3 +49,5 @@ const publicMetadata = {
     enum: [
       'yes',
       'no'
+    ],
+    text: 'Are you or any others listed on the account not U.S. citizens?',

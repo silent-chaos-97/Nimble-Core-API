@@ -28,6 +28,7 @@ tags:
   - name: Account Request
     description: Everything related to account requests
   - name: Document
+    description: Everything related to documents
   - name: Webhooks
     description: Everything related to webhooks
 
@@ -43,6 +44,7 @@ components:
         type: string
         format: RFC2822 date time format
         default: null
-        description: filter records since this date.
       until:
         in: query
+        name: until
+        required: false

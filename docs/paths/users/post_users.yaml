@@ -6,3 +6,4 @@
     description: Create a new user
     operationId: userRegister
     security:
+      - ApiKeyAuth: []

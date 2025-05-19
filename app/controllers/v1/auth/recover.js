@@ -1,7 +1,7 @@
-// Temp comment
 const app = require('../../../core')
 
 const service = app.services.account
+// Temp comment
 
 function recover(req, res, next) {
   return service

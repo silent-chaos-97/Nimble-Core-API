@@ -8,8 +8,8 @@ describe('app.services.email.welcome', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
+  let clock = null
 
-  before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
@@ -24,3 +24,4 @@ describe('app.services.email.welcome', () => {
 
   after(() => {
     clock.restore()
+    sinon.restore()

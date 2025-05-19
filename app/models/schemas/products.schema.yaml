@@ -51,3 +51,5 @@ columns:
   - data: minimum_amount
     type: integer
     numericFormat:
+      pattern: $0,0
+      culture: en-US

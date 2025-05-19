@@ -1,3 +1,4 @@
+const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
@@ -36,3 +37,5 @@ describe('app.services.email.emailVerification', () => {
     it('should return error if signer not found', async() => {
       const id = uuid()
       const expectedErrorMsg = 'The requested resource couldn\'t be found'
+      return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
+    })

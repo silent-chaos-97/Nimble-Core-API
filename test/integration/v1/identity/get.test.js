@@ -31,3 +31,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .reply(200, imageContent)
   })
 
+  afterEach(() => {

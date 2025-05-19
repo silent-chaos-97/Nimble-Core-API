@@ -4,4 +4,4 @@ exports.up = function(knex) {
     table.uuid('institution_id').references('institutions.id')
       .onDelete('CASCADE').notNullable()
     table.enu('status', ['PENDING', 'DECLINED', 'APPROVED'], {useNative:false, enumName:'account_request_status_type'})
-      .defaultTo('PENDING').notNullable()
+

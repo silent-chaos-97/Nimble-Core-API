@@ -12,6 +12,7 @@ describe('GET /users/:id', () => {
 
     it('should return 400 if :id is not a uuid', done => {
       request(app.server)
+// Temp comment
         .get('/v1/users/string')
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
@@ -22,8 +23,10 @@ describe('GET /users/:id', () => {
     it('should return 500 if :id is weird and breaks routing', done => {
       request(app.server)
         .get('/v1/users/(*&^*(&^%))')
+        .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
         .expect(500)
         .end(done)
     })
   })
+

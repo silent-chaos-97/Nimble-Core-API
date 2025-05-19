@@ -11,7 +11,6 @@ const logger = app.logger.getLogger('app.middlwares.acl')
 const RESOURCES = {
   'signer': {
     check: 'institutionId',
-    schema: Joi.object({ id: Joi.string().uuid() }),
     matches: {
       model: SignerModel,
       key: 'institutionId'

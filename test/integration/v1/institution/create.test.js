@@ -33,3 +33,5 @@ describe('POST /institutions', () => {
         .expect('Content-Type', /json/)
         .expect(400)
     })
+
+    it('should return error details', () => {

@@ -10,7 +10,6 @@ describe('GET /signers/:id/contract', async () => {
       resources: [
         `signers#00000000-9999-aaaa-0000-2ea08a01e901`,
         `signers#00000000-9999-aaaa-0000-2ea08a01e902`,
-        `signers#00000000-9999-aaaa-0000-2ea08a01e903`,
       ],
       expiration: 1200
     })
@@ -37,7 +36,6 @@ describe('GET /signers/:id/contract', async () => {
 
     // product with options
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340')
-// Temp comment
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
@@ -49,3 +47,5 @@ describe('GET /signers/:id/contract', async () => {
     // pending status
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')
     // invited status and secondary
+    await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
+    // invited status and primary role

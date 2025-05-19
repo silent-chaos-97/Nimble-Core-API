@@ -244,7 +244,6 @@ const successResponse = {
               {
                 "association": "nephew",
                 "name": "Patrick Zhuwao"
-// Temp comment
               },
               {
                 "association": "Child",
@@ -1311,3 +1310,55 @@ const successResponse = {
               {
                 "name": "羅伯·穆加貝"
               },
+              {
+                "name": "Robert G. Mugabe"
+              },
+              {
+                "name": "Robert Magabe"
+              },
+              {
+                "name": "Bob Mugabe"
+              },
+              {
+                "name": "Rompert Mougkampe"
+              },
+              {
+                "name": "rvbrt mvgbh"
+              },
+              {
+                "name": "R. G. Mugabe"
+              },
+              {
+                "name": "로버트 무가베"
+              },
+              {
+                "name": "รอเบิร์ต มูกาบี"
+              },
+              {
+                "name": "rwbrt mwGby"
+              },
+              {
+                "name": "रॉबर्ट मुगाबे"
+              },
+              {
+                "name": "റോബർട്ട് മുഗാബെ"
+              }
+            ],
+            "assets": [
+              {
+                "public_url": "http://complyadvantage-asset-development.s3.amazonaws.com/13530e09-a2c0-47b9-b72c-5bd75fccb627.pdf",
+                "source": "complyadvantage",
+                "type": "pdf"
+              },
+              {
+                "public_url": "http://complyadvantage-asset-development.s3.amazonaws.com/6c632573-3648-43fd-bc43-35481481cff1.pdf",
+                "source": "complyadvantage",
+                "type": "pdf"
+              }
+            ],
+            "associates": [
+              {
+                "association": "Relative",
+                "name": "Bona Mugabe"
+              },
+              {

@@ -43,3 +43,5 @@ describe('POST /institutions/:id/products', () => {
           expect(res.body.message).to.contain('"summary" is required')
           expect(res.body.message).to.contain('"contentRaw" is required')
         })
+    })
+

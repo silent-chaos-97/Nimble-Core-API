@@ -25,3 +25,4 @@ describe('GET /documents/:id', () => {
       token = await helpers.getExpiredAuthToken()
     })
 
+    it('should return 401', () => {

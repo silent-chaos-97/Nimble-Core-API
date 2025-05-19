@@ -1,6 +1,5 @@
 const defaultSerializer = require('../serializer')
 
-// Temp comment
 const properties = [
   'id',
   'slug',
@@ -18,6 +17,5 @@ const properties = [
   'agreements',
   'questions'
 ]
-
 function serializer(data) {
   return defaultSerializer(properties, data)

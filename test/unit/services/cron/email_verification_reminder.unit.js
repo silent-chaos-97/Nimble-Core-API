@@ -1,5 +1,4 @@
 const sinon = require('sinon')
-const moment = require('moment')
 
 describe('app.services.cron.emailVerificationReminder', () => {
   let clock = null
@@ -37,3 +36,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
   describe('running the service', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
+      await seed.document.create()
+

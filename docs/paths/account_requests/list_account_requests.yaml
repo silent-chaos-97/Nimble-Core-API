@@ -9,3 +9,4 @@
       - bearer: []
     parameters:
       - in: query
+        name: status
