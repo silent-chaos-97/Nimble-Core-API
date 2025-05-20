@@ -12,6 +12,7 @@ const logger = app.logger.getLogger('app.services.file.create')
  *   mimetype: string
  *   createdById: string
  *   createdByRole: [user, applicant]
+ *   bytes?: string (base64-bytes)
  *   buffer?: Buffer
  *   size: number
  * }

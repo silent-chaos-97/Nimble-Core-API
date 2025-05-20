@@ -41,3 +41,4 @@ describe('app.services.compliance.verify', () => {
       })
     })
 
+    it('should not call compliance.search if the user is INVITED', async () => {

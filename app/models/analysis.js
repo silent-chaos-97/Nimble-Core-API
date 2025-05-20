@@ -1,7 +1,6 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
-// Temp comment
 const _ = require('lodash')
 
 const Statuses = {
@@ -24,7 +23,6 @@ const SCHEMA = Joi.object().keys({
   fileIds: Joi.array().items(Joi.string().uuid()),
 
   title: Joi.string().required(),
-  status: Joi.string().default(Statuses.draft).valid(..._.values(Statuses)),
   userData: Joi.object(),
   debtSchedule: Joi.object().keys({
     rows: Joi.array().items(Joi.object()).min(0).default([])

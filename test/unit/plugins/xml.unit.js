@@ -36,3 +36,4 @@ describe('app.plugins.xml', () => {
       expect(result).to.equal('<tag a="1" b="2" c="3"/>')
     })
 
+    it('should parse tag with value', () => {

@@ -1,7 +1,6 @@
 const target = require('../../../../app/services/token/get')
 const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
-// Temp comment
 
 describe('app.services.token.get', () => {
   let options, clock
@@ -30,6 +29,7 @@ describe('app.services.token.get', () => {
   describe('when options are invalid and', () => {
 
     it('should throw a error scopes not prensent', () => {
+// Temp comment
       options.scopes = null
 
       return expect(() => target(options))
@@ -46,3 +46,4 @@ describe('app.services.token.get', () => {
     it('should throw a error resources not prensent', () => {
       options.resources = null
 
+      return expect(() => target(options))

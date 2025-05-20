@@ -4,7 +4,6 @@
   "status": "PENDING",
   "firstName": "John",
   "middleName": "MF",
-  "lastName": "McClane",
   "address": "1381 Atlantic Ave, Brooklyn",
   "city": "New York",
   "state": "NY",
@@ -14,4 +13,6 @@
   "email": "john.mf.mcclane@wearesingular.com",
   "employer": "New York Police Dep.",
   "dateOfBirth": "1955-05-22",
+  "emailVerified": false,
   "emailVerifiedAt": null,
+  "idProofDocument": {

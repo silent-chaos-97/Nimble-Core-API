@@ -8,7 +8,6 @@ describe('GET /account-requests', () => {
       request(app.server)
         .get('/v1/account-requests')
         .expect('Content-Type', /json/)
-        .set('Authorization', 'Bearer ' + 'AAAA')
         .expect(401)
         .end(done)
     })
@@ -28,6 +27,7 @@ describe('GET /account-requests', () => {
 
     describe('when not filtering', () => {
       beforeEach(async () => {
+        await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products

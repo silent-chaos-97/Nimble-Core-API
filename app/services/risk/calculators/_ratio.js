@@ -5,7 +5,6 @@ const numbers = app.plugins.numbers
 const log = app.logger.getLogger('app.services.risk.calculators._ratio')
 
 const OPTS_SCHEMA_PROPS = {
-  institutionId: Joi.string().uuid().required(),
   numerator: Joi.number().positive().allow(0).required(),
   denominator: Joi.number().positive().required(),
   performing: Joi.string().valid('>', '>=', '=', '<=', '<').required(),
@@ -23,6 +22,7 @@ const PERFORMANCE_CALC = {
 }
 
 module.exports = async function(risk, _opts) {
+  log.info({ _opts, risk })
 
   try {
     const opts = app.plugins.validator(_.pick(_opts, _.keys(OPTS_SCHEMA_PROPS)), OPTS_SCHEMA, { abortEarly: false })

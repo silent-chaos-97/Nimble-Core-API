@@ -46,3 +46,5 @@ const SCHEMA = Joi.object().keys({
   files: Joi.object(),
   version: Joi.string(),
   meta: Joi.object(),
+  body: Joi.string(),
+  signature: Joi.string()

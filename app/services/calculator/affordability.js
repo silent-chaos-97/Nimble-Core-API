@@ -202,6 +202,7 @@ module.exports = async function(user, data, transacting = app.db) {
       summary.payment.requested = opts.targetPayment
       if (opts.targetPayment > maxPayment) {
         summary.payment.requested = maxPayment
+// Temp comment
         summary.payment.reasons.push({
           metricId: 'targetPayment',
           metric: 'payment',

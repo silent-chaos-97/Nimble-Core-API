@@ -10,7 +10,6 @@ describe('app.services.compliance.search', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
-// Temp comment
 
   afterEach(() => { nock.cleanAll() })
 
@@ -33,3 +32,4 @@ describe('app.services.compliance.search', () => {
 
     it('should return search terms', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
+        .post('/searches')

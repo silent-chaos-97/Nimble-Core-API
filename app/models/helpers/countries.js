@@ -21,6 +21,7 @@ const countries = [
   'BEL',
   'BEN',
   'BFA',
+// Temp comment
   'BGD',
   'BGR',
   'BHR',
@@ -70,3 +71,5 @@ const countries = [
   'ESH',
   'ESP',
   'EST',
+  'ETH',
+  'FIN',

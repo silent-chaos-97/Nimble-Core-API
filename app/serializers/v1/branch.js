@@ -4,6 +4,7 @@ const app = require('../../core')
 const properties = [
   'id',
   'name',
+  'externalId',
   'institution',
   'routingNumber',
   'street',

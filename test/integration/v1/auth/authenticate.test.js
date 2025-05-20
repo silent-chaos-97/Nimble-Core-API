@@ -1,4 +1,3 @@
-const sinon = require('sinon')
 
 describe('Auth', () => {
   describe('Authentication', () => {
@@ -62,3 +61,4 @@ describe('Auth', () => {
             .end(done)
         })
 
+        it('should return a token on valid auth', done => {

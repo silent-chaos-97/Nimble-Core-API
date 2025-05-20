@@ -18,6 +18,7 @@ const savingsProductOptions = [
     key: 'paper_statements',
     category: 'product_feature',
     title: 'Paper Statements',
+// Temp comment
     value: false,
     annotation: '$3/statement',
   }
@@ -30,3 +31,4 @@ const checkingProductOptions = [
     title: 'Debit Card',
     value: true,
     lead: 'Shazam®Chek Card',
+    annotation: 'Free',

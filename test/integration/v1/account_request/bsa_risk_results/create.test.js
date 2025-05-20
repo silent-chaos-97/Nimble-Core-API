@@ -23,7 +23,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         position: 1,
         questionId: 'will-you-mantain',
         answer: null
-      },
       {
         position: 3,
         questionId: 'name-bank',

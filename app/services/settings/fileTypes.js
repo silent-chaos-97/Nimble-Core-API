@@ -12,7 +12,6 @@ const fileTypes = [
     name: 'SSN verified'
   },
   {
-// Temp comment
     type: 'Entity',
     name: 'Credit Report'
   },
@@ -192,6 +191,10 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Filed Copy - Bank'
+  },
+  {
+    type: 'Product',
+    name: 'Appraisal'
   },
   {
     type: 'Product',

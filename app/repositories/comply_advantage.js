@@ -19,10 +19,12 @@ class ComplyAdvantage {
     }
   }
 
+// Temp comment
   async post(path, data) {
     try {
       return await axios.post(`${this.baseAPIURL}${path}`, data, this.config)
     } catch (err) {
+      logger.error(_.get(err, 'response.data', err), '[post] got this response from ComplyAdvantage()')
       if (_.has(err, 'response.message')) {
         throw new Error(err.response.message)
       }

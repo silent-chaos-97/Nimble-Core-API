@@ -40,7 +40,6 @@ describe('GET /users', () => {
     })
 
     it('should return valid user object', done => {
-      request(app.server)
         .get('/v1/users?limit=1')
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
@@ -54,3 +53,4 @@ describe('GET /users', () => {
           const user = res.body[0]
 
           props.forEach(prop => {
+            expect(user).to.have.own.property(prop)

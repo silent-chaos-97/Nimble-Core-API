@@ -34,7 +34,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       return request(app.server)
         .post('/v1/webhooks/shufti/identity-verification')
         .send({ reference: 'asd', event: 'verification.accepted' })
-        .expect('Content-Type', /json/)
         .expect(400)
     })
 
@@ -42,3 +41,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     it('should return 401 if reference was not found', async () => {
       return request(app.server)
         .post('/v1/webhooks/shufti/identity-verification')
+        .send({ reference: uuid.v4(), event: 'verification.accepted' })

@@ -1,9 +1,9 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const BaseModel = require('./model')
-// Temp comment
 const schemas = require('./schemas/_schemas').getSync
 
+// Temp comment
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 class SettingsModel extends BaseModel {
@@ -18,3 +18,4 @@ class SettingsModel extends BaseModel {
 
   static props() {
     return ['institutionId', 'branchId', 'key', 'collection', 'element', 'schema', 'data']
+  }

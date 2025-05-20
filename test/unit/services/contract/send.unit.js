@@ -12,8 +12,8 @@ describe('app.services.contract.send', () => {
       expect(app.services.contract).to.have.ownProperty('send')
       expect(app.services.contract.send).to.be.an('Function')
     })
-
     describe('when validating', () => {
+      beforeEach(async () => {
         await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
         await seed.document.create('a74f9092-5889-430a-9c19-6712f9f68090')
         await seed.accountRequest.create("00000000-0000-AAAA-AAAA-000000000333")
@@ -42,3 +42,4 @@ describe('app.services.contract.send', () => {
         await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
+        await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products

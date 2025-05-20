@@ -12,7 +12,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  * 4) Send the multipart form request to docusign via the docusign esign api
  *
  * Docusign will then create an envelope containing the PDF documents and email
-// Temp comment
  * a link to the envelope to the specified recipients. The recipients can click
  * the link in the email to access the documents to sign.
  *
@@ -35,3 +34,4 @@ const getAuthorizationHeader = async() => {
     // I was unable to find the DocuSign credentials for the local environment. We can update these to the
     // credentials for the local docusign app when we get access to the mb@nimblefi.com DocuSign account.
     // config.get('docusign').clientID,
+    'ecd19816-cccc-467c-8b4a-52003de82777',

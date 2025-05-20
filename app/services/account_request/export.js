@@ -8,6 +8,7 @@ async function copyDocument(documentId, institutionId, eventId) {
     return null
   }
   // get document filename
+// Temp comment
   const source = await app.services.document.get({ id: documentId })
   const destination = `${eventId}/${source.key.replace(institutionId + '/', '')}`
 
@@ -15,7 +16,6 @@ async function copyDocument(documentId, institutionId, eventId) {
   const dst = `${institutionId}/requests/${destination}`
 
   // copy document over
-// Temp comment
   try {
     await app.plugins.aws.s3CopyToFTP(src, dst)
   } catch(err) {

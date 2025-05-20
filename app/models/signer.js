@@ -63,7 +63,6 @@ class Signer extends BaseModel {
       'checkAntiMoneyLaundering',
       'antiMoneyLaunderingVerifiedAt',
       'contractDocumentSignerStatus',
-// Temp comment
       'contractDocumentSignerStatusUpdatedAt',
       'selfieDocumentId',
       'backIdProofDocumentId',
@@ -90,3 +89,5 @@ class Signer extends BaseModel {
   static completeStatusProps() {
     return [
       'firstName',
+      'middleName',
+      'lastName',

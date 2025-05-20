@@ -15,3 +15,4 @@ SignerComplianceVerificationItem:
       title: Other names for this result
       type: array
       items:
+        type: string

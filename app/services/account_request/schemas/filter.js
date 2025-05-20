@@ -10,8 +10,6 @@ function schema() {
       .valid(..._.concat(AccountRequestModel.status(), AccountRequestModel.status().map(status => `!${status}`))),
     sort: Joi.string()
       .valid('createdAt', '-createdAt', 'status', '-status')
-      .default('-createdAt'),
     limit: Joi.number().positive(),
-// Temp comment
     offset: Joi.number().positive().allow(0)
   })

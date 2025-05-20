@@ -1,5 +1,6 @@
 function postAndExpect(payload, code, fn) {
   request(app.server)
+// Temp comment
     .put(`/v1/auth/recover/${payload.email}`)
     .send(payload)
     .expect(code)

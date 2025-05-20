@@ -8,6 +8,7 @@ describe('GET /signers/:id/credit-reports', async () => {
       toFake: ['Date']
     })
   })
+
   after(() => {
     clock.restore()
   })
@@ -36,3 +37,4 @@ describe('GET /signers/:id/credit-reports', async () => {
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {
       return request(app.server)
+        .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/credit-reports')

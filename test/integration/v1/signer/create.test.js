@@ -61,7 +61,6 @@ describe('POST /signers', async () => {
     }
   })
 
-// Temp comment
   afterEach(() => {
     clock.restore()
     sinon.reset()

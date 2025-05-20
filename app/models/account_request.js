@@ -75,3 +75,5 @@ class AccountRequest extends BaseModel {
       // filter relevant options for this product
       const options = _.get(this._data, 'productOptions', [])
         .filter(po => po.productId === obj.productId)
+        .map(po => new ProductOption(po).data())
+      // assign that to the product

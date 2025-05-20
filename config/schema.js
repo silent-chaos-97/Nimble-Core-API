@@ -190,3 +190,8 @@ const schema = {
     s3_upload_bucket: {
       doc: 's3 bucket name where uploads are to be stored',
       format: String,
+      default: 'local-uploads',
+      env: 'AWS_S3_UPLOADS_BUCKET'
+    },
+    s3_asset_bucket: {
+      doc: 's3 bucket name where assets are to be stored',

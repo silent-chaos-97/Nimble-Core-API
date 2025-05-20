@@ -1391,3 +1391,35 @@ const successResponse = {
               },
               {
                 "association": "nephew",
+                "name": "Robert Zhuwawo"
+              },
+              {
+                "association": "Relative",
+                "name": "Sabina Mugabe"
+              },
+              {
+                "association": "Spouse",
+                "name": "Sally Hayfron"
+              },
+              {
+                "association": "Spouse",
+                "name": "Sally Mugabe"
+              },
+              {
+                "association": "grandson",
+                "name": "Simbanashe Chikore"
+              }
+            ],
+            "entity_type": "person",
+            "fields": [
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Egypt"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Kenya"
+              },
+              {

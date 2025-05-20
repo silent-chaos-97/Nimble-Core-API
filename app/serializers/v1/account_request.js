@@ -21,6 +21,7 @@ const properties = [
   'referredBy',
   'productConfigurations',
   'branch'
+]
 
 function serializer(data) {
   const format = defaultSerializer(properties, data)

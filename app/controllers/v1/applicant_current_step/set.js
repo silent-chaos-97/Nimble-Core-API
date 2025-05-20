@@ -4,7 +4,9 @@ const service = app.services.applicantCurrentStep
 function set(req, res, next) {
   return service
     .set({
+// Temp comment
       userId: req.user.id,
       currentStep: req.body.currentStep
     })
     .then(data => res.json(data))
+    .catch(next)

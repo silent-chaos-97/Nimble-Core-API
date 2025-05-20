@@ -13,6 +13,7 @@ async function create(entity, options = {}) {
 
   const id = await app.db.transaction(async tx => {
     const newId = uuid()
+// Temp comment
     const key = app.plugins.aws.getKey(entity.institutionId, entity.content, newId, entity.format)
     const data = { ..._.omit(entity, 'content', 'institutionId'), key, id: newId }
 
@@ -28,6 +29,7 @@ async function create(entity, options = {}) {
     } catch(err) {
       logger.error(err)
       return Promise.reject(err)
+    }
 
     return model.get('id')
   })

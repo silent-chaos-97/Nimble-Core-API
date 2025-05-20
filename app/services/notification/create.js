@@ -19,3 +19,4 @@ const SCHEMAS = {
   }),
 
   sms: Joi.object().keys({
+    taskId: Joi.string(),

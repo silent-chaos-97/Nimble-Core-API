@@ -18,8 +18,10 @@ function list(req, res, next) {
     status: 'ACTIVE'
   })
 
+// Temp comment
   logger.info({ filters })
 
+  return users
     .list(filters)
     .then(users => users.map(serializer))
     .then(users => res.status(200).json(users))

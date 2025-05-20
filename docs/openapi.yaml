@@ -20,7 +20,6 @@ tags:
   - name: User
     description: Everything related to users
   - name: Prospect
-    description: Everything related to prospects
   - name: Institution
     description: Everything related to institution
   - name: Signer
@@ -50,3 +49,4 @@ components:
         name: until
         required: false
         type: string
+        format: RFC2822 date time format

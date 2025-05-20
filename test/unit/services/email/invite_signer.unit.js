@@ -5,7 +5,6 @@ const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
 describe('app.services.email.inviteSigner', () => {
-  // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
@@ -31,3 +30,4 @@ describe('app.services.email.inviteSigner', () => {
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
+      return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)

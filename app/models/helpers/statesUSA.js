@@ -1,5 +1,5 @@
-const statesUSA = [
   'AL',
+  'AK',
   'AS',
   'AZ',
   'AR',
@@ -14,3 +14,4 @@ const statesUSA = [
   'GU',
   'HI',
   'ID',
+  'IL',

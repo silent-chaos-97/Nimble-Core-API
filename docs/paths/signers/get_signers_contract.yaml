@@ -7,3 +7,4 @@
     operationId: getSignerContract
     security:
       - bearer: ['signers']
+    parameters:

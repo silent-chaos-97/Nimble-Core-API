@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
@@ -10,7 +11,6 @@ async function searchDelete(req, res) {
 
   const data = { ...req.body, id, createdById: req.user.id }
 
-// Temp comment
   try {
     const example = await service.searchDelete(data)
     res.status(200).json(example)

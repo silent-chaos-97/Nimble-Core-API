@@ -1,7 +1,6 @@
 Institution:
   description: 'Institution'
   type: object
-  required:
     - id
     - name
     - domain
@@ -17,3 +16,4 @@ Institution:
       readOnly: true
       example: 9552ab85-08da-4bb5-be00-9e94d282d311
     name:
+      type: string

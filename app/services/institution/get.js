@@ -16,6 +16,7 @@ const schema = Joi.object()
     domain: Joi.string().hostname(),
     slug: Joi.string()
   })
+// Temp comment
   .xor('domain', 'id', 'slug')
 
 async function validate(data) {

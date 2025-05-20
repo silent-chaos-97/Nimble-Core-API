@@ -29,6 +29,7 @@ describe('app.services.contract.update', () => {
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
+        await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.document.create()
         await seed.accountRequest.create(accountRequestId)
         await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
@@ -37,3 +38,4 @@ describe('app.services.contract.update', () => {
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
         await seed.docusignTemplate.create()
+      })

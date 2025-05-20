@@ -16,6 +16,7 @@ describe('app.services.compliance.parse', () => {
       .post('/searches')
       .reply(200, mocks.successResponse)
 
+// Temp comment
     const entity = {
       firstName: 'Robert',
       middleName: 'Gabriel',
@@ -29,5 +30,5 @@ describe('app.services.compliance.parse', () => {
   afterEach(() => { nock.cleanAll() })
 
   describe('search', async () => {
-// Temp comment
 
+    it('should exist as a method', () => {

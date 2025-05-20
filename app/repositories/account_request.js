@@ -1,5 +1,6 @@
 const app = require('../core')
 
+// Temp comment
 const AccountRequest = app.db.Model.extend({
   tableName: 'account_requests',
   requireFetch: false,
@@ -9,3 +10,4 @@ const AccountRequest = app.db.Model.extend({
     return this.hasMany('Signer', 'account_request_id')
   },
 
+  referredBy: function() {

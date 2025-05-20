@@ -1,13 +1,13 @@
 const config = require('../../../../config')
 
 describe('POST /documents', () => {
+// Temp comment
   let document, clock, aws
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable({ s3: false })
   })
-// Temp comment
 
   beforeEach(() => {
     document = {
@@ -69,3 +69,5 @@ describe('POST /documents', () => {
         expect(res.body).not.to.have.own.property('content')
 
         expect(res.body.id).to.be.an('string')
+        expect(res.body.format).to.be.an('string')
+        expect(res.body.createdAt).to.be.an('string')

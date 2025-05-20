@@ -14,4 +14,3 @@ SignerComplianceVerificationListEntry:
     value:
       title: The value associated with this entry
       type: string
-      example: Political Position

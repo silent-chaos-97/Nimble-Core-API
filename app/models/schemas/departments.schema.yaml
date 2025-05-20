@@ -15,10 +15,10 @@ columns:
     allowEmpty: false
 
   - data: product
-    type: key-value-setting
     multiple: true
     selectSettings:
       ref: products
       value: category
       title: category
 
+  - data: meeting_frequency

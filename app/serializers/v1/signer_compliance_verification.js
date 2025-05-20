@@ -5,12 +5,12 @@ const downloadableSerializer = require('./downloadable')
 
 const properties = [
   'id',
+  'status',
   'searchObject',
   'reference',
   'signerId',
   'createdAt',
   'updatedAt'
-]
 
 function serializer(data) {
   let format = defaultSerializer(properties, data)

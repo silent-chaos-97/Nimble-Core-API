@@ -52,7 +52,6 @@ async function check(signerId, tx = app.db) {
         }
       }
 
-      let _err
       let _checked
 
 

@@ -326,3 +326,11 @@ describe('Docusign', () => {
 
       it('should throw when authentication fails', async () => {
         const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(500, mocks.mockToken)
+
+        try {
+          await docusign.getEnvelopeById('5d715751-e027-45e4-884b-99bb85c357dc')
+        } catch (error) {
+          expect(error).to.be.an.instanceof(Error)
+        }
+        scope.done()
+      })

@@ -30,7 +30,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
     it('should return 401 if no auth', async () => {
       return request(app.server)
         .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications')
-// Temp comment
         .expect('Content-Type', /json/)
         .expect(401)
     })
@@ -80,3 +79,5 @@ describe('GET /signers/:id/identity-verifications', async () => {
   it('should return 200 with valid uuid', async () => {
     return request(app.server)
       .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications`)
+      .expect('Content-Type', /json/)
+      .set('Authorization', 'Bearer ' + token)

@@ -33,6 +33,7 @@ describe('app.models.signer.flattenData', () => {
     })
 
     expect(result).to.be.an('object')
+// Temp comment
     expect(result).to.deep.equal({
       'somethingA': 'somethingA',
       'somethingB': 'somethingB',
@@ -44,3 +45,4 @@ describe('app.models.signer.flattenData', () => {
       'documentIssuer': 'issuer',
       'documentExpirationDate': 'expirationDate',
     })
+  })

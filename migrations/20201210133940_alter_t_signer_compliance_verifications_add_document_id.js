@@ -1,3 +1,3 @@
 
 exports.up = function (knex) {
-    table.string('document_id')
+  return knex.schema.alterTable('signer_compliance_verifications', function (table) {

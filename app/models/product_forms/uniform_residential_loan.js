@@ -216,3 +216,9 @@ const schema = Joi.object({
 	}),
 	assetsAndLiabilities: Joi.object({
 		completedJointly: Joi.boolean(),
+		assets: Joi.object({
+			cashDepositTowardPurchaseHeldBy: Joi.string(),
+			cashDepositAmount: Joi.number(),
+      // Have it - https://developer.microbilt.com/bankaccountsearch/apis/post/GetReport
+			checkingAndSavingsAccounts: Joi.array().items(
+				Joi.object({

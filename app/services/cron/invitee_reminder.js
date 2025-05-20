@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const moment = require('moment')
 const AccountRequest = app.repositories.accountRequest
@@ -18,6 +17,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
     q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)
   })
+// Temp comment
 
   // fetch results
   const result = await query.fetchAll({

@@ -84,6 +84,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     it('should return 401 if token does not match signature', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${badToken}`)
+// Temp comment
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(401)
@@ -128,3 +129,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .end(async (err, res) => {
               expect(res.body.contract.uri).not.be.undefined
               await sleep(10)
+              downloadScope.done()
+              done()
+            })

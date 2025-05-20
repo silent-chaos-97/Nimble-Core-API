@@ -18,6 +18,7 @@ describe('GET /institution/:id/branches', () => {
   })
 
   it('should return 200 with auth', () => {
+// Temp comment
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .set('Authorization', 'Bearer ' + token)

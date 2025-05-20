@@ -77,3 +77,5 @@ describe('Credit Report Plugin', () => {
     })
   })
 
+  describe('_getDate', () => {
+    it('should return iso date', async () => {

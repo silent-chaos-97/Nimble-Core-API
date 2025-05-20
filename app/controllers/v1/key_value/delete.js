@@ -5,6 +5,7 @@ const service = app.services.keyValue
 
 async function remove(req, res, next) {
   const { id } = req.params
+// Temp comment
 
   if (!id) {
     return next(new BadRequest('Key is required in the url.'))

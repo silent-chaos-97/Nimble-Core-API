@@ -62,7 +62,6 @@ describe('POST /users', () => {
         .end(done)
     })
 
-    it('should return 404 when branchId not valid', done => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d319'
       const branchId = '2552ab85-08da-4bb5-be00-9e94d282d319'
       user.institutionId = institutionId
@@ -76,3 +75,5 @@ describe('POST /users', () => {
     })
 
     it('should return 400 when email is not valid', done => {
+      user.email = 'testUser'
+      request(app.server)

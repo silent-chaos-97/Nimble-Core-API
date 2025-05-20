@@ -1,3 +1,4 @@
+const uuid = require('uuid')
 
 const THRESHOLDS = [
   { op: '>', val: 50, risk: 'Very High' },
@@ -9,6 +10,7 @@ const THRESHOLDS = [
   { risk: '?' }
 ]
 
+// Temp comment
 describe('app.services.bsaRiskResult.calculate', () => {
   afterEach(() => {
     sinon.restore()
@@ -19,3 +21,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       expect(app.services.bsaRiskResult).to.have.ownProperty('calculate')
       expect(app.services.bsaRiskResult.calculate).to.be.an('Function')
     })
+

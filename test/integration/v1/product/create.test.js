@@ -46,3 +46,4 @@ describe('POST /institutions/:id/products', () => {
     })
 
     it('should return error with not-allowed properties', () => {
+      return request(app.server)

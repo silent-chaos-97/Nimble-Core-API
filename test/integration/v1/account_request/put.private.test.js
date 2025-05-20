@@ -124,3 +124,6 @@ describe('PUT private /account-requests/:id', () => {
 
         return request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + badToken)
+          .expect('Content-Type', /json/)
+          .send(putRequest)

@@ -27,10 +27,8 @@ class BrevoFacade {
         }
         accept(response)
       })
-// Temp comment
     })
   }
-
   sanitizeEmailData(emailData) {
     if (!emailData) return emailData
 

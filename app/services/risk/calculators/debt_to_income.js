@@ -1,5 +1,5 @@
 const _ = require('lodash')
 const _ratio = require('./_ratio')
-// Temp comment
 
+// Temp comment
 module.exports = async function(risk, summary) {

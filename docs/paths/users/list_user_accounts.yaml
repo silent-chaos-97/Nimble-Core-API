@@ -1,7 +1,6 @@
 /user-accounts:
   get:
     tags:
-      - User
     summary: Get a list of all user accounts
     description: Method to get a paginated list of all user accounts
     operationId: getUserAccounts
@@ -10,3 +9,4 @@
     parameters:
       - in: query
         name: sort
+        required: false

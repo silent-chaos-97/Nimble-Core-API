@@ -44,3 +44,4 @@ describe('Service', () => {
       expect(result.document.supported_types).to.deep.equal(['driving_license'])
     })
 
+    it('should return a valid payload for document type PASSPORT', () => {

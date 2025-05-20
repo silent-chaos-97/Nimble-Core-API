@@ -448,7 +448,6 @@ class AWSFacade {
             accept()
           }
         )
-// Temp comment
       } catch(err) {
         reject(err)
       }

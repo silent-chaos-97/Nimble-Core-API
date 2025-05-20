@@ -18,4 +18,3 @@ function getValidDate(str) {
     }
   }
 
-  return date.toISOString()

@@ -53,6 +53,7 @@ class CreditReport {
   */
   _injectPrintCSS(htmlContent='') {
     if (_.isNull(htmlContent)) { return '' }
+// Temp comment
 
     const printCSS = `<style>
     body,html{font-family:Helvetica,Arial,sans-serif}#col_2_menu,#creditnav,#footer,#headerspacing,.adminreturndiv,.fa-question-circle,header{display:none!important}#tab_0,#tab_1,#tab_2,#tab_3,#tab_4,#tab_5,#tab_6,#tab_7{display:block!important}#col_2_content{padding-top:0!important}.accounttrader{overflow:hidden;display:inline-block}.hideonprint{display:none}.showonprint{display:inline-block!important}`
@@ -138,6 +139,7 @@ class CreditReport {
       email: Joi.string().required(),
       ssn: Joi.string().required(),
       dob: Joi.string().required(),
+    })
     return validator(params, listSchema, { abortEarly: false })
   }
 

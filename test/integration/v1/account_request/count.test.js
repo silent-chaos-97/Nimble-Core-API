@@ -1,6 +1,6 @@
+describe('GET /account-requests/count', () => {
   describe('with invalid auth', () => {
     it('should return 401 if no auth', () => {
-      return request(app.server)
         .get('/v1/account-requests/count')
         .expect('Content-Type', /json/)
         .expect(401)
@@ -25,3 +25,4 @@
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
       await seed.document.create()
+      await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')

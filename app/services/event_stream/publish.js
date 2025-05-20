@@ -26,8 +26,8 @@ async function publish(stream, event = { id: null, event: null, type: null, body
   event = { ...event, event: event.event || event.type, body: event.body || event.payload }
 
   const Message = _.pick(event, ['id', 'event', 'body'])
-
   const PublishReq = { Message, TopicArn: event.topicArn || event.TopicArn || app.config.get('sns')[stream] }
+
   return client.publish({ ...PublishReq, Message: JSON.stringify(Message) }).promise()
     .then(response => logger.debug({ message: '[publish] EventPublished', MessageId: response.MessageId, PubReq: PublishReq }))
     .catch(err => logger.error(err, { message: '[publish] FailedToPublishEvent', PubReq: PublishReq }))

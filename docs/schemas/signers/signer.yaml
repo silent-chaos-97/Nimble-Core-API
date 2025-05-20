@@ -4,7 +4,6 @@ Signer:
     - id
   properties:
     id:
-      type: string
       format: uuidv4
       title: signer uuid
       readOnly: true
@@ -60,3 +59,5 @@ Signer:
       maxLength: 250
       example: 123 Main Streey Apt. 1
     city:
+      type: string
+      title: City

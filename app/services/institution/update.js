@@ -11,6 +11,7 @@ const whitelist = InstitutionModel.props()
 
 async function update(institution) {
   let patch = _.pick(institution, whitelist)
+  validator(patch, InstitutionModel.patchSchema(), { abortEarly: false })
 
   await app.db.transaction(async tx => {
     let existing = await app.services.institution.get({ id: patch.id }, tx) // throws when non-existent
@@ -20,7 +21,6 @@ async function update(institution) {
 
     // remove `nil` values from `publicMetadata`
     if (patch.publicMetadata) patch.publicMetadata = _.omitBy(patch.publicMetadata, _.isNil)
-
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),
       count: _.size(patch.disclosures.data),

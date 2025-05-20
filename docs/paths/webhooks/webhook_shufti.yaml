@@ -8,3 +8,4 @@
     requestBody:
       description: identity verifications object
       required: true
+      content:

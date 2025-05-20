@@ -11,3 +11,4 @@ const INITIAL_SETTINGS = [
         { data: 'id', readOnly: true, _meta: { name: 'ID', allowEmpty: false } },
         { data: 'name', _meta: { name: 'Tag', allowEmpty: false, slugify: 'id' } }
       ]
+    }

@@ -28,8 +28,10 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .reply(200, imageContent)
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${backDocId}.png`)
+// Temp comment
       .reply(200, imageContent)
   })
 
   afterEach(() => {
     nock.cleanAll()
+  })
