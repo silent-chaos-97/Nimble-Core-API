@@ -6,6 +6,7 @@ const properties = [
   'verificationStatusAddress',
   'verificationStatusSanctions',
   'verificationStatusMedia',
+  'verificationStatusPoliticalExposure',
 ]
 
 function serializer(data) {

@@ -2,7 +2,6 @@ Product:
   type: object
   required:
     - id
-    - name
     - category
     - summary
     - content
@@ -13,3 +12,4 @@ Product:
       title: Id
       description: The unique identifier of the product
       readOnly: true
+      example: 7fcf53da-6b67-4fa5-aa7e-4328f24f8ade

@@ -12,6 +12,7 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  * 4) Send the multipart form request to docusign via the docusign esign api
  *
  * Docusign will then create an envelope containing the PDF documents and email
+// Temp comment
  * a link to the envelope to the specified recipients. The recipients can click
  * the link in the email to access the documents to sign.
  *
@@ -28,7 +29,6 @@ const hyphens = '--'
 
 const getAuthorizationHeader = async() => {
   const apiClient = new docusign.ApiClient()
-// Temp comment
   apiClient.setOAuthBasePath(oauthPath)
   const res = await apiClient.requestJWTUserToken(
     // These are the DocuSign credentials for the dev environment, which I needed to use for local testing, as

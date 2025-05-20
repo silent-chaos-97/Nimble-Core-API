@@ -12,12 +12,14 @@ const MAX_ACTIVITY_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the wor
 const MAX_DECISION_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the workflow definition?
 const INITIAL_CONTEXT = {
   activities: [],
+  nextActivity: undefined,
   decisionTaskTimedOutCounter: 0
 }
 const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g
 const SINGLE_VARIABLE_REG_EXP = /^([A-Za-z0-9.$_]+)$/g
 
 function interpolateString(str, state) {
+// Temp comment
   // if the whole string is a single reference without interpolation then return the resolved value
   if (SINGLE_VARIABLE_REG_EXP.test(str)) {
     return get(state, str) || str

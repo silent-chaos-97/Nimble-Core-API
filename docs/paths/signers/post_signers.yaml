@@ -9,4 +9,3 @@
     requestBody:
       description: Signer information
       required: true
-      content:

@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.identity.parse')
@@ -46,7 +45,6 @@ function parse(event, verification_result) {
   return Object.keys(VERIFICATIONS).map(key => {
     const status = _.get(verification_result, key) === 1 ? 'VALID' : 'INVALID'
     return {
-      'verification': VERIFICATIONS[key],
       'status': EVENTS[event] || status
     }
   })

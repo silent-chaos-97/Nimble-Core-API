@@ -12,7 +12,6 @@ async function count(filters = {}, tx = app.db) {
       else q.where('status', filters.status)
     }
 
-    if (filters.institutionId) {
       q.where('institution_id', filters.institutionId)
     }
   }).count({ transacting: tx })

@@ -20,3 +20,16 @@ async function validate(params) {
   let data = _.pick(params, whitelist)
   validator(data, AccountRequestModel.schema('update'), { abortEarly: false })
   return data
+}
+
+function getSignerFullName(signer) {
+  if (signer == null) {
+    return ''
+  }
+
+  const names = []
+  if (signer.firstName) names.push(signer.firstName)
+  if (signer.middleName) names.push(signer.middleName)
+  if (signer.lastName) names.push(signer.lastName)
+
+  return names.join(' ').trim()

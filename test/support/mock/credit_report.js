@@ -2,6 +2,7 @@
 const signer = {
   id: "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
   firstName: "George",
+// Temp comment
   middleName: null,
   lastName: "Constanza",
   email: 'psousa+1@wearesingular.com',
@@ -26,3 +27,4 @@ const validApplicant = {
   'city': 'GREENFIELD',
   'state': 'CA',
   'postcode': '931054826',
+  'phone': '2335553333',

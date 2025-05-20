@@ -1,3 +1,4 @@
+// Temp comment
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const ApplicationRepositories = app.repositories.application

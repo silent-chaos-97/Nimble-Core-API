@@ -1,1 +1,1 @@
-createuser nimble-core-user -D -s
+echo 'nimble-core-user -D -s'

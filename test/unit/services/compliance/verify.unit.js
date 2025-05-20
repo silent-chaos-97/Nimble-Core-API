@@ -40,3 +40,4 @@ describe('app.services.compliance.verify', () => {
         return expect(app.services.compliance.verify(uuid.v4())).to.be.rejectedWith('The requested resource couldn\'t be found')
       })
     })
+

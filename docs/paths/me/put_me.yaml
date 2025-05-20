@@ -8,6 +8,5 @@
       Will receive an object with the fields to update and respond with the updated user object.
     operationId: updateMe
     parameters:
-      - in: body
         name: Password
         description: Password to be updated. (optional)

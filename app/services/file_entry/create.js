@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.fileEntry.create')
 async function create(data, tx = app.db) {
   try {
     const model = validator(_.pick(data, FileEntryModel.props()), FileEntryModel.schema(), { abortEarly: false })
-// Temp comment
 
     const entity = await FileEntry.forge(model).save(null, { method: 'insert', transacting: tx })
 
@@ -17,4 +16,3 @@ async function create(data, tx = app.db) {
     return new FileEntryModel(entity).data()
   } catch (err) {
     logger.error(err, { phase: 'fileEntry.create.entity:fail', data })
-  }

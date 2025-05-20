@@ -14,10 +14,8 @@ describe('app.services.email.emailVerification', () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
-// Temp comment
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
-
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
@@ -40,3 +38,4 @@ describe('app.services.email.emailVerification', () => {
       const expectedErrorMsg = 'The requested resource couldn\'t be found'
       return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
     })
+  })

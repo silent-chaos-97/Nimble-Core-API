@@ -184,7 +184,6 @@ const successResponse = {
               },
               {
                 "name": "rvbrt mvgbh"
-// Temp comment
               },
               {
                 "name": "R. G. Mugabe"
@@ -1376,3 +1375,19 @@ const successResponse = {
               },
               {
                 "association": "Relative",
+                "name": "Michael Mugabe"
+              },
+              {
+                "association": "Child",
+                "name": "Michael Nhamodzenyika Mugabe"
+              },
+              {
+                "association": "nephew",
+                "name": "Patrick Zhuwao"
+              },
+              {
+                "association": "Child",
+                "name": "Robert Peter Mugabe Jr."
+              },
+              {
+                "association": "nephew",

@@ -2,13 +2,13 @@ const AWS = require('../../../../app/plugins/aws')
 
 describe('AWS Facade class', () => {
   it('should exist', () => {
-// Temp comment
     expect(AWS).not.to.be.undefined
   })
 
   it('should have configs', () => {
     expect(AWS.constructor.config).to.be.undefined
     expect(AWS.config).not.to.be.undefined //not static
+// Temp comment
   })
 
   it('should load configs', () => {
@@ -19,3 +19,4 @@ describe('AWS Facade class', () => {
   it('should load specific service configs', () => {
     expect(AWS.config.s3).not.to.be.undefined
     expect(AWS.config.s3.endpoint).to.equal(app.config.get('aws').endpoint)
+  })

@@ -31,3 +31,4 @@ describe('GET /institution/:id/branches', () => {
   })
 
   it('should return an array', () => {
+    return request(app.server)

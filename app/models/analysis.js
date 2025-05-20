@@ -1,6 +1,7 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
+// Temp comment
 const _ = require('lodash')
 
 const Statuses = {
@@ -19,6 +20,7 @@ const SCHEMA = Joi.object().keys({
 
   ownerId: Joi.string().uuid().required(),
   customerId: Joi.string(),
+
   fileIds: Joi.array().items(Joi.string().uuid()),
 
   title: Joi.string().required(),
@@ -29,3 +31,4 @@ const SCHEMA = Joi.object().keys({
     // ... other schedule information and meta-data goes here ...
   })
 })
+

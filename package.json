@@ -6,6 +6,7 @@
   "main": "index.js",
   "directories": {
     "doc": "docs"
+  },
   "scripts": {
     "start": "knex migrate:latest && node index.js | bunyan",
     "worker": "knex migrate:latest && node worker.js | bunyan",
@@ -39,3 +40,4 @@
     "docker-stop": "docker kill `docker ps -q` || true; docker rm -f `docker ps -a -q` || true; docker network prune -f || true",
     "docker-clean": "yarn docker-stop; docker rmi -f `docker images -q` || true",
     "docker-start": "docker compose -f ./docker-compose.dev.yml up --wait",
+    "dev-infra": "yarn docker-start && yarn localstack",

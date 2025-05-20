@@ -35,7 +35,6 @@ describe('POST /signers/:id/email-verifications', async () => {
       headerToken = await helpers.getAuthToken()
     })
 
-    describe('with invalid auth', () => {
       it('should return 401 if no auth', async () => {
         return request(app.server)
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications')
@@ -54,3 +53,4 @@ describe('POST /signers/:id/email-verifications', async () => {
       it('should return 404 if user is not in the same institution', async () => {
         await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000020')
+        await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')

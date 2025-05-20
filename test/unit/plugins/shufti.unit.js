@@ -1,6 +1,5 @@
 const axios = require('axios')
 const nock = require('nock')
-// Temp comment
 const mocks = require('../../support/mock/shufti')
 const shufti = require('../../../app/plugins/shufti')
 
@@ -44,3 +43,4 @@ describe('Service', () => {
       expect(result.face.allow_offline).to.equal('1')
       expect(result.document.supported_types).to.deep.equal(['driving_license'])
     })
+

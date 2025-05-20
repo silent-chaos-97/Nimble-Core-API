@@ -7,7 +7,6 @@ const newProducts = [
     content:
       `**Card features**
 
-// Temp comment
 - Add convenience, control and security to your financial life:
 - No fees for ATM cash advances
 - Zero liability for unauthorized purchases
@@ -23,3 +22,4 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 
 - View and download statements
 - Make payments
+- Add travel notes

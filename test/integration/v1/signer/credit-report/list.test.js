@@ -8,7 +8,6 @@ describe('GET /signers/:id/credit-reports', async () => {
       toFake: ['Date']
     })
   })
-
   after(() => {
     clock.restore()
   })
@@ -24,6 +23,7 @@ describe('GET /signers/:id/credit-reports', async () => {
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
     await seed.account_request_products() // insert all
+    await seed.account_request_product_options() // insert all
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
 
@@ -35,3 +35,4 @@ describe('GET /signers/:id/credit-reports', async () => {
 
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {
+      return request(app.server)

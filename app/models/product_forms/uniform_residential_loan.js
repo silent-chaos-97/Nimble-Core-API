@@ -76,6 +76,7 @@ const schema = Joi.object({
 	titleHeldInName: Joi.string(),
   // User
 	titleHeldInManner: Joi.string(),
+  // User
 	estateHeldIn: Joi.string().valid('Fee Simple', 'Leasehold'),
   // User
 	sourceOfPayments: Joi.string(),
@@ -213,3 +214,5 @@ const schema = Joi.object({
 			total: Joi.number()
 		})
 	}),
+	assetsAndLiabilities: Joi.object({
+		completedJointly: Joi.boolean(),

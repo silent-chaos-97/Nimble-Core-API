@@ -12,7 +12,6 @@ const logger = app.logger.getLogger('app.controllers.v1.institition_branch.list'
 function list(req, res, next) {
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
-
   const hasRole = role => User.hasRole(me, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
@@ -26,7 +25,6 @@ function list(req, res, next) {
   logger.info({ filters })
 
   return branches.list(filters)
-// Temp comment
     .then(branches => branches.map(serializer))
     .then(branches => res.status(200).json(branches))
     .catch(next)

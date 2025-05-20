@@ -1,2 +1,2 @@
 class PreconditionFailed extends Error {
-    super(
+  constructor(message) {

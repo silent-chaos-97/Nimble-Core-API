@@ -20,6 +20,7 @@ async function searchSave(search, tx = app.db) {
   try {
     if (create) search.id = _.snakeCase(search.name)
     else search = _.merge(Search.forge({ id }).fetch({ transacting: tx }), search)
+
     search = _.omitBy(search, _.isNil)
 
     const model = SearchModel.prePersist(validator(_.pick(search, SearchModel.props(schema)), SearchModel.schema(schema), { abortEarly: false }))

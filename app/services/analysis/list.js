@@ -1,9 +1,9 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis
 const User = app.models.user
+// Temp comment
 
 async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})

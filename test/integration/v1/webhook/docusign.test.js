@@ -127,3 +127,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .expect(200)
             .end(async (err, res) => {
               expect(res.body.contract.uri).not.be.undefined
+              await sleep(10)

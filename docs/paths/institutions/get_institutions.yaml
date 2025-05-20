@@ -3,3 +3,4 @@
     tags:
       - Institution
     summary: Get an institution
+    description: Method to get an Institution

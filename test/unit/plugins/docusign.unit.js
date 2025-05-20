@@ -135,6 +135,7 @@ describe('Docusign', () => {
           expect(error).to.be.an.instanceof(Error)
         }
       })
+
       it('should return error with more than 4 signers', async () => {
         const args ={
           accountRequestId: 'string',
@@ -321,3 +322,7 @@ describe('Docusign', () => {
           expect(error).to.be.an.instanceof(Error)
         }
         scope.done()
+      })
+
+      it('should throw when authentication fails', async () => {
+        const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(500, mocks.mockToken)

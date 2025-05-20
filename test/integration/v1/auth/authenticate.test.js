@@ -13,6 +13,7 @@ describe('Auth', () => {
 
       it('should not allow invalid tokens requests', done => {
         request(app.server)
+          .get('/v1/me')
           .set('Authorization', 'Bearer ' + 'INVALID TOKEN')
           .expect('Content-Type', /json/)
           .expect(401)
@@ -60,3 +61,4 @@ describe('Auth', () => {
             .expect(200)
             .end(done)
         })
+

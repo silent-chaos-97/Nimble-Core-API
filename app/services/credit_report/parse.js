@@ -3,6 +3,7 @@ const xmlParse = require('xml-parser-xo')
 
 const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
+const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.parse')
 
 /**
@@ -17,7 +18,6 @@ async function parse(consumerId) {
   if (_.isEmpty(result) || result.length == 0) {
     logger.error(`[parse] response from Credit Bureau is empty for consumer id [${consumerId}]`)
     throw new InternalServerError('Response from Credit Bureau is empty')
-  }
 
   const url = result[0].report_url
   const updatedAt = creditReportAPI._getDate(result[0].time_updated)

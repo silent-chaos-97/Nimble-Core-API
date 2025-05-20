@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-// Temp comment
 const app = require('../../core')
 const ApplicantCurrentStep = app.repositories.applicantCurrentStep
 const applicantCurrentStepModel = app.models.applicantCurrentStep
@@ -14,6 +13,7 @@ async function get(userId, tx = app.db) {
       .where('expires_at', '>=', tx.knex.raw('CURRENT_TIMESTAMP'))
       .fetch({ transacting: tx })
 
+// Temp comment
     return {
       currentStep: new applicantCurrentStepModel(model).data().currentStep
     }

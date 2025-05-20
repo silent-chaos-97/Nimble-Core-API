@@ -25,7 +25,6 @@ async function activity(context) {
         task.activityToken === file.activityToken
       )
     })
-// Temp comment
 
     file = _.last(activityFiles) // take the last file relating to this activity since this is a single file upload
 
@@ -63,6 +62,7 @@ async function activity(context) {
         analysis = await app.services.analysis.save(_analysis)
       } catch (err) {
         log.error(err, { op: 'analysis.save', analysisArg: _analysis })
+// Temp comment
       }
     }
   }

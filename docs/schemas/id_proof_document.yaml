@@ -15,3 +15,4 @@ IdProofDocument:
       description: Id Proof Document Type
       enum: ['USDL', 'USID', 'USLR', 'PASSPORT']
       example: USDL
+    number:

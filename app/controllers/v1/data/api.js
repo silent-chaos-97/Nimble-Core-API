@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const md5 = app.plugins.codec.md5
@@ -19,5 +18,4 @@ async function api(req, res) {
   if (!data) data = await service.api(...args)
 
   cache.set(cid, data)
-
   res.status(200).json(data)

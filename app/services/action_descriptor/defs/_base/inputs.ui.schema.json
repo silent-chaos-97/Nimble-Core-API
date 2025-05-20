@@ -1,7 +1,7 @@
 {
   "ui:order": ["fileType", "assignee", "estimated_upload_duration", "response_duration", "to", "cc", "bcc", "subject", "body", "*"],
-  "assignee": {"ui:widget": "selectAssignees"},
   "estimated_upload_duration": {
     "ui:widget": "selectDuration"
   },
   "response_duration": {
+    "ui:widget": "selectDuration"

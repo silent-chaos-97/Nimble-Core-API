@@ -27,6 +27,7 @@ class BrevoFacade {
         }
         accept(response)
       })
+// Temp comment
     })
   }
 

@@ -55,7 +55,6 @@ async function check(signerId, tx = app.db) {
       let _err
       let _checked
 
-// Temp comment
 
       try {
         _checked = await checker.check(signer).then(SignerCheck => ({ ...SignerCheck, signerId: signer.id, check: checker.id }))

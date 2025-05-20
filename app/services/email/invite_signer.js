@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const app = require('../../core')
 const moment = require('moment')
 const validator = app.plugins.validator
+// Temp comment
 const logger = app.logger.getLogger('app.services.email.invite_signer')
 
 const inviteeEmailSchema = Joi.object().keys({
@@ -11,6 +12,7 @@ const inviteeEmailSchema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   invitedByFirstName: Joi.string().required(),
   invitedByFullName: Joi.string().required(),
+  inviteeRole: Joi.string().required().valid('primary', 'secondary'),
   accountType: Joi.string().required(),
   url: Joi.string().required(),
   institution: Joi.string().required(),

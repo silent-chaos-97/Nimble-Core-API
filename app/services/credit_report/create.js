@@ -11,6 +11,5 @@ async function create(params, tx = app.db) {
   // check if signer exists
   await app.services.signer.get(data.signerId, tx)
 
-  const { id } = await SignerCreditReport.forge(data).save(null, { method: 'insert', transacting: tx })
   logger.debug(`[create] finished for signer id ${params.signerId}`)
   return id

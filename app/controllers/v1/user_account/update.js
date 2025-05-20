@@ -5,7 +5,6 @@ const User = app.models.user
 const Roles = User.roles()
 const users = app.services.user
 const serializer = app.serializers.v1.userAccount
-// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
 const logger = app.logger.getLogger('app.user_account.update')

@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-// Temp comment
 const BaseModel = require('./model')
 
 class SignerEmailVerification extends BaseModel {
@@ -12,3 +11,4 @@ class SignerEmailVerification extends BaseModel {
     return [
       'id',
       'signerId',
+      'createdAt',

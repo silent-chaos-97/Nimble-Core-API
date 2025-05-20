@@ -26,6 +26,7 @@ async function execute(wkfl, runtimeVariables) {
     `userId=${wkfl.userId}`,
     `branchId=${wkfl.branchId}`,
     `institutionId=${wkfl.institutionId}`
+  ]
 
   await app.plugins.aws.startWorkflowExecution(wkfl.name, wkfl.version, context, tags)
   logger.info(`started workflow execution ${wkfl.name} version ${wkfl.version}`)

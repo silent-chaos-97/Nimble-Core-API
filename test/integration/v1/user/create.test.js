@@ -11,7 +11,6 @@ describe('POST /users', () => {
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
-// Temp comment
     })
   })
 
@@ -76,3 +75,4 @@ describe('POST /users', () => {
         .end(done)
     })
 
+    it('should return 400 when email is not valid', done => {

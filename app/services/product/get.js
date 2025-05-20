@@ -1,4 +1,3 @@
-const app = require('../../core')
 const Product = app.repositories.product
 const ProductModel = app.models.product
 const { validator } = app.plugins
@@ -10,6 +9,7 @@ async function get(options, tx = app.db) {
   const conditions = validator(options, schema(), { abortEarly: false })
 
   const model = await Product.forge(conditions).fetch({
+    withRelated: [{
       options: (qb) => {
         qb.orderBy('category', 'ASC')
         qb.orderBy('key', 'ASC')

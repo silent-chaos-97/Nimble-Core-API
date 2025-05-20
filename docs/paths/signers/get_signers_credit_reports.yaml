@@ -1,4 +1,5 @@
 /signers/{id}/credit-reports:
+  get:
     tags:
       - Signer
     summary: Get Signer credit reports by Id
@@ -10,4 +11,4 @@
         required: true
         schema:
           type: string
-          format: uuidv4
+      - name: limit

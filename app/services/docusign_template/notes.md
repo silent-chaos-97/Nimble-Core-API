@@ -47,3 +47,4 @@ How can we do this?
 > To directly grant consent to an internal application:
 
 - From the organization dashboard, click the Applications tile.
+- Click Authorize Application and choose an application from the drop-down menu. This menu lists every integration key by name.

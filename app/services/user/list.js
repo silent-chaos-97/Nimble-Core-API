@@ -5,11 +5,9 @@ const User = app.repositories.user
 const UserModel = app.models.user
 const getPagination = app.plugins.pagination
 
-// Temp comment
 const sortBy = {
   '': 'users.id',
   'first_name': 'users.first_name', // TODO: consider indexing
-  'last_name': 'users.last_name' // TODO: consider indexing
 }
 
 function getSqlSort(sort) {

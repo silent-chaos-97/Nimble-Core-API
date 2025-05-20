@@ -5,7 +5,6 @@ _.mixin(require('lodash-inflection'))
 
 const Bookshelf = require('../../app/plugins/bookshelf')
 const knex = Bookshelf.knex
-
 const seedsDirectory = `${__dirname}/data`
 
 function insert(table, data, pk = 'id') {

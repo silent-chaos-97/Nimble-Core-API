@@ -24,6 +24,7 @@ const SCHEMA = Joi.object().keys({
   updatedById: Joi.string().required(),
   branchId: Joi.string().uuid(),
   institutionId: Joi.string().uuid().required(),
+  assignee: Joi.array().items(Joi.object()).required(),
   assignerId: Joi.string().required(),
   workflowId: Joi.string(),
   activityId: Joi.string(),

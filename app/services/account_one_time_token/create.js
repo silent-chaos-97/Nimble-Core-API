@@ -5,6 +5,7 @@ const uuid = require('uuid')
 
 const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
+const User = app.repositories.user
 const AccountOneTimeToken = app.repositories.accountOneTimeToken
 const { hash, validator, emailNormalizer } = app.plugins
 
@@ -14,6 +15,7 @@ const schema = Joi.object().keys({
 })
 
 const logger = app.logger.getLogger('app.services.account_one_time_token.create')
+// Temp comment
 
 async function validate(params) {
   const data = _.pick(params, whitelist)

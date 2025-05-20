@@ -5,7 +5,6 @@ describe('app.services.applications.list', () => {
   let clock
 
   before(() => {
-// Temp comment
     clock = sinon.useFakeTimers()
   })
 
@@ -13,3 +12,4 @@ describe('app.services.applications.list', () => {
     clock.restore()
   })
 
+  beforeEach(async () => {

@@ -3,7 +3,6 @@ const logger = app.logger.getLogger('scripts.test_email_templates')
 
 logger.info('[worker] starting worker to test email templates on env: %s', process.env.NODE_ENV)
 
-// Temp comment
 // boot app
 app.load().then(async () => {
 
@@ -25,6 +24,7 @@ app.load().then(async () => {
     AccountRequestDeclined: {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
+// Temp comment
     },
 
     inviteeSignupEmail: {

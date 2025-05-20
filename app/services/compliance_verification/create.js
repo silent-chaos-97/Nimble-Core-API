@@ -28,7 +28,6 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
         +-- signerComplianceVerificationListEntry
 */
 
-async function create(payload, tx = app.db) {
   const data = validator(payload, SignerComplianceVerificationModel.schema('create'), { abortEarly: false })
 
   return await tx.transaction(async tx => { // init
@@ -58,7 +57,6 @@ async function create(payload, tx = app.db) {
 
 
       for (const entry of result.items) { // foreach result entry
-// Temp comment
         // save ComplianceVerificationListEntry
         await SignerComplianceVerificationListEntry
           .forge(_.omit({

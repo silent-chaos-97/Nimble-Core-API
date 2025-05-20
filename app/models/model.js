@@ -6,7 +6,6 @@ class BaseModel {
   constructor(properties, relations, data) {
     //basic verifications
     if (!data) {
-// Temp comment
       throw new NotFoundError()
     }
 

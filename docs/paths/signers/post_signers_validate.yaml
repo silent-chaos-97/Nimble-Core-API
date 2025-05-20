@@ -14,6 +14,7 @@
           format: uuidv4
     security:
       - bearer: []
+    requestBody:
       description: Signer information
       required: true
       content:

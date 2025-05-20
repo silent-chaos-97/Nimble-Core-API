@@ -188,3 +188,5 @@ const schema = {
       env: 'AWS_S3_FTP_BUCKET'
     },
     s3_upload_bucket: {
+      doc: 's3 bucket name where uploads are to be stored',
+      format: String,

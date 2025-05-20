@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const ApplicantCurrentStep = app.repositories.applicantCurrentStep
 const applicantCurrentStepModel = app.models.applicantCurrentStep
 

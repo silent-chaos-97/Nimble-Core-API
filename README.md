@@ -3,6 +3,7 @@
 
 the api behind the nimble project.
 
+### System Requirements
 
 - nodejs = 14
 - postgres >= 11
@@ -54,3 +55,4 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 
 1. Edit the user, in the database, that you will be using for login in the `users` table
    - edit the `roles` column to look like `["employee", "developer", "institution-admin"]`
+

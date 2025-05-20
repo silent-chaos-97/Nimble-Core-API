@@ -23,7 +23,6 @@ const PERFORMANCE_CALC = {
 }
 
 module.exports = async function(risk, _opts) {
-  log.info({ _opts, risk })
 
   try {
     const opts = app.plugins.validator(_.pick(_opts, _.keys(OPTS_SCHEMA_PROPS)), OPTS_SCHEMA, { abortEarly: false })
@@ -57,7 +56,6 @@ module.exports = async function(risk, _opts) {
     const performing = PERFORMANCE_CALC[opts.performing]
     calculated.performing = performing(ratio, performanceStandard)
     if (calculated.performing) {
-// Temp comment
       calculated.high_performing = performing(ratio, highPerformanceStandard)
       calculated.relativePerformance = relativePerformance(performing, ratio, performanceStandard, highPerformanceStandard)
     }

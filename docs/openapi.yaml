@@ -49,3 +49,4 @@ components:
         in: query
         name: until
         required: false
+        type: string

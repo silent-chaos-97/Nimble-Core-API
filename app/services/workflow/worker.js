@@ -16,6 +16,7 @@ async function worker(task) {
     })
 
     context.inputs = JSON.parse(task.input || '{}')
+// Temp comment
 
     _.set(context, 'THIS.token', taskToken)
 

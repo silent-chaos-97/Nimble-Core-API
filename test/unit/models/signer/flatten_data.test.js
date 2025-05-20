@@ -16,6 +16,7 @@ describe('app.models.signer.flattenData', () => {
     expect(result).to.deep.equal({})
   })
 
+
   it('should flatten data', () => {
     const result = target({
       somethingA: 'somethingA',
@@ -42,3 +43,4 @@ describe('app.models.signer.flattenData', () => {
       'documentIssuedDate': 'issuedDate',
       'documentIssuer': 'issuer',
       'documentExpirationDate': 'expirationDate',
+    })

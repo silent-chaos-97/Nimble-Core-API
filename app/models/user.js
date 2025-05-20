@@ -49,3 +49,4 @@ class UserModel extends BaseModel {
       || this.isBranchAdmin(user)
       || this.isInstitutionAdmin(user)
       || this.isSuperAdmin(user)
+  }

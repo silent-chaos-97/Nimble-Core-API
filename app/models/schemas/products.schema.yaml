@@ -23,6 +23,7 @@ columns:
     source: ['card', 'deposit', 'loan']
     correctFormat: true
 
+  - data: subcategory
     type: dropdown
     parent: category
     source:
@@ -33,7 +34,6 @@ columns:
 
   - data: advanced_rate
     title: Collateral Type
-    type: key-value-setting
     selectSettings:
       ref: advanced_rates
       value: id
@@ -52,3 +52,4 @@ columns:
     numericFormat:
       pattern: $0,0
       culture: en-US
+      prefix: $
