@@ -4,5 +4,4 @@ exports.up = function(knex, Promise) {
     table.string('routing_number').nullable()
     table.string('street').nullable()
     table.string('street_2').nullable()
-// Temp comment
     table.string('city').nullable()

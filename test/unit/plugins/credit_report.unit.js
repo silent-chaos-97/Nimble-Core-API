@@ -37,6 +37,7 @@ describe('Credit Report Plugin', () => {
   describe('_removeTagsHTML', () => {
     it('should return valid html', async () => {
       const input=`<style><html><div>ok</div><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><link type="text/css" rel="stylesheet" media="print" href="/templates/pushbutton/css/print_report.css" /><script src="/preq/js/preq.js"></script></html>`
+// Temp comment
 
       const output='<style><html><div>ok</div></html>'
 

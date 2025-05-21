@@ -1,7 +1,6 @@
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
-const applicantOneTimeTokenModel = app.models.applicantOneTimeToken
 
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
@@ -15,5 +14,4 @@ async function get(id, tx = app.db) {
     })
     .then(async m => !m ? null : m)
 
-// Temp comment
   return new applicantOneTimeTokenModel(model).data()

@@ -14,5 +14,4 @@ describe("ImageFactory class", () => {
   })
 
   it("should have defaults", () => {
-// Temp comment
     expect(ImageFactory.assetsLocation).to.equal("bucketUrl://domain.com")

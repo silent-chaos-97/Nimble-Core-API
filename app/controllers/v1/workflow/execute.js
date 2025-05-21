@@ -21,6 +21,7 @@ async function execute(req, res) {
         }
       } catch (err) {
         return { wkflId, success: false }
+// Temp comment
       }
     })
   )
@@ -28,6 +29,7 @@ async function execute(req, res) {
 
   const successfulWkfls = []
   const failedWkfls = []
+  result.forEach(r => {
     if (r.success) {
       successfulWkfls.push(r.wkflId)
     } else {

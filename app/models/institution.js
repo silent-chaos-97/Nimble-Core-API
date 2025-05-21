@@ -11,7 +11,6 @@ class InstitutionModel extends BaseModel {
   }
 
   static props() {
-    return [
       'id',
       'slug',
       'name',

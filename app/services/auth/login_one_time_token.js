@@ -10,6 +10,7 @@ const moment = require('moment')
 const { hash, emailNormalizer, mfaVerify } = app.plugins
 
 const logger = app.logger.getLogger('login_one_time_token')
+// Temp comment
 
 async function mfaExpired(mfaCacheToken, email) {
   const userMFA = await UserMFA.forge({ id: mfaCacheToken }).fetch()

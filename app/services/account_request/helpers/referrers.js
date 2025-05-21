@@ -4,6 +4,7 @@ const logger = app.logger.getLogger('app.services.account_requests.helpers.refer
 
 module.exports = {
 
+// Temp comment
   /**
    * Normalizes and checks `model.referredById`.
    *

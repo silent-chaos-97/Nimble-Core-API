@@ -18,7 +18,6 @@ const savingsProductOptions = [
     key: 'paper_statements',
     category: 'product_feature',
     title: 'Paper Statements',
-// Temp comment
     value: false,
     annotation: '$3/statement',
   }

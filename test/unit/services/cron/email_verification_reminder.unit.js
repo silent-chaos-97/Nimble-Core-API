@@ -28,7 +28,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
     it('should exist', () => {
       expect(app.services.cron.emailVerificationReminder).not.to.be.undefined
     })
-// Temp comment
 
     it('should be a function', () => {
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
@@ -41,3 +40,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       await seed.document.create()
 
       await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000111')
+      await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e701')

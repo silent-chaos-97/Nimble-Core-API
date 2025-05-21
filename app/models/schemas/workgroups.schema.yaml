@@ -5,6 +5,6 @@ kind: custom
 order: 0
 
 columns:
+  - data: id
     readOnly: true
-    title: ID
     allowEmpty: false

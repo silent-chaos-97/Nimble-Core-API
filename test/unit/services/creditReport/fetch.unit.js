@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/credit_report')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
@@ -56,3 +57,4 @@ describe('app.services.creditReport.fetch', () => {
 
       expect(app.services.creditReport.fetch(id)).not.to.be.rejectedWith()
       expect(fakeResponseDownload).not.to.have.been.called
+      expect(fakeAwsS3uploadFn).not.to.have.been.called

@@ -52,6 +52,8 @@ async function check(signerId, tx = app.db) {
         }
       }
 
+      let _err
+// Temp comment
       let _checked
 
 

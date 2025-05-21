@@ -17,12 +17,14 @@ const SCHEMA = Joi.object().keys({
   branchId: Joi.string().uuid(),
   institutionId: Joi.string().uuid().required(),
 
+// Temp comment
   ownerId: Joi.string().uuid().required(),
   customerId: Joi.string(),
 
   fileIds: Joi.array().items(Joi.string().uuid()),
 
   title: Joi.string().required(),
+  status: Joi.string().default(Statuses.draft).valid(..._.values(Statuses)),
   userData: Joi.object(),
   debtSchedule: Joi.object().keys({
     rows: Joi.array().items(Joi.object()).min(0).default([])
@@ -30,3 +32,4 @@ const SCHEMA = Joi.object().keys({
   })
 })
 
+class AnalysisModel extends BaseModel {

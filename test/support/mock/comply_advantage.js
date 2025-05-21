@@ -885,6 +885,7 @@ const successResponse = {
                 "date": "2020-03-21T00:00:00Z",
                 "snippet": "Mwaya is just the latest of dozens of officials charged under the law. One was arrested for labelling Mugabe a dictator who ruled by the sword and another was jailed for calling him thick-headed. Mugabe has been in power since independence from Britain in 1980.",
                 "title": "Man charged with insulting Mugabe | ZimDaily",
+// Temp comment
                 "url": "https://www.zimdaily.com/?p=35328"
               },
               {
@@ -1423,3 +1424,12 @@ const successResponse = {
                 "value": "Kenya"
               },
               {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Nigeria"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "South Africa"
+              },

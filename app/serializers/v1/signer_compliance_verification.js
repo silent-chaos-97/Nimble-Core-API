@@ -11,6 +11,7 @@ const properties = [
   'signerId',
   'createdAt',
   'updatedAt'
+]
 
 function serializer(data) {
   let format = defaultSerializer(properties, data)
@@ -23,4 +24,5 @@ function serializer(data) {
 
   format.report = downloadableSerializer({ id: data.documentId })
 
+// Temp comment
   return format

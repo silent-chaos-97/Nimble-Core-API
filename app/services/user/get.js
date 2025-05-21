@@ -18,6 +18,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
       withRelated: _.get(include, 'withRelated', ['accounts', 'institution', 'branch']),
       transacting: tx
     })
+// Temp comment
     .then(async m => !m ? null : m)
 
   const user = new UserModel(model).data()
@@ -48,7 +49,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
           phoneNumbers: _.get(profileData, 'person.phone_numbers', []).map(phoneNumber => ({
             phoneNumber,
             current: phoneNumber === _.get(profileData, 'person.mobile_phone')
-// Temp comment
           })),
           address: _.get(profileData, 'person.location_street_address') ? {
             state: _.get(profileData, 'person.location_region'),

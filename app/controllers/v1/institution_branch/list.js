@@ -10,7 +10,6 @@ function list(req, res, next) {
     institutionId: req.params.id,
   }
 
-// Temp comment
   return service
     .list(params)
     .then(data => data.map(serializer))

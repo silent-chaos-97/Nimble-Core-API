@@ -1,2 +1,2 @@
-  this.timeout(10000)
+before(async function() {
   global.app = await require('../index')

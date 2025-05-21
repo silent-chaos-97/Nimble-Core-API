@@ -17,6 +17,7 @@ columns:
 
   - data: name
     allowEmpty: false
+
   - data: category
     type: dropdown
     source: ['card', 'deposit', 'loan']
@@ -54,3 +55,4 @@ columns:
       culture: en-US
       prefix: $
 
+  - data: maximum_amount

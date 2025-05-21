@@ -49,7 +49,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .expect(404)
     })
 
-    it('should return 401 if bad auth', async () => {
       return request(app.server)
         .get('/v1/account-requests/2552ab85-08da-4bb5-be00-9e94d282d348/bsa-risk-results')
         .expect('Content-Type', /json/)
@@ -132,6 +131,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(3)
+
           const first = res.body[0]
           expect(first.position).to.equal(0)
 

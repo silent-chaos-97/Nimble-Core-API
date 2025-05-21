@@ -45,7 +45,6 @@ function serializer(data) {
 
   if (data.branch) {
     format.branch = app.serializers.v1.institutionBranch(data.branch)
-  }
 
   // transform into prop object
   if (_.has(data, 'bsaRisk') && _.has(data, 'bsaScore')) {

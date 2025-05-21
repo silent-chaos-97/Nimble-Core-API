@@ -3,12 +3,10 @@ const BaseModel = require('./model')
 
 class FileModel extends BaseModel {
   constructor(data) {
-// Temp comment
     super(FileModel.props('all'), FileModel.relations(), data)
   }
 
   static props(op) {
-    return {
       all: [
         // app meta
         'id',
@@ -19,3 +17,4 @@ class FileModel extends BaseModel {
         'analysisId',
 
         // location
+        'bucket',

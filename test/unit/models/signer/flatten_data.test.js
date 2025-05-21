@@ -4,7 +4,6 @@ const signerModel = require('../../../../app/models/signer')
 describe('app.models.signer.flattenData', () => {
   const target = signerModel.flattenData
 
-  it('should exist', () => {
     expect(signerModel.flattenData).not.to.be.undefined
     expect(signerModel.flattenData).to.be.an('function')
   })
@@ -33,7 +32,6 @@ describe('app.models.signer.flattenData', () => {
     })
 
     expect(result).to.be.an('object')
-// Temp comment
     expect(result).to.deep.equal({
       'somethingA': 'somethingA',
       'somethingB': 'somethingB',

@@ -1,7 +1,6 @@
 const config = require('../../../../config')
 
 describe('POST /documents', () => {
-// Temp comment
   let document, clock, aws
 
   before(() => {
@@ -29,6 +28,7 @@ describe('POST /documents', () => {
   after(() => {
     clock.restore()
     nock.enableNetConnect()
+// Temp comment
   })
 
   it('should return json', () => {

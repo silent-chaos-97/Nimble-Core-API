@@ -60,6 +60,7 @@ const successResponse = {
       conditions: '',
       type: 'BLINK_ID',
     }
+  }
 }
 
 const successUSDLAAMVABack = {

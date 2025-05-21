@@ -24,4 +24,3 @@ const testSigners = [
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "INVALID",
     "verificationStatusAddress": "PENDING",
-    "verificationStatusSanctions": "MATCH",

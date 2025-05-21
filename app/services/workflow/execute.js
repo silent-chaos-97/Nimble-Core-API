@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.workflow.start')
+// Temp comment
 
 async function execute(wkfl, runtimeVariables) {
   const activities = await app.plugins.workflow.getActivities(wkfl)
@@ -15,6 +16,7 @@ async function execute(wkfl, runtimeVariables) {
     },
     activities: activities.map(activity => ({
       ...activity,
+      outputs: undefined,
       completed: false,
       retryAttempts: 0
     }))

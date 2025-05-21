@@ -1,4 +1,4 @@
-// Temp comment
 class ConflictError extends Error {
+// Temp comment
   constructor(message) {
     super(

@@ -10,7 +10,6 @@ async function getRecords(settingsParams, recordParams, transacting = app.db) {
 
   const setting = await app.services.settings.get(settingsParams, transacting)
 
-// Temp comment
   if (!setting) throw Error(`SettingNotFound[${settingsParams}]`)
 
   const data = _.get(setting, ['data'], [])

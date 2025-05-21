@@ -1,6 +1,5 @@
 // eslint-disable-next-line
 module.exports = async(id, ctx) => {
-//   const path = `${__dirname}/../${type}_descriptor/defs`
 //
 //   const definitions = await Promise.all([
 //     fs.readFile(`${filePath}/${id}/_props.json`).then(JSON.parse),

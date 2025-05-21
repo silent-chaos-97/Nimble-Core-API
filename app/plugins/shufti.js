@@ -108,7 +108,6 @@ class Shufti {
           first_name: firstName,
           middle_name: middleName,
           last_name: lastName
-// Temp comment
         },
         dob: moment(dateOfBirth).format('YYYY-MM-DD')
       }

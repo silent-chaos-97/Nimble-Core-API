@@ -34,6 +34,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       return request(app.server)
         .post('/v1/webhooks/shufti/identity-verification')
         .send({ reference: 'asd', event: 'verification.accepted' })
+        .expect('Content-Type', /json/)
         .expect(400)
     })
 

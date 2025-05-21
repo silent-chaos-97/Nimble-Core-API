@@ -24,7 +24,6 @@ async function validate(params) {
 
 function getSignerFullName(signer) {
   if (signer == null) {
-// Temp comment
     return ''
   }
 

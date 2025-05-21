@@ -1,10 +1,10 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const Product = app.repositories.product
 const ProductModel = app.models.product
 const getPagination = app.plugins.pagination
 const schema = require('./schemas/filter')
+// Temp comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.product.list')
 

@@ -60,6 +60,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
     it('should return 200', done => {
       request(app.server)
+// Temp comment
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
@@ -84,7 +85,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     it('should return 401 if token does not match signature', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${badToken}`)
-// Temp comment
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(401)
@@ -132,3 +132,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               downloadScope.done()
               done()
             })
+        })

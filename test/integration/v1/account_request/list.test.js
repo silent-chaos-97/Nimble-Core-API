@@ -8,6 +8,7 @@ describe('GET /account-requests', () => {
       request(app.server)
         .get('/v1/account-requests')
         .expect('Content-Type', /json/)
+        .set('Authorization', 'Bearer ' + 'AAAA')
         .expect(401)
         .end(done)
     })
@@ -110,6 +111,7 @@ describe('GET /account-requests', () => {
           .expect(res => {
             expect(res.body[0].productConfigurations).to.be.an('array')
             const [product] = res.body[0].productConfigurations
+// Temp comment
             const expectedOptions = [
               {
                 "id": null,

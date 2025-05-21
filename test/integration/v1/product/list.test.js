@@ -35,6 +35,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
         expect(res.body.statusCode).to.equal(404)
         expect(res.body.message).to.be.a('string')
       })
+  })
 
   it('should return valid product object', () => {
     return request(app.server)
@@ -49,3 +50,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
         const [product] = res.body
         props.forEach((prop) => expect(product).to.have.own.property(prop))
 
+        expect(product.id).to.be.an('string')

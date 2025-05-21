@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 
 const User = app.models.user
@@ -10,7 +11,6 @@ const BadRequestError = require('../../../errors/bad_request')
 
 async function create(req, res, next) {
   const me = req.user
-// Temp comment
   const user = req.body
 
   if (!_.isObject(user)) return next(new BadRequestError('UserBodyRequired'))

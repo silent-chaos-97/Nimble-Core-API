@@ -25,6 +25,7 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
        \
         +-- signerComplianceVerificationListEntry
         +-- signerComplianceVerificationListEntry
+// Temp comment
         +-- signerComplianceVerificationListEntry
 */
 
@@ -53,6 +54,7 @@ async function create(payload, tx = app.db) {
         }, 'items'))
         .save(null, {
           method: 'insert',
+          transacting: tx
         })
 
 

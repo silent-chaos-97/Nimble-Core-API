@@ -37,3 +37,4 @@ describe('app.plugins.xml', () => {
     })
 
     it('should parse tag with value', () => {
+      const result = target.tag('tag', {}, 'value')

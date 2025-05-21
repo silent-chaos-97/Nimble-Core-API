@@ -34,7 +34,6 @@ function acl(resource, param) {
     const targetId = _.get(req.params, param, '') // the ID we are targeting
     const checkBy = _.get(RESOURCES, resource, null) // the parameters
     if (!checkBy) { // abort
-      return next(new NotFoundError())
     }
 
     if (req.checkedScopeToken) {

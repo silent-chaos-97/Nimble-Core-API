@@ -66,7 +66,6 @@ async function save(analysis, opts, tx = app.db) {
       }, {})
 
       if (!_.isEmpty(analyses)) {
-        log.info({ op: 'attachAnalyses', analyses })
 
         const saveOpts = { method: 'update', patch: true }
 

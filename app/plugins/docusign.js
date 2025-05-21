@@ -645,7 +645,6 @@ class Docusign {
    *
    * @param {Object} templateTabs - tab onject from docusign
    * @param {key: value} signerMap - Key, value pairs with text mapped information
-   * @param {integer} position - position for the suffix
    */
   _populateTextTabs(templateTabs, signerMap, position = 1) {
     logger.debug(`[_populateTextTabs] started for signer at position ${position}`)

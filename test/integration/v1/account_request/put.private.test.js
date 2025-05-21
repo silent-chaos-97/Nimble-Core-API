@@ -127,3 +127,4 @@ describe('PUT private /account-requests/:id', () => {
           .set('Authorization', 'Bearer ' + badToken)
           .expect('Content-Type', /json/)
           .send(putRequest)
+          .expect(404)

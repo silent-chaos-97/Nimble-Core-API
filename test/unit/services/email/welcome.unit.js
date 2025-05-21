@@ -24,5 +24,7 @@ describe('app.services.email.welcome', () => {
   })
 
   after(() => {
+    clock.restore()
     sinon.restore()
   })
+

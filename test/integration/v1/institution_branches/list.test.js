@@ -17,8 +17,8 @@ describe('GET /institution/:id/branches', () => {
       .expect(200)
   })
 
-  it('should return 200 with auth', () => {
 // Temp comment
+  it('should return 200 with auth', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .set('Authorization', 'Bearer ' + token)
@@ -33,3 +33,4 @@ describe('GET /institution/:id/branches', () => {
 
   it('should return an array', () => {
     return request(app.server)
+      .get(`/v1/institutions/${id}/branches`)

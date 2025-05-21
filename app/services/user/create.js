@@ -8,5 +8,6 @@ const validator = app.plugins.validator
 const whitelist = UserModel.props()
 
 async function validate(user) {
+  let data = _.pick(user, whitelist)
   validator(data, UserModel.schema(), { abortEarly: false })
   return data

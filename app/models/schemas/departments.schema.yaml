@@ -15,6 +15,7 @@ columns:
     allowEmpty: false
 
   - data: product
+    type: key-value-setting
     multiple: true
     selectSettings:
       ref: products

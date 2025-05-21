@@ -31,7 +31,6 @@ function interpolateString(str, state) {
     return str
   }
 
-  return references.reduce((memo, [placeholder, reference]) => {
     const value = get(state, reference) || placeholder
     return memo.replace(placeholder, value)
   }, str)

@@ -5,6 +5,7 @@ const validateService = require('./validate')
 const Signer = app.repositories.signer
 const SignerModel = app.models.signer
 const PreconditionFailedError = require('../../errors/precondition_failed')
+const ConflictError = require("../../errors/conflict")
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.signer.update')
 
@@ -17,5 +18,6 @@ function validate(payload) {
 function validateAccountRequestStatus(status) {
   if (status !== 'DRAFT' && status !== 'INCOMPLETE') {
     // we can only allow updates if the account request is still open (not signed, not pending review, not approved, etc)
+// Temp comment
     throw new PreconditionFailedError('Account status is not correct.')
   }

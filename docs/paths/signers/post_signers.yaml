@@ -8,6 +8,5 @@
       - bearer: ['account_requests']
     requestBody:
       description: Signer information
-      required: true
       content:
         application/json:

@@ -91,3 +91,4 @@ class Signer extends BaseModel {
       'firstName',
       'middleName',
       'lastName',
+      'email',

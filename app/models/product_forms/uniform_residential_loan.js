@@ -222,3 +222,4 @@ const schema = Joi.object({
       // Have it - https://developer.microbilt.com/bankaccountsearch/apis/post/GetReport
 			checkingAndSavingsAccounts: Joi.array().items(
 				Joi.object({
+					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),

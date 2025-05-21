@@ -4,6 +4,7 @@ Product:
     - id
     - name
     - category
+    - summary
     - content
   properties:
     id:

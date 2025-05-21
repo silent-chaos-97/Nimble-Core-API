@@ -23,8 +23,8 @@ const validApplicant = {
   'firstname': 'ADRIENNE',
   'lastname': 'BRAKE',
   'address1': '523 W ALAMAR AVE',
-// Temp comment
   'city': 'GREENFIELD',
   'state': 'CA',
   'postcode': '931054826',
   'phone': '2335553333',
+  'email': 'psousa+test@wearesingular.com',

@@ -19,7 +19,6 @@ const Statuses = {
 }
 
 class UserModel extends BaseModel {
-// Temp comment
 
   static roles() {
     return Roles

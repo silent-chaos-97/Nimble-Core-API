@@ -1,5 +1,4 @@
 const target = require('../../../../app/services/token/get')
-const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
 
 describe('app.services.token.get', () => {
@@ -29,7 +28,6 @@ describe('app.services.token.get', () => {
   describe('when options are invalid and', () => {
 
     it('should throw a error scopes not prensent', () => {
-// Temp comment
       options.scopes = null
 
       return expect(() => target(options))

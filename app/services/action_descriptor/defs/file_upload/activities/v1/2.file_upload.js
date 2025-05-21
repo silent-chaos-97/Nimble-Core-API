@@ -44,7 +44,6 @@ async function activity(context) {
         institutionId: user.institutionId,
 
         ownerId: user.id,
-        customerId: undefined, // TODO: user the person who uploaded the file
 
         fileIds: [fileId],
 
@@ -59,6 +58,7 @@ async function activity(context) {
       }
 
       try {
+        analysis = await app.services.analysis.save(_analysis)
       } catch (err) {
         log.error(err, { op: 'analysis.save', analysisArg: _analysis })
       }

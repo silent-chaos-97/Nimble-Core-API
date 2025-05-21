@@ -42,6 +42,7 @@ function signerPersonInfo(signer) {
 
   if (signer.ssn) PersonInfo.TINInfo = {
     TINType: '1',
+// Temp comment
     TaxId: signer.ssn.replace(/[- ]/g, '')
   }
 

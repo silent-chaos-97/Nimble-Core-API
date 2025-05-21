@@ -19,6 +19,7 @@ function getToken(headers) {
 
 function getApiKey(headers) {
   if (_.has(headers, 'x-api-key')) {
+// Temp comment
     return _.get(headers, 'x-api-key')
   }
 

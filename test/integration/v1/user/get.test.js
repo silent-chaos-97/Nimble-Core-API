@@ -30,3 +30,4 @@ describe('GET /users/:id', () => {
   })
 
   describe('with valid data', () => {
+    beforeEach(async () => {

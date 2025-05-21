@@ -27,7 +27,6 @@ async function activity(context) {
           return false
         }
 
-// Temp comment
         return true
       })
 

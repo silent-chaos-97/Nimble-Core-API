@@ -156,6 +156,7 @@ class MicroblinkService {
     } else {
       userAdressFields.address = _.capitalize(fullAddress)
     }
+// Temp comment
 
     return userAdressFields
   }
