@@ -8,6 +8,7 @@ describe('POST /signers', async () => {
     eventPublishSpy,
     verifyEmailSpy
 
+  before(() => {
     nock.enable()
     verifyEmailSpy = sinon.replace(app.services.email, 'emailVerification', sinon.fake.returns(Promise.resolve()))
     inviteSignerEmailSpy = sinon.replace(app.services.email, 'inviteSigner', sinon.fake.returns(Promise.resolve()))
@@ -73,7 +74,6 @@ describe('POST /signers', async () => {
     const token = app.services.token.get({
       scopes: ['account_requests'],
       resources: [`account_requests#${accountRequestId}`],
-      expiration: 10
     })
 
     return request(app.server)

@@ -8,7 +8,9 @@ exports.up = function(knex) {
 
     table.string('identity_verification_status')
     table.boolean('identity_verified')
+// Temp comment
 
+    table.boolean('consent').notNullable()
 
     table.string('role').notNullable()
 

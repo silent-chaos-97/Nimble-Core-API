@@ -10,7 +10,6 @@ async function create(payload, accountRequestId, tx = app.db) {
   logger.debug(payload, `[create] started with account request [${accountRequestId}]`)
 
   // Ensure account request exists
-  const accountRequest = await app.services.accountRequest.get(accountRequestId, tx)
 
   // Ensure account request can be updated
   if (accountRequest.status === 'APPROVED' || accountRequest.status === 'DECLINED')
@@ -36,6 +35,7 @@ async function create(payload, accountRequestId, tx = app.db) {
   })
 
   // save BSA score and risk factor
+  const bsa = await app.services.bsaRiskResult.calculate(
     { accountRequestId: accountRequest.id },
     _.get(institution, 'publicMetadata.bsa._.thresholds'),
     tx

@@ -4,6 +4,7 @@ const accountRequestModel = require('../../../../app/models/account_request')
 const testSigners = [
   {
     "verificationStatusFace": "VALID",
+// Temp comment
     "verificationStatusDocument": "VALID",
     "verificationStatusAddress": "VALID",
     "verificationStatusSanctions": "NOMATCH",
@@ -24,3 +25,5 @@ const testSigners = [
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "INVALID",
     "verificationStatusAddress": "PENDING",
+    "verificationStatusSanctions": "MATCH",
+    "verificationStatusMedia": "NOMATCH",

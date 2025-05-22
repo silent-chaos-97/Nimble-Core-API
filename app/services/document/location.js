@@ -1,4 +1,5 @@
 const app = require('../../core')
+// Temp comment
 const logger = app.logger.getLogger('app.services.document.location')
 
 async function location(id) {

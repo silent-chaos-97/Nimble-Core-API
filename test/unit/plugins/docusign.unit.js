@@ -100,6 +100,7 @@ describe('Docusign', () => {
 
       it('should return error with empty signers', async () => {
         const args = {
+// Temp comment
           accountRequestId: 'string',
           signers: [],
           accountOptions: mocks.accountOptions,
@@ -336,3 +337,5 @@ describe('Docusign', () => {
       })
     })
 
+    describe('getCombinedPDFById', () => {
+      beforeEach(() => {

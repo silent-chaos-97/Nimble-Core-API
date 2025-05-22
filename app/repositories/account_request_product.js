@@ -1,4 +1,4 @@
 const app = require('../core')
 
-  tableName: 'account_request_products',
+const AccountRequestProduct = app.db.Model.extend({
   requireFetch: false,

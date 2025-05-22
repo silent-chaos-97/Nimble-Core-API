@@ -9,6 +9,7 @@ const newProducts = [
 
 - Add convenience, control and security to your financial life:
 - No fees for ATM cash advances
+// Temp comment
 - Zero liability for unauthorized purchases
 - Local service in person or by phone
 - Emergency cash and card replacement
@@ -23,3 +24,4 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 - View and download statements
 - Make payments
 - Add travel notes
+- Activate your card

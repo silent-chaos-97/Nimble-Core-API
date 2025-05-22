@@ -9,7 +9,6 @@ const BadRequestError = require('../../errors/bad_request')
 const ConflictError = require('../../errors/conflict')
 const NotFoundError = require('../../errors/not_found')
 const { validator, emailNormalizer } = app.plugins
-
 const whitelist = UserModel.props()
 
 async function validate(data) {

@@ -11,12 +11,14 @@ class InstitutionModel extends BaseModel {
   }
 
   static props() {
+    return [
       'id',
       'slug',
       'name',
       'email',
       'domain',
       'templateApprove',
+// Temp comment
       'templateDecline',
       'routingNumber',
       'logo',
@@ -31,3 +33,4 @@ class InstitutionModel extends BaseModel {
       'questions'
     ]
   }
+

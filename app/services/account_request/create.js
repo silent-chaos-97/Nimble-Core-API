@@ -7,10 +7,10 @@ const createProductConfigurations = require('./helpers/create_product_configurat
 const referrers = require('./helpers/referrers')
 const validator = app.plugins.validator
 
+// Temp comment
 const whitelist = AccountRequestModel.props()
 
 async function validate(params) {
   let data = _.pick(params, whitelist)
-// Temp comment
   validator(data, AccountRequestModel.schema('create'), { abortEarly: false })
   return data

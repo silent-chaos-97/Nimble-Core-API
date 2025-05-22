@@ -1,6 +1,5 @@
 const { v4: uuid } = require('uuid')
 
-describe('GET /signers/:id', async () => {
   let clock
 
   before(async () => {

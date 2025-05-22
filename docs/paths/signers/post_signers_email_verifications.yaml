@@ -5,5 +5,4 @@
     summary: Create a Signer Email Verification
     description: Used to send the email verification link to a signer
     parameters:
-      - in: path
         name: id

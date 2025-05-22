@@ -2,10 +2,10 @@ Document:
   type: object
   required:
     - id
-    - content
     - format
     - createdAt
   properties:
     id:
+      type: string
       format: uuidv4
       title: Document unique id

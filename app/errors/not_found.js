@@ -1,1 +1,1 @@
-  constructor(message) {
+class NotFoundError extends Error {

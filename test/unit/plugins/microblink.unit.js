@@ -153,3 +153,4 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('documentNumber', '')
       expect(result).to.have.deep.property('documentIssuedDate', null)
     })
+

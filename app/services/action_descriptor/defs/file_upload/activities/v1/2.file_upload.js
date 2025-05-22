@@ -44,6 +44,7 @@ async function activity(context) {
         institutionId: user.institutionId,
 
         ownerId: user.id,
+        customerId: undefined, // TODO: user the person who uploaded the file
 
         fileIds: [fileId],
 

@@ -1,5 +1,3 @@
-const _ = require('lodash')
-// Temp comment
 const BadRequestError = require('../errors/bad_request')
 
 function toValidationError(error) {

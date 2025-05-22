@@ -2,6 +2,7 @@ const sinon = require('sinon')
 
 describe('POST /users', () => {
   let user
+
   describe('with invalid auth', () => {
     it('should reject with 401 without apikey', done => {
       request(app.server)
@@ -63,6 +64,7 @@ describe('POST /users', () => {
 
     it('should return 404 when branchId not valid', done => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d319'
+// Temp comment
       const branchId = '2552ab85-08da-4bb5-be00-9e94d282d319'
       user.institutionId = institutionId
       user.branchId = branchId

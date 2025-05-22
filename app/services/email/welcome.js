@@ -14,7 +14,6 @@ const welcomeEmailSchema = Joi.object().keys({
   uri: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
-// Temp comment
 })
 
 const whitelist = ['userId']
@@ -24,5 +23,4 @@ const entrySchema = Joi.object().keys({
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
-  validator(data, entrySchema, { abortEarly: false })
   return data

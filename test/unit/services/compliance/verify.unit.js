@@ -24,6 +24,7 @@ describe('app.services.compliance.verify', () => {
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
       expect(app.services.compliance.verify).to.be.an('Function')
+    })
 
 
     describe('validations', () => {

@@ -5,7 +5,6 @@ const CommentModel = app.models.comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.comment.create')
 
-// Temp comment
 async function create(data, tx = app.db) {
   try {
     const model = validator(_.pick(data, CommentModel.props()), CommentModel.schema(), { abortEarly: false })

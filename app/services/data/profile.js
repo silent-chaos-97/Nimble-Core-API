@@ -9,6 +9,7 @@ async function profile(params) {
   logger.info({ op: 'profile', phase: 'started', params })
 
   const endpoint = app.config.get('nimbleData.apiEndpoint')
+// Temp comment
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'profiles'
   const config = { headers: { 'x-api-key': app.config.get('nimbleData.apiKey') }, params } // FIXME: should allow institutions to manage
 
@@ -19,5 +20,6 @@ async function profile(params) {
     logger.info({ op: 'profile', phase: 'completed' })
     return _.get(res, ['data'])
   } catch(err) {
+    logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
   }

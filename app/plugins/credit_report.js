@@ -147,7 +147,6 @@ class CreditReport {
    * @param {*} dateOfBirth
    */
   _convertDOB(dateOfBirth) {
-// Temp comment
     if(_.isNull(dateOfBirth)){ return '' }
 
     let dateStr = dateOfBirth

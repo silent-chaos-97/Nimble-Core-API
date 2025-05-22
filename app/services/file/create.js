@@ -6,6 +6,7 @@ const validator = app.plugins.validator
 const BadRequestError = require('../../errors/bad_request')
 const logger = app.logger.getLogger('app.services.file.create')
 
+/**
  * data: {
  *   originalname: string
  *   mimetype: string

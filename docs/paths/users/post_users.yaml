@@ -1,6 +1,6 @@
 /users:
   post:
-      - User
+    tags:
     summary: Create a new user
     description: Create a new user
     operationId: userRegister

@@ -24,7 +24,6 @@ const publicMetadata = {
     default: null,
     subtype: 'text',
     required: true,
-    dependsOn: {
       milesAway: 'yes'
     },
     maxLength: 255

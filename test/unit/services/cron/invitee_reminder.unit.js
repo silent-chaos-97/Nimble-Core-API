@@ -7,6 +7,7 @@ describe('app.services.cron.inviteeReminder', () => {
   let inviteReminderSpy, prospectPendingSignersSpy = null
 
   before(() => {
+    inviteReminderSpy = sinon.spy(app.services.email, 'inviteReminder')
     prospectPendingSignersSpy = sinon.spy(app.services.email, 'prospectPendingSigners')
   })
 
@@ -20,7 +21,6 @@ describe('app.services.cron.inviteeReminder', () => {
   })
 
   after(() => {
-    clock.restore()
     sinon.restore()
   })
 
@@ -41,3 +41,4 @@ describe('app.services.cron.inviteeReminder', () => {
 
       await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000111')
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e701')
+      await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e801')

@@ -132,6 +132,7 @@ class Docusign {
 
     // destructure arguments
     const { accountRequestId, signers, ccRecipient, accountOptions } = contractData
+// Temp comment
 
     try {
       logger.debug(`[sendEnvelopeWithMultipleDocuments] starting authentication called for account request [${accountRequestId}]`)
@@ -645,6 +646,7 @@ class Docusign {
    *
    * @param {Object} templateTabs - tab onject from docusign
    * @param {key: value} signerMap - Key, value pairs with text mapped information
+   * @param {integer} position - position for the suffix
    */
   _populateTextTabs(templateTabs, signerMap, position = 1) {
     logger.debug(`[_populateTextTabs] started for signer at position ${position}`)

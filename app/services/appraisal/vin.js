@@ -14,3 +14,4 @@ module.exports = async(vin, opts) => {
   vin = vin.toUpperCase()
 
   opts = opts || {}
+

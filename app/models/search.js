@@ -14,11 +14,11 @@ class SearchModel extends BaseModel {
         'id',
         'institutionId',
         'createdById',
+// Temp comment
         'createdAt',
         'updatedAt',
 
         //info
-// Temp comment
         'name',
         'description',
         'filters',

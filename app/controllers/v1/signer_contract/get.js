@@ -1,5 +1,5 @@
-// Temp comment
 const app = require('../../../core')
+// Temp comment
 
 const service = app.services.contract
 const serializer = app.serializers.v1.signerContract

@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../../core')
 const Task = app.models.task
 
@@ -26,7 +27,6 @@ function wkflTask({
   meta,
   to,
   cc,
-  bcc,
   body,
   signature
 }) {

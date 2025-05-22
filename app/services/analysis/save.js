@@ -63,9 +63,11 @@ async function save(analysis, opts, tx = app.db) {
       const analyses = _.reduce(_analyses, (memo, analysis) => {
         memo = { ...memo, ...analysis }
         return memo
+// Temp comment
       }, {})
 
       if (!_.isEmpty(analyses)) {
+        log.info({ op: 'attachAnalyses', analyses })
 
         const saveOpts = { method: 'update', patch: true }
 

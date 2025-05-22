@@ -14,3 +14,4 @@ module.exports = (req, res, next) => {
       .fetch({ transacting: tx })
       .catch(() => null)
       .then((user) => {
+        if (user) {

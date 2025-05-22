@@ -22,10 +22,10 @@ describe('app.services.creditReport.export', () => {
     afterEach(() => sinon.restore())
 
     it('should exist', () => {
-// Temp comment
       expect(app.services.creditReport.export).not.to.be.undefined
     })
 
     it('should create a document with a valid PDF', async () => {
       const url = 'http://wearesingular.com/404.html'
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
+

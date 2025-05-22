@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
-
 const Statuses = {
   draft: 'draft',
   published: 'published',
@@ -17,7 +16,6 @@ const SCHEMA = Joi.object().keys({
   branchId: Joi.string().uuid(),
   institutionId: Joi.string().uuid().required(),
 
-// Temp comment
   ownerId: Joi.string().uuid().required(),
   customerId: Joi.string(),
 

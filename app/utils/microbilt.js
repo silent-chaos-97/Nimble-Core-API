@@ -42,7 +42,6 @@ function signerPersonInfo(signer) {
 
   if (signer.ssn) PersonInfo.TINInfo = {
     TINType: '1',
-// Temp comment
     TaxId: signer.ssn.replace(/[- ]/g, '')
   }
 
@@ -50,6 +49,7 @@ function signerPersonInfo(signer) {
     PersonInfo.DriversLicense = {
       LicenseNum: signer.documentNumber,
       StateProv: signer.documentIssuer,
+// Temp comment
       Country: 'USA'
     }
 

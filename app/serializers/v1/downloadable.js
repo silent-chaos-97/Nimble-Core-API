@@ -9,7 +9,6 @@ function serializer(data) {
       scopes: ['documents']
     }
     const token = app.services.token.get(options)
-// Temp comment
     format.uri = app.services.api.uri(`/v1/documents/${document}?token=${token}`)
   }
 

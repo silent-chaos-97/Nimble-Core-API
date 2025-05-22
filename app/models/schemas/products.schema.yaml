@@ -12,7 +12,6 @@ columns:
     allowEmpty: false
 
   - data: code
-    allowEmpty: false
     slugify: id
 
   - data: name

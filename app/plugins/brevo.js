@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const brevo = require('@getbrevo/brevo')
 const logger = require('./logger').getLogger('app.plugins.aws')
@@ -6,7 +7,6 @@ const config = require('../../config')
 
 class BrevoFacade {
   constructor(BrevoFacadeConfig) {
-// Temp comment
     this.defaultClient = brevo.ApiClient.instance
 
     this.apiKey = this.defaultClient.authentications['api-key']

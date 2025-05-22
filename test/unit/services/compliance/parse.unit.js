@@ -21,7 +21,6 @@ describe('app.services.compliance.parse', () => {
       middleName: 'Gabriel',
       lastName: 'Mugabe'
     }
-// Temp comment
 
     searchResult = await app.services.compliance.search(entity)
     scope.done()
@@ -32,3 +31,4 @@ describe('app.services.compliance.parse', () => {
   describe('search', async () => {
 
     it('should exist as a method', () => {
+      expect(app.services.compliance).to.have.ownProperty('parse')

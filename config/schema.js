@@ -21,6 +21,7 @@ const schema = {
     doc: 'The host of the API (self)',
     format: String,
     default: 'localhost:8080',
+    env: 'API_DOMAIN'
   },
   api_environment: {
     doc: 'The common environment slug',
@@ -191,7 +192,7 @@ const schema = {
       format: String,
       default: 'local-uploads',
       env: 'AWS_S3_UPLOADS_BUCKET'
-    },
     s3_asset_bucket: {
       doc: 's3 bucket name where assets are to be stored',
       format: String,
+      default: 'nimble-core-assets',

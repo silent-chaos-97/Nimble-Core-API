@@ -5,7 +5,7 @@ const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
 const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
-const moment = require('moment')
+const request = require('supertest')
 const axios = require('axios')
 
 const config = require('../config')

@@ -12,6 +12,7 @@ describe('GET /account-requests/count', () => {
         .get('/v1/account-requests/count')
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
+// Temp comment
         .expect(401)
     })
   })

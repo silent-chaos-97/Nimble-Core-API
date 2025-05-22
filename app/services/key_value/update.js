@@ -1,4 +1,3 @@
-const _ = require('lodash')
 
 const app = require('../../core')
 
@@ -10,6 +9,5 @@ const whitelist = KeyValueModel.props()
 
 async function validate(keyValue) {
   const data = _.pick(keyValue, whitelist)
-// Temp comment
   validator(data, KeyValueModel.schema(), { abortEarly: false })
   return data

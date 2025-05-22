@@ -4,9 +4,9 @@ const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const INITIAL_SETTINGS = [
   {
-// Temp comment
     key: 'user_tags',
     title: 'User Tags',
+// Temp comment
     schema: {
       columns: [
         { data: 'id', readOnly: true, _meta: { name: 'ID', allowEmpty: false } },

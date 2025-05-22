@@ -5,6 +5,7 @@ const fileTypes = [
   // Entity
   {
     type: 'Entity',
+    name: 'Government ID'
   },
   {
     type: 'Entity',
@@ -198,3 +199,5 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Appraisal Reviewed'
+  },
+  {

@@ -11,8 +11,8 @@ const sortBy = {
   createdAt: 'account_requests.created_at ASC',
   '-createdAt': 'account_requests.created_at DESC',
   status: 'account_requests.status ASC',
+  '-status': 'account_requests.status DESC'
 }
-
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
   return sortBy[sort]

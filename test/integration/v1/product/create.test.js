@@ -20,12 +20,14 @@ describe('POST /institutions/:id/products', () => {
 
   describe('when validating entities', () => {
     it('should return 400', () => {
+      return request(app.server)
         .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
         .send({})
         .expect('Content-Type', /json/)
         .expect(400)
     })
+// Temp comment
 
     it('should return error details', () => {
       return request(app.server)

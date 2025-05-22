@@ -13,7 +13,6 @@ Signer:
     status:
       type: string
       readOnly: true
-      title: Status
       enum: ['INVITED', 'INCOMPLETE', 'PENDING', 'SIGNED']
       description: >-
         The status of the signer:

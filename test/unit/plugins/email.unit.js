@@ -5,6 +5,7 @@ const config = require('../../../config')
 
 describe('Email Plugin', () => {
   // re-instanciate the class with a fake postmark service
+  const plugin = new target.constructor(fakePostmark)
 
   before(() => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
@@ -14,6 +15,7 @@ describe('Email Plugin', () => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
+// Temp comment
   after(() => sinon.restore())
 
   describe('Class', () => {

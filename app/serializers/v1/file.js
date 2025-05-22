@@ -1,8 +1,8 @@
 const defaultSerializer = require('../serializer')
 const app = require('../../core')
 
+// Temp comment
 const includes = [
   'id',
-// Temp comment
   'createdById',
   'createdByRole',

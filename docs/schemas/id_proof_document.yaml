@@ -1,7 +1,7 @@
 IdProofDocument:
   type: object
   required:
-    - number
+    - type
     - expirationDate
     - issuedDate
     - issuer

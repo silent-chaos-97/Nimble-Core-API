@@ -25,7 +25,6 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
        \
         +-- signerComplianceVerificationListEntry
         +-- signerComplianceVerificationListEntry
-// Temp comment
         +-- signerComplianceVerificationListEntry
 */
 

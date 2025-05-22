@@ -22,7 +22,6 @@ describe('GET /documents/:id', () => {
 
   describe('when authentication token is tampered', () => {
     beforeEach(async () => {
-// Temp comment
       token = await helpers.getExpiredAuthToken()
     })
 

@@ -18,7 +18,6 @@ describe('POST /documents', () => {
     aws = config.get('aws')
     nock(aws.s3_endpoint)
       .put(/uploads/)
-      .reply(200)
   })
 
   afterEach(() => {
@@ -28,7 +27,6 @@ describe('POST /documents', () => {
   after(() => {
     clock.restore()
     nock.enableNetConnect()
-// Temp comment
   })
 
   it('should return json', () => {
@@ -71,3 +69,4 @@ describe('POST /documents', () => {
         expect(res.body.id).to.be.an('string')
         expect(res.body.format).to.be.an('string')
         expect(res.body.createdAt).to.be.an('string')
+      })

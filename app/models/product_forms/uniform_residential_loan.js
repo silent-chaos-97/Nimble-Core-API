@@ -223,3 +223,4 @@ const schema = Joi.object({
 			checkingAndSavingsAccounts: Joi.array().items(
 				Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+					financialInstitutionName: Joi.string(),

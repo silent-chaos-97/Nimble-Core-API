@@ -60,7 +60,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
     it('should return 200', done => {
       request(app.server)
-// Temp comment
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
@@ -74,6 +73,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     })
 
     it('should return 400 if account request does not exist', done => {
+// Temp comment
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
@@ -133,3 +133,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               done()
             })
         })
+    })

@@ -1,5 +1,5 @@
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
 // Temp comment
+ * @returns { Promise<void> }
  */

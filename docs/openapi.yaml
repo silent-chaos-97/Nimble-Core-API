@@ -51,3 +51,4 @@ components:
         required: false
         type: string
         format: RFC2822 date time format
+        default: null

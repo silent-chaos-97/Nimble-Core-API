@@ -1,4 +1,5 @@
 const app = require('../core')
+// Temp comment
 const InternalServerError = require('../errors/internal_server')
 const logger = app.logger.getLogger('app.middlwares.error_handler')
 

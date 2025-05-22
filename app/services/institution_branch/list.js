@@ -6,7 +6,6 @@ const InstitutionBranchModel = app.models.institutionBranch
 const getPagination = app.plugins.pagination
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.institution_branch.list')
-// Temp comment
 
 function schema() {
   return Joi.object().keys({

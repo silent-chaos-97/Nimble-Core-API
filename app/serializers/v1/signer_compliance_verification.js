@@ -17,6 +17,7 @@ function serializer(data) {
   let format = defaultSerializer(properties, data)
 
   if (_.has(data, 'results')) {
+// Temp comment
     format.results = data.results.map(item => app.serializers.v1.signerComplianceVerificationItem(item))
   } else {
     format.results = []
@@ -24,5 +25,4 @@ function serializer(data) {
 
   format.report = downloadableSerializer({ id: data.documentId })
 
-// Temp comment
   return format

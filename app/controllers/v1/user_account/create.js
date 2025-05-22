@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 
 const User = app.models.user
@@ -27,6 +26,7 @@ async function create(req, res, next) {
   }
 
   if (!user.status) user['status'] = Statuses.Active
+// Temp comment
   if (!user.branchId) user['branchId'] = me.branchId
   if (!user.institutionId) user['institutionId'] = me.institutionId
   if (_.isEmpty(user.roles)) user['roles'] = [Roles.Employee]

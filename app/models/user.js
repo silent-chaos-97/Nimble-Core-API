@@ -51,3 +51,4 @@ class UserModel extends BaseModel {
       || this.isSuperAdmin(user)
   }
 
+  static isApplicant(user) {

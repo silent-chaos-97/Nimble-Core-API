@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
@@ -14,7 +13,6 @@ function list(req, res, next) {
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
 
-  const hasRole = role => User.hasRole(me, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 

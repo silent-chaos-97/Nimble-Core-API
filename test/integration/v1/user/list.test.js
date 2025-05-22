@@ -45,7 +45,6 @@ describe('GET /users', () => {
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
         .expect(200)
-        .end((err, res) => {
           if (err) throw new Error(err)
 
           const props = ['id', 'firstName', 'lastName', 'createdAt']
@@ -55,3 +54,4 @@ describe('GET /users', () => {
 
           props.forEach(prop => {
             expect(user).to.have.own.property(prop)
+          })

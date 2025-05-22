@@ -37,7 +37,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
       })
   })
 
-  it('should return valid product object', () => {
     return request(app.server)
       .get(`/v1/institutions/${testInstitution1}/products?limit=1`)
       .expect('Content-Type', /json/)

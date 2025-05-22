@@ -9,12 +9,12 @@ describe('POST /institutions', () => {
     newInstitution = _.omit({
       ...institution,
       email: 'hello@wearesingular.com',
+      logo: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+C/zAgAEJwIF4KuppQAAAABJRU5ErkJggg==',
       backgroundImage: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+C/zAgAEJwIF4KuppQAAAABJRU5ErkJggg==',
     }, ['backgroundImageUri', 'logoUri'])
   })
 
   afterEach(() => sinon.restore())
-
   it('should return 401 when apikey not present', () => {
     return request(app.server)
       .post('/v1/institutions')

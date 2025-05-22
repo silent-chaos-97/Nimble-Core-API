@@ -5,7 +5,6 @@ const service = app.services.user
 const serializer = app.serializers.v1.user
 
 function list(req, res, next) {
-// Temp comment
   const params = _.pick(req.query, 'limit', 'offset', 'sort')
   return service
     .list(params)

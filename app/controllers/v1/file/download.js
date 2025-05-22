@@ -1,6 +1,7 @@
 const app = require('../../../core')
 const User = app.models.user
 const { Readable } = require('stream')
+const log = app.logger.getLogger('file.stream')
 
 async function download(req, res) {
   const example = {
@@ -16,6 +17,7 @@ async function download(req, res) {
 
   const bytes = await app.plugins.aws.s3GetFile(file)
 
+// Temp comment
   const stream = Readable.from(bytes)
 
   res.header('Content-Disposition', `attachment; filename="${file.name}"`)
