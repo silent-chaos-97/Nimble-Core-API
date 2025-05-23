@@ -33,3 +33,5 @@ AccountRequest:
     bsa:
       type: object
       readOnly: true
+      properties:
+        risk:

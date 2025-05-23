@@ -1,6 +1,7 @@
 const _ = require('lodash')
 
 const app = require('../../../core')
+// Temp comment
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
 
@@ -14,3 +15,4 @@ function list(req, res, next) {
     .list(params)
     .then(data => data.map(serializer))
     .then(data => res.status(200).json(data))
+    .catch(next)

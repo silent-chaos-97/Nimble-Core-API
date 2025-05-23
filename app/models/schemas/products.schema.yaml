@@ -12,6 +12,7 @@ columns:
     allowEmpty: false
 
   - data: code
+    allowEmpty: false
     slugify: id
 
   - data: name
@@ -55,3 +56,6 @@ columns:
       prefix: $
 
   - data: maximum_amount
+    type: integer
+    numericFormat:
+      pattern: $0,0

@@ -37,7 +37,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
       accountRequestId: accountRequestId,
       category: 'account_number',
       key: 'account_number',
-      title: 'Account Number',
       value: newAccountNumber
     }).save(null, { method: 'insert', transacting: tx })
   }

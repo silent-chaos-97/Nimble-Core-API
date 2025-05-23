@@ -201,3 +201,13 @@ const fileTypes = [
     name: 'Appraisal Reviewed'
   },
   {
+    type: 'Product',
+    name: 'Preliminary Title Opinon'
+  },
+  {
+    type: 'Product',
+    name: 'Final Title Opinoin'
+  },
+  {
+    type: 'Product',
+    name: 'Title Committment'

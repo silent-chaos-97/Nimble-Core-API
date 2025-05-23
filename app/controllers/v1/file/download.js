@@ -5,7 +5,6 @@ const log = app.logger.getLogger('file.stream')
 
 async function download(req, res) {
   const example = {
-    id: req.params.id
     // institutionId: req.user.institutionId FIXME: institution_id does not exist on files, but it should
   }
 
@@ -17,7 +16,6 @@ async function download(req, res) {
 
   const bytes = await app.plugins.aws.s3GetFile(file)
 
-// Temp comment
   const stream = Readable.from(bytes)
 
   res.header('Content-Disposition', `attachment; filename="${file.name}"`)

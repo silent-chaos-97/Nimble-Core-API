@@ -1,4 +1,3 @@
-ProductConfiguration:
   type: object
   required:
     - productId

@@ -52,3 +52,5 @@ class UserModel extends BaseModel {
   }
 
   static isApplicant(user) {
+    return this.hasRole(user, 'applicant') && !this.isEmployee(user)
+  }

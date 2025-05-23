@@ -1,2 +1,2 @@
 SignerContract:
-  type: object
+  required:

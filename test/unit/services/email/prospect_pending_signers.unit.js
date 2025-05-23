@@ -27,3 +27,5 @@ describe('app.services.email.prospectPendingSigners', () => {
 
   describe('when validating', () => {
 
+    it('should return error if signerId is not a uuid', async () => {
+      const id = 'asdsd'

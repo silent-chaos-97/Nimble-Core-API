@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const brevo = require('@getbrevo/brevo')
 const logger = require('./logger').getLogger('app.plugins.aws')

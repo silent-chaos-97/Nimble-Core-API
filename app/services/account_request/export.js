@@ -22,5 +22,4 @@ async function copyDocument(documentId, institutionId, eventId) {
   }
 
   logger.info({ op: 'copyDocument', phase: 'success', documentId, institutionId, eventId, src, dst })
-
   return `/requests/${destination}`

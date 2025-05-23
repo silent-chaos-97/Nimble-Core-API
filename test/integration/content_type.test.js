@@ -10,3 +10,4 @@ describe('Content-Type Support', () => {
         .expect(400)
     })
 
+    it('should return 404 if body is empty', () => {

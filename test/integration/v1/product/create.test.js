@@ -27,7 +27,6 @@ describe('POST /institutions/:id/products', () => {
         .expect('Content-Type', /json/)
         .expect(400)
     })
-// Temp comment
 
     it('should return error details', () => {
       return request(app.server)
@@ -48,3 +47,6 @@ describe('POST /institutions/:id/products', () => {
 
     it('should return error with not-allowed properties', () => {
       return request(app.server)
+        .post(`/v1/institutions/${institutionId}/products`)
+        .set('X-API-KEY', 'superpowers')
+        .send({ ...product, title: 'A product title' })

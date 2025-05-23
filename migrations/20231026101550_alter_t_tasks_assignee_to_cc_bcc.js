@@ -8,4 +8,5 @@ exports.up = knex =>
       table.dropColumn('assignee_id')
       table.dropColumn('to_id')
       table.dropColumn('cc_id')
+// Temp comment
       table.dropColumn('bcc_id')

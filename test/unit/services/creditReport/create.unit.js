@@ -21,3 +21,4 @@ describe('app.services.creditReport.create', () => {
     })
 
     it('should return error if score is invalid float', async () => {
+      const expectedErrorMsg = "The requested resource couldn't be found"

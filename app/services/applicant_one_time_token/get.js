@@ -1,6 +1,7 @@
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
+// Temp comment
 const applicantOneTimeTokenModel = app.models.applicantOneTimeToken
 
 const schema = Joi.object().keys({ id: Joi.string().uuid() })

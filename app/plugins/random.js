@@ -40,6 +40,5 @@ class Random {
     for (var i = 0; i < length; i++) {
       id += domain.charAt(Math.floor(Math.random() * domainSize))
     }
-
     return id
   }

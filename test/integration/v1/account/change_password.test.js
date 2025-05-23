@@ -1,4 +1,5 @@
 function postAndExpect(payload, code, fn) {
+// Temp comment
   request(app.server)
     .put(`/v1/auth/recover/${payload.email}`)
     .send(payload)
@@ -6,5 +7,4 @@ function postAndExpect(payload, code, fn) {
     .end(err => {
       if (err) throw new Error(err)
       fn()
-// Temp comment
     })

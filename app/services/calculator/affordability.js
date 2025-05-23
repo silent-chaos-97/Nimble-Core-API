@@ -1,6 +1,5 @@
 /* eslint-disable */
 // FIXME: enable lint when no longer WIP
-
 const app = require('../../core')
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
@@ -456,3 +455,85 @@ function _amort(summary, risks) {
     logger.error(err, { loan, rate, totalTerm, amortTerm, targetPayment, additionalCashDown, cashDown, summary })
     throw err
   }
+}
+
+function _loan(product, targetLtv = null, cost, equityDown, cashDown) {
+  equityDown = equityDown || 0
+  cashDown = cashDown || 0
+
+  let summary = { reasons: [] }
+
+  const productMinLtv = numbers.toNumber(_.get(product, 'advancedRate.min_analysis', DEFAULT_MIN_LOAN_TO_VALUE))
+  const productMaxLtv = numbers.toNumber(_.get(product, 'advancedRate.analysis', DEFAULT_MAX_LOAN_TO_VALUE))
+
+  let minLtv = _.isNumber(targetLtv) ? targetLtv : productMinLtv
+  let maxLtv = _.isNumber(targetLtv) ? targetLtv : productMaxLtv
+
+  if (minLtv < productMinLtv) {
+    summary.reasons.push({
+      metricId: 'loan',
+      metric: 'advancedRate.min_analysis',
+      operation: 'increase_target_ltv_to_product_min_analysis',
+      requested: minLtv,
+      adjusted: productMinLtv
+    })
+
+    minLtv = productMinLtv
+    maxLtv = productMinLtv
+  }
+
+  if (maxLtv > productMaxLtv) {
+    summary.reasons.push({
+      metricId: 'loan',
+      metric: 'advancedRate.analysis',
+      operation: 'reduce_target_ltv_to_product_analysis',
+      requested: maxLtv,
+      adjusted: productMaxLtv
+    })
+
+    minLtv = productMaxLtv
+    maxLtv = productMaxLtv
+  }
+
+  const loan = cost - equityDown - cashDown
+  const ltv = loan / cost
+
+  let adjustment = 0
+  if (ltv > maxLtv) adjustment = loan - (cost * maxLtv)
+  if (ltv < minLtv) adjustment = loan - (cost * minLtv)
+
+  const value = loan - adjustment
+
+  const _minLoan = cost - equityDown
+  const _minLtv = _minLoan / cost
+  const _minCashDown = _.ceil(_minLtv <= maxLtv ? 0 : _minLoan - (cost * maxLtv))
+  const _maxCashDown = _.ceil(_minLoan - (cost * minLtv))
+
+  summary = {
+    ...summary,
+    value: _.round(value, 3),
+    requested: loan,
+    adjustment: adjustment ? -1 * _.ceil(adjustment) : 0,
+    totalDown: equityDown + cashDown,
+    loanToValue: {
+      value: _.round(value / cost, 3),
+      requested: _.round(ltv, 3),
+      max: maxLtv,
+      min: minLtv
+    },
+    cash: {
+      additional: _.ceil(adjustment),
+      min: _minCashDown,
+      max: _maxCashDown
+    }
+  }
+
+  if (adjustment) summary.reasons.push({
+    metricId: 'loan',
+    metric: 'loan_to_value',
+    operation: 'adjust_loan_amount_to_fit_ltv',
+    requested: summary.loanToValue.requested,
+    adjusted: summary.loanToValue.value
+  })
+
+  return summary

@@ -1143,6 +1143,7 @@ const successResponse = {
           ],
           "match_types_details": {
             "Gabriel Robert Mugabe": {
+              "match_types": {
                 "gabriel": [
                   "name_exact"
                 ],
@@ -1440,4 +1441,74 @@ const successResponse = {
                 "name": "Country",
                 "source": "complyadvantage-adverse-media",
                 "value": "United Kingdom"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "United States"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Zambia"
+              },
+              {
+                "name": "Country",
+                "source": "tresor-direction-generale",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage-adverse-media",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Country",
+                "source": "complyadvantage",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage",
+                "value": "European Union"
+              },
+              {
+                "name": "Original Place of Birth Text",
+                "source": "complyadvantage",
+                "value": "Harare"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "Egypt, Kenya, South Africa"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "Nigeria, South Africa, Zimbabwe"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "Spain, United States, Zambia, Zimbabwe"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "United Kingdom"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "Zambia"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "tresor-direction-generale",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage-adverse-media",
+                "value": "Zimbabwe"
               },

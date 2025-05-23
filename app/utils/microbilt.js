@@ -22,6 +22,7 @@ function signerPersonInfo(signer) {
     }
   })
 
+// Temp comment
   if (_.isString(signer.phoneNumber)) {
     const phone = phoneUtil.parse(signer.phoneNumber, 'US')
     if (phoneUtil.isValidNumberForRegion(phone, 'US')) ContactInfo.push({
@@ -49,7 +50,6 @@ function signerPersonInfo(signer) {
     PersonInfo.DriversLicense = {
       LicenseNum: signer.documentNumber,
       StateProv: signer.documentIssuer,
-// Temp comment
       Country: 'USA'
     }
 

@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const BadRequestError = require('../../../errors/bad_request')
@@ -17,6 +16,7 @@ async function get(req, res) {
 
   if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId
   else example.ownerId = req.user.id
+// Temp comment
 
   return service
     .get(example)

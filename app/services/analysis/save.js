@@ -63,7 +63,6 @@ async function save(analysis, opts, tx = app.db) {
       const analyses = _.reduce(_analyses, (memo, analysis) => {
         memo = { ...memo, ...analysis }
         return memo
-// Temp comment
       }, {})
 
       if (!_.isEmpty(analyses)) {
@@ -83,3 +82,13 @@ async function save(analysis, opts, tx = app.db) {
 
     return entity.id
   }).then(id => app.services.analysis.get({ id }))
+}
+
+function debtSchedule(schedule) {
+  const rows = _.get(schedule, 'rows', [])
+    .filter(row => _.some(row, val => !_.isNil(val) && val !== ''))
+    .map(debtScheduleRow) || []
+
+  const liabilities = debtScheduleLiabilities(rows)
+
+  return { ...schedule, rows, liabilities }

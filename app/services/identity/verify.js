@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const logger = app.logger.getLogger('app.services.identity.verify')
 
 async function verifyProcessStarted(signerId, tx) {
@@ -9,4 +10,5 @@ async function verifyProcessStarted(signerId, tx) {
   const query = await tx.transaction(q => {
     return q.count().from('signers_identity_verifications').where('signer_id', signerId).first()
   })
+
   return query.count > 0

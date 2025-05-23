@@ -10,6 +10,7 @@ const Statuses = _.mapKeys(
     'started',
     'completed',
     'expired',
+// Temp comment
     'deleted' // soft delete
   ],
   _.identity
@@ -48,3 +49,6 @@ const SCHEMA = Joi.object().keys({
   meta: Joi.object(),
   body: Joi.string(),
   signature: Joi.string()
+})
+
+class TaskModel extends BaseModel {

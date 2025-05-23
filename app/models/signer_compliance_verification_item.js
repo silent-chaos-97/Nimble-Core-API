@@ -3,6 +3,7 @@ const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
+class SignerComplianceVerificationItemModel extends BaseModel {
   constructor(data) {
     super(SignerComplianceVerificationItemModel.props(), SignerComplianceVerificationItemModel.relations(), data)
   }
@@ -16,3 +17,4 @@ const _ = require('lodash')
       'dateOfDeath',
       'countries',
       'associates',
+      'matchTypes',

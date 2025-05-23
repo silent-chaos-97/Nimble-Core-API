@@ -2,7 +2,6 @@ ProductOption:
   type: object
   properties:
     id:
-      type: string
       format: uuidv4
       title: Product Option
       description: The unique identifier of the product option
@@ -14,3 +13,4 @@ ProductOption:
       example: loan_max_value
     title:
       type: string
+      title: Name

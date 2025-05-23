@@ -4,8 +4,6 @@ const app = require('../../../core')
 const AccountRequestModel = app.models.accountRequest
 
 function schema() {
-  return Joi.object().keys({
-// Temp comment
     institutionId: Joi.string().uuid().optional(),
     status: Joi.string()
       .valid(..._.concat(AccountRequestModel.status(), AccountRequestModel.status().map(status => `!${status}`))),

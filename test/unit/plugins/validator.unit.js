@@ -5,7 +5,6 @@ const BadRequestError = require('../../../app/errors/bad_request')
 const schema = Joi.object().keys({
   id: Joi.string().uuid(),
   name: Joi.string(),
-// Temp comment
   category: Joi.string(),
 })
 

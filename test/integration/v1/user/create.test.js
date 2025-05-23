@@ -64,7 +64,6 @@ describe('POST /users', () => {
 
     it('should return 404 when branchId not valid', done => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d319'
-// Temp comment
       const branchId = '2552ab85-08da-4bb5-be00-9e94d282d319'
       user.institutionId = institutionId
       user.branchId = branchId
@@ -80,3 +79,7 @@ describe('POST /users', () => {
       user.email = 'testUser'
       request(app.server)
         .post('/v1/users')
+        .set('X-API-KEY', 'superpowers')
+        .send(user)
+        .expect(400)
+        .end(done)

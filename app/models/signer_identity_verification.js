@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
+// Temp comment
 
 class SignerIdentityVerification extends BaseModel {
 
@@ -8,3 +9,5 @@ class SignerIdentityVerification extends BaseModel {
   }
 
   static props() {
+    return [
+      'id',

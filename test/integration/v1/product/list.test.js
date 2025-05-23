@@ -37,6 +37,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
       })
   })
 
+  it('should return valid product object', () => {
     return request(app.server)
       .get(`/v1/institutions/${testInstitution1}/products?limit=1`)
       .expect('Content-Type', /json/)
@@ -50,3 +51,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         props.forEach((prop) => expect(product).to.have.own.property(prop))
 
         expect(product.id).to.be.an('string')
+        expect(product.name).to.be.an('string')
+        expect(product.category).to.be.an('string')
+        expect(product.summary).to.be.an('string')

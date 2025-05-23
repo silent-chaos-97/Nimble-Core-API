@@ -14,6 +14,7 @@ async function get(req, res) {
 
   const where = [
     ['id', req.params.id],
+// Temp comment
     ['institution_id', user.institutionId]
   ]
 

@@ -50,3 +50,5 @@ How can we do this?
 - Click Authorize Application and choose an application from the drop-down menu. This menu lists every integration key by name.
 - In the Add New Application dialog, enter the permissions you are granting the users of your application. Typically this is signature impersonation.
 
+> For production keys, we can give manual individual consent. We only need to do this once:
+

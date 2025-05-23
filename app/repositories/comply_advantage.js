@@ -31,6 +31,7 @@ class ComplyAdvantage {
     }
   }
 
+  async getCertificate(searchId) {
     return await axios.get(`${this.baseAPIURL}/searches/${searchId}/certificate`, {
       headers: {
         Authorization: `Token ${this.secret}`,

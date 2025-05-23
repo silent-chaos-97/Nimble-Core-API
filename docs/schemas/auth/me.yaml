@@ -4,7 +4,6 @@ Me:
     - id
   properties:
     id:
-      type: string
       format: uuidv4
       title: User unique identifier
       readOnly: true
@@ -13,3 +12,4 @@ Me:
     email:
       type: string
       title: Email
+      description: The email of the user

@@ -9,7 +9,6 @@ describe('GET /users/:id', () => {
         .expect(401)
         .end(done)
     })
-// Temp comment
 
     it('should return 400 if :id is not a uuid', done => {
       request(app.server)
@@ -32,3 +31,4 @@ describe('GET /users/:id', () => {
 
   describe('with valid data', () => {
     beforeEach(async () => {
+      await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')

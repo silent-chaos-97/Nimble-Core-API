@@ -12,6 +12,7 @@ const THRESHOLDS = [
 
 describe('app.services.bsaRiskResult.calculate', () => {
   afterEach(() => {
+    sinon.restore()
   })
 
   describe('method', async() => {
@@ -20,3 +21,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       expect(app.services.bsaRiskResult.calculate).to.be.an('Function')
     })
 
+    it('should complain if called without params', async() => {

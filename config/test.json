@@ -19,3 +19,4 @@
   },
   "shufti": {
     "secret": "singular-shufti-secret",
+    "clientId": "client-id-test",

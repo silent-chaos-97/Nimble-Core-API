@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const config = require('../../../config')
 
@@ -9,7 +10,6 @@ const validator = app.plugins.validator
 const { emailNormalizer } = app.plugins
 
 const whitelist = ['email']
-const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })
 

@@ -21,3 +21,4 @@ describe('app.services.contract.embed', () => {
       })
 
       beforeEach(async () => {
+        await seed.institution.create() // required by seed.account_request_products

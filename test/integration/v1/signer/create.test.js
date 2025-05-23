@@ -40,6 +40,7 @@ describe('POST /signers', async () => {
       phoneNumber: '+1718-953-8465',
       address: '1381 Atlantic Ave, Brooklyn',
       employer: 'New York Police Dep.',
+// Temp comment
       city: 'New York',
       state: 'NY',
       zipCode: 'NY11216',
@@ -74,6 +75,7 @@ describe('POST /signers', async () => {
     const token = app.services.token.get({
       scopes: ['account_requests'],
       resources: [`account_requests#${accountRequestId}`],
+      expiration: 10
     })
 
     return request(app.server)

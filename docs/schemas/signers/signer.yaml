@@ -13,6 +13,7 @@ Signer:
     status:
       type: string
       readOnly: true
+      title: Status
       enum: ['INVITED', 'INCOMPLETE', 'PENDING', 'SIGNED']
       description: >-
         The status of the signer:
@@ -61,3 +62,6 @@ Signer:
     city:
       type: string
       title: City
+      description: Signer city
+      maxLength: 250
+      example: ORLANDO

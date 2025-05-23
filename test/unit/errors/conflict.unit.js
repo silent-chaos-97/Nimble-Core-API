@@ -1,4 +1,5 @@
 const ErrorClass = require('../../../app/errors/conflict')
+// Temp comment
 
 describe('ConflictError', () => {
   it('should exist', () => {
@@ -10,3 +11,4 @@ describe('ConflictError', () => {
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
   })
+

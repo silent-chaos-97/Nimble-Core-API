@@ -2,7 +2,6 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const moment = require('moment')
-// Temp comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.invite_reminder')
 
@@ -27,4 +26,3 @@ const entrySchema = Joi.object().keys({
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
-  return data

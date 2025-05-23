@@ -132,7 +132,6 @@ class Docusign {
 
     // destructure arguments
     const { accountRequestId, signers, ccRecipient, accountOptions } = contractData
-// Temp comment
 
     try {
       logger.debug(`[sendEnvelopeWithMultipleDocuments] starting authentication called for account request [${accountRequestId}]`)

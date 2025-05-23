@@ -21,5 +21,6 @@ columns:
       ref: products
       value: category
       title: category
-
   - data: meeting_frequency
+    type: dropdown
+    source: 

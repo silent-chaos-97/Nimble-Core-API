@@ -32,3 +32,4 @@ const checkingProductOptions = [
     lead: 'Shazam®Chek Card',
     annotation: 'Free',
   },
+  {

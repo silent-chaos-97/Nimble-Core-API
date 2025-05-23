@@ -4,7 +4,6 @@ const { expect } = require('chai')
 describe('app.services.applications.list', () => {
   let clock
 
-  before(() => {
     clock = sinon.useFakeTimers()
   })
 
@@ -13,3 +12,4 @@ describe('app.services.applications.list', () => {
   })
 
   beforeEach(async () => {
+    await seed.application.create('8a62b41f-1c59-4854-af50-cf0e60cc6d73')

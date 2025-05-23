@@ -1,3 +1,4 @@
+UserAuthRecovery:
   type: object
   required:
     - password

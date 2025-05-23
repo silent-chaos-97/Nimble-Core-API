@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 
 const service = app.services.signer
@@ -9,6 +8,7 @@ const validator = app.plugins.validator
 async function update(req, res) {
   const schema = model.schema('update.api.public')
   const payload = validator({ ...req.body, id: req.params.id }, schema, { abortEarly: false })
+// Temp comment
   const data = model.flattenData(payload)
 
   const signer = await service.update(data)

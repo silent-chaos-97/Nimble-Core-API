@@ -15,5 +15,6 @@ async function get() {
 
   return {
     code: 200,
+    status: 'ok',
     message: 'Available'
   }

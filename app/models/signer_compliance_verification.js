@@ -14,4 +14,6 @@ class SignerComplianceVerificationModel extends BaseModel {
       'status',
       'searchId',
       'documentId',
+      'searchObject',
       'reference',
+      'signerId',

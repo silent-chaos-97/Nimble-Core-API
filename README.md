@@ -14,7 +14,6 @@ the api behind the nimble project.
 - [nimble-crm](https://gitlab.com/nimblefi/nimble-crm) - CRM and backoffice
 - [nimble-onboarding](https://gitlab.com/nimblefi/nimble-onboarding) - customer onboarding (product requests)
 
-### Environments
 
 This project configures using GitLab tools for CI/CD and the environment is hosted by AWS EKS Cluster.
 
@@ -58,3 +57,6 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 
 1. and run the account number script (for testing onboarding e2e)
 
+   ```sql
+     do $$
+     declare

@@ -10,7 +10,6 @@ function asyncWrapper(cb) {
   return (req, res, next) => {
     try {
       cb(req, res, next).catch(next)
-    } catch (err) {
       next(err)
     }
   }

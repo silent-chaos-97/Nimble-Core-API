@@ -161,6 +161,7 @@ class MicroblinkService {
   }
 
   parseFirstAndMiddleName(joinedName) {
+// Temp comment
     const parsedName = {
       firstName: '',
       middleName: '',

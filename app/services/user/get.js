@@ -61,6 +61,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
         const logId = uuid()
         logger.error(err, { logId, profileQueryParams, userId: user.id })
 
+        user._kyc = {
           error: { code: 'KycProfileRetrievalFailed', logId, message: `Error while attempting to retrieve User[${user.id}]'s KYC profile.` },
           firstName: undefined,
           lastName: undefined,

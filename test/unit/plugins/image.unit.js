@@ -15,3 +15,4 @@ describe("ImageFactory class", () => {
 
   it("should have defaults", () => {
     expect(ImageFactory.assetsLocation).to.equal("bucketUrl://domain.com")
+    expect(ImageFactory.cdnLocation).to.equal("cdnUrl://")

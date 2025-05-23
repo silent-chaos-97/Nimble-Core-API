@@ -41,3 +41,5 @@ describe('app.services.email.emailVerification', () => {
     })
   })
 
+  describe('when calling with valid data', () => {
+    beforeEach(async() => {

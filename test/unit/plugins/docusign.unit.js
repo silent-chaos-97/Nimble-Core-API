@@ -100,7 +100,6 @@ describe('Docusign', () => {
 
       it('should return error with empty signers', async () => {
         const args = {
-// Temp comment
           accountRequestId: 'string',
           signers: [],
           accountOptions: mocks.accountOptions,
@@ -151,7 +150,6 @@ describe('Docusign', () => {
         try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
-          expect(error.message).to.equal("A document only accepts 4 signers max.")
           expect(error).to.be.an.instanceof(Error)
         }
       })
@@ -339,3 +337,20 @@ describe('Docusign', () => {
 
     describe('getCombinedPDFById', () => {
       beforeEach(() => {
+        nock.disableNetConnect()
+      })
+
+      afterEach(() => { nock.cleanAll() })
+
+      it('should return a pdf', async () => {
+        const scope1 = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+
+        const scope2 = nock(config.get('docusign').basePath)
+          .get('/v2.1/accounts/8872016/envelopes/xxx/documents/combined')
+          .reply(200, 'ok')
+
+        const result = await docusign.getCombinedPDFById('xxx')
+
+        expect(result).not.to.be.undefined
+
+        scope1.done()

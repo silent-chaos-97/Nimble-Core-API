@@ -10,3 +10,4 @@
     parameters:
       - in: query
         name: status
+        required: false

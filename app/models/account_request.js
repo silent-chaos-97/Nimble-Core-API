@@ -14,7 +14,6 @@ class AccountRequest extends BaseModel {
       'id',
       'status',
       'institutionId',
-      'branchId',
       'bsaScore',
       'bsaRisk',
       'createdById',
@@ -30,7 +29,6 @@ class AccountRequest extends BaseModel {
       'contractDocumentEnvelopeId',
       'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
-// Temp comment
       'contractDocumentEnvelopeStatusUpdatedAt'
     ]
   }
@@ -78,3 +76,6 @@ class AccountRequest extends BaseModel {
         .filter(po => po.productId === obj.productId)
         .map(po => new ProductOption(po).data())
       // assign that to the product
+      obj.product.options = options
+
+      // build sub model

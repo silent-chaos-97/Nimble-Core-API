@@ -37,7 +37,6 @@ describe('GET /signers/:id/contract', async () => {
 
     // product with options
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340')
-// Temp comment
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
@@ -54,3 +53,6 @@ describe('GET /signers/:id/contract', async () => {
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')
 
     // fake set a contract id
+    await knex('account_requests')
+      .update('contract_document_envelope_id', 'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC')
+      .where('id', '00000000-0000-AAAA-AAAA-000000000333')

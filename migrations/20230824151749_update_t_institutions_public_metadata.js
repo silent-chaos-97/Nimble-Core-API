@@ -24,6 +24,7 @@ const publicMetadata = {
     default: null,
     subtype: 'text',
     required: true,
+    dependsOn: {
       milesAway: 'yes'
     },
     maxLength: 255
@@ -53,3 +54,6 @@ const publicMetadata = {
     type: 'string',
     order: 0,
     score: {
+      no: 2,
+      yes: 2
+    },

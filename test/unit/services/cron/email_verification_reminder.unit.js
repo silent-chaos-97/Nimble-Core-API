@@ -41,3 +41,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
       await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000111')
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e701')
+      await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e801')
+      await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e901')

@@ -32,3 +32,5 @@ describe('app.services.email.inviteSigner', () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)
+    })
+

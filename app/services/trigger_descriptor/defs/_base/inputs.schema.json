@@ -1,4 +1,3 @@
-{
   "properties": {
     "memo": {
       "title": "Memo",
@@ -6,3 +5,4 @@
     },
     "scope": {
       "title": "Account Type",
+      "type": "array",

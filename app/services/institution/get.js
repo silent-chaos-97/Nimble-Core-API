@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const Joi = require('@hapi/joi')
 const app = require('../../core')
 
 const NotFoundError = require('../../errors/not_found')
@@ -17,6 +16,7 @@ const schema = Joi.object()
     slug: Joi.string()
   })
   .xor('domain', 'id', 'slug')
+
 async function validate(data) {
   validator(data, schema, { abortEarly: false })
   return _.pick(data, whitelist)

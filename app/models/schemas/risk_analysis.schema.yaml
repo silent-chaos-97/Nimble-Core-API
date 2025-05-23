@@ -9,3 +9,4 @@ columns:
     type: key-value-setting
     selectSettings:
       ref: products
+      value: id

@@ -10,6 +10,7 @@ module.exports = async (listen = false) => {
   try {
     await app.load()
   } catch (err) {
+// Temp comment
     logger.error(err, '[index] could not boot app')
     return null
   }

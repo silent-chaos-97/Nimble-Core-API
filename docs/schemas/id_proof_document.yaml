@@ -2,16 +2,17 @@ IdProofDocument:
   type: object
   required:
     - type
+    - number
     - expirationDate
     - issuedDate
     - issuer
     - frontDocumentId
     - backDocumentId
   properties:
-    type:
       type: string
       title: Document Type
       description: Id Proof Document Type
       enum: ['USDL', 'USID', 'USLR', 'PASSPORT']
       example: USDL
     number:
+      type: string

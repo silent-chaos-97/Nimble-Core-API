@@ -1,4 +1,4 @@
 //const _ = require('lodash')
 const BaseModel = require('./model')
 
-  constructor(data) {
+class IdentityModel extends BaseModel {

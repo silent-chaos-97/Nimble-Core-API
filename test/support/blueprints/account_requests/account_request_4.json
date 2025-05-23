@@ -64,3 +64,7 @@
       "verificationStatusFaceUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusDocument": "VALID",
       "verificationStatusDocumentUpdatedAt": "2018-03-16T11:32:03.341Z",
+      "verificationStatusAddress": "INVALID",
+      "verificationStatusAddressUpdatedAt": "2018-03-16T11:32:03.341Z",
+      "verificationStatusSanctions": "NOMATCH",
+      "verificationStatusSanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",

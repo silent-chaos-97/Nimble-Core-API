@@ -1,5 +1,6 @@
 Account:
+  type: object
   required:
-    - strategy
   properties:
     strategy:
+      type: string

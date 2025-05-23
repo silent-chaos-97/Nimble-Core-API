@@ -15,9 +15,7 @@ describe('Email Plugin', () => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
-// Temp comment
   after(() => sinon.restore())
-
   describe('Class', () => {
     it('should exist', () => {
       expect(target).not.to.be.undefined
@@ -57,3 +55,5 @@ describe('Email Plugin', () => {
           plugin.send(null, {})
         }).to.throw()
       })
+
+      it('should use the correct sendEmailWithTemplate signature', () => {

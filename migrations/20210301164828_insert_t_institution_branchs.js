@@ -1,4 +1,5 @@
 const institutionBranches = [
+  { name: 'Storm Lake Main', external_id: '1' },
   { name: 'Storm Lake North', external_id: '2' },
   { name: 'Storm Lake 5th', external_id: '5' },
   { name: 'Storm Lake Plaza', external_id: '6' },
@@ -10,3 +11,4 @@ const institutionBranches = [
   { name: 'Brookings', external_id: '47' },
   { name: 'Sioux City Downtown', external_id: '50' },
   { name: 'Sioux City Hamilton', external_id: '51' },
+  { name: 'Sioux City Morningside', external_id: '52' },

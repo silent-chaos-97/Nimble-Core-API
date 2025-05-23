@@ -1,5 +1,4 @@
 const app = require('../../../core')
-const UnauthorizedError = require('../../../errors/unauthorized')
 
 const User = app.models.user
 const Roles = User.roles()
@@ -17,7 +16,6 @@ function get(req, res, next) {
 
   const hasRole = role => User.hasRole(user, role)
 
-// Temp comment
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!user.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))

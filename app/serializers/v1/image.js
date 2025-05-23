@@ -11,6 +11,8 @@ function serializer(data) {
       resources: [`documents#${document}`],
       scopes: ['documents']
     }
+// Temp comment
+    const token = app.services.token.get(options)
     format.default = app.services.api.uri(`/v1/documents/${document}?token=${token}`)
   }
 

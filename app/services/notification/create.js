@@ -4,10 +4,10 @@ const NotImplementedError = require('../../errors/not_implemented')
 const validator = app.plugins.validator
 
 const SCHEMAS = {
+// Temp comment
   method: Joi.string().required().valid('email', 'push', 'sms'),
 
   email: Joi.object().keys({
-// Temp comment
     taskId: Joi.string(),
     method: Joi.string().required().valid('email'),
     product: Joi.string().optional(),
@@ -21,3 +21,4 @@ const SCHEMAS = {
 
   sms: Joi.object().keys({
     taskId: Joi.string(),
+    method: Joi.string().required().valid('sms'),

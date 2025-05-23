@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+const app = require('../core')
 const _ = require('lodash')
 const BaseModel = require('./model')
 const BadRequestError = require('../errors/bad_request')
@@ -92,3 +93,7 @@ class Signer extends BaseModel {
       'lastName',
       'email',
       'address',
+      'city',
+      'state',
+      'zipCode',
+      'ssn',

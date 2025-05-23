@@ -19,7 +19,6 @@ describe('PUT /signers/:id', async () => {
     // account request for prospect
     await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000333')
     // create invited signers for this prospect with different roles and status
-    // pending status
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')
     // invited status and secondary
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
@@ -68,6 +67,7 @@ describe('PUT /signers/:id', async () => {
   })
 
   afterEach(() => {
+    clock.restore()
     sinon.restore()
     nock.cleanAll()
   })

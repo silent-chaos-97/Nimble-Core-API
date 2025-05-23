@@ -9,3 +9,4 @@ Support:
     seed.entity.create(1) // create by id
     seed.entity.create({}) // create by object
     seed.entity.create([]) // create by collection
+    seed.entity.get() // get first

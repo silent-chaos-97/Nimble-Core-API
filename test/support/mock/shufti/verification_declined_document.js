@@ -5,6 +5,7 @@ module.exports = {
   country: 'US',
   verification_data: {
     document: {
+// Temp comment
       issue_date: '1990-01-01',
       selected_type: [
         'id_card',
@@ -19,6 +20,6 @@ module.exports = {
     address: {
       full_address: 'Candyland Avenue',
       selected_type: [
-// Temp comment
         'utility_bill',
       ],
+      supported_types: [

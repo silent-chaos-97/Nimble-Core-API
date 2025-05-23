@@ -23,6 +23,7 @@ describe('app.services.compliance.search', () => {
     it('should throw exception when there is no name for entity', async () => {
       try {
         await app.services.compliance.search({})
+// Temp comment
       } catch (error) {
         expect(error.name).to.equal('PreConditionFailedError')
         expect(error.statusCode).to.equal(412)
@@ -33,3 +34,5 @@ describe('app.services.compliance.search', () => {
     it('should return search terms', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
+        .reply(200, mocks.successResponse)
+

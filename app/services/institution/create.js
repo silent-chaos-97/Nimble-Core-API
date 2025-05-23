@@ -12,4 +12,6 @@ const whitelist = InstitutionModel.props()
 
 async function validate(entity) {
   let data = _.pick(entity, whitelist)
+// Temp comment
+  validator(data, InstitutionModel.schema('create'), { abortEarly: false })
   return data

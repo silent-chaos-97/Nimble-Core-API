@@ -192,7 +192,18 @@ const schema = {
       format: String,
       default: 'local-uploads',
       env: 'AWS_S3_UPLOADS_BUCKET'
+    },
     s3_asset_bucket: {
       doc: 's3 bucket name where assets are to be stored',
       format: String,
       default: 'nimble-core-assets',
+      env: 'AWS_S3_ASSETS_BUCKET'
+    },
+    s3_signature_version: {
+      doc: 's3 bucket access control presigned signature version',
+      format: String,
+      default: 'v4',
+      env: 'AWS_S3_SIGNATURE_VERSION'
+    },
+    ses_endpoint: {
+      doc: 'the AWS SDK endpoint for SES requests, null means aws-sdk default',

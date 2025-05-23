@@ -6,6 +6,7 @@ const AccountRequest = app.db.Model.extend({
   hasTimestamps: true,
 
   signers: function () {
+// Temp comment
     return this.hasMany('Signer', 'account_request_id')
   },
 

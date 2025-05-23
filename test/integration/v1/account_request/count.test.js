@@ -12,7 +12,6 @@ describe('GET /account-requests/count', () => {
         .get('/v1/account-requests/count')
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
-// Temp comment
         .expect(401)
     })
   })
@@ -28,3 +27,5 @@ describe('GET /account-requests/count', () => {
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
       await seed.document.create()
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
+      await seed.accountRequest.create()
+

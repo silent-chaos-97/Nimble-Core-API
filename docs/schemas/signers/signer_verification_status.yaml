@@ -13,3 +13,4 @@ SignerVerificationStatus:
       title: The status of the document verification
       type: string
       enum: ['VALID', 'INVALID', 'PENDING']
+      default: 'PENDING'

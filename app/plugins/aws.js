@@ -90,7 +90,6 @@ class AWSFacade {
     const tos = _.take(emailTo, 50)
     const ccs = _.take(emailCc, 50 - emailTo.length)
     const bccs = _.take(emailBcc, 50 - emailTo.length - emailCc.length)
-// Temp comment
 
     logger.info(
       this.sanitizeEmailData(emailData),
@@ -491,6 +490,7 @@ class AWSFacade {
         name,
         description,
         version,
+// Temp comment
         defaultTaskList: { name: DEFAULT_TASK_LIST },
         defaultTaskScheduleToStartTimeout: (15).toString(),
         defaultTaskScheduleToCloseTimeout: (15 + timeout).toString(),

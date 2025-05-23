@@ -73,3 +73,7 @@ const countries = [
   'ETH',
   'FIN',
   'FJI',
+  'FLK',
+  'FRA',
+  'FRO',
+  'FSM',

@@ -18,6 +18,7 @@ describe('POST /documents', () => {
     aws = config.get('aws')
     nock(aws.s3_endpoint)
       .put(/uploads/)
+      .reply(200)
   })
 
   afterEach(() => {
@@ -31,7 +32,6 @@ describe('POST /documents', () => {
 
   it('should return json', () => {
     return request(app.server)
-      .post('/v1/documents')
       .send(document)
       .expect('Content-Type', /json/)
   })
@@ -70,3 +70,6 @@ describe('POST /documents', () => {
         expect(res.body.format).to.be.an('string')
         expect(res.body.createdAt).to.be.an('string')
       })
+  })
+
+  it('should persist the document metadata', (done) => {

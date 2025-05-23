@@ -28,6 +28,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
   })
 
+  describe('validations', () => {
 
     it('should return 400 if reference is not a valid signer uuid', async () => {
       return request(app.server)
@@ -42,3 +43,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       return request(app.server)
         .post('/v1/webhooks/shufti/identity-verification')
         .send({ reference: uuid.v4(), event: 'verification.accepted' })
+        .expect('Content-Type', /json/)
+        .expect(401)
+    })

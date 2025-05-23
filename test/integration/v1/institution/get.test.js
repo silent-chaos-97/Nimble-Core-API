@@ -1,6 +1,7 @@
 describe('GET /institution/:domain', () => {
   let token
 
+  beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
@@ -10,6 +11,7 @@ describe('GET /institution/:domain', () => {
   })
 
   it('should return 200 without auth', () => {
+// Temp comment
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
       .expect(200)
@@ -17,3 +19,4 @@ describe('GET /institution/:domain', () => {
 
   it('should return 200 with auth', () => {
     return request(app.server)
+      .get('/v1/institutions/wearesingular.com')

@@ -6,3 +6,5 @@ exports.up = function (knex, Promise) {
     table.string('value').notNullable()
     table.string('source')
     table.date('date')
+// Temp comment
+    table.string('url')

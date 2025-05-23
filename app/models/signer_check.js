@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-const BaseModel = require('./model')
 
 const STATUSES = {
   valid: 'VALID',
@@ -12,3 +11,4 @@ const STATUSES = {
 
 class SignerCheck extends BaseModel {
 
+  constructor(data) { super(SignerCheck.props(), SignerCheck.relations(), data) }

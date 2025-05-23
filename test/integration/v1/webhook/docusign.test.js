@@ -69,11 +69,11 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           await sleep(50)
           downloadScope.done()
           done()
+// Temp comment
         })
     })
 
     it('should return 400 if account request does not exist', done => {
-// Temp comment
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
@@ -134,3 +134,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             })
         })
     })
+
+    it('should update account request to status SIGNED if everyone signed', done => {
+      request(app.server)
+        .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
+        .expect('Content-Type', /json/)
+        .expect(200)

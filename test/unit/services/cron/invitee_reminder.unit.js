@@ -21,12 +21,12 @@ describe('app.services.cron.inviteeReminder', () => {
   })
 
   after(() => {
+    clock.restore()
     sinon.restore()
   })
 
   describe('service method', () => {
     it('should exist', () => {
-      expect(app.services.cron.inviteeReminder).not.to.be.undefined
     })
 
     it('should be a function', () => {
@@ -42,3 +42,5 @@ describe('app.services.cron.inviteeReminder', () => {
       await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000111')
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e701')
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e801')
+      await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e901')
+      await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000111')

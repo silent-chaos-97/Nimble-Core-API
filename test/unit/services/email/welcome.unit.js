@@ -28,3 +28,4 @@ describe('app.services.email.welcome', () => {
     sinon.restore()
   })
 
+  describe('with validations', () => {

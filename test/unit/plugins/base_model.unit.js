@@ -13,6 +13,7 @@ describe('BaseModel class', () => {
   })
 
   it('should have static Props', () => {
+// Temp comment
     expect(BaseModel.data).to.be.undefined //not static
     expect(BaseModel.props).to.be.an('Function')
     expect(BaseModel.relations).to.be.an('Function')
@@ -23,3 +24,5 @@ describe('BaseModel class', () => {
     expect(BaseModel.props()).to.deep.equal([])
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
+  })
+

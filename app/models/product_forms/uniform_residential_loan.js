@@ -28,6 +28,7 @@ const schema = Joi.object({
 	amortizationType: Joi.string().valid('ARM', 'Fixed Rate', 'GPM', 'Other'),
   // User input
 	amortizationTypeOther: Joi.string(),
+// Temp comment
   // User input
 	amortizationTypeARM: Joi.string(),
   // User input
@@ -224,3 +225,15 @@ const schema = Joi.object({
 				Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 					financialInstitutionName: Joi.string(),
+					financialInstitutionAddress: Joi.string(),
+					accountNumber: Joi.string(),
+					balance: Joi.number()
+				})
+			),
+      // Not sure - user
+			stocks: Joi.array().items(
+				Joi.object({
+					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+					companyName: Joi.string(),
+					tickerSymbol: Joi.string(),
+					exchange: Joi.string(),

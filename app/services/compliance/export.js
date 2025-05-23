@@ -16,7 +16,6 @@ async function __export(searchId, institutionId) {
       institutionId: institutionId
     }, {
       ContentType: 'application/pdf'
-// Temp comment
     })
 
   } catch (err) {

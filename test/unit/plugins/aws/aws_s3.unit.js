@@ -43,3 +43,6 @@ describe("AWS Facade for s3", () => {
       expect(AWS.s3.copyObject).to.have.been.called
     })
   })
+
+  describe('s3ImgUpload()', () => {
+    it('should exist', () => {

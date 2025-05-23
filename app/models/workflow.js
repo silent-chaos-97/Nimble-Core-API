@@ -10,6 +10,7 @@ const Statuses = {
   Deleted: 'DELETED'
 }
 
+// Temp comment
 class WorkflowModel extends BaseModel {
 
   constructor(data) {
@@ -25,3 +26,4 @@ class WorkflowModel extends BaseModel {
   }
 
   static relations() {
+    return ['user', 'branch', 'institution']

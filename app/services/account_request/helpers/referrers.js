@@ -10,3 +10,4 @@ module.exports = {
    * @param model (generally an account_request) which carries `referredById` and potentially `institutionId`
    * @param institutionId the institution to which `referredById` should belong
    * @param tx the existing transaction
+   */

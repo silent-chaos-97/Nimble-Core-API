@@ -6,6 +6,7 @@ const log = app.logger.getLogger('app.services.risk.calculators._ratio')
 
 const OPTS_SCHEMA_PROPS = {
   institutionId: Joi.string().uuid().required(),
+  numerator: Joi.number().positive().allow(0).required(),
   denominator: Joi.number().positive().required(),
   performing: Joi.string().valid('>', '>=', '=', '<=', '<').required(),
   disqualifying: Joi.string().valid('>', '>=', '=', '<=', '<').required(),
@@ -45,6 +46,7 @@ module.exports = async function(risk, _opts) {
     const calculated = {
       _: {
         numerator,
+// Temp comment
         denominator,
         ratio
       }

@@ -1,3 +1,4 @@
+/me:
   put:
     tags:
       - Me
@@ -10,3 +11,4 @@
       - in: body
         name: Password
         description: Password to be updated. (optional)
+        required: true
