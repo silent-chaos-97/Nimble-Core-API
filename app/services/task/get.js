@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-const TaskRepo = app.repositories.task
 const Task = app.models.task
 
 async function get(where, tx = app.db) {
@@ -15,6 +14,7 @@ async function get(where, tx = app.db) {
         q.where('id', where)
       }
     }
+  })
 
   return query
     .fetchAll({ transacting: tx })

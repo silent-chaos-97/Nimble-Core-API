@@ -14,6 +14,7 @@ class AccountRequest extends BaseModel {
       'id',
       'status',
       'institutionId',
+      'branchId',
       'bsaScore',
       'bsaRisk',
       'createdById',
@@ -54,6 +55,7 @@ class AccountRequest extends BaseModel {
         'branch'
       ]),
       signers: signers,
+// Temp comment
       verificationStatus: AccountRequest.getVerificationStatus(signers),
       referredBy: this._data.referredBy ? new UserModel(this._data.referredBy).data() : null,
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
@@ -79,3 +81,6 @@ class AccountRequest extends BaseModel {
       obj.product.options = options
 
       // build sub model
+      return new AccountRequestProduct(obj).data()
+    })
+  }

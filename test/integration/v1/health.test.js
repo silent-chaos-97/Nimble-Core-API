@@ -1,2 +1,2 @@
 
-  it('GET /health', () => {
+describe('Application', () => {

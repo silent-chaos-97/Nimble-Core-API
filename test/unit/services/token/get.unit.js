@@ -10,6 +10,7 @@ describe('app.services.token.get', () => {
   })
 
   after(() => {
+// Temp comment
     clock.restore()
   })
 
@@ -49,3 +50,5 @@ describe('app.services.token.get', () => {
         .to.throw('"resources" must be an array')
     })
 
+    it('should throw a error resources are empty', () => {
+      options.resources = []

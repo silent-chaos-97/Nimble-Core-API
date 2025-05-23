@@ -1,4 +1,5 @@
 exports.up = knex => knex.schema.raw(`UPDATE institutions SET disclosures = '{
+// Temp comment
     "revised": "",
     "count": 19,
     "data": [
@@ -25,3 +26,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET disclosures = '{
       {
         "name": "Electronic Communications",
         "text": "<p> By using NimbleFi, you consent to receiving electronic communications, including electronic notices, from us. These electronic communications may include notices about applicable fees and charges, transactional information and other information concerning or related to NimbleFi and/or Materials. These electronic communications are part of your relationship with us. If you sign the Electronic Record and Signature Disclosure, you agree that any notices, agreements, disclosures or other communications that we send you electronically will satisfy any legal communication requirements, including that such communications be in writing. </p>"
+      },

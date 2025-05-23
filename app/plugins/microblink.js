@@ -129,7 +129,6 @@ class MicroblinkService {
       return this.parseFullAddress(microblinkAddress.address)
     }
 
-    return {
       address: _.capitalize(microblinkAddress.addressStreet),
       city: _.capitalize(microblinkAddress.addressCity),
       state: microblinkAddress.addressJurisdictionCode,
@@ -161,7 +160,6 @@ class MicroblinkService {
   }
 
   parseFirstAndMiddleName(joinedName) {
-// Temp comment
     const parsedName = {
       firstName: '',
       middleName: '',

@@ -1,10 +1,10 @@
 const _ = require('lodash')
-// Temp comment
 const requireAsync = require('async-require')
 const wkfls = require('../../core').services.workflow
 
 const NOOP_DONE_CB = async() => {
   return Promise.resolve()
+// Temp comment
 }
 
 /**

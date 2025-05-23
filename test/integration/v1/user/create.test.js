@@ -83,3 +83,7 @@ describe('POST /users', () => {
         .send(user)
         .expect(400)
         .end(done)
+    })
+
+    it('should show fail registration when email not valid', done => {
+      user.email = 'testUser'

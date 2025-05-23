@@ -19,7 +19,6 @@ describe('app.services.email.welcome', () => {
   })
 
   beforeEach(() => {
-    plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
 
@@ -29,3 +28,5 @@ describe('app.services.email.welcome', () => {
   })
 
   describe('with validations', () => {
+    it('should return error if userId is not a uuid', async() => {
+      try {

@@ -12,6 +12,7 @@
 // const Roles = UserModel.roles()
 
 // async function verifyCode(res,id){
+//   const sentSuccess = await mfaVerify.sendVerificationCode(id)
 //
 //   if (!sentSuccess){
 //     return res.status(500).json({ message: 'Something went wrong', status:false })

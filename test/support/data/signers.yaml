@@ -99,7 +99,6 @@
   verification_status_face: 'VALID'
   verification_status_face_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_document: 'VALID'
-  verification_status_document_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_address: 'INVALID'
   verification_status_address_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_sanctions: 'NOMATCH'
@@ -115,6 +114,12 @@
   document_number: '109409348'
   document_expiration_date: 2022-02-16
   document_issued_date: 2000-02-16
+  document_issuer: 'FL'
   city: 'Lisbon'
   address: '123 main street apt. 1'
   state: 'CA'
+  zip_code: '22222'
+  ssn: '333-33-3333'
+  phone_number: '(233) 555-3333'
+  date_of_birth: 1945-12-06
+

@@ -7,3 +7,4 @@ describe('app.services.auth.auth_token', () => {
   before(() => {
     clock = sinon.useFakeTimers()
   })
+

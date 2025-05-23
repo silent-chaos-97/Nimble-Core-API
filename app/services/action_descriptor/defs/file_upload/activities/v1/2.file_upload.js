@@ -38,7 +38,6 @@ async function activity(context) {
 
     if (user) {
       const _analysis = {
-// Temp comment
         createdById: user.id,
         updatedById: user.id,
 

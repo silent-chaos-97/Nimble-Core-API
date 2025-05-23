@@ -1,12 +1,10 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
-// Temp comment
 const _ = require('lodash')
 
 const Statuses = {
   draft: 'draft',
-  published: 'published',
   deleted: 'deleted'
 }
 
@@ -35,3 +33,4 @@ const SCHEMA = Joi.object().keys({
 class AnalysisModel extends BaseModel {
   constructor(data) {
     super([...AnalysisModel.props(), ...AnalysisModel.privateProps()], AnalysisModel.relations(), data)
+  }

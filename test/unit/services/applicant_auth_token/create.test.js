@@ -34,3 +34,5 @@ describe('app.services.applicantOneTimeToken.create', () => {
         it('should throw an error when missing or invalid Id', () => {
           const bodyProp = { id: null }
           const errorMessage = "Id is missing"
+          expect(target).not.to.be.undefined
+

@@ -7,6 +7,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.contract.send', () => {
   describe('send', async () => {
+// Temp comment
 
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('send')
@@ -15,6 +16,7 @@ describe('app.services.contract.send', () => {
 
     describe('when validating', () => {
       beforeEach(async () => {
+        await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
         await seed.document.create('a74f9092-5889-430a-9c19-6712f9f68090')
         await seed.accountRequest.create("00000000-0000-AAAA-AAAA-000000000333")
       })
@@ -46,3 +48,5 @@ describe('app.services.contract.send', () => {
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.document.create()
+        await seed.accountRequest.create(accountRequestId)
+        await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products

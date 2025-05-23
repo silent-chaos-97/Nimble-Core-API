@@ -35,3 +35,5 @@ AccountRequest:
       readOnly: true
       properties:
         risk:
+          type: string
+          title: BSA Risk evaluation, null if not evaluated

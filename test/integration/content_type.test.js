@@ -1,6 +1,7 @@
 describe('Content-Type Support', () => {
   describe('when calling post method without json content type', () => {
     it('should return 400 if body isnt empty', () => {
+// Temp comment
       return request(app.server)
         .post('/some/unkown/resource')
         .send('<html></html>')
@@ -11,3 +12,4 @@ describe('Content-Type Support', () => {
     })
 
     it('should return 404 if body is empty', () => {
+      // It should return 404 because route doesnt exist it means it proceeded

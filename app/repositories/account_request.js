@@ -6,8 +6,8 @@ const AccountRequest = app.db.Model.extend({
   hasTimestamps: true,
 
   signers: function () {
-// Temp comment
     return this.hasMany('Signer', 'account_request_id')
   },
 
   referredBy: function() {
+    return this.belongsTo('User', 'referred_by_id')

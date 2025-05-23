@@ -9,6 +9,7 @@ IdProofDocument:
     - frontDocumentId
     - backDocumentId
   properties:
+    type:
       type: string
       title: Document Type
       description: Id Proof Document Type
@@ -16,3 +17,4 @@ IdProofDocument:
       example: USDL
     number:
       type: string
+      title: Document Number

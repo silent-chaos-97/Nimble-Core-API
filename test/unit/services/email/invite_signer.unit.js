@@ -34,3 +34,5 @@ describe('app.services.email.inviteSigner', () => {
       return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)
     })
 
+    it('should return error if signer not found', async () => {
+      const id = uuid()

@@ -77,3 +77,6 @@ const countries = [
   'FRA',
   'FRO',
   'FSM',
+  'GAB',
+  'GBR',
+  'GEO',

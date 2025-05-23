@@ -16,7 +16,6 @@ class Random {
       .replace(/[^a-z]+/g, '') // only letters
       .substr(0, 1) // first char
       .replace(/[ilo]/g, 'x') // replace ambiguous letters with X
-  }
 
   /**
    * @returns {string} will return a 6 char string similar to X11ABC
@@ -40,5 +39,6 @@ class Random {
     for (var i = 0; i < length; i++) {
       id += domain.charAt(Math.floor(Math.random() * domainSize))
     }
+
     return id
   }

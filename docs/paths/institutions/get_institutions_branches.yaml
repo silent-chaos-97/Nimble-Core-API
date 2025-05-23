@@ -5,7 +5,9 @@
     summary: Get a paginated list of institution branches
     description: Method to get Institution branches
     operationId: getInstitutionBranches
+    parameters:
       - name: id
         in: path
         description: Id of the Institution
         required: true
+        schema:

@@ -20,3 +20,4 @@ class FileModel extends BaseModel {
         // location
         'bucket',
         'key',
+

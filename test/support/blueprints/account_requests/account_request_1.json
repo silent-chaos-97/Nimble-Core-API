@@ -69,3 +69,6 @@
         "issuedDate": "2000-02-16",
         "issuer": "FL",
         "number": "109409348",
+        "type": "USDL"
+      },
+      "checkSanction": null,

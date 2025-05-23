@@ -104,6 +104,7 @@ describe('MicroblinkService', () => {
 
       expect(result).to.have.deep.property('firstName', userData.firstName)
       expect(result).to.have.deep.property('lastName', userData.lastName)
+      expect(result).to.have.deep.property('address', '123 main street apt. 1')
       expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')
       expect(result).to.have.deep.property('documentNumber', userData.documentNumber)
       expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')
@@ -128,7 +129,6 @@ describe('MicroblinkService', () => {
             customerMiddleName: '',
           },
         },
-      }
 
       const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
       expect(result).to.have.deep.property('firstName', 'Mark')
@@ -161,3 +161,11 @@ describe('MicroblinkService', () => {
           result: {
             dateOfBirth: {
               day: 18,
+              month: 3,
+              year: 1990,
+              originalString: '03/18/1990',
+            },
+            type: 'BLINK_ID',
+          },
+        },
+      }

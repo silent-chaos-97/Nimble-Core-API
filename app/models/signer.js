@@ -97,3 +97,8 @@ class Signer extends BaseModel {
       'state',
       'zipCode',
       'ssn',
+      'dateOfBirth',
+      'phoneNumber',
+      'employer',
+      'documentType',
+      'documentNumber',

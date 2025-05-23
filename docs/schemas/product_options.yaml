@@ -2,6 +2,7 @@ ProductOption:
   type: object
   properties:
     id:
+      type: string
       format: uuidv4
       title: Product Option
       description: The unique identifier of the product option
@@ -14,3 +15,4 @@ ProductOption:
     title:
       type: string
       title: Name
+      description: The human readable title for the property

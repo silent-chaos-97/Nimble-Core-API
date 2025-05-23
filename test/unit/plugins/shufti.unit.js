@@ -42,9 +42,10 @@ describe('Service', () => {
       expect(result.document.issue_date).to.equal(userData.documentIssuedDate)
       expect(result.face.allow_offline).to.equal('1')
       expect(result.document.supported_types).to.deep.equal(['driving_license'])
-    })
 
     it('should return a valid payload for document type PASSPORT', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',
         idProofType: 'PASSPORT',
+        frontIdProof: 'test/asset/sample.jpg',
+        backIdProof: null,

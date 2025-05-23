@@ -207,3 +207,13 @@ const schema = {
     },
     ses_endpoint: {
       doc: 'the AWS SDK endpoint for SES requests, null means aws-sdk default',
+      format: String,
+      default: 'email.us-east-2.amazonaws.com',
+      env: 'AWS_SES_ENDPOINT'
+    },
+    ses_region: {
+      doc: 'the AWS SDK region for SES requests, null means aws-sdk default',
+      format: String,
+      default: 'us-east-2',
+      env: 'AWS_SES_REGION'
+    },

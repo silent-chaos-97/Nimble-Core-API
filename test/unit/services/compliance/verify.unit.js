@@ -27,7 +27,6 @@ describe('app.services.compliance.verify', () => {
     })
 
 
-// Temp comment
     describe('validations', () => {
       it('should throw exception if not provided with parameters', async () => {
         return expect(app.services.compliance.verify()).to.be.rejectedWith()
@@ -40,9 +39,10 @@ describe('app.services.compliance.verify', () => {
       it('should throw exception if the user can\'t be found', async () => {
         return expect(app.services.compliance.verify(uuid.v4())).to.be.rejectedWith('The requested resource couldn\'t be found')
       })
-    })
 
     it('should not call compliance.search if the user is INVITED', async () => {
       const fakeUserGet = sinon.replace(app.services.signer, 'get', sinon.fake.returns({ ...fakeUser, status: 'INVITED' }))
       const fakeComplianceSearch = sinon.replace(app.services.compliance, 'search', sinon.fake.returns({}))
       const fakeComplianceExport = sinon.replace(app.services.compliance, 'export', sinon.fake.returns({}))
+
+      // call target

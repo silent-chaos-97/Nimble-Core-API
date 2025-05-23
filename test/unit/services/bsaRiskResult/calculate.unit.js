@@ -22,3 +22,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
     })
 
     it('should complain if called without params', async() => {
+      const target = app.services.bsaRiskResult.calculate

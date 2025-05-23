@@ -52,3 +52,6 @@ How can we do this?
 
 > For production keys, we can give manual individual consent. We only need to do this once:
 
+- The first thing we need is to set a redirect url. This can be anything. In this case I put https://api.app.nimblefi.com/v1/health
+- Next we need to copy and paste a URL in the format below and sign in with the user we want to give consent.
+- After this we sign in and give consent.

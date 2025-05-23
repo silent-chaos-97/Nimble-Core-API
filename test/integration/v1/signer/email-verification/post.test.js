@@ -42,6 +42,7 @@ describe('POST /signers/:id/email-verifications', async () => {
           .expect('Content-Type', /json/)
           .expect(401)
       })
+// Temp comment
 
       it('should return 401 if bad auth', async () => {
         return request(app.server)
@@ -60,3 +61,6 @@ describe('POST /signers/:id/email-verifications', async () => {
 
         return request(app.server)
           .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications`)
+          .set('Authorization', 'Bearer ' + badToken)
+          .expect('Content-Type', /json/)
+          .expect(404)

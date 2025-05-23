@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const nock = require('nock')
 const util = require('util')
 const chai = require('chai')
@@ -12,3 +11,4 @@ const axios = require('axios')
 
 const config = require('../config')
 
+// eslint-disable-next-line no-console

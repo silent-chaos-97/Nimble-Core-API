@@ -9,3 +9,4 @@ async function searchGet(example, tx = app.db) {
 
   const entity = await Search.forge(_.isString(example) ? { id: example } : example).fetch({ transacting: tx })
 
+  return new SearchModel(entity).data()

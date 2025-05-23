@@ -24,3 +24,4 @@
               - $ref: '#/components/schemas/Signer'
               - type: object
                 required:
+                  - accountRequestId

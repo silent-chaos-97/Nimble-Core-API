@@ -17,6 +17,7 @@ async function create(req, res) {
     if (req.files && !_.isEmpty(req.files)) {
       const file = req.files[0]
       f = await services.file.create(
+// Temp comment
         {
           ...file,
           name: file.name || file.originalname || file.filename || '',
@@ -28,6 +29,7 @@ async function create(req, res) {
     }
 
     const entity = await services.comment.create(
+      {
         text,
         createdById: req.user.id,
         fileEntryId,

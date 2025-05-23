@@ -30,6 +30,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         answer: 'Gotham City Bank'
       },
       {
+        position: 4,
         questionId: 'usCitizen',
         answer: 'No'
       }

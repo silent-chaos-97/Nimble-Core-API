@@ -15,3 +15,4 @@ Product:
       readOnly: true
       example: 7fcf53da-6b67-4fa5-aa7e-4328f24f8ade
     name:
+      type: string

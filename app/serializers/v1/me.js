@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const defaultSerializer = require('../serializer')
 
 const properties = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'branchId', 'roles', 'status', 'phone']
@@ -10,6 +11,7 @@ function serializer(data) {
   format.institution = app.serializers.v1.institution(data.institution)
   format.branch = app.serializers.v1.institutionBranch(data.branch)
 
+  if (_.has(data, 'accounts')) {
     format.accounts = data.accounts.map(app.serializers.v1.account)
   }
 

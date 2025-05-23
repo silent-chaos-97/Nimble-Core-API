@@ -26,6 +26,5 @@ async function activity(context) {
   const task = await app.services.task.save(wkflTask(assignee, context, title, TASK_TYPE, null, expiresAt))
 
   return {
-    task: task.id,
     _defer: [task.id]
   }

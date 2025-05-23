@@ -17,6 +17,7 @@ class InstitutionModel extends BaseModel {
       'name',
       'email',
       'domain',
+      'templateApprove',
       'templateDecline',
       'routingNumber',
       'logo',
@@ -33,3 +34,5 @@ class InstitutionModel extends BaseModel {
   }
 
   // overwrite the data() function to compose the {logo} prop
+  data() {
+    return {

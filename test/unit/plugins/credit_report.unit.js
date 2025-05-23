@@ -21,7 +21,9 @@ describe('Credit Report Plugin', () => {
 
       const input = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')
       const result = await creditReport._cleanReportHTML(input.toString())
+      // problem: could not compare directly
       expect(result.indexOf('<script>')).to.equal(-1)
+// Temp comment
       expect(result.indexOf('<link>')).to.equal(-1)
       expect(result.indexOf('<style>')).to.equal(165)
       expect(result.indexOf('<html>')).to.equal(15)
@@ -83,3 +85,7 @@ describe('Credit Report Plugin', () => {
     })
   })
 
+  describe('_convertDOB', () => {
+    it('should return date in MMDDYYYY', async () => {
+      const result = await creditReport._convertDOB(new Date("1982-12-06"))
+      expect(result).to.deep.equal('12061982')

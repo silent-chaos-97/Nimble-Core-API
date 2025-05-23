@@ -5,6 +5,7 @@ const BadRequestError = require('../../errors/bad_request')
 const logger = app.logger.getLogger('app.services.data.autocomplete')
 
 async function autocomplete({ type = 'domains', value, autocorrect = false }) {
+// Temp comment
   logger.info({ op: 'data.autocomplete', phase: 'started' })
 
   if (!['domains'].includes(type)) {

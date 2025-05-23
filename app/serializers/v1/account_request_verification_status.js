@@ -6,6 +6,7 @@ const properties = [
   'verificationStatusAddress',
   'verificationStatusSanctions',
   'verificationStatusMedia',
+// Temp comment
   'verificationStatusPoliticalExposure',
 ]
 

@@ -475,7 +475,6 @@ const successResponse = {
                 "name": "Political Position",
                 "source": "complyadvantage",
                 "tag": "political_position",
-                "value": "Chairmen"
               },
               {
                 "name": "Political Position",
@@ -1512,3 +1511,75 @@ const successResponse = {
                 "source": "complyadvantage-adverse-media",
                 "value": "Zimbabwe"
               },
+              {
+                "name": "Original Country Text",
+                "source": "complyadvantage",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Nationality",
+                "source": "complyadvantage",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Countries",
+                "tag": "country_names",
+                "value": "Egypt, Kenya, Nigeria, South Africa, Spain, United Kingdom, United States, Zambia, Zimbabwe"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "complyadvantage-adverse-media",
+                "tag": "date_of_birth",
+                "value": "1914"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "complyadvantage-adverse-media",
+                "tag": "date_of_birth",
+                "value": "1921"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "complyadvantage-adverse-media",
+                "tag": "date_of_birth",
+                "value": "1924"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "complyadvantage",
+                "tag": "date_of_birth",
+                "value": "1924"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "complyadvantage",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "tresor-direction-generale",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "hm-treasury-list",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "europe-sanctions-list",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "dfat-australia-list",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "special-economic-measures-act",

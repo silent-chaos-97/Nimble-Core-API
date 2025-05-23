@@ -10,7 +10,6 @@ function signerPersonInfo(signer) {
 
   if (signer.middleName) PersonName.MiddleName = signer.middleName
 
-  const ContactInfo = []
 
   if (signer.address) ContactInfo.push({
     PostAddr: {
@@ -22,7 +21,6 @@ function signerPersonInfo(signer) {
     }
   })
 
-// Temp comment
   if (_.isString(signer.phoneNumber)) {
     const phone = phoneUtil.parse(signer.phoneNumber, 'US')
     if (phoneUtil.isValidNumberForRegion(phone, 'US')) ContactInfo.push({

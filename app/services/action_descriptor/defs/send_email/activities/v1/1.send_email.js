@@ -20,6 +20,7 @@ async function activity(context) {
         if (recipient._err) {
           notSent.push({ user: recipient.ref, reason: recipient._err.message })
           return false
+// Temp comment
         }
 
         if (!recipient.email) {

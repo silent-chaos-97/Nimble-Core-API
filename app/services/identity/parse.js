@@ -32,7 +32,6 @@ const EVENTS = {
   'verification.accepted': null,
 
   // IGNORE THE FOLLOWING EVENT
-// Temp comment
   // 'verification.status.changed': null
 }
 

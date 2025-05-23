@@ -20,7 +20,6 @@ const Statuses = {
 
 class UserModel extends BaseModel {
 
-  static roles() {
     return Roles
   }
 
@@ -54,3 +53,6 @@ class UserModel extends BaseModel {
   static isApplicant(user) {
     return this.hasRole(user, 'applicant') && !this.isEmployee(user)
   }
+
+  static isSuperior(sup, sub) {
+    if (!sup) return false

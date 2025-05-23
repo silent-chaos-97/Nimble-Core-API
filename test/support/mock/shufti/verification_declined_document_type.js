@@ -21,3 +21,4 @@ module.exports = {
       selected_type: [
         'utility_bill',
       ],
+      supported_types: [

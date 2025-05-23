@@ -1,4 +1,5 @@
 const app = require('../../../core')
+const UnauthorizedError = require('../../../errors/unauthorized')
 
 const User = app.models.user
 const Roles = User.roles()

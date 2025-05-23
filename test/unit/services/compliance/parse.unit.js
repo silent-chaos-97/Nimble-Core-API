@@ -24,6 +24,7 @@ describe('app.services.compliance.parse', () => {
 
     searchResult = await app.services.compliance.search(entity)
     scope.done()
+  })
 
   afterEach(() => { nock.cleanAll() })
 
@@ -32,3 +33,5 @@ describe('app.services.compliance.parse', () => {
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
       expect(app.services.compliance.parse).to.be.an('Function')
+    })
+

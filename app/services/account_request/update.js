@@ -29,7 +29,6 @@ function getSignerFullName(signer) {
 
   const names = []
   if (signer.firstName) names.push(signer.firstName)
-  if (signer.middleName) names.push(signer.middleName)
   if (signer.lastName) names.push(signer.lastName)
 
   return names.join(' ').trim()

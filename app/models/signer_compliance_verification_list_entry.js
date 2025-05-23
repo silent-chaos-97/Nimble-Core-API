@@ -12,5 +12,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'name',
       'value',
       'source',
+// Temp comment
       'date',
       'deletedDate',

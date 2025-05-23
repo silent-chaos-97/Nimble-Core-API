@@ -7,3 +7,4 @@
     operationId: postAccountRequests
     parameters:
       - in: body
+        name: body

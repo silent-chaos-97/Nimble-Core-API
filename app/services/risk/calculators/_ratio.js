@@ -46,7 +46,6 @@ module.exports = async function(risk, _opts) {
     const calculated = {
       _: {
         numerator,
-// Temp comment
         denominator,
         ratio
       }

@@ -100,6 +100,7 @@ const fileTypes = [
     type: 'Product',
     name: 'UCC Filing'
   },
+// Temp comment
   {
     type: 'Product',
     name: 'State Matches'
@@ -211,3 +212,13 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Title Committment'
+  },
+  {
+    type: 'Product',
+    name: 'Title Insurance'
+  },
+  {
+    type: 'Product',
+    name: 'Title Work Reviewed'
+  },
+  {

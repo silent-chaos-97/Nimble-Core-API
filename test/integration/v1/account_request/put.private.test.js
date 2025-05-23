@@ -3,6 +3,7 @@ const sinon = require('sinon')
 describe('PUT private /account-requests/:id', () => {
   const pendingAccountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae7'
   const putRequest = {
+    status: 'APPROVED',
     branchId: '2552ab85-0000-0000-0000-000000000001',
     statusEmailSubject: 'example subject',
     statusEmailBody: '<html>example body</html>',
@@ -134,3 +135,10 @@ describe('PUT private /account-requests/:id', () => {
           .put('/v1/account-requests/123')
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
+          .send(putRequest)
+          .expect(400)
+          .end((err, res) => {
+            expect(res.body.message).to.contain('"id" must be a valid GUID')
+            done()
+          })
+      })

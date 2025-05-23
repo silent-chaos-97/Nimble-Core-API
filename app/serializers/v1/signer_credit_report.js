@@ -1,6 +1,5 @@
 const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
-// Temp comment
 
 const properties = [
   'id',
@@ -18,4 +17,5 @@ function serializer(data) {
   // report is a downloadable document, reusing the serializer
   format.report = downloadableSerializer({ id: data.documentId })
 
+// Temp comment
   return format

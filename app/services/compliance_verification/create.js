@@ -34,6 +34,7 @@ async function create(payload, tx = app.db) {
   return await tx.transaction(async tx => { // init
 
     // save ComplianceVerification
+    const newVerification = await SignerComplianceVerification
       .forge(_.omit(data, 'results'))
       .save(null, { method: 'insert', transacting: tx })
 

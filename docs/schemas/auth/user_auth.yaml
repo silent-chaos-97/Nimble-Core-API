@@ -5,3 +5,4 @@ UserAuth:
     - firstName
     - lastName
     - institutionId
+  properties:

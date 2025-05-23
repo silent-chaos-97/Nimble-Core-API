@@ -30,6 +30,7 @@ describe('app.models.signer.flattenData', () => {
         issuer: 'issuer',
         expirationDate: 'expirationDate',
       }
+// Temp comment
     })
 
     expect(result).to.be.an('object')
@@ -48,3 +49,5 @@ describe('app.models.signer.flattenData', () => {
 
 
 
+  it('should not flatten data not set', () => {
+    const result = target({

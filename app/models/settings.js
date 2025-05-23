@@ -19,3 +19,4 @@ class SettingsModel extends BaseModel {
     return ['institutionId', 'branchId', 'key', 'collection', 'element', 'schema', 'data']
   }
 
+  static prePersist(settings) {

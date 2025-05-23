@@ -18,7 +18,6 @@
 
 - account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d348'
   product_id: '3552ab85-08da-4bb5-be00-9e94d282d310'
-  category: 'account_number'
   key: 'account_number'
   title: 'Account Number'
   value: '001'
@@ -28,3 +27,5 @@
 - account_request_id: '17ba2033-1c12-463b-bbc7-72deed747ae7'
   product_id: '3552ab85-08da-4bb5-be00-9e94d282d340'
   category: 'solo-choice'
+  key: 'optionC'
+  title: 'Option C'

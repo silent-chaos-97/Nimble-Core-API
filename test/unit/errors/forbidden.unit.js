@@ -10,3 +10,4 @@ describe('ForbiddenError', () => {
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
   })
+

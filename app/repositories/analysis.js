@@ -5,3 +5,4 @@ const Analysis = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+  files: function() {

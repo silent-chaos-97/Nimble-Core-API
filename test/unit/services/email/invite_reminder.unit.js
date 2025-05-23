@@ -1,5 +1,6 @@
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
+const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
@@ -31,5 +32,6 @@ describe('app.services.email.inviteReminder', () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
-    })
 
+    it('should return error if signer not found', async () => {
+      const id = uuid()

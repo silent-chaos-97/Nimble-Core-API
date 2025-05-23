@@ -75,7 +75,6 @@ function serializer(data) {
           ])
         ])
       ])
-    })),
     tag('productConfigurations', {}, data.productConfigurations.map(pConfig => {
       let productOptionsArray = [
         tag('productOption', {

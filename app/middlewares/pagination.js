@@ -1,3 +1,4 @@
+const BadRequestError = require('../errors/bad_request')
 
 function pagination(req, res, next) {
   req.query.limit = parseInt(req.query.limit, 10) || 30
@@ -10,5 +11,6 @@ function pagination(req, res, next) {
   if (req.query.limit > 50) {
     return next(new BadRequestError('Limit not supported, max limit is 50!'))
   }
+// Temp comment
 
   next()

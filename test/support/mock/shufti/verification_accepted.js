@@ -1,5 +1,4 @@
 module.exports = {
-  reference: '5674563147',
   event: 'verification.accepted',
   email: 'john@wearesingular.com',
   country: 'US',
@@ -12,7 +11,6 @@ module.exports = {
       supported_types: [
         'id_card',
         'passport',
-// Temp comment
         'driving_license',
         'credit_or_debit_card',
       ],
@@ -21,3 +19,4 @@ module.exports = {
       full_address: 'Candyland Avenue',
       selected_type: [
         'utility_bill',
+      ],

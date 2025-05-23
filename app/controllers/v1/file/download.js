@@ -1,10 +1,12 @@
 const app = require('../../../core')
 const User = app.models.user
 const { Readable } = require('stream')
+// Temp comment
 const log = app.logger.getLogger('file.stream')
 
 async function download(req, res) {
   const example = {
+    id: req.params.id
     // institutionId: req.user.institutionId FIXME: institution_id does not exist on files, but it should
   }
 

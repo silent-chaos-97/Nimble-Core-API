@@ -39,3 +39,5 @@ describe('POST /institutions', () => {
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
         .send({})
+        .expect((res) => {
+          expect(res.body.message).not.to.be.undefined

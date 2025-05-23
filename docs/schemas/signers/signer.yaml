@@ -65,3 +65,7 @@ Signer:
       description: Signer city
       maxLength: 250
       example: ORLANDO
+    state:
+      type: string
+      title: State
+      description: Signer state

@@ -54,3 +54,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
         expect(product.name).to.be.an('string')
         expect(product.category).to.be.an('string')
         expect(product.summary).to.be.an('string')
+        expect(product.content).to.be.an('string')
+        expect(product.options).to.be.an('array')

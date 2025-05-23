@@ -150,6 +150,7 @@ describe('Docusign', () => {
         try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
+          expect(error.message).to.equal("A document only accepts 4 signers max.")
           expect(error).to.be.an.instanceof(Error)
         }
       })
@@ -354,3 +355,19 @@ describe('Docusign', () => {
         expect(result).not.to.be.undefined
 
         scope1.done()
+        scope2.done()
+      })
+
+      it('should throw when error occurs', async () => {
+        let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+
+        scope = nock(config.get('docusign').basePath)
+          .get('/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined')
+          .reply(500, 'ok')
+
+        try {
+          await docusign.getCombinedPDFById('5d715751-e027-45e4-884b-99bb85c357dc')
+        } catch (error) {
+          expect(error).to.be.an.instanceof(Error)
+        }
+        scope.done()

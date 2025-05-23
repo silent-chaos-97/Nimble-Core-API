@@ -1,7 +1,6 @@
 {
   "type": "object",
   "required": ["document"],
-  "properties": {
     "fileType": {
       "title": "Document",
       "type": "string",
@@ -9,3 +8,4 @@
     },
     "analyze": {
       "title": "Analyze Uploaded Document",
+      "type": "boolean",

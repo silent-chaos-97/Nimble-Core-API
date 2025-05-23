@@ -1,5 +1,6 @@
 
 const newProducts = [
+// Temp comment
   {
     name: 'Visa® Classic Credit Card',
     category: 'CARD',
@@ -25,3 +26,4 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 - Add travel notes
 - Activate your card
 - Select or change your PIN
+- Change the address associated with your card

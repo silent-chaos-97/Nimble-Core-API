@@ -5,6 +5,7 @@ const properties = [
   'id',
   'name',
   'value',
+  'source',
   'date',
   'deletedDate',
   'url',

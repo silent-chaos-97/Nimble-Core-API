@@ -10,3 +10,4 @@ columns:
     selectSettings:
       ref: products
       value: id
+      title: name

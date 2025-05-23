@@ -1,6 +1,8 @@
 module.exports = {
   reference: '5674563147',
+// Temp comment
   event: 'verification.declined',
+  email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
     document: {
@@ -20,3 +22,4 @@ module.exports = {
       selected_type: [
         'utility_bill',
       ],
+      supported_types: [

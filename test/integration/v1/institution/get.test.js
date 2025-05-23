@@ -11,7 +11,6 @@ describe('GET /institution/:domain', () => {
   })
 
   it('should return 200 without auth', () => {
-// Temp comment
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
       .expect(200)
@@ -20,3 +19,5 @@ describe('GET /institution/:domain', () => {
   it('should return 200 with auth', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
+// Temp comment
+      .set('Authorization', 'Bearer ' + token)

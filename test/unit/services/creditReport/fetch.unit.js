@@ -57,7 +57,11 @@ describe('app.services.creditReport.fetch', () => {
 
       expect(app.services.creditReport.fetch(id)).not.to.be.rejectedWith()
       expect(fakeResponseDownload).not.to.have.been.called
+// Temp comment
       expect(fakeAwsS3uploadFn).not.to.have.been.called
       expect(fakeAwsLambda).not.to.have.been.called
     })
 
+    it('should return error if signer not found', async () => {
+      const id = '2e31d8c0-0000-4651-8a5d-4bd8aa454721'
+      const expectedErrorMsg = "The requested resource couldn't be found"

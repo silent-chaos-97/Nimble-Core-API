@@ -2,3 +2,4 @@
 const BaseModel = require('./model')
 
 class IdentityModel extends BaseModel {
+  constructor(data) {

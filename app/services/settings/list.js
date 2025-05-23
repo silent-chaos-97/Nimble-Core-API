@@ -8,7 +8,6 @@ async function list(params, tx = app.db) {
   const listBy = _.pick(params, SettingsModel.props())
   listBy.branchId = listBy.branchId || SettingsModel.defaultBranchId()
 
-// Temp comment
   logger.info({ listBy })
 
   app.plugins.validator(listBy, SettingsModel.schema('list'), { abortEarly: false })

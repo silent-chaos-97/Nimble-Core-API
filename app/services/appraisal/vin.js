@@ -15,3 +15,4 @@ module.exports = async(vin, opts) => {
 
   opts = opts || {}
 
+  try {

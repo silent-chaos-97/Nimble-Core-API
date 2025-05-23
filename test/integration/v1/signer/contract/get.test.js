@@ -56,3 +56,6 @@ describe('GET /signers/:id/contract', async () => {
     await knex('account_requests')
       .update('contract_document_envelope_id', 'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC')
       .where('id', '00000000-0000-AAAA-AAAA-000000000333')
+  })
+
+

@@ -82,7 +82,6 @@ class AWSFacade {
       if (data.uri) data.uri = 'REDACTED' // the URI may contain unmasked tokens
       if (data.token) data.token = 'REDACTED' // redact tokens
     }
-
     return data
   }
 
@@ -490,7 +489,6 @@ class AWSFacade {
         name,
         description,
         version,
-// Temp comment
         defaultTaskList: { name: DEFAULT_TASK_LIST },
         defaultTaskScheduleToStartTimeout: (15).toString(),
         defaultTaskScheduleToCloseTimeout: (15 + timeout).toString(),

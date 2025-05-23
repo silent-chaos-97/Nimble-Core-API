@@ -32,3 +32,5 @@ app.load().then(async () => {
       invitedByFullName: 'invitedByFullName',
       accountType: 'accountType',
       inviteeRole: 'inviteeRole',
+      institution: 'institution',
+      institutionUrl: 'institutionUrl',

@@ -22,3 +22,4 @@ describe('app.services.contract.embed', () => {
 
       beforeEach(async () => {
         await seed.institution.create() // required by seed.account_request_products
+        await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')

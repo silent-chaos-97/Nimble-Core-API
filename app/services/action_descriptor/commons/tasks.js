@@ -61,5 +61,6 @@ function wkflTask({
     signature
   }
 
+  if (version) task.version = `${version}`
 
   return task

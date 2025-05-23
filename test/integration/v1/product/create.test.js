@@ -34,6 +34,7 @@ describe('POST /institutions/:id/products', () => {
         .set('X-API-KEY', 'superpowers')
         .send({})
         .expect(400)
+// Temp comment
         .expect((res) => {
           expect(res.body.message).not.to.be.undefined
           expect(res.body.message).not.to.contain('"id" is required')
@@ -50,3 +51,5 @@ describe('POST /institutions/:id/products', () => {
         .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
         .send({ ...product, title: 'A product title' })
+        .expect(400)
+        .expect((res) => {

@@ -29,7 +29,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     const newAccountNumber = await app.services.productAccountNumber.next({
       productId: product.productId,
       accountRequestId: accountRequestId
-    })
 
     // save the account number as generic product option
     await AccountRequestProductOption.forge({
@@ -37,6 +36,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
       accountRequestId: accountRequestId,
       category: 'account_number',
       key: 'account_number',
+      title: 'Account Number',
       value: newAccountNumber
     }).save(null, { method: 'insert', transacting: tx })
   }

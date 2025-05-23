@@ -6,4 +6,5 @@ module "eks" {
   cluster_endpoint_public_access = true
 
   cluster_addons = {
-    vpc-cni = {
+      resolve_conflicts = "OVERWRITE"
+    }

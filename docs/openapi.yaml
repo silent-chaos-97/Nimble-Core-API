@@ -54,3 +54,6 @@ components:
         default: null
         description: filter records until this date.
     pagination:
+      offset:
+        in: query
+        name: offset

@@ -47,7 +47,6 @@ const publicMetadata = {
   },
   usCitizen: {
     enum: [
-// Temp comment
       'yes',
       'no'
     ],
@@ -57,3 +56,6 @@ const publicMetadata = {
     score: {
       no: 2,
       yes: 2
+    },
+    default: 'no',
+    subtype: 'enum',

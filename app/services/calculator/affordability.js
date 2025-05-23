@@ -1,5 +1,6 @@
 /* eslint-disable */
 // FIXME: enable lint when no longer WIP
+
 const app = require('../../core')
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
