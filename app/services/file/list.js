@@ -12,6 +12,5 @@ async function list(user, tx = app.db) {
     q.where('created_by_id', uid)
   })
 
-  const records = await query.fetchAll({ transacting: tx })
 
   return records.models.map(record => new FileModel(record).data())

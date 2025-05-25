@@ -36,3 +36,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           const errorMessage = "Id is missing"
           expect(target).not.to.be.undefined
 
+          return Promise.all([

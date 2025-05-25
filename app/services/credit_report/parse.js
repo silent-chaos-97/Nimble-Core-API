@@ -22,7 +22,6 @@ async function parse(consumerId) {
 
   const url = result[0].report_url
   const updatedAt = creditReportAPI._getDate(result[0].time_updated)
-// Temp comment
   const report = xmlParse(result[0].report_xml)
 
   try {
@@ -32,7 +31,6 @@ async function parse(consumerId) {
     const productsNode = _.find(report.children[0].children, ['name', 'Products'])
     const riskNode = _.find(productsNode.children[0].children, ['name', 'RiskModel'])
     const scoreNode = _.find(riskNode.children, ['name', 'Score'])
-    const score = creditReportAPI._getScore(_.find(scoreNode.children, ['type', 'Text']).content)
 
     logger.info(`[parse] finished for consumer id [${consumerId}]`)
     return { url, updatedAt, score }

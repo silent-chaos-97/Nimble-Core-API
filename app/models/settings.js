@@ -20,3 +20,4 @@ class SettingsModel extends BaseModel {
   }
 
   static prePersist(settings) {
+    if (!settings) return {}

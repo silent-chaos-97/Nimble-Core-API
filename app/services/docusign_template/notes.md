@@ -10,7 +10,6 @@ To use this api, you need to fill several variables in the env:
 - DOCUSIGN_BASE_PATH - this is the api base url. It's going to be different depending if we're using sandbox or live.
 
 - DOCUSIGN_USER_ID - this is the user id for the sender. You can get this in docusign -> admin -> users -> detail.
-
 - DOCUSIGN_ACCOUNT_ID - This is the account id. You can find this in docusign -> admin -> top left corner.
 
 - DOCUSIGN_CLIENT_ID - This is the integration key. You can find it in docusign -> api and keys -> the name of the app/environment.
@@ -55,3 +54,5 @@ How can we do this?
 - The first thing we need is to set a redirect url. This can be anything. In this case I put https://api.app.nimblefi.com/v1/health
 - Next we need to copy and paste a URL in the format below and sign in with the user we want to give consent.
 - After this we sign in and give consent.
+
+URL:

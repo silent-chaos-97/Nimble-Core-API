@@ -16,3 +16,4 @@ module.exports = async(vin, opts) => {
   opts = opts || {}
 
   try {
+    let car_type = _.toLower(opts.car_type || opts.carType || 'used')

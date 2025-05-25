@@ -9,7 +9,6 @@ const fileTypes = [
   },
   {
     type: 'Entity',
-    name: 'SSN verified'
   },
   {
     type: 'Entity',
@@ -100,7 +99,6 @@ const fileTypes = [
     type: 'Product',
     name: 'UCC Filing'
   },
-// Temp comment
   {
     type: 'Product',
     name: 'State Matches'
@@ -222,3 +220,13 @@ const fileTypes = [
     name: 'Title Work Reviewed'
   },
   {
+    type: 'Product',
+    name: 'Flood Certification'
+  },
+  {
+    type: 'Product',
+    name: 'Flood Insurance'
+  },
+  {
+    type: 'Product',
+    name: 'Zones Match'

@@ -1,2 +1,3 @@
 {
   "recipients": {
+    "ui:widget": "selectUsers"

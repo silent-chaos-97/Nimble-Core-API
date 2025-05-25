@@ -64,3 +64,5 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
        strt integer:= 1; -- start in this index, excluding this number
        num integer:= 99; -- loop until this number (including)
        counter integer := 0 ; -- loop index, do not touch
+       institution_id uuid := '2552ab85-08da-4bb5-be00-9e94d282d311';
+     begin

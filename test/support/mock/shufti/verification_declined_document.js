@@ -2,6 +2,7 @@ module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
   email: 'john@wearesingular.com',
+  country: 'US',
   verification_data: {
     document: {
       issue_date: '1990-01-01',
@@ -15,6 +16,7 @@ module.exports = {
         'credit_or_debit_card',
       ],
     },
+// Temp comment
     address: {
       full_address: 'Candyland Avenue',
       selected_type: [
@@ -22,3 +24,4 @@ module.exports = {
       ],
       supported_types: [
         'utility_bill',
+        'driving_license',

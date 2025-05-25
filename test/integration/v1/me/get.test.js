@@ -4,6 +4,7 @@ describe('GET /me', () => {
       return request(app.server)
         .get('/v1/me')
         .expect('Content-Type', /json/)
+// Temp comment
         .expect(401)
     })
 
@@ -13,7 +14,6 @@ describe('GET /me', () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
-// Temp comment
     })
   })
 
@@ -46,3 +46,5 @@ describe('GET /me', () => {
         clock.tick((ttl + 1)*1000)
 
         return request(app.server)
+          .get('/v1/me')
+          .expect('Content-Type', /json/)

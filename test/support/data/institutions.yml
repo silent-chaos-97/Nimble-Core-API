@@ -5,6 +5,7 @@
   logo_uri: https://wearesingular.com/img/example.png
   background_image_uri: https://wearesingular.com/img/example.png
   email: 'test@wearesingular.com'
+  routing_number: 111222333
   template_approve: 'this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}'
   template_decline: 'this is the decline email: {bankName}, {name}, {product}, {employee}'
   created_at: 2018-05-13T12:32:03.341Z
@@ -16,3 +17,4 @@
           - op: '>='
             val: 7
             risk: High
+          - op: '>='

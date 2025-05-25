@@ -55,7 +55,6 @@ class AccountRequest extends BaseModel {
         'branch'
       ]),
       signers: signers,
-// Temp comment
       verificationStatus: AccountRequest.getVerificationStatus(signers),
       referredBy: this._data.referredBy ? new UserModel(this._data.referredBy).data() : null,
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
@@ -84,3 +83,7 @@ class AccountRequest extends BaseModel {
       return new AccountRequestProduct(obj).data()
     })
   }
+
+
+  static status() {
+    return _.keys({

@@ -27,6 +27,7 @@ describe('Service', () => {
         lastName: 'Doe',
         dateOfBirth: '1978-03-13',
         documentIssuedDate: '1988-03-13',
+// Temp comment
         fullAddress: '3339 Maryland Avenue, Largo, Florida',
         email: 'john@wearesingular.com',
       }
@@ -42,6 +43,7 @@ describe('Service', () => {
       expect(result.document.issue_date).to.equal(userData.documentIssuedDate)
       expect(result.face.allow_offline).to.equal('1')
       expect(result.document.supported_types).to.deep.equal(['driving_license'])
+    })
 
     it('should return a valid payload for document type PASSPORT', () => {
       const userData = {
@@ -49,3 +51,5 @@ describe('Service', () => {
         idProofType: 'PASSPORT',
         frontIdProof: 'test/asset/sample.jpg',
         backIdProof: null,
+        firstName: 'John',
+        middleName: 'Carter',

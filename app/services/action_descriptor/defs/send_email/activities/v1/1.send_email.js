@@ -20,7 +20,6 @@ async function activity(context) {
         if (recipient._err) {
           notSent.push({ user: recipient.ref, reason: recipient._err.message })
           return false
-// Temp comment
         }
 
         if (!recipient.email) {
@@ -43,7 +42,6 @@ async function activity(context) {
         })
         sent.push({ user: recipient.id || recipient.user || '?', email: recipient.email })
       } catch(err) {
-        if (isDbErr(err)) return Promise.reject(err)
         notSent.push({ user: recipient.id || recipient.user || '?', reason: err.message })
       }
     }))

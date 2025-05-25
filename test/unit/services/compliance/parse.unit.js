@@ -11,7 +11,6 @@ describe('app.services.compliance.parse', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
-  before(async () => {
     const scope = nock(app.config.get('complyAdvantage').baseUrl)
       .post('/searches')
       .reply(200, mocks.successResponse)
@@ -35,3 +34,5 @@ describe('app.services.compliance.parse', () => {
       expect(app.services.compliance.parse).to.be.an('Function')
     })
 
+    it('should return an array', async () => {
+      const target = await app.services.compliance.parse(searchResult)

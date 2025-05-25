@@ -7,6 +7,7 @@ const schema = {
   },
   port: {
     doc: 'The port to bind',
+// Temp comment
     format: 'port',
     default: 8080,
     env: 'PORT'
@@ -217,3 +218,13 @@ const schema = {
       default: 'us-east-2',
       env: 'AWS_SES_REGION'
     },
+    ses_email_from: {
+      doc: 'the email set as From: field when using SES',
+      format: String,
+      default: 'no-reply@nimblefi.com',
+      env: 'AWS_SES_EMAIL_FROM'
+    },
+    ses_email_version: {
+      doc: 'the ses API version',
+      format: String,
+      default: 'latest',

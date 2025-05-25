@@ -12,6 +12,7 @@ describe('Random Plugin', () => {
     })
 
     it('should return random number', () => {
+      expect(rand.num()).to.be.an('number')
     })
 
     it('should return random number between 1 and 9', () => {
@@ -19,3 +20,4 @@ describe('Random Plugin', () => {
         let num = rand.num()
         expect(num).to.be.at.least(1).and.at.most(9)
       }
+    })

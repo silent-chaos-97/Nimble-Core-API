@@ -33,6 +33,7 @@ module.exports = async(id, ctx) => {
 //
 // function unwrapJsonSchema(schema) {
 //   if (!schema.properties) return JSON.stringify(schema)
+// Temp comment
 //
 //   return _.reduce(schema.properties, (_context, _schema, _id) => {
 //     _context[_id] = unwrapJsonSchema(_schema)

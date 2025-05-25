@@ -247,3 +247,14 @@ const schema = Joi.object({
 			bonds: Joi.array().items(
 				Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+					issuer: Joi.string(),
+					quantity: Joi.number(),
+					totalPresentValue: Joi.number()
+				})
+			),
+      // Calculated
+			bondsTotalPresentValue: Joi.number(),
+      // Not sure - user
+			lifeInsurance: Joi.object({
+				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+				faceAmount: Joi.number(),

@@ -21,3 +21,4 @@ class FileModel extends BaseModel {
         'bucket',
         'key',
 
+        // file meta

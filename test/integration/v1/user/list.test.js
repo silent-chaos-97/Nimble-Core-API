@@ -33,6 +33,7 @@ describe('GET /users', () => {
     it('should return 200', done => {
       request(app.server)
         .get('/v1/users?limit=1')
+        .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
         .expect(200)
         .end(done)
@@ -50,7 +51,6 @@ describe('GET /users', () => {
           const props = ['id', 'firstName', 'lastName', 'createdAt']
 
           expect(res.body).to.have.lengthOf(1)
-          const user = res.body[0]
 
           props.forEach(prop => {
             expect(user).to.have.own.property(prop)
@@ -60,3 +60,6 @@ describe('GET /users', () => {
 
           expect(user.id).to.be.an('string')
           expect(res.body).not.to.have.own.property('email')
+          expect(user.firstName).to.be.an('string')
+          expect(user.lastName).to.be.an('string')
+          expect(user).not.to.have.own.property('accounts')

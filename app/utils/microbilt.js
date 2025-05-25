@@ -10,6 +10,7 @@ function signerPersonInfo(signer) {
 
   if (signer.middleName) PersonName.MiddleName = signer.middleName
 
+  const ContactInfo = []
 
   if (signer.address) ContactInfo.push({
     PostAddr: {

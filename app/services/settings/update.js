@@ -17,6 +17,7 @@ async function update(params, transacting = app.db) {
   const descriptor = await app.services.settings.get(id, transacting)
 
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)
+// Temp comment
 
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
 

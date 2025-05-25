@@ -22,7 +22,6 @@ describe('app.services.creditReport.export', () => {
     afterEach(() => sinon.restore())
 
     it('should exist', () => {
-// Temp comment
       expect(app.services.creditReport.export).not.to.be.undefined
     })
 
@@ -33,3 +32,4 @@ describe('app.services.creditReport.export', () => {
       const html = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
+

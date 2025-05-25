@@ -1,5 +1,6 @@
 const sinon = require('sinon')
 const target = require('../../../app/plugins/email')
+const fakePostmark = require('../../support/mock/postmark')
 const config = require('../../../config')
 
 describe('Email Plugin', () => {
@@ -17,6 +18,7 @@ describe('Email Plugin', () => {
   after(() => sinon.restore())
 
   describe('Class', () => {
+// Temp comment
     it('should exist', () => {
       expect(target).not.to.be.undefined
     })
@@ -59,3 +61,5 @@ describe('Email Plugin', () => {
       it('should use the correct sendEmailWithTemplate signature', () => {
 
         let expectedCall = sinon.match({
+          From: sinon.match.string,
+          To: 'eee@eee.com',

@@ -7,7 +7,5 @@
 //         const options = {
 //             phone
 //         }
-// Temp comment
 //         const token = app.services.token.get(options)
 //         return { token }
-//     }

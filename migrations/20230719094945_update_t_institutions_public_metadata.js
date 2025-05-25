@@ -53,9 +53,11 @@ const publicMetadata = {
     text: 'Are you or any others listed on the account not U.S. citizens?',
     type: 'string',
     order: 0,
-    score: {
       no: 2,
       yes: 2
     },
     default: 'no',
     subtype: 'enum',
+    required: true
+  },
+  combinedIncome: {

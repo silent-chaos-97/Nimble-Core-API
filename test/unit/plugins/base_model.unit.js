@@ -5,6 +5,7 @@ describe('BaseModel class', () => {
   it('should exist', () => {
     expect(BaseModel).not.to.be.undefined
   })
+// Temp comment
 
   it('should be an extendable class', () => {
     expect(BaseModel).to.be.an('Function')
@@ -15,6 +16,7 @@ describe('BaseModel class', () => {
   it('should have static Props', () => {
     expect(BaseModel.data).to.be.undefined //not static
     expect(BaseModel.props).to.be.an('Function')
+    expect(BaseModel.relations).to.be.an('Function')
     expect(BaseModel.schema).to.be.an('Function')
   })
 
@@ -25,3 +27,4 @@ describe('BaseModel class', () => {
   })
 
   it('should have Props', () => {
+    let model = new BaseModel([], [], {})

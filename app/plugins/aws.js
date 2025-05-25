@@ -82,6 +82,7 @@ class AWSFacade {
       if (data.uri) data.uri = 'REDACTED' // the URI may contain unmasked tokens
       if (data.token) data.token = 'REDACTED' // redact tokens
     }
+
     return data
   }
 
@@ -221,7 +222,6 @@ class AWSFacade {
       this.ses.testRenderTemplate(params, (err, response) => {
         if (err) return reject(err)
         accept(response)
-      })
     })
   }
 

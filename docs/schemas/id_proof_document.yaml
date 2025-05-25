@@ -18,3 +18,4 @@ IdProofDocument:
     number:
       type: string
       title: Document Number
+      description: Id Proof Document Number

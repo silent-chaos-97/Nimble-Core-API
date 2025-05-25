@@ -2,9 +2,9 @@
   get:
     tags:
       - Signer
-    summary: Get Signer identity verifications by Id
     description: fetch signer identity verifications by Id
     parameters:
       - in: path
         name: id
         description: uuid signer id
+        required: true

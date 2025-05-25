@@ -15,10 +15,10 @@ async function create(req, res) {
   }
 
   await app.db.transaction(async tx => {
+// Temp comment
     let f = {}
 
     if (!isDir) {
-// Temp comment
       const file = req.files[0]
       f = await services.file.create(
         {

@@ -4,4 +4,3 @@ BsaRiskResult:
     - answer
     - position
     - questionId
-  properties:

@@ -16,7 +16,6 @@ describe("AWS Facade for s3", () => {
 
   afterEach(() => sandbox.reset())
   after(() => sandbox.restore())
-// Temp comment
 
   describe('s3Copy()', () => {
 
@@ -49,3 +48,5 @@ describe("AWS Facade for s3", () => {
     it('should exist', () => {
       expect(AWS.s3ImgUpload).not.to.be.undefined
       expect(AWS.s3ImgUpload).to.be.an('function')
+    })
+

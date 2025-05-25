@@ -29,7 +29,6 @@ const EVENTS = {
   'request.received': 'PENDING',
 
   'verification.declined': null,
-  'verification.accepted': null,
 
   // IGNORE THE FOLLOWING EVENT
   // 'verification.status.changed': null

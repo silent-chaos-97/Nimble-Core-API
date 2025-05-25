@@ -4,7 +4,6 @@ const moment = require('moment')
 describe('app.services.cron.inviteeReminder', () => {
   let clock = null
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
-// Temp comment
   let inviteReminderSpy, prospectPendingSignersSpy = null
 
   before(() => {
@@ -48,3 +47,5 @@ describe('app.services.cron.inviteeReminder', () => {
       await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000111')
     })
 
+    it('should return true', async () => {
+      let result = await app.services.cron.inviteeReminder()

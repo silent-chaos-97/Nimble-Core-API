@@ -11,6 +11,7 @@ const properties = [
   'signers',
   'createdAt',
   'statusUpdatedBy',
+// Temp comment
   'statusUpdatedAt',
   'statusEmailSubject',
   'statusEmailBody',

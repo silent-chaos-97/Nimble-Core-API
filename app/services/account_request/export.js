@@ -5,6 +5,7 @@ const logger = app.logger.getLogger('app.services.account_request.export')
 
 async function copyDocument(documentId, institutionId, eventId) {
   if (!documentId) {
+    return null
   }
   // get document filename
   const source = await app.services.document.get({ id: documentId })
@@ -18,7 +19,6 @@ async function copyDocument(documentId, institutionId, eventId) {
     await app.plugins.aws.s3CopyToFTP(src, dst)
   } catch(err) {
     logger.error({ err, op: 'copyDocument', documentId, institutionId, eventId, src, dst, message: `[copyDocument] could not copy file from [/${source.key}] to [ftp:${institutionId}/${destination}]` })
-  }
 
   logger.info({ op: 'copyDocument', phase: 'success', documentId, institutionId, eventId, src, dst })
 

@@ -5,6 +5,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
   let clock = null
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
   let emailVerificationEmailSpy
+
   before(() => {
     emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
   })
@@ -44,3 +45,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e901')
 
       await seed.signerEmailVerification.create('FF000000-0000-0000-1111-1ea08a01e801')
+      await seed.signerEmailVerification.create('FF000000-0000-0000-2222-1ea08a01e901')
+      await seed.signerEmailVerification.create('FF000000-0000-0000-3333-1ea08a01e901')

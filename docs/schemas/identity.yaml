@@ -21,3 +21,4 @@ Identity:
       example: Specimen
     address:
       type: string
+      title: Address

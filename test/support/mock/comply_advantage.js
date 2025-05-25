@@ -475,6 +475,7 @@ const successResponse = {
                 "name": "Political Position",
                 "source": "complyadvantage",
                 "tag": "political_position",
+                "value": "Chairmen"
               },
               {
                 "name": "Political Position",
@@ -1570,7 +1571,6 @@ const successResponse = {
               },
               {
                 "name": "Date of Birth",
-                "source": "europe-sanctions-list",
                 "tag": "date_of_birth",
                 "value": "1924-02-21"
               },
@@ -1583,3 +1583,72 @@ const successResponse = {
               {
                 "name": "Date of Birth",
                 "source": "special-economic-measures-act",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "malta-financial-services-authority-mfsa-national-sanctions",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "ofac-sdn-list",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Date of Birth",
+                "source": "swiss-seco-list",
+                "tag": "date_of_birth",
+                "value": "1924-02-21"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Chairmen"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Chairperson Of The African Union"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Chairperson Of The Organisation Of African Unity"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Former President of Republic of Zimbabwe"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Politician"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Pres."
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "President"
+              },

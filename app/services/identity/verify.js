@@ -8,6 +8,5 @@ async function verifyProcessStarted(signerId, tx) {
   // query will check if the identity_verification process started by counting how many results we have saved if any
   const query = await tx.transaction(q => {
     return q.count().from('signers_identity_verifications').where('signer_id', signerId).first()
-  })
 
   return query.count > 0

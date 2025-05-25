@@ -8,6 +8,7 @@ describe('GET /account-requests/:id', () => {
 
   after(() => {
     clock.restore()
+// Temp comment
   })
 
   beforeEach(async () => {

@@ -35,6 +35,7 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .expect('Content-Type', /json/)
+// Temp comment
   })
 
   it('should return 201', () => {
@@ -78,3 +79,6 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .end((err, res) => {
+        if (err) throw new Error(err)
+
+        // check if metadata was persisted

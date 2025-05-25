@@ -69,6 +69,7 @@ describe('MicroblinkService', () => {
               originalString: '03/18/2018',
             },
             dateOfExpiry: {
+// Temp comment
               day: 18,
               month: 3,
               year: 2025,
@@ -129,6 +130,7 @@ describe('MicroblinkService', () => {
             customerMiddleName: '',
           },
         },
+      }
 
       const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
       expect(result).to.have.deep.property('firstName', 'Mark')
@@ -169,3 +171,10 @@ describe('MicroblinkService', () => {
           },
         },
       }
+
+      const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
+      expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')
+    })
+
+    it('should split more complex addresses for BLINK_ID', async () => {
+      const response = {

@@ -29,4 +29,6 @@ const validApplicant = {
   'phone': '2335553333',
   'email': 'psousa+test@wearesingular.com',
   "ssn": "666707610",
+  "dob": "12061945"
 }
+

@@ -15,3 +15,4 @@ SignerCreditReport:
       description: A object that contains the report information
     reference:
       title: The external service search reference for this query
+      description: This is the REF given by the external service to retrieve a credit report

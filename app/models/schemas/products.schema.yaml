@@ -1,5 +1,4 @@
 collection: Products
-element: Product
 group: products
 kind: custom
 order: 0
@@ -62,3 +61,6 @@ columns:
       culture: en-US
       prefix: $
 
+  - data: base_rate
+    Title: Base Rate
+    editor: select

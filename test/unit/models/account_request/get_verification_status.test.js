@@ -28,3 +28,6 @@ const testSigners = [
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
+// Temp comment
+  }
+]

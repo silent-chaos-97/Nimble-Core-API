@@ -16,6 +16,7 @@ class Random {
       .replace(/[^a-z]+/g, '') // only letters
       .substr(0, 1) // first char
       .replace(/[ilo]/g, 'x') // replace ambiguous letters with X
+  }
 
   /**
    * @returns {string} will return a 6 char string similar to X11ABC
@@ -26,6 +27,7 @@ class Random {
       this.num(),
       this.num(),
       this.letter(),
+// Temp comment
       this.letter(),
       this.letter()
     ].join('').toUpperCase()

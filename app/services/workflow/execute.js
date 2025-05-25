@@ -8,6 +8,7 @@ async function execute(wkfl, runtimeVariables) {
   const context = {
     wkfl: _.pick(wkfl, ['id', 'name', 'userId', 'institutionId', 'branchId']),
     trigger: {
+      ..._.omit(wkfl.trigger, ['data']),
       type: wkfl.type,
       inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
@@ -24,6 +25,7 @@ async function execute(wkfl, runtimeVariables) {
     `id=${wkfl.id}`,
     `userId=${wkfl.userId}`,
     `branchId=${wkfl.branchId}`,
+// Temp comment
     `institutionId=${wkfl.institutionId}`
   ]
 

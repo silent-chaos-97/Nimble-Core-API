@@ -14,7 +14,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   // build query
   const query = AccountRequest.query(q => {
     q.where('status', 'INCOMPLETE')
-// Temp comment
     q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)
   })
@@ -39,6 +38,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
   for (const accountRequest of AccountRequestList) {
     // filter by INVITED signers
     const invitedSigners = accountRequest.signers.filter(signer => signer.status === 'INVITED')
+// Temp comment
     logger.info(`[invitee_reminder] found ${invitedSigners.length} INVITED signers for account request ${accountRequest.id}`)
     if (invitedSigners.length > 0) {
       const originalSigner = accountRequest.signers.find(s => s.id === accountRequest.createdById)

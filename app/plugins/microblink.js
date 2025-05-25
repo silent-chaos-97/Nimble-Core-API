@@ -62,7 +62,6 @@ class MicroblinkService {
         zipCode: '',
         documentNumber: '',
         documentExpirationDate: null,
-        documentIssuedDate: null,
         documentIssuer: ''
       }
     }
@@ -129,6 +128,7 @@ class MicroblinkService {
       return this.parseFullAddress(microblinkAddress.address)
     }
 
+    return {
       address: _.capitalize(microblinkAddress.addressStreet),
       city: _.capitalize(microblinkAddress.addressCity),
       state: microblinkAddress.addressJurisdictionCode,

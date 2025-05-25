@@ -40,4 +40,7 @@ describe('app.plugins.xml', () => {
       const result = target.tag('tag', {}, 'value')
       expect(result).to.equal('<tag>value</tag>')
     })
+
     it('should parse tag with props and value', () => {
+      const result = target.tag('tag', { a: 1, b: 2 }, 'value')
+      expect(result).to.equal('<tag a="1" b="2">value</tag>')

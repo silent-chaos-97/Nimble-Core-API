@@ -13,3 +13,4 @@ class UserAuthModel extends BaseModel {
     return ['email', 'password']
   }
 
+  static schema() {

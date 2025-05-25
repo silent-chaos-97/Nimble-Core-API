@@ -8,3 +8,4 @@
     security:
       - ApiKeyAuth: []
     requestBody:
+      content:

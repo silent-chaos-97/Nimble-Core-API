@@ -34,6 +34,7 @@ const SCHEMA = Joi.object().keys({
   cc: Joi.array().items(Joi.object()).optional(),
   bcc: Joi.array().items(Joi.object()).optional(),
 
+  title: Joi.string().required(),
   description: Joi.string(),
   type: Joi.string()
     .default(Types.generic)
@@ -52,3 +53,6 @@ const SCHEMA = Joi.object().keys({
 class TaskModel extends BaseModel {
   constructor(data) {
     super(TaskModel.props(), TaskModel.relations(), data)
+  }
+
+  static props() {

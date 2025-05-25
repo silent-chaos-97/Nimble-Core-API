@@ -32,6 +32,8 @@ describe('app.services.email.inviteReminder', () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
+    })
 
     it('should return error if signer not found', async () => {
       const id = uuid()
+      const expectedErrorMsg = "The requested resource couldn't be found"

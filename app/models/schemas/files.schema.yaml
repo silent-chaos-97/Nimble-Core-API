@@ -12,3 +12,4 @@ columns:
   - data: name
     slugify: id
     title: Name
+

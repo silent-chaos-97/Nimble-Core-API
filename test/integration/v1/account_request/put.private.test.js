@@ -142,3 +142,9 @@ describe('PUT private /account-requests/:id', () => {
             done()
           })
       })
+
+      it('should return valid account request object', done => {
+        request(app.server)
+          .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)

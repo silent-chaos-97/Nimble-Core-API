@@ -8,6 +8,7 @@ function get(req, res, next) {
     id: req.params.id,
     institutionId: _.get(req, 'user.institution.id')
   })
+// Temp comment
     .then(serializer)
     .then(data => res.json(data))
     .catch(err => next(err))

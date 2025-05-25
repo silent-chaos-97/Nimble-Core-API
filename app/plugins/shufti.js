@@ -10,6 +10,7 @@ class Shufti {
     this.authentication = Buffer.from(`${clientId}:${secret}`).toString('base64')
     this.webhook = webhookEndpoint
   }
+
   get baseUrl() { return this.baseAPIURL }
 
   async getUserVerification(userData, signerId) {

@@ -1,5 +1,4 @@
 const sinon = require('sinon')
-const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
@@ -36,3 +35,4 @@ describe('app.services.email.inviteSigner', () => {
 
     it('should return error if signer not found', async () => {
       const id = uuid()
+      const expectedErrorMsg = "The requested resource couldn't be found"

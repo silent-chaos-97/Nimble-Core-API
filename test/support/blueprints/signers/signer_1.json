@@ -6,6 +6,7 @@
   "emailVerified": true,
   "emailVerifiedAt": "2018-02-16T11:32:03.341Z",
   "dateOfBirth": "1945-12-06",
+  "email": "example@nimblefi.com",
   "firstName": "George",
   "lastName": "Constanza",
   "middleName": null,
@@ -18,3 +19,4 @@
   "idProofDocument": {
     "type": "USDL",
     "number": "109409348",
+    "issuer": "FL",

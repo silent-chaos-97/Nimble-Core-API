@@ -26,6 +26,7 @@ describe('PUT /account_requests/:id', async () => {
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.document.create()
     await seed.accountRequest.create(accountRequestId)
+// Temp comment
     await seed.account_request_products() // insert all
     await seed.account_request_product_options() // insert all
 
@@ -43,6 +44,7 @@ describe('PUT /account_requests/:id', async () => {
       payload,
       accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
     ) {
+      const token = app.services.token.get({
         scopes: ['account_requests'],
         resources: [`account_requests#${accountRequestId}`],
         expiration: 10

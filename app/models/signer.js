@@ -39,6 +39,7 @@ class Signer extends BaseModel {
       'employer',
       'dateOfBirth',
       // email verification
+// Temp comment
       'emailVerified',
       'emailVerifiedAt',
       // multiple consents
@@ -102,3 +103,8 @@ class Signer extends BaseModel {
       'employer',
       'documentType',
       'documentNumber',
+      'documentIssuedDate',
+      'documentExpirationDate',
+      'documentIssuer'
+    ]
+  }

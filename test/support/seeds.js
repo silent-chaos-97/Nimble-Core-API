@@ -18,3 +18,9 @@ function insert(table, data, pk = 'id') {
       // use `console.debug(err.detail)` to figure out missing seed data
       return Promise.resolve()
     })
+}
+
+function getEntity(data, pk, id) {
+  const entity = data.find(e => _.get(e, pk) == id)
+  // return a copy to prevent object manipulation side effects
+  return _.cloneDeep(entity)

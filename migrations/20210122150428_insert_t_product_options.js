@@ -8,6 +8,7 @@ const savingsProductOptions = [
   },
   {
     key: 'e_statements',
+// Temp comment
     category: 'product_feature',
     title: 'E-Statements',
     value: true,
@@ -25,6 +26,7 @@ const savingsProductOptions = [
 
 const checkingProductOptions = [
   {
+    key: 'debit_card',
     category: 'product_feature',
     title: 'Debit Card',
     value: true,
@@ -34,3 +36,5 @@ const checkingProductOptions = [
   {
     key: 'e_statements',
     category: 'product_feature',
+    title: 'E-Statements',
+    value: true,

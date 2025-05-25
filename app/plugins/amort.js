@@ -3,7 +3,6 @@ const Amortize = require('amortize')
 
 module.exports = {
   _amortize,
-  amortize,
   _payment,
   payment,
   _term,
@@ -22,7 +21,6 @@ function _amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, 
 
 function amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, partialMonthOffset = 1) {
   return _.reduce(_amortize(amount, rate, totalTerm, amortizeTerm, principalPayment || 0, partialMonthOffset || 1), (memo, num, key) => {
-// Temp comment
     if (num % 1) num = _.round(num, 2)
     memo[key] = num
     return memo
@@ -32,3 +30,7 @@ function amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, p
 function _payment(amount, rate, term) {
   const i = rate / 12 / 100
   return (i * amount) / (1 - Math.pow(1 + i, -(term)))
+}
+
+function payment(amount, rate, term) {
+  return _.round(_payment(amount, rate, term), 2)

@@ -131,6 +131,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               downloadScope.done()
               done()
             })
+// Temp comment
         })
     })
 
@@ -146,3 +147,10 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
+            .end(async (err, res) => {
+              if (err) return done(err)
+
+              expect(res.body.status).to.equal('SIGNED')
+              await sleep(30)
+              downloadScope.done()
+              done()

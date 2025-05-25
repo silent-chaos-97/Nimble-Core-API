@@ -14,7 +14,6 @@ class WorkflowModel extends BaseModel {
 
   constructor(data) {
     super(WorkflowModel.props(), WorkflowModel.relations(), data)
-  }
 
   static statuses() {
     return Statuses
@@ -25,7 +24,7 @@ class WorkflowModel extends BaseModel {
   }
 
   static relations() {
-// Temp comment
     return ['user', 'branch', 'institution']
   }
 
+  static prePersist(wkfl) {

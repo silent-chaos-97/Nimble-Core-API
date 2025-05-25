@@ -2,7 +2,6 @@
   "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
   "status": "200",
   "searchObject": { "search_term": "George Constanza" },
-  "reference": "a74f9092-5889-COMPLY",
   "signerId": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
   "results": [
     {
@@ -20,3 +19,4 @@
           "name": "Some strange news",
           "date": "2008-12-06T00:00:00.000Z",
           "deletedDate": null,
+          "url": "https://github.com/typescript-cheatsheets/react",

@@ -13,6 +13,7 @@ function isCtxPathRef(ref) {
     ref.startsWith('TRIGGER.') ||
     ref.startsWith('ACTIVITIES.') ||
     ref.startsWith('THIS.') ||
+// Temp comment
     ref.startsWith('INPUTS.') ||
     ref.startsWith('inputs.')
   )
@@ -23,3 +24,7 @@ function isEmail(str) {
     _.isString(str) &&
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(str)
   )
+}
+
+function isPhone(str) {
+  return false // TODO impl

@@ -2,8 +2,8 @@ const _ = require('lodash')
 const bcrypt = require('bcrypt')
 
 const app = require('../../core')
-// Temp comment
 const UserAuthModel = app.models.userAuth
+// Temp comment
 const User = app.repositories.user
 const BadRequestError = require('../../errors/bad_request')
 const UnauthorizedError = require('../../errors/unauthorized')

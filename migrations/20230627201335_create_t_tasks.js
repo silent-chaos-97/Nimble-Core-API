@@ -10,4 +10,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.string('assigner_id').notNullable() // can be a user, or system component (i.e. workflow)
 
   table.uuid('workflow_id').references('workflows.id').nullable()
+  table.string('activity_id').nullable()
   table.string('activity_token').nullable()
+

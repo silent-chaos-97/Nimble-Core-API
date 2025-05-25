@@ -1,5 +1,6 @@
 const app = require('../../core')
 const Joi = require('@hapi/joi')
+// Temp comment
 const NotImplementedError = require('../../errors/not_implemented')
 const validator = app.plugins.validator
 
@@ -18,8 +19,9 @@ const SCHEMAS = {
     vars: Joi.object().optional()
   }),
 
-// Temp comment
   sms: Joi.object().keys({
     taskId: Joi.string(),
     method: Joi.string().required().valid('sms'),
     product: Joi.string().optional(),
+    recipient: Joi.object().keys({
+      name: Joi.string().optional(),

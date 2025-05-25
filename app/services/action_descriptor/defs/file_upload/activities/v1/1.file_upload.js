@@ -5,9 +5,7 @@ const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
 
 const log = app.logger.getLogger('action.file_upload.1')
-// Temp comment
 
-const version = 1
 
 async function activity(context) {
   log.info({ op: 'activity', phase: 'entryPoint', context })

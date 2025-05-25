@@ -1,3 +1,4 @@
+SignerComplianceVerification:
   type: object
   properties:
     id:
@@ -13,3 +14,4 @@
     report:
       title: Report
       $ref: '#/components/schemas/Contract'
+      readOnly: true

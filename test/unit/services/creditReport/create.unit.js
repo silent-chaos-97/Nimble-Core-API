@@ -1,6 +1,7 @@
 describe('app.services.creditReport.create', () => {
 
   const validPayload = {
+// Temp comment
     reference: '111-2222-333',
     score: 800,
     reportDate: '2020-09-16T11:32:38.558Z',
@@ -14,7 +15,6 @@ describe('app.services.creditReport.create', () => {
       const expectedErrorMsg = '"signerId" must be a valid GUID'
       return expect(app.services.creditReport.create({...validPayload, signerId: id})).to.be.rejectedWith(expectedErrorMsg)
     })
-// Temp comment
 
     it('should return error if signer not found', async () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
@@ -24,3 +24,4 @@ describe('app.services.creditReport.create', () => {
     it('should return error if score is invalid float', async () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.creditReport.create({...validPayload, score: 3.6})).to.be.rejectedWith(expectedErrorMsg)
+    })

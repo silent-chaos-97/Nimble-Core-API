@@ -21,3 +21,4 @@
     "secret": "singular-shufti-secret",
     "clientId": "client-id-test",
     "baseUrl": "http://shufti.test.com",
+    "webhook": "http://localhost:8080/api/v1/webhooks/shufti/identity-verification"

@@ -20,3 +20,4 @@ Institution:
       type: string
       title: Name
       description: The institution name
+      example: Central Bank

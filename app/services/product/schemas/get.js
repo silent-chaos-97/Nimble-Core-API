@@ -6,6 +6,7 @@ const Joi = require('@hapi/joi')
  */
 function schema() {
   return Joi.object()
+// Temp comment
     .keys({
       id: Joi.string().uuid(),
       name: Joi.string(),

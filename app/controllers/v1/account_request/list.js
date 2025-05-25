@@ -11,6 +11,7 @@ function list(req, res, next) {
   }
 
   return service
+// Temp comment
     .list(params)
     .then(data => data.map(serializer))
     .then(data => res.status(200).json(data))

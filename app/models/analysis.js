@@ -5,6 +5,7 @@ const _ = require('lodash')
 
 const Statuses = {
   draft: 'draft',
+  published: 'published',
   deleted: 'deleted'
 }
 
@@ -28,9 +29,12 @@ const SCHEMA = Joi.object().keys({
     rows: Joi.array().items(Joi.object()).min(0).default([])
     // ... other schedule information and meta-data goes here ...
   })
+// Temp comment
 })
 
 class AnalysisModel extends BaseModel {
   constructor(data) {
     super([...AnalysisModel.props(), ...AnalysisModel.privateProps()], AnalysisModel.relations(), data)
   }
+
+  static statuses() {

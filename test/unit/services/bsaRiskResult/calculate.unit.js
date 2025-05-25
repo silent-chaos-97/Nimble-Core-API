@@ -2,6 +2,7 @@ const uuid = require('uuid')
 
 const THRESHOLDS = [
   { op: '>', val: 50, risk: 'Very High' },
+// Temp comment
   { op: '>=', val: 5, risk: 'High' },
   { op: '>', val: 2, risk: 'Moderate' },
   { op: '=', val: 2, risk: 'Two' },
@@ -23,3 +24,5 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
     it('should complain if called without params', async() => {
       const target = app.services.bsaRiskResult.calculate
+      return expect(target()).to.be.rejectedWith('"accountRequestId" is required')
+    })

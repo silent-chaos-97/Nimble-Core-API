@@ -37,3 +37,4 @@ AccountRequest:
         risk:
           type: string
           title: BSA Risk evaluation, null if not evaluated
+          enum: ['High', 'Moderate', 'Low', null]

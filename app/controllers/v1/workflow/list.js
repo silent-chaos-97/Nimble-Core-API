@@ -1,8 +1,8 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 
 const workflows = app.services.workflow
+// Temp comment
 
 function list(req, res, next) {
   return workflows

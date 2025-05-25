@@ -7,6 +7,7 @@ const User = app.repositories.user
 const UserModel = app.models.user
 const { validator } = app.plugins
 
+// Temp comment
 const whitelist = UserModel.props()
 
 async function validate(data) {

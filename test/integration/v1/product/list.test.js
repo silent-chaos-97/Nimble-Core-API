@@ -56,3 +56,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         expect(product.summary).to.be.an('string')
         expect(product.content).to.be.an('string')
         expect(product.options).to.be.an('array')
+
+        expect(product).not.to.have.own.property('contentRaw')
+        expect(product).not.to.have.own.property('updatedAt')

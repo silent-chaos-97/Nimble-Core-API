@@ -4,7 +4,6 @@ const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.subscriber.factory')
 
-// Temp comment
 function createSubscriber(opts) {
   const name = opts.name
 
@@ -19,6 +18,7 @@ function createSubscriber(opts) {
       logger.info(message, `[handleMessage] [${name}] message received`)
 
       const msg = unwrap(message) // unwrap the AWS message envelope (typically SNS -> SQS -> handler)
+// Temp comment
 
       logger.info(msg, `[handleMessage] delegating normalized message to [${name}].handleMessage...`)
 

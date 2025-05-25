@@ -33,6 +33,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect('Content-Type', /json/)
         .expect(401)
     })
+// Temp comment
 
     it('should return 401 if bad auth', async () => {
       return request(app.server)
@@ -71,7 +72,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
     const id = uuid.v4()
     return request(app.server)
       .get(`/v1/signers/${id}/identity-verifications`)
-// Temp comment
       .expect('Content-Type', /json/)
       .set('Authorization', 'Bearer ' + token)
       .expect(404)
@@ -91,3 +91,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
     it('should return a list of verifications', async () => {
       return request(app.server)
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications`)
+        .expect('Content-Type', /json/)
+        .set('Authorization', 'Bearer ' + token)
+        .expect(200)
+        .expect(res => {

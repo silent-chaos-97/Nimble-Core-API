@@ -59,3 +59,6 @@ describe('GET /signers/:id/contract', async () => {
   })
 
 
+  describe('when validating', () => {
+    it('should return 403 when the token does not provide access to that signer', async () => {
+      let badtoken = app.services.token.get({

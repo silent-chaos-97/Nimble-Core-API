@@ -1,6 +1,5 @@
 {
   "type": "object",
-  "required": [
     "sent",
     "notSent"
   ],
@@ -15,3 +14,4 @@
           "email"
         ],
         "properties": {
+          "user": {

@@ -3,7 +3,6 @@ const { loadPdf, fillPdf, savePdf } = require('./fill_pdf')
 const { docusignHelpers } = require('./upload_document')
 const { getPdfFormFields } = require('./pdf_form_fields.test')
 
-// Temp comment
 const run = async () => {
 	const formFields = getPdfFormFields()
 	let pdfDocument1 = await loadPdf('/sample.pdf')
@@ -13,3 +12,4 @@ const run = async () => {
 	// pdfDocument2 = fillPdf(pdfDocument2, formFields)
 	let pdfBytes2 = await savePdf(pdfDocument2)
 	const signHereTab = docusignHelpers.createSignHereTab('/sn1/', '20', '10', 'pixels')
+	const document1 = docusignHelpers.createDocument('sample.pdf', 'pdf', '1')

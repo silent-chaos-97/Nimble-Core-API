@@ -10,7 +10,6 @@ describe('app.services.token.get', () => {
   })
 
   after(() => {
-// Temp comment
     clock.restore()
   })
 
@@ -52,3 +51,5 @@ describe('app.services.token.get', () => {
 
     it('should throw a error resources are empty', () => {
       options.resources = []
+
+      return expect(() => target(options))

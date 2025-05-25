@@ -26,3 +26,8 @@ async function mfaExpired(mfaCacheToken, email) {
   const now = moment()
 
   return now.isAfter(expiresAt)
+}
+
+async function mfaVerified(mfaCacheToken) {
+  const userMFA = await UserMFA.forge({ id: mfaCacheToken }).fetch()
+  return userMFA.get('verified')

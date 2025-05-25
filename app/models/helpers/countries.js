@@ -80,3 +80,7 @@ const countries = [
   'GAB',
   'GBR',
   'GEO',
+  'GGY',
+  'GHA',
+  'GIB',
+  'GIN',

@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../core')
 
 const AccountRequest = app.db.Model.extend({
@@ -11,3 +12,4 @@ const AccountRequest = app.db.Model.extend({
 
   referredBy: function() {
     return this.belongsTo('User', 'referred_by_id')
+  },

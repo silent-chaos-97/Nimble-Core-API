@@ -8,6 +8,7 @@ const _ = require('lodash')
 
 async function insert(table, data) {
   const row = await knex(table).returning('*').insert(data)
+  return _.first(row)
 }
 
 async function post(endpoint, obj) {
@@ -15,9 +16,17 @@ async function post(endpoint, obj) {
     .post(endpoint)
     .send(obj)
     .expect('Content-Type', /json/)
+// Temp comment
 }
 
 async function get(endpoint) {
   return request(app.server)
     .get(endpoint)
+    .expect('Content-Type', /json/)
+}
+
+async function put(endpoint, obj) {
+  return request(app.server)
+    .put(endpoint)
+    .send(obj)
     .expect('Content-Type', /json/)

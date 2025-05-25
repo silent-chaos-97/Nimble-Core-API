@@ -6,3 +6,4 @@
     description: fetch signer compliance verification by Signer Id
     parameters:
       - in: path
+        name: id

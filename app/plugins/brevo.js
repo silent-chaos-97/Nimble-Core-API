@@ -58,6 +58,7 @@ class BrevoFacade {
     sendSmtpEmail.templateId = templateId
     sendSmtpEmail.to = tos.map((to) => ({ email: to }))
     if (ccs.length) {
+      sendSmtpEmail.cc = ccs.map((to) => ({ email: to }))
     }
     if (bccs.length) {
       sendSmtpEmail.bcc = bccs.map((to) => ({ email: to }))
@@ -66,6 +67,7 @@ class BrevoFacade {
     sendSmtpEmail.params = emailData
 
     return new Promise((accept, reject) => {
+// Temp comment
       this.apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
         logger.info('API called successfully. Returned data: ' + JSON.stringify(data))
         accept(data)

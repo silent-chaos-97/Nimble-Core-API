@@ -5,7 +5,6 @@ const _ = require('lodash')
 
 function serializer(data) {
   const tag = app.plugins.xml.tag
-  const format = app.plugins.xml.format
 
   return format(tag('accountRequest', {
     updatedAt: moment(data.statusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS'),
@@ -75,6 +74,7 @@ function serializer(data) {
           ])
         ])
       ])
+    })),
     tag('productConfigurations', {}, data.productConfigurations.map(pConfig => {
       let productOptionsArray = [
         tag('productOption', {

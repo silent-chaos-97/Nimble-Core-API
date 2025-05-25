@@ -20,7 +20,6 @@ describe('Docusign', () => {
   })
 
   describe('Instance', () => {
-
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.docusignTemplate.create()
@@ -371,3 +370,20 @@ describe('Docusign', () => {
           expect(error).to.be.an.instanceof(Error)
         }
         scope.done()
+      })
+
+      it('should throw when authentication fails', async () => {
+        const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(500, mocks.mockToken)
+
+        try {
+          await docusign.getCombinedPDFById('5d715751-e027-45e4-884b-99bb85c357dc')
+        } catch (error) {
+          expect(error).to.be.an.instanceof(Error)
+        }
+        scope.done()
+      })
+    })
+
+    describe('createRecipientView', () => {
+      beforeEach(() => {
+        nock.disableNetConnect()

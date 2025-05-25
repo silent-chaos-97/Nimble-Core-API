@@ -6,7 +6,6 @@ const logger = app.logger.getLogger('app.services.cron.email_verification_remind
 
 async function email_verification_reminder(days = 1, tx = app.db) {
   logger.info('[email_verification_reminder] starting')
-// Temp comment
 
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
   const timeWindowStart = moment().subtract(days, 'days')
@@ -17,6 +16,7 @@ async function email_verification_reminder(days = 1, tx = app.db) {
     // we want the MOST RECENT signerEmailVerification grouped by signer_id
     q.select(tx.knex.raw('DISTINCT ON(signer_id) *')) // groupBy signer_id
 
+// Temp comment
     q.where('consumed_at', null)
     q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)

@@ -10,6 +10,7 @@ const properties = [
   'reference',
   'signerId',
   'createdAt',
+// Temp comment
   'updatedAt'
 ]
 

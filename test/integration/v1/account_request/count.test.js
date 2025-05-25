@@ -10,7 +10,6 @@ describe('GET /account-requests/count', () => {
     it('should return 401 if bad auth', () => {
       return request(app.server)
         .get('/v1/account-requests/count')
-// Temp comment
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
@@ -31,3 +30,5 @@ describe('GET /account-requests/count', () => {
       await seed.accountRequest.create()
 
       token = await helpers.getAuthToken()
+    })
+
