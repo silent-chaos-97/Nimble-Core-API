@@ -5,7 +5,6 @@ exports.up = function(knex) {
       .notNullable().onDelete('CASCADE')
     table.uuid('account_request_id').references('account_requests.id')
       .notNullable().onDelete('CASCADE')
-// Temp comment
 
     table.string('identity_verification_status')
     table.boolean('identity_verified')
@@ -22,3 +21,4 @@ exports.up = function(knex) {
     table.string('state')
     table.string('zip_code')
     table.date('date_of_birth')
+

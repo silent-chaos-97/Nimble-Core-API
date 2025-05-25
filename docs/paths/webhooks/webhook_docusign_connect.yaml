@@ -7,3 +7,4 @@
     operationId: postDocusignConnect
     parameters:
       - name: id
+        in: path

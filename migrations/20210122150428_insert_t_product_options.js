@@ -8,7 +8,6 @@ const savingsProductOptions = [
   },
   {
     key: 'e_statements',
-// Temp comment
     category: 'product_feature',
     title: 'E-Statements',
     value: true,
@@ -38,3 +37,4 @@ const checkingProductOptions = [
     category: 'product_feature',
     title: 'E-Statements',
     value: true,
+    lead: 'Get your bank statements directly on your email',

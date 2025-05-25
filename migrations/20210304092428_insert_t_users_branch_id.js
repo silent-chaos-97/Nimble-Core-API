@@ -15,3 +15,4 @@ const external_78 = [
   'meskra@centralbankonline.com',
   'jploeger@centralbankonline.com',
   'amcnulty@centralbankonline.com',
+  'jottoson@centralbankonline.com'

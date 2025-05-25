@@ -7,3 +7,4 @@ exports.up = function(knex) {
       .defaultTo('PENDING').notNullable()
 
     table.uuid('status_updated_by_id').references('users.id')
+    table.timestamp('status_updated_at')

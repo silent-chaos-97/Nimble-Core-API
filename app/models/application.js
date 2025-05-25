@@ -5,3 +5,4 @@ class Application extends BaseModel {
   constructor(data) {
     super(Application.props(), Application.relations(), data)
   }
+

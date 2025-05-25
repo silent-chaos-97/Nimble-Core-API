@@ -16,7 +16,7 @@ class SignerComplianceVerificationModel extends BaseModel {
       'documentId',
       'searchObject',
       'reference',
-// Temp comment
       'signerId',
       'createdAt',
       'updatedAt',
+    ]

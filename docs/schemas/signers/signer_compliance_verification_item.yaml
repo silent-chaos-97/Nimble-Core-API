@@ -19,3 +19,4 @@ SignerComplianceVerificationItem:
     dateOfBirth:
       title: The birthdate of this result
       type: string
+    dateOfDeath:

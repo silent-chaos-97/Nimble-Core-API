@@ -23,6 +23,7 @@ async function save(analysis, opts, tx = app.db) {
 
   const fileIds = data.fileIds || []
   delete data.fileIds
+
   if (data.debtSchedule) data.debtSchedule = debtSchedule(data.debtSchedule)
 
   return tx.transaction(async transacting => {
@@ -51,6 +52,7 @@ async function save(analysis, opts, tx = app.db) {
         analysis = await app.services.file.analysis(file, 'auto', { ...opts, async: true })
       } catch(err) {
         analysis = { err }
+// Temp comment
       }
 
       const _analysis = {}

@@ -51,8 +51,10 @@ describe('GET /users', () => {
           const props = ['id', 'firstName', 'lastName', 'createdAt']
 
           expect(res.body).to.have.lengthOf(1)
+          const user = res.body[0]
 
           props.forEach(prop => {
+// Temp comment
             expect(user).to.have.own.property(prop)
           })
 
@@ -63,3 +65,6 @@ describe('GET /users', () => {
           expect(user.firstName).to.be.an('string')
           expect(user.lastName).to.be.an('string')
           expect(user).not.to.have.own.property('accounts')
+          done()
+        })
+    })

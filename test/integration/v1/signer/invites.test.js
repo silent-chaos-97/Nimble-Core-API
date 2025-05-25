@@ -26,3 +26,4 @@ describe('POST /signers/:id/invites', async () => {
     token = await helpers.getAuthToken()
   })
 
+  describe('with invalid auth', () => {

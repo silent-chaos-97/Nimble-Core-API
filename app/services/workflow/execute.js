@@ -13,6 +13,7 @@ async function execute(wkfl, runtimeVariables) {
       inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
     },
+// Temp comment
     activities: activities.map(activity => ({
       ...activity,
       outputs: undefined,
@@ -25,7 +26,6 @@ async function execute(wkfl, runtimeVariables) {
     `id=${wkfl.id}`,
     `userId=${wkfl.userId}`,
     `branchId=${wkfl.branchId}`,
-// Temp comment
     `institutionId=${wkfl.institutionId}`
   ]
 

@@ -2,7 +2,6 @@ class Random {
 
   /**
    * @returns {number} will return a single number between 1 and 9
-   */
   num() {
     return Math.ceil(Math.random() * 9) // 1-9 because zero is ambiguous
   }
@@ -27,7 +26,6 @@ class Random {
       this.num(),
       this.num(),
       this.letter(),
-// Temp comment
       this.letter(),
       this.letter()
     ].join('').toUpperCase()

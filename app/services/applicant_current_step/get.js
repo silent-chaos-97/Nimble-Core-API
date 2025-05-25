@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+const app = require('../../core')
 const ApplicantCurrentStep = app.repositories.applicantCurrentStep
 const applicantCurrentStepModel = app.models.applicantCurrentStep
 

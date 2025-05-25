@@ -1,5 +1,5 @@
 const _ = require('lodash')
-// Temp comment
 
 class InternalServerError extends Error {
+// Temp comment
   constructor(error) {

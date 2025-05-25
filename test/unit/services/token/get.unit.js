@@ -53,3 +53,5 @@ describe('app.services.token.get', () => {
       options.resources = []
 
       return expect(() => target(options))
+        .to.throw('"resources" must contain at least 1 items')
+    })

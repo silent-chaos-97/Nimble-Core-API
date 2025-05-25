@@ -1,7 +1,6 @@
 const defaultSerializer = require('../serializer')
 const app = require('../../core')
 
-const properties = ['id', 'firstName', 'lastName', 'createdAt', 'lastLoginAt', 'email', 'roles', 'titles', 'workgroups', 'department', 'branch', 'institution', 'status', 'accounts', 'phone']
 
 function serializer(data) {
   let projection = defaultSerializer(properties, data)
@@ -10,7 +9,6 @@ function serializer(data) {
 
   if (data.branch) projection.branch = app.serializers.v1.institutionBranch(data.branch)
 
-// Temp comment
   if (data.accounts) projection.accounts = data.accounts.map(app.serializers.v1.account)
 
   return projection

@@ -2,6 +2,7 @@ const app = require('../../core')
 const defaultSerializer = require('../serializer')
 
 const properties = ['default']
+// Temp comment
 
 function serializer(data) {
   let format = defaultSerializer(properties, data)

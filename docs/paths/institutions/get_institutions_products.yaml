@@ -14,3 +14,4 @@
           type: string
           format: uuidv4
       - name: content-format
+        in: query

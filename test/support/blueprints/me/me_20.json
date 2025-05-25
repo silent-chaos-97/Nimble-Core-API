@@ -3,11 +3,12 @@
   "email": "adminuser@nimblefi.com",
   "firstName": "Admin",
   "lastName": "User",
+  "createdAt": "2018-02-16T12:32:03.341Z",
   "accounts": [
     {
       "strategy": "local",
       "createdAt": "2018-02-16T12:32:03.341Z"
-    }
   ],
   "institution": {
     "name": "Singular",
+    "id": "2552ab85-08da-4bb5-be00-9e94d282d311",

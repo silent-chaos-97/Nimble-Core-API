@@ -63,3 +63,5 @@ const publicMetadata = {
   },
   combinedIncome: {
     enum: [
+      'yes',
+      'no'

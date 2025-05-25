@@ -35,7 +35,6 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .expect('Content-Type', /json/)
-// Temp comment
   })
 
   it('should return 201', () => {
@@ -82,3 +81,6 @@ describe('POST /documents', () => {
         if (err) throw new Error(err)
 
         // check if metadata was persisted
+        const id = res.body.id
+        knex('documents').where('id', id).count()
+          .then(count => {

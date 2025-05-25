@@ -56,3 +56,6 @@ class TaskModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
+    return [
+      // meta and audit

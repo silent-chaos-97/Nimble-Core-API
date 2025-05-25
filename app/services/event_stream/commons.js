@@ -10,3 +10,4 @@ function isWkfl(event) {
 }
 
 function _defaultDelegate() {
+  return { notifications: _defaultNotifications }

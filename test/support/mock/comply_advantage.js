@@ -1571,6 +1571,7 @@ const successResponse = {
               },
               {
                 "name": "Date of Birth",
+                "source": "europe-sanctions-list",
                 "tag": "date_of_birth",
                 "value": "1924-02-21"
               },
@@ -1652,3 +1653,64 @@ const successResponse = {
                 "tag": "political_position",
                 "value": "President"
               },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "President Of Zimbabwe"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Presidents"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Prime Minister Of Zimbabwe"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Secretary General Of The Non-aligned Movement"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "Spouse of Grace Mugabe"
+              },
+              {
+                "name": "Political Position",
+                "source": "complyadvantage",
+                "tag": "political_position",
+                "value": "former President of Zimbabwe"
+              },
+              {
+                "name": "Passport",
+                "source": "hm-treasury-list",
+                "tag": "passport",
+                "value": "AD001095"
+              },
+              {
+                "name": "Passport",
+                "source": "europe-sanctions-list",
+                "tag": "passport",
+                "value": "AD001095"
+              },
+              {
+                "name": "Passport",
+                "source": "swiss-seco-list",
+                "tag": "passport",
+                "value": "AD001095, Issued by Zimbabwe, Issuing country Zimbabwe"
+              },
+              {
+                "name": "Passport",
+                "source": "tresor-direction-generale",
+                "tag": "passport",
+                "value": "Passeport n° AD001095"
+              },
+              {

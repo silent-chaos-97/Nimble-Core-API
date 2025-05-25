@@ -1,5 +1,4 @@
 const app = require('../../../core')
-
 /**
  * TODO: Determine who should have access
  */

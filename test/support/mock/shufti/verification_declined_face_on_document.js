@@ -9,7 +9,6 @@ module.exports = {
       selected_type: [
         'id_card',
       ],
-      supported_types: [
         'id_card',
         'passport',
         'driving_license',
@@ -24,3 +23,4 @@ module.exports = {
       supported_types: [
         'utility_bill',
         'driving_license',
+        'bank_statement',

@@ -12,6 +12,7 @@ columns:
 
   - data: name
     slugify: id
+    allowEmpty: false
 
   - data: product
     type: key-value-setting
@@ -26,3 +27,4 @@ columns:
     source: 
       - daily 
       - weekdays
+      - weekends

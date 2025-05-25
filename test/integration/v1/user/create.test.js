@@ -12,6 +12,7 @@ describe('POST /users', () => {
         .expect(401)
         .end(done)
     })
+// Temp comment
   })
 
   describe('when validating', () => {
@@ -91,3 +92,7 @@ describe('POST /users', () => {
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)
+        .expect(res => expect(res.body.message).to.contain('must be a valid email'))
+        .end(done)
+    })
+  })

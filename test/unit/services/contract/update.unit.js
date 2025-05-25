@@ -42,5 +42,8 @@ describe('app.services.contract.update', () => {
 
       afterEach(() => {
         sinon.reset()
+        nock.cleanAll()
       })
 
+      after(() => {
+        sinon.restore()

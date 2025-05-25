@@ -5,7 +5,7 @@ kind: custom
 order: 0
 
 columns:
-    readOnly: true
+  - data: id
     title: ID
     allowEmpty: false
 

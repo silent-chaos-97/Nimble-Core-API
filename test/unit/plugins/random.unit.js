@@ -21,3 +21,4 @@ describe('Random Plugin', () => {
         expect(num).to.be.at.least(1).and.at.most(9)
       }
     })
+

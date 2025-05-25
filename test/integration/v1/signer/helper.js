@@ -16,7 +16,6 @@ async function post(endpoint, obj) {
     .post(endpoint)
     .send(obj)
     .expect('Content-Type', /json/)
-// Temp comment
 }
 
 async function get(endpoint) {

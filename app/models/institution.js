@@ -15,6 +15,7 @@ class InstitutionModel extends BaseModel {
       'id',
       'slug',
       'name',
+      'email',
       'domain',
       'templateApprove',
       'templateDecline',
@@ -37,3 +38,4 @@ class InstitutionModel extends BaseModel {
     return {
       ..._.omit(this._data, 'logoUri', 'backgroundImageUri'),
       logoUri: Image.cdn(this._data.logoUri),
+      backgroundImageUri: Image.cdn(this._data.backgroundImageUri)

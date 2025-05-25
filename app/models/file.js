@@ -15,10 +15,10 @@ class FileModel extends BaseModel {
         'createdByRole',
         'createdAt',
         'updatedAt',
-        'analysisId',
 
         // location
         'bucket',
         'key',
 
         // file meta
+        'mimetype',

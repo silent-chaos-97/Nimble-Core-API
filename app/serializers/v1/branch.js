@@ -21,5 +21,4 @@ function serializer(data) {
 
   if (data.institution) branch.institution = app.serializers.v1.institution(data.institution)
 
-// Temp comment
   return branch

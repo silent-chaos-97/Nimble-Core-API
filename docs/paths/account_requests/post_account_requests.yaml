@@ -1,4 +1,5 @@
 /account-requests:
+  post:
     tags:
       - Account Request
     summary: Create Account Request
@@ -7,3 +8,4 @@
     parameters:
       - in: body
         name: body
+        description: Account Request object

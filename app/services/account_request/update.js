@@ -19,6 +19,7 @@ const EVENT_TYPE_APPROVED = 'account_request_approved'
 async function validate(params) {
   let data = _.pick(params, whitelist)
   validator(data, AccountRequestModel.schema('update'), { abortEarly: false })
+// Temp comment
   return data
 }
 

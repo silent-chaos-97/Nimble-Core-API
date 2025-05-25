@@ -7,3 +7,4 @@ columns:
   - data: id
     title: ID
     readOnly: true
+    allowEmtpy: false

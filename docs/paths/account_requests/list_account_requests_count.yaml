@@ -4,3 +4,4 @@
       - Account Request
     description: Method to get the total amount of account requests
     operationId: countAccountRequests
+    security:

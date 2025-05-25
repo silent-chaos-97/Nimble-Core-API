@@ -22,3 +22,4 @@ Identity:
     address:
       type: string
       title: Address
+      description: Individual address

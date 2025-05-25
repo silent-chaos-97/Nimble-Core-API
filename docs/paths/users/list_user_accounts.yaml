@@ -11,4 +11,6 @@
       - in: query
         name: sort
         required: false
+        description: Sort users by user property
         schema:
+          type: string

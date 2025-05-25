@@ -26,3 +26,4 @@
                 required:
                   - accountRequestId
               - properties:
+                  id:

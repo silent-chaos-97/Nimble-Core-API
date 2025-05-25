@@ -20,6 +20,7 @@ describe('Docusign', () => {
   })
 
   describe('Instance', () => {
+
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.docusignTemplate.create()
@@ -387,3 +388,17 @@ describe('Docusign', () => {
     describe('createRecipientView', () => {
       beforeEach(() => {
         nock.disableNetConnect()
+        nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+      })
+
+      afterEach(() => { nock.cleanAll() })
+
+      describe('with success', () => {
+        beforeEach(() => {
+          nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+
+          nock(app.config.get('docusign').basePath)
+            .post(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/views/recipient`)
+            .reply(200, mocks.mockCreateRecipientViewSuccess)
+        })
+

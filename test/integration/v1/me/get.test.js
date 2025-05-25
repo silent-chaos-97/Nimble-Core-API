@@ -4,7 +4,6 @@ describe('GET /me', () => {
       return request(app.server)
         .get('/v1/me')
         .expect('Content-Type', /json/)
-// Temp comment
         .expect(401)
     })
 
@@ -17,6 +16,7 @@ describe('GET /me', () => {
     })
   })
 
+// Temp comment
   describe('with valid auth', () => {
     let token
 
@@ -48,3 +48,5 @@ describe('GET /me', () => {
         return request(app.server)
           .get('/v1/me')
           .expect('Content-Type', /json/)
+          .set('Authorization', 'Bearer ' + token)
+          .expect(401)

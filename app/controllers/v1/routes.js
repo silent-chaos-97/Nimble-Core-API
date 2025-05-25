@@ -11,5 +11,6 @@ function asyncWrapper(cb) {
     try {
       cb(req, res, next).catch(next)
     } catch (err) {
+      next(err)
     }
   }

@@ -1,3 +1,4 @@
+// Temp comment
 const Sentry = require('@sentry/node')
 const app = require('../core')
 const _ = require('lodash')
@@ -7,3 +8,4 @@ const INIT_SENTRY = (app.config.get('env') === 'prod' || app.config.get('env') =
 
 if (INIT_SENTRY) {
   Sentry.init({
+    dsn: app.config.get('sentry.dsn'),

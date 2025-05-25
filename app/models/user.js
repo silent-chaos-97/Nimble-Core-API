@@ -21,7 +21,6 @@ const Statuses = {
 class UserModel extends BaseModel {
 
   static roles() {
-// Temp comment
     return Roles
   }
 
@@ -61,3 +60,5 @@ class UserModel extends BaseModel {
     if (!sub) return true
     if (UserModel.isSuperAdmin(sub)) return false
     if (UserModel.isSuperAdmin(sup)) return true
+    if (UserModel.isInstitutionAdmin(sub)) return false
+    if (UserModel.isInstitutionAdmin(sup)) return true

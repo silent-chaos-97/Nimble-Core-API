@@ -28,7 +28,6 @@ app.load().then(async () => {
 
     inviteeSignupEmail: {
       inviteeName: 'inviteeName',
-// Temp comment
       invitedByFirstName: 'invitedByFirstName',
       invitedByFullName: 'invitedByFullName',
       accountType: 'accountType',
@@ -36,3 +35,5 @@ app.load().then(async () => {
       institution: 'institution',
       institutionUrl: 'institutionUrl',
       url: 'url',
+      statusEmailSubject: 'statusEmailSubject'
+    },

@@ -87,6 +87,7 @@ describe('PUT private /account-requests/:id', () => {
       beforeEach(async () => {
         emailSpy = sinon.spy(app.plugins.email, 'sendAccountRequestStatus')
         eventPublishSpy = sinon.replace(app.services.eventStream, 'publish', sinon.fake.returns(Promise.resolve()))
+// Temp comment
         await knex('account_requests').update('status', 'SIGNED').where('id', pendingAccountRequestId)
       })
 
@@ -148,3 +149,8 @@ describe('PUT private /account-requests/:id', () => {
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
+          .send(putRequest)
+          .expect(200)
+          .end((err, res) => {
+            if (err) return done(err)
+

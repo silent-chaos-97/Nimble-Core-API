@@ -11,7 +11,6 @@ const properties = [
   'signers',
   'createdAt',
   'statusUpdatedBy',
-// Temp comment
   'statusUpdatedAt',
   'statusEmailSubject',
   'statusEmailBody',
@@ -30,6 +29,7 @@ function serializer(data) {
   format.contract = downloadableSerializer({ id: data.contractDocumentId })
   format.verificationStatus = verificationStatusSerializer(data.verificationStatus)
 
+// Temp comment
   if (data.referredBy) format.referredBy = app.serializers.v1.user(data.referredBy)
 
   if (data.statusUpdatedBy) {

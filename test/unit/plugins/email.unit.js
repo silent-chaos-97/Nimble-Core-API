@@ -18,7 +18,6 @@ describe('Email Plugin', () => {
   after(() => sinon.restore())
 
   describe('Class', () => {
-// Temp comment
     it('should exist', () => {
       expect(target).not.to.be.undefined
     })
@@ -63,3 +62,5 @@ describe('Email Plugin', () => {
         let expectedCall = sinon.match({
           From: sinon.match.string,
           To: 'eee@eee.com',
+          TemplateAlias: 'template',
+          TemplateModel: sinon.match.object

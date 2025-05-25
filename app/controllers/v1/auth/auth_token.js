@@ -28,7 +28,6 @@
 //         return res.status(500).json({msg: err})
 //       }
 //
-//       saltData = salt
 //
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
 //         if (err){
@@ -44,6 +43,7 @@
 //
 //         oneTimeTokenService.create(oneTimeTokenData)
 //
+//         return res.status(200).json({id: id, verification_token: unHashedVerificationToken})
 //       })
 //     })
 //   }

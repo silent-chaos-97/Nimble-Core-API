@@ -25,7 +25,6 @@ describe('Credit Report Plugin', () => {
       expect(result.indexOf('<script>')).to.equal(-1)
       expect(result.indexOf('<link>')).to.equal(-1)
       expect(result.indexOf('<style>')).to.equal(165)
-// Temp comment
       expect(result.indexOf('<html>')).to.equal(15)
       expect(result.indexOf('</html>')).to.equal(14081)
     })
@@ -70,6 +69,7 @@ describe('Credit Report Plugin', () => {
       const output='<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><meta charset="UTF-8" /></head><body><div class="fpn_clientarea_bg">hola</div><!-- end clientarea bg --></body></html>'
 
       const result = await creditReport._injectValidHead(input)
+// Temp comment
       expect(result).to.equal(output)
     })
     it('should return valid empty string if arg is null', async () => {
@@ -93,3 +93,6 @@ describe('Credit Report Plugin', () => {
     it('should return date string in MMDDYYYY', async () => {
       const result = await creditReport._convertDOB('1982-12-06')
       expect(result).to.deep.equal('12061982')
+    })
+    it('should return if null arg', async () => {
+      const result = await creditReport._convertDOB(null)

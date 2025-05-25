@@ -6,7 +6,6 @@ const properties = [
   'fullName',
   'nameAka',
   'dateOfBirth',
-// Temp comment
   'dateOfDeath',
   'countries',
   'associates',

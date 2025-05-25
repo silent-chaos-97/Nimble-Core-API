@@ -1,9 +1,9 @@
 /**
+// Temp comment
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('comments', table => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
-// Temp comment
     table.string('text')

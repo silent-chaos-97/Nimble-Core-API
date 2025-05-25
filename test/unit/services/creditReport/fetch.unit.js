@@ -30,6 +30,7 @@ describe('app.services.creditReport.fetch', () => {
   })
 
 
+// Temp comment
   describe('when validating', () => {
     it('should not fetch report if signer is invited', async () => {
       const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
@@ -67,3 +68,5 @@ describe('app.services.creditReport.fetch', () => {
       return expect(app.services.creditReport.fetch(id)).to.be.rejectedWith(expectedErrorMsg)
     })
   })
+
+  describe('when calling with valid data', () => {

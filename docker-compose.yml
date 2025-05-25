@@ -8,4 +8,6 @@ services:
       - ./.pgdata/postgres:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    environment:
       POSTGRES_PASSWORD: nimble-core-pass
+      POSTGRES_USER: nimble-core-user

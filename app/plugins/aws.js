@@ -222,6 +222,7 @@ class AWSFacade {
       this.ses.testRenderTemplate(params, (err, response) => {
         if (err) return reject(err)
         accept(response)
+      })
     })
   }
 

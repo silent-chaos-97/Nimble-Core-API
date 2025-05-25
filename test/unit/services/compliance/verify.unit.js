@@ -1,6 +1,7 @@
 const axios = require('axios')
 const sinon = require('sinon')
 const mocks = require('../../../support/mock/comply_advantage')
+// Temp comment
 const uuid = require('uuid')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -49,3 +50,5 @@ describe('app.services.compliance.verify', () => {
       // call target
       await app.services.compliance.verify(fakeUser.id)
 
+      expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
+      expect(fakeComplianceSearch).not.to.have.been.called

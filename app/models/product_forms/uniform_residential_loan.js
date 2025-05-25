@@ -6,7 +6,6 @@ const schema = Joi.object({
   // User input
 	intentToApplyJointly: Joi.object({
 		jointApplicationRequired: Joi.boolean(),
-		includesIncomeOrAssetsFromOtherPerson: Joi.boolean(),
 		borrowerSignature: Joi.string().dataUri(),
 		coborrowerSignature: Joi.string().dataUri()
 	}),
@@ -258,3 +257,12 @@ const schema = Joi.object({
 			lifeInsurance: Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 				faceAmount: Joi.number(),
+				netCashValue: Joi.number()
+			}),
+      // Calculated
+			lifeInsuranceTotalNetCashValue: Joi.number(),
+      // Calculated
+			subtotalLiquidAssets: Joi.number(),
+      // Not sure - https://developer.microbilt.com/propertysearch/apis/post/GetReport
+			realEstateOwned: Joi.object({
+				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),

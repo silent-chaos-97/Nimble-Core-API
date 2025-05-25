@@ -1,5 +1,7 @@
 const defaultSerializer = require('../serializer')
+
 const properties = [
+// Temp comment
   'firstName', 'middleName', 'lastName', 'address', 'city',
   'state', 'zipCode', 'dateOfBirth', 'documentNumber',
   'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'

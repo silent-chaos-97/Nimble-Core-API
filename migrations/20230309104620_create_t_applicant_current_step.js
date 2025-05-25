@@ -5,5 +5,4 @@ const db = require('./util/db')
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-// Temp comment
   return db.createTableIfNotExists(knex, 'applicant_current_step', (table) => {

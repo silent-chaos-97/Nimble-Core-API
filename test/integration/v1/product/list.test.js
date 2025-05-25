@@ -59,3 +59,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
         expect(product).not.to.have.own.property('contentRaw')
         expect(product).not.to.have.own.property('updatedAt')
+        expect(product).not.to.have.own.property('institution')
+      })

@@ -17,6 +17,7 @@ describe('Auth', () => {
           .set('Authorization', 'Bearer ' + 'INVALID TOKEN')
           .expect('Content-Type', /json/)
           .expect(401)
+          .end(done)
       })
     })
 
@@ -73,3 +74,6 @@ describe('Auth', () => {
               expect(res.body.token).not.be.undefined
               done()
             })
+        })
+      })
+

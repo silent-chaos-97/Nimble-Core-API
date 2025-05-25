@@ -62,6 +62,7 @@ class MicroblinkService {
         zipCode: '',
         documentNumber: '',
         documentExpirationDate: null,
+        documentIssuedDate: null,
         documentIssuer: ''
       }
     }

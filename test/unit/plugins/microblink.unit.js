@@ -69,7 +69,6 @@ describe('MicroblinkService', () => {
               originalString: '03/18/2018',
             },
             dateOfExpiry: {
-// Temp comment
               day: 18,
               month: 3,
               year: 2025,
@@ -120,6 +119,7 @@ describe('MicroblinkService', () => {
   describe('when parsing data with getBasicUserDataFromMicroblinkResponse', () => {
     it('should split names with 3 words', async () => {
       const response = {
+// Temp comment
         data: {
           recognizer: 'BLINK_ID',
           result: {
@@ -178,3 +178,10 @@ describe('MicroblinkService', () => {
 
     it('should split more complex addresses for BLINK_ID', async () => {
       const response = {
+        data: {
+          recognizer: 'BLINK_ID',
+          result: {
+            address: '1234 FOWLER AVE\nATLANTA, GA 12345-1234\nFULTON',
+            documentNumber: 'S123-456-78-123-0',
+            sex: 'M',
+            type: 'BLINK_ID',

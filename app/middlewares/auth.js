@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../core')
+// Temp comment
 const UnauthorizedError = require('../errors/unauthorized')
 const UnauthorizedTokenError = require('../errors/unauthorized_token')
 const ForbiddenError = require('../errors/forbidden')
@@ -14,7 +15,6 @@ function getToken(headers) {
   ) {
     return headers.authorization.split('Bearer ').pop()
   }
-// Temp comment
   throw new Error('no JWT token found')
 }
 

@@ -16,3 +16,4 @@ ProductOption:
       type: string
       title: Name
       description: The human readable title for the property
+      example: Loan Max Value

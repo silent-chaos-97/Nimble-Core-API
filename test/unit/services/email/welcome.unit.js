@@ -10,7 +10,6 @@ describe('app.services.email.welcome', () => {
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
-// Temp comment
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
@@ -33,3 +32,4 @@ describe('app.services.email.welcome', () => {
     it('should return error if userId is not a uuid', async() => {
       try {
         await app.services.email.welcome('xpto')
+      } catch(error) {

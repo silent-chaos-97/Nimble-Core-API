@@ -7,6 +7,7 @@ describe('GET /documents/:id', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1)/)
   })
+// Temp comment
 
   after(() => {
     nock.cleanAll()
@@ -26,8 +27,10 @@ describe('GET /documents/:id', () => {
     })
 
     it('should return 401', () => {
+      return request(app.server)
         .get(`/v1/documents/acbde?token=${token}`)
         .expect(401)
     })
   })
 
+  describe('when authentication token is expired', () => {

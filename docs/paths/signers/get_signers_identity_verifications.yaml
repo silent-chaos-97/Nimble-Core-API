@@ -2,6 +2,7 @@
   get:
     tags:
       - Signer
+    summary: Get Signer identity verifications by Id
     description: fetch signer identity verifications by Id
     parameters:
       - in: path

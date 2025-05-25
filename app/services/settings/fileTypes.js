@@ -9,6 +9,7 @@ const fileTypes = [
   },
   {
     type: 'Entity',
+    name: 'SSN verified'
   },
   {
     type: 'Entity',
@@ -230,3 +231,11 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Zones Match'
+  },
+  {
+    type: 'Product',
+    name: 'Collateral Inspection'
+  },
+  {
+    type: 'Product',
+    name: 'Environmental Risk Assessment'

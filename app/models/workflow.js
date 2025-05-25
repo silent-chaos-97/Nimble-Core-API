@@ -14,6 +14,7 @@ class WorkflowModel extends BaseModel {
 
   constructor(data) {
     super(WorkflowModel.props(), WorkflowModel.relations(), data)
+  }
 
   static statuses() {
     return Statuses
@@ -28,3 +29,4 @@ class WorkflowModel extends BaseModel {
   }
 
   static prePersist(wkfl) {
+    return !wkfl ? {} : _.merge(wkfl, wkfl.activities ? { activities: JSON.stringify(wkfl.activities) } : {})

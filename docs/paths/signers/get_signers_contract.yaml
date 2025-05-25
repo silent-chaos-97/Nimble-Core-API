@@ -9,3 +9,4 @@
       - bearer: ['signers']
     parameters:
       - name: id
+        in: path

@@ -1,10 +1,10 @@
 const axios = require('axios')
 const nock = require('nock')
-axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.contract.embed', () => {
   describe('embed', async () => {
 
+    it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('embed')
       expect(app.services.contract.embed).to.be.an('Function')
     })
@@ -23,3 +23,4 @@ describe('app.services.contract.embed', () => {
         await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
+        await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products

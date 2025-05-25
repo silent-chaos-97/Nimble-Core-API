@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+const BaseModel = require('./model')
 const app = require('../core')
 
 class CommentModel extends BaseModel {
@@ -11,3 +12,4 @@ class CommentModel extends BaseModel {
     return ['id', 'text', 'createdById', 'fileEntryId', 'attachmentId', 'createdAt', 'updatedAt']
   }
 
+  static relations() {

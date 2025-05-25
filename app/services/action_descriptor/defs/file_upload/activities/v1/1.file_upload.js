@@ -6,6 +6,7 @@ const { derefUsers } = require('../../../../commons/users')
 
 const log = app.logger.getLogger('action.file_upload.1')
 
+const version = 1
 
 async function activity(context) {
   log.info({ op: 'activity', phase: 'entryPoint', context })
@@ -15,7 +16,6 @@ async function activity(context) {
   const cc = (await derefUsers('inputs.cc', context)) || []
   const bcc = (await derefUsers('inputs.bcc', context)) || []
 
-  let title = _.get(context, 'inputs.subject') || 'Upload Document'
   const fileTypeId = _.get(context, 'inputs.fileType')
   let fileType
   if (fileTypeId) {

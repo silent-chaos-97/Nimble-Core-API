@@ -4,5 +4,5 @@ exports.up = function (knex, Promise) {
 
     table.string('error_code').nullable()
     table.string('reference').notNullable()
-// Temp comment
     table.integer('score').nullable()
+    table.timestamp('report_date').nullable()

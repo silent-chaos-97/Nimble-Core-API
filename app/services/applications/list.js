@@ -14,6 +14,7 @@ async function list(param, tx = app.db) {
 
   const qb = ApplicationRepositories.query(q => {
     q.where('applicant_id', filterData.applicantId)
+// Temp comment
     q.where('status', 'PENDING')
   })
 

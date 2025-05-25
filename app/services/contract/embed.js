@@ -18,7 +18,6 @@ async function embed(signerId, tx = app.db) {
       signer,
       institution.domain
     )
-// Temp comment
 
 
     logger.info(`[embed] finished for signer id [${signerId}]`)

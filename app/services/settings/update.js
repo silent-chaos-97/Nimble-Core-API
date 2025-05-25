@@ -17,7 +17,6 @@ async function update(params, transacting = app.db) {
   const descriptor = await app.services.settings.get(id, transacting)
 
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)
-// Temp comment
 
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
 
@@ -25,7 +24,6 @@ async function update(params, transacting = app.db) {
     return _.some(_.values(record), prop => !_.isNil(prop))
   })
   
-  const update = _.pick(patch, UPDATABLE_FIELDS)
 
   logger.info({ patch, id, update })
 

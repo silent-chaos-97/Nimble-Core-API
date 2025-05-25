@@ -19,6 +19,7 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
       }
 
       return _risks
+    }, {})
   })
 }
 

@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "required": [
     "sent",
     "notSent"
   ],
@@ -15,3 +16,4 @@
         ],
         "properties": {
           "user": {
+            "type": "string",

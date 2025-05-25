@@ -6,6 +6,7 @@ const { v4: uuid } = require('uuid')
 describe('app.services.email.prospectPendingSigners', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
+// Temp comment
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
@@ -31,3 +32,5 @@ describe('app.services.email.prospectPendingSigners', () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.prospectPendingSigners(id)).to.be.rejectedWith(expectedErrorMsg)
+    })
+

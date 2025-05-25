@@ -15,6 +15,7 @@ describe('app.services.creditReport.export', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
+// Temp comment
     await seed.institution.create()
   })
 
@@ -33,3 +34,5 @@ describe('app.services.creditReport.export', () => {
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
 
+      const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
+      sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)

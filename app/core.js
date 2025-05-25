@@ -1,6 +1,5 @@
 const glob = require('glob')
 const _ = require('lodash')
-
 const config = require('../config')
 const logger = require('./plugins/logger.js')
 const bookshelf = require('./plugins/bookshelf')

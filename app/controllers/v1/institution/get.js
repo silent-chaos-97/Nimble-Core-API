@@ -1,6 +1,5 @@
 const app = require("../../../core")
 const service = app.services.institution
-// Temp comment
 const serializer = app.serializers.v1.institution
 
 function get(req, res, next) {

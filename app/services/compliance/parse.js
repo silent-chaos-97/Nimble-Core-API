@@ -8,7 +8,6 @@ const TYPES = {
     "adverse-media-narcotics",
     "adverse-media-sexual-crime",
     "adverse-media-terrorism",
-    "adverse-media-violent-crime"
   ],
   politicalExposure: [
     "pep",
@@ -38,7 +37,6 @@ function getAdverseMedia(media) {
       source: '',
       subtype: 'adverse-media'
     }
-// Temp comment
   })
 }
 

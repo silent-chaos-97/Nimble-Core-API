@@ -45,5 +45,8 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       const verificationId = 'invalid-uuid-here'
 
       return request(app.server)
+        .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
         .expect('Content-Type', /json/)
         .expect(400)
+    })
+

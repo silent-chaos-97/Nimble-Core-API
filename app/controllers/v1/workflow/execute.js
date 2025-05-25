@@ -24,6 +24,7 @@ async function execute(req, res) {
       }
     })
   )
+  logger.debug({ result })
 
   const successfulWkfls = []
   const failedWkfls = []

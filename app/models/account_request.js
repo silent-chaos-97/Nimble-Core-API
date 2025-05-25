@@ -22,7 +22,6 @@ class AccountRequest extends BaseModel {
       'productConfigurations',
       'referrers', // FIXME: exists for backward compatability
       'referredById',
-      'statusUpdatedById',
       'statusUpdatedAt',
       'statusEmailSubject',
       'statusEmailBody',
@@ -87,3 +86,6 @@ class AccountRequest extends BaseModel {
 
   static status() {
     return _.keys({
+      DRAFT: ['referral'],
+      INCOMPLETE: [''],
+      PENDING: ['Ready to Sign'],

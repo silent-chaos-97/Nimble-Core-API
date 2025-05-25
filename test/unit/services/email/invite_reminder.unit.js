@@ -11,7 +11,6 @@ describe('app.services.email.inviteReminder', () => {
   let clock = null
 
   before(() => {
-    clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')
@@ -37,3 +36,5 @@ describe('app.services.email.inviteReminder', () => {
     it('should return error if signer not found', async () => {
       const id = uuid()
       const expectedErrorMsg = "The requested resource couldn't be found"
+      return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
+    })

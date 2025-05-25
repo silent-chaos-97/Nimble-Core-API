@@ -29,6 +29,7 @@ describe('POST /signers/:id/email-verifications', async () => {
   })
 
 
+  describe('when using header Bearer token', () => {
     let headerToken
     beforeEach(async () => {
       headerToken = await helpers.getAuthToken()
@@ -65,3 +66,5 @@ describe('POST /signers/:id/email-verifications', async () => {
       })
     })
 
+    it('should return 400 with invalid uuid as id', async () => {
+      const id = 'invalid-uuid-here'

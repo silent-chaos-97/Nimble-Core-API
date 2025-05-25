@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
@@ -10,7 +11,6 @@ describe('app.services.email.inviteSigner', () => {
   let clock = null
 
   before(() => {
-    clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')
@@ -36,3 +36,5 @@ describe('app.services.email.inviteSigner', () => {
     it('should return error if signer not found', async () => {
       const id = uuid()
       const expectedErrorMsg = "The requested resource couldn't be found"
+      return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)
+    })

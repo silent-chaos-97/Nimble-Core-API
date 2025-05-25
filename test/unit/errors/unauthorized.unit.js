@@ -11,3 +11,4 @@ describe('UnauthorizedError', () => {
     expect(error).to.be.instanceOf(Error)
   })
 
+  it('should have a status code and message', () => {

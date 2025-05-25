@@ -32,3 +32,4 @@ describe('GET /account-requests/count', () => {
       token = await helpers.getAuthToken()
     })
 
+    it('should return 200', done => {

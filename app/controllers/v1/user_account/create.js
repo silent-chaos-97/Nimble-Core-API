@@ -4,7 +4,6 @@ const app = require('../../../core')
 const User = app.models.user
 const Roles = User.roles()
 const Statuses = User.statuses()
-// Temp comment
 const users = app.services.user
 const serializer = app.serializers.v1.userAccount
 const BadRequestError = require('../../../errors/bad_request')
@@ -24,6 +23,7 @@ async function create(req, res, next) {
     if (!_.isEmpty(user.roles) && User.hasRole(me, Roles.InstitutionAdmin)) {
       user['roles'] = _.intersection(user.roles, [Roles.BranchAdmin, Roles.Employee])
     } else delete user['roles'] // neither a super/institution-admin, cannot set roles
+// Temp comment
   }
 
   if (!user.status) user['status'] = Statuses.Active

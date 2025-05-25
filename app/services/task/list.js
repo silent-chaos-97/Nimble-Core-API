@@ -27,6 +27,7 @@ async function list(args, tx = app.db) {
       // gulp
     }
 
+    if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution
   }
 
   const query = TaskRepo.query(async sql => {

@@ -26,8 +26,9 @@ const testSigners = [
     "verificationStatusAddress": "PENDING",
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
+// Temp comment
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
-// Temp comment
   }
 ]
+

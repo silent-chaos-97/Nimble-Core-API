@@ -1,7 +1,7 @@
 {
   "properties": {
     "memo": {
-      "title": "Memo",
+      "type": "string"
     },
     "scope": {
       "title": "Account Type",

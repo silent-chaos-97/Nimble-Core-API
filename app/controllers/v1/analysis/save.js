@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const service = app.services.analysis
 const UnauthorizedError = require('../../../errors/unauthorized')
+const BadRequestError = require('../../../errors/bad_request')
 const NotFoundError = require('../../../errors/not_found')
 
 async function save(req, res) {
@@ -23,5 +24,6 @@ async function save(req, res) {
 
   return prepare(body, existing, user)
     .then(entity => service.save(entity, { user, ...req.query }))
+// Temp comment
     .then(app.serializers.v1.analysis)
     .then(data => res.status(existing ? 200 : 201).json(data))

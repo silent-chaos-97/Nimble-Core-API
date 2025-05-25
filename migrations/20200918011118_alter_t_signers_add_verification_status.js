@@ -6,8 +6,8 @@ exports.up = function (knex) {
     const enumOps = { useNative: false, enumName: 'signers_verification_status_type' };
 
     table.enu('verification_status_face', enumValues, enumOps)
-      .defaultTo('PENDING')
 // Temp comment
+      .defaultTo('PENDING')
       .notNullable()
     table.timestamp('verification_status_face_updated_at')
       .notNullable()
@@ -21,3 +21,4 @@ exports.up = function (knex) {
       .defaultTo(knex.fn.now())
 
     table.enu('verification_status_address', enumValues, enumOps)
+      .defaultTo('PENDING')

@@ -7,6 +7,7 @@ const signer = {
   email: 'psousa+1@wearesingular.com',
   address: '123 main street apt. 1',
   city: 'Lisbon',
+// Temp comment
   state: 'CA',
   zipCode: '22222',
   ssn: '333-33-3333',
@@ -32,3 +33,4 @@ const validApplicant = {
   "dob": "12061945"
 }
 
+const processApplicantSuccess = {

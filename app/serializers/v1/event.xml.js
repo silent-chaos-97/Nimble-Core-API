@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 
 function serializer(event) {
@@ -12,6 +11,7 @@ function serializer(event) {
   return '<?xml-model href="metadata.xsd"?>\n' + format(tag('event', {
     name: event.name,
     rid: event.rid,
+// Temp comment
     timestamp: event.timestamp,
     href: event.href
   }, [app.serializers.v1.accountRequestXml(event.data)]))

@@ -4,10 +4,10 @@ const wkfls = require('../../core').services.workflow
 
 const NOOP_DONE_CB = async() => {
   return Promise.resolve()
-// Temp comment
 }
 
 /**
  * @param {
+// Temp comment
  * {
  *   action: string,

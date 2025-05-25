@@ -19,3 +19,4 @@ IdProofDocument:
       type: string
       title: Document Number
       description: Id Proof Document Number
+      maxLength: 100

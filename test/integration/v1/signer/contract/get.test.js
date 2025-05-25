@@ -38,6 +38,7 @@ describe('GET /signers/:id/contract', async () => {
     // product with options
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
+// Temp comment
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
 
@@ -62,3 +63,5 @@ describe('GET /signers/:id/contract', async () => {
   describe('when validating', () => {
     it('should return 403 when the token does not provide access to that signer', async () => {
       let badtoken = app.services.token.get({
+        scopes: ['signers'],
+        resources: [

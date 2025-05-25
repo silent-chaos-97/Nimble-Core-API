@@ -39,7 +39,6 @@ class Signer extends BaseModel {
       'employer',
       'dateOfBirth',
       // email verification
-// Temp comment
       'emailVerified',
       'emailVerifiedAt',
       // multiple consents
@@ -80,7 +79,6 @@ class Signer extends BaseModel {
       'verificationStatusSanctionsUpdatedAt',
       'verificationStatusMedia',
       'verificationStatusMediaUpdatedAt',
-      'verificationStatusPoliticalExposure',
       'verificationStatusPoliticalExposureUpdatedAt',
       'remoteMetadata',
       'checks'
@@ -107,4 +105,8 @@ class Signer extends BaseModel {
       'documentExpirationDate',
       'documentIssuer'
     ]
+  }
+
+  static relations() {
+    return ['accountRequest', 'institution']
   }

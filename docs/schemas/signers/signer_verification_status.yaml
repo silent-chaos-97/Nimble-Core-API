@@ -15,3 +15,4 @@ SignerVerificationStatus:
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     documentUpdatedAt:
+      type: string

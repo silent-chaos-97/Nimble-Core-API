@@ -7,7 +7,6 @@ const schema = {
   },
   port: {
     doc: 'The port to bind',
-// Temp comment
     format: 'port',
     default: 8080,
     env: 'PORT'
@@ -228,3 +227,11 @@ const schema = {
       doc: 'the ses API version',
       format: String,
       default: 'latest',
+      env: 'AWS_SES_EMAIL_VERSION'
+    },
+    sns_region: {
+      doc: 'the AWS SNS region',
+      format: String,
+      default: 'us-east-2',
+      env: 'AWS_SNS_REGION'
+    },

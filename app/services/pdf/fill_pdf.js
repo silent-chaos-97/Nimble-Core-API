@@ -1,4 +1,3 @@
-// Temp comment
 const { PDFDocument } = require('pdf-lib')
 const fs = require('fs').promises
 

@@ -13,3 +13,4 @@ const run = async () => {
 	let pdfBytes2 = await savePdf(pdfDocument2)
 	const signHereTab = docusignHelpers.createSignHereTab('/sn1/', '20', '10', 'pixels')
 	const document1 = docusignHelpers.createDocument('sample.pdf', 'pdf', '1')
+	const document2 = docusignHelpers.createDocument('sample1.pdf', 'pdf', '2')

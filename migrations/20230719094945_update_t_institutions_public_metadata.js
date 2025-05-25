@@ -14,7 +14,6 @@ const publicMetadata = {
       {
         risk: 'Low'
       }
-    ]
   },
   hearAbout: {
     text: 'How did you hear about Central Bank?',
@@ -53,6 +52,7 @@ const publicMetadata = {
     text: 'Are you or any others listed on the account not U.S. citizens?',
     type: 'string',
     order: 0,
+    score: {
       no: 2,
       yes: 2
     },
@@ -61,3 +61,5 @@ const publicMetadata = {
     required: true
   },
   combinedIncome: {
+    enum: [
+      'yes',

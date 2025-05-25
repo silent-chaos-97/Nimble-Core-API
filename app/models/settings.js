@@ -7,7 +7,6 @@ const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 class SettingsModel extends BaseModel {
 
-  constructor(data) {
     super(SettingsModel.props(), SettingsModel.relations(), data)
   }
 
@@ -21,3 +20,4 @@ class SettingsModel extends BaseModel {
 
   static prePersist(settings) {
     if (!settings) return {}
+    const _settings = _.cloneDeep(settings)

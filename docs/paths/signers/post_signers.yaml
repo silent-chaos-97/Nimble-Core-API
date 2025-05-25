@@ -7,8 +7,10 @@
     security:
       - bearer: ['account_requests']
     requestBody:
+      description: Signer information
       required: true
       content:
         application/json:
           schema:
             allOf:
+              - $ref: '#/components/schemas/Signer'

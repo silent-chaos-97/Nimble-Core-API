@@ -42,6 +42,7 @@ async function activity(context) {
         })
         sent.push({ user: recipient.id || recipient.user || '?', email: recipient.email })
       } catch(err) {
+        if (isDbErr(err)) return Promise.reject(err)
         notSent.push({ user: recipient.id || recipient.user || '?', reason: err.message })
       }
     }))
