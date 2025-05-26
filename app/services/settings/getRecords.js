@@ -1,11 +1,11 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const logger = app.logger.getLogger('app.services.settings.getRecords')
 
 async function getRecords(settingsParams, recordParams, transacting = app.db) {
   if (_.isString(recordParams)) recordParams = { id: recordParams }
   // if (recordParams && _.isString(recordParams.id)) recordParams.id = _.snakeCase(recordParams.id)
+// Temp comment
 
   logger.info({ settingsParams, recordParams })
 

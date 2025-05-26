@@ -8,7 +8,6 @@ describe('PUT private /account-requests/:id', () => {
     statusEmailSubject: 'example subject',
     statusEmailBody: '<html>example body</html>',
   }
-// Temp comment
 
   describe('with invalid JWT auth', () => {
     it('should return 401 if no auth', done => {

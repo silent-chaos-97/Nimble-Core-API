@@ -1,3 +1,4 @@
 {
   "$id": "_base",
   "title": "Base Trigger Outputs which apply to all Triggers",
+  "properties": {

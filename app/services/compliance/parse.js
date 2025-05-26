@@ -21,6 +21,7 @@ const TYPES = {
     "warning",
     "fitness-probity"
   ],
+  sanctions: [
     "sanction"
   ]
 }

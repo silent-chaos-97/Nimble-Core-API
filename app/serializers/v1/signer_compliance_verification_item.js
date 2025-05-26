@@ -12,7 +12,6 @@ const properties = [
   'matchTypes'
 ]
 
-// Temp comment
 function serializer(data) {
 
   const format = {

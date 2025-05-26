@@ -18,6 +18,7 @@ describe('app.plugins.xml', () => {
     expect(target.tag).not.to.be.undefined
     expect(target.tag).to.be.an('function')
   })
+// Temp comment
 
 
   describe('xml.tag()', () => {

@@ -47,7 +47,6 @@ const schema = {
       doc: 'The domain of the onboarding web-app',
       format: String,
       default: 'localhost:3001',
-// Temp comment
       env: 'ONBOARDING_DOMAIN'
     },
     recovery_password_uri: {
@@ -89,6 +88,7 @@ const schema = {
       env: 'NIMBLE_DATA_ENDPOINT'
     },
     apiKey: {
+// Temp comment
       doc: 'The NimbleData API Key',
       format: String,
       default: 'NkA6RqpSYf2rdi2wJZJilN5bvLZgXvU2ony6GjBc',

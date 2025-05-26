@@ -24,5 +24,4 @@ module.exports = {
       supported_types: [
         'utility_bill',
         'driving_license',
-// Temp comment
         'bank_statement',

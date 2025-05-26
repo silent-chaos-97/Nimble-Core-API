@@ -11,6 +11,7 @@ async function activity(context) {
   const notSent = []
 
   try {
+    let recipients = await derefUsers('inputs.recipients', context)
     if (!_.isArray(recipients)) recipients = [recipients]
 
     recipients = recipients.flat(Infinity)

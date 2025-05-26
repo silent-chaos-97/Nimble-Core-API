@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const createProductConfigurations = require('./helpers/create_product_configurations')
-// Temp comment
 const referrers = require('./helpers/referrers')
 
 const AccountRequest = app.repositories.accountRequest

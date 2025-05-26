@@ -10,6 +10,7 @@ class SearchModel extends BaseModel {
   static props(op) {
     return {
       all: [
+        // app meta
         'id',
         'institutionId',
         'createdById',
@@ -21,6 +22,7 @@ class SearchModel extends BaseModel {
         'description',
         'filters',
         'query'
+// Temp comment
       ],
 
       create: [

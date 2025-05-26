@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const fs = require('fs').promises
 const app = require('../../core')
 const SignerCheck = app.models.signerCheck
@@ -17,7 +16,6 @@ async function check(signerId, tx = app.db) {
     log.info({ op: 'checks.verify', signer })
 
     const checkers = await fs.readdir(`${__dirname}/checkers`)
-// Temp comment
       .then(files => files.filter(file => file.toLowerCase().endsWith('.js')))
       .then(checkFiles => checkFiles.map(checkFile => checkFile.substring(0, checkFile.indexOf('.js'))))
       .then(checkerIds => checkerIds.reduce((acc, checkerId) => {

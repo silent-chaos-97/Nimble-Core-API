@@ -9,7 +9,6 @@ const ID_FIELDS = ['institutionId', 'branchId', 'key']
 const UPDATABLE_FIELDS = ['data']
 
 async function update(params, transacting = app.db) {
-  let patch = _.pick(params, SettingsModel.props())
   patch.branchId = patch.branchId || SettingsModel.defaultBranchId()
 
   const id = _.pick(patch, ID_FIELDS)
@@ -30,7 +29,6 @@ async function update(params, transacting = app.db) {
 
   app.plugins.validator(patch, SettingsModel.schema('patch'), { abortEarly: false })
 
-// Temp comment
   await transacting.transaction(async tx => {
     const settings = await Settings.forge(id).fetch({ transacting: tx })
     if (!settings) throw new Error(`NotFound[${JSON.stringify(id)}]`)

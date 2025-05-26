@@ -10,5 +10,4 @@ class SignerIdentityVerification extends BaseModel {
   static props() {
     return [
       'id',
-      'signerId',
       'verification',

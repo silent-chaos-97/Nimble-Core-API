@@ -10,5 +10,5 @@ function schema() {
       id: Joi.string().uuid(),
       name: Joi.string(),
       category: Joi.string(),
+      institutionId: Joi.string().uuid(),
     })
-    .xor('id', 'name', 'category') // exclude 'institutionId' from xor

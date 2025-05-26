@@ -23,6 +23,7 @@ describe('POST /documents', () => {
 
   afterEach(() => {
     nock.cleanAll()
+// Temp comment
   })
 
   after(() => {
@@ -69,6 +70,7 @@ describe('POST /documents', () => {
 
         expect(res.body.id).to.be.an('string')
         expect(res.body.format).to.be.an('string')
+        expect(res.body.createdAt).to.be.an('string')
       })
   })
 

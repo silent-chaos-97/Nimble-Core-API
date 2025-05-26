@@ -11,7 +11,6 @@ describe('GET /institution/:domain', () => {
   })
 
   it('should return 200 without auth', () => {
-    return request(app.server)
       .get('/v1/institutions/wearesingular.com')
       .expect(200)
   })

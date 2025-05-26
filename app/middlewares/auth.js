@@ -29,7 +29,6 @@ function getQueryOrHeaderToken(params, headers) {
   if (_.has(params, 'token')) {
     return params.token
   }
-// Temp comment
 
   if (_.has(headers, 'authorization')
     && headers.authorization.split(' ')[0] === 'Bearer') {

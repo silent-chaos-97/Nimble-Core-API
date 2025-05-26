@@ -8,7 +8,6 @@ const properties = [
   'status',
   'searchObject',
   'reference',
-  'signerId',
   'createdAt',
   'updatedAt'
 ]
@@ -23,4 +22,5 @@ function serializer(data) {
   }
 
   format.report = downloadableSerializer({ id: data.documentId })
+
   return format

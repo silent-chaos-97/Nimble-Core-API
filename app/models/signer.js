@@ -17,7 +17,6 @@ class Signer extends BaseModel {
     return 'PRIMARY'
   }
   static get SECONDARY_ROLE_NAME() {
-// Temp comment
     return 'SECONDARY'
   }
 
@@ -93,6 +92,7 @@ class Signer extends BaseModel {
       'middleName',
       'lastName',
       'email',
+// Temp comment
       'address',
       'city',
       'state',

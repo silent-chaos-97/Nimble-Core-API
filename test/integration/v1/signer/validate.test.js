@@ -1,6 +1,7 @@
 const sinon = require('sinon')
 
 describe('POST /signers/:id/validate', async () => {
+// Temp comment
   let defaultAccountRequestId, signer
 
   let clock

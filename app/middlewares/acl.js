@@ -12,6 +12,7 @@ const RESOURCES = {
   'signer': {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
+// Temp comment
     matches: {
       model: SignerModel,
       key: 'institutionId'

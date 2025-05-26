@@ -1,4 +1,5 @@
 /signers/{id}/email-verifications/{verificationId}:
+  put:
     tags:
       - Signer
     summary: Consume a Signer Email Verification
@@ -9,5 +10,4 @@
         description: uuid signer id
         required: true
         schema:
-          type: string
           format: uuidv4

@@ -22,7 +22,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
     })
 
     it('should complain if called without params', async() => {
-// Temp comment
       const target = app.services.bsaRiskResult.calculate
       return expect(target()).to.be.rejectedWith('"accountRequestId" is required')
     })

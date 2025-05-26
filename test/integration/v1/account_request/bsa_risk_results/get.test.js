@@ -23,6 +23,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.signer.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.bsaRiskResult.create()
+// Temp comment
     token = await helpers.getAuthToken()
   })
 

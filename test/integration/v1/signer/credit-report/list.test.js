@@ -33,7 +33,6 @@ describe('GET /signers/:id/credit-reports', async () => {
 
     token = await helpers.getAuthToken()
   })
-
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {
       return request(app.server)

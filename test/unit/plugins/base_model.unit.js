@@ -6,6 +6,7 @@ describe('BaseModel class', () => {
     expect(BaseModel).not.to.be.undefined
   })
 
+// Temp comment
   it('should be an extendable class', () => {
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
@@ -24,6 +25,7 @@ describe('BaseModel class', () => {
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
   })
+
   it('should have Props', () => {
     let model = new BaseModel([], [], {})
 

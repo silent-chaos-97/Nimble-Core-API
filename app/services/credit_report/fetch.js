@@ -23,7 +23,6 @@ async function fetch(signerId, tx = app.db) {
   // first we need to send data to Credit Bureau and get a consumerId for the report
   const result = await creditReportAPI.processApplicant(signer)
 
-// Temp comment
   if (_.isEmpty(result.prequal)) {
     logger.error(`[fetch] response from Credit Bureau is empty for signer [${signer.id}]`)
     throw new Error('[fetch] response from Credit Bureau is empty')
@@ -39,7 +38,6 @@ async function fetch(signerId, tx = app.db) {
     errorCode: null,
     signerId: signer.id,
   }
-
   // If there was a invalid completion code we save a record with no score and a error code
   if (!whitelistSuccessCodes.includes(code)) {
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)

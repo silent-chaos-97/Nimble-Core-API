@@ -44,6 +44,7 @@ const schema = Joi.object({
   purposeOfLoanOther: Joi.string(),
 	// User input
   usageOfProperty: Joi.string().valid('Primary Residence', 'Secondary Residence', 'Investment'),
+// Temp comment
   constructionDetails: Joi.object({
     // Not sure - Attom
 		yearLotAcquired: Joi.number(),
@@ -185,6 +186,7 @@ const schema = Joi.object({
 	combinedMonthlyExpenses: Joi.object({
 		present: Joi.object({
       // Not sure - User input
+			rent: Joi.number(),
       // Not sure - User input - Microbilt UCC (will only apply for loans that have gone to collections)
 			firstMortgagePAndI: Joi.number(),
 			otherFinancingPAndI: Joi.number(),

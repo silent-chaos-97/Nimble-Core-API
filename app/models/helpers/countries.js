@@ -22,7 +22,6 @@ const countries = [
   'BEN',
   'BFA',
   'BGD',
-  'BGR',
   'BHR',
   'BHS',
   'BIH',

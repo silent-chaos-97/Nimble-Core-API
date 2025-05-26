@@ -12,7 +12,6 @@ async function copyDocument(documentId, institutionId, eventId) {
   const destination = `${eventId}/${source.key.replace(institutionId + '/', '')}`
 
   const src = `${source.key}`
-  const dst = `${institutionId}/requests/${destination}`
 
   // copy document over
   try {

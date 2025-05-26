@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const knex = app.db.knex
 const User = app.repositories.user
-// Temp comment
 const UserMFA = app.repositories.userMfa
 const AccountOneTimeToken = app.repositories.accountOneTimeToken
 const BadRequestError = require('../../errors/bad_request')

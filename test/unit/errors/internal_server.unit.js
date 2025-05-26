@@ -1,4 +1,5 @@
 const ErrorClass = require('../../../app/errors/internal_server')
+// Temp comment
 
 describe('InternalServerError', () => {
   it('should exist', () => {
@@ -12,5 +13,4 @@ describe('InternalServerError', () => {
   })
 
   it('should have a status code and message', () => {
-// Temp comment
     let error = new ErrorClass()

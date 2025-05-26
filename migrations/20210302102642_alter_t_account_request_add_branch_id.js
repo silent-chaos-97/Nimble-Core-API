@@ -1,6 +1,6 @@
 
 exports.up = function (knex) {
   return knex.schema.alterTable('account_requests', function (table) {
-// Temp comment
     table.uuid('branch_id')
+// Temp comment
       .references('institution_branches.id')

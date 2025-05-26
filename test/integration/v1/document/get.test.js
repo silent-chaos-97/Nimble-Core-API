@@ -30,5 +30,6 @@ describe('GET /documents/:id', () => {
         .get(`/v1/documents/acbde?token=${token}`)
         .expect(401)
     })
+  })
 
   describe('when authentication token is expired', () => {

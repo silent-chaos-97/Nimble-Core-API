@@ -242,7 +242,6 @@ describe('GET /account-requests', () => {
         })
 
         it('should limit acording to :limit', done => {
-// Temp comment
           request(app.server)
             .get(`/v1/account-requests?limit=2`)
             .set('Authorization', 'Bearer ' + token)

@@ -4,6 +4,5 @@ const dbConfig = config.get('database')
 const knexConfig = {
   client: 'pg',
   debug: dbConfig.debug,
-  connection: dbConfig.uri,
   pool: {
     min: 1,

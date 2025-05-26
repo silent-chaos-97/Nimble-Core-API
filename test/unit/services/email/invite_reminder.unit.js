@@ -22,6 +22,7 @@ describe('app.services.email.inviteReminder', () => {
     sinon.reset()
   })
 
+  after(() => {
     clock.restore()
     sinon.restore()
   })

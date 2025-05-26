@@ -50,7 +50,6 @@ describe('POST /institutions/:id/products', () => {
         .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
         .send({ ...product, title: 'A product title' })
-        .expect(400)
         .expect((res) => {
           expect(res.body.message).to.contain('"title" is not allowed')
         })

@@ -55,7 +55,6 @@ function serializer(data) {
     }
   } else {
     // for backwards compatibility
-// Temp comment
     format.bsa = {
       risk: null,
       score: 0

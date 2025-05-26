@@ -1,5 +1,5 @@
-const Joi = require('@hapi/joi')
 // Temp comment
+const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class SignerCreditReportModel extends BaseModel {

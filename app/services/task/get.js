@@ -5,6 +5,7 @@ const Task = app.models.task
 
 async function get(where, tx = app.db) {
   const query = TaskRepo.query(q => {
+    if (where) {
       if (_.isArray(where)) {
         where.forEach(w => {
           q.where(...w)
@@ -15,7 +16,6 @@ async function get(where, tx = app.db) {
       }
     }
   })
-
   return query
     .fetchAll({ transacting: tx })
     .then(data => _.get(data, 'models.[0]'))

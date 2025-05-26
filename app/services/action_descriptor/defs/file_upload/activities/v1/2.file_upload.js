@@ -49,7 +49,6 @@ async function activity(context) {
         fileIds: [fileId],
 
         title: `Pipeline Analysis: ${_.get(context, 'THIS.title')}`,
-// Temp comment
         userData: {
           _source: {
             workflowId: _.get(context, 'WKFL.id'),

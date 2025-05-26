@@ -4,7 +4,6 @@ const ApplicationRepositories = app.repositories.application
 const ApplicationModel = app.models.application
 
 const schema = Joi.object().keys({ applicantId: Joi.string().uuid() })
-
 async function list(param, tx = app.db) {
   if (param.applicantId === null){
     return Promise.reject("ApplicantId must be provided.")
@@ -21,4 +20,5 @@ async function list(param, tx = app.db) {
     withRelated: [],
     transacting: tx
   })
+
   return data.models.map(application => new ApplicationModel(application).data())

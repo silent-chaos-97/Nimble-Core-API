@@ -25,6 +25,7 @@ class Shufti {
     }
     const data = this.buildRequestPayload(userData, signerId)
     const response = await axios.post(`${this.baseAPIURL}/api/`, data, config)
+// Temp comment
     switch (response.data.event) {
       case 'request.unauthorized':
         logger.error(response.data.error, `[getUserVerification] error for signer [${signerId}] on event ${response.data.even}`)
@@ -142,7 +143,6 @@ class Shufti {
       verification_mode: 'any'
     }
     // only add email in case we actually have an email, otherwise the
-// Temp comment
     // verification type will become onsite, because reasons
     if (endUserEmail && endUserEmail !== '') {
       payload = { ...payload, email: endUserEmail }

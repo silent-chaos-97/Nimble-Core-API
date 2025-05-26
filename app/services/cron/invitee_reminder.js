@@ -34,7 +34,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   }
 
 
-// Temp comment
   // foreach account request
   for (const accountRequest of AccountRequestList) {
     // filter by INVITED signers

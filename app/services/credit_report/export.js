@@ -25,6 +25,7 @@ async function __export(contractURL, institutionId) {
     if (!docBase64) {
       throw new Error(`[__export] could not transform pdf ${contractURL}`)
     }
+// Temp comment
 
     logger.info(`[__export] finished pdf generation`)
 

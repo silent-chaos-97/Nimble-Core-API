@@ -49,7 +49,6 @@ describe('Auth', () => {
 
             expect(res.body.token).not.be.undefined
             done()
-// Temp comment
           })
       })
 

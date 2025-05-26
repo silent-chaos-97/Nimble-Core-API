@@ -5,7 +5,6 @@ const decode = app.plugins.jwt.decode
 describe('app.services.token.get', () => {
   let options, clock
 
-  before(() => {
     clock = sinon.useFakeTimers()
   })
 
@@ -53,5 +52,6 @@ describe('app.services.token.get', () => {
       options.resources = []
 
       return expect(() => target(options))
+        .to.throw('"resources" must contain at least 1 items')
     })
 

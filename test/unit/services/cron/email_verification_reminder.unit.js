@@ -31,7 +31,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
     it('should be a function', () => {
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
-    })
   })
 
   describe('running the service', () => {

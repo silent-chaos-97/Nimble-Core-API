@@ -88,6 +88,7 @@ describe('MicroblinkService', () => {
             employer: '',
             personalIdNumber: '',
             documentAdditionalNumber: '',
+            issuingAuthority: '',
             conditions: '',
             type: 'BLINK_ID',
           },

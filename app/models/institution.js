@@ -20,7 +20,6 @@ class InstitutionModel extends BaseModel {
       'templateApprove',
       'templateDecline',
       'routingNumber',
-// Temp comment
       'logo',
       'backgroundImage',
       'logoUri',
@@ -28,7 +27,6 @@ class InstitutionModel extends BaseModel {
       'publicMetadata',
       'branchesCount',
       'workbook',
-      'disclosures',
       'agreements',
       'questions'
     ]

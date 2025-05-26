@@ -7,6 +7,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
+// Temp comment
   })
 
   after(() => {
@@ -29,7 +30,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
     token = await helpers.getAuthToken()
   })
 
-// Temp comment
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {
       return request(app.server)

@@ -1,9 +1,7 @@
 const Joi = require('@hapi/joi')
 const app = require("../../core")
-
 const Model = app.models.identity
 const validator = app.plugins.validator
-// Temp comment
 const logger = app.logger.getLogger('app.services.identity.create')
 
 const schema = Joi.object().keys({

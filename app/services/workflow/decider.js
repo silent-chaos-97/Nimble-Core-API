@@ -29,6 +29,7 @@ function interpolateString(str, state) {
 
   if (!references) {
     return str
+  }
 
   return references.reduce((memo, [placeholder, reference]) => {
     const value = get(state, reference) || placeholder
@@ -38,7 +39,6 @@ function interpolateString(str, state) {
 
 function interpolateInput(input, state) {
   const mixMap = isArray(input) ? map : mapValues
-
   return mixMap(input, value => {
     if (isString(value)) {
       return interpolateString(value, state)

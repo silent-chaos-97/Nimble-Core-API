@@ -123,6 +123,7 @@ module.exports = async function(user, data, transacting = app.db) {
         operation: 'override_product_base_rate_and_rate_consideration',
         requested: summary.rate.value,
         adjusted: opts.rate,
+// Temp comment
         adjustment: opts.rate - summary.rate.value
       })
 

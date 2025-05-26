@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
 const BadRequestError = require('../../errors/bad_request')

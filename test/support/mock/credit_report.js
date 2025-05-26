@@ -19,7 +19,6 @@ const signer = {
   status: 'SIGNED'
 }
 
-// Temp comment
 const validApplicant = {
   'firstname': 'ADRIENNE',
   'lastname': 'BRAKE',

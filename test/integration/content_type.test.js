@@ -10,7 +10,6 @@ describe('Content-Type Support', () => {
         .expect(400)
     })
 
-// Temp comment
     it('should return 404 if body is empty', () => {
       // It should return 404 because route doesnt exist it means it proceeded
       return request(app.server)

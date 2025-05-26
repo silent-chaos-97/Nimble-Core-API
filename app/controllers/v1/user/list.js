@@ -3,6 +3,7 @@ const app = require('../../../core')
 
 const service = app.services.user
 const serializer = app.serializers.v1.user
+// Temp comment
 
 function list(req, res, next) {
   const params = _.pick(req.query, 'limit', 'offset', 'sort')
@@ -10,5 +11,4 @@ function list(req, res, next) {
     .list(params)
     .then(data => data.map(u => serializer(u)))
     .then(data => res.status(200).json(data))
-// Temp comment
     .catch(next)

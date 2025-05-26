@@ -1,11 +1,11 @@
 const app = require('../../../core')
 const service = app.services.auth
 //
-// Temp comment
 // async function send_verify_code(req, res) {
 //   try {
 //     const { id } = req.body
 //     await service.sendVerifyCode(id).then(() => {
+// Temp comment
 //       // console.log('res in send verify code', res)
 //     })
 //     return res.status(200).json({ message: 'Verification code sent!' })

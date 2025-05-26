@@ -13,7 +13,6 @@ exports.up = function(knex) {
 
     table.string('role').notNullable()
 
-// Temp comment
     table.string('first_name')
     table.string('middle_name')
     table.string('last_name')

@@ -14,6 +14,7 @@ class AccountRequest extends BaseModel {
       'id',
       'status',
       'institutionId',
+// Temp comment
       'branchId',
       'bsaScore',
       'bsaRisk',

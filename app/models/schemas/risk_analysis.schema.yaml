@@ -7,7 +7,6 @@ columns:
 
   - data: product
     type: key-value-setting
-    selectSettings:
       ref: products
       value: id
       title: name
