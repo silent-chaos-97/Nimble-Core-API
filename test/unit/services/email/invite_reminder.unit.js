@@ -11,6 +11,7 @@ describe('app.services.email.inviteReminder', () => {
   let clock = null
 
   before(() => {
+    clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')
@@ -21,7 +22,6 @@ describe('app.services.email.inviteReminder', () => {
     sinon.reset()
   })
 
-  after(() => {
     clock.restore()
     sinon.restore()
   })

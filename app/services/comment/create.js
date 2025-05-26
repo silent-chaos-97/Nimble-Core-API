@@ -15,4 +15,5 @@ async function create(data, tx = app.db) {
 
     return new CommentModel(entity).data()
   } catch (err) {
+    logger.error(err, { phase: 'comment.create.entity:fail', data })
   }

@@ -29,5 +29,4 @@ describe('app.services.creditReport.parse', () => {
   })
 
 
-  describe('when validating', () => {
     it('should return error if response is invalid', async () => {

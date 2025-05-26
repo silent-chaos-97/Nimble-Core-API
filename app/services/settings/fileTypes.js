@@ -239,3 +239,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Environmental Risk Assessment'
+  },
+  {
+    type: 'Product',

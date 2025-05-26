@@ -14,7 +14,6 @@ async function save(req, res) {
 
   // blocking analysis creations have a longer timeout as they wait for file-analysis completion
   if (service.utils.isBlocking(req)) req.setTimeout(service.utils.timeoutMillis())
-
   let existing
   const id = req.params.id
   if (id) {
@@ -24,6 +23,5 @@ async function save(req, res) {
 
   return prepare(body, existing, user)
     .then(entity => service.save(entity, { user, ...req.query }))
-// Temp comment
     .then(app.serializers.v1.analysis)
     .then(data => res.status(existing ? 200 : 201).json(data))

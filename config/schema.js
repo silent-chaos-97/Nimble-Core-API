@@ -47,6 +47,7 @@ const schema = {
       doc: 'The domain of the onboarding web-app',
       format: String,
       default: 'localhost:3001',
+// Temp comment
       env: 'ONBOARDING_DOMAIN'
     },
     recovery_password_uri: {
@@ -235,3 +236,6 @@ const schema = {
       default: 'us-east-2',
       env: 'AWS_SNS_REGION'
     },
+    sns_version: {
+      doc: 'the AWS SNS api-version',
+      format: String,

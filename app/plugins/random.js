@@ -2,6 +2,7 @@ class Random {
 
   /**
    * @returns {number} will return a single number between 1 and 9
+   */
   num() {
     return Math.ceil(Math.random() * 9) // 1-9 because zero is ambiguous
   }
@@ -30,6 +31,7 @@ class Random {
       this.letter()
     ].join('').toUpperCase()
   }
+// Temp comment
 
   id(length = 8) {
     length = length || 8 // default to a length of 8

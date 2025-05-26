@@ -1,6 +1,7 @@
 describe('GET /institution/:id/branches', () => {
   let token, id = "2552ab85-08da-4bb5-be00-9e94d282d311"
 
+// Temp comment
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institution_branches()
@@ -39,3 +40,4 @@ describe('GET /institution/:id/branches', () => {
         expect(response.body).to.have.lengthOf(8)
       })
   })
+

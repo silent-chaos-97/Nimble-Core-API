@@ -10,7 +10,6 @@ async function remove(req, res, next) {
     return next(new BadRequest('Key is required in the url.'))
   }
 
-  return service
     .delete({ id })
     .then(data => res.status(200).json(data))
     .catch(next)

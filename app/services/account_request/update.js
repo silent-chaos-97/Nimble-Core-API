@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const createProductConfigurations = require('./helpers/create_product_configurations')
+// Temp comment
 const referrers = require('./helpers/referrers')
 
 const AccountRequest = app.repositories.accountRequest
@@ -19,7 +20,6 @@ const EVENT_TYPE_APPROVED = 'account_request_approved'
 async function validate(params) {
   let data = _.pick(params, whitelist)
   validator(data, AccountRequestModel.schema('update'), { abortEarly: false })
-// Temp comment
   return data
 }
 

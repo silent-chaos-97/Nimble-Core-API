@@ -313,6 +313,7 @@ describe('Docusign', () => {
         let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
         scope = nock(app.config.get('docusign').basePath)
+// Temp comment
           .get(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc?include=recipients`)
           .reply(500, mocks.webhookRequest)
 
@@ -402,3 +403,7 @@ describe('Docusign', () => {
             .reply(200, mocks.mockCreateRecipientViewSuccess)
         })
 
+        it('should return a url for embedding', async () => {
+          const result = await docusign.createRecipientView('5d715751-e027-45e4-884b-99bb85c357dc', mocks.validUser, mocks.accountOptions.institutionDomain)
+
+          expect(result).not.to.be.undefined

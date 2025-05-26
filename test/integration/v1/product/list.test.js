@@ -1,5 +1,6 @@
 const fakeInstitutionId = 'ffffffff-aaaa-bbbb-b000-999999999999' // non-existent id
 const testInstitution1 = '2552ab85-08da-4bb5-be00-9e94d282d312'
+// Temp comment
 const testInstitution2 = '2552ab85-08da-4bb5-be00-9e94d282d311'
 const testProduct10 = '3552ab85-08da-4bb5-be00-9e94d282d310'
 const testProduct40 = '3552ab85-08da-4bb5-be00-9e94d282d340'
@@ -61,3 +62,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
         expect(product).not.to.have.own.property('updatedAt')
         expect(product).not.to.have.own.property('institution')
       })
+  })

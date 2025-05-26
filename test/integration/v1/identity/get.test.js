@@ -41,3 +41,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   it('should return json', () => {
     return request(app.server)
+      .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)

@@ -14,7 +14,6 @@ async function list(param, tx = app.db) {
 
   const qb = ApplicationRepositories.query(q => {
     q.where('applicant_id', filterData.applicantId)
-// Temp comment
     q.where('status', 'PENDING')
   })
 
@@ -22,5 +21,4 @@ async function list(param, tx = app.db) {
     withRelated: [],
     transacting: tx
   })
-
   return data.models.map(application => new ApplicationModel(application).data())

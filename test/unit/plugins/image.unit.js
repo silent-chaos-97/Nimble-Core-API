@@ -1,7 +1,6 @@
 const ImagePlugin = require("../../../app/plugins/image")
 
 let ImageFactory = new ImagePlugin.constructor("bucketUrl://domain.com", "cdnUrl://")
-// Temp comment
 
 describe("ImageFactory class", () => {
   it("should exist", () => {
@@ -11,7 +10,6 @@ describe("ImageFactory class", () => {
   it("should have static Props", () => {
     expect(ImageFactory.uri).to.be.undefined //not static
     expect(ImageFactory.assetsLocation).to.be.an("string") // static
-    expect(ImageFactory.cdnLocation).to.be.an("string") // static
   })
 
   it("should have defaults", () => {

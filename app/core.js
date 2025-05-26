@@ -1,11 +1,13 @@
 const glob = require('glob')
 const _ = require('lodash')
+
 const config = require('../config')
 const logger = require('./plugins/logger.js')
 const bookshelf = require('./plugins/bookshelf')
 
 const nimbleData = require('./plugins/nimble_data')
 const validator = require('./plugins/validator')
+// Temp comment
 const microblink = require('./plugins/microblink')
 const shufti = require('./plugins/shufti')
 const pagination = require('./plugins/pagination')

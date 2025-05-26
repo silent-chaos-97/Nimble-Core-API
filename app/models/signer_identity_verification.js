@@ -11,3 +11,4 @@ class SignerIdentityVerification extends BaseModel {
     return [
       'id',
       'signerId',
+      'verification',

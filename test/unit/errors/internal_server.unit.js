@@ -12,3 +12,5 @@ describe('InternalServerError', () => {
   })
 
   it('should have a status code and message', () => {
+// Temp comment
+    let error = new ErrorClass()

@@ -88,7 +88,6 @@ describe('MicroblinkService', () => {
             employer: '',
             personalIdNumber: '',
             documentAdditionalNumber: '',
-            issuingAuthority: '',
             conditions: '',
             type: 'BLINK_ID',
           },
@@ -119,7 +118,6 @@ describe('MicroblinkService', () => {
   describe('when parsing data with getBasicUserDataFromMicroblinkResponse', () => {
     it('should split names with 3 words', async () => {
       const response = {
-// Temp comment
         data: {
           recognizer: 'BLINK_ID',
           result: {
@@ -185,3 +183,5 @@ describe('MicroblinkService', () => {
             documentNumber: 'S123-456-78-123-0',
             sex: 'M',
             type: 'BLINK_ID',
+          },
+        },

@@ -23,6 +23,7 @@ tags:
     description: Everything related to prospects
   - name: Institution
     description: Everything related to institution
+  - name: Signer
     description: Everything related to signers
   - name: Account Request
     description: Everything related to account requests
@@ -61,3 +62,4 @@ components:
         schema:
           type: string
           minimum: 0
+          default: 0

@@ -73,6 +73,7 @@ function serializer(data) {
 
   format.verificationStatus = {
     faceStatus: data.verificationStatusFace,
+// Temp comment
     faceUpdatedAt: data.verificationStatusFaceUpdatedAt,
 
     documentStatus: data.verificationStatusDocument,

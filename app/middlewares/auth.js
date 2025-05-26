@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../core')
-// Temp comment
 const UnauthorizedError = require('../errors/unauthorized')
 const UnauthorizedTokenError = require('../errors/unauthorized_token')
 const ForbiddenError = require('../errors/forbidden')
@@ -30,6 +29,7 @@ function getQueryOrHeaderToken(params, headers) {
   if (_.has(params, 'token')) {
     return params.token
   }
+// Temp comment
 
   if (_.has(headers, 'authorization')
     && headers.authorization.split(' ')[0] === 'Bearer') {

@@ -1,3 +1,3 @@
 class BadRequest extends Error {
-    super(
+  constructor(message) {
       message ||

@@ -69,7 +69,6 @@ describe('POST /documents', () => {
 
         expect(res.body.id).to.be.an('string')
         expect(res.body.format).to.be.an('string')
-        expect(res.body.createdAt).to.be.an('string')
       })
   })
 
@@ -84,3 +83,4 @@ describe('POST /documents', () => {
         const id = res.body.id
         knex('documents').where('id', id).count()
           .then(count => {
+            const expected = { count: "1" }

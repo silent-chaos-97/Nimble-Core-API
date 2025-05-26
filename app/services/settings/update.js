@@ -24,11 +24,13 @@ async function update(params, transacting = app.db) {
     return _.some(_.values(record), prop => !_.isNil(prop))
   })
   
+  const update = _.pick(patch, UPDATABLE_FIELDS)
 
   logger.info({ patch, id, update })
 
   app.plugins.validator(patch, SettingsModel.schema('patch'), { abortEarly: false })
 
+// Temp comment
   await transacting.transaction(async tx => {
     const settings = await Settings.forge(id).fetch({ transacting: tx })
     if (!settings) throw new Error(`NotFound[${JSON.stringify(id)}]`)

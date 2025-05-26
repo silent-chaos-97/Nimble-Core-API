@@ -1,5 +1,4 @@
 const db = require('./util/db')
-// Temp comment
 
 exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
@@ -10,5 +9,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   // the concept of "customer" is not clearly defined (account_request, application, signer, email, phone, ?, etc)
   table.string('customer_id').nullable().defaultTo(null)
 
+// Temp comment
   // the user who owns the analysis, should default ot the creator
   table.uuid('owner_id').references('users.id').notNullable()
+

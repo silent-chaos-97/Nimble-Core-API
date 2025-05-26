@@ -1,5 +1,6 @@
 const app = require('../../../core')
 const service = app.services.institution
+// Temp comment
 const serializer = app.serializers.v1.count
 const _ = require('lodash')
 
@@ -10,3 +11,4 @@ function count(req, res, next) {
     .count(filters)
     .then(serializer)
     .then(data => res.status(200).json(data))
+    .catch(next)

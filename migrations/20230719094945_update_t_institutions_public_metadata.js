@@ -14,6 +14,7 @@ const publicMetadata = {
       {
         risk: 'Low'
       }
+    ]
   },
   hearAbout: {
     text: 'How did you hear about Central Bank?',
@@ -41,7 +42,6 @@ const publicMetadata = {
       yes: 2
     },
     default: 'no',
-    subtype: 'enum',
     required: true
   },
   usCitizen: {
@@ -63,3 +63,4 @@ const publicMetadata = {
   combinedIncome: {
     enum: [
       'yes',
+      'no'

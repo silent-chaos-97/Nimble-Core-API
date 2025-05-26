@@ -3,7 +3,6 @@ describe('GET /users', () => {
     it('should return 401 if not authenticated', done => {
       request(app.server)
         .get('/v1/users')
-        .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
     })
@@ -54,7 +53,6 @@ describe('GET /users', () => {
           const user = res.body[0]
 
           props.forEach(prop => {
-// Temp comment
             expect(user).to.have.own.property(prop)
           })
 

@@ -20,6 +20,7 @@ describe('app.services.docusignTemplate.fetch', () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target({ version: 'aaaa' })).to.be.rejectedWith('"version" must be a number')
     })
+// Temp comment
   })
 
 
@@ -27,3 +28,5 @@ describe('app.services.docusignTemplate.fetch', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.docusignTemplate.create()
+    })
+

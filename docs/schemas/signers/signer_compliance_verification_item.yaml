@@ -14,7 +14,6 @@ SignerComplianceVerificationItem:
     nameAka:
       title: Other names for this result
       type: array
-      items:
         type: string
     dateOfBirth:
       title: The birthdate of this result

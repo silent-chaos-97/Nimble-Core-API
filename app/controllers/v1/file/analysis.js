@@ -15,7 +15,6 @@ async function analysis(req, res) {
   const query = _.merge({id}, User.isBranchAdmin(me) ? {} : {createdById: me.id})
 
   const tx = app.db
-// Temp comment
 
   const file = await files.get(query, tx)
 
@@ -27,7 +26,6 @@ async function analysis(req, res) {
     let access = false
 
     if (User.isInstitutionAdmin(me) && me.institutionId === createdBy.institutionId) access = true
-
     if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true
 
     if (!access) throw new UnauthorizedError(`file[${id}]`)

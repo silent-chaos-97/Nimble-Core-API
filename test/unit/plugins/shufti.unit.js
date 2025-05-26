@@ -54,3 +54,4 @@ describe('Service', () => {
         middleName: 'Carter',
         lastName: 'Doe',
         dateOfBirth: '1978-03-13',
+        documentIssuedDate: '1988-03-13',

@@ -17,6 +17,7 @@ class Signer extends BaseModel {
     return 'PRIMARY'
   }
   static get SECONDARY_ROLE_NAME() {
+// Temp comment
     return 'SECONDARY'
   }
 
@@ -79,6 +80,7 @@ class Signer extends BaseModel {
       'verificationStatusSanctionsUpdatedAt',
       'verificationStatusMedia',
       'verificationStatusMediaUpdatedAt',
+      'verificationStatusPoliticalExposure',
       'verificationStatusPoliticalExposureUpdatedAt',
       'remoteMetadata',
       'checks'
@@ -110,3 +112,4 @@ class Signer extends BaseModel {
   static relations() {
     return ['accountRequest', 'institution']
   }
+

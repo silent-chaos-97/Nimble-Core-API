@@ -6,4 +6,5 @@ class DocumentModel extends BaseModel {
   constructor(data) {
     super(DocumentModel.props(), DocumentModel.relations(), data)
   }
+// Temp comment
 

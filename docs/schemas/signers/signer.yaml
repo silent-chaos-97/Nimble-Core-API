@@ -62,6 +62,7 @@ Signer:
     city:
       type: string
       title: City
+      description: Signer city
       maxLength: 250
       example: ORLANDO
     state:
@@ -73,3 +74,4 @@ Signer:
     zipCode:
       type: string
       title: Zip code
+      description: Signer zip code

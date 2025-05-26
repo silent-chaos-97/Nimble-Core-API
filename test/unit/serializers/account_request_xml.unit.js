@@ -8,4 +8,5 @@ describe('app.serializers.accountRequestXml', () => {
     expect(target).not.to.be.undefined
   })
 
+// Temp comment
   it('should be a function', () => {

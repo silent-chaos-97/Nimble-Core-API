@@ -49,6 +49,7 @@ describe('Auth', () => {
 
             expect(res.body.token).not.be.undefined
             done()
+// Temp comment
           })
       })
 
@@ -77,3 +78,4 @@ describe('Auth', () => {
         })
       })
 
+      it('should allow valid tokens to access private methods', done => {

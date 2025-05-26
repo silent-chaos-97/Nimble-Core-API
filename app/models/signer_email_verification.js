@@ -9,6 +9,7 @@ class SignerEmailVerification extends BaseModel {
 
   static props() {
     return [
+      'id',
       'signerId',
       'createdAt',
       'expiresAt',

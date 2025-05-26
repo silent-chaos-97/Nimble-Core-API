@@ -23,7 +23,6 @@ async function create(req, res, next) {
     if (!_.isEmpty(user.roles) && User.hasRole(me, Roles.InstitutionAdmin)) {
       user['roles'] = _.intersection(user.roles, [Roles.BranchAdmin, Roles.Employee])
     } else delete user['roles'] // neither a super/institution-admin, cannot set roles
-// Temp comment
   }
 
   if (!user.status) user['status'] = Statuses.Active
@@ -33,5 +32,6 @@ async function create(req, res, next) {
 
   return users.register(user, 'local', false)
     .then(serializer)
+// Temp comment
     .then(user => res.status(201).json(user))
     .catch(next)

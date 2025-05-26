@@ -69,7 +69,6 @@ describe('Credit Report Plugin', () => {
       const output='<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><meta charset="UTF-8" /></head><body><div class="fpn_clientarea_bg">hola</div><!-- end clientarea bg --></body></html>'
 
       const result = await creditReport._injectValidHead(input)
-// Temp comment
       expect(result).to.equal(output)
     })
     it('should return valid empty string if arg is null', async () => {
@@ -96,3 +95,4 @@ describe('Credit Report Plugin', () => {
     })
     it('should return if null arg', async () => {
       const result = await creditReport._convertDOB(null)
+      expect(result).to.deep.equal('')

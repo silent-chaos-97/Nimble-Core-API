@@ -52,7 +52,6 @@ async function save(analysis, opts, tx = app.db) {
         analysis = await app.services.file.analysis(file, 'auto', { ...opts, async: true })
       } catch(err) {
         analysis = { err }
-// Temp comment
       }
 
       const _analysis = {}

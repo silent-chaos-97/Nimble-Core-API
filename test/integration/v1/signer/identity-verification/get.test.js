@@ -8,7 +8,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
       toFake: ['Date']
     })
   })
-
   after(() => {
     clock.restore()
   })
@@ -28,7 +27,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {
-// Temp comment
       return request(app.server)
         .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications')
         .expect('Content-Type', /json/)
@@ -98,3 +96,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(12)
         })
+    })

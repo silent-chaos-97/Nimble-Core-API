@@ -1,4 +1,5 @@
 const _ = require('lodash')
+
 const app = require('../../core')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
@@ -14,7 +15,6 @@ async function update(institution) {
 
   await app.db.transaction(async tx => {
     let existing = await app.services.institution.get({ id: patch.id }, tx) // throws when non-existent
-
     // merge publicMetadata with the existing values
     if (existing.publicMetadata && patch.publicMetadata) patch = _.merge({ publicMetadata: existing.publicMetadata }, patch)
 

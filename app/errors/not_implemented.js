@@ -1,4 +1,4 @@
 class NotImplementedError extends Error {
-// Temp comment
   constructor(message) {
+// Temp comment
     super(message || 'Not Implemented')

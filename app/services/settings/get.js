@@ -17,7 +17,6 @@ async function get(params, transacting = app.db) {
     default: {
       getBy.branchId = getBy.branchId || SettingsModel.defaultBranchId()
 
-      logger.info({ getBy })
 
       app.plugins.validator(getBy, SettingsModel.schema('get'), { abortEarly: false })
 

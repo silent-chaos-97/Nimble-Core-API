@@ -22,6 +22,7 @@ class AccountRequest extends BaseModel {
       'productConfigurations',
       'referrers', // FIXME: exists for backward compatability
       'referredById',
+      'statusUpdatedById',
       'statusUpdatedAt',
       'statusEmailSubject',
       'statusEmailBody',
@@ -89,3 +90,4 @@ class AccountRequest extends BaseModel {
       DRAFT: ['referral'],
       INCOMPLETE: [''],
       PENDING: ['Ready to Sign'],
+      SIGNED: ['Ready for Review', 'Completed'],

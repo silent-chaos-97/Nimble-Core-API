@@ -3,7 +3,6 @@
 ## Docusign requirements
 
 The app uses a third-party SAAS called Docusign to send and allow prospects to sign contracts.
-To use this api, you need to fill several variables in the env:
 
 - DOCUSIGN_BASE_OAUTH_PATH - this is the oath server url. It's going to be different depending if it's sandbox or live.
 
@@ -59,3 +58,4 @@ How can we do this?
 URL:
 https://account.docusign.com/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=CLIENTID&redirect_uri=https%3A%2F%2Fapi.app.nimblefi.com%2Fv1%2Fhealth
 
+Notes:

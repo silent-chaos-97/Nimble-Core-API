@@ -18,7 +18,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   })
 
   beforeEach(async () => {
-// Temp comment
     sinon.reset()
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -34,6 +33,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     it('should return 400 if reference is not a valid signer uuid', async () => {
       return request(app.server)
         .post('/v1/webhooks/shufti/identity-verification')
+// Temp comment
         .send({ reference: 'asd', event: 'verification.accepted' })
         .expect('Content-Type', /json/)
         .expect(400)
@@ -53,3 +53,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         .post('/v1/webhooks/shufti/identity-verification')
         .send({ reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', event: null })
         .expect('Content-Type', /json/)
+        .expect(400)

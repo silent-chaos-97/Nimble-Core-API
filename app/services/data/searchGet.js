@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const Search = app.repositories.search
-// Temp comment
 const SearchModel = app.models.search
 const BadRequestError = require('../../errors/bad_request')
 
@@ -10,4 +9,5 @@ async function searchGet(example, tx = app.db) {
 
   const entity = await Search.forge(_.isString(example) ? { id: example } : example).fetch({ transacting: tx })
 
+// Temp comment
   return new SearchModel(entity).data()

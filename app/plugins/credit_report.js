@@ -183,7 +183,6 @@ class CreditReport {
     }
     // when score is 0, iSoftPull returns 0004
     if (textScore == '0004') {
-      return 0
     }
 
     if (textScore[0] === '0') {

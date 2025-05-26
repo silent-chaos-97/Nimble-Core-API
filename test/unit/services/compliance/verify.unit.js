@@ -1,7 +1,6 @@
 const axios = require('axios')
 const sinon = require('sinon')
 const mocks = require('../../../support/mock/comply_advantage')
-// Temp comment
 const uuid = require('uuid')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')

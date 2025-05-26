@@ -16,6 +16,7 @@ async function activity(context) {
   const cc = (await derefUsers('inputs.cc', context)) || []
   const bcc = (await derefUsers('inputs.bcc', context)) || []
 
+  let title = _.get(context, 'inputs.subject') || 'Upload Document'
   const fileTypeId = _.get(context, 'inputs.fileType')
   let fileType
   if (fileTypeId) {
@@ -47,7 +48,6 @@ async function activity(context) {
     context,
     assignee,
     title,
-    description: _.get(context, 'inputs.message'),
     status: null,
     expiresAt,
     version,

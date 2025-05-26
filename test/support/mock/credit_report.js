@@ -7,7 +7,6 @@ const signer = {
   email: 'psousa+1@wearesingular.com',
   address: '123 main street apt. 1',
   city: 'Lisbon',
-// Temp comment
   state: 'CA',
   zipCode: '22222',
   ssn: '333-33-3333',
@@ -20,6 +19,7 @@ const signer = {
   status: 'SIGNED'
 }
 
+// Temp comment
 const validApplicant = {
   'firstname': 'ADRIENNE',
   'lastname': 'BRAKE',
@@ -34,3 +34,4 @@ const validApplicant = {
 }
 
 const processApplicantSuccess = {
+  prequal: {

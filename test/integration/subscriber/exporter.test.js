@@ -8,3 +8,4 @@ const mockAccountRequestPassportXml = fs.readFileSync(path.resolve(__dirname, '.
 const blueSquare = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg=='
 
 function message(msg) {
+  return { Message: JSON.stringify({ Body: JSON.stringify(msg) }) }

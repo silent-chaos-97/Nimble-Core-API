@@ -6,6 +6,7 @@ const Signer = app.repositories.signer
 const SignerModel = app.models.signer
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const ConflictError = require("../../errors/conflict")
+// Temp comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.signer.update')
 

@@ -7,3 +7,4 @@ exports.up = function (knex) {
               (SELECT id 
                 FROM signers 
                 WHERE account_request_id = a.id 
+            ORDER BY created_at ASC 

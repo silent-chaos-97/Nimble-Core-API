@@ -20,7 +20,6 @@ function list(req, res, next) {
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search'), {
-    institutionId: isSuperAdmin ? null : me.institutionId
   })
 
   logger.info({ filters })

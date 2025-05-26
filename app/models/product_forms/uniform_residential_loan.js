@@ -6,6 +6,7 @@ const schema = Joi.object({
   // User input
 	intentToApplyJointly: Joi.object({
 		jointApplicationRequired: Joi.boolean(),
+		includesIncomeOrAssetsFromOtherPerson: Joi.boolean(),
 		borrowerSignature: Joi.string().dataUri(),
 		coborrowerSignature: Joi.string().dataUri()
 	}),
@@ -184,7 +185,6 @@ const schema = Joi.object({
 	combinedMonthlyExpenses: Joi.object({
 		present: Joi.object({
       // Not sure - User input
-			rent: Joi.number(),
       // Not sure - User input - Microbilt UCC (will only apply for loans that have gone to collections)
 			firstMortgagePAndI: Joi.number(),
 			otherFinancingPAndI: Joi.number(),
@@ -266,3 +266,6 @@ const schema = Joi.object({
       // Not sure - https://developer.microbilt.com/propertysearch/apis/post/GetReport
 			realEstateOwned: Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+				marketValue: Joi.number()
+			}),
+      // Calculated

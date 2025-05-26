@@ -12,6 +12,7 @@ async function list(args, tx = app.db) {
 
   const query = Analysis.query(sql => {
     if (!User.isInstitutionAdmin(user)) sql.where('owner_id', user.id)
+
     sql.where('institution_id', user.institutionId)
     sql.where('status', filters.status ? '=' : '!=', filters.status || AnalysisModel.statuses().deleted)
 

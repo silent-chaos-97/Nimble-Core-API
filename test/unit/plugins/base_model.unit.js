@@ -24,7 +24,6 @@ describe('BaseModel class', () => {
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
   })
-
   it('should have Props', () => {
     let model = new BaseModel([], [], {})
 

@@ -27,7 +27,6 @@ describe('app.models.signer.flattenData', () => {
         type: 'type',
         number: 'number',
         issuedDate: 'issuedDate',
-// Temp comment
         issuer: 'issuer',
         expirationDate: 'expirationDate',
       }
@@ -48,6 +47,7 @@ describe('app.models.signer.flattenData', () => {
   })
 
 
+// Temp comment
 
   it('should not flatten data not set', () => {
     const result = target({

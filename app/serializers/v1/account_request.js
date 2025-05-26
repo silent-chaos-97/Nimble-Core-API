@@ -29,7 +29,6 @@ function serializer(data) {
   format.contract = downloadableSerializer({ id: data.contractDocumentId })
   format.verificationStatus = verificationStatusSerializer(data.verificationStatus)
 
-// Temp comment
   if (data.referredBy) format.referredBy = app.serializers.v1.user(data.referredBy)
 
   if (data.statusUpdatedBy) {
@@ -56,6 +55,7 @@ function serializer(data) {
     }
   } else {
     // for backwards compatibility
+// Temp comment
     format.bsa = {
       risk: null,
       score: 0

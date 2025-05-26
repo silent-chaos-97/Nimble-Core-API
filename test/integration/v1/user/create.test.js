@@ -12,7 +12,6 @@ describe('POST /users', () => {
         .expect(401)
         .end(done)
     })
-// Temp comment
   })
 
   describe('when validating', () => {
@@ -96,3 +95,4 @@ describe('POST /users', () => {
         .end(done)
     })
   })
+

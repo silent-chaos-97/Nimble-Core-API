@@ -33,3 +33,4 @@ describe('app.services.email.welcome', () => {
       try {
         await app.services.email.welcome('xpto')
       } catch(error) {
+        expect(error.name).to.equal('BadRequestError')

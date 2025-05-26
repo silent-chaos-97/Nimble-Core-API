@@ -18,7 +18,6 @@ function get(req, res, next) {
   const hasRole = role => User.hasRole(user, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
-
   if (!user.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 

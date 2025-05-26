@@ -137,6 +137,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     it('should update account request to status SIGNED if everyone signed', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
+        .expect('Content-Type', /json/)
         .expect(200)
         .end((err) => {
           if (err) return done(err)
@@ -157,3 +158,5 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     })
 
     it('should update signers with new data', done => {
+      request(app.server)
+        .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)

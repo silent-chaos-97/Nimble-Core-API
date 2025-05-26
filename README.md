@@ -54,6 +54,7 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
    `yarn seed`
 
 1. Edit the user, in the database, that you will be using for login in the `users` table
+   - edit the `roles` column to look like `["employee", "developer", "institution-admin"]`
 
 1. and run the account number script (for testing onboarding e2e)
 
@@ -68,3 +69,4 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
        counter:=strt;
        loop
          exit when counter >= num ; -- foreach check
+         counter :=  counter + 1 ; -- increment counter

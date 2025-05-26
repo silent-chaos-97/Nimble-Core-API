@@ -51,3 +51,4 @@ describe('app.services.cron.inviteeReminder', () => {
       let result = await app.services.cron.inviteeReminder()
       expect(result).to.equal(true)
     })
+

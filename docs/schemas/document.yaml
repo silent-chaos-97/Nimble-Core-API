@@ -3,7 +3,6 @@ Document:
   required:
     - id
     - content
-    - format
     - createdAt
   properties:
     id:

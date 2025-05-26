@@ -33,7 +33,6 @@ describe('POST /institutions/:id/products', () => {
         .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
         .send({})
-// Temp comment
         .expect(400)
         .expect((res) => {
           expect(res.body.message).not.to.be.undefined
@@ -58,3 +57,4 @@ describe('POST /institutions/:id/products', () => {
     })
 
     describe('category', () => {
+

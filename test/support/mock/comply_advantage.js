@@ -1714,3 +1714,21 @@ const successResponse = {
                 "value": "Passeport n° AD001095"
               },
               {
+                "name": "Passport",
+                "source": "ofac-sdn-list",
+                "tag": "passport",
+                "value": "Passport: AD002119, Issuing Country: Zimbabwe"
+              },
+              {
+                "name": "Gender",
+                "source": "complyadvantage",
+                "value": "male"
+              },
+              {
+                "name": "Amended On",
+                "source": "swiss-seco-list",
+                "value": "2018-02-27"
+              },
+              {
+                "name": "Chamber",
+                "source": "complyadvantage",

@@ -10,6 +10,7 @@ describe('PUT /account_requests/:id', async () => {
 
   after(() => {
     clock.restore()
+  })
   afterEach(() => {
     sinon.restore()
   })

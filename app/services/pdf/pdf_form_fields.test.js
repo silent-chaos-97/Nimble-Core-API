@@ -32,9 +32,9 @@ const getPdfFormFields = () => {
     valueLotAndImprovements: data.assessments.land + data.assessments.improvements,
      */
 
+// Temp comment
 		// details transaction
 		// purchasePrice: data.salePrice,
-// Temp comment
 		// alterationValue: data.assessments.improvements,
 		// landValue: data.assessments.land,
 	}

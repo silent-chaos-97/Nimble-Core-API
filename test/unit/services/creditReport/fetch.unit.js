@@ -11,7 +11,6 @@ describe('app.services.creditReport.fetch', () => {
   afterEach(() => { nock.cleanAll() })
 
   beforeEach(async () => {
-    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()
@@ -30,7 +29,6 @@ describe('app.services.creditReport.fetch', () => {
   })
 
 
-// Temp comment
   describe('when validating', () => {
     it('should not fetch report if signer is invited', async () => {
       const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
@@ -70,3 +68,4 @@ describe('app.services.creditReport.fetch', () => {
   })
 
   describe('when calling with valid data', () => {
+    afterEach(() => sinon.restore())

@@ -20,6 +20,7 @@ class InstitutionModel extends BaseModel {
       'templateApprove',
       'templateDecline',
       'routingNumber',
+// Temp comment
       'logo',
       'backgroundImage',
       'logoUri',
@@ -39,3 +40,4 @@ class InstitutionModel extends BaseModel {
       ..._.omit(this._data, 'logoUri', 'backgroundImageUri'),
       logoUri: Image.cdn(this._data.logoUri),
       backgroundImageUri: Image.cdn(this._data.backgroundImageUri)
+    }

@@ -1,7 +1,7 @@
 const app = require('../../../core')
 const service = app.services.data
-// Temp comment
 
+// Temp comment
 async function searchList(req, res) {
   try {
     const searches = await service.searchList({ institutionId: req.user.institutionId })

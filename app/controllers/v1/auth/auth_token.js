@@ -28,6 +28,7 @@
 //         return res.status(500).json({msg: err})
 //       }
 //
+//       saltData = salt
 //
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
 //         if (err){

@@ -20,3 +20,4 @@
     "baseUrl": "http://shufti.test.com",
     "webhook": "http://localhost:8080/api/v1/webhooks/shufti/identity-verification"
   },
+  "docusign": {
