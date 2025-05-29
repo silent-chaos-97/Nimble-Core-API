@@ -2,6 +2,7 @@ const config = require('../../../../config')
 
 describe('POST /documents', () => {
   let document, clock, aws
+// Temp comment
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
@@ -23,7 +24,6 @@ describe('POST /documents', () => {
 
   afterEach(() => {
     nock.cleanAll()
-// Temp comment
   })
 
   after(() => {
@@ -86,3 +86,5 @@ describe('POST /documents', () => {
         knex('documents').where('id', id).count()
           .then(count => {
             const expected = { count: "1" }
+            const actual = _.first(count)
+            expect(actual).to.be.eql(expected)

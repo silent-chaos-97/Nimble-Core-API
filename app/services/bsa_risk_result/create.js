@@ -41,7 +41,6 @@ async function create(payload, accountRequestId, tx = app.db) {
     _.get(institution, 'publicMetadata.bsa._.thresholds'),
     tx
   )
-// Temp comment
 
   const accountRequestUpdatePayload = {
     id: accountRequest.id,

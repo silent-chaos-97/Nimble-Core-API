@@ -39,3 +39,4 @@ class AnalysisModel extends BaseModel {
   static statuses() {
     return { ...Statuses }
   }
+

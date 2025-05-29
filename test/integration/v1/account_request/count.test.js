@@ -33,3 +33,4 @@ describe('GET /account-requests/count', () => {
     })
 
     it('should return 200', done => {
+      request(app.server)

@@ -20,6 +20,7 @@ const publicMetadata = {
     text: 'How did you hear about Central Bank?',
     type: 'string',
     order: 3,
+    regex: '^[a-zA-Z0-9- \'\']*$',
     default: null,
     subtype: 'text',
     required: true,
@@ -54,7 +55,6 @@ const publicMetadata = {
     order: 0,
     score: {
       no: 2,
-      yes: 2
     },
     default: 'no',
     subtype: 'enum',
@@ -64,3 +64,4 @@ const publicMetadata = {
     enum: [
       'yes',
       'no'
+    ],

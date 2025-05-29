@@ -9,7 +9,6 @@ module.exports = {
       selected_type: [
         'id_card',
       ],
-      supported_types: [
         'id_card',
         'passport',
         'driving_license',
@@ -20,7 +19,6 @@ module.exports = {
       full_address: 'Candyland Avenue',
       selected_type: [
         'utility_bill',
-// Temp comment
       ],
       supported_types: [
         'utility_bill',

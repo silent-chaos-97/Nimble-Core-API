@@ -53,3 +53,4 @@ describe("AWS Facade for s3", () => {
     it('should return a promise', () => {
       let result = AWS.s3ImgUpload(blueSquare)
       expect(result).to.be.an('Promise')
+    })

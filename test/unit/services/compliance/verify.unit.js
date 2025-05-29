@@ -27,7 +27,6 @@ describe('app.services.compliance.verify', () => {
     })
 
 
-    describe('validations', () => {
       it('should throw exception if not provided with parameters', async () => {
         return expect(app.services.compliance.verify()).to.be.rejectedWith()
       })
@@ -51,3 +50,5 @@ describe('app.services.compliance.verify', () => {
 
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
       expect(fakeComplianceSearch).not.to.have.been.called
+      expect(fakeComplianceExport).not.to.have.been.called
+    })

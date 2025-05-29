@@ -10,3 +10,4 @@ services:
       - POSTGRES_DB=nimble-core-db
       - POSTGRES_USER=nimble-core-user
       - POSTGRES_PASSWORD=nimble-core-pass
+    healthcheck:

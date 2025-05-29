@@ -75,3 +75,5 @@ Signer:
       type: string
       title: Zip code
       description: Signer zip code
+      maxLength: 100
+      example: 17101-0000

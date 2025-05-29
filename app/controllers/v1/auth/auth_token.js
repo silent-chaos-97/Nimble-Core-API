@@ -46,4 +46,5 @@
 //
 //         return res.status(200).json({id: id, verification_token: unHashedVerificationToken})
 //       })
+//     })
 //   }

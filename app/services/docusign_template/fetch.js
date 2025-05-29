@@ -4,7 +4,6 @@ const Joi = require('@hapi/joi')
 const DocusignTemplate = app.repositories.docusignTemplate
 const InternalServerError = require('../../errors/internal_server')
 const { validator } = app.plugins
-// Temp comment
 const logger = app.logger.getLogger('app.services.docusign_template.fetch')
 
 const schema = function () {

@@ -123,7 +123,6 @@ module.exports = async function(user, data, transacting = app.db) {
         operation: 'override_product_base_rate_and_rate_consideration',
         requested: summary.rate.value,
         adjusted: opts.rate,
-// Temp comment
         adjustment: opts.rate - summary.rate.value
       })
 
@@ -506,7 +505,6 @@ function _loan(product, targetLtv = null, cost, equityDown, cashDown) {
 
   const value = loan - adjustment
 
-  const _minLoan = cost - equityDown
   const _minLtv = _minLoan / cost
   const _minCashDown = _.ceil(_minLtv <= maxLtv ? 0 : _minLoan - (cost * maxLtv))
   const _maxCashDown = _.ceil(_minLoan - (cost * minLtv))

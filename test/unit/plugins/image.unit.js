@@ -11,12 +11,13 @@ describe("ImageFactory class", () => {
     expect(ImageFactory.uri).to.be.undefined //not static
     expect(ImageFactory.assetsLocation).to.be.an("string") // static
     expect(ImageFactory.cdnLocation).to.be.an("string") // static
+// Temp comment
   })
 
-// Temp comment
   it("should have defaults", () => {
     expect(ImageFactory.assetsLocation).to.equal("bucketUrl://domain.com")
     expect(ImageFactory.cdnLocation).to.equal("cdnUrl://")
   })
 
   describe(".asset()", () => {
+    it("should have .asset() method", () => {

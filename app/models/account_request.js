@@ -14,7 +14,6 @@ class AccountRequest extends BaseModel {
       'id',
       'status',
       'institutionId',
-// Temp comment
       'branchId',
       'bsaScore',
       'bsaRisk',
@@ -48,6 +47,7 @@ class AccountRequest extends BaseModel {
     return {
       ..._.omit(this._data, [
         'signers',
+// Temp comment
         'referredBy',
         'statusUpdatedBy',
         'verificationStatus',
@@ -92,3 +92,4 @@ class AccountRequest extends BaseModel {
       INCOMPLETE: [''],
       PENDING: ['Ready to Sign'],
       SIGNED: ['Ready for Review', 'Completed'],
+      APPROVED: [],

@@ -46,7 +46,6 @@ describe('POST /signers', async () => {
       ssn: '111-22-3333',
       consent: true,
       consentAccountOpening: true,
-      consentPrivacyPolicy: true,
       consentCommunication: false,
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
@@ -80,4 +79,5 @@ describe('POST /signers', async () => {
     return request(app.server)
       .post(`/v1/signers`)
       .set('Authorization', 'Bearer ' + token)
+      .send(payload)
       .expect('Content-Type', /json/)

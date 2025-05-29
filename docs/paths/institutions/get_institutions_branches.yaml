@@ -1,4 +1,5 @@
 /institutions/{id}/branches:
+  get:
     tags:
       - Institution
     summary: Get a paginated list of institution branches
@@ -11,3 +12,4 @@
         required: true
         schema:
           type: string
+          format: uuidv4

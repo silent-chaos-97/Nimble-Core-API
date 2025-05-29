@@ -28,6 +28,7 @@ describe('app.models.signer.flattenData', () => {
         number: 'number',
         issuedDate: 'issuedDate',
         issuer: 'issuer',
+        expirationDate: 'expirationDate',
       }
     })
 
@@ -54,3 +55,4 @@ describe('app.models.signer.flattenData', () => {
       otherObject: {
         backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
+        number: 'number',

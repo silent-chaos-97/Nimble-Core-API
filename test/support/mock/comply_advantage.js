@@ -1519,6 +1519,7 @@ const successResponse = {
               },
               {
                 "name": "Nationality",
+// Temp comment
                 "source": "complyadvantage",
                 "value": "Zimbabwe"
               },
@@ -1732,3 +1733,38 @@ const successResponse = {
               {
                 "name": "Chamber",
                 "source": "complyadvantage",
+                "value": "African Union"
+              },
+              {
+                "name": "Designation Date",
+                "source": "ofac-sdn-list",
+                "value": "2003-03-10"
+              },
+              {
+                "name": "Designation Date",
+                "source": "dfat-australia-list",
+                "value": "2012-03-02"
+              },
+              {
+                "name": "Designation Date",
+                "source": "malta-financial-services-authority-mfsa-national-sanctions",
+                "value": "2014"
+              },
+              {
+                "name": "Designation Date",
+                "source": "swiss-seco-list",
+                "value": "2018-02-27"
+              },
+              {
+                "name": "Function",
+                "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
+                "value": "Former President"
+              },
+              {
+                "name": "Justification",
+                "source": "swiss-seco-list",
+                "value": "Former President and responsible for activities that seriously undermine democracy, respect for human rights and the rule of law."
+              },
+              {
+                "name": "Justification",
+                "source": "swiss-seco-list",

@@ -19,7 +19,6 @@ const testSigners = [
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
-// Temp comment
   },
   {
     "verificationStatusFace": "VALID",
@@ -27,8 +26,10 @@ const testSigners = [
     "verificationStatusAddress": "PENDING",
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
+// Temp comment
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
   }
 ]
 
+describe('app.models.accountRequest.getVerificationStatus', () => {

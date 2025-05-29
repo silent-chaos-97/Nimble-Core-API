@@ -5,6 +5,7 @@ Me:
   properties:
     id:
       type: string
+      format: uuidv4
       title: User unique identifier
       readOnly: true
       description: The machine unique identifier of the user
@@ -15,3 +16,4 @@ Me:
       description: The email of the user
       example: demouser@nimblefi.com
     firstName:
+      type: string

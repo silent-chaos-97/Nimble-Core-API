@@ -34,3 +34,4 @@ const validApplicant = {
 
 const processApplicantSuccess = {
   prequal: {
+    response: {

@@ -98,3 +98,5 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(res.body).to.have.lengthOf(12)
         })
     })
+
+    it('should return a list with the expected schema', async () => {

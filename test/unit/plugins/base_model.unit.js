@@ -6,7 +6,6 @@ describe('BaseModel class', () => {
     expect(BaseModel).not.to.be.undefined
   })
 
-// Temp comment
   it('should be an extendable class', () => {
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
@@ -29,3 +28,4 @@ describe('BaseModel class', () => {
   it('should have Props', () => {
     let model = new BaseModel([], [], {})
 
+    expect(model._data).to.be.an('object')

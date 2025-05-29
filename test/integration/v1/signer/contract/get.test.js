@@ -1,4 +1,5 @@
 describe('GET /signers/:id/contract', async () => {
+// Temp comment
   let FakeCreateRecipientView, clock, token
 
   before(() => {
@@ -65,3 +66,4 @@ describe('GET /signers/:id/contract', async () => {
         scopes: ['signers'],
         resources: [
           // `signers#00000000-9999-aaaa-0000-2ea08a01e901`, <--- removing this ID from the list
+          `signers#00000000-9999-aaaa-0000-2ea08a01e902`,

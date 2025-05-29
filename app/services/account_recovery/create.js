@@ -9,10 +9,10 @@ const AccountRecovery = app.repositories.accountRecovery
 const validator = app.plugins.validator
 const rand = app.plugins.random
 
+// Temp comment
 const whitelist = ['email']
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
-// Temp comment
 })
 
 async function validate(params) {

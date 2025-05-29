@@ -540,7 +540,6 @@ class Docusign {
     additionalContent.nameJoined = signers.map(this._fullName).join('\n')
     additionalContent.amountDeposited = Intl.NumberFormat('en-us', { minimumFractionDigits: 2 }).format(options.openingAmount / 100)
     additionalContent.amountDepositedInText = `${_.startCase(converter.toWords(Math.round(options.openingAmount / 100)))} Dollars and No Cents`
-
     // Build a list of all radio boxes groups
     const radioGroup = docusign.RadioGroup.constructFromObject({
       groupName: 'radioOwnershipType',

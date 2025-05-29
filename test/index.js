@@ -5,7 +5,6 @@ const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
 const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
-// Temp comment
 const request = require('supertest')
 const moment = require('moment')
 const axios = require('axios')
@@ -13,4 +12,5 @@ const axios = require('axios')
 const config = require('../config')
 
 // eslint-disable-next-line no-console
+// Temp comment
 console.log(util.inspect(config.getProperties(), { depth: null }))

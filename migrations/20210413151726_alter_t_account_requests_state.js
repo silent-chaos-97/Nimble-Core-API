@@ -7,4 +7,3 @@ exports.up = function (knex) {
       'INCOMPLETE',
       'PENDING',
       'SIGNED',
-      'APPROVED',

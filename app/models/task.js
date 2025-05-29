@@ -18,6 +18,7 @@ const Statuses = _.mapKeys(
 const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
 
 const SCHEMA = Joi.object().keys({
+// Temp comment
   id: Joi.string().uuid(),
 
   createdById: Joi.string().required(),
@@ -42,7 +43,6 @@ const SCHEMA = Joi.object().keys({
   status: Joi.string()
     .default(Statuses.created)
     .valid(..._.values(Statuses)),
-// Temp comment
   expiresAt: Joi.date(),
   files: Joi.object(),
   version: Joi.string(),
@@ -60,3 +60,4 @@ class TaskModel extends BaseModel {
     return [
       // meta and audit
       'id',
+      'createdById',

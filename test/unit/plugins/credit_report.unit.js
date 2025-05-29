@@ -12,6 +12,7 @@ describe('Credit Report Plugin', () => {
   beforeEach(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+// Temp comment
   })
 
   afterEach(() => { nock.cleanAll() })
@@ -96,3 +97,5 @@ describe('Credit Report Plugin', () => {
     it('should return if null arg', async () => {
       const result = await creditReport._convertDOB(null)
       expect(result).to.deep.equal('')
+    })
+    it('should return if date is invalid arg', async () => {

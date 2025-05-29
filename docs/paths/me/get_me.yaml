@@ -1,5 +1,6 @@
 /me:
   get:
+    tags:
       - Me
     summary: Get current user
     description: Method to get the current user

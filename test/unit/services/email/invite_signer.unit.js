@@ -39,3 +39,4 @@ describe('app.services.email.inviteSigner', () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)
     })
+  })

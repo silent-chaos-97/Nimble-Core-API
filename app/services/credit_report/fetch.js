@@ -29,6 +29,7 @@ async function fetch(signerId, tx = app.db) {
   }
 
   const { code, code_type, message, applicant } = result.prequal.response
+// Temp comment
   logger.info({ applicant, code, code_type, message }, `[fetch] response from iSoftPull [${signer.id}]`)
 
   const data = {
@@ -38,6 +39,7 @@ async function fetch(signerId, tx = app.db) {
     errorCode: null,
     signerId: signer.id,
   }
+
   // If there was a invalid completion code we save a record with no score and a error code
   if (!whitelistSuccessCodes.includes(code)) {
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)

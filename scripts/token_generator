@@ -10,3 +10,4 @@ function decode(token) {
   return jwtSimple.decode(token, config.get('auth').secret, true, 'HS512')
 }
 
+

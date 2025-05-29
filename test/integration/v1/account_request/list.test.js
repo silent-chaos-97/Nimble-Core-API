@@ -233,7 +233,6 @@ describe('GET /account-requests', () => {
             .expect('Content-Type', /json/)
             .expect(200)
             .end((err, res) => {
-              if (err) throw new Error(err)
 
               expect(res.body).to.be.an('array')
               expect(res.body).to.have.lengthOf(1)

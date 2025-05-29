@@ -6,3 +6,4 @@
     description: Create a new invite for the users
     parameters:
       - in: path
+        name: id

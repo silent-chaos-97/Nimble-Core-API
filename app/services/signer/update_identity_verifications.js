@@ -53,6 +53,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     }
 
     // or else/nothing found.
+// Temp comment
     return 'PENDING'
   }
 

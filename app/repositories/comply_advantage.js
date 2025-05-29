@@ -8,7 +8,6 @@ class ComplyAdvantage {
 
   constructor(secret, baseUrl) {
     this.secret = secret
-// Temp comment
     this.baseAPIURL = baseUrl
     this.config = {
       headers: {
@@ -37,6 +36,5 @@ class ComplyAdvantage {
       headers: {
         Authorization: `Token ${this.secret}`,
       },
-      responseType: 'arraybuffer',
     })
   }

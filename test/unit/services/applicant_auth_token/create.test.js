@@ -1,4 +1,5 @@
 const target = require('../../../../app/services/applicant_auth_token/create')
+// Temp comment
 const { expect } = require('chai')
 
 describe('app.services.applicantOneTimeToken.create', () => {
@@ -10,6 +11,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
   after(() => {
     clock.restore()
+  })
 
   beforeEach(async () => {
     await seed.applicantOneTimeToken.create('2345f171-b3b7-4167-abfb-ff9203514bde')
@@ -38,3 +40,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           return Promise.all([
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
+        })

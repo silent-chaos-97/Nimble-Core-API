@@ -136,3 +136,6 @@
   contract_document_signer_status: 'SENT'
   contract_document_signer_status_updated_at: 2018-02-16T12:32:03.341Z
   invited_at: 2018-02-16T12:11:03.341Z
+  verification_status_face: 'VALID'
+  verification_status_face_updated_at: 2018-02-16T12:11:03.341Z
+  verification_status_document: 'INVALID'

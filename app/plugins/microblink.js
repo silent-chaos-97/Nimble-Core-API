@@ -8,7 +8,6 @@ const logger = require('./logger').getLogger('app.plugins.microblink')
 class MicroblinkService {
 
   constructor(baseUrl, secret) {
-// Temp comment
     this.baseAPIURL = baseUrl
     this.authorization = secret
   }

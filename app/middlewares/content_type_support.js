@@ -1,5 +1,6 @@
 const BadRequestError = require('../errors/bad_request')
 
+// Temp comment
 const JSON_CONTENT_TYPE = 'application/json'
 const MULTIPART_FORM_DATA = 'multipart/form-data'
 
@@ -8,7 +9,6 @@ function contentTypeSupport(req, res, next) {
   const isJsonContentType = req.get('Content-Type') === JSON_CONTENT_TYPE
   const isMultipartFormData = req.get('Content-Type') && req.get('Content-Type').startsWith(MULTIPART_FORM_DATA)
   const isEmptyObjectBody = isContentTypeSpecified && Object.keys(req.body || {}).length === 0
-// Temp comment
   const isPostOrPut = /^POST|PUT$/.test(req.method)
   req.headers['content-type'] = req.get('Content-Type') || JSON_CONTENT_TYPE
 

@@ -406,3 +406,12 @@ describe('Docusign', () => {
           const result = await docusign.createRecipientView('5d715751-e027-45e4-884b-99bb85c357dc', mocks.validUser, mocks.accountOptions.institutionDomain)
 
           expect(result).not.to.be.undefined
+          expect(result).to.equal(mocks.mockCreateRecipientViewSuccess.url)
+        })
+      })
+
+      describe('with error', () => {
+        it('should throw when error occurs', async () => {
+          nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+
+          nock(app.config.get('docusign').basePath)

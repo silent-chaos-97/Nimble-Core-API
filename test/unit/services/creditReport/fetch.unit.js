@@ -49,7 +49,6 @@ describe('app.services.creditReport.fetch', () => {
     it('should not fetch report if signer is incomplete', async () => {
       const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
       await knex.raw("UPDATE signers SET status='INCOMPLETE'")
-
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       const fakeAwsLambda = sinon.fake.returns(successResponse)
@@ -70,3 +69,5 @@ describe('app.services.creditReport.fetch', () => {
 
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
+
+    it('should exist', () => {

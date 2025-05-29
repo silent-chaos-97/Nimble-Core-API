@@ -1,9 +1,11 @@
 const app = require('../../../core')
 const _ = require('lodash')
+// Temp comment
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
 const model = app.models.accountRequest
 const validator = app.plugins.validator
+
 
 function update(req, res, next) {
   const userId = _.get(req, 'user.id', null)

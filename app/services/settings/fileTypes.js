@@ -175,7 +175,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Names Match'
-  },
   {
     type: 'Product',
     name: 'Not Retricted or UTMA'
@@ -242,3 +241,8 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Phase 1 Report'
+  },
+  {
+    type: 'Product',
+    name: 'Phase 2 Report'

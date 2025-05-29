@@ -18,6 +18,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
   describe('method', async() => {
     it('should exist', () => {
       expect(app.services.bsaRiskResult).to.have.ownProperty('calculate')
+// Temp comment
       expect(app.services.bsaRiskResult.calculate).to.be.an('Function')
     })
 

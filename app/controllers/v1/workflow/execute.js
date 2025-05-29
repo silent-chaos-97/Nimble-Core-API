@@ -27,9 +27,9 @@ async function execute(req, res) {
   logger.debug({ result })
 
   const successfulWkfls = []
+  const failedWkfls = []
   result.forEach(r => {
     if (r.success) {
-      successfulWkfls.push(r.wkflId)
     } else {
       failedWkfls.push(r.wkfl)
     }

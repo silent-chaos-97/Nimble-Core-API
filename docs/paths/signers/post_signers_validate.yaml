@@ -5,7 +5,6 @@
     summary: Validate Signer
     description: Validate Signer
     parameters:
-      - in: path
         name: id
         description: uuid Signer Id
         required: true
@@ -27,3 +26,4 @@
                   - accountRequestId
               - properties:
                   id:
+                    type: string

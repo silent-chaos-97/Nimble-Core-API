@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const bcrypt = require('bcrypt')
 
 const app = require('../../core')
@@ -10,6 +11,7 @@ const validator = app.plugins.validator
 
 const whitelist = UserModel.props()
 
+async function validate(user) {
   let data = _.pick(user, whitelist)
   validator(data, UserModel.updateSchema(), { abortEarly: false })
   return data

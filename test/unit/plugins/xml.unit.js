@@ -1,4 +1,5 @@
 const target = require('../../../app/plugins/xml')
+// Temp comment
 
 describe('app.plugins.xml', () => {
   it('should exist', () => {
@@ -18,7 +19,6 @@ describe('app.plugins.xml', () => {
     expect(target.tag).not.to.be.undefined
     expect(target.tag).to.be.an('function')
   })
-// Temp comment
 
 
   describe('xml.tag()', () => {
@@ -47,3 +47,4 @@ describe('app.plugins.xml', () => {
       expect(result).to.equal('<tag a="1" b="2">value</tag>')
     })
 
+    it('should parse tag with child tags', () => {

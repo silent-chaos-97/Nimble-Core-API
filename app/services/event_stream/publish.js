@@ -4,12 +4,12 @@ const app = require('../../core')
 const logger = app.logger.getLogger('app.services.event_stream.publish')
 
 const client = new AWS.SNS({
+  apiVersion: '2010-03-31',
   // removes empty string/undefineds
   ..._.pickBy(app.config.get('sns'), _.identity)
 })
 
 /**
- * @param stream the name of the stream or topic (or configuration key which references it)
  * @param {{id: string, event: string, type?: string, body: any, payload?: any }} event the event data being emitted
  * @param event.id identifier of the bound resource
  * @param event.event the type of event or resource

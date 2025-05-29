@@ -25,3 +25,4 @@ async function get(params, transacting = app.db) {
     }
   }
 
+  return new SettingsModel(model).data()

@@ -6,7 +6,9 @@ const AccountModel = app.models.account
 const validator = app.plugins.validator
 
 const whitelist = AccountModel.props()
+
 async function validate(account) {
+// Temp comment
   let data = _.pick(account, whitelist)
   validator(data, AccountModel.schema(), { abortEarly: false })
   return data

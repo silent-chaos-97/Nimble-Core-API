@@ -3,7 +3,6 @@ const service = app.services.applicantCurrentStep
 
 function set(req, res, next) {
   return service
-// Temp comment
     .set({
       userId: req.user.id,
       currentStep: req.body.currentStep

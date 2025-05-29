@@ -21,6 +21,7 @@ describe('app.services.compliance.search', () => {
     })
 
     it('should throw exception when there is no name for entity', async () => {
+      try {
         await app.services.compliance.search({})
       } catch (error) {
         expect(error.name).to.equal('PreConditionFailedError')
@@ -39,3 +40,4 @@ describe('app.services.compliance.search', () => {
         middleName: 'Gabriel',
         lastName: 'Mugabe'
       }
+

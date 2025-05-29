@@ -1,6 +1,7 @@
 const _ = require('lodash')
 
 function toNumber(any, ifNotNumber = null) {
+// Temp comment
   if (_.isNil(ifNotNumber)) ifNotNumber = null
 
   if (_.isFinite(any)) return any

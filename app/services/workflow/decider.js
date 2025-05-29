@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const { get, mapValues, isObject, isArray, isString, map } = require('lodash')
-const { v4: uuid } = require('uuid')
 const moment = require('moment')
 const app = require('../../core')
 const Task = app.models.task
@@ -39,6 +38,7 @@ function interpolateString(str, state) {
 
 function interpolateInput(input, state) {
   const mixMap = isArray(input) ? map : mapValues
+
   return mixMap(input, value => {
     if (isString(value)) {
       return interpolateString(value, state)

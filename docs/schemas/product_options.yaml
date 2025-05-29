@@ -1,4 +1,3 @@
-ProductOption:
   type: object
   properties:
     id:
@@ -10,9 +9,11 @@ ProductOption:
       example: 95554751-51d1-4f37-9785-417ae5251d56
     key:
       type: string
+      description: the property key
       example: loan_max_value
     title:
       type: string
       title: Name
       description: The human readable title for the property
       example: Loan Max Value
+    category:

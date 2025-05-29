@@ -47,3 +47,4 @@ describe('app.services.contract.update', () => {
 
       after(() => {
         sinon.restore()
+        nock.enableNetConnect()

@@ -5,3 +5,4 @@ describe('Email Normalise Plugin', () => {
     expect(target).not.to.be.undefined
   })
 
+  it('should return a email with domain in lowercase', () => {

@@ -44,7 +44,6 @@ const schema = Joi.object({
   purposeOfLoanOther: Joi.string(),
 	// User input
   usageOfProperty: Joi.string().valid('Primary Residence', 'Secondary Residence', 'Investment'),
-// Temp comment
   constructionDetails: Joi.object({
     // Not sure - Attom
 		yearLotAcquired: Joi.number(),
@@ -271,3 +270,9 @@ const schema = Joi.object({
 				marketValue: Joi.number()
 			}),
       // Calculated
+			realEstateOwnedTotalMarketValue: Joi.number(),
+      // Not sure - User
+			vestedInterestInRetirementFund: Joi.object({
+				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+				marketValue: Joi.number()
+			}),

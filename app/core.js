@@ -23,7 +23,6 @@ const xml = require('./plugins/xml')
 const { v4: uuid } = require('uuid')
 const hash = require('./plugins/hash')
 const codec = require('./plugins/codec')
-// Temp comment
 const mfaVerify = require('./plugins/mfa_verify')
 const phoneNormalizer = require('./plugins/phone_normalizer')
 const cache = require('./plugins/cache')
@@ -31,6 +30,7 @@ const mappers = require('./plugins/mappers')
 const amort = require('./plugins/amort')
 const workflow = require('./plugins/workflow')
 const numbers = require('./plugins/numbers')
+// Temp comment
 const zson = require('./plugins/zson')
 const google = require('./plugins/google')
 

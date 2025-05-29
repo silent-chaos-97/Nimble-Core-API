@@ -64,3 +64,4 @@ describe('Email Plugin', () => {
           To: 'eee@eee.com',
           TemplateAlias: 'template',
           TemplateModel: sinon.match.object
+        })

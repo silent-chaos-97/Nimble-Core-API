@@ -186,3 +186,7 @@ describe('MicroblinkService', () => {
             type: 'BLINK_ID',
           },
         },
+      }
+
+      const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
+      expect(result).to.have.deep.property('address', '1234 fowler ave')

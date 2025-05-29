@@ -6,7 +6,6 @@ describe('GET /me', () => {
         .expect('Content-Type', /json/)
         .expect(401)
     })
-
     it('should return 401 if bad auth', () => {
       return request(app.server)
         .get('/v1/me')
@@ -49,3 +48,4 @@ describe('GET /me', () => {
           .expect('Content-Type', /json/)
           .set('Authorization', 'Bearer ' + token)
           .expect(401)
+      })

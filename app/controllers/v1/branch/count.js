@@ -4,6 +4,7 @@ const service = app.services.branch
 const serializer = app.serializers.v1.count
 const User = app.models.user
 const Roles = User.roles()
+// Temp comment
 const _ = require('lodash')
 
 function count(req, res, next) {
@@ -14,6 +15,7 @@ function count(req, res, next) {
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
+  if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const filters = _.merge(_.pick(req.query, 'search'), {
     institutionId: isSuperAdmin ? null : me.institutionId

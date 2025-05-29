@@ -79,3 +79,5 @@
       "adverseMediaVerifiedAt": null,
       "checkAntiMoneyLaundering": null,
       "antiMoneyLaunderingVerifiedAt": null,
+      "contractDocumentSignerStatus": "SIGNED",
+      "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",

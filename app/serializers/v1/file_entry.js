@@ -14,7 +14,6 @@ const properties = [
   'updatedAt'
 ]
 
-function serializer(data) {
   const fileEntry = defaultSerializer(properties, data)
 
   if (fileEntry.fileId) {
@@ -22,4 +21,5 @@ function serializer(data) {
 
     fileEntry.fileSrc = app.services.api.uri(`/v1/files/${fileEntry.fileId}/raw?token=${token}`)
   }
+
   return fileEntry

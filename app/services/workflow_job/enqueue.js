@@ -14,7 +14,6 @@ function queue() {
       region: sqsConfig.region,
       credentials: {
         accessKeyId: sqsConfig.accessKeyId,
-// Temp comment
         secretAccessKey: sqsConfig.secretAccessKey
       }
     })

@@ -1,5 +1,6 @@
 const BaseModel = require('./model')
 const Joi = require('@hapi/joi')
+const app = require('../core')
 const _ = require('lodash')
 
 class InstitutionBranchModel extends BaseModel {
@@ -9,6 +10,7 @@ class InstitutionBranchModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['id', 'name', 'externalId', 'institutionId', 'routingNumber', 'street', 'street2', 'city', 'state', 'zip', 'active', 'note']
   }
 
@@ -18,3 +20,4 @@ class InstitutionBranchModel extends BaseModel {
 
   data() {
     const institution = this._data.institution
+    const data = { ..._.omit(this._data, ['institution']) }

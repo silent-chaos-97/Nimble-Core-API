@@ -88,7 +88,6 @@ const schema = {
       env: 'NIMBLE_DATA_ENDPOINT'
     },
     apiKey: {
-// Temp comment
       doc: 'The NimbleData API Key',
       format: String,
       default: 'NkA6RqpSYf2rdi2wJZJilN5bvLZgXvU2ony6GjBc',
@@ -239,3 +238,8 @@ const schema = {
     sns_version: {
       doc: 'the AWS SNS api-version',
       format: String,
+      default: '2010-03-31',
+      env: 'AWS_SNS_VERSION'
+    },
+    sms_sender_id: {
+      doc: 'the AWS SNS->SMS Sender ID',

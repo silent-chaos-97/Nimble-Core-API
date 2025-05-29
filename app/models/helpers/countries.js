@@ -22,6 +22,7 @@ const countries = [
   'BEN',
   'BFA',
   'BGD',
+  'BGR',
   'BHR',
   'BHS',
   'BIH',
@@ -78,6 +79,7 @@ const countries = [
   'FSM',
   'GAB',
   'GBR',
+// Temp comment
   'GEO',
   'GGY',
   'GHA',
@@ -87,3 +89,5 @@ const countries = [
   'GMB',
   'GNB',
   'GNQ',
+  'GRC',
+  'GRD',

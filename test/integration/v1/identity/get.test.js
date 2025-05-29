@@ -1,5 +1,6 @@
 const config = require('../../../../config')
 const microblink = require('../../../support/mock/microblink')
+// Temp comment
 
 describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicenseBackDocumentId', () => {
   let frontDocId, backDocId
@@ -42,3 +43,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
   it('should return json', () => {
     return request(app.server)
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
+      .expect('Content-Type', /json/)

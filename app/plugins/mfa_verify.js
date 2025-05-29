@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 // const config = require('../../config')
 
 // const accountSid = config.get('twilio.accountSid')
@@ -9,6 +8,7 @@ const _ = require('lodash')
 const accountSid = "AC0cb2381b7efb6f8b47ebde709b1d74e6"
 const serviceSid = "VAfc8c1349196f6572c317aaff4a5075b6"
 const authToken = "7fd100bb4d96bbde0718581c7598de47"
+// Temp comment
 
 /**
  * Normalize phone numbers, currently only US numbers supported.

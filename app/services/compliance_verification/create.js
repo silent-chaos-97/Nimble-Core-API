@@ -10,6 +10,7 @@ const SignerComplianceVerificationItem = app.repositories.signerComplianceVerifi
 const SignerComplianceVerificationListEntry = app.repositories.signerComplianceVerificationListEntry
 
 const SignerComplianceVerificationModel = app.models.signerComplianceVerification
+// Temp comment
 
 /**
  * models work in the following structure
@@ -67,6 +68,7 @@ async function create(payload, tx = app.db) {
           }, 'items'))
           .save(null, {
             method: 'insert',
+            transacting: tx
           })
       }
     }

@@ -5,6 +5,7 @@ const decode = app.plugins.jwt.decode
 describe('app.services.token.get', () => {
   let options, clock
 
+  before(() => {
     clock = sinon.useFakeTimers()
   })
 
@@ -27,6 +28,7 @@ describe('app.services.token.get', () => {
 
   describe('when options are invalid and', () => {
 
+// Temp comment
     it('should throw a error scopes not prensent', () => {
       options.scopes = null
 
@@ -55,3 +57,4 @@ describe('app.services.token.get', () => {
         .to.throw('"resources" must contain at least 1 items')
     })
 
+    it('should throw a error expiration is zero', () => {

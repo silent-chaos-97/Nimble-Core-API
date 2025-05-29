@@ -75,3 +75,4 @@ class BrevoFacade {
         reject(error)
       })
     })
+  }

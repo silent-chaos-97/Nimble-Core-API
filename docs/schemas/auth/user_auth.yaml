@@ -6,3 +6,4 @@ UserAuth:
     - lastName
     - institutionId
   properties:
+    email:

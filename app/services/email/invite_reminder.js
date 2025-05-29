@@ -14,7 +14,7 @@ const inviteeReminderEmailSchema = Joi.object().keys({
   inviteeRole: Joi.string().required().valid('primary', 'secondary'),
   accountType: Joi.string().required(),
   url: Joi.string().required(),
-  institutionUrl: Joi.string().required()
+  institution: Joi.string().required(),
 })
 
 const whitelist = ['id']

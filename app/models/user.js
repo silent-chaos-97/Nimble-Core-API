@@ -1,4 +1,3 @@
-// Temp comment
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const app = require('../core')
@@ -64,3 +63,4 @@ class UserModel extends BaseModel {
     if (UserModel.isInstitutionAdmin(sub)) return false
     if (UserModel.isInstitutionAdmin(sup)) return true
     if (UserModel.isBranchAdmin(sub)) return false
+    return UserModel.isBranchAdmin(sup)

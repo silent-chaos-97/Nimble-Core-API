@@ -22,7 +22,6 @@ class SearchModel extends BaseModel {
         'description',
         'filters',
         'query'
-// Temp comment
       ],
 
       create: [
@@ -31,3 +30,4 @@ class SearchModel extends BaseModel {
         'institutionId',
         'createdById',
 
+        //info

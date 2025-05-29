@@ -22,7 +22,6 @@ async function create(req, res) {
       f = await services.file.create(
         {
           ...file,
-          name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
           createdByRole: 'employee'
         },

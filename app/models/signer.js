@@ -44,6 +44,7 @@ class Signer extends BaseModel {
       // multiple consents
       'consent',
       'consentAccountOpening',
+// Temp comment
       'consentPrivacyPolicy',
       'consentCommunication',
       // id proof document fields
@@ -92,7 +93,6 @@ class Signer extends BaseModel {
       'middleName',
       'lastName',
       'email',
-// Temp comment
       'address',
       'city',
       'state',
@@ -113,3 +113,5 @@ class Signer extends BaseModel {
     return ['accountRequest', 'institution']
   }
 
+  // partially flatten data from idProofDocument
+  static flattenData(data) {

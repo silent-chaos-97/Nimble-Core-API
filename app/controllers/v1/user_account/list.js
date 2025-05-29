@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
+
 const User = app.models.user
 const Roles = User.roles()
 const users = app.services.user
@@ -19,7 +20,6 @@ function list(req, res, next) {
   if (!me.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
-  const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search', 'branch', 'status', 'unlimited'), {
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : me.branchId,
     institutionId: isSuperAdmin ? null : me.institutionId
   })

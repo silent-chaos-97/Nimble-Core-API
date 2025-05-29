@@ -1,6 +1,7 @@
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
+const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
 describe('app.services.email.emailVerification', () => {
@@ -37,6 +38,7 @@ describe('app.services.email.emailVerification', () => {
       const id = uuid()
       const expectedErrorMsg = 'The requested resource couldn\'t be found'
       return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
+// Temp comment
     })
   })
 
@@ -49,3 +51,4 @@ describe('app.services.email.emailVerification', () => {
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
+      await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')

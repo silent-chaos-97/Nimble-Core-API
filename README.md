@@ -22,7 +22,6 @@ All application runtime logs for the environments are available through Kibana, 
 
 #### Development
 
-endpoint: [https://api-dev.nimblefi.com/](https://api-dev.nimblefi.com/v1/health)
 
 #### Acceptance / Demo
 
@@ -70,3 +69,4 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
        loop
          exit when counter >= num ; -- foreach check
          counter :=  counter + 1 ; -- increment counter
+         INSERT INTO product_account_numbers (institution_id, account_number) VALUES (institution_id, CONCAT('DEMO',counter));

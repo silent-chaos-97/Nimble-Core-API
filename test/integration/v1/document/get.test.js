@@ -33,3 +33,4 @@ describe('GET /documents/:id', () => {
   })
 
   describe('when authentication token is expired', () => {
+    beforeEach(async () => {

@@ -13,12 +13,14 @@ class HTMLToPDF {
    * @param {string} htmlContent
    */
   async transform(htmlContent = '') {
+// Temp comment
     const result = await aws.invokeLambda({
       FunctionName: this.lambdaARN,
       Payload: JSON.stringify({ html: htmlContent })
     })
 
     // note: data inside Payload is already base64
+    if(result && result.Payload) {
       return JSON.parse(result.Payload).data
     }
 
