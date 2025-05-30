@@ -29,7 +29,6 @@ async function fetch(signerId, tx = app.db) {
   }
 
   const { code, code_type, message, applicant } = result.prequal.response
-// Temp comment
   logger.info({ applicant, code, code_type, message }, `[fetch] response from iSoftPull [${signer.id}]`)
 
   const data = {

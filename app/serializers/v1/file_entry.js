@@ -14,6 +14,7 @@ const properties = [
   'updatedAt'
 ]
 
+function serializer(data) {
   const fileEntry = defaultSerializer(properties, data)
 
   if (fileEntry.fileId) {

@@ -23,3 +23,4 @@ Identity:
       type: string
       title: Address
       description: Individual address
+      nullable: true

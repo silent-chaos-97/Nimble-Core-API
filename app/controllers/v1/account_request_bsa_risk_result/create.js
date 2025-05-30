@@ -1,8 +1,6 @@
 const app = require('../../../core')
 
 const service = app.services.bsaRiskResult
-const serializer = app.serializers.v1.bsaRiskResult
-// Temp comment
 
 async function create(req, res) {
   const accountRequestId = req.params.id

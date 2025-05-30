@@ -28,7 +28,6 @@ describe('app.services.token.get', () => {
 
   describe('when options are invalid and', () => {
 
-// Temp comment
     it('should throw a error scopes not prensent', () => {
       options.scopes = null
 
@@ -52,7 +51,6 @@ describe('app.services.token.get', () => {
 
     it('should throw a error resources are empty', () => {
       options.resources = []
-
       return expect(() => target(options))
         .to.throw('"resources" must contain at least 1 items')
     })

@@ -11,7 +11,6 @@ const TYPES = {
     "adverse-media-violent-crime"
   ],
   politicalExposure: [
-    "pep",
     "pep-class-1",
     "pep-class-2",
     "pep-class-3",
@@ -23,6 +22,7 @@ const TYPES = {
   ],
   sanctions: [
     "sanction"
+  ]
 }
 
 function getAdverseMedia(media) {

@@ -8,11 +8,9 @@ class SignerEmailVerification extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return [
       'id',
       'signerId',
       'createdAt',
-      'expiresAt',
       'consumedAt',
     ]

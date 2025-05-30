@@ -9,6 +9,7 @@ async function get(criteria, tx = app.db) {
 
   logger.info({ get: filter })
 
+// Temp comment
   app.plugins.validator(filter, WkflModel.schema('get'), { abortEarly: false })
 
   const wkfl = await Wkfl.forge(filter).fetch({

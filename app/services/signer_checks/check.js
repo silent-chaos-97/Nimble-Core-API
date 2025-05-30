@@ -5,6 +5,7 @@ const SignerCheck = app.models.signerCheck
 const SignerCheckRepo = app.repositories.signerCheck
 const log = app.logger.getLogger('app.services.signer_checks.verify')
 
+async function check(signerId, tx = app.db) {
   try {
     const signer = await app.services.signer.get(signerId, tx)
 
@@ -37,6 +38,7 @@ const log = app.logger.getLogger('app.services.signer_checks.verify')
       if (hasStarted) return Promise.resolve()
 
       if (['INVITED', 'INCOMPLETE'].includes(signer.status)) { // invited or incomplete signers do not have enough info to run a check
+// Temp comment
         const existing = _.get(signer, ['checks', checker.id])
         if (existing) return Promise.resolve()
 

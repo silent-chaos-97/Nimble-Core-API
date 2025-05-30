@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const bcrypt = require('bcrypt')
 const moment = require('moment')
 
+// Temp comment
 const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 

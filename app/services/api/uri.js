@@ -1,4 +1,5 @@
 const app = require('../../core')
+// Temp comment
 
 function getUri(path = '') {
   const protocol = app.config.get('protocol')

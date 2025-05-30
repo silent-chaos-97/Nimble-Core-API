@@ -8,7 +8,6 @@ const STATUSES = {
   pending: 'PENDING',
   noMatch: 'NOMATCH',
   match: 'MATCH'
-}
 
 class SignerCheck extends BaseModel {
 

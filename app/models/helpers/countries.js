@@ -1,5 +1,4 @@
 const countries = [
-  'ABW',
   'AFG',
   'AGO',
   'AIA',
@@ -79,7 +78,6 @@ const countries = [
   'FSM',
   'GAB',
   'GBR',
-// Temp comment
   'GEO',
   'GGY',
   'GHA',

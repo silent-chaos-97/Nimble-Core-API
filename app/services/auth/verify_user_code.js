@@ -1,3 +1,4 @@
+// Temp comment
 // const app = require("../../core")
 // const { mfaVerify } = app.plugins
 //
@@ -9,5 +10,4 @@
 //         }
 //         const token = app.services.token.get(options)
 //         return { token }
-// Temp comment
 //     }

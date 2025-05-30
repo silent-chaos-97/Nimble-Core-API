@@ -7,6 +7,7 @@ const SCHEMAS = {
   method: Joi.string().required().valid('email', 'push', 'sms'),
 
   email: Joi.object().keys({
+// Temp comment
     taskId: Joi.string(),
     method: Joi.string().required().valid('email'),
     product: Joi.string().optional(),

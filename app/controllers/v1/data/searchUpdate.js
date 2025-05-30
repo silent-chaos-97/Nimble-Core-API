@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
+// Temp comment
 const service = app.services.data
 
 async function searchCreate(req, res) {
@@ -11,7 +12,6 @@ async function searchCreate(req, res) {
   if (!id) throw new BadRequestError('id required')
 
   const data = { ...req.body, id, institutionId: req.user.institutionId }
-// Temp comment
 
   try {
     const search = await service.searchSave(data)

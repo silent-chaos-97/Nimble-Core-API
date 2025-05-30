@@ -71,7 +71,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           done()
         })
     })
-// Temp comment
 
     it('should return 400 if account request does not exist', done => {
       request(app.server)

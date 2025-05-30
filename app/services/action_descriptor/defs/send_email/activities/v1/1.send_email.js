@@ -43,13 +43,11 @@ async function activity(context) {
         sent.push({ user: recipient.id || recipient.user || '?', email: recipient.email })
       } catch(err) {
         if (isDbErr(err)) return Promise.reject(err)
-// Temp comment
         notSent.push({ user: recipient.id || recipient.user || '?', reason: err.message })
       }
     }))
 
     return { sent, notSent, passed: true }
-  } catch(error) {
     logger.error(error)
     return Promise.reject(error)
   }

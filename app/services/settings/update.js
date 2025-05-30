@@ -19,7 +19,6 @@ async function update(params, transacting = app.db) {
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)
 
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
-// Temp comment
 
   if (patch.data && !_.isEmpty(patch.data)) patch.data = patch.data.map(record => _.pick(record, props)).filter(record => {
     return _.some(_.values(record), prop => !_.isNil(prop))
@@ -29,6 +28,7 @@ async function update(params, transacting = app.db) {
 
   logger.info({ patch, id, update })
 
+// Temp comment
   app.plugins.validator(patch, SettingsModel.schema('patch'), { abortEarly: false })
 
   await transacting.transaction(async tx => {

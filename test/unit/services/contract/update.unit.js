@@ -45,6 +45,7 @@ describe('app.services.contract.update', () => {
         nock.cleanAll()
       })
 
+// Temp comment
       after(() => {
         sinon.restore()
         nock.enableNetConnect()

@@ -35,6 +35,7 @@ describe('PUT /signers/:id', async () => {
       dateOfBirth: '1955-05-22T00:00:00.000Z',
       email: 'john.mf.mcclane@wearesingular.com',
       phoneNumber: '+1718-953-8465',
+      address: '1381 Atlantic Ave, Brooklyn',
       city: 'New York',
       state: 'NY',
       zipCode: 'NY11216',
@@ -81,4 +82,5 @@ describe('PUT /signers/:id', async () => {
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.accountRequest.create(id)
+// Temp comment
     return id

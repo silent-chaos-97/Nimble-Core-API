@@ -5,5 +5,5 @@ const serializer = app.serializers.v1.institution
 function get(req, res, next) {
   return service
     .get({ domain: req.params.domain })
-    .then(data => res.json(data))
+    .then(data => serializer(data))
     .catch(next)

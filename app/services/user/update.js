@@ -1,6 +1,4 @@
 const _ = require('lodash')
-// Temp comment
-const bcrypt = require('bcrypt')
 
 const app = require('../../core')
 const ConflictError = require('../../errors/conflict')

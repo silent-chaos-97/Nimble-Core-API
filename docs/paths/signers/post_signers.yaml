@@ -1,4 +1,5 @@
 /signers:
+  post:
     tags:
       - Signer
     summary: Create Signer

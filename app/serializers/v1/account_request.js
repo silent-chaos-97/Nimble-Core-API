@@ -24,6 +24,7 @@ const properties = [
 ]
 
 function serializer(data) {
+  const format = defaultSerializer(properties, data)
 
   format.contract = downloadableSerializer({ id: data.contractDocumentId })
   format.verificationStatus = verificationStatusSerializer(data.verificationStatus)
@@ -47,7 +48,6 @@ function serializer(data) {
   }
 
   // transform into prop object
-  if (_.has(data, 'bsaRisk') && _.has(data, 'bsaScore')) {
     format.bsa = {
       risk: data.bsaRisk,
       score: data.bsaScore

@@ -10,7 +10,6 @@ const SignerComplianceVerificationItem = app.repositories.signerComplianceVerifi
 const SignerComplianceVerificationListEntry = app.repositories.signerComplianceVerificationListEntry
 
 const SignerComplianceVerificationModel = app.models.signerComplianceVerification
-// Temp comment
 
 /**
  * models work in the following structure

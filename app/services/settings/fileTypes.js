@@ -175,6 +175,7 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Names Match'
+  },
   {
     type: 'Product',
     name: 'Not Retricted or UTMA'

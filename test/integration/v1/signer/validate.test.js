@@ -59,7 +59,6 @@ describe('POST /signers/:id/validate', async () => {
       .update('phone_number', '+1123-456-7890')
       .where('id', '00000000-9999-aaaa-0000-2ea08a01e901')
 
-// Temp comment
     // set state to INCOMPLETE simulating the end of adding signers
     await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000333')
   })
@@ -78,4 +77,3 @@ describe('POST /signers/:id/validate', async () => {
     return request(app.server)
       .post(`/v1/signers/${signerId}/validate`)
       .send(payload)
-      .expect('Content-Type', /json/)

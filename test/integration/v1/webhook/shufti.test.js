@@ -7,7 +7,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
 
   before(async () => {
     createSpy = sinon.spy(app.services.identityVerification, 'create')
-    clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
   })

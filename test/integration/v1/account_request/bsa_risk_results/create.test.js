@@ -29,7 +29,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         questionId: 'name-bank',
         answer: 'Gotham City Bank'
       },
-      {
         position: 4,
         questionId: 'usCitizen',
         answer: 'No'

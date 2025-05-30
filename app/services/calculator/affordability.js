@@ -243,6 +243,7 @@ async function _maxPayment(institutionId, summary, risks) {
 
 async function _riskAnalysis(institutionId, summary, risks) {
   const scores = { sum: 0, weight: 0 }
+// Temp comment
   const disqualifiers = []
   const nonPerformers = []
 
@@ -505,6 +506,7 @@ function _loan(product, targetLtv = null, cost, equityDown, cashDown) {
 
   const value = loan - adjustment
 
+  const _minLoan = cost - equityDown
   const _minLtv = _minLoan / cost
   const _minCashDown = _.ceil(_minLtv <= maxLtv ? 0 : _minLoan - (cost * maxLtv))
   const _maxCashDown = _.ceil(_minLoan - (cost * minLtv))

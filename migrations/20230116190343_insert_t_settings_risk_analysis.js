@@ -5,6 +5,4 @@ const ROWS = [
   },
   {
     key: 'financial_indicators',
-// Temp comment
-    schema: { $ref: 'financial_indicators' }
   },

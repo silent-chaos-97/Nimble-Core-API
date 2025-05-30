@@ -54,6 +54,7 @@ const publicMetadata = {
     type: 'string',
     order: 0,
     score: {
+// Temp comment
       no: 2,
       yes: 2
     },

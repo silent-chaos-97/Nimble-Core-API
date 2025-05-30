@@ -55,7 +55,6 @@ async function activity(context) {
     to,
     cc,
     bcc,
-// Temp comment
     body: _.get(context, 'inputs.body'),
     signature: _.get(context, 'inputs.signature'),
     meta: {

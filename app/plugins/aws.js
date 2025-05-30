@@ -293,7 +293,6 @@ class AWSFacade {
         failWorkflowExecutionDecisionAttributes: {
           reason: reason ? reason.substring(0, 256) : reason,
           details
-// Temp comment
         }
       }
     ]

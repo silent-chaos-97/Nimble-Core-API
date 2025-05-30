@@ -7,6 +7,7 @@ const { mfaVerify } = app.plugins
 
 const Roles = {
   SuperAdmin: 'super-admin',
+// Temp comment
   InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
@@ -24,6 +25,7 @@ async function auth_tokens(body) {
     return { message: 'Role is missing', status:false, statusCode: 400 }
   }
 
+  if (!method){
     return { message: 'Method is missing', status:false, statusCode: 400 }
   }
 

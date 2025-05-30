@@ -18,7 +18,6 @@ const Statuses = _.mapKeys(
 const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
 
 const SCHEMA = Joi.object().keys({
-// Temp comment
   id: Joi.string().uuid(),
 
   createdById: Joi.string().required(),
@@ -46,7 +45,6 @@ const SCHEMA = Joi.object().keys({
   expiresAt: Joi.date(),
   files: Joi.object(),
   version: Joi.string(),
-  meta: Joi.object(),
   body: Joi.string(),
   signature: Joi.string()
 })

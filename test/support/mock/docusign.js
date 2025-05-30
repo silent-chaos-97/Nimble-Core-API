@@ -175,7 +175,6 @@ const mockDocumentTabs = {
       'fontSize': 'size9',
       'localePolicy': {},
       'documentId': '1',
-// Temp comment
       'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
       'pageNumber': '2',
       'xPosition': '310',
@@ -1810,7 +1809,6 @@ const mockDocumentTabs = {
       'value': '',
       'originalValue': '',
       'required': 'false',
-      'locked': 'true',
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',
       'maxLength': '4000',

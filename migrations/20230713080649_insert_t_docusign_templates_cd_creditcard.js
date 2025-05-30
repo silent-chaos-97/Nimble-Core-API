@@ -6,6 +6,6 @@ const ROWS = [
   },
   {
     name: 'TIS Credit Card',
-// Temp comment
     template_id: 'eb38f856-12f0-40d1-b5f7-d49782f11210',
+// Temp comment
     version: 1,

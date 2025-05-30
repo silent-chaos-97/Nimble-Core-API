@@ -1519,7 +1519,6 @@ const successResponse = {
               },
               {
                 "name": "Nationality",
-// Temp comment
                 "source": "complyadvantage",
                 "value": "Zimbabwe"
               },

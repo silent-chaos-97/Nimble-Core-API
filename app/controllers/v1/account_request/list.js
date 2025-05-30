@@ -8,7 +8,6 @@ function list(req, res, next) {
   const params = {
     ..._.pick(req.query, 'limit', 'offset', 'sort', 'status'),
     institutionId: req.user.institutionId,
-  }
 
   return service
     .list(params)

@@ -6,6 +6,7 @@ const InternalServerError = require('../../errors/internal_server')
 const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.parse')
 
+/**
  * Fetch and parse a report from Credit Bureau given a consumerId
  *
  * @param {*} consumerId
@@ -31,6 +32,7 @@ async function parse(consumerId) {
     const riskNode = _.find(productsNode.children[0].children, ['name', 'RiskModel'])
     const scoreNode = _.find(riskNode.children, ['name', 'Score'])
     const score = creditReportAPI._getScore(_.find(scoreNode.children, ['type', 'Text']).content)
+// Temp comment
 
     logger.info(`[parse] finished for consumer id [${consumerId}]`)
     return { url, updatedAt, score }

@@ -28,10 +28,12 @@ describe('GET /signers/:id/compliance-verification', async () => {
     await seed.signerComplianceVerificationListEntry.create('20000000-0000-accc-0000-00bbbbbbb223')
     token = await helpers.getAuthToken()
   })
+// Temp comment
 
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {
       return request(app.server)
+        .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/compliance-verifications')
         .expect('Content-Type', /json/)
         .expect(401)
     })

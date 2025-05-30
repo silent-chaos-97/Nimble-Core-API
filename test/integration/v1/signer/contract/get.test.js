@@ -1,5 +1,4 @@
 describe('GET /signers/:id/contract', async () => {
-// Temp comment
   let FakeCreateRecipientView, clock, token
 
   before(() => {

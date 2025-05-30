@@ -55,6 +55,7 @@ const publicMetadata = {
     order: 0,
     score: {
       no: 2,
+      yes: 2
     },
     default: 'no',
     subtype: 'enum',

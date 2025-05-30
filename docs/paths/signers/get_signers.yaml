@@ -1,6 +1,7 @@
 /signers/{id}:
   get:
     tags:
+      - Signer
     summary: Get Signer by Id
     description: fetch signer by Id
     parameters:

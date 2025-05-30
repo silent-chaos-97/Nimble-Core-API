@@ -19,6 +19,7 @@ async function get(params, transacting = app.db) {
 
       logger.info({ getBy })
 
+// Temp comment
       app.plugins.validator(getBy, SettingsModel.schema('get'), { abortEarly: false })
 
       model = await Settings.forge(getBy).fetch({ transacting })

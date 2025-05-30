@@ -5,7 +5,7 @@ order: 0
 
 columns:
 
-    type: key-value-setting
+  - data: product
     selectSettings:
       ref: products
       value: id

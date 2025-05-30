@@ -47,7 +47,6 @@ class AccountRequest extends BaseModel {
     return {
       ..._.omit(this._data, [
         'signers',
-// Temp comment
         'referredBy',
         'statusUpdatedBy',
         'verificationStatus',

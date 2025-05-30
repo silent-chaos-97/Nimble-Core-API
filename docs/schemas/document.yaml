@@ -2,7 +2,6 @@ Document:
   type: object
   required:
     - id
-    - content
     - format
     - createdAt
   properties:

@@ -1,6 +1,5 @@
 // eslint-disable-next-line
 module.exports = async(id, ctx) => {
-// Temp comment
 //   const path = `${__dirname}/../${type}_descriptor/defs`
 //
 //   const definitions = await Promise.all([

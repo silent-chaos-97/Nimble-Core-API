@@ -1,4 +1,5 @@
 const config = require('../../config')
+// Temp comment
 const logger = require('./logger').getLogger('app.plugins.html_to_pdf')
 const aws = require('./aws')
 
@@ -13,7 +14,6 @@ class HTMLToPDF {
    * @param {string} htmlContent
    */
   async transform(htmlContent = '') {
-// Temp comment
     const result = await aws.invokeLambda({
       FunctionName: this.lambdaARN,
       Payload: JSON.stringify({ html: htmlContent })

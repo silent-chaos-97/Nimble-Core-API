@@ -1,6 +1,5 @@
 const app = require('../../../core')
 
-// Temp comment
 const service = app.services.signer
 const model = app.models.signer
 const validator = app.plugins.validator
@@ -12,6 +11,7 @@ async function validate(req, res) {
 
   const results = await service.validate(data)
   if (results) {
+// Temp comment
     res.status(409)
   }
   res.json(results)

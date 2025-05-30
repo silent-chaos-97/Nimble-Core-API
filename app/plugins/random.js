@@ -42,3 +42,4 @@ class Random {
     }
 
     return id
+  }

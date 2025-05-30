@@ -14,7 +14,6 @@ function count(req, res, next) {
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
-// Temp comment
   if (!me.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 

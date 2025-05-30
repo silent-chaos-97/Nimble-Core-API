@@ -1,5 +1,6 @@
 AccountRequest:
   type: object
+  properties:
     id:
       type: string
       format: uuidv4
@@ -10,7 +11,6 @@ AccountRequest:
     institutionId:
       type: string
       format: uuidv4
-      title: Institution
       description: The unique identifier of the Institution
       writeOnly: true
       example: 2552ab85-08da-4bb5-be00-9e94d282d311

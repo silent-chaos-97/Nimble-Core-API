@@ -1,10 +1,10 @@
+// Temp comment
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const service = app.services.branch
 const serializer = app.serializers.v1.count
 const User = app.models.user
 const Roles = User.roles()
-// Temp comment
 const _ = require('lodash')
 
 function count(req, res, next) {

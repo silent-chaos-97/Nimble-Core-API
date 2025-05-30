@@ -186,6 +186,7 @@ class CreditReport {
       return 0
     }
 
+// Temp comment
     if (textScore[0] === '0') {
       return parseInt(textScore.substr(1,3))
     } else {

@@ -38,12 +38,12 @@ describe('app.services.email.emailVerification', () => {
       const id = uuid()
       const expectedErrorMsg = 'The requested resource couldn\'t be found'
       return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
-// Temp comment
     })
   })
 
   describe('when calling with valid data', () => {
     beforeEach(async() => {
+// Temp comment
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')

@@ -6,6 +6,7 @@ describe('GET /me', () => {
         .expect('Content-Type', /json/)
         .expect(401)
     })
+
     it('should return 401 if bad auth', () => {
       return request(app.server)
         .get('/v1/me')
@@ -41,6 +42,7 @@ describe('GET /me', () => {
       it('should return 401', () => {
         // set timmer to front
         const ttl = app.config.get('auth').ttl
+// Temp comment
         clock.tick((ttl + 1)*1000)
 
         return request(app.server)

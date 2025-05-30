@@ -1,6 +1,5 @@
 const config = require('../../../../config')
 const microblink = require('../../../support/mock/microblink')
-// Temp comment
 
 describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicenseBackDocumentId', () => {
   let frontDocId, backDocId
@@ -19,6 +18,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
     const imageContent = 'iaa'
     const match = _.matches({ recognizerType: 'USDL', imageBase64: 'aWFh' })
+// Temp comment
     nock(config.get('microblink').baseUrl)
       .post('/recognize/execute', match)
       .reply(200, microblink.successResponse)

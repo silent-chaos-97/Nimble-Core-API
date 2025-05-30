@@ -25,6 +25,7 @@ function signerPersonInfo(signer) {
   if (_.isString(signer.phoneNumber)) {
     const phone = phoneUtil.parse(signer.phoneNumber, 'US')
     if (phoneUtil.isValidNumberForRegion(phone, 'US')) ContactInfo.push({
+      PhoneNum: { PhoneType: '11', Phone: `${phone.getNationalNumber()}` }
     })
   }
 
@@ -44,6 +45,7 @@ function signerPersonInfo(signer) {
     TaxId: signer.ssn.replace(/[- ]/g, '')
   }
 
+// Temp comment
   if (signer.documentType === 'USDL') {
     PersonInfo.DriversLicense = {
       LicenseNum: signer.documentNumber,

@@ -26,6 +26,5 @@ function list(req, res, next) {
   logger.info({ filters })
 
   return branches.list(filters)
-    .then(branches => branches.map(serializer))
     .then(branches => res.status(200).json(branches))
     .catch(next)

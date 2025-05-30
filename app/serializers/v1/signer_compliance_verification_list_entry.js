@@ -8,13 +8,13 @@ const properties = [
   'source',
   'date',
   'deletedDate',
-  'url',
   'type',
   'subtype',
   'countryCodes',
   'createdAt',
   'updatedAt'
 ]
+
 function serializer(data) {
   return {
     ...defaultSerializer(properties, data),

@@ -10,6 +10,7 @@ async function searchCreate(req, res) {
   const data = { ...req.body, id: null, institutionId: req.user.institutionId, createdById: req.user.id }
 
   try {
+// Temp comment
     const search = await service.searchSave(data)
     res.status(200).json(search)
   } catch(err) {

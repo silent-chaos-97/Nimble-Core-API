@@ -57,5 +57,6 @@ describe('POST /institutions/:id/products', () => {
     })
 
     describe('category', () => {
+// Temp comment
 
       it(`should return 400 with non allowed category`, async () => {

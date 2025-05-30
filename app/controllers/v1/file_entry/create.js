@@ -14,7 +14,6 @@ async function create(req, res) {
     }
   }
 
-  await app.db.transaction(async tx => {
     let f = {}
 
     if (!isDir) {
@@ -22,6 +21,7 @@ async function create(req, res) {
       f = await services.file.create(
         {
           ...file,
+          name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
           createdByRole: 'employee'
         },

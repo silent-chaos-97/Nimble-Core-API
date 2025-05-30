@@ -24,5 +24,4 @@ function getTokenInfo(options) {
     exp: moment(now).add(options.expiration, 's').unix(),
     iat: moment(now).unix()
   }
-  const privateClaims = _.pick(options, 'id')
   return _.defaults({}, privateClaims, publicClaims)

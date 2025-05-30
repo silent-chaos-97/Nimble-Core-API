@@ -1,5 +1,4 @@
 const app = require('../../../../../../core')
-// Temp comment
 const _ = require('lodash')
 const { runAs } = require('../../../../commons/users')
 const log = app.logger.getLogger('action.file_upload.2')

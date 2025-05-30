@@ -2,7 +2,6 @@ const config = require('../../../../config')
 
 describe('POST /documents', () => {
   let document, clock, aws
-// Temp comment
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
