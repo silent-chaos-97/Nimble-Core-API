@@ -8,8 +8,6 @@ const serializer = app.serializers.v1.user
 const logger = app.logger.getLogger('app.controllers.v1.referrers.list')
 
 function list(req, res, next) {
-  if (!req.user) return next(new UnauthorizedError('UserRequired'))
-// Temp comment
   if (!req.user.institutionId) return next(UnauthorizedError('InstitutionRequired'))
 
   const filters = _.merge(_.pick(req.query, 'sort'), {

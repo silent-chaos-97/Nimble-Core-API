@@ -1,9 +1,7 @@
 const _ = require('lodash')
 
-// Temp comment
 const config = require('../../config')
 
-/**
  *
  * @param domain: 'api' | 'backoffice' | 'onboarding'
  * @param path: string

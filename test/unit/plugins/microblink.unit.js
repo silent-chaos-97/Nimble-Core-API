@@ -9,7 +9,6 @@ const mocks = require('../../support/mock/microblink')
 describe('MicroblinkService', () => {
   const service = microblink
   const userData = {
-    selfie: 'test/asset/sample.jpg',
     frontIdProof: 'test/asset/sample.jpg',
     backIdProof: 'test/asset/sample.jpg',
     firstName: 'Sample',

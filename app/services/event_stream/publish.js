@@ -5,7 +5,6 @@ const logger = app.logger.getLogger('app.services.event_stream.publish')
 
 const client = new AWS.SNS({
   apiVersion: '2010-03-31',
-  // removes empty string/undefineds
   ..._.pickBy(app.config.get('sns'), _.identity)
 })
 
@@ -26,6 +25,7 @@ async function publish(stream, event = { id: null, event: null, type: null, body
   event = { ...event, event: event.event || event.type, body: event.body || event.payload }
 
   const Message = _.pick(event, ['id', 'event', 'body'])
+
   const PublishReq = { Message, TopicArn: event.topicArn || event.TopicArn || app.config.get('sns')[stream] }
 
   return client.publish({ ...PublishReq, Message: JSON.stringify(Message) }).promise()

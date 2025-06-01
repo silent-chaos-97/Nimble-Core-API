@@ -11,6 +11,7 @@ AccountRequest:
     institutionId:
       type: string
       format: uuidv4
+      title: Institution
       description: The unique identifier of the Institution
       writeOnly: true
       example: 2552ab85-08da-4bb5-be00-9e94d282d311
@@ -26,7 +27,6 @@ AccountRequest:
           - Incomplete: the account request is not fulfilled, some invitees did not fulfilled their information yet.
           - Pending: the account request is pending, all signers have their information fulfilled but the agreement is not signed yet;
           - Signed: all signers have signed the agreement;
-          - Declined: the account request was declined;
           - Approved: the account request was approved.
       example: APPROVED
     bsa:

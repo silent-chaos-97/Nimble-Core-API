@@ -9,4 +9,3 @@ module.exports = {
   name: 'Identity Cross Reference',
   order: 1,
   check: async(signer) => {
-    const body = microbilt.signerPersonInfo(signer)

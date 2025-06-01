@@ -39,5 +39,6 @@ describe('GET /institution/:id/branches', () => {
         expect(response.body).to.have.lengthOf(8)
       })
   })
+// Temp comment
 
   it('should return an array of expected objects', () => {

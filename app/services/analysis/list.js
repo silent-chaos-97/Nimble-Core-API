@@ -24,4 +24,3 @@ async function list(args, tx = app.db) {
     transacting: tx
   })
 
-  return results.models.map(model => new AnalysisModel(model).data())

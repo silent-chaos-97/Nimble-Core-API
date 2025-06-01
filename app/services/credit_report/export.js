@@ -4,7 +4,6 @@ const creditReportAPI = require('../../plugins/credit_report')
 const HTMLToPDF = require('../../plugins/html_to_pdf')
 const logger = app.logger.getLogger('app.services.credit_report.export')
 
-// Temp comment
 async function __export(contractURL, institutionId) {
   try {
     logger.info(`[__export] started download for ${contractURL}`)
@@ -28,7 +27,6 @@ async function __export(contractURL, institutionId) {
     }
 
     logger.info(`[__export] finished pdf generation`)
-
     return await app.services.document.create({
       format: 'pdf',
       content: docBase64,

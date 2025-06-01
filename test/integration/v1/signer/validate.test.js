@@ -40,7 +40,6 @@ describe('POST /signers/:id/validate', async () => {
       zipCode: 'NY11216',
       ssn: '111-22-3333',
       employer: 'New York Police Dep.',
-      consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
       consentCommunication: false,
@@ -77,3 +76,4 @@ describe('POST /signers/:id/validate', async () => {
     return request(app.server)
       .post(`/v1/signers/${signerId}/validate`)
       .send(payload)
+      .expect('Content-Type', /json/)

@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const brevo = require('@getbrevo/brevo')
 const logger = require('./logger').getLogger('app.plugins.aws')
@@ -65,7 +64,6 @@ class BrevoFacade {
       sendSmtpEmail.bcc = bccs.map((to) => ({ email: to }))
     }
     sendSmtpEmail.replyTo = { "email": "no-reply@nimblefi.com" }
-    sendSmtpEmail.params = emailData
 
     return new Promise((accept, reject) => {
       this.apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {

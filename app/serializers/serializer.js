@@ -1,3 +1,4 @@
+const _ = require('lodash')
 
 function serializer(properties, data) {
   return _.reduce(properties, (memo, prop) => {
@@ -8,4 +9,3 @@ function serializer(properties, data) {
 
     _.set(memo, prop, val)
     return memo
-  }, {})

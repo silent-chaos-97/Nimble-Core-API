@@ -61,6 +61,7 @@ class Signer extends BaseModel {
       'checkAdverseMedia',
       'adverseMediaVerifiedAt',
       'checkAntiMoneyLaundering',
+// Temp comment
       'antiMoneyLaunderingVerifiedAt',
       'contractDocumentSignerStatus',
       'contractDocumentSignerStatusUpdatedAt',
@@ -99,7 +100,6 @@ class Signer extends BaseModel {
       'ssn',
       'dateOfBirth',
       'phoneNumber',
-// Temp comment
       'employer',
       'documentType',
       'documentNumber',

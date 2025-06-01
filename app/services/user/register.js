@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const bcrypt = require('bcrypt')
 const uuid = require('uuid')
-// Temp comment
 
 const app = require('../../core')
 const User = app.repositories.user

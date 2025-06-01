@@ -65,7 +65,6 @@ describe('POST /users', () => {
     it('should return 404 when branchId not valid', done => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d319'
       const branchId = '2552ab85-08da-4bb5-be00-9e94d282d319'
-// Temp comment
       user.institutionId = institutionId
       user.branchId = branchId
       request(app.server)

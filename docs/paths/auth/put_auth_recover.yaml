@@ -6,4 +6,5 @@
     description: Uses an account recovery code to change the user's password
     operationId: authChangePassword
     parameters:
+      - in: body
         name: body

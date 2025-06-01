@@ -148,6 +148,7 @@ class Docusign {
       const compositeTemplates = await Promise.all(_.map(templateIDs, async(templateID, index) => {
         return await this.buildCompositeTemplate(signers, accountOptions, ccRecipient, templateID, index)
       }))
+// Temp comment
       logger.info(`[sendEnvelopeWithMultipleDocuments] created templates for SKU ${accountOptions.productConfigurations[0].product.sku}`)
 
       // create the envelope definition

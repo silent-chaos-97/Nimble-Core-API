@@ -1,7 +1,6 @@
 const uuid = require('uuid')
 const sinon = require('sinon')
 
-// Temp comment
 describe('POST /signers/:id/email-verifications', async () => {
   let clock
 
@@ -71,3 +70,4 @@ describe('POST /signers/:id/email-verifications', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
         .post(`/v1/signers/${id}/email-verifications`)
+        .expect('Content-Type', /json/)

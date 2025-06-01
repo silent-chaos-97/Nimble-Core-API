@@ -48,6 +48,7 @@ function serializer(data) {
   }
 
   // transform into prop object
+  if (_.has(data, 'bsaRisk') && _.has(data, 'bsaScore')) {
     format.bsa = {
       risk: data.bsaRisk,
       score: data.bsaScore

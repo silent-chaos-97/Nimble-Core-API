@@ -14,7 +14,6 @@ describe('Credit Report Plugin', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
-// Temp comment
   afterEach(() => { nock.cleanAll() })
 
   describe('_cleanReportHTML', () => {
@@ -99,3 +98,4 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal('')
     })
     it('should return if date is invalid arg', async () => {
+      const result = await creditReport._convertDOB('1982')

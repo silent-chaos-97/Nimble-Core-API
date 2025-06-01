@@ -27,7 +27,6 @@ async function check(signerId, tx = app.db) {
         }
 
         return acc
-      }, []))
 
     const signerChecks = await Promise.all(checkers.map(async checker => {
       let _hasStarted = checker.hasStarted
@@ -38,7 +37,6 @@ async function check(signerId, tx = app.db) {
       if (hasStarted) return Promise.resolve()
 
       if (['INVITED', 'INCOMPLETE'].includes(signer.status)) { // invited or incomplete signers do not have enough info to run a check
-// Temp comment
         const existing = _.get(signer, ['checks', checker.id])
         if (existing) return Promise.resolve()
 

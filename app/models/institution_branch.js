@@ -10,6 +10,7 @@ class InstitutionBranchModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['id', 'name', 'externalId', 'institutionId', 'routingNumber', 'street', 'street2', 'city', 'state', 'zip', 'active', 'note']
   }
 

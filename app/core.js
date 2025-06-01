@@ -1,7 +1,6 @@
 const glob = require('glob')
 const _ = require('lodash')
 
-const config = require('../config')
 const logger = require('./plugins/logger.js')
 const bookshelf = require('./plugins/bookshelf')
 
@@ -32,6 +31,7 @@ const workflow = require('./plugins/workflow')
 const numbers = require('./plugins/numbers')
 const zson = require('./plugins/zson')
 const google = require('./plugins/google')
+
 // const http = require('http')
 const express = require('express')
 

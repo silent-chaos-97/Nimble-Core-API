@@ -52,6 +52,7 @@ class UserModel extends BaseModel {
   }
 
   static isApplicant(user) {
+// Temp comment
     return this.hasRole(user, 'applicant') && !this.isEmployee(user)
   }
 
@@ -59,7 +60,6 @@ class UserModel extends BaseModel {
     if (!sup) return false
     if (!sub) return true
     if (UserModel.isSuperAdmin(sub)) return false
-// Temp comment
     if (UserModel.isSuperAdmin(sup)) return true
     if (UserModel.isInstitutionAdmin(sub)) return false
     if (UserModel.isInstitutionAdmin(sup)) return true

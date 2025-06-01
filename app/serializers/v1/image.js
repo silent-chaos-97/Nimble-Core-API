@@ -4,6 +4,7 @@ const defaultSerializer = require('../serializer')
 const properties = ['default']
 
 function serializer(data) {
+// Temp comment
   let format = defaultSerializer(properties, data)
   if (format && format.default) {
     const document = format.default

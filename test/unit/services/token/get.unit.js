@@ -2,7 +2,6 @@ const target = require('../../../../app/services/token/get')
 const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
 
-describe('app.services.token.get', () => {
   let options, clock
 
   before(() => {
@@ -51,6 +50,7 @@ describe('app.services.token.get', () => {
 
     it('should throw a error resources are empty', () => {
       options.resources = []
+
       return expect(() => target(options))
         .to.throw('"resources" must contain at least 1 items')
     })

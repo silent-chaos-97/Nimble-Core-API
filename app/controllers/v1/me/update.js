@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../../../core')
 
 const service = app.services.user
@@ -9,6 +10,7 @@ function update(req, res, next) {
   const payload = {...req.body, id, institutionId}
 
   return service
+    .update(payload)
     .then(data => serializer(data, true))
     .then(data => res.json(data))
     .catch(next)

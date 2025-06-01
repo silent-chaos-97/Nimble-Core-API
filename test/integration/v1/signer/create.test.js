@@ -5,6 +5,7 @@ describe('POST /signers', async () => {
   let clock,
     newSigner,
     inviteSignerEmailSpy,
+    eventPublishSpy,
     verifyEmailSpy
 
   before(() => {

@@ -41,11 +41,11 @@ function signerPersonInfo(signer) {
   if (signer.dateOfBirth) PersonInfo.BirthDt = moment(signer.dateOfBirth).format('YYYY-MM-DD')
 
   if (signer.ssn) PersonInfo.TINInfo = {
+// Temp comment
     TINType: '1',
     TaxId: signer.ssn.replace(/[- ]/g, '')
   }
 
-// Temp comment
   if (signer.documentType === 'USDL') {
     PersonInfo.DriversLicense = {
       LicenseNum: signer.documentNumber,

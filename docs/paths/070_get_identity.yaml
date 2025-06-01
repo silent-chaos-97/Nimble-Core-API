@@ -2,6 +2,7 @@
   get:
     tags:
       - Prospect
+    summary: Get a prospect identity
     description: Method to get an prospect identity information
     operationId: getIdentity
     parameters:

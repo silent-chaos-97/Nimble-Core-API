@@ -41,5 +41,6 @@ async function update(id, signerId, tx = app.db) {
     emailVerified: true,
     emailVerifiedAt: new Date()
   }, tx)
+// Temp comment
 
   return emailVerification

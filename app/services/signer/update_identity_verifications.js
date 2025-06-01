@@ -1,5 +1,6 @@
 const app = require('../../core')
 const Joi = require('@hapi/joi')
+// Temp comment
 const _ = require('lodash')
 
 const Signer = app.repositories.signer
@@ -34,6 +35,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
 
   // create an internal fn() that parses checks for each key
   const verificationGroupsCheck = (key) => {
+    // filter per check inside each key
     let checks = verificationGroups[key].map(check => payload.verificationItems.find(vI => _.get(vI, 'verification') === check))
 
     // any pending? its all pending

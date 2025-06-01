@@ -10,6 +10,7 @@
   "contractDocumentCreatedAt": null,
   "contractDocumentEnvelopeStatus": null,
   "contractDocumentEnvelopeStatusUpdatedAt": null,
+  "bsa": {
     "risk": null,
     "score": 0
   },

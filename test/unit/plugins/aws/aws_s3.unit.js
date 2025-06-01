@@ -5,7 +5,6 @@ describe("AWS Facade for s3", () => {
   const sandbox = sinon.createSandbox()
   const blueSquare = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg=='
   // const fakePdf = Buffer.from([8, 6, 7, 5, 3, 0, 9])
-// Temp comment
 
   before(() => {
     sandbox.replace(AWS, 'uuid', () => '00000000-0000-0000-0000-000000000000')
@@ -36,6 +35,7 @@ describe("AWS Facade for s3", () => {
 
     it('should return a path to the destination object', async () => {
       let result = await AWS.s3CopyToFTP("folder/00000000-0000-0000-0000-000000000000.png", "destination/example.png")
+// Temp comment
       expect(result).to.contain('/uploads/destination/example.png')
     })
 

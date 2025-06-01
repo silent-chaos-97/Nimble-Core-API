@@ -7,7 +7,6 @@ const { mfaVerify } = app.plugins
 
 const Roles = {
   SuperAdmin: 'super-admin',
-// Temp comment
   InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
   Employee: 'employee',

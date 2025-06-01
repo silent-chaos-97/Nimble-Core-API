@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const service = app.services.branch
@@ -12,6 +11,7 @@ function count(req, res, next) {
   if (!me) return next(new UnauthorizedError('UserRequired'))
 
   const hasRole = role => User.hasRole(me, role)
+// Temp comment
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 

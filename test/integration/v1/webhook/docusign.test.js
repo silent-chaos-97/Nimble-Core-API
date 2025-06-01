@@ -163,3 +163,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .end((err) => {
+          if (err) return done(err)

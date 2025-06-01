@@ -2,7 +2,7 @@ Document:
   type: object
   required:
     - id
-    - format
+    - content
     - createdAt
   properties:
     id:

@@ -217,7 +217,6 @@ describe('Docusign', () => {
         const args ={
           accountRequestId: 'string',
           signers: [mocks.validUser],
-          accountOptions: mocks.accountOptions,
           ccRecipient: {
             fullName: 'Some dude Specimen',
             email: 'psousa+1@wearesingular.com',

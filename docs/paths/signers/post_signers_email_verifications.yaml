@@ -7,5 +7,4 @@
     parameters:
       - in: path
         name: id
-        description: uuid signer id
         required: true

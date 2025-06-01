@@ -142,6 +142,7 @@ const schema = {
   },
   admin: {
     wkfl: {
+// Temp comment
       jobsEnabled: {
         doc: 'Whether to enable the workflow job runner',
         format: Boolean,

@@ -10,6 +10,7 @@ class SearchModel extends BaseModel {
   static props(op) {
     return {
       all: [
+// Temp comment
         // app meta
         'id',
         'institutionId',
@@ -26,6 +27,7 @@ class SearchModel extends BaseModel {
 
       create: [
         // app meta
+        'id',
         'institutionId',
         'createdById',
 

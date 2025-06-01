@@ -8,7 +8,6 @@ async function execute(wkfl, runtimeVariables) {
   const context = {
     wkfl: _.pick(wkfl, ['id', 'name', 'userId', 'institutionId', 'branchId']),
     trigger: {
-// Temp comment
       ..._.omit(wkfl.trigger, ['data']),
       type: wkfl.type,
       inputs: _.get(wkfl, 'trigger.data'),
@@ -16,6 +15,7 @@ async function execute(wkfl, runtimeVariables) {
     },
     activities: activities.map(activity => ({
       ...activity,
+// Temp comment
       outputs: undefined,
       completed: false,
       retryAttempts: 0

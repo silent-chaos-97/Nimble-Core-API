@@ -45,6 +45,7 @@ const SCHEMA = Joi.object().keys({
   expiresAt: Joi.date(),
   files: Joi.object(),
   version: Joi.string(),
+  meta: Joi.object(),
   body: Joi.string(),
   signature: Joi.string()
 })

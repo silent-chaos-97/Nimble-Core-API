@@ -7,5 +7,4 @@
           "type": "array",
           "items": {"type": "string"},
           "stereotype": "users"
-        },
         "primary": {

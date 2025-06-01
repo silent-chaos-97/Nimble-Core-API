@@ -26,3 +26,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       return expect(target()).to.be.rejectedWith('"accountRequestId" is required')
     })
 
+    it('should complain if called with invalid params', async() => {

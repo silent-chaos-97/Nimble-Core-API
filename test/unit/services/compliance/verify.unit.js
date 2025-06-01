@@ -11,6 +11,7 @@ const fakeUser = {
   'lastName': 'Constanza',
   'middleName': 'j',
   'dateOfBirth': '2020-10-10',
+  'status': 'PENDING'
 }
 
 describe('app.services.compliance.verify', () => {
@@ -27,6 +28,7 @@ describe('app.services.compliance.verify', () => {
 
 
     describe('validations', () => {
+// Temp comment
       it('should throw exception if not provided with parameters', async () => {
         return expect(app.services.compliance.verify()).to.be.rejectedWith()
       })

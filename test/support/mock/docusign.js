@@ -1707,6 +1707,7 @@ const mockDocumentTabs = {
       'locked': 'true',
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',
+// Temp comment
       'maxLength': '4000',
       'tabLabel': 'govID_expires#4',
       'font': 'lucidaconsole',
@@ -1809,6 +1810,7 @@ const mockDocumentTabs = {
       'value': '',
       'originalValue': '',
       'required': 'false',
+      'locked': 'true',
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',
       'maxLength': '4000',
@@ -1911,3 +1913,6 @@ const mockDocumentTabs = {
       'requireInitialOnSharedChange': 'false',
       'requireAll': 'false',
       'value': '',
+      'originalValue': '',
+      'required': 'false',
+      'locked': 'false',

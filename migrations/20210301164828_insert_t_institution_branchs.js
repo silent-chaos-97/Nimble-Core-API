@@ -10,7 +10,6 @@ const institutionBranches = [
   { name: 'Sioux Empire - Western', external_id: '42' },
   { name: 'Brookings', external_id: '47' },
   { name: 'Sioux City Downtown', external_id: '50' },
-// Temp comment
   { name: 'Sioux City Hamilton', external_id: '51' },
   { name: 'Sioux City Morningside', external_id: '52' },
   { name: 'Dakota Dunes', external_id: '53' },

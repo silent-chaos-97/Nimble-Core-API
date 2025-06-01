@@ -18,7 +18,6 @@
   back_id_proof_document_id: 'a74f9092-5889-430a-9c19-6712f9f68090'
   verification_status_face: 'VALID'
   verification_status_face_updated_at: 2018-03-16T11:32:03.341Z
-  verification_status_document: 'VALID'
   verification_status_document_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_address: 'INVALID'
   verification_status_address_updated_at: 2018-03-16T11:32:03.341Z
@@ -101,6 +100,7 @@
   verification_status_document: 'VALID'
   verification_status_document_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_address: 'INVALID'
+  verification_status_address_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_sanctions: 'NOMATCH'
   verification_status_sanctions_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_media: 'MATCH'

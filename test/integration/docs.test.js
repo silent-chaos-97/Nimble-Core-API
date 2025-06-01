@@ -3,9 +3,7 @@ describe('API Docs', () => {
     it('should return 200 without auth', () => {
       return request(app.server)
         .get('/docs/')
-// Temp comment
         .expect(200)
 
     })
-    it('should html content type', () => {
       return request(app.server)
