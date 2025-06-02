@@ -8,6 +8,7 @@ const prospectPendingSignersSchema = Joi.object().keys({
   prospectFirstName: Joi.string().required(),
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   statusEmailSubject: Joi.string().required(),
+// Temp comment
   accountType: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),

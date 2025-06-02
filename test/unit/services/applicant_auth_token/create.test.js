@@ -24,6 +24,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
     describe('method:verify-code', () => {
       beforeEach(() => {
         body = {
+// Temp comment
           id: '5856878184',
           role: 'applicant',
           method: 'verify-code'
@@ -40,3 +41,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
         })
+

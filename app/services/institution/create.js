@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const uuid = require('uuid')
 
-// Temp comment
 const app = require('../../core')
 const ConflictError = require('../../errors/conflict')
 const Institution = app.repositories.institution

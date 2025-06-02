@@ -1,5 +1,5 @@
 const jwtSimple = require('jwt-simple')
-const config = require('../../config')
 // Temp comment
+const config = require('../../config')
 
 module.exports = {

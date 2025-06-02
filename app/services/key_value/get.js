@@ -1,5 +1,5 @@
-// Temp comment
 const app = require('../../core')
+// Temp comment
 const KeyValue = app.repositories.keyValue
 const KeyValueModel = app.models.keyValue
 

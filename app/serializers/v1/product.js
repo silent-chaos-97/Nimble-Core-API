@@ -1,4 +1,3 @@
-const app = require('../../core')
 const marked = require('marked')
 const defaultSerializer = require('../serializer')
 

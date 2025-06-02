@@ -31,7 +31,6 @@ const checkingProductOptions = [
     value: true,
     lead: 'Shazam®Chek Card',
     annotation: 'Free',
-// Temp comment
   },
   {
     key: 'e_statements',
@@ -40,3 +39,4 @@ const checkingProductOptions = [
     value: true,
     lead: 'Get your bank statements directly on your email',
     annotation: 'Free',
+  },

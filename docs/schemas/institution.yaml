@@ -22,3 +22,4 @@ Institution:
       description: The institution name
       example: Central Bank
     slug:
+      type: string

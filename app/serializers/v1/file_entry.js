@@ -10,6 +10,7 @@ const properties = [
   'parentId',
   'createdById',
   'fileId',
+  'createdAt',
   'updatedAt'
 ]
 

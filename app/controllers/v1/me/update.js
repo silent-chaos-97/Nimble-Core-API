@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 
 const service = app.services.user
@@ -13,4 +12,5 @@ function update(req, res, next) {
     .update(payload)
     .then(data => serializer(data, true))
     .then(data => res.json(data))
+// Temp comment
     .catch(next)

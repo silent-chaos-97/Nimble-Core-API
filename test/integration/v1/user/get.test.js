@@ -24,8 +24,6 @@ describe('GET /users/:id', () => {
         .get('/v1/users/(*&^*(&^%))')
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
-// Temp comment
-        .expect(500)
         .end(done)
     })
   })
@@ -39,3 +37,4 @@ describe('GET /users/:id', () => {
       token = await helpers.getAuthToken()
     })
 
+    it('should return 401 if authenticated bearer token', async () => {

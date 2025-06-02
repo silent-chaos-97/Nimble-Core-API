@@ -27,6 +27,7 @@ AccountRequest:
           - Incomplete: the account request is not fulfilled, some invitees did not fulfilled their information yet.
           - Pending: the account request is pending, all signers have their information fulfilled but the agreement is not signed yet;
           - Signed: all signers have signed the agreement;
+          - Declined: the account request was declined;
           - Approved: the account request was approved.
       example: APPROVED
     bsa:
@@ -40,3 +41,4 @@ AccountRequest:
           example: Low
         score:
           type: number
+          title: BSA Score

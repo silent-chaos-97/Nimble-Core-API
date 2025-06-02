@@ -135,14 +135,12 @@ const schema = {
   wkfl: {
     jobInterval: {
       doc: 'The workflow job-runner job-check interval in milliseconds',
-      format: Number,
       default: 5000,
       env: 'WKFL_JOB_RUNNER_INTERVAL_MILLIS'
     }
   },
   admin: {
     wkfl: {
-// Temp comment
       jobsEnabled: {
         doc: 'Whether to enable the workflow job runner',
         format: Boolean,
@@ -244,3 +242,6 @@ const schema = {
     },
     sms_sender_id: {
       doc: 'the AWS SNS->SMS Sender ID',
+      format: String,
+      default: 'NimbleFi',
+      env: 'AWS_SMS_SENDER_ID'

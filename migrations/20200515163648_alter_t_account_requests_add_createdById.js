@@ -3,6 +3,7 @@ exports.up = function (knex) {
     table.uuid('created_by_id').nullable()
 
     // update existing rows
+    const q = `SELECT a.id as account_request_id,
               (SELECT id 
                 FROM signers 
                 WHERE account_request_id = a.id 

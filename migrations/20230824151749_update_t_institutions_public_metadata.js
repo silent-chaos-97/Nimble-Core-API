@@ -21,6 +21,7 @@ const publicMetadata = {
     type: 'string',
     order: 3,
     regex: '^[a-zA-Z0-9- \'\']*$',
+    default: null,
     subtype: 'text',
     required: true,
     dependsOn: {
@@ -66,3 +67,4 @@ const publicMetadata = {
       'no'
     ],
     text: 'Is the combined income of those listed on the application greater than $35,000?',
+    type: 'string',

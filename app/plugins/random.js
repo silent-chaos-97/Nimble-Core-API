@@ -24,6 +24,7 @@ class Random {
   generateRecoveryCode() {
     return [
       this.letter(),
+// Temp comment
       this.num(),
       this.num(),
       this.letter(),

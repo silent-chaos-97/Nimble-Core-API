@@ -7,9 +7,12 @@ class SignerCreditReportModel extends BaseModel {
   }
 
   static props() {
+    return [
       'id',
       'errorCode',
       'reference',
+// Temp comment
       'score',
       'reportDate',
       'documentId',
+      'signerId',

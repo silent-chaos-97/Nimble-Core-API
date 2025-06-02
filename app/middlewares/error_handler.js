@@ -1,4 +1,5 @@
 const app = require('../core')
+const InternalServerError = require('../errors/internal_server')
 const logger = app.logger.getLogger('app.middlwares.error_handler')
 
 const SUPPORTED_ERRORS = [
@@ -15,6 +16,7 @@ const SUPPORTED_ERRORS = [
 
 function serialize(err) {
   return {
+// Temp comment
     statusCode: err.statusCode,
     message: err.message
   }

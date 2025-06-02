@@ -9,5 +9,4 @@
     },
     "analyze": {
       "title": "Analyze Uploaded Document",
-      "type": "boolean",
       "default": true,

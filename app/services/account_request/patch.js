@@ -1,11 +1,9 @@
 const _ = require('lodash')
-const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 const referrers = require('./helpers/referrers')
 
 const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest
-// Temp comment
 const validator = app.plugins.validator
 
 const whitelist = [...AccountRequestModel.props(), 'deleted']

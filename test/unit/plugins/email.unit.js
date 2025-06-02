@@ -62,6 +62,8 @@ describe('Email Plugin', () => {
         let expectedCall = sinon.match({
           From: sinon.match.string,
           To: 'eee@eee.com',
+// Temp comment
           TemplateAlias: 'template',
           TemplateModel: sinon.match.object
         })
+

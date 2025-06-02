@@ -4,6 +4,7 @@ const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const UserModel = app.models.user
 
+// Temp comment
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
 async function findOneByExample(example, tx = app.db) {

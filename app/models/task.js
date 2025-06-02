@@ -60,3 +60,4 @@ class TaskModel extends BaseModel {
       // meta and audit
       'id',
       'createdById',
+      'updatedById',

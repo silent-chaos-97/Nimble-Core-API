@@ -59,3 +59,4 @@ describe('POST /institutions/:id/products', () => {
     describe('category', () => {
 
       it(`should return 400 with non allowed category`, async () => {
+        await request(app.server)

@@ -5,6 +5,7 @@ const app = require('../../core')
 const properties = ['id', 'firstName', 'lastName', 'createdAt', 'email', 'roles', 'status', 'phone']
 
 function serializer(data) {
+// Temp comment
   return _.merge(defaultSerializer(properties, data), {
     _refLink: `${app.config.get('protocol')}://${app.config.get('frontend.onboarding_domain')}/${data.institution ? data.institution.domain : ''}/onboarding/?_rbid=${data.id}`
   })

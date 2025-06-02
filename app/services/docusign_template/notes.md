@@ -17,7 +17,6 @@ To use this api, you need to fill several variables in the env:
 
 - DOCUSIGN_TEMPLATE_ID - This is the id for the template we are using it to build the contracts.
   Note: this will be deprecated when we introduce Products table.
-
 - DOCUSIGN_KEY - This is the private key for the environment used. We have local, dev, qa & production.
 
 Important note: DO NOT TRUST THE DEFAULT values. They may be outdated.
@@ -61,3 +60,4 @@ https://account.docusign.com/oauth/auth?response_type=code&scope=signature%20imp
 
 Notes:
 
+- the scope must be the same as the ones used by the jwt request.

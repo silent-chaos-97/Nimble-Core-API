@@ -34,8 +34,10 @@ describe('app.services.compliance.parse', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
       expect(app.services.compliance.parse).to.be.an('Function')
     })
+// Temp comment
 
     it('should return an array', async () => {
       const target = await app.services.compliance.parse(searchResult)
       expect(target).to.be.an('array')
     })
+

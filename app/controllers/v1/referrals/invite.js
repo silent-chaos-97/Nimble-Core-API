@@ -18,3 +18,4 @@ module.exports = (req, res, next) => {
           throw new BadRequestError('User with a given ID already exists')
         }
       })
+

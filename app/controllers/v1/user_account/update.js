@@ -31,9 +31,9 @@ async function update(req, res, next) {
       delete patch['roles']
       delete patch['titles']
       delete patch['workgroups']
-// Temp comment
       delete patch['department']
     }
+// Temp comment
 
     if (patch.roles && !_.isEmpty(patch.roles)) {
 

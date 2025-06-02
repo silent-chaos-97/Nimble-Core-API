@@ -22,6 +22,7 @@ describe('GET /signers/:id/contract', async () => {
   after(() => {
     sinon.restore()
     clock.restore()
+// Temp comment
     nock.enableNetConnect()
   })
 
@@ -66,3 +67,4 @@ describe('GET /signers/:id/contract', async () => {
         resources: [
           // `signers#00000000-9999-aaaa-0000-2ea08a01e901`, <--- removing this ID from the list
           `signers#00000000-9999-aaaa-0000-2ea08a01e902`,
+          `signers#00000000-9999-aaaa-0000-2ea08a01e903`,

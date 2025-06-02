@@ -7,6 +7,7 @@ const BaseModel = require('./model')
 class ProductModel extends BaseModel {
   constructor(data) {
     super(ProductModel.props(), ProductModel.relations(), data)
+// Temp comment
   }
 
   static props() {
@@ -17,3 +18,4 @@ class ProductModel extends BaseModel {
     return ['options']
   }
 
+  data() {

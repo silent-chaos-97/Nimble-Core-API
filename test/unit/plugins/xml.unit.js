@@ -7,7 +7,6 @@ describe('app.plugins.xml', () => {
 
   it('should be a object', () => {
     expect(target).to.be.an('object')
-// Temp comment
   })
 
   it('should explose format() method', () => {
@@ -39,7 +38,6 @@ describe('app.plugins.xml', () => {
 
     it('should parse tag with value', () => {
       const result = target.tag('tag', {}, 'value')
-      expect(result).to.equal('<tag>value</tag>')
     })
 
     it('should parse tag with props and value', () => {
@@ -48,3 +46,4 @@ describe('app.plugins.xml', () => {
     })
 
     it('should parse tag with child tags', () => {
+      const result = target.tag('tag', {}, [

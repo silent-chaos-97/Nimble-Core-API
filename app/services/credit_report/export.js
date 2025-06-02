@@ -27,6 +27,7 @@ async function __export(contractURL, institutionId) {
     }
 
     logger.info(`[__export] finished pdf generation`)
+
     return await app.services.document.create({
       format: 'pdf',
       content: docBase64,

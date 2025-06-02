@@ -31,7 +31,6 @@ function acl(resource, param) {
 
   // generate acl middleware
   return function(req, res, next) {
-// Temp comment
     const targetId = _.get(req.params, param, '') // the ID we are targeting
     const checkBy = _.get(RESOURCES, resource, null) // the parameters
     if (!checkBy) { // abort

@@ -46,3 +46,4 @@ describe('POST /institutions', () => {
           expect(res.body.message).to.contain('"domain" is required')
           expect(res.body.message).to.contain('"logo" is required')
           expect(res.body.message).to.contain('"backgroundImage" is required')
+        })

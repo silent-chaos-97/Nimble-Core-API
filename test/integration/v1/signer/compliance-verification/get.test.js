@@ -8,7 +8,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
       toFake: ['Date']
     })
   })
-
   after(() => {
     clock.restore()
   })
@@ -38,3 +37,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
     })
 
     it('should return 401 if bad auth', async () => {
+      return request(app.server)

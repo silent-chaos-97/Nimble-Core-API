@@ -61,7 +61,6 @@ class Signer extends BaseModel {
       'checkAdverseMedia',
       'adverseMediaVerifiedAt',
       'checkAntiMoneyLaundering',
-// Temp comment
       'antiMoneyLaunderingVerifiedAt',
       'contractDocumentSignerStatus',
       'contractDocumentSignerStatusUpdatedAt',
@@ -115,3 +114,5 @@ class Signer extends BaseModel {
 
   // partially flatten data from idProofDocument
   static flattenData(data) {
+    return {
+      ..._.omit(data, 'idProofDocument'),

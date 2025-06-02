@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const ConflictError = require('../../errors/conflict')
 const Product = app.repositories.product
-const ProductModel = app.models.product
 const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.product.create')
 
@@ -24,3 +23,4 @@ async function create(payload, tx = app.db) {
   const newProduct = _.omit(data, 'contentRaw')
   newProduct.content = data.contentRaw
   const { id } = await Product.forge(newProduct).save(null, { method: 'insert', transacting: tx })
+  return await app.services.product.get({ id }, tx)

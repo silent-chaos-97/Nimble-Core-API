@@ -4,6 +4,7 @@ const BaseModel = require('./model')
 const app = require('../core')
 
 class FileEntryModel extends BaseModel {
+  constructor(data) {
     super(FileEntryModel.props(), FileEntryModel.relations(), data)
   }
 
@@ -13,3 +14,4 @@ class FileEntryModel extends BaseModel {
 
   static relations() {
     return ['createdBy', 'parent', 'file']
+  }

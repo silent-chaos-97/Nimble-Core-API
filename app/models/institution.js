@@ -40,3 +40,4 @@ class InstitutionModel extends BaseModel {
       logoUri: Image.cdn(this._data.logoUri),
       backgroundImageUri: Image.cdn(this._data.backgroundImageUri)
     }
+  }

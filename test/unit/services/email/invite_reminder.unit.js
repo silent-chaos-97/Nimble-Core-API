@@ -10,6 +10,7 @@ describe('app.services.email.inviteReminder', () => {
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
+  before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
@@ -39,3 +40,4 @@ describe('app.services.email.inviteReminder', () => {
       return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
     })
   })
+

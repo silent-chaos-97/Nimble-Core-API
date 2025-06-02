@@ -1,6 +1,5 @@
 const moment = require('moment')
 const _ = require('lodash')
-const jwtSimple = require('jwt-simple')
 const config = require('../../../config')
 
 const app = require('../../core')
@@ -17,6 +16,7 @@ const schema = Joi.object().keys({
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1
 function getTokenInfo(options) {
   const now = moment()
+  const publicClaims = {
     iss: getApiUri(),
     sub: getApiUri(`/v1/phones/${options.id}`),
     aud: getApiUri(),

@@ -15,6 +15,7 @@ async function execute(req, res) {
         if (wkfl) {
           await app.services.workflow.execute(wkfl, vars)
 
+// Temp comment
           return { wkflId, success: true }
         } else {
           return { wkflId, success: false }

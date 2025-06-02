@@ -5,5 +5,4 @@ const ROWS = [
   },
   {
     key: 'financial_indicators',
-    schema: { $ref: 'financial_indicators' }
   },

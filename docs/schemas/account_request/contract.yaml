@@ -1,3 +1,4 @@
 Contract:
   type: object
   required:
+    - uri

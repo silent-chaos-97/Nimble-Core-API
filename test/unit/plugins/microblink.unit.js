@@ -9,6 +9,7 @@ const mocks = require('../../support/mock/microblink')
 describe('MicroblinkService', () => {
   const service = microblink
   const userData = {
+    selfie: 'test/asset/sample.jpg',
     frontIdProof: 'test/asset/sample.jpg',
     backIdProof: 'test/asset/sample.jpg',
     firstName: 'Sample',
@@ -91,7 +92,6 @@ describe('MicroblinkService', () => {
             conditions: '',
             type: 'BLINK_ID',
           },
-        },
       }
 
       const scope = nock(config.get('microblink').baseUrl)
@@ -189,3 +189,5 @@ describe('MicroblinkService', () => {
 
       const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
       expect(result).to.have.deep.property('address', '1234 fowler ave')
+      expect(result).to.have.deep.property('city', 'Atlanta')
+      expect(result).to.have.deep.property('state', 'GA')

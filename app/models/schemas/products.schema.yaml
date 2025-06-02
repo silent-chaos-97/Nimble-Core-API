@@ -69,3 +69,4 @@ columns:
     internalValue: interest-rates/type/rate/%/0.0
     selectOptions:
       'INTERNAL_RATE': Internal Rate
+      'RIFSPBLP_N.B': Bank Prime Rate / Average Majority / Short-Term Loan

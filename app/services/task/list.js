@@ -12,7 +12,6 @@ async function list(args, tx = app.db) {
   const filters = _.get(args, 'filters', {})
 
   if (!User.isInstitutionAdmin(user)) {
-    // remove unavailable (by role) filters
     delete filters.assigneeId
   }
 

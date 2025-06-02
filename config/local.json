@@ -5,6 +5,7 @@
     "secret": "WByI6PU0qF+/+0/wDaV4NihX2Z7SFgi5qT2qh0nM",
     "endpoint": "",
     "region": "us-east-2",
+    "s3_endpoint": "",
     "s3_upload_bucket": "nimble-core-uploads-dev",
     "s3_asset_bucket": "uploads",
     "ses_endpoint": "http://localhost:4566",

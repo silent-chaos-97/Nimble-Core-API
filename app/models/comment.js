@@ -6,7 +6,6 @@ const app = require('../core')
 class CommentModel extends BaseModel {
   constructor(data) {
     super(CommentModel.props(), CommentModel.relations(), data)
-// Temp comment
   }
 
   static props() {

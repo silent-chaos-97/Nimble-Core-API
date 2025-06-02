@@ -41,3 +41,4 @@ describe('app.services.compliance.search', () => {
         lastName: 'Mugabe'
       }
 
+      const search = await app.services.compliance.search(entity)

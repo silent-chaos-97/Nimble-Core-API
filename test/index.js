@@ -11,6 +11,5 @@ const axios = require('axios')
 
 const config = require('../config')
 
-// Temp comment
 // eslint-disable-next-line no-console
 console.log(util.inspect(config.getProperties(), { depth: null }))

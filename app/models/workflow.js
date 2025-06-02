@@ -13,6 +13,7 @@ const Statuses = {
 class WorkflowModel extends BaseModel {
 
   constructor(data) {
+// Temp comment
     super(WorkflowModel.props(), WorkflowModel.relations(), data)
   }
 
@@ -31,3 +32,4 @@ class WorkflowModel extends BaseModel {
   static prePersist(wkfl) {
     return !wkfl ? {} : _.merge(wkfl, wkfl.activities ? { activities: JSON.stringify(wkfl.activities) } : {})
   }
+

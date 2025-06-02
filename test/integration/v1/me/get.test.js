@@ -49,5 +49,6 @@ describe('GET /me', () => {
           .expect('Content-Type', /json/)
           .set('Authorization', 'Bearer ' + token)
           .expect(401)
-// Temp comment
       })
+// Temp comment
+    })

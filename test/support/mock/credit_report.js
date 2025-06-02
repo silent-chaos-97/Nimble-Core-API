@@ -32,5 +32,6 @@ const validApplicant = {
   "dob": "12061945"
 }
 
+const processApplicantSuccess = {
   prequal: {
     response: {

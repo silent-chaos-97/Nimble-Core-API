@@ -7,6 +7,7 @@
   </documents>
   <bsa>
     <score>2</score>
+    <questions/>
   </bsa>
   <signers>
     <signer>
@@ -17,7 +18,6 @@
       <middleName/>
       <lastName>Constanza</lastName>
       <phoneNumber/>
-      <ssn/>
       <role>PRIMARY</role>
       <employer>Singular</employer>
       <address>

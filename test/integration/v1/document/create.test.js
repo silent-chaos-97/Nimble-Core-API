@@ -87,3 +87,4 @@ describe('POST /documents', () => {
             const expected = { count: "1" }
             const actual = _.first(count)
             expect(actual).to.be.eql(expected)
+            done()

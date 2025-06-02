@@ -13,6 +13,7 @@ async function download(req, res) {
     example.createdById = req.user.id // TODO: really should allow any type of "ownership"
   }
 
+  const file = await app.services.file.get(example)
 
   const bytes = await app.plugins.aws.s3GetFile(file)
 

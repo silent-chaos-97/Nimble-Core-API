@@ -29,3 +29,4 @@ describe('app.services.docusignTemplate.fetch', () => {
       await seed.docusignTemplate.create()
     })
 
+    it('should return error if it cannot find a template', async () => {

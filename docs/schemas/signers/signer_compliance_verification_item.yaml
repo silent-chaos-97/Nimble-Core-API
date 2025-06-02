@@ -16,7 +16,7 @@ SignerComplianceVerificationItem:
       type: array
       items:
         type: string
-    dateOfBirth:
       title: The birthdate of this result
       type: string
     dateOfDeath:
+      title: The date of death of this result

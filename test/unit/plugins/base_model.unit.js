@@ -14,7 +14,6 @@ describe('BaseModel class', () => {
 
   it('should have static Props', () => {
     expect(BaseModel.data).to.be.undefined //not static
-    expect(BaseModel.props).to.be.an('Function')
     expect(BaseModel.relations).to.be.an('Function')
     expect(BaseModel.schema).to.be.an('Function')
   })

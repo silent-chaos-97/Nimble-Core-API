@@ -7,3 +7,4 @@
     operationId: createProduct
     security:
       - ApiKeyAuth: []
+    requestBody:

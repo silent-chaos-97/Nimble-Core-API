@@ -98,3 +98,4 @@ describe('POST /users', () => {
 
   describe('with valid data', () => {
     beforeEach(async () => {
+      const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'

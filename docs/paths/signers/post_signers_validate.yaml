@@ -21,6 +21,7 @@
         application/json:
           schema:
             allOf:
+              - $ref: '#/components/schemas/Signer'
               - type: object
                 required:
                   - accountRequestId

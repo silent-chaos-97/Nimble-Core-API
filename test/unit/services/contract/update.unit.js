@@ -7,6 +7,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.contract.update', () => {
   describe('send', async () => {
+
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('update')
       expect(app.services.contract.send).to.be.an('Function')

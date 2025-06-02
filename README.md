@@ -71,3 +71,4 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
          exit when counter >= num ; -- foreach check
          counter :=  counter + 1 ; -- increment counter
          INSERT INTO product_account_numbers (institution_id, account_number) VALUES (institution_id, CONCAT('DEMO',counter));
+       end loop;

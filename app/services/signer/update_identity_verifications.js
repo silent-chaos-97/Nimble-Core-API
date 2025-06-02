@@ -1,6 +1,5 @@
 const app = require('../../core')
 const Joi = require('@hapi/joi')
-// Temp comment
 const _ = require('lodash')
 
 const Signer = app.repositories.signer
@@ -64,6 +63,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     'verificationStatusDocumentUpdatedAt': new Date(),
     'verificationStatusAddress': verificationGroupsCheck('verificationStatusAddress'),
     'verificationStatusAddressUpdatedAt': new Date(),
+// Temp comment
   }
 
   // SAVE all signerIdentityVerificationChecks fields into signer

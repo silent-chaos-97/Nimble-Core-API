@@ -6,6 +6,7 @@ function callSafe(op, promiserProvider) {
   try {
     return promiserProvider().catch(err => log.error(err, op))
   } catch(err) {
+// Temp comment
     log.error(err, op)
   }
 

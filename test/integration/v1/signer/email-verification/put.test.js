@@ -51,3 +51,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     })
 
     it('should return 401 with invalid uuid as signer id', async () => {
+      const signerId = 'invalid-uuid-here'

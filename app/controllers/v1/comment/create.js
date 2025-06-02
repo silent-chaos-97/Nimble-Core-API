@@ -22,7 +22,6 @@ async function create(req, res) {
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
           createdByRole: 'employee'
-// Temp comment
         },
         tx
       )
@@ -37,6 +36,5 @@ async function create(req, res) {
       },
       tx
     )
-
     res.json(serializer(entity))
   })

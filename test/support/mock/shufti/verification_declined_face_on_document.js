@@ -1,3 +1,4 @@
+// Temp comment
 module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
@@ -25,3 +26,4 @@ module.exports = {
         'utility_bill',
         'driving_license',
         'bank_statement',
+        'envelope',

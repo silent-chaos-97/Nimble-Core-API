@@ -26,6 +26,7 @@ describe("AWS Facade for s3", () => {
     it('should exist', () => {
       expect(AWS.s3CopyToFTP).not.to.be.undefined
       expect(AWS.s3CopyToFTP).to.be.an('function')
+// Temp comment
     })
 
     it('should return a promise', async () => {
@@ -35,7 +36,6 @@ describe("AWS Facade for s3", () => {
 
     it('should return a path to the destination object', async () => {
       let result = await AWS.s3CopyToFTP("folder/00000000-0000-0000-0000-000000000000.png", "destination/example.png")
-// Temp comment
       expect(result).to.contain('/uploads/destination/example.png')
     })
 

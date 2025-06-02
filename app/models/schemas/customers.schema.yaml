@@ -1,7 +1,6 @@
 collection: Customers
 element: Customer
 group: organization
-order: 0
 
 columns:
   - data: id
@@ -11,3 +10,4 @@ columns:
 
   - data: first_name
     allowEmpty: true
+

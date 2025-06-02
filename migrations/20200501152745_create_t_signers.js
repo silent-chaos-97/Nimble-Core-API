@@ -20,5 +20,5 @@ exports.up = function(knex) {
     table.string('city')
     table.string('state')
     table.string('zip_code')
-    table.date('date_of_birth')
 
+    table.string('phone_number')

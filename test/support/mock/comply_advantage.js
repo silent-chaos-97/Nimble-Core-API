@@ -1384,6 +1384,7 @@ const successResponse = {
               {
                 "association": "nephew",
                 "name": "Patrick Zhuwao"
+// Temp comment
               },
               {
                 "association": "Child",
@@ -1768,5 +1769,25 @@ const successResponse = {
                 "name": "Justification",
                 "source": "swiss-seco-list",
                 "value": "Head of Government and responsible for activities that seriously undermine democracy, respect for human rights and the rule of law."
+              },
+              {
+                "name": "List Name",
+                "source": "ofac-sdn-list",
+                "value": "SDN List"
+              },
+              {
+                "name": "Listing Id",
+                "source": "ofac-sdn-list",
+                "value": "OFAC-7480"
+              },
+              {
+                "name": "Listing Origin",
+                "source": "swiss-seco-list",
+                "value": "EU"
+              },
+              {
+                "name": "National Id",
+                "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
+                "value": "AD001095 (passport-National passport) ((passport))"
               },
               {

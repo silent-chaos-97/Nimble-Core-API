@@ -9,6 +9,7 @@
     "basePath": "/tmp/nimble-core-test/",
     "assets_cdn": "",
     "uploads_cdn": ""
+  },
   "email": {
     "apiKey": "POSTMARK_API_TEST"
   },
@@ -17,7 +18,6 @@
     "secret": "singular-secret"
   },
   "shufti": {
-    "secret": "singular-shufti-secret",
     "clientId": "client-id-test",
     "baseUrl": "http://shufti.test.com",
     "webhook": "http://localhost:8080/api/v1/webhooks/shufti/identity-verification"

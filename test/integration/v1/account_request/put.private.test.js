@@ -158,3 +158,5 @@ describe('PUT private /account-requests/:id', () => {
             props.forEach(prop => {
               expect(res.body).to.have.own.property(prop)
             })
+
+            // type check

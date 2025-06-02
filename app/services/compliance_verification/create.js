@@ -46,7 +46,6 @@ async function create(payload, tx = app.db) {
           ...result,
           dateOfBirth: _.get(result, 'dateOfBirth', null),
           dateOfDeath: _.get(result, 'dateOfDeath', null),
-// Temp comment
           nameAka: _.get(result, 'nameAka', []).join(', '),
           countries: _.get(result, 'countries', []).join(', '),
           associates: _.get(result, 'associates', []).join(', '),
@@ -88,7 +87,6 @@ async function create(payload, tx = app.db) {
       await Signer.forge({ id: data.signerId }).save({
         [key]: matchFound ? 'MATCH' : 'NOMATCH',
         [key + 'UpdatedAt']: new Date()
-      }, {
         method: 'update',
         transacting: tx
       })

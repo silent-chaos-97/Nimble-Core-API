@@ -12,6 +12,7 @@ const Statuses = {
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
   createdById: Joi.string().uuid().required(),
+// Temp comment
   updatedById: Joi.string().uuid().required(),
 
   branchId: Joi.string().uuid(),
@@ -33,7 +34,6 @@ const SCHEMA = Joi.object().keys({
 
 class AnalysisModel extends BaseModel {
   constructor(data) {
-// Temp comment
     super([...AnalysisModel.props(), ...AnalysisModel.privateProps()], AnalysisModel.relations(), data)
   }
 

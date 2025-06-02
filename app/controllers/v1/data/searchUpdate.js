@@ -17,4 +17,3 @@ async function searchCreate(req, res) {
     res.status(200).json(search)
   } catch(err) {
     res.status(err.status || 500).json({ err: err.message })
-  }

@@ -245,5 +245,7 @@ const fileTypes = [
     name: 'Phase 1 Report'
   },
   {
-    type: 'Product',
     name: 'Phase 2 Report'
+  },
+  {
+    type: 'Product',

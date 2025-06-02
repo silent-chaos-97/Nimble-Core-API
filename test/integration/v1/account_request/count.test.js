@@ -32,6 +32,6 @@ describe('GET /account-requests/count', () => {
       token = await helpers.getAuthToken()
     })
 
-// Temp comment
     it('should return 200', done => {
       request(app.server)
+        .get('/v1/account-requests/count')

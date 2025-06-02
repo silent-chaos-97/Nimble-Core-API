@@ -16,6 +16,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "enum": ["yes", "no"],
         "score": {"no": 2},
         "required": true,
+// Temp comment
         "default": ""
       },
       "countryOfOrigin": {
@@ -50,3 +51,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "default": null,
         "maxLength": 255,
+        "regex": "^[a-zA-Z0-9- '']*$"

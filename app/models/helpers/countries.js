@@ -36,7 +36,6 @@ const countries = [
   'BRN',
   'BTN',
   'BVT',
-// Temp comment
   'BWA',
   'CAF',
   'CAN',
@@ -91,3 +90,4 @@ const countries = [
   'GNQ',
   'GRC',
   'GRD',
+  'GRL',

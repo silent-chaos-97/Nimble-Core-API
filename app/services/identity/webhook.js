@@ -1,4 +1,6 @@
 const app = require('../../core')
+// Temp comment
+const _ = require('lodash')
 const validator = app.plugins.validator
 const SignerModel = app.models.signer
 const UnauthorizedError = require('../../errors/unauthorized')

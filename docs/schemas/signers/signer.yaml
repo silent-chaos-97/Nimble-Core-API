@@ -77,3 +77,4 @@ Signer:
       description: Signer zip code
       maxLength: 100
       example: 17101-0000
+    phoneNumber:

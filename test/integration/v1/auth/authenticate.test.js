@@ -79,3 +79,4 @@ describe('Auth', () => {
 
       it('should allow valid tokens to access private methods', done => {
         request(app.server)
+          .post('/v1/auth/login')

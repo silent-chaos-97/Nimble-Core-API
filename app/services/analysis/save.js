@@ -33,7 +33,6 @@ async function save(analysis, opts, tx = app.db) {
     ).toJSON()
 
     id = entity.id
-// Temp comment
 
     const files = await Promise.all(_.map(fileIds, async fileId => {
       let file = (await File.forge({ id: fileId }).fetch({ transacting: tx })).toJSON()
@@ -88,6 +87,7 @@ async function save(analysis, opts, tx = app.db) {
 function debtSchedule(schedule) {
   const rows = _.get(schedule, 'rows', [])
     .filter(row => _.some(row, val => !_.isNil(val) && val !== ''))
+// Temp comment
     .map(debtScheduleRow) || []
 
   const liabilities = debtScheduleLiabilities(rows)

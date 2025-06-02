@@ -66,3 +66,4 @@ const publicMetadata = {
       'yes',
       'no'
     ],
+    text: 'Is the combined income of those listed on the application greater than $35,000?',

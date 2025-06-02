@@ -6,3 +6,4 @@
   "properties": {
     "task": {
       "title": "Upload Task Assignment",
+      "type": "string",

@@ -20,3 +20,4 @@ class SignerComplianceVerificationModel extends BaseModel {
       'createdAt',
       'updatedAt',
     ]
+  }

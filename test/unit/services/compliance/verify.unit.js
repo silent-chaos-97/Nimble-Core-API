@@ -28,7 +28,6 @@ describe('app.services.compliance.verify', () => {
 
 
     describe('validations', () => {
-// Temp comment
       it('should throw exception if not provided with parameters', async () => {
         return expect(app.services.compliance.verify()).to.be.rejectedWith()
       })
