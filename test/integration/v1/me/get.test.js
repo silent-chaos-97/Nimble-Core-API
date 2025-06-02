@@ -50,5 +50,4 @@ describe('GET /me', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect(401)
       })
-// Temp comment
     })

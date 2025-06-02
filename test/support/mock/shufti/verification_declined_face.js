@@ -15,7 +15,6 @@ module.exports = {
         'driving_license',
         'credit_or_debit_card',
       ],
-    },
     address: {
       full_address: 'Candyland Avenue',
       selected_type: [
@@ -24,7 +23,6 @@ module.exports = {
       supported_types: [
         'utility_bill',
         'driving_license',
-// Temp comment
         'bank_statement',
         'envelope',
         'id_card',

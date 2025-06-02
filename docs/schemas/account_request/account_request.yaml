@@ -32,7 +32,6 @@ AccountRequest:
       example: APPROVED
     bsa:
       type: object
-      readOnly: true
       properties:
         risk:
           type: string

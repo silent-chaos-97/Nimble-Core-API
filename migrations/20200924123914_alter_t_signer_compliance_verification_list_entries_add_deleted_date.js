@@ -1,3 +1,3 @@
-  return knex.schema.alterTable('signer_compliance_verification_list_entries', function (table) {
+exports.up = function (knex) {
     table.date('deleted_date')
   })

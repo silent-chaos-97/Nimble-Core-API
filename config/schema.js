@@ -135,6 +135,7 @@ const schema = {
   wkfl: {
     jobInterval: {
       doc: 'The workflow job-runner job-check interval in milliseconds',
+      format: Number,
       default: 5000,
       env: 'WKFL_JOB_RUNNER_INTERVAL_MILLIS'
     }
@@ -197,6 +198,7 @@ const schema = {
       format: String,
       default: 'nimble-core-assets',
       env: 'AWS_S3_ASSETS_BUCKET'
+// Temp comment
     },
     s3_signature_version: {
       doc: 's3 bucket access control presigned signature version',
@@ -245,3 +247,4 @@ const schema = {
       format: String,
       default: 'NimbleFi',
       env: 'AWS_SMS_SENDER_ID'
+    },

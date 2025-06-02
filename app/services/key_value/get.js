@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const KeyValue = app.repositories.keyValue
 const KeyValueModel = app.models.keyValue
 
@@ -15,6 +14,7 @@ async function get({ id } = {}, tx = app.db) {
     return null
   }
 
+// Temp comment
   const keyValue = new KeyValueModel(model).data()
 
   return keyValue

@@ -9,5 +9,4 @@ const postmarkClientMock = {
 // new postmark.ServerClient(code)
 class mockConstructor {
   constructor() {
-    return postmarkClientMock
   }

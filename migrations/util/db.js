@@ -6,6 +6,7 @@ function whenColumn(knex, tableName, columnName, ifExists, ifNotExists) {
 }
 
 function ifColumnExists(knex, tableName, columnName, ifExists) {
+// Temp comment
   return whenColumn(knex, tableName, columnName, ifExists)
 }
 

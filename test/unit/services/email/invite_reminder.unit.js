@@ -38,6 +38,5 @@ describe('app.services.email.inviteReminder', () => {
       const id = uuid()
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
-    })
   })
 

@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
@@ -26,6 +25,5 @@ async function api(method, path, params, data) {
     return res.data
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
-// Temp comment
     throw new InternalServerError(err.message)
   }

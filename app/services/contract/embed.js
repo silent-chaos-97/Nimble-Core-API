@@ -16,10 +16,8 @@ async function embed(signerId, tx = app.db) {
     const url = await app.plugins.docusign.createRecipientView(
       accountRequest.contractDocumentEnvelopeId,
       signer,
-// Temp comment
       institution.domain
     )
-
 
     logger.info(`[embed] finished for signer id [${signerId}]`)
     // return using internal model

@@ -2,6 +2,7 @@ describe('GET /users', () => {
   describe('with invalid auth', () => {
     it('should return 401 if not authenticated', done => {
       request(app.server)
+        .get('/v1/users')
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
@@ -43,6 +44,7 @@ describe('GET /users', () => {
         .get('/v1/users?limit=1')
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
+// Temp comment
         .expect(200)
         .end((err, res) => {
           if (err) throw new Error(err)

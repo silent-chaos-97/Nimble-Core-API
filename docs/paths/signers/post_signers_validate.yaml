@@ -2,7 +2,6 @@
   post:
     tags:
       - Signer
-    summary: Validate Signer
     description: Validate Signer
     parameters:
       - in: path

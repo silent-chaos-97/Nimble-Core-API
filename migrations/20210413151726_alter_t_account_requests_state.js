@@ -5,5 +5,6 @@ exports.up = function (knex) {
     table.enu('status', [
       'DRAFT',
       'INCOMPLETE',
+      'PENDING',
       'SIGNED',
       'APPROVED',

@@ -17,7 +17,6 @@ const testSigners = [
     "verificationStatusAddress": "PENDING",
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
-// Temp comment
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
   },
@@ -33,3 +32,4 @@ const testSigners = [
 ]
 
 describe('app.models.accountRequest.getVerificationStatus', () => {
+  const target = accountRequestModel.getVerificationStatus

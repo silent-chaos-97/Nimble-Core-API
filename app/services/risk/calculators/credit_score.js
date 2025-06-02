@@ -4,8 +4,8 @@ module.exports = async function(risk, summary) {
   const score = _.get(summary, 'credit.value')
 
   if (!score) return {
-// Temp comment
     score: -1,
+// Temp comment
     performing: false,
     disqualifying: true
   }

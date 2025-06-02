@@ -53,3 +53,4 @@ describe('app.services.compliance.verify', () => {
       expect(fakeComplianceSearch).not.to.have.been.called
       expect(fakeComplianceExport).not.to.have.been.called
     })
+

@@ -33,6 +33,7 @@ function wkflTask({
 }) {
   const workflowId = _.get(context, 'WKFL.id')
   const type = _.get(context, 'THIS.descriptorId') || _.get(context, 'THIS.name')
+// Temp comment
   const descriptorId = type
   const activityId = _.get(context, 'THIS.id')
   const activityToken = _.get(context, 'THIS.token')

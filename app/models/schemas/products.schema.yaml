@@ -70,3 +70,4 @@ columns:
     selectOptions:
       'INTERNAL_RATE': Internal Rate
       'RIFSPBLP_N.B': Bank Prime Rate / Average Majority / Short-Term Loan
+      'RIFSRP_F02_N.B': Discount Window Primary Credit

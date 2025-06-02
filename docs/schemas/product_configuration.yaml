@@ -1,5 +1,4 @@
 ProductConfiguration:
-  type: object
   required:
     - productId
   properties:
@@ -9,3 +8,4 @@ ProductConfiguration:
       title: Product
       description: The unique identifier of the product
       example: 95554751-51d1-4f37-9785-417ae5251d56
+    initialDeposit:

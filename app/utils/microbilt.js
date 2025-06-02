@@ -33,7 +33,6 @@ function signerPersonInfo(signer) {
     EmailAddr: signer.email
   })
 
-  const PersonInfo = {
     PersonName,
     ContactInfo
   }

@@ -69,6 +69,7 @@
       "verificationStatusSanctions": "NOMATCH",
       "verificationStatusSanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusMedia": "MATCH",
+      "verificationStatusMediaUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusPoliticalExposure": "NOMATCH",
       "verificationStatusPoliticalExposureUpdatedAt": "2018-03-16T11:32:03.341Z",
       "remoteMetadata": {}

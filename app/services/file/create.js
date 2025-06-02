@@ -31,6 +31,7 @@ async function create(data, tx = app.db) {
   const res = await app.plugins.aws.putFile(data, `${data.createdByRole}/${data.createdById}`)
 
   logger.info({ phase: 'file.create.s3:success', res })
+
   try {
     data = _.merge(data, res)
 

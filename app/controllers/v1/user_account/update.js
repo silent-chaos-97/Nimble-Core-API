@@ -33,7 +33,6 @@ async function update(req, res, next) {
       delete patch['workgroups']
       delete patch['department']
     }
-// Temp comment
 
     if (patch.roles && !_.isEmpty(patch.roles)) {
 
@@ -65,4 +64,3 @@ async function update(req, res, next) {
   return users.patch(patch)
     .then(serializer)
     .then(user => res.status(200).json(user))
-    .catch(next)

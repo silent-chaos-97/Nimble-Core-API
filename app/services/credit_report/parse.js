@@ -16,7 +16,6 @@ async function parse(consumerId) {
   const result = await creditReportAPI.fetchReport(consumerId)
 
   if (_.isEmpty(result) || result.length == 0) {
-    logger.error(`[parse] response from Credit Bureau is empty for consumer id [${consumerId}]`)
     throw new InternalServerError('Response from Credit Bureau is empty')
   }
 

@@ -23,4 +23,5 @@ function serializer(data) {
     fileEntry.fileSrc = app.services.api.uri(`/v1/files/${fileEntry.fileId}/raw?token=${token}`)
   }
 
+// Temp comment
   return fileEntry

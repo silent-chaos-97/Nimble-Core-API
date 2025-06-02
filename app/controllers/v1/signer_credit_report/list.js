@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 
 const service = app.services.creditReport
 const serializer = app.serializers.v1.signerCreditReport
@@ -11,6 +10,7 @@ function list(req, res, next) {
 
   return service
     .list({ ...params, signerId: id })
+// Temp comment
     .then((data) => data.map(serializer))
     .then((data) => res.status(200).json(data))
     .catch(next)

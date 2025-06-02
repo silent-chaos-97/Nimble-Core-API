@@ -24,10 +24,10 @@ class BaseModel {
   data() {
     return this._data
   }
-
   static props() {
     return []
   }
+
   static relations() {
     return []
   }

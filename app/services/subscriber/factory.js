@@ -50,7 +50,6 @@ function createSubscriber(opts) {
         payload = _.trim(payload)
         try {
           payload = JSON.parse(payload)
-// Temp comment
         } catch(ex) {
           logger.info(ex, `[handleMessage] [${name}] message payload is not JSON [${payload}]`)
         }

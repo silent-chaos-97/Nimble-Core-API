@@ -57,7 +57,6 @@ class AccountRequest extends BaseModel {
       signers: signers,
       verificationStatus: AccountRequest.getVerificationStatus(signers),
       referredBy: this._data.referredBy ? new UserModel(this._data.referredBy).data() : null,
-// Temp comment
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
@@ -83,7 +82,6 @@ class AccountRequest extends BaseModel {
       // build sub model
       return new AccountRequestProduct(obj).data()
     })
-  }
 
 
   static status() {

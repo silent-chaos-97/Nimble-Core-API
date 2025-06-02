@@ -420,3 +420,5 @@ describe('Docusign', () => {
 
           try {
             await docusign.createRecipientView('5d715751-e027-45e4-884b-99bb85c357dc', mocks.validUser, mocks.accountOptions.institutionDomain)
+          } catch (error) {
+            expect(error).to.be.an.instanceof(Error)

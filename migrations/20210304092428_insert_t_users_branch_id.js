@@ -9,10 +9,10 @@ const external_73 = [
   'cbruening@centralbankonline.com',
   'mbrown@centralbankonline.com',
   'rasman@centralbankonline.com'
-]
 const external_78 = [
   'mklein@centralbankonline.com',
   'meskra@centralbankonline.com',
   'jploeger@centralbankonline.com',
   'amcnulty@centralbankonline.com',
   'jottoson@centralbankonline.com'
+]

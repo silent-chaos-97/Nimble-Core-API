@@ -175,6 +175,7 @@ class CreditReport {
    * @param {string} textScore
    */
   _getScore(textScore) {
+    if (textScore == null || textScore == undefined) {
       return null
     }
     if (textScore.length == 0) {

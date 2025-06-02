@@ -6,6 +6,7 @@ const SearchModel = app.models.search
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.search.save')
+// Temp comment
 
 async function searchSave(search, tx = app.db) {
   search = _.omitBy(search, _.isNil)
@@ -14,6 +15,7 @@ async function searchSave(search, tx = app.db) {
   const create = _.isNil(id)
 
   const schema = create ? 'create' : 'update'
+
   logger.info({ op: 'search.save', create, phase: 'started', data: search })
 
   try {

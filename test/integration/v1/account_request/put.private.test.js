@@ -6,7 +6,6 @@ describe('PUT private /account-requests/:id', () => {
     status: 'APPROVED',
     branchId: '2552ab85-0000-0000-0000-000000000001',
     statusEmailSubject: 'example subject',
-    statusEmailBody: '<html>example body</html>',
   }
 
   describe('with invalid JWT auth', () => {
@@ -160,3 +159,4 @@ describe('PUT private /account-requests/:id', () => {
             })
 
             // type check
+            expect(res.body.id).to.be.an('string')

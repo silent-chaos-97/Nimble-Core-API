@@ -22,3 +22,4 @@ describe('GET /institution/:domain', () => {
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
   })
+

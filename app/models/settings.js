@@ -15,7 +15,6 @@ class SettingsModel extends BaseModel {
     return DEFAULT_BRANCH_ID
   }
 
-  static props() {
     return ['institutionId', 'branchId', 'key', 'collection', 'element', 'schema', 'data']
   }
 

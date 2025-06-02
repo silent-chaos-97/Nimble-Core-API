@@ -7,7 +7,6 @@ const SignerIdentityVerification = app.repositories.signerIdentityVerification
 const SignerIdentityVerificationModel = app.models.signerIdentityVerification
 const logger = app.logger.getLogger('app.services.identity_verification.list')
 
-const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required(),
 })

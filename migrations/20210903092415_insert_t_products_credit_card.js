@@ -1,6 +1,5 @@
 
 const newProducts = [
-  {
     name: 'Visa® Classic Credit Card',
     category: 'CARD',
     summary: 'When you have a Visa® Classic Card, <INSTITUTION NAME> goes where you go.',
@@ -22,6 +21,7 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 
 - View and download statements
 - Make payments
+- Add travel notes
 - Activate your card
 - Select or change your PIN
 - Change the address associated with your card

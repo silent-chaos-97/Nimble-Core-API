@@ -34,7 +34,6 @@ describe('PUT /account_requests/:id', async () => {
 
     accountRequest = {
       id: accountRequestId,
-      productConfigurations: [{ initialDeposit: 50099, productId: '3552ab85-08da-4bb5-be00-9e94d282d310' }],
     }
   })
 

@@ -7,6 +7,7 @@ describe('Random Plugin', () => {
 
   describe('num()', () => {
 
+    it('should exist', () => {
       expect(rand.num).not.to.be.undefined
     })
 
@@ -20,5 +21,4 @@ describe('Random Plugin', () => {
         expect(num).to.be.at.least(1).and.at.most(9)
       }
     })
-
   })

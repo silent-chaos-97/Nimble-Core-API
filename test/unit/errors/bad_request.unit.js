@@ -1,4 +1,3 @@
-const ErrorClass = require('../../../app/errors/bad_request')
 
 describe('BadRequestError', () => {
   it('should exist', () => {
@@ -12,5 +11,5 @@ describe('BadRequestError', () => {
   })
 
   it('should have a status code and message', () => {
-// Temp comment
     let error = new ErrorClass()
+    expect(error).have.property('statusCode')

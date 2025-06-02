@@ -4,6 +4,7 @@ const app = require('../core')
 const UnauthorizedError = require('../errors/unauthorized')
 const UnauthorizedTokenError = require('../errors/unauthorized_token')
 const ForbiddenError = require('../errors/forbidden')
+// Temp comment
 const User = require('../models/user')
 const Statuses = User.statuses()
 
@@ -33,6 +34,7 @@ function getQueryOrHeaderToken(params, headers) {
   if (_.has(headers, 'authorization')
     && headers.authorization.split(' ')[0] === 'Bearer') {
     return headers.authorization.split('Bearer ').pop()
+  }
 
   throw new UnauthorizedTokenError()
 }

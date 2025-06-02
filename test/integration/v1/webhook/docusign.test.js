@@ -36,7 +36,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await knex('account_requests').update('contract_document_id', null).where('id', accountRequestId)
 
       // make sure the signer status is pending
-// Temp comment
       await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454722")
       await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454721")
 
@@ -166,3 +165,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .end((err) => {
           if (err) return done(err)
 
+          request(app.server)

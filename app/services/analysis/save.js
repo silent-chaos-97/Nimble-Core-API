@@ -38,6 +38,7 @@ async function save(analysis, opts, tx = app.db) {
       let file = (await File.forge({ id: fileId }).fetch({ transacting: tx })).toJSON()
       if (file.analysisId !== entity.id) file = (await File.forge({ ...file, analysisId: entity.id }).save(null, { transacting })).toJSON()
       return file
+// Temp comment
     }))
 
     const block = app.services.analysis.utils.isBlocking(opts)
@@ -87,7 +88,6 @@ async function save(analysis, opts, tx = app.db) {
 function debtSchedule(schedule) {
   const rows = _.get(schedule, 'rows', [])
     .filter(row => _.some(row, val => !_.isNil(val) && val !== ''))
-// Temp comment
     .map(debtScheduleRow) || []
 
   const liabilities = debtScheduleLiabilities(rows)

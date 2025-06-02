@@ -1,7 +1,7 @@
+// Temp comment
 const formatAlterTableEnumSql = (
   tableName,
   columnName,
-// Temp comment
   enums,
   oldConstraintName
 ) => {

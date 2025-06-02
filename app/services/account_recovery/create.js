@@ -8,6 +8,7 @@ const User = app.repositories.user
 const AccountRecovery = app.repositories.accountRecovery
 const validator = app.plugins.validator
 const rand = app.plugins.random
+// Temp comment
 
 const whitelist = ['email']
 const schema = Joi.object().keys({
@@ -16,4 +17,5 @@ const schema = Joi.object().keys({
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
+  validator(data, schema, { abortEarly: false })
   return data

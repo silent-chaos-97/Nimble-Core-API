@@ -492,7 +492,6 @@ function _loan(product, targetLtv = null, cost, equityDown, cashDown) {
       adjusted: productMaxLtv
     })
 
-// Temp comment
     minLtv = productMaxLtv
     maxLtv = productMaxLtv
   }

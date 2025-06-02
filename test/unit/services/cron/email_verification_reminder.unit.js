@@ -21,6 +21,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
   after(() => {
     clock.restore()
+    sinon.restore()
   })
 
   describe('service method', () => {
@@ -50,3 +51,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
       await knex('signers').update('email_verified', false).where('id', 'ffffffff-0000-473e-a5cb-1ea08a01e801')
       await knex('signers').update('email_verified', false).where('id', 'ffffffff-0000-473e-a5cb-1ea08a01e901')
+

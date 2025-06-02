@@ -554,6 +554,7 @@ const mockDocumentTabs = {
       'templateRequired': 'false',
       'conditionalParentLabel': 'email#2',
       'conditionalParentValue': '##ANY##',
+// Temp comment
       'tabType': 'text'
     },
     {
@@ -1937,3 +1938,13 @@ const mockDocumentTabs = {
       'templateLocked': 'false',
       'templateRequired': 'false',
       'conditionalParentLabel': 'email#4',
+      'conditionalParentValue': '##ANY##',
+      'tabType': 'text'
+    },
+    {
+      'validationPattern': '',
+      'validationMessage': '',
+      'shared': 'true',
+      'requireInitialOnSharedChange': 'false',
+      'requireAll': 'false',
+      'value': '',

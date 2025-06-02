@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 const md5 = app.plugins.codec.md5
 const service = app.services.data

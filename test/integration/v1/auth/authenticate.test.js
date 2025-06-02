@@ -74,9 +74,9 @@ describe('Auth', () => {
               expect(res.body.token).not.be.undefined
               done()
             })
-        })
       })
 
       it('should allow valid tokens to access private methods', done => {
         request(app.server)
           .post('/v1/auth/login')
+          .send({ email: 'demouser@nimblefi.com', password: 'pwd' })

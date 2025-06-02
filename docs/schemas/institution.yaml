@@ -9,7 +9,6 @@ Institution:
     - logo
     - backgroundImage
   properties:
-    id:
       type: string
       format: uuidv4
       title: Institution ID

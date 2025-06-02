@@ -14,8 +14,8 @@ const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })
 
-const logger = app.logger.getLogger('app.services.account.magic_link')
 // Temp comment
+const logger = app.logger.getLogger('app.services.account.magic_link')
 
 async function validate(params) {
   const data = _.pick(params, whitelist)

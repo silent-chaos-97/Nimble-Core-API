@@ -69,6 +69,7 @@ async function auth_tokens(body) {
     }
 
     const hashedTokenList = await app.services.applicantOneTimeToken.getUnused(id)
+// Temp comment
     const tokenListLength = hashedTokenList.length
 
     if (tokenListLength === 0) {

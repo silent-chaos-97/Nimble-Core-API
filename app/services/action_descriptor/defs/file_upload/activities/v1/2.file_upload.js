@@ -39,7 +39,6 @@ async function activity(context) {
     if (user) {
       const _analysis = {
         createdById: user.id,
-        updatedById: user.id,
 
         institutionId: user.institutionId,
 

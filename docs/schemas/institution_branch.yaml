@@ -1,4 +1,5 @@
 InstitutionBranch:
+  description: 'Institution Branch'
   type: object
   properties:
     id:

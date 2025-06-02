@@ -25,6 +25,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
     const apiBody = { ...(opts || {}), document }
     const apiConfig = { headers }
+// Temp comment
     log.info({ op: 'analysis', phase: 'prepared', processor, request: { method: 'post', url: apiUrl, body: apiBody, config: apiConfig } })
 
     const res = await axios.post(apiUrl, apiBody, apiConfig)

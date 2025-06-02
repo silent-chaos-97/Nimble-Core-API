@@ -1,3 +1,4 @@
+/signers/{id}/contract:
   get:
     tags:
       - Signer

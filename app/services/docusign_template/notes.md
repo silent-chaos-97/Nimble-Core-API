@@ -17,6 +17,7 @@ To use this api, you need to fill several variables in the env:
 
 - DOCUSIGN_TEMPLATE_ID - This is the id for the template we are using it to build the contracts.
   Note: this will be deprecated when we introduce Products table.
+
 - DOCUSIGN_KEY - This is the private key for the environment used. We have local, dev, qa & production.
 
 Important note: DO NOT TRUST THE DEFAULT values. They may be outdated.

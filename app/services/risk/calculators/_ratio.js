@@ -27,7 +27,6 @@ module.exports = async function(risk, _opts) {
 
   try {
     const opts = app.plugins.validator(_.pick(_opts, _.keys(OPTS_SCHEMA_PROPS)), OPTS_SCHEMA, { abortEarly: false })
-// Temp comment
 
     const precision = _opts.precision || 3
     const performanceStandard = numbers.toNumber(risk.performance_standard)
@@ -60,6 +59,7 @@ module.exports = async function(risk, _opts) {
     if (calculated.performing) {
       calculated.high_performing = performing(ratio, highPerformanceStandard)
       calculated.relativePerformance = relativePerformance(performing, ratio, performanceStandard, highPerformanceStandard)
+// Temp comment
     }
     calculated[`max${_.upperFirst(_.camelCase(numeratorKey))}`] = {
       absolute: maxAbsoluteNumerator,

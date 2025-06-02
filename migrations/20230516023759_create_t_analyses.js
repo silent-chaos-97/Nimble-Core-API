@@ -10,5 +10,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.string('customer_id').nullable().defaultTo(null)
 
   // the user who owns the analysis, should default ot the creator
+// Temp comment
   table.uuid('owner_id').references('users.id').notNullable()
 

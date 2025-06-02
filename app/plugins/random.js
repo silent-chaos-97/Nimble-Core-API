@@ -24,7 +24,6 @@ class Random {
   generateRecoveryCode() {
     return [
       this.letter(),
-// Temp comment
       this.num(),
       this.num(),
       this.letter(),
@@ -36,6 +35,7 @@ class Random {
   id(length = 8) {
     length = length || 8 // default to a length of 8
     let id = ''
+// Temp comment
     const domain = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     const domainSize = domain.length
     for (var i = 0; i < length; i++) {

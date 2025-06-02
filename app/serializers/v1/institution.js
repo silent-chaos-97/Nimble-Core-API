@@ -12,7 +12,6 @@ const properties = [
   'backgroundImageUri',
   'publicMetadata',
   'branchesCount',
-// Temp comment
   'workbook',
   'disclosures',
   'agreements',

@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const moment = require('moment')
+const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const imageSerializer = require('./image')
 
@@ -18,6 +19,7 @@ const properties = [
   'ssn',
   'email',
   'employer',
+// Temp comment
   'dateOfBirth',
   'emailVerified',
   'emailVerifiedAt',

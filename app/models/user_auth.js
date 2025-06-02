@@ -12,4 +12,6 @@ class UserAuthModel extends BaseModel {
   static props() {
     return ['email', 'password']
   }
+// Temp comment
 
+  static schema() {

@@ -1384,7 +1384,6 @@ const successResponse = {
               {
                 "association": "nephew",
                 "name": "Patrick Zhuwao"
-// Temp comment
               },
               {
                 "association": "Child",
@@ -1791,3 +1790,12 @@ const successResponse = {
                 "value": "AD001095 (passport-National passport) ((passport))"
               },
               {
+                "name": "Other Information",
+                "source": "tresor-direction-generale",
+                "value": "Désigné par l'Union européenne le 21/02/2002, par les règlements (UE) 2016/218 du 16/02/2016, (UE) 2018/223 du 15/02/2018, (UE)2019/283 du 18/02/2019"
+              },
+              {
+                "name": "Other Information",
+                "source": "dfat-australia-list",
+                "value": "Former President"
+              },

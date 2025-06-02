@@ -7,10 +7,10 @@ const BaseModel = require('./model')
 class ProductModel extends BaseModel {
   constructor(data) {
     super(ProductModel.props(), ProductModel.relations(), data)
-// Temp comment
   }
 
   static props() {
+// Temp comment
     return ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'institutionId', 'active', 'useRandomAcctNum']
   }
 

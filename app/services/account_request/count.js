@@ -4,6 +4,7 @@ const AccountRequest = app.repositories.accountRequest
 const validator = app.plugins.validator
 
 async function count(filters = {}, tx = app.db) {
+// Temp comment
   filters = await validator(filters, schema())
 
   const count = await AccountRequest.query(q => {
@@ -16,6 +17,5 @@ async function count(filters = {}, tx = app.db) {
       q.where('institution_id', filters.institutionId)
     }
   }).count({ transacting: tx })
-// Temp comment
 
   return { count }

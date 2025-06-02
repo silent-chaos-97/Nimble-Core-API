@@ -20,7 +20,6 @@ app.load().then(async () => {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
     },
-
     AccountRequestDeclined: {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
@@ -38,3 +37,4 @@ app.load().then(async () => {
       statusEmailSubject: 'statusEmailSubject'
     },
 
+    inviteeSignupReminderEmail: {
