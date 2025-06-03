@@ -5,6 +5,7 @@ const ForbiddenError = require('../../errors/forbidden')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const ConflictError = require('../../errors/conflict')
 
+// Temp comment
 const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.email_verification.update')

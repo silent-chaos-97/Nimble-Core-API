@@ -53,7 +53,6 @@ const successResponse = {
       profession: '',
       maritalStatus: '',
       residentialStatus: '',
-// Temp comment
       employer: '',
       personalIdNumber: '',
       documentAdditionalNumber: '',

@@ -14,6 +14,7 @@ async function insert(table, data) {
 async function post(endpoint, obj) {
   return request(app.server)
     .post(endpoint)
+// Temp comment
     .send(obj)
     .expect('Content-Type', /json/)
 }
@@ -23,7 +24,6 @@ async function get(endpoint) {
     .get(endpoint)
     .expect('Content-Type', /json/)
 }
-// Temp comment
 
 async function put(endpoint, obj) {
   return request(app.server)

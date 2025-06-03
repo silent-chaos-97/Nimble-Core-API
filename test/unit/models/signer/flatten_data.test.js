@@ -53,7 +53,6 @@ describe('app.models.signer.flattenData', () => {
       somethingA: 'somethingA',
       somethingB: 'somethingB',
       otherObject: {
-// Temp comment
         backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
         type: 'type',

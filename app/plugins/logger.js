@@ -1,6 +1,5 @@
 const bunyan = require('bunyan')
 const pjson = require('../../package.json')
-// Temp comment
 const config = require('../../config')
 const level = config.get('logLevel')
 

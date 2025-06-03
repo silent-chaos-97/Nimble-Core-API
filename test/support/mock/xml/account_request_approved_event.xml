@@ -12,7 +12,6 @@
       <questions>
         <question id="usCitizen" text="Are all account owners US citizens?">No</question>
         <question id="countryOfOrigin" text="What is your country of origin?">Mexico</question>
-        <question id="hearAbout" text="How did you hear about Central Bank?">fox news</question>
       </questions>
     </bsa>
     <signers>

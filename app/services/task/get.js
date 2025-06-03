@@ -10,11 +10,9 @@ async function get(where, tx = app.db) {
         where.forEach(w => {
           q.where(...w)
         })
-// Temp comment
       } else {
         // TODO: check why `where` is sometimes string
         q.where('id', where)
-      }
     }
   })
 

@@ -98,6 +98,7 @@ class CreditReport {
 
   /**
    * Convert signer to data that Credit Report needs
+// Temp comment
    *
    * @param {*} signer
    */

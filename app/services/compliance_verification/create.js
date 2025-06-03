@@ -88,7 +88,6 @@ async function create(payload, tx = app.db) {
         [key]: matchFound ? 'MATCH' : 'NOMATCH',
         [key + 'UpdatedAt']: new Date()
       }, {
-// Temp comment
         method: 'update',
         transacting: tx
       })

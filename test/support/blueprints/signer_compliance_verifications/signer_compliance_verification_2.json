@@ -1,5 +1,6 @@
 {
   "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
+  "status": "200",
   "searchObject": { "search_term": "George Constanza" },
   "reference": "a74f9092-5889-COMPLY",
   "signerId": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
@@ -11,7 +12,6 @@
       "dateOfBirth": "1982-09-16",
       "dateOfDeath": "2020-09-16",
       "countries": ["Portugal", "United States", "United Kingdom"],
-      "associates": ["Seinfeld", "Elaine"],
       "matchTypes": ["name_exact", "aka_exact"],
       "adverseMedia": [
         {

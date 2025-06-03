@@ -1,4 +1,3 @@
-const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const BaseModel = require('./model')
 const schemas = require('./schemas/_schemas').getSync
@@ -15,6 +14,7 @@ class SettingsModel extends BaseModel {
     return DEFAULT_BRANCH_ID
   }
 
+  static props() {
     return ['institutionId', 'branchId', 'key', 'collection', 'element', 'schema', 'data']
   }
 

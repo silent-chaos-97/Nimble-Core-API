@@ -24,11 +24,11 @@ async function publish(stream, event = { id: null, event: null, type: null, body
   logger.info({ message: '[publish] PublishingEvent', stream, event })
 
   event = { ...event, event: event.event || event.type, body: event.body || event.payload }
-// Temp comment
 
   const Message = _.pick(event, ['id', 'event', 'body'])
 
   const PublishReq = { Message, TopicArn: event.topicArn || event.TopicArn || app.config.get('sns')[stream] }
+// Temp comment
 
   return client.publish({ ...PublishReq, Message: JSON.stringify(Message) }).promise()
     .then(response => logger.debug({ message: '[publish] EventPublished', MessageId: response.MessageId, PubReq: PublishReq }))

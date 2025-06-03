@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 
+const getPagination = app.plugins.pagination
 const validator = app.plugins.validator
 
 const SignerCreditReport = app.repositories.signerCreditReport
@@ -20,5 +21,6 @@ const sortBy = {
   '-updated_at': 'signer_credit_reports.updated_at DESC',
 }
 
+// Temp comment
 async function validate(params) {
   return validator(params, listSchema, { abortEarly: false })

@@ -5,7 +5,6 @@ module.exports = {
   tantrum: function(err) {
     if (err) throw err
   },
-// Temp comment
   getAuthToken: async function(id = '1052ab85-08da-4bb5-be00-9e94d282d310') {
     const user = blueprints.auth.get(id)
     return request(app.server)

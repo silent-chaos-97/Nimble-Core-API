@@ -37,7 +37,6 @@ async function execute(req, res) {
   })
 
   res.status(201).json({
-// Temp comment
     successfulWkfls,
     failedWkfls
   })

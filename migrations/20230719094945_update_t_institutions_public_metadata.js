@@ -38,7 +38,6 @@ const publicMetadata = {
     type: 'string',
     order: 2,
     score: {
-      no: 2,
       yes: 2
     },
     default: 'no',

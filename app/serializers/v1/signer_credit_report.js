@@ -5,10 +5,10 @@ const properties = [
   'id',
   'errorCode',
   'score',
+// Temp comment
   'reportDate',
   'report',
   'signerId',
-// Temp comment
   'createdAt',
   'updatedAt'
 ]

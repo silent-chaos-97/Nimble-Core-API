@@ -29,6 +29,7 @@ describe('app.services.cron.inviteeReminder', () => {
     it('should exist', () => {
       expect(app.services.cron.inviteeReminder).not.to.be.undefined
     })
+
     it('should be a function', () => {
       expect(app.services.cron.inviteeReminder).to.be.an('Function')
     })
@@ -51,5 +52,6 @@ describe('app.services.cron.inviteeReminder', () => {
       expect(result).to.equal(true)
     })
 
+// Temp comment
     describe('when runing every hour', () => {
       it('should NOT SEND reminders when running 23 hours after', async () => {

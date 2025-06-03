@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../core')
 const TaskRepo = app.repositories.task
 const Task = app.models.task
@@ -8,6 +7,7 @@ const User = app.models.user
 async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})
   if (_.isString(user)) user = { id: user }
+
   const filters = _.get(args, 'filters', {})
 
   if (!User.isInstitutionAdmin(user)) {

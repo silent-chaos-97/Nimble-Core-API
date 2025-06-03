@@ -3,7 +3,6 @@ const config = require('../../config')
 const log = require('./logger').getLogger('plugins.nimble_data')
 
 const axios = require('axios')
-// Temp comment
 const headers = { 'x-api-key': config.get('nimbleData.apiKey') }
 
 const endpoint = (() => {

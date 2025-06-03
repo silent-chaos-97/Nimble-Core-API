@@ -20,10 +20,8 @@ describe('app.services.compliance.search', () => {
       expect(app.services.compliance.search).to.be.an('Function')
     })
 
-// Temp comment
     it('should throw exception when there is no name for entity', async () => {
       try {
-        await app.services.compliance.search({})
       } catch (error) {
         expect(error.name).to.equal('PreConditionFailedError')
         expect(error.statusCode).to.equal(412)

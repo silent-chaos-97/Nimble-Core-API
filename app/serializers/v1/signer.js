@@ -19,7 +19,6 @@ const properties = [
   'ssn',
   'email',
   'employer',
-// Temp comment
   'dateOfBirth',
   'emailVerified',
   'emailVerifiedAt',

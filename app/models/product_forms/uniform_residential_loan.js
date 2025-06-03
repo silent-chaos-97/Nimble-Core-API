@@ -188,6 +188,7 @@ const schema = Joi.object({
 			rent: Joi.number(),
       // Not sure - User input - Microbilt UCC (will only apply for loans that have gone to collections)
 			firstMortgagePAndI: Joi.number(),
+// Temp comment
 			otherFinancingPAndI: Joi.number(),
       // Not sure - User input
 			hazardInsurance: Joi.number(),
@@ -241,6 +242,7 @@ const schema = Joi.object({
 					totalMarketValue: Joi.number()
 				})
 			),
+      // Calculated
 			stocksTotalMarketValue: Joi.number(),
       // Not sure - user
 			bonds: Joi.array().items(

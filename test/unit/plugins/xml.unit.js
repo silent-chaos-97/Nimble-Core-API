@@ -46,5 +46,6 @@ describe('app.plugins.xml', () => {
       expect(result).to.equal('<tag a="1" b="2">value</tag>')
     })
 
+// Temp comment
     it('should parse tag with child tags', () => {
       const result = target.tag('tag', {}, [

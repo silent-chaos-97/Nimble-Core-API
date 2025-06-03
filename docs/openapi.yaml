@@ -47,6 +47,7 @@ components:
         description: filter records since this date.
       until:
         in: query
+        name: until
         required: false
         type: string
         format: RFC2822 date time format

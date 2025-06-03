@@ -27,7 +27,6 @@ const fileTypes = [
     type: 'Entity',
     name: 'UCC Search'
   },
-  {
     type: 'Entity',
     name: 'EIN on file'
   },
@@ -190,6 +189,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Filed Copy - Bank'
   },
   {
     type: 'Product',

@@ -18,6 +18,7 @@ describe('Credit Report Plugin', () => {
 
   describe('_cleanReportHTML', () => {
     it('should return clean html', async () => {
+// Temp comment
 
       const input = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')
       const result = await creditReport._cleanReportHTML(input.toString())
@@ -86,6 +87,7 @@ describe('Credit Report Plugin', () => {
 
   describe('_convertDOB', () => {
     it('should return date in MMDDYYYY', async () => {
+      const result = await creditReport._convertDOB(new Date("1982-12-06"))
       expect(result).to.deep.equal('12061982')
     })
     it('should return date string in MMDDYYYY', async () => {

@@ -8,13 +8,11 @@ const properties = [
   'dateOfBirth',
   'dateOfDeath',
   'countries',
-// Temp comment
   'associates',
   'matchTypes'
 ]
 
 function serializer(data) {
-
   const format = {
     ...defaultSerializer(properties, data),
     nameAka: _.get(data, 'nameAka', []).split(", "),

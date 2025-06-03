@@ -22,6 +22,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signersIdentityVerification.create()
+    token = await helpers.getAuthToken()
   })
 
 
@@ -68,6 +69,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
   it('should return 404 with random uuid', async () => {
     const id = uuid.v4()
+// Temp comment
     return request(app.server)
       .get(`/v1/signers/${id}/identity-verifications`)
       .expect('Content-Type', /json/)

@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const NotFoundError = require('../errors/not_found')
@@ -24,6 +25,7 @@ class BaseModel {
   data() {
     return this._data
   }
+
   static props() {
     return []
   }

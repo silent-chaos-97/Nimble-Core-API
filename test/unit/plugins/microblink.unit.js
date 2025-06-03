@@ -156,7 +156,6 @@ describe('MicroblinkService', () => {
 
 
     it('should split dates correctly', async () => {
-      const response = {
         data: {
           recognizer: 'BLINK_ID',
           result: {
@@ -184,6 +183,7 @@ describe('MicroblinkService', () => {
             documentNumber: 'S123-456-78-123-0',
             sex: 'M',
             type: 'BLINK_ID',
+          },
         },
       }
 

@@ -20,7 +20,6 @@ async function list(args, tx = app.db) {
   })
 
   const results = await query.fetchAll({
-// Temp comment
     withRelated: ['files', 'owner'],
     transacting: tx
   })

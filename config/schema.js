@@ -198,7 +198,6 @@ const schema = {
       format: String,
       default: 'nimble-core-assets',
       env: 'AWS_S3_ASSETS_BUCKET'
-// Temp comment
     },
     s3_signature_version: {
       doc: 's3 bucket access control presigned signature version',

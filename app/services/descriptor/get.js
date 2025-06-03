@@ -17,6 +17,7 @@ module.exports = async(id, ctx) => {
 //   return defs.map(def => {
 //     const inputs = { ...def.inputs, properties: { ...def.inputs.properties, ..._base.inputs.properties } }
 //     const outputs = { ...def.outputs, properties: { ...def.outputs.properties, ..._base.outputs.properties } }
+//     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }
 //
 //     return { ...def, inputs, outputs, context }
 //   })

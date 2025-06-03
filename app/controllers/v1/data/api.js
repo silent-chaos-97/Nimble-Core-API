@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 const md5 = app.plugins.codec.md5
 const service = app.services.data
@@ -13,7 +12,6 @@ async function api(req, res) {
   ]
 
   const cid = md5(args)
-
   let data = cache.get(cid)
 
   if (!data) data = await service.api(...args)

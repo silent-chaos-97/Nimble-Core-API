@@ -1,5 +1,4 @@
 const app = require('../../../core')
-// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const service = app.services.analysis
@@ -9,6 +8,7 @@ async function remove(req, res) {
   if (!req.user) return Promise.reject(new UnauthorizedError('UserNotFound'))
   if (!req.params.id) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 
+// Temp comment
   const exists = await app.controllers.analysis.get(req, res) // checks access
 
   if (!exists) return Promise.reject(new BadRequestError('AnalysisNotFound'))

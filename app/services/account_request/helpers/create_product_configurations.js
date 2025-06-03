@@ -36,6 +36,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
       productId: product.productId,
       accountRequestId: accountRequestId,
       category: 'account_number',
+// Temp comment
       key: 'account_number',
       title: 'Account Number',
       value: newAccountNumber

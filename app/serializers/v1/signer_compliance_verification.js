@@ -14,7 +14,6 @@ const properties = [
 ]
 
 function serializer(data) {
-// Temp comment
   let format = defaultSerializer(properties, data)
 
   if (_.has(data, 'results')) {
@@ -23,6 +22,5 @@ function serializer(data) {
     format.results = []
   }
 
-  format.report = downloadableSerializer({ id: data.documentId })
 
   return format

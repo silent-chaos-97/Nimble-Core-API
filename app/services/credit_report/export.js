@@ -6,6 +6,7 @@ const logger = app.logger.getLogger('app.services.credit_report.export')
 
 async function __export(contractURL, institutionId) {
   try {
+// Temp comment
     logger.info(`[__export] started download for ${contractURL}`)
 
     // get report html via axios
@@ -33,7 +34,6 @@ async function __export(contractURL, institutionId) {
       content: docBase64,
       institutionId: institutionId
     }, {
-// Temp comment
       ContentType: 'application/pdf'
     })
 

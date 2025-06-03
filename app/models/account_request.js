@@ -82,6 +82,7 @@ class AccountRequest extends BaseModel {
       // build sub model
       return new AccountRequestProduct(obj).data()
     })
+  }
 
 
   static status() {

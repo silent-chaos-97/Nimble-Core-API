@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
@@ -20,6 +21,7 @@ async function api(method, path, params, data) {
       get: () => axios.get(apiUrl, { params, headers }),
       post: () => axios.post(apiUrl, data, { headers })
     }[method]()
+// Temp comment
 
     logger.info({ op: 'data.api', phase: 'completed', res: _.get(res, ['data'], res) })
     return res.data

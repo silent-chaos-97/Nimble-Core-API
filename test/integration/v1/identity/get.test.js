@@ -37,6 +37,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   after(() => {
     nock.enableNetConnect()
+  })
 
   it('should return json', () => {
     return request(app.server)

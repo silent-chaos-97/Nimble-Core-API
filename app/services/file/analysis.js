@@ -12,6 +12,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
   if (_.isString(file)) file = await app.services.file.get(file, tx)
 
   if (!file) throw new NotFoundError(`file[${file}]`)
+// Temp comment
 
   if ((processor && processor.startsWith('irs')) || ('true' === `${opts.irs}`)) return irsPdf(file, opts)
 
@@ -25,7 +26,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
     const apiBody = { ...(opts || {}), document }
     const apiConfig = { headers }
-// Temp comment
     log.info({ op: 'analysis', phase: 'prepared', processor, request: { method: 'post', url: apiUrl, body: apiBody, config: apiConfig } })
 
     const res = await axios.post(apiUrl, apiBody, apiConfig)

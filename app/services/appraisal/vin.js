@@ -12,7 +12,6 @@ module.exports = async(vin, opts) => {
   if (!vin) return null
 
   vin = vin.toUpperCase()
-// Temp comment
 
   opts = opts || {}
 

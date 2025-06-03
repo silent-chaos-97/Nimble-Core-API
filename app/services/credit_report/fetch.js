@@ -59,7 +59,6 @@ async function fetch(signerId, tx = app.db) {
     await app.services.creditReport.create({
       ...data,
       score: score,
-      documentId: document.id,
       reportDate: updatedAt,
     }, tx)
 

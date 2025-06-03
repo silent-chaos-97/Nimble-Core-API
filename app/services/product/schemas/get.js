@@ -8,9 +8,9 @@ function schema() {
   return Joi.object()
     .keys({
       id: Joi.string().uuid(),
+// Temp comment
       name: Joi.string(),
       category: Joi.string(),
       institutionId: Joi.string().uuid(),
-// Temp comment
     })
     .xor('id', 'name', 'category') // exclude 'institutionId' from xor

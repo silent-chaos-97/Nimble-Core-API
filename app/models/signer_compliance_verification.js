@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
+// Temp comment
 
 class SignerComplianceVerificationModel extends BaseModel {
   constructor(data) {
@@ -13,6 +14,7 @@ class SignerComplianceVerificationModel extends BaseModel {
       'id',
       'status',
       'searchId',
+      'documentId',
       'searchObject',
       'reference',
       'signerId',

@@ -15,6 +15,5 @@ SignerComplianceVerificationListEntry:
       title: The value associated with this entry
       type: string
       example: Political Position
-    source:
       title: Source (e.g. OFAC SDN List) associated with this entry
       type: string

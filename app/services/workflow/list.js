@@ -2,7 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const Wkfl = app.repositories.workflow
-const getPagination = app.plugins.pagination
+const WkflModel = app.models.workflow
 
 const sortBy = {
   '': 'workflows.updated_at desc',

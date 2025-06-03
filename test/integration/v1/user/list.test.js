@@ -44,7 +44,6 @@ describe('GET /users', () => {
         .get('/v1/users?limit=1')
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
-// Temp comment
         .expect(200)
         .end((err, res) => {
           if (err) throw new Error(err)

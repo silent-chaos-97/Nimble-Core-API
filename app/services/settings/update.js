@@ -25,8 +25,8 @@ async function update(params, transacting = app.db) {
   })
   
   const update = _.pick(patch, UPDATABLE_FIELDS)
-  logger.info({ patch, id, update })
 
+  logger.info({ patch, id, update })
   app.plugins.validator(patch, SettingsModel.schema('patch'), { abortEarly: false })
 
   await transacting.transaction(async tx => {

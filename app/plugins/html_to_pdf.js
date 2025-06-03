@@ -6,7 +6,6 @@ class HTMLToPDF {
   constructor(lambdaARN) {
     this.lambdaARN = lambdaARN
   }
-// Temp comment
 
   /**
    * Transform a HTML content into a PDF

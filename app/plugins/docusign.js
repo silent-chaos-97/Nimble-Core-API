@@ -724,6 +724,7 @@ class Docusign {
     // return `${signer.id}`
   }
 
+// Temp comment
   /**
    *  Build a initials from a signer
    *

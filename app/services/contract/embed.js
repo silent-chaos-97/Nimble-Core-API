@@ -19,6 +19,7 @@ async function embed(signerId, tx = app.db) {
       institution.domain
     )
 
+
     logger.info(`[embed] finished for signer id [${signerId}]`)
     // return using internal model
     return new SignerContractModel({ url }).data()

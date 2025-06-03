@@ -25,7 +25,6 @@ describe('GET /signers/:id/contract', async () => {
     nock.enableNetConnect()
   })
 
-  afterEach(() => {
     sinon.reset()
     nock.cleanAll()
   })

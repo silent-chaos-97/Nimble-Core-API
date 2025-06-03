@@ -554,7 +554,6 @@ const mockDocumentTabs = {
       'templateRequired': 'false',
       'conditionalParentLabel': 'email#2',
       'conditionalParentValue': '##ANY##',
-// Temp comment
       'tabType': 'text'
     },
     {
