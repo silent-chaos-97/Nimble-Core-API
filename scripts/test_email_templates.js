@@ -23,11 +23,11 @@ app.load().then(async () => {
 
     AccountRequestDeclined: {
       statusEmailSubject: "statusEmailSubject",
-      statusEmailBody: "statusEmailBody"
     },
 
     inviteeSignupEmail: {
       inviteeName: 'inviteeName',
+      invitedByFirstName: 'invitedByFirstName',
       invitedByFullName: 'invitedByFullName',
       accountType: 'accountType',
       inviteeRole: 'inviteeRole',

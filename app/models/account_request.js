@@ -93,3 +93,4 @@ class AccountRequest extends BaseModel {
       SIGNED: ['Ready for Review', 'Completed'],
       APPROVED: [],
       DECLINED: []
+    })

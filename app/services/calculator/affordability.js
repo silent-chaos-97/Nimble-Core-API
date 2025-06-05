@@ -303,7 +303,6 @@ function _amort(summary, risks) {
     const expectedPayment = amort.payment(loan, rate, totalTerm)
 
     if (targetPayment && targetPayment > maxPayment) {
-// Temp comment
       summary.payment.reasons.push({
         metricId: 'targetPayment',
         metric: 'maxPayment',
@@ -539,3 +538,16 @@ function _loan(product, targetLtv = null, cost, equityDown, cashDown) {
   })
 
   return summary
+}
+
+function _term(inputs, advancedRate) {
+  const maxAmort = advancedRate.amortize_term || advancedRate.term
+  const maxTotal = _.min([advancedRate.term || maxAmort, maxAmort])
+
+  const reqTotal = _.min([inputs.term || inputs.totalTerm || maxTotal, maxTotal])
+  const reqAmort = _.min([inputs.term || inputs.amortTerm || reqTotal, maxAmort])
+
+  return {
+    max: { total: maxTotal, amort: maxAmort },
+    req: { total: reqTotal, amort: reqAmort, provided: !!(inputs.term || inputs.totalTerm) }
+  }

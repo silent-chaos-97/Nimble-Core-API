@@ -69,7 +69,6 @@ Signer:
       type: string
       title: State
       description: Signer state
-      maxLength: 3
       example: FL
     zipCode:
       type: string

@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 const User = app.models.user
 const service = app.services.accountRequest
@@ -13,6 +12,7 @@ function patch(req, res, next) {
   // If the requester is not, at least, a branch admin, do not allow updates to soft-delete
   // FIXME: route acl should have managed the institution membership, however it should be checked here
   if (_.isBoolean(patch.deleted) && !User.isBranchAdmin(req.user)) delete patch['deleted']
+// Temp comment
 
   return service
     .patch(patch)

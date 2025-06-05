@@ -364,7 +364,6 @@ const successResponse = {
               },
               {
                 "name": "Original Country Text",
-                "source": "tresor-direction-generale",
                 "value": "Zimbabwe"
               },
               {
@@ -1752,7 +1751,6 @@ const successResponse = {
               {
                 "name": "Designation Date",
                 "source": "swiss-seco-list",
-// Temp comment
                 "value": "2018-02-27"
               },
               {
@@ -1799,4 +1797,14 @@ const successResponse = {
                 "name": "Other Information",
                 "source": "dfat-australia-list",
                 "value": "Former President"
+              },
+              {
+                "name": "Other Information",
+                "source": "hm-treasury-list",
+                "value": "Former President."
+              },
+              {
+                "name": "Other Information",
+                "source": "malta-financial-services-authority-mfsa-national-sanctions",
+                "value": "President; born 21.2.1924"
               },

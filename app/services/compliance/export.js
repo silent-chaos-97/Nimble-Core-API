@@ -16,7 +16,6 @@ async function __export(searchId, institutionId) {
       institutionId: institutionId
     }, {
       ContentType: 'application/pdf'
-    })
 
   } catch (err) {
     logger.info(err, `[__export] failed for search id [${searchId}] and institution id [${institutionId}]`)

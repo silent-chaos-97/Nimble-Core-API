@@ -25,6 +25,7 @@ describe('POST /documents', () => {
     nock.cleanAll()
   })
 
+  after(() => {
     clock.restore()
     nock.enableNetConnect()
   })
@@ -38,7 +39,6 @@ describe('POST /documents', () => {
 
   it('should return 201', () => {
     return request(app.server)
-      .post('/v1/documents')
       .send(document)
       .expect(201)
   })

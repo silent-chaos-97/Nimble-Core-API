@@ -29,6 +29,7 @@ class Signer extends BaseModel {
       'firstName',
       'middleName',
       'lastName',
+      'address',
       'city',
       'state',
       'zipCode',
@@ -115,3 +116,4 @@ class Signer extends BaseModel {
   static flattenData(data) {
     return {
       ..._.omit(data, 'idProofDocument'),
+      ...(_.has(data, 'idProofDocument') ? {

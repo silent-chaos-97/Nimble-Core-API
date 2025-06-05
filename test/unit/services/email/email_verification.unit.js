@@ -40,6 +40,7 @@ describe('app.services.email.emailVerification', () => {
       return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
     })
   })
+
   describe('when calling with valid data', () => {
     beforeEach(async() => {
       await seed.institution.create()

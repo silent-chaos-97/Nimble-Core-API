@@ -9,3 +9,4 @@ module.exports = {
     logger.info(ctx, '[sms:notify]')
 
     // coerce phone
+    let phone = ctx.recipient.mobile || ''

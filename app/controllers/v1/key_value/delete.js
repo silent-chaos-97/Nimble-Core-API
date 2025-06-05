@@ -1,5 +1,4 @@
 const app = require('../../../core')
-const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue
 

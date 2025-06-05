@@ -21,3 +21,4 @@
     "webhook": "http://localhost:8080/api/v1/webhooks/shufti/identity-verification"
   },
   "docusign": {
+    "userID": "f5c1a3fc-f745-4bc1-a947-69c60909be8e",

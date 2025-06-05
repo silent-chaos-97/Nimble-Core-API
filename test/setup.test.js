@@ -1,3 +1,3 @@
 before(async function() {
-  global.app = await require('../index')
+  this.timeout(10000)
   return knex.migrate.latest().then(() => seed.flush())

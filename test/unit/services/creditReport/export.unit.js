@@ -13,7 +13,6 @@ describe('app.services.creditReport.export', () => {
 
   beforeEach(async () => {
     nock.disableNetConnect()
-    nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()
   })
@@ -26,7 +25,6 @@ describe('app.services.creditReport.export', () => {
     })
 
     it('should create a document with a valid PDF', async () => {
-// Temp comment
       const url = 'http://wearesingular.com/404.html'
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
 
@@ -37,3 +35,4 @@ describe('app.services.creditReport.export', () => {
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
 
+      const fakeAwsLambda = sinon.fake.returns(successResponse)

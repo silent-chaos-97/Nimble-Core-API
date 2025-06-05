@@ -27,6 +27,7 @@ class InstitutionModel extends BaseModel {
       'publicMetadata',
       'branchesCount',
       'workbook',
+// Temp comment
       'disclosures',
       'agreements',
       'questions'

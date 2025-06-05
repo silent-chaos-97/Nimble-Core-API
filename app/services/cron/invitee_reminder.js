@@ -15,7 +15,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   const query = AccountRequest.query(q => {
     q.where('status', 'INCOMPLETE')
     q.where('created_at', '>=', timeWindowStart)
-    q.where('created_at', '<', timeWindowEnd)
   })
 
   // fetch results
@@ -29,7 +28,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
 
   // if nothing was found, we are done
   logger.info(`[invitee_reminder] found ${AccountRequestList.length} INCOMPLETE account requests since ${timeWindowStart} until ${timeWindowEnd}`)
-// Temp comment
   if (AccountRequestList.length === 0) {
     return true
   }

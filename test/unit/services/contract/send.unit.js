@@ -14,7 +14,6 @@ describe('app.services.contract.send', () => {
     })
 
     describe('when validating', () => {
-// Temp comment
       beforeEach(async () => {
         await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
         await seed.document.create('a74f9092-5889-430a-9c19-6712f9f68090')
@@ -30,7 +29,6 @@ describe('app.services.contract.send', () => {
         }
       })
     })
-
     describe('when passing information to docusign', () => {
       let docusignSend = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
@@ -57,3 +55,4 @@ describe('app.services.contract.send', () => {
         await seed.docusignTemplate.create()
       })
 
+      afterEach(() => {

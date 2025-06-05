@@ -18,7 +18,6 @@ describe('Credit Report Plugin', () => {
 
   describe('_cleanReportHTML', () => {
     it('should return clean html', async () => {
-// Temp comment
 
       const input = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')
       const result = await creditReport._cleanReportHTML(input.toString())
@@ -97,7 +96,7 @@ describe('Credit Report Plugin', () => {
     it('should return if null arg', async () => {
       const result = await creditReport._convertDOB(null)
       expect(result).to.deep.equal('')
-    })
     it('should return if date is invalid arg', async () => {
       const result = await creditReport._convertDOB('1982')
       expect(result).to.deep.equal('')
+    })

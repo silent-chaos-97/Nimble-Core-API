@@ -5,6 +5,7 @@ describe('POST /institutions', () => {
     institution = blueprints.institution.get('2552ab85-08da-4bb5-be00-9e94d282d311')
 
     sinon.replace(app.plugins.aws, 's3ImgUpload', () => Promise.resolve('https://wearesingular.com/img/example.png'))
+
     newInstitution = _.omit({
       ...institution,
       email: 'hello@wearesingular.com',
@@ -43,6 +44,7 @@ describe('POST /institutions', () => {
           expect(res.body.message).not.to.contain('"id" is required')
           expect(res.body.message).to.contain('"name" is required')
           expect(res.body.message).to.contain('"domain" is required')
+// Temp comment
           expect(res.body.message).to.contain('"logo" is required')
           expect(res.body.message).to.contain('"backgroundImage" is required')
         })

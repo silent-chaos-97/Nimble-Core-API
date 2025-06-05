@@ -162,6 +162,7 @@ const schema = {
       format: String,
       default: '',
       env: 'AWS_SECRET_ACCESS_KEY'
+// Temp comment
     },
     endpoint: {
       doc: 'the AWS SDK endpoint, null means aws-sdk default',
@@ -247,3 +248,4 @@ const schema = {
       default: 'NimbleFi',
       env: 'AWS_SMS_SENDER_ID'
     },
+    sms_origination_numbers: {

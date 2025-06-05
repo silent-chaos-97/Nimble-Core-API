@@ -5,7 +5,6 @@ const institutionBranches = [
   { name: 'Storm Lake Plaza', external_id: '6' },
   { name: 'Cherokee', external_id: '30' },
   { name: 'Cherokee North', external_id: '31' },
-  { name: 'Sioux Empire - 33rd & Minnesota', external_id: '40' },
   { name: 'Sioux Empire - W 12th', external_id: '41' },
   { name: 'Sioux Empire - Western', external_id: '42' },
   { name: 'Brookings', external_id: '47' },

@@ -1,5 +1,6 @@
 const app = require('../../core')
 const Comment = app.repositories.comment
+const CommentModel = app.models.comment
 
 async function list(fileEntryId, tx = app.db) {
   const query = Comment.query(q => {

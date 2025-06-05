@@ -23,6 +23,7 @@ const PERFORMANCE_CALC = {
 }
 
 module.exports = async function(risk, _opts) {
+  log.info({ _opts, risk })
 
   try {
     const opts = app.plugins.validator(_.pick(_opts, _.keys(OPTS_SCHEMA_PROPS)), OPTS_SCHEMA, { abortEarly: false })

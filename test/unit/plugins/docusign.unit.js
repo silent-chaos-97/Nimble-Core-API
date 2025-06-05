@@ -129,6 +129,7 @@ describe('Docusign', () => {
         }
 
         try {
+          await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
           expect(error.message).to.equal("Cannot send envelope without options.")
           expect(error).to.be.an.instanceof(Error)
@@ -421,3 +422,6 @@ describe('Docusign', () => {
             await docusign.createRecipientView('5d715751-e027-45e4-884b-99bb85c357dc', mocks.validUser, mocks.accountOptions.institutionDomain)
           } catch (error) {
             expect(error).to.be.an.instanceof(Error)
+            expect(error.message).to.equal("Not Found")
+            expect(error.response.body.message).to.equal(mocks.mockCreateRecipientViewError.message)
+          }

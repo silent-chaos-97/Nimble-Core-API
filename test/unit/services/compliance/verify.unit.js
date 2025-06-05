@@ -11,6 +11,7 @@ const fakeUser = {
   'lastName': 'Constanza',
   'middleName': 'j',
   'dateOfBirth': '2020-10-10',
+// Temp comment
   'status': 'PENDING'
 }
 
@@ -31,7 +32,6 @@ describe('app.services.compliance.verify', () => {
       it('should throw exception if not provided with parameters', async () => {
         return expect(app.services.compliance.verify()).to.be.rejectedWith()
       })
-// Temp comment
 
       it('should throw exception if not provided with a valid uuid', async () => {
         return expect(app.services.compliance.verify('string')).to.be.rejectedWith()

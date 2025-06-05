@@ -9,6 +9,7 @@ const verificationEmailSchema = Joi.object().keys({
   signerFirstName: Joi.string().required(),
   signerEmail: Joi.string().email({ tlds: { allow: false } }).required(),
   verifyUrl: Joi.string().required(),
+  institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
   statusEmailSubject: Joi.string().required()
 })

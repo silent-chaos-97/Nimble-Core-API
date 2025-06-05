@@ -8,7 +8,6 @@ describe('GET /signers/:id/contract', async () => {
     token = app.services.token.get({
       scopes: ['signers'],
       resources: [
-        `signers#00000000-9999-aaaa-0000-2ea08a01e901`,
         `signers#00000000-9999-aaaa-0000-2ea08a01e902`,
         `signers#00000000-9999-aaaa-0000-2ea08a01e903`,
       ],
@@ -25,6 +24,7 @@ describe('GET /signers/:id/contract', async () => {
     nock.enableNetConnect()
   })
 
+  afterEach(() => {
     sinon.reset()
     nock.cleanAll()
   })
@@ -66,3 +66,4 @@ describe('GET /signers/:id/contract', async () => {
           // `signers#00000000-9999-aaaa-0000-2ea08a01e901`, <--- removing this ID from the list
           `signers#00000000-9999-aaaa-0000-2ea08a01e902`,
           `signers#00000000-9999-aaaa-0000-2ea08a01e903`,
+        ],

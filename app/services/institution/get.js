@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 
@@ -10,6 +11,7 @@ const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.institution.get')
 
 const whitelist = ['domain', 'id', 'slug']
+const schema = Joi.object()
   .keys({
     id: Joi.string().uuid(),
     domain: Joi.string().hostname(),

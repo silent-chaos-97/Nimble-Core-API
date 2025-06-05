@@ -25,6 +25,6 @@
               - type: object
                 required:
                   - accountRequestId
-              - properties:
                   id:
                     type: string
+                    writeOnly: true

@@ -15,7 +15,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
     await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0d')
   })
 
-// Temp comment
   it('should return 200 without auth', () => {
     return request(app.server).get(`/v1/institutions/${testInstitution1}/products`).expect(200)
   })
@@ -51,6 +50,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
         const [product] = res.body
         props.forEach((prop) => expect(product).to.have.own.property(prop))
 
+// Temp comment
         expect(product.id).to.be.an('string')
         expect(product.name).to.be.an('string')
         expect(product.category).to.be.an('string')
@@ -65,3 +65,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
   })
 
   describe('with multiple data', () => {
+    beforeEach(async () => {

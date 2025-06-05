@@ -6,3 +6,4 @@ class AccountOneTimeTokenModel extends BaseModel {
     super(AccountOneTimeTokenModel.props(), AccountOneTimeTokenModel.relations(), data)
   }
 
+  static props() {

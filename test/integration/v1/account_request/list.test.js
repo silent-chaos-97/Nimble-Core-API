@@ -38,6 +38,7 @@ describe('GET /account-requests', () => {
         await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0d')
         await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0e')
         await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0f')
+        await seed.productOption.create('9a8a47ee-6880-4b5d-aa44-0b07b608783f')
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.document.create()
@@ -202,7 +203,6 @@ describe('GET /account-requests', () => {
 
       describe('by status', () => {
         it('should return a filtered list', () => {
-          return request(app.server)
             .get(`/v1/account-requests?status=APPROVED`)
             .set('Authorization', 'Bearer ' + token)
             .expect('Content-Type', /json/)

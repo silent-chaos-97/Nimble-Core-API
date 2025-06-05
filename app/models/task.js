@@ -56,6 +56,7 @@ class TaskModel extends BaseModel {
   }
 
   static props() {
+    return [
       // meta and audit
       'id',
       'createdById',

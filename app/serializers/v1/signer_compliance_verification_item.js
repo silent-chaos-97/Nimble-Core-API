@@ -13,6 +13,7 @@ const properties = [
 ]
 
 function serializer(data) {
+
   const format = {
     ...defaultSerializer(properties, data),
     nameAka: _.get(data, 'nameAka', []).split(", "),

@@ -1,2 +1,3 @@
 UserToken:
   type: object
+  properties:

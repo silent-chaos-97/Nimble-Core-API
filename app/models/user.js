@@ -3,6 +3,7 @@ const _ = require('lodash')
 const app = require('../core')
 const BaseModel = require('./model')
 
+const Roles = {
   SuperAdmin: 'super-admin',
   InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
@@ -56,6 +57,7 @@ class UserModel extends BaseModel {
 
   static isSuperior(sup, sub) {
     if (!sup) return false
+// Temp comment
     if (!sub) return true
     if (UserModel.isSuperAdmin(sub)) return false
     if (UserModel.isSuperAdmin(sup)) return true

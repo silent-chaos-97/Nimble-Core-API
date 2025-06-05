@@ -8,7 +8,7 @@ async function get() {
   } catch(err) {
     return {
       code: 500,
-      message: `Unavailable: ${err.message}`
+      status: 'Internal Server Error',
     }
   }
 

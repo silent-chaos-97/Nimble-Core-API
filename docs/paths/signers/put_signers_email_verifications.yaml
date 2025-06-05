@@ -2,6 +2,7 @@
   put:
     tags:
       - Signer
+    summary: Consume a Signer Email Verification
     description: Used to consument a verification send via email
     parameters:
       - in: path

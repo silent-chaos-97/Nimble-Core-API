@@ -29,8 +29,10 @@ describe('app.services.email.prospectPendingSigners', () => {
 
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
+// Temp comment
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.prospectPendingSigners(id)).to.be.rejectedWith(expectedErrorMsg)
     })
 
     it('should return error if signer not found', async () => {
+      const id = uuid()

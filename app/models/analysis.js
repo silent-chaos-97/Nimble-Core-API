@@ -3,10 +3,8 @@ const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
-const Statuses = {
   draft: 'draft',
   published: 'published',
-// Temp comment
   deleted: 'deleted'
 }
 
@@ -41,3 +39,4 @@ class AnalysisModel extends BaseModel {
     return { ...Statuses }
   }
 
+  static privateProps() {

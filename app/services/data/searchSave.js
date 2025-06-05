@@ -4,7 +4,6 @@ const validator = app.plugins.validator
 const Search = app.repositories.search
 const SearchModel = app.models.search
 const InternalServerError = require('../../errors/internal_server')
-
 const logger = app.logger.getLogger('app.services.data.search.save')
 
 async function searchSave(search, tx = app.db) {

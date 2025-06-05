@@ -40,7 +40,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     // any pending? its all pending
     if (checks.find(vI => _.get(vI, 'status') === 'PENDING')) {
       return 'PENDING'
-// Temp comment
     }
 
     // any invalid? its all invalid

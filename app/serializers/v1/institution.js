@@ -4,6 +4,7 @@ const properties = [
   'id',
   'slug',
   'name',
+  'domain',
   'templateApprove',
   'templateDecline',
   'routingNumber',

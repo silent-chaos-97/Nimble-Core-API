@@ -14,6 +14,7 @@ async function get(params, tx = app.db) {
   logger.debug(params, '[get] started with params')
   params = validator(params, schema, { abortEarly: false })
 
+// Temp comment
   // ensure that documents exists before going to s3
   const [frontDoc, backDoc] = await Promise.all([
     app.services.document.get({id: params.frontDocId}, tx),
@@ -23,7 +24,6 @@ async function get(params, tx = app.db) {
     app.plugins.aws.getContent(frontDoc.key),
     app.plugins.aws.getContent(backDoc.key)
   ])
-// Temp comment
   const payload = { backIdProof, frontIdProof }
   const data = await app.plugins.microblink.getIdentity(payload)
   logger.debug(`[get] ended with document number [${data.documentNumber}]`)

@@ -46,7 +46,6 @@ describe('app.services.token.get', () => {
       options.resources = null
 
       return expect(() => target(options))
-// Temp comment
         .to.throw('"resources" must be an array')
     })
 
@@ -59,3 +58,4 @@ describe('app.services.token.get', () => {
 
     it('should throw a error expiration is zero', () => {
       options.expiration = 0
+

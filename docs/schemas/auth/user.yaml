@@ -7,5 +7,6 @@ User:
       type: string
       format: uuidv4
       title: User ID
+      description: The machine unique identifier of the user
       readOnly: true
       example: 1052ab85-08da-4bb5-be00-9e94d282d310

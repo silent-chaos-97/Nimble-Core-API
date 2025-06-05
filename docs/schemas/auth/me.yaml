@@ -1,4 +1,5 @@
 Me:
+  type: object
   required:
     - id
   properties:

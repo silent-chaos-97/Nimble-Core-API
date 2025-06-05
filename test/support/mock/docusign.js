@@ -1006,7 +1006,6 @@ const mockDocumentTabs = {
       'tabType': 'text'
     },
     {
-      'validationPattern': '',
       'validationMessage': '',
       'shared': 'true',
       'requireInitialOnSharedChange': 'false',
@@ -1947,3 +1946,14 @@ const mockDocumentTabs = {
       'requireInitialOnSharedChange': 'false',
       'requireAll': 'false',
       'value': '',
+      'originalValue': '',
+      'required': 'false',
+      'locked': 'true',
+      'concealValueOnDocument': 'false',
+      'disableAutoSize': 'false',
+      'maxLength': '4000',
+      'tabLabel': 'birthDate#4',
+      'font': 'lucidaconsole',
+      'bold': 'false',
+      'italic': 'false',
+      'underline': 'false',

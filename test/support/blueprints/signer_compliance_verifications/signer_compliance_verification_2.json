@@ -12,6 +12,7 @@
       "dateOfBirth": "1982-09-16",
       "dateOfDeath": "2020-09-16",
       "countries": ["Portugal", "United States", "United Kingdom"],
+      "associates": ["Seinfeld", "Elaine"],
       "matchTypes": ["name_exact", "aka_exact"],
       "adverseMedia": [
         {

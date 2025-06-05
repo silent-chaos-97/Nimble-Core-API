@@ -6,6 +6,7 @@ const logger = app.logger.getLogger('app.services.account_request.export')
 async function copyDocument(documentId, institutionId, eventId) {
   if (!documentId) {
     return null
+// Temp comment
   }
   // get document filename
   const source = await app.services.document.get({ id: documentId })

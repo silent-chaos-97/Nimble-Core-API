@@ -5,6 +5,7 @@ const mocks = require('../../../support/mock/comply_advantage')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.compliance.search', () => {
+// Temp comment
 
   beforeEach(() => {
     nock.disableNetConnect()
@@ -22,6 +23,7 @@ describe('app.services.compliance.search', () => {
 
     it('should throw exception when there is no name for entity', async () => {
       try {
+        await app.services.compliance.search({})
       } catch (error) {
         expect(error.name).to.equal('PreConditionFailedError')
         expect(error.statusCode).to.equal(412)

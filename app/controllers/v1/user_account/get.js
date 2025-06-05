@@ -1,3 +1,4 @@
+const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const User = app.models.user
@@ -15,6 +16,7 @@ function get(req, res, next) {
   if (!id) return next(new UnauthorizedError('IdRequired'))
 
   const hasRole = role => User.hasRole(user, role)
+// Temp comment
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 

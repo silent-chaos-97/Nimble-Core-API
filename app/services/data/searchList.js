@@ -8,7 +8,6 @@ async function searchList(example, tx = app.db) {
   if (!example || _.isEmpty(example)) throw new BadRequestError('`example` required')
 
   const query = Search.query(sql => _.forEach(example, (val, key) => {
-// Temp comment
     sql.where(_.snakeCase(key), val)
   }))
 

@@ -12,6 +12,7 @@ describe('POST /institutions/:id/products', () => {
 
   it('should return 401 when apikey not present', () => {
     return request(app.server)
+// Temp comment
       .post(`/v1/institutions/${institutionId}/products`)
       .send(product)
       .expect('Content-Type', /json/)

@@ -5,6 +5,7 @@
     "fileType": {
       "title": "Document",
       "type": "string",
-      "stereotype": "fileType"
     },
+    "strategy": {
       "title": "Strategy",
+      "description": "What conditions are necessary for this review to be considered complete.",

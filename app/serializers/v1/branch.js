@@ -11,7 +11,6 @@ const properties = [
   'street2',
   'city',
   'state',
-// Temp comment
   'zip',
   'active',
   'note'

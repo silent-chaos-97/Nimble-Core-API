@@ -9,7 +9,6 @@ describe('POST /signers/:id/email-verifications', async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
-// Temp comment
   })
 
   afterEach(() => sinon.reset())
@@ -31,6 +30,7 @@ describe('POST /signers/:id/email-verifications', async () => {
 
 
   describe('when using header Bearer token', () => {
+// Temp comment
     let headerToken
     beforeEach(async () => {
       headerToken = await helpers.getAuthToken()

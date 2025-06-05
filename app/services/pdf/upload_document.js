@@ -25,7 +25,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
 const CRLF = '\r\n'
 const boundary = 'multipartboundary_multipartboundary'
 const hyphens = '--'
-// Temp comment
 
 const getAuthorizationHeader = async() => {
   const apiClient = new docusign.ApiClient()
@@ -46,3 +45,4 @@ const getAuthorizationHeader = async() => {
 }
 
 const createDocument = (name, fileExtension, documentId) => ({ name, fileExtension, documentId })
+

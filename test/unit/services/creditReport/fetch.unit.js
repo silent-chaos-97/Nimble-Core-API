@@ -51,7 +51,6 @@ describe('app.services.creditReport.fetch', () => {
       await knex.raw("UPDATE signers SET status='INCOMPLETE'")
 
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
-// Temp comment
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       const fakeAwsLambda = sinon.fake.returns(successResponse)
 

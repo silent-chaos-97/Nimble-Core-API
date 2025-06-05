@@ -1,9 +1,9 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const nimbleData = app.plugins.nimbleData
-// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 
 module.exports = async(req, res) => {
+// Temp comment
   const category = _.get(req, 'params.category') || _.get(req, 'body.category')
 

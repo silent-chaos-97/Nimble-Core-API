@@ -18,3 +18,4 @@ Product:
       type: string
       title: Name
       description: The name of the product
+      example: Simple Checking

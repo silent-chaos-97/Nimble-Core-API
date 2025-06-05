@@ -156,6 +156,7 @@ describe('MicroblinkService', () => {
 
 
     it('should split dates correctly', async () => {
+      const response = {
         data: {
           recognizer: 'BLINK_ID',
           result: {
@@ -192,3 +193,4 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('city', 'Atlanta')
       expect(result).to.have.deep.property('state', 'GA')
       expect(result).to.have.deep.property('zipCode', '12345-1234')
+    })

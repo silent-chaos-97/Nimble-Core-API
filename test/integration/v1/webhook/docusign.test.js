@@ -166,3 +166,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           if (err) return done(err)
 
           request(app.server)
+            .get(`/v1/account-requests/${accountRequestId}`)

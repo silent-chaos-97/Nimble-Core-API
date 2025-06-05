@@ -188,7 +188,6 @@ const schema = Joi.object({
 			rent: Joi.number(),
       // Not sure - User input - Microbilt UCC (will only apply for loans that have gone to collections)
 			firstMortgagePAndI: Joi.number(),
-// Temp comment
 			otherFinancingPAndI: Joi.number(),
       // Not sure - User input
 			hazardInsurance: Joi.number(),
@@ -282,3 +281,4 @@ const schema = Joi.object({
       // Not sure - Microbilt may be able to provide us with Secretary of State records for finding what businesses the user owns. Mark sent us an API for finding private business financial data, but I can't remember what it's called. May be in an email he sent
 			newWorthOwnedBusinesses: Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+				marketValue: Joi.number()

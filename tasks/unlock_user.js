@@ -1,4 +1,5 @@
 const minimist = require('minimist')
+const app = require('../app/core')
 const logger = app.logger.getLogger('tasks.unlock_user')
 
 async function unlockUser(email) {

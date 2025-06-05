@@ -24,3 +24,4 @@ Identity:
       title: Address
       description: Individual address
       nullable: true
+      example: 123 Main Streey Apt. 1

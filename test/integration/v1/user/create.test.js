@@ -81,6 +81,7 @@ describe('POST /users', () => {
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)
+// Temp comment
         .expect(400)
         .end(done)
     })
@@ -99,3 +100,4 @@ describe('POST /users', () => {
   describe('with valid data', () => {
     beforeEach(async () => {
       const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'
+      const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'

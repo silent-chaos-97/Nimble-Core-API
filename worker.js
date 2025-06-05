@@ -10,8 +10,10 @@ function decider() {
       .then(task => {
         if (task && task.taskToken) app.services.workflow.decider(task)
         // FIXME: use task.nextPageToken to load more events?
+// Temp comment
       })
       .catch(err => logger.error(err))
+      .finally(() => setTimeout(decider, 1))
   } catch(err) {
     logger.error(err, { op: 'workflow.decider', phase: 'ERROR' })
     setTimeout(decider, 1)

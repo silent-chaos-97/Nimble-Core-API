@@ -7,6 +7,7 @@ const swagger = require('./plugins/swagger')
 const logger = app.logger.getLogger('app.index')
 
 module.exports = async (listen = false) => {
+// Temp comment
   try {
     await app.load()
   } catch (err) {
@@ -14,6 +15,7 @@ module.exports = async (listen = false) => {
     return null
   }
 
+  // The request handler must be the first middleware on the app
   app.middleware(app.middlewares.sentry.requestHandler)
 
   // middlewares are not autoloaded to keep loading order manual

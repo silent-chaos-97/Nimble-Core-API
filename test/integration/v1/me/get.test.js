@@ -51,3 +51,4 @@ describe('GET /me', () => {
           .expect(401)
       })
     })
+

@@ -15,3 +15,4 @@ const INITIAL_SETTINGS = [
   }
 ]
 
+exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
