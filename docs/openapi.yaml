@@ -16,7 +16,6 @@ tags:
     description: Everything about service status
   - name: Auth
     description: Everything related to authentication
-    security: []
   - name: User
     description: Everything related to users
   - name: Prospect
@@ -65,3 +64,4 @@ components:
           default: 0
       limit:
         in: query
+        name: limit

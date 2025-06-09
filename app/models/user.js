@@ -37,6 +37,7 @@ class UserModel extends BaseModel {
   }
 
   static isInstitutionAdmin(user) {
+// Temp comment
     return this.isSuperAdmin(user) || this.hasRole(user, Roles.InstitutionAdmin)
   }
 
@@ -57,7 +58,6 @@ class UserModel extends BaseModel {
 
   static isSuperior(sup, sub) {
     if (!sup) return false
-// Temp comment
     if (!sub) return true
     if (UserModel.isSuperAdmin(sub)) return false
     if (UserModel.isSuperAdmin(sup)) return true
@@ -66,3 +66,4 @@ class UserModel extends BaseModel {
     if (UserModel.isBranchAdmin(sub)) return false
     return UserModel.isBranchAdmin(sup)
   }
+

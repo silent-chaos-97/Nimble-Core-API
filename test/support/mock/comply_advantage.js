@@ -364,6 +364,7 @@ const successResponse = {
               },
               {
                 "name": "Original Country Text",
+                "source": "tresor-direction-generale",
                 "value": "Zimbabwe"
               },
               {
@@ -1807,4 +1808,14 @@ const successResponse = {
                 "name": "Other Information",
                 "source": "malta-financial-services-authority-mfsa-national-sanctions",
                 "value": "President; born 21.2.1924"
+              },
+              {
+                "name": "Other Information",
+                "source": "tresor-direction-generale",
+                "value": "Renseignements complémentaires : Ancien président; responsable d'activités qui portent gravement atteinte à la démocratie, au respect des droits de l'homme et à l'État de droit"
+              },
+              {
+                "name": "Other Information",
+                "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
+                "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0283&from=EN"
               },

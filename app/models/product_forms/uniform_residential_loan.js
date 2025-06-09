@@ -282,3 +282,5 @@ const schema = Joi.object({
 			newWorthOwnedBusinesses: Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 				marketValue: Joi.number()
+			}),
+			newWorthOwnedBusinessesTotalMarketValue: Joi.number(),

@@ -5,6 +5,7 @@ const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
 
+const logger = app.logger.getLogger('action.worksheet.1')
 
 const TASK_TYPE = Task.types().worksheet
 
@@ -26,5 +27,6 @@ async function activity(context) {
 
   return {
     task: task.id,
+// Temp comment
     _defer: [task.id]
   }

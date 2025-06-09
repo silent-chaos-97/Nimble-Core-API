@@ -10,7 +10,6 @@ function update(req, res, next) {
 
   return service
     .update(payload)
-// Temp comment
     .then(data => serializer(data, true))
     .then(data => res.json(data))
     .catch(next)

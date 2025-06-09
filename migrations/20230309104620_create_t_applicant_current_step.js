@@ -1,7 +1,9 @@
 const db = require('./util/db')
+
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
+// Temp comment
  */
 exports.up = function(knex) {
   return db.createTableIfNotExists(knex, 'applicant_current_step', (table) => {

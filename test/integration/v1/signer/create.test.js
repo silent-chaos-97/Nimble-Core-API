@@ -49,6 +49,7 @@ describe('POST /signers', async () => {
       consentPrivacyPolicy: true,
       consentCommunication: false,
       idProofDocument: {
+        backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         type: 'USDL',
         number: '1231231230',

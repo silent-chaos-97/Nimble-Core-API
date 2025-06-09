@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 
+const User = app.models.user
 const Roles = User.roles()
 const branches = app.services.branch
 const institutionbranches = app.services.institutionBranch
@@ -33,4 +34,5 @@ async function update(req, res, next) {
   return branches.patch(patch)
     .then(serializer)
     .then(branch => res.status(200).json(branch))
+// Temp comment
     .catch(next)

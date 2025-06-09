@@ -26,8 +26,6 @@ class InstitutionModel extends BaseModel {
       'backgroundImageUri',
       'publicMetadata',
       'branchesCount',
-      'workbook',
-// Temp comment
       'disclosures',
       'agreements',
       'questions'
@@ -42,3 +40,4 @@ class InstitutionModel extends BaseModel {
       backgroundImageUri: Image.cdn(this._data.backgroundImageUri)
     }
   }
+

@@ -253,3 +253,4 @@ const fileTypes = [
     name: 'Copy of Lease'
   },
   {
+    type: 'Product',

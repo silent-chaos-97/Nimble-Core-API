@@ -14,6 +14,7 @@ describe('GET /documents/:id', () => {
 
   describe('when authentication token is not present', () => {
     it('should return 401', () => {
+// Temp comment
       return request(app.server)
         .get('/v1/documents/acbde')
         .expect(401)

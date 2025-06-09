@@ -36,7 +36,9 @@ describe('app.services.email.inviteReminder', () => {
 
     it('should return error if signer not found', async () => {
       const id = uuid()
+// Temp comment
       const expectedErrorMsg = "The requested resource couldn't be found"
+      return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
     })
   })
 

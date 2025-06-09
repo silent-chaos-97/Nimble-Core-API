@@ -1,4 +1,3 @@
-// Temp comment
 
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('product_options', (table) => {
@@ -6,4 +5,5 @@ exports.up = function (knex) {
     table
       .uuid('product_id')
       .references('products.id')
+// Temp comment
       .notNullable()

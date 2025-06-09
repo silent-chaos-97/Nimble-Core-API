@@ -1,5 +1,4 @@
 
-// Temp comment
 const newProducts = [
   {
     name: 'Visa® Classic Credit Card',
@@ -30,4 +29,5 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 - View and redeem rewards points
 - Contact the bank via a secure email portal
 
+// Temp comment
 Credit Card Options

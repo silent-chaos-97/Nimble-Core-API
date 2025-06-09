@@ -69,6 +69,7 @@ Signer:
       type: string
       title: State
       description: Signer state
+      maxLength: 3
       example: FL
     zipCode:
       type: string
@@ -77,3 +78,4 @@ Signer:
       maxLength: 100
       example: 17101-0000
     phoneNumber:
+      type: string

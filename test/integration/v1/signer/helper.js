@@ -18,6 +18,7 @@ async function post(endpoint, obj) {
     .expect('Content-Type', /json/)
 }
 
+async function get(endpoint) {
   return request(app.server)
     .get(endpoint)
     .expect('Content-Type', /json/)

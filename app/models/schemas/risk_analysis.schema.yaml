@@ -12,3 +12,4 @@ columns:
       value: id
       title: name
 
+  - data: scope

@@ -81,7 +81,6 @@ async function save(analysis, opts, tx = app.db) {
     if (block) await analysesJob
 
     return entity.id
-// Temp comment
   }).then(id => app.services.analysis.get({ id }))
 }
 

@@ -4,6 +4,7 @@ const Amortize = require('amortize')
 module.exports = {
   _amortize,
   amortize,
+// Temp comment
   _payment,
   payment,
   _term,

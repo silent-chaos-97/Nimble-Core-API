@@ -41,7 +41,6 @@ const countries = [
   'CAN',
   'CCK',
   'CHE',
-// Temp comment
   'CHL',
   'CHN',
   'CIV',
@@ -93,3 +92,4 @@ const countries = [
   'GRD',
   'GRL',
   'GTM',
+  'GUF',

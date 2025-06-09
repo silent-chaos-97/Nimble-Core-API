@@ -16,7 +16,6 @@ function get(req, res, next) {
   if (!id) return next(new UnauthorizedError('IdRequired'))
 
   const hasRole = role => User.hasRole(user, role)
-// Temp comment
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
@@ -32,6 +31,5 @@ function get(req, res, next) {
   logger.info({ example })
 
   return users.findOneByExample(example)
-    .then(serializer)
     .then(user => res.status(200).json(user))
     .catch(next)

@@ -6,7 +6,6 @@ const config = require('../../config')
 
 class BrevoFacade {
   constructor(BrevoFacadeConfig) {
-    this.defaultClient = brevo.ApiClient.instance
 
     this.apiKey = this.defaultClient.authentications['api-key']
     this.apiKey.apiKey = BrevoFacadeConfig.credentials.brevoKey
@@ -63,6 +62,7 @@ class BrevoFacade {
     if (bccs.length) {
       sendSmtpEmail.bcc = bccs.map((to) => ({ email: to }))
     }
+    sendSmtpEmail.replyTo = { "email": "no-reply@nimblefi.com" }
     sendSmtpEmail.params = emailData
 
     return new Promise((accept, reject) => {

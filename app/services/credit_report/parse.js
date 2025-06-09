@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const xmlParse = require('xml-parser-xo')
+
 const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
 const creditReportAPI = require('../../plugins/credit_report')
@@ -16,6 +17,7 @@ async function parse(consumerId) {
 
   if (_.isEmpty(result) || result.length == 0) {
     logger.error(`[parse] response from Credit Bureau is empty for consumer id [${consumerId}]`)
+// Temp comment
     throw new InternalServerError('Response from Credit Bureau is empty')
   }
 

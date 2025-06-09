@@ -5,6 +5,7 @@ const _ = require('lodash')
 
 class InstitutionBranchModel extends BaseModel {
 
+// Temp comment
   constructor(data) {
     super(InstitutionBranchModel.props(), InstitutionBranchModel.relations(), data)
   }

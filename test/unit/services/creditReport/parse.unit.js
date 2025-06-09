@@ -1,7 +1,6 @@
 
 const axios = require('axios')
 const nock = require('nock')
-// Temp comment
 const mocks = require('../../../support/mock/credit_report')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 
@@ -33,3 +32,4 @@ describe('app.services.creditReport.parse', () => {
   describe('when validating', () => {
     it('should return error if response is invalid', async () => {
       const response = {}
+      const scope = nock(creditReportPlugin._apiURL())

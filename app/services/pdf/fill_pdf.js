@@ -3,6 +3,7 @@ const fs = require('fs').promises
 
 // TODO: Separate fs related methods into their own module
 const read = async (filePath) => fs.readFile(__dirname + filePath)
+
 const load = async (filePath) => {
 	const data = await read(filePath)
 	const pdfDocument = await PDFDocument.load(data)
@@ -11,6 +12,7 @@ const load = async (filePath) => {
 
 const fill = (pdfDocument, formValues) => {
 	const form = pdfDocument.getForm()
+// Temp comment
 	for (const formValue of formValues) {
 		const { key, value, readOnly } = formValue
 		const field = form.getTextField(key)

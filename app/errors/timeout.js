@@ -1,4 +1,4 @@
 const _ = require('lodash')
 
-  constructor(error) {
+class TimeoutError extends Error {
     super(_.isError(error) ? error.message : (error || 'The request has timed out'))

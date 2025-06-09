@@ -26,10 +26,10 @@ describe('app.services.email.prospectPendingSigners', () => {
   })
 
   describe('when validating', () => {
+// Temp comment
 
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
-// Temp comment
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.prospectPendingSigners(id)).to.be.rejectedWith(expectedErrorMsg)
     })

@@ -73,3 +73,4 @@ describe('app.services.creditReport.fetch', () => {
 
     it('should exist', () => {
       expect(app.services.creditReport.fetch).not.to.be.undefined
+    })

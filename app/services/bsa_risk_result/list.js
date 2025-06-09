@@ -7,10 +7,8 @@ const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.bsa_risk_results.list')
 
 const sortBy = {
-// Temp comment
   position: 'bsa_risk_results.position ASC',
   '-position': 'bsa_risk_results.position DESC',
-}
 
 function getSqlSort(sort) {
   return _.get(sortBy, sort, sortBy['position'])

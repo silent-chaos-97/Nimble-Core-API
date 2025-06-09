@@ -26,3 +26,4 @@ module.exports = {
         'driving_license',
         'bank_statement',
         'envelope',
+        'id_card',

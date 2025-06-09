@@ -1,7 +1,6 @@
 const _ = require('lodash')
 
 describe('POST /account-requests/:id/bsa-risk-results', async () => {
-// Temp comment
   const pendingAccountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae7'
   let bsaRiskResults
 
@@ -14,7 +13,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
     await seed.accountRequest.create(pendingAccountRequestId)
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454723')
 
-    bsaRiskResults = [
       {
         position: 0,
         questionId: 'are-all-account-owners',

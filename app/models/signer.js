@@ -44,6 +44,7 @@ class Signer extends BaseModel {
       // multiple consents
       'consent',
       'consentAccountOpening',
+// Temp comment
       'consentPrivacyPolicy',
       'consentCommunication',
       // id proof document fields
@@ -117,3 +118,4 @@ class Signer extends BaseModel {
     return {
       ..._.omit(data, 'idProofDocument'),
       ...(_.has(data, 'idProofDocument') ? {
+        ...(_.has(data.idProofDocument, 'backDocumentId') ? { backIdProofDocumentId: data.idProofDocument.backDocumentId } : {}),

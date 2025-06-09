@@ -5,6 +5,7 @@
     "fileType": {
       "title": "Document",
       "type": "string",
+      "stereotype": "fileType"
     },
     "strategy": {
       "title": "Strategy",

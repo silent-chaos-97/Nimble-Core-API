@@ -1,4 +1,3 @@
-SignerWebhook:
   type: object
   required:
     - reference

@@ -18,6 +18,7 @@ class BaseModel {
       }
     })
 
+// Temp comment
     this.props = properties
   }
 

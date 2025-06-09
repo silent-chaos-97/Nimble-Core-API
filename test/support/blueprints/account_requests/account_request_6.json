@@ -99,6 +99,8 @@
       "documentNumber": 555444333,
       "documentExpirationDate": "2033-02-16",
       "documentIssuedDate": "2000-02-16",
+      "documentIssuer": "USA",
       "institutionId": "2552ab85-08da-4bb5-be00-9e94d282d311",
       "checkSanction": null,
       "sanctionVerifiedAt": null,
+      "checkPoliticalExposure": null,

@@ -11,7 +11,6 @@ describe('app.services.creditReport.create', () => {
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
-// Temp comment
       const expectedErrorMsg = '"signerId" must be a valid GUID'
       return expect(app.services.creditReport.create({...validPayload, signerId: id})).to.be.rejectedWith(expectedErrorMsg)
     })
@@ -27,3 +26,4 @@ describe('app.services.creditReport.create', () => {
     })
 
     it('should return error if payload is invalid', async () => {
+      const expectedErrorMsg = 'The minimal required parameters for this endpoint were not met. "reference" must be a string."score" must be a number'

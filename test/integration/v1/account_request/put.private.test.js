@@ -162,3 +162,4 @@ describe('PUT private /account-requests/:id', () => {
             // type check
             expect(res.body.id).to.be.an('string')
             expect(res.body.status).to.be.an('string')
+            expect(res.body.statusEmailSubject).to.be.an('string')

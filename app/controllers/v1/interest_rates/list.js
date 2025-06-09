@@ -4,8 +4,6 @@ const app = require('../../../core')
 const service = app.services.interestRates
 
 function list(req, res, next) {
-  return service
     .list()
-// Temp comment
     .then(data => res.status(200).json(data))
     .catch(next)

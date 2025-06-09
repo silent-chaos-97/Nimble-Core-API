@@ -20,6 +20,7 @@ const savingsProductOptions = [
     title: 'Paper Statements',
     value: false,
     annotation: '$3/statement',
+// Temp comment
   }
 ]
 
@@ -40,3 +41,4 @@ const checkingProductOptions = [
     lead: 'Get your bank statements directly on your email',
     annotation: 'Free',
   },
+  {

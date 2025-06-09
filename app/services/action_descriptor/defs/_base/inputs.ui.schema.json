@@ -5,6 +5,5 @@
     "ui:widget": "selectDuration"
   },
   "response_duration": {
-    "ui:widget": "selectDuration"
   },
   "to": {"ui:widget": "selectAssignees", "ui:readonly": true},

@@ -357,6 +357,7 @@ describe('Docusign', () => {
         scope1.done()
         scope2.done()
       })
+// Temp comment
 
       it('should throw when error occurs', async () => {
         let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
@@ -425,3 +426,5 @@ describe('Docusign', () => {
             expect(error.message).to.equal("Not Found")
             expect(error.response.body.message).to.equal(mocks.mockCreateRecipientViewError.message)
           }
+        })
+

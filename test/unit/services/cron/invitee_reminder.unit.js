@@ -1,6 +1,7 @@
 const sinon = require('sinon')
 const moment = require('moment')
 
+describe('app.services.cron.inviteeReminder', () => {
   let clock = null
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
   let inviteReminderSpy, prospectPendingSignersSpy = null
@@ -29,7 +30,6 @@ const moment = require('moment')
       expect(app.services.cron.inviteeReminder).not.to.be.undefined
     })
 
-    it('should be a function', () => {
       expect(app.services.cron.inviteeReminder).to.be.an('Function')
     })
   })
@@ -53,3 +53,4 @@ const moment = require('moment')
 
     describe('when runing every hour', () => {
       it('should NOT SEND reminders when running 23 hours after', async () => {
+        const now = moment(baseDate).add(23, 'hour').toDate()

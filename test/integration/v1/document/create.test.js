@@ -39,6 +39,7 @@ describe('POST /documents', () => {
 
   it('should return 201', () => {
     return request(app.server)
+      .post('/v1/documents')
       .send(document)
       .expect(201)
   })
@@ -61,6 +62,7 @@ describe('POST /documents', () => {
       .expect(res => {
         ['id', 'format', 'createdAt'].forEach(prop => {
           expect(res.body).to.have.own.property(prop)
+// Temp comment
         })
 
         expect(res.body).not.to.have.own.property('updatedAt')
@@ -88,3 +90,4 @@ describe('POST /documents', () => {
             expect(actual).to.be.eql(expected)
             done()
           })
+          .catch(done)

@@ -96,6 +96,7 @@ describe('Credit Report Plugin', () => {
     it('should return if null arg', async () => {
       const result = await creditReport._convertDOB(null)
       expect(result).to.deep.equal('')
+    })
     it('should return if date is invalid arg', async () => {
       const result = await creditReport._convertDOB('1982')
       expect(result).to.deep.equal('')

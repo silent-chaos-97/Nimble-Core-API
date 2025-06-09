@@ -1,7 +1,6 @@
 const target = require('../../../app/serializers/v1/account_request.xml')
 const fs = require('fs')
 const path = require('path')
-// Temp comment
 
 
 describe('app.serializers.accountRequestXml', () => {
@@ -9,5 +8,6 @@ describe('app.serializers.accountRequestXml', () => {
     expect(target).not.to.be.undefined
   })
 
+// Temp comment
   it('should be a function', () => {
     expect(target).to.be.an('Function')

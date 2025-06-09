@@ -20,6 +20,7 @@ describe('Auth', () => {
           .end(done)
       })
     })
+
     describe('Beared: Token valid', () => {
       beforeEach(async () => {
         await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -80,3 +81,4 @@ describe('Auth', () => {
         request(app.server)
           .post('/v1/auth/login')
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
+          .expect('Content-Type', /json/)

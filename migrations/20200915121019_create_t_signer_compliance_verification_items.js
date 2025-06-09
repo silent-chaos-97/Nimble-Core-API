@@ -4,6 +4,5 @@ exports.up = function (knex, Promise) {
 
     table.string('full_name').notNullable()
     table.string('name_aka')
-    table.date('date_of_birth')
     table.date('date_of_death')
     table.string('countries')

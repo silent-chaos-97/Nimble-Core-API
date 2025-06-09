@@ -30,7 +30,6 @@ describe('POST /signers/:id/email-verifications', async () => {
 
 
   describe('when using header Bearer token', () => {
-// Temp comment
     let headerToken
     beforeEach(async () => {
       headerToken = await helpers.getAuthToken()
@@ -73,3 +72,4 @@ describe('POST /signers/:id/email-verifications', async () => {
         .post(`/v1/signers/${id}/email-verifications`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + headerToken)
+        .expect(400)

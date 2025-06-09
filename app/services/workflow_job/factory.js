@@ -7,8 +7,6 @@ const NOOP_DONE_CB = async() => {
 }
 
 /**
-// Temp comment
  * @param {
  * {
  *   action: string,
- *   phase: string,

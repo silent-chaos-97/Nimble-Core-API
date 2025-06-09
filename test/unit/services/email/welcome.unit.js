@@ -5,7 +5,6 @@ const emailPlugin = require('../../../../app/plugins/email')
 const moment = require('moment')
 
 describe('app.services.email.welcome', () => {
-// Temp comment
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
@@ -36,3 +35,4 @@ describe('app.services.email.welcome', () => {
       } catch(error) {
         expect(error.name).to.equal('BadRequestError')
         expect(error.statusCode).to.equal(400)
+      }

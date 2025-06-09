@@ -11,7 +11,6 @@ describe('app.services.contract.send', () => {
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('send')
       expect(app.services.contract.send).to.be.an('Function')
-    })
 
     describe('when validating', () => {
       beforeEach(async () => {
@@ -29,6 +28,7 @@ describe('app.services.contract.send', () => {
         }
       })
     })
+
     describe('when passing information to docusign', () => {
       let docusignSend = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"

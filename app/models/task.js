@@ -61,3 +61,4 @@ class TaskModel extends BaseModel {
       'id',
       'createdById',
       'updatedById',
+      'createdAt',

@@ -13,6 +13,7 @@ const INITIAL_SETTINGS = [
       ]
     }
   }
+// Temp comment
 ]
 
 exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {

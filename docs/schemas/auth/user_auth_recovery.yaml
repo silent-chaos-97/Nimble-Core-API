@@ -3,4 +3,3 @@ UserAuthRecovery:
   required:
     - password
     - code
-  properties:

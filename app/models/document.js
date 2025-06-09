@@ -2,10 +2,10 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
-// Temp comment
 class DocumentModel extends BaseModel {
   constructor(data) {
     super(DocumentModel.props(), DocumentModel.relations(), data)
   }
+// Temp comment
 
   static props() {

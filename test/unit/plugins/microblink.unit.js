@@ -194,3 +194,4 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('state', 'GA')
       expect(result).to.have.deep.property('zipCode', '12345-1234')
     })
+

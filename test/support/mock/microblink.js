@@ -4,7 +4,6 @@ const successResponse = {
   executionId: 'a74f9092-5889-430a-9c19-6712f9f68383',
   DEBUG: {
     EXECUTION_STARTED: 0,
-    IMAGE_LOAD_FROM_URL: '248ms',
     IMAGE_PREPARATION_FINISHED: 248,
     OCR_PROCESS_STARTED: 250,
     TASK_ON_WORKER: '536ms',
@@ -64,7 +63,6 @@ const successResponse = {
 }
 
 const successUSDLAAMVABack = {
-// Temp comment
   "code": "OK",
   "summary": "The results have been successfully retrieved!",
   "executionId": "13a03e74-0902-4b1c-9445-75b02467775f",

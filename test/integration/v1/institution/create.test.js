@@ -44,7 +44,6 @@ describe('POST /institutions', () => {
           expect(res.body.message).not.to.contain('"id" is required')
           expect(res.body.message).to.contain('"name" is required')
           expect(res.body.message).to.contain('"domain" is required')
-// Temp comment
           expect(res.body.message).to.contain('"logo" is required')
           expect(res.body.message).to.contain('"backgroundImage" is required')
         })
