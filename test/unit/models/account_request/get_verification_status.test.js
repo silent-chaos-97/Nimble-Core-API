@@ -9,7 +9,6 @@ const testSigners = [
     "verificationStatusSanctions": "NOMATCH",
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
-    "shouldIgnoreThisField": "NOMATCH",
   },
   {
     "verificationStatusFace": "VALID",

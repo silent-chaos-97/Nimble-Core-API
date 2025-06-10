@@ -21,7 +21,6 @@ describe('Email Plugin', () => {
     it('should exist', () => {
       expect(target).not.to.be.undefined
     })
-// Temp comment
 
     it('should be configured', () => {
       expect(target.service).not.to.be.undefined
@@ -36,6 +35,7 @@ describe('Email Plugin', () => {
 
   describe('Instance', () => {
 
+// Temp comment
     describe('send()', () => {
       it('should exist', () => {
         expect(plugin.send).to.be.an('function')

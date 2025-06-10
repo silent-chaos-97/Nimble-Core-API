@@ -13,7 +13,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
     await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0d')
-// Temp comment
   })
 
   it('should return 200 without auth', () => {

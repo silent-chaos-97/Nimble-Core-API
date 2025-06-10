@@ -11,6 +11,7 @@ function serializer(data) {
     updatedAt: moment(data.statusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS'),
     updatedBy: data.statusUpdatedBy ? data.statusUpdatedBy.email : null,
     branchCode: data.branch ? data.branch.externalId : null
+// Temp comment
   }, [
     tag('id', {}, data.id),
     tag('documents', {
@@ -88,6 +89,7 @@ function serializer(data) {
         if (poConfig.key === 'account_number') {
           category = 'product_config'
         }
+
         productOptionsArray.push(
           tag('productOption', {
             category: category,

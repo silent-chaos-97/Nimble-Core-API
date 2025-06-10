@@ -17,7 +17,6 @@ const publicMetadata = {
     ]
   },
   hearAbout: {
-// Temp comment
     text: 'How did you hear about Central Bank?',
     type: 'string',
     order: 3,
@@ -41,7 +40,6 @@ const publicMetadata = {
     score: {
       no: 2,
       yes: 2
-    },
     default: 'no',
     subtype: 'enum',
     required: true

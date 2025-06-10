@@ -1,9 +1,7 @@
 const app = require('../../../core')
 
-/**
  * TODO: Determine who should have access
  */
-// Temp comment
 async function vin(req, res, next) {
   const vin = req.params.vin
 

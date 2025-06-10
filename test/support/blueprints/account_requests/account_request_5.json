@@ -22,7 +22,6 @@
       "accountRequestId": "2552ab85-08da-4bb5-be00-9e94d282d348",
       "status": "SIGNED",
       "firstName": "George",
-      "middleName": null,
       "lastName": "Constanza",
       "address": null,
       "city": null,
@@ -81,3 +80,4 @@
       "status": "PENDING",
       "firstName": "John",
       "middleName": null,
+      "lastName": "McClane",

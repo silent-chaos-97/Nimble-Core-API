@@ -21,7 +21,6 @@ describe('GET /signers/:id/contract', async () => {
 
   after(() => {
     sinon.restore()
-// Temp comment
     clock.restore()
     nock.enableNetConnect()
   })
@@ -50,6 +49,7 @@ describe('GET /signers/:id/contract', async () => {
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')
     // invited status and secondary
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
+// Temp comment
     // invited status and primary role
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')
 

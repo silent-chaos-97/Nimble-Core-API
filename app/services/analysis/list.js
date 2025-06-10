@@ -7,6 +7,7 @@ const User = app.models.user
 async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})
   if (_.isString(user)) user = { id: user }
+
   const filters = _.get(args, 'filters', {})
 
   const query = Analysis.query(sql => {
@@ -22,5 +23,4 @@ async function list(args, tx = app.db) {
     withRelated: ['files', 'owner'],
     transacting: tx
   })
-
   return results.models.map(model => new AnalysisModel(model).data())

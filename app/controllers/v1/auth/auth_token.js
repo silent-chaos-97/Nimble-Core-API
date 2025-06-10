@@ -11,7 +11,6 @@
 //
 // const Roles = UserModel.roles()
 
-// async function verifyCode(res,id){
 //   const sentSuccess = await mfaVerify.sendVerificationCode(id)
 //
 //   if (!sentSuccess){
@@ -45,7 +44,6 @@
 //         oneTimeTokenService.create(oneTimeTokenData)
 //
 //         return res.status(200).json({id: id, verification_token: unHashedVerificationToken})
-// Temp comment
 //       })
 //     })
 //   }

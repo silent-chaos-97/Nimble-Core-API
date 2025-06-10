@@ -10,7 +10,6 @@ const statesUSA = [
   'DE',
   'DC',
   'FM',
-  'FL',
   'GA',
   'GU',
   'HI',

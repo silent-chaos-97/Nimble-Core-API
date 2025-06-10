@@ -8,10 +8,8 @@ const Statuses = {
   published: 'published',
   deleted: 'deleted'
 }
-
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
-// Temp comment
   createdById: Joi.string().uuid().required(),
   updatedById: Joi.string().uuid().required(),
 

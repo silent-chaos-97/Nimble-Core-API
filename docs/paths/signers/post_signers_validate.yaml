@@ -13,7 +13,6 @@
           type: string
           format: uuidv4
     security:
-      - bearer: []
     requestBody:
       description: Signer information
       required: true

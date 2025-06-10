@@ -441,6 +441,7 @@ const mockDocumentTabs = {
       'recipientId': '48e6eb8f-7675-419a-9f3e-23acad4c63a1',
       'pageNumber': '2',
       'xPosition': '239',
+      'yPosition': '119',
       'width': '59',
       'height': '12',
       'tabId': '409cc450-142b-400b-a49b-3c27205a20d9',
@@ -1968,3 +1969,9 @@ const mockDocumentTabs = {
       'width': '74',
       'height': '12',
       'tabId': '46bae7ec-3cd5-4773-b374-cc8ab7a30769',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'conditionalParentLabel': 'email#4',
+      'conditionalParentValue': '##ANY##',
+      'tabType': 'text'
+    },

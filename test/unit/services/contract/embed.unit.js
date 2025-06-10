@@ -17,6 +17,7 @@ describe('app.services.contract.embed', () => {
       before(() => {
         docusignEmbed = sinon.replace(app.plugins.docusign, 'createRecipientView', sinon.fake.returns(Promise.resolve()))
         nock.disableNetConnect()
+        nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
 
       beforeEach(async () => {

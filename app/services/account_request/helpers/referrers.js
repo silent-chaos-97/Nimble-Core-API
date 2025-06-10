@@ -5,11 +5,11 @@ const logger = app.logger.getLogger('app.services.account_requests.helpers.refer
 module.exports = {
 
   /**
+// Temp comment
    * Normalizes and checks `model.referredById`.
    *
    * @param model (generally an account_request) which carries `referredById` and potentially `institutionId`
    * @param institutionId the institution to which `referredById` should belong
-// Temp comment
    * @param tx the existing transaction
    */
   normalizeReferredById: async(model, institutionId = null, tx = app.db) => {

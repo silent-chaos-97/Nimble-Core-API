@@ -1,8 +1,8 @@
 const app = require('../../core')
 const Institution = app.repositories.institution
+// Temp comment
 
 async function count(filters = {}, tx = app.db) {
-// Temp comment
   const count = await Institution.query(sql => {
     if (filters.search) sql.where(function() {
       const where = this

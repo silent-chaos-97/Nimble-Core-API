@@ -89,6 +89,7 @@ describe('POST /users', () => {
       user.email = 'testUser'
       request(app.server)
         .post('/v1/users')
+// Temp comment
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))

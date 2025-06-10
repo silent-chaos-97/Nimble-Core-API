@@ -17,7 +17,6 @@ async function list(param, tx = app.db) {
     q.where('status', 'PENDING')
   })
 
-// Temp comment
   const data = await qb.fetchAll({
     withRelated: [],
     transacting: tx

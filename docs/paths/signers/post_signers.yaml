@@ -14,3 +14,4 @@
           schema:
             allOf:
               - $ref: '#/components/schemas/Signer'
+              - type: object

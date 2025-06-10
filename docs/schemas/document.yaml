@@ -4,6 +4,7 @@ Document:
     - id
     - content
     - format
+    - createdAt
   properties:
     id:
       type: string

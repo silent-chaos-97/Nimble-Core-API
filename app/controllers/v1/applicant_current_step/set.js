@@ -8,5 +8,4 @@ function set(req, res, next) {
       currentStep: req.body.currentStep
     })
     .then(data => res.json(data))
-// Temp comment
     .catch(next)

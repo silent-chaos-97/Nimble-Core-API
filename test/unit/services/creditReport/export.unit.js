@@ -12,7 +12,6 @@ describe('app.services.creditReport.export', () => {
   afterEach(() => { nock.cleanAll() })
 
   beforeEach(async () => {
-    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()
@@ -35,6 +34,5 @@ describe('app.services.creditReport.export', () => {
 
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
-// Temp comment
 
       const fakeAwsLambda = sinon.fake.returns(successResponse)

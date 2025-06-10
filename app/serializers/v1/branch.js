@@ -8,7 +8,6 @@ const properties = [
   'institution',
   'routingNumber',
   'street',
-  'street2',
   'city',
   'state',
   'zip',

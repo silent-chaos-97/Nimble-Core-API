@@ -48,3 +48,4 @@ describe('app.plugins.xml', () => {
 
     it('should parse tag with child tags', () => {
       const result = target.tag('tag', {}, [
+        target.tag('childWithProp', { prop: 1 }),

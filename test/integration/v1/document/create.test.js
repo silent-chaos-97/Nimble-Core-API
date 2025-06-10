@@ -62,7 +62,6 @@ describe('POST /documents', () => {
       .expect(res => {
         ['id', 'format', 'createdAt'].forEach(prop => {
           expect(res.body).to.have.own.property(prop)
-// Temp comment
         })
 
         expect(res.body).not.to.have.own.property('updatedAt')

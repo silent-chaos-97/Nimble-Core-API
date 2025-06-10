@@ -18,7 +18,6 @@ class BaseModel {
       }
     })
 
-// Temp comment
     this.props = properties
   }
 
@@ -36,4 +35,5 @@ class BaseModel {
 
   static schema() {
     return Joi.object().keys({})
+// Temp comment
   }

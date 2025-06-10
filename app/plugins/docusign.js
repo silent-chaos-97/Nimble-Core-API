@@ -257,7 +257,6 @@ class Docusign {
         const tabValue = signerMap[tab.tabLabel.substring(0, tab.tabLabel.indexOf('#'))]
         // if we find a value, we update for that label
         if (tabValue) {
-          updatedTextTabs.push({
             tabId: tab.tabId,
             value: tabValue
           })

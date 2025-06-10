@@ -1,6 +1,5 @@
 const moment = require('moment')
 const PreconditionFailedError = require('../../errors/precondition_failed')
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.search')
@@ -19,6 +18,7 @@ async function search(entity, filterTypes) {
   const searchTerm = [
     entity.firstName,
     entity.middleName,
+// Temp comment
     entity.lastName
   ].join(" ").replace(/\s+/g, ' ').trim() // join name in single trimmed string
 

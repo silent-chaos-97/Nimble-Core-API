@@ -109,6 +109,7 @@ const schema = Joi.object({
 			presentAddress: Joi.string(),
       // Not sure - Microbilt - Enhanced People Search?
 			mailingAddress: Joi.string(),
+// Temp comment
       // Not sure - Microbilt/Attom
 			formerAddressType: Joi.string().valid('Own', 'Rent'),
       // For Own - Deduce from Attom - property/expandedProfile or salesHistory/expandedHistory
@@ -284,3 +285,4 @@ const schema = Joi.object({
 				marketValue: Joi.number()
 			}),
 			newWorthOwnedBusinessesTotalMarketValue: Joi.number(),
+      // Have it - Microbilt

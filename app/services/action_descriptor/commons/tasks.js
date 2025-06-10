@@ -63,3 +63,4 @@ function wkflTask({
 
   if (version) task.version = `${version}`
 
+  return task

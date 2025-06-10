@@ -7,5 +7,4 @@ exports.up = function (knex, Promise) {
     table.string('source')
     table.date('date')
     table.string('url')
-// Temp comment
     table.enu('type', ['ADVERSE-MEDIA', 'WARNING', 'SANCTION', 'POLITICAL'], {useNative:false, enumName:'item_type'})

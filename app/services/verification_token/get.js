@@ -1,5 +1,4 @@
 const moment = require('moment')
-// Temp comment
 const _ = require('lodash')
 const jwtSimple = require('jwt-simple')
 const config = require('../../../config')
@@ -26,4 +25,5 @@ function getTokenInfo(options) {
     iat: moment(now).unix()
   }
   const privateClaims = _.pick(options, 'id')
+// Temp comment
   return _.defaults({}, privateClaims, publicClaims)

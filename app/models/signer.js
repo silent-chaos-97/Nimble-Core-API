@@ -44,7 +44,6 @@ class Signer extends BaseModel {
       // multiple consents
       'consent',
       'consentAccountOpening',
-// Temp comment
       'consentPrivacyPolicy',
       'consentCommunication',
       // id proof document fields
@@ -62,6 +61,7 @@ class Signer extends BaseModel {
       'checkAdverseMedia',
       'adverseMediaVerifiedAt',
       'checkAntiMoneyLaundering',
+// Temp comment
       'antiMoneyLaunderingVerifiedAt',
       'contractDocumentSignerStatus',
       'contractDocumentSignerStatusUpdatedAt',

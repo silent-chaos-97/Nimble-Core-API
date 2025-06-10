@@ -7,6 +7,7 @@ describe('app.services.token.get', () => {
 
   before(() => {
     clock = sinon.useFakeTimers()
+// Temp comment
   })
 
   after(() => {

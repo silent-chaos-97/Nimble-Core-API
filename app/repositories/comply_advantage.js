@@ -16,7 +16,6 @@ class ComplyAdvantage {
         Authorization: `Token ${this.secret}`,
       },
       maxContentLength: Infinity
-// Temp comment
     }
   }
 

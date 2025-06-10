@@ -19,7 +19,6 @@ describe('GET /users/:id', () => {
         .end(done)
     })
 
-    it('should return 500 if :id is weird and breaks routing', done => {
       request(app.server)
         .get('/v1/users/(*&^*(&^%))')
         .set('X-API-KEY', 'superpowers')
@@ -39,3 +38,4 @@ describe('GET /users/:id', () => {
     })
 
     it('should return 401 if authenticated bearer token', async () => {
+      return request(app.server)

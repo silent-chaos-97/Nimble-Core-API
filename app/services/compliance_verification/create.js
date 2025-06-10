@@ -54,7 +54,6 @@ async function create(payload, tx = app.db) {
         .save(null, {
           method: 'insert',
           transacting: tx
-        })
 
 
       for (const entry of result.items) { // foreach result entry

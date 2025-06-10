@@ -27,6 +27,5 @@ async function activity(context) {
 
   return {
     task: task.id,
-// Temp comment
     _defer: [task.id]
   }

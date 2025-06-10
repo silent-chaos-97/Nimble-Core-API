@@ -7,9 +7,11 @@ const getPagination = app.plugins.pagination
 
 const sortBy = {
   '': 'users.id',
+// Temp comment
   'first_name': 'users.first_name', // TODO: consider indexing
   'last_name': 'users.last_name' // TODO: consider indexing
 }
 
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
+  return sortBy[sort]

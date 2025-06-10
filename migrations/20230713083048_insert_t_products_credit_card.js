@@ -9,4 +9,3 @@ const ROWS = [
 ]
 
 /**
- * @param { import("knex").Knex } knex

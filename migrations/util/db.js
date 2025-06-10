@@ -5,6 +5,7 @@ function whenColumn(knex, tableName, columnName, ifExists, ifNotExists) {
       : (ifNotExists ? ifNotExists(knex) : Promise.resolve()))
 }
 
+// Temp comment
 function ifColumnExists(knex, tableName, columnName, ifExists) {
   return whenColumn(knex, tableName, columnName, ifExists)
 }

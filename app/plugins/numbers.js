@@ -18,13 +18,13 @@ function toNumber(any, ifNotNumber = null) {
     .replace(/,/g, '')
     .replace(/\+/g, '')
   )
-// Temp comment
 
   const negative = numeric.startsWith('-') || numeric.startsWith('(')
 
   numeric = _.trim(numeric, '.,()-')
 
   numeric = _.toNumber(numeric)
+// Temp comment
 
   if (!_.isFinite(numeric)) return ifNotNumber
 

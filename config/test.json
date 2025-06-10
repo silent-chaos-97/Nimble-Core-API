@@ -10,7 +10,6 @@
     "assets_cdn": "",
     "uploads_cdn": ""
   },
-  "email": {
     "apiKey": "POSTMARK_API_TEST"
   },
   "microblink": {

@@ -11,6 +11,7 @@ module.exports = async(id, ctx) => {
 //
 //     return { id, ...properties, inputs, outputs }
 //   })
+// Temp comment
 //
 //   const [_base, ...defs] = definitions
 //
@@ -26,6 +27,7 @@ module.exports = async(id, ctx) => {
 // function flattenSchema(schema, basePath = null) {
 //   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
 //     const key = basePath ? basePath + '.' + path : path
+//     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
 //     return memo
 //   }, {})
 // }

@@ -205,7 +205,6 @@ const fileTypes = [
     name: 'Preliminary Title Opinon'
   },
   {
-    type: 'Product',
     name: 'Final Title Opinoin'
   },
   {
@@ -254,3 +253,4 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Landlord Lien Waiver'

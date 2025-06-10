@@ -14,4 +14,3 @@
           type: string
           format: uuidv4
     requestBody:
-      description: BSA Questionnaire results

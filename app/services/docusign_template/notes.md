@@ -61,4 +61,5 @@ https://account.docusign.com/oauth/auth?response_type=code&scope=signature%20imp
 
 Notes:
 
+- the scope must be the same as the ones used by the jwt request.
 - if you don't do this you will get a error_consent when authenticating.

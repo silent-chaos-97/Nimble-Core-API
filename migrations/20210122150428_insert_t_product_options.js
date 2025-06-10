@@ -20,9 +20,7 @@ const savingsProductOptions = [
     title: 'Paper Statements',
     value: false,
     annotation: '$3/statement',
-// Temp comment
   }
-]
 
 const checkingProductOptions = [
   {

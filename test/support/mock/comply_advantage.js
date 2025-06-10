@@ -1819,3 +1819,9 @@ const successResponse = {
                 "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
                 "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0283&from=EN"
               },
+              {
+                "name": "Party",
+                "source": "complyadvantage",
+                "value": "Zimbabwe African National Union"
+              },
+              {

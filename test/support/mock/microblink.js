@@ -4,6 +4,7 @@ const successResponse = {
   executionId: 'a74f9092-5889-430a-9c19-6712f9f68383',
   DEBUG: {
     EXECUTION_STARTED: 0,
+    IMAGE_LOAD_FROM_URL: '248ms',
     IMAGE_PREPARATION_FINISHED: 248,
     OCR_PROCESS_STARTED: 250,
     TASK_ON_WORKER: '536ms',
@@ -40,7 +41,6 @@ const successResponse = {
         month: 3,
         year: 2025,
         originalString: '03/18/2025',
-      },
       documentNumber: 'S123-456-78-123-0',
       sex: 'M',
       additionalNameInformation: '',

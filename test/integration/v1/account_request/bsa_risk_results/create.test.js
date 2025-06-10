@@ -13,12 +13,14 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
     await seed.accountRequest.create(pendingAccountRequestId)
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454723')
 
+    bsaRiskResults = [
       {
         position: 0,
         questionId: 'are-all-account-owners',
         answer: 'Yes'
       },
       {
+// Temp comment
         position: 1,
         questionId: 'will-you-mantain',
         answer: null

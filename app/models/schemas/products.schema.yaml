@@ -39,7 +39,6 @@ columns:
       ref: advanced_rates
       value: id
       title: asset_type
-
   - data: scope
     title: Account Type
     type: key-value-setting

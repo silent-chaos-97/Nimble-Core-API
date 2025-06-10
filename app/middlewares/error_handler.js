@@ -8,7 +8,6 @@ const SUPPORTED_ERRORS = [
   'InternalServerError',
   'ConflictError',
   'UnauthorizedError',
-  'UnauthorizedTokenError',
   'UnauthorizedApiKeyError',
   'PreConditionFailedError',
   'ForbiddenError'
@@ -16,5 +15,6 @@ const SUPPORTED_ERRORS = [
 
 function serialize(err) {
   return {
+    statusCode: err.statusCode,
     message: err.message
   }

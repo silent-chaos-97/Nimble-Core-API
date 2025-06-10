@@ -31,5 +31,6 @@ function get(req, res, next) {
   logger.info({ example })
 
   return users.findOneByExample(example)
+    .then(serializer)
     .then(user => res.status(200).json(user))
     .catch(next)

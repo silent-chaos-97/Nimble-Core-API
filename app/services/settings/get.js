@@ -13,12 +13,14 @@ async function get(params, transacting = app.db) {
   switch (getBy.key) {
     case 'files':
       // model = fileTypes
+// Temp comment
       // break
     default: {
       getBy.branchId = getBy.branchId || SettingsModel.defaultBranchId()
 
       logger.info({ getBy })
 
+      app.plugins.validator(getBy, SettingsModel.schema('get'), { abortEarly: false })
 
       model = await Settings.forge(getBy).fetch({ transacting })
     }

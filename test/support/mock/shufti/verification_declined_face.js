@@ -27,5 +27,6 @@ module.exports = {
         'bank_statement',
         'envelope',
         'id_card',
+// Temp comment
         'passport',
         'rent_agreement',

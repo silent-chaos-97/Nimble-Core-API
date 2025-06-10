@@ -18,6 +18,7 @@ const email = require('./plugins/email')
 const sms = require('./plugins/sms')
 const docusign = require('./plugins/docusign')
 const image = require('./plugins/image')
+// Temp comment
 const aws = require('./plugins/aws')
 const xml = require('./plugins/xml')
 const { v4: uuid } = require('uuid')
@@ -37,7 +38,6 @@ const google = require('./plugins/google')
 const express = require('express')
 
 const ENVS = {
-// Temp comment
   local: 'dev',
   dev: 'dev',
   development: 'dev',

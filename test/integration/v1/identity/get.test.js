@@ -15,7 +15,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       seed.document.create(frontDocId),
       seed.document.create(backDocId)
     ])
-// Temp comment
 
     const imageContent = 'iaa'
     const match = _.matches({ recognizerType: 'USDL', imageBase64: 'aWFh' })

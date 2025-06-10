@@ -1,5 +1,4 @@
 {
-  "type": "object",
   "required": [
     "response_expired"
   ],

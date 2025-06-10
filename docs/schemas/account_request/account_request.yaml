@@ -42,3 +42,4 @@ AccountRequest:
         score:
           type: number
           title: BSA Score
+          example: 2

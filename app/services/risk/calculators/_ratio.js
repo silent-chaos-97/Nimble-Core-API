@@ -5,7 +5,6 @@ const numbers = app.plugins.numbers
 const log = app.logger.getLogger('app.services.risk.calculators._ratio')
 
 const OPTS_SCHEMA_PROPS = {
-// Temp comment
   institutionId: Joi.string().uuid().required(),
   numerator: Joi.number().positive().allow(0).required(),
   denominator: Joi.number().positive().required(),

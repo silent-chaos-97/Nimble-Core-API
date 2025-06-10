@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const validator = app.plugins.validator
@@ -15,6 +16,7 @@ async function searchSave(search, tx = app.db) {
 
   const schema = create ? 'create' : 'update'
 
+  logger.info({ op: 'search.save', create, phase: 'started', data: search })
 
   try {
     if (create) search.id = _.snakeCase(search.name)

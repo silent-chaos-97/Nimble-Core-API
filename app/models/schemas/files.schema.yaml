@@ -14,3 +14,4 @@ columns:
     title: Name
 
   - data: type
+    title: Type

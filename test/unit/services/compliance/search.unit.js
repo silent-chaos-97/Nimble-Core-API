@@ -1,6 +1,5 @@
 const axios = require('axios')
 const nock = require('nock')
-// Temp comment
 const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -38,8 +37,8 @@ describe('app.services.compliance.search', () => {
 
       const entity = {
         firstName: 'Robert',
-        middleName: 'Gabriel',
         lastName: 'Mugabe'
       }
 
       const search = await app.services.compliance.search(entity)
+      expect(search).to.have.ownProperty('search')

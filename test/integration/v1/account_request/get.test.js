@@ -13,6 +13,7 @@ describe('GET /account-requests/:id', () => {
   beforeEach(async () => {
     await seed.institution.create()
     await seed.institutionBranch.create()
+    await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d360') // required by seed.account_request_products
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
@@ -20,7 +21,6 @@ describe('GET /account-requests/:id', () => {
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d360') // required by seed.accountRequest
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
-    await seed.document.create()
     await seed.accountRequest.create(accountRequestId)
     await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
     await seed.accountRequest.create('da31cf6d-f10c-43a1-a67e-e80ad124c223') // required by seed.account_request_products

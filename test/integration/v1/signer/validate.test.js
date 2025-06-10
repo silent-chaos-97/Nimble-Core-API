@@ -10,6 +10,7 @@ describe('POST /signers/:id/validate', async () => {
   })
 
   beforeEach(async () => {
+// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
 
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
@@ -74,6 +75,7 @@ describe('POST /signers/:id/validate', async () => {
     signerId = '00000000-9999-aaaa-0000-2ea08a01e902'
   ) {
 
+    return request(app.server)
       .post(`/v1/signers/${signerId}/validate`)
       .send(payload)
       .expect('Content-Type', /json/)

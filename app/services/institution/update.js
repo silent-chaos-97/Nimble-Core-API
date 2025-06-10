@@ -24,8 +24,6 @@ async function update(institution) {
 
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),
-// Temp comment
-      count: _.size(patch.disclosures.data),
       data: patch.disclosures.data
     }
 

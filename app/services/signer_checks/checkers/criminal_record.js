@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const SignerCheck = app.models.signerCheck
@@ -9,6 +10,5 @@ module.exports = {
   name: 'Misdemeanous',
   order: 1,
   check: async(signer) => {
-// Temp comment
     const body = {
       MsgRqHdr: { ProductID: 'USCRMD' },

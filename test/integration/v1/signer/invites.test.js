@@ -27,3 +27,5 @@ describe('POST /signers/:id/invites', async () => {
   })
 
   describe('with invalid auth', () => {
+    it('should return 401 if no auth', async () => {
+      return request(app.server)

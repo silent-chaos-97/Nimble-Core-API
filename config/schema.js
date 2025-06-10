@@ -216,7 +216,6 @@ const schema = {
       format: String,
       default: 'us-east-2',
       env: 'AWS_SES_REGION'
-// Temp comment
     },
     ses_email_from: {
       doc: 'the email set as From: field when using SES',
@@ -251,3 +250,4 @@ const schema = {
     sms_origination_numbers: {
       doc: 'the AWS SNS->SMS Origination Numbers',
       format: String,
+      default: '+18335861528,+18335941169',

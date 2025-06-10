@@ -1,4 +1,5 @@
 const app = require('../../core')
+const Joi = require('@hapi/joi')
 const _ = require('lodash')
 
 const Signer = app.repositories.signer

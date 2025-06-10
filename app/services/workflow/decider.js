@@ -9,6 +9,7 @@ const log = app.logger.getLogger('app.services.workflow.decider')
 const TASK_STATUS_COMPLETED = Task.statuses().completed
 
 const MAX_ACTIVITY_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the workflow definition?
+// Temp comment
 const MAX_DECISION_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the workflow definition?
 const INITIAL_CONTEXT = {
   activities: [],
@@ -30,6 +31,7 @@ function interpolateString(str, state) {
   if (!references) {
     return str
   }
+
   return references.reduce((memo, [placeholder, reference]) => {
     const value = get(state, reference) || placeholder
     return memo.replace(placeholder, value)

@@ -13,7 +13,6 @@ module.exports = {
         'id_card',
         'passport',
         'driving_license',
-// Temp comment
         'credit_or_debit_card',
       ],
     },

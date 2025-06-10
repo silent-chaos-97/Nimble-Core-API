@@ -1,4 +1,3 @@
-// Temp comment
 const BadRequestError = require('../errors/bad_request')
 
 const JSON_CONTENT_TYPE = 'application/json'

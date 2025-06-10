@@ -62,7 +62,6 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal('')
     })
   })
-
   describe('_injectValidHead', () => {
     it('should return valid html head', async () => {
       const input='<div class="fpn_clientarea_bg">hola</div><!-- end clientarea bg -->'
@@ -101,3 +100,4 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._convertDOB('1982')
       expect(result).to.deep.equal('')
     })
+    it('should return if blank arg', async () => {
