@@ -36,3 +36,4 @@ describe('GET /documents/:id', () => {
     beforeEach(async () => {
       token = await helpers.getExpiredAuthToken()
     })
+

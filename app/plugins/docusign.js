@@ -142,6 +142,7 @@ class Docusign {
     }
 
     try {
+      // get ids for templates we need
       const templateIDs = this._getTemplateForProduct(accountOptions.productConfigurations[0].product.sku, signers.length > 1)
 
       const compositeTemplates = await Promise.all(_.map(templateIDs, async(templateID, index) => {
@@ -824,7 +825,6 @@ class Docusign {
    *
    * @param {string} sku - a product Sku
    */
-  _getTemplateForProduct(sku, co) {
     if (_.isEmpty(sku))
       throw new Error('Missing sku')
 

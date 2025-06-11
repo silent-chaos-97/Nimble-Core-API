@@ -51,3 +51,4 @@ describe('app.services.contract.update', () => {
       })
 
       it('should call with correct arguments', async () => {
+

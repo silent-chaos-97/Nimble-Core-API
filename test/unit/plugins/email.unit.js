@@ -15,7 +15,6 @@ describe('Email Plugin', () => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
-  after(() => sinon.restore())
 
   describe('Class', () => {
     it('should exist', () => {
@@ -67,3 +66,4 @@ describe('Email Plugin', () => {
         })
 
         plugin.send('template', { email: 'eee@eee.com', a: 1, b: 2 })
+

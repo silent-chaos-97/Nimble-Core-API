@@ -105,3 +105,5 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
+        .expect(res => {
+

@@ -185,7 +185,6 @@ class AWSFacade {
             StringValue: _.sample(this.config.sms.originationNumbers)
           }
         }
-      }
 
       this.sns.publish(publish, (err, response) => {
         if (err) {
@@ -354,6 +353,7 @@ class AWSFacade {
   }
 
   failActivity(taskToken, reason, details) {
+    return new Promise((resolve, reject) => {
       try {
         this.swf.respondActivityTaskFailed(
           {

@@ -80,3 +80,5 @@ Signer:
     phoneNumber:
       type: string
       title: phone number
+      description: Signer phone number
+      maxLength: 20

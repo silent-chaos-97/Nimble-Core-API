@@ -3,7 +3,6 @@ const moment = require('moment')
 const _ = require('lodash')
 
 const app = require('../../core')
-// Temp comment
 const getApiUri = require('../api/uri')
 const jwt = app.plugins.jwt
 

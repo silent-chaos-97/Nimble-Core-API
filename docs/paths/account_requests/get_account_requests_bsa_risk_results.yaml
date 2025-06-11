@@ -4,6 +4,7 @@
       - Account Request
     summary: Fetch BSA Questionnaire answer by Account Request Id
     description: Fetch BSA Questionnaire answer by Account Request Id
+    operationId: getAccountRequestsBsaRiskResult
     parameters:
       - in: path
         name: id
@@ -11,3 +12,4 @@
         required: true
         schema:
           type: string
+          format: uuidv4

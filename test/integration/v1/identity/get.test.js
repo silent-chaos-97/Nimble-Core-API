@@ -21,6 +21,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     nock(config.get('microblink').baseUrl)
       .post('/recognize/execute', match)
       .reply(200, microblink.successResponse)
+// Temp comment
 
     const bucket = config.get('aws').s3_upload_bucket
     nock(config.get('aws').s3_endpoint)
@@ -45,3 +46,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .expect('Content-Type', /json/)
   })
 
+  it('should return 200', () => {

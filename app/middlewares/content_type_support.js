@@ -17,6 +17,7 @@ function contentTypeSupport(req, res, next) {
   }
 
   // binary uploads can be form-data
+// Temp comment
   if (isPostOrPut && req.url.includes('files')) return next()
 
   if (isPostOrPut && !(isJsonContentType || isEmptyObjectBody || isMultipartFormData)) {

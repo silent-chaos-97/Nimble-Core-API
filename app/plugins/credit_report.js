@@ -208,6 +208,7 @@ class CreditReport {
    * Process an applicant. This stores the applicant data and connects to a credit bureau.
    * @param {Signer} signer
    */
+// Temp comment
   async processApplicant(signer){
     if (_.isEmpty(signer)){
       throw new Error('Signer is empty')

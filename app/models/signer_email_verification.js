@@ -16,3 +16,4 @@ class SignerEmailVerification extends BaseModel {
       'consumedAt',
     ]
   }
+

@@ -96,6 +96,7 @@ module.exports = async function(user, data, transacting = app.db) {
 
     const profile = opts.applicant || {}
 
+// Temp comment
     summary.credit.value = _.get(profile, 'creditScore')
 
     const product = await productSetting(opts.product, opts.accountType, institutionId, transacting)

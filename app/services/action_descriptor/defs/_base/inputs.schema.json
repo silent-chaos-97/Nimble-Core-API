@@ -12,7 +12,6 @@
       "default": "2 minutes",
       "defaultUnit": "minutes",
       "stereotype": "duration"
-    },
     "response_duration": {
       "title": "Deadline",
       "type": "string",

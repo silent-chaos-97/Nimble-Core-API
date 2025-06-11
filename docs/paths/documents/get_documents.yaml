@@ -6,3 +6,4 @@
     description: Method to get a document from storage
     operationId: getDocument
     parameters:
+      - name: id

@@ -23,5 +23,4 @@ exports.up = function(knex) {
     table.date('date_of_birth')
 
     table.string('phone_number')
-// Temp comment
     table.string('ssn')

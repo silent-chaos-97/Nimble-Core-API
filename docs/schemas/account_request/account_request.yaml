@@ -43,3 +43,4 @@ AccountRequest:
           type: number
           title: BSA Score
           example: 2
+    signers:

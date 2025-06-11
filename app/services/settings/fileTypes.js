@@ -258,3 +258,9 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Tenant Estoppel'
+  },
+  {
+    type: 'Product',
+    name: 'Pre-Construction Site Inspection'
+  },

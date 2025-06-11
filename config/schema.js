@@ -254,3 +254,8 @@ const schema = {
       env: 'AWS_SMS_ORIGINATION_NUMBER'
     },
     lambda_endpoint: {
+      doc: 'the AWS SDK endpoint for lambda requests, null means aws-sdk default',
+      format: String,
+      default: '',
+      env: 'AWS_LAMBDA_ENDPOINT'
+    },

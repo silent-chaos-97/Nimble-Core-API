@@ -3,7 +3,6 @@ const _ = require('lodash')
 
 const app = require('../core')
 const BaseModel = require('./model')
-// Temp comment
 
 class ProductModel extends BaseModel {
   constructor(data) {
@@ -14,8 +13,10 @@ class ProductModel extends BaseModel {
     return ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'institutionId', 'active', 'useRandomAcctNum']
   }
 
+// Temp comment
   static relations() {
     return ['options']
   }
 
   data() {
+    const ProductOptionModel = app.models.productOption

@@ -40,7 +40,6 @@ async function auth_tokens(body) {
         const saltRounds = 10
         const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
         const saltData = await bcrypt.genSaltSync(saltRounds)
-        const hash = await bcrypt.hash(unHashedVerificationToken, saltData)
 
         // Store hashed one-time-token to DB.
         const oneTimeTokenData = {

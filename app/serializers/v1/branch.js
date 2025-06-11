@@ -14,7 +14,6 @@ const properties = [
   'zip',
   'active',
   'note'
-// Temp comment
 ]
 
 function serializer(data) {

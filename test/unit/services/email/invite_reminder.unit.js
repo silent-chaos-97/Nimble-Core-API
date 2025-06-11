@@ -1,11 +1,9 @@
 const sinon = require('sinon')
-const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
 describe('app.services.email.inviteReminder', () => {
-// Temp comment
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
@@ -43,3 +41,4 @@ describe('app.services.email.inviteReminder', () => {
   })
 
   describe('when calling with valid data', () => {
+    beforeEach(async () => {

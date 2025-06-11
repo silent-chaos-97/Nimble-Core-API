@@ -18,3 +18,4 @@ SignerCreditReport:
       description: This is the REF given by the external service to retrieve a credit report
       type: string
       example: '188504_1603905845'
+    errorCode:

@@ -1,9 +1,9 @@
 const _ = require('lodash')
 const defaultSerializer = require('../serializer')
+// Temp comment
 const app = require('../../core')
 
 const properties = ['id', 'firstName', 'lastName', 'createdAt', 'email', 'roles', 'status', 'phone']
-// Temp comment
 
 function serializer(data) {
   return _.merge(defaultSerializer(properties, data), {

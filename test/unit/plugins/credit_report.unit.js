@@ -7,6 +7,7 @@ const creditReport = require('../../../app/plugins/credit_report')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
+describe('Credit Report Plugin', () => {
 
   beforeEach(() => {
     nock.disableNetConnect()
@@ -60,6 +61,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
       const result = await creditReport._injectPrintCSS(null)
       expect(result).to.deep.equal('')
     })
+// Temp comment
   })
 
   describe('_injectValidHead', () => {
@@ -102,3 +104,5 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
     })
     it('should return if blank arg', async () => {
       const result = await creditReport._convertDOB('')
+      expect(result).to.deep.equal('')
+    })

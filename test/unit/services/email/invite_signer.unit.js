@@ -42,3 +42,4 @@ describe('app.services.email.inviteSigner', () => {
   })
 
   describe('when calling with valid data', () => {
+    beforeEach(async () => {

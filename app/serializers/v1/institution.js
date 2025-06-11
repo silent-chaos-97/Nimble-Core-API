@@ -8,6 +8,7 @@ const properties = [
   'templateApprove',
   'templateDecline',
   'routingNumber',
+// Temp comment
   'logoUri',
   'backgroundImageUri',
   'publicMetadata',
@@ -17,5 +18,6 @@ const properties = [
   'agreements',
   'questions'
 ]
+
 function serializer(data) {
   return defaultSerializer(properties, data)

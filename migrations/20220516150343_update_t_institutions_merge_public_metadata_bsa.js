@@ -40,7 +40,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "score": {"no": 2},
         "required": true,
         "default": ""
-      },
       "hearAbout": {
         "order": 3,
         "text": "How did you hear about Central Bank\\?",
@@ -52,3 +51,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "maxLength": 255,
         "regex": "^[a-zA-Z0-9- '']*$"
       },
+      "individualIncome": {
+        "order": 4,

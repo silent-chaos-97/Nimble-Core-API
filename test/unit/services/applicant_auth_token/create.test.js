@@ -2,6 +2,7 @@ const target = require('../../../../app/services/applicant_auth_token/create')
 const { expect } = require('chai')
 
 describe('app.services.applicantOneTimeToken.create', () => {
+// Temp comment
   let body, clock
 
   before(() => {
@@ -42,3 +43,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
         })
 
         it('should throw an error when missing or invalid role', () => {
+          const bodyProp = { id: "111", role: null }

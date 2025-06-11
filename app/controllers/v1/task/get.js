@@ -4,7 +4,6 @@ const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const tasks = app.services.task
 
-// Temp comment
 async function get(req, res) {
   const user = req.user
 

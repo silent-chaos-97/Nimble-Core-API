@@ -4,7 +4,6 @@ const savingsProductOptions = [
     category: 'product_feature',
     title: 'ATM Only Card',
     value: false,
-    annotation: 'Free',
   },
   {
     key: 'e_statements',
@@ -26,7 +25,6 @@ const savingsProductOptions = [
 const checkingProductOptions = [
   {
     key: 'debit_card',
-// Temp comment
     category: 'product_feature',
     title: 'Debit Card',
     value: true,
@@ -42,3 +40,4 @@ const checkingProductOptions = [
     annotation: 'Free',
   },
   {
+    key: 'paper_statements',

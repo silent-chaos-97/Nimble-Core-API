@@ -12,3 +12,4 @@
         schema:
           type: string
           format: uuidv4
+      - in: path

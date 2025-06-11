@@ -11,3 +11,4 @@ module.exports = {
   check: async(signer) => {
     const body = {
       MsgRqHdr: { ProductID: 'USCRMD' },
+      ...microbilt.signerPersonInfo(signer)

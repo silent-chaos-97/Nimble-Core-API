@@ -17,3 +17,4 @@ Me:
       example: demouser@nimblefi.com
     firstName:
       type: string
+      title: First Name

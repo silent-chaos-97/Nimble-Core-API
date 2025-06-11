@@ -1,4 +1,5 @@
 const countries = [
+  'ABW',
   'AFG',
   'AGO',
   'AIA',
@@ -85,7 +86,6 @@ const countries = [
   'GIN',
   'GLP',
   'GMB',
-  'GNB',
   'GNQ',
   'GRC',
   'GRD',
@@ -93,3 +93,5 @@ const countries = [
   'GTM',
   'GUF',
   'GUM',
+  'GUY',
+  'HKG',

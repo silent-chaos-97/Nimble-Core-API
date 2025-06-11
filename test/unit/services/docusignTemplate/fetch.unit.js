@@ -22,7 +22,6 @@ describe('app.services.docusignTemplate.fetch', () => {
     })
   })
 
-// Temp comment
 
   describe('fetch', async () => {
     beforeEach(async () => {
@@ -32,3 +31,4 @@ describe('app.services.docusignTemplate.fetch', () => {
 
     it('should return error if it cannot find a template', async () => {
       try {
+        await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d300', version: 1 })

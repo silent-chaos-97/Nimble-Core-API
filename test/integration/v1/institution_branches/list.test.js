@@ -10,7 +10,6 @@ describe('GET /institution/:id/branches', () => {
     token = await helpers.getAuthToken()
 
   })
-// Temp comment
 
   it('should return 200 without auth', () => {
     return request(app.server)
@@ -36,7 +35,6 @@ describe('GET /institution/:id/branches', () => {
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
       .then(response => {
-        expect(response.body).to.be.an('Array')
         expect(response.body).to.have.lengthOf(8)
       })
   })
@@ -44,3 +42,4 @@ describe('GET /institution/:id/branches', () => {
   it('should return an array of expected objects', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
+      .expect(200)

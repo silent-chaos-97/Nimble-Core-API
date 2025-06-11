@@ -192,9 +192,14 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('address', '1234 fowler ave')
       expect(result).to.have.deep.property('city', 'Atlanta')
       expect(result).to.have.deep.property('state', 'GA')
+      expect(result).to.have.deep.property('zipCode', '12345-1234')
     })
 
     it('should not split addresses', async () => {
       const response = {
         data: {
           recognizer: 'BLINK_ID',
+          result: {
+            address: '1234 FOWLER AVE ATLANTA',
+            documentNumber: 'S123-456-78-123-0',
+            sex: 'M',

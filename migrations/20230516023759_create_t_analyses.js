@@ -9,5 +9,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   // the concept of "customer" is not clearly defined (account_request, application, signer, email, phone, ?, etc)
   table.string('customer_id').nullable().defaultTo(null)
 
+  // the user who owns the analysis, should default ot the creator
   table.uuid('owner_id').references('users.id').notNullable()
 
+  table.uuid('created_by_id').references('users.id').notNullable()

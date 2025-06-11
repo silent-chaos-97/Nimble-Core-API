@@ -13,6 +13,7 @@ const client = new AWS.SNS({
  * @param stream the name of the stream or topic (or configuration key which references it)
  * @param {{id: string, event: string, type?: string, body: any, payload?: any }} event the event data being emitted
  * @param event.id identifier of the bound resource
+ * @param event.event the type of event or resource
  * @param event.type? the type of event or resource (weak alias for event)
  * @param event.body the body of the event
  * @param event.payload? the body of the event (weak alias for body)
@@ -28,6 +29,5 @@ async function publish(stream, event = { id: null, event: null, type: null, body
 
   const PublishReq = { Message, TopicArn: event.topicArn || event.TopicArn || app.config.get('sns')[stream] }
 
-  return client.publish({ ...PublishReq, Message: JSON.stringify(Message) }).promise()
     .then(response => logger.debug({ message: '[publish] EventPublished', MessageId: response.MessageId, PubReq: PublishReq }))
     .catch(err => logger.error(err, { message: '[publish] FailedToPublishEvent', PubReq: PublishReq }))

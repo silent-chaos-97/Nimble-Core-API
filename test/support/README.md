@@ -1,6 +1,7 @@
 # Seeds
 
 The seeds are used to insert database data for tests.
+The file should be snake case and plural.
 
 Support:
 
@@ -11,3 +12,4 @@ Support:
     seed.entity.get() // get first
     seed.entity.get(1) // get by id
 
+If you add a file for a new table, don't forget to edit the seeds.js file

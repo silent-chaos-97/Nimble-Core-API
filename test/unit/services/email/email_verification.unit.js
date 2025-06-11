@@ -11,6 +11,7 @@ describe('app.services.email.emailVerification', () => {
   let clock = null
 
   before(() => {
+// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
@@ -40,6 +41,7 @@ describe('app.services.email.emailVerification', () => {
       return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
     })
   })
+
   describe('when calling with valid data', () => {
     beforeEach(async() => {
       await seed.institution.create()
@@ -53,3 +55,4 @@ describe('app.services.email.emailVerification', () => {
       await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
       await seed.account_request_products() // insert all
       await seed.account_request_product_options() // insert all
+      await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')

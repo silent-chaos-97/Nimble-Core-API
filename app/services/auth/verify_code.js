@@ -1,5 +1,4 @@
 const app = require('../../core')
-const User = app.repositories.user
 const UserMFA = app.repositories.userMfa
 const { mfaVerify } = app.plugins
 
@@ -11,6 +10,7 @@ async function verify_code(data, transacting = app.db) {
   if (!userMFA) {
     return { verified: false }
   }
+
   const token = userMFA.get('token')
   const email = userMFA.get('email')
   const user = await User.forge({ email }).fetch({ transacting })

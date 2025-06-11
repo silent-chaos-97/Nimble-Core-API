@@ -33,3 +33,4 @@ class WorkflowModel extends BaseModel {
   }
 
   isNewVersion(prevWkfl) {
+    const newActivities = this._data.activities

@@ -16,4 +16,3 @@ SignerVerificationStatus:
       default: 'PENDING'
     documentUpdatedAt:
       type: string
-      format: date-time

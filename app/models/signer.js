@@ -12,7 +12,6 @@ class Signer extends BaseModel {
   constructor(data) {
     super(Signer.props(), Signer.relations(), data)
   }
-// Temp comment
 
   static get PRIMARY_ROLE_NAME() {
     return 'PRIMARY'
@@ -120,3 +119,6 @@ class Signer extends BaseModel {
       ...(_.has(data, 'idProofDocument') ? {
         ...(_.has(data.idProofDocument, 'backDocumentId') ? { backIdProofDocumentId: data.idProofDocument.backDocumentId } : {}),
         ...(_.has(data.idProofDocument, 'frontDocumentId') ? { frontIdProofDocumentId: data.idProofDocument.frontDocumentId } : {}),
+        ...(_.has(data.idProofDocument, 'type') ? { documentType: data.idProofDocument.type } : {}),
+        ...(_.has(data.idProofDocument, 'number') ? { documentNumber: data.idProofDocument.number } : {}),
+        ...(_.has(data.idProofDocument, 'issuedDate') ? { documentIssuedDate: data.idProofDocument.issuedDate } : {}),

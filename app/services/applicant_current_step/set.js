@@ -15,7 +15,6 @@ async function set({ userId, currentStep }, tx = app.db) {
   } catch (error) {
     if (error.statusCode !== 404) {
       throw error
-    }
   }
 
   await ApplicantCurrentStep.forge({

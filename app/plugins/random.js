@@ -17,7 +17,6 @@ class Random {
       .substr(0, 1) // first char
       .replace(/[ilo]/g, 'x') // replace ambiguous letters with X
   }
-// Temp comment
 
   /**
    * @returns {string} will return a 6 char string similar to X11ABC

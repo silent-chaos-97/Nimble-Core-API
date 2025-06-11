@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const app = require('../../core')
-// Temp comment
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 const logger = app.logger.getLogger('app.services.institution_branch.get')
@@ -12,7 +11,6 @@ async function get(id, tx = app.db) {
   app.plugins.validator({ id }, schema, { abortEarly: false })
 
   const model = await InstitutionBranch.forge({ id }).fetch({
-    transacting: tx,
     withRelated: ['institution']
   }).then(async m => !m ? null : m)
 

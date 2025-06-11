@@ -35,7 +35,6 @@ async function execute(req, res) {
       failedWkfls.push(r.wkfl)
     }
   })
-// Temp comment
 
   res.status(201).json({
     successfulWkfls,

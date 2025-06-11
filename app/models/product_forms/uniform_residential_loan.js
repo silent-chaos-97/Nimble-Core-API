@@ -112,6 +112,7 @@ const schema = Joi.object({
       // Not sure - Microbilt/Attom
 			formerAddressType: Joi.string().valid('Own', 'Rent'),
       // For Own - Deduce from Attom - property/expandedProfile or salesHistory/expandedHistory
+// Temp comment
       // For Rent - Unknown
 			formerAddressNumberOfYears: Joi.number(),
       // Not sure - Microbilt - Enhanced People Search
@@ -288,3 +289,10 @@ const schema = Joi.object({
 			automobilesOwned: Joi.array().items(
 				Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+          // Microbilt - Vehicle Search
+					make: Joi.string(),
+					year: Joi.number(),
+          // Microbilt - Vehicle Pricing - Seems pretty inaccurate from my initial assessment
+					marketValue: Joi.number()
+				})
+			),

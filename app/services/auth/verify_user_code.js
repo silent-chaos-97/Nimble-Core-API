@@ -1,4 +1,5 @@
 // const app = require("../../core")
+// const { mfaVerify } = app.plugins
 //
 // async function verify_user_code(phone, code) {
 //     const isValid = await mfaVerify.isApproved(phone, code)
@@ -6,6 +7,7 @@
 //         const options = {
 //             phone
 //         }
+// Temp comment
 //         const token = app.services.token.get(options)
 //         return { token }
 //     }

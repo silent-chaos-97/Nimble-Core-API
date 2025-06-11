@@ -12,4 +12,5 @@ describe('Content-Type Support', () => {
 
     it('should return 404 if body is empty', () => {
       // It should return 404 because route doesnt exist it means it proceeded
+      return request(app.server)
         .post('/some/unkown/resource')

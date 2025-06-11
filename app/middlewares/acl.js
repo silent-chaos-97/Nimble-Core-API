@@ -24,7 +24,6 @@ const RESOURCES = {
       model: AccountRequestModel,
       key: 'institutionId'
     }
-// Temp comment
   }
 }
 
@@ -46,7 +45,6 @@ function acl(resource, param) {
     logger.debug('[acl] check for user:', _.get(req.user, 'id'), 'on', resource, 'using param:', targetId)
 
     // validate schema
-    if (_.has(checkBy, 'schema')) {
       try {
         // will throw if validation failts
         validator({ [param]: targetId }, checkBy.schema, { abortEarly: false })

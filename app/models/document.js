@@ -1,9 +1,9 @@
 //const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
-// Temp comment
 
 class DocumentModel extends BaseModel {
+// Temp comment
   constructor(data) {
     super(DocumentModel.props(), DocumentModel.relations(), data)
   }

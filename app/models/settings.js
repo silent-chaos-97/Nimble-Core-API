@@ -6,6 +6,7 @@ const schemas = require('./schemas/_schemas').getSync
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 class SettingsModel extends BaseModel {
+// Temp comment
 
   constructor(data) {
     super(SettingsModel.props(), SettingsModel.relations(), data)
@@ -24,3 +25,4 @@ class SettingsModel extends BaseModel {
     const _settings = _.cloneDeep(settings)
     _settings.data = JSON.stringify(_settings.data || [])
     return _settings
+  }

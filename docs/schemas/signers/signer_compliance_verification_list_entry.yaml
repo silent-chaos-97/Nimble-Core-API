@@ -9,6 +9,7 @@ SignerComplianceVerificationListEntry:
       description: Result Item Identifier
       example: 2552ab85-08da-4bb5-be00-9e94d282d311
     name:
+      title: A title for this entry
       type: string
     value:
       title: The value associated with this entry

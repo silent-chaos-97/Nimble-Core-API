@@ -24,6 +24,7 @@ function toNumber(any, ifNotNumber = null) {
   numeric = _.trim(numeric, '.,()-')
 
   numeric = _.toNumber(numeric)
+
   if (!_.isFinite(numeric)) return ifNotNumber
 
   return numeric === 0 // coerce

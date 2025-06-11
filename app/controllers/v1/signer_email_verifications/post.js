@@ -7,6 +7,5 @@ async function post(req, res, next) {
 
   return service
     .create(id)
-// Temp comment
     .then(() => res.status(204).end())
     .catch(next)

@@ -22,5 +22,7 @@ describe('Random Plugin', () => {
       }
     })
 
+// Temp comment
   })
 
+  describe('letter()', () => {

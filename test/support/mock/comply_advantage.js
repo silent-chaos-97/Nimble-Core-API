@@ -1473,6 +1473,7 @@ const successResponse = {
                 "value": "European Union"
               },
               {
+                "name": "Original Place of Birth Text",
                 "source": "complyadvantage",
                 "value": "Harare"
               },
@@ -1847,3 +1848,43 @@ const successResponse = {
               {
                 "name": "Program",
                 "source": "ofac-sdn-list",
+                "value": "ZIMBABWE"
+              },
+              {
+                "name": "Reason",
+                "source": "malta-financial-services-authority-mfsa-national-sanctions",
+                "value": "COUNCIL REGULATION (EC) No 314/2004 of 19 February 2004"
+              },
+              {
+                "name": "Regime",
+                "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
+                "value": "2019/283 (OJ L47)"
+              },
+              {
+                "name": "Regime",
+                "source": "special-economic-measures-act",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Regime",
+                "source": "hm-treasury-list",
+                "value": "Zimbabwe"
+              },
+              {
+                "name": "Regime",
+                "source": "tresor-direction-generale",
+                "value": "Zimbabwe (annexe III Gel actif)"
+              },
+              {
+                "name": "Region",
+                "source": "complyadvantage",
+                "value": "Rhodesia"
+              },
+              {
+                "name": "Regulation",
+                "source": "belgium-consolidated-list-of-the-national-and-european-sanctions",
+                "value": "ZWE"
+              },
+              {
+                "name": "Related URL",
+                "source": "complyadvantage",

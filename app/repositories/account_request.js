@@ -1,4 +1,3 @@
-const app = require('../core')
 
 const AccountRequest = app.db.Model.extend({
   tableName: 'account_requests',
@@ -13,3 +12,4 @@ const AccountRequest = app.db.Model.extend({
     return this.belongsTo('User', 'referred_by_id')
   },
 
+  statusUpdatedBy: function () {

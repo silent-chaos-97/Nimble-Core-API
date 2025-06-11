@@ -17,4 +17,5 @@ const ROWS = [
 
 const OLD_ROWS = [
   {
+    name: 'Credit Card',
     sku: 'credit-card',

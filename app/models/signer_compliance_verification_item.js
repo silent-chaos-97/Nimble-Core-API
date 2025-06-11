@@ -20,4 +20,5 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'matchTypes',
       'createdAt',
       'updatedAt',
-    ]
+  }
+

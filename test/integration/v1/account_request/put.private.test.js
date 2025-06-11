@@ -6,7 +6,6 @@ describe('PUT private /account-requests/:id', () => {
     status: 'APPROVED',
     branchId: '2552ab85-0000-0000-0000-000000000001',
     statusEmailSubject: 'example subject',
-// Temp comment
     statusEmailBody: '<html>example body</html>',
   }
 
@@ -64,7 +63,6 @@ describe('PUT private /account-requests/:id', () => {
           })
       })
 
-      it('should return 200 if changed to declined wen not signed', done => {
         const putRequestDeclined = {
           status: 'DECLINED',
           statusEmailSubject: 'example subject',
@@ -167,3 +165,6 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.statusEmailBody).to.be.an('string')
             expect(res.body.signers).to.be.an('array')
             expect(res.body.createdAt).to.be.an('string')
+            expect(res.body.statusUpdatedBy).to.be.an('object')
+            expect(res.body.statusUpdatedAt).to.be.an('string')
+            done()

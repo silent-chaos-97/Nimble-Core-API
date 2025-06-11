@@ -73,3 +73,4 @@ columns:
       'RIFSRP_F02_N.B': Discount Window Primary Credit
       'RIFSPFF_N.B': Federal Funds Effective Rate
       'RIFSPPNAAD30_N.B': Commercial Paper / Nonfinancial / 30-Day
+      'RIFSPPNAAD60_N.B': Commercial Paper / Nonfinancial / 60-Day

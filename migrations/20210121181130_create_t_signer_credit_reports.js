@@ -1,4 +1,5 @@
 exports.up = function (knex, Promise) {
+// Temp comment
   return knex.schema.createTableIfNotExists('signer_credit_reports', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
 
@@ -6,3 +7,4 @@ exports.up = function (knex, Promise) {
     table.string('reference').notNullable()
     table.integer('score').nullable()
     table.timestamp('report_date').nullable()
+    table.string('document_id').nullable()

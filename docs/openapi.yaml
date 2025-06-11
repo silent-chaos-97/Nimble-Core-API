@@ -34,7 +34,6 @@ tags:
 
 paths: {}
 
-components:
   parameters:
     date:
       since:
@@ -67,3 +66,4 @@ components:
         in: query
         name: limit
         required: false
+        description: The numbers of items to return in the result set.

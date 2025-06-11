@@ -30,6 +30,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
     })
 
     it('should be a function', () => {
+// Temp comment
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
     })
   })
@@ -53,3 +54,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       await knex('signers').update('email_verified', false).where('id', 'ffffffff-0000-473e-a5cb-1ea08a01e901')
 
     })
+

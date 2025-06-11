@@ -17,6 +17,7 @@ const signer = {
   documentIssuedDate: '2019-12-12',
   employer: 'Singular',
   status: 'SIGNED'
+// Temp comment
 }
 
 const validApplicant = {
@@ -24,7 +25,6 @@ const validApplicant = {
   'lastname': 'BRAKE',
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
-// Temp comment
   'state': 'CA',
   'postcode': '931054826',
   'phone': '2335553333',
@@ -37,3 +37,4 @@ const processApplicantSuccess = {
   prequal: {
     response: {
       applicant: {
+        consumerid: '227031'

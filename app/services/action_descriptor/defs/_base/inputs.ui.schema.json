@@ -4,6 +4,8 @@
   "estimated_upload_duration": {
     "ui:widget": "selectDuration"
   },
+  "response_duration": {
     "ui:widget": "selectDuration"
   },
   "to": {"ui:widget": "selectAssignees", "ui:readonly": true},
+  "cc": {"ui:widget": "selectAssignees"},

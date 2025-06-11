@@ -24,5 +24,4 @@ describe('AWS Facade class', () => {
     const target = new AWS.constructor({
       credentials: {
         accessKeyId: 'accessKeyId'
-      },
       region: 'region',

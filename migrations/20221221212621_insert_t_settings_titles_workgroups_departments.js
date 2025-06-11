@@ -9,6 +9,5 @@ const TITLE = {
 const WORKGROUPS = {
   key: 'workgroups',
   title: 'Workgroups',
-// Temp comment
   schema: { $ref: 'workgroups' }
 }

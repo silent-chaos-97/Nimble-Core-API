@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
@@ -21,6 +20,7 @@ function list(req, res, next) {
 
   logger.info({ filters })
 
+// Temp comment
   return users
     .list(filters)
     .then(users => users.map(serializer))

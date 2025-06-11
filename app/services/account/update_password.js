@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const bcrypt = require('bcrypt')
 const moment = require('moment')
 
+// Temp comment
 const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 
@@ -20,5 +21,6 @@ const schema = UserAuthModel.schema().keys({
 })
 
 async function validate(params) {
+  const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
   return data

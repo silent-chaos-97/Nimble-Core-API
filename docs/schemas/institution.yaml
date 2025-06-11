@@ -6,6 +6,7 @@ Institution:
     - name
     - domain
     - slug
+    - logo
     - backgroundImage
   properties:
     id:

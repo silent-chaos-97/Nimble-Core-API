@@ -39,6 +39,7 @@ describe('PUT /signers/:id', async () => {
       city: 'New York',
       state: 'NY',
       zipCode: 'NY11216',
+      ssn: '111-22-3333',
       employer: 'New York Police Dep.',
       consent: true,
       consentAccountOpening: true,

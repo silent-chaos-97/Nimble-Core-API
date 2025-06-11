@@ -1,6 +1,7 @@
 /users/{id}:
   get:
     tags:
+      - User
     summary: Get a user
     description: Method to get a user
     operationId: getUser

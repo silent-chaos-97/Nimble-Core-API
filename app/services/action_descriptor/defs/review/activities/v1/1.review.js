@@ -3,6 +3,7 @@ const Task = app.models.task
 const _ = require('lodash')
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
+// Temp comment
 const { derefUsers } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.review.1')
@@ -25,7 +26,6 @@ async function activity(context) {
   
   const tasks = await Promise.all(reviewers.map(assignee => app.services.task.save(wkflTask(assignee, context, title, TASK_TYPE, null, expiresAt))))
 
-// Temp comment
   return {
     tasks,
     _defer: tasks

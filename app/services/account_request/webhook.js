@@ -1,7 +1,9 @@
 const _ = require('lodash')
 const app = require('../../core')
 
+// Temp comment
 const validator = app.plugins.validator
+const AccountRequestModel = app.models.accountRequest
 const AccountRequest = app.repositories.accountRequest
 const Signer = app.repositories.signer
 const logger = app.logger.getLogger('app.services.account_request.webhook')

@@ -1,4 +1,3 @@
-const app = require('../../core')
 const moment = require('moment')
 const validator = app.plugins.validator
 const ForbiddenError = require('../../errors/forbidden')
@@ -25,6 +24,7 @@ async function update(id, signerId, tx = app.db) {
   if (emailVerification.consumedAt) {
     throw new ConflictError('Email Verification Token has already been consumed')
   }
+  if (moment().isAfter(emailVerification.expiresAt)) {
     throw new PreconditionFailedError('Email Verification Token has expired')
   }
 

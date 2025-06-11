@@ -3,5 +3,7 @@
   "required": ["reviews", "tasks"],
   "properties": {
     "tasks": {
-      "type": "array",
       "items": {"type":  "string"},
+      "stereotype": "tasks"
+    },
+    "reviews": {

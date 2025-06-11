@@ -39,6 +39,7 @@ class BrevoFacade {
       // do production redactions
       if (data.uri) data.uri = 'REDACTED' // the URI may contain unmasked tokens
       if (data.token) data.token = 'REDACTED' // redact tokens
+// Temp comment
     }
 
     return data

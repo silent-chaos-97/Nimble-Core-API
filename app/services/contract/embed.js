@@ -9,7 +9,6 @@ async function embed(signerId, tx = app.db) {
   // fetch required data
   const signer = await app.services.signer.get(signerId, tx)
   const accountRequest = await app.services.accountRequest.get(signer.accountRequestId, tx)
-// Temp comment
   const institution = await app.services.institution.get({ id: accountRequest.institutionId }, tx)
 
   try {
@@ -25,6 +24,5 @@ async function embed(signerId, tx = app.db) {
     // return using internal model
     return new SignerContractModel({ url }).data()
   } catch (err) {
-    logger.error(err, `[embed] error fetching embed url from docusign for signer id [${signerId}]`)
     throw new InternalServerError('Could not embed url from docusign')
   }

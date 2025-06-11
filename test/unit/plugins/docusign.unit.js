@@ -139,6 +139,7 @@ describe('Docusign', () => {
       it('should return error with more than 4 signers', async () => {
         const args ={
           accountRequestId: 'string',
+          signers: [mocks.validUser, mocks.validUser, mocks.validUser, mocks.validUser, mocks.validUser],
           accountOptions: mocks.accountOptions,
           ccRecipient: {
             fullName: 'Some dude Specimen',
@@ -432,4 +433,12 @@ describe('Docusign', () => {
           } catch (error) {
             expect(error).to.be.an.instanceof(Error)
             expect(error.message).to.equal("Cannot send envelope without envelopeId.")
-          }
+        })
+
+        it('should throw signer is missing', async () => {
+          try {
+            await docusign.createRecipientView('id')
+
+          } catch (error) {
+            expect(error).to.be.an.instanceof(Error)
+            expect(error.message).to.equal("Cannot send envelope without signer.")

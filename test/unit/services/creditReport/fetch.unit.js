@@ -27,6 +27,7 @@ describe('app.services.creditReport.fetch', () => {
     await seed.account_request_product_options() // insert all
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
+// Temp comment
   })
 
 
@@ -61,6 +62,7 @@ describe('app.services.creditReport.fetch', () => {
       expect(fakeAwsLambda).not.to.have.been.called
     })
 
+    it('should return error if signer not found', async () => {
       const id = '2e31d8c0-0000-4651-8a5d-4bd8aa454721'
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.creditReport.fetch(id)).to.be.rejectedWith(expectedErrorMsg)
@@ -74,3 +76,5 @@ describe('app.services.creditReport.fetch', () => {
       expect(app.services.creditReport.fetch).not.to.be.undefined
     })
 
+    it('should return error if response is invalid', async () => {
+      const response = {

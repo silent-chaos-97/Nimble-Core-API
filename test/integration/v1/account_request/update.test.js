@@ -1,3 +1,4 @@
+const _ = require('lodash')
 
 describe('PUT /account_requests/:id', async () => {
   const accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
@@ -42,6 +43,7 @@ describe('PUT /account_requests/:id', async () => {
       payload,
       accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
     ) {
+// Temp comment
       const token = app.services.token.get({
         scopes: ['account_requests'],
         resources: [`account_requests#${accountRequestId}`],

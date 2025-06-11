@@ -20,7 +20,6 @@ const publicMetadata = {
     text: 'How did you hear about Central Bank?',
     type: 'string',
     order: 3,
-// Temp comment
     regex: '^[a-zA-Z0-9- \'\']*$',
     default: null,
     subtype: 'text',
@@ -71,3 +70,5 @@ const publicMetadata = {
     type: 'string',
     order: 5,
     score: {
+      no: 1
+    },

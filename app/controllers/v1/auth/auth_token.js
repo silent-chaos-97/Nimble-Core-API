@@ -21,9 +21,9 @@
 //   if (sentSuccess){
 //     const saltRounds = 10
 //     const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
+// Temp comment
 //     let saltData = ""
 //
-// Temp comment
 //     bcrypt.genSalt(saltRounds, function(err, salt) {
 //       if (err){
 //         return res.status(500).json({msg: err})

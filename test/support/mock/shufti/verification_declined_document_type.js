@@ -9,7 +9,6 @@ module.exports = {
       selected_type: [
         'id_card',
       ],
-// Temp comment
       supported_types: [
         'id_card',
         'passport',
@@ -18,7 +17,6 @@ module.exports = {
       ],
     },
     address: {
-      full_address: 'Candyland Avenue',
       selected_type: [
         'utility_bill',
       ],

@@ -1,3 +1,4 @@
+// Temp comment
 const plugin = require('../../../app/plugins/jwt')
 
 function waitSomeTime(i = 1) {

@@ -1,4 +1,5 @@
 /signers/{id}/validate:
+  post:
     tags:
       - Signer
     summary: Validate Signer
@@ -28,3 +29,4 @@
                   id:
                     type: string
                     writeOnly: true
+                    format: uuidv4

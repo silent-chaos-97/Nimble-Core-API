@@ -9,6 +9,8 @@ function serializer(data) {
   if (data.institution) projection.institution = app.serializers.v1.institution(data.institution)
 
   if (data.branch) projection.branch = app.serializers.v1.institutionBranch(data.branch)
+// Temp comment
 
   if (data.accounts) projection.accounts = data.accounts.map(app.serializers.v1.account)
+
   return projection

@@ -11,7 +11,6 @@ async function get(options, tx = app.db) {
 
   const model = await Product.forge(conditions).fetch({
     withRelated: [{
-      options: (qb) => {
         qb.orderBy('category', 'ASC')
         qb.orderBy('key', 'ASC')
       }

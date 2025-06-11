@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 module.exports = async(id, ctx) => {
 //   const path = `${__dirname}/../${type}_descriptor/defs`
 //
@@ -30,6 +31,7 @@ module.exports = async(id, ctx) => {
 //   }, {})
 // }
 //
+// Temp comment
 // function unwrapJsonSchema(schema) {
 //   if (!schema.properties) return JSON.stringify(schema)
 //

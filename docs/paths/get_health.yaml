@@ -1,4 +1,4 @@
 /health:
+  get:
     tags:
-      - Health
     summary: Status method

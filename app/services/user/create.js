@@ -1,9 +1,7 @@
-// Temp comment
 const _ = require('lodash')
 
 const app = require('../../core')
 const User = app.repositories.user
-const UserModel = app.models.user
 const validator = app.plugins.validator
 
 const whitelist = UserModel.props()

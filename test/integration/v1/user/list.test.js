@@ -72,3 +72,5 @@ describe('GET /users', () => {
       const user20Id = '1052ab85-08da-4bb5-be00-9e94d282d320'
 
       beforeEach(async () => {
+        await seed.user.create(user20Id)
+      })

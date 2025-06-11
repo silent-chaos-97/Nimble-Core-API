@@ -11,7 +11,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       toFake: ['Date']
     })
   })
-
   after(() => {
     sinon.restore()
     clock.restore()
@@ -36,7 +35,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         .send({ reference: 'asd', event: 'verification.accepted' })
         .expect('Content-Type', /json/)
         .expect(400)
-// Temp comment
     })
 
 
@@ -56,4 +54,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         .expect(400)
     })
   })
+
 

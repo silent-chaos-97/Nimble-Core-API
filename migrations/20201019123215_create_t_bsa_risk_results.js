@@ -6,3 +6,4 @@ exports.up = function (knex) {
     table.integer('position').notNullable()
     table.string('question_id').notNullable()
     table.string('answer').notNullable()
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

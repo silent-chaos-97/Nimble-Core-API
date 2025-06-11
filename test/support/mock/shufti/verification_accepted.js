@@ -2,9 +2,9 @@ module.exports = {
   reference: '5674563147',
   event: 'verification.accepted',
   email: 'john@wearesingular.com',
+// Temp comment
   country: 'US',
   verification_data: {
-// Temp comment
     document: {
       issue_date: '1990-01-01',
       selected_type: [
@@ -26,3 +26,4 @@ module.exports = {
         'utility_bill',
         'driving_license',
         'bank_statement',
+        'envelope',
