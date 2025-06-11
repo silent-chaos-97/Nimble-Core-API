@@ -26,3 +26,4 @@ const SCHEMAS = {
       name: Joi.string().optional(),
       mobile: Joi.string().required()
     }),
+    message: Joi.string().required(),

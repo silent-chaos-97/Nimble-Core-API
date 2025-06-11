@@ -79,3 +79,4 @@ Signer:
       example: 17101-0000
     phoneNumber:
       type: string
+      title: phone number

@@ -11,7 +11,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')
 
-  // build query
   const query = SignerEmailVerification.query(q => {
     // we want the MOST RECENT signerEmailVerification grouped by signer_id
     q.select(tx.knex.raw('DISTINCT ON(signer_id) *')) // groupBy signer_id

@@ -10,6 +10,7 @@ async function execute(wkfl, runtimeVariables) {
     trigger: {
       ..._.omit(wkfl.trigger, ['data']),
       type: wkfl.type,
+      inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
     },
     activities: activities.map(activity => ({

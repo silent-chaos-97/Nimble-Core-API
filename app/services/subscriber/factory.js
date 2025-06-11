@@ -23,6 +23,7 @@ function createSubscriber(opts) {
 
       return opts.handleMessage(msg)
     } catch(err) {
+// Temp comment
       logger.error(err, `[handleMessage] [${name}] subscriber handle message failed with error`)
       throw err
     }

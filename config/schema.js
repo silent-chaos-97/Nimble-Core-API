@@ -251,3 +251,6 @@ const schema = {
       doc: 'the AWS SNS->SMS Origination Numbers',
       format: String,
       default: '+18335861528,+18335941169',
+      env: 'AWS_SMS_ORIGINATION_NUMBER'
+    },
+    lambda_endpoint: {

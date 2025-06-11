@@ -11,6 +11,7 @@
 //
 // const Roles = UserModel.roles()
 
+// async function verifyCode(res,id){
 //   const sentSuccess = await mfaVerify.sendVerificationCode(id)
 //
 //   if (!sentSuccess){
@@ -22,6 +23,7 @@
 //     const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
 //     let saltData = ""
 //
+// Temp comment
 //     bcrypt.genSalt(saltRounds, function(err, salt) {
 //       if (err){
 //         return res.status(500).json({msg: err})

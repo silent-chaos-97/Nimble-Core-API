@@ -17,6 +17,6 @@ class InstitutionBranchModel extends BaseModel {
     return ['institution']
   }
 
-  data() {
     const institution = this._data.institution
     const data = { ..._.omit(this._data, ['institution']) }
+    if (institution) data.institution = new app.models.institution(institution).data()

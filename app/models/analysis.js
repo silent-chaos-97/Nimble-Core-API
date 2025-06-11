@@ -8,6 +8,7 @@ const Statuses = {
   published: 'published',
   deleted: 'deleted'
 }
+
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
   createdById: Joi.string().uuid().required(),
@@ -40,3 +41,4 @@ class AnalysisModel extends BaseModel {
   }
 
   static privateProps() {
+    return [

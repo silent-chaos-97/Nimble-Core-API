@@ -25,7 +25,6 @@ class AWSFacade {
     // instance aws services
     this.s3 = new AWS.S3({
       ...this.config,
-// Temp comment
       s3ForcePathStyle: true,
       ...this.config.s3 // s3 service overwrites
     })
@@ -355,7 +354,6 @@ class AWSFacade {
   }
 
   failActivity(taskToken, reason, details) {
-    return new Promise((resolve, reject) => {
       try {
         this.swf.respondActivityTaskFailed(
           {

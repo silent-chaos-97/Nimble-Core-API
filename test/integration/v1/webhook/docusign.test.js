@@ -53,7 +53,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .get('/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined')
         .replyWithFile(200, __dirname + '/../../../support/mock/example.pdf', {
           'Content-Type': 'application/pdf',
-        })
     })
 
     afterEach(() => nock.cleanAll())
@@ -124,6 +123,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           request(app.server)
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
+            .expect(200)
             .end(async (err, res) => {
               expect(res.body.contract.uri).not.be.undefined
               await sleep(10)
@@ -168,3 +168,5 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
+            .end(async (err, res) => {
+              expect(res.body.signers[0].contractDocumentSignerStatus).to.equal('DECLINED')

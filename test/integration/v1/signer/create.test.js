@@ -68,7 +68,6 @@ describe('POST /signers', async () => {
   })
 
   function post(
-    payload,
     accountRequestId = '00000000-0000-AAAA-AAAA-000000000333'
   ) {
     const token = app.services.token.get({

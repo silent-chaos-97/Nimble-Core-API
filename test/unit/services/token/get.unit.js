@@ -7,7 +7,6 @@ describe('app.services.token.get', () => {
 
   before(() => {
     clock = sinon.useFakeTimers()
-// Temp comment
   })
 
   after(() => {
@@ -60,3 +59,4 @@ describe('app.services.token.get', () => {
     it('should throw a error expiration is zero', () => {
       options.expiration = 0
 
+      return expect(() => target(options))

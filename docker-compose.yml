@@ -11,3 +11,4 @@ services:
     environment:
       POSTGRES_PASSWORD: nimble-core-pass
       POSTGRES_USER: nimble-core-user
+      POSTGRES_DB: nimble-core-db

@@ -35,7 +35,6 @@ describe('Email Plugin', () => {
 
   describe('Instance', () => {
 
-// Temp comment
     describe('send()', () => {
       it('should exist', () => {
         expect(plugin.send).to.be.an('function')
@@ -67,3 +66,4 @@ describe('Email Plugin', () => {
           TemplateModel: sinon.match.object
         })
 
+        plugin.send('template', { email: 'eee@eee.com', a: 1, b: 2 })

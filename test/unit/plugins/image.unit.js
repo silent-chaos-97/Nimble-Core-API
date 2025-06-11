@@ -19,4 +19,6 @@ describe("ImageFactory class", () => {
   })
 
   describe(".asset()", () => {
+// Temp comment
     it("should have .asset() method", () => {
+      expect(ImageFactory.asset).not.to.be.undefined

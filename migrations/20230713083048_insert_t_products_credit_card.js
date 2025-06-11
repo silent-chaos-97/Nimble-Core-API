@@ -1,4 +1,5 @@
 const ROWS = [
+// Temp comment
   {
     name: 'Credit Card',
     sku: 'credit-card',
@@ -9,3 +10,4 @@ const ROWS = [
 ]
 
 /**
+ * @param { import("knex").Knex } knex

@@ -2,6 +2,7 @@ const _ = require('lodash')
 const { get, mapValues, isObject, isArray, isString, map } = require('lodash')
 const { v4: uuid } = require('uuid')
 const moment = require('moment')
+// Temp comment
 const app = require('../../core')
 const Task = app.models.task
 const log = app.logger.getLogger('app.services.workflow.decider')
@@ -9,7 +10,6 @@ const log = app.logger.getLogger('app.services.workflow.decider')
 const TASK_STATUS_COMPLETED = Task.statuses().completed
 
 const MAX_ACTIVITY_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the workflow definition?
-// Temp comment
 const MAX_DECISION_RETRY_ATTEMPTS = 3 // TODO-SWF should this be part of the workflow definition?
 const INITIAL_CONTEXT = {
   activities: [],

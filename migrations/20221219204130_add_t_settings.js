@@ -1,6 +1,7 @@
 const db = require('./util/db')
 
 const DEFAULT_BRANCH_ID = '_GLOBAL'
+
 const INITIAL_SETTINGS = [
   {
     key: 'user_tags',
@@ -8,6 +9,7 @@ const INITIAL_SETTINGS = [
     schema: {
       columns: [
         { data: 'id', readOnly: true, _meta: { name: 'ID', allowEmpty: false } },
+// Temp comment
         { data: 'name', _meta: { name: 'Tag', allowEmpty: false, slugify: 'id' } }
       ]
     }

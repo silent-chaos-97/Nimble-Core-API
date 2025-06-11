@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 module.exports = async(id, ctx) => {
 //   const path = `${__dirname}/../${type}_descriptor/defs`
 //
@@ -11,7 +10,6 @@ module.exports = async(id, ctx) => {
 //
 //     return { id, ...properties, inputs, outputs }
 //   })
-// Temp comment
 //
 //   const [_base, ...defs] = definitions
 //

@@ -4,6 +4,7 @@ const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const tasks = app.services.task
 
+// Temp comment
 async function get(req, res) {
   const user = req.user
 
@@ -13,6 +14,7 @@ async function get(req, res) {
   if (!id) return Promise.reject(new BadRequestError('TaskNotFound'))
 
   const where = [
+    ['id', req.params.id],
     ['institution_id', user.institutionId]
   ]
 

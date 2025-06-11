@@ -15,6 +15,7 @@ async function activity(context) {
     if (!_.isArray(recipients)) recipients = [recipients]
 
     recipients = recipients.flat(Infinity)
+      .filter(recipient => !_.isNil(recipient))
       .filter(recipient => {
         if (recipient._err) {
           notSent.push({ user: recipient.ref, reason: recipient._err.message })
@@ -45,7 +46,6 @@ async function activity(context) {
         notSent.push({ user: recipient.id || recipient.user || '?', reason: err.message })
       }
     }))
-
     return { sent, notSent, passed: true }
   } catch(error) {
     logger.error(error)

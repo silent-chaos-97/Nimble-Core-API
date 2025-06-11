@@ -34,7 +34,6 @@ class AccountRequest extends BaseModel {
     ]
   }
 
-  static relations() {
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']
   }
 
@@ -94,3 +93,4 @@ class AccountRequest extends BaseModel {
       APPROVED: [],
       DECLINED: []
     })
+  }

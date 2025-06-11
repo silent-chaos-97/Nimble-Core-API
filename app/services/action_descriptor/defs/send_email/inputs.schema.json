@@ -5,4 +5,5 @@
     "message",
     "type"
   ],
+  "properties": {
     "recipients": {

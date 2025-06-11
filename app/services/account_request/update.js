@@ -23,7 +23,6 @@ async function validate(params) {
 }
 
 function getSignerFullName(signer) {
-  if (signer == null) {
     return ''
   }
 

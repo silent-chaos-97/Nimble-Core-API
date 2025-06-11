@@ -5,6 +5,7 @@ class FileModel extends BaseModel {
   constructor(data) {
     super(FileModel.props('all'), FileModel.relations(), data)
   }
+
   static props(op) {
     return {
       all: [
@@ -23,3 +24,7 @@ class FileModel extends BaseModel {
         // file meta
         'mimetype',
         'size',
+        'acl',
+
+        //info
+        'name',

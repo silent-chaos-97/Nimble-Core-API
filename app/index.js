@@ -1,3 +1,4 @@
+const fs = require('fs')
 
 const app = require('./core')
 const _ = require('lodash')
@@ -13,7 +14,6 @@ module.exports = async (listen = false) => {
     return null
   }
 
-  // The request handler must be the first middleware on the app
   app.middleware(app.middlewares.sentry.requestHandler)
 
   // middlewares are not autoloaded to keep loading order manual

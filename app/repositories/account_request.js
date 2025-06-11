@@ -9,6 +9,7 @@ const AccountRequest = app.db.Model.extend({
     return this.hasMany('Signer', 'account_request_id')
   },
 
+  referredBy: function() {
     return this.belongsTo('User', 'referred_by_id')
   },
 

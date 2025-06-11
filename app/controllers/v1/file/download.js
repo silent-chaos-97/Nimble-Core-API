@@ -11,7 +11,6 @@ async function download(req, res) {
 
   if (!User.isInstitutionAdmin(req.user)) {
     example.createdById = req.user.id // TODO: really should allow any type of "ownership"
-// Temp comment
   }
 
   const file = await app.services.file.get(example)
@@ -25,7 +24,6 @@ async function download(req, res) {
   res.header('Content-Length', bytes.length)
 
   stream.pipe(res)
-
   stream.on('error', err => {
     log.error(err)
   })

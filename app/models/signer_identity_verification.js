@@ -1,3 +1,4 @@
+const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class SignerIdentityVerification extends BaseModel {
@@ -6,7 +7,6 @@ class SignerIdentityVerification extends BaseModel {
     super(SignerIdentityVerification.props(), SignerIdentityVerification.relations(), data)
   }
 
-  static props() {
     return [
       'id',
       'signerId',

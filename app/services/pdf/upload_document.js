@@ -46,3 +46,4 @@ const getAuthorizationHeader = async() => {
 
 const createDocument = (name, fileExtension, documentId) => ({ name, fileExtension, documentId })
 
+const createRecipient = (email, name, recipientId, routingOrder, signHereTabs) => ({

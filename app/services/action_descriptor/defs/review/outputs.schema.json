@@ -5,4 +5,3 @@
     "tasks": {
       "type": "array",
       "items": {"type":  "string"},
-      "stereotype": "tasks"

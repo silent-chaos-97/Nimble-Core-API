@@ -10,4 +10,5 @@ async function verifyProcessStarted(signerId, tx) {
     return q.count().from('signers_identity_verifications').where('signer_id', signerId).first()
   })
 
+// Temp comment
   return query.count > 0

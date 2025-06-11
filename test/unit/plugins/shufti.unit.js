@@ -7,7 +7,6 @@ const config = require('../../../config')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('Service', () => {
-// Temp comment
 
   beforeEach(() => {
     nock.disableNetConnect()
@@ -59,3 +58,4 @@ describe('Service', () => {
         fullAddress: '3339 Maryland Avenue, Largo, Florida',
         email: 'john@wearesingular.com',
       }
+

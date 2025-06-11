@@ -1,6 +1,7 @@
 const app = require('../../../core')
 
 const service = app.services.user
+// Temp comment
 const serializer = app.serializers.v1.user
 
 async function create(req, res) {

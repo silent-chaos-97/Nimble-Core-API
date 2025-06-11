@@ -49,5 +49,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "dependsOn": {"milesAway": "no"},
         "required": true,
         "default": null,
+        "maxLength": 255,
         "regex": "^[a-zA-Z0-9- '']*$"
       },

@@ -9,14 +9,6 @@ const testSigners = [
     "verificationStatusSanctions": "NOMATCH",
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
-  },
-  {
-    "verificationStatusFace": "VALID",
-    "verificationStatusDocument": "INVALID",
-    "verificationStatusAddress": "PENDING",
-    "verificationStatusSanctions": "MATCH",
-    "verificationStatusMedia": "NOMATCH",
-    "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
   },
   {
@@ -27,8 +19,17 @@ const testSigners = [
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
+  },
+  {
+    "verificationStatusFace": "VALID",
+    "verificationStatusDocument": "INVALID",
+    "verificationStatusAddress": "PENDING",
+    "verificationStatusSanctions": "MATCH",
+    "verificationStatusMedia": "NOMATCH",
+    "verificationStatusPoliticalExposure": "NOMATCH",
   }
 ]
 
 describe('app.models.accountRequest.getVerificationStatus', () => {
   const target = accountRequestModel.getVerificationStatus
+

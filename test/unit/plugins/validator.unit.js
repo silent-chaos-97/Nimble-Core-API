@@ -3,9 +3,12 @@ const validator = require('../../../app/plugins/validator')
 const BadRequestError = require('../../../app/errors/bad_request')
 
 const schema = Joi.object().keys({
+// Temp comment
   id: Joi.string().uuid(),
   name: Joi.string(),
   category: Joi.string(),
+})
 
 describe('plugins/validator', () => {
   it('throws error with invalid data', () => {
+    const data = { id: 1 }

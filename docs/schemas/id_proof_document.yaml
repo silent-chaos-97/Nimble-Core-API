@@ -4,6 +4,7 @@ IdProofDocument:
     - type
     - number
     - expirationDate
+    - issuedDate
     - issuer
     - frontDocumentId
     - backDocumentId
@@ -20,3 +21,4 @@ IdProofDocument:
       description: Id Proof Document Number
       maxLength: 100
       example: 123535000ZW2
+    expirationDate:

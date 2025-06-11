@@ -7,7 +7,6 @@ const properties = [
   'isDir',
   'size',
   'mimetype',
-  'parentId',
   'createdById',
   'fileId',
   'createdAt',

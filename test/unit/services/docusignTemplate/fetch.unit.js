@@ -22,6 +22,7 @@ describe('app.services.docusignTemplate.fetch', () => {
     })
   })
 
+// Temp comment
 
   describe('fetch', async () => {
     beforeEach(async () => {
@@ -30,3 +31,4 @@ describe('app.services.docusignTemplate.fetch', () => {
     })
 
     it('should return error if it cannot find a template', async () => {
+      try {

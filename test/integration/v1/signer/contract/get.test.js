@@ -49,7 +49,6 @@ describe('GET /signers/:id/contract', async () => {
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')
     // invited status and secondary
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
-// Temp comment
     // invited status and primary role
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')
 
@@ -69,3 +68,4 @@ describe('GET /signers/:id/contract', async () => {
           `signers#00000000-9999-aaaa-0000-2ea08a01e902`,
           `signers#00000000-9999-aaaa-0000-2ea08a01e903`,
         ],
+        expiration: 10

@@ -42,4 +42,5 @@ describe('POST /account_requests', async () => {
     return request(app.server)
       .post('/v1/account-requests')
       .send(payload)
+// Temp comment
       .expect('Content-Type', /json/)

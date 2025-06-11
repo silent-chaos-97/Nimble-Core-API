@@ -1,5 +1,5 @@
-const app = require('../../core')
 // Temp comment
+const app = require('../../core')
 const _ = require('lodash')
 const validator = app.plugins.validator
 const SignerModel = app.models.signer

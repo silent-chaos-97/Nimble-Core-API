@@ -5,7 +5,6 @@ describe('POST /institutions/:id/products', () => {
   let product
 
   beforeEach(async () => {
-    await seed.institution.create(institutionId)
     product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])
     product.contentRaw = 'An **example** markdown'
   })
@@ -33,6 +32,7 @@ describe('POST /institutions/:id/products', () => {
         .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
         .send({})
+        .expect(400)
         .expect((res) => {
           expect(res.body.message).not.to.be.undefined
           expect(res.body.message).not.to.contain('"id" is required')
@@ -60,3 +60,4 @@ describe('POST /institutions/:id/products', () => {
       it(`should return 400 with non allowed category`, async () => {
         await request(app.server)
           .post(`/v1/institutions/${institutionId}/products`)
+          .set('X-API-KEY', 'superpowers')

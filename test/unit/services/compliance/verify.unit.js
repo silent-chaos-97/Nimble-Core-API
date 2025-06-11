@@ -54,3 +54,4 @@ describe('app.services.compliance.verify', () => {
       expect(fakeComplianceExport).not.to.have.been.called
     })
 
+    it('should not call compliance.search if the user is INCOMPLETE', async () => {

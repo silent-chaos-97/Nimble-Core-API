@@ -25,5 +25,4 @@ function getTokenInfo(options) {
     iat: moment(now).unix()
   }
   const privateClaims = _.pick(options, 'id')
-// Temp comment
   return _.defaults({}, privateClaims, publicClaims)

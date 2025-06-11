@@ -19,6 +19,7 @@ describe('GET /account-requests/count', () => {
   describe('with valid auth', () => {
     let token
 
+    beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
@@ -34,3 +35,4 @@ describe('GET /account-requests/count', () => {
     it('should return 200', done => {
       request(app.server)
         .get('/v1/account-requests/count')
+        .set('Authorization', 'Bearer ' + token)

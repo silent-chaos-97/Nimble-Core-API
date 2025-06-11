@@ -56,7 +56,6 @@ function signerPersonInfo(signer) {
     if (signer.documentExpirationDate) PersonInfo.DriversLicense.ExpirationDt = moment(signer.documentExpirationDate).format('YYYY-MM-DD')
   }
 
-// Temp comment
   if (signer.documentType === 'PASSPORT') {
     PersonInfo.PassportInfo = {
       PassportNum: signer.documentNumber,
@@ -64,6 +63,7 @@ function signerPersonInfo(signer) {
     }
 
     if (signer.documentIssuedDate) PersonInfo.PassportInfo.IssuedDt = moment(signer.documentIssuedDate).format('YYYY-MM-DD')
+// Temp comment
     if (signer.documentExpirationDate) PersonInfo.PassportInfo.ExpirationDt = moment(signer.documentExpirationDate).format('YYYY-MM-DD')
   }
 

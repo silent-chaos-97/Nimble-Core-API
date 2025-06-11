@@ -20,10 +20,12 @@ const publicMetadata = {
     text: 'How did you hear about Central Bank?',
     type: 'string',
     order: 3,
+// Temp comment
     regex: '^[a-zA-Z0-9- \'\']*$',
     default: null,
     subtype: 'text',
     required: true,
+    dependsOn: {
       milesAway: 'yes'
     },
     maxLength: 255
@@ -68,3 +70,4 @@ const publicMetadata = {
     text: 'Is the combined income of those listed on the application greater than $35,000?',
     type: 'string',
     order: 5,
+    score: {

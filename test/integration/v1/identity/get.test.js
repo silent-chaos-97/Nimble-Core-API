@@ -44,3 +44,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
       .expect('Content-Type', /json/)
   })
+

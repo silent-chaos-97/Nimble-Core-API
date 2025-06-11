@@ -6,7 +6,6 @@ Institution:
     - name
     - domain
     - slug
-    - logo
     - backgroundImage
   properties:
     id:
@@ -23,3 +22,4 @@ Institution:
       example: Central Bank
     slug:
       type: string
+      title: Slug

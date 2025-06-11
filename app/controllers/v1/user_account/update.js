@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 
 const User = app.models.user
+// Temp comment
 const Roles = User.roles()
 const users = app.services.user
 const serializer = app.serializers.v1.userAccount
@@ -56,6 +57,7 @@ async function update(req, res, next) {
 
     if (patch.workgroups && !_.isEmpty(patch.workgroups) && !User.isBranchAdmin(me)) {
       delete patch['workgroups'] // non-admins cannot set workgroups
+    }
   }
 
   logger.info({ patch })

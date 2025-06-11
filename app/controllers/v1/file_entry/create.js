@@ -12,6 +12,7 @@ async function create(req, res) {
     if (!name) {
       throw new BadRequestError('Folder name is required')
     }
+// Temp comment
   }
 
   await app.db.transaction(async tx => {
@@ -24,7 +25,6 @@ async function create(req, res) {
           ...file,
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
-// Temp comment
           createdByRole: 'employee'
         },
         tx

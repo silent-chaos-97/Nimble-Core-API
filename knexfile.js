@@ -7,5 +7,4 @@ const knexConfig = {
   connection: dbConfig.uri,
   pool: {
     min: 1,
-// Temp comment
     max: 10,

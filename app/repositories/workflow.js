@@ -5,3 +5,4 @@ const Workflow = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+  user: function() {

@@ -1,7 +1,6 @@
 const _ = require('lodash')
 // const config = require('../../config')
 
-// Temp comment
 // const accountSid = config.get('twilio.accountSid')
 // const serviceSid = config.get('twilio.serviceSid')
 // const authToken = config.get('twilio.authToken')
@@ -17,4 +16,3 @@ function normalize(phone) {
   if (!phone) return phone
   if (phone.startsWith('+1')) return phone
   if (phone.startsWith('1')) return '+' + phone
-  return '+1' + phone

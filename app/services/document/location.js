@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.document.location')
 

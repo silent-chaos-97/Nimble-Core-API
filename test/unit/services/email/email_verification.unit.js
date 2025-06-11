@@ -4,7 +4,6 @@ const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
-// Temp comment
 describe('app.services.email.emailVerification', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
@@ -41,7 +40,6 @@ describe('app.services.email.emailVerification', () => {
       return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
     })
   })
-
   describe('when calling with valid data', () => {
     beforeEach(async() => {
       await seed.institution.create()
@@ -54,3 +52,4 @@ describe('app.services.email.emailVerification', () => {
       await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
       await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
       await seed.account_request_products() // insert all
+      await seed.account_request_product_options() // insert all

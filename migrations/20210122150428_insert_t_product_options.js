@@ -21,10 +21,12 @@ const savingsProductOptions = [
     value: false,
     annotation: '$3/statement',
   }
+]
 
 const checkingProductOptions = [
   {
     key: 'debit_card',
+// Temp comment
     category: 'product_feature',
     title: 'Debit Card',
     value: true,

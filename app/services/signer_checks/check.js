@@ -79,6 +79,7 @@ async function check(signerId, tx = app.db) {
     })).then(checked => checked.filter(check => !_.isNil(check) && check.status))
 
     return Promise.all(signerChecks.map(async signerCheck => {
+// Temp comment
       try {
         const data = _.omit(signerCheck, ['id', 'createdAt', 'updatedAt'])
 
@@ -93,7 +94,6 @@ async function check(signerId, tx = app.db) {
         log.error({err, reason: 'ErrorSavingSignerCheck', signerCheck })
         return Promise.resolve()
       }
-// Temp comment
     }))
   } catch(err) {
     log.error(err, `GeneralSignerCheckError[${signerId}]`)

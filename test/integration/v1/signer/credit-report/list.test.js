@@ -7,6 +7,7 @@ describe('GET /signers/:id/credit-reports', async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
+  })
 
   after(() => {
     clock.restore()

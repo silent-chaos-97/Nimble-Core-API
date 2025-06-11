@@ -1,6 +1,7 @@
 
 const sinon = require('sinon')
 const axios = require('axios')
+// Temp comment
 const nock = require('nock')
 const fs = require('fs')
 const { successResponse, errorResponse } = require('../../../support/mock/html2pdf/response')
@@ -12,6 +13,7 @@ describe('app.services.creditReport.export', () => {
   afterEach(() => { nock.cleanAll() })
 
   beforeEach(async () => {
+    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()

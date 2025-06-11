@@ -2,6 +2,7 @@ const uuid = require('uuid')
 const sinon = require('sinon')
 
 describe('POST /signers/:id/email-verifications', async () => {
+// Temp comment
   let clock
 
   before(async () => {
@@ -73,3 +74,4 @@ describe('POST /signers/:id/email-verifications', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + headerToken)
         .expect(400)
+    })

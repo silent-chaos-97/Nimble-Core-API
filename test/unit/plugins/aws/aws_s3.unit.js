@@ -55,3 +55,4 @@ describe("AWS Facade for s3", () => {
       expect(result).to.be.an('Promise')
     })
 
+    it('should fail if not uploading an image', () => {

@@ -39,3 +39,4 @@ app.load().then(async () => {
     },
 
     inviteeSignupReminderEmail: {
+      inviteeName: 'inviteeName',

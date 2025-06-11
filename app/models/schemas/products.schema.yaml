@@ -39,6 +39,7 @@ columns:
       ref: advanced_rates
       value: id
       title: asset_type
+
   - data: scope
     title: Account Type
     type: key-value-setting
@@ -71,3 +72,4 @@ columns:
       'RIFSPBLP_N.B': Bank Prime Rate / Average Majority / Short-Term Loan
       'RIFSRP_F02_N.B': Discount Window Primary Credit
       'RIFSPFF_N.B': Federal Funds Effective Rate
+      'RIFSPPNAAD30_N.B': Commercial Paper / Nonfinancial / 30-Day

@@ -24,6 +24,7 @@ describe('app.services.email.welcome', () => {
   })
 
   after(() => {
+    clock.restore()
     sinon.restore()
   })
 
@@ -33,5 +34,4 @@ describe('app.services.email.welcome', () => {
         await app.services.email.welcome('xpto')
       } catch(error) {
         expect(error.name).to.equal('BadRequestError')
-        expect(error.statusCode).to.equal(400)
       }

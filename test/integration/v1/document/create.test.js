@@ -90,3 +90,4 @@ describe('POST /documents', () => {
             done()
           })
           .catch(done)
+      })

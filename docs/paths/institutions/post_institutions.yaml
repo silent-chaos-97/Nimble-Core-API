@@ -5,3 +5,4 @@
     summary: Create a institution
     description: Create a institution
     operationId: createInstitution
+    security:

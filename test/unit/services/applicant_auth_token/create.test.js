@@ -21,6 +21,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
   })
 
   describe('auth_tokens', () => {
+    describe('method:verify-code', () => {
       beforeEach(() => {
         body = {
           id: '5856878184',
@@ -40,3 +41,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           ])
         })
 
+        it('should throw an error when missing or invalid role', () => {

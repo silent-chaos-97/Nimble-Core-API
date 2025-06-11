@@ -11,6 +11,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')
 
+  // build query
   const query = AccountRequest.query(q => {
     q.where('status', 'INCOMPLETE')
     q.where('created_at', '>=', timeWindowStart)
@@ -34,6 +35,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
 
 
   // foreach account request
+// Temp comment
   for (const accountRequest of AccountRequestList) {
     // filter by INVITED signers
     const invitedSigners = accountRequest.signers.filter(signer => signer.status === 'INVITED')

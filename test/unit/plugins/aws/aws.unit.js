@@ -16,6 +16,7 @@ describe('AWS Facade class', () => {
   })
 
   it('should load specific service configs', () => {
+    expect(AWS.config.s3).not.to.be.undefined
     expect(AWS.config.s3.endpoint).to.equal(app.config.get('aws').endpoint)
   })
 
@@ -24,3 +25,4 @@ describe('AWS Facade class', () => {
       credentials: {
         accessKeyId: 'accessKeyId'
       },
+      region: 'region',

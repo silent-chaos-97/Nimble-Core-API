@@ -13,5 +13,6 @@ async function searchDelete(req, res) {
   try {
     const example = await service.searchDelete(data)
     res.status(200).json(example)
+  } catch(err) {
     res.status(err.status || 500).json({ err: err.message })
   }

@@ -1,11 +1,11 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 const logger = app.logger.getLogger('app.services.account_requests.helpers.referrers')
 
 module.exports = {
 
   /**
-// Temp comment
    * Normalizes and checks `model.referredById`.
    *
    * @param model (generally an account_request) which carries `referredById` and potentially `institutionId`
@@ -14,3 +14,4 @@ module.exports = {
    */
   normalizeReferredById: async(model, institutionId = null, tx = app.db) => {
     if (!_.has(model, 'referredById')) return model
+

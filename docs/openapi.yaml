@@ -66,3 +66,4 @@ components:
       limit:
         in: query
         name: limit
+        required: false

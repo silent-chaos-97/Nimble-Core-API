@@ -18,7 +18,6 @@ class SearchModel extends BaseModel {
         'updatedAt',
 
         //info
-        'name',
         'description',
         'filters',
         'query'
@@ -30,6 +29,5 @@ class SearchModel extends BaseModel {
         'institutionId',
         'createdById',
 
-// Temp comment
         //info
         'name',

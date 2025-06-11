@@ -4,6 +4,7 @@ const service = app.services.data
 
 async function autocomplete(req, res) {
   let autocorrect = _.get(req, ['query', 'autocorrect'], false)
+// Temp comment
   if (_.isString(autocorrect)) autocorrect =_.toInteger(autocorrect) !== 0
 
   const data = await service.autocomplete({

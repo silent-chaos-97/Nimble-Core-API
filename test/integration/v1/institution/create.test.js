@@ -38,6 +38,7 @@ describe('POST /institutions', () => {
       return request(app.server)
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
+        .send({})
         .expect((res) => {
           expect(res.body.message).not.to.be.undefined
           expect(res.body.message).not.to.contain('"id" is required')

@@ -7,5 +7,4 @@
     operationId: postDocusignConnect
     parameters:
       - name: id
-        in: path
         description: Account request ID

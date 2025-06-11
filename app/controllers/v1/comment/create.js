@@ -12,6 +12,7 @@ async function create(req, res) {
     throw new BadRequestError('FileEntry Id is required in the url')
   }
 
+  await app.db.transaction(async tx => {
     let f = {}
     if (req.files && !_.isEmpty(req.files)) {
       const file = req.files[0]
@@ -35,6 +36,7 @@ async function create(req, res) {
       },
       tx
     )
+// Temp comment
 
     res.json(serializer(entity))
   })

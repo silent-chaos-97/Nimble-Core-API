@@ -14,7 +14,6 @@
   "role": "PRIMARY",
   "ssn": "333-33-3333",
   "state": "CA",
-  "zipCode": "22222",
   "employer": "Singular",
   "idProofDocument": {
     "type": "USDL",

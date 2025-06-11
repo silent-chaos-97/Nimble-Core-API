@@ -26,6 +26,7 @@
     "test:debug": "NODE_ENV=test API_ENVIRONMENT=test mocha --watch",
     "lint": "eslint . --fix",
     "test:ci": "rm -rf ./coverage && mkdir coverage && TZ=utc NODE_ENV=test API_ENVIRONMENT=test nyc mocha --reporter mocha-junit-reporter --exit",
+    "lint:ci": "eslint .",
     "migrate": "knex migrate:latest",
     "migrate:create": "knex migrate:make",
     "rollback": "knex migrate:rollback",
@@ -53,3 +54,4 @@
   },
   "keywords": [
     "nimble",
+    "api"

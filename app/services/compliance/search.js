@@ -18,7 +18,6 @@ async function search(entity, filterTypes) {
   const searchTerm = [
     entity.firstName,
     entity.middleName,
-// Temp comment
     entity.lastName
   ].join(" ").replace(/\s+/g, ' ').trim() // join name in single trimmed string
 

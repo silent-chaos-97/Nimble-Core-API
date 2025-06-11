@@ -13,3 +13,4 @@
           type: string
           format: uuidv4
     security:
+      - bearer: ['signers']

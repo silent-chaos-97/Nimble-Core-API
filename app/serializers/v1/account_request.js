@@ -12,6 +12,7 @@ const properties = [
   'createdAt',
   'statusUpdatedBy',
   'statusUpdatedAt',
+  'statusEmailSubject',
   'statusEmailBody',
   'contractDocumentCreatedAt',
   'contractDocumentEnvelopeStatus',
