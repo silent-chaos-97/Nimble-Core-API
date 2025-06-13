@@ -25,6 +25,7 @@ const validApplicant = {
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
   'state': 'CA',
+  'postcode': '931054826',
   'phone': '2335553333',
   'email': 'psousa+test@wearesingular.com',
   "ssn": "666707610",
@@ -36,3 +37,5 @@ const processApplicantSuccess = {
     response: {
       applicant: {
         consumerid: '227031'
+      },
+      code: 1004,

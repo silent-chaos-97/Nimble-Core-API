@@ -4,6 +4,7 @@ const { expect } = require('chai')
 
 describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
+// Temp comment
 
   before(() => {
     nock.disableNetConnect()
@@ -176,3 +177,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               await sleep(30)
               downloadScope.done()
               done()
+            })
+        })
+    })
+
+    it('should update signer status', done => {
+      request(app.server)

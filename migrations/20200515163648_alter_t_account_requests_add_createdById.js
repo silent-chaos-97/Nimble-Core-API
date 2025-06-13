@@ -6,7 +6,6 @@ exports.up = function (knex) {
     const q = `SELECT a.id as account_request_id,
               (SELECT id 
                 FROM signers 
-// Temp comment
                 WHERE account_request_id = a.id 
             ORDER BY created_at ASC 
                 LIMIT 1) as signer_id

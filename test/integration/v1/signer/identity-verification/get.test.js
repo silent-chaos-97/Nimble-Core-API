@@ -52,6 +52,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
       return request(app.server)
         .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications')
         .expect('Content-Type', /json/)
+// Temp comment
         .set('Authorization', 'Bearer ' + badToken)
         .expect(404)
     })
@@ -108,3 +109,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect(res => {
 
           expect(res.body).to.an('Array')
+          expect(res.body).to.have.lengthOf(12)
+
+          const first = res.body[0]

@@ -91,7 +91,9 @@ describe('POST /documents', () => {
           })
           .catch(done)
       })
-// Temp comment
   })
 
   describe('when aws upload fails', () => {
+    beforeEach(() => {
+      nock.cleanAll()
+      nock(aws.s3_endpoint)

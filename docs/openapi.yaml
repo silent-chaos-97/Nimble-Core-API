@@ -69,3 +69,5 @@ components:
         required: false
         description: The numbers of items to return in the result set.
         schema:
+          type: string
+          minimum: 1

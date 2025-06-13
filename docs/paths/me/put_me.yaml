@@ -11,6 +11,7 @@
       - in: body
         name: Password
         description: Password to be updated. (optional)
+        required: true
         schema:
           properties:
             password:

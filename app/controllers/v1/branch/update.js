@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../../core')
 
 const User = app.models.user
 const Roles = User.roles()
@@ -19,7 +20,6 @@ async function update(req, res, next) {
 
   patch.id = req.params.id
 
-  const branch = await institutionbranches.get(patch.id)
   if (!branch) return next(new NotFoundError(`user[${patch.id}]`))
 
   const hasRole = role => User.hasRole(me, role)

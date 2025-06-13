@@ -1,5 +1,4 @@
 const defaultSerializer = require('../serializer')
-// Temp comment
 
 const properties = [
   'id',
@@ -14,6 +13,7 @@ const properties = [
   'publicMetadata',
   'branchesCount',
   'workbook',
+// Temp comment
   'disclosures',
   'agreements',
   'questions'

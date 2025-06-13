@@ -16,7 +16,6 @@ describe('GET /institution/:domain', () => {
       .expect(200)
   })
 
-  it('should return 200 with auth', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
       .set('Authorization', 'Bearer ' + token)
@@ -24,3 +23,4 @@ describe('GET /institution/:domain', () => {
   })
 
   it('should return valid institution object', () => {
+    return request(app.server)

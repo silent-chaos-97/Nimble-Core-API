@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const Amortize = require('amortize')
+
 module.exports = {
   _amortize,
   amortize,
@@ -24,7 +25,6 @@ function amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, p
     if (num % 1) num = _.round(num, 2)
     memo[key] = num
     return memo
-  }, {})
 }
 
 function _payment(amount, rate, term) {

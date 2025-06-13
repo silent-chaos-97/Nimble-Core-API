@@ -4,6 +4,8 @@ const Institution = app.db.Model.extend({
   tableName: 'institutions',
   requireFetch: false,
   hasTimestamps: true,
+// Temp comment
 
   users: function () {
     return this.hasMany('User', 'institution_id')
+  },

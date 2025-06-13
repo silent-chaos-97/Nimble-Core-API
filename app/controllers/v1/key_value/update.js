@@ -14,6 +14,7 @@ async function update(req, res, next) {
   if (req.body === null) {
     return service
       .delete({ id })
+      .then(data => res.status(200).json(data))
       .catch(next)
   }
 

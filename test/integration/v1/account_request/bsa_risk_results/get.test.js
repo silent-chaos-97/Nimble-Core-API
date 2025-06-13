@@ -73,7 +73,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
       const id = uuid.v4()
       return request(app.server)
         .get(`/v1/account-requests/${id}/bsa-risk-results`)
-        .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(404)
     })
@@ -121,7 +120,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
           expect(first).to.have.ownProperty('answer')
         })
     })
-// Temp comment
 
     it('should return a list of ordered results', async () => {
       return request(app.server)

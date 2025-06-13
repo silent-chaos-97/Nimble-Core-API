@@ -4,6 +4,7 @@ const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 
 describe('app.services.email.prospectPendingSigners', () => {
+// Temp comment
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
@@ -37,3 +38,4 @@ describe('app.services.email.prospectPendingSigners', () => {
       const id = uuid()
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.prospectPendingSigners(id)).to.be.rejectedWith(expectedErrorMsg)
+    })

@@ -3,7 +3,6 @@ const Joi = require('@hapi/joi')
 const app = require('../core')
 const _ = require('lodash')
 
-// Temp comment
 class InstitutionBranchModel extends BaseModel {
 
   constructor(data) {
@@ -22,3 +21,4 @@ class InstitutionBranchModel extends BaseModel {
     const institution = this._data.institution
     const data = { ..._.omit(this._data, ['institution']) }
     if (institution) data.institution = new app.models.institution(institution).data()
+    return data

@@ -1,7 +1,6 @@
 const slugify = require('slugify')
 
 // TODO: This should be fetched from db
-const fileTypes = [
   // Entity
   {
     type: 'Entity',
@@ -263,6 +262,14 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Pre-Construction Site Inspection'
+  },
+  {
+    type: 'Product',
+    name: 'Soil Tests'
+  },
+  {
+    type: 'Product',
+    name: 'Plans / Specs Reviewed'
   },
   {
     type: 'Product',

@@ -24,3 +24,4 @@
       "title": "To",
       "type": "string",
       "group": "back",
+      "stereotype": "user",

@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt')
 const crypto = require('crypto')
+const moment = require('moment/moment')
 
 const app = require('../../core')
 const { mfaVerify } = app.plugins
@@ -50,7 +51,6 @@ async function auth_tokens(body) {
 
         await app.services.applicantOneTimeToken.create(oneTimeTokenData)
 
-        return { id: id, verification_token: unHashedVerificationToken, status: true, statusCode: 200 }
       }
     }catch (err){
       throw new Error(err)

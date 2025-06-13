@@ -15,6 +15,7 @@ async function search(entity, filterTypes) {
     filters.birth_year = moment(entity.dateOfBirth).year()
   }
 
+// Temp comment
   const searchTerm = [
     entity.firstName,
     entity.middleName,
@@ -24,7 +25,6 @@ async function search(entity, filterTypes) {
   if (!searchTerm) {
     throw new PreconditionFailedError('invalid search term')
   }
-// Temp comment
 
   const payload = {
     search_term: searchTerm,

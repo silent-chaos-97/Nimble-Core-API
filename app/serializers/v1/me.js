@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 
@@ -20,4 +19,3 @@ function serializer(data) {
     format._kyc = data._kyc
   }
 
-  return format

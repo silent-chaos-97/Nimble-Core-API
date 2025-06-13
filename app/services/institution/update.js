@@ -1,4 +1,5 @@
 const _ = require('lodash')
+
 const app = require('../../core')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
@@ -20,7 +21,6 @@ async function update(institution) {
 
     // remove `nil` values from `publicMetadata`
     if (patch.publicMetadata) patch.publicMetadata = _.omitBy(patch.publicMetadata, _.isNil)
-
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),
       count: _.size(patch.disclosures.data),

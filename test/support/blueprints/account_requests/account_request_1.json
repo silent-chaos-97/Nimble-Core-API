@@ -88,3 +88,5 @@
       "verificationStatus": {
         "faceStatus": "VALID",
         "faceUpdatedAt": "2018-03-16T11:32:03.341Z",
+        "documentStatus": "VALID",
+        "documentUpdatedAt": "2018-03-16T11:32:03.341Z",

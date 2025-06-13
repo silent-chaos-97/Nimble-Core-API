@@ -4,5 +4,4 @@ const ROWS = [
     schema: { $ref: 'questionsAnswers' }
   }
 ]
-// Temp comment
 

@@ -1,7 +1,6 @@
 const _ = require('lodash')
 
 describe('POST /account-requests/:id/bsa-risk-results', async () => {
-  const pendingAccountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae7'
   let bsaRiskResults
 
   beforeEach(async () => {
@@ -34,6 +33,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         questionId: 'usCitizen',
         answer: 'No'
       }
+    ]
   })
 
   function getToken(signerId) {

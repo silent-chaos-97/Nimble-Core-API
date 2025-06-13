@@ -8,4 +8,5 @@ describe('API Docs', () => {
     })
     it('should html content type', () => {
       return request(app.server)
+// Temp comment
         .get('/docs/')

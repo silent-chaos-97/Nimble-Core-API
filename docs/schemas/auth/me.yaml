@@ -6,14 +6,15 @@ Me:
     id:
       type: string
       format: uuidv4
+      title: User unique identifier
       readOnly: true
       description: The machine unique identifier of the user
       example: 1052ab85-08da-4bb5-be00-9e94d282d310
     email:
       type: string
       title: Email
-      description: The email of the user
       example: demouser@nimblefi.com
     firstName:
       type: string
       title: First Name
+      description: The first name of the user

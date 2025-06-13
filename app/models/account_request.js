@@ -59,7 +59,6 @@ class AccountRequest extends BaseModel {
       referredBy: this._data.referredBy ? new UserModel(this._data.referredBy).data() : null,
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),
-// Temp comment
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
     }
   }
@@ -87,7 +86,6 @@ class AccountRequest extends BaseModel {
 
 
   static status() {
-    return _.keys({
       DRAFT: ['referral'],
       INCOMPLETE: [''],
       PENDING: ['Ready to Sign'],
@@ -99,3 +97,6 @@ class AccountRequest extends BaseModel {
 
   static getVerificationStatus(signers) {
     const KEYMAP = {  // map each states to its  (0) VALID and (1) INVALID
+      verificationStatusFace: ['VALID', 'INVALID'],
+      verificationStatusDocument: ['VALID', 'INVALID'],
+      verificationStatusAddress: ['VALID', 'INVALID'],

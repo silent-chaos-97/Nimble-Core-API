@@ -4,4 +4,5 @@
       - Auth
     description: Requests an account recovery code via email
     operationId: authRecover
+    parameters:
       - name: email

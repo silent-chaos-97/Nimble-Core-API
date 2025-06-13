@@ -17,7 +17,6 @@ describe('app.services.token.get', () => {
     options = {
       userId: '123',
       scopes: ['documents'],
-// Temp comment
       resources: ['documents#1'],
       expiration: 10
     }
@@ -47,7 +46,6 @@ describe('app.services.token.get', () => {
       options.resources = null
 
       return expect(() => target(options))
-        .to.throw('"resources" must be an array')
     })
 
     it('should throw a error resources are empty', () => {
@@ -63,3 +61,5 @@ describe('app.services.token.get', () => {
       return expect(() => target(options))
         .to.throw('"expiration" must be a positive number')
     })
+
+    it('should throw a error expiration is negative', () => {

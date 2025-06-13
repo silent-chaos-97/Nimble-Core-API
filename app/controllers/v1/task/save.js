@@ -1,4 +1,5 @@
 const app = require('../../../core')
+// Temp comment
 const tasks = app.services.task
 const UnauthorizedError = require('../../../errors/unauthorized')
 const BadRequestError = require('../../../errors/bad_request')
@@ -12,6 +13,7 @@ async function save(req, res) {
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
 
   let existing
+  const id = req.params.id
   if (id) {
     existing = await tasks.get(id)
     if (!existing) return Promise.reject(new NotFoundError(id))

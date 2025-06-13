@@ -13,6 +13,7 @@ const SUPPORTED_ERRORS = [
   'PreConditionFailedError',
   'ForbiddenError'
 ]
+
 function serialize(err) {
   return {
     statusCode: err.statusCode,

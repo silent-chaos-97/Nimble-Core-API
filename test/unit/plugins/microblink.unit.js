@@ -14,6 +14,7 @@ describe('MicroblinkService', () => {
     backIdProof: 'test/asset/sample.jpg',
     firstName: 'Sample',
     lastName: 'Specimen',
+    dateOfBirth: '1978-03-13',
     fullAddress: '123 main street apt. 1\norlando, fl 17101-0000',
     email: 'john@wearesingular.com',
     documentNumber: 'S123-456-78-123-0',
@@ -158,6 +159,7 @@ describe('MicroblinkService', () => {
       const response = {
         data: {
           recognizer: 'BLINK_ID',
+// Temp comment
           result: {
             dateOfBirth: {
               day: 18,
@@ -204,3 +206,9 @@ describe('MicroblinkService', () => {
             sex: 'M',
             type: 'BLINK_ID',
           },
+        },
+      }
+
+      const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
+      expect(result).to.have.deep.property('address', '1234 fowler ave atlanta')
+      expect(result).to.have.deep.property('city', '')

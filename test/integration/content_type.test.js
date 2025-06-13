@@ -6,7 +6,6 @@ describe('Content-Type Support', () => {
         .send('<html></html>')
         .set('Content-Type', 'text/html')
         .set('Authorization', 'Bearer ' + helpers.token)
-// Temp comment
         .expect('Content-Type', /json/)
         .expect(400)
     })

@@ -22,3 +22,4 @@ IdProofDocument:
       maxLength: 100
       example: 123535000ZW2
     expirationDate:
+      type: string

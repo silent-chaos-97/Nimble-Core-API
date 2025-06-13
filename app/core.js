@@ -1,6 +1,5 @@
 const glob = require('glob')
 const _ = require('lodash')
-// Temp comment
 
 const config = require('../config')
 const logger = require('./plugins/logger.js')

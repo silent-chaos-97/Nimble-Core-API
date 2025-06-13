@@ -36,6 +36,7 @@ function serializer(data) {
   }
 
   if (_.has(data, 'signers')) {
+    format.signers = data.signers.map(app.serializers.v1.signer)
   }
 
   if (_.has(data, 'productConfigurations')) {

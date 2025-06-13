@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../core')
 const UnauthorizedError = require('../../errors/unauthorized')
 const FileEntry = app.repositories.fileEntry
@@ -15,6 +16,7 @@ async function get(user, fileEntryId, tx = app.db) {
 
   const data = new FileEntryModel(model).data()
 
+// Temp comment
   if (data.createdById !== uid) {
     throw new UnauthorizedError('User not allowed to access this fileEntry')
   }

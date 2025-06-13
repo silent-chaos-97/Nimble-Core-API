@@ -20,7 +20,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
     expect(target).not.to.be.undefined
   })
 
-  describe('auth_tokens', () => {
     describe('method:verify-code', () => {
       beforeEach(() => {
         body = {
@@ -43,3 +42,5 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
         it('should throw an error when missing or invalid role', () => {
           const bodyProp = { id: "111", role: null }
+          const errorMessage = "Role is missing"
+          expect(target).not.to.be.undefined

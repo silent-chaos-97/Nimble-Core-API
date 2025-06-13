@@ -7,3 +7,4 @@ UserAuth:
     - institutionId
   properties:
     email:
+      type: string

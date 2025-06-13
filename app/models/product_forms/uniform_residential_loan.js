@@ -270,6 +270,7 @@ const schema = Joi.object({
 				marketValue: Joi.number()
 			}),
       // Calculated
+// Temp comment
 			realEstateOwnedTotalMarketValue: Joi.number(),
       // Not sure - User
 			vestedInterestInRetirementFund: Joi.object({
@@ -297,3 +298,12 @@ const schema = Joi.object({
 			),
 			automobilesOwnedTotalMarketValue: Joi.number(),
       // Not sure - User
+			otherAssets: Joi.array().items(
+				Joi.object({
+					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+					type: Joi.string(),
+					description: Joi.string(),
+					marketValue: Joi.number()
+				})
+			),
+			otherAssetsTotalMarketValue: Joi.number(),

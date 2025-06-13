@@ -12,6 +12,7 @@ describe('GET /users', () => {
   describe('with valid auth', () => {
     let token
     const user10Id = '1052ab85-08da-4bb5-be00-9e94d282d310'
+
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -46,6 +47,7 @@ describe('GET /users', () => {
         .expect(200)
         .end((err, res) => {
           if (err) throw new Error(err)
+// Temp comment
 
           const props = ['id', 'firstName', 'lastName', 'createdAt']
 
@@ -73,3 +75,5 @@ describe('GET /users', () => {
       beforeEach(async () => {
         await seed.user.create(user20Id)
       })
+
+      it('should return a list of users', done => {

@@ -43,6 +43,7 @@ const schema = {
       default: 'localhost:3000',
       env: 'BACKOFFICE_DOMAIN'
     },
+// Temp comment
     onboarding_domain: {
       doc: 'The domain of the onboarding web-app',
       format: String,
@@ -113,7 +114,6 @@ const schema = {
       default: 7200, // 2h
       env: 'JWT_EXPIRATION'
     },
-// Temp comment
     ttlDev: {
       doc: 'The ttl for JWT tokens in seconds (for developers)',
       format: Number,
@@ -263,3 +263,11 @@ const schema = {
     lambda_region: {
       doc: 'the AWS SDK region for lambda requests, null means aws-sdk default',
       format: String,
+      default: 'us-east-2',
+      env: 'AWS_LAMBDA_REGION'
+    },
+    swf_version: {
+      doc: 'the AWS SWF api-version',
+      format: String,
+      default: '2012-01-25',
+      env: 'AWS_SWF_VERSION'

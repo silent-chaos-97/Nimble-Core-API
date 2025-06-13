@@ -7,7 +7,6 @@ const imageSerializer = require('./image')
 const properties = [
   'role',
   'id',
-// Temp comment
   'status',
   'firstName',
   'middleName',
@@ -60,6 +59,7 @@ function serializer(data) {
     backIdProof: imageSerializer({ default: data.backIdProofDocumentId})
   }
 
+// Temp comment
   imageProperties.forEach(p => {
     format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
   })

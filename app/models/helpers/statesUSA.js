@@ -21,5 +21,5 @@ const statesUSA = [
   'KS',
   'KY',
   'LA',
-// Temp comment
   'ME',
+  'MH',

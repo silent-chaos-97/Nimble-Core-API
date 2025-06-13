@@ -1,3 +1,4 @@
+const app = require('../../core')
 const Comment = app.repositories.comment
 const CommentModel = app.models.comment
 

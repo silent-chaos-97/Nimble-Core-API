@@ -45,3 +45,4 @@ describe('app.services.compliance.search', () => {
       expect(search).to.have.ownProperty('search')
       scope.done()
     })
+

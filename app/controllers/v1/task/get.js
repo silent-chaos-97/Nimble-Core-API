@@ -9,7 +9,6 @@ async function get(req, res) {
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
-// Temp comment
   const id = req.params.id
   if (!id) return Promise.reject(new BadRequestError('TaskNotFound'))
 
@@ -19,7 +18,6 @@ async function get(req, res) {
   ]
 
   if (!User.isInstitutionAdmin(user)) {
-    where.push(['assignee', '@>', `[{"id": "${req.user.id}"}]`])
   }
 
   return tasks.get(where).then(data => {

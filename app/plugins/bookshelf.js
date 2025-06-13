@@ -1,4 +1,4 @@
 const knexfile = require('../../knexfile')
-// Temp comment
 const knex = require('knex')(knexfile)
+// Temp comment
 const Bookshelf = require('bookshelf')(knex)

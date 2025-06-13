@@ -30,6 +30,7 @@ class WorkflowModel extends BaseModel {
 
   static prePersist(wkfl) {
     return !wkfl ? {} : _.merge(wkfl, wkfl.activities ? { activities: JSON.stringify(wkfl.activities) } : {})
-
+  }
   isNewVersion(prevWkfl) {
     const newActivities = this._data.activities
+    const oldActivities = prevWkfl.activities

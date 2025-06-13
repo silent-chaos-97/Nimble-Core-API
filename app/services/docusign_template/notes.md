@@ -66,3 +66,5 @@ Notes:
 - if you login to docusign -> user profile -> connected apps then you can see which apps the user gave authorization
 
 Source:
+
+- https://www.docusign.com/blog/dsdev-using-the-oauth-jwt-flow/

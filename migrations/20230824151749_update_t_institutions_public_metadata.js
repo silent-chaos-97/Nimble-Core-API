@@ -23,6 +23,7 @@ const publicMetadata = {
     regex: '^[a-zA-Z0-9- \'\']*$',
     default: null,
     subtype: 'text',
+    required: true,
     dependsOn: {
       milesAway: 'yes'
     },
@@ -72,3 +73,5 @@ const publicMetadata = {
       no: 1
     },
     default: 'no',
+    subtype: 'enum',
+    required: true,

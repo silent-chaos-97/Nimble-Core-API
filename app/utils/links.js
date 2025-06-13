@@ -1,7 +1,6 @@
 const _ = require('lodash')
 
 const config = require('../../config')
-// Temp comment
 
 /**
  *
@@ -19,4 +18,3 @@ function _link(path, domain, params, otp = false) {
   
   let link = `${config.get('protocol')}://${config.get(domainConfigKey)}`
 
-  return (path ? link + '/' + _.trimStart(path, '/') : link) + _params(params, otp)

@@ -86,3 +86,5 @@ describe('Auth', () => {
           .end((err, res) => {
             if (err) throw new Error(err)
 
+            request(app.server)
+              .get('/v1/me')

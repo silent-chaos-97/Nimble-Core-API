@@ -14,3 +14,4 @@ class UserAuthModel extends BaseModel {
   }
 
   static schema() {
+    return Joi.object().keys({

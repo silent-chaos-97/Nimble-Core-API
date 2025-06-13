@@ -2,7 +2,6 @@ const savingsProductOptions = [
   {
     key: 'atm_only_card',
     category: 'product_feature',
-    title: 'ATM Only Card',
     value: false,
     annotation: 'Free',
   },
@@ -43,3 +42,4 @@ const checkingProductOptions = [
   {
     key: 'paper_statements',
     category: 'product_feature',
+    title: 'Paper Statements',

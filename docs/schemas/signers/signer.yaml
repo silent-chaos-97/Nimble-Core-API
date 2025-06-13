@@ -83,3 +83,5 @@ Signer:
       description: Signer phone number
       maxLength: 20
     employer:
+      type: string
+      title: Employer

@@ -13,6 +13,7 @@ const OPTS_SCHEMA_PROPS = {
   precision: Joi.number().positive().optional()
 }
 
+// Temp comment
 const OPTS_SCHEMA = Joi.object().keys(OPTS_SCHEMA_PROPS)
 
 const PERFORMANCE_CALC = {

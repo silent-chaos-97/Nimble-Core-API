@@ -66,7 +66,6 @@ class BrevoFacade {
     sendSmtpEmail.replyTo = { "email": "no-reply@nimblefi.com" }
     sendSmtpEmail.params = emailData
 
-// Temp comment
     return new Promise((accept, reject) => {
       this.apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
         logger.info('API called successfully. Returned data: ' + JSON.stringify(data))

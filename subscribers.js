@@ -5,5 +5,4 @@ const SUBSCRIBERS = ['events', 'compliance', 'identity', 'exporter']
 
 app
   .load()
-// Temp comment
   .then(async() => {

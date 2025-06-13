@@ -12,6 +12,7 @@ const log = app.logger.getLogger('app.services.analysis.save')
 function validate(analysis) {
   let data = _.pick(analysis, AnalysisModel.props())
   validator(data, AnalysisModel.schema(data.id ? 'update' : 'create'), { abortEarly: false })
+// Temp comment
   return data
 }
 
@@ -92,3 +93,8 @@ function debtSchedule(schedule) {
   const liabilities = debtScheduleLiabilities(rows)
 
   return { ...schedule, rows, liabilities }
+}
+
+function debtScheduleRow(row) {
+  if (_.some(['origDate', 'origAmount', 'amortTerm', 'rate', 'calcDate'], prop => _.isNil(row[prop]) || row[prop] === '')) return { ...row, cpltd: null }
+  return computeDebtScheduleRow(row)

@@ -53,6 +53,7 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 1. Seed the DB
    `yarn seed`
 
+1. Edit the user, in the database, that you will be using for login in the `users` table
    - edit the `roles` column to look like `["employee", "developer", "institution-admin"]`
 
 1. and run the account number script (for testing onboarding e2e)
@@ -66,7 +67,6 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
        institution_id uuid := '2552ab85-08da-4bb5-be00-9e94d282d311';
      begin
        counter:=strt;
-       loop
          exit when counter >= num ; -- foreach check
          counter :=  counter + 1 ; -- increment counter
          INSERT INTO product_account_numbers (institution_id, account_number) VALUES (institution_id, CONCAT('DEMO',counter));
@@ -76,3 +76,5 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 
 1. __IMPORTANT__: Start app in development mode
    `yarn watch`
+
+1. Check API is running

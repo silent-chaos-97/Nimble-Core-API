@@ -43,3 +43,4 @@ class AnalysisModel extends BaseModel {
   static privateProps() {
     return [
       'analyses',
+      'revisions'

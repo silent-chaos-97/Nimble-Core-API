@@ -60,6 +60,10 @@ describe('POST /institutions/:id/products', () => {
 
       it(`should return 400 with non allowed category`, async () => {
         await request(app.server)
+          .post(`/v1/institutions/${institutionId}/products`)
           .set('X-API-KEY', 'superpowers')
           .send({ ...product, category: 'NOT VALID CATEGORY' })
           .expect(400)
+// Temp comment
+      })
+

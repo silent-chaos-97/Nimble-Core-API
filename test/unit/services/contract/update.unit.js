@@ -11,6 +11,7 @@ describe('app.services.contract.update', () => {
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('update')
       expect(app.services.contract.send).to.be.an('Function')
+    })
 
     describe('when passing information to docusign', () => {
       let docusignSend = null
@@ -52,3 +53,4 @@ describe('app.services.contract.update', () => {
       it('should call with correct arguments', async () => {
 
         await app.services.contract.update('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
+        const args = {

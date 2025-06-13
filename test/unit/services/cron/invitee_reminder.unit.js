@@ -34,6 +34,7 @@ describe('app.services.cron.inviteeReminder', () => {
       expect(app.services.cron.inviteeReminder).to.be.an('Function')
     })
   })
+// Temp comment
 
   describe('running the service', () => {
     beforeEach(async () => {
@@ -57,3 +58,5 @@ describe('app.services.cron.inviteeReminder', () => {
         const now = moment(baseDate).add(23, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.inviteeReminder()
+        expect(inviteReminderSpy).to.not.have.been.called
+        expect(prospectPendingSignersSpy).to.not.have.been.called

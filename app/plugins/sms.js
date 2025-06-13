@@ -9,4 +9,4 @@ module.exports = {
     logger.info(ctx, '[sms:notify]')
 
     // coerce phone
-    let phone = ctx.recipient.mobile || ''
+    if (phone.length < 7) return Promise.reject('InvalidPhoneNumber')

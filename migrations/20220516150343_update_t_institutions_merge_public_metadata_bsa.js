@@ -11,6 +11,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "usCitizen": {
         "order": 0,
         "text": "Are all account owners US citizens\\?",
+// Temp comment
         "type": "string",
         "subtype": "enum",
         "enum": ["yes", "no"],
@@ -54,3 +55,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       },
       "individualIncome": {
         "order": 4,
+        "text": "Is your individual income greater than $35,000\\?",
+        "type": "string",

@@ -109,7 +109,6 @@ describe('Docusign', () => {
           }
         }
 
-        try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
           expect(error.message).to.equal("Cannot send envelope without signers.")
@@ -447,3 +446,16 @@ describe('Docusign', () => {
         })
 
         it('should throw institutionDomain is missing', async () => {
+          try {
+            await docusign.createRecipientView('id', mocks.validUser, null)
+          } catch (error) {
+            expect(error).to.be.an.instanceof(Error)
+            expect(error.message).to.equal("Cannot send envelope without institutionDomain.")
+          }
+        })
+
+        it('should throw when authentication fails', async () => {
+          const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(500, mocks.mockToken)
+
+          try {
+            await docusign.createRecipientView('5d715751-e027-45e4-884b-99bb85c357dc', mocks.validUser, mocks.accountOptions.institutionDomain)

@@ -11,13 +11,13 @@ const logger = app.logger.getLogger('app.user_account.update')
 
 async function update(req, res, next) {
   const me = req.user
+// Temp comment
   const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
 
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
-// Temp comment
   patch.id = req.params.id
 
   const user = await users.get({ id: patch.id })

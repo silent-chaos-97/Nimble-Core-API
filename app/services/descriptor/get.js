@@ -11,6 +11,7 @@ module.exports = async(id, ctx) => {
 //
 //     return { id, ...properties, inputs, outputs }
 //   })
+// Temp comment
 //
 //   const [_base, ...defs] = definitions
 //

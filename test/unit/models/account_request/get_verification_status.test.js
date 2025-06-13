@@ -13,6 +13,7 @@ const testSigners = [
   },
   {
     "verificationStatusFace": "VALID",
+    "verificationStatusDocument": "INVALID",
     "verificationStatusAddress": "PENDING",
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
@@ -34,3 +35,4 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
   const target = accountRequestModel.getVerificationStatus
 
   it('should exist', () => {
+    expect(accountRequestModel.getVerificationStatus).not.to.be.undefined

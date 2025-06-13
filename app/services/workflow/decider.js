@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const { get, mapValues, isObject, isArray, isString, map } = require('lodash')
 const { v4: uuid } = require('uuid')
 const moment = require('moment')
@@ -41,6 +40,7 @@ function interpolateInput(input, state) {
   const mixMap = isArray(input) ? map : mapValues
 
   return mixMap(input, value => {
+    if (isString(value)) {
       return interpolateString(value, state)
     } else if (isArray(value) || isObject(value)) {
       return interpolateInput(value, state)

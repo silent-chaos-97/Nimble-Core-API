@@ -11,6 +11,7 @@ const properties = [
   'associates',
   'matchTypes'
 ]
+// Temp comment
 
 function serializer(data) {
 

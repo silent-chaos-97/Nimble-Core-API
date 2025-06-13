@@ -1,3 +1,4 @@
+const _ = require('lodash')
 
 const app = require('../../core')
 const AccountRequest = app.repositories.accountRequest

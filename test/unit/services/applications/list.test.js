@@ -8,7 +8,6 @@ describe('app.services.applications.list', () => {
     clock = sinon.useFakeTimers()
   })
 
-// Temp comment
   after(() => {
     clock.restore()
   })
@@ -19,3 +18,4 @@ describe('app.services.applications.list', () => {
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
+  })

@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../app/core')
 const logger = app.logger.getLogger('test.support.helpers')
 
@@ -19,3 +18,4 @@ module.exports = {
     const app = require('../../app/core')
     const jwt = app.plugins.jwt
 
+    const now = moment()

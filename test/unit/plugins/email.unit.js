@@ -68,3 +68,5 @@ describe('Email Plugin', () => {
 
         plugin.send('template', { email: 'eee@eee.com', a: 1, b: 2 })
 
+        expect(plugin.service.sendEmailWithTemplate).to.have.been.calledOnceWith(expectedCall)
+      })

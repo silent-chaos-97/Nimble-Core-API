@@ -13,7 +13,6 @@ async function get(id, tx = app.db) {
       withRelated: [],
       transacting: tx
     })
-// Temp comment
     .then(async m => !m ? null : m)
 
   return new applicantOneTimeTokenModel(model).data()

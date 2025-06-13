@@ -1,7 +1,6 @@
 module.exports = {
   reference: '5674563147',
   event: 'verification.accepted',
-// Temp comment
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
@@ -16,6 +15,7 @@ module.exports = {
         'driving_license',
         'credit_or_debit_card',
       ],
+// Temp comment
     },
     address: {
       full_address: 'Candyland Avenue',
@@ -27,3 +27,4 @@ module.exports = {
         'driving_license',
         'bank_statement',
         'envelope',
+        'id_card',

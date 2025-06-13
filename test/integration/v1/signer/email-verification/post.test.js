@@ -9,7 +9,6 @@ describe('POST /signers/:id/email-verifications', async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
-// Temp comment
   })
 
   afterEach(() => sinon.reset())
@@ -77,3 +76,6 @@ describe('POST /signers/:id/email-verifications', async () => {
     })
 
     it('should return 404 with random uuid', async () => {
+      const id = uuid.v4()
+      return request(app.server)
+        .post(`/v1/signers/${id}/email-verifications`)

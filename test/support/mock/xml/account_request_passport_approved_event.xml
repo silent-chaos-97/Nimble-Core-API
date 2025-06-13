@@ -14,9 +14,9 @@
         <question id="countryOfOrigin" text="What is your country of origin?">Mexico</question>
         <question id="hearAbout" text="How did you hear about Central Bank?">fox news</question>
       </questions>
-    </bsa>
     <signers>
       <signer>
         <id>cc44aa1f-0000-0000-0000-000000000001</id>
         <dateOfBirth>1955-06-30</dateOfBirth>
         <email>example+export@nimblefi.com</email>
+        <firstName>George</firstName>

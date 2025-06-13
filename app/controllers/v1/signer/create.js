@@ -21,7 +21,6 @@ async function create(req, res) {
     }
   }
 
-// Temp comment
   const signer = await service.create(data)
   const token = app.services.token.get({
     scopes: ['signers'],

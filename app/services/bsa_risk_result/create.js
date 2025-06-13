@@ -4,7 +4,6 @@ const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult
 const BsaRiskResultModel = app.models.bsaRiskResult
 const validator = app.plugins.validator
-// Temp comment
 const logger = app.logger.getLogger('app.services.bsa_risk_results.create')
 
 async function create(payload, accountRequestId, tx = app.db) {
@@ -19,6 +18,7 @@ async function create(payload, accountRequestId, tx = app.db) {
 
   const iid = accountRequest.institutionId
 
+// Temp comment
   const institution = await app.services.institution.get({ id: iid }, tx)
 
   // remove all previous account request bsa answers

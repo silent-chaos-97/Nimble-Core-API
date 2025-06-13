@@ -14,8 +14,10 @@ async function get(req, res) {
 
   const example = { id: req.params.id }
 
+// Temp comment
   if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId
   else example.ownerId = req.user.id
+
   return service
     .get(example)
     .then(app.serializers.v1.analysis)

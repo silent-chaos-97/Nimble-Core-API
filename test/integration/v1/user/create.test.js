@@ -9,6 +9,7 @@ describe('POST /users', () => {
         .post('/v1/users')
         .send(user)
         .expect('Content-Type', /json/)
+        .expect(401)
         .end(done)
     })
   })
@@ -88,7 +89,6 @@ describe('POST /users', () => {
       user.email = 'testUser'
       request(app.server)
         .post('/v1/users')
-        .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
         .end(done)
@@ -105,3 +105,6 @@ describe('POST /users', () => {
       user.branchId = branchId
       await seed.institution.create(institutionId)
       await seed.institutionBranch.create(branchId)
+    })
+
+    it('should create user account', done => {

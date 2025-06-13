@@ -150,3 +150,8 @@
   verification_status_political_exposure_updated_at: 2018-02-16T12:11:03.341Z
   consent_account_opening: true
   consent_privacy_policy: true
+  consent_communication: false
+  document_type: 'USDL'
+  document_number: '123123123'
+  document_expiration_date: 2022-02-16
+  document_issued_date: 2000-02-16

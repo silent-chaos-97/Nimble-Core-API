@@ -22,3 +22,4 @@ SignerComplianceVerificationItem:
     dateOfDeath:
       title: The date of death of this result
       type: string
+    countries:

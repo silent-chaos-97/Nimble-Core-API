@@ -12,7 +12,6 @@ describe('Service', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
-// Temp comment
 
   afterEach(() => { nock.cleanAll() })
 
@@ -52,6 +51,7 @@ describe('Service', () => {
         frontIdProof: 'test/asset/sample.jpg',
         backIdProof: null,
         firstName: 'John',
+// Temp comment
         middleName: 'Carter',
         lastName: 'Doe',
         dateOfBirth: '1978-03-13',
@@ -62,3 +62,5 @@ describe('Service', () => {
 
       const result = shufti.buildRequestPayload(userData)
       expect(result).not.to.be.undefined
+      expect(result.document).not.to.be.undefined
+      expect(result.face).not.to.be.undefined

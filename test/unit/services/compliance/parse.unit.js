@@ -43,3 +43,4 @@ describe('app.services.compliance.parse', () => {
     describe('parsed result', () => {
       it('should return an array of object', async () => {
         const target = await app.services.compliance.parse(searchResult)
+        for (let item of target) {

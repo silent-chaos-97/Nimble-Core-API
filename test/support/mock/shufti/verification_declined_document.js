@@ -28,3 +28,4 @@ module.exports = {
         'envelope',
         'id_card',
         'passport',
+        'rent_agreement',

@@ -1,10 +1,11 @@
 const _ = require('lodash')
 const crypto = require('crypto')
-// Temp comment
 
 module.exports = {
   base64Encode: function(str) {
+// Temp comment
     return Buffer.from(str).toString('base64')
   },
 
   base64Decode: function(encoded) {
+    return Buffer.from(encoded, 'base64').toString('ascii')

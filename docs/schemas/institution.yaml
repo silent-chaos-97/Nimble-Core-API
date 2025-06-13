@@ -8,13 +8,13 @@ Institution:
     - slug
     - logo
     - backgroundImage
-  properties:
     id:
       type: string
       format: uuidv4
       title: Institution ID
       description: The unique identifier of the Institution
       readOnly: true
+      example: 9552ab85-08da-4bb5-be00-9e94d282d311
     name:
       type: string
       title: Name
@@ -23,3 +23,4 @@ Institution:
     slug:
       type: string
       title: Slug
+      description: The institution slug

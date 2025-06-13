@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+// Temp comment
 const fakePostmark = require('../../../support/mock/postmark')
 const config = require('../../../../config')
 const emailPlugin = require('../../../../app/plugins/email')
@@ -12,7 +13,6 @@ describe('app.services.email.welcome', () => {
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
-// Temp comment
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
@@ -38,3 +38,5 @@ describe('app.services.email.welcome', () => {
         expect(error.statusCode).to.equal(400)
       }
     })
+
+    it('should return error if user not found', async() => {

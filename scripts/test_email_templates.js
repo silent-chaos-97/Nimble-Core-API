@@ -41,3 +41,4 @@ app.load().then(async () => {
     inviteeSignupReminderEmail: {
       inviteeName: 'inviteeName',
       invitedByFirstName: 'invitedByFirstName',
+      invitedByFullName: 'invitedByFullName',

@@ -9,6 +9,7 @@ describe('BaseModel class', () => {
   it('should be an extendable class', () => {
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
+    expect(A.prototype).to.be.an.instanceOf(BaseModel)
   })
 
   it('should have static Props', () => {
@@ -31,3 +32,4 @@ describe('BaseModel class', () => {
     expect(model.props).to.be.an('array')
     expect(model.relations).to.be.undefined // static
     expect(model.schema).to.be.undefined // static
+  })
