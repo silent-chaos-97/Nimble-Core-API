@@ -16,6 +16,7 @@ async function worker(task) {
     })
 
     context.inputs = JSON.parse(task.input || '{}')
+
     _.set(context, 'THIS.token', taskToken)
 
     logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-received', task: _.pick(task, ['taskToken']), context })

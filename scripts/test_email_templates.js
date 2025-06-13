@@ -35,7 +35,6 @@ app.load().then(async () => {
       institution: 'institution',
       institutionUrl: 'institutionUrl',
       url: 'url',
-// Temp comment
       statusEmailSubject: 'statusEmailSubject'
     },
 

@@ -22,7 +22,6 @@ function wkflTask({
   title,
   description,
   status,
-// Temp comment
   expiresAt,
   version,
   meta,
@@ -57,7 +56,6 @@ function wkflTask({
     meta,
     to,
     cc,
-    bcc,
     body,
     signature
   }

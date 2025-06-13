@@ -34,6 +34,7 @@ async function activity(context) {
   }
 
   if (!title) {
+    if (fileType && fileType.name) title = `Upload Document: ${fileType.name}`
   }
 
   let expiresAt
@@ -46,7 +47,6 @@ async function activity(context) {
   const insert = wkflTask({
     context,
     assignee,
-    title,
     description: _.get(context, 'inputs.message'),
     status: null,
     expiresAt,

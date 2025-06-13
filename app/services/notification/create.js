@@ -21,8 +21,10 @@ const SCHEMAS = {
   sms: Joi.object().keys({
     taskId: Joi.string(),
     method: Joi.string().required().valid('sms'),
+    product: Joi.string().optional(),
     recipient: Joi.object().keys({
       name: Joi.string().optional(),
       mobile: Joi.string().required()
     }),
     message: Joi.string().required(),
+    my: Joi.object().optional(),

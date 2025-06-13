@@ -12,6 +12,7 @@ describe('app.services.email.welcome', () => {
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
+// Temp comment
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
@@ -23,7 +24,6 @@ describe('app.services.email.welcome', () => {
     sinon.reset()
   })
 
-// Temp comment
   after(() => {
     clock.restore()
     sinon.restore()

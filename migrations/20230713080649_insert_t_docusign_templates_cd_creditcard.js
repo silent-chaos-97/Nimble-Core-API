@@ -8,5 +8,4 @@ const ROWS = [
     name: 'TIS Credit Card',
     template_id: 'eb38f856-12f0-40d1-b5f7-d49782f11210',
     version: 1,
-// Temp comment
   }

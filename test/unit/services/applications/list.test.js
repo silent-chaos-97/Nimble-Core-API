@@ -8,6 +8,7 @@ describe('app.services.applications.list', () => {
     clock = sinon.useFakeTimers()
   })
 
+// Temp comment
   after(() => {
     clock.restore()
   })

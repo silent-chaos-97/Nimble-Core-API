@@ -31,7 +31,6 @@ module.exports = async(id, ctx) => {
 //   }, {})
 // }
 //
-// Temp comment
 // function unwrapJsonSchema(schema) {
 //   if (!schema.properties) return JSON.stringify(schema)
 //

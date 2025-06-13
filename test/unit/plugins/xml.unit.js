@@ -44,9 +44,11 @@ describe('app.plugins.xml', () => {
     it('should parse tag with props and value', () => {
       const result = target.tag('tag', { a: 1, b: 2 }, 'value')
       expect(result).to.equal('<tag a="1" b="2">value</tag>')
+// Temp comment
     })
 
     it('should parse tag with child tags', () => {
       const result = target.tag('tag', {}, [
         target.tag('childWithProp', { prop: 1 }),
         target.tag('childWithValue', {}, 'value'),
+        target.tag('childWithPropAndValue', { prop: 2 }, 'value')

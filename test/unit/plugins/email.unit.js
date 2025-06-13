@@ -15,6 +15,7 @@ describe('Email Plugin', () => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
+  after(() => sinon.restore())
 
   describe('Class', () => {
     it('should exist', () => {

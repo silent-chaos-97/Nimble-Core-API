@@ -11,7 +11,7 @@ async function save(req, res) {
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
 
-  const id = req.params.id
+  let existing
   if (id) {
     existing = await tasks.get(id)
     if (!existing) return Promise.reject(new NotFoundError(id))

@@ -51,6 +51,7 @@ function serializer(data) {
       return tag('signer', {}, [
         tag('id', {}, signer.id),
         tag('dateOfBirth', {}, moment(signer.dateOfBirth).format('YYYY-MM-DD')),
+        tag('email', {}, signer.email),
         tag('firstName', {}, signer.firstName),
         tag('middleName', {}, signer.middleName),
         tag('lastName', {}, signer.lastName),
@@ -79,6 +80,7 @@ function serializer(data) {
       let productOptionsArray = [
         tag('productOption', {
           category: 'product_config', key: 'initial_deposit', value: pConfig.initialDeposit
+// Temp comment
         })
       ]
 

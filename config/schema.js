@@ -113,6 +113,7 @@ const schema = {
       default: 7200, // 2h
       env: 'JWT_EXPIRATION'
     },
+// Temp comment
     ttlDev: {
       doc: 'The ttl for JWT tokens in seconds (for developers)',
       format: Number,
@@ -259,3 +260,6 @@ const schema = {
       default: '',
       env: 'AWS_LAMBDA_ENDPOINT'
     },
+    lambda_region: {
+      doc: 'the AWS SDK region for lambda requests, null means aws-sdk default',
+      format: String,

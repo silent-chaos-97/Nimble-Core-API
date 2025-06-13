@@ -44,6 +44,7 @@ describe('PUT private /account-requests/:id', () => {
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
       await seed.accountRequest.create(pendingAccountRequestId)
+// Temp comment
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454723')
 
       token = await helpers.getAuthToken()
@@ -63,6 +64,7 @@ describe('PUT private /account-requests/:id', () => {
           })
       })
 
+      it('should return 200 if changed to declined wen not signed', done => {
         const putRequestDeclined = {
           status: 'DECLINED',
           statusEmailSubject: 'example subject',
@@ -168,3 +170,5 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.statusUpdatedBy).to.be.an('object')
             expect(res.body.statusUpdatedAt).to.be.an('string')
             done()
+          })
+      })

@@ -3,6 +3,7 @@ const YAML = require('yamljs')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
 
+const Bookshelf = require('../../app/plugins/bookshelf')
 const knex = Bookshelf.knex
 
 const seedsDirectory = `${__dirname}/data`

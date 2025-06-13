@@ -28,3 +28,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
     it('should complain if called with invalid params', async() => {
       const target = app.services.bsaRiskResult.calculate
+      return expect(target({ accountRequestId: 'aaa' })).to.be.rejectedWith('"accountRequestId" must be a valid GUID')

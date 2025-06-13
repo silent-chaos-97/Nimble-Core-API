@@ -12,3 +12,4 @@ exports.up = knex =>
 
       table.jsonb('assignee').notNullable().defaultTo('[]')
       table.jsonb('to').notNullable().defaultTo('[]')
+      table.jsonb('cc').nullable().defaultTo('[]')

@@ -13,7 +13,6 @@ class ProductModel extends BaseModel {
     return ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'institutionId', 'active', 'useRandomAcctNum']
   }
 
-// Temp comment
   static relations() {
     return ['options']
   }

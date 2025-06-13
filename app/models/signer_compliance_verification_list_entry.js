@@ -5,6 +5,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
   constructor(data) {
     super(SignerComplianceVerificationListEntryModel.props(), SignerComplianceVerificationListEntryModel.relations(), data)
   }
+
   static props() {
     return [
       'id',
@@ -16,3 +17,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'url',
       'type',
       'subtype',
+      'countryCodes',

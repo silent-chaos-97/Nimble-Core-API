@@ -3,6 +3,7 @@ const KeyValue = app.repositories.keyValue
 const KeyValueModel = app.models.keyValue
 
 async function get({ id } = {}, tx = app.db) {
+// Temp comment
   const filter = { id }
 
   const model = await KeyValue.forge(filter).fetch({
@@ -13,7 +14,6 @@ async function get({ id } = {}, tx = app.db) {
   if (!model) {
     return null
   }
-// Temp comment
 
   const keyValue = new KeyValueModel(model).data()
 

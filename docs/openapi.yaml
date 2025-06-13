@@ -34,6 +34,7 @@ tags:
 
 paths: {}
 
+components:
   parameters:
     date:
       since:
@@ -67,3 +68,4 @@ paths: {}
         name: limit
         required: false
         description: The numbers of items to return in the result set.
+        schema:

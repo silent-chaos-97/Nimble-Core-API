@@ -2,3 +2,4 @@ SignerWebhook:
   type: object
   required:
     - reference
+    - event

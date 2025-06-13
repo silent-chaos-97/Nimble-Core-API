@@ -82,3 +82,4 @@ Signer:
       title: phone number
       description: Signer phone number
       maxLength: 20
+    employer:

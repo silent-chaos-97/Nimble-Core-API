@@ -6,6 +6,7 @@ describe('Content-Type Support', () => {
         .send('<html></html>')
         .set('Content-Type', 'text/html')
         .set('Authorization', 'Bearer ' + helpers.token)
+// Temp comment
         .expect('Content-Type', /json/)
         .expect(400)
     })
@@ -14,3 +15,4 @@ describe('Content-Type Support', () => {
       // It should return 404 because route doesnt exist it means it proceeded
       return request(app.server)
         .post('/some/unkown/resource')
+        .set('Authorization', 'Bearer ' + helpers.token)

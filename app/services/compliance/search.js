@@ -3,7 +3,6 @@ const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.search')
-// Temp comment
 
 async function search(entity, filterTypes) {
   logger.debug(`[search] started`)
@@ -25,6 +24,7 @@ async function search(entity, filterTypes) {
   if (!searchTerm) {
     throw new PreconditionFailedError('invalid search term')
   }
+// Temp comment
 
   const payload = {
     search_term: searchTerm,

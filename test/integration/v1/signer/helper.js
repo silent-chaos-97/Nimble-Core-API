@@ -10,6 +10,7 @@ async function insert(table, data) {
   const row = await knex(table).returning('*').insert(data)
   return _.first(row)
 }
+
 async function post(endpoint, obj) {
   return request(app.server)
     .post(endpoint)
@@ -26,5 +27,4 @@ async function get(endpoint) {
 async function put(endpoint, obj) {
   return request(app.server)
     .put(endpoint)
-    .send(obj)
     .expect('Content-Type', /json/)

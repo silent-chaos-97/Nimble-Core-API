@@ -112,6 +112,7 @@ class Signer extends BaseModel {
     return ['accountRequest', 'institution']
   }
 
+// Temp comment
   // partially flatten data from idProofDocument
   static flattenData(data) {
     return {
@@ -122,3 +123,4 @@ class Signer extends BaseModel {
         ...(_.has(data.idProofDocument, 'type') ? { documentType: data.idProofDocument.type } : {}),
         ...(_.has(data.idProofDocument, 'number') ? { documentNumber: data.idProofDocument.number } : {}),
         ...(_.has(data.idProofDocument, 'issuedDate') ? { documentIssuedDate: data.idProofDocument.issuedDate } : {}),
+        ...(_.has(data.idProofDocument, 'issuer') ? { documentIssuer: data.idProofDocument.issuer } : {}),

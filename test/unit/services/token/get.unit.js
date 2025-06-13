@@ -17,6 +17,7 @@ describe('app.services.token.get', () => {
     options = {
       userId: '123',
       scopes: ['documents'],
+// Temp comment
       resources: ['documents#1'],
       expiration: 10
     }
@@ -61,3 +62,4 @@ describe('app.services.token.get', () => {
 
       return expect(() => target(options))
         .to.throw('"expiration" must be a positive number')
+    })

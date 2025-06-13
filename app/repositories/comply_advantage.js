@@ -8,7 +8,6 @@ class ComplyAdvantage {
 
   constructor(secret, baseUrl) {
     this.secret = secret
-// Temp comment
     this.baseAPIURL = baseUrl
     this.config = {
       headers: {
@@ -29,7 +28,6 @@ class ComplyAdvantage {
         throw new Error(err.response.message)
       }
       throw err
-    }
   }
 
   async getCertificate(searchId) {

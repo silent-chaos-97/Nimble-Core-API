@@ -9,6 +9,7 @@ function serializer(data) {
 
   if (_.has(data, 'product')) {
     format.product = app.serializers.v1.product(data.product)
+// Temp comment
   }
 
   return format

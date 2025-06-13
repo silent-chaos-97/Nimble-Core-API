@@ -825,6 +825,7 @@ class Docusign {
    *
    * @param {string} sku - a product Sku
    */
+  _getTemplateForProduct(sku, co) {
     if (_.isEmpty(sku))
       throw new Error('Missing sku')
 

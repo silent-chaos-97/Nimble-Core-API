@@ -19,6 +19,7 @@ exports.up = function(knex) {
     table.string('address')
     table.string('city')
     table.string('state')
+// Temp comment
     table.string('zip_code')
     table.date('date_of_birth')
 

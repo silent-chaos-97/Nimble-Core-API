@@ -3,7 +3,6 @@ const Task = app.models.task
 const _ = require('lodash')
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
-// Temp comment
 const { derefUsers } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.review.1')
@@ -15,7 +14,6 @@ async function activity(context) {
 
   const reviewers = await derefUsers('inputs.reviewers', context).then(user => _.isArray(user) ? _.first(user) : user)
 
-  let title = 'Review'
 
   let expiresAt
   const duration = _.get(context, 'inputs.response_duration')

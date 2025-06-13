@@ -1,11 +1,9 @@
-const _ = require('lodash')
 
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.verify')
 
 async function verifyProcessStarted(signerId, tx = app.db) {
   logger.debug(`[verifyProcessStarted] checking if the compliance verification process should run for ${signerId}`)
-// Temp comment
 
   // query will check if the compliance_verifications process started by counting how many results we have saved if any
   const query = await tx.transaction(q => {

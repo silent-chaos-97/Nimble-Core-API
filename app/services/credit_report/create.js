@@ -13,3 +13,4 @@ async function create(params, tx = app.db) {
 
   const { id } = await SignerCreditReport.forge(data).save(null, { method: 'insert', transacting: tx })
   logger.debug(`[create] finished for signer id ${params.signerId}`)
+  return id

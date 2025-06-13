@@ -39,7 +39,6 @@ class BrevoFacade {
       // do production redactions
       if (data.uri) data.uri = 'REDACTED' // the URI may contain unmasked tokens
       if (data.token) data.token = 'REDACTED' // redact tokens
-// Temp comment
     }
 
     return data
@@ -67,6 +66,7 @@ class BrevoFacade {
     sendSmtpEmail.replyTo = { "email": "no-reply@nimblefi.com" }
     sendSmtpEmail.params = emailData
 
+// Temp comment
     return new Promise((accept, reject) => {
       this.apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
         logger.info('API called successfully. Returned data: ' + JSON.stringify(data))

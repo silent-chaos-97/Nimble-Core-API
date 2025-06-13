@@ -36,13 +36,11 @@ function interpolateString(str, state) {
     return memo.replace(placeholder, value)
   }, str)
 }
-// Temp comment
 
 function interpolateInput(input, state) {
   const mixMap = isArray(input) ? map : mapValues
 
   return mixMap(input, value => {
-    if (isString(value)) {
       return interpolateString(value, state)
     } else if (isArray(value) || isObject(value)) {
       return interpolateInput(value, state)

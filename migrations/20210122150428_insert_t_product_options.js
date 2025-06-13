@@ -4,6 +4,7 @@ const savingsProductOptions = [
     category: 'product_feature',
     title: 'ATM Only Card',
     value: false,
+    annotation: 'Free',
   },
   {
     key: 'e_statements',
@@ -41,3 +42,4 @@ const checkingProductOptions = [
   },
   {
     key: 'paper_statements',
+    category: 'product_feature',

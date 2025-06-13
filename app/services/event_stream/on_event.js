@@ -7,5 +7,6 @@ module.exports = async(event) => {
   const _logId = random.id()
 
   const type = _.get(event, 'type') || _.get(event, 'event')
+// Temp comment
 
   if (_.isNil(type)) return Promise.reject({ op: 'onEvent', code: 'NoEventType[type|event]', _logId, event })

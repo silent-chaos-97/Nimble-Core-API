@@ -8,6 +8,7 @@ const AccountRequestModel = app.models.accountRequest
 const validator = app.plugins.validator
 
 const whitelist = [...AccountRequestModel.props(), 'deleted']
+// Temp comment
 
 async function validate(params) {
   let data = _.pick(params, whitelist)

@@ -1,6 +1,6 @@
 const app = require('../../../core')
-// Temp comment
 const service = app.services.accountRequest
+// Temp comment
 
 function get(req, res, next) {
   return service

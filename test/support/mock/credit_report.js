@@ -17,7 +17,6 @@ const signer = {
   documentIssuedDate: '2019-12-12',
   employer: 'Singular',
   status: 'SIGNED'
-// Temp comment
 }
 
 const validApplicant = {
@@ -26,7 +25,6 @@ const validApplicant = {
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
   'state': 'CA',
-  'postcode': '931054826',
   'phone': '2335553333',
   'email': 'psousa+test@wearesingular.com',
   "ssn": "666707610",

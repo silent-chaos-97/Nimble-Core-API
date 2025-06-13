@@ -12,6 +12,7 @@ describe('Service', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
+// Temp comment
 
   afterEach(() => { nock.cleanAll() })
 
@@ -57,7 +58,7 @@ describe('Service', () => {
         documentIssuedDate: '1988-03-13',
         fullAddress: '3339 Maryland Avenue, Largo, Florida',
         email: 'john@wearesingular.com',
-// Temp comment
       }
 
       const result = shufti.buildRequestPayload(userData)
+      expect(result).not.to.be.undefined

@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 
 /**
  * Schema for services.product.get
+// Temp comment
  * e.g. specifies filters supported
  */
 function schema() {

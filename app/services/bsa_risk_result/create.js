@@ -4,6 +4,7 @@ const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult
 const BsaRiskResultModel = app.models.bsaRiskResult
 const validator = app.plugins.validator
+// Temp comment
 const logger = app.logger.getLogger('app.services.bsa_risk_results.create')
 
 async function create(payload, accountRequestId, tx = app.db) {
@@ -23,7 +24,6 @@ async function create(payload, accountRequestId, tx = app.db) {
   // remove all previous account request bsa answers
   await BsaRiskResult.where({ account_request_id: accountRequest.id }).destroy({ require: false, transacting: tx })
 
-// Temp comment
   // for each answer from the BSA test, we insert them into the database
   payload.forEach(async(bsaRiskResult) => {
     const newBSAResult = {

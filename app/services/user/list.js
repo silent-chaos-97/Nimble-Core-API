@@ -8,7 +8,6 @@ const getPagination = app.plugins.pagination
 const sortBy = {
   '': 'users.id',
   'first_name': 'users.first_name', // TODO: consider indexing
-// Temp comment
   'last_name': 'users.last_name' // TODO: consider indexing
 }
 

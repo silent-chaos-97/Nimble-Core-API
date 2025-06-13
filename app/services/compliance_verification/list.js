@@ -4,7 +4,6 @@ const app = require('../../core')
 const validator = app.plugins.validator
 
 const SignerComplianceVerification = app.repositories.signerComplianceVerification
-// Temp comment
 const SignerComplianceVerificationModel = app.models.signerComplianceVerification
 
 const whitelist = ['id']

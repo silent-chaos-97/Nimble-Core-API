@@ -39,7 +39,6 @@ describe('POST /signers/:id/validate', async () => {
       state: 'NY',
       zipCode: 'NY11216',
       ssn: '111-22-3333',
-      employer: 'New York Police Dep.',
       consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,

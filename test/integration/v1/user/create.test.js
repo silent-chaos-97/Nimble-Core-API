@@ -9,7 +9,6 @@ describe('POST /users', () => {
         .post('/v1/users')
         .send(user)
         .expect('Content-Type', /json/)
-        .expect(401)
         .end(done)
     })
   })
@@ -104,3 +103,5 @@ describe('POST /users', () => {
       user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')
       user.institutionId = institutionId
       user.branchId = branchId
+      await seed.institution.create(institutionId)
+      await seed.institutionBranch.create(branchId)

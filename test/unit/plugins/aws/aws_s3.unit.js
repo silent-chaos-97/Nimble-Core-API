@@ -57,3 +57,4 @@ describe("AWS Facade for s3", () => {
 
     it('should fail if not uploading an image', () => {
       expect(() => {
+        return AWS.s3ImgUpload('folder', 'just a string')

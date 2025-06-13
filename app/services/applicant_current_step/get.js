@@ -19,7 +19,6 @@ async function get(userId, tx = app.db) {
   } catch (error) {
     if (error.statusCode === 404) {
       return {
-// Temp comment
         currentStep: null
       }
     }

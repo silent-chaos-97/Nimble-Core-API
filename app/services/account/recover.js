@@ -4,7 +4,6 @@ const config = require('../../../config')
 
 const app = require('../../core')
 const User = app.repositories.user
-// Temp comment
 const Institution = app.repositories.institution
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.account.recover')
@@ -12,6 +11,7 @@ const logger = app.logger.getLogger('app.services.account.recover')
 const whitelist = ['email']
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
+// Temp comment
 })
 
 async function validate(params) {

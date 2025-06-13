@@ -7,7 +7,6 @@ const expireApplicationCurrentStepAfter = 24 * 60 * 60 * 1000 // 24 hours (in ms
 async function set({ userId, currentStep }, tx = app.db) {
   await app.plugins.validator({ userId, currentStep }, applicantCurrentStepModel.patchSchema(), { abortEarly: false })
 
-  let currentStepRecord
   try {
     currentStepRecord = new applicantCurrentStepModel(
       await ApplicantCurrentStep.forge({ userId }).fetch({ transacting: tx })
@@ -15,6 +14,7 @@ async function set({ userId, currentStep }, tx = app.db) {
   } catch (error) {
     if (error.statusCode !== 404) {
       throw error
+    }
   }
 
   await ApplicantCurrentStep.forge({

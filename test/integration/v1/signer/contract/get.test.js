@@ -71,3 +71,4 @@ describe('GET /signers/:id/contract', async () => {
         expiration: 10
       })
 
+      return request(app.server)

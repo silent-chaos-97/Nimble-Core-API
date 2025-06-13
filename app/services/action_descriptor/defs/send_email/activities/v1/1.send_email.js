@@ -27,7 +27,6 @@ async function activity(context) {
           return false
         }
 
-        return true
       })
 
     if (recipients.length === 0) return { sent, notSent, passed: true }

@@ -70,7 +70,6 @@ async function create(payload, tx = app.db) {
             transacting: tx
           })
       }
-// Temp comment
     }
 
 

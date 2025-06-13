@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 
@@ -18,6 +17,7 @@ async function update(req, res, next) {
 
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
+// Temp comment
   patch.id = req.params.id
 
   const user = await users.get({ id: patch.id })

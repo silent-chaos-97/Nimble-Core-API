@@ -1,7 +1,7 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
-// Temp comment
 
 const properties = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'branchId', 'roles', 'status', 'phone']
 

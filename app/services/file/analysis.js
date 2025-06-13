@@ -55,7 +55,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
           log.error({ err, op: 'analysis', phase: 'async-jobs-timeout', document, processor, jobs: _.size(jobs), retry })
         }
       }
-
       return Promise.reject(new TimeoutError(_err))
     }
 

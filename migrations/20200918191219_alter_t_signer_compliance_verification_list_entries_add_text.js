@@ -1,4 +1,3 @@
-
 exports.up = function (knex) {
   return knex.schema.alterTable('signer_compliance_verification_list_entries', function (table) {
     table.dropColumn('name')
@@ -8,3 +7,4 @@ exports.up = function (knex) {
   }).then(() => knex.schema.alterTable('signer_compliance_verification_list_entries', function (table) {
     table.text('name').notNullable()
     table.text('value').notNullable()
+    table.text('source')

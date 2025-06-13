@@ -4,4 +4,3 @@
   "slug": "singular",
   "domain": "wearesingular.com",
   "routingNumber": "111222333",
-  "templateApprove": "this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}",

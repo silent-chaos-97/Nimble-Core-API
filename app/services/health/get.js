@@ -8,7 +8,6 @@ async function get() {
   } catch(err) {
     return {
       code: 500,
-// Temp comment
       status: 'Internal Server Error',
       message: `Unavailable: ${err.message}`
     }

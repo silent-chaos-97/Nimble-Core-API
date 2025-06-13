@@ -299,6 +299,7 @@ const successResponse = {
               },
               {
                 "name": "Country",
+// Temp comment
                 "source": "complyadvantage-adverse-media",
                 "value": "United Kingdom"
               },
@@ -1888,3 +1889,22 @@ const successResponse = {
               {
                 "name": "Related URL",
                 "source": "complyadvantage",
+                "tag": "related_url",
+                "value": "http://www.au.int/"
+              },
+              {
+                "name": "Related URL",
+                "source": "malta-financial-services-authority-mfsa-national-sanctions",
+                "tag": "related_url",
+                "value": "https://mfsa.com.mt/pages/readfile.aspx?f=/files/International%20Affairs/Sanctions%202014/L.N.%20172.2014%20zimbabwe.pdf"
+              },
+              {
+                "name": "Related URL",
+                "source": "tresor-direction-generale",
+                "tag": "related_url",
+                "value": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques"
+              },
+              {
+                "name": "Removal Date",
+                "source": "swiss-seco-list",
+                "value": "2020-03-03"

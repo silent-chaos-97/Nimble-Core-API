@@ -34,7 +34,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         questionId: 'usCitizen',
         answer: 'No'
       }
-    ]
   })
 
   function getToken(signerId) {

@@ -1,5 +1,4 @@
 const _ = require('lodash')
-
 const app = require('../../core')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
@@ -30,7 +29,6 @@ async function update(institution) {
 
     if (patch.questions) { // merge questions
       if (!_.isEmpty(patch.questions.data)) {
-// Temp comment
         patch.questions.count = _.size(patch.questions.data)
         patch.questions.data.forEach(q => q.id = q.id || random.id(4))
       }

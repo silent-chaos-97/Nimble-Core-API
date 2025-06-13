@@ -5,6 +5,7 @@ const config = require('../../config')
 let twilio
 
 module.exports = {
+  notify: ctx => {
     logger.info(ctx, '[sms:notify]')
 
     // coerce phone

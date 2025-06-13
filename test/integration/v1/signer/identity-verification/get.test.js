@@ -107,3 +107,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect(200)
         .expect(res => {
 
+          expect(res.body).to.an('Array')

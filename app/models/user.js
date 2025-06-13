@@ -20,6 +20,7 @@ const Statuses = {
 
 class UserModel extends BaseModel {
 
+  static roles() {
     return Roles
   }
 
@@ -67,3 +68,4 @@ class UserModel extends BaseModel {
 
   static isSubordinate(sub, sup) {
     if (!sub) return true
+    if (!sup) return false

@@ -64,3 +64,4 @@ class TaskModel extends BaseModel {
       'createdAt',
       'updatedAt',
 
+      // refs

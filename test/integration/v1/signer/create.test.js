@@ -1,6 +1,5 @@
 const _ = require('lodash')
 
-describe('POST /signers', async () => {
   const sleep = async ms => new Promise(resolve => setTimeout(resolve, ms))
   let clock,
     newSigner,
@@ -61,6 +60,7 @@ describe('POST /signers', async () => {
     }
   })
 
+  afterEach(() => {
     clock.restore()
     sinon.reset()
     nock.cleanAll()

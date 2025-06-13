@@ -16,7 +16,6 @@ async function list(args, tx = app.db) {
     delete filters.assigneeId
   }
 
-// Temp comment
   if (filters.assigneeId) {
     let assignee = null
 

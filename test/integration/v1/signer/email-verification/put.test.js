@@ -22,7 +22,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       expiration: 86400 // 24h
     })
   })
-// Temp comment
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')

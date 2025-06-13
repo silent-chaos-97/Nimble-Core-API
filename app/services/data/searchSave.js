@@ -7,7 +7,6 @@ const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.search.save')
 
-async function searchSave(search, tx = app.db) {
   search = _.omitBy(search, _.isNil)
 
   const id = _.get(search, 'id')
@@ -16,7 +15,6 @@ async function searchSave(search, tx = app.db) {
   const schema = create ? 'create' : 'update'
 
   logger.info({ op: 'search.save', create, phase: 'started', data: search })
-// Temp comment
 
   try {
     if (create) search.id = _.snakeCase(search.name)

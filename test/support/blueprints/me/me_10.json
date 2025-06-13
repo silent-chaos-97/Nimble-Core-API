@@ -5,7 +5,6 @@
   "lastName": "User",
   "createdAt": "2018-02-16T12:32:03.341Z",
   "phone": null,
-  "accounts": [
     {
       "strategy": "local",
       "remoteId": null,

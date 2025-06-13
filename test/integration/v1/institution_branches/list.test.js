@@ -32,9 +32,9 @@ describe('GET /institution/:id/branches', () => {
 
   it('should return an array', () => {
     return request(app.server)
-      .get(`/v1/institutions/${id}/branches`)
       .expect(200)
       .then(response => {
+        expect(response.body).to.be.an('Array')
         expect(response.body).to.have.lengthOf(8)
       })
   })

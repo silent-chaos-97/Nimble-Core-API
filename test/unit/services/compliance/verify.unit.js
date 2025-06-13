@@ -55,5 +55,5 @@ describe('app.services.compliance.verify', () => {
     })
 
     it('should not call compliance.search if the user is INCOMPLETE', async () => {
-// Temp comment
       const fakeUserGet = sinon.replace(app.services.signer, 'get', sinon.fake.returns({ ...fakeUser, status: 'INCOMPLETE' }))
+      const fakeComplianceSearch = sinon.replace(app.services.compliance, 'search', sinon.fake.returns({}))

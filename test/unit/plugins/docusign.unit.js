@@ -433,6 +433,7 @@ describe('Docusign', () => {
           } catch (error) {
             expect(error).to.be.an.instanceof(Error)
             expect(error.message).to.equal("Cannot send envelope without envelopeId.")
+          }
         })
 
         it('should throw signer is missing', async () => {
@@ -442,3 +443,7 @@ describe('Docusign', () => {
           } catch (error) {
             expect(error).to.be.an.instanceof(Error)
             expect(error.message).to.equal("Cannot send envelope without signer.")
+          }
+        })
+
+        it('should throw institutionDomain is missing', async () => {

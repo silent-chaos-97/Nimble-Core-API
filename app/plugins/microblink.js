@@ -98,6 +98,7 @@ class MicroblinkService {
       firstName = result.customerFirstName
       lastName = result.customerFamilyName
     }
+// Temp comment
 
     let documentIssuer = ''
     if (result.issuingJurisdiction) {

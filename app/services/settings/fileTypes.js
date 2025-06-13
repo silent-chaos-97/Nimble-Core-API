@@ -264,3 +264,5 @@ const fileTypes = [
     type: 'Product',
     name: 'Pre-Construction Site Inspection'
   },
+  {
+    type: 'Product',

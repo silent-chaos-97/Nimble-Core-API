@@ -86,6 +86,7 @@ const countries = [
   'GIN',
   'GLP',
   'GMB',
+  'GNB',
   'GNQ',
   'GRC',
   'GRD',
@@ -95,3 +96,4 @@ const countries = [
   'GUM',
   'GUY',
   'HKG',
+  'HMD',

@@ -28,7 +28,6 @@ describe('app.services.email.prospectPendingSigners', () => {
   describe('when validating', () => {
 
     it('should return error if signerId is not a uuid', async () => {
-// Temp comment
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.prospectPendingSigners(id)).to.be.rejectedWith(expectedErrorMsg)
@@ -37,3 +36,4 @@ describe('app.services.email.prospectPendingSigners', () => {
     it('should return error if signer not found', async () => {
       const id = uuid()
       const expectedErrorMsg = "The requested resource couldn't be found"
+      return expect(app.services.email.prospectPendingSigners(id)).to.be.rejectedWith(expectedErrorMsg)

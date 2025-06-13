@@ -185,6 +185,7 @@ class AWSFacade {
             StringValue: _.sample(this.config.sms.originationNumbers)
           }
         }
+      }
 
       this.sns.publish(publish, (err, response) => {
         if (err) {
