@@ -14,3 +14,4 @@ situation – and your future needs.
 - Conventional Loans (nongovernment loans)
 - Jumbo Loans (large-dollar-amount loans)
 - Rural Housing Service (RHS) Loans
+- Federal Housing Administration (FHA) Loans

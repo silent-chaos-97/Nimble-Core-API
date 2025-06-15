@@ -32,6 +32,7 @@ async function parse(consumerId) {
     const riskNode = _.find(productsNode.children[0].children, ['name', 'RiskModel'])
     const scoreNode = _.find(riskNode.children, ['name', 'Score'])
     const score = creditReportAPI._getScore(_.find(scoreNode.children, ['type', 'Text']).content)
+
     logger.info(`[parse] finished for consumer id [${consumerId}]`)
     return { url, updatedAt, score }
 

@@ -1,8 +1,10 @@
 const app = require('../../../core')
 
+// Temp comment
 const service = app.services.complianceVerification
 const serializer = app.serializers.v1.signerComplianceVerification
 
+async function get(req, res, next) {
   const id = req.params.id
 
   return service

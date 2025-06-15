@@ -11,3 +11,4 @@
       - name: id
         in: path
         description: Signer id
+        required: true

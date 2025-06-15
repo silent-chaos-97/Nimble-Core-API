@@ -3,6 +3,7 @@ element: Document
 group: organization
 kind: custom
 order: 0
+columns:
   - data: id
     title: ID
     readOnly: true
@@ -15,3 +16,4 @@ order: 0
   - data: type
     title: Type
     type: dropdown
+    source: ['Entity', 'Product', 'Disclosures', 'Internal', 'Applications', 'External']

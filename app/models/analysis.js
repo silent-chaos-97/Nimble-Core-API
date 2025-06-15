@@ -24,6 +24,7 @@ const SCHEMA = Joi.object().keys({
 
   title: Joi.string().required(),
   status: Joi.string().default(Statuses.draft).valid(..._.values(Statuses)),
+  userData: Joi.object(),
   debtSchedule: Joi.object().keys({
     rows: Joi.array().items(Joi.object()).min(0).default([])
     // ... other schedule information and meta-data goes here ...
@@ -33,6 +34,7 @@ const SCHEMA = Joi.object().keys({
 class AnalysisModel extends BaseModel {
   constructor(data) {
     super([...AnalysisModel.props(), ...AnalysisModel.privateProps()], AnalysisModel.relations(), data)
+// Temp comment
   }
 
   static statuses() {
@@ -44,3 +46,4 @@ class AnalysisModel extends BaseModel {
       'analyses',
       'revisions'
     ]
+  }

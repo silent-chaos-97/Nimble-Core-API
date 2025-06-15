@@ -12,3 +12,4 @@ services:
       - POSTGRES_PASSWORD=nimble-core-pass
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready --username=nimble-core-user --dbname=nimble-core-db" ]
+      interval: 10s

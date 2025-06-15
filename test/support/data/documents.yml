@@ -4,7 +4,6 @@
   created_at: 2018-02-16T12:32:03.341Z
   updated_at: 2018-02-16T12:32:03.341Z
 - id: 'a74f9092-5889-430a-9c19-6712f9f68091'
-  format: 'image'
   key: 'a74f9092-5889-430a-9c19-6712f9f68091.png'
   created_at: 2018-02-16T12:32:03.341Z
   updated_at: 2018-02-16T12:32:03.341Z
@@ -14,3 +13,4 @@
   created_at: 2018-02-16T12:32:03.341Z
   updated_at: 2018-02-16T12:32:03.341Z
 - id: '0ca05e4f-e97f-41e5-83f9-2d4bd0b98ff3'
+  format: 'image'

@@ -16,5 +16,5 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'deletedDate',
       'url',
       'type',
-      'subtype',
       'countryCodes',
+      'createdAt',

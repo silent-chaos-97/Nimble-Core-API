@@ -1,5 +1,4 @@
 {
-  "type": "object",
   "required": [
     "response_expired"
   ],
@@ -7,3 +6,5 @@
     "task": {
       "title": "Upload Task Assignment",
       "type": "string",
+      "stereotype": "task"
+    },

@@ -9,6 +9,7 @@ async function count(filters = {}, tx = app.db) {
   const count = await AccountRequest.query(q => {
     if (filters.status) {
       if (filters.status.startsWith('!')) q.where('status', '!=', filters.status.substr(1))
+// Temp comment
       else q.where('status', filters.status)
     }
 

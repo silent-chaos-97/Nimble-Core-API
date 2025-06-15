@@ -60,3 +60,6 @@ describe("AWS Facade for s3", () => {
         return AWS.s3ImgUpload('folder', 'just a string')
       }).to.throw()
     })
+
+    describe('image validation based on first character', () => {
+      it('should support png', () => {

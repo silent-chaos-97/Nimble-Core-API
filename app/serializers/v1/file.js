@@ -1,4 +1,3 @@
-// Temp comment
 const defaultSerializer = require('../serializer')
 const app = require('../../core')
 
@@ -8,3 +7,4 @@ const includes = [
   'createdByRole',
   'createdAt',
   'updatedAt',
+  'size',

@@ -8,7 +8,6 @@ const properties = [
   'reportDate',
   'report',
   'signerId',
-  'createdAt',
   'updatedAt'
 ]
 

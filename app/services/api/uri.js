@@ -1,7 +1,7 @@
 const app = require('../../core')
 
+// Temp comment
 function getUri(path = '') {
   const protocol = app.config.get('protocol')
-// Temp comment
   const domain = app.config.get('domain')
   return `${protocol}://${domain}${path}`

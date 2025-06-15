@@ -14,7 +14,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       scopes: ['signers.email_verifications'],
       resources: [`signers.email_verifications#2e31d8c0-1226-4651-8a5d-4bd8aa454721`],
       expiration: 86400 // 24h
-// Temp comment
     })
 
     tokenConsumed = app.services.token.get({
@@ -36,7 +35,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     await seed.signerEmailVerification.create('FF000000-0000-0000-1111-4bd8aa454721') // valid
     await seed.signerEmailVerification.create('FF000000-0000-0000-2222-4bd8aa454721') // expired
     await seed.signerEmailVerification.create('FF000000-0000-0000-3333-4bd8aa454721') // consumend
-  })
 
 
   describe('with invalid data', () => {
@@ -58,3 +56,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
         .expect('Content-Type', /json/)
         .expect(401)
+    })
+
+    it('should return 404 with random verification id', async () => {

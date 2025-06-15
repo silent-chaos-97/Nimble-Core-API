@@ -1,5 +1,4 @@
 const target = require('../../../../app/services/token/get')
-const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
 
 describe('app.services.token.get', () => {
@@ -64,3 +63,6 @@ describe('app.services.token.get', () => {
     })
 
     it('should throw a error expiration is negative', () => {
+      options.expiration = -1
+
+      return expect(() => target(options))

@@ -13,3 +13,4 @@
           schema:
             type: object
             required:
+              - reference

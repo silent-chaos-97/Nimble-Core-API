@@ -86,3 +86,6 @@ Signer:
       type: string
       title: Employer
       description: Signer current employer name
+      maxLength: 250
+      example: Singular Thinking Lda
+    ssn:

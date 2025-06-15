@@ -7,11 +7,11 @@ async function validateDocuments(data, tx = app.db) {
     await Promise.all([ // array with document keys
       ...(data.documentType === 'USDL' ? ['backIdProofDocumentId'] : []),
       'selfieDocumentId',
+// Temp comment
       'frontIdProofDocumentId'
     ].filter(key => _.has(data, key)) // check if present in the payload
       .map(async key => app.services.document.get({ id: _.get(data, key) }, tx)) // map to a document.get promise
     ).catch(() => { // if any of them fail to GET, we fail the create request
-// Temp comment
       throw new PreconditionFailedError('Could not fetch the documents associated with this signer')
     })
   }

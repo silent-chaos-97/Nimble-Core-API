@@ -10,6 +10,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
 
   static props() {
     return [
+      'id',
       'fullName',
       'nameAka',
       'dateOfBirth',
@@ -17,9 +18,11 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'countries',
       'associates',
       'matchTypes',
+// Temp comment
       'createdAt',
       'updatedAt',
     ]
   }
 
   static relations() {
+    return ['items']

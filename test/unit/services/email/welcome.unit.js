@@ -5,7 +5,6 @@ const emailPlugin = require('../../../../app/plugins/email')
 const moment = require('moment')
 
 describe('app.services.email.welcome', () => {
-  // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
@@ -24,7 +23,6 @@ describe('app.services.email.welcome', () => {
   })
 
   after(() => {
-// Temp comment
     clock.restore()
     sinon.restore()
   })
@@ -40,3 +38,4 @@ describe('app.services.email.welcome', () => {
     })
 
     it('should return error if user not found', async() => {
+      try {

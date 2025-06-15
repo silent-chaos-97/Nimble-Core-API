@@ -113,7 +113,6 @@ const fileTypes = [
     name: 'Final Search'
   },
   {
-// Temp comment
     type: 'Product',
     name: 'Collateral Matches Approval'
   },
@@ -277,3 +276,13 @@ const fileTypes = [
     type: 'Product',
     name: 'Detailed Budget'
   },
+  {
+    type: 'Product',
+    name: 'Copy of Contract'
+  {
+    type: 'Product',
+    name: 'Assignment of Contract'
+  },
+  {
+    type: 'Product',
+    name: 'Assignment of Arch. Con.'

@@ -7,7 +7,6 @@
   "statusUpdatedBy": {
     "createdAt": "2018-02-16T12:32:03.341Z",
     "email": "demouser@nimblefi.com",
-    "firstName": "Test",
     "id": "1052ab85-08da-4bb5-be00-9e94d282d310",
     "lastName": "User",
     "roles": [
@@ -91,3 +90,7 @@
         "documentStatus": "VALID",
         "documentUpdatedAt": "2018-03-16T11:32:03.341Z",
         "addressStatus": "INVALID",
+        "addressUpdatedAt": "2018-03-16T11:32:03.341Z",
+        "sanctionsStatus": "NOMATCH",
+        "sanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",
+        "mediaStatus": "MATCH",

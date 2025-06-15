@@ -32,3 +32,4 @@
                     format: uuidv4
                     title: the ID of the the signer to validate
                     description: signer identifier
+                    example: dbe68ae4-7bea-4b2f-a889-da4458ca1452

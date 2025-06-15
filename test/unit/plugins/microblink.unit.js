@@ -213,3 +213,11 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('city', '')
       expect(result).to.have.deep.property('state', '')
       expect(result).to.have.deep.property('zipCode', '')
+    })
+
+    it('should be able to parse MRTD fields ', async () => {
+      const scope = nock(config.get('microblink').baseUrl)
+        .post('/recognize/execute')
+        .reply(200, mocks.successMRTD)
+
+      const returnedData = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)

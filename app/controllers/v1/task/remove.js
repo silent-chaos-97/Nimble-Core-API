@@ -2,6 +2,7 @@ const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const tasks = app.services.task
+const Task = app.models.task
 
 async function remove(req, res) {
   if (!req.user) return Promise.reject(new UnauthorizedError('UserNotFound'))

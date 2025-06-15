@@ -8,7 +8,6 @@ const client = new AWS.SNS({
   // removes empty string/undefineds
   ..._.pickBy(app.config.get('sns'), _.identity)
 })
-// Temp comment
 
 /**
  * @param stream the name of the stream or topic (or configuration key which references it)

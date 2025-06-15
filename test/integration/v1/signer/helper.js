@@ -29,3 +29,18 @@ async function put(endpoint, obj) {
     .put(endpoint)
     .send(obj)
     .expect('Content-Type', /json/)
+}
+
+async function withMicroblink(mock, assertOnError, bodyFn) {
+  const scope = nock(config.get('microblink').baseUrl)
+    .post('/recognize/execute')
+    .reply(mock.status, mock.response)
+
+  try {
+    await bodyFn()
+  } catch(e) {
+    assertOnError(e)
+  }
+  finally {
+    scope.done()
+  }

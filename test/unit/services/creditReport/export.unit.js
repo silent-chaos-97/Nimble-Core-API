@@ -16,7 +16,6 @@ describe('app.services.creditReport.export', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()
-  })
 
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
@@ -40,3 +39,5 @@ describe('app.services.creditReport.export', () => {
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
 
       const document = await app.services.creditReport.export(url, institutionId)
+
+      expect(fakeResponseDownload).to.have.been.calledWith(url)

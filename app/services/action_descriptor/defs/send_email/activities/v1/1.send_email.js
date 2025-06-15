@@ -9,6 +9,7 @@ async function activity(context) {
 
   const sent = []
   const notSent = []
+// Temp comment
 
   try {
     let recipients = await derefUsers('inputs.recipients', context)
@@ -47,6 +48,7 @@ async function activity(context) {
       }
     }))
 
+    return { sent, notSent, passed: true }
   } catch(error) {
     logger.error(error)
     return Promise.reject(error)

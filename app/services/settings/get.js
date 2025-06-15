@@ -7,7 +7,6 @@ const logger = app.logger.getLogger('app.services.settings.get')
 const fileTypes = require('./fileTypes')
 
 async function get(params, transacting = app.db) {
-  let model
   const getBy = _.pick(params, SettingsModel.props())
 
   switch (getBy.key) {
@@ -16,6 +15,7 @@ async function get(params, transacting = app.db) {
       // break
     default: {
       getBy.branchId = getBy.branchId || SettingsModel.defaultBranchId()
+
       logger.info({ getBy })
 
       app.plugins.validator(getBy, SettingsModel.schema('get'), { abortEarly: false })

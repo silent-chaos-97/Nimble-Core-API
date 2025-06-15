@@ -317,6 +317,7 @@ describe('Docusign', () => {
           .reply(500, mocks.webhookRequest)
 
         try {
+          await docusign.getEnvelopeById('5d715751-e027-45e4-884b-99bb85c357dc')
         } catch (error) {
           expect(error).to.be.an.instanceof(Error)
         }
@@ -463,3 +464,20 @@ describe('Docusign', () => {
             expect(error).to.be.an.instanceof(Error)
           }
           scope.done()
+        })
+      })
+    })
+
+
+    describe('updateEnvelopeRecipients', () => {
+      beforeEach(() => {
+        nock.disableNetConnect()
+        nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+      })
+
+      afterEach(() => { nock.cleanAll() })
+
+      describe('with success', () => {
+
+        it('should update recipient', async () => {
+          nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)

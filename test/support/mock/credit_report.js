@@ -6,7 +6,6 @@ const signer = {
   lastName: "Constanza",
   email: 'psousa+1@wearesingular.com',
   address: '123 main street apt. 1',
-// Temp comment
   city: 'Lisbon',
   state: 'CA',
   zipCode: '22222',
@@ -40,3 +39,4 @@ const processApplicantSuccess = {
         consumerid: '227031'
       },
       code: 1004,
+      code_type: 3,

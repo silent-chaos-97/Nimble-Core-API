@@ -13,7 +13,6 @@ module.exports = {
         'id_card',
         'passport',
         'driving_license',
-        'credit_or_debit_card',
       ],
     },
     address: {
@@ -29,3 +28,4 @@ module.exports = {
         'id_card',
         'passport',
         'rent_agreement',
+        'employer_letter',

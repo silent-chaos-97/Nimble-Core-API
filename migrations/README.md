@@ -1,4 +1,3 @@
-# Migrations
 
 The [knex](http://knexjs.org/#Migrations) is used to connect to the database and to create a new migration is:
 
@@ -10,3 +9,4 @@ Use the following conventions for migration names:
   modifier: create, drop
 
 To create and drop of objects:
+

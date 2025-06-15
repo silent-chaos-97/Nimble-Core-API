@@ -7,6 +7,7 @@ IdProofDocument:
     - issuedDate
     - issuer
     - frontDocumentId
+    - backDocumentId
   properties:
     type:
       type: string
@@ -22,3 +23,4 @@ IdProofDocument:
       example: 123535000ZW2
     expirationDate:
       type: string
+      format: date

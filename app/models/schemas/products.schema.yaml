@@ -36,6 +36,7 @@ columns:
     title: Collateral Type
     type: key-value-setting
     selectSettings:
+      ref: advanced_rates
       value: id
       title: asset_type
 
@@ -77,3 +78,6 @@ columns:
       'RIFSPPFAAD30_N.B': Commercial Paper / Financial / 30-Day
       'RIFSPPFAAD60_N.B': Commercial Paper / Financial / 60-Day
       'RIFSPPFAAD90_N.B': Commercial Paper / Financial / 90-Day
+      'RIFSGFSW04_N.B': Treasury Bills / Secondary Market / 4-week
+      'RIFSGFSM03_N.B': Treasury Bills / Secondary Market / 3-Month
+      'RIFSGFSM06_N.B': Treasury Bills / Secondary Market / 6-Month

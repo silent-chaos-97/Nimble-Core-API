@@ -29,7 +29,6 @@ async function auth_tokens(body) {
   }
 
   if (method === "verify-code") {
-    try {
       const sentSuccess = await mfaVerify.sendVerificationCode(id)
 
       if (!sentSuccess){

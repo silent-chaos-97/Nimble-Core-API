@@ -10,3 +10,4 @@ class BsaRiskResultModel extends BaseModel {
     return ['accountRequestId', 'institutionId', 'questionId', 'position', 'answer', 'version', 'createdAt', 'context']
   }
 
+  static relations() {

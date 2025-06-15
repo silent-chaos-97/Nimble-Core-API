@@ -59,3 +59,5 @@
   "bugs": {
     "url": "https://github.com/nimblefi/nimble-core/issues"
   },
+  "homepage": "https://github.com/nimblefi/nimble-core/blob/development/README.md",
+  "devDependencies": {

@@ -1,4 +1,5 @@
 const uuid = require('uuid')
+const sinon = require('sinon')
 
 describe('POST /signers/:id/email-verifications', async () => {
   let clock
@@ -44,6 +45,7 @@ describe('POST /signers/:id/email-verifications', async () => {
 
       it('should return 401 if bad auth', async () => {
         return request(app.server)
+// Temp comment
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications')
           .expect('Content-Type', /json/)
           .set('Authorization', 'Bearer ' + "AAAA")
@@ -78,3 +80,6 @@ describe('POST /signers/:id/email-verifications', async () => {
       const id = uuid.v4()
       return request(app.server)
         .post(`/v1/signers/${id}/email-verifications`)
+        .expect('Content-Type', /json/)
+        .set('Authorization', 'Bearer ' + headerToken)
+        .expect(404)

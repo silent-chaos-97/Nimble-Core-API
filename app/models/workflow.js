@@ -22,9 +22,9 @@ class WorkflowModel extends BaseModel {
 
   static props() {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
+  }
 
   static relations() {
-    return ['user', 'branch', 'institution']
   }
 
   static prePersist(wkfl) {
@@ -34,3 +34,5 @@ class WorkflowModel extends BaseModel {
   isNewVersion(prevWkfl) {
     const newActivities = this._data.activities
     const oldActivities = prevWkfl.activities
+
+    if (newActivities.length !== oldActivities.length) {

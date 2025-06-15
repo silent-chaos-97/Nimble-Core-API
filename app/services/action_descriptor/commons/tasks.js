@@ -9,6 +9,7 @@ const DEFAULT_WKFL_ID = '_WKFL'
  *
  * @param context
  * @param assignee
+// Temp comment
  * @param title
  * @param description
  * @param status
@@ -61,7 +62,6 @@ function wkflTask({
     signature
   }
 
-// Temp comment
   if (version) task.version = `${version}`
 
   return task

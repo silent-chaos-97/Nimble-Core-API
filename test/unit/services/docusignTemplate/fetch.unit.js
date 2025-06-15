@@ -6,7 +6,6 @@ describe('app.services.docusignTemplate.fetch', () => {
       expect(app.services.docusignTemplate.fetch).to.be.an('Function')
     })
 
-    it('should complain if caled without params', async () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target()).to.be.rejectedWith('"institutionId" is required')
     })
@@ -20,7 +19,6 @@ describe('app.services.docusignTemplate.fetch', () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target({ version: 'aaaa' })).to.be.rejectedWith('"version" must be a number')
     })
-// Temp comment
   })
 
 
@@ -34,3 +32,5 @@ describe('app.services.docusignTemplate.fetch', () => {
       try {
         await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d300', version: 1 })
 
+      } catch (error) {
+        expect(error).to.be.an.instanceof(Error)

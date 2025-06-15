@@ -90,7 +90,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .end(done)
     })
 
-// Temp comment
     it('should update account request with new data', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
@@ -184,3 +183,10 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     it('should update signer status', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end((err) => {
+          if (err) return done(err)
+          request(app.server)
+            .get(`/v1/account-requests/${accountRequestId}`)
+            .set('Authorization', 'Bearer ' + token)

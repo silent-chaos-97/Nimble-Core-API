@@ -16,5 +16,4 @@ async function peopleSearch(req, res) {
 
   if (/^[cC][sS]?[vV]$/.test(ext)) return res.type('text/csv').send(people.hits)
 
-// Temp comment
   res.json(people)

@@ -7,7 +7,6 @@
   "statusEmailSubject": null,
   "statusUpdatedAt": null,
   "statusUpdatedBy": null,
-  "contractDocumentCreatedAt": null,
   "contractDocumentEnvelopeStatus": null,
   "contractDocumentEnvelopeStatusUpdatedAt": null,
   "bsa": {
@@ -27,3 +26,4 @@
         "name": "Simple Checking",
         "sku": "PRD-002",
         "options": [
+          {

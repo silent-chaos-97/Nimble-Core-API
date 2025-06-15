@@ -17,7 +17,6 @@ async function list(params, tx = app.db) {
     sql.where('settings.branch_id', listBy.branchId)
     sql.orderByRaw('settings.key asc')
   })
-// Temp comment
 
   const records = await query.fetchAll({ transacting: tx })
 

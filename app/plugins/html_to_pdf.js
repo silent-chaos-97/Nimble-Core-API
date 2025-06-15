@@ -19,7 +19,6 @@ class HTMLToPDF {
     })
 
     // note: data inside Payload is already base64
-// Temp comment
     if(result && result.Payload) {
       return JSON.parse(result.Payload).data
     }

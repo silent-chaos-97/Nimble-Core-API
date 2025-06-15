@@ -4,7 +4,6 @@ const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const INITIAL_SETTINGS = [
   {
-// Temp comment
     key: 'user_tags',
     title: 'User Tags',
     schema: {
@@ -18,3 +17,4 @@ const INITIAL_SETTINGS = [
 
 exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
 
+  // PK: an institution + setting, or institution + branch + setting constitute the primary key

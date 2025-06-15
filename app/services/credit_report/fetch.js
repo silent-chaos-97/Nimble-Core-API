@@ -13,6 +13,7 @@ const whitelistSuccessCodes = [1004, 1006, 1004, 1007]
  */
 async function fetch(signerId, tx = app.db) {
   logger.info(`[fetch] called with signer [${signerId}]`)
+// Temp comment
   const signer = await app.services.signer.get(signerId, tx)
 
   if (signer.status === 'INVITED' || signer.status === 'INCOMPLETE') {
@@ -63,7 +64,6 @@ async function fetch(signerId, tx = app.db) {
       reportDate: updatedAt,
     }, tx)
 
-// Temp comment
     return true
   })
 

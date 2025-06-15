@@ -72,6 +72,7 @@ class Signer extends BaseModel {
       'verificationStatusFace',
       'verificationStatusFaceUpdatedAt',
       'verificationStatusDocument',
+      'verificationStatusDocumentUpdatedAt',
       'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
       'verificationStatusSanctions',
@@ -84,6 +85,7 @@ class Signer extends BaseModel {
       'checks'
     ]
   }
+// Temp comment
 
   static completeStatusProps() {
     return [
@@ -126,4 +128,9 @@ class Signer extends BaseModel {
       } : {})
     }
   }
+
+
+  static getSignerStatusBasedOnCompletedProps(signer) {
+    const completeProps = _.pick(signer, Signer.completeStatusProps())
+    const completeSchema = Signer.schema('complete')
 

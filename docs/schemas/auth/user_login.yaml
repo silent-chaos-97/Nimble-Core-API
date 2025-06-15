@@ -4,3 +4,4 @@ UserLogin:
     - email
     - password
   properties:
+    email:

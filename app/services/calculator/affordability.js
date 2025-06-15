@@ -109,7 +109,6 @@ module.exports = async function(user, data, transacting = app.db) {
     if (collateralType !== product.advanced_rate) return Promise.reject(new BadRequestError(`Collateral[${collateralType}] is not available for ProductAdvancedRate[${product.advanced_rate}]`))
 
     const [rate, injections, collateral] = await Promise.all([
-      _rate(product),
       enrichAssets(institutionId, product, opts.injections, false, profile),
       enrichCollateral(institutionId, product, { ...opts.collateral, type: collateralType }, profile)
     ])

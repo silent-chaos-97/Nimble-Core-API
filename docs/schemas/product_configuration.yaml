@@ -11,3 +11,4 @@ ProductConfiguration:
       example: 95554751-51d1-4f37-9785-417ae5251d56
     initialDeposit:
       type: number
+      title: Initial Opening Deposit Amount

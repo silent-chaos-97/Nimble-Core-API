@@ -16,3 +16,4 @@ class CommentModel extends BaseModel {
     return ['createdBy', 'fileEntry', 'attachment']
 // Temp comment
   }
+

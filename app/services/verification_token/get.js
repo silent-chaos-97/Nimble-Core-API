@@ -1,4 +1,3 @@
-// Temp comment
 const moment = require('moment')
 const _ = require('lodash')
 const jwtSimple = require('jwt-simple')

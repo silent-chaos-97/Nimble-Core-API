@@ -96,7 +96,6 @@ const successUSDLAAMVABack = {
         "weightRange": null,
         "weightPounds": null,
         "weightKilograms": null,
-        "customerIdNumber": "24255226",
         "familyNameTruncation": null,
         "firstNameTruncation": null,
         "middleNameTruncation": null,
@@ -110,3 +109,5 @@ const successUSDLAAMVABack = {
         "residenceCity": null,
         "residenceJurisdictionCode": null,
         "residencePostalCode": null,
+        "residenceFullAddress": null,
+        "under18": null,

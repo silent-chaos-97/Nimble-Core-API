@@ -4,6 +4,7 @@ describe('Auth', () => {
   describe('Authentication', () => {
     describe('Beared: Token invalid', () => {
       it('should not allow un-authenticated requests', done => {
+        request(app.server)
           .get('/v1/me')
           .expect('Content-Type', /json/)
           .expect(401)
@@ -43,7 +44,6 @@ describe('Auth', () => {
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
           .expect(200)
-          .end((err, res) => {
             if (err) throw new Error(err)
 
             expect(res.body.token).not.be.undefined
@@ -88,3 +88,6 @@ describe('Auth', () => {
             request(app.server)
               .get('/v1/me')
               .set('Authorization', 'Bearer ' + res.body.token)
+              .expect('Content-Type', /json/)
+              .expect(200)
+              .end((err, res) => {

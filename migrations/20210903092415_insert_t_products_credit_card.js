@@ -33,3 +33,5 @@ Credit Card Options
 We give you options for credit cards that line up perfectly with the way you live. <INSTITUTION NAME> Visa can provide you with cash advances from your credit line at all banks and ATMs that recognize these cards worldwide.`
   },
   {
+    name: 'Platinum Rewards Visa® Credit Card',
+    category: 'CARD',

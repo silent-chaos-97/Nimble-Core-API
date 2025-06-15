@@ -39,3 +39,4 @@ describe('GET /account-requests/count', () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .end(done)
+    })

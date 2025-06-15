@@ -1977,3 +1977,77 @@ const successResponse = {
                 "date": "2019-10-01T00:00:00Z",
                 "snippet": "The Herald No allowances for MDC-A after SONA boycott MDC Alliance legislators will not receive their sitting allowances for the past five months after they walked out The Herald Nokutenda Chiyangwa  and Anesu Madiye A Peruvian man appeared in court yesterday charged with unlawfully dealing in dangerous drugs after he was allegedly caught at Robert Gabriel Mugabe International Airport with a kilogramme of cocaine. Wilmer Tarazona Aro (32) appeared before magistrate Mrs Rumbidzai Mugwagwa who denied bail and remanded the matter to October 4.",
                 "title": "1kg cocaine lands Peruvian in court | The Herald",
+                "url": "https://www.herald.co.zw/1kg-cocaine-lands-peruvian-in-court/"
+              },
+              {
+                "date": "2020-03-26T00:00:00Z",
+                "snippet": "This year's recipient of China's Confucius Peace Prize is the prsident of Zimbabwe, Robert Mugabe. President Mugabe is perhaps best known for his many violations of human rights, including the massacre of an estimated 20,000 people in the Matebeleland and Midlands provinces in the 1980s. In 2005, the political thriller \"The Interpreter,\" starring Nicole Kidman and Sean Penn, involved an assassination plot targeting fictional president Edmond Zuwanie, a soft-spoken former teacher who devolved into a remorseless despot.",
+                "title": "A \"peace\" prize for Mugabe: The double-speak behind China's answer to the ... | ZimDaily",
+                "url": "https://www.zimdaily.com/?p=36197"
+              },
+              {
+                "date": "2020-03-29T00:00:00Z",
+                "snippet": "He says that \"by this big mistake we have learned a lot\". Zimbabwe's army early Wednesday announced that President Robert Mugabe and his family were under house arrest. - AP",
+                "title": "AS IT HAPPENED: Zanu-PF youth leader apologises for 'big mistake' of 'denigrating' army | News24",
+                "url": "https://www.news24.com/Africa/Zimbabwe/live-britain-urges-no-violence-in-zimbabwe-20171115"
+              },
+              {
+                "date": "2020-03-30T00:00:00Z",
+                "snippet": "\"Si es necesario, se desplegarán las fuerzas de seguridad para garantizar el respeto [del confinamiento]\", advirtió el presidente Mnangagwa en su discurso. El año pasado, la represión de los disturbios originados por la subida de los precios del combustible causó cerca de 20 muertos y numerosos heridos, y reavivó el miedo a los abusos del régimen de Robert Mugabe (1980-2017). El promotor de aquellas manifestaciones, el líder de la principal central sindical del país, Japhet Moyo, afirmó que respaldaba las órdenes de confinamiento.",
+                "title": "El país que teme morir de hambre antes que de coronavirus cuando comience la cuarentena - Infobae",
+                "url": "https://www.infobae.com/america/mundo/2020/03/30/el-pais-que-teme-morir-de-hambre-antes-que-de-coronavirus-cuando-comience-la-cuarentena/?outputType=amp-type"
+              },
+              {
+                "date": "2020-03-21T00:00:00Z",
+                "snippet": "But on his Harare visit last month he stunned onlookers when he warmly shared the stage with the Zimbabwean leader while expanding his business empire. The former president of Botswana has once again set tongues wagging, this time accusing Mugabe of violating the rights of gays and lesbians. Speaking in an interview in New York with a United Nations online publication, Africa Renewal, Mogae emphasised the need for reformed mindsets.",
+                "title": "Former Botswana President Mogae blasts Zimbabwean tyrant Robert Mugabe | ZimDaily",
+                "url": "https://www.zimdaily.com/?p=42787"
+              },
+              {
+                "date": "2019-11-24T00:00:00Z",
+                "snippet": "\"They call us maJuda, which means the Jews,\" he said. The Lemba have also escaped the wrath of Zimbabwe's authoritarian ruler, President Robert G. Mugabe, who is accused of using political violence to stay in power during a 32-year reign. Mugabe is himself a Roman Catholic, which also puts him in a small minority among Zimbabwe's mostly Anglican, Methodist and Pentacostal churchgoers",
+                "title": "From Zimbabwe, With Faith – The Forward",
+                "url": "https://forward.com/opinion/171453/from-zimbabwe-with-faith/"
+              },
+              {
+                "date": "2020-03-26T00:00:00Z",
+                "snippet": "The brother of a farmer murdered in Zimbabwe has appealed for Nelson Mandela to intervene to prevent further bloodshed in the country's deepening crisis. Paul Dunn, who farms 1,500 acres at Ash, called on the former South African president and ANC leader to condemn Robert Mugabe's murderous regime and help end the killings. Mr Dunn has campaigned for peace in Zimbabwe since his brother, Alan, was murdered by Mugabe's war veterans on his farm near Harare eight years ago.",
+                "title": "Kent farmer appeals to Nelson Mandela",
+                "url": "https://www.kentonline.co.uk/kent/news/kent-farmer-appeals-to-nelson-ma-a40038/"
+              },
+              {
+                "date": "2019-07-19T00:00:00Z",
+                "snippet": "I particularly want to thank His Excellency, the President and Commander-In-Chief of the Zimbabwe Defence Forces, Cde. R. G Mugabe, who is also the First Secretary of the revolutionary party ZANU PF, for making it possible for me to be in this House today. I am humbled by the magnitude of the confidence and responsibility placed upon me by my revolutionary party ZANU PF and the people of Lobengula Constituency.",
+                "title": "Lobengula MP blames the mushrooming of Vuzu parties to absentee parents | The Insider",
+                "url": "https://www.insiderzim.com/lobengula-mp-blames-the-mushrooming-of-vuzu-parties-to-absentee-parents/"
+              },
+              {
+                "date": "2020-03-21T00:00:00Z",
+                "snippet": "Mwaya is just the latest of dozens of officials charged under the law. One was arrested for labelling Mugabe a dictator who ruled by the sword and another was jailed for calling him thick-headed. Mugabe has been in power since independence from Britain in 1980.",
+                "title": "Man charged with insulting Mugabe | ZimDaily",
+                "url": "https://www.zimdaily.com/?p=35328"
+              },
+              {
+                "date": "2020-03-22T00:00:00Z",
+                "snippet": "The late former president Robert Mugabe claimed huge amounts of arms had been uncovered on farms owned by Zapu for use to ostensibly overthrow his government to justify the deployment of the Fifth Brigade. After the \"discovery\" of the weapons, Mugabe fired Nkomo, Josiah Chinamano and Joseph Msika (all late), Transport minister and Natural Resources minister respectively, from government on charges of plotting to overthrow his government, culminating in the Gukurahundi massacres which led to the killing of thousands of civilians. However, despite all the persecution and suffering at the hands of government, Nkomo returned home from exile in Britain and subsequently signed the Unity Accord with Mugabe in 1987.",
+                "title": "Mpofu under fire over Nkomo - The Standard",
+                "url": "https://www.thestandard.co.zw/2020/03/22/mpofu-fire-nkomo/amp/"
+              },
+              {
+                "date": "2019-09-18T00:00:00Z",
+                "snippet": "During this period he gained several further degrees from the University of London a Masters in Economics, a Bachelor of Administration, and two Law degrees. While imprisoned, Mugabe learned that his first born son Nhamodzenyika, had died of encephalitis at the age of three. Mugabe was grief-stricken and requested a leave of absence to visit his wife Sally (née Hayfron) in Ghana, but the Prison Warden refused to allow him to bury and mourn for his son.",
+                "title": "Mugabe The Legacy - Bulawayo24 News",
+                "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-170850.html"
+              },
+              {
+                "date": "2019-09-17T00:00:00Z",
+                "snippet": "Mugabe is dead, but old men still run southern Africa FBI still actively working cold case on Calder Road killer Pretoria mall evacuated after bomb threat Australian High Court to consider Cardinal's appeal Mugabe is dead, but old men still run southern Africa The death of Robert Gabriel Mugabe (95) saw another of the first-generation leaders of newly independent southern African states leave the world stage. Southern Africa was the last region on the continent to obtain majority rule.",
+                "title": "Mugabe is dead, but old men still run southern Africa",
+                "url": "https://www.bignewsnetwork.com/news/262444041/mugabe-is-dead-but-old-men-still-run-southern-africa"
+              },
+              {
+                "date": "2019-12-18T00:00:00Z",
+                "snippet": "whose founder president Kwame Nkrumah profoundly influenced him. As a member of various nationalist parties that were banned by the white-minority government, Mugabe was detained with other nationalist leaders in 1964 and spent the next 10 years in prison camps or jail. He used his incarceration to gain three degrees through correspondence courses, but the years in prison left their mark.",
+                "title": "Mugabe still the boss at 89 | ZimDaily",
+                "url": "https://www.zimdaily.com/?p=13016"
+              },

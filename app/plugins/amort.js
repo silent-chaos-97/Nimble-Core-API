@@ -36,3 +36,8 @@ function _payment(amount, rate, term) {
 
 function payment(amount, rate, term) {
   return _.round(_payment(amount, rate, term), 2)
+}
+
+function _term(amount, rate, payment) {
+  const i = rate / 12 / 100
+  return Math.log(payment / (payment - amount * i)) / Math.log(i + 1)

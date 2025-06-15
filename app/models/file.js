@@ -22,10 +22,10 @@ class FileModel extends BaseModel {
         'key',
 
         // file meta
-        'mimetype',
         'size',
         'acl',
 
         //info
         'name',
         'version'
+      ],

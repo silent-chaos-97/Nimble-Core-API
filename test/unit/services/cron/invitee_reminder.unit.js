@@ -59,3 +59,6 @@ describe('app.services.cron.inviteeReminder', () => {
         await app.services.cron.inviteeReminder()
         expect(inviteReminderSpy).to.not.have.been.called
         expect(prospectPendingSignersSpy).to.not.have.been.called
+      })
+
+      it('should SEND reminders when running 24 hours after', async () => {

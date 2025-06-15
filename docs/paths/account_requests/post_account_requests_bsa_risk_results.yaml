@@ -1,5 +1,4 @@
 /account-requests/{id}/bsa-risk-results:
-  post:
     tags:
       - Account Request
     summary: Upsert the BSA Questionnaire results by account request Id
@@ -16,3 +15,4 @@
     requestBody:
       description: BSA Questionnaire results
       required: true
+      content:

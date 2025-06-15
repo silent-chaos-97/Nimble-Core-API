@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const createProductConfigurations = require('./helpers/create_product_configurations')
 const referrers = require('./helpers/referrers')

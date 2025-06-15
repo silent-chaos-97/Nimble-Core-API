@@ -14,6 +14,7 @@ describe('POST /signers/:id/invites', async () => {
     sinon.restore()
     clock.restore()
   })
+// Temp comment
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -31,3 +32,4 @@ describe('POST /signers/:id/invites', async () => {
       return request(app.server)
         .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/invites`)
         .expect('Content-Type', /json/)
+        .expect(401)

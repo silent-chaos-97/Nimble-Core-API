@@ -309,3 +309,14 @@ const schema = Joi.object({
       // Not sure - Microbilt property search / Attom sales history
 			ownedRealEstateSchedule: Joi.object({
 				properties: Joi.array().items(
+					Joi.object({
+						address: Joi.string(),
+						saleStatus: Joi.string().valid('Sold', 'Pending Sale', 'Rental'),
+						propertyType: Joi.string(),
+						presentMarketValue: Joi.number(),
+						mortgageAndLiensAmount: Joi.number(),
+						grossRentalIncome: Joi.number(),
+						mortgagePayments: Joi.number(),
+						insuranceMaintenanceTaxesAndMiscellaneous: Joi.number(),
+						netRentalIncome: Joi.number()
+					})

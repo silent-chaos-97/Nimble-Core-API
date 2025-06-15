@@ -264,7 +264,6 @@ const schema = {
       format: String,
       default: 'us-east-2',
       env: 'AWS_LAMBDA_REGION'
-// Temp comment
     },
     swf_version: {
       doc: 'the AWS SWF api-version',
@@ -273,3 +272,13 @@ const schema = {
       env: 'AWS_SWF_VERSION'
     },
     swf_region: {
+      doc: 'the AWS SDK region for SWF, null means aws-sdk default',
+      format: String,
+      default: 'us-east-2',
+      env: 'AWS_SWF_REGION'
+    },
+    swf_domain: {
+      doc: 'the AWS SWF domain',
+      format: String,
+      default: 'wkfl-local',
+      env: 'AWS_SWF_DOMAIN'

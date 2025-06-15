@@ -80,3 +80,6 @@ describe('app.services.creditReport.fetch', () => {
         prequal: {}
       }
       const scope = nock(creditReportPlugin._apiURL())
+        .post(/process_applicant/)
+        .reply(200, response)
+

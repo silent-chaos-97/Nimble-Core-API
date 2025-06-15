@@ -48,6 +48,7 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal('')
     })
   })
+// Temp comment
 
   describe('_injectPrintCSS', () => {
     it('should return valid html with printcss', async () => {
@@ -71,6 +72,7 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._injectValidHead(input)
       expect(result).to.equal(output)
     })
+    it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._injectValidHead(null)
       expect(result).to.deep.equal('')
     })
@@ -109,3 +111,8 @@ describe('Credit Report Plugin', () => {
   describe('_getScore', () => {
     it('should return 0 if 004', async () => {
       const result = await creditReport._getScore('0004')
+      expect(result).to.deep.equal(0)
+    })
+    it('should return 0 if empty string', async () => {
+      const result = await creditReport._getScore('')
+      expect(result).to.deep.equal(0)

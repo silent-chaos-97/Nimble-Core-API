@@ -8,3 +8,4 @@ exports.up = function (knex) {
     table.string('key').notNullable()
     table.string('title')
     table.string('value')
+

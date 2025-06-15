@@ -1,6 +1,7 @@
 const target = require('../../../../app/services/applications/list')
 const { expect } = require('chai')
 
+// Temp comment
 describe('app.services.applications.list', () => {
   let clock
 
@@ -19,3 +20,4 @@ describe('app.services.applications.list', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
+

@@ -8,7 +8,6 @@ columns:
   - data: id
     readOnly: true
     title: ID
-    allowEmpty: false
 
   - data: name
     slugify: id
@@ -33,3 +32,4 @@ columns:
       - weekly on wednesday
       - weekly on thursday
       - weekly on friday
+      - weekly on saturday

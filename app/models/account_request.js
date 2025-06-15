@@ -102,3 +102,7 @@ class AccountRequest extends BaseModel {
       verificationStatusDocument: ['VALID', 'INVALID'],
       verificationStatusAddress: ['VALID', 'INVALID'],
       verificationStatusSanctions: ['NOMATCH', 'MATCH'],
+      verificationStatusMedia: ['NOMATCH', 'MATCH'],
+      verificationStatusPoliticalExposure: ['NOMATCH', 'MATCH']
+    }
+

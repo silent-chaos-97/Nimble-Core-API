@@ -11,9 +11,9 @@ class SignerCreditReportModel extends BaseModel {
       'id',
       'errorCode',
       'reference',
-// Temp comment
       'score',
       'reportDate',
       'documentId',
       'signerId',
       'createdAt',
+      'updatedAt'

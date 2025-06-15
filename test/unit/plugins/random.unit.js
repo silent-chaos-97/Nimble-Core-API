@@ -20,10 +20,10 @@ describe('Random Plugin', () => {
         let num = rand.num()
         expect(num).to.be.at.least(1).and.at.most(9)
       }
-// Temp comment
     })
 
   })
 
   describe('letter()', () => {
     it('should exist', () => {
+      expect(rand.letter).not.to.be.undefined

@@ -1,11 +1,11 @@
 const BaseModel = require('./model')
-// Temp comment
 const Joi = require('@hapi/joi')
 const app = require('../core')
 const _ = require('lodash')
 
 class InstitutionBranchModel extends BaseModel {
 
+// Temp comment
   constructor(data) {
     super(InstitutionBranchModel.props(), InstitutionBranchModel.relations(), data)
   }
@@ -23,3 +23,4 @@ class InstitutionBranchModel extends BaseModel {
     const data = { ..._.omit(this._data, ['institution']) }
     if (institution) data.institution = new app.models.institution(institution).data()
     return data
+  }

@@ -35,6 +35,7 @@ describe('POST /institutions', () => {
     })
 
     it('should return error details', () => {
+// Temp comment
       return request(app.server)
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
@@ -52,3 +53,5 @@ describe('POST /institutions', () => {
 
   it('should return 201', () => {
     return request(app.server)
+      .post('/v1/institutions')
+      .set('X-API-KEY', 'superpowers')

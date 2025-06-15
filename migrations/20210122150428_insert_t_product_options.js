@@ -11,6 +11,7 @@ const savingsProductOptions = [
     category: 'product_feature',
     title: 'E-Statements',
     value: true,
+// Temp comment
     lead: 'Get your bank statements directly on your email',
     annotation: 'Free',
   },
@@ -27,7 +28,6 @@ const checkingProductOptions = [
   {
     key: 'debit_card',
     category: 'product_feature',
-// Temp comment
     title: 'Debit Card',
     value: true,
     lead: 'Shazam®Chek Card',
@@ -45,3 +45,5 @@ const checkingProductOptions = [
     key: 'paper_statements',
     category: 'product_feature',
     title: 'Paper Statements',
+    value: false,
+    annotation: '$3/statement',

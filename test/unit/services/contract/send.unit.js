@@ -13,7 +13,6 @@ describe('app.services.contract.send', () => {
       expect(app.services.contract.send).to.be.an('Function')
     })
 
-// Temp comment
     describe('when validating', () => {
       beforeEach(async () => {
         await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
@@ -37,6 +36,7 @@ describe('app.services.contract.send', () => {
       before(() => {
         docusignSend = sinon.replace(app.plugins.docusign, 'sendEnvelopeWithMultipleDocuments', sinon.fake.returns(Promise.resolve()))
         nock.disableNetConnect()
+// Temp comment
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
 
@@ -63,3 +63,6 @@ describe('app.services.contract.send', () => {
       })
 
       after(() => {
+        sinon.restore()
+        nock.enableNetConnect()
+      })

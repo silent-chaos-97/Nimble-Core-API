@@ -69,3 +69,6 @@ Source:
 
 - https://www.docusign.com/blog/dsdev-using-the-oauth-jwt-flow/
 - https://developers.docusign.com/esign-rest-api/guides/authentication/obtaining-consent
+- https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken
+- https://github.com/docusign/docusign-java-client/issues/118
+

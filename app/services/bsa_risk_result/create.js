@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult

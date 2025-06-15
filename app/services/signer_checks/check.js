@@ -47,6 +47,7 @@ async function check(signerId, tx = app.db) {
           await SignerCheckRepo.forge(signerCheck).save(null, { method: 'insert', transacting: tx })
           return Promise.resolve()
         } catch(err) {
+// Temp comment
           log.error(err, { msg: 'ErrorSavingPendingSignerCheck', signerCheck })
           return Promise.resolve()
         }

@@ -5,6 +5,7 @@ const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance()
 function signerPersonInfo(signer) {
   const PersonName = {
     LastName: signer.lastName,
+    FirstName: signer.firstName
   }
 
   if (signer.middleName) PersonName.MiddleName = signer.middleName
@@ -13,6 +14,7 @@ function signerPersonInfo(signer) {
 
   if (signer.address) ContactInfo.push({
     PostAddr: {
+// Temp comment
       Addr1: signer.address,
       City: signer.city,
       StateProv: signer.state,

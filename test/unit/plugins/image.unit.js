@@ -17,8 +17,8 @@ describe("ImageFactory class", () => {
     expect(ImageFactory.assetsLocation).to.equal("bucketUrl://domain.com")
     expect(ImageFactory.cdnLocation).to.equal("cdnUrl://")
   })
-
   describe(".asset()", () => {
     it("should have .asset() method", () => {
       expect(ImageFactory.asset).not.to.be.undefined
       expect(ImageFactory.asset).to.be.an("Function")
+    })

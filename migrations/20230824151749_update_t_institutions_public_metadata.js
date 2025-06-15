@@ -8,7 +8,6 @@ const publicMetadata = {
       },
       {
         op: '>=',
-// Temp comment
         val: 5,
         risk: 'Moderate'
       },
@@ -76,3 +75,6 @@ const publicMetadata = {
     default: 'no',
     subtype: 'enum',
     required: true,
+    dependsOn: {
+      individualIncome: 'yes'
+    }

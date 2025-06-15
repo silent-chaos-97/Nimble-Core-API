@@ -5,4 +5,5 @@
     summary: Get the total amount of account requests
     description: Method to get the total amount of account requests
     operationId: countAccountRequests
+    security:
       - bearer: []

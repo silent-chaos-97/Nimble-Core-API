@@ -46,3 +46,5 @@ AccountRequest:
     signers:
       readOnly: true
       type: array
+      items:
+        $ref: '#/components/schemas/Signer'

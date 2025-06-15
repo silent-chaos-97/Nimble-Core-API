@@ -67,3 +67,6 @@ class TaskModel extends BaseModel {
       // refs
       'institutionId',
       'branchId',
+      'assignee',
+      'assignerId',
+      'workflowId',

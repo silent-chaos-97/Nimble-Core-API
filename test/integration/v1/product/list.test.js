@@ -71,3 +71,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
       await seed.institution.create(testInstitution2)
       await seed.product.create(testProduct10)
     })
+
+    it('should not return products of other institutions', () => {
+      return request(app.server)

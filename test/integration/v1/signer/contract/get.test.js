@@ -9,7 +9,6 @@ describe('GET /signers/:id/contract', async () => {
       scopes: ['signers'],
       resources: [
         `signers#00000000-9999-aaaa-0000-2ea08a01e901`,
-        `signers#00000000-9999-aaaa-0000-2ea08a01e902`,
         `signers#00000000-9999-aaaa-0000-2ea08a01e903`,
       ],
       expiration: 1200
@@ -74,3 +73,6 @@ describe('GET /signers/:id/contract', async () => {
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
         .set('Authorization', 'Bearer ' + badtoken)
+        .expect(403)
+        .expect('Content-Type', /json/)
+    })

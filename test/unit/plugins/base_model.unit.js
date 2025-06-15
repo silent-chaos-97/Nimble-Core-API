@@ -33,3 +33,4 @@ describe('BaseModel class', () => {
     expect(model.relations).to.be.undefined // static
     expect(model.schema).to.be.undefined // static
   })
+

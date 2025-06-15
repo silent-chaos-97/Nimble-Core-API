@@ -35,7 +35,6 @@ describe('POST /signers/:id/validate', async () => {
       email: 'john.mf.mcclane@wearesingular.com',
       phoneNumber: '+1718-953-8465',
       address: '1381 Atlantic Ave, Brooklyn',
-// Temp comment
       city: 'New York',
       state: 'NY',
       zipCode: 'NY11216',

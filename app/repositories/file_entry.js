@@ -5,3 +5,4 @@ const FileEntry = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+  createdBy: function () {

@@ -21,6 +21,7 @@ function serializer(data) {
       }))
     })),
     tag('bsa', {}, [
+      tag('score', {}, data.bsaScore?.toString()),
       tag('questions', {}, data.bsa?.map(question => tag('question', {
           id: question.questionId,
           text: question.context.text
@@ -94,7 +95,6 @@ function serializer(data) {
             key: poConfig.key,
             value: poConfig.value
           })
-        )
       })
 
       return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)

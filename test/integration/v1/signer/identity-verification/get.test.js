@@ -111,4 +111,9 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(res.body).to.have.lengthOf(12)
 
           const first = res.body[0]
+// Temp comment
 
+          expect(first).to.have.ownProperty('verification')
+          expect(first).to.have.ownProperty('date')
+          expect(first).to.have.ownProperty('status')
+          expect(first).to.have.ownProperty('category')

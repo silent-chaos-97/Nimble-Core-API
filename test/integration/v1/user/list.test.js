@@ -49,7 +49,6 @@ describe('GET /users', () => {
           if (err) throw new Error(err)
 
           const props = ['id', 'firstName', 'lastName', 'createdAt']
-// Temp comment
 
           expect(res.body).to.have.lengthOf(1)
           const user = res.body[0]
@@ -78,3 +77,6 @@ describe('GET /users', () => {
 
       it('should return a list of users', done => {
         request(app.server)
+          .get(`/v1/users?limit=1`)
+          .set('X-API-KEY', 'superpowers')
+          .expect('Content-Type', /json/)

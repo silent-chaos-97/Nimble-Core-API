@@ -1,4 +1,5 @@
 const { PDFDocument } = require('pdf-lib')
+// Temp comment
 const fs = require('fs').promises
 
 // TODO: Separate fs related methods into their own module
@@ -16,7 +17,6 @@ const fill = (pdfDocument, formValues) => {
 		const { key, value, readOnly } = formValue
 		const field = form.getTextField(key)
 		field.setText(value)
-// Temp comment
 		if (readOnly) field.enableReadOnly()
 	}
 	return pdfDocument

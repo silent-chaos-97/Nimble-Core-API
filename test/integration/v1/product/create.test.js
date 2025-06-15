@@ -16,6 +16,7 @@ describe('POST /institutions/:id/products', () => {
       .send(product)
       .expect('Content-Type', /json/)
       .expect(401)
+  })
 
   describe('when validating entities', () => {
     it('should return 400', () => {
@@ -65,3 +66,6 @@ describe('POST /institutions/:id/products', () => {
           .expect(400)
       })
 
+      new Array('SAVINGS', 'CHECKING', 'CD').forEach(category => {
+        it(`should return 201 with ${category} as a valid category`, async () => {
+          await request(app.server)

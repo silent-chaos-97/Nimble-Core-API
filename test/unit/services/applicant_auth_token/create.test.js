@@ -1,5 +1,4 @@
 const target = require('../../../../app/services/applicant_auth_token/create')
-const { expect } = require('chai')
 
 describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
@@ -15,6 +14,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
   beforeEach(async () => {
     await seed.applicantOneTimeToken.create('2345f171-b3b7-4167-abfb-ff9203514bde')
   })
+
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
@@ -44,3 +44,5 @@ describe('app.services.applicantOneTimeToken.create', () => {
           const bodyProp = { id: "111", role: null }
           const errorMessage = "Role is missing"
           expect(target).not.to.be.undefined
+
+          return Promise.all([

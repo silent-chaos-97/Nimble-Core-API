@@ -7,10 +7,10 @@ columns:
 
   - data: product
     type: key-value-setting
-    selectSettings:
       ref: products
       value: id
       title: name
 
   - data: scope
     title: Account Type
+    type: key-value-setting

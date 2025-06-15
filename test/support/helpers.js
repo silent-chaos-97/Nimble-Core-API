@@ -19,3 +19,4 @@ module.exports = {
     const jwt = app.plugins.jwt
 
     const now = moment()
+    const defaults = {

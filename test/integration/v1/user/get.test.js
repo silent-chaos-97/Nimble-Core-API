@@ -43,3 +43,5 @@ describe('GET /users/:id', () => {
         .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
+        .expect(401)
+    })

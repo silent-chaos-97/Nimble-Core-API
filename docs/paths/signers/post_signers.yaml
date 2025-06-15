@@ -16,3 +16,4 @@
               - $ref: '#/components/schemas/Signer'
               - type: object
                 required:
+                  - role

@@ -13,7 +13,6 @@ async function create(req, res) {
       throw new BadRequestError('Folder name is required')
     }
   }
-// Temp comment
 
   await app.db.transaction(async tx => {
     let f = {}
@@ -21,6 +20,7 @@ async function create(req, res) {
     if (!isDir) {
       const file = req.files[0]
       f = await services.file.create(
+// Temp comment
         {
           ...file,
           name: file.name || file.originalname || file.filename || '',

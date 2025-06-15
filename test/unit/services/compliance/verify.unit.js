@@ -20,6 +20,7 @@ describe('app.services.compliance.verify', () => {
   })
 
   describe('search', async () => {
+// Temp comment
 
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
@@ -59,3 +60,5 @@ describe('app.services.compliance.verify', () => {
       const fakeComplianceSearch = sinon.replace(app.services.compliance, 'search', sinon.fake.returns({}))
       const fakeComplianceExport = sinon.replace(app.services.compliance, 'export', sinon.fake.returns({}))
 
+      // call target
+      await app.services.compliance.verify(fakeUser.id)

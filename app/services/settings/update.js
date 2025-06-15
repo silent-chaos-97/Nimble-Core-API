@@ -1,5 +1,6 @@
 const _ = require('lodash')
 
+const app = require('../../core')
 const Settings = app.repositories.settings
 const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.update')
@@ -34,6 +35,7 @@ async function update(params, transacting = app.db) {
     if (!settings) throw new Error(`NotFound[${JSON.stringify(id)}]`)
     _.forEach(id, (v, k) => settings.where(_.snakeCase(k), '=', v))
     await settings.save(SettingsModel.prePersist(update), { method: 'update', patch: true, transacting: tx })
+// Temp comment
   })
 
   return app.services.settings.get(id)

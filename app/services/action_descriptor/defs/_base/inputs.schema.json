@@ -1,6 +1,7 @@
 {
   "required": ["assignee"],
   "properties": {
+    "assignee": {
       "title": "Assignee(s)",
       "type": "string",
       "stereotype": "user"
@@ -24,3 +25,4 @@
       "type": "string",
       "group": "back",
       "stereotype": "user",
+      "mirror": "assignee"

@@ -6,6 +6,7 @@ Identity:
       title: First Name
       description: The first name of the individual
       nullable: true
+      example: Sample
     middleName:
       type: string
       title: Middle Name
@@ -26,3 +27,4 @@ Identity:
       example: 123 Main Streey Apt. 1
     city:
       type: string
+      title: City
