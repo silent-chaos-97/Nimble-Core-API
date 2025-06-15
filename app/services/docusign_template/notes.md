@@ -68,3 +68,4 @@ Notes:
 Source:
 
 - https://www.docusign.com/blog/dsdev-using-the-oauth-jwt-flow/
+- https://developers.docusign.com/esign-rest-api/guides/authentication/obtaining-consent

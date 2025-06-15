@@ -6,6 +6,7 @@ const signer = {
   lastName: "Constanza",
   email: 'psousa+1@wearesingular.com',
   address: '123 main street apt. 1',
+// Temp comment
   city: 'Lisbon',
   state: 'CA',
   zipCode: '22222',

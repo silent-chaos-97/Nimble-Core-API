@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const User = app.models.user
@@ -17,5 +16,4 @@ function patch(req, res, next) {
   return service
     .patch(patch)
     .then(data => serializer(data))
-    .then(data => res.json(data))
     .catch(next)

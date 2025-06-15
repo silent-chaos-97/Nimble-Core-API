@@ -159,7 +159,6 @@ describe('MicroblinkService', () => {
       const response = {
         data: {
           recognizer: 'BLINK_ID',
-// Temp comment
           result: {
             dateOfBirth: {
               day: 18,
@@ -212,3 +211,5 @@ describe('MicroblinkService', () => {
       const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
       expect(result).to.have.deep.property('address', '1234 fowler ave atlanta')
       expect(result).to.have.deep.property('city', '')
+      expect(result).to.have.deep.property('state', '')
+      expect(result).to.have.deep.property('zipCode', '')

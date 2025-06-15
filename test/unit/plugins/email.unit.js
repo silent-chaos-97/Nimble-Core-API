@@ -70,3 +70,4 @@ describe('Email Plugin', () => {
 
         expect(plugin.service.sendEmailWithTemplate).to.have.been.calledOnceWith(expectedCall)
       })
+    })

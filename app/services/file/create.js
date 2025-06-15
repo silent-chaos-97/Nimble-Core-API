@@ -30,11 +30,11 @@ async function create(data, tx = app.db) {
 
   const res = await app.plugins.aws.putFile(data, `${data.createdByRole}/${data.createdById}`)
 
+  logger.info({ phase: 'file.create.s3:success', res })
 
   try {
     data = _.merge(data, res)
 
-    const model = validator(_.pick(data, FileModel.props('create')), FileModel.schema('create'), { abortEarly: false })
 
     const entity = await File.forge(model).save(null, { method: 'insert', transacting: tx })
 

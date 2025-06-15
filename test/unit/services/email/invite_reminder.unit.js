@@ -34,11 +34,11 @@ describe('app.services.email.inviteReminder', () => {
       return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
     })
 
+    it('should return error if signer not found', async () => {
       const id = uuid()
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
     })
-  })
 
   describe('when calling with valid data', () => {
     beforeEach(async () => {

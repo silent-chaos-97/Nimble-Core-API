@@ -2,8 +2,10 @@ const _ = require('lodash')
 const app = require('../../core')
 const PreconditionFailed = require('../../errors/precondition_failed')
 
+// Temp comment
 const AccountRequest = app.repositories.accountRequest
 const logger = app.logger.getLogger('app.services.contract.update')
+
 
 function getProductName(productConfigurations) {
   // for now we only have 1 product

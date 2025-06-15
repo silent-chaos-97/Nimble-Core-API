@@ -19,3 +19,4 @@ SignerCreditReport:
       type: string
       example: '188504_1603905845'
     errorCode:
+      title: An error code if case of failure to retrieve the report

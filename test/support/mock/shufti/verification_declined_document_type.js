@@ -11,6 +11,7 @@ module.exports = {
       ],
       supported_types: [
         'id_card',
+        'passport',
         'driving_license',
         'credit_or_debit_card',
       ],
@@ -27,3 +28,4 @@ module.exports = {
         'envelope',
         'id_card',
         'passport',
+        'rent_agreement',

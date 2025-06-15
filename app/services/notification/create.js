@@ -10,7 +10,6 @@ const SCHEMAS = {
     taskId: Joi.string(),
     method: Joi.string().required().valid('email'),
     product: Joi.string().optional(),
-    to: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).required(),
     cc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     bcc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     title: Joi.string().required(),
@@ -28,3 +27,4 @@ const SCHEMAS = {
     }),
     message: Joi.string().required(),
     my: Joi.object().optional(),
+    cta: Joi.object().optional().keys({

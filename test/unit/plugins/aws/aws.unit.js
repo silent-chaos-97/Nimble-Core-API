@@ -1,4 +1,5 @@
 const AWS = require('../../../../app/plugins/aws')
+
 describe('AWS Facade class', () => {
   it('should exist', () => {
     expect(AWS).not.to.be.undefined
@@ -22,7 +23,6 @@ describe('AWS Facade class', () => {
   it('should not load empty config vars', () => {
     const target = new AWS.constructor({
       credentials: {
-        accessKeyId: 'accessKeyId'
       },
       region: 'region',
       endpoint: '',

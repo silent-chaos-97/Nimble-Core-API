@@ -7,7 +7,6 @@ IdProofDocument:
     - issuedDate
     - issuer
     - frontDocumentId
-    - backDocumentId
   properties:
     type:
       type: string

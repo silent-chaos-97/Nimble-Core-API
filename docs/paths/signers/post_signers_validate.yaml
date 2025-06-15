@@ -12,6 +12,7 @@
         schema:
           type: string
           format: uuidv4
+    security:
       - bearer: []
     requestBody:
       description: Signer information
@@ -30,3 +31,4 @@
                     writeOnly: true
                     format: uuidv4
                     title: the ID of the the signer to validate
+                    description: signer identifier

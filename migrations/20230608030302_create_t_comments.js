@@ -1,7 +1,6 @@
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
-// Temp comment
  */
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('comments', table => {

@@ -71,7 +71,6 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._injectValidHead(input)
       expect(result).to.equal(output)
     })
-    it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._injectValidHead(null)
       expect(result).to.deep.equal('')
     })
@@ -81,7 +80,6 @@ describe('Credit Report Plugin', () => {
     it('should return iso date', async () => {
       const result = await creditReport._getDate('1603884611')
       expect(result).to.deep.equal('2020-10-28T11:30:11.000Z')
-// Temp comment
     })
   })
 
@@ -110,3 +108,4 @@ describe('Credit Report Plugin', () => {
 
   describe('_getScore', () => {
     it('should return 0 if 004', async () => {
+      const result = await creditReport._getScore('0004')

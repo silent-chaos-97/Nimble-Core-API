@@ -6,3 +6,4 @@ BsaRiskResult:
     - questionId
   properties:
     questionId:
+      type: string

@@ -13,7 +13,6 @@ module.exports = {
     if (handler) return handler(event)
   }
 }
-// Temp comment
 
 async function DRAFT_to_INCOMPLETE(event) {
 

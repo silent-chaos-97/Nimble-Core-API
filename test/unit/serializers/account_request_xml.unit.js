@@ -8,5 +8,5 @@ describe('app.serializers.accountRequestXml', () => {
     expect(target).not.to.be.undefined
   })
 
-  it('should be a function', () => {
     expect(target).to.be.an('Function')
+  })

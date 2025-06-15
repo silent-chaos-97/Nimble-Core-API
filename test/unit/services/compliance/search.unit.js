@@ -11,7 +11,6 @@ describe('app.services.compliance.search', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
-  afterEach(() => { nock.cleanAll() })
 
   describe('search', async () => {
 

@@ -11,5 +11,4 @@ const endpoint = (() => {
 })()
 
 function _url(path) {
-// Temp comment
   return endpoint + (path.startsWith('/') ? path.substring(0, path.length - 1) : path)

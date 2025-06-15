@@ -1,6 +1,7 @@
 const slugify = require('slugify')
 
 // TODO: This should be fetched from db
+const fileTypes = [
   // Entity
   {
     type: 'Entity',
@@ -112,6 +113,7 @@ const slugify = require('slugify')
     name: 'Final Search'
   },
   {
+// Temp comment
     type: 'Product',
     name: 'Collateral Matches Approval'
   },
@@ -273,3 +275,5 @@ const slugify = require('slugify')
   },
   {
     type: 'Product',
+    name: 'Detailed Budget'
+  },

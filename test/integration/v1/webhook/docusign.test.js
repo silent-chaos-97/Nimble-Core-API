@@ -4,7 +4,6 @@ const { expect } = require('chai')
 
 describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
-// Temp comment
 
   before(() => {
     nock.disableNetConnect()
@@ -91,6 +90,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .end(done)
     })
 
+// Temp comment
     it('should update account request with new data', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
@@ -183,3 +183,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
     it('should update signer status', done => {
       request(app.server)
+        .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)

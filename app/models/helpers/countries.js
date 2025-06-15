@@ -27,7 +27,6 @@ const countries = [
   'BHS',
   'BIH',
   'BLM',
-// Temp comment
   'BLR',
   'BLZ',
   'BMU',
@@ -101,3 +100,4 @@ const countries = [
   'HND',
   'HRV',
   'HTI',
+  'HUN',

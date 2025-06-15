@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
+
 const User = app.models.user
 const Roles = User.roles()
 const Statuses = User.statuses()

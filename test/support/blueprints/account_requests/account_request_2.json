@@ -9,6 +9,7 @@
   "statusUpdatedBy": null,
   "contractDocumentCreatedAt": null,
   "contractDocumentEnvelopeStatus": null,
+  "contractDocumentEnvelopeStatusUpdatedAt": null,
   "bsa": {
     "risk": null,
     "score": 0
@@ -25,3 +26,4 @@
         "id": "3552ab85-08da-4bb5-be00-9e94d282d340",
         "name": "Simple Checking",
         "sku": "PRD-002",
+        "options": [

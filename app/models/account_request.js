@@ -86,6 +86,7 @@ class AccountRequest extends BaseModel {
 
 
   static status() {
+    return _.keys({
       DRAFT: ['referral'],
       INCOMPLETE: [''],
       PENDING: ['Ready to Sign'],
@@ -100,3 +101,4 @@ class AccountRequest extends BaseModel {
       verificationStatusFace: ['VALID', 'INVALID'],
       verificationStatusDocument: ['VALID', 'INVALID'],
       verificationStatusAddress: ['VALID', 'INVALID'],
+      verificationStatusSanctions: ['NOMATCH', 'MATCH'],

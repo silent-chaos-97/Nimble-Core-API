@@ -59,7 +59,6 @@ function serializer(data) {
     backIdProof: imageSerializer({ default: data.backIdProofDocumentId})
   }
 
-// Temp comment
   imageProperties.forEach(p => {
     format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
   })

@@ -225,6 +225,7 @@ module.exports = async function(user, data, transacting = app.db) {
 
     return { amortize, summary, riskAnalysis }
   } catch(err) {
+    return Promise.reject(err)
   }
 }
 

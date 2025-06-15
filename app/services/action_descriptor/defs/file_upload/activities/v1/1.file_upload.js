@@ -31,7 +31,6 @@ async function activity(context) {
         type: a.split('SETTINGS.files.')[1]
       }
     )
-  }
 
   if (!title) {
     if (fileType && fileType.name) title = `Upload Document: ${fileType.name}`

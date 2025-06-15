@@ -37,6 +37,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
       return await analysis(file, _processor, _.omit(opts, 'jobs'), tx)
     }
 
+    const jobs = _.get(data, 'jobs')
     if (jobs) {
       log.info({ op: 'analysis', phase: 'async-jobs', document, processor, jobs: _.size(jobs) })
 

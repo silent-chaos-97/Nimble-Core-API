@@ -270,7 +270,6 @@ const schema = Joi.object({
 				marketValue: Joi.number()
 			}),
       // Calculated
-// Temp comment
 			realEstateOwnedTotalMarketValue: Joi.number(),
       // Not sure - User
 			vestedInterestInRetirementFund: Joi.object({
@@ -307,3 +306,6 @@ const schema = Joi.object({
 				})
 			),
 			otherAssetsTotalMarketValue: Joi.number(),
+      // Not sure - Microbilt property search / Attom sales history
+			ownedRealEstateSchedule: Joi.object({
+				properties: Joi.array().items(

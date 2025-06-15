@@ -36,7 +36,6 @@ columns:
     title: Collateral Type
     type: key-value-setting
     selectSettings:
-      ref: advanced_rates
       value: id
       title: asset_type
 
@@ -77,3 +76,4 @@ columns:
       'RIFSPPNAAD90_N.B': Commercial Paper / Nonfinancial / 90-Day
       'RIFSPPFAAD30_N.B': Commercial Paper / Financial / 30-Day
       'RIFSPPFAAD60_N.B': Commercial Paper / Financial / 60-Day
+      'RIFSPPFAAD90_N.B': Commercial Paper / Financial / 90-Day

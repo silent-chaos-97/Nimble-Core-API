@@ -5,8 +5,8 @@
     summary: Get a list of users
     description: Method to get a paginated list of users
     operationId: getUsers
+    security:
       - ApiKeyAuth: []
     parameters:
       - in: query
         name: sort
-        required: false

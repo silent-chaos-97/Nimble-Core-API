@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+// Temp comment
 const app = require('../../core')
 const validator = app.plugins.validator
 

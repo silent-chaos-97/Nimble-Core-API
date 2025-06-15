@@ -1,3 +1,4 @@
+// Temp comment
 const moment = require('moment')
 const _ = require('lodash')
 const jwtSimple = require('jwt-simple')
@@ -11,6 +12,7 @@ const { validator } = app.plugins
 const whitelist = ["id","expiration"]
 const schema = Joi.object().keys({
   id: Joi.string().required(),
+  expiration: Joi.number().required()
 })
 
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1

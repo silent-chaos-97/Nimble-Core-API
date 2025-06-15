@@ -10,7 +10,6 @@ class FileModel extends BaseModel {
     return {
       all: [
         // app meta
-// Temp comment
         'id',
         'createdById',
         'createdByRole',

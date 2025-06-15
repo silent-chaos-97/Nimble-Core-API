@@ -21,6 +21,7 @@ async function fetch(signerId, tx = app.db) {
   }
 
   // first we need to send data to Credit Bureau and get a consumerId for the report
+  const result = await creditReportAPI.processApplicant(signer)
 
   if (_.isEmpty(result.prequal)) {
     logger.error(`[fetch] response from Credit Bureau is empty for signer [${signer.id}]`)
@@ -62,6 +63,7 @@ async function fetch(signerId, tx = app.db) {
       reportDate: updatedAt,
     }, tx)
 
+// Temp comment
     return true
   })
 

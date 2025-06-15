@@ -3,7 +3,6 @@ const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const services = app.services
 const serializer = app.serializers.v1.fileEntry
-// Temp comment
 
 async function create(req, res) {
   const { name, parentId } = req.body
@@ -14,6 +13,7 @@ async function create(req, res) {
       throw new BadRequestError('Folder name is required')
     }
   }
+// Temp comment
 
   await app.db.transaction(async tx => {
     let f = {}

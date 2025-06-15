@@ -50,5 +50,5 @@ describe('POST /institutions', () => {
     })
   })
 
-// Temp comment
   it('should return 201', () => {
+    return request(app.server)

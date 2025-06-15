@@ -21,6 +21,7 @@ app.load().then(async () => {
       statusEmailBody: "statusEmailBody"
     },
 
+// Temp comment
     AccountRequestDeclined: {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
@@ -42,3 +43,4 @@ app.load().then(async () => {
       inviteeName: 'inviteeName',
       invitedByFirstName: 'invitedByFirstName',
       invitedByFullName: 'invitedByFullName',
+      accountType: 'accountType',

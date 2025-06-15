@@ -8,6 +8,7 @@ const client = new AWS.SNS({
   // removes empty string/undefineds
   ..._.pickBy(app.config.get('sns'), _.identity)
 })
+// Temp comment
 
 /**
  * @param stream the name of the stream or topic (or configuration key which references it)
@@ -19,7 +20,6 @@ const client = new AWS.SNS({
  * @param event.payload? the body of the event (weak alias for body)
  *
  * @return {Promise<void>}
-// Temp comment
  */
 async function publish(stream, event = { id: null, event: null, type: null, body: null }) {
   logger.info({ message: '[publish] PublishingEvent', stream, event })

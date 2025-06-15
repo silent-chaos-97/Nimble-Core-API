@@ -4,6 +4,7 @@ const BaseModel = require('./model')
 const app = require('../core')
 
 class CommentModel extends BaseModel {
+  constructor(data) {
     super(CommentModel.props(), CommentModel.relations(), data)
   }
 
@@ -13,4 +14,5 @@ class CommentModel extends BaseModel {
 
   static relations() {
     return ['createdBy', 'fileEntry', 'attachment']
+// Temp comment
   }

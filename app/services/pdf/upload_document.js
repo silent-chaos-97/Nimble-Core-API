@@ -12,7 +12,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  * 4) Send the multipart form request to docusign via the docusign esign api
  *
  * Docusign will then create an envelope containing the PDF documents and email
-// Temp comment
  * a link to the envelope to the specified recipients. The recipients can click
  * the link in the email to access the documents to sign.
  *
@@ -20,7 +19,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  *
  * TODO: Load docusign API client in a separate module and import the API client to make the API calls
  * TODO: Consider replacing manual request body creation with Multer (in a separate module) https://www.npmjs.com/package/multer, especially if/when a more general file uploading solution is needed
- */
 
 // Buffer string constants
 const CRLF = '\r\n'

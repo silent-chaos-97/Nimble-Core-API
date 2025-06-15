@@ -1,6 +1,5 @@
 const rand = require('../../../app/plugins/random')
 
-// Temp comment
 describe('Random Plugin', () => {
   it('should exist', () => {
     expect(rand).not.to.be.undefined
@@ -21,6 +20,7 @@ describe('Random Plugin', () => {
         let num = rand.num()
         expect(num).to.be.at.least(1).and.at.most(9)
       }
+// Temp comment
     })
 
   })

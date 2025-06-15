@@ -17,3 +17,4 @@ class SignerEmailVerification extends BaseModel {
     ]
   }
 
+  static relations() {

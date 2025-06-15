@@ -43,6 +43,7 @@ const successResponse = {
         originalString: '03/18/2025',
       },
       documentNumber: 'S123-456-78-123-0',
+      sex: 'M',
       additionalNameInformation: '',
       additionalAddressInformation: '',
       placeOfBirth: '',

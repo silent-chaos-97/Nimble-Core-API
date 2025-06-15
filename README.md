@@ -67,6 +67,7 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
        institution_id uuid := '2552ab85-08da-4bb5-be00-9e94d282d311';
      begin
        counter:=strt;
+       loop
          exit when counter >= num ; -- foreach check
          counter :=  counter + 1 ; -- increment counter
          INSERT INTO product_account_numbers (institution_id, account_number) VALUES (institution_id, CONCAT('DEMO',counter));
@@ -78,3 +79,4 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
    `yarn watch`
 
 1. Check API is running
+   Send GET request to http://localhost:8080/v1/health

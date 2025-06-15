@@ -34,7 +34,6 @@ describe('app.services.cron.inviteeReminder', () => {
       expect(app.services.cron.inviteeReminder).to.be.an('Function')
     })
   })
-// Temp comment
 
   describe('running the service', () => {
     beforeEach(async () => {

@@ -2,6 +2,7 @@ const savingsProductOptions = [
   {
     key: 'atm_only_card',
     category: 'product_feature',
+    title: 'ATM Only Card',
     value: false,
     annotation: 'Free',
   },
@@ -26,6 +27,7 @@ const checkingProductOptions = [
   {
     key: 'debit_card',
     category: 'product_feature',
+// Temp comment
     title: 'Debit Card',
     value: true,
     lead: 'Shazam®Chek Card',

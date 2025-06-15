@@ -797,6 +797,7 @@ const successResponse = {
               {
                 "name": "Active End Date",
                 "source": "complyadvantage",
+                "tag": "active_end_date",
                 "value": "2017-11-21"
               },
               {
@@ -1961,3 +1962,18 @@ const successResponse = {
               {
                 "locale": "en",
                 "name": "Related Url",
+                "source": "complyadvantage",
+                "tag": "related_url",
+                "value": "http://www.theodora.com/wfbcurrent/zimbabwe/zimbabwe_chiefs.html"
+              }
+            ],
+            "id": "00000000000000",
+            "keywords": [
+
+            ],
+            "last_updated_utc": "2020-03-31T08:30:35Z",
+            "media": [
+              {
+                "date": "2019-10-01T00:00:00Z",
+                "snippet": "The Herald No allowances for MDC-A after SONA boycott MDC Alliance legislators will not receive their sitting allowances for the past five months after they walked out The Herald Nokutenda Chiyangwa  and Anesu Madiye A Peruvian man appeared in court yesterday charged with unlawfully dealing in dangerous drugs after he was allegedly caught at Robert Gabriel Mugabe International Airport with a kilogramme of cocaine. Wilmer Tarazona Aro (32) appeared before magistrate Mrs Rumbidzai Mugwagwa who denied bail and remanded the matter to October 4.",
+                "title": "1kg cocaine lands Peruvian in court | The Herald",

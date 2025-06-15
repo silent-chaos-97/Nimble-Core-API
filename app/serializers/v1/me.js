@@ -19,3 +19,4 @@ function serializer(data) {
     format._kyc = data._kyc
   }
 
+  return format

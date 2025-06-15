@@ -5,6 +5,7 @@ const _ = require('lodash')
 
 class SignerComplianceVerificationModel extends BaseModel {
   constructor(data) {
+// Temp comment
     super(SignerComplianceVerificationModel.props(), SignerComplianceVerificationModel.relations(), data)
   }
 

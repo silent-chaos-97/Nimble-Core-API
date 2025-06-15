@@ -9,3 +9,4 @@ const FILES = {
   key: 'files',
   schema: { $ref: 'files' }
 }
+

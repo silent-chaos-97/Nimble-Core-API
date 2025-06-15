@@ -22,7 +22,6 @@ class WorkflowModel extends BaseModel {
 
   static props() {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
-  }
 
   static relations() {
     return ['user', 'branch', 'institution']
@@ -31,6 +30,7 @@ class WorkflowModel extends BaseModel {
   static prePersist(wkfl) {
     return !wkfl ? {} : _.merge(wkfl, wkfl.activities ? { activities: JSON.stringify(wkfl.activities) } : {})
   }
+
   isNewVersion(prevWkfl) {
     const newActivities = this._data.activities
     const oldActivities = prevWkfl.activities

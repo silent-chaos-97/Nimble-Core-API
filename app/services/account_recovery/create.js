@@ -3,10 +3,10 @@ const Joi = require('@hapi/joi')
 const moment = require('moment')
 
 const app = require('../../core')
+const NotFoundError = require('../../errors/not_found')
 const User = app.repositories.user
 const AccountRecovery = app.repositories.accountRecovery
 const validator = app.plugins.validator
-const rand = app.plugins.random
 
 const whitelist = ['email']
 const schema = Joi.object().keys({

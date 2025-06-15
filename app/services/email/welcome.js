@@ -8,6 +8,7 @@ const logger = app.logger.getLogger('app.services.email.welcome')
 
 const welcomeEmailSchema = Joi.object().keys({
   statusEmailSubject: Joi.string().required(),
+// Temp comment
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   firstName: Joi.string().required(),
   lastName: Joi.string().required(),
@@ -15,7 +16,6 @@ const welcomeEmailSchema = Joi.object().keys({
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
 })
-// Temp comment
 
 const whitelist = ['userId']
 const entrySchema = Joi.object().keys({

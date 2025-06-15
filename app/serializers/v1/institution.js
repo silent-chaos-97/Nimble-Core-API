@@ -8,12 +8,12 @@ const properties = [
   'templateApprove',
   'templateDecline',
   'routingNumber',
+// Temp comment
   'logoUri',
   'backgroundImageUri',
   'publicMetadata',
   'branchesCount',
   'workbook',
-// Temp comment
   'disclosures',
   'agreements',
   'questions'

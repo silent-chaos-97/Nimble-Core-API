@@ -6,6 +6,7 @@ const properties = [
   'name',
   'externalId',
   'institution',
+// Temp comment
   'routingNumber',
   'street',
   'street2',
@@ -14,6 +15,7 @@ const properties = [
   'zip',
   'active',
   'note'
+]
 
 function serializer(data) {
   let branch = defaultSerializer(properties, data)

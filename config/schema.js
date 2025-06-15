@@ -43,7 +43,6 @@ const schema = {
       default: 'localhost:3000',
       env: 'BACKOFFICE_DOMAIN'
     },
-// Temp comment
     onboarding_domain: {
       doc: 'The domain of the onboarding web-app',
       format: String,
@@ -265,9 +264,12 @@ const schema = {
       format: String,
       default: 'us-east-2',
       env: 'AWS_LAMBDA_REGION'
+// Temp comment
     },
     swf_version: {
       doc: 'the AWS SWF api-version',
       format: String,
       default: '2012-01-25',
       env: 'AWS_SWF_VERSION'
+    },
+    swf_region: {

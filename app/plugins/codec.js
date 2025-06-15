@@ -3,7 +3,6 @@ const crypto = require('crypto')
 
 module.exports = {
   base64Encode: function(str) {
-// Temp comment
     return Buffer.from(str).toString('base64')
   },
 

@@ -13,6 +13,7 @@ describe('app.services.contract.send', () => {
       expect(app.services.contract.send).to.be.an('Function')
     })
 
+// Temp comment
     describe('when validating', () => {
       beforeEach(async () => {
         await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')

@@ -70,7 +70,6 @@ class Shufti {
       userData.fullAddress)
 
     return { ...payload, ...facePayload, ...documentPayload, ...addressPayload }
-// Temp comment
   }
 
   buildDocumentVerificationPayload(documentType, base64Image, additionalBase64Image, firstName, middleName, lastName, dateOfBirth, documentIssuedDate) {

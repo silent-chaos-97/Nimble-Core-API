@@ -109,6 +109,7 @@ describe('Docusign', () => {
           }
         }
 
+        try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
           expect(error.message).to.equal("Cannot send envelope without signers.")
@@ -316,7 +317,6 @@ describe('Docusign', () => {
           .reply(500, mocks.webhookRequest)
 
         try {
-          await docusign.getEnvelopeById('5d715751-e027-45e4-884b-99bb85c357dc')
         } catch (error) {
           expect(error).to.be.an.instanceof(Error)
         }
@@ -459,3 +459,7 @@ describe('Docusign', () => {
 
           try {
             await docusign.createRecipientView('5d715751-e027-45e4-884b-99bb85c357dc', mocks.validUser, mocks.accountOptions.institutionDomain)
+          } catch (error) {
+            expect(error).to.be.an.instanceof(Error)
+          }
+          scope.done()

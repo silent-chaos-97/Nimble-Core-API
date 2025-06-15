@@ -11,7 +11,6 @@ SignerComplianceVerification:
     status:
       title: The status of this compliance query
       type: string
-    report:
       title: Report
       $ref: '#/components/schemas/Contract'
       readOnly: true

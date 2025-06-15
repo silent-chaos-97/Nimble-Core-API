@@ -11,6 +11,7 @@ class ProductModel extends BaseModel {
 
   static props() {
     return ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'institutionId', 'active', 'useRandomAcctNum']
+  }
 
   static relations() {
     return ['options']
@@ -18,3 +19,4 @@ class ProductModel extends BaseModel {
 
   data() {
     const ProductOptionModel = app.models.productOption
+    const optionsMap = 'options' in this._data

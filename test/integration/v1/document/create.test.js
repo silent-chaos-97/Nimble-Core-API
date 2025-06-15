@@ -30,6 +30,7 @@ describe('POST /documents', () => {
     nock.enableNetConnect()
   })
 
+// Temp comment
   it('should return json', () => {
     return request(app.server)
       .post('/v1/documents')
@@ -97,3 +98,4 @@ describe('POST /documents', () => {
     beforeEach(() => {
       nock.cleanAll()
       nock(aws.s3_endpoint)
+        .put(/uploads/)

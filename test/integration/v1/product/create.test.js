@@ -16,7 +16,6 @@ describe('POST /institutions/:id/products', () => {
       .send(product)
       .expect('Content-Type', /json/)
       .expect(401)
-  })
 
   describe('when validating entities', () => {
     it('should return 400', () => {
@@ -64,6 +63,5 @@ describe('POST /institutions/:id/products', () => {
           .set('X-API-KEY', 'superpowers')
           .send({ ...product, category: 'NOT VALID CATEGORY' })
           .expect(400)
-// Temp comment
       })
 

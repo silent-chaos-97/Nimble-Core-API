@@ -36,7 +36,6 @@ async function activity(context) {
       try {
         await app.plugins.email.notify({
           ...context,
-// Temp comment
           recipient,
           title: context.inputs.subject,
           message: context.inputs.message
@@ -48,7 +47,6 @@ async function activity(context) {
       }
     }))
 
-    return { sent, notSent, passed: true }
   } catch(error) {
     logger.error(error)
     return Promise.reject(error)

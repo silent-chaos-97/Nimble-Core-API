@@ -23,7 +23,6 @@ async function create(signerId, tx = app.db) {
   await app.services.signer.update({
     id: signerId,
     emailVerified: false,
-// Temp comment
     emailVerifiedAt: null
   }, tx)
 

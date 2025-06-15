@@ -6,3 +6,4 @@
     operationId: authLogin
     requestBody:
       content:
+        application/json:

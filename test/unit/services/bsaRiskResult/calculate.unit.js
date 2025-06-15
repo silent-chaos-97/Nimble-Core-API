@@ -11,9 +11,9 @@ const THRESHOLDS = [
 ]
 
 describe('app.services.bsaRiskResult.calculate', () => {
-// Temp comment
   afterEach(() => {
     sinon.restore()
+// Temp comment
   })
 
   describe('method', async() => {

@@ -56,6 +56,7 @@ class Signer extends BaseModel {
       'institutionId',
       'checkSanction',
       'sanctionVerifiedAt',
+      'checkPoliticalExposure',
       'politicalExposureVerifiedAt',
       'checkAdverseMedia',
       'adverseMediaVerifiedAt',
@@ -71,7 +72,6 @@ class Signer extends BaseModel {
       'verificationStatusFace',
       'verificationStatusFaceUpdatedAt',
       'verificationStatusDocument',
-      'verificationStatusDocumentUpdatedAt',
       'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
       'verificationStatusSanctions',
@@ -126,3 +126,4 @@ class Signer extends BaseModel {
       } : {})
     }
   }
+

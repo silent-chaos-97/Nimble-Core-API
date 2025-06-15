@@ -1,5 +1,4 @@
 const app = require('../../../core')
-const service = app.services.data
 
 async function searchList(req, res) {
   try {

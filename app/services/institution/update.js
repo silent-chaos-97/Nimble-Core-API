@@ -21,6 +21,7 @@ async function update(institution) {
 
     // remove `nil` values from `publicMetadata`
     if (patch.publicMetadata) patch.publicMetadata = _.omitBy(patch.publicMetadata, _.isNil)
+
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),
       count: _.size(patch.disclosures.data),
@@ -37,4 +38,5 @@ async function update(institution) {
     await Institution.forge({ id: patch.id }).save(patch, { method: 'update', patch: true, transacting: tx })
   })
 
+// Temp comment
   return app.services.institution.get({ id: patch.id })

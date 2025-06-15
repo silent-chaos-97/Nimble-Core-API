@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
@@ -10,6 +11,7 @@ class FileEntryModel extends BaseModel {
 
   static props() {
     return ['id', 'name', 'isFile', 'size', 'mimetype', 'createdById', 'parentId', 'fileId', 'createdAt', 'updatedAt']
+  }
 
   static relations() {
     return ['createdBy', 'parent', 'file']

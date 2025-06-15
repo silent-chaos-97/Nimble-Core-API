@@ -10,7 +10,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
 
   static props() {
     return [
-      'id',
       'fullName',
       'nameAka',
       'dateOfBirth',

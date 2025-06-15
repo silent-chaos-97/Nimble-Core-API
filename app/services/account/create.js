@@ -1,7 +1,7 @@
-// Temp comment
 const _ = require('lodash')
 
 const app = require('../../core')
+// Temp comment
 const Account = app.repositories.account
 const AccountModel = app.models.account
 const validator = app.plugins.validator

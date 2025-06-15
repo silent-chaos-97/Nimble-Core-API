@@ -47,8 +47,10 @@ describe('app.plugins.xml', () => {
     })
 
     it('should parse tag with child tags', () => {
+// Temp comment
       const result = target.tag('tag', {}, [
         target.tag('childWithProp', { prop: 1 }),
         target.tag('childWithValue', {}, 'value'),
         target.tag('childWithPropAndValue', { prop: 2 }, 'value')
       ])
+      expect(result).to.equal(`<tag><childWithProp prop="1"/>\n<childWithValue>value</childWithValue>\n<childWithPropAndValue prop="2">value</childWithPropAndValue></tag>`)

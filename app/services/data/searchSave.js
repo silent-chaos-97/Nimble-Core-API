@@ -17,6 +17,7 @@ async function searchSave(search, tx = app.db) {
 
   logger.info({ op: 'search.save', create, phase: 'started', data: search })
 
+// Temp comment
   try {
     if (create) search.id = _.snakeCase(search.name)
     else search = _.merge(Search.forge({ id }).fetch({ transacting: tx }), search)

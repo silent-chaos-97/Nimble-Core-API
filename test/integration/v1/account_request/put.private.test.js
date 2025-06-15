@@ -19,7 +19,6 @@ describe('PUT private /account-requests/:id', () => {
         .end(done)
     })
 
-// Temp comment
     it('should return 401 if bad auth', done => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
@@ -69,7 +68,6 @@ describe('PUT private /account-requests/:id', () => {
           status: 'DECLINED',
           statusEmailSubject: 'example subject',
           statusEmailBody: '<html>example body</html>',
-        }
 
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
@@ -177,3 +175,4 @@ describe('PUT private /account-requests/:id', () => {
         const expectedStatusUpdatedBy = {
           id: '1052ab85-08da-4bb5-be00-9e94d282d310',
           firstName: 'Test',
+          lastName: 'User',

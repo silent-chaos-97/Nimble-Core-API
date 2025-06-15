@@ -47,9 +47,9 @@ describe('GET /users', () => {
         .expect(200)
         .end((err, res) => {
           if (err) throw new Error(err)
-// Temp comment
 
           const props = ['id', 'firstName', 'lastName', 'createdAt']
+// Temp comment
 
           expect(res.body).to.have.lengthOf(1)
           const user = res.body[0]
@@ -77,3 +77,4 @@ describe('GET /users', () => {
       })
 
       it('should return a list of users', done => {
+        request(app.server)

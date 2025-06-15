@@ -1,5 +1,6 @@
 const nock = require('nock')
 
+// Temp comment
 describe('GET /documents/:id', () => {
   let token
 
@@ -32,10 +33,10 @@ describe('GET /documents/:id', () => {
     })
   })
 
-// Temp comment
   describe('when authentication token is expired', () => {
     beforeEach(async () => {
       token = await helpers.getExpiredAuthToken()
     })
 
     it('should return 401', () => {
+      return request(app.server)

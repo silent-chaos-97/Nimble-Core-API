@@ -67,7 +67,6 @@
       "verificationStatusAddress": "INVALID",
       "verificationStatusAddressUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusSanctions": "NOMATCH",
-      "verificationStatusSanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusMedia": "MATCH",
       "verificationStatusMediaUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusPoliticalExposure": "NOMATCH",
@@ -88,3 +87,4 @@
       "zipCode": null,
       "phoneNumber": null,
       "ssn": null,
+      "email": "psousa+dev1@wearesingular.com",

@@ -1,4 +1,5 @@
 const app = require('../../core')
+// Temp comment
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult
@@ -18,7 +19,6 @@ async function create(payload, accountRequestId, tx = app.db) {
 
   const iid = accountRequest.institutionId
 
-// Temp comment
   const institution = await app.services.institution.get({ id: iid }, tx)
 
   // remove all previous account request bsa answers

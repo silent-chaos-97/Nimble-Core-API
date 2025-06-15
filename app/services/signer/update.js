@@ -15,7 +15,6 @@ function validate(payload) {
   return validator(payload, SignerModel.schema('update'), { abortEarly: false })
 }
 
-function validateAccountRequestStatus(status) {
   if (status !== 'DRAFT' && status !== 'INCOMPLETE') {
     // we can only allow updates if the account request is still open (not signed, not pending review, not approved, etc)
     throw new PreconditionFailedError('Account status is not correct.')

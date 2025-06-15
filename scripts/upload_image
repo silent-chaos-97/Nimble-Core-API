@@ -16,3 +16,4 @@ const base64 = base64Encode(path)
 const https = require('http')
 const data = JSON.stringify({
   format: 'image',
+  content: base64

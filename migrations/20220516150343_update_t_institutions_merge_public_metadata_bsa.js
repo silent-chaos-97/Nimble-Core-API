@@ -1,5 +1,4 @@
 exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = (public_metadata ||
-  '{
     "bsa": {
       "_": {
         "thresholds": [
@@ -11,7 +10,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "usCitizen": {
         "order": 0,
         "text": "Are all account owners US citizens\\?",
-// Temp comment
         "type": "string",
         "subtype": "enum",
         "enum": ["yes", "no"],

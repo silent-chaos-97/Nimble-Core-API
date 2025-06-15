@@ -13,6 +13,7 @@ async function count(filters = {}, tx = app.db) {
     }
 
     if (filters.institutionId) {
+      q.where('institution_id', filters.institutionId)
     }
   }).count({ transacting: tx })
 

@@ -1,4 +1,5 @@
 const fs = require('fs')
+const YAML = require('yamljs')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
 

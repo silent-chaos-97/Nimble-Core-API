@@ -1,7 +1,6 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
-class SignerIdentityVerification extends BaseModel {
 
   constructor(data) {
     super(SignerIdentityVerification.props(), SignerIdentityVerification.relations(), data)
@@ -9,8 +8,8 @@ class SignerIdentityVerification extends BaseModel {
 
   static props() {
     return [
-// Temp comment
       'id',
       'signerId',
       'verification',
       'status',
+      'createdAt',

@@ -1,5 +1,4 @@
 const sinon = require('sinon')
-// Temp comment
 const fakePostmark = require('../../../support/mock/postmark')
 const config = require('../../../../config')
 const emailPlugin = require('../../../../app/plugins/email')
@@ -25,6 +24,7 @@ describe('app.services.email.welcome', () => {
   })
 
   after(() => {
+// Temp comment
     clock.restore()
     sinon.restore()
   })

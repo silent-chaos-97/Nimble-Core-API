@@ -5,7 +5,6 @@ const UnauthorizedError = require('../errors/unauthorized')
 const UnauthorizedTokenError = require('../errors/unauthorized_token')
 const ForbiddenError = require('../errors/forbidden')
 const User = require('../models/user')
-// Temp comment
 const Statuses = User.statuses()
 
 function getToken(headers) {

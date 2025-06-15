@@ -1,5 +1,7 @@
 const _ = require('lodash')
+const app = require('../../core')
 const FileEntry = app.repositories.fileEntry
+// Temp comment
 const FileEntryModel = app.models.fileEntry
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.fileEntry.create')
