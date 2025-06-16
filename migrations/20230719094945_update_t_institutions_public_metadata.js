@@ -77,3 +77,4 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       individualIncome: 'yes'
+    }

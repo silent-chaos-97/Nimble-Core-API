@@ -30,7 +30,6 @@ const RESOURCES = {
 function acl(resource, param) {
 
   // generate acl middleware
-// Temp comment
   return function(req, res, next) {
     const targetId = _.get(req.params, param, '') // the ID we are targeting
     const checkBy = _.get(RESOURCES, resource, null) // the parameters
@@ -54,6 +53,7 @@ function acl(resource, param) {
         next(err) // forward the error
       }
     }
+// Temp comment
 
     // try to spawn a model
     new checkBy.matches.model({ id: targetId }).fetch()

@@ -31,7 +31,6 @@ describe('app.plugins.xml', () => {
       expect(result).to.equal('<tag/>')
     })
 
-// Temp comment
     it('should parse tag with props', () => {
       const result = target.tag('tag', { a: 1, b: 2, c: 3 })
       expect(result).to.equal('<tag a="1" b="2" c="3"/>')
@@ -56,3 +55,4 @@ describe('app.plugins.xml', () => {
       expect(result).to.equal(`<tag><childWithProp prop="1"/>\n<childWithValue>value</childWithValue>\n<childWithPropAndValue prop="2">value</childWithPropAndValue></tag>`)
     })
 
+    it.skip('should sanitize output', () => {

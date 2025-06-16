@@ -7,5 +7,6 @@
     operationId: getAccountRequest
     parameters:
       - name: id
+        in: path
         description: Account request ID
         required: true

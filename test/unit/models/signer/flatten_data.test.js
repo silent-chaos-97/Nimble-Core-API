@@ -29,6 +29,7 @@ describe('app.models.signer.flattenData', () => {
         issuedDate: 'issuedDate',
         issuer: 'issuer',
         expirationDate: 'expirationDate',
+      }
     })
 
     expect(result).to.be.an('object')
@@ -39,7 +40,6 @@ describe('app.models.signer.flattenData', () => {
       'frontIdProofDocumentId': 'frontDocumentId',
       'documentType': 'type',
       'documentNumber': 'number',
-      'documentIssuedDate': 'issuedDate',
       'documentIssuer': 'issuer',
       'documentExpirationDate': 'expirationDate',
     })
@@ -65,3 +65,4 @@ describe('app.models.signer.flattenData', () => {
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({
       'somethingA': 'somethingA',
+      'somethingB': 'somethingB',

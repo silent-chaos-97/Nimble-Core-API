@@ -6,3 +6,4 @@
   "reporter": [ "text", "cobertura", "html" ],
   "all": true,
   "check-coverage": true,
+  "report-dir": "./coverage",

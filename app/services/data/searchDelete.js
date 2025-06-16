@@ -7,7 +7,6 @@ const InternalServerError = require('../../errors/internal_server')
 
 const PROPS = SearchModel.props('delete')
 const SCHEMA = SearchModel.schema('delete')
-
 const logger = app.logger.getLogger('app.services.data.search.delete')
 
 async function searchDelete(example, tx = app.db) {
@@ -17,6 +16,7 @@ async function searchDelete(example, tx = app.db) {
 
   try {
     const model = SearchModel.prePersist(validator(_.pick(example, PROPS), SCHEMA, { abortEarly: false }))
+
     const where = _.reduce(model, (memo, val, key) => {
       memo[_.snakeCase(key)] = val
       return memo

@@ -56,6 +56,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     })
   })
 
+
   it('should try to create verifications in DB', async () => {
     return request(app.server)
       .post('/v1/webhooks/shufti/identity-verification')

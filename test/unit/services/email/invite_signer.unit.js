@@ -41,7 +41,6 @@ describe('app.services.email.inviteSigner', () => {
     })
   })
 
-// Temp comment
   describe('when calling with valid data', () => {
     beforeEach(async () => {
       await seed.institution.create()

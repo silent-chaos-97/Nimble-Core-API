@@ -24,3 +24,4 @@ const statesUSA = [
   'ME',
   'MH',
   'MD',
+  'MA',

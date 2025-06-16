@@ -9,7 +9,6 @@ describe("AWS Facade for s3", () => {
   before(() => {
     sandbox.replace(AWS, 'uuid', () => '00000000-0000-0000-0000-000000000000')
     sandbox.spy(AWS, 'uuid')
-    sandbox.spy(AWS.s3, 'putObject')
     sandbox.spy(AWS.s3, 'copyObject')
     sandbox.spy(AWS.s3, 'getSignedUrl')
   })

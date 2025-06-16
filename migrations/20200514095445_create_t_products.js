@@ -6,3 +6,4 @@ exports.up = function (knex, Promise) {
       .references('institutions.id')
       .notNullable()
       .onDelete('CASCADE')
+    table.string('name').notNullable()

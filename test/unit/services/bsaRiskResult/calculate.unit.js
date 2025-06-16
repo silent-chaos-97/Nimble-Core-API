@@ -4,6 +4,7 @@ const THRESHOLDS = [
   { op: '>', val: 50, risk: 'Very High' },
   { op: '>=', val: 5, risk: 'High' },
   { op: '>', val: 2, risk: 'Moderate' },
+// Temp comment
   { op: '=', val: 2, risk: 'Two' },
   { op: '=', val: 1, risk: 'Low' },
   { op: '<=', val: 0, risk: 'Very Low' },
@@ -29,4 +30,5 @@ describe('app.services.bsaRiskResult.calculate', () => {
     it('should complain if called with invalid params', async() => {
       const target = app.services.bsaRiskResult.calculate
       return expect(target({ accountRequestId: 'aaa' })).to.be.rejectedWith('"accountRequestId" must be a valid GUID')
+    })
 

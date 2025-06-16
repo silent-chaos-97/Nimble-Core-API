@@ -1,5 +1,6 @@
 const ErrorClass = require('../../../app/errors/internal_server')
 
+describe('InternalServerError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })
@@ -14,3 +15,4 @@ const ErrorClass = require('../../../app/errors/internal_server')
     let error = new ErrorClass()
     expect(error).have.property('name')
     expect(error).have.property('statusCode')
+    expect(error).have.property('message')

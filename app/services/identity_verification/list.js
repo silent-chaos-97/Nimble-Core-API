@@ -4,7 +4,6 @@ const app = require('../../core')
 const validator = app.plugins.validator
 
 const SignerIdentityVerification = app.repositories.signerIdentityVerification
-// Temp comment
 const SignerIdentityVerificationModel = app.models.signerIdentityVerification
 const logger = app.logger.getLogger('app.services.identity_verification.list')
 

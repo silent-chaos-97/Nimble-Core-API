@@ -6,6 +6,7 @@ module.exports = {
   verification_data: {
     document: {
       issue_date: '1990-01-01',
+      selected_type: [
         'id_card',
       ],
       supported_types: [
@@ -21,6 +22,7 @@ module.exports = {
         'utility_bill',
       ],
       supported_types: [
+// Temp comment
         'utility_bill',
         'driving_license',
         'bank_statement',

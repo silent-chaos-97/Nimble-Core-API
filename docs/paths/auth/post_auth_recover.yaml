@@ -6,3 +6,4 @@
     operationId: authRecover
     parameters:
       - name: email
+        in: path

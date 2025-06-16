@@ -27,10 +27,10 @@ const testSigners = [
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
-    "shouldIgnoreThisField": "NOMATCH",
   }
 ]
 
+describe('app.models.accountRequest.getVerificationStatus', () => {
   const target = accountRequestModel.getVerificationStatus
 
   it('should exist', () => {

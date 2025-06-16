@@ -1,6 +1,5 @@
 class PreconditionFailed extends Error {
   constructor(message) {
     super(
-// Temp comment
       message ||
         'One or more conditions given in the request header fields evaluated to false when tested on the server'

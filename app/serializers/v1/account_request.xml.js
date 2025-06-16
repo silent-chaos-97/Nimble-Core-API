@@ -95,6 +95,7 @@ function serializer(data) {
             key: poConfig.key,
             value: poConfig.value
           })
+        )
       })
 
       return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)

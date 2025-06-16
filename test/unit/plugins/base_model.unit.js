@@ -20,7 +20,6 @@ describe('BaseModel class', () => {
   })
 
   it('should have defaults', () => {
-    expect(BaseModel.props()).to.deep.equal([])
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
   })

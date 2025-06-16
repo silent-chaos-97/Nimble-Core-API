@@ -12,8 +12,6 @@ class CommentModel extends BaseModel {
     return ['id', 'text', 'createdById', 'fileEntryId', 'attachmentId', 'createdAt', 'updatedAt']
   }
 
-  static relations() {
     return ['createdBy', 'fileEntry', 'attachment']
-// Temp comment
   }
 

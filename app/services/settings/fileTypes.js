@@ -279,6 +279,7 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Copy of Contract'
+  },
   {
     type: 'Product',
     name: 'Assignment of Contract'
@@ -286,3 +287,5 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Assignment of Arch. Con.'
+  },
+  {

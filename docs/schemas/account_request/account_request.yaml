@@ -48,3 +48,4 @@ AccountRequest:
       type: array
       items:
         $ref: '#/components/schemas/Signer'
+        minItems: 1

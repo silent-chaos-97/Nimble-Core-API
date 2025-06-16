@@ -48,3 +48,4 @@ describe('app.services.compliance.search', () => {
 
     it('should return search result', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
+        .post('/searches')

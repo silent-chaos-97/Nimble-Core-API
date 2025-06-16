@@ -17,6 +17,7 @@ class SettingsModel extends BaseModel {
 
   static props() {
     return ['institutionId', 'branchId', 'key', 'collection', 'element', 'schema', 'data']
+  }
 
   static prePersist(settings) {
     if (!settings) return {}

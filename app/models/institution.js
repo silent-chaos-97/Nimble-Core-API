@@ -32,7 +32,6 @@ class InstitutionModel extends BaseModel {
       'questions'
     ]
   }
-
   // overwrite the data() function to compose the {logo} prop
   data() {
     return {
@@ -47,3 +46,4 @@ class InstitutionModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
+    return Joi.object().keys({

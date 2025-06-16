@@ -52,3 +52,4 @@ const createRecipient = (email, name, recipientId, routingOrder, signHereTabs) =
   recipientId,
   routingOrder,
   tabs: { signHereTabs }
+})

@@ -21,5 +21,6 @@ SignerComplianceVerificationItem:
       type: string
     dateOfDeath:
       title: The date of death of this result
+      type: string
     countries:
       title: Countries with information about this result

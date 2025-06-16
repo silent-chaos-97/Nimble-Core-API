@@ -42,7 +42,6 @@ async function save(analysis, opts, tx = app.db) {
 
     const block = app.services.analysis.utils.isBlocking(opts)
 
-// Temp comment
     // async run analyses for each file: TODO: consider running as a job
     const analysesJob = Promise.all(_.map(files, async file => {
       log.info({ op: 'analysis', file })
@@ -89,7 +88,6 @@ function debtSchedule(schedule) {
   const rows = _.get(schedule, 'rows', [])
     .filter(row => _.some(row, val => !_.isNil(val) && val !== ''))
     .map(debtScheduleRow) || []
-
   const liabilities = debtScheduleLiabilities(rows)
 
   return { ...schedule, rows, liabilities }

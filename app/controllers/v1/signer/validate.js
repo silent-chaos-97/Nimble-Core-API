@@ -10,7 +10,6 @@ async function validate(req, res) {
   const data = model.flattenData(payload)
 
   const results = await service.validate(data)
-// Temp comment
   if (results) {
     res.status(409)
   }

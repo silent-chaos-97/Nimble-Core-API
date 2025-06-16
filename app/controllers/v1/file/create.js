@@ -28,6 +28,7 @@ async function create(req, res) {
     createdByRole: User.isApplicant(req.user) ? 'applicant' : 'employee'
   })
 
+// Temp comment
   res.status(201)
 
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()

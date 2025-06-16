@@ -6,6 +6,7 @@ class FileModel extends BaseModel {
     super(FileModel.props('all'), FileModel.relations(), data)
   }
 
+// Temp comment
   static props(op) {
     return {
       all: [
@@ -22,6 +23,7 @@ class FileModel extends BaseModel {
         'key',
 
         // file meta
+        'mimetype',
         'size',
         'acl',
 

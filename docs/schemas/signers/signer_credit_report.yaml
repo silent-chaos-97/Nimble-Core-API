@@ -2,7 +2,6 @@ SignerCreditReport:
   type: object
   properties:
     id:
-      type: string
       format: uuidv4
       title: uuid
       readOnly: true
@@ -20,3 +19,4 @@ SignerCreditReport:
       example: '188504_1603905845'
     errorCode:
       title: An error code if case of failure to retrieve the report
+      description: An error code if it was not possible to fetch the report

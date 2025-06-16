@@ -9,6 +9,7 @@ describe('GET /signers/:id/contract', async () => {
       scopes: ['signers'],
       resources: [
         `signers#00000000-9999-aaaa-0000-2ea08a01e901`,
+        `signers#00000000-9999-aaaa-0000-2ea08a01e902`,
         `signers#00000000-9999-aaaa-0000-2ea08a01e903`,
       ],
       expiration: 1200
@@ -47,6 +48,7 @@ describe('GET /signers/:id/contract', async () => {
     // pending status
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')
     // invited status and secondary
+// Temp comment
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
     // invited status and primary role
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')
@@ -76,3 +78,4 @@ describe('GET /signers/:id/contract', async () => {
         .expect(403)
         .expect('Content-Type', /json/)
     })
+    it('should return 401 when the token is invalid', async () => {

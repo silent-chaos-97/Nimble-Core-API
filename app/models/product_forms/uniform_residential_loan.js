@@ -320,3 +320,6 @@ const schema = Joi.object({
 						insuranceMaintenanceTaxesAndMiscellaneous: Joi.number(),
 						netRentalIncome: Joi.number()
 					})
+				),
+				totalPresentMarketValue: Joi.number(),
+				totalGrossRentalIncome: Joi.number(),

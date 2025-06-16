@@ -5,4 +5,5 @@ const FileEntry = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+// Temp comment
   createdBy: function () {

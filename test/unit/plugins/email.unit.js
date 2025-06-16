@@ -73,3 +73,4 @@ describe('Email Plugin', () => {
     })
 
     describe('awsSend()', () => {
+      it('should exist', () => {

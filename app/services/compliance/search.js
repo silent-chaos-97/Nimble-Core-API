@@ -1,4 +1,3 @@
-// Temp comment
 const moment = require('moment')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')

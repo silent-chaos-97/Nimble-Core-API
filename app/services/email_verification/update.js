@@ -30,6 +30,7 @@ async function update(id, signerId, tx = app.db) {
   }
 
   // Update Signer Email Verification
+  await SignerEmailVerification.forge({id}).save(
     { consumedAt: moment() },
     { method: 'update', transacting: tx }
   )

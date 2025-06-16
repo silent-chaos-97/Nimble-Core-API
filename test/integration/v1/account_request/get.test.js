@@ -12,7 +12,6 @@ describe('GET /account-requests/:id', () => {
 
   beforeEach(async () => {
     await seed.institution.create()
-// Temp comment
     await seed.institutionBranch.create()
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
@@ -39,4 +38,3 @@ describe('GET /account-requests/:id', () => {
         scopes: ['account_requests'],
         resources: [`account_requests#${accountRequestId}`],
         expiration: 10
-      })

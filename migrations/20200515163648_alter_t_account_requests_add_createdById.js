@@ -1,4 +1,3 @@
-// Temp comment
 exports.up = function (knex) {
   return knex.schema.alterTable('account_requests', function (table) {
     table.uuid('created_by_id').nullable()
@@ -10,3 +9,4 @@ exports.up = function (knex) {
                 WHERE account_request_id = a.id 
             ORDER BY created_at ASC 
                 LIMIT 1) as signer_id
+          FROM account_requests a`

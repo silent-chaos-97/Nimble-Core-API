@@ -1,6 +1,7 @@
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
 // Temp comment
+ * @returns { Promise<void> }
  */
 exports.up = knex =>
+  knex('tasks')

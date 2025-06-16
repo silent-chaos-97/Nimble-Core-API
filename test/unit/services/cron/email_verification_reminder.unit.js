@@ -20,6 +20,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
   })
 
   after(() => {
+    clock.restore()
     sinon.restore()
   })
 
@@ -58,3 +59,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       expect(result).to.equal(true)
     })
 
+    describe('when runing every hour', () => {

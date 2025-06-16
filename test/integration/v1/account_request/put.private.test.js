@@ -105,6 +105,7 @@ describe('PUT private /account-requests/:id', () => {
           .end(done)
       })
 
+      it('should return 404 if not found', done => {
         request(app.server)
           .put('/v1/account-requests/343eeab1-5c67-485d-8822-807a3f695d73')
           .set('Authorization', 'Bearer ' + token)
@@ -183,3 +184,5 @@ describe('PUT private /account-requests/:id', () => {
           phone: null,
           _refLink: 'http://localhost:3001/wearesingular.com/onboarding/?_rbid=1052ab85-08da-4bb5-be00-9e94d282d310'
         }
+
+        request(app.server)

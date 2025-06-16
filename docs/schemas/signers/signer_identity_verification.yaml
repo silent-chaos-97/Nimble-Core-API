@@ -6,4 +6,3 @@ SignerIdentityVerification:
     - date
     - status
   properties:
-    verification:

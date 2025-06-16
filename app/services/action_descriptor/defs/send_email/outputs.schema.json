@@ -20,3 +20,4 @@
             "stereotype": "user"
           },
           "email": {
+            "type": "string",

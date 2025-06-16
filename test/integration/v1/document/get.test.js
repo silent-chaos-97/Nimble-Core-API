@@ -10,6 +10,7 @@ describe('GET /documents/:id', () => {
 
   after(() => {
     nock.cleanAll()
+  })
 
   describe('when authentication token is not present', () => {
     it('should return 401', () => {
@@ -38,4 +39,5 @@ describe('GET /documents/:id', () => {
 
     it('should return 401', () => {
       return request(app.server)
+// Temp comment
         .get(`/v1/documents/abcde?token=${token}`)

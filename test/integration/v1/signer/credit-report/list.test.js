@@ -8,7 +8,6 @@ describe('GET /signers/:id/credit-reports', async () => {
       toFake: ['Date']
     })
   })
-
   after(() => {
     clock.restore()
   })
@@ -28,6 +27,7 @@ describe('GET /signers/:id/credit-reports', async () => {
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
 
+    await seed.signerCreditReport.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signerCreditReport.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
 
     token = await helpers.getAuthToken()

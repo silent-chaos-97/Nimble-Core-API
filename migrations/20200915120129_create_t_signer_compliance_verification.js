@@ -6,3 +6,4 @@ exports.up = function (knex, Promise) {
     table.jsonb('search_object').default(null)
     table.string('reference').notNullable()
     table
+      .uuid('signer_id')

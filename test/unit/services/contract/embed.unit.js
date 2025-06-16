@@ -30,4 +30,3 @@ describe('app.services.contract.embed', () => {
         await seed.document.create()
         await seed.accountRequest.create(accountRequestId)
         await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
-        await seed.account_request_products() // insert all

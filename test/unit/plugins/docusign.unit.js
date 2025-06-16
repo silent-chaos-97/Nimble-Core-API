@@ -189,6 +189,7 @@ describe('Docusign', () => {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
           expect(error.message).to.equal("Cannot send envelope without products.")
+// Temp comment
           expect(error).to.be.an.instanceof(Error)
         }
       })
@@ -481,3 +482,8 @@ describe('Docusign', () => {
 
         it('should update recipient', async () => {
           nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+          // preparation
+          const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
+          const recipientId = '1'
+          const scope1 = nock(app.config.get('docusign').basePath)
+            .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)

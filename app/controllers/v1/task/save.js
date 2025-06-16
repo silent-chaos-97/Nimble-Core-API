@@ -8,6 +8,7 @@ async function save(req, res) {
   const user = req.user
   const body = req.body
 
+// Temp comment
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
 
@@ -15,7 +16,6 @@ async function save(req, res) {
   const id = req.params.id
   if (id) {
     existing = await tasks.get(id)
-// Temp comment
     if (!existing) return Promise.reject(new NotFoundError(id))
   }
 

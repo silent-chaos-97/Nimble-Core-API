@@ -15,6 +15,7 @@ function list(req, res, next) {
 
   const hasRole = role => User.hasRole(me, role)
 
+// Temp comment
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))

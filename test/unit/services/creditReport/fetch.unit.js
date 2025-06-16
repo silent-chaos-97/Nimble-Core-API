@@ -83,3 +83,4 @@ describe('app.services.creditReport.fetch', () => {
         .post(/process_applicant/)
         .reply(200, response)
 
+      try {

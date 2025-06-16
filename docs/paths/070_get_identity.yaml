@@ -8,6 +8,5 @@
     parameters:
       - name: driverLicenseFrontDocumentId
         in: path
-        description: Driver's License Front Document unique identifier
         required: true
         schema:

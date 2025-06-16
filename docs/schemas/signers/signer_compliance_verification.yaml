@@ -13,6 +13,7 @@ SignerComplianceVerification:
       type: string
     report:
       title: Report
+      $ref: '#/components/schemas/Contract'
       readOnly: true
       description: A object that contains the report information
     searchObject:

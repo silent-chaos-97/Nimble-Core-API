@@ -14,7 +14,6 @@ const successResponse = {
   data: {
     recognizer: 'BLINK_ID',
     version: '2.8.1',
-    startTime: '2019-11-20T12:13:05.052Z',
     finishTime: '2019-11-20T12:13:05.587Z',
     durationTimeInSeconds: 0.535,
     taskId: 132,
@@ -96,6 +95,7 @@ const successUSDLAAMVABack = {
         "weightRange": null,
         "weightPounds": null,
         "weightKilograms": null,
+        "customerIdNumber": "24255226",
         "familyNameTruncation": null,
         "firstNameTruncation": null,
         "middleNameTruncation": null,

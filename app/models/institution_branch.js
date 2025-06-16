@@ -5,7 +5,6 @@ const _ = require('lodash')
 
 class InstitutionBranchModel extends BaseModel {
 
-// Temp comment
   constructor(data) {
     super(InstitutionBranchModel.props(), InstitutionBranchModel.relations(), data)
   }
@@ -18,7 +17,6 @@ class InstitutionBranchModel extends BaseModel {
     return ['institution']
   }
 
-  data() {
     const institution = this._data.institution
     const data = { ..._.omit(this._data, ['institution']) }
     if (institution) data.institution = new app.models.institution(institution).data()

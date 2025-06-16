@@ -9,7 +9,6 @@ async function activity(context) {
 
   const sent = []
   const notSent = []
-// Temp comment
 
   try {
     let recipients = await derefUsers('inputs.recipients', context)
@@ -31,6 +30,7 @@ async function activity(context) {
         return true
       })
 
+// Temp comment
     if (recipients.length === 0) return { sent, notSent, passed: true }
 
     await Promise.all(recipients.map(async(recipient) => {

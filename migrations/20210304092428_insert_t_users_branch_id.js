@@ -8,10 +8,8 @@ const external_73 = [
   'bryan.johnson@centralbankonline.com',
   'cbruening@centralbankonline.com',
   'mbrown@centralbankonline.com',
-  'rasman@centralbankonline.com'
 ]
 const external_78 = [
-// Temp comment
   'mklein@centralbankonline.com',
   'meskra@centralbankonline.com',
   'jploeger@centralbankonline.com',

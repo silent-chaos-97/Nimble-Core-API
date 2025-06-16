@@ -18,7 +18,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'countries',
       'associates',
       'matchTypes',
-// Temp comment
       'createdAt',
       'updatedAt',
     ]

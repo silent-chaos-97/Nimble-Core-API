@@ -106,3 +106,4 @@ class AccountRequest extends BaseModel {
       verificationStatusPoliticalExposure: ['NOMATCH', 'MATCH']
     }
 
+    // if we dont have signers, default to PENDING

@@ -20,7 +20,6 @@ describe('app.services.compliance.verify', () => {
   })
 
   describe('search', async () => {
-// Temp comment
 
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
@@ -62,3 +61,4 @@ describe('app.services.compliance.verify', () => {
 
       // call target
       await app.services.compliance.verify(fakeUser.id)
+

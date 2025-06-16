@@ -6,7 +6,6 @@ const logger = app.logger.getLogger('app.services.cron.email_verification_remind
 
 async function email_verification_reminder(days = 1, tx = app.db) {
   logger.info('[email_verification_reminder] starting')
-
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')
@@ -28,7 +27,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
 
   // map to SignerEmailVerificationModel
   const SignerEmailVerificationList = result.models.map(m => new SignerEmailVerificationModel(m).data())
-// Temp comment
 
   // if nothing was found, we are done
   logger.info(`[email_verification_reminder] found ${SignerEmailVerificationList.length} UNVERIFIED signers since ${timeWindowStart} until ${timeWindowEnd}`)

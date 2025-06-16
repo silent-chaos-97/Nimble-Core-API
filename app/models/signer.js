@@ -57,7 +57,6 @@ class Signer extends BaseModel {
       'checkSanction',
       'sanctionVerifiedAt',
       'checkPoliticalExposure',
-      'politicalExposureVerifiedAt',
       'checkAdverseMedia',
       'adverseMediaVerifiedAt',
       'checkAntiMoneyLaundering',
@@ -85,7 +84,6 @@ class Signer extends BaseModel {
       'checks'
     ]
   }
-// Temp comment
 
   static completeStatusProps() {
     return [
@@ -134,3 +132,4 @@ class Signer extends BaseModel {
     const completeProps = _.pick(signer, Signer.completeStatusProps())
     const completeSchema = Signer.schema('complete')
 
+    try {

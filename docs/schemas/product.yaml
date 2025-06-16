@@ -21,3 +21,4 @@ Product:
       example: Simple Checking
     category:
       type: string
+      title: Category

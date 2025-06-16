@@ -2,10 +2,12 @@ const _ = require('lodash')
 const app = require('../../core')
 const google = app.plugins.google
 
+// Temp comment
 const OPS = {
   write_global_google_sheet
 }
 
+/**
  * Computes analysis data.
  * XXX: currently only supports export to a shared google sheet, but will expand to both use
  * google sheets as an executor of business computations (create form template, update with data, read back in)

@@ -221,3 +221,5 @@ describe('MicroblinkService', () => {
         .reply(200, mocks.successMRTD)
 
       const returnedData = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
+      const result = service.getBasicUserDataFromMicroblinkResponse(returnedData.data.result)
+

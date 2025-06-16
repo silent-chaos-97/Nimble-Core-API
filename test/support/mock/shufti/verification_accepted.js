@@ -1,3 +1,4 @@
+// Temp comment
 module.exports = {
   reference: '5674563147',
   event: 'verification.accepted',
@@ -10,7 +11,6 @@ module.exports = {
         'id_card',
       ],
       supported_types: [
-// Temp comment
         'id_card',
         'passport',
         'driving_license',

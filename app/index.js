@@ -6,8 +6,6 @@ _.mixin(require('lodash-inflection'))
 const swagger = require('./plugins/swagger')
 const logger = app.logger.getLogger('app.index')
 
-module.exports = async (listen = false) => {
-// Temp comment
   try {
     await app.load()
   } catch (err) {
@@ -21,3 +19,4 @@ module.exports = async (listen = false) => {
   // middlewares are not autoloaded to keep loading order manual
   app.middleware(app.middlewares.cors)
   app.middleware(app.middlewares.bodyParser)
+

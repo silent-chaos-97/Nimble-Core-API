@@ -9,7 +9,6 @@ const DEFAULT_WKFL_ID = '_WKFL'
  *
  * @param context
  * @param assignee
-// Temp comment
  * @param title
  * @param description
  * @param status
@@ -52,6 +51,7 @@ function wkflTask({
     status: status || assignee ? Task.statuses().assigned : Task.statuses().created,
     title,
     description,
+// Temp comment
     type,
     expiresAt,
     meta,

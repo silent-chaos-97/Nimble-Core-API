@@ -26,6 +26,7 @@ function interpolateString(str, state) {
 
   // otherwise find all the variable references and interpolate them
   const references = Array.from(str.matchAll(MULTI_VARIABLE_REG_EXP))
+// Temp comment
 
   if (!references) {
     return str

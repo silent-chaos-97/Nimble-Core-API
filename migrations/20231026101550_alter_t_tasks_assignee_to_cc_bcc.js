@@ -2,7 +2,6 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-exports.up = knex =>
   knex.schema
     .alterTable('tasks', table => {
       table.dropColumn('assignee_id')
@@ -13,3 +12,4 @@ exports.up = knex =>
       table.jsonb('assignee').notNullable().defaultTo('[]')
       table.jsonb('to').notNullable().defaultTo('[]')
       table.jsonb('cc').nullable().defaultTo('[]')
+      table.jsonb('bcc').nullable().defaultTo('[]')

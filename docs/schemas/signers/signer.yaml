@@ -89,3 +89,4 @@ Signer:
       maxLength: 250
       example: Singular Thinking Lda
     ssn:
+      type: string

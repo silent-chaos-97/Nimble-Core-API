@@ -8,5 +8,4 @@
           "items": {"type": "string"},
           "stereotype": "users"
         },
-        "primary": {
           "title": "Primary Applicant",

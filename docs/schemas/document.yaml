@@ -1,4 +1,5 @@
 Document:
+  type: object
   required:
     - id
     - content
@@ -13,4 +14,3 @@ Document:
       description: signer identifier
       example: a74f9092-5889-430a-9c19-6712f9f68090
     institutionId:
-      type: string

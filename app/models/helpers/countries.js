@@ -17,6 +17,7 @@ const countries = [
   'AUS',
   'AUT',
   'AZE',
+  'BDI',
   'BEL',
   'BEN',
   'BFA',
@@ -104,3 +105,4 @@ const countries = [
   'IMN',
   'IND',
   'IOT',
+  'IRL',

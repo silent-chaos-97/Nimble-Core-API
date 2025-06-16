@@ -20,3 +20,22 @@ function validateAccountRequestStatus(status) {
     // we can only allow updates if the account request is still open (not signed, not pending review, not approved, etc)
     throw new PreconditionFailedError('Account status is not correct.')
   }
+}
+
+async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
+  logger.debug(`[validateAndUpdateSignerStatus] - started for signer [${signerId}]`)
+
+  const signer = await app.services.signer.get(signerId, tx)
+  if (signer.status === 'SIGNED') { // status is SIGNER, we cant allow further changes on this signer personal data
+    throw new PreconditionFailedError('Signer status is not correct.')
+  }
+
+  const status = SignerModel.getSignerStatusBasedOnCompletedProps(signer)
+  logger.debug(`[validateAndUpdateSignerStatus] - status should be [${status}] for signer [${signerId}]`)
+
+  if (status !== signer.status) { // only update if changing
+    logger.debug(`[validateAndUpdateSignerStatus] - changing status to [${status}] for signer [${signerId}]`)
+    await updateSigner(signer.id, { status }, tx)
+  }
+
+  logger.debug(`[validateAndUpdateSignerStatus] - end for signer [${signerId}]`)

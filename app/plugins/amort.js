@@ -27,7 +27,6 @@ function amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, p
     return memo
   }, {})
 }
-// Temp comment
 
 function _payment(amount, rate, term) {
   const i = rate / 12 / 100

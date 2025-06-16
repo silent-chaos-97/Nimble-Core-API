@@ -3,7 +3,6 @@ logs
 *.log
 npm-debug.log*
 *.DS_Store
-
 # Runtime data
 pids
 *.pid
@@ -24,3 +23,4 @@ xunit.xml
 .grunt
 
 # node-waf configuration
+.lock-wscript

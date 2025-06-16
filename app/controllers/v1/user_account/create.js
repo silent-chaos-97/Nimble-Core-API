@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../../core')
 
 const User = app.models.user
@@ -16,6 +15,7 @@ async function create(req, res, next) {
 
   if (!User.hasRole(me, Roles.SuperAdmin)) {
     delete user['institutionId'] // only super-admin can set an institution
+
     if (!User.hasRole(me, Roles.InstitutionAdmin)) delete user['branchId'] // only institution-admin+ can set the branch
 
     // an institution-admin can set the branch-admin and employee role

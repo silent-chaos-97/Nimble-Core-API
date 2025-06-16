@@ -100,7 +100,6 @@ class Shufti {
     }
   }
 
-// Temp comment
   /** build json payload for backgroundcheck */
   buildBackgroundChecksPayload(firstName, middleName, lastName, dateOfBirth) {
     return {

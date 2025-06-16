@@ -9,8 +9,6 @@ const properties = [
   'searchObject',
   'reference',
   'signerId',
-// Temp comment
-  'createdAt',
   'updatedAt'
 ]
 

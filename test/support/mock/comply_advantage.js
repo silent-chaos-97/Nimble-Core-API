@@ -2051,3 +2051,23 @@ const successResponse = {
                 "title": "Mugabe still the boss at 89 | ZimDaily",
                 "url": "https://www.zimdaily.com/?p=13016"
               },
+              {
+                "date": "2019-09-17T00:00:00Z",
+                "snippet": "The Zimbabwe Mail Mugabe will answer to God, says Mukonori Mukonori (FM), who was Mugabe 's confidante since the days of the liberation struggle, told Blessed Mhlanga (BM) in an interview that he was in constant touch with Mugabe before his death on Friday at a Singapore hospital. The cause of the 95-year-old 's death has not been revealed, but President Emmerson Mnangagwa last month said Mugabe had been detained at the hospital since April. Mukonori spoke about Mugabe 's legacy and disclosed that he once tried to persuade the veteran ruler to apologise for the Gukurahundi atrocities.",
+                "title": "Mugabe will answer to God, says Mukonori – The Zimbabwe Mail",
+                "url": "https://www.thezimbabwemail.com/religion/mugabe-will-answer-to-god-says-mukonori/"
+              },
+              {
+                "date": "2018-09-11T00:00:00Z",
+                "snippet": "The war veterans/soldiers had to use a coup in order to push Grace Mugabe away. If Grace Mugabe was a genuine/supporting wife, she should have allowed R.G Mugabe to retire from politics long back but because of her love of planes and money, R.G Mugabe had to be subjected to a long period of political prison. On 11/09/2018, I wrote a piece condemning ZANU PF government for abusing taxpayers' money by chartering a plane for Grace Mugabe from Singapore.",
+                "title": "No difference between Grace Mugabe & Judas Iscariot - Bulawayo24 News",
+                "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-144993.html"
+              },
+              {
+                "date": "2019-09-24T00:00:00Z",
+                "snippet": "Blacklisting of South Africa's Gupta Brothers Means Govt Dept Slams 'Fake News' About Sex Education in South Africa #FeesMustFall Activist Admitted to Hospital in South Africa Relief For HIV/Aids Patients as Legal Battle Ends In Botswana Luyolo Yiba Wins Idols South Africa Season 15 Crown! Mugabe's Family Ordered to Register 'Billion-Dollar' Estate 'No Sympathy' for South African Student's Killer at Court Ruling South African Rail Agency Bleeds 10,000 Security Jobs Watch Bonang Matheba Get Candid on U.S. Radio Show Burna Boy to Donate Proceeds From Concert to Xenophobia Victims Two Die in Tornado in South Africa's KwaZulu-Natal Miss South Africa Asks Men to Write Love Letters Against Violence Prisoners's Lawsuit to Set South African Legal Precedent? Foreign Protesters Not Our Problem",
+                "title": "Prince Harry, Meghan Markle Take 10-Day Tour in Southern Africa - allAfrica.com",
+                "url": "https://allafrica.com/view/group/main/main/id/00070106.html"
+              },
+              {
+                "date": "2019-11-24T00:00:00Z",

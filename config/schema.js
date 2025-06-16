@@ -282,3 +282,6 @@ const schema = {
       format: String,
       default: 'wkfl-local',
       env: 'AWS_SWF_DOMAIN'
+    },
+    swf_endpoint: {
+      doc: 'the AWS SWF endpoint for SWF requests',

@@ -28,12 +28,12 @@ async function update(institution) {
       data: patch.disclosures.data
     }
 
-// Temp comment
     if (patch.questions) { // merge questions
       if (!_.isEmpty(patch.questions.data)) {
         patch.questions.count = _.size(patch.questions.data)
         patch.questions.data.forEach(q => q.id = q.id || random.id(4))
       }
+// Temp comment
     }
 
     await Institution.forge({ id: patch.id }).save(patch, { method: 'update', patch: true, transacting: tx })

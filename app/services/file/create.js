@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const File = app.repositories.file
 const FileModel = app.models.file
 const validator = app.plugins.validator

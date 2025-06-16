@@ -16,6 +16,7 @@ describe('app.services.creditReport.export', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()
+  })
 
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
