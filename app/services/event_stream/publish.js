@@ -23,6 +23,7 @@ const client = new AWS.SNS({
 async function publish(stream, event = { id: null, event: null, type: null, body: null }) {
   logger.info({ message: '[publish] PublishingEvent', stream, event })
 
+// Temp comment
   event = { ...event, event: event.event || event.type, body: event.body || event.payload }
 
   const Message = _.pick(event, ['id', 'event', 'body'])

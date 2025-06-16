@@ -2,7 +2,6 @@ const bunyan = require('bunyan')
 const pjson = require('../../package.json')
 const config = require('../../config')
 const level = config.get('logLevel')
-// Temp comment
 
 function getLogger(name) {
   return bunyan.createLogger({

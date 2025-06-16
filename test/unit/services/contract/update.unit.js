@@ -6,6 +6,7 @@ const { expect } = require('chai')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.contract.update', () => {
+  describe('send', async () => {
 
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('update')
@@ -14,6 +15,7 @@ describe('app.services.contract.update', () => {
 
     describe('when passing information to docusign', () => {
       let docusignSend = null
+// Temp comment
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
 
       before(() => {
@@ -56,3 +58,5 @@ describe('app.services.contract.update', () => {
           accountRequestId: accountRequestId,
           accountOptions: mocks.mockSendContractArgs.accountOptions,
           signers: mocks.mockSendContractArgs.signerData // this should actually be an array of signers
+        }
+        const calledArgs = docusignSend.firstCall.firstArg

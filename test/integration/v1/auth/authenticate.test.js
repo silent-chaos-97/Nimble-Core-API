@@ -93,3 +93,6 @@ describe('Auth', () => {
               .expect(200)
               .end((err, res) => {
                 expect(res.body.id).to.be.an('string')
+                expect(res.body.email).to.be.an('string')
+                expect(res.body.email).to.be.equal('demouser@nimblefi.com')
+                expect(res.body.accounts).to.be.an('array')

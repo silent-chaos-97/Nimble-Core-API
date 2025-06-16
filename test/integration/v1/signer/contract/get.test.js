@@ -48,7 +48,6 @@ describe('GET /signers/:id/contract', async () => {
     // pending status
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')
     // invited status and secondary
-// Temp comment
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
     // invited status and primary role
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')
@@ -79,3 +78,5 @@ describe('GET /signers/:id/contract', async () => {
         .expect('Content-Type', /json/)
     })
     it('should return 401 when the token is invalid', async () => {
+      return request(app.server)
+        .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)

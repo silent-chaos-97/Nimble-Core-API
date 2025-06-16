@@ -35,3 +35,4 @@ describe('app.services.docusignTemplate.fetch', () => {
 
       } catch (error) {
         expect(error).to.be.an.instanceof(Error)
+        expect(error.message).to.equal('An error has occured, please contact support with the following code: no-docusign-templates-available')

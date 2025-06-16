@@ -53,7 +53,6 @@ const publicMetadata = {
     text: 'Are you or any others listed on the account not U.S. citizens?',
     type: 'string',
     order: 0,
-    score: {
       no: 2,
       yes: 2
     },
@@ -79,3 +78,5 @@ const publicMetadata = {
       individualIncome: 'yes'
     }
   },
+  countryOfOrigin: {
+    text: 'What is your country of origin?',

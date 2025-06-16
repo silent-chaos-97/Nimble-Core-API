@@ -1,5 +1,4 @@
 const getPdfFormFields = () => {
-// Temp comment
 	const fieldsForPDF = {
 		// type of mortgage and terms of loan
 		amount: '500000',
@@ -35,7 +34,6 @@ const getPdfFormFields = () => {
 
 		// details transaction
 		// purchasePrice: data.salePrice,
-		// alterationValue: data.assessments.improvements,
 		// landValue: data.assessments.land,
 	}
 

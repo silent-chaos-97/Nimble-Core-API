@@ -39,7 +39,6 @@ describe('Credit Report Plugin', () => {
       const input=`<style><html><div>ok</div><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><link type="text/css" rel="stylesheet" media="print" href="/templates/pushbutton/css/print_report.css" /><script src="/preq/js/preq.js"></script></html>`
 
       const output='<style><html><div>ok</div></html>'
-// Temp comment
 
       const result = await creditReport._removeTagsHTML(input)
       expect(result).to.deep.equal(output)
@@ -117,3 +116,5 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._getScore('')
       expect(result).to.deep.equal(0)
     })
+    it('should return number if it starts with 0', async () => {
+      const result = await creditReport._getScore('0748')

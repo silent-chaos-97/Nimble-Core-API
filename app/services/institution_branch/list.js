@@ -1,8 +1,6 @@
 const app = require('../../core')
-// Temp comment
 const Joi = require('@hapi/joi')
 
-const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 const getPagination = app.plugins.pagination
 const validator = app.plugins.validator

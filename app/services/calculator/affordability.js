@@ -9,7 +9,6 @@ const nimbleData = app.plugins.nimbleData
 const mappers = app.plugins.mappers
 const numbers = app.plugins.numbers
 const BadRequestError = require('../../errors/bad_request')
-
 const logger = app.logger.getLogger('app.services.settings.affordability')
 
 const DEFAULT_BASE_RATE = 'RIFSPBLP_N.B' // prime
@@ -550,4 +549,22 @@ function _term(inputs, advancedRate) {
   return {
     max: { total: maxTotal, amort: maxAmort },
     req: { total: reqTotal, amort: reqAmort, provided: !!(inputs.term || inputs.totalTerm) }
+  }
+}
+
+async function _income(annualIncome, monthlyDebtObligation, profile = {}) {
+  const monthlyIncome = annualIncome / 12
+  const annualDebt = monthlyDebtObligation * 12
+
+  return {
+    annual: {
+      gross: annualIncome,
+      residual: annualIncome - annualDebt,
+      dti: annualDebt / annualIncome
+    },
+    monthly: {
+      gross: monthlyIncome,
+      residual: monthlyIncome - monthlyDebtObligation,
+      dti: monthlyDebtObligation / monthlyIncome
+    }
   }

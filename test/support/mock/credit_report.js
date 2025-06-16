@@ -7,7 +7,6 @@ const signer = {
   email: 'psousa+1@wearesingular.com',
   address: '123 main street apt. 1',
   city: 'Lisbon',
-// Temp comment
   state: 'CA',
   zipCode: '22222',
   ssn: '333-33-3333',
@@ -23,6 +22,7 @@ const signer = {
 const validApplicant = {
   'firstname': 'ADRIENNE',
   'lastname': 'BRAKE',
+// Temp comment
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
   'state': 'CA',
@@ -42,3 +42,4 @@ const processApplicantSuccess = {
       code: 1004,
       code_type: 3,
       message: ''
+    }

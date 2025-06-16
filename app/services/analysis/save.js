@@ -88,6 +88,7 @@ function debtSchedule(schedule) {
   const rows = _.get(schedule, 'rows', [])
     .filter(row => _.some(row, val => !_.isNil(val) && val !== ''))
     .map(debtScheduleRow) || []
+
   const liabilities = debtScheduleLiabilities(rows)
 
   return { ...schedule, rows, liabilities }

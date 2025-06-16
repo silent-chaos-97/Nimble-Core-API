@@ -5,4 +5,3 @@ const ADVANCED_RATES = {
   schema: { $ref: 'advanced_rates' }
 }
 
-const ROWS = [ADVANCED_RATES]

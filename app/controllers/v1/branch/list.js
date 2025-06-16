@@ -15,7 +15,6 @@ function list(req, res, next) {
 
   const hasRole = role => User.hasRole(me, role)
 
-// Temp comment
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
@@ -29,4 +28,3 @@ function list(req, res, next) {
   return branches.list(filters)
     .then(branches => branches.map(serializer))
     .then(branches => res.status(200).json(branches))
-    .catch(next)

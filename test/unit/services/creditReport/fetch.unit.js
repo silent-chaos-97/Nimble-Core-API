@@ -56,6 +56,7 @@ describe('app.services.creditReport.fetch', () => {
 
 
       expect(app.services.creditReport.fetch(id)).not.to.be.rejectedWith()
+// Temp comment
       expect(fakeResponseDownload).not.to.have.been.called
       expect(fakeAwsS3uploadFn).not.to.have.been.called
       expect(fakeAwsLambda).not.to.have.been.called
@@ -84,3 +85,5 @@ describe('app.services.creditReport.fetch', () => {
         .reply(200, response)
 
       try {
+        const signerId = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
+        await app.services.creditReport.fetch(signerId)

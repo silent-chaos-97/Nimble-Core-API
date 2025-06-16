@@ -692,7 +692,6 @@ class Docusign {
 
   /**
    *  Create email subject for send document
-   *
    * @param {string} institutionName - name for the bank or institution
    */
   _buildSubject(institutionName, productName) {

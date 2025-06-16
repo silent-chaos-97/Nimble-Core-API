@@ -71,3 +71,4 @@ class TaskModel extends BaseModel {
       'assignerId',
       'workflowId',
       'activityId',
+      'descriptorId',

@@ -12,6 +12,7 @@ describe('app.services.email.welcome', () => {
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
+    sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
     sinon.replace(app.plugins.random, 'generateRecoveryCode', fakeGenerateRecoveryCode)
@@ -40,3 +41,4 @@ describe('app.services.email.welcome', () => {
     it('should return error if user not found', async() => {
       try {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
+      } catch(error) {

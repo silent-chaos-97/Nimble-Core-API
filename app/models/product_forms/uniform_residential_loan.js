@@ -323,3 +323,11 @@ const schema = Joi.object({
 				),
 				totalPresentMarketValue: Joi.number(),
 				totalGrossRentalIncome: Joi.number(),
+				totalMortgagePayments: Joi.number(),
+				totalMortgageAndLiensAmount: Joi.number(),
+				totalInsuranceMaintenanceTaxesAndMiscellaneous: Joi.number(),
+				totalNetRentalIncome: Joi.number()
+			}),
+			totalAssetsBorrower: Joi.number(),
+			totalAssetsCoborrower: Joi.number(),
+			totalAssetsJoint: Joi.number()

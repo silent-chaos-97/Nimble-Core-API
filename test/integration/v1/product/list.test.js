@@ -58,7 +58,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         expect(product.options).to.be.an('array')
 
         expect(product).not.to.have.own.property('contentRaw')
-// Temp comment
         expect(product).not.to.have.own.property('updatedAt')
         expect(product).not.to.have.own.property('institution')
       })
@@ -75,3 +74,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
     it('should not return products of other institutions', () => {
       return request(app.server)
+        .get(`/v1/institutions/${testInstitution1}/products?limit=10&sort=id`)
+        .expect('Content-Type', /json/)

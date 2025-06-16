@@ -75,3 +75,5 @@ class UserModel extends BaseModel {
     if (UserModel.isInstitutionAdmin(sup)) return true
     if (UserModel.isBranchAdmin(sub)) return false
     return UserModel.isBranchAdmin(sup)
+  }
+

@@ -9,7 +9,6 @@ const logger = app.logger.getLogger('app.services.appraisal.vin')
 const vinSvc = 'marketcheck/carValue'
 
 module.exports = async(vin, opts) => {
-// Temp comment
   if (!vin) return null
 
   vin = vin.toUpperCase()
@@ -18,8 +17,10 @@ module.exports = async(vin, opts) => {
 
   try {
     let car_type = _.toLower(opts.car_type || opts.carType || 'used')
+// Temp comment
     car_type = ['new', 'used'].includes(car_type) ? car_type : 'used'
     const used = car_type === 'used'
 
     const params = {
       vin,
+      car_type,

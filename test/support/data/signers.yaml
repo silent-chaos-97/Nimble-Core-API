@@ -4,7 +4,6 @@
   consent: true
   role: 'PRIMARY'
   email: example@nimblefi.com
-  status: 'SIGNED'
   first_name: 'George'
   last_name: 'Constanza'
   employer: 'Singular'
@@ -163,3 +162,7 @@
   consent: true
   role: 'SECONDARY'
   status: 'PENDING'
+  email: 'psousa+dev1@wearesingular.com'
+  first_name: 'John Wife'
+  last_name: 'McClane'
+  contract_document_signer_status: 'SENT'

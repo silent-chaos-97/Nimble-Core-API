@@ -15,6 +15,7 @@ const SCHEMA = Joi.object().keys({
   updatedById: Joi.string().uuid().required(),
 
   branchId: Joi.string().uuid(),
+// Temp comment
   institutionId: Joi.string().uuid().required(),
 
   ownerId: Joi.string().uuid().required(),
@@ -47,3 +48,4 @@ class AnalysisModel extends BaseModel {
     ]
   }
 
+  static props() {

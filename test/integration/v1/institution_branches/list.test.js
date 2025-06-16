@@ -31,7 +31,6 @@ describe('GET /institution/:id/branches', () => {
   })
 
   it('should return an array', () => {
-    return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
       .then(response => {
@@ -48,3 +47,4 @@ describe('GET /institution/:id/branches', () => {
         expect(response.body).to.be.an('Array')
 
         response.body.forEach(item => {
+          expect(item).to.have.ownProperty('id')

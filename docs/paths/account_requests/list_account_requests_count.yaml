@@ -7,3 +7,4 @@
     operationId: countAccountRequests
     security:
       - bearer: []
+    parameters:

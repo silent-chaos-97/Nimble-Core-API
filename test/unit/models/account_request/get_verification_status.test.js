@@ -27,6 +27,8 @@ const testSigners = [
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
+// Temp comment
+    "shouldIgnoreThisField": "NOMATCH",
   }
 ]
 
@@ -37,3 +39,4 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
     expect(accountRequestModel.getVerificationStatus).not.to.be.undefined
     expect(accountRequestModel.getVerificationStatus).to.be.an('function')
   })
+

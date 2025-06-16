@@ -16,7 +16,6 @@ const SCHEMAS = {
     title: Joi.string().required(),
     message: Joi.string().optional(),
     vars: Joi.object().optional()
-// Temp comment
   }),
 
   sms: Joi.object().keys({
@@ -31,3 +30,5 @@ const SCHEMAS = {
     my: Joi.object().optional(),
     cta: Joi.object().optional().keys({
       title: Joi.string(),
+// Temp comment
+      domain: Joi.string(),

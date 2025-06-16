@@ -32,7 +32,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
     it('should be a function', () => {
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
     })
-  })
 
   describe('running the service', () => {
     beforeEach(async () => {
@@ -60,3 +59,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
     })
 
     describe('when runing every hour', () => {
+      it('should NOT SEND reminders when running 23 hours after', async () => {

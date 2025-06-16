@@ -1,5 +1,4 @@
 /institutions/{id}/products:
-  get:
     tags:
       - Institution
     summary: Get a list of products of a institution
@@ -18,3 +17,4 @@
         description: The format of the content property
         required: true
         default: html
+        schema:

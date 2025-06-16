@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const Joi = require('@hapi/joi')
 const bcrypt = require('bcrypt')
 const moment = require('moment')
 
@@ -13,6 +12,7 @@ const UserAuthModel = app.models.userAuth
 const validator = app.plugins.validator
 
 // extend UserAuthModel props and schema
+const whitelist = [...UserAuthModel.props(), 'code']
 const schema = UserAuthModel.schema().keys({
   password: Joi.string().min(6).max(160).required(),
   code: Joi.string().required()

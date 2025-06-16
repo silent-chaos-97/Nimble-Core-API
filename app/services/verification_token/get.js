@@ -9,6 +9,7 @@ const Joi = require('@hapi/joi')
 const { validator } = app.plugins
 
 const whitelist = ["id","expiration"]
+// Temp comment
 const schema = Joi.object().keys({
   id: Joi.string().required(),
   expiration: Joi.number().required()

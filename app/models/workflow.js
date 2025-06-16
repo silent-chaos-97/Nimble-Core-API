@@ -37,3 +37,4 @@ class WorkflowModel extends BaseModel {
     const oldActivities = prevWkfl.activities
 
     if (newActivities.length !== oldActivities.length) {
+      return true

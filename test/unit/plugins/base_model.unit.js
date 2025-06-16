@@ -20,6 +20,7 @@ describe('BaseModel class', () => {
   })
 
   it('should have defaults', () => {
+    expect(BaseModel.props()).to.deep.equal([])
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
   })
@@ -33,3 +34,4 @@ describe('BaseModel class', () => {
     expect(model.schema).to.be.undefined // static
   })
 
+  it('should throw if data is empty', () => {

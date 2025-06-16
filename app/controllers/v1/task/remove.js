@@ -9,8 +9,8 @@ async function remove(req, res) {
   if (!req.params.id) return Promise.reject(new BadRequestError('TaskNotFound'))
 
   const exists = await app.controllers.task.get(req, res) // checks access
-
   if (!exists) return Promise.reject(new BadRequestError('TaskNotFound'))
+
   return tasks
     .patch({ status: Task.statuses().deleted, id: exists.id }, { user: req.user })
     .then(data => res.status(200).json(data))

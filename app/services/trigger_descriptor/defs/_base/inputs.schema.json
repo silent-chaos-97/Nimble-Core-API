@@ -1,6 +1,5 @@
 {
   "properties": {
-    "memo": {
       "title": "Memo",
       "type": "string"
     },
@@ -10,3 +9,4 @@
       "items": {
         "type": "string"
       },
+      "minItems": 1,

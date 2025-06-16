@@ -42,6 +42,7 @@ describe('POST /users', () => {
         })
     })
   })
+// Temp comment
 
   describe('with invalid data', () => {
     beforeEach(async () => {
@@ -110,9 +111,11 @@ describe('POST /users', () => {
 
     it('should create user account', done => {
       request(app.server)
-// Temp comment
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect('Content-Type', /json/)
         .expect(201)
+        .end(done)
+    })
+

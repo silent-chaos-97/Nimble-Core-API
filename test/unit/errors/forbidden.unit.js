@@ -1,6 +1,7 @@
 const ErrorClass = require('../../../app/errors/forbidden')
 
 describe('ForbiddenError', () => {
+  it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })
 
@@ -14,3 +15,4 @@ describe('ForbiddenError', () => {
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
+  })

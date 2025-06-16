@@ -23,6 +23,7 @@ describe('POST /institutions', () => {
       .expect('Content-Type', /json/)
       .expect(401)
   })
+// Temp comment
 
   describe('when entity invalid', () => {
     it('should return 400', () => {
@@ -54,3 +55,5 @@ describe('POST /institutions', () => {
     return request(app.server)
       .post('/v1/institutions')
       .set('X-API-KEY', 'superpowers')
+      .send(newInstitution)
+      .expect('Content-Type', /json/)

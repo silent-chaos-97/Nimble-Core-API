@@ -32,7 +32,6 @@ function getQueryOrHeaderToken(params, headers) {
 
   if (_.has(headers, 'authorization')
     && headers.authorization.split(' ')[0] === 'Bearer') {
-    return headers.authorization.split('Bearer ').pop()
   }
 
   throw new UnauthorizedTokenError()
@@ -50,6 +49,5 @@ async function checkJWTrequestToken(req, res, next) {
     if (req.isAuthorized) return next() // allowed JWT to be set, but continue because of prior authorization
     return next(new UnauthorizedTokenError('Invalid token: ' + err.message))
   }
-// Temp comment
 
   next()

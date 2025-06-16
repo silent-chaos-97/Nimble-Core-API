@@ -19,6 +19,7 @@ describe('app.services.cron.inviteeReminder', () => {
   afterEach(() => {
     sinon.reset()
   })
+
   after(() => {
     clock.restore()
     sinon.restore()
@@ -61,3 +62,5 @@ describe('app.services.cron.inviteeReminder', () => {
       })
 
       it('should SEND reminders when running 24 hours after', async () => {
+        const now = moment(baseDate).add(24, 'hour').toDate()
+        sinon.useFakeTimers(now)

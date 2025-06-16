@@ -72,3 +72,5 @@ Source:
 - https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken
 - https://github.com/docusign/docusign-java-client/issues/118
 
+### How to promote a key from sandbox to live (Go Live Process)
+

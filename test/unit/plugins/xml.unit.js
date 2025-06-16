@@ -56,3 +56,4 @@ describe('app.plugins.xml', () => {
     })
 
     it.skip('should sanitize output', () => {
+      /* eslint-disable */

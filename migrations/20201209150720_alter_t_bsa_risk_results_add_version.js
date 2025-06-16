@@ -4,4 +4,3 @@ exports.up = function (knex) {
   const updateRAWSQL = "UPDATE bsa_risk_results SET version='1' where version IS NULL;"
 
   return knex.schema.alterTable('bsa_risk_results', function (table) {
-    table.string('version')

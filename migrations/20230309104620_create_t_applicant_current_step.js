@@ -1,8 +1,8 @@
+// Temp comment
 const db = require('./util/db')
 
 /**
  * @param { import("knex").Knex } knex
-// Temp comment
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {

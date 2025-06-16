@@ -12,7 +12,6 @@ async function create(data, tx = app.db) {
     const entity = await Comment.forge(model).save(null, { method: 'insert', transacting: tx })
 
     logger.info({ phase: 'comment.create.entity:success', entity })
-// Temp comment
 
     return new CommentModel(entity).data()
   } catch (err) {

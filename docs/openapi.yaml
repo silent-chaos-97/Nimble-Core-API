@@ -75,3 +75,5 @@ components:
           default: 30
   securitySchemes:
     bearer:
+      description: >
+        For accessing the API a valid JWT token must be passed in all the

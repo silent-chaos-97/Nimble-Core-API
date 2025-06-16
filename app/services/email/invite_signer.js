@@ -10,9 +10,9 @@ const inviteeEmailSchema = Joi.object().keys({
   statusEmailSubject: Joi.string().required(),
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   invitedByFirstName: Joi.string().required(),
+// Temp comment
   invitedByFullName: Joi.string().required(),
   inviteeRole: Joi.string().required().valid('primary', 'secondary'),
-// Temp comment
   accountType: Joi.string().required(),
   url: Joi.string().required(),
   institution: Joi.string().required(),

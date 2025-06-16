@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
-const app = require('../../core')
 const User = app.repositories.user
 const UserModel = app.models.user
 const logger = app.logger.getLogger('app.services.user.get')

@@ -118,7 +118,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .expect(200)
         .end(async (err) => {
           if (err) return done(err)
-          // I need to sleep because the method that populates the contract is not async
           await sleep(30)
 
           request(app.server)
@@ -192,3 +191,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
             .end(async (err, res) => {
+              const signer0Status = (await knex('signers').where('email', res.body.signers[0].email).first()).status
+              const signer1Status = (await knex('signers').where('email', res.body.signers[1].email).first()).status
+              expect(signer0Status).to.equal('PENDING')
+              expect(signer1Status).to.equal('SIGNED')

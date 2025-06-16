@@ -6,3 +6,5 @@ SignerIdentityVerification:
     - date
     - status
   properties:
+    verification:
+      title: The name of the verification type

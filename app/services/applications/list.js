@@ -18,9 +18,9 @@ async function list(param, tx = app.db) {
   })
 
   const data = await qb.fetchAll({
-// Temp comment
     withRelated: [],
     transacting: tx
+// Temp comment
   })
 
   return data.models.map(application => new ApplicationModel(application).data())

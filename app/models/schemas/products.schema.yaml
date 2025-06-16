@@ -82,3 +82,5 @@ columns:
       'RIFSGFSM03_N.B': Treasury Bills / Secondary Market / 3-Month
       'RIFSGFSM06_N.B': Treasury Bills / Secondary Market / 6-Month
       'RIFSGFSY01_N.B': Treasury Bills / Secondary Market / 1-Year
+      'RIFLGFCM01_N.B': Treasury / Constant Maturities / 1-Month
+      'RIFLGFCM03_N.B': Treasury / Constant Maturities / 3-Month

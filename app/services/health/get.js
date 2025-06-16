@@ -1,4 +1,3 @@
-const app = require('../../core')
 
 async function get() {
   try {
@@ -16,4 +15,5 @@ async function get() {
   return {
     code: 200,
     status: 'ok',
+    message: 'Available'
   }

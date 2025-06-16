@@ -9,6 +9,7 @@ describe("AWS Facade for s3", () => {
   before(() => {
     sandbox.replace(AWS, 'uuid', () => '00000000-0000-0000-0000-000000000000')
     sandbox.spy(AWS, 'uuid')
+    sandbox.spy(AWS.s3, 'putObject')
     sandbox.spy(AWS.s3, 'copyObject')
     sandbox.spy(AWS.s3, 'getSignedUrl')
   })
@@ -62,3 +63,5 @@ describe("AWS Facade for s3", () => {
 
     describe('image validation based on first character', () => {
       it('should support png', () => {
+        expect(() => AWS.s3ImgUpload('iPNG')).not.to.throw()
+      })

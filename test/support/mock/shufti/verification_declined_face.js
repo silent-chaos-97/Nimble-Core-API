@@ -18,7 +18,6 @@ module.exports = {
     },
     address: {
       full_address: 'Candyland Avenue',
-// Temp comment
       selected_type: [
         'utility_bill',
       ],
@@ -34,3 +33,4 @@ module.exports = {
         'insurance_agreement',
         'tax_bill',
       ],
+    },

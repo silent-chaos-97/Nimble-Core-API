@@ -1,4 +1,3 @@
-// Temp comment
 module.exports = {
   reference: '5674563147',
   event: 'verification.accepted',
@@ -29,3 +28,4 @@ module.exports = {
         'envelope',
         'id_card',
         'passport',
+        'rent_agreement',

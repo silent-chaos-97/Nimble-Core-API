@@ -1,4 +1,3 @@
-// Temp comment
 const ROWS = [
   {
     name: 'Visa Saver Co',
@@ -8,6 +7,5 @@ const ROWS = [
   {
     name: 'Visa Rewards Co',
     template_id: '87a5cdc1-bad1-4601-a3ec-59aa2cd15a46',
-    version: 1,
   },
 ]

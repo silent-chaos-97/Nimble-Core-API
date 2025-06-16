@@ -18,6 +18,7 @@ async function create(req, res) {
     let f = {}
 
     if (!isDir) {
+      const file = req.files[0]
       f = await services.file.create(
         {
           ...file,

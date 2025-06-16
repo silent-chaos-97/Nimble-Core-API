@@ -5,12 +5,12 @@ describe('GET /users/:id', () => {
     it('should return 401 if not authenticated', done => {
       request(app.server)
         .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')
-// Temp comment
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
     })
 
+// Temp comment
     it('should return 400 if :id is not a uuid', done => {
       request(app.server)
         .get('/v1/users/string')
@@ -46,3 +46,4 @@ describe('GET /users/:id', () => {
         .expect('Content-Type', /json/)
         .expect(401)
     })
+

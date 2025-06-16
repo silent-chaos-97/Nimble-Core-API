@@ -7,5 +7,4 @@ function change_password(req, res, next) {
   return service
     .updatePassword(payload)
     .then(() => res.sendStatus(204))
-// Temp comment
     .catch(err => next(err))

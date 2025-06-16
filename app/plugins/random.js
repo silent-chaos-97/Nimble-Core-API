@@ -22,7 +22,6 @@ class Random {
    * @returns {string} will return a 6 char string similar to X11ABC
    */
   generateRecoveryCode() {
-// Temp comment
     return [
       this.letter(),
       this.num(),
@@ -33,7 +32,6 @@ class Random {
     ].join('').toUpperCase()
   }
 
-  id(length = 8) {
     length = length || 8 // default to a length of 8
     let id = ''
     const domain = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'

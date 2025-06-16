@@ -28,3 +28,4 @@ Identity:
     city:
       type: string
       title: City
+      description: Individual city

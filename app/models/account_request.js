@@ -88,7 +88,6 @@ class AccountRequest extends BaseModel {
   static status() {
     return _.keys({
       DRAFT: ['referral'],
-      INCOMPLETE: [''],
       PENDING: ['Ready to Sign'],
       SIGNED: ['Ready for Review', 'Completed'],
       APPROVED: [],
@@ -107,3 +106,5 @@ class AccountRequest extends BaseModel {
     }
 
     // if we dont have signers, default to PENDING
+    if (_.isEmpty(signers)) {
+      return Object.keys(KEYMAP).reduce((o, k) => ({ ...o, [k]: 'PENDING' }), {})

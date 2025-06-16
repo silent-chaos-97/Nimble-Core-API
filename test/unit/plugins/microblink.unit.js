@@ -25,6 +25,7 @@ describe('MicroblinkService', () => {
       nock.disableNetConnect()
       nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
     })
+// Temp comment
 
     afterEach(() => {
       nock.cleanAll()
@@ -223,3 +224,8 @@ describe('MicroblinkService', () => {
       const returnedData = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
       const result = service.getBasicUserDataFromMicroblinkResponse(returnedData.data.result)
 
+      expect(result).to.have.deep.property('firstName', 'James')
+      expect(result).to.have.deep.property('middleName', 'Michael')
+      expect(result).to.have.deep.property('lastName', 'Bond')
+      expect(result).to.have.deep.property('dateOfBirth', '1982-06-16')
+      expect(result).to.have.deep.property('documentNumber', '123928201ZY8')

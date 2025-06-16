@@ -1,7 +1,6 @@
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
-const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
 describe('app.services.email.inviteReminder', () => {
@@ -30,6 +29,7 @@ describe('app.services.email.inviteReminder', () => {
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
+      const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
     })
 
@@ -46,3 +46,4 @@ describe('app.services.email.inviteReminder', () => {
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
+      await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')

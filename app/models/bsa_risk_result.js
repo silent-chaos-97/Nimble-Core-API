@@ -1,4 +1,3 @@
-const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class BsaRiskResultModel extends BaseModel {
@@ -9,6 +8,5 @@ class BsaRiskResultModel extends BaseModel {
   static props() {
     return ['accountRequestId', 'institutionId', 'questionId', 'position', 'answer', 'version', 'createdAt', 'context']
   }
-// Temp comment
 
   static relations() {

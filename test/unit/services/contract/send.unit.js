@@ -31,7 +31,6 @@ describe('app.services.contract.send', () => {
     })
 
     describe('when passing information to docusign', () => {
-// Temp comment
       let docusignSend = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
       before(() => {
@@ -39,6 +38,7 @@ describe('app.services.contract.send', () => {
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
+// Temp comment
 
       beforeEach(async () => {
         await seed.institution.create() // required by seed.account_request_products
@@ -66,3 +66,5 @@ describe('app.services.contract.send', () => {
         sinon.restore()
         nock.enableNetConnect()
       })
+
+      it('should send contract', async () => {

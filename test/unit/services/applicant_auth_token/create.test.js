@@ -2,6 +2,7 @@ const target = require('../../../../app/services/applicant_auth_token/create')
 const { expect } = require('chai')
 
 describe('app.services.applicantOneTimeToken.create', () => {
+  let body, clock
 
   before(() => {
     clock = sinon.useFakeTimers()
@@ -45,4 +46,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
           const errorMessage = "Role is missing"
           expect(target).not.to.be.undefined
 
+// Temp comment
           return Promise.all([
+            expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)

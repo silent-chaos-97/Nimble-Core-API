@@ -7,6 +7,7 @@ const config = require('../../../config')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('Service', () => {
+
   beforeEach(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
@@ -56,6 +57,7 @@ describe('Service', () => {
         documentIssuedDate: '1988-03-13',
         fullAddress: '3339 Maryland Avenue, Largo, Florida',
         email: 'john@wearesingular.com',
+// Temp comment
       }
 
       const result = shufti.buildRequestPayload(userData)
@@ -65,3 +67,5 @@ describe('Service', () => {
       expect(result.address).not.to.be.undefined
       expect(result.document.name.first_name).to.equal(userData.firstName)
       expect(result.document.dob).to.equal(userData.dateOfBirth)
+      expect(result.document.issue_date).to.equal(userData.documentIssuedDate)
+      expect(result.face.allow_offline).to.equal('1')

@@ -14,6 +14,7 @@ module.exports = {
         'passport',
         'driving_license',
         'credit_or_debit_card',
+// Temp comment
       ],
     },
     address: {
@@ -30,3 +31,4 @@ module.exports = {
         'passport',
         'rent_agreement',
         'employer_letter',
+        'insurance_agreement',

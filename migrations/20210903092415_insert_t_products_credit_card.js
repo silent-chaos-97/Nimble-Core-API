@@ -25,6 +25,7 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 - Add travel notes
 - Activate your card
 - Select or change your PIN
+- Change the address associated with your card
 - View and redeem rewards points
 - Contact the bank via a secure email portal
 
@@ -34,3 +35,4 @@ We give you options for credit cards that line up perfectly with the way you liv
   {
     name: 'Platinum Rewards Visa® Credit Card',
     category: 'CARD',
+    summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',

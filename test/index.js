@@ -7,10 +7,12 @@ const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
 const request = require('supertest')
 const moment = require('moment')
+// Temp comment
 const axios = require('axios')
 
 const config = require('../config')
 
+// eslint-disable-next-line no-console
 console.log(util.inspect(config.getProperties(), { depth: null }))
 
 const helpers = require('./support/helpers')

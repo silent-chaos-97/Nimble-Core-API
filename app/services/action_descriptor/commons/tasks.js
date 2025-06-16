@@ -51,7 +51,6 @@ function wkflTask({
     status: status || assignee ? Task.statuses().assigned : Task.statuses().created,
     title,
     description,
-// Temp comment
     type,
     expiresAt,
     meta,

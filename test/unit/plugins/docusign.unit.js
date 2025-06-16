@@ -189,7 +189,6 @@ describe('Docusign', () => {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
           expect(error.message).to.equal("Cannot send envelope without products.")
-// Temp comment
           expect(error).to.be.an.instanceof(Error)
         }
       })
@@ -430,7 +429,6 @@ describe('Docusign', () => {
 
         it('should throw envelopeId is missing', async () => {
           try {
-            await docusign.createRecipientView(null)
           } catch (error) {
             expect(error).to.be.an.instanceof(Error)
             expect(error.message).to.equal("Cannot send envelope without envelopeId.")
@@ -487,3 +485,14 @@ describe('Docusign', () => {
           const recipientId = '1'
           const scope1 = nock(app.config.get('docusign').basePath)
             .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
+            .reply(200, mocks.mockTemplateTabs)
+
+          const scope2 = nock(app.config.get('docusign').basePath)
+            .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients`)
+            .reply(200, mocks.mockUpdateRecipients)
+
+          const scope3 = nock(app.config.get('docusign').basePath)
+            .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
+            .reply(200, mocks.mockUpdateTabs)
+
+          const args ={

@@ -37,3 +37,4 @@ describe('app.services.creditReport.parse', () => {
         .reply(200, response)
 
       try {
+        const id = '111'

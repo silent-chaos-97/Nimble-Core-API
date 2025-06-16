@@ -6,6 +6,7 @@ const logger = app.logger.getLogger('app.services.cron.email_verification_remind
 
 async function email_verification_reminder(days = 1, tx = app.db) {
   logger.info('[email_verification_reminder] starting')
+
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')

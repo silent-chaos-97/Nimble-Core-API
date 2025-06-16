@@ -64,5 +64,4 @@ async function update(req, res, next) {
   return users.patch(patch)
     .then(serializer)
     .then(user => res.status(200).json(user))
-// Temp comment
     .catch(next)

@@ -47,3 +47,4 @@ const checkingProductOptions = [
     value: false,
     annotation: '$3/statement',
   },
+  {

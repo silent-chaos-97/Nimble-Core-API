@@ -6,7 +6,6 @@ const SUPPORTED_ERRORS = [
   'NotFoundError',
   'BadRequestError',
   'InternalServerError',
-  'ConflictError',
   'UnauthorizedError',
   'UnauthorizedTokenError',
   'UnauthorizedApiKeyError',

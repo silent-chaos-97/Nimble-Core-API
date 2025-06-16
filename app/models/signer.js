@@ -57,6 +57,7 @@ class Signer extends BaseModel {
       'checkSanction',
       'sanctionVerifiedAt',
       'checkPoliticalExposure',
+      'politicalExposureVerifiedAt',
       'checkAdverseMedia',
       'adverseMediaVerifiedAt',
       'checkAntiMoneyLaundering',
@@ -133,3 +134,6 @@ class Signer extends BaseModel {
     const completeSchema = Signer.schema('complete')
 
     try {
+      app.plugins.validator(completeProps, completeSchema, { abortEarly: false })
+      return 'PENDING' // all data OK: status should be PENDING
+    } catch (err) {

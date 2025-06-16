@@ -10,3 +10,4 @@
         },
         "primary": {
           "title": "Primary Applicant",
+          "type": "string",

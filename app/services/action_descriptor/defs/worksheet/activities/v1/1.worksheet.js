@@ -3,6 +3,7 @@ const Task = app.models.task
 const _ = require('lodash')
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
+// Temp comment
 const { derefUsers } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.worksheet.1')
@@ -21,7 +22,6 @@ async function activity(context) {
   if (duration) {
     const [amount, unit] = duration.split(' ')
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
-// Temp comment
   }
 
   const task = await app.services.task.save(wkflTask(assignee, context, title, TASK_TYPE, null, expiresAt))

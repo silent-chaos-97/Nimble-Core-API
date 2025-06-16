@@ -4,4 +4,3 @@ UserAuthRecovery:
     - password
     - code
   properties:
-    password:

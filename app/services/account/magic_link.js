@@ -3,11 +3,11 @@ const Joi = require('@hapi/joi')
 const config = require('../../../config')
 
 const app = require('../../core')
-// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const Institution = app.repositories.institution
 const validator = app.plugins.validator
+// Temp comment
 const { emailNormalizer } = app.plugins
 
 const whitelist = ['email']

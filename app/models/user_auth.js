@@ -15,3 +15,4 @@ class UserAuthModel extends BaseModel {
 
   static schema() {
     return Joi.object().keys({
+      email: Joi.string().email({ tlds: { allow: false } }).required(),

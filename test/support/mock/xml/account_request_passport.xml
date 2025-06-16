@@ -6,6 +6,7 @@
     <document name="thirdFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.thirdFileName.pdf"/>
   </documents>
   <bsa>
+    <score>2</score>
     <questions/>
   </bsa>
   <signers>
@@ -16,7 +17,6 @@
       <firstName>George</firstName>
       <middleName/>
       <lastName>Constanza</lastName>
-      <phoneNumber/>
       <ssn/>
       <role>PRIMARY</role>
       <employer>Singular</employer>
@@ -31,3 +31,4 @@
           <number>1112221112</number>
           <expirationDate>2022-02-16</expirationDate>
           <issuedDate>2011-02-16</issuedDate>
+          <issuer>PRT</issuer>

@@ -29,7 +29,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   })
 
   describe('validations', () => {
-
     it('should return 400 if reference is not a valid signer uuid', async () => {
       return request(app.server)
         .post('/v1/webhooks/shufti/identity-verification')
@@ -63,3 +62,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       .send({ event: 'verification.accepted', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', verification_result: mock.verificationAccepted.verification_result })
       .expect('Content-Type', /json/)
       .expect(200)
+      .expect(() => {
+        expect(createSpy.callCount).to.equal(11)

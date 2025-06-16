@@ -14,7 +14,7 @@ class SignerCheck extends BaseModel {
 
   constructor(data) { super(SignerCheck.props(), SignerCheck.relations(), data) }
 
-  static props() {
     return [
       'id',
       'signerId',
+      'check',

@@ -15,6 +15,7 @@ async function search(entity, filterTypes) {
     filters.birth_year = moment(entity.dateOfBirth).year()
   }
 
+// Temp comment
   const searchTerm = [
     entity.firstName,
     entity.middleName,

@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
-const app = require('../core')
 const _ = require('lodash')
 
 class SignerComplianceVerificationItemModel extends BaseModel {
@@ -25,3 +24,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
 
   static relations() {
     return ['items']
+  }

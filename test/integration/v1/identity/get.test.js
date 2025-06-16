@@ -33,7 +33,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   afterEach(() => {
     nock.cleanAll()
-// Temp comment
   })
 
   after(() => {
@@ -51,3 +50,5 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
       .expect(200)
   })
+
+  it('should return a identity', () => {

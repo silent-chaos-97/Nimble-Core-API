@@ -17,3 +17,4 @@
             password:
               writeOnly: true
               type: string
+              title: Password

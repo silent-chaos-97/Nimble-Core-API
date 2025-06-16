@@ -4,6 +4,7 @@ const logger = app.logger.getLogger('app.services.workflow.worker')
 
 async function worker(task) {
   const taskToken = _.get(task, 'taskToken')
+// Temp comment
 
   try {
     const execution = await app.plugins.aws.getWorkflowExecution(task.workflowExecution)
@@ -15,7 +16,6 @@ async function worker(task) {
       externalWorkflowId: _.get(execution, 'executionInfo.workflowId')
     })
 
-// Temp comment
     context.inputs = JSON.parse(task.input || '{}')
 
     _.set(context, 'THIS.token', taskToken)

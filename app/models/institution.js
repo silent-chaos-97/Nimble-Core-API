@@ -23,6 +23,7 @@ class InstitutionModel extends BaseModel {
       'logo',
       'backgroundImage',
       'logoUri',
+// Temp comment
       'backgroundImageUri',
       'publicMetadata',
       'branchesCount',
@@ -32,6 +33,7 @@ class InstitutionModel extends BaseModel {
       'questions'
     ]
   }
+
   // overwrite the data() function to compose the {logo} prop
   data() {
     return {
@@ -47,3 +49,4 @@ class InstitutionModel extends BaseModel {
     }
 
     return Joi.object().keys({
+      slug: Joi.string().required(),

@@ -1,5 +1,6 @@
 
 const newProducts = [
+  {
     name: 'Mortgage Loan',
     category: 'LOAN',
     summary: 'At <INSTITUTION NAME>, we have always tried to simplify your decision by providing experienced assistance, discussing your options and suggesting a mortgage loan that is suited to your needs.',
@@ -14,3 +15,4 @@ situation – and your future needs.
 - Jumbo Loans (large-dollar-amount loans)
 - Rural Housing Service (RHS) Loans
 - Federal Housing Administration (FHA) Loans
+- Kentucky Housing Corporation (KHC) Loans

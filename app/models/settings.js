@@ -27,3 +27,4 @@ class SettingsModel extends BaseModel {
   }
 
   data() {
+    let _data = _.cloneDeep(this._data)

@@ -47,3 +47,4 @@ describe('app.services.compliance.parse', () => {
           expect(item).to.be.an('object')
         }
       })
+

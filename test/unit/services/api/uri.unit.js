@@ -4,4 +4,3 @@ describe('app.services.api.uri', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
-

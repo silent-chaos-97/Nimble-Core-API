@@ -36,6 +36,7 @@ describe('app.services.email.emailVerification', () => {
 
     it('should return error if signer not found', async() => {
       const id = uuid()
+      const expectedErrorMsg = 'The requested resource couldn\'t be found'
       return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
     })
   })
@@ -59,3 +60,5 @@ describe('app.services.email.emailVerification', () => {
       await knex('signer_email_verifications').insert({
         id: '2e31d8c0-0000-0000-0000-4bd8aa454722',
         signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
+      })
+    })

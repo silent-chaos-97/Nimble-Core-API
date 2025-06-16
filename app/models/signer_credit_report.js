@@ -17,3 +17,4 @@ class SignerCreditReportModel extends BaseModel {
       'signerId',
       'createdAt',
       'updatedAt'
+    ]

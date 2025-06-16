@@ -8,7 +8,6 @@ const log = app.logger.getLogger('action.commons.users')
 
 function isCtxPathRef(ref) {
   if (!_.isString(ref)) return false
-
   return (
     ref.startsWith('TRIGGER.') ||
     ref.startsWith('ACTIVITIES.') ||

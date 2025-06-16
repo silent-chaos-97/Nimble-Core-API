@@ -82,13 +82,13 @@ describe('POST /documents', () => {
 
         // check if metadata was persisted
         const id = res.body.id
+        knex('documents').where('id', id).count()
           .then(count => {
             const expected = { count: "1" }
             const actual = _.first(count)
             expect(actual).to.be.eql(expected)
             done()
           })
-          .catch(done)
       })
   })
 
@@ -101,3 +101,6 @@ describe('POST /documents', () => {
     })
 
     it('should not persist the document metadata', (done) => {
+      request(app.server)
+        .post('/v1/documents')
+        .send(document)

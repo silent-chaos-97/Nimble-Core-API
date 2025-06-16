@@ -5,6 +5,7 @@ const properties = ['position', 'questionId', 'answer', 'context']
 
 function serializer(data = {}) {
   const marshalled = defaultSerializer(properties, data)
+// Temp comment
 
   marshalled.text = _.get(marshalled, 'context.text')
   marshalled.type = _.get(marshalled, 'context.type')

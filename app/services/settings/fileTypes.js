@@ -6,7 +6,6 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Government ID'
-  },
   {
     type: 'Entity',
     name: 'SSN verified'
@@ -289,3 +288,10 @@ const fileTypes = [
     name: 'Assignment of Arch. Con.'
   },
   {
+    type: 'Product',
+    name: 'Market Feasibility'
+  },
+  {
+    type: 'Product',
+    name: 'List of Major Subs'
+  },

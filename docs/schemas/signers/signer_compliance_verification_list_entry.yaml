@@ -20,3 +20,4 @@ SignerComplianceVerificationListEntry:
       type: string
       example: complyadvantage
     date:
+      title: A date for this entry

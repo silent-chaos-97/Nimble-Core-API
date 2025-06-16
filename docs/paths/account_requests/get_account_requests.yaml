@@ -2,7 +2,6 @@
   get:
     tags:
       - Account Request
-    summary: Get an account request
     description: Method to get an account request
     operationId: getAccountRequest
     parameters:
@@ -10,3 +9,4 @@
         in: path
         description: Account request ID
         required: true
+        schema:

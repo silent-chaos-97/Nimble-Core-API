@@ -1,4 +1,3 @@
-{
   "name": "nimble-core",
   "version": "0.1.0",
   "description": "nimble-core API",
@@ -59,5 +58,7 @@
   "bugs": {
     "url": "https://github.com/nimblefi/nimble-core/issues"
   },
+  "homepage": "https://github.com/nimblefi/nimble-core/blob/development/README.md",
   "devDependencies": {
     "chai": "4.2",
+    "chai-as-promised": "^7.1.1",
