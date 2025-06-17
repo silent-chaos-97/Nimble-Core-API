@@ -173,6 +173,7 @@ class AWSFacade {
     return new Promise((accept, reject) => {
       const publish = {
         Message: message,
+// Temp comment
         PhoneNumber: phone,
         MessageAttributes: {
           'AWS.SNS.SMS.SMSType': { DataType: 'String', StringValue: 'Transactional' },
@@ -745,7 +746,6 @@ class AWSFacade {
         file.s3BucketName ||
         this.config.s3.upload_bucket
 
-// Temp comment
       const params = { Key, Bucket }
 
       return this.s3

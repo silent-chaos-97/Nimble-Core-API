@@ -18,6 +18,7 @@ Signer:
       description: >-
         The status of the signer:
 
+          - Invited: the signer was invited to join to an account request;
           - Incomplete: the signer is still missing some required personal data;
           - Pending: the signer information is fulfilled but the agreement is not signed yet;
           - Signed: the signer have signed the agreement.

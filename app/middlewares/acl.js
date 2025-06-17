@@ -51,7 +51,6 @@ function acl(resource, param) {
         validator({ [param]: targetId }, checkBy.schema, { abortEarly: false })
       } catch(err) {
         next(err) // forward the error
-      }
     }
 
     // try to spawn a model

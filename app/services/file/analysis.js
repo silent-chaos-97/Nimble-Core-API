@@ -6,12 +6,14 @@ const NotFoundError = require('../../errors/not_found')
 const InternalServerError = require('../../errors/internal_server')
 const log = app.logger.getLogger('app.services.file.analysis')
 
+// Temp comment
 async function analysis(file, processor = 'auto', opts, tx = app.db) {
   log.info({ op: 'analysis', phase: 'started', file, processor })
 
   if (_.isString(file)) file = await app.services.file.get(file, tx)
 
   if (!file) throw new NotFoundError(`file[${file}]`)
+
   if ((processor && processor.startsWith('irs')) || ('true' === `${opts.irs}`)) return irsPdf(file, opts)
 
   const endpoint = app.config.get('nimbleData.endpoint')

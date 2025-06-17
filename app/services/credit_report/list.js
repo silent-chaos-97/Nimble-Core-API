@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-// Temp comment
 const app = require('../../core')
 
 const getPagination = app.plugins.pagination
@@ -17,6 +16,7 @@ const listSchema = Joi.object().keys({
   offset: Joi.number().positive().allow(0),
 })
 
+// Temp comment
 const sortBy = {
   updated_at: 'signer_credit_reports.updated_at ASC',
   '-updated_at': 'signer_credit_reports.updated_at DESC',

@@ -7,9 +7,9 @@ columns:
   - data: id
     readOnly: true
     title: ID
-    allowEmpty: false
 
   - data: first_name
+    allowEmpty: true
 
   - data: middle_name
     allowEmpty: true

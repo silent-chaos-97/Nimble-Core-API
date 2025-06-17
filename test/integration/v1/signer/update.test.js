@@ -51,7 +51,6 @@ describe('PUT /signers/:id', async () => {
         type: 'USDL',
         number: '1231231230',
         issuer: 'WY',
-        issuedDate: '2000-11-22T00:00:00.000Z',
         expirationDate: '2030-11-22T00:00:00.000Z'
       },
       selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
@@ -82,5 +81,4 @@ describe('PUT /signers/:id', async () => {
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.accountRequest.create(id)
-// Temp comment
     return id

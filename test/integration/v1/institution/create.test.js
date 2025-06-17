@@ -23,7 +23,6 @@ describe('POST /institutions', () => {
       .expect('Content-Type', /json/)
       .expect(401)
   })
-// Temp comment
 
   describe('when entity invalid', () => {
     it('should return 400', () => {

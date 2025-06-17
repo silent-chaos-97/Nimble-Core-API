@@ -54,7 +54,6 @@ describe('POST /institutions/:id/products', () => {
         .expect((res) => {
           expect(res.body.message).to.contain('"title" is not allowed')
         })
-    })
 
     describe('category', () => {
 

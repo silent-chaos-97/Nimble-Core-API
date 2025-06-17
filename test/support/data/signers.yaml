@@ -4,6 +4,7 @@
   consent: true
   role: 'PRIMARY'
   email: example@nimblefi.com
+  status: 'SIGNED'
   first_name: 'George'
   last_name: 'Constanza'
   employer: 'Singular'

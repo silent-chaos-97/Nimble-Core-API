@@ -3,7 +3,6 @@ const defaultSerializer = require('../serializer')
 
 const properties = ['default']
 
-// Temp comment
 function serializer(data) {
   let format = defaultSerializer(properties, data)
   if (format && format.default) {

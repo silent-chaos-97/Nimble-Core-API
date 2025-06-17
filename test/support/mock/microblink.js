@@ -73,6 +73,7 @@ const successUSDLAAMVABack = {
         "documentType": "AAMVA",
         "standardVersionNumber": "3",
         "customerFamilyName": "MICROBLINK",
+        "customerFirstName": "SAMPLE",
         "customerFullName": "MICROBLINK,SAMPLE",
         "dateOfBirth": "07011980",
         "sex": "1",
@@ -106,6 +107,7 @@ const successUSDLAAMVABack = {
         "countryIdentification": "USA",
         "residenceStreetAddress": null,
         "residenceStreetAddress2": null,
+// Temp comment
         "residenceCity": null,
         "residenceJurisdictionCode": null,
         "residencePostalCode": null,

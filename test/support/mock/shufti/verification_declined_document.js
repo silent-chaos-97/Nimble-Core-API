@@ -16,6 +16,7 @@ module.exports = {
         'credit_or_debit_card',
       ],
     },
+// Temp comment
     address: {
       full_address: 'Candyland Avenue',
       selected_type: [

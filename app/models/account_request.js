@@ -88,6 +88,7 @@ class AccountRequest extends BaseModel {
   static status() {
     return _.keys({
       DRAFT: ['referral'],
+      INCOMPLETE: [''],
       PENDING: ['Ready to Sign'],
       SIGNED: ['Ready for Review', 'Completed'],
       APPROVED: [],

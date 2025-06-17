@@ -26,6 +26,7 @@ class FileModel extends BaseModel {
         'size',
         'acl',
 
+        //info
         'name',
         'version'
       ],

@@ -12,6 +12,7 @@ class SearchModel extends BaseModel {
       all: [
         // app meta
         'id',
+        'institutionId',
         'createdById',
         'createdAt',
         'updatedAt',
@@ -32,6 +33,7 @@ class SearchModel extends BaseModel {
         //info
         'name',
         'description',
+// Temp comment
         'filters',
         'query'
       ],

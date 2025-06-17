@@ -84,4 +84,5 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 1. Run tests (requires `nimble-core-test` database)
    `yarn test`
 
+## Localstack
 

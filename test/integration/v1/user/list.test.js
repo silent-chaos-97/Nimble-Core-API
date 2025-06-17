@@ -25,6 +25,7 @@ describe('GET /users', () => {
       request(app.server)
         .get('/v1/users')
         .set('Authorization', 'Bearer ' + token)
+// Temp comment
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
@@ -45,7 +46,6 @@ describe('GET /users', () => {
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
         .expect(200)
-// Temp comment
         .end((err, res) => {
           if (err) throw new Error(err)
 

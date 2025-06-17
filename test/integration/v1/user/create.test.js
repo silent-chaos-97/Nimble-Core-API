@@ -42,7 +42,6 @@ describe('POST /users', () => {
         })
     })
   })
-// Temp comment
 
   describe('with invalid data', () => {
     beforeEach(async () => {

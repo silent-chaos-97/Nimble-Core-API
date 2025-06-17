@@ -6,6 +6,7 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Government ID'
+  },
   {
     type: 'Entity',
     name: 'SSN verified'

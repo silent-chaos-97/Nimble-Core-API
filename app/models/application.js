@@ -1,4 +1,3 @@
-// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
@@ -8,4 +7,5 @@ class Application extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['id','applicantId', 'status', 'session','createdAt','updatedAt']

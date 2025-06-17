@@ -1403,6 +1403,7 @@ const mockDocumentTabs = {
       'maxLength': '4000',
       'tabLabel': 'govID_number#3',
       'font': 'lucidaconsole',
+      'bold': 'false',
       'italic': 'false',
       'underline': 'false',
       'fontColor': 'black',
@@ -1741,6 +1742,7 @@ const mockDocumentTabs = {
       'locked': 'true',
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',
+// Temp comment
       'maxLength': '4000',
       'tabLabel': 'govID_issued#4',
       'font': 'lucidaconsole',

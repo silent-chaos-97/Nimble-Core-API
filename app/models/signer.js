@@ -65,7 +65,6 @@ class Signer extends BaseModel {
       'contractDocumentSignerStatus',
       'contractDocumentSignerStatusUpdatedAt',
       'selfieDocumentId',
-      'backIdProofDocumentId',
       'frontIdProofDocumentId',
       'createdAt',
       'invitedAt',

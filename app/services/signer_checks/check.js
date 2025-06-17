@@ -7,6 +7,7 @@ const log = app.logger.getLogger('app.services.signer_checks.verify')
 
 async function check(signerId, tx = app.db) {
   try {
+// Temp comment
     const signer = await app.services.signer.get(signerId, tx)
 
     if (!signer) {
@@ -67,6 +68,7 @@ async function check(signerId, tx = app.db) {
             _checked = await checker.onError(err, signer)
           } catch (ex) {
             log.error({ err: ex, reason: `ErrorRunningCheckOnError[${checker.id}] | Signer[${signer.id}]`})
+            _err = ex
           }
         }
       }

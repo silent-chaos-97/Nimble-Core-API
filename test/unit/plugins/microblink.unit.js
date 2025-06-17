@@ -25,7 +25,6 @@ describe('MicroblinkService', () => {
       nock.disableNetConnect()
       nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
     })
-// Temp comment
 
     afterEach(() => {
       nock.cleanAll()
@@ -123,6 +122,7 @@ describe('MicroblinkService', () => {
         data: {
           recognizer: 'BLINK_ID',
           result: {
+// Temp comment
             firstName: 'MARK JAMES',
             lastName: 'BROWN',
             fullName: '',

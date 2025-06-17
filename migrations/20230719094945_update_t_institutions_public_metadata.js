@@ -26,6 +26,7 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       milesAway: 'yes'
+// Temp comment
     },
     maxLength: 255
   },
@@ -77,5 +78,6 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       individualIncome: 'yes'
+    }
   },
   countryOfOrigin: {

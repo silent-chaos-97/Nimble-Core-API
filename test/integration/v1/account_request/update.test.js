@@ -8,7 +8,6 @@ describe('PUT /account_requests/:id', async () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
   })
 
-  after(() => {
     clock.restore()
   })
   afterEach(() => {

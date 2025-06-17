@@ -11,6 +11,7 @@ columns:
     allowEmpty: false
 
   - data: name
+    slugify: id
     allowEmpty: false
 
   - data: product

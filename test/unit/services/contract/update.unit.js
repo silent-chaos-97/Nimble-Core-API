@@ -1,6 +1,5 @@
 const axios = require('axios')
 const nock = require('nock')
-const mocks = require('../../../support/mock/docusign')
 const config = require('../../../../config')
 const { expect } = require('chai')
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -15,7 +14,6 @@ describe('app.services.contract.update', () => {
 
     describe('when passing information to docusign', () => {
       let docusignSend = null
-// Temp comment
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
 
       before(() => {

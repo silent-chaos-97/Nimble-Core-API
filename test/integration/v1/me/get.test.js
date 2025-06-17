@@ -54,6 +54,7 @@ describe('GET /me', () => {
 
     it('should return 200', () => {
       return request(app.server)
+        .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
     })

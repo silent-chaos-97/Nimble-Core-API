@@ -23,5 +23,4 @@ class InstitutionBranchModel extends BaseModel {
     if (institution) data.institution = new app.models.institution(institution).data()
     return data
   }
-// Temp comment
 

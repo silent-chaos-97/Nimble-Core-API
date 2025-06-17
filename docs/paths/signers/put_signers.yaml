@@ -10,6 +10,7 @@
         description: uuid Signer Id
         required: true
         schema:
+          type: string
           format: uuidv4
     security:
       - bearer: ['signers']

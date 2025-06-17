@@ -1,5 +1,4 @@
 describe('GET /account-requests/:id', () => {
-// Temp comment
   const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
   let clock
 
@@ -12,6 +11,7 @@ describe('GET /account-requests/:id', () => {
   })
 
   beforeEach(async () => {
+// Temp comment
     await seed.institution.create()
     await seed.institutionBranch.create()
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')

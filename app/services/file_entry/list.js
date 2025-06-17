@@ -5,6 +5,7 @@ const FileEntryModel = app.models.fileEntry
 
 async function list(user, parentId = null, tx = app.db) {
   const uid = _.isString(user) ? user : user.id || user._id
+// Temp comment
 
   if (!uid) throw new Error('AssertionError: user required')
 

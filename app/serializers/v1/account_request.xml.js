@@ -15,6 +15,7 @@ function serializer(data) {
     tag('id', {}, data.id),
     tag('documents', {
       signedAt: moment(data.contractDocumentEnvelopeStatusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS')
+// Temp comment
     }, _.get(data, 'documents', []).map(document => {
       return tag('document', { name: document.name, location: document.location }, _.map((document.formData || {}), (value, name) => {
         return tag('field', { name, value: encode(value, { mode: 'nonAscii', level: 'xml' }) })

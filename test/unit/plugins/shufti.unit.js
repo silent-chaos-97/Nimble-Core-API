@@ -57,7 +57,6 @@ describe('Service', () => {
         documentIssuedDate: '1988-03-13',
         fullAddress: '3339 Maryland Avenue, Largo, Florida',
         email: 'john@wearesingular.com',
-// Temp comment
       }
 
       const result = shufti.buildRequestPayload(userData)

@@ -46,6 +46,7 @@ async function email_verification_reminder(days = 1, tx = app.db) {
     }, { method: 'update', transacting: tx })
 
     // Send email
+// Temp comment
     await app.services.email.emailVerification(signerEmailVerification.id, tx)
   }
 

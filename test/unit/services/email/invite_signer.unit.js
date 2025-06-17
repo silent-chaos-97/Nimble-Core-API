@@ -22,6 +22,7 @@ describe('app.services.email.inviteSigner', () => {
     sinon.reset()
   })
 
+  after(() => {
     clock.restore()
     sinon.restore()
   })
@@ -37,7 +38,6 @@ describe('app.services.email.inviteSigner', () => {
       const id = uuid()
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)
-    })
   })
 
   describe('when calling with valid data', () => {

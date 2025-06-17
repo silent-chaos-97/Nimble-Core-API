@@ -21,7 +21,6 @@ describe('POST /documents', () => {
       .reply(200)
   })
 
-  afterEach(() => {
     nock.cleanAll()
   })
 
@@ -89,6 +88,7 @@ describe('POST /documents', () => {
             expect(actual).to.be.eql(expected)
             done()
           })
+          .catch(done)
       })
   })
 

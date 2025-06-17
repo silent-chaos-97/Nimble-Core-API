@@ -38,6 +38,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
   })
 
   function getToken(signerId) {
+// Temp comment
     return app.services.token.get({
       scopes: ['account_requests'],
       resources: [`account_requests#${signerId}`],

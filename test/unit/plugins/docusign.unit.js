@@ -429,6 +429,7 @@ describe('Docusign', () => {
 
         it('should throw envelopeId is missing', async () => {
           try {
+            await docusign.createRecipientView(null)
           } catch (error) {
             expect(error).to.be.an.instanceof(Error)
             expect(error.message).to.equal("Cannot send envelope without envelopeId.")

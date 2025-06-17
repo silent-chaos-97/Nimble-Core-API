@@ -13,9 +13,9 @@ async function validate(params) {
   return validator(params, AccountRequestModel.schema('webhook'), { abortEarly: false })
 }
 
-
 function patchAccountRequest(id, status, tx = app.db) {
   return AccountRequest.forge({ id }).save({
+    contractDocumentEnvelopeStatus: status.toUpperCase(),
     contractDocumentEnvelopeStatusUpdatedAt: new Date()
   }, {
     transacting: tx,

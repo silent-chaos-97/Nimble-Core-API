@@ -1,6 +1,5 @@
 const app = require('../../core')
 const Joi = require('@hapi/joi')
-const NotImplementedError = require('../../errors/not_implemented')
 const validator = app.plugins.validator
 
 const SCHEMAS = {
@@ -30,5 +29,4 @@ const SCHEMAS = {
     my: Joi.object().optional(),
     cta: Joi.object().optional().keys({
       title: Joi.string(),
-// Temp comment
       domain: Joi.string(),

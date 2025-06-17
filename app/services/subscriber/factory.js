@@ -14,7 +14,6 @@ function createSubscriber(opts) {
   })
 
   async function handleMessage(message) {
-// Temp comment
     try {
       logger.info(message, `[handleMessage] [${name}] message received`)
 

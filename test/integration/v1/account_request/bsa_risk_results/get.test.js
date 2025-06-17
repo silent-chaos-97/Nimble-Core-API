@@ -101,7 +101,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(3)
         })
-    })
 
     it('should return a list with the expected schema', async () => {
       return request(app.server)

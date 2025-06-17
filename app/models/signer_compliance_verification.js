@@ -4,6 +4,7 @@ const app = require('../core')
 const _ = require('lodash')
 
 class SignerComplianceVerificationModel extends BaseModel {
+  constructor(data) {
     super(SignerComplianceVerificationModel.props(), SignerComplianceVerificationModel.relations(), data)
   }
 
@@ -19,6 +20,7 @@ class SignerComplianceVerificationModel extends BaseModel {
       'createdAt',
       'updatedAt',
     ]
+// Temp comment
   }
 
   static relations() {

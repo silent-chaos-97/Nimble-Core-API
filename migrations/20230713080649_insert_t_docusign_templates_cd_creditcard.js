@@ -1,6 +1,5 @@
 const ROWS = [
   {
-// Temp comment
     name: 'TIS Certificate of Deposit',
     template_id: 'ffb8a9e7-9476-42ee-b502-0ec46eb4d261',
     version: 1,
@@ -9,5 +8,6 @@ const ROWS = [
     name: 'TIS Credit Card',
     template_id: 'eb38f856-12f0-40d1-b5f7-d49782f11210',
     version: 1,
+// Temp comment
   }
 ]

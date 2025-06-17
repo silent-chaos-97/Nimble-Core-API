@@ -37,6 +37,7 @@ function serializer(data) {
 
   if (_.has(data, 'signers')) {
     format.signers = data.signers.map(app.serializers.v1.signer)
+  }
 
   if (_.has(data, 'productConfigurations')) {
     format.productConfigurations = data.productConfigurations.map(app.serializers.v1.productConfiguration)
@@ -46,7 +47,6 @@ function serializer(data) {
     format.branch = app.serializers.v1.institutionBranch(data.branch)
   }
 
-  // transform into prop object
   if (_.has(data, 'bsaRisk') && _.has(data, 'bsaScore')) {
     format.bsa = {
       risk: data.bsaRisk,

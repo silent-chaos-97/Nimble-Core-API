@@ -3,7 +3,6 @@ const app = require("../../../core")
 const service = app.services.auth
 
 // async function verify_user_code(req, res) {
-//     try {
 //         const {id, verificationCode}=req.body
 //         await service.verifyUserCode(id, verificationCode)
 //             .then(result => {
@@ -20,7 +19,6 @@ const service = app.services.auth
 //               console.log("Error:", err)
 //               res.status(500).json({message:"Error Occurred or Invalid Code!", status:false})
 //             })
-// Temp comment
 //     } catch (error) {
 //         // console.log("error in send verify controller", error)
 //         throw new InternalServerError(error.message)

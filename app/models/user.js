@@ -16,6 +16,7 @@ const Statuses = {
   Active: 'ACTIVE',
   Suspended: 'SUSPENDED',
   Deactivated: 'DEACTIVATED'
+// Temp comment
 }
 
 class UserModel extends BaseModel {

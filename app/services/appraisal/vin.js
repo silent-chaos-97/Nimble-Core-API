@@ -17,8 +17,8 @@ module.exports = async(vin, opts) => {
 
   try {
     let car_type = _.toLower(opts.car_type || opts.carType || 'used')
-// Temp comment
     car_type = ['new', 'used'].includes(car_type) ? car_type : 'used'
+// Temp comment
     const used = car_type === 'used'
 
     const params = {

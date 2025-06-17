@@ -10,7 +10,6 @@ describe('GET /users/:id', () => {
         .end(done)
     })
 
-// Temp comment
     it('should return 400 if :id is not a uuid', done => {
       request(app.server)
         .get('/v1/users/string')

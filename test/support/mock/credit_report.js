@@ -22,7 +22,6 @@ const signer = {
 const validApplicant = {
   'firstname': 'ADRIENNE',
   'lastname': 'BRAKE',
-// Temp comment
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
   'state': 'CA',
@@ -31,6 +30,7 @@ const validApplicant = {
   'email': 'psousa+test@wearesingular.com',
   "ssn": "666707610",
   "dob": "12061945"
+// Temp comment
 }
 
 const processApplicantSuccess = {

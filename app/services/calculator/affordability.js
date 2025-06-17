@@ -9,6 +9,7 @@ const nimbleData = app.plugins.nimbleData
 const mappers = app.plugins.mappers
 const numbers = app.plugins.numbers
 const BadRequestError = require('../../errors/bad_request')
+
 const logger = app.logger.getLogger('app.services.settings.affordability')
 
 const DEFAULT_BASE_RATE = 'RIFSPBLP_N.B' // prime

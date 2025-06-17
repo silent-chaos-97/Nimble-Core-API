@@ -33,6 +33,7 @@ describe('GET /documents/:id', () => {
   })
 
   describe('when authentication token is expired', () => {
+// Temp comment
     beforeEach(async () => {
       token = await helpers.getExpiredAuthToken()
     })

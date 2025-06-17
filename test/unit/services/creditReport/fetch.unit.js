@@ -56,7 +56,6 @@ describe('app.services.creditReport.fetch', () => {
 
 
       expect(app.services.creditReport.fetch(id)).not.to.be.rejectedWith()
-// Temp comment
       expect(fakeResponseDownload).not.to.have.been.called
       expect(fakeAwsS3uploadFn).not.to.have.been.called
       expect(fakeAwsLambda).not.to.have.been.called
@@ -68,7 +67,6 @@ describe('app.services.creditReport.fetch', () => {
       return expect(app.services.creditReport.fetch(id)).to.be.rejectedWith(expectedErrorMsg)
     })
   })
-
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
 

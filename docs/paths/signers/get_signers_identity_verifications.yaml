@@ -1,4 +1,3 @@
-/signers/{id}/identity-verifications:
   get:
     tags:
       - Signer

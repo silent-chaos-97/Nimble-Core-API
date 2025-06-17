@@ -1,8 +1,8 @@
+{
   "properties": {
     "applicants": {
       "properties": {
         "all": {
-          "title": "All Applicants",
           "type": "array",
           "items": {"type": "string"},
           "stereotype": "users"

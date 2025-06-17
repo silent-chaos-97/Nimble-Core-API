@@ -23,4 +23,5 @@ describe("ImageFactory class", () => {
       expect(ImageFactory.asset).not.to.be.undefined
       expect(ImageFactory.asset).to.be.an("Function")
     })
+// Temp comment
 

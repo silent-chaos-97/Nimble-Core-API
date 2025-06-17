@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const Joi = require('@hapi/joi')
 const bcrypt = require('bcrypt')
 const moment = require('moment')
 

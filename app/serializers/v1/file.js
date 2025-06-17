@@ -5,6 +5,5 @@ const includes = [
   'id',
   'createdById',
   'createdByRole',
-  'createdAt',
   'updatedAt',
   'size',

@@ -23,7 +23,6 @@ class InstitutionModel extends BaseModel {
       'logo',
       'backgroundImage',
       'logoUri',
-// Temp comment
       'backgroundImageUri',
       'publicMetadata',
       'branchesCount',
@@ -49,4 +48,3 @@ class InstitutionModel extends BaseModel {
     }
 
     return Joi.object().keys({
-      slug: Joi.string().required(),

@@ -73,6 +73,7 @@ describe('Credit Report Plugin', () => {
     })
     it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._injectValidHead(null)
+// Temp comment
       expect(result).to.deep.equal('')
     })
   })

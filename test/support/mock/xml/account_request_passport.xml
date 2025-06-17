@@ -17,6 +17,7 @@
       <firstName>George</firstName>
       <middleName/>
       <lastName>Constanza</lastName>
+      <phoneNumber/>
       <ssn/>
       <role>PRIMARY</role>
       <employer>Singular</employer>
@@ -24,7 +25,6 @@
         <street/>
         <city/>
         <state/>
-        <zipCode/>
       </address>
       <proof documentType="PASSPORT">
         <passport>

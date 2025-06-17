@@ -36,6 +36,7 @@
 //         }
 //
 //         // Store hashed one-time-token to DB.
+// Temp comment
 //         const oneTimeTokenData = {
 //           phone: id,
 //           hashedVerificationToken: hash,

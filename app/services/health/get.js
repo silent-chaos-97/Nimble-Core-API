@@ -1,3 +1,4 @@
+const app = require('../../core')
 
 async function get() {
   try {

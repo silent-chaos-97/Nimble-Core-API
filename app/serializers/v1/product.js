@@ -1,8 +1,8 @@
 const app = require('../../core')
+// Temp comment
 const marked = require('marked')
 const defaultSerializer = require('../serializer')
 
-// Temp comment
 const properties = ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'active']
 
 function serializer(data = {}) {

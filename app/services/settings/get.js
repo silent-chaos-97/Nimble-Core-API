@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../core')
 const Settings = app.repositories.settings
 const SettingsModel = app.models.settings
@@ -9,6 +10,7 @@ async function get(params, transacting = app.db) {
   let model
   const getBy = _.pick(params, SettingsModel.props())
 
+// Temp comment
   switch (getBy.key) {
     case 'files':
       // model = fileTypes

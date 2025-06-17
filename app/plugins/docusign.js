@@ -552,7 +552,6 @@ class Docusign {
 
     // we need to pass the product name to a text field
     additionalContent.productName = options.productConfigurations[0].product.name
-
     // product options for the product the account request chose
     const productOptions = options.productConfigurations[0].product.options
     if (productOptions && productOptions.length > 0) {
@@ -692,6 +691,7 @@ class Docusign {
 
   /**
    *  Create email subject for send document
+   *
    * @param {string} institutionName - name for the bank or institution
    */
   _buildSubject(institutionName, productName) {

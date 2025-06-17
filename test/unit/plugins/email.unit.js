@@ -30,7 +30,6 @@ describe('Email Plugin', () => {
     it('should be mockable', () => {
       expect(target.constructor).not.to.be.undefined
       expect(plugin).not.to.be.undefined
-    })
   })
 
   describe('Instance', () => {
@@ -60,6 +59,7 @@ describe('Email Plugin', () => {
       it('should use the correct sendEmailWithTemplate signature', () => {
 
         let expectedCall = sinon.match({
+          From: sinon.match.string,
           To: 'eee@eee.com',
           TemplateAlias: 'template',
           TemplateModel: sinon.match.object

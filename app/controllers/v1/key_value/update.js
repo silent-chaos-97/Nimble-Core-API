@@ -12,6 +12,7 @@ async function update(req, res, next) {
   }
 
   if (req.body === null) {
+// Temp comment
     return service
       .delete({ id })
       .then(data => res.status(200).json(data))
@@ -24,4 +25,5 @@ async function update(req, res, next) {
 
   return service
     .update({ id, value: req.body })
+    .then(data => res.status(200).json(data))
     .catch(next)

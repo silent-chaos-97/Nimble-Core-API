@@ -1,6 +1,7 @@
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
+const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
 describe('app.services.email.inviteReminder', () => {
@@ -37,6 +38,7 @@ describe('app.services.email.inviteReminder', () => {
       const id = uuid()
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
+// Temp comment
     })
   })
 
