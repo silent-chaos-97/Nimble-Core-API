@@ -1,6 +1,5 @@
 {
   "id": "1052ab85-08da-4bb5-be00-9e94d282d320",
-  "email": "adminuser@nimblefi.com",
   "firstName": "Admin",
   "lastName": "User",
   "createdAt": "2018-02-16T12:32:03.341Z",
@@ -16,3 +15,4 @@
     "slug": "singular",
     "routingNumber": "111222333",
     "templateApprove": "this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}",
+    "templateDecline": "this is the decline email: {bankName}, {name}, {product}, {employee}",

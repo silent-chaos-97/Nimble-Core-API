@@ -17,3 +17,4 @@ const run = async () => {
 	const signer = docusignHelpers.createRecipient('kknapp@zivaro.com', 'Kyle', '1', '1', [ signHereTab ])
 	const envelopeJson = docusignHelpers.createEnvelopeJson(
 		'Please sign the included document(s)',
+		[ signer ],

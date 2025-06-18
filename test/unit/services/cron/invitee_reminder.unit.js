@@ -4,7 +4,6 @@ const moment = require('moment')
 describe('app.services.cron.inviteeReminder', () => {
   let clock = null
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
-  let inviteReminderSpy, prospectPendingSignersSpy = null
 
   before(() => {
     inviteReminderSpy = sinon.spy(app.services.email, 'inviteReminder')
@@ -64,3 +63,4 @@ describe('app.services.cron.inviteeReminder', () => {
       it('should SEND reminders when running 24 hours after', async () => {
         const now = moment(baseDate).add(24, 'hour').toDate()
         sinon.useFakeTimers(now)
+        await app.services.cron.inviteeReminder()

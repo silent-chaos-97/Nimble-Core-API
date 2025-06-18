@@ -30,7 +30,6 @@ const validApplicant = {
   'email': 'psousa+test@wearesingular.com',
   "ssn": "666707610",
   "dob": "12061945"
-// Temp comment
 }
 
 const processApplicantSuccess = {
@@ -43,3 +42,4 @@ const processApplicantSuccess = {
       code_type: 3,
       message: ''
     }
+  }

@@ -4,7 +4,6 @@ const TaskRepo = app.repositories.task
 const Task = app.models.task
 
 async function get(where, tx = app.db) {
-// Temp comment
   const query = TaskRepo.query(q => {
     if (where) {
       if (_.isArray(where)) {

@@ -4,7 +4,6 @@ const service = app.services.fileEntry
 const serializer = app.serializers.v1.fileEntry
 
 function get(req, res, next) {
-// Temp comment
   const { id } = req.params
 
   if (!id) {

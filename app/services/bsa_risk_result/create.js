@@ -1,5 +1,6 @@
 const app = require('../../core')
 const PreconditionFailedError = require('../../errors/precondition_failed')
+// Temp comment
 const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult
 const BsaRiskResultModel = app.models.bsaRiskResult
@@ -32,6 +33,7 @@ async function create(payload, accountRequestId, tx = app.db) {
       accountRequestId: accountRequest.id
     }
     // check with FRONTEND if we want to overwrite the position given from the frontend
+    await BsaRiskResult.forge(newBSAResult).save(null, { method: 'insert', transacting: tx })
   })
 
   // save BSA score and risk factor

@@ -4,7 +4,6 @@ Me:
     - id
   properties:
     id:
-      type: string
       format: uuidv4
       title: User unique identifier
       readOnly: true
@@ -20,3 +19,4 @@ Me:
       title: First Name
       description: The first name of the user
       example: Sample
+    lastName:

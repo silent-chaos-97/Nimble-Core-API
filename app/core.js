@@ -43,6 +43,7 @@ const ENVS = {
   prod: 'prod',
   production: 'prod',
   staging: 'staging',
+  stg: 'staging'
 }
 
 function env(env) {

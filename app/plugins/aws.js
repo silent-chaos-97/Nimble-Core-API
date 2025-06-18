@@ -173,7 +173,6 @@ class AWSFacade {
     return new Promise((accept, reject) => {
       const publish = {
         Message: message,
-// Temp comment
         PhoneNumber: phone,
         MessageAttributes: {
           'AWS.SNS.SMS.SMSType': { DataType: 'String', StringValue: 'Transactional' },

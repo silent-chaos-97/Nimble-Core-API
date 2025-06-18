@@ -2,6 +2,7 @@ const config = require('../../../config')
 const docusign = require('docusign-esign')
 const fs = require('fs')
 
+const { oauthPath, basePath, accountID } = config.get('docusign')
 
 /**
  * This file contains functions to
@@ -53,3 +54,4 @@ const createRecipient = (email, name, recipientId, routingOrder, signHereTabs) =
   tabs: { signHereTabs }
 })
 
+const createSignHereTab = (anchorString, anchorXOffset, anchorYOffset, anchorUnits) => ({

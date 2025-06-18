@@ -57,6 +57,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   })
 
 
+  it('should try to create verifications in DB', async () => {
     return request(app.server)
       .post('/v1/webhooks/shufti/identity-verification')
       .send({ event: 'verification.accepted', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', verification_result: mock.verificationAccepted.verification_result })
@@ -64,3 +65,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       .expect(200)
       .expect(() => {
         expect(createSpy.callCount).to.equal(11)
+        expect(createSpy.called).to.equal(true)

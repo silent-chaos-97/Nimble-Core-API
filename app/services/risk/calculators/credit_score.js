@@ -1,6 +1,5 @@
 const _ = require('lodash')
 
-// Temp comment
 module.exports = async function(risk, summary) {
   const score = _.get(summary, 'credit.value')
 
@@ -10,3 +9,4 @@ module.exports = async function(risk, summary) {
     disqualifying: true
   }
 
+  const performingScore = _.toNumber(risk.performance_standard)

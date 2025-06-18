@@ -9,3 +9,4 @@ const Analysis = app.db.Model.extend({
   files: function() {
     return this.hasMany('File', 'analysis_id')
   },
+

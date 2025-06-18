@@ -497,3 +497,15 @@ describe('Docusign', () => {
             .reply(200, mocks.mockUpdateTabs)
 
           const args ={
+            accountRequestId: 'string',
+            signers: [mocks.validUser],
+            accountOptions: mocks.accountOptions
+          }
+          const result = await docusign.updateEnvelopeRecipients(args, envelopeId, mocks.validUser.id)
+
+          scope1.done()
+          scope2.done()
+          scope3.done()
+
+          expect(result).not.to.be.undefined
+          expect(result.recipientUpdateResults[0].recipientId).to.equal(recipientId)

@@ -54,6 +54,7 @@ describe('POST /institutions/:id/products', () => {
         .expect((res) => {
           expect(res.body.message).to.contain('"title" is not allowed')
         })
+    })
 
     describe('category', () => {
 
@@ -70,3 +71,5 @@ describe('POST /institutions/:id/products', () => {
           await request(app.server)
             .post(`/v1/institutions/${institutionId}/products`)
             .set('X-API-KEY', 'superpowers')
+            .send({ ...product, category })
+            .expect(201)

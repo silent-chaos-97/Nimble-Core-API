@@ -3,7 +3,6 @@ const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
 
-const properties = [
   'id',
   'status',
   'searchObject',
@@ -20,7 +19,6 @@ function serializer(data) {
     format.results = data.results.map(item => app.serializers.v1.signerComplianceVerificationItem(item))
   } else {
     format.results = []
-// Temp comment
   }
 
   format.report = downloadableSerializer({ id: data.documentId })

@@ -4,6 +4,7 @@ const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue
 
+// Temp comment
 async function update(req, res, next) {
   const { id } = req.params
 
@@ -12,7 +13,6 @@ async function update(req, res, next) {
   }
 
   if (req.body === null) {
-// Temp comment
     return service
       .delete({ id })
       .then(data => res.status(200).json(data))

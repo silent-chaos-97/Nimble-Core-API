@@ -21,7 +21,7 @@ describe('POST /documents', () => {
       .reply(200)
   })
 
-    nock.cleanAll()
+  afterEach(() => {
   })
 
   after(() => {
@@ -104,3 +104,5 @@ describe('POST /documents', () => {
       request(app.server)
         .post('/v1/documents')
         .send(document)
+        .end((err) => {
+          if (err) throw new Error(err)

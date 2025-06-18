@@ -1,6 +1,7 @@
 const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/comply_advantage')
+
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.compliance.search', () => {
@@ -35,7 +36,6 @@ describe('app.services.compliance.search', () => {
         .reply(200, mocks.successResponse)
 
       const entity = {
-        firstName: 'Robert',
         middleName: 'Gabriel',
         lastName: 'Mugabe'
       }
@@ -49,3 +49,4 @@ describe('app.services.compliance.search', () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
         .reply(200, mocks.successResponse)
+

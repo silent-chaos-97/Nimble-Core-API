@@ -27,9 +27,7 @@ describe('POST /signers/:id/invites', async () => {
   })
 
   describe('with invalid auth', () => {
-// Temp comment
     it('should return 401 if no auth', async () => {
-      return request(app.server)
         .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/invites`)
         .expect('Content-Type', /json/)
         .expect(401)

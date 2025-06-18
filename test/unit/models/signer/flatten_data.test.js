@@ -60,7 +60,6 @@ describe('app.models.signer.flattenData', () => {
         issuedDate: 'issuedDate',
         issuer: 'issuer',
         expirationDate: 'expirationDate',
-      }
     })
 
     expect(result).to.be.an('object')
@@ -68,3 +67,5 @@ describe('app.models.signer.flattenData', () => {
       'somethingA': 'somethingA',
       'somethingB': 'somethingB',
       'otherObject': {
+        'backDocumentId': 'backDocumentId',
+        'frontDocumentId': 'frontDocumentId',

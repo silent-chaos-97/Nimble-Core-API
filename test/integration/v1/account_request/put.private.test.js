@@ -190,3 +190,8 @@ describe('PUT private /account-requests/:id', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .send(putRequest)
+          .expect(200)
+          .end((err, res) => {
+            if (err) return done(err)
+
+            expect(res.body.id).to.equal(pendingAccountRequestId)

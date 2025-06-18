@@ -6,3 +6,4 @@ const ADVANCED_RATES = {
 }
 
 const ROWS = [ADVANCED_RATES]
+

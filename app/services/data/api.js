@@ -15,7 +15,6 @@ async function api(method, path, params, data) {
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage
 
   logger.info({ op: 'data.api', phase: 'prepared', request: { endpoint, apiUrl, headers, method, params, data } })
-
   try {
     const res = await {
       get: () => axios.get(apiUrl, { params, headers }),

@@ -40,7 +40,6 @@ const fileTypes = [
     name: 'Articles of Incorporation'
   },
   {
-    type: 'Entity',
     name: 'Operating Agreement'
   },
   {
@@ -296,3 +295,10 @@ const fileTypes = [
     type: 'Product',
     name: 'List of Major Subs'
   },
+  {
+    type: 'Product',
+    name: 'Zoning OK'
+  },
+  {
+    type: 'Product',
+    name: 'Building Permit'

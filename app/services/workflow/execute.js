@@ -2,9 +2,9 @@ const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.workflow.start')
 
-// Temp comment
 async function execute(wkfl, runtimeVariables) {
   const activities = await app.plugins.workflow.getActivities(wkfl)
+// Temp comment
 
   const context = {
     wkfl: _.pick(wkfl, ['id', 'name', 'userId', 'institutionId', 'branchId']),

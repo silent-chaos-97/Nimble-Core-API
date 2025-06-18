@@ -120,3 +120,33 @@ describe('GET /signers/:id/identity-verifications', async () => {
     })
 
     it('should return a list of expected verifications', async () => {
+      return request(app.server)
+        .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications`)
+        .expect('Content-Type', /json/)
+        .set('Authorization', 'Bearer ' + token)
+        .expect(200)
+        .expect(res => {
+
+          expect(res.body).to.an('Array')
+          expect(res.body).to.have.lengthOf(12)
+
+          const names = res.body.map(item => item.verification)
+
+          expect(names).to.contain('Face Detection')
+          expect(names).to.contain('Face On Document Matched')
+          expect(names).to.contain('Originality')
+          expect(names).to.contain('Visibility')
+          expect(names).to.contain('Document Type')
+          expect(names).to.contain('Issued Date')
+          expect(names).to.contain('Expiration Date')
+          expect(names).to.contain('Name')
+          expect(names).to.contain('Country')
+          expect(names).to.contain('Date Of Birth')
+          expect(names).to.contain('Gender')
+          expect(names).to.contain('Address')
+        })
+    })
+
+    it('should not list verifications not on the list', async () => {
+      await seed.signersIdentityVerification.create({
+        id: '00000000-0000-0000-0000-000000000013',

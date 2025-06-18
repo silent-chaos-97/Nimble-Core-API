@@ -2118,3 +2118,55 @@ const successResponse = {
                 "url": "https://thefinancialexpress.com.bd/world/africa/zimbabwes-president-opponent-both-confident-of-win-after-close-vote-1533025719"
               },
               {
+                "date": "2018-09-18T00:00:00Z",
+                "snippet": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+                "title": "Новости: ВЛАСТЬ, Зимбабве, все за все время, 1 страница | podrobnosti.ua",
+                "url": "http://podrobnosti.ua/archive/tag/all/vlast/zimbabve/page1/"
+              },
+              {
+                "date": "2018-07-24T00:00:00Z",
+                "snippet": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+                "title": "Новости: ВЛАСТЬ, Перевороты, видео за все время, 1 страница | podrobnosti.ua",
+                "url": "http://podrobnosti.ua/archive/tag/video/vlast/perevoroty-putchi/page1/"
+              },
+              {
+                "date": "2019-02-07T00:00:00Z",
+                "snippet": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+                "title": "Новости: ВЛАСТЬ, Перевороты, все за все время, 1 страница | podrobnosti.ua",
+                "url": "http://podrobnosti.ua/archive/tag/all/vlast/perevoroty-putchi/page1/"
+              },
+              {
+                "date": "2019-02-05T00:00:00Z",
+                "snippet": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+                "title": "Новости: Все разделы, Перевороты, все за все время, 2 страница | podrobnosti.ua",
+                "url": "http://podrobnosti.ua/archive/tag/all/all/perevoroty-putchi/page2/"
+              },
+              {
+                "date": "2018-11-09T00:00:00Z",
+                "snippet": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+                "title": "Новости: Перевороты, все за все время | podrobnosti.ua",
+                "url": "http://podrobnosti.ua/tag/perevoroty-putchi/"
+              },
+              {
+                "date": "2018-11-19T00:00:00Z",
+                "snippet": ": Роберта Мугабе арестовали военные |",
+                "title": "Переворот в Зимбабве: Роберта Мугабе арестовали военные | podrobnosti.ua",
+                "url": "http://podrobnosti.ua/2210894-perevorot-v-zimbabve-roberta-mugabe-arestovali-voennye.html"
+              }
+            ],
+            "name": "Mugabe Robert Gabriel",
+            "source_notes": {
+              "belgium-consolidated-list-of-the-national-and-european-sanctions": {
+                "aml_types": [
+                  "sanction"
+                ],
+                "listing_started_utc": "2019-02-19T00:00:00Z",
+                "name": "Belgium Consolidated List of the National and European Sanctions",
+                "url": "https://finance.belgium.be/en/treasury/financial-sanctions"
+              },
+              "complyadvantage": {
+                "aml_types": [
+                  "pep-class-1"
+                ],
+                "name": "ComplyAdvantage PEP Data"
+              },

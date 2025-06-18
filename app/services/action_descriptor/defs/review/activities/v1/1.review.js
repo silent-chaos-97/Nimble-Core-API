@@ -15,7 +15,6 @@ async function activity(context) {
   const reviewers = await derefUsers('inputs.reviewers', context).then(user => _.isArray(user) ? _.first(user) : user)
 
   let title = 'Review'
-// Temp comment
 
   let expiresAt
   const duration = _.get(context, 'inputs.response_duration')
@@ -24,7 +23,6 @@ async function activity(context) {
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
   }
   
-  const tasks = await Promise.all(reviewers.map(assignee => app.services.task.save(wkflTask(assignee, context, title, TASK_TYPE, null, expiresAt))))
 
   return {
     tasks,

@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const marked = require('marked')
 const defaultSerializer = require('../serializer')
 

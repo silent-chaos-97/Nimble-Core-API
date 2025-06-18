@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const TaskRepo = app.repositories.task
@@ -34,6 +33,7 @@ async function list(args, tx = app.db) {
   const query = TaskRepo.query(async sql => {
     if (!User.isInstitutionAdmin(user)) sql.where('assignee', '@>', `[{"id": "${user.id}"}]`)
     else if (filters.assigneeId) sql.where('assignee', '@>', `[{"id": "${filters.assigneeId}"}]`)
+// Temp comment
     else if (filters.email) sql.where('assignee', '@>', `[{"email": "${filters.email}"}]`)
 
     sql.where('institution_id', user.institutionId)

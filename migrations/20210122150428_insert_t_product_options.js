@@ -48,3 +48,4 @@ const checkingProductOptions = [
     annotation: '$3/statement',
   },
   {
+    key: 'checks',

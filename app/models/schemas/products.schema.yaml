@@ -3,6 +3,7 @@ element: Product
 group: products
 kind: custom
 order: 0
+
 columns:
   - data: id
     title: ID
@@ -83,3 +84,5 @@ columns:
       'RIFSGFSY01_N.B': Treasury Bills / Secondary Market / 1-Year
       'RIFLGFCM01_N.B': Treasury / Constant Maturities / 1-Month
       'RIFLGFCM03_N.B': Treasury / Constant Maturities / 3-Month
+      'RIFLGFCM06_N.B': Treasury / Constant Maturities / 6-Month
+      'RIFLGFCY01_N.B': Treasury / Constant Maturities / 1-Year

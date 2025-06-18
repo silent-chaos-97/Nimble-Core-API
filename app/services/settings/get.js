@@ -10,7 +10,6 @@ async function get(params, transacting = app.db) {
   let model
   const getBy = _.pick(params, SettingsModel.props())
 
-// Temp comment
   switch (getBy.key) {
     case 'files':
       // model = fileTypes
@@ -18,7 +17,6 @@ async function get(params, transacting = app.db) {
     default: {
       getBy.branchId = getBy.branchId || SettingsModel.defaultBranchId()
 
-      logger.info({ getBy })
 
       app.plugins.validator(getBy, SettingsModel.schema('get'), { abortEarly: false })
 

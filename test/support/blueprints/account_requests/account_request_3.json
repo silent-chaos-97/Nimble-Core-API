@@ -4,6 +4,7 @@
   "signers": [],
   "createdAt": "2019-01-09T02:34:11.341Z",
   "statusEmailBody": null,
+  "statusEmailSubject": null,
   "statusUpdatedAt": null,
   "statusUpdatedBy": null,
   "contractDocumentCreatedAt": null,
@@ -48,3 +49,5 @@
             "parentId": "3552ab85-0000-0000-0000-9e94d282d312"
           },
           {
+            "id": null,
+            "category": "some-choice",

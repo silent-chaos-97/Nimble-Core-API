@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
+// Temp comment
 
 const User = app.models.user
 const Roles = User.roles()
@@ -18,6 +19,7 @@ async function create(req, res, next) {
     delete user['institutionId'] // only super-admin can set an institution
 
     if (!User.hasRole(me, Roles.InstitutionAdmin)) delete user['branchId'] // only institution-admin+ can set the branch
+
     // an institution-admin can set the branch-admin and employee role
     if (!_.isEmpty(user.roles) && User.hasRole(me, Roles.InstitutionAdmin)) {
       user['roles'] = _.intersection(user.roles, [Roles.BranchAdmin, Roles.Employee])

@@ -41,3 +41,4 @@ describe('app.services.email.prospectPendingSigners', () => {
   })
 
   describe('when calling with valid data', () => {
+    beforeEach(async () => {

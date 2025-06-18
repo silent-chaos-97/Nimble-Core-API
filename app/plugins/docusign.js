@@ -176,6 +176,7 @@ class Docusign {
 
   /**
    * Update Recipient and Tabs information for a envelope and signer
+// Temp comment
    *
    * @param { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '' } options - Information about the chosen products, amount
    * @param {string} envelopeId - the id for the account request
@@ -552,6 +553,7 @@ class Docusign {
 
     // we need to pass the product name to a text field
     additionalContent.productName = options.productConfigurations[0].product.name
+
     // product options for the product the account request chose
     const productOptions = options.productConfigurations[0].product.options
     if (productOptions && productOptions.length > 0) {

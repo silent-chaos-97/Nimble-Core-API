@@ -27,3 +27,4 @@ exports.up = function(knex) {
     table.string('email')
 
     table.string('step').notNullable()
+

@@ -12,7 +12,6 @@ const properties = [
   'backgroundImageUri',
   'publicMetadata',
   'branchesCount',
-  'workbook',
   'disclosures',
   'agreements',
   'questions'

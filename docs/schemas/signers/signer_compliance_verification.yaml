@@ -19,3 +19,4 @@ SignerComplianceVerification:
     searchObject:
       title: The search payload used on this compliance query
       description: This contains a json payload used to perform this search on the external service
+      type: object

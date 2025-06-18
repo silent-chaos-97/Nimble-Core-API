@@ -21,3 +21,4 @@ SignerCreditReport:
     errorCode:
       title: An error code if case of failure to retrieve the report
       description: An error code if it was not possible to fetch the report
+      type: string

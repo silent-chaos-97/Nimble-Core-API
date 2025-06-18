@@ -1,7 +1,6 @@
 const app = require('../../../../../../core')
 const _ = require('lodash')
 const moment = require('moment')
-const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
 
 const log = app.logger.getLogger('action.file_upload.1')

@@ -7,7 +7,6 @@ IdProofDocument:
     - issuedDate
     - issuer
     - frontDocumentId
-    - backDocumentId
   properties:
     type:
       type: string
@@ -25,3 +24,4 @@ IdProofDocument:
       type: string
       format: date
       title: Expiration Date
+      description: Id Proof Document Expiration Date

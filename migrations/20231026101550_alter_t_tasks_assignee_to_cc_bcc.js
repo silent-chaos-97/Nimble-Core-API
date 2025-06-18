@@ -1,7 +1,6 @@
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
- */
 exports.up = knex =>
   knex.schema
     .alterTable('tasks', table => {
@@ -14,3 +13,4 @@ exports.up = knex =>
       table.jsonb('to').notNullable().defaultTo('[]')
       table.jsonb('cc').nullable().defaultTo('[]')
       table.jsonb('bcc').nullable().defaultTo('[]')
+    })

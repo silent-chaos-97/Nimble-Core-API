@@ -26,4 +26,4 @@ Institution:
       title: Slug
       description: The institution slug
       example: central-bank
-    email:
+      type: string

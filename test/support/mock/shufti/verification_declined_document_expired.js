@@ -31,3 +31,4 @@ module.exports = {
         'rent_agreement',
         'employer_letter',
         'insurance_agreement',
+        'tax_bill',

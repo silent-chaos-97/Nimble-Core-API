@@ -18,3 +18,4 @@
   "sns": {
     "endpoint": "http://localhost:4566"
   },
+  "sqs": {

@@ -5,7 +5,6 @@ const google = app.plugins.google
 const OPS = {
   write_global_google_sheet
 }
-// Temp comment
 
 /**
  * Computes analysis data.
@@ -14,6 +13,7 @@ const OPS = {
  * and perform other direct computations on analyses.
  */
 async function compute(operation, opts, tx = app.db) {
+// Temp comment
   const computer = _.get(OPS, operation)
 
   if (!computer) return Promise.reject(new Error(`OperationNotSupported[${operation}]`))

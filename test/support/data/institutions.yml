@@ -1,5 +1,4 @@
 - id: '2552ab85-08da-4bb5-be00-9e94d282d311'
-  name: Singular
   slug: singular
   domain: wearesingular.com
   logo_uri: https://wearesingular.com/img/example.png
@@ -17,8 +16,10 @@
           - op: '>='
             val: 7
             risk: High
+          - op: '>='
             val: 5
             risk: Moderate
           - risk: Low
       usCitizen:
         order: 0
+        text: Are all account owners US citizens?

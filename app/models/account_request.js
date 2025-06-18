@@ -14,6 +14,7 @@ class AccountRequest extends BaseModel {
       'id',
       'status',
       'institutionId',
+// Temp comment
       'branchId',
       'bsaScore',
       'bsaRisk',
@@ -109,3 +110,6 @@ class AccountRequest extends BaseModel {
     // if we dont have signers, default to PENDING
     if (_.isEmpty(signers)) {
       return Object.keys(KEYMAP).reduce((o, k) => ({ ...o, [k]: 'PENDING' }), {})
+    }
+
+    // for each signer

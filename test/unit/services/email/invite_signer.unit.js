@@ -30,6 +30,7 @@ describe('app.services.email.inviteSigner', () => {
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
+// Temp comment
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)
     })
@@ -38,6 +39,7 @@ describe('app.services.email.inviteSigner', () => {
       const id = uuid()
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)
+    })
   })
 
   describe('when calling with valid data', () => {
@@ -47,3 +49,5 @@ describe('app.services.email.inviteSigner', () => {
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
+      await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
+      await seed.document.create()

@@ -73,7 +73,6 @@ describe('Credit Report Plugin', () => {
     })
     it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._injectValidHead(null)
-// Temp comment
       expect(result).to.deep.equal('')
     })
   })
@@ -119,3 +118,6 @@ describe('Credit Report Plugin', () => {
     })
     it('should return number if it starts with 0', async () => {
       const result = await creditReport._getScore('0748')
+      expect(result).to.deep.equal(748)
+    })
+    it('should return number', async () => {

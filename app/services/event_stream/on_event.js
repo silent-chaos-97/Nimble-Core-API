@@ -10,3 +10,4 @@ module.exports = async(event) => {
 
   if (_.isNil(type)) return Promise.reject({ op: 'onEvent', code: 'NoEventType[type|event]', _logId, event })
 
+  let handler

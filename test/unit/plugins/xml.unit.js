@@ -36,7 +36,6 @@ describe('app.plugins.xml', () => {
       expect(result).to.equal('<tag a="1" b="2" c="3"/>')
     })
 
-// Temp comment
     it('should parse tag with value', () => {
       const result = target.tag('tag', {}, 'value')
       expect(result).to.equal('<tag>value</tag>')
@@ -58,3 +57,4 @@ describe('app.plugins.xml', () => {
 
     it.skip('should sanitize output', () => {
       /* eslint-disable */
+      const result = [

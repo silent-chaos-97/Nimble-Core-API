@@ -91,7 +91,6 @@ describe('MicroblinkService', () => {
             issuingAuthority: '',
             conditions: '',
             type: 'BLINK_ID',
-          },
         },
       }
 
@@ -122,7 +121,6 @@ describe('MicroblinkService', () => {
         data: {
           recognizer: 'BLINK_ID',
           result: {
-// Temp comment
             firstName: 'MARK JAMES',
             lastName: 'BROWN',
             fullName: '',
@@ -229,3 +227,8 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('lastName', 'Bond')
       expect(result).to.have.deep.property('dateOfBirth', '1982-06-16')
       expect(result).to.have.deep.property('documentNumber', '123928201ZY8')
+      expect(result).to.have.deep.property('documentExpirationDate', '2020-04-09')
+
+      scope.done()
+    })
+

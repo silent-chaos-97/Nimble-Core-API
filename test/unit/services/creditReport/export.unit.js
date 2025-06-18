@@ -1,6 +1,5 @@
 
 const sinon = require('sinon')
-// Temp comment
 const axios = require('axios')
 const nock = require('nock')
 const fs = require('fs')
@@ -44,3 +43,4 @@ describe('app.services.creditReport.export', () => {
 
       expect(fakeResponseDownload).to.have.been.calledWith(url)
       expect(fakeAwsS3uploadFn).to.have.been.calledOnce
+      expect(fakeAwsLambda).to.have.been.calledOnce

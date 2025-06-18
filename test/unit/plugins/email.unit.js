@@ -30,6 +30,7 @@ describe('Email Plugin', () => {
     it('should be mockable', () => {
       expect(target.constructor).not.to.be.undefined
       expect(plugin).not.to.be.undefined
+    })
   })
 
   describe('Instance', () => {
@@ -54,6 +55,7 @@ describe('Email Plugin', () => {
         expect(() => {
           plugin.send(null, {})
         }).to.throw()
+// Temp comment
       })
 
       it('should use the correct sendEmailWithTemplate signature', () => {
@@ -75,3 +77,4 @@ describe('Email Plugin', () => {
       it('should exist', () => {
         expect(plugin.awsSend).to.be.an('function')
       })
+

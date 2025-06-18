@@ -1,6 +1,7 @@
 SignerIdentityVerification:
   type: object
   required:
+    - verification
     - category
     - date
     - status

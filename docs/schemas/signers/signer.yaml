@@ -92,3 +92,5 @@ Signer:
       type: string
       title: SSN
       maxLength: 20
+      description: Signer ssn
+    email:

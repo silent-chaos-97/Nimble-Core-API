@@ -1,6 +1,5 @@
 const ErrorClass = require('../../../app/errors/conflict')
 
-// Temp comment
 describe('ConflictError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
@@ -17,3 +16,4 @@ describe('ConflictError', () => {
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
   })
+

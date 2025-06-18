@@ -10,6 +10,5 @@ const whitelist = ['id']
 const schema = Joi.object().keys({
   id: Joi.string().uuid().required()
 })
-
 async function validate(data) {
   return validator(_.pick(data, whitelist), schema, { abortEarly: false })

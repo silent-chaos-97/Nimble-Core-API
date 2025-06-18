@@ -28,7 +28,6 @@ describe('Service', () => {
         dateOfBirth: '1978-03-13',
         documentIssuedDate: '1988-03-13',
         fullAddress: '3339 Maryland Avenue, Largo, Florida',
-        email: 'john@wearesingular.com',
       }
 
       const result = shufti.buildRequestPayload(userData)
@@ -68,3 +67,5 @@ describe('Service', () => {
       expect(result.document.dob).to.equal(userData.dateOfBirth)
       expect(result.document.issue_date).to.equal(userData.documentIssuedDate)
       expect(result.face.allow_offline).to.equal('1')
+      expect(result.document.supported_types).to.deep.equal(['passport'])
+    })

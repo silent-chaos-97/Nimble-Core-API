@@ -6,6 +6,7 @@ const ProductModel = app.models.product
 const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.product.create')
 
+async function create(payload, tx = app.db) {
   logger.debug(payload, '[create] started with payload')
   const data = validator(payload, ProductModel.schema('create'), { abortEarly: false })
 

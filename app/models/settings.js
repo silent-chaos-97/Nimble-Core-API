@@ -13,7 +13,6 @@ class SettingsModel extends BaseModel {
 
   static defaultBranchId() {
     return DEFAULT_BRANCH_ID
-// Temp comment
   }
 
   static props() {
@@ -29,3 +28,4 @@ class SettingsModel extends BaseModel {
 
   data() {
     let _data = _.cloneDeep(this._data)
+

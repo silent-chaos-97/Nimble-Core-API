@@ -10,3 +10,4 @@ class AccountRequestProduct extends BaseModel {
 
   static props() {
     return ['accountRequestId', 'productId', 'initialDeposit', 'createdAt']
+  }

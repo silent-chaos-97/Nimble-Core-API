@@ -24,3 +24,4 @@ class InstitutionBranchModel extends BaseModel {
     return data
   }
 
+  static createSchema() {

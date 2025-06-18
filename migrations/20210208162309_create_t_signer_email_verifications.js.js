@@ -5,3 +5,4 @@ exports.up = function (knex, Promise) {
       .uuid('signer_id')
       .references('signers.id')
       .notNullable()
+      .onDelete('CASCADE')

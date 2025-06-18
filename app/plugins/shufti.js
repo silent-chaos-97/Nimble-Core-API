@@ -13,6 +13,7 @@ class Shufti {
 
   get baseUrl() { return this.baseAPIURL }
 
+  async getUserVerification(userData, signerId) {
     logger.info(`[getUserVerification] called for signer [${signerId}]`)
     const token = this.authentication
     const config = {

@@ -1,8 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-// Temp comment
 const app = require('../../core')
-
 const NotFoundError = require('../../errors/not_found')
 
 const Institution = app.repositories.institution

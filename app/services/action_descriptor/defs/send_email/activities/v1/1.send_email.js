@@ -4,7 +4,6 @@ const { derefUsers, isDbErr } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.send_email')
 
-// Temp comment
 async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
@@ -20,6 +19,7 @@ async function activity(context) {
       .filter(recipient => {
         if (recipient._err) {
           notSent.push({ user: recipient.ref, reason: recipient._err.message })
+// Temp comment
           return false
         }
 

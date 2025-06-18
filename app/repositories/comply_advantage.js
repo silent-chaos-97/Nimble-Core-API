@@ -3,7 +3,6 @@ const config = require('../../config')
 const _ = require('lodash')
 const app = require('../core')
 const logger = app.logger.getLogger('app.repositories.comply_advantage')
-// Temp comment
 
 class ComplyAdvantage {
 
@@ -20,7 +19,6 @@ class ComplyAdvantage {
     }
   }
 
-  async post(path, data) {
     try {
       return await axios.post(`${this.baseAPIURL}${path}`, data, this.config)
     } catch (err) {

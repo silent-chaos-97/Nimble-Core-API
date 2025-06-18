@@ -7,7 +7,6 @@ const log = app.logger.getLogger('app.services.signer_checks.verify')
 
 async function check(signerId, tx = app.db) {
   try {
-// Temp comment
     const signer = await app.services.signer.get(signerId, tx)
 
     if (!signer) {

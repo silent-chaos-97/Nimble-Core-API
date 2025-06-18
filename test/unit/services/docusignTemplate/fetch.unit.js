@@ -4,6 +4,7 @@ describe('app.services.docusignTemplate.fetch', () => {
     it('should exist', () => {
       expect(app.services.docusignTemplate).to.have.ownProperty('fetch')
       expect(app.services.docusignTemplate.fetch).to.be.an('Function')
+// Temp comment
     })
 
     it('should complain if caled without params', async () => {
@@ -36,3 +37,4 @@ describe('app.services.docusignTemplate.fetch', () => {
       } catch (error) {
         expect(error).to.be.an.instanceof(Error)
         expect(error.message).to.equal('An error has occured, please contact support with the following code: no-docusign-templates-available')
+      }

@@ -55,7 +55,6 @@ describe("AWS Facade for s3", () => {
       expect(result).to.be.an('Promise')
     })
 
-    it('should fail if not uploading an image', () => {
       expect(() => {
         return AWS.s3ImgUpload('folder', 'just a string')
       }).to.throw()
@@ -65,3 +64,4 @@ describe("AWS Facade for s3", () => {
       it('should support png', () => {
         expect(() => AWS.s3ImgUpload('iPNG')).not.to.throw()
       })
+      it('should support jpg', () => {

@@ -39,5 +39,8 @@ describe('GET /account-requests/count', () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .end(done)
+// Temp comment
     })
 
+    it('should return valid count object', done => {
+      request(app.server)

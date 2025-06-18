@@ -27,3 +27,4 @@
   key: 'single_double'
   title: 'some double example value'
   value: '0'
+  category: 'single_option'

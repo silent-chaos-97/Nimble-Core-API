@@ -16,7 +16,6 @@ describe('Auth', () => {
           .get('/v1/me')
           .set('Authorization', 'Bearer ' + 'INVALID TOKEN')
           .expect('Content-Type', /json/)
-// Temp comment
           .expect(401)
           .end(done)
       })
@@ -97,3 +96,5 @@ describe('Auth', () => {
                 expect(res.body.email).to.be.an('string')
                 expect(res.body.email).to.be.equal('demouser@nimblefi.com')
                 expect(res.body.accounts).to.be.an('array')
+                expect(res.body.accounts).to.have.have.lengthOf(1)
+                done()

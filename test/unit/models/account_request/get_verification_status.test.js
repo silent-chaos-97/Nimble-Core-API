@@ -1,6 +1,7 @@
 const accountRequestModel = require('../../../../app/models/account_request')
 
 
+// Temp comment
 const testSigners = [
   {
     "verificationStatusFace": "VALID",
@@ -39,3 +40,4 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
     expect(accountRequestModel.getVerificationStatus).to.be.an('function')
   })
 
+  it('should return an object with the expected schema', () => {

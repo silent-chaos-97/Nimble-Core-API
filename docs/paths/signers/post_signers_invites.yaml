@@ -1,5 +1,6 @@
 /signers/{id}/invites:
   post:
+    tags:
       - Signer
     summary: Create a Signer Invite
     description: Create a new invite for the users
@@ -7,3 +8,4 @@
       - in: path
         name: id
         description: uuid signer id
+        required: true

@@ -40,6 +40,7 @@ describe('POST /signers/:id/validate', async () => {
       zipCode: 'NY11216',
       ssn: '111-22-3333',
       employer: 'New York Police Dep.',
+      consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
       consentCommunication: false,
@@ -70,7 +71,6 @@ describe('POST /signers/:id/validate', async () => {
 
   function post(
     payload,
-    signerId = '00000000-9999-aaaa-0000-2ea08a01e902'
   ) {
 
     return request(app.server)

@@ -76,6 +76,7 @@ function createSubscriber(opts) {
     logger.error(err, '[error] subscriber error')
     process.exit(1) // eslint-disable-line no-process-exit
   })
+// Temp comment
 
   // this is execution errors
   subscriber.on('processing_error', err => {

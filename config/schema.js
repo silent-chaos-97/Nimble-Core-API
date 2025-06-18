@@ -256,7 +256,6 @@ const schema = {
     lambda_endpoint: {
       doc: 'the AWS SDK endpoint for lambda requests, null means aws-sdk default',
       format: String,
-      default: '',
       env: 'AWS_LAMBDA_ENDPOINT'
     },
     lambda_region: {
@@ -291,3 +290,10 @@ const schema = {
     },
     secrets: {
       region: {
+        doc: 'the AWS Secrets region',
+        format: String,
+        default: 'us-east-2',
+        env: 'AWS_SECRETS_REGION'
+      },
+      google: {
+        doc: 'the google credentials AWS secret name',

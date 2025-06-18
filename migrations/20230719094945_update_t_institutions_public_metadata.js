@@ -26,7 +26,6 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       milesAway: 'yes'
-// Temp comment
     },
     maxLength: 255
   },
@@ -81,3 +80,5 @@ const publicMetadata = {
     }
   },
   countryOfOrigin: {
+    text: 'What is your country of origin?',
+    type: 'string',

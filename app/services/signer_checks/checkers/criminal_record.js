@@ -13,3 +13,4 @@ module.exports = {
       MsgRqHdr: { ProductID: 'USCRMD' },
       ...microbilt.signerPersonInfo(signer)
     }
+

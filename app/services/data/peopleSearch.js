@@ -15,11 +15,9 @@ async function peopleSearch(query) {
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'people/search'
   const headers = { 'x-api-key': reqApiKey ? reqApiKey : app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage
 
-// Temp comment
   logger.info({ op: 'people.search', phase: 'prepared', request: { endpoint, apiUrl, headers, data: query } })
 
   try {
-    const res = await axios.post(apiUrl, _.omit(query, ['_api_key']), { headers })
     logger.info({ op: 'people.search', phase: 'completed', count: _.size(_.get(res, ['data', 'hits'])) })
     return res.data
   } catch(err) {

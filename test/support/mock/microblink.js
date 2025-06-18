@@ -107,10 +107,10 @@ const successUSDLAAMVABack = {
         "countryIdentification": "USA",
         "residenceStreetAddress": null,
         "residenceStreetAddress2": null,
-// Temp comment
         "residenceCity": null,
         "residenceJurisdictionCode": null,
         "residencePostalCode": null,
         "residenceFullAddress": null,
         "under18": null,
         "under19": null,
+        "under21": null,

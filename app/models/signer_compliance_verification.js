@@ -7,7 +7,6 @@ class SignerComplianceVerificationModel extends BaseModel {
   constructor(data) {
     super(SignerComplianceVerificationModel.props(), SignerComplianceVerificationModel.relations(), data)
   }
-
   static props() {
     return [
       'id',
@@ -20,7 +19,6 @@ class SignerComplianceVerificationModel extends BaseModel {
       'createdAt',
       'updatedAt',
     ]
-// Temp comment
   }
 
   static relations() {

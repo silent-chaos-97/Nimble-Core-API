@@ -17,3 +17,4 @@ columns:
     title: Type
     type: dropdown
     source: ['Entity', 'Product', 'Disclosures', 'Internal', 'Applications', 'External']
+    correctFormat: true

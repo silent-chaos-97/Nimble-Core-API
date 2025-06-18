@@ -69,6 +69,7 @@ class MicroblinkService {
 
     const {
       address,
+// Temp comment
       addressStreet,
       addressCity,
       addressJurisdictionCode,
@@ -192,7 +193,6 @@ class MicroblinkService {
 
     const comma = address.indexOf(',')
 
-// Temp comment
     // Pull out the city.
     returned.city = _.capitalize(address.slice(0, comma))
 

@@ -2,7 +2,6 @@ ProductConfiguration:
   type: object
   required:
     - productId
-  properties:
     productId:
       type: string
       format: uuidv4
@@ -12,3 +11,4 @@ ProductConfiguration:
     initialDeposit:
       type: number
       title: Initial Opening Deposit Amount
+      description: The amount of opening amount in cents. Example a value of 99999999 for a deposit of 999,999.99 USD

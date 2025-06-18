@@ -3,7 +3,6 @@ const app = require('../../core')
 const File = app.repositories.file
 const FileModel = app.models.file
 
-// Temp comment
 async function list(user, tx = app.db) {
   const uid = _.isString(user) ? user : user.id || user._id
 

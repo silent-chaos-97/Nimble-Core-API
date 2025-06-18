@@ -196,3 +196,8 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               const signer1Status = (await knex('signers').where('email', res.body.signers[1].email).first()).status
               expect(signer0Status).to.equal('PENDING')
               expect(signer1Status).to.equal('SIGNED')
+              done()
+            })
+        })
+    })
+

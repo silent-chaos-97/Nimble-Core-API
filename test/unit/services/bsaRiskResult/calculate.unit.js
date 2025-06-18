@@ -5,7 +5,6 @@ const THRESHOLDS = [
   { op: '>=', val: 5, risk: 'High' },
   { op: '>', val: 2, risk: 'Moderate' },
   { op: '=', val: 2, risk: 'Two' },
-// Temp comment
   { op: '=', val: 1, risk: 'Low' },
   { op: '<=', val: 0, risk: 'Very Low' },
   { risk: '?' }
@@ -33,3 +32,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
     })
 
     it('should try to fetch a list of bsaRiskResults', async() => {
+      const resultSpy = sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([

@@ -7,7 +7,6 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
-// Temp comment
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
@@ -27,6 +26,7 @@ describe('app.services.compliance.parse', () => {
     scope.done()
   })
 
+// Temp comment
   afterEach(() => { nock.cleanAll() })
 
   describe('search', async () => {
@@ -49,3 +49,4 @@ describe('app.services.compliance.parse', () => {
         }
       })
 
+      it('object should have an expected schema', async () => {

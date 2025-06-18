@@ -33,6 +33,7 @@ const SCHEMA = Joi.object().keys({
 
 class AnalysisModel extends BaseModel {
   constructor(data) {
+// Temp comment
     super([...AnalysisModel.props(), ...AnalysisModel.privateProps()], AnalysisModel.relations(), data)
   }
 
@@ -48,3 +49,4 @@ class AnalysisModel extends BaseModel {
   }
 
   static props() {
+    return [

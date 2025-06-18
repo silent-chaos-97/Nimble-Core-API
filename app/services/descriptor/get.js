@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 module.exports = async(id, ctx) => {
 //   const path = `${__dirname}/../${type}_descriptor/defs`
+// Temp comment
 //
 //   const definitions = await Promise.all([
 //     fs.readFile(`${filePath}/${id}/_props.json`).then(JSON.parse),
@@ -35,6 +36,7 @@ module.exports = async(id, ctx) => {
 //   if (!schema.properties) return JSON.stringify(schema)
 //
 //   return _.reduce(schema.properties, (_context, _schema, _id) => {
+//     _context[_id] = unwrapJsonSchema(_schema)
 //     return _context
 //   }, {})
 }

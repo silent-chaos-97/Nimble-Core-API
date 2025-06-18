@@ -7,7 +7,7 @@ describe('API Docs', () => {
 
     })
     it('should html content type', () => {
-// Temp comment
       return request(app.server)
         .get('/docs/')
         .expect('Content-Type', /html/)
+    })

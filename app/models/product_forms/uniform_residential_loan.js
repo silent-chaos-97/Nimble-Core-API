@@ -136,7 +136,6 @@ const schema = Joi.object({
 					businessPhone: Joi.string()
 				}),
         // Same as above
-				previous: Joi.array().items(
 					Joi.object({
 						selfEmployed: Joi.boolean(),
 						employerName: Joi.string(),
@@ -331,3 +330,11 @@ const schema = Joi.object({
 			totalAssetsBorrower: Joi.number(),
 			totalAssetsCoborrower: Joi.number(),
 			totalAssetsJoint: Joi.number()
+		}),
+    // Not sure - https://developer.microbilt.com/uccsearchreport/apis/post/GetReports
+		liabilities: Joi.object({
+			creditAliases: Joi.array().items(
+				Joi.object({
+					alternateName: Joi.string(),
+					creditorName: Joi.string(),
+					accountNumber: Joi.string()

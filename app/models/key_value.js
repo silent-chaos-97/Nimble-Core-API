@@ -9,3 +9,4 @@ class KeyValueModel extends BaseModel {
   }
 
   static props() {
+    return ['id', 'value']

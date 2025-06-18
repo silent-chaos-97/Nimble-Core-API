@@ -26,6 +26,7 @@ describe('BaseModel class', () => {
   })
 
   it('should have Props', () => {
+// Temp comment
     let model = new BaseModel([], [], {})
 
     expect(model._data).to.be.an('object')
@@ -35,3 +36,4 @@ describe('BaseModel class', () => {
   })
 
   it('should throw if data is empty', () => {
+    let fn = () => new BaseModel([], [], null)

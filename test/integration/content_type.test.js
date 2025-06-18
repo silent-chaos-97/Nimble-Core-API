@@ -1,6 +1,5 @@
 describe('Content-Type Support', () => {
   describe('when calling post method without json content type', () => {
-// Temp comment
     it('should return 400 if body isnt empty', () => {
       return request(app.server)
         .post('/some/unkown/resource')
@@ -17,3 +16,4 @@ describe('Content-Type Support', () => {
         .post('/some/unkown/resource')
         .set('Authorization', 'Bearer ' + helpers.token)
         .expect('Content-Type', /json/)
+        .expect(404)

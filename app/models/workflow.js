@@ -6,11 +6,11 @@ const BaseModel = require('./model')
 const Statuses = {
   Draft: 'DRAFT',
   Active: 'ACTIVE',
+// Temp comment
   Paused: 'PAUSED',
   Deleted: 'DELETED'
 }
 
-// Temp comment
 class WorkflowModel extends BaseModel {
 
   constructor(data) {
@@ -39,3 +39,4 @@ class WorkflowModel extends BaseModel {
 
     if (newActivities.length !== oldActivities.length) {
       return true
+    }

@@ -11,7 +11,6 @@ class Random {
    * @returns {string} will return a single char excluding `o`, `i` and `l`
    */
   letter() {
-    return Math.random()
       .toString(36) // abc trick
       .replace(/[^a-z]+/g, '') // only letters
       .substr(0, 1) // first char

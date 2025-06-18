@@ -1,5 +1,6 @@
 const axios = require('axios')
 const nock = require('nock')
+const mocks = require('../../../support/mock/docusign')
 const config = require('../../../../config')
 const { expect } = require('chai')
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -54,7 +55,7 @@ describe('app.services.contract.update', () => {
         await app.services.contract.update('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
         const args = {
           accountRequestId: accountRequestId,
-          accountOptions: mocks.mockSendContractArgs.accountOptions,
           signers: mocks.mockSendContractArgs.signerData // this should actually be an array of signers
         }
         const calledArgs = docusignSend.firstCall.firstArg
+

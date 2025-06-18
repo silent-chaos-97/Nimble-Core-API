@@ -12,5 +12,6 @@ columns:
       value: id
       title: name
 
+  - data: scope
     title: Account Type
     type: key-value-setting

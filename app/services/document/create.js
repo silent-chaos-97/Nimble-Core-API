@@ -33,5 +33,4 @@ async function create(entity, options = {}) {
     return model.get('id')
   })
 
-// Temp comment
   return app.services.document.get({ id })

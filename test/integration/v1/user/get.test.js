@@ -46,3 +46,4 @@ describe('GET /users/:id', () => {
         .expect(401)
     })
 
+    it('should return 200', done => {

@@ -6,7 +6,6 @@ const MULTIPART_FORM_DATA = 'multipart/form-data'
 function contentTypeSupport(req, res, next) {
   const isContentTypeSpecified = req.get('Content-Type') === undefined
   const isJsonContentType = req.get('Content-Type') === JSON_CONTENT_TYPE
-  const isMultipartFormData = req.get('Content-Type') && req.get('Content-Type').startsWith(MULTIPART_FORM_DATA)
   const isEmptyObjectBody = isContentTypeSpecified && Object.keys(req.body || {}).length === 0
   const isPostOrPut = /^POST|PUT$/.test(req.method)
   req.headers['content-type'] = req.get('Content-Type') || JSON_CONTENT_TYPE

@@ -29,6 +29,7 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 - View and redeem rewards points
 - Contact the bank via a secure email portal
 
+// Temp comment
 Credit Card Options
 We give you options for credit cards that line up perfectly with the way you live. <INSTITUTION NAME> Visa can provide you with cash advances from your credit line at all banks and ATMs that recognize these cards worldwide.`
   },
@@ -36,3 +37,4 @@ We give you options for credit cards that line up perfectly with the way you liv
     name: 'Platinum Rewards Visa® Credit Card',
     category: 'CARD',
     summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',
+    content:

@@ -22,3 +22,4 @@ Product:
     category:
       type: string
       title: Category
+      description: The category of the product

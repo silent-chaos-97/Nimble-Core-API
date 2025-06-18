@@ -5,7 +5,6 @@ const ForbiddenError = require('../../errors/forbidden')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const ConflictError = require('../../errors/conflict')
 
-const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.email_verification.update')
 
@@ -32,6 +31,7 @@ async function update(id, signerId, tx = app.db) {
   // Update Signer Email Verification
   await SignerEmailVerification.forge({id}).save(
     { consumedAt: moment() },
+    { method: 'update', transacting: tx }
   )
 
   // Update Signer verification Status

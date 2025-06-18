@@ -77,6 +77,8 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       individualIncome: 'yes'
-    }
   },
+  countryOfOrigin: {
     text: 'What is your country of origin?',
+    type: 'string',
+    order: 1,

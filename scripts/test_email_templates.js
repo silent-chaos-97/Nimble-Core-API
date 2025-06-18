@@ -46,3 +46,4 @@ app.load().then(async () => {
       inviteeRole: 'inviteeRole',
       institution: 'institution',
       institutionUrl: 'institutionUrl',
+      url: 'url',

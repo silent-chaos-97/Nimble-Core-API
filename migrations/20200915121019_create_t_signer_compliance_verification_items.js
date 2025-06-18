@@ -8,3 +8,4 @@ exports.up = function (knex, Promise) {
     table.date('date_of_death')
     table.string('countries')
     table.string('associates')
+    table.string('match_types')

@@ -25,6 +25,7 @@
         <street/>
         <city/>
         <state/>
+        <zipCode/>
       </address>
       <proof documentType="PASSPORT">
         <passport>
@@ -32,3 +33,4 @@
           <expirationDate>2022-02-16</expirationDate>
           <issuedDate>2011-02-16</issuedDate>
           <issuer>PRT</issuer>
+          <documents>

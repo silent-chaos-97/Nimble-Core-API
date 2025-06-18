@@ -6,7 +6,6 @@ class SearchModel extends BaseModel {
   constructor(data) {
     super(SearchModel.props(['all']), SearchModel.relations(), data)
   }
-
   static props(op) {
     return {
       all: [
@@ -33,7 +32,6 @@ class SearchModel extends BaseModel {
         //info
         'name',
         'description',
-// Temp comment
         'filters',
         'query'
       ],

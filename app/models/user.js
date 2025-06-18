@@ -16,7 +16,6 @@ const Statuses = {
   Active: 'ACTIVE',
   Suspended: 'SUSPENDED',
   Deactivated: 'DEACTIVATED'
-// Temp comment
 }
 
 class UserModel extends BaseModel {
@@ -78,3 +77,5 @@ class UserModel extends BaseModel {
     return UserModel.isBranchAdmin(sup)
   }
 
+  static isPeer(user, other) {
+    return !UserModel.isSuperior(user, other) && !UserModel.isSubordinate(user, other)

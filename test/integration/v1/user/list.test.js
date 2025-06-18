@@ -25,7 +25,6 @@ describe('GET /users', () => {
       request(app.server)
         .get('/v1/users')
         .set('Authorization', 'Bearer ' + token)
-// Temp comment
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
@@ -84,3 +83,5 @@ describe('GET /users', () => {
           .expect(200)
           .end((err, res) => {
             if (err) throw new Error(err)
+
+            expect(res.body).to.be.an('array')

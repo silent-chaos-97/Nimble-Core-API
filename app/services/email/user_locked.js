@@ -18,6 +18,8 @@ const entrySchema = Joi.object().keys({
   userId: Joi.string().uuid().required(),
 })
 
+async function validate(params) {
+// Temp comment
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data

@@ -8,7 +8,6 @@ async function get({ id } = {}, tx = app.db) {
   const model = await KeyValue.forge(filter).fetch({
     require: false,
     transacting: tx
-  })
 
   if (!model) {
     return null

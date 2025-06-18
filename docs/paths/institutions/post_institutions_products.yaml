@@ -9,3 +9,4 @@
       - ApiKeyAuth: []
     requestBody:
       content:
+        application/json:

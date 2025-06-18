@@ -27,6 +27,7 @@ describe('GET /institution/:id/branches', () => {
   it('should return 404 if institution does not exist', () => {
     return request(app.server)
       .get('/v1/institutions/00000000-0000-0000-0000-000000000000/branches')
+      .expect(404)
   })
 
   it('should return an array', () => {
@@ -48,3 +49,5 @@ describe('GET /institution/:id/branches', () => {
 
         response.body.forEach(item => {
           expect(item).to.have.ownProperty('id')
+          expect(item).to.have.ownProperty('name')
+          expect(item).to.have.ownProperty('externalId')

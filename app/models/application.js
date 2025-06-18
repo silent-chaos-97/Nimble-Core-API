@@ -7,5 +7,4 @@ class Application extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return ['id','applicantId', 'status', 'session','createdAt','updatedAt']

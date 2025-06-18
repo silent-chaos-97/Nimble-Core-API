@@ -4,7 +4,6 @@ const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 const applicantOneTimeTokenModel = app.models.applicantOneTimeToken
 
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
-
 async function get(id, tx = app.db) {
   const filterData = await app.plugins.validator({id}, schema, { abortEarly: false })
 
@@ -13,7 +12,6 @@ async function get(id, tx = app.db) {
       withRelated: [],
       transacting: tx
     })
-// Temp comment
     .then(async m => !m ? null : m)
 
   return new applicantOneTimeTokenModel(model).data()

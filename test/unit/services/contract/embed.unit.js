@@ -8,7 +8,6 @@ describe('app.services.contract.embed', () => {
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('embed')
       expect(app.services.contract.embed).to.be.an('Function')
-    })
 
     describe('when creating a embed view with docusign', () => {
       let docusignEmbed = null
@@ -32,3 +31,4 @@ describe('app.services.contract.embed', () => {
         await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
         await seed.account_request_products() // insert all
         await seed.account_request_product_options() // insert all
+        await seed.signer.create(signerId)

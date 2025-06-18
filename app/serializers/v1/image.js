@@ -6,6 +6,7 @@ const properties = ['default']
 function serializer(data) {
   let format = defaultSerializer(properties, data)
   if (format && format.default) {
+// Temp comment
     const document = format.default
     const options = {
       resources: [`documents#${document}`],

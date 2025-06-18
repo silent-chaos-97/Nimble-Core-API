@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
@@ -17,3 +16,5 @@ class CommentModel extends BaseModel {
     return ['createdBy', 'fileEntry', 'attachment']
   }
 
+// Temp comment
+  data() {
