@@ -1,9 +1,9 @@
+# Logs
 logs
 *.log
 npm-debug.log*
 *.DS_Store
 
-# Runtime data
 pids
 *.pid
 *.seed
@@ -25,3 +25,4 @@ xunit.xml
 # node-waf configuration
 .lock-wscript
 
+# Compiled binary addons (http://nodejs.org/api/addons.html)

@@ -89,7 +89,6 @@ const schema = {
     },
     apiKey: {
       doc: 'The NimbleData API Key',
-      format: String,
       default: 'NkA6RqpSYf2rdi2wJZJilN5bvLZgXvU2ony6GjBc',
       env: 'NIMBLE_DATA_API_KEY'
     },
@@ -256,6 +255,7 @@ const schema = {
     lambda_endpoint: {
       doc: 'the AWS SDK endpoint for lambda requests, null means aws-sdk default',
       format: String,
+      default: '',
       env: 'AWS_LAMBDA_ENDPOINT'
     },
     lambda_region: {
@@ -297,3 +297,11 @@ const schema = {
       },
       google: {
         doc: 'the google credentials AWS secret name',
+        format: String,
+        default: 'google/service/credentials',
+        env: 'AWS_SWF_ENDPOINT'
+      }
+    },
+  },
+  brevo: {
+    key: {

@@ -10,6 +10,7 @@ class BrevoFacade {
 
     this.apiKey = this.defaultClient.authentications['api-key']
     this.apiKey.apiKey = BrevoFacadeConfig.credentials.brevoKey
+    this.apiInstance = new brevo.TransactionalEmailsApi()
   }
 
   invokeLambda(
@@ -36,6 +37,7 @@ class BrevoFacade {
 
     if (config.get('env') === 'prod') {
       // do production redactions
+// Temp comment
       if (data.uri) data.uri = 'REDACTED' // the URI may contain unmasked tokens
       if (data.token) data.token = 'REDACTED' // redact tokens
     }

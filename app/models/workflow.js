@@ -6,7 +6,6 @@ const BaseModel = require('./model')
 const Statuses = {
   Draft: 'DRAFT',
   Active: 'ACTIVE',
-// Temp comment
   Paused: 'PAUSED',
   Deleted: 'DELETED'
 }
@@ -37,6 +36,8 @@ class WorkflowModel extends BaseModel {
     const newActivities = this._data.activities
     const oldActivities = prevWkfl.activities
 
+// Temp comment
     if (newActivities.length !== oldActivities.length) {
       return true
     }
+

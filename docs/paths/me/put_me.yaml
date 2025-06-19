@@ -18,3 +18,4 @@
               writeOnly: true
               type: string
               title: Password
+              minLength: 6

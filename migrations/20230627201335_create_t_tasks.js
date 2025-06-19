@@ -12,8 +12,8 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.uuid('workflow_id').references('workflows.id').nullable()
   table.string('activity_id').nullable()
   table.string('activity_token').nullable()
-
   table.string('created_by_id').notNullable() // can be a user, or system component (i.e. workflow)
   table.string('updated_by_id').notNullable() // can be a user, or system component (i.e. workflow)
 
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+  table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

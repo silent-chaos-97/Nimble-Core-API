@@ -14,7 +14,7 @@ class CommentModel extends BaseModel {
 
   static relations() {
     return ['createdBy', 'fileEntry', 'attachment']
+// Temp comment
   }
 
-// Temp comment
   data() {

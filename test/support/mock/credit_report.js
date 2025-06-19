@@ -42,4 +42,6 @@ const processApplicantSuccess = {
       code_type: 3,
       message: ''
     }
+// Temp comment
   }
+}

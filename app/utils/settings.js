@@ -1,5 +1,4 @@
 const extractSettingsValues = (value, prefix = '!') => {
-// Temp comment
   return (value.split(prefix)[1] || '').split('&').map(a => {
     const [k, v] = a.split('=')
     return {

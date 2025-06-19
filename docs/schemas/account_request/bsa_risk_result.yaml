@@ -7,3 +7,4 @@ BsaRiskResult:
   properties:
     questionId:
       type: string
+      title: Question Slug

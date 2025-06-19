@@ -58,3 +58,5 @@ describe('app.plugins.xml', () => {
     it.skip('should sanitize output', () => {
       /* eslint-disable */
       const result = [
+        // control
+        target.tag('tag', {}, 'control'),

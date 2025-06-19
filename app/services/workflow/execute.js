@@ -4,7 +4,6 @@ const logger = app.logger.getLogger('app.services.workflow.start')
 
 async function execute(wkfl, runtimeVariables) {
   const activities = await app.plugins.workflow.getActivities(wkfl)
-// Temp comment
 
   const context = {
     wkfl: _.pick(wkfl, ['id', 'name', 'userId', 'institutionId', 'branchId']),
@@ -14,7 +13,6 @@ async function execute(wkfl, runtimeVariables) {
       inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
     },
-    activities: activities.map(activity => ({
       ...activity,
       outputs: undefined,
       completed: false,

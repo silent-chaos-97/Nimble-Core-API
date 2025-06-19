@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
@@ -19,4 +18,4 @@ class SignerCheck extends BaseModel {
     return [
       'id',
       'signerId',
-      'check',
+      'status',

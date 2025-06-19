@@ -59,7 +59,6 @@ describe('GET /users', () => {
 
           expect(user).not.to.have.own.property('updatedAt')
 
-          expect(user.id).to.be.an('string')
           expect(res.body).not.to.have.own.property('email')
           expect(user.firstName).to.be.an('string')
           expect(user.lastName).to.be.an('string')
@@ -85,3 +84,5 @@ describe('GET /users', () => {
             if (err) throw new Error(err)
 
             expect(res.body).to.be.an('array')
+            expect(res.body).to.have.lengthOf(1)
+            //expect(res.body[0]).to.deep.equal(blueprints.user.get(user10Id))

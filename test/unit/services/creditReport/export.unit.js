@@ -13,7 +13,6 @@ describe('app.services.creditReport.export', () => {
 
   beforeEach(async () => {
     nock.disableNetConnect()
-    nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()
   })
@@ -44,3 +43,4 @@ describe('app.services.creditReport.export', () => {
       expect(fakeResponseDownload).to.have.been.calledWith(url)
       expect(fakeAwsS3uploadFn).to.have.been.calledOnce
       expect(fakeAwsLambda).to.have.been.calledOnce
+      expect(document.format).to.equal('pdf')

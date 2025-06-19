@@ -312,7 +312,6 @@ describe('Docusign', () => {
       it('should throw when error occurs', async () => {
         let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
-        scope = nock(app.config.get('docusign').basePath)
           .get(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc?include=recipients`)
           .reply(500, mocks.webhookRequest)
 
@@ -509,3 +508,16 @@ describe('Docusign', () => {
 
           expect(result).not.to.be.undefined
           expect(result.recipientUpdateResults[0].recipientId).to.equal(recipientId)
+        })
+
+        it('should update secondary signers', async () => {
+          nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+
+          // preparation
+          const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
+          const recipientId = '3'
+          const scope1 = nock(app.config.get('docusign').basePath)
+            .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
+            .reply(200, mocks.mockTemplateTabs)
+
+          const scope2 = nock(app.config.get('docusign').basePath)

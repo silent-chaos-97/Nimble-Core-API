@@ -16,3 +16,4 @@ module.exports = {
 
     model.referredById = _.trim(model.referredById)
 
+    if (!model.referredById || model.referredById === '!') { // removing referredBy, set explicitly to null

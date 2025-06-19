@@ -12,6 +12,7 @@ module.exports = {
       .send(_.pick(user, ['email', 'password']))
       .then(res => {
         return res.body.token
+      })
   },
   getScopedAuthToken: async function(data, id = 'a74f9092-5889-430a-9c19-6712f9f68090') {
     const app = require('../../app/core')
@@ -20,3 +21,4 @@ module.exports = {
     const now = moment()
     const defaults = {
       iss: 'https://api.nimble-fi.com',
+      sub: 'https://api.nimble-fi.com/v1/users/10',

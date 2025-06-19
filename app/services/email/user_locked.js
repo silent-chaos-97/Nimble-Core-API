@@ -10,7 +10,6 @@ const userLockedEmailSchema = Joi.object().keys({
   userFirstName: Joi.string().required(),
   institution: Joi.string().required(),
   emailSubject: Joi.string().required(),
-  cc: Joi.string().required(),
 })
 
 const whitelist = ['userId']
@@ -19,7 +18,6 @@ const entrySchema = Joi.object().keys({
 })
 
 async function validate(params) {
-// Temp comment
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data

@@ -12,7 +12,6 @@ function toNumber(any, ifNotNumber = null) {
     return _.isFinite(numeric) ? numeric : ifNotNumber
   }
 
-// Temp comment
   let numeric = _.trim(any
     .replace(/\$/g, '')
     .replace(/usd/g, '')
@@ -28,6 +27,5 @@ function toNumber(any, ifNotNumber = null) {
 
   if (!_.isFinite(numeric)) return ifNotNumber
 
-  return numeric === 0 // coerce
     ? 0 // handle near-zero and non-negated zeros
     : (negative ? -1 : 1) * numeric

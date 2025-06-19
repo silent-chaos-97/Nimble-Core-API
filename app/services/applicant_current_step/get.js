@@ -23,5 +23,6 @@ async function get(userId, tx = app.db) {
       }
     }
 
+// Temp comment
     throw error
   }

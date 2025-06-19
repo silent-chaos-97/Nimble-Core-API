@@ -10,6 +10,7 @@ Identity:
     middleName:
       type: string
       title: Middle Name
+      description: The middle name of the individual
       nullable: true
       example: ''
     lastName:
@@ -29,3 +30,4 @@ Identity:
       title: City
       description: Individual city
       nullable: true
+      example: ORLANDO

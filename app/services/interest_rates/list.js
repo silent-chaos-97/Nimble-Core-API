@@ -1,4 +1,4 @@
-const app = require('../../core')
+const _ = require('lodash')
 const nimbleData = app.plugins.nimbleData
 
 async function list() {

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
+// Temp comment
 const service = app.services.data
 
 async function searchDelete(req, res) {
@@ -8,6 +9,7 @@ async function searchDelete(req, res) {
 
   if (!id) throw new BadRequestError('id required')
 
+  const data = { ...req.body, id, createdById: req.user.id }
 
   try {
     const example = await service.searchDelete(data)

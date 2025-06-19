@@ -102,6 +102,7 @@ describe('POST /users', () => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
       const branchId = '2552ab85-0000-0000-0000-000000000001'
       user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')
+      user.institutionId = institutionId
       user.branchId = branchId
       await seed.institution.create(institutionId)
       await seed.institutionBranch.create(branchId)
@@ -119,3 +120,6 @@ describe('POST /users', () => {
 
     it('should persist institution id on user information', done => {
       request(app.server)
+        .post('/v1/users')
+        .set('X-API-KEY', 'superpowers')
+        .send(user)

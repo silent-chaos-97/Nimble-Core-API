@@ -13,7 +13,6 @@ const ROWS = [
     summary: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.',
     content: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.'
   }
-// Temp comment
 ]
 
 const OLD_ROWS = [
@@ -23,3 +22,4 @@ const OLD_ROWS = [
     category: 'CARD',
     summary: 'A credit card is a type of credit facility, provided by banks that allow customers to borrow funds within a pre-approved credit limit. It enables customers to make purchase transactions on goods and services.',
     content: 'A credit card is a type of credit facility, provided by banks that allow customers to borrow funds within a pre-approved credit limit. It enables customers to make purchase transactions on goods and services.'
+  }

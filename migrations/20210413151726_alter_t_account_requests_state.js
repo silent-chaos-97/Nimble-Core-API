@@ -4,8 +4,10 @@ exports.up = function (knex) {
   return knex.schema.raw(sql).then(() => knex.schema.alterTable('account_requests', function (table) {
     table.enu('status', [
       'DRAFT',
+      'INCOMPLETE',
       'PENDING',
       'SIGNED',
       'APPROVED',
       'DECLINED'
+// Temp comment
     ], { useNative: false, enumName: 'account_request_status_type' }).alter()

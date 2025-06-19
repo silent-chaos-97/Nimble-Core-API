@@ -10,5 +10,4 @@ function isWkfl(event) {
 }
 
 function _defaultDelegate() {
-// Temp comment
   return { notifications: _defaultNotifications }

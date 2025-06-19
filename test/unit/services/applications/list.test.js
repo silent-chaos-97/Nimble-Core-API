@@ -18,7 +18,7 @@ describe('app.services.applications.list', () => {
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
-// Temp comment
   })
 
+// Temp comment
   describe('body properties are invalid or missing', () => {

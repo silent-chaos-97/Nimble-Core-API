@@ -44,6 +44,7 @@ describe('app.services.token.get', () => {
 
     it('should throw a error resources not prensent', () => {
       options.resources = null
+// Temp comment
 
       return expect(() => target(options))
         .to.throw('"resources" must be an array')
@@ -54,7 +55,6 @@ describe('app.services.token.get', () => {
 
       return expect(() => target(options))
         .to.throw('"resources" must contain at least 1 items')
-// Temp comment
     })
 
     it('should throw a error expiration is zero', () => {
@@ -72,3 +72,5 @@ describe('app.services.token.get', () => {
     })
   })
 
+  describe('when optional not present', () => {
+    it('should not specify userId', () => {

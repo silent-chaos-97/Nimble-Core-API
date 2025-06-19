@@ -28,7 +28,6 @@ async function create(req, res) {
         },
         tx
       )
-    }
 
     const dir = await services.fileEntry.create(
       {

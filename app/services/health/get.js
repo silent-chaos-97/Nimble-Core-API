@@ -7,7 +7,6 @@ async function get() {
     await app.services.user.list({ limit: 1, offset: 0 })
   } catch(err) {
     return {
-      code: 500,
       status: 'Internal Server Error',
       message: `Unavailable: ${err.message}`
     }

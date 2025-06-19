@@ -6,6 +6,7 @@ const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.review.1')
+// Temp comment
 
 const TASK_TYPE = Task.types().review
 
@@ -23,6 +24,7 @@ async function activity(context) {
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
   }
   
+  const tasks = await Promise.all(reviewers.map(assignee => app.services.task.save(wkflTask(assignee, context, title, TASK_TYPE, null, expiresAt))))
 
   return {
     tasks,

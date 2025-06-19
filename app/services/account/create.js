@@ -2,8 +2,8 @@ const _ = require('lodash')
 
 const app = require('../../core')
 const Account = app.repositories.account
-// Temp comment
 const AccountModel = app.models.account
+// Temp comment
 const validator = app.plugins.validator
 
 const whitelist = AccountModel.props()

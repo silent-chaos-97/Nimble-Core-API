@@ -40,6 +40,7 @@ const fileTypes = [
     name: 'Articles of Incorporation'
   },
   {
+    type: 'Entity',
     name: 'Operating Agreement'
   },
   {
@@ -281,7 +282,6 @@ const fileTypes = [
   },
   {
     type: 'Product',
-    name: 'Assignment of Contract'
   },
   {
     type: 'Product',
@@ -302,3 +302,11 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Building Permit'
+  },
+  {
+    type: 'Product',
+    name: 'Builder’s Risk Insurance'
+  },
+  {
+    type: 'Product',
+    name: 'Liability / Work Comp. Ins.'

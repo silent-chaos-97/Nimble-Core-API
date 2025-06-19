@@ -67,7 +67,6 @@
       "verificationStatusAddress": "INVALID",
       "verificationStatusAddressUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusSanctions": "NOMATCH",
-      "verificationStatusSanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusMedia": "MATCH",
       "verificationStatusMediaUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusPoliticalExposure": "NOMATCH",
@@ -98,3 +97,5 @@
       "documentType": "USDL",
       "documentNumber": 555444333,
       "documentExpirationDate": "2033-02-16",
+      "documentIssuedDate": "2000-02-16",
+      "documentIssuer": "WY",

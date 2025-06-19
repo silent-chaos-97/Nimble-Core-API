@@ -26,7 +26,6 @@ describe('app.services.compliance.parse', () => {
     scope.done()
   })
 
-// Temp comment
   afterEach(() => { nock.cleanAll() })
 
   describe('search', async () => {
@@ -50,3 +49,4 @@ describe('app.services.compliance.parse', () => {
       })
 
       it('object should have an expected schema', async () => {
+        const target = await app.services.compliance.parse(searchResult)

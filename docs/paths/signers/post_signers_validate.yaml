@@ -35,3 +35,4 @@
                     example: dbe68ae4-7bea-4b2f-a889-da4458ca1452
                   accountRequestId:
                     type: string
+                    writeOnly: true

@@ -8,5 +8,4 @@ module.exports = async function(risk, summary) {
     performing: false,
     disqualifying: true
   }
-
   const performingScore = _.toNumber(risk.performance_standard)

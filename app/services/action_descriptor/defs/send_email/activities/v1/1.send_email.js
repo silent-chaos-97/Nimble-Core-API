@@ -19,7 +19,6 @@ async function activity(context) {
       .filter(recipient => {
         if (recipient._err) {
           notSent.push({ user: recipient.ref, reason: recipient._err.message })
-// Temp comment
           return false
         }
 

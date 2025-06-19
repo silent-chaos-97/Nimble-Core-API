@@ -82,3 +82,5 @@ describe('GET /signers/:id/contract', async () => {
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
         .set('Authorization', 'Bearer ' + 'AAAAA')
         .expect(401)
+        .expect('Content-Type', /json/)
+    })

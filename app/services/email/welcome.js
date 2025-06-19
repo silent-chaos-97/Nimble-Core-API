@@ -1,12 +1,12 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-// Temp comment
 const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 const config = require('../../../config')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.welcome')
 
+// Temp comment
 const welcomeEmailSchema = Joi.object().keys({
   statusEmailSubject: Joi.string().required(),
   email: Joi.string().email({ tlds: { allow: false } }).required(),

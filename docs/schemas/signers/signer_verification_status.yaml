@@ -20,3 +20,4 @@ SignerVerificationStatus:
     addressStatus:
       title: The status of the address verification
       type: string
+      enum: ['VALID', 'INVALID', 'PENDING']

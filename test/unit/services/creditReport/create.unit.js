@@ -32,3 +32,4 @@ describe('app.services.creditReport.create', () => {
   })
 
   describe('when calling with valid data', () => {
+    beforeEach(async () => {

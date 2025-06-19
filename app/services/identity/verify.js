@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const logger = app.logger.getLogger('app.services.identity.verify')
 
 async function verifyProcessStarted(signerId, tx) {

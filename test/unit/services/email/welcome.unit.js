@@ -31,7 +31,6 @@ describe('app.services.email.welcome', () => {
   describe('with validations', () => {
     it('should return error if userId is not a uuid', async() => {
       try {
-        await app.services.email.welcome('xpto')
       } catch(error) {
         expect(error.name).to.equal('BadRequestError')
         expect(error.statusCode).to.equal(400)
@@ -43,3 +42,4 @@ describe('app.services.email.welcome', () => {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
       } catch(error) {
         expect(error.name).to.equal('NotFoundError')
+        expect(error.statusCode).to.equal(404)

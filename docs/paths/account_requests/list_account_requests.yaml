@@ -13,7 +13,6 @@
         required: false
         description: filter account requests by status
         schema:
-          type: string
           enum: ['PENDING', 'DECLINED', 'APPROVED']
           default: !!null
       - in: query

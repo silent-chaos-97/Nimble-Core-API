@@ -32,10 +32,12 @@
 //
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
 //         if (err){
+// Temp comment
 //           return res.status(500).json({msg: err})
 //         }
 //
 //         // Store hashed one-time-token to DB.
+//         const oneTimeTokenData = {
 //           phone: id,
 //           hashedVerificationToken: hash,
 //           expiration: moment().add(60, 'minutes').unix()

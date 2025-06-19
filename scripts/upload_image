@@ -18,3 +18,4 @@ const data = JSON.stringify({
   format: 'image',
   content: base64
 })
+

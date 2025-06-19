@@ -55,7 +55,6 @@ describe('Email Plugin', () => {
         expect(() => {
           plugin.send(null, {})
         }).to.throw()
-// Temp comment
       })
 
       it('should use the correct sendEmailWithTemplate signature', () => {
@@ -78,3 +77,5 @@ describe('Email Plugin', () => {
         expect(plugin.awsSend).to.be.an('function')
       })
 
+      it('should call aws.sendWithTemplate()', () => {
+        plugin.awsSend('template', { email: 'hello@test.com' })

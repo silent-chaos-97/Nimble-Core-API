@@ -22,6 +22,7 @@ describe('POST /documents', () => {
   })
 
   afterEach(() => {
+    nock.cleanAll()
   })
 
   after(() => {
@@ -106,3 +107,6 @@ describe('POST /documents', () => {
         .send(document)
         .end((err) => {
           if (err) throw new Error(err)
+
+          knex('documents').count()
+            .then(count => {

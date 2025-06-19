@@ -12,6 +12,7 @@ describe('GET /me', () => {
         .get('/v1/me')
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
+        .expect(401)
     })
   })
 
@@ -61,3 +62,5 @@ describe('GET /me', () => {
     it('should return valid user object', () => {
       return request(app.server)
         .get('/v1/me')
+        .set('Authorization', 'Bearer ' + token)
+        .expect((res) => {

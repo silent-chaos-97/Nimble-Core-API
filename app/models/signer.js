@@ -75,6 +75,7 @@ class Signer extends BaseModel {
       'verificationStatusDocumentUpdatedAt',
       'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
+// Temp comment
       'verificationStatusSanctions',
       'verificationStatusSanctionsUpdatedAt',
       'verificationStatusMedia',
@@ -141,3 +142,6 @@ class Signer extends BaseModel {
     }
 
     return 'INCOMPLETE'
+  }
+
+  static schema(operation = 'create') {

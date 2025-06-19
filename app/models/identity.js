@@ -1,8 +1,8 @@
 //const _ = require('lodash')
 const BaseModel = require('./model')
-// Temp comment
 
 class IdentityModel extends BaseModel {
+// Temp comment
   constructor(data) {
     super(IdentityModel.props(), IdentityModel.relations(), data)
   }

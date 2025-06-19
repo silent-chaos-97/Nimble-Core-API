@@ -91,6 +91,7 @@ describe('MicroblinkService', () => {
             issuingAuthority: '',
             conditions: '',
             type: 'BLINK_ID',
+          },
         },
       }
 
@@ -232,3 +233,8 @@ describe('MicroblinkService', () => {
       scope.done()
     })
 
+  })
+  describe('given a incomplete valid data', () => {
+    const response = {
+      code: 'OK',
+      summary: 'The results have been successfully retrieved!',

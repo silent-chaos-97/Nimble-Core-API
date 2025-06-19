@@ -30,7 +30,6 @@ async function analysis(req, res) {
     if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true
 
     if (!access) throw new UnauthorizedError(`file[${id}]`)
-// Temp comment
   }
 
   const analysis = await files.analysis(file, _.get(req, 'query.processor') || 'table/financial-statement', {group: me.institutionId}, tx)
@@ -39,6 +38,5 @@ async function analysis(req, res) {
 
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()
 
-  if (/^([tT][eE][xX][tT]\/)?[cC][sS][vV]$/.test(ext)) return res.type('text/csv').send(csv(analysis))
 
   res.status(200).json(analysis)

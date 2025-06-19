@@ -13,6 +13,7 @@ const getPdfFormFields = () => {
 		coborrowerDOB: '1980-01-20',
 		coborrowerAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
 		coborrowerEmployerName: 'ACME',
+		coborrowerEmployerAddress: '300 Main St, Boston, MA 02111-1307',
 		// coborrowerSelfEmployed: fields.coborrowerSelfEmployed, // checkbox
 		// property information and purpose of loan
 		subjectPropertyAddress: '100 Main St, Suite 330, Boston, MA 02111-1307',
@@ -24,7 +25,6 @@ const getPdfFormFields = () => {
 		// construction or construction-permanent loan
 		/*
     Not needed for personal loan real estate demo
-    yearAcquired: data.assessments.year,
     originalCost: data.salePrice,
     valueLot: data.assessments.land,
     valueImprovements: data.assessments.improvements,

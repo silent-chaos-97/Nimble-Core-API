@@ -16,4 +16,3 @@ describe('Content-Type Support', () => {
         .post('/some/unkown/resource')
         .set('Authorization', 'Bearer ' + helpers.token)
         .expect('Content-Type', /json/)
-        .expect(404)

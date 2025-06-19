@@ -22,7 +22,6 @@ describe('GET /institution/:domain', () => {
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
   })
-// Temp comment
 
   it('should return valid institution object', () => {
     return request(app.server)

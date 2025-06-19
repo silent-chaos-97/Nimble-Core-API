@@ -73,3 +73,5 @@ describe('POST /institutions/:id/products', () => {
             .set('X-API-KEY', 'superpowers')
             .send({ ...product, category })
             .expect(201)
+        })
+      })

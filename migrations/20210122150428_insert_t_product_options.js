@@ -49,3 +49,4 @@ const checkingProductOptions = [
   },
   {
     key: 'checks',
+    category: 'product_feature',

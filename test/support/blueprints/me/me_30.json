@@ -3,9 +3,9 @@
   "email": "aliceinwonderland@nimblefi.com",
   "firstName": "Alice",
   "lastName": "Wonderland",
+  "createdAt": "2018-03-16T12:32:03.341Z",
   "accounts": [
     {
-      "strategy": "local",
       "createdAt": "2018-03-16T12:32:03.341Z"
     }
   ],

@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-const BaseModel = require('./model')
 
 class AccountOneTimeTokenModel extends BaseModel {
   constructor(data) {
@@ -8,3 +7,4 @@ class AccountOneTimeTokenModel extends BaseModel {
 
   static props() {
     return ['userId', 'scopes', 'resources', 'expiration', "phone", 'createdAt']
+  }

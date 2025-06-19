@@ -21,3 +21,4 @@
           },
           "email": {
             "type": "string",
+            "stereotype": "email"

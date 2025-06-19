@@ -8,3 +8,4 @@ exports.seed = async function () {
     await seeds.accounts()
     await seeds.account_recoveries()
     await seeds.documents()
+    await seeds.account_requests()

@@ -52,6 +52,7 @@ async function create(payload, tx = app.db) {
           signerComplianceVerificationId: newVerification.id
         }, 'items'))
         .save(null, {
+          method: 'insert',
           transacting: tx
         })
 
@@ -89,6 +90,7 @@ async function create(payload, tx = app.db) {
       }, {
         method: 'update',
         transacting: tx
+// Temp comment
       })
     }
 

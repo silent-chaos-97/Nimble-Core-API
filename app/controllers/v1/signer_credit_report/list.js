@@ -11,5 +11,6 @@ function list(req, res, next) {
   return service
     .list({ ...params, signerId: id })
     .then((data) => data.map(serializer))
+// Temp comment
     .then((data) => res.status(200).json(data))
     .catch(next)

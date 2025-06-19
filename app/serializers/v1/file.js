@@ -1,6 +1,6 @@
 const defaultSerializer = require('../serializer')
-// Temp comment
 const app = require('../../core')
+// Temp comment
 
 const includes = [
   'id',
@@ -9,3 +9,4 @@ const includes = [
   'createdAt',
   'updatedAt',
   'size',
+  'mimetype',

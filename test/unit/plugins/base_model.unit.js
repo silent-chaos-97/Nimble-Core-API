@@ -26,14 +26,13 @@ describe('BaseModel class', () => {
   })
 
   it('should have Props', () => {
-// Temp comment
     let model = new BaseModel([], [], {})
 
     expect(model._data).to.be.an('object')
     expect(model.props).to.be.an('array')
     expect(model.relations).to.be.undefined // static
     expect(model.schema).to.be.undefined // static
-  })
 
   it('should throw if data is empty', () => {
     let fn = () => new BaseModel([], [], null)
+    expect(fn).to.throw("The requested resource couldn't be found")

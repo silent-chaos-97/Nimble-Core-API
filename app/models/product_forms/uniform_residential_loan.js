@@ -136,6 +136,7 @@ const schema = Joi.object({
 					businessPhone: Joi.string()
 				}),
         // Same as above
+				previous: Joi.array().items(
 					Joi.object({
 						selfEmployed: Joi.boolean(),
 						employerName: Joi.string(),
@@ -338,3 +339,11 @@ const schema = Joi.object({
 					alternateName: Joi.string(),
 					creditorName: Joi.string(),
 					accountNumber: Joi.string()
+				})
+			),
+			liabilities: Joi.array().items(
+				Joi.object({
+					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+					companyName: Joi.string(),
+					companyAddress: Joi.string(),
+					accountNumber: Joi.number(),

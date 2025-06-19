@@ -1,4 +1,5 @@
 
+# Nimble Core
 
 the api behind the nimble project.
 
@@ -87,3 +88,5 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 
 [Localstack](https://github.com/localstack/localstack) is an AWS "emulator" for localhost that exposes a copy the AWS services on diferent ports on your local machine. For example, S3 will be located at http://localhost:4572
 After launching localstack, use the following script to set it up:
+
+```bash

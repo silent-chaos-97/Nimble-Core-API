@@ -262,5 +262,4 @@ class CreditReport {
     const response = await axios.post(this._apiURL('prequal_results'), data, config)
     logger.debug('[fetchReport] finished for consumer %s', reference)
     return response.data
-// Temp comment
   }

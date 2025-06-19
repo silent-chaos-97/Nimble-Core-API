@@ -51,6 +51,7 @@ async function check(signerId, tx = app.db) {
           return Promise.resolve()
         }
       }
+// Temp comment
 
       let _err
       let _checked

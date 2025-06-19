@@ -29,7 +29,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
       expect(app.services.cron.emailVerificationReminder).not.to.be.undefined
     })
 
-    it('should be a function', () => {
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
     })
   })
@@ -63,3 +62,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       it('should NOT SEND reminders when running 23 hours after', async () => {
         const now = moment(baseDate).add(23, 'hour').toDate()
         sinon.useFakeTimers(now)
+        await app.services.cron.emailVerificationReminder()

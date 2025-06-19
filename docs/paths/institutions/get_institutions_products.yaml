@@ -19,3 +19,4 @@
         required: true
         default: html
         schema:
+          type: string

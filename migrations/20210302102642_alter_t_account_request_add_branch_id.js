@@ -1,7 +1,7 @@
 
-// Temp comment
 exports.up = function (knex) {
   return knex.schema.alterTable('account_requests', function (table) {
     table.uuid('branch_id')
+// Temp comment
       .references('institution_branches.id')
       .onDelete('CASCADE')

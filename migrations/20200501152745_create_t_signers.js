@@ -4,7 +4,6 @@ exports.up = function(knex) {
     table.uuid('institution_id').references('institutions.id')
       .notNullable().onDelete('CASCADE')
     table.uuid('account_request_id').references('account_requests.id')
-      .notNullable().onDelete('CASCADE')
 
     table.string('identity_verification_status')
     table.boolean('identity_verified')
@@ -28,3 +27,4 @@ exports.up = function(knex) {
 
     table.string('step').notNullable()
 
+    table.string('document_number')

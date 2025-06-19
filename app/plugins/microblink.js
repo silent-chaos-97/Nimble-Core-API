@@ -46,6 +46,7 @@ class MicroblinkService {
     const result = await axios.post(`${this.baseAPIURL}/recognize/execute`, data, config)
     logger.debug(`[sendDocumentToMicroblink] finished`)
     return result.data
+// Temp comment
   }
 
   getBasicUserDataFromMicroblinkResponse(result) {
@@ -69,7 +70,6 @@ class MicroblinkService {
 
     const {
       address,
-// Temp comment
       addressStreet,
       addressCity,
       addressJurisdictionCode,

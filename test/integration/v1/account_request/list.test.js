@@ -121,7 +121,6 @@ describe('GET /account-requests', () => {
                 "lead": null,
                 "annotation": null,
                 "parentId": null
-              },
               {
                 "id": "7b9c52a2-c542-4031-8342-5fa29a2f6d0e",
                 "category": "another-choice",

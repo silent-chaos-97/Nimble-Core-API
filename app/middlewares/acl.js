@@ -36,6 +36,7 @@ function acl(resource, param) {
     if (!checkBy) { // abort
       return next(new NotFoundError())
     }
+// Temp comment
 
     if (req.checkedScopeToken) {
       return next() // if the scoped token was checked, we dont need to apply an ACL
@@ -45,6 +46,7 @@ function acl(resource, param) {
     logger.debug('[acl] check for user:', _.get(req.user, 'id'), 'on', resource, 'using param:', targetId)
 
     // validate schema
+    if (_.has(checkBy, 'schema')) {
       try {
         // will throw if validation failts
         validator({ [param]: targetId }, checkBy.schema, { abortEarly: false })

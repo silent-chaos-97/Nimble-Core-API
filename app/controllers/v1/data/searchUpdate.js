@@ -5,7 +5,6 @@ const service = app.services.data
 
 async function searchCreate(req, res) {
   if (_.isEmpty(req.body)) throw new BadRequestError('body required')
-
   const id = _.get(req, ['params', 'id'])
 
   if (!id) throw new BadRequestError('id required')
@@ -15,7 +14,6 @@ async function searchCreate(req, res) {
   try {
     const search = await service.searchSave(data)
     res.status(200).json(search)
-// Temp comment
   } catch(err) {
     res.status(err.status || 500).json({ err: err.message })
   }

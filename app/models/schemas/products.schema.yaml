@@ -86,3 +86,5 @@ columns:
       'RIFLGFCM03_N.B': Treasury / Constant Maturities / 3-Month
       'RIFLGFCM06_N.B': Treasury / Constant Maturities / 6-Month
       'RIFLGFCY01_N.B': Treasury / Constant Maturities / 1-Year
+      'RIFLGFCY02_N.B': Treasury / Constant Maturities / 2-Year
+      'RIFLGFCY03_N.B': Treasury / Constant Maturities / 3-Year

@@ -82,3 +82,5 @@ const publicMetadata = {
   countryOfOrigin: {
     text: 'What is your country of origin?',
     type: 'string',
+    order: 1,
+    score: {

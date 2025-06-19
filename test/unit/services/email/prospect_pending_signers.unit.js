@@ -12,7 +12,6 @@ describe('app.services.email.prospectPendingSigners', () => {
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
-    sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
   })
 
   beforeEach(() => {
@@ -42,3 +41,4 @@ describe('app.services.email.prospectPendingSigners', () => {
 
   describe('when calling with valid data', () => {
     beforeEach(async () => {
+      await seed.institution.create()

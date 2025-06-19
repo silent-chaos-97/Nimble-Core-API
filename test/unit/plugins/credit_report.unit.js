@@ -121,3 +121,6 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal(748)
     })
     it('should return number', async () => {
+      const result = await creditReport._getScore('1845')
+      expect(result).to.deep.equal(1845)
+    })

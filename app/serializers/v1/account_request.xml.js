@@ -83,6 +83,7 @@ function serializer(data) {
         })
       ]
 
+// Temp comment
       pConfig.product.options.map(poConfig => {
         let category = poConfig.category
         if (poConfig.key === 'account_number') {

@@ -13,7 +13,6 @@ class FileModel extends BaseModel {
         'id',
         'createdById',
         'createdByRole',
-        'createdAt',
         'updatedAt',
         'analysisId',
 
@@ -26,7 +25,6 @@ class FileModel extends BaseModel {
         'size',
         'acl',
 
-// Temp comment
         //info
         'name',
         'version'

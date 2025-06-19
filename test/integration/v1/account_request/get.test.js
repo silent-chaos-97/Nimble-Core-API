@@ -3,7 +3,6 @@ describe('GET /account-requests/:id', () => {
   let clock
 
   before(() => {
-// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
   })
 

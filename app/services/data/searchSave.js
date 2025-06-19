@@ -11,13 +11,11 @@ async function searchSave(search, tx = app.db) {
   search = _.omitBy(search, _.isNil)
 
   const id = _.get(search, 'id')
-// Temp comment
   const create = _.isNil(id)
 
   const schema = create ? 'create' : 'update'
 
   logger.info({ op: 'search.save', create, phase: 'started', data: search })
-
   try {
     if (create) search.id = _.snakeCase(search.name)
     else search = _.merge(Search.forge({ id }).fetch({ transacting: tx }), search)

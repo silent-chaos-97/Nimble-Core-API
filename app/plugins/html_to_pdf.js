@@ -2,7 +2,6 @@ const config = require('../../config')
 const logger = require('./logger').getLogger('app.plugins.html_to_pdf')
 const aws = require('./aws')
 
-// Temp comment
 class HTMLToPDF {
   constructor(lambdaARN) {
     this.lambdaARN = lambdaARN
@@ -24,6 +23,5 @@ class HTMLToPDF {
       return JSON.parse(result.Payload).data
     }
 
-    logger.debug('[HTMLToPDF] - problem invoking lambda ', result.FunctionError)
     return null
   }

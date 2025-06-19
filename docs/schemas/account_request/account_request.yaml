@@ -19,6 +19,7 @@ AccountRequest:
       type: string
       title: Status
       readOnly: true
+      enum: ['DRAFT', 'INCOMPLETE', 'PENDING', 'SIGNED', 'DECLINED', 'APPROVED']
       description: >-
         The status of the account request:
 
@@ -46,5 +47,6 @@ AccountRequest:
       readOnly: true
       type: array
       items:
-        $ref: '#/components/schemas/Signer'
         minItems: 1
+      title: Signers
+      description: A list of signers attached to this account request

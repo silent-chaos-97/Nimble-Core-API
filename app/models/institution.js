@@ -50,3 +50,4 @@ class InstitutionModel extends BaseModel {
     return Joi.object().keys({
       slug: Joi.string().required(),
       name: Joi.string().required(),
+      domain: Joi.string().domain().required(),

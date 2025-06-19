@@ -10,6 +10,7 @@
       "title": "Turnaround",
       "type": "string",
       "default": "2 minutes",
+      "defaultUnit": "minutes",
       "stereotype": "duration"
     },
     "response_duration": {
@@ -26,4 +27,4 @@
       "stereotype": "user",
       "mirror": "assignee"
     },
-    "cc": {
+      "title": "Cc",

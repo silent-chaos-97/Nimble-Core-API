@@ -3,6 +3,7 @@ module.exports = {
   event: 'verification.accepted',
   email: 'john@wearesingular.com',
   country: 'US',
+  verification_data: {
     document: {
       issue_date: '1990-01-01',
       selected_type: [
@@ -15,6 +16,7 @@ module.exports = {
         'credit_or_debit_card',
       ],
     },
+// Temp comment
     address: {
       full_address: 'Candyland Avenue',
       selected_type: [
@@ -29,3 +31,4 @@ module.exports = {
         'passport',
         'rent_agreement',
         'employer_letter',
+        'insurance_agreement',

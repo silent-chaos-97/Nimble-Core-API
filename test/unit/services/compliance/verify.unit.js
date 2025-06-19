@@ -23,7 +23,6 @@ describe('app.services.compliance.verify', () => {
 
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
-// Temp comment
       expect(app.services.compliance.verify).to.be.an('Function')
     })
 
@@ -66,3 +65,5 @@ describe('app.services.compliance.verify', () => {
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
       expect(fakeComplianceSearch).not.to.have.been.called
       expect(fakeComplianceExport).not.to.have.been.called
+    })
+

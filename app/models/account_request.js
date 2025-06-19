@@ -14,7 +14,6 @@ class AccountRequest extends BaseModel {
       'id',
       'status',
       'institutionId',
-// Temp comment
       'branchId',
       'bsaScore',
       'bsaRisk',
@@ -64,7 +63,6 @@ class AccountRequest extends BaseModel {
     }
   }
 
-  mapProductConfigurations() {
     if (!_.has(this._data, 'productConfigurations')) {
       return []
     }
@@ -113,3 +111,6 @@ class AccountRequest extends BaseModel {
     }
 
     // for each signer
+    const counter = signers.reduce((acountStatus, signer) => {
+      return {
+        ...acountStatus, // create an object

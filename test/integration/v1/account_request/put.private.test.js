@@ -170,6 +170,7 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.statusUpdatedAt).to.be.an('string')
             done()
           })
+// Temp comment
       })
 
       it('should return updated account request object', done => {
@@ -195,3 +196,8 @@ describe('PUT private /account-requests/:id', () => {
             if (err) return done(err)
 
             expect(res.body.id).to.equal(pendingAccountRequestId)
+            expect(res.body.status).to.equal(putRequest.status)
+            expect(res.body.statusEmailBody).to.equal(putRequest.statusEmailBody)
+            expect(res.body.statusEmailSubject).to.equal(putRequest.statusEmailSubject)
+            expect(res.body.statusUpdatedBy).to.deep.equal(expectedStatusUpdatedBy)
+            expect(moment.utc(res.body.statusUpdatedAt).unix()).to.be.closeTo(moment.utc().unix(), 2) // within 2 secconds

@@ -47,7 +47,6 @@
       "sanctionVerifiedAt": null,
       "checkPoliticalExposure": null,
       "politicalExposureVerifiedAt": null,
-      "checkAdverseMedia": null,
       "adverseMediaVerifiedAt": null,
       "checkAntiMoneyLaundering": null,
       "antiMoneyLaunderingVerifiedAt": null,
@@ -98,3 +97,5 @@
       "documentType": "PASSPORT",
       "documentNumber": 555444333,
       "documentExpirationDate": "2033-02-16",
+      "documentIssuedDate": "2000-02-16",
+      "documentIssuer": "USA",

@@ -1436,7 +1436,6 @@ const successResponse = {
                 "name": "Country",
                 "source": "complyadvantage-adverse-media",
                 "value": "Spain"
-              },
               {
                 "name": "Country",
                 "source": "complyadvantage-adverse-media",
@@ -2170,3 +2169,56 @@ const successResponse = {
                 ],
                 "name": "ComplyAdvantage PEP Data"
               },
+              "complyadvantage-adverse-media": {
+                "aml_types": [
+                  "adverse-media"
+                ],
+                "country_codes": [
+                  "ZW"
+                ],
+                "name": "ComplyAdvantage Adverse Media"
+              },
+              "dfat-australia-list": {
+                "aml_types": [
+                  "sanction"
+                ],
+                "listing_started_utc": "2012-03-02T00:00:00Z",
+                "name": "DFAT Australia Consolidated Sanctions List",
+                "url": "https://www.dfat.gov.au/international-relations/security/sanctions/Pages/consolidated-list.aspx"
+              },
+              "europe-sanctions-list": {
+                "aml_types": [
+                  "sanction"
+                ],
+                "listing_ended_utc": "2020-02-25T00:00:00Z",
+                "listing_started_utc": "2005-06-16T00:00:00Z",
+                "name": "EU External Action Service - Consolidated list of Sanctions",
+                "url": "https://eeas.europa.eu/headquarters/headquarters-homepage_en/8442/Consolidated%20list%20of%20sanctions"
+              },
+              "hm-treasury-list": {
+                "aml_types": [
+                  "sanction"
+                ],
+                "listing_ended_utc": "2020-02-19T00:00:00Z",
+                "listing_started_utc": "2002-02-21T00:00:00Z",
+                "name": "UK HM Treasury Office of Financial Sanctions Implementation Consolidated List",
+                "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
+              },
+              "malta-financial-services-authority-mfsa-national-sanctions": {
+                "aml_types": [
+                  "sanction"
+                ],
+                "listing_started_utc": "2014-01-01T00:00:00Z",
+                "name": "Malta Financial Services Authority (MFSA) National Sanctions",
+                "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"
+              },
+              "ofac-sdn-list": {
+                "aml_types": [
+                  "sanction"
+                ],
+                "listing_started_utc": "2003-03-10T00:00:00Z",
+                "name": "OFAC SDN List",
+                "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+              },
+              "special-economic-measures-act": {
+                "aml_types": [

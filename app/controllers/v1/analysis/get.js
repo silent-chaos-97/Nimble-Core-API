@@ -4,12 +4,12 @@ const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const service = app.services.analysis
 
-async function get(req, res) {
   const user = req.user
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
   const id = req.params.id
+  if (!id) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 
   const example = { id: req.params.id }
 

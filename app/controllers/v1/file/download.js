@@ -25,5 +25,6 @@ async function download(req, res) {
 
   stream.pipe(res)
 
+  stream.on('error', err => {
     log.error(err)
   })

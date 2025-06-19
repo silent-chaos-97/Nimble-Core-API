@@ -69,3 +69,4 @@ describe('app.services.contract.send', () => {
       it('should send contract', async () => {
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 
+        await app.services.contract.send(accountRequestId)

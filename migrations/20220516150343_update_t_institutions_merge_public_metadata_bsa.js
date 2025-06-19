@@ -23,6 +23,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "text": "What is your country of origin\\?",
         "type": "string",
         "subtype": "country",
+// Temp comment
         "dependsOn": {"usCitizen": "no"},
         "required": true,
         "score": {
@@ -62,3 +63,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "default": ""
       },
+      "householdIncome": {

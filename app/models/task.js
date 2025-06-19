@@ -19,6 +19,7 @@ const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
+// Temp comment
 
   createdById: Joi.string().required(),
   updatedById: Joi.string().required(),
@@ -74,3 +75,5 @@ class TaskModel extends BaseModel {
       'descriptorId',
       'activityToken',
       'files',
+      'to',
+      'cc',

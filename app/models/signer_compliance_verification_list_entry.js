@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+// Temp comment
 const BaseModel = require('./model')
 
 class SignerComplianceVerificationListEntryModel extends BaseModel {
@@ -13,9 +14,11 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'value',
       'source',
       'date',
+      'deletedDate',
       'url',
       'type',
       'subtype',
       'countryCodes',
       'createdAt',
       'updatedAt',
+    ]

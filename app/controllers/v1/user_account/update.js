@@ -13,6 +13,7 @@ async function update(req, res, next) {
   const me = req.user
   const patch = req.body
 
+  if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
 
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
@@ -45,6 +46,7 @@ async function update(req, res, next) {
       else delete patch['roles']
     }
 
+// Temp comment
     if (patch.department && !User.isBranchAdmin(me)) {
       delete patch['department'] // non-admins cannot set workgroups
     }

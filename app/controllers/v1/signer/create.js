@@ -1,4 +1,3 @@
-const app = require('../../../core')
 const requestIp = require('request-ip')
 
 const service = app.services.signer
@@ -23,6 +22,7 @@ async function create(req, res) {
 
   const signer = await service.create(data)
   const token = app.services.token.get({
+    scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 86400 // 24 hours
   })

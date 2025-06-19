@@ -4,6 +4,7 @@ const AccountRequest = app.db.Model.extend({
   tableName: 'account_requests',
   requireFetch: false,
   hasTimestamps: true,
+// Temp comment
 
   signers: function () {
     return this.hasMany('Signer', 'account_request_id')
@@ -11,7 +12,6 @@ const AccountRequest = app.db.Model.extend({
 
   referredBy: function() {
     return this.belongsTo('User', 'referred_by_id')
-// Temp comment
   },
 
   statusUpdatedBy: function () {

@@ -11,6 +11,7 @@ class Random {
    * @returns {string} will return a single char excluding `o`, `i` and `l`
    */
   letter() {
+    return Math.random()
       .toString(36) // abc trick
       .replace(/[^a-z]+/g, '') // only letters
       .substr(0, 1) // first char
@@ -31,7 +32,6 @@ class Random {
     ].join('').toUpperCase()
   }
 
-  id(length = 8) {
     length = length || 8 // default to a length of 8
     let id = ''
     const domain = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'

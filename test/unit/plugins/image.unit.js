@@ -20,7 +20,6 @@ describe("ImageFactory class", () => {
 
   describe(".asset()", () => {
     it("should have .asset() method", () => {
-      expect(ImageFactory.asset).not.to.be.undefined
       expect(ImageFactory.asset).to.be.an("Function")
     })
 

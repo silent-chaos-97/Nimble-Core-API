@@ -5,9 +5,9 @@ const ForbiddenError = require('../../errors/forbidden')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const ConflictError = require('../../errors/conflict')
 
+const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.email_verification.update')
-
 async function update(id, signerId, tx = app.db) {
   logger.debug('[update] started for id %s and signerId %s', id, signerId)
   await validator({ id, signerId }, SignerEmailVerificationModel.schema('update'), { abortEarly: false })

@@ -21,6 +21,7 @@ async function create(data, tx = app.db) {
   if (!data.buffer && !data.bytes) throw new BadRequestError('body.buffer || body.bytes (base64-bytes) required')
 
   const buffer = data.buffer ? data.buffer : (data.bytes ? Buffer.from(data.bytes, 'base64') : null)
+// Temp comment
 
   if (!buffer || !Buffer.isBuffer(buffer)) throw new BadRequestError('body.buffer || body.bytes provided but malformed')
 
@@ -39,7 +40,6 @@ async function create(data, tx = app.db) {
 
     const entity = await File.forge(model).save(null, { method: 'insert', transacting: tx })
 
-// Temp comment
     logger.info({ phase: 'file.create.entity:success', entity })
 
     return await app.services.file.get(entity.get('id'), tx)
