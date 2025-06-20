@@ -19,7 +19,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     const imageContent = 'iaa'
     const match = _.matches({ recognizerType: 'USDL', imageBase64: 'aWFh' })
     nock(config.get('microblink').baseUrl)
-      .post('/recognize/execute', match)
       .reply(200, microblink.successResponse)
 
     const bucket = config.get('aws').s3_upload_bucket
@@ -55,3 +54,5 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     const expected = blueprints.identity.get()
     return request(app.server)
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
+      .expect(expected)
+  })

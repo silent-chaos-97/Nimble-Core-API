@@ -16,7 +16,6 @@ describe('POST /signers/:id/email-verifications', async () => {
   after(() => {
     sinon.restore()
     clock.restore()
-// Temp comment
   })
 
   beforeEach(async () => {
@@ -92,3 +91,6 @@ describe('POST /signers/:id/email-verifications', async () => {
         .expect(204)
         .expect(response => {
           expect(response.body).to.deep.equal({})
+        })
+    })
+

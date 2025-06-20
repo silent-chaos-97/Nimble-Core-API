@@ -23,3 +23,4 @@ SignerCreditReport:
       description: An error code if it was not possible to fetch the report
       type: string
       example: '188504_1603905845'
+    score:

@@ -58,6 +58,7 @@ describe('GET /signers/:id/contract', async () => {
       .where('id', '00000000-0000-AAAA-AAAA-000000000333')
   })
 
+
   describe('when validating', () => {
     it('should return 403 when the token does not provide access to that signer', async () => {
       let badtoken = app.services.token.get({
@@ -84,3 +85,6 @@ describe('GET /signers/:id/contract', async () => {
         .expect('Content-Type', /json/)
     })
 
+
+    it('should return 400 when the token is missing', async () => {
+      return request(app.server)

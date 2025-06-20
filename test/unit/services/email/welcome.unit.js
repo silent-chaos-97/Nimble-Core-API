@@ -20,7 +20,6 @@ describe('app.services.email.welcome', () => {
 
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
-    sinon.reset()
   })
 
   after(() => {
@@ -45,3 +44,4 @@ describe('app.services.email.welcome', () => {
         expect(error.name).to.equal('NotFoundError')
         expect(error.statusCode).to.equal(404)
       }
+    })

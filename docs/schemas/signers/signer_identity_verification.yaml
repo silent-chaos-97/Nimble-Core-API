@@ -8,3 +8,4 @@ SignerIdentityVerification:
   properties:
     verification:
       title: The name of the verification type
+      type: string

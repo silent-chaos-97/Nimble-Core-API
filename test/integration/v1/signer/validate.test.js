@@ -34,7 +34,6 @@ describe('POST /signers/:id/validate', async () => {
       dateOfBirth: '1955-05-22T00:00:00.000Z',
       email: 'john.mf.mcclane@wearesingular.com',
       phoneNumber: '+1718-953-8465',
-      address: '1381 Atlantic Ave, Brooklyn',
       city: 'New York',
       state: 'NY',
       zipCode: 'NY11216',
@@ -49,6 +48,7 @@ describe('POST /signers/:id/validate', async () => {
 
     // update primary signer with default data
     await knex('signers')
+      .update('ssn', '111-22-3333')
       .update('phone_number', '+1718-953-8465')
       .where('id', signer.id)
 

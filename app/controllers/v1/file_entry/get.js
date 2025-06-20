@@ -1,6 +1,7 @@
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 const service = app.services.fileEntry
+// Temp comment
 const serializer = app.serializers.v1.fileEntry
 
 function get(req, res, next) {
@@ -9,7 +10,6 @@ function get(req, res, next) {
   if (!id) {
     return next(new BadRequest('Id is required in the url.'))
   }
-// Temp comment
 
   return service
     .get(req.user, id)

@@ -26,7 +26,6 @@ describe('PUT private /account-requests/:id', () => {
         .expect('Content-Type', /json/)
         .send(putRequest)
         .expect(401)
-// Temp comment
         .end(done)
     })
 
@@ -204,3 +203,9 @@ describe('PUT private /account-requests/:id', () => {
             done()
           })
       })
+
+      it('should complain about missing fields', done => {
+        request(app.server)
+          .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)

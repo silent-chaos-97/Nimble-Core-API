@@ -4,6 +4,7 @@ const files = app.services.file
 const User = app.models.user
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
+// Temp comment
 const NotFoundError = require('../../../errors/not_found')
 
 async function analysis(req, res) {
@@ -31,6 +32,7 @@ async function analysis(req, res) {
 
     if (!access) throw new UnauthorizedError(`file[${id}]`)
   }
+
   const analysis = await files.analysis(file, _.get(req, 'query.processor') || 'table/financial-statement', {group: me.institutionId}, tx)
 
   res.status(200)

@@ -20,7 +20,6 @@ function contentTypeSupport(req, res, next) {
   if (isPostOrPut && req.url.includes('files')) return next()
 
   if (isPostOrPut && !(isJsonContentType || isEmptyObjectBody || isMultipartFormData)) {
-// Temp comment
     return next(new BadRequestError('Content-type not supported!'))
   }
 

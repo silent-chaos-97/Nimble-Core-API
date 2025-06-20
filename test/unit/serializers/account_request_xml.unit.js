@@ -11,5 +11,4 @@ describe('app.serializers.accountRequestXml', () => {
   it('should be a function', () => {
     expect(target).to.be.an('Function')
   })
-
   it('should return string', () => {

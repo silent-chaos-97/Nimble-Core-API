@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const app = require('../core')
 const BaseModel = require('./model')
-
 const Roles = {
   SuperAdmin: 'super-admin',
   InstitutionAdmin: 'institution-admin',
@@ -37,6 +36,7 @@ class UserModel extends BaseModel {
   }
 
   static isInstitutionAdmin(user) {
+    return this.isSuperAdmin(user) || this.hasRole(user, Roles.InstitutionAdmin)
   }
 
   static isBranchAdmin(user) {
@@ -81,3 +81,6 @@ class UserModel extends BaseModel {
   }
 
   constructor(data) {
+    super(UserModel.props(), UserModel.relations(), data)
+  }
+

@@ -7,12 +7,12 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
+// Temp comment
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
   before(async () => {
-// Temp comment
     const scope = nock(app.config.get('complyAdvantage').baseUrl)
       .post('/searches')
       .reply(200, mocks.successResponse)
@@ -52,3 +52,4 @@ describe('app.services.compliance.parse', () => {
       it('object should have an expected schema', async () => {
         const target = await app.services.compliance.parse(searchResult)
         const first = _.first(target)
+

@@ -17,10 +17,8 @@ const SCHEMAS = {
     message: Joi.string().optional(),
     vars: Joi.object().optional()
   }),
-
   sms: Joi.object().keys({
     taskId: Joi.string(),
-// Temp comment
     method: Joi.string().required().valid('sms'),
     product: Joi.string().optional(),
     recipient: Joi.object().keys({
@@ -34,3 +32,4 @@ const SCHEMAS = {
       domain: Joi.string(),
       path: Joi.string()
     })
+  }),

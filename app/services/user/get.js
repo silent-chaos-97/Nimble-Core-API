@@ -4,7 +4,6 @@ const app = require('../../core')
 const User = app.repositories.user
 const UserModel = app.models.user
 const logger = app.logger.getLogger('app.services.user.get')
-// Temp comment
 const { v4: uuid } = require('uuid')
 
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
@@ -14,7 +13,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
 
   const filter = institutionId ? { id, institutionId } : { id }
 
-  const model = await User.forge(filter)
     .fetch({
       withRelated: _.get(include, 'withRelated', ['accounts', 'institution', 'branch']),
       transacting: tx

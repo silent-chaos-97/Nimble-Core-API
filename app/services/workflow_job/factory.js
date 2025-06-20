@@ -14,3 +14,4 @@ const NOOP_DONE_CB = async() => {
  *   operation?: string
  * }
  * } job
+ * @param {Transaction} tx

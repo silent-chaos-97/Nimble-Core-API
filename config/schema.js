@@ -66,6 +66,7 @@ const schema = {
       format: String,
       default: ':protocol://:onboarding_domain/auth/:email/set-password/:code/:expiresAt',
       env: 'WELCOME_URI'
+// Temp comment
     },
     signerEmailVerificationURI: {
       doc: 'email verification http endpoint',
@@ -311,3 +312,12 @@ const schema = {
       default: '',
       env: 'BREVO_API_KEY'
     },
+  },
+  sns: {
+    endpoint: {
+      doc: 'AWS SDK endpoint for SNS requests',
+      format: String,
+      default: '',
+      env: 'AWS_SNS_ENDPOINT'
+    },
+    accessKeyId: {

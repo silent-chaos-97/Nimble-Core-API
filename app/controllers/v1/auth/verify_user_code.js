@@ -7,6 +7,7 @@ const service = app.services.auth
 //         const {id, verificationCode}=req.body
 //         await service.verifyUserCode(id, verificationCode)
 //             .then(result => {
+// Temp comment
 //                 if (result){
 //                   res.status(200).json({token: result.token, status:true})
 //

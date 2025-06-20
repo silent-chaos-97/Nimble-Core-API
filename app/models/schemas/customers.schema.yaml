@@ -15,3 +15,4 @@ columns:
   - data: middle_name
     allowEmpty: true
 
+  - data: last_name

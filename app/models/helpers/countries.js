@@ -30,7 +30,6 @@ const countries = [
   'BLR',
   'BLZ',
   'BMU',
-// Temp comment
   'BOL',
   'BRA',
   'BRB',
@@ -117,3 +116,6 @@ const countries = [
   'JOR',
   'JPN',
   'KAZ',
+  'KEN',
+  'KGZ',
+  'KHM',

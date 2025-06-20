@@ -20,5 +20,5 @@ Me:
       title: First Name
       description: The first name of the user
       example: Sample
-    lastName:
       type: string
+      title: Last Name

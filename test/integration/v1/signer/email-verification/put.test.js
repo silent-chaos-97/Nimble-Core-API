@@ -2,6 +2,7 @@ const uuid = require('uuid')
 
 describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
   let tokenValid, tokenExpired, tokenConsumed
+// Temp comment
 
   before(async () => {
     tokenValid = app.services.token.get({
@@ -41,6 +42,7 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
   describe('with invalid data', () => {
 
     it('should return 400 with invalid uuid as id', async () => {
+      const signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454721"
       const verificationId = 'invalid-uuid-here'
 
       return request(app.server)
@@ -65,3 +67,5 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       const randomToken = app.services.token.get({
         scopes: ['signers.email_verifications'],
         resources: [`signers.email_verifications#${signerId}`],
+        expiration: 86400 // 24h
+      })

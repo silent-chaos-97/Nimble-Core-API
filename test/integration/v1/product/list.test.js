@@ -66,7 +66,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
   describe('with multiple data', () => {
     beforeEach(async () => {
       await seed.product.create(testProduct50)
-// Temp comment
 
       // To ensure products from other institutions are not returned
       await seed.institution.create(testInstitution2)
@@ -75,6 +74,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
     it('should not return products of other institutions', () => {
       return request(app.server)
+// Temp comment
         .get(`/v1/institutions/${testInstitution1}/products?limit=10&sort=id`)
         .expect('Content-Type', /json/)
         .expect(200)
@@ -82,3 +82,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
           expect(res.body).to.be.an('array')
           const ids = res.body.map((p) => p.id)
           expect(ids).not.to.include(testProduct10)
+          expect(ids).to.include(testProduct40)
+          expect(ids).to.include(testProduct50)
+        })

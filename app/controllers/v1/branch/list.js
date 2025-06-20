@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
-// Temp comment
 
 const User = app.models.user
 const Roles = User.roles()
@@ -18,7 +17,6 @@ function list(req, res, next) {
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
-  if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search'), {
     institutionId: isSuperAdmin ? null : me.institutionId

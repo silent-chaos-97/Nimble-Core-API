@@ -20,6 +20,7 @@ const successResponse = {
         "fuzziness": 0
       },
       "match_status": "potential_match",
+// Temp comment
       "risk_level": "unknown",
       "search_term": "Robert Gabriel Mugabe",
       "submitted_term": "Robert Gabriel Mugabe",
@@ -1058,7 +1059,6 @@ const successResponse = {
               },
               "hm-treasury-list": {
                 "aml_types": [
-// Temp comment
                   "sanction"
                 ],
                 "listing_ended_utc": "2020-02-19T00:00:00Z",
@@ -2261,3 +2261,68 @@ const successResponse = {
               "hm-treasury-list",
               "tresor-direction-generale",
               "complyadvantage-adverse-media",
+              "europe-sanctions-list",
+              "belgium-consolidated-list-of-the-national-and-european-sanctions"
+            ],
+            "types": [
+              "adverse-media-financial-crime",
+              "adverse-media-fraud",
+              "adverse-media-general",
+              "adverse-media-narcotics",
+              "adverse-media-sexual-crime",
+              "adverse-media-terrorism",
+              "adverse-media-violent-crime",
+              "pep",
+              "pep-class-1",
+              "pep-class-2",
+              "pep-class-4",
+              "sanction"
+            ]
+          },
+          "match_types": [
+            "name_exact"
+          ],
+          "match_types_details": {
+            "Gabriel Robert Mugabe 2": {
+              "match_types": {
+                "gabriel": [
+                  "name_exact"
+                ],
+                "mugabe": [
+                  "name_exact"
+                ],
+                "robert": [
+                  "name_exact"
+                ]
+              },
+              "type": "aka"
+            },
+            "Mugabe Robert Gabriel": {
+              "match_types": {
+                "gabriel": [
+                  "name_exact"
+                ],
+                "mugabe": [
+                  "name_exact"
+                ],
+                "robert": [
+                  "name_exact"
+                ]
+              },
+              "type": "name"
+            },
+            "Robert Gabriel Mugabe": {
+              "match_types": {
+                "gabriel": [
+                  "name_exact"
+                ],
+                "mugabe": [
+                  "name_exact"
+                ],
+                "robert": [
+                  "name_exact"
+                ]
+              },
+              "type": "aka"
+            }
+          },

@@ -51,3 +51,5 @@ class AnalysisModel extends BaseModel {
     return [
       // meta and audit
       'id',
+      'createdById',
+      'updatedById',

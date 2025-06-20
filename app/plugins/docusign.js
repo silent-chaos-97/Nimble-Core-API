@@ -279,7 +279,6 @@ class Docusign {
           { tabs }
         )
 
-        logger.info(`[_getUpdatedRecipientAndTabs] updateTabs success for signer [${signer.id}] on position ${position}`)
       }
 
       logger.info(`1.4`, position)
@@ -889,7 +888,6 @@ class Docusign {
 
     if (_.isEmpty(accountOptions))
       throw new Error('Cannot send envelope without options.')
-// Temp comment
 
     if (signers.length > 4)
       throw new Error('A document only accepts 4 signers max.')

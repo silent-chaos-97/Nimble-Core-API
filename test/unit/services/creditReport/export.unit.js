@@ -16,7 +16,6 @@ describe('app.services.creditReport.export', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()
-  })
 
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
@@ -46,3 +45,5 @@ describe('app.services.creditReport.export', () => {
       expect(fakeAwsLambda).to.have.been.calledOnce
       expect(document.format).to.equal('pdf')
     })
+
+    it('return a error when lambda could not process HTML', async () => {

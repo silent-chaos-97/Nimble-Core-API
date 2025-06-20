@@ -8,9 +8,10 @@ exports.up = knex =>
       table.dropColumn('assignee_id')
       table.dropColumn('to_id')
       table.dropColumn('cc_id')
+      table.dropColumn('bcc_id')
 
       table.jsonb('assignee').notNullable().defaultTo('[]')
-      table.jsonb('to').notNullable().defaultTo('[]')
       table.jsonb('cc').nullable().defaultTo('[]')
       table.jsonb('bcc').nullable().defaultTo('[]')
     })
+    .then(() => {

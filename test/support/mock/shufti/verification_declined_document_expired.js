@@ -33,3 +33,4 @@ module.exports = {
         'insurance_agreement',
         'tax_bill',
       ],
+    },

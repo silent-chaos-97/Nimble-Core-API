@@ -38,7 +38,6 @@ const publicMetadata = {
     type: 'string',
     order: 2,
     score: {
-      no: 2,
       yes: 2
     },
     default: 'no',
@@ -85,3 +84,6 @@ const publicMetadata = {
     order: 1,
     score: {
       US: 0,
+      default: 0
+    },
+    default: '',

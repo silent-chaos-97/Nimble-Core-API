@@ -58,3 +58,4 @@ const createSignHereTab = (anchorString, anchorXOffset, anchorYOffset, anchorUni
   anchorString,
   anchorXOffset,
   anchorYOffset,
+  anchorUnits

@@ -18,3 +18,4 @@
           default: !!null
       - in: query
         name: sort
+        required: false

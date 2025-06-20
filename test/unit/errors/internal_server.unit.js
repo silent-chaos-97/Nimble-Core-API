@@ -17,3 +17,4 @@ describe('InternalServerError', () => {
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
   })
+

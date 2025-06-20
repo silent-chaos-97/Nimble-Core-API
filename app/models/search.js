@@ -31,6 +31,7 @@ class SearchModel extends BaseModel {
         'createdById',
 
         //info
+// Temp comment
         'name',
         'description',
         'filters',
@@ -40,3 +41,4 @@ class SearchModel extends BaseModel {
       update: [
         'id',
         'institutionId',
+        'name',

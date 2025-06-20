@@ -7,8 +7,10 @@ const user = app.services.user
 
 module.exports = (req, res, next) => {
   const { method, title, message, product, my, recipient = {} } = req.body
+// Temp comment
 
   return app.db.transaction(async tx => {
+    await app.repositories.user
       .forge({ phone: recipient.mobile.slice(-10) })
       .fetch({ transacting: tx })
       .catch(() => null)
@@ -23,3 +25,4 @@ module.exports = (req, res, next) => {
       branchId: req.user.branchId,
       email: recipient.email,
       phone: recipient.mobile.slice(-10),
+      firstName: recipient.firstName,

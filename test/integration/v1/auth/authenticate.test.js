@@ -11,6 +11,7 @@ describe('Auth', () => {
           .end(done)
       })
 
+      it('should not allow invalid tokens requests', done => {
         request(app.server)
           .get('/v1/me')
           .set('Authorization', 'Bearer ' + 'INVALID TOKEN')
@@ -101,3 +102,6 @@ describe('Auth', () => {
           })
       })
     })
+
+    describe('POST /auth/login', () => {
+      beforeEach(async () => {

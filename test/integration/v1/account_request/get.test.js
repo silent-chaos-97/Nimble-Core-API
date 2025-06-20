@@ -2,6 +2,7 @@ describe('GET /account-requests/:id', () => {
   const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
   let clock
 
+// Temp comment
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
   })
@@ -30,7 +31,6 @@ describe('GET /account-requests/:id', () => {
     await seed.account_request_product_options() // insert all
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
-// Temp comment
   })
 
   describe('Token', () => {

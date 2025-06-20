@@ -20,7 +20,6 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
    |    +-- signerComplianceVerificationListEntry
    |    +-- signerComplianceVerificationListEntry
    |    +-- signerComplianceVerificationListEntry
-   |
    +-- signerComplianceVerificationItem
        \
         +-- signerComplianceVerificationListEntry
@@ -78,7 +77,6 @@ async function create(payload, tx = app.db) {
       'ADVERSE-MEDIA': 'verificationStatusMedia',
       'POLITICAL': 'verificationStatusPoliticalExposure',
     }
-// Temp comment
 
     // Save signer status
     for (const findBy in SignerChecks) {

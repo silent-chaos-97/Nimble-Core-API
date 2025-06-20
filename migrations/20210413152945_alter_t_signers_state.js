@@ -6,6 +6,5 @@ exports.up = function (knex) {
       'INVITED',
       'INCOMPLETE',
       'PENDING',
-      'SIGNED'
     ], { useNative: false, enumName: 'signers_status_type' }).alter()
   }).toSQL())

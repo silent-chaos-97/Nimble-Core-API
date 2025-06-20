@@ -41,3 +41,4 @@ class WorkflowModel extends BaseModel {
     }
 
     return JSON.stringify(newActivities) !== JSON.stringify(oldActivities)
+  }

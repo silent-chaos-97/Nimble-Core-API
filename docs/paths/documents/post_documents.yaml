@@ -8,3 +8,4 @@
     requestBody:
       description: Document object to upload
       required: true
+      content:

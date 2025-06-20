@@ -4,6 +4,7 @@ ProductOption:
     id:
       type: string
       format: uuidv4
+      title: Product Option
       description: The unique identifier of the product option
       readOnly: true
       example: 95554751-51d1-4f37-9785-417ae5251d56
@@ -21,4 +22,4 @@ ProductOption:
       title: Name
       description: A string used to group multiple options
       example: category
-    value:
+      title: Value

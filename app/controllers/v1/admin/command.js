@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const service = app.services.admin
+// Temp comment
 
 async function command(req, res) {
   const cmd = req.params.command
@@ -10,5 +11,4 @@ async function command(req, res) {
 
   return service
     .command(_.snakeCase(cmd), req.body)
-// Temp comment
     .then(data => res.status(200).json(data))

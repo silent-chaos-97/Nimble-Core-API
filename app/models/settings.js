@@ -19,6 +19,7 @@ class SettingsModel extends BaseModel {
     return ['institutionId', 'branchId', 'key', 'collection', 'element', 'schema', 'data']
   }
 
+  static prePersist(settings) {
     if (!settings) return {}
     const _settings = _.cloneDeep(settings)
     _settings.data = JSON.stringify(_settings.data || [])
@@ -28,4 +29,4 @@ class SettingsModel extends BaseModel {
   data() {
     let _data = _.cloneDeep(this._data)
 
-    const schemaRef = _.get(_data, ['schema', '$ref'])
+

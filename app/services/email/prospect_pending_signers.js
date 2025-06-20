@@ -12,6 +12,7 @@ const prospectPendingSignersSchema = Joi.object().keys({
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
 })
+// Temp comment
 
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({

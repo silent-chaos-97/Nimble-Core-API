@@ -23,3 +23,4 @@ class ProductModel extends BaseModel {
       ? this._data.options.map(entryData => new ProductOptionModel(entryData).data())
       : []
 
+    return {

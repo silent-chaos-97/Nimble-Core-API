@@ -22,7 +22,6 @@ describe('app.models.signer.flattenData', () => {
       somethingA: 'somethingA',
       somethingB: 'somethingB',
       idProofDocument: {
-        backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
         type: 'type',
         number: 'number',
@@ -53,7 +52,6 @@ describe('app.models.signer.flattenData', () => {
       somethingA: 'somethingA',
       somethingB: 'somethingB',
       otherObject: {
-// Temp comment
         backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
         type: 'type',
@@ -74,3 +72,5 @@ describe('app.models.signer.flattenData', () => {
         'type': 'type',
         'number': 'number',
         'issuedDate': 'issuedDate',
+        'issuer': 'issuer',
+        'expirationDate': 'expirationDate',

@@ -6,7 +6,6 @@ const publicMetadata = {
         val: 7,
         risk: 'High'
       },
-// Temp comment
       {
         op: '>=',
         val: 5,
@@ -88,3 +87,5 @@ const publicMetadata = {
       US: 0,
       default: 0
     },
+    default: '',
+    subtype: 'country',

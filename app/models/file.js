@@ -9,7 +9,6 @@ class FileModel extends BaseModel {
   static props(op) {
     return {
       all: [
-// Temp comment
         // app meta
         'id',
         'createdById',
@@ -33,3 +32,4 @@ class FileModel extends BaseModel {
       ],
 
       create: [
+        'createdById',

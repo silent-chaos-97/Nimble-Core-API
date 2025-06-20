@@ -4,7 +4,6 @@ const logger = app.logger.getLogger('app.middlwares.error_handler')
 
 const SUPPORTED_ERRORS = [
   'NotFoundError',
-  'BadRequestError',
   'InternalServerError',
   'ConflictError',
   'UnauthorizedError',
@@ -16,7 +15,6 @@ const SUPPORTED_ERRORS = [
 
 function serialize(err) {
   return {
-// Temp comment
     statusCode: err.statusCode,
     message: err.message
   }

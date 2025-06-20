@@ -22,3 +22,4 @@ SignerComplianceVerificationListEntry:
     date:
       title: A date for this entry
       type: string
+      format: date

@@ -1,5 +1,6 @@
 /**
  * @param { import("knex").Knex } knex
+// Temp comment
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
@@ -7,3 +8,4 @@ exports.up = function (knex) {
     table.string('id').primary()
     table.jsonb('value').notNullable()
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

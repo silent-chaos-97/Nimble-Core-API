@@ -65,3 +65,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "householdIncome": {
         "order": 5,
         "text": "Is your household income greater than $50,000\\?",
+        "type": "string",

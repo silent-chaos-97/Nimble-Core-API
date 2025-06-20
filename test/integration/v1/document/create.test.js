@@ -112,3 +112,6 @@ describe('POST /documents', () => {
             .then(count => {
               const expected = { count: "0" }
               const actual = _.first(count)
+              expect(actual).to.be.eql(expected)
+              done()
+            })

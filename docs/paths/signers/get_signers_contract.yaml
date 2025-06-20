@@ -1,6 +1,7 @@
 /signers/{id}/contract:
   get:
     tags:
+      - Signer
     summary: Fetch a link for the signer contract, to forward the user to a page where he can view and sign the contract
     description: Fetch Signer Contract
     operationId: getSignerContract
@@ -10,5 +11,5 @@
       - name: id
         in: path
         description: Signer id
-        required: true
         schema:
+          type: string

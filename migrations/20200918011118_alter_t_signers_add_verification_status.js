@@ -28,3 +28,4 @@ exports.up = function (knex) {
 
     table.enu('verification_status_sanctions', enumMatchValues, enumOps)
       .defaultTo('PENDING')
+      .notNullable()

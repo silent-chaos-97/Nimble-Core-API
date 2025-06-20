@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const services = app.services
-const serializer = app.serializers.v1.fileEntry
 
 async function create(req, res) {
   const { name, parentId } = req.body
@@ -15,7 +14,6 @@ async function create(req, res) {
   }
 
   await app.db.transaction(async tx => {
-// Temp comment
     let f = {}
 
     if (!isDir) {

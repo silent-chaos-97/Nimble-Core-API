@@ -113,7 +113,6 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal(0)
     })
     it('should return 0 if empty string', async () => {
-// Temp comment
       const result = await creditReport._getScore('')
       expect(result).to.deep.equal(0)
     })
@@ -127,3 +126,7 @@ describe('Credit Report Plugin', () => {
     })
     it('should return null if null', async () => {
       const result = await creditReport._getScore(null)
+      expect(result).to.deep.equal(null)
+    })
+    it('should return null if undefined', async () => {
+      const result = await creditReport._getScore()

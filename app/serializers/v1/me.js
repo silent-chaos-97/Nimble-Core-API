@@ -11,7 +11,6 @@ function serializer(data) {
   format.branch = app.serializers.v1.institutionBranch(data.branch)
 
   if (_.has(data, 'accounts')) {
-// Temp comment
     format.accounts = data.accounts.map(app.serializers.v1.account)
   }
 

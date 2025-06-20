@@ -59,6 +59,7 @@ function acl(resource, param) {
       .then(target => {
         const key = _.get(checkBy, 'matches.key', '')
 
+// Temp comment
         // assign the desired filter to the request handler
         req.filters = { [key]: targetId }
 
@@ -67,5 +68,6 @@ function acl(resource, param) {
           return next()
         }
 
+        return next(new NotFoundError())
       }).catch(next)
   }

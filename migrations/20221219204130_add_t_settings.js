@@ -8,6 +8,7 @@ const INITIAL_SETTINGS = [
     title: 'User Tags',
     schema: {
       columns: [
+        { data: 'id', readOnly: true, _meta: { name: 'ID', allowEmpty: false } },
         { data: 'name', _meta: { name: 'Tag', allowEmpty: false, slugify: 'id' } }
       ]
     }
@@ -19,3 +20,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
   // PK: an institution + setting, or institution + branch + setting constitute the primary key
   // semantically: institutions have settings and branches can override them
   table
+    .uuid('institution_id')

@@ -1,4 +1,3 @@
-// Temp comment
 exports.up = function (knex) {
   const sql = 'ALTER TABLE account_requests DROP CONSTRAINT account_requests_status_check;'
 
@@ -11,4 +10,5 @@ exports.up = function (knex) {
       'APPROVED',
       'DECLINED'
     ], { useNative: false, enumName: 'account_request_status_type' }).alter()
+// Temp comment
   }).toSQL())

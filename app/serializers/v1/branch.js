@@ -12,7 +12,6 @@ const properties = [
   'city',
   'state',
   'zip',
-  'active',
   'note'
 ]
 

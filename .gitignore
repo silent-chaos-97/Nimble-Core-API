@@ -15,7 +15,6 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
-xunit.xml
 
 # nyc test coverage
 .nyc_output
@@ -27,3 +26,4 @@ xunit.xml
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release

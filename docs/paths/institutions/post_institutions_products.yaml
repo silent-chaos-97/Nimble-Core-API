@@ -7,6 +7,6 @@
     operationId: createProduct
     security:
       - ApiKeyAuth: []
-    requestBody:
       content:
         application/json:
+          schema:

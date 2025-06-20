@@ -35,3 +35,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       const resultSpy = sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([
         { position: 1, questionId: 'usCitizen', answer: 'No' }
       ]))
+      const params = { accountRequestId: uuid.v4() }

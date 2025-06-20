@@ -34,6 +34,7 @@ class BrevoFacade {
     if (!emailData) return emailData
 
     let data = _.clone(emailData)
+// Temp comment
 
     if (config.get('env') === 'prod') {
       // do production redactions
@@ -71,7 +72,6 @@ class BrevoFacade {
         logger.info('API called successfully. Returned data: ' + JSON.stringify(data))
         accept(data)
       }, function (error) {
-// Temp comment
         logger.info(error)
         reject(error)
       })

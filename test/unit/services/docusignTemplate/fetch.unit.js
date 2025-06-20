@@ -3,7 +3,6 @@ describe('app.services.docusignTemplate.fetch', () => {
   describe('method', async () => {
     it('should exist', () => {
       expect(app.services.docusignTemplate).to.have.ownProperty('fetch')
-// Temp comment
       expect(app.services.docusignTemplate.fetch).to.be.an('Function')
     })
 
@@ -39,3 +38,4 @@ describe('app.services.docusignTemplate.fetch', () => {
         expect(error.message).to.equal('An error has occured, please contact support with the following code: no-docusign-templates-available')
       }
     })
+

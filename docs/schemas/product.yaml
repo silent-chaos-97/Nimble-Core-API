@@ -1,6 +1,5 @@
 Product:
   type: object
-  required:
     - id
     - name
     - category
@@ -24,3 +23,4 @@ Product:
       title: Category
       description: The category of the product
       enum: ['CHECKING', 'SAVINGS', 'CD']
+      example: CHECKING

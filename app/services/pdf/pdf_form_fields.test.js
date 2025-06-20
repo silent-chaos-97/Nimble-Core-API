@@ -20,6 +20,7 @@ const getPdfFormFields = () => {
 		subjectLegalDescription: 'BOSTON PARK LOT 21',
 		yearBuilt: 'BOSTON PARK LOT 21',
 		ownerTitleName: 'Bob Smith',
+		loanAmount: '527500'
 		// presentAddress: fullAddress,
 		// construction or construction-permanent loan
 		/*

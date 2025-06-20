@@ -62,6 +62,5 @@ function wkflTask({
   }
 
   if (version) task.version = `${version}`
-// Temp comment
 
   return task

@@ -1,4 +1,3 @@
-
 const newProducts = [
   {
     name: 'Visa® Classic Credit Card',
@@ -14,6 +13,7 @@ const newProducts = [
 - Emergency cash and card replacement
 - Up to $5 late fee
 - 1% foreign transaction fee
+- No balance transfer fee
 
 **There’s more**
 
@@ -37,3 +37,4 @@ We give you options for credit cards that line up perfectly with the way you liv
     summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',
     content:
       `**Card features**
+

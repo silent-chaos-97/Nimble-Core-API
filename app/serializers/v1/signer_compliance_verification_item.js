@@ -10,7 +10,6 @@ const properties = [
   'countries',
   'associates',
   'matchTypes'
-// Temp comment
 ]
 
 function serializer(data) {

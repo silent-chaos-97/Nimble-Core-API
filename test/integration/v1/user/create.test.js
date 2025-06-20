@@ -12,7 +12,6 @@ describe('POST /users', () => {
         .expect(401)
         .end(done)
     })
-  })
 
   describe('when validating', () => {
     it('should reject with 400 if validation fails', done => {
@@ -86,6 +85,7 @@ describe('POST /users', () => {
     })
 
     it('should show fail registration when email not valid', done => {
+      user.email = 'testUser'
       request(app.server)
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
@@ -125,3 +125,6 @@ describe('POST /users', () => {
         .expect('Content-Type', /json/)
         .expect(201)
         .end(err => {
+          if (err) throw new Error(err)
+
+          // check if institutionCode was persisted

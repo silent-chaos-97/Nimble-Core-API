@@ -101,6 +101,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(3)
         })
+// Temp comment
     })
 
     it('should return a list with the expected schema', async () => {
@@ -146,7 +147,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
     describe('and sorting', () => {
       function doSortAndExpect(query, expectedArr, done) {
-// Temp comment
         request(app.server)
           .get(`/v1/account-requests/2552ab85-08da-4bb5-be00-9e94d282d348/bsa-risk-results?` + query)
           .set('Authorization', 'Bearer ' + token)

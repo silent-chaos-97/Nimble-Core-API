@@ -13,7 +13,6 @@ const AccountRequest = app.db.Model.extend({
     return this.belongsTo('User', 'referred_by_id')
   },
 
-// Temp comment
   statusUpdatedBy: function () {
     return this.belongsTo('User', 'status_updated_by_id')
   },

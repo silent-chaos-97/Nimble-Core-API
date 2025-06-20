@@ -4,7 +4,7 @@ const app = require('../../../core')
 const service = app.services.account
 
 function magic_link(req, res, next) {
-    .magicLink(req.body)
+  return service
     .then(uri => res.status(200).json({
       type: 'MAGIC_LINK',
       token: 'magic-link',

@@ -7,7 +7,6 @@ async function searchDelete(req, res) {
   const id = _.get(req, ['params', 'id'])
 
   if (!id) throw new BadRequestError('id required')
-
   const data = { ...req.body, id, createdById: req.user.id }
 
   try {

@@ -66,3 +66,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
         await app.services.cron.emailVerificationReminder()
         expect(emailVerificationEmailSpy).to.not.have.been.called
       })
+

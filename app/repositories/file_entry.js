@@ -1,3 +1,4 @@
+const app = require('../core')
 
 const FileEntry = app.db.Model.extend({
   tableName: 'file_entries',
@@ -5,3 +6,4 @@ const FileEntry = app.db.Model.extend({
   hasTimestamps: true,
 
   createdBy: function () {
+    return this.belongsTo('User', 'created_by_id')

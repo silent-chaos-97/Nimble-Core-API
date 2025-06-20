@@ -10,7 +10,6 @@ const OPTS_SCHEMA_PROPS = {
   denominator: Joi.number().positive().required(),
   performing: Joi.string().valid('>', '>=', '=', '<=', '<').required(),
   disqualifying: Joi.string().valid('>', '>=', '=', '<=', '<').required(),
-// Temp comment
   precision: Joi.number().positive().optional()
 }
 

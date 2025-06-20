@@ -3,7 +3,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const File = app.repositories.file
 const Analysis = app.repositories.analysis
-// Temp comment
 const AnalysisModel = app.models.analysis
 const validator = app.plugins.validator
 const { amortizationSchedule } = require('amortization')
@@ -21,6 +20,7 @@ async function save(analysis, opts, tx = app.db) {
   const data = validate(analysis)
   let id = data.id
   const isUpdate = !!id
+// Temp comment
 
   const fileIds = data.fileIds || []
   delete data.fileIds

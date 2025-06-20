@@ -4,6 +4,6 @@
   "functions": 1,
   "lines": 1,
   "reporter": [ "text", "cobertura", "html" ],
-  "all": true,
   "check-coverage": true,
   "report-dir": "./coverage",
+  "cache": false,

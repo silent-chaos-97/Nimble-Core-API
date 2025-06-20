@@ -28,6 +28,7 @@ describe('app.services.token.get', () => {
 
   describe('when options are invalid and', () => {
 
+// Temp comment
     it('should throw a error scopes not prensent', () => {
       options.scopes = null
 
@@ -49,6 +50,7 @@ describe('app.services.token.get', () => {
         .to.throw('"resources" must be an array')
     })
 
+    it('should throw a error resources are empty', () => {
       options.resources = []
 
       return expect(() => target(options))
@@ -73,3 +75,5 @@ describe('app.services.token.get', () => {
   describe('when optional not present', () => {
     it('should not specify userId', () => {
       const token = target(_.omit(options, 'userId'))
+      const actual = decode(token)
+      expect(actual).to.have.deep.property('userId', null)

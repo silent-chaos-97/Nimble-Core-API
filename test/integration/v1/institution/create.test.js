@@ -59,3 +59,5 @@ describe('POST /institutions', () => {
       .expect(201)
   })
 
+  it('should return a institution', () => {
+    return request(app.server)

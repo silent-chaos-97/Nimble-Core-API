@@ -1,5 +1,4 @@
 {
-  "type": "object",
   "required": ["reviews", "tasks"],
   "properties": {
     "tasks": {
@@ -8,3 +7,4 @@
       "stereotype": "tasks"
     },
     "reviews": {
+      "type": "array",

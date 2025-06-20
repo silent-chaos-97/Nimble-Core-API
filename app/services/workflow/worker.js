@@ -11,14 +11,12 @@ async function worker(task) {
     const context = JSON.parse(_.get(execution, 'latestExecutionContext', '{}'))
 
     _.set(context, 'EXEC', {
-      runId: _.get(execution, 'executionInfo.runId'),
       externalWorkflowId: _.get(execution, 'executionInfo.workflowId')
     })
 
     context.inputs = JSON.parse(task.input || '{}')
 
     _.set(context, 'THIS.token', taskToken)
-// Temp comment
 
     logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-received', task: _.pick(task, ['taskToken']), context })
 

@@ -8,7 +8,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   before(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
-  })
 
   describe('when the signers email are unique', () => {
     let token
@@ -210,3 +209,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           if (err) return done(err)
 
           request(app.server)
+            .get(`/v1/account-requests/${accountRequestId}`)
+            .set('Authorization', 'Bearer ' + token)
+            .expect(200)
+            .end(async (err, res) => {
+              expect(res.body.signers[2].contractDocumentSignerStatus).to.equal('SENT')
+              await sleep(30)

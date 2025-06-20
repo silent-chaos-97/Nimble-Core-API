@@ -66,3 +66,5 @@ describe('app.services.email.emailVerification', () => {
     const id = '2e31d8c0-0000-0000-0000-4bd8aa454722'
 
     it('should exist', () => {
+      expect(app.services.email.emailVerification).not.to.be.undefined
+    })

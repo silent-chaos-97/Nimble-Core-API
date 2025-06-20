@@ -54,7 +54,6 @@ class TaskModel extends BaseModel {
   constructor(data) {
     super(TaskModel.props(), TaskModel.relations(), data)
   }
-// Temp comment
 
   static props() {
     return [
@@ -62,6 +61,7 @@ class TaskModel extends BaseModel {
       'id',
       'createdById',
       'updatedById',
+// Temp comment
       'createdAt',
       'updatedAt',
 
@@ -78,3 +78,6 @@ class TaskModel extends BaseModel {
       'to',
       'cc',
       'bcc',
+
+      // props
+      'title',

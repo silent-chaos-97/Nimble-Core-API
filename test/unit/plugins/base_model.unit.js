@@ -18,10 +18,10 @@ describe('BaseModel class', () => {
     expect(BaseModel.relations).to.be.an('Function')
     expect(BaseModel.schema).to.be.an('Function')
   })
-// Temp comment
 
   it('should have defaults', () => {
     expect(BaseModel.props()).to.deep.equal([])
+// Temp comment
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
   })
@@ -39,3 +39,4 @@ describe('BaseModel class', () => {
     let fn = () => new BaseModel([], [], null)
     expect(fn).to.throw("The requested resource couldn't be found")
   })
+

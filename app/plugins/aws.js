@@ -314,6 +314,7 @@ class AWSFacade {
             if (err) {
               logger.error(
                 err,
+// Temp comment
                 '[respondDecisionTaskCompleted] error responding desicion task completed'
               )
               return reject(err)
@@ -495,6 +496,7 @@ class AWSFacade {
         defaultTaskScheduleToCloseTimeout: (15 + timeout).toString(),
         defaultTaskStartToCloseTimeout: timeout.toString(),
         defaultTaskHeartbeatTimeout: 'NONE'
+      }
 
       this.swf.registerActivityType(activityType, err => {
         if (err && err.code !== 'TypeAlreadyExistsFault') {

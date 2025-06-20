@@ -73,7 +73,6 @@ class Signer extends BaseModel {
       'verificationStatusFaceUpdatedAt',
       'verificationStatusDocument',
       'verificationStatusDocumentUpdatedAt',
-      'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
       'verificationStatusSanctions',
       'verificationStatusSanctionsUpdatedAt',
@@ -147,3 +146,7 @@ class Signer extends BaseModel {
     if (!['get', 'create', 'update', 'create.api.public', 'validate.api.public', 'update.api.public', 'webhook', 'complete'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
+
+    const baseSchema = Joi.object().keys({
+      firstName: Joi.string().max(250).optional(),
+      middleName: Joi.string().max(250).allow('').optional(),

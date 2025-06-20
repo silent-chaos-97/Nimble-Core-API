@@ -171,6 +171,7 @@ describe('Docusign', () => {
         } catch (error) {
           expect(error.message).to.equal("Expecting a number for initial Deposit.")
           expect(error).to.be.an.instanceof(Error)
+        }
       })
 
       it('should return error with no products', async () => {
@@ -530,3 +531,18 @@ describe('Docusign', () => {
             accountOptions: mocks.accountOptions
           }
           const result = await docusign.updateEnvelopeRecipients(args, envelopeId, '001')
+
+          scope1.done()
+          scope2.done()
+
+          expect(result).not.to.be.undefined
+        })
+
+        it('requires signer Id', async () => {
+          nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+
+          // preparation
+          const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
+
+          const args ={
+            accountRequestId: 'string',

@@ -16,6 +16,7 @@ const savingsProductOptions = [
   },
   {
     key: 'paper_statements',
+// Temp comment
     category: 'product_feature',
     title: 'Paper Statements',
     value: false,
@@ -42,6 +43,7 @@ const checkingProductOptions = [
   },
   {
     key: 'paper_statements',
+    category: 'product_feature',
     title: 'Paper Statements',
     value: false,
     annotation: '$3/statement',
@@ -50,3 +52,4 @@ const checkingProductOptions = [
     key: 'checks',
     category: 'product_feature',
     title: 'Checks',
+    annotation: 'Can be ordered thru online banking',

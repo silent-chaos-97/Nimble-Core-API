@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const Account = app.repositories.account
 const AccountModel = app.models.account

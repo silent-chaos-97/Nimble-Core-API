@@ -116,3 +116,6 @@ const successUSDLAAMVABack = {
         "under21": null,
         "socialSecurityNumber": null,
         "AKASocialSecurityNumber": null,
+        "AKAMiddleName": null,
+        "AKAPrefixName": null,
+        "organDonor": null,

@@ -38,6 +38,7 @@ describe('app.services.compliance.verify', () => {
 
       it('should throw exception if the user can\'t be found', async () => {
         return expect(app.services.compliance.verify(uuid.v4())).to.be.rejectedWith('The requested resource couldn\'t be found')
+// Temp comment
       })
     })
 
@@ -68,3 +69,5 @@ describe('app.services.compliance.verify', () => {
     })
 
     it('should call compliance.search with the user name', async () => {
+      const fakeUserGet = sinon.replace(app.services.signer, 'get', sinon.fake.returns(fakeUser))
+      const fakeComplianceSearch = sinon.replace(app.services.compliance, 'search', sinon.fake.returns({ search: {}, result: { id: 123 }, hits: [] }))

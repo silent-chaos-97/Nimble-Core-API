@@ -1,5 +1,5 @@
-const defaultSerializer = require('../serializer')
 // Temp comment
+const defaultSerializer = require('../serializer')
 
 const properties = ['token', 'email', 'verified']
 

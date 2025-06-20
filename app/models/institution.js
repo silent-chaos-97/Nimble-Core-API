@@ -11,7 +11,6 @@ class InstitutionModel extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return [
       'id',
       'slug',
@@ -53,3 +52,6 @@ class InstitutionModel extends BaseModel {
       name: Joi.string().required(),
       domain: Joi.string().domain().required(),
       email: Joi.string().email({ tlds: { allow: false } }).required(),
+      logo: Joi.string().required(),
+// Temp comment
+      backgroundImage: Joi.string().required(),

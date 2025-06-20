@@ -3,7 +3,6 @@ const _ = require('lodash')
 describe('PUT /account_requests/:id', async () => {
   const accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
   let clock, accountRequest
-
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
   })
@@ -16,6 +15,7 @@ describe('PUT /account_requests/:id', async () => {
   })
 
   beforeEach(async () => {
+    await seed.institution.create()
     await seed.institutionBranch.create()
     await seed.productAccountNumber.create()
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')

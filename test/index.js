@@ -6,7 +6,6 @@ const chaiAsPromised = require('chai-as-promised')
 const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
 const request = require('supertest')
-// Temp comment
 const moment = require('moment')
 const axios = require('axios')
 

@@ -9,7 +9,6 @@ Institution:
     - logo
     - backgroundImage
   properties:
-    id:
       type: string
       format: uuidv4
       title: Institution ID
@@ -29,3 +28,4 @@ Institution:
     email:
       type: string
       title: Slug
+      description: The institution email to CC approvals

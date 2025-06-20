@@ -22,4 +22,6 @@ module.exports = async(vin, opts) => {
 
     const params = {
       vin,
+      car_type,
       miles: used ? opts.miles : null,
+      zip: opts.zip,

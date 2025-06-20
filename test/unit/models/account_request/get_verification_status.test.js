@@ -42,3 +42,4 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
   it('should return an object with the expected schema', () => {
     const result = target(testSigners)
 
+    expect(Object.keys(result)).to.deep.equal([

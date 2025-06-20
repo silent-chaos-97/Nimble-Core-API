@@ -163,6 +163,7 @@ class MicroblinkService {
   parseFirstAndMiddleName(joinedName) {
     const parsedName = {
       firstName: '',
+      middleName: '',
     }
     if (typeof joinedName.firstName !== 'string') return parsedName
 

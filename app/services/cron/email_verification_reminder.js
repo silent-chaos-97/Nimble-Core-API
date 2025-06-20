@@ -5,7 +5,6 @@ const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.cron.email_verification_reminder')
 
 async function email_verification_reminder(days = 1, tx = app.db) {
-  logger.info('[email_verification_reminder] starting')
 
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
   const timeWindowStart = moment().subtract(days, 'days')

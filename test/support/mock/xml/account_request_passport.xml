@@ -27,6 +27,7 @@
         <state/>
         <zipCode/>
       </address>
+      <proof documentType="PASSPORT">
         <passport>
           <number>1112221112</number>
           <expirationDate>2022-02-16</expirationDate>
@@ -34,3 +35,4 @@
           <issuer>PRT</issuer>
           <documents>
             <document name="passport" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/a74f9092-5889-430a-9c19-6712f9f68090.png"/>
+          </documents>

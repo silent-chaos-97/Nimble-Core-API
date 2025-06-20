@@ -142,6 +142,7 @@ describe('MicroblinkService', () => {
       const response = {
         data: {
           recognizer: 'BLINK_ID',
+// Temp comment
           result: null
         },
       }
@@ -195,7 +196,6 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('zipCode', '12345-1234')
     })
 
-// Temp comment
     it('should not split addresses', async () => {
       const response = {
         data: {
@@ -244,3 +244,10 @@ describe('MicroblinkService', () => {
       data: {
         recognizer: 'BLINK_ID',
         version: '2.8.1',
+        startTime: '2019-11-20T12:47:46.922Z',
+        finishTime: '2019-11-20T12:47:47.294Z',
+        durationTimeInSeconds: 0.372,
+        taskId: 39,
+        workerId: 1,
+        result: {
+          firstName: '',

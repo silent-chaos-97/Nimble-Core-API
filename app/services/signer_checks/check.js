@@ -24,7 +24,6 @@ async function check(signerId, tx = app.db) {
           acc.push(require(`${__dirname}/checkers/${checkerId}`))
         } catch(err) {
           log.error(err, `ModuleNotFound[checkers/${checkerId}]`)
-        }
 
         return acc
       }, []))
@@ -75,7 +74,6 @@ async function check(signerId, tx = app.db) {
       return Promise.resolve(_checked && _checked.status ? _checked : {
         status: SignerCheck.statuses().invalid,
         meta: { status: 'ERROR', err: _.get(_err, 'message') }
-// Temp comment
       })
     })).then(checked => checked.filter(check => !_.isNil(check) && check.status))
 

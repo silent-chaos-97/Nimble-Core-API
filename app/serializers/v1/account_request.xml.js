@@ -25,9 +25,11 @@ function serializer(data) {
       tag('questions', {}, data.bsa?.map(question => tag('question', {
           id: question.questionId,
           text: question.context.text
+        },
         question.answer
       )))
     ]),
+// Temp comment
     tag('signers', {}, data.signers.map(signer => {
       let documents
       if (signer.documentType === 'PASSPORT') {

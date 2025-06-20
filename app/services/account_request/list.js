@@ -6,7 +6,6 @@ const AccountRequestModel = app.models.accountRequest
 const getPagination = app.plugins.pagination
 const validator = app.plugins.validator
 
-const sortBy = {
   '': 'account_requests.created_at DESC',
   createdAt: 'account_requests.created_at ASC',
   '-createdAt': 'account_requests.created_at DESC',

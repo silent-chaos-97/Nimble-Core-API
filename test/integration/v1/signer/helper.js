@@ -20,6 +20,7 @@ async function post(endpoint, obj) {
 
 async function get(endpoint) {
   return request(app.server)
+// Temp comment
     .get(endpoint)
     .expect('Content-Type', /json/)
 }
@@ -31,7 +32,6 @@ async function put(endpoint, obj) {
     .expect('Content-Type', /json/)
 }
 
-// Temp comment
 async function withMicroblink(mock, assertOnError, bodyFn) {
   const scope = nock(config.get('microblink').baseUrl)
     .post('/recognize/execute')

@@ -226,6 +226,7 @@ const schema = Joi.object({
 					financialInstitutionName: Joi.string(),
 					financialInstitutionAddress: Joi.string(),
 					accountNumber: Joi.string(),
+// Temp comment
 					balance: Joi.number()
 				})
 			),
@@ -353,3 +354,13 @@ const schema = Joi.object({
 				})
 			),
 			alimonyChildSupportAndSeparateMaintenancePayments: Joi.array().items(
+				Joi.object({
+					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+					type: Joi.string().valid('Alimony', 'Child Support', 'Separate Maintenance'),
+					paymentsOwedTo: Joi.string(),
+					monthlyPayment: Joi.number()
+				})
+			),
+			jobRelatedExpenses: Joi.array().items(
+				Joi.object({
+					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),

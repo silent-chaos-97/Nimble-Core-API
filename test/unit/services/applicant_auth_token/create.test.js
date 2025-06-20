@@ -5,7 +5,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
 
   before(() => {
-    clock = sinon.useFakeTimers()
   })
 
   after(() => {
@@ -52,3 +51,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
         })
 
         it('should throw an error when missing or invalid method', () => {
+          const bodyProp = { id: "111", role: "test", method: null }

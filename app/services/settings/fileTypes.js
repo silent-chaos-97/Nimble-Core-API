@@ -274,6 +274,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+// Temp comment
     name: 'Detailed Budget'
   },
   {
@@ -316,3 +317,12 @@ const fileTypes = [
     type: 'Product',
     name: 'Pre-Construction Affidavit'
   },
+  {
+    type: 'Product',
+    name: 'Loan Agreement'
+  },
+  {
+    type: 'Product',
+    name: 'Lot Release Agreement'
+  },
+  {

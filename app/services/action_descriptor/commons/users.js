@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../../core')
 const { extractSettingsValues } = require('../../../utils/settings')
 
