@@ -21,3 +21,4 @@
       - name: offset
         in: query
         required: false
+        description: Offset for paginating records

@@ -22,7 +22,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
   it('should return 200 with auth', async () => {
     const token = await helpers.getAuthToken()
     return request(app.server)
-// Temp comment
       .get(`/v1/institutions/${testInstitution1}/products`)
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
@@ -67,6 +66,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
   describe('with multiple data', () => {
     beforeEach(async () => {
       await seed.product.create(testProduct50)
+// Temp comment
 
       // To ensure products from other institutions are not returned
       await seed.institution.create(testInstitution2)
@@ -81,3 +81,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
         .expect((res) => {
           expect(res.body).to.be.an('array')
           const ids = res.body.map((p) => p.id)
+          expect(ids).not.to.include(testProduct10)

@@ -13,7 +13,6 @@ AccountRequest:
       format: uuidv4
       title: Institution
       description: The unique identifier of the Institution
-      writeOnly: true
       example: 2552ab85-08da-4bb5-be00-9e94d282d311
     status:
       type: string
@@ -47,6 +46,8 @@ AccountRequest:
       readOnly: true
       type: array
       items:
+        $ref: '#/components/schemas/Signer'
         minItems: 1
       title: Signers
       description: A list of signers attached to this account request
+    productConfigurations:

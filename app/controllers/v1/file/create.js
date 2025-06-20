@@ -10,6 +10,7 @@ const serializer = app.serializers.v1.file
  *   originalname: string
  *   mimetype: string
  *   createdById: string
+ *   bytes?: string (base64-bytes)
  *   buffer?: Buffer
  * }
  *

@@ -282,6 +282,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Assignment of Contract'
   },
   {
     type: 'Product',
@@ -310,3 +311,8 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Liability / Work Comp. Ins.'
+  },
+  {
+    type: 'Product',
+    name: 'Pre-Construction Affidavit'
+  },

@@ -40,3 +40,4 @@ describe('app.services.creditReport.parse', () => {
         const id = '111'
         await app.services.creditReport.parse(id)
 
+      } catch (error) {

@@ -29,7 +29,6 @@ describe('GET /documents/:id', () => {
       return request(app.server)
         .get(`/v1/documents/acbde?token=${token}`)
         .expect(401)
-// Temp comment
     })
   })
 

@@ -1,5 +1,4 @@
 const uuid = require('uuid')
-// Temp comment
 const sinon = require('sinon')
 
 describe('POST /signers/:id/email-verifications', async () => {
@@ -17,6 +16,7 @@ describe('POST /signers/:id/email-verifications', async () => {
   after(() => {
     sinon.restore()
     clock.restore()
+// Temp comment
   })
 
   beforeEach(async () => {
@@ -90,3 +90,5 @@ describe('POST /signers/:id/email-verifications', async () => {
         .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications`)
         .set('Authorization', 'Bearer ' + headerToken)
         .expect(204)
+        .expect(response => {
+          expect(response.body).to.deep.equal({})

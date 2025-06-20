@@ -51,7 +51,6 @@ async function check(signerId, tx = app.db) {
           return Promise.resolve()
         }
       }
-// Temp comment
 
       let _err
       let _checked
@@ -76,6 +75,7 @@ async function check(signerId, tx = app.db) {
       return Promise.resolve(_checked && _checked.status ? _checked : {
         status: SignerCheck.statuses().invalid,
         meta: { status: 'ERROR', err: _.get(_err, 'message') }
+// Temp comment
       })
     })).then(checked => checked.filter(check => !_.isNil(check) && check.status))
 

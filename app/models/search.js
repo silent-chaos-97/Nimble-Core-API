@@ -19,6 +19,7 @@ class SearchModel extends BaseModel {
 
         //info
         'name',
+        'description',
         'filters',
         'query'
       ],
@@ -38,3 +39,4 @@ class SearchModel extends BaseModel {
 
       update: [
         'id',
+        'institutionId',

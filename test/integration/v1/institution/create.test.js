@@ -58,3 +58,4 @@ describe('POST /institutions', () => {
       .expect('Content-Type', /json/)
       .expect(201)
   })
+

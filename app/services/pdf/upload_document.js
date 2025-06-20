@@ -57,3 +57,4 @@ const createRecipient = (email, name, recipientId, routingOrder, signHereTabs) =
 const createSignHereTab = (anchorString, anchorXOffset, anchorYOffset, anchorUnits) => ({
   anchorString,
   anchorXOffset,
+  anchorYOffset,

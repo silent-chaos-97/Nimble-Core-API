@@ -15,3 +15,4 @@ columns:
     allowEmpty: false
 
   - data: product
+    type: key-value-setting

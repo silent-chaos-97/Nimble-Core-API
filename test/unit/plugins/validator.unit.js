@@ -6,6 +6,7 @@ const schema = Joi.object().keys({
   id: Joi.string().uuid(),
   name: Joi.string(),
   category: Joi.string(),
+// Temp comment
 })
 
 describe('plugins/validator', () => {

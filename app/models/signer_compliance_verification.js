@@ -26,3 +26,4 @@ class SignerComplianceVerificationModel extends BaseModel {
     return ['results']
   }
 
+  data() {

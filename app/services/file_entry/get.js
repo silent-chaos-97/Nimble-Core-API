@@ -8,9 +8,7 @@ async function get(user, fileEntryId, tx = app.db) {
   const uid = _.isString(user) ? user : user.id || user._id
 
   if (!uid) throw new Error('AssertionError: user required')
-
   const model = await FileEntry.forge({ id: fileEntryId }).fetch({
-// Temp comment
     withRelated: ['createdBy', 'file'],
     transacting: tx
   })

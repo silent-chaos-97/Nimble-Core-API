@@ -90,3 +90,5 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 After launching localstack, use the following script to set it up:
 
 ```bash
+$ yarn localstack
+```

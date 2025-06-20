@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 
 const app = require('../core')
@@ -10,5 +9,6 @@ class AccountRequestProduct extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['accountRequestId', 'productId', 'initialDeposit', 'createdAt']
   }

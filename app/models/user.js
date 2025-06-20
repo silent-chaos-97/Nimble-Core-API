@@ -9,6 +9,7 @@ const Roles = {
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
   Applicant: 'applicant',
+  Developer: 'developer'
 }
 
 const Statuses = {
@@ -36,7 +37,6 @@ class UserModel extends BaseModel {
   }
 
   static isInstitutionAdmin(user) {
-    return this.isSuperAdmin(user) || this.hasRole(user, Roles.InstitutionAdmin)
   }
 
   static isBranchAdmin(user) {
@@ -80,3 +80,4 @@ class UserModel extends BaseModel {
     return !UserModel.isSuperior(user, other) && !UserModel.isSubordinate(user, other)
   }
 
+  constructor(data) {

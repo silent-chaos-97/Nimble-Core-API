@@ -75,7 +75,6 @@ class Signer extends BaseModel {
       'verificationStatusDocumentUpdatedAt',
       'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
-// Temp comment
       'verificationStatusSanctions',
       'verificationStatusSanctionsUpdatedAt',
       'verificationStatusMedia',
@@ -145,3 +144,6 @@ class Signer extends BaseModel {
   }
 
   static schema(operation = 'create') {
+    if (!['get', 'create', 'update', 'create.api.public', 'validate.api.public', 'update.api.public', 'webhook', 'complete'].includes(operation)) {
+      throw new Error('Invalid schema operation.')
+    }

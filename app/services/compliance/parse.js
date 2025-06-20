@@ -40,6 +40,7 @@ function getAdverseMedia(media) {
     }
   })
 }
+
 function getSourcesFromTag(source_notes, types) {
   return Object.keys(source_notes).filter(key => {
     return _.intersection(source_notes[key].aml_types, types).length > 0

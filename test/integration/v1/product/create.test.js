@@ -75,3 +75,4 @@ describe('POST /institutions/:id/products', () => {
             .expect(201)
         })
       })
+    })

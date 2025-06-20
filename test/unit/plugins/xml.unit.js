@@ -60,3 +60,4 @@ describe('app.plugins.xml', () => {
       const result = [
         // control
         target.tag('tag', {}, 'control'),
+        target.tag('tag', {}, 123),

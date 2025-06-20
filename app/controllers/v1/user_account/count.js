@@ -20,6 +20,7 @@ function count(req, res, next) {
   const filters = _.merge(_.pick(req.query, 'search', 'branch'), {
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : me.branchId,
     institutionId: isSuperAdmin ? null : me.institutionId
+  })
 
   return service
     .count(filters)

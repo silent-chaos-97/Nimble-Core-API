@@ -13,6 +13,7 @@ async function execute(wkfl, runtimeVariables) {
       inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
     },
+    activities: activities.map(activity => ({
       ...activity,
       outputs: undefined,
       completed: false,
@@ -22,7 +23,6 @@ async function execute(wkfl, runtimeVariables) {
 
   const tags = [
     `id=${wkfl.id}`,
-    `userId=${wkfl.userId}`,
     `branchId=${wkfl.branchId}`,
     `institutionId=${wkfl.institutionId}`
   ]

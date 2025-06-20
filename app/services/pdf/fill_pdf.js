@@ -3,7 +3,6 @@ const fs = require('fs').promises
 
 // TODO: Separate fs related methods into their own module
 const read = async (filePath) => fs.readFile(__dirname + filePath)
-// Temp comment
 
 const load = async (filePath) => {
 	const data = await read(filePath)

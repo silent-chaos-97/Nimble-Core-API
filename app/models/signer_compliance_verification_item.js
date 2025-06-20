@@ -14,6 +14,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'fullName',
       'nameAka',
       'dateOfBirth',
+// Temp comment
       'dateOfDeath',
       'countries',
       'associates',
@@ -27,3 +28,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     return ['items']
   }
 
+  data() {

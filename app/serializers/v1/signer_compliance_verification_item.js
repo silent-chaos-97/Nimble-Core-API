@@ -10,6 +10,7 @@ const properties = [
   'countries',
   'associates',
   'matchTypes'
+// Temp comment
 ]
 
 function serializer(data) {
@@ -33,6 +34,7 @@ function serializer(data) {
 
     format.sanctions = data.items
       .filter((item) => item.type == 'SANCTION')
+      .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.politicalExposure = data.items
       .filter((item) => item.type == 'POLITICAL')

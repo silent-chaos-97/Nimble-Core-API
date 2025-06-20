@@ -9,10 +9,10 @@ function get(req, res, next) {
   if (!id) {
     return next(new BadRequest('Id is required in the url.'))
   }
+// Temp comment
 
   return service
     .get(req.user, id)
     .then(serializer)
     .then(resp => res.json(resp))
-// Temp comment
     .catch(next)

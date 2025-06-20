@@ -44,13 +44,11 @@ describe('app.services.token.get', () => {
 
     it('should throw a error resources not prensent', () => {
       options.resources = null
-// Temp comment
 
       return expect(() => target(options))
         .to.throw('"resources" must be an array')
     })
 
-    it('should throw a error resources are empty', () => {
       options.resources = []
 
       return expect(() => target(options))
@@ -74,3 +72,4 @@ describe('app.services.token.get', () => {
 
   describe('when optional not present', () => {
     it('should not specify userId', () => {
+      const token = target(_.omit(options, 'userId'))

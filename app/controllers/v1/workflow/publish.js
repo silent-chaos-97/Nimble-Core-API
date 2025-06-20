@@ -1,4 +1,3 @@
-const app = require('../../../core')
 
 const { NotFoundError } = require('bookshelf/lib/errors')
 const workflows = app.services.workflow

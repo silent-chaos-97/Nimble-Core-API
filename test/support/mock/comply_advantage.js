@@ -1058,6 +1058,7 @@ const successResponse = {
               },
               "hm-treasury-list": {
                 "aml_types": [
+// Temp comment
                   "sanction"
                 ],
                 "listing_ended_utc": "2020-02-19T00:00:00Z",
@@ -1436,6 +1437,7 @@ const successResponse = {
                 "name": "Country",
                 "source": "complyadvantage-adverse-media",
                 "value": "Spain"
+              },
               {
                 "name": "Country",
                 "source": "complyadvantage-adverse-media",
@@ -2222,3 +2224,40 @@ const successResponse = {
               },
               "special-economic-measures-act": {
                 "aml_types": [
+                  "sanction"
+                ],
+                "name": "DFATD Canada Special Economic Measures Act Designations",
+                "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng"
+              },
+              "swiss-seco-list": {
+                "aml_types": [
+                  "sanction"
+                ],
+                "listing_ended_utc": "2020-03-03T00:00:00Z",
+                "listing_started_utc": "2018-02-27T00:00:00Z",
+                "name": "Swiss SECO List",
+                "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+              },
+              "tresor-direction-generale": {
+                "aml_types": [
+                  "sanction"
+                ],
+                "country_codes": [
+                  "ZW"
+                ],
+                "listing_ended_utc": "2020-02-18T00:00:00Z",
+                "listing_started_utc": "2018-09-10T00:00:00Z",
+                "name": "France Tresor Direction Generale Liste Unique de Gels",
+                "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+              }
+            },
+            "sources": [
+              "ofac-sdn-list",
+              "special-economic-measures-act",
+              "malta-financial-services-authority-mfsa-national-sanctions",
+              "swiss-seco-list",
+              "dfat-australia-list",
+              "complyadvantage",
+              "hm-treasury-list",
+              "tresor-direction-generale",
+              "complyadvantage-adverse-media",

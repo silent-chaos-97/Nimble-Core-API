@@ -21,7 +21,6 @@ async function create(data, tx = app.db) {
   if (!data.buffer && !data.bytes) throw new BadRequestError('body.buffer || body.bytes (base64-bytes) required')
 
   const buffer = data.buffer ? data.buffer : (data.bytes ? Buffer.from(data.bytes, 'base64') : null)
-// Temp comment
 
   if (!buffer || !Buffer.isBuffer(buffer)) throw new BadRequestError('body.buffer || body.bytes provided but malformed')
 

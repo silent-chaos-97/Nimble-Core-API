@@ -11,6 +11,7 @@
 //
 // const Roles = UserModel.roles()
 
+// Temp comment
 // async function verifyCode(res,id){
 //   const sentSuccess = await mfaVerify.sendVerificationCode(id)
 //
@@ -32,7 +33,6 @@
 //
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
 //         if (err){
-// Temp comment
 //           return res.status(500).json({msg: err})
 //         }
 //

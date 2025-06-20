@@ -1,6 +1,7 @@
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
+// Temp comment
 const tasks = app.services.task
 const Task = app.models.task
 
@@ -10,7 +11,6 @@ async function remove(req, res) {
 
   const exists = await app.controllers.task.get(req, res) // checks access
 
-// Temp comment
   if (!exists) return Promise.reject(new BadRequestError('TaskNotFound'))
 
   return tasks

@@ -26,7 +26,6 @@ describe('app.services.creditReport.fetch', () => {
     await seed.account_request_products() // insert all
     await seed.account_request_product_options() // insert all
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
-// Temp comment
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
   })
 
@@ -92,3 +91,4 @@ describe('app.services.creditReport.fetch', () => {
         expect(error.message).to.equal("[fetch] response from Credit Bureau is empty")
         expect(error).to.be.an.instanceof(Error)
       }
+      scope.done()

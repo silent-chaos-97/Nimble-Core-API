@@ -168,6 +168,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           request(app.server)
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
+            .expect(200)
             .end(async (err, res) => {
               expect(res.body.signers[0].contractDocumentSignerStatus).to.equal('DECLINED')
               expect(res.body.signers[1].contractDocumentSignerStatus).to.equal('COMPLETED')
@@ -205,3 +206,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
         .expect('Content-Type', /json/)
         .expect(200)
+        .end((err) => {
+          if (err) return done(err)
+
+          request(app.server)

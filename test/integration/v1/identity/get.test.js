@@ -54,3 +54,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
   it('should return a identity', () => {
     const expected = blueprints.identity.get()
     return request(app.server)
+      .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)

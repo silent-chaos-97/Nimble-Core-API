@@ -18,3 +18,4 @@ const institutionBranches = [
   { name: 'Ankeny', external_id: '71' },
   { name: 'Mills Civic', external_id: '73' },
   { name: 'Urbandale - 100th', external_id: '74' },
+  { name: 'Drake', external_id: '75' },

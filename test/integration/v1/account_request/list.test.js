@@ -121,6 +121,7 @@ describe('GET /account-requests', () => {
                 "lead": null,
                 "annotation": null,
                 "parentId": null
+              },
               {
                 "id": "7b9c52a2-c542-4031-8342-5fa29a2f6d0e",
                 "category": "another-choice",
@@ -157,7 +158,6 @@ describe('GET /account-requests', () => {
             if (err) throw new Error(err)
 
             expect(res.body).to.be.an('array')
-            expect(res.body).to.have.lengthOf(1)
             expect(res.body[0]).to.deep.equal(blueprints.accountRequest.get(accountRequestId))
             done()
           })

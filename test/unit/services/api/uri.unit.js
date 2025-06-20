@@ -5,3 +5,4 @@ describe('app.services.api.uri', () => {
     expect(target).not.to.be.undefined
   })
 
+  it('should return the api uri', () => {

@@ -11,7 +11,6 @@ describe('Auth', () => {
           .end(done)
       })
 
-      it('should not allow invalid tokens requests', done => {
         request(app.server)
           .get('/v1/me')
           .set('Authorization', 'Bearer ' + 'INVALID TOKEN')
@@ -27,7 +26,6 @@ describe('Auth', () => {
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
-// Temp comment
       })
 
       it('should respond to valid auth with 200', done => {
@@ -101,3 +99,5 @@ describe('Auth', () => {
                 done()
               })
           })
+      })
+    })

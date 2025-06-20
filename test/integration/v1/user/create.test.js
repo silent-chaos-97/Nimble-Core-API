@@ -86,7 +86,6 @@ describe('POST /users', () => {
     })
 
     it('should show fail registration when email not valid', done => {
-      user.email = 'testUser'
       request(app.server)
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
@@ -123,3 +122,6 @@ describe('POST /users', () => {
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)
+        .expect('Content-Type', /json/)
+        .expect(201)
+        .end(err => {

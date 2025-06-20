@@ -9,3 +9,4 @@ exports.up = function(knex, Promise) {
     table.string('zip').nullable()
     table.boolean('active').default(true)
     table.string('note').nullable()
+  })

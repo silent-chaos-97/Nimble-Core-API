@@ -11,7 +11,6 @@ async function get(where, tx = app.db) {
           q.where(...w)
         })
       } else {
-        // TODO: check why `where` is sometimes string
         q.where('id', where)
       }
     }

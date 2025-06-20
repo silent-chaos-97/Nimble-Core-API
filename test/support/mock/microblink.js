@@ -115,3 +115,4 @@ const successUSDLAAMVABack = {
         "under19": null,
         "under21": null,
         "socialSecurityNumber": null,
+        "AKASocialSecurityNumber": null,

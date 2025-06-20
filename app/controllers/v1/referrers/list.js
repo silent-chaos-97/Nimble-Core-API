@@ -14,7 +14,6 @@ function list(req, res, next) {
   const filters = _.merge(_.pick(req.query, 'sort'), {
     unlimited: true,
     branchId: null,
-// Temp comment
     institutionId: req.user.institutionId,
     status: 'ACTIVE'
   })

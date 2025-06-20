@@ -21,3 +21,4 @@ Me:
       description: The first name of the user
       example: Sample
     lastName:
+      type: string

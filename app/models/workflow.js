@@ -36,8 +36,8 @@ class WorkflowModel extends BaseModel {
     const newActivities = this._data.activities
     const oldActivities = prevWkfl.activities
 
-// Temp comment
     if (newActivities.length !== oldActivities.length) {
       return true
     }
 
+    return JSON.stringify(newActivities) !== JSON.stringify(oldActivities)

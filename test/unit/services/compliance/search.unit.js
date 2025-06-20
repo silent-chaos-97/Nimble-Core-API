@@ -49,7 +49,7 @@ describe('app.services.compliance.search', () => {
     it('should return search result', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
-// Temp comment
         .reply(200, mocks.successResponse)
 
       const entity = {
+        firstName: 'Robert',

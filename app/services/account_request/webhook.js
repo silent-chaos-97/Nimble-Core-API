@@ -15,7 +15,6 @@ async function validate(params) {
 
 
 function patchAccountRequest(id, status, tx = app.db) {
-  return AccountRequest.forge({ id }).save({
     contractDocumentEnvelopeStatus: status.toUpperCase(),
     contractDocumentEnvelopeStatusUpdatedAt: new Date()
   }, {

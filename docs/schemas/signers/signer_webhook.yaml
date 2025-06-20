@@ -4,3 +4,4 @@ SignerWebhook:
     - reference
     - event
   properties:
+    reference:

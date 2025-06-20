@@ -2,6 +2,7 @@ const app = require('../../../core')
 
 const service = app.services.email
 
+// Temp comment
 async function invite(req, res) {
   const id = req.params.id
 

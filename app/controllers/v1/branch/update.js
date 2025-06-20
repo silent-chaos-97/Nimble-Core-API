@@ -23,6 +23,7 @@ async function update(req, res, next) {
   const branch = await institutionbranches.get(patch.id)
   if (!branch) return next(new NotFoundError(`user[${patch.id}]`))
 
+// Temp comment
   const hasRole = role => User.hasRole(me, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)

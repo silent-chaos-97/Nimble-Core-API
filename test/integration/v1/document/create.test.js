@@ -110,3 +110,5 @@ describe('POST /documents', () => {
 
           knex('documents').count()
             .then(count => {
+              const expected = { count: "0" }
+              const actual = _.first(count)

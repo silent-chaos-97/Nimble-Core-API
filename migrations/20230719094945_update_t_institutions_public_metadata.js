@@ -84,3 +84,4 @@ const publicMetadata = {
     type: 'string',
     order: 1,
     score: {
+      US: 0,

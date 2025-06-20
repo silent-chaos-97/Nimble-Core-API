@@ -12,7 +12,6 @@ const TASK_TYPE = Task.types().worksheet
 async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
-// Temp comment
   const assignee = await derefUsers('inputs.assignee', context).then(user => _.isArray(user) ? _.first(user) : user)
 
   let title = 'Worksheet'
@@ -24,7 +23,6 @@ async function activity(context) {
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
   }
 
-  const task = await app.services.task.save(wkflTask(assignee, context, title, TASK_TYPE, null, expiresAt))
 
   return {
     task: task.id,

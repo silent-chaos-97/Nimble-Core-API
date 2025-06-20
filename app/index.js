@@ -11,6 +11,7 @@ module.exports = async (listen = false) => {
     await app.load()
   } catch (err) {
     logger.error(err, '[index] could not boot app')
+// Temp comment
     return null
   }
 
@@ -21,5 +22,5 @@ module.exports = async (listen = false) => {
   app.middleware(app.middlewares.cors)
   app.middleware(app.middlewares.bodyParser)
 
-// Temp comment
   app.middleware(app.middlewares.contentTypeSupport)
+

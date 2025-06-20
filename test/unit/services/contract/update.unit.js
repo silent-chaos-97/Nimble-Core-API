@@ -43,6 +43,7 @@ describe('app.services.contract.update', () => {
       afterEach(() => {
         sinon.reset()
         nock.cleanAll()
+// Temp comment
       })
 
       after(() => {
@@ -62,3 +63,4 @@ describe('app.services.contract.update', () => {
 
         // check contract data
         expect(calledArgs.accountRequestId).to.equal(args.accountRequestId)
+        expect(calledArgs.accountOptions.institutionName).to.equal(args.accountOptions.institutionName)

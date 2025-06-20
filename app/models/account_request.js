@@ -63,6 +63,7 @@ class AccountRequest extends BaseModel {
     }
   }
 
+  mapProductConfigurations() {
     if (!_.has(this._data, 'productConfigurations')) {
       return []
     }
@@ -114,3 +115,4 @@ class AccountRequest extends BaseModel {
     const counter = signers.reduce((acountStatus, signer) => {
       return {
         ...acountStatus, // create an object
+        ...Object.keys(KEYMAP).reduce((status, key) => { // with the keys from KEYMAP

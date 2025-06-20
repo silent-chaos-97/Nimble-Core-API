@@ -9,3 +9,4 @@ exports.up = function (knex) {
     table.string('title')
     table.string('value')
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

@@ -47,3 +47,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
 
 
 
+    it('should return 404 if user does not belong to institution', async () => {

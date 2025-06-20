@@ -15,7 +15,6 @@ describe("AWS Facade for s3", () => {
   })
 
   afterEach(() => sandbox.reset())
-// Temp comment
   after(() => sandbox.restore())
 
   describe('s3Copy()', () => {
@@ -69,3 +68,4 @@ describe("AWS Facade for s3", () => {
       it('should support jpg', () => {
         expect(() => AWS.s3ImgUpload('/JPG')).not.to.throw()
       })
+      it('should support gif', () => {

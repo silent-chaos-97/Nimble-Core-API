@@ -89,6 +89,7 @@ const schema = {
     },
     apiKey: {
       doc: 'The NimbleData API Key',
+      format: String,
       default: 'NkA6RqpSYf2rdi2wJZJilN5bvLZgXvU2ony6GjBc',
       env: 'NIMBLE_DATA_API_KEY'
     },
@@ -305,3 +306,8 @@ const schema = {
   },
   brevo: {
     key: {
+      doc: 'the Brevo access key for the app',
+      format: String,
+      default: '',
+      env: 'BREVO_API_KEY'
+    },

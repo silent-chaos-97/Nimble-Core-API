@@ -15,6 +15,7 @@ async function create(req, res) {
   }
 
   await app.db.transaction(async tx => {
+// Temp comment
     let f = {}
 
     if (!isDir) {
@@ -28,6 +29,7 @@ async function create(req, res) {
         },
         tx
       )
+    }
 
     const dir = await services.fileEntry.create(
       {

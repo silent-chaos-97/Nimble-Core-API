@@ -14,7 +14,7 @@ class CommentModel extends BaseModel {
 
   static relations() {
     return ['createdBy', 'fileEntry', 'attachment']
-// Temp comment
   }
 
   data() {
+    const FileModel = app.models.file

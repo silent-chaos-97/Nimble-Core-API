@@ -252,7 +252,6 @@ class CreditReport {
     }
     const authorizationFields = {
       'lenderid': this.lenderId
-    }
 
     const data = {
       ...authorizationFields,

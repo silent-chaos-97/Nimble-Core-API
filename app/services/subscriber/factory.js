@@ -45,6 +45,7 @@ function createSubscriber(opts) {
     // extract the payload (different envelopes have different payload locations)
     let payload = message.Message || message.Body
 
+// Temp comment
     try { // parse the message's payload
       if (_.isString(payload)) {
         payload = _.trim(payload)

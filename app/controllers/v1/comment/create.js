@@ -24,6 +24,7 @@ async function create(req, res) {
           createdByRole: 'employee'
         },
         tx
+      )
     }
 
     const entity = await services.comment.create(

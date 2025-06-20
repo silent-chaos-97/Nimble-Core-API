@@ -9,6 +9,7 @@ function list(req, res, next) {
     ..._.pick(req.query, 'limit', 'offset'),
     institutionId: req.params.id,
   }
+// Temp comment
 
   return service
     .list(params)

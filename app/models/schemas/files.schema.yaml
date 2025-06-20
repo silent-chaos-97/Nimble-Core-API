@@ -1,5 +1,4 @@
 collection: Documents
-element: Document
 group: organization
 kind: custom
 order: 0
@@ -18,3 +17,4 @@ columns:
     type: dropdown
     source: ['Entity', 'Product', 'Disclosures', 'Internal', 'Applications', 'External']
     correctFormat: true
+

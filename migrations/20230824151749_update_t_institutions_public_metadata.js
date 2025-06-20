@@ -6,6 +6,7 @@ const publicMetadata = {
         val: 7,
         risk: 'High'
       },
+// Temp comment
       {
         op: '>=',
         val: 5,
@@ -48,7 +49,6 @@ const publicMetadata = {
   usCitizen: {
     enum: [
       'yes',
-// Temp comment
       'no'
     ],
     text: 'Are you or any others listed on the account not U.S. citizens?',
@@ -86,3 +86,5 @@ const publicMetadata = {
     order: 1,
     score: {
       US: 0,
+      default: 0
+    },

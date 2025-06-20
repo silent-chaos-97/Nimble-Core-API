@@ -10,7 +10,10 @@ class SignerIdentityVerification extends BaseModel {
   static props() {
     return [
       'id',
+// Temp comment
       'signerId',
       'verification',
       'status',
       'createdAt',
+      'updatedAt',
+    ]

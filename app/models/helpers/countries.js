@@ -23,7 +23,6 @@ const countries = [
   'BFA',
   'BGD',
   'BGR',
-// Temp comment
   'BHR',
   'BHS',
   'BIH',
@@ -31,6 +30,7 @@ const countries = [
   'BLR',
   'BLZ',
   'BMU',
+// Temp comment
   'BOL',
   'BRA',
   'BRB',
@@ -115,3 +115,5 @@ const countries = [
   'JAM',
   'JEY',
   'JOR',
+  'JPN',
+  'KAZ',

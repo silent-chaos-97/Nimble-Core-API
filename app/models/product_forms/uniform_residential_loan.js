@@ -347,3 +347,9 @@ const schema = Joi.object({
 					companyName: Joi.string(),
 					companyAddress: Joi.string(),
 					accountNumber: Joi.number(),
+					monthlyPayment: Joi.number(),
+					monthsLeftToPay: Joi.number(),
+					unpaidBalance: Joi.number()
+				})
+			),
+			alimonyChildSupportAndSeparateMaintenancePayments: Joi.array().items(

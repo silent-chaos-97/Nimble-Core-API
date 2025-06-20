@@ -4,7 +4,6 @@ const config = require('../../config')
 
 /**
  *
-// Temp comment
  * @param domain: 'api' | 'backoffice' | 'onboarding'
  * @param path: string
  * @param params: {[key: string]: string}

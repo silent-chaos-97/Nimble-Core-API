@@ -6,6 +6,7 @@
   "createdAt": "2018-03-16T12:32:03.341Z",
   "accounts": [
     {
+      "strategy": "local",
       "createdAt": "2018-03-16T12:32:03.341Z"
     }
   ],
@@ -16,3 +17,4 @@
     "routingNumber": "111222333",
     "templateApprove": "this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}",
     "templateDecline": "this is the decline email: {bankName}, {name}, {product}, {employee}",
+    "domain": "wearesingular.com",

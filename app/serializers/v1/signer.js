@@ -50,6 +50,7 @@ function serializer(data) {
   format.dateOfBirth = format.dateOfBirth ? moment(format.dateOfBirth).format('YYYY-MM-DD') : null
 
   format.idProofDocument = {
+    type: data.documentType,
     number: data.documentNumber,
     expirationDate: data.documentExpirationDate ? moment(data.documentExpirationDate).format('YYYY-MM-DD') : null,
     issuedDate: data.documentIssuedDate ? moment(data.documentIssuedDate).format('YYYY-MM-DD') : null,
@@ -84,7 +85,6 @@ function serializer(data) {
     sanctionsUpdatedAt: data.verificationStatusSanctionsUpdatedAt,
 
     mediaStatus: data.verificationStatusMedia,
-    mediaUpdatedAt: data.verificationStatusMediaUpdatedAt,
 
     politicalExposure: data.verificationStatusPoliticalExposure,
     politicalExposureUpdatedAt: data.verificationStatusPoliticalExposureUpdatedAt,

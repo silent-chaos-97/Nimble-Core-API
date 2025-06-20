@@ -67,3 +67,4 @@ describe('app.services.compliance.verify', () => {
       expect(fakeComplianceExport).not.to.have.been.called
     })
 
+    it('should call compliance.search with the user name', async () => {

@@ -2,7 +2,6 @@ const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 const service = app.services.comment
 const serializer = app.serializers.v1.comment
-// Temp comment
 
 function list(req, res, next) {
   const { fileEntryId } = req.params

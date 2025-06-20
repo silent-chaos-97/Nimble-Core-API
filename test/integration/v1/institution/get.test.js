@@ -28,3 +28,4 @@ describe('GET /institution/:domain', () => {
       .get('/v1/institutions/wearesingular.com')
       .set('Authorization', 'Bearer ' + token)
       .expect((res) => {
+        const props = ['id', 'slug', 'name', 'domain', 'logoUri', 'backgroundImageUri']

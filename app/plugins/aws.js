@@ -495,7 +495,6 @@ class AWSFacade {
         defaultTaskScheduleToCloseTimeout: (15 + timeout).toString(),
         defaultTaskStartToCloseTimeout: timeout.toString(),
         defaultTaskHeartbeatTimeout: 'NONE'
-      }
 
       this.swf.registerActivityType(activityType, err => {
         if (err && err.code !== 'TypeAlreadyExistsFault') {

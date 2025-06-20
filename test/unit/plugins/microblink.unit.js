@@ -195,6 +195,7 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('zipCode', '12345-1234')
     })
 
+// Temp comment
     it('should not split addresses', async () => {
       const response = {
         data: {
@@ -234,7 +235,12 @@ describe('MicroblinkService', () => {
     })
 
   })
+
   describe('given a incomplete valid data', () => {
     const response = {
       code: 'OK',
       summary: 'The results have been successfully retrieved!',
+      executionId: 'a74f9092-5889-430a-9c19-6712f9f68383',
+      data: {
+        recognizer: 'BLINK_ID',
+        version: '2.8.1',

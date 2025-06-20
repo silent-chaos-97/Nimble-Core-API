@@ -43,6 +43,7 @@ describe('GET /me', () => {
         // set timmer to front
         const ttl = app.config.get('auth').ttl
         clock.tick((ttl + 1)*1000)
+// Temp comment
 
         return request(app.server)
           .get('/v1/me')
@@ -64,3 +65,4 @@ describe('GET /me', () => {
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
         .expect((res) => {
+          const props = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'accounts']

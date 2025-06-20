@@ -1,4 +1,3 @@
-{
   "properties": {
     "memo": {
       "title": "Memo",
@@ -11,3 +10,4 @@
         "type": "string"
       },
       "minItems": 1,
+      "stereotype": "scope"

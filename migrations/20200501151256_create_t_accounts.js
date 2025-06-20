@@ -4,3 +4,4 @@ module.exports.up = function(knex) {
     table.uuid('user_id').references('users.id')
       .notNullable().onDelete('CASCADE')
     table.string('strategy')
+    table.string('secret')

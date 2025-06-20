@@ -1,5 +1,6 @@
 const sinon = require('sinon')
 
+describe('POST /signers/:id/validate', async () => {
   let defaultAccountRequestId, signer
 
   let clock
@@ -48,7 +49,6 @@ const sinon = require('sinon')
 
     // update primary signer with default data
     await knex('signers')
-      .update('ssn', '111-22-3333')
       .update('phone_number', '+1718-953-8465')
       .where('id', signer.id)
 

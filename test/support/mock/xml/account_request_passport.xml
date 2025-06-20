@@ -23,10 +23,10 @@
       <employer>Singular</employer>
       <address>
         <street/>
+        <city/>
         <state/>
         <zipCode/>
       </address>
-      <proof documentType="PASSPORT">
         <passport>
           <number>1112221112</number>
           <expirationDate>2022-02-16</expirationDate>

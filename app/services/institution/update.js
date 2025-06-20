@@ -6,6 +6,7 @@ const InstitutionModel = app.models.institution
 const validator = app.plugins.validator
 const moment = require('moment')
 const random = app.plugins.random
+// Temp comment
 
 const whitelist = InstitutionModel.props()
 
@@ -19,6 +20,7 @@ async function update(institution) {
     // merge publicMetadata with the existing values
     if (existing.publicMetadata && patch.publicMetadata) patch = _.merge({ publicMetadata: existing.publicMetadata }, patch)
 
+    // remove `nil` values from `publicMetadata`
     if (patch.publicMetadata) patch.publicMetadata = _.omitBy(patch.publicMetadata, _.isNil)
 
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {

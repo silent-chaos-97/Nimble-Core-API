@@ -171,7 +171,6 @@ describe('Docusign', () => {
         } catch (error) {
           expect(error.message).to.equal("Expecting a number for initial Deposit.")
           expect(error).to.be.an.instanceof(Error)
-        }
       })
 
       it('should return error with no products', async () => {
@@ -312,6 +311,7 @@ describe('Docusign', () => {
       it('should throw when error occurs', async () => {
         let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
+        scope = nock(app.config.get('docusign').basePath)
           .get(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc?include=recipients`)
           .reply(500, mocks.webhookRequest)
 
@@ -521,3 +521,12 @@ describe('Docusign', () => {
             .reply(200, mocks.mockTemplateTabs)
 
           const scope2 = nock(app.config.get('docusign').basePath)
+            .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients`)
+            .reply(200, mocks.mockUpdateRecipients)
+
+          const args ={
+            accountRequestId: 'string',
+            signers: [mocks.validUser, mocks.validUser, {...mocks.validUser, id: '001'}],
+            accountOptions: mocks.accountOptions
+          }
+          const result = await docusign.updateEnvelopeRecipients(args, envelopeId, '001')

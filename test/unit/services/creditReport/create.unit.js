@@ -15,7 +15,6 @@ describe('app.services.creditReport.create', () => {
       return expect(app.services.creditReport.create({...validPayload, signerId: id})).to.be.rejectedWith(expectedErrorMsg)
     })
 
-    it('should return error if signer not found', async () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.creditReport.create(validPayload)).to.be.rejectedWith(expectedErrorMsg)
     })
@@ -33,3 +32,4 @@ describe('app.services.creditReport.create', () => {
 
   describe('when calling with valid data', () => {
     beforeEach(async () => {
+      await seed.institution.create()

@@ -16,3 +16,4 @@
       - name: limit
         in: query
         required: false
+        description: Limit number of records

@@ -11,3 +11,5 @@ columns:
     allowEmpty: false
 
   - data: type
+    allowEmpty: false
+

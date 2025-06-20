@@ -11,4 +11,3 @@ async function create(payload, tx = app.db) {
 
   const { id } = await SignerIdentityVerification.forge(data).save(null, { method: 'insert', transacting: tx })
 
-  return id

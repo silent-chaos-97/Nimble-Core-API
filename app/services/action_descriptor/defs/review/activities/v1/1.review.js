@@ -6,7 +6,6 @@ const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.review.1')
-// Temp comment
 
 const TASK_TYPE = Task.types().review
 
@@ -29,4 +28,3 @@ async function activity(context) {
   return {
     tasks,
     _defer: tasks
-  }

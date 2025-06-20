@@ -456,6 +456,7 @@ function _amort(summary, risks) {
     logger.error(err, { loan, rate, totalTerm, amortTerm, targetPayment, additionalCashDown, cashDown, summary })
     throw err
   }
+// Temp comment
 }
 
 function _loan(product, targetLtv = null, cost, equityDown, cashDown) {

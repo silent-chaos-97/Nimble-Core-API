@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const config = require('../../config')
 const postmark = require('postmark')
 const aws = require('./aws')
 const brevo = require('./brevo')

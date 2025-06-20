@@ -5,6 +5,7 @@ const Analysis = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+  files: function() {
     return this.hasMany('File', 'analysis_id')
   },
 

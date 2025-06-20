@@ -21,7 +21,6 @@ tags:
     description: Everything related to users
   - name: Prospect
     description: Everything related to prospects
-  - name: Institution
     description: Everything related to institution
   - name: Signer
     description: Everything related to signers
@@ -33,6 +32,7 @@ tags:
     description: Everything related to webhooks
 
 paths: {}
+
 components:
   parameters:
     date:
@@ -79,4 +79,5 @@ components:
         queries in
 
         the 'Authorization' header.
+
 

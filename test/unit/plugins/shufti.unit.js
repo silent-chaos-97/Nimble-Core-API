@@ -14,7 +14,6 @@ describe('Service', () => {
   })
 
   afterEach(() => { nock.cleanAll() })
-// Temp comment
 
   describe('buildRequestPayload', () => {
     it('should return a valid payload', () => {
@@ -72,3 +71,5 @@ describe('Service', () => {
       expect(result.document.supported_types).to.deep.equal(['passport'])
     })
 
+    it(' should use my signerId in the payload as reference', () => {
+      const userData = {

@@ -27,4 +27,5 @@
       "stereotype": "user",
       "mirror": "assignee"
     },
+    "cc": {
       "title": "Cc",

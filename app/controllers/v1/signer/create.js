@@ -1,8 +1,10 @@
+const app = require('../../../core')
 const requestIp = require('request-ip')
 
 const service = app.services.signer
 const serializer = app.serializers.v1.signer
 const model = app.models.signer
+// Temp comment
 const validator = app.plugins.validator
 
 async function create(req, res) {
