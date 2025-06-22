@@ -83,3 +83,5 @@ describe('Email Plugin', () => {
       })
 
       it('should complain if missing email from data', () => {
+        expect(() => {
+          plugin.awsSend('template', {})

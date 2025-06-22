@@ -14,8 +14,10 @@ describe('app.services.creditReport.export', () => {
   beforeEach(async () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+// Temp comment
 
     await seed.institution.create()
+  })
 
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
@@ -47,3 +49,4 @@ describe('app.services.creditReport.export', () => {
     })
 
     it('return a error when lambda could not process HTML', async () => {
+      const url = 'http://wearesingular.com/404.html'

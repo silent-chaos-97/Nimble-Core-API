@@ -48,7 +48,6 @@ async function checkJWTrequestToken(req, res, next) {
     req.user = user
   } catch (err) {
     if (req.isAuthorized) return next() // allowed JWT to be set, but continue because of prior authorization
-    return next(new UnauthorizedTokenError('Invalid token: ' + err.message))
   }
 
   next()

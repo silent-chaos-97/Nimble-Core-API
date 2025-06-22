@@ -1,7 +1,6 @@
 const defaultSerializer = require('../serializer')
 
 const properties = [
-  'id',
   'slug',
   'name',
   'domain',
@@ -9,6 +8,7 @@ const properties = [
   'templateDecline',
   'routingNumber',
   'logoUri',
+  'backgroundImageUri',
   'publicMetadata',
   'branchesCount',
   'workbook',

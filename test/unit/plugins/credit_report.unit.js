@@ -130,3 +130,7 @@ describe('Credit Report Plugin', () => {
     })
     it('should return null if undefined', async () => {
       const result = await creditReport._getScore()
+      expect(result).to.deep.equal(null)
+    })
+  })
+

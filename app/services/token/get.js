@@ -7,7 +7,6 @@ const getApiUri = require('../api/uri')
 const jwt = app.plugins.jwt
 
 function schema() {
-  return Joi.object().keys({
     userId: Joi.string().optional().default(null),
     scopes: Joi.array().items(Joi.string()).min(1).default(['*']),
     resources: Joi.array().items(Joi.string()).min(1).default(['*']),

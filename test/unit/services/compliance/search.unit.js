@@ -55,3 +55,4 @@ describe('app.services.compliance.search', () => {
         firstName: 'Robert',
         middleName: 'Gabriel',
         lastName: 'Mugabe'
+      }

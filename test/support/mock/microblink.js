@@ -71,7 +71,6 @@ const successUSDLAAMVABack = {
     "recognizer": "USDL",
     "result": {
         "documentType": "AAMVA",
-        "standardVersionNumber": "3",
         "customerFamilyName": "MICROBLINK",
         "customerFirstName": "SAMPLE",
         "customerFullName": "MICROBLINK,SAMPLE",
@@ -119,3 +118,5 @@ const successUSDLAAMVABack = {
         "AKAMiddleName": null,
         "AKAPrefixName": null,
         "organDonor": null,
+        "veteran": null,
+        "AKADateOfBirth": null,

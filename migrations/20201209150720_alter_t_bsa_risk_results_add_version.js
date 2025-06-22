@@ -1,7 +1,6 @@
 
 exports.up = function (knex) {
   const addNullConstraintSQL = "ALTER TABLE bsa_risk_results ALTER COLUMN version SET NOT NULL;"
-// Temp comment
   const updateRAWSQL = "UPDATE bsa_risk_results SET version='1' where version IS NULL;"
 
   return knex.schema.alterTable('bsa_risk_results', function (table) {

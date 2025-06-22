@@ -153,6 +153,7 @@ describe('PUT private /account-requests/:id', () => {
           .end((err, res) => {
             if (err) return done(err)
 
+// Temp comment
             // prop check
             let props = ['id', 'status', 'signers', 'statusEmailSubject', 'statusEmailBody', 'statusUpdatedBy', 'statusUpdatedAt', 'createdAt']
             props.forEach(prop => {
@@ -209,3 +210,8 @@ describe('PUT private /account-requests/:id', () => {
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
+          .send({})
+          .expect(400)
+          .end((err, res) => {
+            if (err) return done(err)
+

@@ -28,7 +28,6 @@ describe('app.services.token.get', () => {
 
   describe('when options are invalid and', () => {
 
-// Temp comment
     it('should throw a error scopes not prensent', () => {
       options.scopes = null
 
@@ -63,7 +62,6 @@ describe('app.services.token.get', () => {
       return expect(() => target(options))
         .to.throw('"expiration" must be a positive number')
     })
-
     it('should throw a error expiration is negative', () => {
       options.expiration = -1
 
@@ -77,3 +75,5 @@ describe('app.services.token.get', () => {
       const token = target(_.omit(options, 'userId'))
       const actual = decode(token)
       expect(actual).to.have.deep.property('userId', null)
+    })
+

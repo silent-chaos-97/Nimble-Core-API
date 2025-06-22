@@ -2,6 +2,7 @@
   get:
     tags:
       - Institution
+    summary: Get a paginated list of institution branches
     description: Method to get Institution branches
     operationId: getInstitutionBranches
     parameters:
@@ -16,3 +17,4 @@
         in: query
         required: false
         description: Limit number of records
+        schema:

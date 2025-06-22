@@ -24,6 +24,7 @@ const validApplicant = {
   'lastname': 'BRAKE',
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
+// Temp comment
   'state': 'CA',
   'postcode': '931054826',
   'phone': '2335553333',
@@ -46,3 +47,4 @@ const processApplicantSuccess = {
 }
 
 const processApplicantFailed = {
+  prequal: {

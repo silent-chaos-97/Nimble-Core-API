@@ -119,3 +119,6 @@ const countries = [
   'KEN',
   'KGZ',
   'KHM',
+  'KIR',
+  'KNA',
+  'KOR',

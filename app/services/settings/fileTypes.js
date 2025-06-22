@@ -102,7 +102,6 @@ const fileTypes = [
   },
   {
     type: 'Product',
-    name: 'State Matches'
   },
   {
     type: 'Product',
@@ -274,7 +273,6 @@ const fileTypes = [
   },
   {
     type: 'Product',
-// Temp comment
     name: 'Detailed Budget'
   },
   {
@@ -324,5 +322,13 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Lot Release Agreement'
+  },
+  {
+    type: 'Product',
+    name: 'Commitment for Permanent Financing'
+  },
+  {
+    type: 'Product',
+    name: 'Application'
   },
   {

@@ -5,6 +5,7 @@ const mocks = require('../../../support/mock/credit_report')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
+// Temp comment
 
 describe('app.services.creditReport.parse', () => {
   afterEach(() => { nock.cleanAll() })
@@ -42,3 +43,5 @@ describe('app.services.creditReport.parse', () => {
 
       } catch (error) {
         expect(error.message).to.equal("Response from Credit Bureau is empty")
+        expect(error).to.be.an.instanceof(Error)
+      }

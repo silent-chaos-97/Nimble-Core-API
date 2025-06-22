@@ -31,7 +31,6 @@ class SearchModel extends BaseModel {
         'createdById',
 
         //info
-// Temp comment
         'name',
         'description',
         'filters',
@@ -42,3 +41,5 @@ class SearchModel extends BaseModel {
         'id',
         'institutionId',
         'name',
+        'description',
+        'filters',

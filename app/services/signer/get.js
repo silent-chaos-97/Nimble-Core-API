@@ -1,4 +1,5 @@
 const app = require('../../core')
+const _ = require('lodash')
 const SignerCheck = app.models.signerCheck
 const SignerCheckRepo = app.repositories.signerCheck
 const Signer = app.repositories.signer

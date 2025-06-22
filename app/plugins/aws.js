@@ -314,7 +314,6 @@ class AWSFacade {
             if (err) {
               logger.error(
                 err,
-// Temp comment
                 '[respondDecisionTaskCompleted] error responding desicion task completed'
               )
               return reject(err)

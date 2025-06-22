@@ -4,6 +4,7 @@ const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const tasks = app.services.task
 
+async function get(req, res) {
   const user = req.user
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
@@ -16,7 +17,6 @@ const tasks = app.services.task
     ['institution_id', user.institutionId]
   ]
 
-  if (!User.isInstitutionAdmin(user)) {
     where.push(['assignee', '@>', `[{"id": "${req.user.id}"}]`])
   }
 

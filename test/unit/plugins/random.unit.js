@@ -31,3 +31,4 @@ describe('Random Plugin', () => {
 
     it('should return random char', () => {
       let letter = rand.letter()
+      expect(letter).to.be.an('string')

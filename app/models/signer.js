@@ -73,6 +73,7 @@ class Signer extends BaseModel {
       'verificationStatusFaceUpdatedAt',
       'verificationStatusDocument',
       'verificationStatusDocumentUpdatedAt',
+      'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
       'verificationStatusSanctions',
       'verificationStatusSanctionsUpdatedAt',
@@ -150,3 +151,7 @@ class Signer extends BaseModel {
     const baseSchema = Joi.object().keys({
       firstName: Joi.string().max(250).optional(),
       middleName: Joi.string().max(250).allow('').optional(),
+      lastName: Joi.string().max(250).optional(),
+      address: Joi.string().max(250).optional(),
+      city: Joi.string().max(250).optional(),
+      state: Joi.string().max(3).optional(),

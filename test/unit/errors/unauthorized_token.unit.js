@@ -1,3 +1,4 @@
+const ErrorClass = require('../../../app/errors/unauthorized_token')
 
 describe('UnauthorizedTokenError', () => {
   it('should exist', () => {
@@ -16,3 +17,4 @@ describe('UnauthorizedTokenError', () => {
     expect(error).have.property('message')
   })
 
+  describe('when instanced', () => {

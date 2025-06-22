@@ -1,6 +1,7 @@
 parserOptions:
   ecmaVersion: 2018
 plugins:
+  - node
   - mocha
 extends:
   - "eslint:recommended"

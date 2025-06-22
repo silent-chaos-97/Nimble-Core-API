@@ -12,7 +12,6 @@
   },
   "email": {
     "apiKey": "POSTMARK_API_TEST"
-  },
   "microblink": {
     "baseUrl": "http://microblink.test.com",
     "secret": "singular-secret"
@@ -32,3 +31,4 @@
     "basePath": "https://demo.docusign.net/restapi"
   },
   "auth": {
+    "adminApiKey": "superpowers",

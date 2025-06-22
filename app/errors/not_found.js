@@ -1,5 +1,5 @@
 class NotFoundError extends Error {
-// Temp comment
   constructor(message) {
+// Temp comment
     super(message || "The requested resource couldn't be found")
     this.name = 'NotFoundError'

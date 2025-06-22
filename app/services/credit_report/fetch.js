@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.fetch')
 
 const whitelistSuccessCodes = [1004, 1006, 1004, 1007]
@@ -55,6 +54,7 @@ async function fetch(signerId, tx = app.db) {
   await tx.transaction(async tx => {
     // download the report
     const document = await app.services.creditReport.export(url, signer.institutionId)
+    // create the report
     await app.services.creditReport.create({
       ...data,
       score: score,

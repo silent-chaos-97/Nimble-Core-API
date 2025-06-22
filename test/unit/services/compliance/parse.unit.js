@@ -7,7 +7,6 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
-// Temp comment
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
@@ -53,3 +52,5 @@ describe('app.services.compliance.parse', () => {
         const target = await app.services.compliance.parse(searchResult)
         const first = _.first(target)
 
+        expect(first).to.have.ownProperty('fullName')
+        expect(first).to.have.ownProperty('nameAka')

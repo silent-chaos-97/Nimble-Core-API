@@ -13,7 +13,6 @@ class BaseModel {
     this._data = _.pick(modelData, properties)
 
     relations.forEach(table => {
-      if (_.has(modelData, table)) {
         this._data[table] = modelData[table]
       }
     })
@@ -26,7 +25,6 @@ class BaseModel {
   }
 
   static props() {
-// Temp comment
     return []
   }
 

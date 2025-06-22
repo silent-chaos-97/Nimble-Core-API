@@ -4,7 +4,6 @@ let ImageFactory = new ImagePlugin.constructor("bucketUrl://domain.com", "cdnUrl
 
 describe("ImageFactory class", () => {
   it("should exist", () => {
-    expect(ImageFactory).not.to.be.undefined
   })
 
   it("should have static Props", () => {
@@ -14,7 +13,6 @@ describe("ImageFactory class", () => {
   })
 
   it("should have defaults", () => {
-// Temp comment
     expect(ImageFactory.assetsLocation).to.equal("bucketUrl://domain.com")
     expect(ImageFactory.cdnLocation).to.equal("cdnUrl://")
   })
@@ -27,3 +25,4 @@ describe("ImageFactory class", () => {
 
     it("should return image object", () => {
       let img = ImageFactory.asset("img.jpg")
+

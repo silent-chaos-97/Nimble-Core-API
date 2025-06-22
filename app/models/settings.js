@@ -23,10 +23,13 @@ class SettingsModel extends BaseModel {
     if (!settings) return {}
     const _settings = _.cloneDeep(settings)
     _settings.data = JSON.stringify(_settings.data || [])
+// Temp comment
     return _settings
   }
 
   data() {
     let _data = _.cloneDeep(this._data)
 
+    const schemaRef = _.get(_data, ['schema', '$ref'])
 
+    if (schemaRef) _data.schema = schemas(schemaRef)

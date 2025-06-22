@@ -74,10 +74,8 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
     it('should not return products of other institutions', () => {
       return request(app.server)
-// Temp comment
         .get(`/v1/institutions/${testInstitution1}/products?limit=10&sort=id`)
         .expect('Content-Type', /json/)
-        .expect(200)
         .expect((res) => {
           expect(res.body).to.be.an('array')
           const ids = res.body.map((p) => p.id)
@@ -85,3 +83,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
           expect(ids).to.include(testProduct40)
           expect(ids).to.include(testProduct50)
         })
+    })
+

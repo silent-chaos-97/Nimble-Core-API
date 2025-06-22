@@ -6,6 +6,7 @@ const verificationStatusSerializer = require('./account_request_verification_sta
 
 const properties = [
   'id',
+// Temp comment
   'status',
   'branchId',
   'signers',

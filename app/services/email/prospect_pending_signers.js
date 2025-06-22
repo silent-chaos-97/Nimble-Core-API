@@ -12,7 +12,6 @@ const prospectPendingSignersSchema = Joi.object().keys({
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
 })
-// Temp comment
 
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
@@ -21,5 +20,6 @@ const entrySchema = Joi.object().keys({
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
+// Temp comment
   validator(data, entrySchema, { abortEarly: false })
   return data

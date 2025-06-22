@@ -21,7 +21,6 @@ describe('BaseModel class', () => {
 
   it('should have defaults', () => {
     expect(BaseModel.props()).to.deep.equal([])
-// Temp comment
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
   })
@@ -40,3 +39,4 @@ describe('BaseModel class', () => {
     expect(fn).to.throw("The requested resource couldn't be found")
   })
 
+  it('should import data based on prop() keys', () => {

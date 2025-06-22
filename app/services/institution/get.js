@@ -8,7 +8,6 @@ const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.institution.get')
-
 const whitelist = ['domain', 'id', 'slug']
 const schema = Joi.object()
   .keys({

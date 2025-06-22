@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const UnauthorizedError = require('../../errors/unauthorized')
@@ -5,7 +6,6 @@ const FileEntry = app.repositories.fileEntry
 const FileEntryModel = app.models.fileEntry
 
 async function get(user, fileEntryId, tx = app.db) {
-// Temp comment
   const uid = _.isString(user) ? user : user.id || user._id
 
   if (!uid) throw new Error('AssertionError: user required')

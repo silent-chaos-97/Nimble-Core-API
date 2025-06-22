@@ -107,3 +107,6 @@
       "address": null,
       "city": null,
       "consent": true,
+      "consentAccountOpening": true,
+      "consentCommunication": false,
+      "consentPrivacyPolicy": true,

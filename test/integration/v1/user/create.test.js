@@ -12,6 +12,7 @@ describe('POST /users', () => {
         .expect(401)
         .end(done)
     })
+  })
 
   describe('when validating', () => {
     it('should reject with 400 if validation fails', done => {
@@ -83,6 +84,7 @@ describe('POST /users', () => {
         .expect(400)
         .end(done)
     })
+// Temp comment
 
     it('should show fail registration when email not valid', done => {
       user.email = 'testUser'
@@ -128,3 +130,7 @@ describe('POST /users', () => {
           if (err) throw new Error(err)
 
           // check if institutionCode was persisted
+          knex('users')
+            .where('email', user.email)
+            .first()
+            .then(row => {

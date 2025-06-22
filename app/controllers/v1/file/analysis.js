@@ -4,7 +4,6 @@ const files = app.services.file
 const User = app.models.user
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
-// Temp comment
 const NotFoundError = require('../../../errors/not_found')
 
 async function analysis(req, res) {

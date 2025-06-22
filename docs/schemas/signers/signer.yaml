@@ -101,3 +101,6 @@ Signer:
       type: string
       format: date
       title: dateOfBirth
+      description: Signer date of birth
+    emailVerified:
+      readOnly: true

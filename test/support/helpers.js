@@ -23,3 +23,4 @@ module.exports = {
       iss: 'https://api.nimble-fi.com',
       sub: 'https://api.nimble-fi.com/v1/users/10',
       aud: 'https://nimble-fi.com',
+      exp: moment(now).add(10, 'm').unix(),

@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const app = require('../core')
 const BaseModel = require('./model')
+
 const Roles = {
   SuperAdmin: 'super-admin',
   InstitutionAdmin: 'institution-admin',
@@ -79,8 +80,9 @@ class UserModel extends BaseModel {
   static isPeer(user, other) {
     return !UserModel.isSuperior(user, other) && !UserModel.isSubordinate(user, other)
   }
-
   constructor(data) {
     super(UserModel.props(), UserModel.relations(), data)
   }
 
+  static props() {
+    return ['id', 'email', 'password', 'firstName', 'lastName', 'createdAt', 'lastLoginAt', 'institutionId', 'branchId', 'roles', 'titles', 'workgroups', 'department', 'status', 'phone']

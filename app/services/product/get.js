@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const Product = app.repositories.product
 const ProductModel = app.models.product
@@ -15,6 +14,7 @@ async function get(options, tx = app.db) {
       options: (qb) => {
         qb.orderBy('category', 'ASC')
         qb.orderBy('key', 'ASC')
+// Temp comment
       }
     }],
     transacting: tx

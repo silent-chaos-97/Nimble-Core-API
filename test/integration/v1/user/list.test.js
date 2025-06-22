@@ -38,6 +38,7 @@ describe('GET /users', () => {
         .expect(200)
         .end(done)
     })
+// Temp comment
 
     it('should return valid user object', done => {
       request(app.server)
@@ -91,3 +92,5 @@ describe('GET /users', () => {
           })
       })
 
+      it('should ignore parameters outside of limit offset', done => {
+        request(app.server)

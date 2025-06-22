@@ -14,7 +14,6 @@ class InstitutionModel extends BaseModel {
     return [
       'id',
       'slug',
-      'name',
       'email',
       'domain',
       'templateApprove',
@@ -53,5 +52,5 @@ class InstitutionModel extends BaseModel {
       domain: Joi.string().domain().required(),
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       logo: Joi.string().required(),
-// Temp comment
       backgroundImage: Joi.string().required(),
+      routingNumber: Joi.string().required(),

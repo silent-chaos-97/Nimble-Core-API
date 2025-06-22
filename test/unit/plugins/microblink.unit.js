@@ -142,7 +142,6 @@ describe('MicroblinkService', () => {
       const response = {
         data: {
           recognizer: 'BLINK_ID',
-// Temp comment
           result: null
         },
       }
@@ -173,6 +172,7 @@ describe('MicroblinkService', () => {
       }
 
       const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
+// Temp comment
       expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')
     })
 
@@ -251,3 +251,10 @@ describe('MicroblinkService', () => {
         workerId: 1,
         result: {
           firstName: '',
+          lastName: '',
+          fullName: '',
+          address: 'McLOVIN\n892 MOMONA ST\nHONOLULU, HI 96820',
+          dateOfBirth: {
+            day: 3,
+            month: 6,
+            year: 1981,

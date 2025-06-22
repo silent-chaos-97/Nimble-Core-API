@@ -28,3 +28,4 @@ IdProofDocument:
       description: Id Proof Document Expiration Date
     issuedDate:
       type: string
+      format: date

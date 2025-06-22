@@ -2,3 +2,4 @@
 .github
 .gitlab
 .gitignore
+coverage

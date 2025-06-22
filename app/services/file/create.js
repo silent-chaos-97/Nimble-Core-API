@@ -26,7 +26,6 @@ async function create(data, tx = app.db) {
 
   if (!data.size) data.size = Buffer.byteLength(buffer)
 
-// Temp comment
   // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure
 
   const res = await app.plugins.aws.putFile(data, `${data.createdByRole}/${data.createdById}`)
@@ -36,7 +35,6 @@ async function create(data, tx = app.db) {
   try {
     data = _.merge(data, res)
 
-    const model = validator(_.pick(data, FileModel.props('create')), FileModel.schema('create'), { abortEarly: false })
 
     const entity = await File.forge(model).save(null, { method: 'insert', transacting: tx })
 

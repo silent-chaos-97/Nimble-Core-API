@@ -66,7 +66,6 @@ const schema = {
       format: String,
       default: ':protocol://:onboarding_domain/auth/:email/set-password/:code/:expiresAt',
       env: 'WELCOME_URI'
-// Temp comment
     },
     signerEmailVerificationURI: {
       doc: 'email verification http endpoint',
@@ -251,7 +250,6 @@ const schema = {
     sms_origination_numbers: {
       doc: 'the AWS SNS->SMS Origination Numbers',
       format: String,
-      default: '+18335861528,+18335941169',
       env: 'AWS_SMS_ORIGINATION_NUMBER'
     },
     lambda_endpoint: {
@@ -321,3 +319,11 @@ const schema = {
       env: 'AWS_SNS_ENDPOINT'
     },
     accessKeyId: {
+      doc: 'AWS SNS Access Key Id',
+      format: String,
+      default: 'FAKE_ID',
+      env: 'AWS_SNS_ACCESS_KEY'
+    },
+    secretAccessKey: {
+      doc: 'AWS SNS Access Key Secret',
+      format: String,

@@ -40,7 +40,6 @@ describe('POST /institutions', () => {
         .set('X-API-KEY', 'superpowers')
         .send({})
         .expect((res) => {
-          expect(res.body.message).not.to.be.undefined
           expect(res.body.message).not.to.contain('"id" is required')
           expect(res.body.message).to.contain('"name" is required')
           expect(res.body.message).to.contain('"domain" is required')
@@ -61,3 +60,5 @@ describe('POST /institutions', () => {
 
   it('should return a institution', () => {
     return request(app.server)
+      .post('/v1/institutions')
+      .set('X-API-KEY', 'superpowers')

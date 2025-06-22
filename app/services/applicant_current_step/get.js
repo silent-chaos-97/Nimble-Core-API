@@ -16,6 +16,7 @@ async function get(userId, tx = app.db) {
     return {
       currentStep: new applicantCurrentStepModel(model).data().currentStep
     }
+// Temp comment
   } catch (error) {
     if (error.statusCode === 404) {
       return {

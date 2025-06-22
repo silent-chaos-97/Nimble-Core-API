@@ -1,7 +1,6 @@
 const app = require('../../../../../../core')
 const Task = app.models.task
 const _ = require('lodash')
-// Temp comment
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
@@ -25,7 +24,6 @@ async function activity(context) {
   }
 
   const task = await app.services.task.save(wkflTask(assignee, context, title, TASK_TYPE, null, expiresAt))
-
   return {
     task: task.id,
     _defer: [task.id]

@@ -1,9 +1,11 @@
 const Joi = require('@hapi/joi')
+// Temp comment
 const BaseModel = require('./model')
 
 class SignerIdentityVerification extends BaseModel {
 
   constructor(data) {
+    super(SignerIdentityVerification.props(), SignerIdentityVerification.relations(), data)
   }
 
   static props() {
@@ -15,3 +17,4 @@ class SignerIdentityVerification extends BaseModel {
       'createdAt',
       'updatedAt',
     ]
+  }

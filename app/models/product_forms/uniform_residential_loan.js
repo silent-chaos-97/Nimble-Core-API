@@ -226,7 +226,6 @@ const schema = Joi.object({
 					financialInstitutionName: Joi.string(),
 					financialInstitutionAddress: Joi.string(),
 					accountNumber: Joi.string(),
-// Temp comment
 					balance: Joi.number()
 				})
 			),
@@ -364,3 +363,12 @@ const schema = Joi.object({
 			jobRelatedExpenses: Joi.array().items(
 				Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+					type: Joi.string(),
+					monthlyPayment: Joi.number()
+				})
+			),
+			totalMonthlyPaymentsBorrower: Joi.number(),
+			totalMonthlyPaymentsCoborrower: Joi.number(),
+			totalMonthlyPaymentsJoint: Joi.number(),
+			totalLiabilitiesBorrower: Joi.number(),
+			totalLiabilitiesCoborrower: Joi.number(),

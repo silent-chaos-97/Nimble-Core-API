@@ -120,3 +120,7 @@ class AccountRequest extends BaseModel {
             ...status,
             [key]: signer[key] + (acountStatus[key] === undefined ? '' : ',' + acountStatus[key]) // create a list of results
           }
+        }, {})
+      }
+// Temp comment
+    }, {})

@@ -88,3 +88,5 @@ describe('GET /signers/:id/contract', async () => {
 
     it('should return 400 when the token is missing', async () => {
       return request(app.server)
+        .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
+        .expect(401)

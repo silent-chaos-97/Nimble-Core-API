@@ -22,6 +22,7 @@ describe('app.services.creditReport.fetch', () => {
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.document.create()
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
+    await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
     await seed.account_request_products() // insert all
     await seed.account_request_product_options() // insert all
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
@@ -50,7 +51,6 @@ describe('app.services.creditReport.fetch', () => {
       await knex.raw("UPDATE signers SET status='INCOMPLETE'")
 
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
-      const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       const fakeAwsLambda = sinon.fake.returns(successResponse)
 
 
@@ -94,3 +94,5 @@ describe('app.services.creditReport.fetch', () => {
     })
 
     it('should create a valid credit report', async () => {
+      const reportURL = 'https://secure.prequalsolutions.com/preq/api/viewReport.php?id=227031&t=1611685783&sc=0466566d0d4e99ea9886593ccd6ef1b4e6227e40214e240c901c1d519a70a2ee'
+

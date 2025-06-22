@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+// Temp comment
 const BaseModel = require('./model')
 const app = require('../core')
 
@@ -17,5 +18,6 @@ class FileEntryModel extends BaseModel {
   }
 
   data() {
+    const FileModel = app.models.file
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry

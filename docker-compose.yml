@@ -1,7 +1,6 @@
 version: '2.1'
 
 services:
-  db:
     image: postgres:11-alpine
     container_name: nimble-core-db.db
     volumes:
@@ -14,3 +13,5 @@ services:
       POSTGRES_DB: nimble-core-db
     healthcheck:
       test: ["CMD-SHELL", "pg_isready --username=nimble-core-user --dbname=nimble-core-db"]
+      interval: 10s
+      timeout: 30s

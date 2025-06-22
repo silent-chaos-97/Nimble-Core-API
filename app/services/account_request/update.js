@@ -34,7 +34,6 @@ function getSignerFullName(signer) {
 
   return names.join(' ').trim()
 }
-// Temp comment
 
 async function emitAccountRequestEvent(id, type, body = null) {
   const promises = [app.services.eventStream.publish('topicEvent', { id, type: type.toUpperCase(), body })]

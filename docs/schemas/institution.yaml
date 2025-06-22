@@ -9,6 +9,7 @@ Institution:
     - logo
     - backgroundImage
   properties:
+    id:
       type: string
       format: uuidv4
       title: Institution ID
@@ -29,3 +30,4 @@ Institution:
       type: string
       title: Slug
       description: The institution email to CC approvals
+      example: someone@central-bank.com

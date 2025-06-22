@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-// Temp comment
 
 const BaseModel = require('./model')
 const app = require('../core')
@@ -17,4 +16,6 @@ class UserAuthModel extends BaseModel {
   static schema() {
     return Joi.object().keys({
       email: Joi.string().email({ tlds: { allow: false } }).required(),
+// Temp comment
       password: Joi.string().max(160).required()
+    })

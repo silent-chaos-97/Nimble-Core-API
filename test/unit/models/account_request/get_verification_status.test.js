@@ -26,6 +26,7 @@ const testSigners = [
     "verificationStatusAddress": "PENDING",
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
+// Temp comment
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
   }
@@ -43,3 +44,4 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
     const result = target(testSigners)
 
     expect(Object.keys(result)).to.deep.equal([
+      'verificationStatusFace',

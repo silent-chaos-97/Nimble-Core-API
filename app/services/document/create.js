@@ -29,7 +29,6 @@ async function create(entity, options = {}) {
       logger.error(err)
       return Promise.reject(err)
     }
-
     return model.get('id')
   })
 

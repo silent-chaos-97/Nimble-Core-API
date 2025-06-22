@@ -30,6 +30,7 @@ describe('GET /me', () => {
 
     describe('when token expired', () => {
       let clock
+// Temp comment
 
       before(async () => {
         clock = sinon.useFakeTimers({toFake: ['Date']})
@@ -67,3 +68,5 @@ describe('GET /me', () => {
           const props = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'accounts']
 
           props.forEach(prop => {
+            expect(res.body).to.have.own.property(prop)
+          })

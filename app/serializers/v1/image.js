@@ -1,6 +1,7 @@
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 
+const properties = ['default']
 
 function serializer(data) {
   let format = defaultSerializer(properties, data)

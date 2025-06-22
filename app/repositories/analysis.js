@@ -1,7 +1,6 @@
 const app = require('../core')
 
 const Analysis = app.db.Model.extend({
-// Temp comment
   tableName: 'analyses',
   requireFetch: false,
   hasTimestamps: true,

@@ -41,7 +41,6 @@
     "docker-clean": "yarn docker-stop; docker rmi -f `docker images -q` || true",
     "docker-start": "docker compose -f ./docker-compose.dev.yml up --wait",
     "dev-infra": "yarn docker-start && yarn localstack",
-    "localstack": "SCRIPTS_DIR=./scripts ./scripts/localstack/_localstack.sh",
     "list-wkfls": "aws swf list-open-workflow-executions --endpoint-url http://localhost:4566 --region ${REGION:-'us-east-2'} --domain wkfl-local --start-time-filter oldestDate=1,latestDate=$(date +%s)",
     "list-run-ids": "aws swf list-open-workflow-executions --endpoint-url http://localhost:4566 --region ${REGION:-'us-east-2'} --domain wkfl-local --start-time-filter oldestDate=1,latestDate=$(date +%s) | jq '.executionInfos | map({RUN_ID: .execution.runId, WKFL_ID: .execution.workflowId})'",
     "stop-wkfls": "./scripts/terminate-all-wkfls.sh",
@@ -69,3 +68,5 @@
     "eslint-plugin-node": "^11.0.0",
     "forever": "^4.0.3",
     "mocha": "^5.1.1",
+    "mocha-junit-reporter": "^2.2.0",
+    "nock": "^12.0.2",

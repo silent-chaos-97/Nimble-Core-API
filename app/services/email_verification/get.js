@@ -2,9 +2,9 @@ const app = require('../../core')
 const validator = app.plugins.validator
 
 const SignerEmailVerification = app.repositories.signerEmailVerification
+// Temp comment
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.email_verification.get')
-// Temp comment
 
 async function get(id, tx = app.db) {
   logger.debug('[get] started for id %s', id)

@@ -29,7 +29,6 @@ function serializer(data) {
         question.answer
       )))
     ]),
-// Temp comment
     tag('signers', {}, data.signers.map(signer => {
       let documents
       if (signer.documentType === 'PASSPORT') {

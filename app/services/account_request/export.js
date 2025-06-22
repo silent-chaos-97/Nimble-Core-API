@@ -31,5 +31,4 @@ async function processReports(reports, institutionId, eventId) {
     // only get document if there is a document id
     if (reports[0].documentId) {
       return copyDocument(reports[0].documentId, institutionId, eventId)
-    }
   }

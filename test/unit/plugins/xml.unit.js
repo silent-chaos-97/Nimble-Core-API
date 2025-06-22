@@ -9,7 +9,6 @@ describe('app.plugins.xml', () => {
     expect(target).to.be.an('object')
   })
 
-// Temp comment
   it('should explose format() method', () => {
     expect(target.format).not.to.be.undefined
     expect(target.format).to.be.an('function')
@@ -64,3 +63,4 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, 123),
         target.tag('tag', {}, 123.45),
         target.tag('tag', {}, 0),
+        target.tag('tag', {}, true),

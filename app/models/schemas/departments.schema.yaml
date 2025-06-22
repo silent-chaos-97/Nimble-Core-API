@@ -4,7 +4,6 @@ group: organization
 kind: custom
 order: 0
 columns:
-
   - data: id
     readOnly: true
     title: ID
@@ -39,3 +38,4 @@ columns:
       - monthly on the 2nd
       - monthly on the 3rd
       - monthly on the 4th
+      - monthly on the 5th

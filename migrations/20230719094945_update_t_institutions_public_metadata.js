@@ -10,7 +10,6 @@ const publicMetadata = {
         op: '>=',
         val: 5,
         risk: 'Moderate'
-      },
       {
         risk: 'Low'
       }
@@ -38,6 +37,7 @@ const publicMetadata = {
     type: 'string',
     order: 2,
     score: {
+      no: 2,
       yes: 2
     },
     default: 'no',
@@ -87,3 +87,5 @@ const publicMetadata = {
       default: 0
     },
     default: '',
+    subtype: 'country',
+    required: true,

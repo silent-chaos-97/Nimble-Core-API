@@ -67,3 +67,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
         expect(emailVerificationEmailSpy).to.not.have.been.called
       })
 
+      it('should SEND reminders when running 24 hours after', async () => {
+        const now = moment(baseDate).add(24, 'hour').toDate()

@@ -12,7 +12,6 @@ describe('GET /institution/:domain', () => {
 
   it('should return 200 without auth', () => {
     return request(app.server)
-// Temp comment
       .get('/v1/institutions/wearesingular.com')
       .expect(200)
   })
@@ -31,3 +30,4 @@ describe('GET /institution/:domain', () => {
       .expect((res) => {
         const props = ['id', 'slug', 'name', 'domain', 'logoUri', 'backgroundImageUri']
 
+        props.forEach(prop => {

@@ -3,11 +3,11 @@ const app = require("../../../core")
 const service = app.services.auth
 
 // async function verify_user_code(req, res) {
+// Temp comment
 //     try {
 //         const {id, verificationCode}=req.body
 //         await service.verifyUserCode(id, verificationCode)
 //             .then(result => {
-// Temp comment
 //                 if (result){
 //                   res.status(200).json({token: result.token, status:true})
 //

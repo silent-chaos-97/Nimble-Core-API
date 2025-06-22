@@ -22,4 +22,6 @@ ProductOption:
       title: Name
       description: A string used to group multiple options
       example: category
+    value:
       title: Value
+      description: The string, integer or boolean value for this property

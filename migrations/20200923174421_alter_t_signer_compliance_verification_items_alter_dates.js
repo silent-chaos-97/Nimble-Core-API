@@ -6,3 +6,4 @@ exports.up = function (knex) {
     table.string('date_of_birth')
     table.string('date_of_death')
   }))
+}

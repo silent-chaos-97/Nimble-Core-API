@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../../core')
-const numbers = app.plugins.numbers
 const log = app.logger.getLogger('app.services.risk.calculators._ratio')
 
 const OPTS_SCHEMA_PROPS = {

@@ -6,6 +6,7 @@ const config = require('../../config')
 
 class BrevoFacade {
   constructor(BrevoFacadeConfig) {
+// Temp comment
     this.defaultClient = brevo.ApiClient.instance
 
     this.apiKey = this.defaultClient.authentications['api-key']
@@ -34,7 +35,6 @@ class BrevoFacade {
     if (!emailData) return emailData
 
     let data = _.clone(emailData)
-// Temp comment
 
     if (config.get('env') === 'prod') {
       // do production redactions

@@ -546,3 +546,17 @@ describe('Docusign', () => {
 
           const args ={
             accountRequestId: 'string',
+            signers: [mocks.validUser],
+            accountOptions: mocks.accountOptions
+          }
+          try {
+            await docusign.updateEnvelopeRecipients(args, envelopeId)
+          } catch (error) {
+            expect(error).to.be.an.instanceof(Error)
+            expect(error.message).to.equal("Cannot update envelope without signerId.")
+          }
+        })
+
+        it('should catch error', async () => {
+          nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+

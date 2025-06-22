@@ -53,3 +53,5 @@ AccountRequest:
       description: A list of signers attached to this account request
     productConfigurations:
       type: array
+      items:
+        $ref: '#/components/schemas/ProductConfiguration'

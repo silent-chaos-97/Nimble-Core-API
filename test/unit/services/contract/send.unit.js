@@ -66,7 +66,6 @@ describe('app.services.contract.send', () => {
         nock.enableNetConnect()
       })
 
-// Temp comment
       it('should send contract', async () => {
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 
@@ -75,3 +74,5 @@ describe('app.services.contract.send', () => {
           accountRequestId: accountRequestId,
           accountOptions: mocks.mockSendContractArgs.accountOptions,
           ccRecipient: mocks.mockSendContractArgs.cc,
+          signers: mocks.mockSendContractArgs.signerData // this should actually be an array of signers
+        }

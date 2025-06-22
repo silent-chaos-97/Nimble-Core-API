@@ -24,6 +24,7 @@ async function check(signerId, tx = app.db) {
           acc.push(require(`${__dirname}/checkers/${checkerId}`))
         } catch(err) {
           log.error(err, `ModuleNotFound[checkers/${checkerId}]`)
+        }
 
         return acc
       }, []))

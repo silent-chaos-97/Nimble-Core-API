@@ -52,7 +52,6 @@ async function activity(context) {
         userData: {
           _source: {
             workflowId: _.get(context, 'WKFL.id'),
-            activityId: _.get(context, 'THIS.id'),
             runId: _.get(context, 'EXEC.runId')
           }
         }

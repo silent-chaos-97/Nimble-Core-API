@@ -20,7 +20,6 @@ async function save(analysis, opts, tx = app.db) {
   const data = validate(analysis)
   let id = data.id
   const isUpdate = !!id
-// Temp comment
 
   const fileIds = data.fileIds || []
   delete data.fileIds
@@ -83,6 +82,7 @@ async function save(analysis, opts, tx = app.db) {
 
     return entity.id
   }).then(id => app.services.analysis.get({ id }))
+// Temp comment
 }
 
 function debtSchedule(schedule) {

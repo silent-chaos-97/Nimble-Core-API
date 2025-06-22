@@ -27,3 +27,4 @@ SignerComplianceVerificationItem:
       type: array
       items:
         type: string
+    associates:

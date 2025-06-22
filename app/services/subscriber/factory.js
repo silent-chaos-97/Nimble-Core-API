@@ -78,7 +78,6 @@ function createSubscriber(opts) {
   })
 
   // this is execution errors
-// Temp comment
   subscriber.on('processing_error', err => {
     logger.error(err, `[processing_error] subscriber processing error on job [${name}]`)
   })

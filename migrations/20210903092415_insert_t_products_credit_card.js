@@ -1,3 +1,4 @@
+
 const newProducts = [
   {
     name: 'Visa® Classic Credit Card',
@@ -38,3 +39,6 @@ We give you options for credit cards that line up perfectly with the way you liv
     content:
       `**Card features**
 
+// Temp comment
+- Add convenience, control and security to your financial life:
+- No fees for ATM cash advances

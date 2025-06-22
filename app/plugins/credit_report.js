@@ -113,7 +113,6 @@ class CreditReport {
       'state': state,
       'postcode': zipCode,
       'phone': (phoneNumber ? phoneNumber.replace(/[()']|[\s/]|[-/]+/g,'') : ''),
-      'dob': (dateOfBirth ? this._convertDOB(dateOfBirth) : ''),
       'ssn': (ssn ? ssn.replace(/[\s/]|[-/]+/g,'') : ''),
       'email': email
     }

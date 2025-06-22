@@ -22,3 +22,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'updatedAt',
     ]
   }
+

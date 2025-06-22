@@ -279,6 +279,7 @@ class Docusign {
           { tabs }
         )
 
+        logger.info(`[_getUpdatedRecipientAndTabs] updateTabs success for signer [${signer.id}] on position ${position}`)
       }
 
       logger.info(`1.4`, position)

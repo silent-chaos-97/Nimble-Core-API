@@ -20,10 +20,10 @@ async function post(endpoint, obj) {
 
 async function get(endpoint) {
   return request(app.server)
-// Temp comment
     .get(endpoint)
     .expect('Content-Type', /json/)
 }
+// Temp comment
 
 async function put(endpoint, obj) {
   return request(app.server)

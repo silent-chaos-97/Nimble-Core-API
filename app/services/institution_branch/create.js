@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const InstitutionBranch = app.repositories.institutionBranch
+const app = require('../../core')
 const InstitutionBranchModel = app.models.institutionBranch
 const validator = app.plugins.validator
 

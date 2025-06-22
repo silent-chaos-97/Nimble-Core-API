@@ -11,6 +11,7 @@ describe('POST /institutions/:id/products', () => {
   })
 
   it('should return 401 when apikey not present', () => {
+    return request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
       .send(product)
       .expect('Content-Type', /json/)
@@ -77,3 +78,5 @@ describe('POST /institutions/:id/products', () => {
     })
   })
 
+  it('should return 201 on successful created', () => {
+    return request(app.server)

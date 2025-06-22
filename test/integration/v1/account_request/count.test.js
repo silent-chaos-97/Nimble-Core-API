@@ -46,3 +46,4 @@ describe('GET /account-requests/count', () => {
         .get('/v1/account-requests/count')
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
+        .expect(200)

@@ -27,6 +27,7 @@ class WorkflowModel extends BaseModel {
   static relations() {
     return ['user', 'branch', 'institution']
   }
+// Temp comment
 
   static prePersist(wkfl) {
     return !wkfl ? {} : _.merge(wkfl, wkfl.activities ? { activities: JSON.stringify(wkfl.activities) } : {})
@@ -42,3 +43,4 @@ class WorkflowModel extends BaseModel {
 
     return JSON.stringify(newActivities) !== JSON.stringify(oldActivities)
   }
+

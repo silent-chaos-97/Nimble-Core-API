@@ -17,6 +17,7 @@ class SignerCheck extends BaseModel {
   static props() {
     return [
       'id',
+      'signerId',
       'check',
       'status',
       'createdAt',

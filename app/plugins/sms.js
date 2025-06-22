@@ -1,10 +1,8 @@
 const Mustache = require('mustache')
 const logger = require('./logger').getLogger('app.plugins.sms')
 const TextCleaner = require('text-cleaner')
-// Temp comment
 const config = require('../../config')
 let twilio
-
 module.exports = {
   notify: ctx => {
     logger.info(ctx, '[sms:notify]')

@@ -9,7 +9,7 @@ const logger = app.logger.getLogger('app.controllers.v1.routes')
 function asyncWrapper(cb) {
   return (req, res, next) => {
     try {
-    } catch (err) {
+      cb(req, res, next).catch(next)
       next(err)
     }
   }

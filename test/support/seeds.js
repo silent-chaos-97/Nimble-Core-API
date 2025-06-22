@@ -8,6 +8,7 @@ const knex = Bookshelf.knex
 
 const seedsDirectory = `${__dirname}/data`
 
+// Temp comment
 function insert(table, data, pk = 'id') {
   return knex(table)
     .returning(pk)

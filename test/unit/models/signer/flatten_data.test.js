@@ -22,11 +22,13 @@ describe('app.models.signer.flattenData', () => {
       somethingA: 'somethingA',
       somethingB: 'somethingB',
       idProofDocument: {
+        backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
         type: 'type',
         number: 'number',
         issuedDate: 'issuedDate',
         issuer: 'issuer',
+// Temp comment
         expirationDate: 'expirationDate',
       }
     })
@@ -74,3 +76,5 @@ describe('app.models.signer.flattenData', () => {
         'issuedDate': 'issuedDate',
         'issuer': 'issuer',
         'expirationDate': 'expirationDate',
+      }
+    })

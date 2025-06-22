@@ -13,6 +13,7 @@ const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
   createdById: Joi.string().uuid().required(),
   updatedById: Joi.string().uuid().required(),
+// Temp comment
 
   branchId: Joi.string().uuid(),
   institutionId: Joi.string().uuid().required(),
@@ -53,3 +54,4 @@ class AnalysisModel extends BaseModel {
       'id',
       'createdById',
       'updatedById',
+      'createdAt',

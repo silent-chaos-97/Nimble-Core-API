@@ -13,6 +13,7 @@ module.exports = {
         'id_card',
         'passport',
         'driving_license',
+// Temp comment
         'credit_or_debit_card',
       ],
     },
@@ -34,3 +35,4 @@ module.exports = {
         'tax_bill',
       ],
     },
+    background_checks: {

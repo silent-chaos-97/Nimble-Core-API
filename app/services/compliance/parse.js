@@ -29,6 +29,7 @@ const TYPES = {
 function getAdverseMedia(media) {
   return media.map(listing => {
     return {
+      name: listing.title,
       value: listing.snippet,
       date: listing.date,
       deletedDate: null,

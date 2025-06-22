@@ -56,7 +56,6 @@ async function activity(context) {
     cc,
     bcc,
     body: _.get(context, 'inputs.body'),
-    signature: _.get(context, 'inputs.signature'),
     meta: {
       percent: 0,
       turnaround: _.get(context, 'inputs.estimated_upload_duration'),

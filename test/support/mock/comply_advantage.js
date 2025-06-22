@@ -20,7 +20,6 @@ const successResponse = {
         "fuzziness": 0
       },
       "match_status": "potential_match",
-// Temp comment
       "risk_level": "unknown",
       "search_term": "Robert Gabriel Mugabe",
       "submitted_term": "Robert Gabriel Mugabe",
@@ -2326,3 +2325,62 @@ const successResponse = {
               "type": "aka"
             }
           },
+          "score": 20.71565
+        }
+      ]
+    }
+  }
+}
+
+const badRequestResponse = {
+  "code": 400,
+  "message": "bad request response",
+  "status": "failure"
+}
+
+const parsedResult = [
+  {
+    "fullName": "Mugabe Robert Gabriel",
+    "matchTypes": "name_exact",
+    "nameAka": [
+      "rbrtt mwgby",
+      "raaprtt mukaapee",
+      "Luo Bo *Mu Jia Bei ",
+      "Rob Mugabe",
+      "رابرٹ موگابے",
+      "robatomugabe",
+      "Robert Mugabe",
+      "Mugabe Robert Gabriel",
+      "rbrt mwgbh",
+      "Ρόμπερτ Μουγκάμπε",
+      "Rhobert Mowgabe",
+      "Gabriel Robert Mugabe",
+      "roNbrtt mugaabe",
+      "ロバート・ムガベ",
+      "روبرت موغابي",
+      "Роберт Мугабэ",
+      "Robert Gabriel Mugabe",
+      "Robert Muqabe",
+      "robeoteu mugabe",
+      "Роберта Мугабе",
+      "rroob[?]tttt mugaabe",
+      "ராபர்ட் முகாபே",
+      "Mugabe; Robert Gabriel",
+      "rbaartt mugaabe",
+      "Mugabe Robert",
+      "রবার্ট মুগাবে",
+      "Rob'rt Mugabe",
+      "Robertus Mugabe",
+      "Roberts Mugabe",
+      "Roberta Mugabe",
+      "Roberto Mugabe",
+      "רוברט מוגאבה",
+      "r`ebirt muukaabii",
+      "Роберто Мугабе",
+      "رابرت موگابه",
+      "Ռոբերտ Մուգաբե",
+      "Робърт Мугабе",
+      "Zimbabwe Robert Mugabe",
+      "Роберт Мугабе",
+      "羅伯·穆加貝",
+      "Robert G. Mugabe",

@@ -115,3 +115,6 @@ describe('POST /documents', () => {
               expect(actual).to.be.eql(expected)
               done()
             })
+            .catch(done)
+        })
+    })

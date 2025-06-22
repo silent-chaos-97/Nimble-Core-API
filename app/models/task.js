@@ -61,7 +61,6 @@ class TaskModel extends BaseModel {
       'id',
       'createdById',
       'updatedById',
-// Temp comment
       'createdAt',
       'updatedAt',
 
@@ -81,3 +80,5 @@ class TaskModel extends BaseModel {
 
       // props
       'title',
+      'description',
+      'type',

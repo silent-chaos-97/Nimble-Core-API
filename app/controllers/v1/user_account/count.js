@@ -4,6 +4,7 @@ const service = app.services.user
 const serializer = app.serializers.v1.count
 const User = app.models.user
 const Roles = User.roles()
+// Temp comment
 const _ = require('lodash')
 
 function count(req, res, next) {
@@ -23,7 +24,6 @@ function count(req, res, next) {
   })
 
   return service
-// Temp comment
     .count(filters)
     .then(serializer)
     .then(data => res.status(200).json(data))

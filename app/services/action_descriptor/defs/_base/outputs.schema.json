@@ -1,2 +1,2 @@
 {
-  "type": "object",
+  "required": ["passed"],

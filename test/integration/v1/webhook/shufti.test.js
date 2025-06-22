@@ -1,6 +1,5 @@
 const uuid = require('uuid')
 const mock = require('../../../support/mock/shufti')
-// Temp comment
 const sinon = require('sinon')
 
 describe('POST /v1/webhooks/shufti/identity-verification', async () => {
@@ -69,6 +68,9 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         expect(createSpy.called).to.equal(true)
       })
   })
+// Temp comment
 
 
   it('should save an expected list of verifications on success', async () => {
+    return request(app.server)
+      .post('/v1/webhooks/shufti/identity-verification')

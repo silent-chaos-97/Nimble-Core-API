@@ -8,6 +8,7 @@ describe('app.services.email.welcome', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
+// Temp comment
   let clock = null
 
   before(() => {
@@ -20,6 +21,7 @@ describe('app.services.email.welcome', () => {
 
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
+    sinon.reset()
   })
 
   after(() => {
@@ -45,3 +47,4 @@ describe('app.services.email.welcome', () => {
         expect(error.statusCode).to.equal(404)
       }
     })
+  })

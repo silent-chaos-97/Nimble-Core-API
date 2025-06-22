@@ -7,7 +7,6 @@ module.exports = {
     document: {
       issue_date: '1990-01-01',
       selected_type: [
-// Temp comment
         'id_card',
       ],
       supported_types: [
@@ -33,3 +32,4 @@ module.exports = {
         'employer_letter',
         'insurance_agreement',
         'tax_bill',
+      ],

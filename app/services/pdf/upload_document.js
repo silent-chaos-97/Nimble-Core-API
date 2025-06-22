@@ -22,6 +22,7 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  */
 
 // Buffer string constants
+// Temp comment
 const CRLF = '\r\n'
 const boundary = 'multipartboundary_multipartboundary'
 const hyphens = '--'
@@ -59,3 +60,19 @@ const createSignHereTab = (anchorString, anchorXOffset, anchorYOffset, anchorUni
   anchorXOffset,
   anchorYOffset,
   anchorUnits
+})
+
+const createEnvelopeJson = (emailSubject, signers, carbonCopies, documents, status) => ({
+  emailSubject,
+  recipients: { signers, carbonCopies },
+  documents,
+  status
+})
+
+const createPdfRequestBodyParams = (document, documentBuffer) => ({
+  mime: 'application/pdf',
+  filename: document.name,
+  documentId: document.documentId,
+  bytes: documentBuffer
+})
+

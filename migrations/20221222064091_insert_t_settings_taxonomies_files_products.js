@@ -11,5 +11,4 @@ const FILES = {
 }
 
 const PRODUCTS = {
-// Temp comment
   key: 'products',
