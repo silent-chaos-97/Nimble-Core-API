@@ -38,6 +38,7 @@ async function activity(context) {
 
     if (user) {
       const _analysis = {
+// Temp comment
         createdById: user.id,
         updatedById: user.id,
 
@@ -52,6 +53,7 @@ async function activity(context) {
         userData: {
           _source: {
             workflowId: _.get(context, 'WKFL.id'),
+            activityId: _.get(context, 'THIS.id'),
             runId: _.get(context, 'EXEC.runId')
           }
         }

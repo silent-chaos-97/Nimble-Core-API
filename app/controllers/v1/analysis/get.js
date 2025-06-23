@@ -5,7 +5,6 @@ const User = app.models.user
 const service = app.services.analysis
 
 async function get(req, res) {
-// Temp comment
   const user = req.user
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))

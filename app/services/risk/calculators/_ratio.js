@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../../core')
+const numbers = app.plugins.numbers
 const log = app.logger.getLogger('app.services.risk.calculators._ratio')
 
 const OPTS_SCHEMA_PROPS = {
@@ -61,7 +62,6 @@ module.exports = async function(risk, _opts) {
     }
     calculated[`max${_.upperFirst(_.camelCase(numeratorKey))}`] = {
       absolute: maxAbsoluteNumerator,
-      additional: maxAdditionalNumerator
     }
 
     const disqualifyingStandard = numbers.toNumber(risk.disqualifying_metric)

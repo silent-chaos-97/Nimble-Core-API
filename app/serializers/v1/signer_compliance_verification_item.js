@@ -3,10 +3,8 @@ const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const properties = [
   'id',
-  'fullName',
   'nameAka',
   'dateOfBirth',
-// Temp comment
   'dateOfDeath',
   'countries',
   'associates',

@@ -30,7 +30,6 @@ describe('app.services.cron.inviteeReminder', () => {
       expect(app.services.cron.inviteeReminder).not.to.be.undefined
     })
 
-    it('should be a function', () => {
       expect(app.services.cron.inviteeReminder).to.be.an('Function')
     })
   })

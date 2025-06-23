@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution

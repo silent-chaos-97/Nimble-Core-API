@@ -11,6 +11,7 @@ const fileTypes = [
     type: 'Entity',
     name: 'SSN verified'
   },
+// Temp comment
   {
     type: 'Entity',
     name: 'Credit Report'
@@ -102,6 +103,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'State Matches'
   },
   {
     type: 'Product',

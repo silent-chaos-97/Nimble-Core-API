@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const Joi = require('@hapi/joi')
 const config = require('../../../config')
 
 const app = require('../../core')
@@ -11,6 +12,7 @@ const { emailNormalizer } = app.plugins
 const whitelist = ['email']
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
+// Temp comment
 })
 
 const logger = app.logger.getLogger('app.services.account.magic_link')

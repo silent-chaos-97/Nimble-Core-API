@@ -7,6 +7,7 @@
   "results": [
     {
       "id": "1e31d8c0-1226-4651-8a5d-4bd8aa454721",
+      "fullName": "George Something Contanza",
       "nameAka": ["Georgie", "Dofus", "Constanza"],
       "dateOfBirth": "1982-09-16",
       "dateOfDeath": "2020-09-16",
@@ -17,7 +18,6 @@
         {
           "id": "20000000-0000-accc-0000-00bbbbbbb221",
           "name": "Some strange news",
-          "date": "2008-12-06T00:00:00.000Z",
           "deletedDate": null,
           "url": "https://github.com/typescript-cheatsheets/react",
           "type": "ADVERSE-MEDIA",

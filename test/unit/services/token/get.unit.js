@@ -62,6 +62,7 @@ describe('app.services.token.get', () => {
       return expect(() => target(options))
         .to.throw('"expiration" must be a positive number')
     })
+
     it('should throw a error expiration is negative', () => {
       options.expiration = -1
 
@@ -73,7 +74,6 @@ describe('app.services.token.get', () => {
   describe('when optional not present', () => {
     it('should not specify userId', () => {
       const token = target(_.omit(options, 'userId'))
-      const actual = decode(token)
       expect(actual).to.have.deep.property('userId', null)
     })
 

@@ -1,4 +1,3 @@
-// Temp comment
 function normalise(email) {
   if (!email) { return email }
   const parts = email.split('@')

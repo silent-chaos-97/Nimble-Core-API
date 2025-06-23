@@ -1,3 +1,4 @@
+// Temp comment
 describe('GET /me', () => {
   describe('with invalid auth', () => {
     it('should return 401 if no auth', () => {
@@ -30,7 +31,6 @@ describe('GET /me', () => {
 
     describe('when token expired', () => {
       let clock
-// Temp comment
 
       before(async () => {
         clock = sinon.useFakeTimers({toFake: ['Date']})

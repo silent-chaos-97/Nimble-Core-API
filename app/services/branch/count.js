@@ -1,4 +1,3 @@
-const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
 
 async function count(filters = {}, tx = app.db) {

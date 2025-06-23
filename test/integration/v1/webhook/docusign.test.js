@@ -179,6 +179,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             })
         })
     })
+
     it('should update signer status', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)

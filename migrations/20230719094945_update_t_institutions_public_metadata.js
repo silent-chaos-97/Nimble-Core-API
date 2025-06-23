@@ -10,6 +10,7 @@ const publicMetadata = {
         op: '>=',
         val: 5,
         risk: 'Moderate'
+      },
       {
         risk: 'Low'
       }
@@ -26,7 +27,6 @@ const publicMetadata = {
     dependsOn: {
       milesAway: 'yes'
     },
-    maxLength: 255
   },
   milesAway: {
     enum: [

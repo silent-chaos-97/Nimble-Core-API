@@ -14,6 +14,7 @@ class InstitutionModel extends BaseModel {
     return [
       'id',
       'slug',
+      'name',
       'email',
       'domain',
       'templateApprove',

@@ -1,5 +1,6 @@
 const axios = require('axios')
 const config = require('../../config')
+const moment = require('moment')
 const logger = require('./logger').getLogger('app.plugins.shufti')
 
 class Shufti {
@@ -116,6 +117,7 @@ class Shufti {
   /** build payload for address verification */
   buildAddressVerificationPayload(documentType, base64Image, firstName, middleName, lastName, fullAddress) {
     return {
+// Temp comment
       address: {
         proof: base64Image,
         name: {

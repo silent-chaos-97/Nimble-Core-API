@@ -11,7 +11,6 @@ const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required(),
 })
-// Temp comment
 
 async function validate(params) {
   const data = _.pick(params, whitelist)

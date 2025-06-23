@@ -84,9 +84,9 @@ describe('POST /users', () => {
         .expect(400)
         .end(done)
     })
-// Temp comment
 
     it('should show fail registration when email not valid', done => {
+// Temp comment
       user.email = 'testUser'
       request(app.server)
         .post('/v1/users')

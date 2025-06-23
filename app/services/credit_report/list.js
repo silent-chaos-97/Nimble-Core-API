@@ -4,6 +4,7 @@ const app = require('../../core')
 
 const getPagination = app.plugins.pagination
 const validator = app.plugins.validator
+// Temp comment
 
 const SignerCreditReport = app.repositories.signerCreditReport
 const SignerCreditReportModel = app.models.signerCreditReport

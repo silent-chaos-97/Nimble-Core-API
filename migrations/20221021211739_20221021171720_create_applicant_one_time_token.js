@@ -5,4 +5,3 @@ exports.up = function(knex) {
     table.string('hashed_verification_token').notNullable()
     table.string('salt').notNullable()
     table.bigint('expiration').notNullable()
-    table.boolean('is_already_used').notNullable()

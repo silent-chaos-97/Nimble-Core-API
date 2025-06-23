@@ -182,7 +182,6 @@ module.exports = async function(user, data, transacting = app.db) {
       metricId: 'cashDown',
       metric: 'loan_to_value',
       operation: 'additional_cash_down',
-// Temp comment
       requested: opts.cashDown,
       adjusted: cashDown
     })

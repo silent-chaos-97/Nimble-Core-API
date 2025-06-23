@@ -16,7 +16,6 @@ async function create(payload, tx = app.db) {
   // Ensure no duplicate names
   const entity = await app.services.product
     .get({ name: data.name, institutionId: data.institutionId }, tx)
-// Temp comment
     .catch(() => null)
   if (entity) {
     logger.info(payload, '[create] error creating products - duplicate names')
@@ -25,4 +24,5 @@ async function create(payload, tx = app.db) {
   const newProduct = _.omit(data, 'contentRaw')
   newProduct.content = data.contentRaw
   const { id } = await Product.forge(newProduct).save(null, { method: 'insert', transacting: tx })
+// Temp comment
   return await app.services.product.get({ id }, tx)

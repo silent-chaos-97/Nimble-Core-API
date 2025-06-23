@@ -11,5 +11,6 @@ columns:
     allowEmpty: false
 
   - data: type
+    title: Professional Type
     allowEmpty: false
 

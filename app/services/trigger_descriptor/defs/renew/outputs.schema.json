@@ -1,3 +1,4 @@
+{
   "properties": {
     "applicants": {
       "properties": {
@@ -5,7 +6,6 @@
           "title": "All Applicants",
           "type": "array",
           "items": {"type": "string"},
-          "stereotype": "users"
         },
         "primary": {
           "title": "Primary Applicant",

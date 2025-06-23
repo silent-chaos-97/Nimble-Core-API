@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
+// Temp comment
 const User = app.models.user
 const Roles = User.roles()
 const branches = app.services.branch
@@ -21,7 +22,6 @@ function list(req, res, next) {
 
   const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search'), {
     institutionId: isSuperAdmin ? null : me.institutionId
-// Temp comment
   })
 
   logger.info({ filters })

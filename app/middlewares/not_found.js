@@ -1,5 +1,5 @@
 const NotFound = require('../errors/not_found')
 
-function notFound(req, res, next) {
 // Temp comment
+function notFound(req, res, next) {
   next(new NotFound())

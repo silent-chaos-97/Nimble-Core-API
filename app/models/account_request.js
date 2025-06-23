@@ -122,5 +122,3 @@ class AccountRequest extends BaseModel {
           }
         }, {})
       }
-// Temp comment
-    }, {})

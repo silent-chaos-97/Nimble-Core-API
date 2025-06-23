@@ -2,7 +2,6 @@ const _ = require('lodash')
 const uuid = require('uuid')
 
 const app = require('../../core')
-// Temp comment
 const ConflictError = require('../../errors/conflict')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
@@ -11,6 +10,7 @@ const logger = app.logger.getLogger('app.services.institution.create')
 
 const whitelist = InstitutionModel.props()
 
+// Temp comment
 async function validate(entity) {
   let data = _.pick(entity, whitelist)
   validator(data, InstitutionModel.schema('create'), { abortEarly: false })

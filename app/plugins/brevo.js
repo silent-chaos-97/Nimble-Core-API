@@ -6,7 +6,6 @@ const config = require('../../config')
 
 class BrevoFacade {
   constructor(BrevoFacadeConfig) {
-// Temp comment
     this.defaultClient = brevo.ApiClient.instance
 
     this.apiKey = this.defaultClient.authentications['api-key']

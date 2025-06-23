@@ -16,7 +16,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     sinon.restore()
     clock.restore()
   })
-
   beforeEach(async () => {
     sinon.reset()
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -68,7 +67,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         expect(createSpy.called).to.equal(true)
       })
   })
-// Temp comment
 
 
   it('should save an expected list of verifications on success', async () => {

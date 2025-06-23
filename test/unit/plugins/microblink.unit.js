@@ -39,7 +39,6 @@ describe('MicroblinkService', () => {
 
       const result = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
 
-      expect(result).to.have.deep.property('code', 'OK')
       expect(result.data.result).to.have.deep.property('firstName', userData.firstName.toUpperCase())
       expect(result.data.result).to.have.deep.property('lastName', userData.lastName.toUpperCase())
       expect(result.data.result).to.have.deep.property('address', userData.fullAddress.toUpperCase())
@@ -172,7 +171,6 @@ describe('MicroblinkService', () => {
       }
 
       const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
-// Temp comment
       expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')
     })
 

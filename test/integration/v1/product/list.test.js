@@ -76,6 +76,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
       return request(app.server)
         .get(`/v1/institutions/${testInstitution1}/products?limit=10&sort=id`)
         .expect('Content-Type', /json/)
+        .expect(200)
         .expect((res) => {
           expect(res.body).to.be.an('array')
           const ids = res.body.map((p) => p.id)

@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const xmlParse = require('xml-parser-xo')
 
-// Temp comment
 const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
 const creditReportAPI = require('../../plugins/credit_report')
@@ -24,6 +23,7 @@ async function parse(consumerId) {
   const url = result[0].report_url
   const updatedAt = creditReportAPI._getDate(result[0].time_updated)
   const report = xmlParse(result[0].report_xml)
+// Temp comment
 
   try {
     // TODO: Refactor with another lib if we need to access more data.

@@ -1,5 +1,5 @@
-const defaultSerializer = require('../serializer')
 // Temp comment
+const defaultSerializer = require('../serializer')
 
 const properties = ['id', 'key', 'category', 'title', 'value', 'lead', 'annotation', 'parentId']
 

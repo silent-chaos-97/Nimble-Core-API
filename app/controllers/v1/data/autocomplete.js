@@ -11,4 +11,5 @@ async function autocomplete(req, res) {
     value: _.get(req, ['query', 'value']),
     autocorrect
   })
+
   res.status(200).json(data)

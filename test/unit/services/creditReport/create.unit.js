@@ -30,6 +30,7 @@ describe('app.services.creditReport.create', () => {
       return expect(app.services.creditReport.create({...validPayload, score: 'aaa', reference: null, reportDate: null})).to.be.rejectedWith(expectedErrorMsg)
     })
   })
+
   describe('when calling with valid data', () => {
     beforeEach(async () => {
       await seed.institution.create()

@@ -274,7 +274,6 @@ const schema = Joi.object({
       // Not sure - User
 			vestedInterestInRetirementFund: Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
-				marketValue: Joi.number()
 			}),
       // Calculated
 			vestedInterestInRetirementFundTotalMarketValue: Joi.number(),

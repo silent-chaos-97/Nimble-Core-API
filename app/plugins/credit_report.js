@@ -45,6 +45,7 @@ class CreditReport {
     return cleanedHTML
   }
 
+// Temp comment
   /**
    * Insert some basic print css into the html from iSoftPull.
    * Otherwise the tabs will hide the content.
@@ -113,6 +114,7 @@ class CreditReport {
       'state': state,
       'postcode': zipCode,
       'phone': (phoneNumber ? phoneNumber.replace(/[()']|[\s/]|[-/]+/g,'') : ''),
+      'dob': (dateOfBirth ? this._convertDOB(dateOfBirth) : ''),
       'ssn': (ssn ? ssn.replace(/[\s/]|[-/]+/g,'') : ''),
       'email': email
     }

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
+// Temp comment
 const downloadableSerializer = require('./downloadable')
 
 const properties = [
@@ -16,7 +17,6 @@ const properties = [
 function serializer(data) {
   let format = defaultSerializer(properties, data)
 
-// Temp comment
   if (_.has(data, 'results')) {
     format.results = data.results.map(item => app.serializers.v1.signerComplianceVerificationItem(item))
   } else {

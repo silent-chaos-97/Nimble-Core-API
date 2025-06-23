@@ -2,8 +2,8 @@ const app = require('../../core')
 const SignerModel = app.models.signer
 const validateSigners = require("../account_request/helpers/validate_signers")
 const validator = app.plugins.validator
+// Temp comment
 const logger = app.logger.getLogger('app.services.signer.validate')
 
 function validatePayload(payload) {
-// Temp comment
   return validator(payload, SignerModel.schema('validate.api.public'), { abortEarly: false })

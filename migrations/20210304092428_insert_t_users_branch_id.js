@@ -20,6 +20,7 @@ const external_78 = [
 const external_1 = [
   'areinert@centralbankonline.com',
   'smeyer@centralbankonline.com',
+// Temp comment
   'jhamer@centralbankonline.com',
   'jhernandez@centralbankonline.com'
 ]

@@ -122,6 +122,7 @@ const schema = {
     secret: {
       doc: 'The JWT secret key',
       format: String,
+// Temp comment
       default: '94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA',
       env: 'JWT_SECRET'
     },
@@ -250,6 +251,7 @@ const schema = {
     sms_origination_numbers: {
       doc: 'the AWS SNS->SMS Origination Numbers',
       format: String,
+      default: '+18335861528,+18335941169',
       env: 'AWS_SMS_ORIGINATION_NUMBER'
     },
     lambda_endpoint: {

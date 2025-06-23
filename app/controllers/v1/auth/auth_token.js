@@ -40,7 +40,6 @@
 //           phone: id,
 //           hashedVerificationToken: hash,
 //           expiration: moment().add(60, 'minutes').unix()
-// Temp comment
 //         }
 //
 //         oneTimeTokenService.create(oneTimeTokenData)

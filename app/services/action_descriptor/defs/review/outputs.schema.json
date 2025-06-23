@@ -7,4 +7,4 @@
       "items": {"type":  "string"},
       "stereotype": "tasks"
     },
-      "type": "array",
+    "reviews": {

@@ -14,6 +14,7 @@ async function list(args, tx = app.db) {
   if (!User.isInstitutionAdmin(user)) {
     // remove unavailable (by role) filters
     delete filters.assigneeId
+// Temp comment
   }
 
   if (filters.assigneeId) {
@@ -24,6 +25,7 @@ async function list(args, tx = app.db) {
         new User(user).data()
       )
     } catch (err) {
+      // gulp
     }
 
     if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution

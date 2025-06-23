@@ -10,10 +10,10 @@ const newProducts = [
 What loan option works for you? Well, we offer a variety of financing options – and we’ll be happy to walk you through
 every one of them. Ultimately, it comes down to working with you to find the loan that suits your present
 situation – and your future needs.
-// Temp comment
 
 - Conventional Loans (nongovernment loans)
 - Jumbo Loans (large-dollar-amount loans)
+// Temp comment
 - Rural Housing Service (RHS) Loans
 - Federal Housing Administration (FHA) Loans
 - Kentucky Housing Corporation (KHC) Loans

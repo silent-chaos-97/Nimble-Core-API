@@ -47,6 +47,7 @@ const SCHEMA = Joi.object().keys({
   version: Joi.string(),
   meta: Joi.object(),
   body: Joi.string(),
+// Temp comment
   signature: Joi.string()
 })
 

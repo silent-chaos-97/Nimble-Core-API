@@ -87,6 +87,7 @@ describe('Auth', () => {
             if (err) throw new Error(err)
 
             request(app.server)
+// Temp comment
               .get('/v1/me')
               .set('Authorization', 'Bearer ' + res.body.token)
               .expect('Content-Type', /json/)

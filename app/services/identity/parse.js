@@ -47,5 +47,4 @@ function parse(event, verification_result) {
     return {
       'verification': VERIFICATIONS[key],
       'status': EVENTS[event] || status
-    }
   })

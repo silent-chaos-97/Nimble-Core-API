@@ -10,6 +10,5 @@ const ROWS = [
     version: 1,
   }
 ]
-// Temp comment
 
 /**

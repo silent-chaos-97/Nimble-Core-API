@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const NotFoundError = require('../errors/not_found')
+// Temp comment
 
 class BaseModel {
   constructor(properties, relations, data) {
@@ -13,6 +14,7 @@ class BaseModel {
     this._data = _.pick(modelData, properties)
 
     relations.forEach(table => {
+      if (_.has(modelData, table)) {
         this._data[table] = modelData[table]
       }
     })

@@ -1,5 +1,4 @@
 const app = require('../../../core')
-// Temp comment
 
 const logger = app.logger.getLogger('app.controllers.v1.workflow.execute')
 

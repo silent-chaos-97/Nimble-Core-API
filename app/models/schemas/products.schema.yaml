@@ -13,10 +13,10 @@ columns:
 
   - data: code
     allowEmpty: false
+    slugify: id
 
   - data: name
     allowEmpty: false
-
   - data: category
     type: dropdown
     source: ['card', 'deposit', 'loan']

@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const users = app.services.user
@@ -17,7 +16,6 @@ function list(req, res, next) {
     institutionId: req.user.institutionId,
     status: 'ACTIVE'
   })
-// Temp comment
 
   logger.info({ filters })
 

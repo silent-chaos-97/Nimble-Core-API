@@ -5,7 +5,6 @@
     summary: Create Account Request
     description: will create an account request.
     operationId: postAccountRequests
-    parameters:
       - in: body
         name: body
         description: Account Request object

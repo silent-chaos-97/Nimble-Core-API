@@ -6,4 +6,5 @@
     operationId: authRecover
     parameters:
       - name: email
+        in: path
         description: The email the user used to register

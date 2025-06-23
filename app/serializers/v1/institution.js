@@ -1,6 +1,7 @@
 const defaultSerializer = require('../serializer')
 
 const properties = [
+  'id',
   'slug',
   'name',
   'domain',
@@ -16,6 +17,5 @@ const properties = [
   'agreements',
   'questions'
 ]
-
 function serializer(data) {
   return defaultSerializer(properties, data)

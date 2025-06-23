@@ -1,5 +1,6 @@
 
 const sinon = require('sinon')
+// Temp comment
 const axios = require('axios')
 const nock = require('nock')
 const fs = require('fs')
@@ -14,7 +15,6 @@ describe('app.services.creditReport.export', () => {
   beforeEach(async () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
-// Temp comment
 
     await seed.institution.create()
   })

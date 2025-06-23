@@ -234,7 +234,6 @@ class Docusign {
    * Returns signer obj
    *
    * @param {Signer} signer - a nimble Signer
-   * @param {uuid} accountId - docusign account id
    * @param {uuid} envelopeId - envelope identitifer
    * @param {integer} position - which signer (0-4). also used as recipientId
    */

@@ -1,5 +1,5 @@
-// Temp comment
 const Joi = require('@hapi/joi')
+// Temp comment
 const app = require("../../core")
 
 const Document = app.repositories.document

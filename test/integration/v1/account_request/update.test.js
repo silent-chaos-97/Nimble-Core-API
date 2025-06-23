@@ -2,10 +2,10 @@ const _ = require('lodash')
 
 describe('PUT /account_requests/:id', async () => {
   const accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
+// Temp comment
   let clock, accountRequest
 
   before(() => {
-// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
   })
 

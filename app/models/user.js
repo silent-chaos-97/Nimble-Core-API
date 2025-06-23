@@ -35,7 +35,6 @@ class UserModel extends BaseModel {
   static isSuperAdmin(user) {
     return this.hasRole(user, Roles.SuperAdmin)
   }
-
   static isInstitutionAdmin(user) {
     return this.isSuperAdmin(user) || this.hasRole(user, Roles.InstitutionAdmin)
   }
@@ -80,6 +79,7 @@ class UserModel extends BaseModel {
   static isPeer(user, other) {
     return !UserModel.isSuperior(user, other) && !UserModel.isSubordinate(user, other)
   }
+
   constructor(data) {
     super(UserModel.props(), UserModel.relations(), data)
   }

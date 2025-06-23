@@ -23,7 +23,6 @@ const TYPES = {
   ],
   sanctions: [
     "sanction"
-  ]
 }
 
 function getAdverseMedia(media) {

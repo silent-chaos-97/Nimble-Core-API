@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const BadRequestError = require('../errors/bad_request')
 
-  return _.map(error.details, (validation) => {
+function toValidationError(error) {
     return validation.message
   }).join('.')

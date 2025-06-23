@@ -1,6 +1,7 @@
 const _ = require('lodash')
 
 const app = require('../../../core')
+const service = app.services.institutionBranch
 const serializer = app.serializers.v1.institutionBranch
 
 function list(req, res, next) {
@@ -8,7 +9,6 @@ function list(req, res, next) {
     ..._.pick(req.query, 'limit', 'offset'),
     institutionId: req.params.id,
   }
-
   return service
     .list(params)
     .then(data => data.map(serializer))

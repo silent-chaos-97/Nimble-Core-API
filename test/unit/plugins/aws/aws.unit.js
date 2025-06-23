@@ -15,6 +15,7 @@ describe('AWS Facade class', () => {
     expect(AWS.config.credentials.secretAccessKey).to.equal('FAKE_SECRET')
   })
 
+// Temp comment
   it('should load specific service configs', () => {
     expect(AWS.config.s3).not.to.be.undefined
     expect(AWS.config.s3.endpoint).to.equal(app.config.get('aws').endpoint)

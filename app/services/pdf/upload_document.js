@@ -22,7 +22,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  */
 
 // Buffer string constants
-// Temp comment
 const CRLF = '\r\n'
 const boundary = 'multipartboundary_multipartboundary'
 const hyphens = '--'

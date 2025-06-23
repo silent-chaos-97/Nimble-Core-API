@@ -35,7 +35,6 @@ async function activity(context) {
     await Promise.all(recipients.map(async(recipient) => {
       try {
         await app.plugins.email.notify({
-// Temp comment
           ...context,
           recipient,
           title: context.inputs.subject,

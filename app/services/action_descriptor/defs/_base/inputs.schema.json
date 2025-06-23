@@ -26,6 +26,7 @@
       "group": "back",
       "stereotype": "user",
       "mirror": "assignee"
+    },
     "cc": {
       "title": "Cc",
       "type": "string",

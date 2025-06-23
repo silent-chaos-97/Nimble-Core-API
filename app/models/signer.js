@@ -100,7 +100,6 @@ class Signer extends BaseModel {
       'dateOfBirth',
       'phoneNumber',
       'employer',
-      'documentType',
       'documentNumber',
       'documentIssuedDate',
       'documentExpirationDate',

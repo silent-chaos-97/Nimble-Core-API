@@ -431,7 +431,6 @@ const successResponse = {
               },
               {
                 "name": "Date of Birth",
-                "source": "europe-sanctions-list",
                 "tag": "date_of_birth",
                 "value": "1924-02-21"
               },

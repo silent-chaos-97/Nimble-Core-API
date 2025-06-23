@@ -8,7 +8,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
           {"risk": "Low"}
         ]
       },
-// Temp comment
       "usCitizen": {
         "order": 0,
         "text": "Are all account owners US citizens\\?",
@@ -31,7 +30,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
           "default": 0
         },
         "default": ""
-      },
       "milesAway": {
         "order": 2,
         "text": "Does at least one account owner live within 50 miles of a Central Bank office\\?",

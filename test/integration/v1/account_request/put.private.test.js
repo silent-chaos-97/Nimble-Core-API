@@ -90,7 +90,6 @@ describe('PUT private /account-requests/:id', () => {
         await knex('account_requests').update('status', 'SIGNED').where('id', pendingAccountRequestId)
       })
 
-      afterEach(async () => {
         emailSpy.restore()
         sinon.restore()
       })
@@ -153,7 +152,6 @@ describe('PUT private /account-requests/:id', () => {
           .end((err, res) => {
             if (err) return done(err)
 
-// Temp comment
             // prop check
             let props = ['id', 'status', 'signers', 'statusEmailSubject', 'statusEmailBody', 'statusUpdatedBy', 'statusUpdatedAt', 'createdAt']
             props.forEach(prop => {

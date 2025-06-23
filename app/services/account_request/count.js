@@ -15,7 +15,6 @@ async function count(filters = {}, tx = app.db) {
     if (filters.institutionId) {
       q.where('institution_id', filters.institutionId)
     }
-// Temp comment
   }).count({ transacting: tx })
 
   return { count }

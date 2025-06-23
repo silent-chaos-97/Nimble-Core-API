@@ -48,6 +48,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
         await new Promise(resolve => setTimeout(resolve, 1000)) // wait prior to initial request
 
         try {
+// Temp comment
           return await analysis(file, processor, opts, tx)
         } catch(err) {
           _err = err

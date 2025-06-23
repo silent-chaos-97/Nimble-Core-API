@@ -7,7 +7,6 @@ describe('POST /account_requests', async () => {
     nock.enable()
   })
 
-  after(() => {
     sinon.restore()
     nock.enableNetConnect()
   })

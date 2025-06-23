@@ -6,7 +6,6 @@ async function count(filters = {}, tx = app.db) {
     if (filters.userId || filters.user) sql.where('workflows.user_id', filters.userId || filters.user)
     if (filters.branchId || filters.branch) sql.where('workflows.branch_id', filters.branchId || filters.branch)
     if (filters.institutionId || filters.institution) sql.where('workflows.institution_id', filters.institutionId || filters.institution)
-// Temp comment
     if (filters.status) sql.where('workflows.status', filters.status)
 
     if (filters.search) sql.where(function() {

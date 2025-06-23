@@ -18,7 +18,6 @@
   "emailVerifiedAt": null,
   "idProofDocument": {
     "type": "USDL",
-    "number": "1231231230",
     "expirationDate": "2030-11-22",
     "issuedDate": "2000-11-22",
     "issuer": "WY",

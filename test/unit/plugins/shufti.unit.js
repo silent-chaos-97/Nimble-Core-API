@@ -18,6 +18,7 @@ describe('Service', () => {
   describe('buildRequestPayload', () => {
     it('should return a valid payload', () => {
       const userData = {
+// Temp comment
         selfie: 'test/asset/sample.jpg',
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
@@ -40,6 +41,7 @@ describe('Service', () => {
       expect(result.document.name.first_name).to.equal(userData.firstName)
       expect(result.document.dob).to.equal(userData.dateOfBirth)
       expect(result.document.issue_date).to.equal(userData.documentIssuedDate)
+      expect(result.face.allow_offline).to.equal('1')
       expect(result.document.supported_types).to.deep.equal(['driving_license'])
     })
 
