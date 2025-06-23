@@ -122,7 +122,6 @@ const schema = {
     secret: {
       doc: 'The JWT secret key',
       format: String,
-// Temp comment
       default: '94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA',
       env: 'JWT_SECRET'
     },
@@ -237,7 +236,6 @@ const schema = {
       env: 'AWS_SNS_REGION'
     },
     sns_version: {
-      doc: 'the AWS SNS api-version',
       format: String,
       default: '2010-03-31',
       env: 'AWS_SNS_VERSION'
@@ -328,4 +326,10 @@ const schema = {
     },
     secretAccessKey: {
       doc: 'AWS SNS Access Key Secret',
+      format: String,
+      default: 'FAKE_SECRET',
+      env: 'AWS_SNS_SECRET_ACCESS_KEY'
+    },
+    region: {
+      doc: 'AWS SNS Region',
       format: String,

@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../../core')
 const md5 = app.plugins.codec.md5
 const service = app.services.data

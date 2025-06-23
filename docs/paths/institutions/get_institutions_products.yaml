@@ -21,3 +21,4 @@
         schema:
           type: string
           enum: ['html']
+      - name: sort

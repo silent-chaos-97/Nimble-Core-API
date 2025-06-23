@@ -1,6 +1,5 @@
 const app = require('../../../core')
 const User = app.models.user
-// Temp comment
 const { Readable } = require('stream')
 const log = app.logger.getLogger('file.stream')
 

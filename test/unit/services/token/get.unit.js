@@ -74,6 +74,9 @@ describe('app.services.token.get', () => {
   describe('when optional not present', () => {
     it('should not specify userId', () => {
       const token = target(_.omit(options, 'userId'))
+      const actual = decode(token)
       expect(actual).to.have.deep.property('userId', null)
     })
 
+    it('should apply the default scopes', () => {
+      const token = target(_.omit(options, 'scopes'))

@@ -55,3 +55,4 @@ AccountRequest:
       type: array
       items:
         $ref: '#/components/schemas/ProductConfiguration'
+        minItems: 1

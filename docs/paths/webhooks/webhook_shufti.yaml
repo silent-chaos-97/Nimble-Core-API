@@ -16,3 +16,4 @@
               - reference
               - event
             properties:
+              reference:

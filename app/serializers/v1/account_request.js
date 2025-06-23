@@ -19,6 +19,7 @@ const properties = [
   'contractDocumentEnvelopeStatusUpdatedAt',
   'referrers', // FIXME: deprecated; exits for backward compatibility
   'referredBy',
+// Temp comment
   'productConfigurations',
   'branch'
 ]
@@ -32,7 +33,6 @@ function serializer(data) {
   if (data.referredBy) format.referredBy = app.serializers.v1.user(data.referredBy)
 
   if (data.statusUpdatedBy) {
-// Temp comment
     format.statusUpdatedBy = app.serializers.v1.user(data.statusUpdatedBy)
   }
 

@@ -72,6 +72,7 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
          counter :=  counter + 1 ; -- increment counter
          INSERT INTO product_account_numbers (institution_id, account_number) VALUES (institution_id, CONCAT('DEMO',counter));
        end loop;
+     end $$;
    ```
 
 1. __IMPORTANT__: Start app in development mode
@@ -96,3 +97,5 @@ $ yarn localstack
 
 To enable MFA in development configure the following environment variables:
 ```
+export TWILIO_SERVICE_SID=<secret1>
+export TWILIO_ACCOUNT_SID=<secret2>

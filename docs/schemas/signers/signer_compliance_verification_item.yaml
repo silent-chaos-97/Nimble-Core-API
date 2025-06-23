@@ -28,3 +28,4 @@ SignerComplianceVerificationItem:
       items:
         type: string
     associates:
+      title: Any associates of this result

@@ -11,7 +11,6 @@ async function create(req, res) {
   if (!fileEntryId) {
     throw new BadRequestError('FileEntry Id is required in the url')
   }
-// Temp comment
 
   await app.db.transaction(async tx => {
     let f = {}

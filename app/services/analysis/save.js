@@ -17,7 +17,6 @@ function validate(analysis) {
 
 async function save(analysis, opts, tx = app.db) {
   opts = opts || {}
-// Temp comment
   const data = validate(analysis)
   let id = data.id
   const isUpdate = !!id
@@ -98,3 +97,14 @@ function debtSchedule(schedule) {
 function debtScheduleRow(row) {
   if (_.some(['origDate', 'origAmount', 'amortTerm', 'rate', 'calcDate'], prop => _.isNil(row[prop]) || row[prop] === '')) return { ...row, cpltd: null }
   return computeDebtScheduleRow(row)
+}
+
+function debtScheduleLiabilities(rows) {
+  const current = computeCurrentLiabilities(rows)
+  const total = computeTotalLiabilities(rows)
+
+  return {
+    current,
+    nonCurrent: total - current,
+    total
+  }

@@ -59,7 +59,6 @@ class MicroblinkService {
         address: '',
         city: '',
         state: '',
-        zipCode: '',
         documentNumber: '',
         documentExpirationDate: null,
         documentIssuedDate: null,

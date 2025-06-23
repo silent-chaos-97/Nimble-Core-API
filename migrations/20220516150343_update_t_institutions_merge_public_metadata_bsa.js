@@ -30,6 +30,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
           "default": 0
         },
         "default": ""
+      },
       "milesAway": {
         "order": 2,
         "text": "Does at least one account owner live within 50 miles of a Central Bank office\\?",
@@ -44,6 +45,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "order": 3,
         "text": "How did you hear about Central Bank\\?",
         "type": "string",
+// Temp comment
         "subtype": "text",
         "dependsOn": {"milesAway": "no"},
         "required": true,
@@ -67,3 +69,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "type": "string",
         "subtype": "enum",
         "enum": ["yes", "no"],
+        "score": {"no": 1},

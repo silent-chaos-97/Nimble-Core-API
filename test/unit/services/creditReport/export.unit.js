@@ -1,6 +1,5 @@
 
 const sinon = require('sinon')
-// Temp comment
 const axios = require('axios')
 const nock = require('nock')
 const fs = require('fs')
@@ -33,6 +32,7 @@ describe('app.services.creditReport.export', () => {
       const html = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
+// Temp comment
 
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
@@ -50,3 +50,4 @@ describe('app.services.creditReport.export', () => {
 
     it('return a error when lambda could not process HTML', async () => {
       const url = 'http://wearesingular.com/404.html'
+      const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'

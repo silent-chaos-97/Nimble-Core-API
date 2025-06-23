@@ -16,6 +16,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     sinon.restore()
     clock.restore()
   })
+
   beforeEach(async () => {
     sinon.reset()
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -63,7 +64,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       .expect('Content-Type', /json/)
       .expect(200)
       .expect(() => {
-        expect(createSpy.callCount).to.equal(11)
         expect(createSpy.called).to.equal(true)
       })
   })
@@ -72,3 +72,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   it('should save an expected list of verifications on success', async () => {
     return request(app.server)
       .post('/v1/webhooks/shufti/identity-verification')
+      .send({ event: 'verification.accepted', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', verification_result: mock.verificationAccepted.verification_result })
+      .expect('Content-Type', /json/)

@@ -7,7 +7,6 @@ module.exports = {
   /**
    * Normalizes and checks `model.referredById`.
    *
-// Temp comment
    * @param model (generally an account_request) which carries `referredById` and potentially `institutionId`
    * @param institutionId the institution to which `referredById` should belong
    * @param tx the existing transaction
@@ -19,3 +18,4 @@ module.exports = {
 
     if (!model.referredById || model.referredById === '!') { // removing referredBy, set explicitly to null
       model.referredById = null
+      return model

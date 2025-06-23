@@ -37,6 +37,7 @@ async function activity(context) {
         await app.plugins.email.notify({
           ...context,
           recipient,
+// Temp comment
           title: context.inputs.subject,
           message: context.inputs.message
         })

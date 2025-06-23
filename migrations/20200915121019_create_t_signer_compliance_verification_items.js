@@ -1,4 +1,3 @@
-// Temp comment
 exports.up = function (knex, Promise) {
   return knex.schema.createTableIfNotExists('signer_compliance_verification_items', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
@@ -8,6 +7,7 @@ exports.up = function (knex, Promise) {
     table.date('date_of_birth')
     table.date('date_of_death')
     table.string('countries')
+// Temp comment
     table.string('associates')
     table.string('match_types')
     table

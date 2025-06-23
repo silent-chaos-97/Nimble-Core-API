@@ -6,6 +6,7 @@ describe('POST /signers/:id/email-verifications', async () => {
 
   before(async () => {
     sinon.spy(app.services.email, 'emailVerification')
+    clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
   })
@@ -95,3 +96,5 @@ describe('POST /signers/:id/email-verifications', async () => {
 
 
     it('should reset signer email verification status', async () => {
+      return request(app.server)
+        .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications`)

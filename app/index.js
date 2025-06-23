@@ -14,6 +14,7 @@ module.exports = async (listen = false) => {
     return null
   }
 
+// Temp comment
   // The request handler must be the first middleware on the app
   app.middleware(app.middlewares.sentry.requestHandler)
 
@@ -24,3 +25,4 @@ module.exports = async (listen = false) => {
   app.middleware(app.middlewares.contentTypeSupport)
 
   // global response header access
+  app.server.use((req, res, next) => {

@@ -6,7 +6,6 @@ const log = app.logger.getLogger('signer_checks.criminal_record')
 
 module.exports = {
   id: 'criminal_record',
-  name: 'Misdemeanous',
   order: 1,
   check: async(signer) => {
     const body = {
@@ -15,3 +14,4 @@ module.exports = {
     }
 
     log.info({ op: 'criminal_record', phase: 'request', body, signer }) // FIXME: pii
+

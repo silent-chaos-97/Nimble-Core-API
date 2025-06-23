@@ -19,3 +19,12 @@ function serialize(err) {
     statusCode: err.statusCode,
     message: err.message
   }
+}
+
+function getError(err) {
+  // TODO: handle different error types
+  if (SUPPORTED_ERRORS.includes(err.name)) {
+    return serialize(err)
+  }
+
+  return serialize(new InternalServerError())

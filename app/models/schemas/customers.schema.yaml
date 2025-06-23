@@ -16,3 +16,4 @@ columns:
     allowEmpty: true
 
   - data: last_name
+    allowEmpty: true

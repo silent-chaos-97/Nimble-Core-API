@@ -17,7 +17,6 @@ async function mfaExpired(mfaCacheToken, email) {
   if (!userMFA) {
     return true
   }
-
   if (userMFA.get('email') !== email) {
     return true
   }
@@ -31,3 +30,13 @@ async function mfaExpired(mfaCacheToken, email) {
 async function mfaVerified(mfaCacheToken) {
   const userMFA = await UserMFA.forge({ id: mfaCacheToken }).fetch()
   return userMFA.get('verified')
+}
+
+async function generateMFACacheToken(email, oneTimeToken) {
+  const { id } = await UserMFA.forge({
+    email: email,
+    token: oneTimeToken,
+    expiresAt: moment().add(24 * 7, 'hours')
+  }).save(null, { method: 'insert' })
+
+  return id

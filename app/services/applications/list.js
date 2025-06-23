@@ -5,6 +5,7 @@ const ApplicationModel = app.models.application
 
 const schema = Joi.object().keys({ applicantId: Joi.string().uuid() })
 
+async function list(param, tx = app.db) {
   if (param.applicantId === null){
     return Promise.reject("ApplicantId must be provided.")
   }
@@ -13,7 +14,6 @@ const schema = Joi.object().keys({ applicantId: Joi.string().uuid() })
 
   const qb = ApplicationRepositories.query(q => {
     q.where('applicant_id', filterData.applicantId)
-    q.where('status', 'PENDING')
   })
 
   const data = await qb.fetchAll({

@@ -66,3 +66,4 @@ describe('app.services.contract.update', () => {
         expect(calledArgs.accountOptions.openingAmount).to.equal(args.accountOptions.openingAmount)
         expect(calledArgs.accountOptions.productName).to.equal(args.accountOptions.productName)
 
+        expect(calledArgs.signers[0].id).to.equal(args.signers[0].id)

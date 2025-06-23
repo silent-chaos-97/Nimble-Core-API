@@ -87,3 +87,5 @@ components:
         to the route /login giving a valid user & password.
 
 
+        The following syntax must be used in the 'Authorization' header:
+

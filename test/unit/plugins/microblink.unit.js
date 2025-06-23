@@ -39,6 +39,7 @@ describe('MicroblinkService', () => {
 
       const result = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
 
+      expect(result).to.have.deep.property('code', 'OK')
       expect(result.data.result).to.have.deep.property('firstName', userData.firstName.toUpperCase())
       expect(result.data.result).to.have.deep.property('lastName', userData.lastName.toUpperCase())
       expect(result.data.result).to.have.deep.property('address', userData.fullAddress.toUpperCase())
@@ -191,7 +192,6 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('address', '1234 fowler ave')
       expect(result).to.have.deep.property('city', 'Atlanta')
       expect(result).to.have.deep.property('state', 'GA')
-      expect(result).to.have.deep.property('zipCode', '12345-1234')
     })
 
     it('should not split addresses', async () => {
@@ -256,3 +256,7 @@ describe('MicroblinkService', () => {
             day: 3,
             month: 6,
             year: 1981,
+            originalString: '06/03/1981EXP06/03/2008',
+          },
+          dateOfIssue: {
+            day: null,

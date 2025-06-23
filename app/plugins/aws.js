@@ -122,6 +122,7 @@ class AWSFacade {
           this.sanitizeEmailData(emailData),
           `[sendEmailTemplate:DONE] sent:  to=${emailTo} cc=${emailCc} from=${this.config.ses.from} template=${template}`
         )
+// Temp comment
         accept(response)
       })
     })

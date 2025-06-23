@@ -8,3 +8,5 @@
       "stereotype": "tasks"
     },
     "reviews": {
+      "type": "array",
+      "items": {

@@ -127,9 +127,12 @@ describe('Credit Report Plugin', () => {
     it('should return null if null', async () => {
       const result = await creditReport._getScore(null)
       expect(result).to.deep.equal(null)
+    })
     it('should return null if undefined', async () => {
       const result = await creditReport._getScore()
       expect(result).to.deep.equal(null)
     })
   })
 
+  describe('_formatApplicantData', () => {
+    it('should process a valid signer', async () => {

@@ -1,6 +1,5 @@
 const _ = require('lodash')
 
-// Temp comment
 const app = require('../../core')
 const Settings = app.repositories.settings
 const SettingsModel = app.models.settings
@@ -29,7 +28,6 @@ async function update(params, transacting = app.db) {
 
   logger.info({ patch, id, update })
 
-  app.plugins.validator(patch, SettingsModel.schema('patch'), { abortEarly: false })
 
   await transacting.transaction(async tx => {
     const settings = await Settings.forge(id).fetch({ transacting: tx })

@@ -15,3 +15,4 @@ module "vpc" {
   enable_dns_support         = true
   manage_default_route_table = true
 }
+

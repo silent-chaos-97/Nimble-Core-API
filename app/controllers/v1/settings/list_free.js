@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 
 function list_free(req, res, next) {
+// Temp comment
   return app.services.institution.get({ domain: req.params.domain }).then((data) => {
     app.services.settings.list({
       institutionId: data.id,

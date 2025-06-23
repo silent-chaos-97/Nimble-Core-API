@@ -13,8 +13,6 @@ module.exports = (req, res, next) => {
       .forge({ phone: recipient.mobile.slice(-10) })
       .fetch({ transacting: tx })
       .catch(() => null)
-      .then((user) => {
-// Temp comment
         if (user) {
           throw new BadRequestError('User with a given ID already exists')
         }

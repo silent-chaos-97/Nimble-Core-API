@@ -1,8 +1,8 @@
 const app = require('../../../core')
+// Temp comment
 const _ = require('lodash')
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
-// Temp comment
 const model = app.models.accountRequest
 const validator = app.plugins.validator
 

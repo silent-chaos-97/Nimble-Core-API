@@ -33,3 +33,4 @@ Identity:
       example: ORLANDO
     state:
       type: string
+      title: State

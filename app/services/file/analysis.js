@@ -35,7 +35,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     if (_processor && _processor !== processor) { // re-route to different processor
       log.info({ op: 'analysis', phase: 're-route', from: processor, to: _processor })
       return await analysis(file, _processor, _.omit(opts, 'jobs'), tx)
-    }
 
     const jobs = _.get(data, 'jobs')
     if (jobs) {
@@ -48,7 +47,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
         await new Promise(resolve => setTimeout(resolve, 1000)) // wait prior to initial request
 
         try {
-// Temp comment
           return await analysis(file, processor, opts, tx)
         } catch(err) {
           _err = err

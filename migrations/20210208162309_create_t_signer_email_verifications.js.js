@@ -6,3 +6,4 @@ exports.up = function (knex, Promise) {
       .references('signers.id')
       .notNullable()
       .onDelete('CASCADE')
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

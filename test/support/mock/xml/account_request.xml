@@ -3,6 +3,7 @@
   <documents signedAt="2019-03-17T13:03:34">
     <document name="someFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.someFileName.pdf"/>
     <document name="anotherFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.anotherFileName.pdf"/>
+    <document name="thirdFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.thirdFileName.pdf"/>
   </documents>
   <bsa>
     <score>2</score>
@@ -37,3 +38,4 @@
             <document name="backDocument" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/a74f9092-5889-430a-9c19-6712f9f68090.png"/>
           </documents>
         </usdl>
+      </proof>

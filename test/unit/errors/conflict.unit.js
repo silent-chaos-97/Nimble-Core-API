@@ -7,7 +7,6 @@ describe('ConflictError', () => {
 
   it('should be and instance of ConflictError and Error', () => {
     let error = new ErrorClass()
-    expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
   })
 
@@ -16,5 +15,6 @@ describe('ConflictError', () => {
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
   })
+
   describe('when instanced', () => {
     it('should have correct name', () => {

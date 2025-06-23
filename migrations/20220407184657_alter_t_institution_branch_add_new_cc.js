@@ -1,4 +1,5 @@
 
+exports.up = function(knex, Promise) {
   return knex.schema.alterTable('institution_branches', table => {
     table.string('routing_number').nullable()
     table.string('street').nullable()
@@ -9,3 +10,4 @@
     table.boolean('active').default(true)
     table.string('note').nullable()
   })
+};

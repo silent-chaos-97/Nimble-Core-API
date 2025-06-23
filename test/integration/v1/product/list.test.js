@@ -86,3 +86,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
         })
     })
 
+    it('should return a list of products', () => {
+      return request(app.server)

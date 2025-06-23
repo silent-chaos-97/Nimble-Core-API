@@ -53,7 +53,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     }
 
     // or else/nothing found.
-    return 'PENDING'
   }
 
   const signerIdentityVerificationChecks = {

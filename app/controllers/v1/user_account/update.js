@@ -29,6 +29,7 @@ async function update(req, res, next) {
 
     if (User.isSubordinate(me, user)) { // subordinate users cannot update affiliations of a superior
       delete patch['roles']
+      delete patch['titles']
       delete patch['workgroups']
       delete patch['department']
     }

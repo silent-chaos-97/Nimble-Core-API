@@ -1,3 +1,4 @@
 {
   "Template": {
     "TemplateName": "userLockedEmail",
+    "SubjectPart": "{{emailSubject}}",

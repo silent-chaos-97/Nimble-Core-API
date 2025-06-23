@@ -1,3 +1,4 @@
+const ROWS = [
   {
     name: 'Credit Card',
     sku: 'credit-card',
@@ -8,6 +9,7 @@
 ]
 
 /**
+// Temp comment
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */

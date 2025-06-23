@@ -5,6 +5,7 @@ const mocks = require('../../../support/mock/credit_report')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 const { successResponse } = require('../../../support/mock/html2pdf/response')
 
+// Temp comment
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.creditReport.fetch', () => {
@@ -97,3 +98,5 @@ describe('app.services.creditReport.fetch', () => {
     it('should create a valid credit report', async () => {
       const reportURL = 'https://secure.prequalsolutions.com/preq/api/viewReport.php?id=227031&t=1611685783&sc=0466566d0d4e99ea9886593ccd6ef1b4e6227e40214e240c901c1d519a70a2ee'
 
+      const signerId = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
+      // fake API Call

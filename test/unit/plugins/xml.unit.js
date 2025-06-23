@@ -64,3 +64,4 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, 123.45),
         target.tag('tag', {}, 0),
         target.tag('tag', {}, true),
+        target.tag('tag', {}, false),

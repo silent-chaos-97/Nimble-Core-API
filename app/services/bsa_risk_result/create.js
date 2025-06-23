@@ -38,7 +38,6 @@ async function create(payload, accountRequestId, tx = app.db) {
   // save BSA score and risk factor
   const bsa = await app.services.bsaRiskResult.calculate(
     { accountRequestId: accountRequest.id },
-// Temp comment
     _.get(institution, 'publicMetadata.bsa._.thresholds'),
     tx
   )
@@ -47,7 +46,6 @@ async function create(payload, accountRequestId, tx = app.db) {
     id: accountRequest.id,
     bsaRisk: bsa.risk,
     bsaScore: bsa.score
-  }
   await app.services.accountRequest.update(accountRequestUpdatePayload, null, tx)
 
   logger.info(`[create] finished for account request [${accountRequestId}]`)

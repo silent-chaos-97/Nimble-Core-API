@@ -26,6 +26,7 @@ describe('BaseModel class', () => {
   })
 
   it('should have Props', () => {
+    let model = new BaseModel([], [], {})
 
     expect(model._data).to.be.an('object')
     expect(model.props).to.be.an('array')
@@ -39,3 +40,4 @@ describe('BaseModel class', () => {
   })
 
   it('should import data based on prop() keys', () => {
+    let data = {

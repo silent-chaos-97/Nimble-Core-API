@@ -1,3 +1,4 @@
 {
   "Template": {
     "TemplateName": "inviteeSignupReminderEmail",
+    "SubjectPart": "{{statusEmailSubject}}",

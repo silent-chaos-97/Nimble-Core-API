@@ -71,3 +71,5 @@
     "mocha": "^5.1.1",
     "mocha-junit-reporter": "^2.2.0",
     "nock": "^12.0.2",
+    "nodemon": "^2.0.15",
+    "nyc": "^15.0.0",

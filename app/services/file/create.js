@@ -3,7 +3,6 @@ const app = require('../../core')
 const File = app.repositories.file
 const FileModel = app.models.file
 const validator = app.plugins.validator
-const BadRequestError = require('../../errors/bad_request')
 const logger = app.logger.getLogger('app.services.file.create')
 
 /**

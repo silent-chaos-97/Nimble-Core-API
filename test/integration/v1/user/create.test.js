@@ -86,11 +86,9 @@ describe('POST /users', () => {
     })
 
     it('should show fail registration when email not valid', done => {
-// Temp comment
       user.email = 'testUser'
       request(app.server)
         .post('/v1/users')
-        .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
         .end(done)
@@ -134,3 +132,5 @@ describe('POST /users', () => {
             .where('email', user.email)
             .first()
             .then(row => {
+              expect(row.institution_id).to.equal(user.institutionId)
+              done()

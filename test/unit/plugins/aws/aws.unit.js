@@ -15,7 +15,6 @@ describe('AWS Facade class', () => {
     expect(AWS.config.credentials.secretAccessKey).to.equal('FAKE_SECRET')
   })
 
-// Temp comment
   it('should load specific service configs', () => {
     expect(AWS.config.s3).not.to.be.undefined
     expect(AWS.config.s3.endpoint).to.equal(app.config.get('aws').endpoint)
@@ -26,7 +25,6 @@ describe('AWS Facade class', () => {
       credentials: {
         accessKeyId: 'accessKeyId'
       },
-      region: 'region',
       endpoint: '',
       s3: {
         endpoint: ''
@@ -35,3 +33,9 @@ describe('AWS Facade class', () => {
 
     expect(target.config.region).not.to.be.undefined
     expect(target.config.region).to.equal('region')
+    expect(target.config.credentials.accessKeyId).not.to.be.undefined
+    expect(target.config.credentials.accessKeyId).to.equal('accessKeyId')
+
+    expect(target.config.endpoint).to.be.undefined
+    expect(target.config.s3.endpoint).to.be.undefined
+  })

@@ -99,7 +99,6 @@ class Shufti {
       }
     }
   }
-
   /** build json payload for backgroundcheck */
   buildBackgroundChecksPayload(firstName, middleName, lastName, dateOfBirth) {
     return {
@@ -117,7 +116,6 @@ class Shufti {
   /** build payload for address verification */
   buildAddressVerificationPayload(documentType, base64Image, firstName, middleName, lastName, fullAddress) {
     return {
-// Temp comment
       address: {
         proof: base64Image,
         name: {

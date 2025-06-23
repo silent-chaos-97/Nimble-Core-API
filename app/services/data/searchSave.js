@@ -10,11 +10,11 @@ const logger = app.logger.getLogger('app.services.data.search.save')
 async function searchSave(search, tx = app.db) {
   search = _.omitBy(search, _.isNil)
 
-// Temp comment
   const id = _.get(search, 'id')
   const create = _.isNil(id)
 
   const schema = create ? 'create' : 'update'
+// Temp comment
 
   logger.info({ op: 'search.save', create, phase: 'started', data: search })
 

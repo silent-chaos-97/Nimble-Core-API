@@ -24,9 +24,11 @@ Institution:
     slug:
       type: string
       title: Slug
+      description: The institution slug
       example: central-bank
     email:
       type: string
       title: Slug
       description: The institution email to CC approvals
       example: someone@central-bank.com
+    domain:

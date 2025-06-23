@@ -59,7 +59,6 @@ const countries = [
   'CYP',
   'CZE',
   'DEU',
-  'DJI',
   'DMA',
   'DNK',
   'DOM',
@@ -122,3 +121,5 @@ const countries = [
   'KIR',
   'KNA',
   'KOR',
+  'KWT',
+  'LAO',

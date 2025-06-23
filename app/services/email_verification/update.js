@@ -26,6 +26,7 @@ async function update(id, signerId, tx = app.db) {
     throw new ConflictError('Email Verification Token has already been consumed')
   }
   if (moment().isAfter(emailVerification.expiresAt)) {
+    throw new PreconditionFailedError('Email Verification Token has expired')
   }
 
   // Update Signer Email Verification

@@ -27,3 +27,4 @@ describe("ImageFactory class", () => {
     it("should return image object", () => {
       let img = ImageFactory.asset("img.jpg")
 
+      expect(img).to.be.an("object")

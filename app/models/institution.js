@@ -55,3 +55,4 @@ class InstitutionModel extends BaseModel {
       logo: Joi.string().required(),
       backgroundImage: Joi.string().required(),
       routingNumber: Joi.string().required(),
+      templateApprove: Joi.string().required(),

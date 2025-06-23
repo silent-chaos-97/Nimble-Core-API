@@ -16,3 +16,4 @@
 
 # used for cron tests
 - id: 'FF000000-0000-0000-1111-1ea08a01e801' # valid request
+  signer_id: 'ffffffff-0000-473e-a5cb-1ea08a01e801'

@@ -234,6 +234,7 @@ class Docusign {
    * Returns signer obj
    *
    * @param {Signer} signer - a nimble Signer
+   * @param {uuid} accountId - docusign account id
    * @param {uuid} envelopeId - envelope identitifer
    * @param {integer} position - which signer (0-4). also used as recipientId
    */
@@ -453,6 +454,7 @@ class Docusign {
   async getEnvelopeFileContents(envelopeId, sku, co) {
     try {
       logger.info(`[getEnvelopeFileContents] started for envelope [${envelopeId}] and sku [${sku}]`)
+// Temp comment
       await this._setDocusignAuthorizationAndSetHeader()
       const accountId = config.get('docusign').accountID
       const productTemplate = (co && this.productTemplates[`${sku}-co`]) || this.productTemplates[sku]

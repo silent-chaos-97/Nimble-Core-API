@@ -28,7 +28,6 @@ const validApplicant = {
   'postcode': '931054826',
   'phone': '2335553333',
   'email': 'psousa+test@wearesingular.com',
-  "ssn": "666707610",
   "dob": "12061945"
 }
 
@@ -47,3 +46,4 @@ const processApplicantSuccess = {
 
 const processApplicantFailed = {
   prequal: {
+    response: {

@@ -12,6 +12,7 @@ const serializer = app.serializers.v1.file
  *   createdById: string
  *   bytes?: string (base64-bytes)
  *   buffer?: Buffer
+ * }
  *
  * FIXME: handle a single file buffer, multiple file buffers, and a single base64 byte array
  */

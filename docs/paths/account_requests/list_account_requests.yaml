@@ -19,3 +19,4 @@
       - in: query
         name: sort
         required: false
+        description: Sort account requests by property

@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const users = app.services.user
@@ -21,6 +22,7 @@ function list(req, res, next) {
 
   return users
     .list(filters)
+// Temp comment
     .then(users => users.map(serializer))
     .then(users => res.status(200).json(users))
     .catch(next)

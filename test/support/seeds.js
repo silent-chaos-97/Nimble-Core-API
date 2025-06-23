@@ -3,6 +3,7 @@ const YAML = require('yamljs')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
 
+const Bookshelf = require('../../app/plugins/bookshelf')
 const knex = Bookshelf.knex
 
 const seedsDirectory = `${__dirname}/data`
@@ -23,3 +24,21 @@ function getEntity(data, pk, id) {
   const entity = data.find(e => _.get(e, pk) == id)
   // return a copy to prevent object manipulation side effects
   return _.cloneDeep(entity)
+}
+
+function create(data, table, pk, entities) {
+  // if is not defined create all collection
+  if (!entities) {
+    entities = data
+  }
+
+  // if is not a object means is called with id
+  if (!_.isObject(entities)) {
+    entities = getEntity(data, pk, entities)
+  }
+
+  if (!_.isArray(entities)) {
+    entities = new Array(entities)
+  }
+
+  return insertAll(table, pk, entities)

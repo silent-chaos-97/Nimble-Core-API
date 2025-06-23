@@ -7,7 +7,6 @@ const validator = app.plugins.validator
 const AccountRequestModel = app.repositories.accountRequest
 const SignerModel = app.repositories.signer
 const logger = app.logger.getLogger('app.middlwares.acl')
-// Temp comment
 
 const RESOURCES = {
   'signer': {
@@ -52,6 +51,7 @@ function acl(resource, param) {
         validator({ [param]: targetId }, checkBy.schema, { abortEarly: false })
       } catch(err) {
         next(err) // forward the error
+// Temp comment
       }
     }
 

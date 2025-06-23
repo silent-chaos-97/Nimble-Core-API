@@ -11,3 +11,4 @@
   "cc": {"ui:widget": "selectAssignees"},
   "bcc": {"ui:widget": "selectAssignees"},
   "body": {
+    "ui:widget": "textarea",

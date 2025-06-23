@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const moment = require('moment')
 const app = require('../../core')
@@ -11,3 +12,9 @@ function isWkfl(event) {
 
 function _defaultDelegate() {
   return { notifications: _defaultNotifications }
+}
+
+function _delegate(event) {
+  if (isWkfl(event)) return wkflDelegate(event)
+
+  return null

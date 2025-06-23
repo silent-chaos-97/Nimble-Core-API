@@ -1,4 +1,3 @@
-// Temp comment
 describe('GET /me', () => {
   describe('with invalid auth', () => {
     it('should return 401 if no auth', () => {
@@ -70,3 +69,4 @@ describe('GET /me', () => {
           props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
           })
+

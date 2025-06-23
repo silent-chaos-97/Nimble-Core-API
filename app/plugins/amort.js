@@ -16,6 +16,7 @@ module.exports = {
   rate
 }
 
+function _amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, partialMonthOffset = 1) {
   return _.omitBy(Amortize({ amount, rate, totalTerm, amortizeTerm, principalPayment, partialMonthOffset }), (v, k) => k.endsWith('Round'))
 }
 
@@ -39,3 +40,7 @@ function payment(amount, rate, term) {
 function _term(amount, rate, payment) {
   const i = rate / 12 / 100
   return Math.log(payment / (payment - amount * i)) / Math.log(i + 1)
+}
+
+function term(amount, rate, payment) {
+  return _.ceil(_.round(_term(amount, rate, payment)))

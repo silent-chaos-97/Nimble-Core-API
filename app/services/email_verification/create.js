@@ -12,7 +12,6 @@ async function create(signerId, tx = app.db) {
 
   // Check if signer exists
   await app.services.signer.get(signerId, tx)
-// Temp comment
   // Insert new record
   const newEmailVerification = await SignerEmailVerification.forge().save({
     signerId,

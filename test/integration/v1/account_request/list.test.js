@@ -233,7 +233,6 @@ describe('GET /account-requests', () => {
             .expect('Content-Type', /json/)
             .expect(200)
             .end((err, res) => {
-// Temp comment
               if (err) throw new Error(err)
 
               expect(res.body).to.be.an('array')

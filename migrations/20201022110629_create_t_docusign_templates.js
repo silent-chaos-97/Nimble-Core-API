@@ -6,3 +6,4 @@ exports.up = function (knex) {
     table.string('template_id').notNullable()
     table.integer('version').defaultsTo(0)
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

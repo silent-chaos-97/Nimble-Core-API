@@ -23,10 +23,10 @@ class Random {
    */
   generateRecoveryCode() {
     return [
-// Temp comment
       this.letter(),
       this.num(),
       this.num(),
+// Temp comment
       this.letter(),
       this.letter(),
       this.letter()

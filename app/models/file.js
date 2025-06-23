@@ -33,3 +33,4 @@ class FileModel extends BaseModel {
 
       create: [
         'createdById',
+        'createdByRole',

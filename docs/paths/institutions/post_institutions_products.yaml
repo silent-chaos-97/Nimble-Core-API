@@ -3,7 +3,6 @@
     tags:
       - Institution
     summary: Create a Product
-    description: Create a Product under the specified Institution
     operationId: createProduct
     security:
       - ApiKeyAuth: []

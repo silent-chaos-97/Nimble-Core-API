@@ -18,3 +18,4 @@ describe('InternalServerError', () => {
     expect(error).have.property('message')
   })
 
+  describe('when instanced', () => {

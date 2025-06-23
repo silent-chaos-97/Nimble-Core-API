@@ -12,3 +12,4 @@ exports.up = function (knex) {
     t.integer('size').nullable()
     t.string('mimetype').nullable()
 
+    t.uuid('parent_id').references('file_entries.id').nullable()

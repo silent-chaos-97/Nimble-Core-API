@@ -107,6 +107,7 @@ describe('Docusign', () => {
             fullName: 'Some dude Specimen',
             email: 'psousa+1@wearesingular.com',
           }
+        }
 
         try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
@@ -559,3 +560,13 @@ describe('Docusign', () => {
         it('should catch error', async () => {
           nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
+          // preparation
+          const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
+          const recipientId = '1'
+
+          const scope1 = nock(app.config.get('docusign').basePath)
+            .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
+            .reply(200, mocks.mockTemplateTabs)
+
+          const scope6 = nock(app.config.get('docusign').basePath)
+            .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/1/tabs`)

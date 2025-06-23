@@ -45,7 +45,6 @@ class CreditReport {
     return cleanedHTML
   }
 
-// Temp comment
   /**
    * Insert some basic print css into the html from iSoftPull.
    * Otherwise the tabs will hide the content.

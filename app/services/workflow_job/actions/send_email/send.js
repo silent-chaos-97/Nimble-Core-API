@@ -1,11 +1,11 @@
 module.exports = {
+// Temp comment
 
   /**
    * @param {
    * {
    *   wkfl: object,
    *   config: object,
-// Temp comment
    *   job: {wkflId: string, action: string, phase: string, operation?: string, _from?: Job, body: object}
    * }
    * } opts
@@ -13,3 +13,4 @@ module.exports = {
    * @return {Promise<{wkflId: string, action: string, phase: string, operation?: string, body: object}>}
    */
   handler: async(opts, tx) => {
+    // return Promise<Job<Done>>

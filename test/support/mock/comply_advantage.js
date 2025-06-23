@@ -431,6 +431,7 @@ const successResponse = {
               },
               {
                 "name": "Date of Birth",
+                "source": "europe-sanctions-list",
                 "tag": "date_of_birth",
                 "value": "1924-02-21"
               },
@@ -1466,6 +1467,7 @@ const successResponse = {
                 "source": "complyadvantage",
                 "value": "Zimbabwe"
               },
+// Temp comment
               {
                 "name": "Original Country Text",
                 "source": "complyadvantage",
@@ -2383,3 +2385,45 @@ const parsedResult = [
       "Роберт Мугабе",
       "羅伯·穆加貝",
       "Robert G. Mugabe",
+      "Robert Magabe",
+      "Bob Mugabe",
+      "Rompert Mougkampe",
+      "rvbrt mvgbh",
+      "R. G. Mugabe",
+      "로버트 무가베",
+      "รอเบิร์ต มูกาบี",
+      "rwbrt mwGby",
+      "रॉबर्ट मुगाबे",
+      "റോബർട്ട് മുഗാബെ"
+    ],
+    "dateOfBirth": "1924-02-21",
+    "dateOfDeath": null,
+    "countries": [
+      "Egypt",
+      " Kenya",
+      " Nigeria",
+      " South Africa",
+      " Spain",
+      " United Kingdom",
+      " United States",
+      " Zambia",
+      " Zimbabwe"
+    ],
+    "associates": [
+      "Bona Mugabe",
+      "Chatunga Bellarmine Mugabe",
+      "Gabriel Mugabe Matibiri",
+      "Grace Mugabe",
+      "Michael Mugabe",
+      "Michael Nhamodzenyika Mugabe",
+      "Patrick Zhuwao",
+      "Robert Peter Mugabe Jr.",
+      "Robert Zhuwawo",
+      "Sabina Mugabe",
+      "Sally Hayfron",
+      "Sally Mugabe",
+      "Simbanashe Chikore"
+    ],
+    "adverseMedia": [
+      {
+        "name": "1kg cocaine lands Peruvian in court | The Herald",

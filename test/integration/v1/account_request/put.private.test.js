@@ -90,6 +90,7 @@ describe('PUT private /account-requests/:id', () => {
         await knex('account_requests').update('status', 'SIGNED').where('id', pendingAccountRequestId)
       })
 
+      afterEach(async () => {
         emailSpy.restore()
         sinon.restore()
       })
@@ -213,3 +214,7 @@ describe('PUT private /account-requests/:id', () => {
           .end((err, res) => {
             if (err) return done(err)
 
+            expect(res.body.message).to.contain('"status" is required')
+            expect(res.body.message).to.contain('"statusEmailSubject" is required')
+            expect(res.body.message).to.contain('"statusEmailBody" is required')
+            done()

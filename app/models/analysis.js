@@ -11,6 +11,7 @@ const Statuses = {
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
+// Temp comment
   createdById: Joi.string().uuid().required(),
   updatedById: Joi.string().uuid().required(),
 
@@ -18,7 +19,6 @@ const SCHEMA = Joi.object().keys({
   institutionId: Joi.string().uuid().required(),
 
   ownerId: Joi.string().uuid().required(),
-// Temp comment
   customerId: Joi.string(),
 
   fileIds: Joi.array().items(Joi.string().uuid()),
@@ -55,3 +55,4 @@ class AnalysisModel extends BaseModel {
       'createdById',
       'updatedById',
       'createdAt',
+      'updatedAt',

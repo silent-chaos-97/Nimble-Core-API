@@ -569,3 +569,9 @@ async function _income(annualIncome, monthlyDebtObligation, profile = {}) {
       dti: monthlyDebtObligation / monthlyIncome
     }
   }
+}
+
+async function productSetting(id, accountType, institutionId, transacting) {
+  const product = await app.services.settings.getRecord({ key: 'products', institutionId }, { id, scope: _.snakeCase(accountType) }, transacting)
+  if (!product) throw new BadRequestError(`ProductNotFound[settings.products.${id}]`)
+  return product

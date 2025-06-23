@@ -1,4 +1,5 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
+// Temp comment
 
+module.exports = async(path = null) => {

@@ -35,6 +35,7 @@ class UserModel extends BaseModel {
   static isSuperAdmin(user) {
     return this.hasRole(user, Roles.SuperAdmin)
   }
+
   static isInstitutionAdmin(user) {
     return this.isSuperAdmin(user) || this.hasRole(user, Roles.InstitutionAdmin)
   }
@@ -86,3 +87,5 @@ class UserModel extends BaseModel {
 
   static props() {
     return ['id', 'email', 'password', 'firstName', 'lastName', 'createdAt', 'lastLoginAt', 'institutionId', 'branchId', 'roles', 'titles', 'workgroups', 'department', 'status', 'phone']
+  }
+

@@ -8,7 +8,6 @@ describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
     nock.disableNetConnect()
-    nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
   before(async () => {
@@ -54,3 +53,4 @@ describe('app.services.compliance.parse', () => {
 
         expect(first).to.have.ownProperty('fullName')
         expect(first).to.have.ownProperty('nameAka')
+        expect(first).to.have.ownProperty('dateOfBirth')

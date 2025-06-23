@@ -44,3 +44,29 @@ async function withMicroblink(mock, assertOnError, bodyFn) {
   finally {
     scope.done()
   }
+}
+
+/*
+* mock:
+*  oauth
+*  documentTabs
+*  createEnvelope
+* */
+async function withDocusign(mockResponse, bodyFn) {
+  nock(`https://${config.get('docusign').oauthPath}`)
+    .post('/oauth/token')
+    .reply(200, mockResponse.oauth)
+
+  nock(config.get('docusign').basePath)
+  .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/NONE/documents/1/tabs`)
+  .reply(200, mockResponse.documentTabs)
+
+  nock(config.get('docusign').basePath)
+  .post(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes`)
+  .reply(200, mockResponse.createEnvelope)
+
+  try {
+    await bodyFn()
+  }finally {
+    nock.cleanAll()
+  }

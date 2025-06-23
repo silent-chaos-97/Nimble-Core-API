@@ -28,6 +28,7 @@ describe('app.services.email.emailVerification', () => {
   })
 
   describe('when validating', () => {
+// Temp comment
     it('should return error if signerId is not a uuid', async() => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
@@ -70,3 +71,4 @@ describe('app.services.email.emailVerification', () => {
     })
 
     it('should call sendEmailTemplate', async() => {
+      await app.services.email.emailVerification(id)

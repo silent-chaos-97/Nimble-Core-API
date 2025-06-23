@@ -8,3 +8,4 @@ module.exports = function() {
   return subscriberFactory({
     name: 'app.services.events',
     handleMessage: async(message) => {
+      try {

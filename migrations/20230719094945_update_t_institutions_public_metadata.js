@@ -27,6 +27,7 @@ const publicMetadata = {
     dependsOn: {
       milesAway: 'yes'
     },
+    maxLength: 255
   },
   milesAway: {
     enum: [
@@ -89,3 +90,5 @@ const publicMetadata = {
     default: '',
     subtype: 'country',
     required: true,
+    dependsOn: {
+      usCitizen: 'yes'

@@ -7,3 +7,4 @@ rules:
   }]
 globals:
   app: true
+  request: true

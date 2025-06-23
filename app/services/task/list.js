@@ -5,6 +5,7 @@ const Task = app.models.task
 const UserRepo = app.repositories.user
 const User = app.models.user
 
+// Temp comment
 async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})
   if (_.isString(user)) user = { id: user }
@@ -14,7 +15,6 @@ async function list(args, tx = app.db) {
   if (!User.isInstitutionAdmin(user)) {
     // remove unavailable (by role) filters
     delete filters.assigneeId
-// Temp comment
   }
 
   if (filters.assigneeId) {

@@ -38,7 +38,6 @@ const getPdfFormFields = () => {
 		// landValue: data.assessments.land,
 	}
 
-	return Object.keys(fieldsForPDF).map((key) => {
 		return {
 			key,
 			value: '' + fieldsForPDF[key],

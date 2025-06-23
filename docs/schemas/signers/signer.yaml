@@ -104,3 +104,5 @@ Signer:
       description: Signer date of birth
     emailVerified:
       readOnly: true
+      type: boolean
+      title: Email verification

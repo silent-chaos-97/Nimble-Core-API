@@ -17,7 +17,6 @@ async function peopleSchema() {
   try {
     const res = await axios.get(apiUrl, { headers })
     logger.info({ op: 'people.schema', phase: 'completed' })
-// Temp comment
     return _.get(res, ['data', 'components', 'schemas', 'Person'])
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)

@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
@@ -11,6 +10,7 @@ const STATUSES = {
 }
 
 class SignerCheck extends BaseModel {
+
   constructor(data) { super(SignerCheck.props(), SignerCheck.relations(), data) }
 
   static props() {
@@ -20,3 +20,4 @@ class SignerCheck extends BaseModel {
       'check',
       'status',
       'createdAt',
+      'updatedAt'

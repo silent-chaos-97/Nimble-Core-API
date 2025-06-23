@@ -7,6 +7,7 @@ describe('GET /signers/:id/credit-reports', async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
+  })
 
   after(() => {
     clock.restore()
@@ -68,3 +69,4 @@ describe('GET /signers/:id/credit-reports', async () => {
     it('should return 400 with invalid uuid as id', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
+        .get(`/v1/signers/${id}/credit-reports`)

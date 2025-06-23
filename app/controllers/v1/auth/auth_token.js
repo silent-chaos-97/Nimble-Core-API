@@ -48,3 +48,72 @@
 //       })
 //     })
 //   }
+// }
+
+// async function tokenExchange(req,res){
+//   const {id, verification_token, verification_code } = req.body
+//
+//   if (!verification_token) {
+//     throw new Error('No Verification Token found')
+//   }
+//
+//   if (!verification_code) {
+//     throw new Error('No Verification Code found')
+//   }
+//
+//   try {
+//     const hashedTokenList = await oneTimeTokenService.getUnused(id)
+//     const tokenListLength = hashedTokenList.length
+//
+//     if (tokenListLength === 0){
+//       // return error if no unused Verification Token found for that phone number
+//       return res.status(500).json({ message: 'Verification Token not found or already used', status:false })
+//     }
+//
+//     for(const item of hashedTokenList){
+//       const hashedToken = item.attributes.hashedVerificationToken
+//       const tokenExpiration = parseInt(item.attributes.expiration)
+//       const timeNowUnix = moment().unix()
+//
+//       if (tokenExpiration < timeNowUnix){
+//         res.status(500).json({ message: 'Verification Token expired', status:false })
+//       }
+//
+//       const result = bcrypt.compareSync(verification_token, hashedToken)
+//
+//       if (result === true) {
+//         const isValid = await mfaVerify.isApproved(id, verification_code)
+//
+//         if (isValid) {
+//           const roles = Object.values([Roles.Applicant])
+//           const formattedId = id.toString().replace(/\D/g, "")
+//           const newUserData = {
+//             phone: formattedId,
+//             roles: [...roles],
+//             branchId: "2552ab85-0000-0000-0000-000000000001",
+//             email: `placeholder-email-id-for-${formattedId}@nimblefi.com`
+//           }
+//
+//           const newUser = await usersService.createApplicant(newUserData, "local")
+//
+//           const tokenOptions = {
+//             userId: newUser.id.toString(),
+//             expiration: 86400 // 24 hours
+//           }
+//           const accessToken = await tokenService.get(tokenOptions)
+//
+//           // Mark isAllReadyUsed=true for this one time token
+//           await oneTimeTokenService.markAlreadyUsed({ id: item.id })
+//
+//           return res.status(200).json({ user: newUser, access_token: accessToken, status: true })
+//         } else {
+//           return res.status(400).json({message:"Invalid Code!", status:false})
+//         }
+//       }
+//     }
+//
+//     // return error if provided Verification Token not matched with any hashed token
+//     return res.status(500).json({ message: 'Verification Token not found or already used', status:false })
+//   } catch (err){
+//     return res.status(500).json({ message: 'Something went wrong', status:false })
+//   }

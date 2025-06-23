@@ -68,6 +68,7 @@ describe('app.models.signer.flattenData', () => {
       'somethingA': 'somethingA',
       'somethingB': 'somethingB',
       'otherObject': {
+        'backDocumentId': 'backDocumentId',
         'frontDocumentId': 'frontDocumentId',
         'type': 'type',
         'number': 'number',
@@ -76,3 +77,5 @@ describe('app.models.signer.flattenData', () => {
         'expirationDate': 'expirationDate',
       }
     })
+  })
+

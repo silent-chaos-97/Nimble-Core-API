@@ -30,6 +30,7 @@ describe('app.services.cron.inviteeReminder', () => {
       expect(app.services.cron.inviteeReminder).not.to.be.undefined
     })
 
+    it('should be a function', () => {
       expect(app.services.cron.inviteeReminder).to.be.an('Function')
     })
   })
@@ -71,3 +72,5 @@ describe('app.services.cron.inviteeReminder', () => {
       it('should NOT SEND reminders when running 25 hours after', async () => {
         const now = moment(baseDate).add(25, 'hour').toDate()
         sinon.useFakeTimers(now)
+        await app.services.cron.inviteeReminder()
+        expect(inviteReminderSpy).to.not.have.been.called

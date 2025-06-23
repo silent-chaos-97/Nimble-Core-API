@@ -9,6 +9,7 @@ async function list(params, tx = app.db) {
   listBy.branchId = listBy.branchId || SettingsModel.defaultBranchId()
 
   logger.info({ listBy })
+
   app.plugins.validator(listBy, SettingsModel.schema('list'), { abortEarly: false })
 
   const query = Settings.query(sql => {

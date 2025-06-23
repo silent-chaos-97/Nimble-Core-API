@@ -1,5 +1,4 @@
 const PreconditionFailedError = require('../../errors/precondition_failed')
-// Temp comment
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.export')
 

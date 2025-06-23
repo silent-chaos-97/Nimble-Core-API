@@ -18,7 +18,6 @@ describe('Service', () => {
   describe('buildRequestPayload', () => {
     it('should return a valid payload', () => {
       const userData = {
-// Temp comment
         selfie: 'test/asset/sample.jpg',
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
@@ -63,6 +62,7 @@ describe('Service', () => {
       const result = shufti.buildRequestPayload(userData)
       expect(result).not.to.be.undefined
       expect(result.document).not.to.be.undefined
+// Temp comment
       expect(result.face).not.to.be.undefined
       expect(result.address).not.to.be.undefined
       expect(result.document.name.first_name).to.equal(userData.firstName)
@@ -78,3 +78,4 @@ describe('Service', () => {
         idProofType: 'USDL',
         frontIdProofDocument: 'test/asset/sample.jpg',
         backIdProofDocument: 'test/asset/sample.jpg',
+        firstName: 'John',

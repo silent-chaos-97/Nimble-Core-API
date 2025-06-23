@@ -14,3 +14,4 @@ const WORKGROUPS = {
 
 const DEPARTMENT = {
   key: 'departments',
+  title: 'Departments',

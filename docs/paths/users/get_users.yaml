@@ -11,3 +11,4 @@
         description: User ID
         required: true
         schema:
+          type: string

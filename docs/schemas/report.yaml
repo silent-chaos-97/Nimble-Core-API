@@ -3,3 +3,4 @@ Report:
   required:
     - uri
   properties:
+    uri:

@@ -33,7 +33,6 @@
     "addressStatus": "INVALID",
     "sanctionsStatus": "MATCH",
     "mediaStatus": "MATCH",
-    "politicalExposure": "MATCH"
   },
   "signers": [
     {
@@ -79,6 +78,7 @@
       "adverseMediaVerifiedAt": null,
       "checkAntiMoneyLaundering": null,
       "antiMoneyLaunderingVerifiedAt": null,
+      "contractDocumentSignerStatus": "SIGNED",
       "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",
       "invitedAt": "2018-02-16T11:32:03.341Z",
       "selfie": {
@@ -109,3 +109,5 @@
       "consentAccountOpening": true,
       "consentCommunication": false,
       "consentPrivacyPolicy": true,
+      "dateOfBirth": null,
+      "emailVerified": false,

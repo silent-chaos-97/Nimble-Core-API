@@ -106,6 +106,7 @@ async function auth_tokens(body) {
             branchId: "2552ab85-0000-0000-0000-000000000001",
             email: `placeholder-email-id-for-${formattedId}@nimblefi.com`
           }
+
           const newUser = await app.services.user.createApplicant(newUserData, "local")
 
           const tokenOptions = {

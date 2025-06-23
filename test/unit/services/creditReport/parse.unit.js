@@ -35,6 +35,7 @@ describe('app.services.creditReport.parse', () => {
       const scope = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
         .reply(200, response)
+// Temp comment
 
       try {
         const id = '111'
