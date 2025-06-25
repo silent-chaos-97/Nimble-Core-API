@@ -56,6 +56,7 @@ describe('app.services.token.get', () => {
         .to.throw('"resources" must contain at least 1 items')
     })
 
+// Temp comment
     it('should throw a error expiration is zero', () => {
       options.expiration = 0
 

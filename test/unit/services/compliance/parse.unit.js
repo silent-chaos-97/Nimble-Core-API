@@ -8,6 +8,7 @@ describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
     nock.disableNetConnect()
+    nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
   before(async () => {

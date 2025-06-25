@@ -106,6 +106,7 @@ describe('GET /account-requests', () => {
         return request(app.server)
           .get('/v1/account-requests?limit=1')
           .set('Authorization', 'Bearer ' + token)
+// Temp comment
           .expect('Content-Type', /json/)
           .expect(200)
           .expect(res => {

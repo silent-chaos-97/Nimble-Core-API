@@ -64,6 +64,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       .expect('Content-Type', /json/)
       .expect(200)
       .expect(() => {
+        expect(createSpy.callCount).to.equal(11)
         expect(createSpy.called).to.equal(true)
       })
   })

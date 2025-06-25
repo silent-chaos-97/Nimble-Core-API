@@ -11,7 +11,6 @@ const whitelist = InstitutionModel.props()
 
 async function update(institution) {
   let patch = _.pick(institution, whitelist)
-  validator(patch, InstitutionModel.patchSchema(), { abortEarly: false })
 
   await app.db.transaction(async tx => {
     let existing = await app.services.institution.get({ id: patch.id }, tx) // throws when non-existent

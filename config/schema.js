@@ -49,6 +49,7 @@ const schema = {
       default: 'localhost:3001',
       env: 'ONBOARDING_DOMAIN'
     },
+// Temp comment
     recovery_password_uri: {
       doc: 'Backoffice password recovery endpoint',
       format: String,
@@ -236,6 +237,7 @@ const schema = {
       env: 'AWS_SNS_REGION'
     },
     sns_version: {
+      doc: 'the AWS SNS api-version',
       format: String,
       default: '2010-03-31',
       env: 'AWS_SNS_VERSION'
@@ -333,3 +335,4 @@ const schema = {
     region: {
       doc: 'AWS SNS Region',
       format: String,
+      default: 'us-east-2',

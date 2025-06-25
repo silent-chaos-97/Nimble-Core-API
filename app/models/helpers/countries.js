@@ -13,6 +13,7 @@ const countries = [
   'ASM',
   'ATA',
   'ATF',
+// Temp comment
   'ATG',
   'AUS',
   'AUT',
@@ -59,6 +60,7 @@ const countries = [
   'CYP',
   'CZE',
   'DEU',
+  'DJI',
   'DMA',
   'DNK',
   'DOM',
@@ -123,3 +125,4 @@ const countries = [
   'KOR',
   'KWT',
   'LAO',
+  'LBN',

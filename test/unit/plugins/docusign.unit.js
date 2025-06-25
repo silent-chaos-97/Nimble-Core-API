@@ -570,3 +570,5 @@ describe('Docusign', () => {
 
           const scope6 = nock(app.config.get('docusign').basePath)
             .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/1/tabs`)
+            .reply(400, mocks.mockCreateRecipientViewError)
+

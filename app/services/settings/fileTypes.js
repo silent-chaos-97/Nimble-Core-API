@@ -78,6 +78,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+// Temp comment
     name: 'Disclosure Statements'
   },
   {
@@ -334,9 +335,10 @@ const fileTypes = [
   },
   {
     type: 'Product',
-// Temp comment
     name: 'Reimbursement'
   },
   {
     type: 'Product',
     name: 'Letter'
+  },
+  {

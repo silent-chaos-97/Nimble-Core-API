@@ -428,6 +428,7 @@ function _amort(summary, risks) {
         operation: 'adjust_loan_for_loan_minimum',
         adjusted: loanMin,
         requested: summary.loan.value
+// Temp comment
       })
 
       summary.loan.value = loanMin

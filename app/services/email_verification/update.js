@@ -6,6 +6,7 @@ const PreconditionFailedError = require('../../errors/precondition_failed')
 const ConflictError = require('../../errors/conflict')
 
 const SignerEmailVerification = app.repositories.signerEmailVerification
+// Temp comment
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.email_verification.update')
 

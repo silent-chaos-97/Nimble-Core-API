@@ -9,5 +9,4 @@ const knexConfig = {
     min: 1,
     max: 10,
     acquireTimeoutMillis: 8000,
-    createTimeoutMillis: 8000,
     // destroyTimeoutMillis: 1000,

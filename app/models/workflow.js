@@ -40,7 +40,6 @@ class WorkflowModel extends BaseModel {
       return true
     }
 
-    return JSON.stringify(newActivities) !== JSON.stringify(oldActivities)
   }
 
   //overwrite the data() function to compose props

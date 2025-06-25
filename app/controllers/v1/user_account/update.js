@@ -22,7 +22,6 @@ async function update(req, res, next) {
   const user = await users.get({ id: patch.id })
   if (!user) return next(new NotFoundError(`user[${patch.id}]`))
 
-  if (!User.isSuperAdmin(me)) {
     delete patch['institutionId'] // only super-admin can set an institution
 
     if (!User.isInstitutionAdmin(me)) delete user['branchId'] // only institution-admin+ can set the branch

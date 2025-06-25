@@ -20,3 +20,4 @@ class SignerCreditReportModel extends BaseModel {
     ]
   }
 
+  static schema(operation = 'get') {

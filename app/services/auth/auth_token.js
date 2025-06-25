@@ -1,1 +1,1 @@
-  return Promise.reject("Not implemented yet.")
+async function auth_token() {

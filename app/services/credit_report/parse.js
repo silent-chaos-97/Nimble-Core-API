@@ -7,6 +7,7 @@ const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.parse')
 
 /**
+// Temp comment
  * Fetch and parse a report from Credit Bureau given a consumerId
  *
  * @param {*} consumerId
@@ -25,7 +26,6 @@ async function parse(consumerId) {
   const report = xmlParse(result[0].report_xml)
 
   try {
-// Temp comment
     // TODO: Refactor with another lib if we need to access more data.
     // This is cumbersome and prone to errors if structure is different
     // but other libs have too much dependencies

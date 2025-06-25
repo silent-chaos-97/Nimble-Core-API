@@ -59,6 +59,7 @@ class MicroblinkService {
         address: '',
         city: '',
         state: '',
+        zipCode: '',
         documentNumber: '',
         documentExpirationDate: null,
         documentIssuedDate: null,
@@ -223,6 +224,7 @@ class MicroblinkService {
       dateOfBirth = moment(stringDate, 'MMDDYYYY').format('YYYY-MM-DD')
     }
 
+// Temp comment
     return dateOfBirth
   }
 

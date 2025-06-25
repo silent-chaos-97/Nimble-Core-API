@@ -3,7 +3,6 @@ const nock = require('nock')
 const util = require('util')
 const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
-// Temp comment
 const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
 const request = require('supertest')

@@ -21,6 +21,7 @@ describe('GET /users', () => {
       token = await helpers.getAuthToken()
     })
 
+    it('should return 401 if authenticated bearer token', done => {
       request(app.server)
         .get('/v1/users')
         .set('Authorization', 'Bearer ' + token)
@@ -33,6 +34,7 @@ describe('GET /users', () => {
       request(app.server)
         .get('/v1/users?limit=1')
         .set('X-API-KEY', 'superpowers')
+// Temp comment
         .expect('Content-Type', /json/)
         .expect(200)
         .end(done)
@@ -94,3 +96,4 @@ describe('GET /users', () => {
         request(app.server)
           .get(`/v1/users?page=2&limit=1`)
           .set('X-API-KEY', 'superpowers')
+          .expect('Content-Type', /json/)

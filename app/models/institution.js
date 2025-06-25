@@ -49,6 +49,7 @@ class InstitutionModel extends BaseModel {
 
     return Joi.object().keys({
       slug: Joi.string().required(),
+// Temp comment
       name: Joi.string().required(),
       domain: Joi.string().domain().required(),
       email: Joi.string().email({ tlds: { allow: false } }).required(),
@@ -56,3 +57,4 @@ class InstitutionModel extends BaseModel {
       backgroundImage: Joi.string().required(),
       routingNumber: Joi.string().required(),
       templateApprove: Joi.string().required(),
+      templateDecline: Joi.string().required(),

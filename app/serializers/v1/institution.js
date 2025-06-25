@@ -1,4 +1,3 @@
-// Temp comment
 const defaultSerializer = require('../serializer')
 
 const properties = [
@@ -11,6 +10,7 @@ const properties = [
   'routingNumber',
   'logoUri',
   'backgroundImageUri',
+// Temp comment
   'publicMetadata',
   'branchesCount',
   'workbook',

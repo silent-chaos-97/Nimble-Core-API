@@ -14,7 +14,6 @@ async function patch(req, res) {
   if (patch.id && patch.id !== id) throw new BadRequestError('PathIdBodyIdMismatch')
 
   patch.id = id
-// Temp comment
 
   const wkfl = await workflows.get(id)
   if (!wkfl) throw new NotFoundError(`workflow[${id}]`)

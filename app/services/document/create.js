@@ -14,6 +14,7 @@ async function create(entity, options = {}) {
   const id = await app.db.transaction(async tx => {
     const newId = uuid()
     const key = app.plugins.aws.getKey(entity.institutionId, entity.content, newId, entity.format)
+    const data = { ..._.omit(entity, 'content', 'institutionId'), key, id: newId }
 
     const model = await Document.forge(data)
       .save(null, { method: 'insert', transacting: tx })

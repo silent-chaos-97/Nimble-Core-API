@@ -2,7 +2,6 @@ const getPdfFormFields = () => {
 	const fieldsForPDF = {
 		// type of mortgage and terms of loan
 		amount: '500000',
-		borrower: 'Bob Smith',
 		borrowerDOB: '1980-01-20',
 		borrowerAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
 		borrowerEmployerName: 'ACME',
@@ -38,6 +37,7 @@ const getPdfFormFields = () => {
 		// landValue: data.assessments.land,
 	}
 
+	return Object.keys(fieldsForPDF).map((key) => {
 		return {
 			key,
 			value: '' + fieldsForPDF[key],

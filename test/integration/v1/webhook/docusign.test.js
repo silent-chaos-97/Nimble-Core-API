@@ -146,6 +146,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
+            .end(async (err, res) => {
               if (err) return done(err)
 
               expect(res.body.status).to.equal('SIGNED')
@@ -224,3 +225,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
   describe('when it has multiple signers with the same email', () => {
     let token
+    const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d347'

@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
+// Temp comment
 const app = require('../core')
 const _ = require('lodash')
 
@@ -11,7 +12,6 @@ const Statuses = {
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
-// Temp comment
   createdById: Joi.string().uuid().required(),
   updatedById: Joi.string().uuid().required(),
 
@@ -56,3 +56,4 @@ class AnalysisModel extends BaseModel {
       'updatedById',
       'createdAt',
       'updatedAt',
+

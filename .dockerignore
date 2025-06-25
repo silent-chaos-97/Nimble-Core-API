@@ -3,3 +3,4 @@
 .gitlab
 .gitignore
 coverage
+helm

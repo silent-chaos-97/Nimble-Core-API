@@ -35,7 +35,6 @@ describe('app.services.creditReport.parse', () => {
       const scope = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
         .reply(200, response)
-// Temp comment
 
       try {
         const id = '111'
@@ -45,3 +44,4 @@ describe('app.services.creditReport.parse', () => {
         expect(error.message).to.equal("Response from Credit Bureau is empty")
         expect(error).to.be.an.instanceof(Error)
       }
+      scope.done()

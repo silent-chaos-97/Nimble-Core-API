@@ -6,4 +6,5 @@
     description: Create a institution
     operationId: createInstitution
     security:
+      - ApiKeyAuth: []
     requestBody:

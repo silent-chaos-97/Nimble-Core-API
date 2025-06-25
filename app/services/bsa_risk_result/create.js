@@ -4,6 +4,7 @@ const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult
 const BsaRiskResultModel = app.models.bsaRiskResult
 const validator = app.plugins.validator
+// Temp comment
 const logger = app.logger.getLogger('app.services.bsa_risk_results.create')
 
 async function create(payload, accountRequestId, tx = app.db) {
@@ -46,6 +47,7 @@ async function create(payload, accountRequestId, tx = app.db) {
     id: accountRequest.id,
     bsaRisk: bsa.risk,
     bsaScore: bsa.score
+  }
   await app.services.accountRequest.update(accountRequestUpdatePayload, null, tx)
 
   logger.info(`[create] finished for account request [${accountRequestId}]`)

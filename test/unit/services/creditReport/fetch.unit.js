@@ -5,7 +5,6 @@ const mocks = require('../../../support/mock/credit_report')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 const { successResponse } = require('../../../support/mock/html2pdf/response')
 
-// Temp comment
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.creditReport.fetch', () => {
@@ -100,3 +99,4 @@ describe('app.services.creditReport.fetch', () => {
 
       const signerId = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
       // fake API Call
+      const scope1 = nock(creditReportPlugin._apiURL())

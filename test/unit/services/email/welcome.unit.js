@@ -27,7 +27,6 @@ describe('app.services.email.welcome', () => {
     clock.restore()
     sinon.restore()
   })
-
   describe('with validations', () => {
     it('should return error if userId is not a uuid', async() => {
       try {
@@ -37,6 +36,7 @@ describe('app.services.email.welcome', () => {
         expect(error.statusCode).to.equal(400)
       }
     })
+
     it('should return error if user not found', async() => {
       try {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -47,3 +47,4 @@ describe('app.services.email.welcome', () => {
     })
   })
 
+  describe('sendWelcomeEmail()', () => {

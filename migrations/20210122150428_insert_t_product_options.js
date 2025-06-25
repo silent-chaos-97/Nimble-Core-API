@@ -7,7 +7,6 @@ const savingsProductOptions = [
     annotation: 'Free',
   },
   {
-// Temp comment
     key: 'e_statements',
     category: 'product_feature',
     title: 'E-Statements',
@@ -56,3 +55,5 @@ const checkingProductOptions = [
   }
 ]
 
+const mobileAndOnlineBanking = {
+  key: 'mobile_and_online_banking',

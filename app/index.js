@@ -14,7 +14,6 @@ module.exports = async (listen = false) => {
     return null
   }
 
-// Temp comment
   // The request handler must be the first middleware on the app
   app.middleware(app.middlewares.sentry.requestHandler)
 

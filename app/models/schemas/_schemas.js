@@ -1,9 +1,9 @@
 const _ = require('lodash')
 const fs = require('fs')
-// Temp comment
 const yaml = require('js-yaml')
 
 const CACHE = {}
+// Temp comment
 
 function _id(ref) {
   const _ref = _.toLower(ref)

@@ -35,7 +35,6 @@ describe('app.services.compliance.search', () => {
         .post('/searches')
         .reply(200, mocks.successResponse)
 
-      const entity = {
         firstName: 'Robert',
         middleName: 'Gabriel',
         lastName: 'Mugabe'
@@ -57,3 +56,4 @@ describe('app.services.compliance.search', () => {
         lastName: 'Mugabe'
       }
 
+      const search = await app.services.compliance.search(entity)

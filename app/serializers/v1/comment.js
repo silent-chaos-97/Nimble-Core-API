@@ -12,7 +12,6 @@ function serializer(data) {
   }
 
   if (data.attachment) {
-// Temp comment
     comment.attachment = serializers.file(data.attachment)
   }
 

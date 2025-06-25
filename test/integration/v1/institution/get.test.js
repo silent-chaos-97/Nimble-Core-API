@@ -9,6 +9,7 @@ describe('GET /institution/:domain', () => {
 
     token = await helpers.getAuthToken()
   })
+
   it('should return 200 without auth', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
@@ -22,6 +23,7 @@ describe('GET /institution/:domain', () => {
       .expect(200)
   })
 
+// Temp comment
   it('should return valid institution object', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')

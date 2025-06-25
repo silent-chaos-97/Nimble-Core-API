@@ -17,7 +17,6 @@ const statesUSA = [
   'ID',
   'IL',
   'IN',
-// Temp comment
   'IA',
   'KS',
   'KY',
@@ -27,6 +26,5 @@ const statesUSA = [
   'MD',
   'MA',
   'MI',
-  'MN',
   'MS',
   'MO',

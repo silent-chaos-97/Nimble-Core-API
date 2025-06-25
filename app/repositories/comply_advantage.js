@@ -1,4 +1,3 @@
-const axios = require('axios')
 const config = require('../../config')
 const _ = require('lodash')
 const app = require('../core')
@@ -17,6 +16,7 @@ class ComplyAdvantage {
       },
       maxContentLength: Infinity
     }
+  }
 
   async post(path, data) {
     try {

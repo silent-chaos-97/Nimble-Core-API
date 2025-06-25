@@ -45,6 +45,7 @@ describe('POST /users', () => {
 
   describe('with invalid data', () => {
     beforeEach(async () => {
+// Temp comment
       const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'
       user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')
     })
@@ -89,6 +90,7 @@ describe('POST /users', () => {
       user.email = 'testUser'
       request(app.server)
         .post('/v1/users')
+        .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
         .end(done)
@@ -134,3 +136,4 @@ describe('POST /users', () => {
             .then(row => {
               expect(row.institution_id).to.equal(user.institutionId)
               done()
+            })

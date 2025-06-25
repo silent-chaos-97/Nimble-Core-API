@@ -35,7 +35,6 @@ function interpolateString(str, state) {
     const value = get(state, reference) || placeholder
     return memo.replace(placeholder, value)
   }, str)
-}
 
 function interpolateInput(input, state) {
   const mixMap = isArray(input) ? map : mapValues

@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const config = require('../../config')
 const postmark = require('postmark')
-const brevo = require('./brevo')
+const aws = require('./aws')
 const Mustache = require('mustache')
 const logger = require('./logger').getLogger('app.plugins.email')
 

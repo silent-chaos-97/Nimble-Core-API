@@ -17,7 +17,6 @@ const RESOURCES = {
       key: 'institutionId'
     }
   },
-  'account_request': {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
     matches: {
@@ -51,7 +50,6 @@ function acl(resource, param) {
         validator({ [param]: targetId }, checkBy.schema, { abortEarly: false })
       } catch(err) {
         next(err) // forward the error
-// Temp comment
       }
     }
 

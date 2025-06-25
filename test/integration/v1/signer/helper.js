@@ -64,7 +64,6 @@ async function withDocusign(mockResponse, bodyFn) {
   nock(config.get('docusign').basePath)
   .post(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes`)
   .reply(200, mockResponse.createEnvelope)
-
   try {
     await bodyFn()
   }finally {

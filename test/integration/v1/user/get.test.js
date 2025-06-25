@@ -53,3 +53,4 @@ describe('GET /users/:id', () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .end(done)
+    })

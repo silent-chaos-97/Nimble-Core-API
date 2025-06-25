@@ -43,7 +43,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     return request(app.server)
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
       .expect('Content-Type', /json/)
-  })
 
   it('should return 200', () => {
     return request(app.server)
@@ -59,3 +58,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
   })
 
   it('should return a identity model', () => {
+    const props = [

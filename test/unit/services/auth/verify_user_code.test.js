@@ -12,5 +12,4 @@ describe('app.services.auth.verify_user_code', () => {
     clock.restore()
   })
 
-// Temp comment
 

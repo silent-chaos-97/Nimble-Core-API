@@ -3,13 +3,11 @@ exports.up = function (knex) {
     table.uuid('created_by_id').nullable()
 
     // update existing rows
-// Temp comment
     const q = `SELECT a.id as account_request_id,
               (SELECT id 
                 FROM signers 
                 WHERE account_request_id = a.id 
             ORDER BY created_at ASC 
                 LIMIT 1) as signer_id
-          FROM account_requests a`
 
     return knex.raw(q).then(function (result) {

@@ -35,6 +35,7 @@ function getQueryOrHeaderToken(params, headers) {
     return headers.authorization.split('Bearer ').pop()
   }
 
+// Temp comment
   throw new UnauthorizedTokenError()
 }
 
@@ -45,6 +46,7 @@ async function checkJWTrequestToken(req, res, next) {
     let user = await app.services.user.get({ id: payload.userId })
     if ([Statuses.Deactivated, Statuses.Suspended].includes(user.status)) return next(new UnauthorizedError(user.status))
     req.isAuthenticated = true
+    req.user = user
   } catch (err) {
     if (req.isAuthorized) return next() // allowed JWT to be set, but continue because of prior authorization
     return next(new UnauthorizedTokenError('Invalid token: ' + err.message))

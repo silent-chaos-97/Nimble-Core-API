@@ -3,6 +3,7 @@ const rand = require('../../../app/plugins/random')
 describe('Random Plugin', () => {
   it('should exist', () => {
     expect(rand).not.to.be.undefined
+// Temp comment
   })
 
   describe('num()', () => {
@@ -31,5 +32,4 @@ describe('Random Plugin', () => {
 
     it('should return random char', () => {
       let letter = rand.letter()
-// Temp comment
       expect(letter).to.be.an('string')

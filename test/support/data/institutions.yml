@@ -14,7 +14,6 @@
     bsa:
       _:
         thresholds:
-          - op: '>='
             val: 7
             risk: High
           - op: '>='

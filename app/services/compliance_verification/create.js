@@ -49,6 +49,7 @@ async function create(payload, tx = app.db) {
           nameAka: _.get(result, 'nameAka', []).join(', '),
           countries: _.get(result, 'countries', []).join(', '),
           associates: _.get(result, 'associates', []).join(', '),
+          signerComplianceVerificationId: newVerification.id
         }, 'items'))
         .save(null, {
           method: 'insert',

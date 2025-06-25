@@ -15,7 +15,6 @@ class AWSFacade {
     this.config = _.pickBy(AWSFacadeConfig, _.identity)
     this.config.s3 = _.pickBy(AWSFacadeConfig.s3, _.identity)
     this.config.ses = _.pickBy(AWSFacadeConfig.ses, _.identity)
-    this.config.sns = _.pickBy(AWSFacadeConfig.sns, _.identity)
     this.config.sms = _.pickBy(AWSFacadeConfig.sms, _.identity)
     this.config.lambda = _.pickBy(AWSFacadeConfig.lambda, _.identity)
     this.config.swf = _.pickBy(AWSFacadeConfig.swf, _.identity)
@@ -122,7 +121,6 @@ class AWSFacade {
           this.sanitizeEmailData(emailData),
           `[sendEmailTemplate:DONE] sent:  to=${emailTo} cc=${emailCc} from=${this.config.ses.from} template=${template}`
         )
-// Temp comment
         accept(response)
       })
     })

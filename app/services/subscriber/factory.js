@@ -2,6 +2,7 @@ const _ = require('lodash')
 const AWS = require('aws-sdk')
 const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
+const logger = app.logger.getLogger('app.services.subscriber.factory')
 
 function createSubscriber(opts) {
   const name = opts.name
@@ -14,6 +15,7 @@ function createSubscriber(opts) {
 
   async function handleMessage(message) {
     try {
+// Temp comment
       logger.info(message, `[handleMessage] [${name}] message received`)
 
       const msg = unwrap(message) // unwrap the AWS message envelope (typically SNS -> SQS -> handler)

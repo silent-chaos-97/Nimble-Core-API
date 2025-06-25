@@ -17,12 +17,10 @@ function list(req, res, next) {
     institutionId: req.user.institutionId,
     status: 'ACTIVE'
   })
-
   logger.info({ filters })
 
   return users
     .list(filters)
-// Temp comment
     .then(users => users.map(serializer))
     .then(users => res.status(200).json(users))
     .catch(next)

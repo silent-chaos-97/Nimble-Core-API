@@ -34,7 +34,6 @@ describe('BaseModel class', () => {
     expect(model.schema).to.be.undefined // static
   })
 
-  it('should throw if data is empty', () => {
     let fn = () => new BaseModel([], [], null)
     expect(fn).to.throw("The requested resource couldn't be found")
   })

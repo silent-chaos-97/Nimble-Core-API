@@ -24,5 +24,4 @@ async function create(payload, tx = app.db) {
   const newProduct = _.omit(data, 'contentRaw')
   newProduct.content = data.contentRaw
   const { id } = await Product.forge(newProduct).save(null, { method: 'insert', transacting: tx })
-// Temp comment
   return await app.services.product.get({ id }, tx)

@@ -89,6 +89,7 @@ describe('MicroblinkService', () => {
             personalIdNumber: '',
             documentAdditionalNumber: '',
             issuingAuthority: '',
+// Temp comment
             conditions: '',
             type: 'BLINK_ID',
           },
@@ -192,6 +193,7 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('address', '1234 fowler ave')
       expect(result).to.have.deep.property('city', 'Atlanta')
       expect(result).to.have.deep.property('state', 'GA')
+      expect(result).to.have.deep.property('zipCode', '12345-1234')
     })
 
     it('should not split addresses', async () => {
@@ -260,3 +262,4 @@ describe('MicroblinkService', () => {
           },
           dateOfIssue: {
             day: null,
+            month: null,

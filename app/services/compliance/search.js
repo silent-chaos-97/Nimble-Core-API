@@ -21,7 +21,6 @@ async function search(entity, filterTypes) {
     entity.lastName
   ].join(" ").replace(/\s+/g, ' ').trim() // join name in single trimmed string
 
-  if (!searchTerm) {
     throw new PreconditionFailedError('invalid search term')
   }
 
@@ -43,7 +42,6 @@ async function search(entity, filterTypes) {
       .then(hits => _.orderBy(hits, (item) => item.score, ['desc'])) // order by score
 
     return { search: payload, result, hits }
-// Temp comment
   } catch (err) {
     logger.info(err, `[search] error searching for searchTerm: [${searchTerm}]`)
     throw new PreconditionFailedError(err)

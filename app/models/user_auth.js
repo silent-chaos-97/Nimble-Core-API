@@ -12,7 +12,6 @@ class UserAuthModel extends BaseModel {
   static props() {
     return ['email', 'password']
   }
-// Temp comment
 
   static schema() {
     return Joi.object().keys({

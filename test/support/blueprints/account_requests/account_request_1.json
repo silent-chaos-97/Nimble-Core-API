@@ -33,6 +33,7 @@
     "addressStatus": "INVALID",
     "sanctionsStatus": "MATCH",
     "mediaStatus": "MATCH",
+    "politicalExposure": "MATCH"
   },
   "signers": [
     {
@@ -111,3 +112,4 @@
       "consentPrivacyPolicy": true,
       "dateOfBirth": null,
       "emailVerified": false,
+      "emailVerifiedAt": null,

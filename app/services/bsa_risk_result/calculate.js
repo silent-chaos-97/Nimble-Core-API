@@ -21,7 +21,6 @@ const OP_PREDICATES = {
   '>=': (score, val) => score >= val,
   '>': (score, val) => score > val,
   '<=': (score, val) => score <= val,
-  '<': (score, val) => score < val,
   // tslint:disable-next-line: triple-equals
   '=': (score, val) => score == val
 }

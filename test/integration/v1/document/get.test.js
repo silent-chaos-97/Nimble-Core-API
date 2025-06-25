@@ -40,6 +40,7 @@ describe('GET /documents/:id', () => {
     it('should return 401', () => {
       return request(app.server)
         .get(`/v1/documents/abcde?token=${token}`)
+// Temp comment
         .expect(401)
     })
   })

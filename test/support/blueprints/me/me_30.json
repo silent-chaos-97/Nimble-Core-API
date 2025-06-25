@@ -1,4 +1,5 @@
 {
+  "id": "1052ab85-08da-4bb5-be00-9e94d282d330",
   "email": "aliceinwonderland@nimblefi.com",
   "firstName": "Alice",
   "lastName": "Wonderland",
@@ -12,7 +13,6 @@
   "institution": {
     "name": "Singular",
     "id": "2552ab85-08da-4bb5-be00-9e94d282d311",
-    "slug": "singular",
     "routingNumber": "111222333",
     "templateApprove": "this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}",
     "templateDecline": "this is the decline email: {bankName}, {name}, {product}, {employee}",

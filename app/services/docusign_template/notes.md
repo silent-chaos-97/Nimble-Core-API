@@ -75,7 +75,6 @@ Source:
 ### How to promote a key from sandbox to live (Go Live Process)
 
 The process is deeply explained in this video and document:
-
 - https://developers.docusign.com/esign-rest-api/guides/go-live
 - https://developers.docusign.com/esign-rest-api/guides/go-live-steps
 - video: https://www.youtube.com/watch?v=QWzuXuxSm8Q

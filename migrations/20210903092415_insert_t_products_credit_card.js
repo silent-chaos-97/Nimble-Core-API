@@ -26,7 +26,6 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 - Activate your card
 - Select or change your PIN
 - Change the address associated with your card
-// Temp comment
 - View and redeem rewards points
 - Contact the bank via a secure email portal
 

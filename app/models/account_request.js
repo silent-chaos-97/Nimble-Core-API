@@ -37,6 +37,7 @@ class AccountRequest extends BaseModel {
   static relations() {
     return ['signers', 'referredBy', 'statusUpdatedBy', 'productConfigurations', 'productOptions', 'branch']
   }
+
   data() {
     const SignerModel = app.models.signer
     const UserModel = app.models.user
@@ -124,3 +125,4 @@ class AccountRequest extends BaseModel {
     }, {})
 
     const acountVerificationStatus = Object.keys(counter).reduce((acountStatus, key) => {
+      const value = counter[key]

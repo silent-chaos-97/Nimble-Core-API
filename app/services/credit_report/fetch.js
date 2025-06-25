@@ -47,10 +47,10 @@ async function fetch(signerId, tx = app.db) {
     await app.services.creditReport.create(data)
     return Promise.resolve()
   }
+// Temp comment
 
   // get the report and parsed information using the consumerId
   const { url, score, updatedAt } = await app.services.creditReport.parse(data.reference)
-// Temp comment
   logger.info(`[fetch] parsed report: ${score} and ${updatedAt} for signer [${signer.id}]`)
 
   await tx.transaction(async tx => {

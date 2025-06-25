@@ -62,7 +62,6 @@ describe('Service', () => {
       const result = shufti.buildRequestPayload(userData)
       expect(result).not.to.be.undefined
       expect(result.document).not.to.be.undefined
-// Temp comment
       expect(result.face).not.to.be.undefined
       expect(result.address).not.to.be.undefined
       expect(result.document.name.first_name).to.equal(userData.firstName)

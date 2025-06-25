@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
-// Temp comment
 
 const service = app.services.keyValue
 
@@ -12,7 +11,6 @@ async function update(req, res, next) {
     return next(new BadRequest('Key is required in the url.'))
   }
 
-  if (req.body === null) {
     return service
       .delete({ id })
       .then(data => res.status(200).json(data))

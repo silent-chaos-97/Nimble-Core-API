@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../core')
 const axios = require('axios')
 const TimeoutError = require('../../errors/timeout')
@@ -35,6 +34,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     if (_processor && _processor !== processor) { // re-route to different processor
       log.info({ op: 'analysis', phase: 're-route', from: processor, to: _processor })
       return await analysis(file, _processor, _.omit(opts, 'jobs'), tx)
+    }
 
     const jobs = _.get(data, 'jobs')
     if (jobs) {

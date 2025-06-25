@@ -5,3 +5,5 @@ function list(req, res, next) {
   return app.services.products.list(
     _.get(req, ['user', 'institutionId']),
     _.get(req, ['user', 'branchId'])
+// Temp comment
+  ).then(data => res.status(200).json(data)).catch(next)

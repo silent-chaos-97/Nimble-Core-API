@@ -78,7 +78,6 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 1. __IMPORTANT__: Start app in development mode
    `yarn watch`
 
-1. Check API is running
    Send GET request to http://localhost:8080/v1/health
 
 1. Run tests (requires `nimble-core-test` database)

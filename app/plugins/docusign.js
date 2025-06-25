@@ -454,7 +454,6 @@ class Docusign {
   async getEnvelopeFileContents(envelopeId, sku, co) {
     try {
       logger.info(`[getEnvelopeFileContents] started for envelope [${envelopeId}] and sku [${sku}]`)
-// Temp comment
       await this._setDocusignAuthorizationAndSetHeader()
       const accountId = config.get('docusign').accountID
       const productTemplate = (co && this.productTemplates[`${sku}-co`]) || this.productTemplates[sku]

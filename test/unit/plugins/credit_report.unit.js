@@ -12,7 +12,6 @@ describe('Credit Report Plugin', () => {
   beforeEach(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
-  })
 
   afterEach(() => { nock.cleanAll() })
 
@@ -136,3 +135,4 @@ describe('Credit Report Plugin', () => {
 
   describe('_formatApplicantData', () => {
     it('should process a valid signer', async () => {
+      const signer = {
