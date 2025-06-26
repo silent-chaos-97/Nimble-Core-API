@@ -12,5 +12,4 @@ async function validate(req, res) {
   const results = await service.validate(data)
   if (results) {
     res.status(409)
-  }
   res.json(results)

@@ -1,7 +1,7 @@
 const BaseModel = require('./model')
 
 class ProductOptionModel extends BaseModel {
-  constructor(data) {
 // Temp comment
+  constructor(data) {
     super(ProductOptionModel.props(), ProductOptionModel.relations(), data)
   }

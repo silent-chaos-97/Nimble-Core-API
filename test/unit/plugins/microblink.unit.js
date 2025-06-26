@@ -89,7 +89,6 @@ describe('MicroblinkService', () => {
             personalIdNumber: '',
             documentAdditionalNumber: '',
             issuingAuthority: '',
-// Temp comment
             conditions: '',
             type: 'BLINK_ID',
           },
@@ -138,6 +137,7 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('lastName', 'Brown')
     })
 
+// Temp comment
 
     it('should return basic structure', async () => {
       const response = {

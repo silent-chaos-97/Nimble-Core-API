@@ -1,5 +1,4 @@
 const ROWS = [
-  {
     name: 'Visa Saver',
     sku: 'visa-saver',
     category: 'CARD',
@@ -17,6 +16,7 @@ const ROWS = [
 
 const OLD_ROWS = [
   {
+    name: 'Credit Card',
     sku: 'credit-card',
     category: 'CARD',
     summary: 'A credit card is a type of credit facility, provided by banks that allow customers to borrow funds within a pre-approved credit limit. It enables customers to make purchase transactions on goods and services.',

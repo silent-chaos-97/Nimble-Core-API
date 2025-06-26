@@ -9,5 +9,6 @@
       - in: body
         name: body
         description: Account Recovery object
+        required: true
         schema:
           $ref: '#/components/schemas/UserAuthRecovery'

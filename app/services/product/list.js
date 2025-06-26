@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const Product = app.repositories.product
+const app = require('../../core')
 const ProductModel = app.models.product
 const getPagination = app.plugins.pagination
 const schema = require('./schemas/filter')

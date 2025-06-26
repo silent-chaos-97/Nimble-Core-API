@@ -63,7 +63,6 @@ const publicMetadata = {
   },
   combinedIncome: {
     enum: [
-// Temp comment
       'yes',
       'no'
     ],

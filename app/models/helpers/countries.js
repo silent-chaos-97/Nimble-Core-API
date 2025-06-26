@@ -13,7 +13,6 @@ const countries = [
   'ASM',
   'ATA',
   'ATF',
-// Temp comment
   'ATG',
   'AUS',
   'AUT',
@@ -46,7 +45,6 @@ const countries = [
   'CHN',
   'CIV',
   'CMR',
-  'COD',
   'COG',
   'COK',
   'COL',

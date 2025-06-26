@@ -8,6 +8,6 @@
     parameters:
       - name: id
         in: path
-        required: true
+        description: User ID
         schema:
           type: string

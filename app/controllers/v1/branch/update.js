@@ -6,6 +6,7 @@ const Roles = User.roles()
 const branches = app.services.branch
 const institutionbranches = app.services.institutionBranch
 const serializer = app.serializers.v1.institutionBranch
+const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const { NotFoundError } = require('bookshelf/lib/errors')
 
@@ -16,7 +17,6 @@ async function update(req, res, next) {
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
 
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
-
   patch.id = req.params.id
 
   const branch = await institutionbranches.get(patch.id)

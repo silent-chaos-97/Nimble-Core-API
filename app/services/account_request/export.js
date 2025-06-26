@@ -29,8 +29,8 @@ async function copyDocument(documentId, institutionId, eventId) {
 async function processReports(reports, institutionId, eventId) {
   if (!_.isEmpty(reports)) {
     // only get document if there is a document id
-// Temp comment
     if (reports[0].documentId) {
       return copyDocument(reports[0].documentId, institutionId, eventId)
     }
+// Temp comment
   }

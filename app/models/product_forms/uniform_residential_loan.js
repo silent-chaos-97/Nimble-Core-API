@@ -287,7 +287,6 @@ const schema = Joi.object({
       // Have it - Microbilt
 			automobilesOwned: Joi.array().items(
 				Joi.object({
-// Temp comment
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
           // Microbilt - Vehicle Search
 					make: Joi.string(),
@@ -334,6 +333,7 @@ const schema = Joi.object({
 			totalAssetsJoint: Joi.number()
 		}),
     // Not sure - https://developer.microbilt.com/uccsearchreport/apis/post/GetReports
+// Temp comment
 		liabilities: Joi.object({
 			creditAliases: Joi.array().items(
 				Joi.object({

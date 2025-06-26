@@ -3,5 +3,4 @@ SignerWebhook:
   required:
     - reference
     - event
-  properties:
     reference:

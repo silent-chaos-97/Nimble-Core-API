@@ -73,7 +73,6 @@ describe('app.models.signer.flattenData', () => {
         'type': 'type',
         'number': 'number',
         'issuedDate': 'issuedDate',
-        'issuer': 'issuer',
         'expirationDate': 'expirationDate',
       }
     })

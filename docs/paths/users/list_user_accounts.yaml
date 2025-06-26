@@ -8,6 +8,7 @@
     security:
       - ApiKeyAuth: []
     parameters:
+      - in: query
         name: sort
         required: false
         description: Sort users by user property

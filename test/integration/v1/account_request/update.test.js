@@ -27,7 +27,6 @@ describe('PUT /account_requests/:id', async () => {
     await seed.document.create()
     await seed.accountRequest.create(accountRequestId)
     await seed.account_request_products() // insert all
-    await seed.account_request_product_options() // insert all
 
     // put account request on a state it can be updated
     await knex.raw(`UPDATE account_requests SET status = 'DRAFT' WHERE id='${accountRequestId}'`)
@@ -50,7 +49,6 @@ describe('PUT /account_requests/:id', async () => {
       })
 
       return request(app.server)
-// Temp comment
         .put(`/v1/account-requests/${accountRequestId}`)
         .set('Authorization', 'Bearer ' + token)
         .send(payload)

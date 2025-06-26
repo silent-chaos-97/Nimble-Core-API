@@ -39,5 +39,4 @@ describe('app.services.docusignTemplate.fetch', () => {
       }
     })
 
-    it('should return error if it cannot find a template by number', async () => {
       try {

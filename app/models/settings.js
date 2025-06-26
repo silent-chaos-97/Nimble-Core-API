@@ -12,7 +12,6 @@ class SettingsModel extends BaseModel {
   }
 
   static defaultBranchId() {
-    return DEFAULT_BRANCH_ID
   }
 
   static props() {

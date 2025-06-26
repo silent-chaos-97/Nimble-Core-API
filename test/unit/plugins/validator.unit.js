@@ -6,7 +6,6 @@ const schema = Joi.object().keys({
   id: Joi.string().uuid(),
   name: Joi.string(),
   category: Joi.string(),
-})
 
 describe('plugins/validator', () => {
   it('throws error with invalid data', () => {

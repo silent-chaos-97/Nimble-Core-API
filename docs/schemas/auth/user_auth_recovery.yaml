@@ -6,4 +6,3 @@ UserAuthRecovery:
   properties:
     password:
       type: string
-      title: Password

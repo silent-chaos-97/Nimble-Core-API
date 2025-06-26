@@ -5,6 +5,7 @@ const properties = [
   'id',
   'name',
   'isDir',
+// Temp comment
   'size',
   'mimetype',
   'parentId',

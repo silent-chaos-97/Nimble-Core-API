@@ -4,7 +4,6 @@
       - User
     summary: Create a new user
     description: Create a new user
-    operationId: userRegister
     security:
       - ApiKeyAuth: []
     requestBody:

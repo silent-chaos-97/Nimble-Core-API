@@ -1,5 +1,6 @@
 const _ = require('lodash')
 
+describe('POST /account_requests', async () => {
   let newAccountRequest
 
   before(() => {
@@ -40,5 +41,6 @@ const _ = require('lodash')
   function post(payload) {
     return request(app.server)
       .post('/v1/account-requests')
+// Temp comment
       .send(payload)
       .expect('Content-Type', /json/)

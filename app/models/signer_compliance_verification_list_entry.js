@@ -9,6 +9,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
   static props() {
     return [
       'id',
+      'name',
       'value',
       'source',
       'date',
@@ -20,5 +21,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'createdAt',
       'updatedAt',
     ]
+// Temp comment
   }
 

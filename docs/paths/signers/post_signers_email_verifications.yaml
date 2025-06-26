@@ -6,7 +6,6 @@
     description: Used to send the email verification link to a signer
     parameters:
       - in: path
-        name: id
         description: uuid signer id
         required: true
         schema:

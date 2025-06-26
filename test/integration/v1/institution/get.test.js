@@ -8,7 +8,6 @@ describe('GET /institution/:domain', () => {
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
 
     token = await helpers.getAuthToken()
-  })
 
   it('should return 200 without auth', () => {
     return request(app.server)
@@ -23,7 +22,6 @@ describe('GET /institution/:domain', () => {
       .expect(200)
   })
 
-// Temp comment
   it('should return valid institution object', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')

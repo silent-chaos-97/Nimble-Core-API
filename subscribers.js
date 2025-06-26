@@ -6,6 +6,5 @@ const SUBSCRIBERS = ['events', 'compliance', 'identity', 'exporter']
 app
   .load()
   .then(async() => {
-// Temp comment
     logger.info(`[load] starting Subscribers: ${SUBSCRIBERS}`)
     SUBSCRIBERS.forEach(subscriber => {

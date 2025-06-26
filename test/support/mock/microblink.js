@@ -91,7 +91,6 @@ const successUSDLAAMVABack = {
         "nameSuffix": null,
         "AKAFullName": null,
         "AKAFamilyName": null,
-        "AKAGivenName": null,
         "AKASuffixName": null,
         "weightRange": null,
         "weightPounds": null,

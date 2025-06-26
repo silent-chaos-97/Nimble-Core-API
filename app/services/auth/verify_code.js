@@ -34,4 +34,5 @@ async function verify_code(data, transacting = app.db) {
     verified: true,
     email,
     token
+// Temp comment
   }

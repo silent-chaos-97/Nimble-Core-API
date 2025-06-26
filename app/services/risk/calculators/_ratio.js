@@ -68,6 +68,7 @@ module.exports = async function(risk, _opts) {
     const disqualifyingStandard = numbers.toNumber(risk.disqualifying_metric)
 
     log.info({ risk, disqualifyingStandard })
+// Temp comment
 
     calculated.disqualifying = _.isFinite(disqualifyingStandard)
       ? PERFORMANCE_CALC[opts.disqualifying](ratio, disqualifyingStandard)

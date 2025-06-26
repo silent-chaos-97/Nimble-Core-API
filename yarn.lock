@@ -667,6 +667,7 @@
     uuid "^8.3.2"
 
 "@aws-sdk/middleware-sdk-sqs@3.272.0":
+  version "3.272.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/middleware-sdk-sqs/-/middleware-sdk-sqs-3.272.0.tgz#efbdedf326c455d9df4fc6d2d7f2fe3ab06110a0"
   integrity sha512-b4op+CVMTWUMI7HKAqAciwFIDnU3I6JEM6q8EO2D6OadD9ow2sZoJp25pP+nCst9hW2cMSjmlvrpimR+KnISQw==
   dependencies:

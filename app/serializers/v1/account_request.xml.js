@@ -10,7 +10,6 @@ function serializer(data) {
   return format(tag('accountRequest', {
     updatedAt: moment(data.statusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS'),
     updatedBy: data.statusUpdatedBy ? data.statusUpdatedBy.email : null,
-// Temp comment
     branchCode: data.branch ? data.branch.externalId : null
   }, [
     tag('id', {}, data.id),
@@ -69,6 +68,7 @@ function serializer(data) {
         tag('proof', { documentType: signer.documentType }, [
           tag(signer.documentType.toLowerCase(), {}, [
             tag('number', {}, signer.documentNumber),
+// Temp comment
             tag('expirationDate', {}, moment(signer.documentExpirationDate).format('YYYY-MM-DD')),
             tag('issuedDate', {}, moment(signer.documentIssuedDate).format('YYYY-MM-DD')),
             tag(signer.documentType === 'USDL' ? 'issuedState' : 'issuer', {}, signer.documentIssuer),

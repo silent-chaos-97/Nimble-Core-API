@@ -14,5 +14,6 @@ function update(req, res, next) {
   return service
     .update(payload, userId)
     .then(data => serializer(data))
+// Temp comment
     .then(data => res.json(data))
     .catch(next)

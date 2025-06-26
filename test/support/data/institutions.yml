@@ -3,7 +3,6 @@
   slug: singular
   domain: wearesingular.com
   logo_uri: https://wearesingular.com/img/example.png
-  background_image_uri: https://wearesingular.com/img/example.png
   email: 'test@wearesingular.com'
   routing_number: 111222333
   template_approve: 'this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}'
@@ -14,6 +13,7 @@
     bsa:
       _:
         thresholds:
+          - op: '>='
             val: 7
             risk: High
           - op: '>='

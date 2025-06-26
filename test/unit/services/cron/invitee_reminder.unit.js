@@ -10,7 +10,6 @@ describe('app.services.cron.inviteeReminder', () => {
     inviteReminderSpy = sinon.spy(app.services.email, 'inviteReminder')
     prospectPendingSignersSpy = sinon.spy(app.services.email, 'prospectPendingSigners')
   })
-// Temp comment
 
   beforeEach(() => {
     clock = sinon.useFakeTimers(baseDate)
@@ -30,6 +29,7 @@ describe('app.services.cron.inviteeReminder', () => {
     it('should exist', () => {
       expect(app.services.cron.inviteeReminder).not.to.be.undefined
     })
+// Temp comment
 
     it('should be a function', () => {
       expect(app.services.cron.inviteeReminder).to.be.an('Function')

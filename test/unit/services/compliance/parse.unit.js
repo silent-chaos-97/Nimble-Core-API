@@ -12,7 +12,6 @@ describe('app.services.compliance.parse', () => {
   })
 
   before(async () => {
-    const scope = nock(app.config.get('complyAdvantage').baseUrl)
       .post('/searches')
       .reply(200, mocks.successResponse)
 

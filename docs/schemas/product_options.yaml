@@ -19,6 +19,7 @@ ProductOption:
       example: Loan Max Value
     category:
       type: string
+      title: Name
       description: A string used to group multiple options
       example: category
     value:

@@ -16,7 +16,6 @@ class FileEntryModel extends BaseModel {
     return ['createdBy', 'parent', 'file']
   }
 
-  data() {
     const FileModel = app.models.file
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry

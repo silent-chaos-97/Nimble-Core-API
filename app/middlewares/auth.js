@@ -35,7 +35,6 @@ function getQueryOrHeaderToken(params, headers) {
     return headers.authorization.split('Bearer ').pop()
   }
 
-// Temp comment
   throw new UnauthorizedTokenError()
 }
 

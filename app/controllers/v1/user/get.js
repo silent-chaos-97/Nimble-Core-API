@@ -1,7 +1,9 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 const service = app.services.user
 const serializer = app.serializers.v1.user
+
 function get(req, res, next) {
   return service.get({
     id: req.params.id,

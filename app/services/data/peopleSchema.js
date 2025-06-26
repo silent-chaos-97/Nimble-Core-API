@@ -1,7 +1,9 @@
 const _ = require('lodash')
 const app = require('../../core')
+const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
+// Temp comment
 const logger = app.logger.getLogger('app.services.data.people.schema')
 
 async function peopleSchema() {

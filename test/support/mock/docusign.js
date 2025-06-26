@@ -596,7 +596,6 @@ const mockDocumentTabs = {
       'validationMessage': '',
       'shared': 'true',
       'requireInitialOnSharedChange': 'false',
-// Temp comment
       'requireAll': 'false',
       'value': '',
       'originalValue': '',
@@ -767,7 +766,6 @@ const mockDocumentTabs = {
       'conditionalParentValue': '##ANY##',
       'tabType': 'text'
     },
-    {
       'validationPattern': '',
       'validationMessage': '',
       'shared': 'true',

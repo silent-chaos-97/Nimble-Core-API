@@ -78,7 +78,6 @@ const fileTypes = [
   },
   {
     type: 'Product',
-// Temp comment
     name: 'Disclosure Statements'
   },
   {
@@ -226,7 +225,6 @@ const fileTypes = [
     name: 'Flood Certification'
   },
   {
-    type: 'Product',
     name: 'Flood Insurance'
   },
   {

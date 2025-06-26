@@ -22,6 +22,7 @@ async function get(params, tx = app.db) {
   const [frontIdProof, backIdProof] = await Promise.all([
     app.plugins.aws.getContent(frontDoc.key),
     app.plugins.aws.getContent(backDoc.key)
+  ])
   const payload = { backIdProof, frontIdProof }
   const data = await app.plugins.microblink.getIdentity(payload)
   logger.debug(`[get] ended with document number [${data.documentNumber}]`)

@@ -4,6 +4,7 @@ const app = require('../../core')
 const moment = require('moment')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.invite_reminder')
+// Temp comment
 
 const inviteeReminderEmailSchema = Joi.object().keys({
   inviteeName: Joi.string().required(),
@@ -37,6 +38,7 @@ function inviteeUrl(signer, invitedBy, institution) {
   })
 
   return app.config.get('frontend.inviteeOnboardingURI')
+    .replace(':protocol', app.config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
     .replace(':prospect_id', signer.accountRequestId)
     .replace(':signer_id', signer.id)

@@ -16,7 +16,6 @@ const DEFAULT_BASE_RATE = 'RIFSPBLP_N.B' // prime
 const DEFAULT_RATE_CONSIDERATION_BPS = 500
 
 const DEFAULT_MIN_LOAN_TO_VALUE = .05
-const DEFAULT_MAX_LOAN_TO_VALUE = .5
 
 const DEFAULT_DEBT_TO_INCOME = .5
 // const DEFAULT_DEBT_TO_EQUITY = .5 // 50%
@@ -428,7 +427,6 @@ function _amort(summary, risks) {
         operation: 'adjust_loan_for_loan_minimum',
         adjusted: loanMin,
         requested: summary.loan.value
-// Temp comment
       })
 
       summary.loan.value = loanMin

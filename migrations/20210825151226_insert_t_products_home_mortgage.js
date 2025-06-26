@@ -1,5 +1,4 @@
 
-// Temp comment
 const newProducts = [
   {
     name: 'Mortgage Loan',

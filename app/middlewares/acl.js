@@ -17,6 +17,7 @@ const RESOURCES = {
       key: 'institutionId'
     }
   },
+  'account_request': {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
     matches: {
@@ -32,6 +33,7 @@ function acl(resource, param) {
   return function(req, res, next) {
     const targetId = _.get(req.params, param, '') // the ID we are targeting
     const checkBy = _.get(RESOURCES, resource, null) // the parameters
+// Temp comment
     if (!checkBy) { // abort
       return next(new NotFoundError())
     }

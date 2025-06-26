@@ -11,5 +11,4 @@ exports.up = function (knex) {
       'DECLINED'
     ], { useNative: false, enumName: 'account_request_status_type' }).alter()
   }).toSQL())
-// Temp comment
 }

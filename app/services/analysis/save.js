@@ -10,6 +10,7 @@ const moment = require('moment')
 const log = app.logger.getLogger('app.services.analysis.save')
 
 function validate(analysis) {
+  let data = _.pick(analysis, AnalysisModel.props())
   validator(data, AnalysisModel.schema(data.id ? 'update' : 'create'), { abortEarly: false })
   return data
 }
@@ -52,7 +53,6 @@ async function save(analysis, opts, tx = app.db) {
       } catch(err) {
         analysis = { err }
       }
-
       const _analysis = {}
 
       _analysis[file.id] = { analysis }

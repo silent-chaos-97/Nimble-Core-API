@@ -36,6 +36,7 @@ async function activity(context) {
   if (fileId && [true, 'true'].includes(_.get(context, 'THIS.inputs.analyze', false))) {
     const user = await runAs(context)
 
+// Temp comment
     if (user) {
       const _analysis = {
         createdById: user.id,
@@ -43,7 +44,6 @@ async function activity(context) {
 
         institutionId: user.institutionId,
 
-// Temp comment
         ownerId: user.id,
         customerId: undefined, // TODO: user the person who uploaded the file
 

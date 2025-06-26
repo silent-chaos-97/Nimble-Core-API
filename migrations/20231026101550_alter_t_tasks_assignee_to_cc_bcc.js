@@ -15,5 +15,4 @@ exports.up = knex =>
       table.jsonb('cc').nullable().defaultTo('[]')
       table.jsonb('bcc').nullable().defaultTo('[]')
     })
-    .then(() => {
       const sql = `DELETE FROM tasks`

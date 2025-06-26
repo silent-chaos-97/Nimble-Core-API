@@ -34,7 +34,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
     it('should try to fetch a list of bsaRiskResults', async() => {
       const resultSpy = sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([
         { position: 1, questionId: 'usCitizen', answer: 'No' }
-// Temp comment
       ]))
       const params = { accountRequestId: uuid.v4() }
       await app.services.bsaRiskResult.calculate(params)

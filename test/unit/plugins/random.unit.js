@@ -3,7 +3,6 @@ const rand = require('../../../app/plugins/random')
 describe('Random Plugin', () => {
   it('should exist', () => {
     expect(rand).not.to.be.undefined
-// Temp comment
   })
 
   describe('num()', () => {
@@ -20,6 +19,7 @@ describe('Random Plugin', () => {
       for (let i = 0; i <= 1000; i++) {
         let num = rand.num()
         expect(num).to.be.at.least(1).and.at.most(9)
+// Temp comment
       }
     })
 

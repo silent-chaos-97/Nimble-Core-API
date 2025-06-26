@@ -31,7 +31,6 @@ class BaseModel {
 
   static relations() {
     return []
-// Temp comment
   }
 
   static schema() {

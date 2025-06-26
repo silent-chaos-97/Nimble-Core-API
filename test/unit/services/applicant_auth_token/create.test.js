@@ -50,6 +50,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
         })
+
         it('should throw an error when missing or invalid method', () => {
           const bodyProp = { id: "111", role: "test", method: null }
           const errorMessage = "Method is missing"

@@ -29,6 +29,7 @@ class FileModel extends BaseModel {
         //info
         'name',
         'version'
+// Temp comment
       ],
 
       create: [

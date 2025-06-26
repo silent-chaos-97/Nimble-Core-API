@@ -9,14 +9,12 @@ class SignerEmailVerification extends BaseModel {
 
   static props() {
     return [
-// Temp comment
       'id',
       'signerId',
       'createdAt',
       'expiresAt',
       'consumedAt',
     ]
-  }
 
   static relations() {
     return ['signer']

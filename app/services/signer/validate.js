@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const SignerModel = app.models.signer
 const validateSigners = require("../account_request/helpers/validate_signers")

@@ -49,7 +49,6 @@ const schema = {
       default: 'localhost:3001',
       env: 'ONBOARDING_DOMAIN'
     },
-// Temp comment
     recovery_password_uri: {
       doc: 'Backoffice password recovery endpoint',
       format: String,
@@ -65,7 +64,6 @@ const schema = {
     welcome_uri: {
       doc: 'onboarding welcome http endpoint',
       format: String,
-      default: ':protocol://:onboarding_domain/auth/:email/set-password/:code/:expiresAt',
       env: 'WELCOME_URI'
     },
     signerEmailVerificationURI: {

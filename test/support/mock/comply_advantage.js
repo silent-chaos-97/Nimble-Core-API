@@ -1164,7 +1164,6 @@ const successResponse = {
                 "mugabe": [
                   "name_exact"
                 ],
-                "robert": [
                   "name_exact"
                 ]
               },

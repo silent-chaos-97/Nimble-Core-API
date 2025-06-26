@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 
 const validator = app.plugins.validator
@@ -21,6 +20,5 @@ function patchAccountRequest(id, status, tx = app.db) {
     contractDocumentEnvelopeStatusUpdatedAt: new Date()
   }, {
     transacting: tx,
-    method: 'update',
     patch: true
   })

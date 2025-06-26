@@ -20,6 +20,7 @@ describe('AWS Facade class', () => {
     expect(AWS.config.s3.endpoint).to.equal(app.config.get('aws').endpoint)
   })
 
+  it('should not load empty config vars', () => {
     const target = new AWS.constructor({
       credentials: {
         accessKeyId: 'accessKeyId'

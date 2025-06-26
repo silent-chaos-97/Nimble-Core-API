@@ -10,5 +10,4 @@ if (INIT_SENTRY) {
     dsn: app.config.get('sentry.dsn'),
     environment: app.config.get('env')
   })
-}
 

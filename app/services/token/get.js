@@ -3,7 +3,6 @@ const moment = require('moment')
 const _ = require('lodash')
 
 const app = require('../../core')
-const getApiUri = require('../api/uri')
 const jwt = app.plugins.jwt
 
 function schema() {
@@ -16,6 +15,7 @@ function schema() {
   })
 }
 
+// public claims - https://tools.ietf.org/html/rfc7519#section-4.1
 function getTokenInfo(options) {
   const now = moment()
   const publicClaims = {

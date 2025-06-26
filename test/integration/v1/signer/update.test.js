@@ -32,6 +32,7 @@ describe('PUT /signers/:id', async () => {
       firstName: 'John',
       middleName: 'MF',
       lastName: 'McClane',
+      dateOfBirth: '1955-05-22T00:00:00.000Z',
       email: 'john.mf.mcclane@wearesingular.com',
       phoneNumber: '+1718-953-8465',
       address: '1381 Atlantic Ave, Brooklyn',
@@ -49,7 +50,6 @@ describe('PUT /signers/:id', async () => {
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         type: 'USDL',
         number: '1231231230',
-        issuer: 'WY',
         issuedDate: '2000-11-22T00:00:00.000Z',
         expirationDate: '2030-11-22T00:00:00.000Z'
       },

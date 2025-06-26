@@ -16,4 +16,3 @@
       - in: query
         name: sort
         required: false
-        description: Sort by position property

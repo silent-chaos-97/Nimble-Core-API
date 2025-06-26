@@ -33,7 +33,7 @@
       "email": "example@nimblefi.com",
       "employer": "Singular",
       "dateOfBirth": "1966-03-16",
-      "consentAccountOpening": true,
+      "consent": true,
       "consentPrivacyPolicy": true,
       "consentCommunication": false,
       "documentType": "USDL",

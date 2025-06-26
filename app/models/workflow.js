@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+// Temp comment
 const _ = require('lodash')
 const app = require('../core')
 const BaseModel = require('./model')
@@ -40,6 +41,7 @@ class WorkflowModel extends BaseModel {
       return true
     }
 
+    return JSON.stringify(newActivities) !== JSON.stringify(oldActivities)
   }
 
   //overwrite the data() function to compose props

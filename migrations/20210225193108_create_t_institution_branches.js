@@ -4,6 +4,5 @@ exports.up = function (knex, Promise) {
     table.string('name').notNullable()
     table.string('external_id').notNullable()
     table
-      .uuid('institution_id')
       .references('institutions.id')
       .notNullable()

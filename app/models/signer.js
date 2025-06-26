@@ -155,6 +155,5 @@ class Signer extends BaseModel {
       address: Joi.string().max(250).optional(),
       city: Joi.string().max(250).optional(),
       state: Joi.string().max(3).optional(),
-      zipCode: Joi.string().max(100).optional(),
       phoneNumber: Joi.string().max(20).optional(),
       ssn: Joi.string().max(20).optional(),
