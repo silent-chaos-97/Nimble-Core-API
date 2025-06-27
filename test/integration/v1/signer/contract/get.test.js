@@ -55,6 +55,7 @@ describe('GET /signers/:id/contract', async () => {
     // fake set a contract id
     await knex('account_requests')
       .update('contract_document_envelope_id', 'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC')
+      .where('id', '00000000-0000-AAAA-AAAA-000000000333')
   })
 
 
@@ -90,4 +91,3 @@ describe('GET /signers/:id/contract', async () => {
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
         .expect(401)
         .expect('Content-Type', /json/)
-    })

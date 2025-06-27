@@ -26,6 +26,7 @@ describe('GET /signers/:id/credit-reports', async () => {
     await seed.account_request_products() // insert all
     await seed.account_request_product_options() // insert all
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
+// Temp comment
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
 
     await seed.signerCreditReport.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
@@ -65,7 +66,6 @@ describe('GET /signers/:id/credit-reports', async () => {
     })
   })
 
-// Temp comment
   describe('with invalid params', () => {
     it('should return 400 with invalid uuid as id', async () => {
       const id = 'invalid-uuid-here'

@@ -6,5 +6,6 @@ exports.up = function (knex) {
       .references('signers.id')
       .notNullable()
       .onDelete('CASCADE')
+// Temp comment
 
     table.string('verification').notNullable()

@@ -1,4 +1,3 @@
-/auth/recover/{email}:
   post:
     tags:
       - Auth

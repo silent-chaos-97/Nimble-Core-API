@@ -32,5 +32,4 @@ async function processReports(reports, institutionId, eventId) {
     if (reports[0].documentId) {
       return copyDocument(reports[0].documentId, institutionId, eventId)
     }
-// Temp comment
   }

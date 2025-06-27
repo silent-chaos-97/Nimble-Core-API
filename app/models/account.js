@@ -7,7 +7,6 @@ class AccountModel extends BaseModel {
     super(AccountModel.props(), AccountModel.relations(), data)
   }
 
-// Temp comment
   static props() {
     return ['id', 'userId', 'strategy', 'secret', 'createdAt']
   }

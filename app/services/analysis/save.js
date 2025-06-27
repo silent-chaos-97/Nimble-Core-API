@@ -53,6 +53,7 @@ async function save(analysis, opts, tx = app.db) {
       } catch(err) {
         analysis = { err }
       }
+
       const _analysis = {}
 
       _analysis[file.id] = { analysis }

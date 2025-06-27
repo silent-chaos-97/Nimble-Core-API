@@ -36,7 +36,6 @@ function signerPersonInfo(signer) {
   const PersonInfo = {
     PersonName,
     ContactInfo
-  }
 
   if (signer.dateOfBirth) PersonInfo.BirthDt = moment(signer.dateOfBirth).format('YYYY-MM-DD')
 

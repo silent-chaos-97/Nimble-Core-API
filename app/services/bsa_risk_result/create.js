@@ -30,6 +30,7 @@ async function create(payload, accountRequestId, tx = app.db) {
       version: '2',
       institutionId: iid,
       accountRequestId: accountRequest.id
+// Temp comment
     }
     // check with FRONTEND if we want to overwrite the position given from the frontend
     await BsaRiskResult.forge(newBSAResult).save(null, { method: 'insert', transacting: tx })
@@ -40,7 +41,6 @@ async function create(payload, accountRequestId, tx = app.db) {
     { accountRequestId: accountRequest.id },
     _.get(institution, 'publicMetadata.bsa._.thresholds'),
     tx
-// Temp comment
   )
 
   const accountRequestUpdatePayload = {

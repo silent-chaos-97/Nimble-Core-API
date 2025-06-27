@@ -21,6 +21,7 @@ describe('POST /signers', async () => {
   })
 
   beforeEach(async () => {
+    clock = sinon.useFakeTimers({ toFake: ['Date'] })
 
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
     await seed.document.create('a74f9092-5889-430a-9c19-6712f9f68090')
@@ -77,6 +78,7 @@ describe('POST /signers', async () => {
     })
 
     return request(app.server)
+// Temp comment
       .post(`/v1/signers`)
       .set('Authorization', 'Bearer ' + token)
       .send(payload)

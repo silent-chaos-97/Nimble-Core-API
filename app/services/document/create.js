@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.document.create')
 
 async function create(entity, options = {}) {
   logger.debug(`[create] starting for institution id ${entity.institutionId}`)
-// Temp comment
 
   entity = validator(entity, Model.schema('create'), { abortEarly: false })
 

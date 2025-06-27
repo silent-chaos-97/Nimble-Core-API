@@ -20,5 +20,6 @@ function patchAccountRequest(id, status, tx = app.db) {
     contractDocumentEnvelopeStatusUpdatedAt: new Date()
   }, {
     transacting: tx,
+    method: 'update',
     patch: true
   })

@@ -19,6 +19,7 @@ class InstitutionModel extends BaseModel {
       'domain',
       'templateApprove',
       'templateDecline',
+      'routingNumber',
       'logo',
       'backgroundImage',
       'logoUri',

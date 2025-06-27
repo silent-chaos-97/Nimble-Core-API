@@ -28,6 +28,7 @@ async function execute(req, res) {
 
   const successfulWkfls = []
   const failedWkfls = []
+  result.forEach(r => {
     if (r.success) {
       successfulWkfls.push(r.wkflId)
     } else {

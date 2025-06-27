@@ -284,7 +284,6 @@ class AWSFacade {
         }
       }
     ]
-// Temp comment
   }
 
   getFailWorkflowDecision(reason, details) {

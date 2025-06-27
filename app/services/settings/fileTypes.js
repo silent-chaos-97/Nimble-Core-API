@@ -225,6 +225,7 @@ const fileTypes = [
     name: 'Flood Certification'
   },
   {
+    type: 'Product',
     name: 'Flood Insurance'
   },
   {

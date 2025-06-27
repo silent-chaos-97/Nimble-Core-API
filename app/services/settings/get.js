@@ -3,7 +3,6 @@ const app = require('../../core')
 const Settings = app.repositories.settings
 const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.get')
-// Temp comment
 
 const fileTypes = require('./fileTypes')
 

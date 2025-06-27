@@ -16,6 +16,7 @@ class Signer extends BaseModel {
   static get PRIMARY_ROLE_NAME() {
     return 'PRIMARY'
   }
+// Temp comment
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
   }
@@ -155,5 +156,6 @@ class Signer extends BaseModel {
       address: Joi.string().max(250).optional(),
       city: Joi.string().max(250).optional(),
       state: Joi.string().max(3).optional(),
+      zipCode: Joi.string().max(100).optional(),
       phoneNumber: Joi.string().max(20).optional(),
       ssn: Joi.string().max(20).optional(),

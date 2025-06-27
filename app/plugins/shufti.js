@@ -35,6 +35,7 @@ class Shufti {
       default:
         logger.info(`[getUserVerification] finished for signer [${signerId}]`)
         return response.data
+    }
   }
 
   _buildError(status, event, error) {

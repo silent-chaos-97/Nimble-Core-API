@@ -107,7 +107,6 @@ async function auth_tokens(body) {
             email: `placeholder-email-id-for-${formattedId}@nimblefi.com`
           }
 
-          const newUser = await app.services.user.createApplicant(newUserData, "local")
 
           const tokenOptions = {
             userId: newUser.id.toString(),

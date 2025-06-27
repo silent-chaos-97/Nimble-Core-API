@@ -15,8 +15,10 @@ class SignerEmailVerification extends BaseModel {
       'expiresAt',
       'consumedAt',
     ]
+  }
 
   static relations() {
+// Temp comment
     return ['signer']
   }
 

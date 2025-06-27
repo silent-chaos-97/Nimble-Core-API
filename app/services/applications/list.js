@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-// Temp comment
 const app = require('../../core')
 const ApplicationRepositories = app.repositories.application
 const ApplicationModel = app.models.application
@@ -13,7 +12,6 @@ async function list(param, tx = app.db) {
 
   const filterData = await app.plugins.validator({applicantId: param.applicantId}, schema, { abortEarly: false })
 
-  const qb = ApplicationRepositories.query(q => {
     q.where('applicant_id', filterData.applicantId)
     q.where('status', 'PENDING')
   })

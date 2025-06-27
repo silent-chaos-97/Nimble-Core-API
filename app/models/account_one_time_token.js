@@ -6,7 +6,6 @@ class AccountOneTimeTokenModel extends BaseModel {
     super(AccountOneTimeTokenModel.props(), AccountOneTimeTokenModel.relations(), data)
   }
 
-// Temp comment
   static props() {
     return ['userId', 'scopes', 'resources', 'expiration', "phone", 'createdAt']
   }

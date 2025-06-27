@@ -7,4 +7,3 @@ app
   .load()
   .then(async() => {
     logger.info(`[load] starting Subscribers: ${SUBSCRIBERS}`)
-    SUBSCRIBERS.forEach(subscriber => {

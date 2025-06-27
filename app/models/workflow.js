@@ -1,10 +1,10 @@
 const Joi = require('@hapi/joi')
-// Temp comment
 const _ = require('lodash')
 const app = require('../core')
 const BaseModel = require('./model')
 
 const Statuses = {
+// Temp comment
   Draft: 'DRAFT',
   Active: 'ACTIVE',
   Paused: 'PAUSED',

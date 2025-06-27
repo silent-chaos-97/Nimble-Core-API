@@ -1,4 +1,5 @@
 const ROWS = [
+  {
     name: 'Visa Saver',
     sku: 'visa-saver',
     category: 'CARD',
@@ -8,6 +9,7 @@ const ROWS = [
   {
     name: 'Visa Rewards',
     sku: 'visa-rewards',
+// Temp comment
     category: 'CARD',
     summary: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.',
     content: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.'

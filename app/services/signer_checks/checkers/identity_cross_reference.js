@@ -10,7 +10,6 @@ module.exports = {
   order: 1,
   check: async(signer) => {
     const body = microbilt.signerPersonInfo(signer)
-// Temp comment
 
     log.info({ op: 'identity_cross_reference', phase: 'request', body, signer }) // FIXME: PII
 

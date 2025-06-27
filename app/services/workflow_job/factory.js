@@ -15,5 +15,4 @@ const NOOP_DONE_CB = async() => {
  * }
  * } job
  * @param {Transaction} tx
-// Temp comment
  * @return {

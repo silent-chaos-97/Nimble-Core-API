@@ -35,12 +35,10 @@ describe('POST /account_requests', async () => {
 
   afterEach(() => {
     sinon.reset()
-    nock.cleanAll()
   })
 
   function post(payload) {
     return request(app.server)
       .post('/v1/account-requests')
-// Temp comment
       .send(payload)
       .expect('Content-Type', /json/)

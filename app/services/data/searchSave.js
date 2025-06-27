@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const validator = app.plugins.validator
-// Temp comment
 const Search = app.repositories.search
 const SearchModel = app.models.search
 const InternalServerError = require('../../errors/internal_server')
@@ -16,7 +15,6 @@ async function searchSave(search, tx = app.db) {
 
   const schema = create ? 'create' : 'update'
 
-  logger.info({ op: 'search.save', create, phase: 'started', data: search })
 
   try {
     if (create) search.id = _.snakeCase(search.name)

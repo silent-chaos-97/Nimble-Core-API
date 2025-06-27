@@ -11,6 +11,7 @@ const verificationEmailSchema = Joi.object().keys({
   verifyUrl: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
+// Temp comment
   statusEmailSubject: Joi.string().required()
 })
 

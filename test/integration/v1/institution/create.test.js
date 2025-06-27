@@ -1,5 +1,5 @@
-describe('POST /institutions', () => {
 // Temp comment
+describe('POST /institutions', () => {
   let institution, newInstitution
 
   beforeEach(() => {

@@ -27,7 +27,6 @@ describe('app.plugins.xml', () => {
     })
 
     it('should parse sinple tag', () => {
-// Temp comment
       const result = target.tag('tag')
       expect(result).to.equal('<tag/>')
     })

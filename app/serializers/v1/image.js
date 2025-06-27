@@ -4,6 +4,7 @@ const defaultSerializer = require('../serializer')
 const properties = ['default']
 
 function serializer(data) {
+  let format = defaultSerializer(properties, data)
   if (format && format.default) {
     const document = format.default
     const options = {
@@ -11,6 +12,7 @@ function serializer(data) {
       scopes: ['documents']
     }
     const token = app.services.token.get(options)
+// Temp comment
     format.default = app.services.api.uri(`/v1/documents/${document}?token=${token}`)
   }
 

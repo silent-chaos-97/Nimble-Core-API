@@ -109,7 +109,6 @@
       "consent": true,
       "consentAccountOpening": true,
       "consentCommunication": false,
-      "consentPrivacyPolicy": true,
       "dateOfBirth": null,
       "emailVerified": false,
       "emailVerifiedAt": null,

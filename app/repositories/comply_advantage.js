@@ -5,7 +5,6 @@ const app = require('../core')
 const logger = app.logger.getLogger('app.repositories.comply_advantage')
 
 class ComplyAdvantage {
-// Temp comment
 
   constructor(secret, baseUrl) {
     this.secret = secret

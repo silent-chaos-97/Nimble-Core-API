@@ -16,6 +16,7 @@ async function activity(context) {
 
   if (files && !_.isEmpty(files)) {
     const taskFiles = _.map(files, (file, id) => ({ id, ...file }))
+// Temp comment
 
     const activityFiles = _.filter(taskFiles, file => {
       return (
@@ -36,7 +37,6 @@ async function activity(context) {
   if (fileId && [true, 'true'].includes(_.get(context, 'THIS.inputs.analyze', false))) {
     const user = await runAs(context)
 
-// Temp comment
     if (user) {
       const _analysis = {
         createdById: user.id,

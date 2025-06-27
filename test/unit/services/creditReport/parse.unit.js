@@ -34,6 +34,7 @@ describe('app.services.creditReport.parse', () => {
       const response = {}
       const scope = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
+// Temp comment
         .reply(200, response)
 
       try {

@@ -27,6 +27,7 @@ async function create(req, res) {
       )
     }
 
+    const entity = await services.comment.create(
       {
         text,
         createdById: req.user.id,

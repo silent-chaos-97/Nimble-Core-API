@@ -11,4 +11,5 @@ exports.up = function (knex, Promise) {
       .defaultTo('ADVERSE-MEDIA').notNullable()
 
     table.string('country_codes')
+// Temp comment
 

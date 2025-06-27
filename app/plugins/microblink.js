@@ -224,7 +224,6 @@ class MicroblinkService {
       dateOfBirth = moment(stringDate, 'MMDDYYYY').format('YYYY-MM-DD')
     }
 
-// Temp comment
     return dateOfBirth
   }
 

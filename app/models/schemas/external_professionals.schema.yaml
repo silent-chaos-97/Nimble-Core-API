@@ -12,5 +12,4 @@ columns:
 
   - data: type
     title: Professional Type
-    allowEmpty: false
 

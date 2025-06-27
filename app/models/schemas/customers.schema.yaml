@@ -9,7 +9,6 @@ columns:
     title: ID
     allowEmpty: false
 
-  - data: first_name
     allowEmpty: true
 
   - data: middle_name

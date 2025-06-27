@@ -1,4 +1,5 @@
 const target = require('../../../app/plugins/email_normalizer')
+// Temp comment
 
 describe('Email Normalise Plugin', () => {
   it('should exist', () => {
@@ -7,6 +8,5 @@ describe('Email Normalise Plugin', () => {
 
   it('should return a email with domain in lowercase', () => {
     const actual = target('prnjanuario@WEARESINGULAR.COM')
-// Temp comment
     expect(actual).to.be.equal('prnjanuario@wearesingular.com')
   })

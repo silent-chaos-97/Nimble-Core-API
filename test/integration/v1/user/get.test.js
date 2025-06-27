@@ -45,7 +45,6 @@ describe('GET /users/:id', () => {
         .expect('Content-Type', /json/)
         .expect(401)
     })
-// Temp comment
 
     it('should return 200', done => {
       request(app.server)

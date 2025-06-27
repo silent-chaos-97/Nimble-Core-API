@@ -65,6 +65,7 @@ class TaskModel extends BaseModel {
       'updatedAt',
 
       // refs
+      'institutionId',
       'branchId',
       'assignee',
       'assignerId',

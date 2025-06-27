@@ -17,7 +17,6 @@ async function fetch(signerId, tx = app.db) {
 
   if (signer.status === 'INVITED' || signer.status === 'INCOMPLETE') {
     logger.info(`[fetch] aborting because signer [${signer.id}] is ${signer.status}`)
-    return Promise.resolve()
   }
 
   // first we need to send data to Credit Bureau and get a consumerId for the report
@@ -39,6 +38,7 @@ async function fetch(signerId, tx = app.db) {
     signerId: signer.id,
   }
 
+  // If there was a invalid completion code we save a record with no score and a error code
   if (!whitelistSuccessCodes.includes(code)) {
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)
     data.errorCode = 'generic_error'

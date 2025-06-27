@@ -10,3 +10,4 @@ exports.up = function(knex, Promise) {
     table.boolean('active').default(true)
     table.string('note').nullable()
   })
+};

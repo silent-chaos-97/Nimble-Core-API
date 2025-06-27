@@ -4,6 +4,7 @@ describe('Auth', () => {
   describe('Authentication', () => {
     describe('Beared: Token invalid', () => {
       it('should not allow un-authenticated requests', done => {
+        request(app.server)
           .get('/v1/me')
           .expect('Content-Type', /json/)
           .expect(401)
@@ -78,6 +79,7 @@ describe('Auth', () => {
 
       it('should allow valid tokens to access private methods', done => {
         request(app.server)
+// Temp comment
           .post('/v1/auth/login')
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)

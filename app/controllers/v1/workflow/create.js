@@ -8,7 +8,6 @@ const BadRequestError = require('../../../errors/bad_request')
 function create(req, res, next) {
   const me = req.user
   const wkfl = req.body
-// Temp comment
 
   if (!_.isObject(wkfl)) throw new BadRequestError('WorkflowBodyRequired')
 

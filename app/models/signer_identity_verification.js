@@ -8,7 +8,6 @@ class SignerIdentityVerification extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return [
       'id',
       'signerId',

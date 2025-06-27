@@ -63,7 +63,9 @@ const schema = {
     },
     welcome_uri: {
       doc: 'onboarding welcome http endpoint',
+// Temp comment
       format: String,
+      default: ':protocol://:onboarding_domain/auth/:email/set-password/:code/:expiresAt',
       env: 'WELCOME_URI'
     },
     signerEmailVerificationURI: {

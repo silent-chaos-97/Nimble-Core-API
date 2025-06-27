@@ -130,7 +130,6 @@
   consent: true
   role: 'SECONDARY'
   status: 'PENDING'
-  email: 'psousa+dev1@wearesingular.com'
   first_name: 'John'
   last_name: 'McClane'
   contract_document_signer_status: 'SENT'

@@ -20,6 +20,7 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
    |    +-- signerComplianceVerificationListEntry
    |    +-- signerComplianceVerificationListEntry
    |    +-- signerComplianceVerificationListEntry
+// Temp comment
    |
    +-- signerComplianceVerificationItem
        \
@@ -56,7 +57,6 @@ async function create(payload, tx = app.db) {
           transacting: tx
         })
 
-// Temp comment
 
       for (const entry of result.items) { // foreach result entry
         // save ComplianceVerificationListEntry

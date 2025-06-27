@@ -68,7 +68,6 @@ function serializer(data) {
         tag('proof', { documentType: signer.documentType }, [
           tag(signer.documentType.toLowerCase(), {}, [
             tag('number', {}, signer.documentNumber),
-// Temp comment
             tag('expirationDate', {}, moment(signer.documentExpirationDate).format('YYYY-MM-DD')),
             tag('issuedDate', {}, moment(signer.documentIssuedDate).format('YYYY-MM-DD')),
             tag(signer.documentType === 'USDL' ? 'issuedState' : 'issuer', {}, signer.documentIssuer),
@@ -90,6 +89,7 @@ function serializer(data) {
           category = 'product_config'
         }
 
+// Temp comment
         productOptionsArray.push(
           tag('productOption', {
             category: category,

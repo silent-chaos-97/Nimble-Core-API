@@ -268,7 +268,6 @@ const successResponse = {
               {
                 "association": "grandson",
                 "name": "Simbanashe Chikore"
-              }
             ],
             "entity_type": "person",
             "fields": [
@@ -1164,6 +1163,7 @@ const successResponse = {
                 "mugabe": [
                   "name_exact"
                 ],
+                "robert": [
                   "name_exact"
                 ]
               },

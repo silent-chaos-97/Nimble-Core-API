@@ -1,6 +1,8 @@
 const _ = require('lodash')
 const config = require('../../config')
 
+class ImageFactory {
+// Temp comment
   constructor(assetsUrl, cdnUrl) {
     this.assetsLocation = assetsUrl
     this.cdnLocation = cdnUrl

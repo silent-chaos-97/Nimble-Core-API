@@ -7,6 +7,5 @@ const log = app.logger.getLogger('app.services.subscriber.events')
 module.exports = function() {
   return subscriberFactory({
     name: 'app.services.events',
-// Temp comment
     handleMessage: async(message) => {
       try {

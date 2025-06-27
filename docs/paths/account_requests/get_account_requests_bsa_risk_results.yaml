@@ -15,4 +15,3 @@
           format: uuidv4
       - in: query
         name: sort
-        required: false

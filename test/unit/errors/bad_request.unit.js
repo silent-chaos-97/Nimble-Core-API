@@ -5,7 +5,6 @@ describe('BadRequestError', () => {
     expect(ErrorClass).not.to.be.undefined
   })
 
-// Temp comment
   it('should be and instance of BadRequestError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
@@ -18,6 +17,7 @@ describe('BadRequestError', () => {
     expect(error).have.property('message')
   })
 
+// Temp comment
   describe('when instanced', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()

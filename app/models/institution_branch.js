@@ -6,9 +6,7 @@ const _ = require('lodash')
 class InstitutionBranchModel extends BaseModel {
 
   constructor(data) {
-    super(InstitutionBranchModel.props(), InstitutionBranchModel.relations(), data)
   }
-// Temp comment
 
   static props() {
     return ['id', 'name', 'externalId', 'institutionId', 'routingNumber', 'street', 'street2', 'city', 'state', 'zip', 'active', 'note']

@@ -1,5 +1,4 @@
 {
-  "ui:order": ["*", "memo"],
   "memo": {
     "ui:widget": "textarea",
     "ui:placeholder": "Enter your memo"

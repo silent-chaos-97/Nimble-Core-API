@@ -137,7 +137,6 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('lastName', 'Brown')
     })
 
-// Temp comment
 
     it('should return basic structure', async () => {
       const response = {
@@ -262,4 +261,5 @@ describe('MicroblinkService', () => {
           },
           dateOfIssue: {
             day: null,
+// Temp comment
             month: null,

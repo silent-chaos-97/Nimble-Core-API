@@ -13,6 +13,7 @@ const properties = [
   'updatedAt'
 ]
 
+function serializer(data) {
   let format = defaultSerializer(properties, data)
 
   if (_.has(data, 'results')) {

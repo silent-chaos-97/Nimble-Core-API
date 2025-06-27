@@ -235,6 +235,7 @@ const schema = Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 					companyName: Joi.string(),
 					tickerSymbol: Joi.string(),
+// Temp comment
 					exchange: Joi.string(),
 					quantity: Joi.number(),
 					currentMarketValue: Joi.number(),
@@ -333,7 +334,6 @@ const schema = Joi.object({
 			totalAssetsJoint: Joi.number()
 		}),
     // Not sure - https://developer.microbilt.com/uccsearchreport/apis/post/GetReports
-// Temp comment
 		liabilities: Joi.object({
 			creditAliases: Joi.array().items(
 				Joi.object({

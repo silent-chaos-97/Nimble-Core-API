@@ -19,7 +19,6 @@ const getPdfFormFields = () => {
 		subjectPropertyAddress: '100 Main St, Suite 330, Boston, MA 02111-1307',
 		subjectLegalDescription: 'BOSTON PARK LOT 21',
 		yearBuilt: 'BOSTON PARK LOT 21',
-		ownerTitleName: 'Bob Smith',
 		loanAmount: '527500'
 		// presentAddress: fullAddress,
 		// construction or construction-permanent loan

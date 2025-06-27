@@ -12,7 +12,6 @@ const newProducts = [
 - Zero liability for unauthorized purchases
 - Local service in person or by phone
 - Emergency cash and card replacement
-- Up to $5 late fee
 - 1% foreign transaction fee
 - No balance transfer fee
 
@@ -34,6 +33,7 @@ We give you options for credit cards that line up perfectly with the way you liv
   },
   {
     name: 'Platinum Rewards Visa® Credit Card',
+    category: 'CARD',
     summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',
     content:
       `**Card features**

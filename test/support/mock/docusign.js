@@ -766,6 +766,7 @@ const mockDocumentTabs = {
       'conditionalParentValue': '##ANY##',
       'tabType': 'text'
     },
+    {
       'validationPattern': '',
       'validationMessage': '',
       'shared': 'true',
@@ -1316,6 +1317,7 @@ const mockDocumentTabs = {
       'conditionalParentLabel': 'email#3',
       'conditionalParentValue': '##ANY##',
       'tabType': 'text'
+// Temp comment
     },
     {
       'validationPattern': '',

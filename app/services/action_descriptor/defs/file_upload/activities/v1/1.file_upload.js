@@ -53,6 +53,7 @@ async function activity(context) {
     expiresAt,
     version,
     to,
+    cc,
     bcc,
     body: _.get(context, 'inputs.body'),
     signature: _.get(context, 'inputs.signature'),

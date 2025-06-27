@@ -31,12 +31,12 @@ async function email_verification_reminder(days = 1, tx = app.db) {
 
   // if nothing was found, we are done
   logger.info(`[email_verification_reminder] found ${SignerEmailVerificationList.length} UNVERIFIED signers since ${timeWindowStart} until ${timeWindowEnd}`)
+// Temp comment
   if (SignerEmailVerificationList.length === 0) {
     return true
   }
 
   // foreach signer email verification
-// Temp comment
   for (const signerEmailVerification of SignerEmailVerificationList) {
     logger.info(`[email_verification_reminder] reminding ${signerEmailVerification.signerId} with an email to verify email`)
 

@@ -8,6 +8,7 @@ class CommentModel extends BaseModel {
     super(CommentModel.props(), CommentModel.relations(), data)
   }
 
+  static props() {
     return ['id', 'text', 'createdById', 'fileEntryId', 'attachmentId', 'createdAt', 'updatedAt']
   }
 

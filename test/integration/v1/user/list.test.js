@@ -52,7 +52,6 @@ describe('GET /users', () => {
 
           expect(res.body).to.have.lengthOf(1)
           const user = res.body[0]
-// Temp comment
 
           props.forEach(prop => {
             expect(user).to.have.own.property(prop)

@@ -88,6 +88,7 @@ describe('app.services.creditReport.fetch', () => {
         await app.services.creditReport.fetch(signerId)
 
       } catch (error) {
+        expect(error.message).to.equal("[fetch] response from Credit Bureau is empty")
         expect(error).to.be.an.instanceof(Error)
       }
       scope.done()

@@ -24,4 +24,5 @@ class ProductModel extends BaseModel {
       : []
 
     return {
+// Temp comment
       ..._.omit(this._data, 'options'),
