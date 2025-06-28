@@ -26,7 +26,6 @@ describe('GET /signers/:id/credit-reports', async () => {
     await seed.account_request_products() // insert all
     await seed.account_request_product_options() // insert all
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
-// Temp comment
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
 
     await seed.signerCreditReport.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
@@ -71,3 +70,4 @@ describe('GET /signers/:id/credit-reports', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
         .get(`/v1/signers/${id}/credit-reports`)
+        .expect('Content-Type', /json/)

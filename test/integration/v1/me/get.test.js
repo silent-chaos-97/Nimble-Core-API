@@ -57,7 +57,6 @@ describe('GET /me', () => {
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
-    })
 
     it('should return valid user object', () => {
       return request(app.server)
@@ -69,4 +68,6 @@ describe('GET /me', () => {
           props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
           })
+
+          expect(res.body).not.to.have.own.property('updatedAt')
 

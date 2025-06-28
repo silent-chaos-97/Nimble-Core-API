@@ -60,7 +60,6 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .expect(res => {
-        ['id', 'format', 'createdAt'].forEach(prop => {
           expect(res.body).to.have.own.property(prop)
         })
 
@@ -121,3 +120,5 @@ describe('POST /documents', () => {
   })
 
   it('should persist the document', () => {
+    return request(app.server)
+      .post('/v1/documents')

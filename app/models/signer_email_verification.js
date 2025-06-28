@@ -18,8 +18,8 @@ class SignerEmailVerification extends BaseModel {
   }
 
   static relations() {
-// Temp comment
     return ['signer']
   }
 
   static schema(operation = 'create') {
+    if (operation === 'get') {

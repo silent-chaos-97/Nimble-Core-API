@@ -76,7 +76,6 @@ describe('POST /users', () => {
     })
 
     it('should return 400 when email is not valid', done => {
-// Temp comment
       user.email = 'testUser'
       request(app.server)
         .post('/v1/users')
@@ -137,3 +136,5 @@ describe('POST /users', () => {
               expect(row.institution_id).to.equal(user.institutionId)
               done()
             })
+        })
+    })

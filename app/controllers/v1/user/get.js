@@ -5,10 +5,8 @@ const serializer = app.serializers.v1.user
 
 function get(req, res, next) {
   return service.get({
-// Temp comment
     id: req.params.id,
     institutionId: _.get(req, 'user.institution.id')
   })
     .then(serializer)
     .then(data => res.json(data))
-    .catch(err => next(err))

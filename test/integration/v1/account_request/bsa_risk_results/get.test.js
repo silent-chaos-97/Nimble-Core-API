@@ -11,6 +11,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
   })
 
   after(() => {
+    clock.restore()
   })
 
   beforeEach(async () => {

@@ -54,3 +54,4 @@ describe('GET /users/:id', () => {
         .expect(200)
         .end(done)
     })
+

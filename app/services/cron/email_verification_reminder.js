@@ -4,7 +4,6 @@ const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.cron.email_verification_reminder')
 
-async function email_verification_reminder(days = 1, tx = app.db) {
   logger.info('[email_verification_reminder] starting')
 
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
@@ -31,7 +30,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
 
   // if nothing was found, we are done
   logger.info(`[email_verification_reminder] found ${SignerEmailVerificationList.length} UNVERIFIED signers since ${timeWindowStart} until ${timeWindowEnd}`)
-// Temp comment
   if (SignerEmailVerificationList.length === 0) {
     return true
   }

@@ -63,7 +63,6 @@ const schema = {
     },
     welcome_uri: {
       doc: 'onboarding welcome http endpoint',
-// Temp comment
       format: String,
       default: ':protocol://:onboarding_domain/auth/:email/set-password/:code/:expiresAt',
       env: 'WELCOME_URI'
@@ -240,7 +239,6 @@ const schema = {
       doc: 'the AWS SNS api-version',
       format: String,
       default: '2010-03-31',
-      env: 'AWS_SNS_VERSION'
     },
     sms_sender_id: {
       doc: 'the AWS SNS->SMS Sender ID',
@@ -336,3 +334,10 @@ const schema = {
       doc: 'AWS SNS Region',
       format: String,
       default: 'us-east-2',
+      env: 'AWS_SNS_REGION'
+    },
+    topicEvent: {
+      doc: 'AWS SDK endpoint for SNS event topic',
+      format: String,
+      default: 'arn:aws:sns:us-east-2:000000000000:events',
+      env: 'AWS_SNS_EVENT_TOPIC'

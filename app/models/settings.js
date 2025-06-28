@@ -32,3 +32,4 @@ class SettingsModel extends BaseModel {
     const schemaRef = _.get(_data, ['schema', '$ref'])
 
     if (schemaRef) _data.schema = schemas(schemaRef)
+

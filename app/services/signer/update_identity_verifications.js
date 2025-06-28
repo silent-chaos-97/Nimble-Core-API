@@ -9,7 +9,6 @@ const { validator } = app.plugins
 const entrySchema = Joi.object().keys({
   signerId: Joi.string().uuid().required(),
   verificationItems: Joi.array().required().items(
-    Joi.object().keys({
       verification: Joi.string().required(),
       status: Joi.string().required()
     })
@@ -58,7 +57,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
 
   const signerIdentityVerificationChecks = {
     'verificationStatusFace': verificationGroupsCheck('verificationStatusFace'),
-// Temp comment
     'verificationStatusFaceUpdatedAt': new Date(),
     'verificationStatusDocument': verificationGroupsCheck('verificationStatusDocument'),
     'verificationStatusDocumentUpdatedAt': new Date(),

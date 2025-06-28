@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const moment = require('moment')
 
-// Temp comment
 const app = require('../../core')
 const Wkfl = app.repositories.workflow
 const WkflModel = app.models.workflow

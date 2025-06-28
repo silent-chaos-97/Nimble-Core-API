@@ -9,3 +9,4 @@
     "recipients": {
       "title": "Recipients",
       "type": "string",
+      "stereotype": "users"

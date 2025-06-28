@@ -8,7 +8,6 @@ const Roles = {
   InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
-// Temp comment
   Applicant: 'applicant',
   Developer: 'developer'
 }
@@ -87,6 +86,9 @@ class UserModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['id', 'email', 'password', 'firstName', 'lastName', 'createdAt', 'lastLoginAt', 'institutionId', 'branchId', 'roles', 'titles', 'workgroups', 'department', 'status', 'phone']
   }
 
+  static relations() {
+    return ['accounts', 'institution', 'branch']

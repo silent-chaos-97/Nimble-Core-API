@@ -110,3 +110,6 @@
       "checkAntiMoneyLaundering": null,
       "antiMoneyLaunderingVerifiedAt": null,
       "contractDocumentSignerStatus": "SENT",
+      "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",
+      "selfieDocumentId": null,
+      "backIdProofDocumentId": null,

@@ -11,6 +11,7 @@
       - in: query
         name: sort
         required: false
+        description: Sort users by user property
         schema:
           type: string
           enum:
@@ -19,3 +20,4 @@
       - in: query
         name: search
         required: false
+        description: Search users by first and last name

@@ -21,7 +21,6 @@ module.exports = {
       selected_type: [
         'utility_bill',
       ],
-      supported_types: [
         'utility_bill',
         'driving_license',
         'bank_statement',
@@ -36,3 +35,4 @@ module.exports = {
     },
     background_checks: {
       dob: '1990-01-01',
+      name: {

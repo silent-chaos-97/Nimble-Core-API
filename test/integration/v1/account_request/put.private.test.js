@@ -39,6 +39,7 @@ describe('PUT private /account-requests/:id', () => {
 
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
+      await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
@@ -218,3 +219,7 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.message).to.contain('"statusEmailBody" is required')
             done()
           })
+      })
+
+        request(app.server)
+          .put('/v1/account-requests/' + pendingAccountRequestId)

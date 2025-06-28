@@ -18,5 +18,6 @@ async function list(params, tx = app.db) {
     sql.orderByRaw('settings.key asc')
   })
 
+  const records = await query.fetchAll({ transacting: tx })
 
   return records.models.map(settings => new SettingsModel(settings).data())

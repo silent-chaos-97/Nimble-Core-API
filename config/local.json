@@ -11,7 +11,6 @@
     "ses_endpoint": "http://localhost:4566",
     "ses_email_from": "test@localhost",
     "lambda_endpoint": "",
-    "lambda_region": "us-east-2",
     "swf_endpoint": "http://localhost:4566",
     "swf_region": "us-east-2"
   },
@@ -21,3 +20,4 @@
   "sqs": {
     "endpoint": "http://localhost:4566"
   },
+  "lambda": {

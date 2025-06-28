@@ -17,3 +17,4 @@ columns:
   - data: product
     type: key-value-setting
     multiple: true
+    selectSettings:

@@ -57,6 +57,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "text": "Is your individual income greater than $35,000\\?",
         "type": "string",
         "subtype": "enum",
+        "enum": ["yes", "no"],
         "score": {"no": 1},
         "required": true,
         "default": ""
@@ -69,3 +70,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "enum": ["yes", "no"],
         "score": {"no": 1},
         "required": true,
+        "default": ""

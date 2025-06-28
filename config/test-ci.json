@@ -30,3 +30,4 @@
   },
   "auth": {
     "adminApiKey": "superpowers",
+    "ttl": 28800,

@@ -29,3 +29,4 @@ IdProofDocument:
     issuedDate:
       type: string
       format: date
+      title: Issued Date

@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 const { extractSettingsValues } = require('../../../utils/settings')
 
@@ -6,7 +7,6 @@ const User = app.models.user
 const UserRepo = app.repositories.user
 const log = app.logger.getLogger('action.commons.users')
 
-// Temp comment
 function isCtxPathRef(ref) {
   if (!_.isString(ref)) return false
 

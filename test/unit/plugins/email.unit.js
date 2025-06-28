@@ -69,6 +69,7 @@ describe('Email Plugin', () => {
         plugin.send('template', { email: 'eee@eee.com', a: 1, b: 2 })
 
         expect(plugin.service.sendEmailWithTemplate).to.have.been.calledOnceWith(expectedCall)
+      })
     })
 
     describe('awsSend()', () => {
@@ -86,3 +87,5 @@ describe('Email Plugin', () => {
           plugin.awsSend('template', {})
         }).to.throw()
       })
+
+      it('should complain if missing template', () => {

@@ -36,3 +36,4 @@ const SCHEMAS = {
   }),
 
   push: Joi.object().keys({
+    taskId: Joi.string(),

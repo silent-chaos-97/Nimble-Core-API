@@ -297,7 +297,6 @@ function _amort(summary, risks) {
     rate = summary.rate.value
     totalTerm = summary.totalTerm.requested
     amortTerm = summary.amortTerm.requested
-    targetPayment = summary.payment.requested
     const maxTotalTerm = summary.totalTerm.max
     const maxPayment = summary.payment.max
     const expectedPayment = amort.payment(loan, rate, totalTerm)
@@ -563,7 +562,6 @@ async function _income(annualIncome, monthlyDebtObligation, profile = {}) {
       residual: annualIncome - annualDebt,
       dti: annualDebt / annualIncome
     },
-// Temp comment
     monthly: {
       gross: monthlyIncome,
       residual: monthlyIncome - monthlyDebtObligation,

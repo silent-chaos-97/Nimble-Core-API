@@ -8,7 +8,6 @@ const fileTypes = [
     name: 'Government ID'
   },
   {
-    type: 'Entity',
     name: 'SSN verified'
   },
   {
@@ -341,3 +340,10 @@ const fileTypes = [
     name: 'Letter'
   },
   {
+    type: 'Product',
+    name: 'Added to Call Report'
+  },
+  {
+    type: 'Product',
+    name: 'Account Application Form'
+  },

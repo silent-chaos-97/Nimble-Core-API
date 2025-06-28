@@ -74,3 +74,4 @@ describe('app.services.cron.inviteeReminder', () => {
         sinon.useFakeTimers(now)
         await app.services.cron.inviteeReminder()
         expect(inviteReminderSpy).to.not.have.been.called
+        expect(prospectPendingSignersSpy).to.not.have.been.called

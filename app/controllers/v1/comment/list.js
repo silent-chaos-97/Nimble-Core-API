@@ -14,4 +14,3 @@ function list(req, res, next) {
     .list(fileEntryId)
     .then(comments => (comments || []).map(serializer))
     .then(resp => res.json(resp))
-    .catch(next)

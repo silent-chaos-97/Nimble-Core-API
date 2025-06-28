@@ -1,6 +1,5 @@
 const ErrorClass = require('../../../app/errors/forbidden')
 
-describe('ForbiddenError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })
@@ -18,3 +17,4 @@ describe('ForbiddenError', () => {
   })
 
   describe('when instanced', () => {
+    it('should have correct name', () => {

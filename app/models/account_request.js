@@ -126,3 +126,5 @@ class AccountRequest extends BaseModel {
 
     const acountVerificationStatus = Object.keys(counter).reduce((acountStatus, key) => {
       const value = counter[key]
+        .split(',')
+        .map(i => KEYMAP[key].indexOf(i)) // match with index of KEYMAP

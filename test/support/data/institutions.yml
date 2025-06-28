@@ -27,3 +27,4 @@
         type: string
         subtype: enum
         enum: [ 'yes', 'no' ]
+        score:

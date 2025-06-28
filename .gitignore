@@ -29,3 +29,4 @@ xunit.xml
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+# Dependency directories

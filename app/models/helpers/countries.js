@@ -5,6 +5,7 @@ const countries = [
   'AIA',
   'ALA',
   'ALB',
+  'AND',
   'ANT',
   'ARE',
   'ARG',
@@ -40,6 +41,7 @@ const countries = [
   'CAN',
   'CCK',
   'CHE',
+// Temp comment
   'CHL',
   'CHN',
   'CIV',
@@ -124,3 +126,6 @@ const countries = [
   'KWT',
   'LAO',
   'LBN',
+  'LBR',
+  'LBY',
+  'LCA',

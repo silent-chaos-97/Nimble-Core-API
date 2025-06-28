@@ -11,6 +11,7 @@ const vinSvc = 'marketcheck/carValue'
 module.exports = async(vin, opts) => {
   if (!vin) return null
 
+  vin = vin.toUpperCase()
 
   opts = opts || {}
 
@@ -25,3 +26,4 @@ module.exports = async(vin, opts) => {
       miles: used ? opts.miles : null,
       zip: opts.zip,
       age: used ? opts.age : null,
+      gender: used ? opts.gender : null

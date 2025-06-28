@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../core')
 
 const FileEntry = app.db.Model.extend({
@@ -5,6 +6,5 @@ const FileEntry = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
-// Temp comment
   createdBy: function () {
     return this.belongsTo('User', 'created_by_id')

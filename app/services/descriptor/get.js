@@ -6,13 +6,13 @@ module.exports = async(id, ctx) => {
 //     fs.readFile(`${filePath}/${id}/_props.json`).then(JSON.parse),
 //     fs.readFile(`${filePath}/${id}/inputs.schema.json`).then(JSON.parse),
 //     fs.readFile(`${filePath}/${id}/outputs.schema.json`).then(JSON.parse)
+//   ]).then(inOut => {
 //     const [properties, inputs, outputs] = inOut
 //
 //     return { id, ...properties, inputs, outputs }
 //   })
 //
 //   const [_base, ...defs] = definitions
-//
 //   return defs.map(def => {
 //     const inputs = { ...def.inputs, properties: { ...def.inputs.properties, ..._base.inputs.properties } }
 //     const outputs = { ...def.outputs, properties: { ...def.outputs.properties, ..._base.outputs.properties } }

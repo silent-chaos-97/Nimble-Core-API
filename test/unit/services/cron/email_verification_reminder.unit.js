@@ -7,6 +7,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
   let emailVerificationEmailSpy
 
   before(() => {
+    emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
   })
 
   beforeEach(() => {
@@ -70,3 +71,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
         const now = moment(baseDate).add(24, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.emailVerificationReminder()
+        expect(emailVerificationEmailSpy).to.have.been.called

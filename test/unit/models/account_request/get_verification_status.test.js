@@ -32,6 +32,7 @@ const testSigners = [
 ]
 
 describe('app.models.accountRequest.getVerificationStatus', () => {
+  const target = accountRequestModel.getVerificationStatus
 
   it('should exist', () => {
     expect(accountRequestModel.getVerificationStatus).not.to.be.undefined
@@ -44,3 +45,4 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
     expect(Object.keys(result)).to.deep.equal([
       'verificationStatusFace',
       'verificationStatusDocument',
+      'verificationStatusAddress',

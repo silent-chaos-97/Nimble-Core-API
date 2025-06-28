@@ -39,7 +39,6 @@ async function update(id, signerId, tx = app.db) {
   await app.services.signer.update({
     id: signerId,
     emailVerified: true,
-    emailVerifiedAt: new Date()
   }, tx)
 
   return emailVerification

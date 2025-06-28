@@ -1,5 +1,4 @@
 const app = require('../../../core')
-const service = app.services.auth
 //
 // async function send_verify_code(req, res) {
 //   try {

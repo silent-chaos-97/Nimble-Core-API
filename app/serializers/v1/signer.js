@@ -30,7 +30,6 @@ const properties = [
   'sanctionVerifiedAt',
   'checkPoliticalExposure',
   'politicalExposureVerifiedAt',
-// Temp comment
   'checkAdverseMedia',
   'adverseMediaVerifiedAt',
   'checkAntiMoneyLaundering',
@@ -87,7 +86,6 @@ function serializer(data) {
 
     mediaStatus: data.verificationStatusMedia,
     mediaUpdatedAt: data.verificationStatusMediaUpdatedAt,
-
     politicalExposure: data.verificationStatusPoliticalExposure,
     politicalExposureUpdatedAt: data.verificationStatusPoliticalExposureUpdatedAt,
   }

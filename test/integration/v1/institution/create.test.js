@@ -1,4 +1,3 @@
-// Temp comment
 describe('POST /institutions', () => {
   let institution, newInstitution
 
@@ -65,3 +64,5 @@ describe('POST /institutions', () => {
       .post('/v1/institutions')
       .set('X-API-KEY', 'superpowers')
       .send(newInstitution)
+      .expect('Content-Type', /json/)
+      .expect(res => {

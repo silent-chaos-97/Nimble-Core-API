@@ -30,3 +30,4 @@
     "consentAccountOpening": true,
     "consentPrivacyPolicy": true,
     "consentCommunication": false,
+    "idProofDocument": {

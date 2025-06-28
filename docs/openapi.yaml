@@ -89,3 +89,5 @@ components:
 
         The following syntax must be used in the 'Authorization' header:
 
+            Bearer xxxxxx.yyyyyyy.zzzzzz
+      type: apiKey

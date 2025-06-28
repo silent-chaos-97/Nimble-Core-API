@@ -1,5 +1,6 @@
 module.exports = {
   reference: '5674563147',
+  event: 'verification.declined',
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
@@ -19,7 +20,6 @@ module.exports = {
       full_address: 'Candyland Avenue',
       selected_type: [
         'utility_bill',
-      ],
       supported_types: [
         'utility_bill',
         'driving_license',
@@ -35,3 +35,4 @@ module.exports = {
     },
     background_checks: {
       dob: '1990-01-01',
+      name: {

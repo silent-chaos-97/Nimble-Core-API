@@ -12,11 +12,11 @@ const newProducts = [
 - Zero liability for unauthorized purchases
 - Local service in person or by phone
 - Emergency cash and card replacement
+- Up to $5 late fee
 - 1% foreign transaction fee
 - No balance transfer fee
 
 **There’s more**
-
 The <INSTITUTION NAME> CardManager allows you anytime access to easily manage your Central Bank credit card.
 
 - View and download statements
@@ -40,3 +40,4 @@ We give you options for credit cards that line up perfectly with the way you liv
 
 - Add convenience, control and security to your financial life:
 - No fees for ATM cash advances
+- Zero liability for unauthorized purchases

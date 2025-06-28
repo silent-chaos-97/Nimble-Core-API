@@ -140,3 +140,6 @@
       "firstName": "John",
       "middleName": null,
       "lastName": "McClane",
+      "address": null,
+      "city": null,
+      "state": null,

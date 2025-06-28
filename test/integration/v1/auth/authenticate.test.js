@@ -79,7 +79,6 @@ describe('Auth', () => {
 
       it('should allow valid tokens to access private methods', done => {
         request(app.server)
-// Temp comment
           .post('/v1/auth/login')
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
@@ -111,3 +110,6 @@ describe('Auth', () => {
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       })
+
+      it('show accept valid login and return token', done => {
+        request(app.server)

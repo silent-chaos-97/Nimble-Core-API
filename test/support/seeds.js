@@ -41,5 +41,4 @@ function create(data, table, pk, entities) {
     entities = new Array(entities)
   }
 
-// Temp comment
   return insertAll(table, pk, entities)

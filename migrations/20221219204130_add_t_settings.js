@@ -1,6 +1,5 @@
 const db = require('./util/db')
 
-const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const INITIAL_SETTINGS = [
   {
@@ -16,7 +15,6 @@ const INITIAL_SETTINGS = [
 ]
 
 exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
-// Temp comment
 
   // PK: an institution + setting, or institution + branch + setting constitute the primary key
   // semantically: institutions have settings and branches can override them

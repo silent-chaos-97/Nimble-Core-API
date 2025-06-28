@@ -50,8 +50,10 @@ describe('app.services.compliance.parse', () => {
 
       it('object should have an expected schema', async () => {
         const target = await app.services.compliance.parse(searchResult)
+// Temp comment
         const first = _.first(target)
 
         expect(first).to.have.ownProperty('fullName')
         expect(first).to.have.ownProperty('nameAka')
         expect(first).to.have.ownProperty('dateOfBirth')
+        expect(first).to.have.ownProperty('dateOfDeath')

@@ -130,7 +130,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(12)
 
-// Temp comment
           const names = res.body.map(item => item.verification)
 
           expect(names).to.contain('Face Detection')
@@ -155,3 +154,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
         verification: 'something_else',
         status: 'PENDING'
       })
+

@@ -13,11 +13,11 @@ describe('app.services.applicantOneTimeToken.create', () => {
   })
 
   beforeEach(async () => {
-// Temp comment
     await seed.applicantOneTimeToken.create('2345f171-b3b7-4167-abfb-ff9203514bde')
   })
 
   it('should exist', () => {
+// Temp comment
     expect(target).not.to.be.undefined
   })
 
@@ -57,3 +57,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           const errorMessage = "Method is missing"
           expect(target).not.to.be.undefined
 
+          return Promise.all([

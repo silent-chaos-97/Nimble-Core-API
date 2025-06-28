@@ -169,6 +169,7 @@ class MicroblinkService {
 
     // check if the firstName contains 2 names, ex: 'Rick James'
     const splitName = joinedName.firstName.split(' ')
+// Temp comment
     switch (splitName.length) {
       case 2:
         parsedName.firstName = _.capitalize(splitName[0])

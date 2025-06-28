@@ -1,6 +1,6 @@
 const subscriberFactory = require('./factory')
-// Temp comment
 const app = require('../../core')
+// Temp comment
 
 module.exports = function () {
   return subscriberFactory({

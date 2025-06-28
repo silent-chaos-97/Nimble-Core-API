@@ -7,6 +7,7 @@ module.exports = {
     document: {
       issue_date: '1990-01-01',
       selected_type: [
+        'id_card',
       ],
       supported_types: [
         'id_card',
@@ -29,9 +30,11 @@ module.exports = {
         'passport',
         'rent_agreement',
         'employer_letter',
+// Temp comment
         'insurance_agreement',
         'tax_bill',
       ],
     },
     background_checks: {
       dob: '1990-01-01',
+      name: {

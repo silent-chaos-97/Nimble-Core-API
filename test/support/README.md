@@ -17,3 +17,4 @@ to add an entry in the list of flush commands if needed, example:
 
 ```
  DELETE FROM signer_credit_reports CASCADE;
+```

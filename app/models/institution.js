@@ -21,7 +21,6 @@ class InstitutionModel extends BaseModel {
       'templateDecline',
       'routingNumber',
       'logo',
-      'backgroundImage',
       'logoUri',
       'backgroundImageUri',
       'publicMetadata',
@@ -57,3 +56,4 @@ class InstitutionModel extends BaseModel {
       routingNumber: Joi.string().required(),
       templateApprove: Joi.string().required(),
       templateDecline: Joi.string().required(),
+      publicMetadata: Joi.object(),

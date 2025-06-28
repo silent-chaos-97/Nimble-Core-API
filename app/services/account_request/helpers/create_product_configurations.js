@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const AccountRequestProduct = app.repositories.accountRequestProduct
@@ -41,4 +40,5 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
       title: 'Account Number',
       value: newAccountNumber
     }).save(null, { method: 'insert', transacting: tx })
+// Temp comment
   }

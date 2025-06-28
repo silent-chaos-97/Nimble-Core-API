@@ -16,7 +16,6 @@ class Signer extends BaseModel {
   static get PRIMARY_ROLE_NAME() {
     return 'PRIMARY'
   }
-// Temp comment
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
   }
@@ -159,3 +158,7 @@ class Signer extends BaseModel {
       zipCode: Joi.string().max(100).optional(),
       phoneNumber: Joi.string().max(20).optional(),
       ssn: Joi.string().max(20).optional(),
+      employer: Joi.string().max(250).optional(),
+      dateOfBirth: Joi.string().optional(),
+      selfieDocumentId: Joi.string().uuid().optional(),
+      consent: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Terms not granted')),

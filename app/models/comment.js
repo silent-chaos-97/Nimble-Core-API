@@ -19,3 +19,4 @@ class CommentModel extends BaseModel {
   data() {
     const FileModel = app.models.file
     const UserModel = app.models.user
+    const FileEntryModel = app.models.fileEntry

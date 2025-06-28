@@ -1,4 +1,5 @@
 const uuid = require('uuid')
+
 const THRESHOLDS = [
   { op: '>', val: 50, risk: 'Very High' },
   { op: '>=', val: 5, risk: 'High' },
@@ -36,3 +37,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       ]))
       const params = { accountRequestId: uuid.v4() }
       await app.services.bsaRiskResult.calculate(params)
+

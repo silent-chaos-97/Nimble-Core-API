@@ -10,6 +10,7 @@ describe('NotFoundError', () => {
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
   })
+
   it('should have a status code and message', () => {
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
@@ -17,3 +18,4 @@ describe('NotFoundError', () => {
   })
 
   describe('when instanced', () => {
+    it('should have correct name', () => {

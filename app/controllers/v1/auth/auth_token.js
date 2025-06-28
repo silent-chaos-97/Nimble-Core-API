@@ -99,7 +99,6 @@
 //
 //           const tokenOptions = {
 //             userId: newUser.id.toString(),
-//             expiration: 86400 // 24 hours
 //           }
 //           const accessToken = await tokenService.get(tokenOptions)
 //

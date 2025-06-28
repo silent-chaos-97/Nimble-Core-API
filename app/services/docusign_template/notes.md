@@ -85,3 +85,5 @@ Some notes about this process:
 - The Go Live Process for production keys can take from 3 days to 1 week.
 
 Conditions it must obey:
+
+- The app must not break polling rules.

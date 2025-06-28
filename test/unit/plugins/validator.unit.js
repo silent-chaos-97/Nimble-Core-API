@@ -10,6 +10,7 @@ const schema = Joi.object().keys({
 
 describe('plugins/validator', () => {
   it('throws error with invalid data', () => {
+    const data = { id: 1 }
     expect(() => validator(data, schema)).to.throw(BadRequestError)
   })
 

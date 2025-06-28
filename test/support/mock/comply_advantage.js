@@ -268,6 +268,7 @@ const successResponse = {
               {
                 "association": "grandson",
                 "name": "Simbanashe Chikore"
+              }
             ],
             "entity_type": "person",
             "fields": [
@@ -2435,3 +2436,55 @@ const parsedResult = [
       },
       {
         "name": "A \"peace\" prize for Mugabe: The double-speak behind China's answer to the ... | ZimDaily",
+        "value": "This year's recipient of China's Confucius Peace Prize is the prsident of Zimbabwe, Robert Mugabe. President Mugabe is perhaps best known for his many violations of human rights, including the massacre of an estimated 20,000 people in the Matebeleland and Midlands provinces in the 1980s. In 2005, the political thriller \"The Interpreter,\" starring Nicole Kidman and Sean Penn, involved an assassination plot targeting fictional president Edmond Zuwanie, a soft-spoken former teacher who devolved into a remorseless despot.",
+        "date": "2020-03-26T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.zimdaily.com/?p=36197",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "AS IT HAPPENED: Zanu-PF youth leader apologises for 'big mistake' of 'denigrating' army | News24",
+        "value": "He says that \"by this big mistake we have learned a lot\". Zimbabwe's army early Wednesday announced that President Robert Mugabe and his family were under house arrest. - AP",
+        "date": "2020-03-29T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.news24.com/Africa/Zimbabwe/live-britain-urges-no-violence-in-zimbabwe-20171115",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "El país que teme morir de hambre antes que de coronavirus cuando comience la cuarentena - Infobae",
+        "value": "\"Si es necesario, se desplegarán las fuerzas de seguridad para garantizar el respeto [del confinamiento]\", advirtió el presidente Mnangagwa en su discurso. El año pasado, la represión de los disturbios originados por la subida de los precios del combustible causó cerca de 20 muertos y numerosos heridos, y reavivó el miedo a los abusos del régimen de Robert Mugabe (1980-2017). El promotor de aquellas manifestaciones, el líder de la principal central sindical del país, Japhet Moyo, afirmó que respaldaba las órdenes de confinamiento.",
+        "date": "2020-03-30T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.infobae.com/america/mundo/2020/03/30/el-pais-que-teme-morir-de-hambre-antes-que-de-coronavirus-cuando-comience-la-cuarentena/?outputType=amp-type",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Former Botswana President Mogae blasts Zimbabwean tyrant Robert Mugabe | ZimDaily",
+        "value": "But on his Harare visit last month he stunned onlookers when he warmly shared the stage with the Zimbabwean leader while expanding his business empire. The former president of Botswana has once again set tongues wagging, this time accusing Mugabe of violating the rights of gays and lesbians. Speaking in an interview in New York with a United Nations online publication, Africa Renewal, Mogae emphasised the need for reformed mindsets.",
+        "date": "2020-03-21T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.zimdaily.com/?p=42787",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "From Zimbabwe, With Faith – The Forward",
+        "value": "\"They call us maJuda, which means the Jews,\" he said. The Lemba have also escaped the wrath of Zimbabwe's authoritarian ruler, President Robert G. Mugabe, who is accused of using political violence to stay in power during a 32-year reign. Mugabe is himself a Roman Catholic, which also puts him in a small minority among Zimbabwe's mostly Anglican, Methodist and Pentacostal churchgoers",
+        "date": "2019-11-24T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://forward.com/opinion/171453/from-zimbabwe-with-faith/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Kent farmer appeals to Nelson Mandela",
+        "value": "The brother of a farmer murdered in Zimbabwe has appealed for Nelson Mandela to intervene to prevent further bloodshed in the country's deepening crisis. Paul Dunn, who farms 1,500 acres at Ash, called on the former South African president and ANC leader to condemn Robert Mugabe's murderous regime and help end the killings. Mr Dunn has campaigned for peace in Zimbabwe since his brother, Alan, was murdered by Mugabe's war veterans on his farm near Harare eight years ago.",
+        "date": "2020-03-26T00:00:00Z",

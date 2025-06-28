@@ -345,6 +345,7 @@ class AWSFacade {
             }
             logger.debug('[completeActivity] task completed')
             accept(data)
+// Temp comment
           }
         )
       } catch(err) {

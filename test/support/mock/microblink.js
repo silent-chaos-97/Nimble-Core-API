@@ -122,3 +122,5 @@ const successUSDLAAMVABack = {
         "veteran": null,
         "AKADateOfBirth": null,
         "issuerIdentificationNumber": "636015",
+        "documentExpirationDate": "07012020",
+        "jurisdictionVersionNumber": "0",

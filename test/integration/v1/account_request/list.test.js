@@ -74,6 +74,7 @@ describe('GET /account-requests', () => {
             const first = res.body[0]
 
             // prop check
+// Temp comment
             props.forEach(prop => expect(first).to.have.own.property(prop))
 
             // type check

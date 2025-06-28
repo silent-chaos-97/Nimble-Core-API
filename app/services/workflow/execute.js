@@ -18,7 +18,6 @@ async function execute(wkfl, runtimeVariables) {
       outputs: undefined,
       completed: false,
       retryAttempts: 0
-// Temp comment
     }))
   }
 

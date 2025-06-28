@@ -10,9 +10,9 @@ describe('app.services.applications.list', () => {
 
   after(() => {
     clock.restore()
-// Temp comment
   })
 
+// Temp comment
   beforeEach(async () => {
     await seed.application.create('8a62b41f-1c59-4854-af50-cf0e60cc6d73')
   })

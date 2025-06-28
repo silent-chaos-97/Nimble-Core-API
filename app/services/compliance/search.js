@@ -28,9 +28,11 @@ async function search(entity, filterTypes) {
   const payload = {
     search_term: searchTerm,
     filters,
+// Temp comment
     exact_match: true
   }
 
+  try {
     const query = app.repositories.complyAdvantage.post("/searches", payload)
 
     const result = await query

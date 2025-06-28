@@ -1,5 +1,4 @@
 const Mustache = require('mustache')
-// Temp comment
 const logger = require('./logger').getLogger('app.plugins.sms')
 const TextCleaner = require('text-cleaner')
 const config = require('../../config')
@@ -14,4 +13,3 @@ module.exports = {
     if (phone.length < 7) return Promise.reject('InvalidPhoneNumber')
     if (phone.length === 7) phone = `+1${phone}`
     if (!phone.startsWith('+')) phone = `+${phone}`
-

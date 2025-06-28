@@ -10,5 +10,6 @@
         in: path
         description: Account request ID
         required: true
+        schema:
           type: string
           format: uuidv4

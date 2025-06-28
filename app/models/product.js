@@ -17,12 +17,10 @@ class ProductModel extends BaseModel {
     return ['options']
   }
 
-  data() {
     const ProductOptionModel = app.models.productOption
     const optionsMap = 'options' in this._data
       ? this._data.options.map(entryData => new ProductOptionModel(entryData).data())
       : []
 
     return {
-// Temp comment
       ..._.omit(this._data, 'options'),

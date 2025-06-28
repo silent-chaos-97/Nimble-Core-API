@@ -19,7 +19,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'associates',
       'matchTypes',
       'createdAt',
-// Temp comment
       'updatedAt',
     ]
   }
@@ -29,5 +28,5 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   }
 
   data() {
-    const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
     return {
+      ..._.omit(this._data, 'items'),

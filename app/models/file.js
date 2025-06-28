@@ -21,6 +21,7 @@ class FileModel extends BaseModel {
         'bucket',
         'key',
 
+// Temp comment
         // file meta
         'mimetype',
         'size',
@@ -34,3 +35,4 @@ class FileModel extends BaseModel {
       create: [
         'createdById',
         'createdByRole',
+        'analysisId',

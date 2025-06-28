@@ -57,3 +57,4 @@ describe('GET /institution/:id/branches', () => {
   })
 
   it('should return expected data', () => {
+    return request(app.server)

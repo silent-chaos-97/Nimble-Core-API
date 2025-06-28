@@ -11,6 +11,7 @@ async function api(method, path, params, data) {
   logger.info({ op: 'data.api', phase: 'started', method, path, params, data })
 
   const endpoint = app.config.get('nimbleData.endpoint')
+  const apiUrl = _.trimEnd(endpoint, '/') + '/' + _.trimStart(path, '/')
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage
 
   logger.info({ op: 'data.api', phase: 'prepared', request: { endpoint, apiUrl, headers, method, params, data } })
@@ -20,6 +21,7 @@ async function api(method, path, params, data) {
       get: () => axios.get(apiUrl, { params, headers }),
       post: () => axios.post(apiUrl, data, { headers })
     }[method]()
+// Temp comment
 
     logger.info({ op: 'data.api', phase: 'completed', res: _.get(res, ['data'], res) })
     return res.data

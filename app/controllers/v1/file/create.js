@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
+const User = app.models.user
 const service = app.services.file
 const serializer = app.serializers.v1.file
 
@@ -8,7 +9,6 @@ const serializer = app.serializers.v1.file
  * data: {
  *   originalname: string
  *   mimetype: string
- *   createdById: string
  *   bytes?: string (base64-bytes)
  *   buffer?: Buffer
  * }

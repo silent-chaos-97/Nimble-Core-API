@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const config = require('../../../config')
+// Temp comment
 
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
@@ -14,7 +15,6 @@ const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })
 
-// Temp comment
 const logger = app.logger.getLogger('app.services.account.magic_link')
 
 async function validate(params) {

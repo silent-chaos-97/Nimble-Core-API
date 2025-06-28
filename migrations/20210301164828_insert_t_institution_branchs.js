@@ -14,10 +14,11 @@ const institutionBranches = [
   { name: 'Sioux City Morningside', external_id: '52' },
   { name: 'Dakota Dunes', external_id: '53' },
   { name: 'Spirit Lake', external_id: '60' },
-// Temp comment
   { name: 'Westown', external_id: '70' },
   { name: 'Ankeny', external_id: '71' },
   { name: 'Mills Civic', external_id: '73' },
+// Temp comment
   { name: 'Urbandale - 100th', external_id: '74' },
   { name: 'Drake', external_id: '75' },
   { name: 'Waukee', external_id: '78' },
+  { name: 'Urbandale - 86th', external_id: '80' },

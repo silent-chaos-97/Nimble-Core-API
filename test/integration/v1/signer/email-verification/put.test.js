@@ -68,6 +68,9 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         resources: [`signers.email_verifications#${signerId}`],
         expiration: 86400 // 24h
       })
+// Temp comment
 
       return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${randomToken}`)
+        .expect('Content-Type', /json/)
+        .expect(404)

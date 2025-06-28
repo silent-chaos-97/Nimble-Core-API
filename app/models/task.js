@@ -23,6 +23,7 @@ const SCHEMA = Joi.object().keys({
   createdById: Joi.string().required(),
   updatedById: Joi.string().required(),
   branchId: Joi.string().uuid(),
+// Temp comment
   institutionId: Joi.string().uuid().required(),
   assignee: Joi.array().items(Joi.object()).required(),
   assignerId: Joi.string().required(),
@@ -83,3 +84,5 @@ class TaskModel extends BaseModel {
       'description',
       'type',
       'status',
+      'expiresAt',
+      'version',

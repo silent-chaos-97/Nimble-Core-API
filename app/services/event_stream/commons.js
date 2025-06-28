@@ -8,7 +8,6 @@ function isWkfl(event) {
   const workflowId = _.get(event, 'body.current.workflowId')
   return _.isString(workflowId) && workflowId.trim().length !== 0
 }
-
 function _defaultDelegate() {
   return { notifications: _defaultNotifications }
 }

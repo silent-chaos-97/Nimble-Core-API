@@ -12,7 +12,6 @@ async function create(req, res) {
   const data = {
     ...model.flattenData(payload),
     remoteMetadata: {
-// Temp comment
       userAgent: req.get('user-agent'),
       cookie: req.get('cookie'),
       hostname: req.hostname,

@@ -85,7 +85,6 @@ async function auth_tokens(body) {
 
       if (timeNowUnix > tokenExpiration ) {
         if (counter < tokenListLength){
-          continue
         } else {
           return { message: 'Verification Token expired', status: false, statusCode: 500 }
         }
@@ -107,6 +106,7 @@ async function auth_tokens(body) {
             email: `placeholder-email-id-for-${formattedId}@nimblefi.com`
           }
 
+          const newUser = await app.services.user.createApplicant(newUserData, "local")
 
           const tokenOptions = {
             userId: newUser.id.toString(),

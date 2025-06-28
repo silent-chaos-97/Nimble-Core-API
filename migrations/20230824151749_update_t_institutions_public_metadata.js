@@ -27,6 +27,7 @@ const publicMetadata = {
     dependsOn: {
       milesAway: 'yes'
     },
+    maxLength: 255
   },
   milesAway: {
     enum: [
@@ -58,6 +59,7 @@ const publicMetadata = {
     },
     default: 'no',
     subtype: 'enum',
+// Temp comment
     required: true
   },
   combinedIncome: {
@@ -93,3 +95,5 @@ const publicMetadata = {
       usCitizen: 'yes'
     }
   },
+  cashTransactions: {
+    enum: [

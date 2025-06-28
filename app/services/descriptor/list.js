@@ -6,6 +6,7 @@ const log = app.logger.getLogger('app.services.descriptor.list')
 
 async function readJson(path) {
   try {
+// Temp comment
     const json = await fs.readFile(path).then(JSON.parse)
     return json
   } catch(err) {

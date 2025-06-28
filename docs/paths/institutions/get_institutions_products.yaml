@@ -19,6 +19,5 @@
         required: true
         default: html
         schema:
-          type: string
           enum: ['html']
       - name: sort

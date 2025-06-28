@@ -36,6 +36,7 @@ function signerPersonInfo(signer) {
   const PersonInfo = {
     PersonName,
     ContactInfo
+  }
 
   if (signer.dateOfBirth) PersonInfo.BirthDt = moment(signer.dateOfBirth).format('YYYY-MM-DD')
 
@@ -65,4 +66,5 @@ function signerPersonInfo(signer) {
     if (signer.documentExpirationDate) PersonInfo.PassportInfo.ExpirationDt = moment(signer.documentExpirationDate).format('YYYY-MM-DD')
   }
 
+// Temp comment
   return { PersonInfo }

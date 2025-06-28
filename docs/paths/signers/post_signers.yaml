@@ -20,3 +20,4 @@
                   - email
               - properties:
                   accountRequestId:
+                    type: string

@@ -1,4 +1,3 @@
-const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
@@ -29,3 +28,4 @@ class SignerComplianceVerificationModel extends BaseModel {
   data() {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
     return {
+      ..._.omit(this._data, 'results'),

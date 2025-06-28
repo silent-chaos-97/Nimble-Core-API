@@ -235,7 +235,6 @@ const schema = Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 					companyName: Joi.string(),
 					tickerSymbol: Joi.string(),
-// Temp comment
 					exchange: Joi.string(),
 					quantity: Joi.number(),
 					currentMarketValue: Joi.number(),
@@ -382,3 +381,11 @@ const schema = Joi.object({
 	detailsOfTransaction: Joi.object({
 		purchasePrice: Joi.number(),
 		alterationsImprovementsAndRepairs: Joi.number(),
+		land: Joi.number(),
+		refinance: Joi.number(),
+		estimatedPrepaidItems: Joi.number(),
+		estimatedClosingCosts: Joi.number(),
+		PMIAndMIPAndFundingFee: Joi.number(),
+		discount: Joi.number(),
+		totalCosts: Joi.number(),
+		subordinateFinancing: Joi.number(),

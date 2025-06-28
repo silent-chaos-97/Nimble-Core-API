@@ -14,6 +14,7 @@ module.exports = (req, res, next) => {
       .fetch({ transacting: tx })
       .catch(() => null)
       .then((user) => {
+        if (user) {
           throw new BadRequestError('User with a given ID already exists')
         }
       })
@@ -25,3 +26,4 @@ module.exports = (req, res, next) => {
       phone: recipient.mobile.slice(-10),
       firstName: recipient.firstName,
       lastName: recipient.lastName,
+      roles: ['applicant']

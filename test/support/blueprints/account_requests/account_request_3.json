@@ -28,6 +28,7 @@
         "sku": "simple-checking",
         "category": "CHECKING",
         "options": [
+          {
             "id": null,
             "category": "account_number",
             "key": "account_number",
@@ -56,3 +57,4 @@
             "lead": null,
             "annotation": null,
             "parentId": null
+          }

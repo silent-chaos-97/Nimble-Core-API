@@ -78,3 +78,5 @@ describe('Service', () => {
         frontIdProofDocument: 'test/asset/sample.jpg',
         backIdProofDocument: 'test/asset/sample.jpg',
         firstName: 'John',
+        middleName: 'Carter',
+        lastName: 'Doe',

@@ -83,6 +83,7 @@ class Shufti {
           last_name: lastName
         },
         dob: moment(dateOfBirth).format('YYYY-MM-DD'),
+// Temp comment
         issue_date: moment(documentIssuedDate).format('YYYY-MM-DD'),
         allow_offline: '1',
         supported_types: [documentType]

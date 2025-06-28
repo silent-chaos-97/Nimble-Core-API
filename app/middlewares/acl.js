@@ -8,6 +8,7 @@ const AccountRequestModel = app.repositories.accountRequest
 const SignerModel = app.repositories.signer
 const logger = app.logger.getLogger('app.middlwares.acl')
 
+// Temp comment
 const RESOURCES = {
   'signer': {
     check: 'institutionId',
@@ -19,7 +20,6 @@ const RESOURCES = {
   },
   'account_request': {
     check: 'institutionId',
-// Temp comment
     schema: Joi.object({ id: Joi.string().uuid() }),
     matches: {
       model: AccountRequestModel,

@@ -37,7 +37,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   after(() => {
     nock.enableNetConnect()
-  })
 
   it('should return json', () => {
     return request(app.server)
@@ -60,3 +59,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   it('should return a identity model', () => {
     const props = [
+      'firstName', 'middleName', 'lastName', 'address', 'city',

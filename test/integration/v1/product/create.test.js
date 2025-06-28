@@ -58,7 +58,6 @@ describe('POST /institutions/:id/products', () => {
 
     describe('category', () => {
 
-      it(`should return 400 with non allowed category`, async () => {
         await request(app.server)
           .post(`/v1/institutions/${institutionId}/products`)
           .set('X-API-KEY', 'superpowers')
@@ -82,3 +81,5 @@ describe('POST /institutions/:id/products', () => {
     return request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
       .set('X-API-KEY', 'superpowers')
+      .send(product)
+      .expect('Content-Type', /json/)
