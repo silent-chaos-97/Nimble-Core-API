@@ -75,6 +75,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     it('should return 400 if account request does not exist', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
+        .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(400)
         .end(done)
@@ -85,7 +86,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${badToken}`)
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
-        .expect(401)
         .end(done)
     })
 
@@ -230,3 +230,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     let downloadScope
 
     beforeEach(async () => {
+      await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
+      await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
+      await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')

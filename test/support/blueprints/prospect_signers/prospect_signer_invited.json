@@ -12,3 +12,4 @@
   "zipCode": null,
   "employer": null,
   "ssn": null,
+  "consent": false,

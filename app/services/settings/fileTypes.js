@@ -8,6 +8,7 @@ const fileTypes = [
     name: 'Government ID'
   },
   {
+    type: 'Entity',
     name: 'SSN verified'
   },
   {
@@ -77,7 +78,6 @@ const fileTypes = [
   },
   {
     type: 'Product',
-    name: 'Disclosure Statements'
   },
   {
     type: 'Product',
@@ -347,3 +347,8 @@ const fileTypes = [
     type: 'Product',
     name: 'Account Application Form'
   },
+  {
+    type: 'Product',
+    name: 'Signature Card'
+  },
+  {

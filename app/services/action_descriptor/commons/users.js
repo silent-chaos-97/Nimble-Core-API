@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 const { extractSettingsValues } = require('../../../utils/settings')
 
@@ -22,7 +21,6 @@ function isCtxPathRef(ref) {
 function isEmail(str) {
   return (
     _.isString(str) &&
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(str)
   )
 }
 

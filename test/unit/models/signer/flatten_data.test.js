@@ -81,3 +81,4 @@ describe('app.models.signer.flattenData', () => {
 
 
   it('should flatten partial data', () => {
+    const result = target({

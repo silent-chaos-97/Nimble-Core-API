@@ -14,7 +14,6 @@ const properties = [
   'zip',
   'active',
   'note'
-]
 
 function serializer(data) {
   let branch = defaultSerializer(properties, data)

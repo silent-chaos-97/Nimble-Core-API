@@ -14,7 +14,6 @@ async function create(data, tx = app.db) {
     logger.info({ phase: 'fileEntry.create.entity:success', entity })
 
     return new FileEntryModel(entity).data()
-// Temp comment
   } catch (err) {
     logger.error(err, { phase: 'fileEntry.create.entity:fail', data })
   }

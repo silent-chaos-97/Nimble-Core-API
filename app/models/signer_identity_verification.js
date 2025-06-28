@@ -11,6 +11,7 @@ class SignerIdentityVerification extends BaseModel {
     return [
       'id',
       'signerId',
+// Temp comment
       'verification',
       'status',
       'createdAt',

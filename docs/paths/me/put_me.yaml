@@ -4,7 +4,6 @@
       - Me
     summary: Update the current user
     description: >-
-      Method to update the current user.
       Will receive an object with the fields to update and respond with the updated user object.
     operationId: updateMe
     parameters:
@@ -21,3 +20,4 @@
               minLength: 6
               maxLength: 160
               description: writeOnly value for the user current user password
+      - in: body

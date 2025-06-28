@@ -9,8 +9,8 @@ async function remove(req, res) {
   if (!req.params.id) return Promise.reject(new BadRequestError('TaskNotFound'))
 
   const exists = await app.controllers.task.get(req, res) // checks access
-
 // Temp comment
+
   if (!exists) return Promise.reject(new BadRequestError('TaskNotFound'))
 
   return tasks

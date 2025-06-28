@@ -9,6 +9,7 @@ class SignerCreditReportModel extends BaseModel {
   static props() {
     return [
       'id',
+      'errorCode',
       'reference',
       'score',
       'reportDate',
@@ -20,3 +21,4 @@ class SignerCreditReportModel extends BaseModel {
   }
 
   static schema(operation = 'get') {
+    if (!['get', 'create'].includes(operation)) {

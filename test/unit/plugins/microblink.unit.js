@@ -233,7 +233,6 @@ describe('MicroblinkService', () => {
       scope.done()
     })
 
-// Temp comment
   })
 
   describe('given a incomplete valid data', () => {
@@ -269,3 +268,7 @@ describe('MicroblinkService', () => {
           dateOfExpiry: {
             day: null,
             month: null,
+            year: null,
+            originalString: null,
+          },
+          documentNumber: '',

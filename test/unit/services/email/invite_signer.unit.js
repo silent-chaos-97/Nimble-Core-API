@@ -1,5 +1,4 @@
 const sinon = require('sinon')
-const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
@@ -57,3 +56,4 @@ describe('app.services.email.inviteSigner', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
     })
+

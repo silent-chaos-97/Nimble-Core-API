@@ -2,13 +2,13 @@
 const moment = require('moment')
 const jwtSimple = require('jwt-simple')
 
-const getToken = require('../app/services/token/get')
 const config = require('../config')
 
 
 function decode(token) {
   return jwtSimple.decode(token, config.get('auth').secret, true, 'HS512')
 }
+
 
 // https://tools.ietf.org/html/rfc7519#section-4.1
 const now = moment()

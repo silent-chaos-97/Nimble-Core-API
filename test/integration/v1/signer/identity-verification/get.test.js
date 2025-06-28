@@ -155,3 +155,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
         status: 'PENDING'
       })
 
+      return request(app.server)

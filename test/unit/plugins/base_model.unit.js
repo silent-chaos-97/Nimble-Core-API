@@ -42,3 +42,4 @@ describe('BaseModel class', () => {
   it('should import data based on prop() keys', () => {
     let data = {
       a: 1,
+      b: 2,

@@ -21,6 +21,7 @@ describe('GET /documents/:id', () => {
   })
 
   describe('when authentication token is tampered', () => {
+    beforeEach(async () => {
       token = await helpers.getExpiredAuthToken()
     })
 
@@ -46,5 +47,5 @@ describe('GET /documents/:id', () => {
   describe('when authentication token does not have valid scope', () => {
     it('should return 403 when token scope is not documents', async () => {
       const data = { scopes: ['users'] }
-      token = await helpers.getScopedAuthToken(data)
 
+      return request(app.server)

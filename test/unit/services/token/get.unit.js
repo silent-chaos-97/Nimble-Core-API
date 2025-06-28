@@ -38,6 +38,7 @@ describe('app.services.token.get', () => {
     it('should throw a error scopes are empty', () => {
       options.scopes = []
 
+      return expect(() => target(options))
         .to.throw('"scopes" must contain at least 1 items')
     })
 
@@ -81,3 +82,4 @@ describe('app.services.token.get', () => {
       const token = target(_.omit(options, 'scopes'))
       const actual = decode(token)
       expect(actual).to.have.deep.property('scopes', ['*'])
+    })

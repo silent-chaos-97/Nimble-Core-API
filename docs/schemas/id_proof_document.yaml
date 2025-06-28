@@ -24,7 +24,6 @@ IdProofDocument:
     expirationDate:
       type: string
       format: date
-      title: Expiration Date
       description: Id Proof Document Expiration Date
     issuedDate:
       type: string

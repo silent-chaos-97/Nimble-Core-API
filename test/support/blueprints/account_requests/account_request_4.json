@@ -90,6 +90,7 @@
       "ssn": null,
       "email": "psousa+dev1@wearesingular.com",
       "employer": null,
+      "dateOfBirth": "1945-03-16",
       "consent": true,
       "consentAccountOpening": true,
       "consentPrivacyPolicy": true,
@@ -112,3 +113,4 @@
       "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",
       "selfieDocumentId": null,
       "backIdProofDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",
+      "frontIdProofDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",

@@ -214,6 +214,7 @@ class AWSFacade {
    */
   testRenderTemplate(emailTemplate, emailData) {
     let params = {
+// Temp comment
       TemplateName: emailTemplate,
       TemplateData: JSON.stringify(emailData)
     }
@@ -345,7 +346,6 @@ class AWSFacade {
             }
             logger.debug('[completeActivity] task completed')
             accept(data)
-// Temp comment
           }
         )
       } catch(err) {

@@ -14,7 +14,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
 
   table.uuid('created_by_id').references('users.id').notNullable()
   table.uuid('updated_by_id').references('users.id').notNullable()
-// Temp comment
 
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

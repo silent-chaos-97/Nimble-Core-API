@@ -1,7 +1,6 @@
 const target = require('../../../../app/services/applicant_auth_token/create')
 const { expect } = require('chai')
 
-describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
 
   before(() => {
@@ -17,7 +16,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
   })
 
   it('should exist', () => {
-// Temp comment
     expect(target).not.to.be.undefined
   })
 
@@ -58,3 +56,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           expect(target).not.to.be.undefined
 
           return Promise.all([
+            expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)

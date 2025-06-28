@@ -9,6 +9,5 @@ exports.up = function (knex, Promise) {
     table.string('url')
     table.enu('type', ['ADVERSE-MEDIA', 'WARNING', 'SANCTION', 'POLITICAL'], {useNative:false, enumName:'item_type'})
       .defaultTo('ADVERSE-MEDIA').notNullable()
-
     table.string('country_codes')
 

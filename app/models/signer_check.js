@@ -22,3 +22,4 @@ class SignerCheck extends BaseModel {
       'status',
       'createdAt',
       'updatedAt'
+    ]

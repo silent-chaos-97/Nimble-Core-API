@@ -79,3 +79,4 @@ describe('app.services.contract.send', () => {
         const calledArgs = docusignSend.firstCall.firstArg
 
         expect(calledArgs.accountRequestId).to.equal(args.accountRequestId)
+        expect(calledArgs.ccRecipient).to.deep.equal(args.ccRecipient)

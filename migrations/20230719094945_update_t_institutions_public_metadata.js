@@ -34,6 +34,7 @@ const publicMetadata = {
       'yes',
       'no'
     ],
+    text: 'Is there anyone on the application that lives further than 50 miles from one of our locations?',
     type: 'string',
     order: 2,
     score: {
@@ -93,3 +94,4 @@ const publicMetadata = {
       usCitizen: 'yes'
     }
   },
+  cashTransactions: {

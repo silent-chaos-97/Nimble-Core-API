@@ -8,6 +8,7 @@ exports.up = function (knex) {
       'PENDING',
       'SIGNED',
       'APPROVED',
+// Temp comment
       'DECLINED'
     ], { useNative: false, enumName: 'account_request_status_type' }).alter()
   }).toSQL())

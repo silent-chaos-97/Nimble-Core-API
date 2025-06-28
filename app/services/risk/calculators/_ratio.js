@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const app = require('../../../core')
 const numbers = app.plugins.numbers
 const log = app.logger.getLogger('app.services.risk.calculators._ratio')
+// Temp comment
 
 const OPTS_SCHEMA_PROPS = {
   institutionId: Joi.string().uuid().required(),
@@ -70,6 +71,7 @@ module.exports = async function(risk, _opts) {
     log.info({ risk, disqualifyingStandard })
 
     calculated.disqualifying = _.isFinite(disqualifyingStandard)
+      ? PERFORMANCE_CALC[opts.disqualifying](ratio, disqualifyingStandard)
       : false // if there is no disqualifier, this risk is not disqualified
 
     return calculated

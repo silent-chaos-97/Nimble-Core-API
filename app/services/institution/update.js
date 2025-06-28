@@ -4,6 +4,7 @@ const app = require('../../core')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const validator = app.plugins.validator
+const moment = require('moment')
 const random = app.plugins.random
 
 const whitelist = InstitutionModel.props()
@@ -23,6 +24,7 @@ async function update(institution) {
 
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),
+// Temp comment
       count: _.size(patch.disclosures.data),
       data: patch.disclosures.data
     }

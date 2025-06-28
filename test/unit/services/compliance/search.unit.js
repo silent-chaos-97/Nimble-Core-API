@@ -11,6 +11,7 @@ describe('app.services.compliance.search', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
+// Temp comment
   afterEach(() => { nock.cleanAll() })
 
   describe('search', async () => {
@@ -59,3 +60,4 @@ describe('app.services.compliance.search', () => {
 
       const search = await app.services.compliance.search(entity)
       expect(search).to.have.ownProperty('result')
+      scope.done()

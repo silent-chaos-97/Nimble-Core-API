@@ -14,6 +14,7 @@ describe('app.services.email.welcome', () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
+    const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
     sinon.replace(app.plugins.random, 'generateRecoveryCode', fakeGenerateRecoveryCode)
   })
 

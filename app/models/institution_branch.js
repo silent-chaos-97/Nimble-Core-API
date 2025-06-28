@@ -28,3 +28,4 @@ class InstitutionBranchModel extends BaseModel {
     return Joi.object().keys({
       name: Joi.string().required(),
       institutionId: Joi.string().required(),
+      externalId: Joi.string().required(),

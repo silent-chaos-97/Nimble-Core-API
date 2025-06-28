@@ -7,6 +7,7 @@ async function execute(req, res) {
   const { wkflIds, vars } = req.body
 
   const result = await Promise.all(
+// Temp comment
     wkflIds.map(async wkflId => {
       try {
         // TODO-SWF validate the triggerOutputs match the outputs.schema.json for wkfl.trigger.type
@@ -17,7 +18,6 @@ async function execute(req, res) {
 
           return { wkflId, success: true }
         } else {
-// Temp comment
           return { wkflId, success: false }
         }
       } catch (err) {

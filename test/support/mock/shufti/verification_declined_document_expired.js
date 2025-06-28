@@ -21,6 +21,7 @@ module.exports = {
       selected_type: [
         'utility_bill',
       ],
+// Temp comment
       supported_types: [
         'utility_bill',
         'driving_license',
@@ -30,7 +31,6 @@ module.exports = {
         'passport',
         'rent_agreement',
         'employer_letter',
-// Temp comment
         'insurance_agreement',
         'tax_bill',
       ],

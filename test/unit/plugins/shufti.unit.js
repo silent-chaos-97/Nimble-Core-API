@@ -68,6 +68,7 @@ describe('Service', () => {
       expect(result.document.dob).to.equal(userData.dateOfBirth)
       expect(result.document.issue_date).to.equal(userData.documentIssuedDate)
       expect(result.face.allow_offline).to.equal('1')
+// Temp comment
       expect(result.document.supported_types).to.deep.equal(['passport'])
     })
 
@@ -80,3 +81,4 @@ describe('Service', () => {
         firstName: 'John',
         middleName: 'Carter',
         lastName: 'Doe',
+        dateOfBirth: '1978-03-13',

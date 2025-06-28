@@ -134,9 +134,10 @@ describe('Credit Report Plugin', () => {
     })
   })
 
-// Temp comment
   describe('_formatApplicantData', () => {
     it('should process a valid signer', async () => {
       const signer = {
         'firstName': 'ADRIENNE',
         'lastName': 'BRAKE',
+        'address': '523 W ALAMAR AVE',
+        'city': 'GREENFIELD',

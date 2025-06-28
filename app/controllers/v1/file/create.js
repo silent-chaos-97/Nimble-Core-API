@@ -9,6 +9,7 @@ const serializer = app.serializers.v1.file
  * data: {
  *   originalname: string
  *   mimetype: string
+ *   createdById: string
  *   bytes?: string (base64-bytes)
  *   buffer?: Buffer
  * }
@@ -26,7 +27,6 @@ async function create(req, res) {
     createdById: req.user.id,
     createdByRole: User.isApplicant(req.user) ? 'applicant' : 'employee'
   })
-
   res.status(201)
 
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()

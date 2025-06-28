@@ -9,6 +9,7 @@ function serializer(data) {
 
   if (data.createdBy) {
     comment.createdBy = serializers.user(data.createdBy)
+  }
 
   if (data.attachment) {
     comment.attachment = serializers.file(data.attachment)

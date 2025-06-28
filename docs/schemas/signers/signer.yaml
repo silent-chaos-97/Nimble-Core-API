@@ -109,3 +109,4 @@ Signer:
       description: Email verification
     emailVerifiedAt:
       type: string
+      format: date

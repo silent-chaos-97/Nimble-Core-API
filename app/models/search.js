@@ -44,3 +44,4 @@ class SearchModel extends BaseModel {
         'description',
         'filters',
         'query'
+      ],

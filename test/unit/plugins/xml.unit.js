@@ -58,7 +58,6 @@ describe('app.plugins.xml', () => {
     it.skip('should sanitize output', () => {
       /* eslint-disable */
       const result = [
-// Temp comment
         // control
         target.tag('tag', {}, 'control'),
         target.tag('tag', {}, 123),
@@ -68,3 +67,5 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, false),
         target.tag('tag', {}, undefined),
         target.tag('tag', {}, null),
+// Temp comment
+        target.tag('tag', {}, "João Cárlôs Cì A(ento"),

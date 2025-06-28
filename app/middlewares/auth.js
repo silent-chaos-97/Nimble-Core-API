@@ -9,7 +9,6 @@ const Statuses = User.statuses()
 
 function getToken(headers) {
   if (
-// Temp comment
     _.has(headers, 'authorization') &&
     headers.authorization.split(' ')[0] === 'Bearer'
   ) {
@@ -17,6 +16,7 @@ function getToken(headers) {
   }
   throw new Error('no JWT token found')
 }
+// Temp comment
 
 function getApiKey(headers) {
   if (_.has(headers, 'x-api-key')) {

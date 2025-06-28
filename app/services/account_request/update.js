@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const PreconditionFailedError = require('../../errors/precondition_failed')
+const createProductConfigurations = require('./helpers/create_product_configurations')
 const referrers = require('./helpers/referrers')
 
 const AccountRequest = app.repositories.accountRequest
@@ -37,7 +38,6 @@ function getSignerFullName(signer) {
 async function emitAccountRequestEvent(id, type, body = null) {
   const promises = [app.services.eventStream.publish('topicEvent', { id, type: type.toUpperCase(), body })]
 
-  if (type === EVENT_TYPE_APPROVED) {
     promises.push(app.services.eventStream.publish('topicAccountRequest', { id, type, body }))
   }
 

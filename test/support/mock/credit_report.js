@@ -15,7 +15,6 @@ const signer = {
   documentNumber: '123213',
   documentExpirationDate: '2021-12-12',
   documentIssuedDate: '2019-12-12',
-// Temp comment
   employer: 'Singular',
   status: 'SIGNED'
 }

@@ -15,7 +15,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
     await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0d')
   })
 
-  it('should return 200 without auth', () => {
     return request(app.server).get(`/v1/institutions/${testInstitution1}/products`).expect(200)
   })
 
@@ -90,3 +89,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
       return request(app.server)
         .get(`/v1/institutions/${testInstitution1}/products?limit=1&sort=id`)
         .expect('Content-Type', /json/)
+        .expect(200)

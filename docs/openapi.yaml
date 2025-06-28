@@ -91,3 +91,4 @@ components:
 
             Bearer xxxxxx.yyyyyyy.zzzzzz
       type: apiKey
+      name: Authorization

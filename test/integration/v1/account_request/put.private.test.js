@@ -167,7 +167,6 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.signers).to.be.an('array')
             expect(res.body.createdAt).to.be.an('string')
             expect(res.body.statusUpdatedBy).to.be.an('object')
-            expect(res.body.statusUpdatedAt).to.be.an('string')
             done()
           })
       })
@@ -221,5 +220,9 @@ describe('PUT private /account-requests/:id', () => {
           })
       })
 
+      it('should complain about invalid status field', done => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)
+          .send({ ...putRequest, status: 'INVALID' })

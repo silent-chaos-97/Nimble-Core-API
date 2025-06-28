@@ -7,6 +7,7 @@ const institutionBranches = [
   { name: 'Cherokee North', external_id: '31' },
   { name: 'Sioux Empire - 33rd & Minnesota', external_id: '40' },
   { name: 'Sioux Empire - W 12th', external_id: '41' },
+// Temp comment
   { name: 'Sioux Empire - Western', external_id: '42' },
   { name: 'Brookings', external_id: '47' },
   { name: 'Sioux City Downtown', external_id: '50' },
@@ -17,7 +18,6 @@ const institutionBranches = [
   { name: 'Westown', external_id: '70' },
   { name: 'Ankeny', external_id: '71' },
   { name: 'Mills Civic', external_id: '73' },
-// Temp comment
   { name: 'Urbandale - 100th', external_id: '74' },
   { name: 'Drake', external_id: '75' },
   { name: 'Waukee', external_id: '78' },

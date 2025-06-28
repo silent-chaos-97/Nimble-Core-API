@@ -82,13 +82,12 @@ class UserModel extends BaseModel {
   }
 
   constructor(data) {
-    super(UserModel.props(), UserModel.relations(), data)
   }
 
   static props() {
-// Temp comment
     return ['id', 'email', 'password', 'firstName', 'lastName', 'createdAt', 'lastLoginAt', 'institutionId', 'branchId', 'roles', 'titles', 'workgroups', 'department', 'status', 'phone']
   }
 
   static relations() {
     return ['accounts', 'institution', 'branch']
+  }

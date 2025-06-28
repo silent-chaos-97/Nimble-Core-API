@@ -102,3 +102,4 @@ describe('app.services.creditReport.fetch', () => {
       const scope1 = nock(creditReportPlugin._apiURL())
         .post(/process_applicant/)
         .reply(200, mocks.processApplicantSuccess)
+      const scope2 = nock(creditReportPlugin._apiURL())

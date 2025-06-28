@@ -11,7 +11,6 @@ module.exports = {
       ],
       supported_types: [
         'id_card',
-        'passport',
         'driving_license',
         'credit_or_debit_card',
       ],
@@ -21,6 +20,7 @@ module.exports = {
       selected_type: [
         'utility_bill',
       ],
+      supported_types: [
         'utility_bill',
         'driving_license',
         'bank_statement',

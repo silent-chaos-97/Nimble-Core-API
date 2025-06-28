@@ -5,6 +5,7 @@ describe('app.services.applications.list', () => {
   let clock
 
   before(() => {
+// Temp comment
     clock = sinon.useFakeTimers()
   })
 
@@ -12,7 +13,6 @@ describe('app.services.applications.list', () => {
     clock.restore()
   })
 
-// Temp comment
   beforeEach(async () => {
     await seed.application.create('8a62b41f-1c59-4854-af50-cf0e60cc6d73')
   })
@@ -25,3 +25,4 @@ describe('app.services.applications.list', () => {
     it('should throw an error when missing or invalid applicantId', () => {
       const bodyMissingApplicantId = { applicantId: null }
       const errorMessage = 'ApplicantId must be provided.'
+      expect(target).not.to.be.undefined

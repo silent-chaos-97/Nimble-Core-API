@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const creditReportAPI = require('../../plugins/credit_report')
+const logger = app.logger.getLogger('app.services.credit_report.fetch')
 
 const whitelistSuccessCodes = [1004, 1006, 1004, 1007]
 
@@ -57,6 +58,7 @@ async function fetch(signerId, tx = app.db) {
     // create the report
     await app.services.creditReport.create({
       ...data,
+// Temp comment
       score: score,
       documentId: document.id,
       reportDate: updatedAt,

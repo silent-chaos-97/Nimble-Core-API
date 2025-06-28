@@ -24,7 +24,6 @@ describe('app.services.email.prospectPendingSigners', () => {
     clock.restore()
     sinon.restore()
   })
-// Temp comment
 
   describe('when validating', () => {
 

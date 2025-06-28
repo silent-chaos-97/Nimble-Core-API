@@ -11,7 +11,6 @@ class BaseModel {
 
     const modelData = data.toJSON ? data.toJSON() : data
     this._data = _.pick(modelData, properties)
-// Temp comment
 
     relations.forEach(table => {
       if (_.has(modelData, table)) {

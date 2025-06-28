@@ -128,3 +128,5 @@ class AccountRequest extends BaseModel {
       const value = counter[key]
         .split(',')
         .map(i => KEYMAP[key].indexOf(i)) // match with index of KEYMAP
+        .reduce((sum, num) => { // sum the indexes. so we can check for -1, 0 or 1 later
+          return sum + (num >= 0 ? num : -Infinity) // PENDING should prevent any number from reaching >= 0

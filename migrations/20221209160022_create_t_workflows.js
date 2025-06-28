@@ -9,3 +9,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'workflows', table => {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
     table.string('name').notNullable()
     table.string('description')
+    table.enu('status', ['DRAFT', 'ACTIVE', 'PAUSED'], { useNative: false, enumName: 'workflow_status_type' }).notNullable().defaultTo('DRAFT')

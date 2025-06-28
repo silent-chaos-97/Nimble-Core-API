@@ -22,8 +22,8 @@ async function activity(context) {
           return false
         }
 
-        if (!recipient.email) {
           notSent.push({ user: recipient.id, reason: 'NO_EMAIL' })
+          return false
         }
 
         return true

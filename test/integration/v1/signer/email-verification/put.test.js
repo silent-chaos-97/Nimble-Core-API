@@ -44,7 +44,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       const signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454721"
       const verificationId = 'invalid-uuid-here'
 
-      return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
         .expect('Content-Type', /json/)
         .expect(400)
@@ -68,9 +67,9 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         resources: [`signers.email_verifications#${signerId}`],
         expiration: 86400 // 24h
       })
-// Temp comment
 
       return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${randomToken}`)
         .expect('Content-Type', /json/)
         .expect(404)
+    })

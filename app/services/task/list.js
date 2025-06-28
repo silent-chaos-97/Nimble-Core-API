@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const TaskRepo = app.repositories.task
 const Task = app.models.task
 const UserRepo = app.repositories.user
@@ -11,7 +10,6 @@ async function list(args, tx = app.db) {
   if (_.isString(user)) user = { id: user }
 
   const filters = _.get(args, 'filters', {})
-
   if (!User.isInstitutionAdmin(user)) {
     // remove unavailable (by role) filters
     delete filters.assigneeId

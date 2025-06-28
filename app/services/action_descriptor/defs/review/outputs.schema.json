@@ -5,7 +5,6 @@
     "tasks": {
       "type": "array",
       "items": {"type":  "string"},
-      "stereotype": "tasks"
     },
     "reviews": {
       "type": "array",

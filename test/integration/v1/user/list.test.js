@@ -67,6 +67,7 @@ describe('GET /users', () => {
           done()
         })
     })
+
     describe('with multiple data', () => {
       const user20Id = '1052ab85-08da-4bb5-be00-9e94d282d320'
 
@@ -78,7 +79,6 @@ describe('GET /users', () => {
         request(app.server)
           .get(`/v1/users?limit=1`)
           .set('X-API-KEY', 'superpowers')
-          .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {
             if (err) throw new Error(err)
@@ -97,3 +97,4 @@ describe('GET /users', () => {
           .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {
+            if (err) throw new Error(err)

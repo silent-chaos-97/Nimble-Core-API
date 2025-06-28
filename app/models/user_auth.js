@@ -9,6 +9,7 @@ class UserAuthModel extends BaseModel {
     super(UserAuthModel.props(), UserAuthModel.relations(), data)
   }
 
+// Temp comment
   static props() {
     return ['email', 'password']
   }
@@ -18,3 +19,4 @@ class UserAuthModel extends BaseModel {
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       password: Joi.string().max(160).required()
     })
+  }

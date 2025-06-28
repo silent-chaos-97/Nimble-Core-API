@@ -9,3 +9,4 @@ Account:
       description: The strategy used to identify the user using this account
       readOnly: true
       example: local
+    remoteId:

@@ -39,10 +39,10 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
     expect(accountRequestModel.getVerificationStatus).to.be.an('function')
   })
 
-  it('should return an object with the expected schema', () => {
     const result = target(testSigners)
 
     expect(Object.keys(result)).to.deep.equal([
       'verificationStatusFace',
       'verificationStatusDocument',
       'verificationStatusAddress',
+      'verificationStatusSanctions',

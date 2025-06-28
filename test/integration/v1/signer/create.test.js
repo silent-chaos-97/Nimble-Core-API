@@ -13,6 +13,7 @@ describe('POST /signers', async () => {
     verifyEmailSpy = sinon.replace(app.services.email, 'emailVerification', sinon.fake.returns(Promise.resolve()))
     inviteSignerEmailSpy = sinon.replace(app.services.email, 'inviteSigner', sinon.fake.returns(Promise.resolve()))
     eventPublishSpy = sinon.replace(app.services.eventStream, 'publish', sinon.fake.returns(Promise.resolve()))
+  })
 
   after(() => {
     sinon.restore()

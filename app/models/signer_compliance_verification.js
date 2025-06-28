@@ -1,3 +1,4 @@
+const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
@@ -8,6 +9,7 @@ class SignerComplianceVerificationModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return [
       'id',
       'status',

@@ -72,7 +72,6 @@ describe('Email Plugin', () => {
       })
     })
 
-    describe('awsSend()', () => {
       it('should exist', () => {
         expect(plugin.awsSend).to.be.an('function')
       })
@@ -89,3 +88,4 @@ describe('Email Plugin', () => {
       })
 
       it('should complain if missing template', () => {
+        expect(() => {

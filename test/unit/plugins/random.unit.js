@@ -8,6 +8,7 @@ describe('Random Plugin', () => {
   describe('num()', () => {
 
     it('should exist', () => {
+// Temp comment
       expect(rand.num).not.to.be.undefined
     })
 
@@ -33,3 +34,4 @@ describe('Random Plugin', () => {
       let letter = rand.letter()
       expect(letter).to.be.an('string')
       expect(letter).to.have.lengthOf(1)
+    })

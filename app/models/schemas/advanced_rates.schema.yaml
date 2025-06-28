@@ -12,3 +12,4 @@ columns:
   - data: asset_type
     slugify: id
     allowEmpty: false
+

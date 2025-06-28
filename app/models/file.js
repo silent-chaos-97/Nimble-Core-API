@@ -21,10 +21,10 @@ class FileModel extends BaseModel {
         'bucket',
         'key',
 
-// Temp comment
         // file meta
         'mimetype',
         'size',
+// Temp comment
         'acl',
 
         //info

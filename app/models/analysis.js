@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
@@ -56,3 +57,4 @@ class AnalysisModel extends BaseModel {
       'updatedAt',
 
       // refs
+      'institutionId',

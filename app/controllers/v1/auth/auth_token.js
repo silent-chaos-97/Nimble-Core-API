@@ -31,7 +31,6 @@
 //       saltData = salt
 //
 //       bcrypt.hash(unHashedVerificationToken, salt, function(err, hash) {
-//         if (err){
 //           return res.status(500).json({msg: err})
 //         }
 //
@@ -99,6 +98,7 @@
 //
 //           const tokenOptions = {
 //             userId: newUser.id.toString(),
+//             expiration: 86400 // 24 hours
 //           }
 //           const accessToken = await tokenService.get(tokenOptions)
 //

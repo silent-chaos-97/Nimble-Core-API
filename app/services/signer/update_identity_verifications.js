@@ -9,6 +9,7 @@ const { validator } = app.plugins
 const entrySchema = Joi.object().keys({
   signerId: Joi.string().uuid().required(),
   verificationItems: Joi.array().required().items(
+    Joi.object().keys({
       verification: Joi.string().required(),
       status: Joi.string().required()
     })
@@ -51,7 +52,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
       return 'VALID'
     }
 
-    // or else/nothing found.
     return 'PENDING'
   }
 

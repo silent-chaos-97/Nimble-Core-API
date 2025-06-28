@@ -101,3 +101,5 @@ export TWILIO_SERVICE_SID=<secret1>
 export TWILIO_ACCOUNT_SID=<secret2>
 export TWILIO_AUTH_TOKEN=<secret3>
 ```
+
+The values are available in Twilio dashboard ("Verify" service).

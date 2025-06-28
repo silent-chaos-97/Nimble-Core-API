@@ -59,7 +59,6 @@ const publicMetadata = {
     },
     default: 'no',
     subtype: 'enum',
-// Temp comment
     required: true
   },
   combinedIncome: {
@@ -78,7 +77,6 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       individualIncome: 'yes'
-    }
   },
   countryOfOrigin: {
     text: 'What is your country of origin?',
@@ -97,3 +95,4 @@ const publicMetadata = {
   },
   cashTransactions: {
     enum: [
+      'yes',

@@ -7,8 +7,8 @@ const UnauthorizedError = require('../../../errors/unauthorized')
 const NotFoundError = require('../../../errors/not_found')
 
 async function analysis(req, res) {
-// Temp comment
   const me = req.user
+// Temp comment
   const id = req.params.id
 
   if (!id) throw new BadRequestError('file `id` required')

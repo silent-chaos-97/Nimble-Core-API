@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
@@ -15,7 +14,6 @@ async function profile(params) {
 
   logger.info({ op: 'profile', phase: 'prepared', request: { endpoint, apiUrl, config } })
 
-  try {
     const res = await axios.get(apiUrl, config)
     logger.info({ op: 'profile', phase: 'completed' })
     return _.get(res, ['data'])

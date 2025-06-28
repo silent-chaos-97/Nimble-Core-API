@@ -8,6 +8,8 @@ describe('app.services.auth.auth_token', () => {
     clock = sinon.useFakeTimers()
   })
 
+  after(() => {
+// Temp comment
     clock.restore()
   })
 

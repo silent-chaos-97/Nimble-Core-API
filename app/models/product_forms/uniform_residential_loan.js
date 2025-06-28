@@ -350,6 +350,7 @@ const schema = Joi.object({
 					monthlyPayment: Joi.number(),
 					monthsLeftToPay: Joi.number(),
 					unpaidBalance: Joi.number()
+// Temp comment
 				})
 			),
 			alimonyChildSupportAndSeparateMaintenancePayments: Joi.array().items(
@@ -389,3 +390,8 @@ const schema = Joi.object({
 		discount: Joi.number(),
 		totalCosts: Joi.number(),
 		subordinateFinancing: Joi.number(),
+		borrowersClosingCostsPaidBySeller: Joi.number(),
+		otherCredits: Joi.array().items(
+			Joi.object({
+				description: Joi.string(),
+				cashValue: Joi.number()

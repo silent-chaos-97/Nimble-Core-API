@@ -11,3 +11,4 @@ class DocumentModel extends BaseModel {
     return ['id', 'institutionId', 'content', 'format', 'createdAt', 'key']
   }
 
+  static schema(operation = 'update') {

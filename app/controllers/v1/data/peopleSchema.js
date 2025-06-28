@@ -1,6 +1,6 @@
 const app = require('../../../core')
-// Temp comment
 const service = app.services.data
+// Temp comment
 
 async function peopleSchema(req, res) {
   const schema = await service.peopleSchema()

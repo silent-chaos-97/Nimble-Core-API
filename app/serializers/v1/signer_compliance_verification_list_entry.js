@@ -15,7 +15,6 @@ const properties = [
   'createdAt',
   'updatedAt'
 ]
-
 function serializer(data) {
   return {
     ...defaultSerializer(properties, data),

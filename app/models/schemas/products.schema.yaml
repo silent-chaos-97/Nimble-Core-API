@@ -8,6 +8,7 @@ columns:
   - data: id
     title: ID
     readOnly: true
+    width: '50'
     allowEmpty: false
 
   - data: code
@@ -98,3 +99,4 @@ columns:
       'RIFLGFCY20_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 20-Year
       'RIFLGFCY30_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 30-Year
       'RIFLGFL_XII_N.B': Treasury / Inflation Indexed / Long-Term Averge (over 10 years)
+

@@ -66,3 +66,4 @@ describe('POST /institutions', () => {
       .send(newInstitution)
       .expect('Content-Type', /json/)
       .expect(res => {
+        const expected = blueprints.institution.get('2552ab85-08da-4bb5-be00-9e94d282d311')

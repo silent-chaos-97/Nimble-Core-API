@@ -4,6 +4,7 @@ const jwtSimple = require('jwt-simple')
 const config = require('../../../config')
 
 const app = require('../../core')
+const getApiUri = require('../api/uri')
 const Joi = require('@hapi/joi')
 const { validator } = app.plugins
 
@@ -12,6 +13,7 @@ const schema = Joi.object().keys({
   id: Joi.string().required(),
   expiration: Joi.number().required()
 })
+// Temp comment
 
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1
 function getTokenInfo(options) {

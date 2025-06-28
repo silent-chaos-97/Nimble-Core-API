@@ -22,7 +22,6 @@ class CreditReport {
     this.version    = version
     // TODO extract lenderId to institution
     this.lenderId   = lenderId
-  }
 
   /**
    * Builds a url to access the API

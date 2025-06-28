@@ -37,6 +37,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   after(() => {
     nock.enableNetConnect()
+  })
 
   it('should return json', () => {
     return request(app.server)
@@ -54,9 +55,11 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     const expected = blueprints.identity.get()
     return request(app.server)
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
+// Temp comment
       .expect(expected)
   })
 
   it('should return a identity model', () => {
     const props = [
       'firstName', 'middleName', 'lastName', 'address', 'city',
+      'state', 'zipCode', 'dateOfBirth', 'documentNumber',

@@ -75,3 +75,4 @@ describe('app.services.compliance.verify', () => {
       sinon.replace(app.services.complianceVerification, 'create', sinon.fake.returns(uuid.v4))
 
       // call target
+      await app.services.compliance.verify(fakeUser.id)

@@ -32,3 +32,4 @@ Institution:
       description: The institution email to CC approvals
       example: someone@central-bank.com
     domain:
+      type: string

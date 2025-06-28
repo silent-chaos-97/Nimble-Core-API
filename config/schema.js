@@ -239,6 +239,7 @@ const schema = {
       doc: 'the AWS SNS api-version',
       format: String,
       default: '2010-03-31',
+      env: 'AWS_SNS_VERSION'
     },
     sms_sender_id: {
       doc: 'the AWS SNS->SMS Sender ID',
@@ -341,3 +342,8 @@ const schema = {
       format: String,
       default: 'arn:aws:sns:us-east-2:000000000000:events',
       env: 'AWS_SNS_EVENT_TOPIC'
+    },
+    topicSigner: {
+      doc: 'AWS SDK endpoint for SNS requests for signers',
+      format: String,
+      default: 'arn:aws:sns:us-east-2:000000000000:signers',

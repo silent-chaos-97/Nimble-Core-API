@@ -94,3 +94,4 @@ describe('GET /signers/:id/contract', async () => {
     })
 
     it('should return 401 if sending bad signer.id', async () => {
+      let weirdtoken = app.services.token.get({

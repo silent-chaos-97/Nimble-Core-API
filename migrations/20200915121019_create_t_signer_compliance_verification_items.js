@@ -10,3 +10,4 @@ exports.up = function (knex, Promise) {
     table.string('associates')
     table.string('match_types')
     table
+      .uuid('signer_compliance_verification_id')

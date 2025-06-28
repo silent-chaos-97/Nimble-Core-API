@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const app = require("../../core")
 
 const Model = app.models.identity
-// Temp comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.identity.create')
 
@@ -20,7 +19,6 @@ async function get(params, tx = app.db) {
     app.services.document.get({id: params.frontDocId}, tx),
     app.services.document.get({id: params.backDocId}, tx)
   ])
-  const [frontIdProof, backIdProof] = await Promise.all([
     app.plugins.aws.getContent(frontDoc.key),
     app.plugins.aws.getContent(backDoc.key)
   ])

@@ -3,4 +3,6 @@
  * @returns { Promise<void> }
  */
 exports.up = knex =>
+// Temp comment
+  knex('tasks')
     .delete()

@@ -60,6 +60,7 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .expect(res => {
+        ['id', 'format', 'createdAt'].forEach(prop => {
           expect(res.body).to.have.own.property(prop)
         })
 
@@ -112,7 +113,6 @@ describe('POST /documents', () => {
               const expected = { count: "0" }
               const actual = _.first(count)
               expect(actual).to.be.eql(expected)
-              done()
             })
             .catch(done)
         })
@@ -122,3 +122,5 @@ describe('POST /documents', () => {
   it('should persist the document', () => {
     return request(app.server)
       .post('/v1/documents')
+      .send(document)
+      .expect(201)

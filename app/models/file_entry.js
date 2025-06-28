@@ -21,3 +21,4 @@ class FileEntryModel extends BaseModel {
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry
 
+    return {

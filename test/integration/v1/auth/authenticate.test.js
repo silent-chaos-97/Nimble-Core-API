@@ -113,3 +113,4 @@ describe('Auth', () => {
 
       it('show accept valid login and return token', done => {
         request(app.server)
+          .post('/v1/auth/login')

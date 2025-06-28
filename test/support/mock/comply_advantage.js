@@ -2488,3 +2488,38 @@ const parsedResult = [
         "name": "Kent farmer appeals to Nelson Mandela",
         "value": "The brother of a farmer murdered in Zimbabwe has appealed for Nelson Mandela to intervene to prevent further bloodshed in the country's deepening crisis. Paul Dunn, who farms 1,500 acres at Ash, called on the former South African president and ANC leader to condemn Robert Mugabe's murderous regime and help end the killings. Mr Dunn has campaigned for peace in Zimbabwe since his brother, Alan, was murdered by Mugabe's war veterans on his farm near Harare eight years ago.",
         "date": "2020-03-26T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.kentonline.co.uk/kent/news/kent-farmer-appeals-to-nelson-ma-a40038/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Lobengula MP blames the mushrooming of Vuzu parties to absentee parents | The Insider",
+        "value": "I particularly want to thank His Excellency, the President and Commander-In-Chief of the Zimbabwe Defence Forces, Cde. R. G Mugabe, who is also the First Secretary of the revolutionary party ZANU PF, for making it possible for me to be in this House today. I am humbled by the magnitude of the confidence and responsibility placed upon me by my revolutionary party ZANU PF and the people of Lobengula Constituency.",
+        "date": "2019-07-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.insiderzim.com/lobengula-mp-blames-the-mushrooming-of-vuzu-parties-to-absentee-parents/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Man charged with insulting Mugabe | ZimDaily",
+        "value": "Mwaya is just the latest of dozens of officials charged under the law. One was arrested for labelling Mugabe a dictator who ruled by the sword and another was jailed for calling him thick-headed. Mugabe has been in power since independence from Britain in 1980.",
+        "date": "2020-03-21T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.zimdaily.com/?p=35328",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Mpofu under fire over Nkomo - The Standard",
+        "value": "The late former president Robert Mugabe claimed huge amounts of arms had been uncovered on farms owned by Zapu for use to ostensibly overthrow his government to justify the deployment of the Fifth Brigade. After the \"discovery\" of the weapons, Mugabe fired Nkomo, Josiah Chinamano and Joseph Msika (all late), Transport minister and Natural Resources minister respectively, from government on charges of plotting to overthrow his government, culminating in the Gukurahundi massacres which led to the killing of thousands of civilians. However, despite all the persecution and suffering at the hands of government, Nkomo returned home from exile in Britain and subsequently signed the Unity Accord with Mugabe in 1987.",
+        "date": "2020-03-22T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.thestandard.co.zw/2020/03/22/mpofu-fire-nkomo/amp/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"

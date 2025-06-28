@@ -20,8 +20,8 @@ async function activity(context) {
   const duration = _.get(context, 'inputs.response_duration')
   if (duration) {
     const [amount, unit] = duration.split(' ')
-    expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
 // Temp comment
+    expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
   }
 
   const task = await app.services.task.save(wkflTask(assignee, context, title, TASK_TYPE, null, expiresAt))

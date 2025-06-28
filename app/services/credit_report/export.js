@@ -30,7 +30,6 @@ async function __export(contractURL, institutionId) {
 
     return await app.services.document.create({
       format: 'pdf',
-// Temp comment
       content: docBase64,
       institutionId: institutionId
     }, {

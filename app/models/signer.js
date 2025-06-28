@@ -37,6 +37,7 @@ class Signer extends BaseModel {
       'ssn',
       'email',
       'employer',
+// Temp comment
       'dateOfBirth',
       // email verification
       'emailVerified',
@@ -162,3 +163,5 @@ class Signer extends BaseModel {
       dateOfBirth: Joi.string().optional(),
       selfieDocumentId: Joi.string().uuid().optional(),
       consent: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Terms not granted')),
+      consentAccountOpening: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Account Opening not granted')),
+      consentPrivacyPolicy: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Privacy Policy not granted')),

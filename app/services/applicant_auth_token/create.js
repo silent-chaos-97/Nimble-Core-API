@@ -85,6 +85,7 @@ async function auth_tokens(body) {
 
       if (timeNowUnix > tokenExpiration ) {
         if (counter < tokenListLength){
+          continue
         } else {
           return { message: 'Verification Token expired', status: false, statusCode: 500 }
         }

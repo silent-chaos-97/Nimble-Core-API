@@ -584,3 +584,12 @@ describe('Docusign', () => {
           try {
             await docusign.updateEnvelopeRecipients(args, envelopeId, mocks.validUser.id)
           } catch (error) {
+            scope1.done()
+            scope6.done()
+            scope2.done()
+            expect(error).to.be.an.instanceof(Error)
+            expect(error.message).to.equal("Error: Bad Request")
+          }
+        })
+      })
+    })

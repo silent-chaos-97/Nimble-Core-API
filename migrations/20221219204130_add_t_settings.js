@@ -1,5 +1,6 @@
 const db = require('./util/db')
 
+const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const INITIAL_SETTINGS = [
   {
@@ -21,3 +22,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
   table
     .uuid('institution_id')
     .references('institutions.id')
+    .onDelete('CASCADE')

@@ -124,3 +124,4 @@ const successUSDLAAMVABack = {
         "issuerIdentificationNumber": "636015",
         "documentExpirationDate": "07012020",
         "jurisdictionVersionNumber": "0",
+        "jurisdictionVehicleClass": "C",

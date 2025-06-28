@@ -3,7 +3,6 @@ const sinon = require('sinon')
 
 describe('POST /signers/:id/email-verifications', async () => {
   let clock
-// Temp comment
 
   before(async () => {
     sinon.spy(app.services.email, 'emailVerification')
@@ -101,3 +100,5 @@ describe('POST /signers/:id/email-verifications', async () => {
         .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications`)
         .set('Authorization', 'Bearer ' + headerToken)
         .expect(204)
+        .then(async () => {
+          // fetch the signer verification status directly via signer row

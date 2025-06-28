@@ -1,4 +1,5 @@
 const ROWS = [
+  {
     key: 'scopes',
     schema: { $ref: 'scopes' }
   },
@@ -9,3 +10,4 @@ const ROWS = [
   {
     key: 'risk_analysis',
     schema: { $ref: 'risk_analysis' }
+  }]

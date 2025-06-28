@@ -71,3 +71,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "score": {"no": 1},
         "required": true,
         "default": ""
+      },

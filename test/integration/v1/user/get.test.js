@@ -55,3 +55,4 @@ describe('GET /users/:id', () => {
         .end(done)
     })
 
+    it('should return valid user object', done => {
