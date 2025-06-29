@@ -99,3 +99,5 @@ describe('GET /users', () => {
           .expect(200)
           .end((err, res) => {
             if (err) throw new Error(err)
+
+            expect(res.body).to.be.an('array')

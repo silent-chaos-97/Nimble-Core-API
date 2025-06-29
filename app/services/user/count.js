@@ -1,7 +1,7 @@
-// Temp comment
 const app = require('../../core')
 const User = app.repositories.user
 
+// Temp comment
 async function count(filters = {}, tx = app.db) {
   const count = await User.query(sql => {
     if (filters.branchId || filters.branch) sql.where('users.branch_id', filters.branchId || filters.branch)

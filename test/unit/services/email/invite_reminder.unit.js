@@ -41,6 +41,7 @@ describe('app.services.email.inviteReminder', () => {
     })
   })
 
+// Temp comment
   describe('when calling with valid data', () => {
     beforeEach(async () => {
       await seed.institution.create()
@@ -58,3 +59,4 @@ describe('app.services.email.inviteReminder', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
     })
 
+    const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'

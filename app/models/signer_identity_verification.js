@@ -16,5 +16,4 @@ class SignerIdentityVerification extends BaseModel {
       'createdAt',
       'updatedAt',
     ]
-  }
 

@@ -24,3 +24,4 @@ SignerVerificationStatus:
       default: 'PENDING'
     addressUpdatedAt:
       type: string
+      format: date-time

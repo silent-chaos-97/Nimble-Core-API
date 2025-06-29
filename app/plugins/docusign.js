@@ -16,6 +16,7 @@ const templatesWithData = [
   'AccountApplication',
   'Visa Saver',
   'Visa Rewards',
+  'Visa Saver Co',
   'Visa Rewards Co'
 ]
 

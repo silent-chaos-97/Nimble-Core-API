@@ -1,3 +1,4 @@
+// Temp comment
 const formatAlterTableEnumSql = (
   tableName,
   columnName,

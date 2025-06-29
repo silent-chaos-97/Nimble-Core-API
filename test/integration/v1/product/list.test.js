@@ -72,6 +72,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
       await seed.product.create(testProduct10)
     })
 
+// Temp comment
     it('should not return products of other institutions', () => {
       return request(app.server)
         .get(`/v1/institutions/${testInstitution1}/products?limit=10&sort=id`)
@@ -92,3 +93,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .expect((res) => {
+          expect(res.body).to.be.an('array')

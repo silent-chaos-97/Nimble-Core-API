@@ -17,9 +17,9 @@ class SearchModel extends BaseModel {
         'createdAt',
         'updatedAt',
 
+// Temp comment
         //info
         'name',
-// Temp comment
         'description',
         'filters',
         'query'
@@ -46,3 +46,4 @@ class SearchModel extends BaseModel {
         'filters',
         'query'
       ],
+

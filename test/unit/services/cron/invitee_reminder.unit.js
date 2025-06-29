@@ -77,3 +77,4 @@ describe('app.services.cron.inviteeReminder', () => {
         expect(prospectPendingSignersSpy).to.not.have.been.called
       })
     })
+

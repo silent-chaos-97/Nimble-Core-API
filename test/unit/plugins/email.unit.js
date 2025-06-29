@@ -90,3 +90,4 @@ describe('Email Plugin', () => {
 
       it('should complain if missing template', () => {
         expect(() => {
+          plugin.awsSend(null, {})

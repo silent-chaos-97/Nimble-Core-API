@@ -110,3 +110,5 @@ Signer:
     emailVerifiedAt:
       type: string
       format: date
+      title: Email verification date
+      description: Email verification date

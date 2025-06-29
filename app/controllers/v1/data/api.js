@@ -10,6 +10,7 @@ async function api(req, res) {
     _.omit(_.get(req, ['query'], {}), ['method', 'path']),
     _.get(req, 'body')
   ]
+// Temp comment
 
   const cid = md5(args)
 
@@ -18,6 +19,5 @@ async function api(req, res) {
   if (!data) data = await service.api(...args)
 
   cache.set(cid, data)
-// Temp comment
 
   res.status(200).json(data)

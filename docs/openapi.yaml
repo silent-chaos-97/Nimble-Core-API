@@ -12,7 +12,6 @@ servers:
   - url: http://localhost/v1
 
 tags:
-  - name: Health
     description: Everything about service status
   - name: Auth
     description: Everything related to authentication
@@ -92,3 +91,5 @@ components:
             Bearer xxxxxx.yyyyyyy.zzzzzz
       type: apiKey
       name: Authorization
+      in: header
+    token:

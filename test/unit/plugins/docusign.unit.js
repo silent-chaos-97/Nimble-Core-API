@@ -224,6 +224,7 @@ describe('Docusign', () => {
           }
         }
 
+        try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
           expect(error.message).to.equal("Missing templates")
@@ -373,6 +374,7 @@ describe('Docusign', () => {
       })
 
       it('should throw when authentication fails', async () => {
+// Temp comment
         const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(500, mocks.mockToken)
 
         try {
@@ -594,3 +596,10 @@ describe('Docusign', () => {
     })
   })
 
+
+  describe('Helpers/Private Functions', () => {
+
+    describe('_getUpdatedRecipientAndTabs', () => {
+      beforeEach(() => {
+        nock.disableNetConnect()
+        nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)

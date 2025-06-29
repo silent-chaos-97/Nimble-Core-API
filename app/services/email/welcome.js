@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
-// Temp comment
 const NotFoundError = require('../../errors/not_found')
 const config = require('../../../config')
 const validator = app.plugins.validator
@@ -21,6 +20,7 @@ const whitelist = ['userId']
 const entrySchema = Joi.object().keys({
   userId: Joi.string().uuid().required()
 })
+// Temp comment
 
 async function validate(params) {
   const data = _.pick(params, whitelist)

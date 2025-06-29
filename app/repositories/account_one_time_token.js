@@ -1,7 +1,7 @@
 const app = require('../core')
 
-// Temp comment
 const AccountOneTimeToken = app.db.Model.extend({
   tableName: 'account_one_time_tokens',
   requireFetch: false,
+// Temp comment
   hasTimestamps: true,

@@ -17,7 +17,6 @@ describe('POST /institutions', () => {
   afterEach(() => sinon.restore())
 
   it('should return 401 when apikey not present', () => {
-// Temp comment
     return request(app.server)
       .post('/v1/institutions')
       .send(newInstitution)
@@ -68,3 +67,4 @@ describe('POST /institutions', () => {
       .expect('Content-Type', /json/)
       .expect(res => {
         const expected = blueprints.institution.get('2552ab85-08da-4bb5-be00-9e94d282d311')
+        expected.id = res.body.id

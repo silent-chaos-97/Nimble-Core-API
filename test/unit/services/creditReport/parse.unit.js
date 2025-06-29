@@ -46,3 +46,4 @@ describe('app.services.creditReport.parse', () => {
       }
       scope.done()
     })
+  })

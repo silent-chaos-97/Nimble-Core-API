@@ -4,6 +4,7 @@ const { docusignHelpers } = require('./upload_document')
 const { getPdfFormFields } = require('./pdf_form_fields.test')
 
 const run = async () => {
+	const formFields = getPdfFormFields()
 	let pdfDocument1 = await loadPdf('/sample.pdf')
 	pdfDocument1 = fillPdf(pdfDocument1, formFields)
 	let pdfBytes1 = await savePdf(pdfDocument1)
@@ -16,7 +17,6 @@ const run = async () => {
 	const signer = docusignHelpers.createRecipient('kknapp@zivaro.com', 'Kyle', '1', '1', [ signHereTab ])
 	const envelopeJson = docusignHelpers.createEnvelopeJson(
 		'Please sign the included document(s)',
-		[ signer ],
 		[],
 		[ document1, document2 ],
 		'sent'

@@ -38,3 +38,4 @@ describe('app.services.contract.embed', () => {
       })
 
       afterEach(() => {
+        sinon.reset()

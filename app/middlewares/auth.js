@@ -57,6 +57,7 @@ async function checkJWTrequestToken(req, res, next) {
 async function checkRoles(roles, req, res, next) {
   if (req.isAuthorized) return next() // already authorized
   if (!req.isAuthenticated) return next(new UnauthorizedTokenError('Roles require authentication'))
+  if (!req.user) return next(new UnauthorizedTokenError('Roles require authentication'))
   if (User.isSuperAdmin(req.user)) return next() // super-admin is always permitted
   if (_.isEmpty(roles)) return next() // no role required
   if (_.isEmpty(req.user.roles)) return next(new UnauthorizedTokenError('Unauthorized:0'))

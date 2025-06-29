@@ -66,10 +66,10 @@ describe('GET /me', () => {
         .expect((res) => {
           const props = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'accounts']
 
-          props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
           })
 
           expect(res.body).not.to.have.own.property('updatedAt')
 
           expect(res.body.id).to.be.an('string')
+          expect(res.body.email).to.be.an('string')

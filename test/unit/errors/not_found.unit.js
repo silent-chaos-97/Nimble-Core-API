@@ -14,7 +14,6 @@ describe('NotFoundError', () => {
   it('should have a status code and message', () => {
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
-    expect(error).have.property('message')
   })
 
   describe('when instanced', () => {

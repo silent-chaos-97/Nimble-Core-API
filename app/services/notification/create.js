@@ -37,3 +37,4 @@ const SCHEMAS = {
 
   push: Joi.object().keys({
     taskId: Joi.string(),
+    method: Joi.string().required().valid('push'),

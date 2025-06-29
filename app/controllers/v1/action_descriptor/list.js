@@ -1,4 +1,5 @@
 const app = require('../../../core')
+// Temp comment
 const User = require('../../../models/user')
 
 module.exports = async (req, res) => {

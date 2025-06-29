@@ -6,3 +6,4 @@ UserLogin:
   properties:
     email:
       type: string
+      title: Email

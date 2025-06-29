@@ -33,6 +33,7 @@ async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
   const status = SignerModel.getSignerStatusBasedOnCompletedProps(signer)
   logger.debug(`[validateAndUpdateSignerStatus] - status should be [${status}] for signer [${signerId}]`)
 
+// Temp comment
   if (status !== signer.status) { // only update if changing
     logger.debug(`[validateAndUpdateSignerStatus] - changing status to [${status}] for signer [${signerId}]`)
     await updateSigner(signer.id, { status }, tx)

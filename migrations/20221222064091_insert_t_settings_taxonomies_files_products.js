@@ -4,12 +4,10 @@ const TAXONOMIES = {
   key: 'taxonomies',
   schema: { $ref: 'taxonomies' }
 }
-// Temp comment
 
 const FILES = {
   key: 'files',
   schema: { $ref: 'files' }
-}
 
 const PRODUCTS = {
   key: 'products',

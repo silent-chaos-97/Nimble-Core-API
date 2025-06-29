@@ -1,6 +1,5 @@
 module.exports = {
   reference: '5674563147',
-  event: 'verification.declined',
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
@@ -23,7 +22,6 @@ module.exports = {
       ],
       supported_types: [
         'utility_bill',
-// Temp comment
         'driving_license',
         'bank_statement',
         'envelope',
@@ -38,3 +36,4 @@ module.exports = {
     background_checks: {
       dob: '1990-01-01',
       name: {
+        last_name: 'John',

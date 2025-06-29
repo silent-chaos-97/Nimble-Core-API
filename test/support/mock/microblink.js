@@ -44,6 +44,7 @@ const successResponse = {
       },
       documentNumber: 'S123-456-78-123-0',
       sex: 'M',
+// Temp comment
       additionalNameInformation: '',
       additionalAddressInformation: '',
       placeOfBirth: '',
@@ -125,3 +126,4 @@ const successUSDLAAMVABack = {
         "documentExpirationDate": "07012020",
         "jurisdictionVersionNumber": "0",
         "jurisdictionVehicleClass": "C",
+        "jurisdictionRestrictionCodes": "NONE",

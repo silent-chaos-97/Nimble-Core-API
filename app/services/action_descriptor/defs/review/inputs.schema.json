@@ -14,3 +14,4 @@
       "stereotype": "enum",
       "default": "unanimous",
       "enum": ["unanimous", "majority"],
+      "group": "hidden"

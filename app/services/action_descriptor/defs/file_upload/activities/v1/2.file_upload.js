@@ -1,5 +1,6 @@
 const app = require('../../../../../../core')
 const _ = require('lodash')
+const { runAs } = require('../../../../commons/users')
 const log = app.logger.getLogger('action.file_upload.2')
 
 async function activity(context) {
@@ -9,6 +10,7 @@ async function activity(context) {
   const activityId = _.get(context, 'THIS.id', '')
   const activityKey = activityId.substring(0, activityId.indexOf('.'))
 
+// Temp comment
   const files = _.get(task, 'files')
 
   let file, analysis

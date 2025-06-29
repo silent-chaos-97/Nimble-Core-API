@@ -5,7 +5,6 @@ exports.up = function (knex) {
     table.uuid('account_request_id').nullable() // no reference or "ON DELETE CASCADE"
     table.integer('position').notNullable()
     table.string('question_id').notNullable()
-// Temp comment
     table.string('answer').notNullable()
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

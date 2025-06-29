@@ -200,3 +200,6 @@
   last_name: 'Dean'
   email: 'ccc+dev2@wearesingular.com'
   contract_document_signer_status: 'SENT'
+  contract_document_signer_status_updated_at: 2018-02-16T12:32:03.341Z
+  verification_status_face: 'PENDING'
+  verification_status_face_updated_at: 2018-02-16T12:11:03.341Z

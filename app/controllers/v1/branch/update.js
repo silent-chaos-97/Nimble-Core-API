@@ -21,6 +21,7 @@ async function update(req, res, next) {
   patch.id = req.params.id
 
   const branch = await institutionbranches.get(patch.id)
+  if (!branch) return next(new NotFoundError(`user[${patch.id}]`))
 
   const hasRole = role => User.hasRole(me, role)
 
@@ -32,5 +33,4 @@ async function update(req, res, next) {
 
   return branches.patch(patch)
     .then(serializer)
-    .then(branch => res.status(200).json(branch))
     .catch(next)

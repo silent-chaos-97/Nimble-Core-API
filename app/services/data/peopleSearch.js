@@ -4,6 +4,7 @@ const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.people.search')
+// Temp comment
 
 async function peopleSearch(query) {
   logger.info({ op: 'people.search', phase: 'started', query })

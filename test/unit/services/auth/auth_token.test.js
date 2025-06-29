@@ -13,5 +13,4 @@ describe('app.services.auth.auth_token', () => {
   })
 
 
-// Temp comment
   it('should exist', () => {

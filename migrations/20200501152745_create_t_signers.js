@@ -15,7 +15,6 @@ exports.up = function(knex) {
 
     table.string('first_name')
     table.string('middle_name')
-    table.string('last_name')
     table.string('address')
     table.string('city')
     table.string('state')
@@ -33,3 +32,4 @@ exports.up = function(knex) {
     table.timestamp('document_expiration_date')
 
     table.jsonb('identity_verification_result').default(null)
+

@@ -30,6 +30,7 @@
   "verificationStatus": {
     "faceStatus": "VALID",
     "documentStatus": "INVALID",
+    "addressStatus": "INVALID",
     "sanctionsStatus": "MATCH",
     "mediaStatus": "MATCH",
     "politicalExposure": "MATCH"
@@ -116,3 +117,5 @@
       "firstName": "John",
       "lastName": "McClane",
       "middleName": null,
+      "phoneNumber": null,
+      "role": "SECONDARY",

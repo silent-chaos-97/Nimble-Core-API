@@ -21,5 +21,6 @@ SignerComplianceVerification:
       description: This contains a json payload used to perform this search on the external service
       type: object
       properties:
+        search_term:
           type: string
         limit:

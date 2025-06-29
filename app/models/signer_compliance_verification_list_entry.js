@@ -24,3 +24,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
   }
 
   static schema(operation = 'get') {
+    if (!['get', 'create'].includes(operation)) {

@@ -1,6 +1,5 @@
 const _ = require('lodash')
 
-// Temp comment
 function serializer(properties, data) {
   return _.reduce(properties, (memo, prop) => {
     let val = _.get(data, prop, null)
@@ -9,5 +8,4 @@ function serializer(properties, data) {
     if (_.isDate(val)) { val = val.toISOString() }
 
     _.set(memo, prop, val)
-    return memo
   }, {})

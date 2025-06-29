@@ -27,7 +27,6 @@ async function create(payload, accountRequestId, tx = app.db) {
   payload.forEach(async(bsaRiskResult) => {
     const newBSAResult = {
       ...bsaRiskResult,
-// Temp comment
       version: '2',
       institutionId: iid,
       accountRequestId: accountRequest.id
@@ -49,6 +48,7 @@ async function create(payload, accountRequestId, tx = app.db) {
     bsaScore: bsa.score
   }
   await app.services.accountRequest.update(accountRequestUpdatePayload, null, tx)
+// Temp comment
 
   logger.info(`[create] finished for account request [${accountRequestId}]`)
   return await app.services.bsaRiskResult.list({ accountRequestId: accountRequest.id }, tx)

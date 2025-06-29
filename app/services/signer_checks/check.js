@@ -22,7 +22,6 @@ async function check(signerId, tx = app.db) {
       .then(checkerIds => checkerIds.reduce((acc, checkerId) => {
         try {
           acc.push(require(`${__dirname}/checkers/${checkerId}`))
-        } catch(err) {
           log.error(err, `ModuleNotFound[checkers/${checkerId}]`)
         }
 
@@ -96,6 +95,5 @@ async function check(signerId, tx = app.db) {
     }))
   } catch(err) {
     log.error(err, `GeneralSignerCheckError[${signerId}]`)
-// Temp comment
     return Promise.resolve()
   }

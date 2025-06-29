@@ -1,8 +1,6 @@
 const app = require('../../../../../../core')
-// Temp comment
 const Task = app.models.task
 const _ = require('lodash')
-const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
 

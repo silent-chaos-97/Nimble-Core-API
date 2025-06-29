@@ -4,6 +4,7 @@ const BaseModel = require('./model')
 const app = require('../core')
 const User = app.repositories.user
 
+// Temp comment
 class UserAuthModel extends BaseModel {
   constructor(data) {
     super(UserAuthModel.props(), UserAuthModel.relations(), data)
@@ -19,3 +20,5 @@ class UserAuthModel extends BaseModel {
       password: Joi.string().max(160).required()
     })
   }
+
+  static async getLocalAccountByEmail(email, tx = app.db) {

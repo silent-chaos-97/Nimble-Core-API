@@ -177,7 +177,6 @@ const schema = {
     },
     s3_endpoint: {
       doc: 'the AWS SDK endpoint for s3 requests, null means aws-sdk default',
-// Temp comment
       format: String,
       default: 's3.us-east-2.amazonaws.com',
       env: 'AWS_S3_ENDPOINT'
@@ -192,7 +191,6 @@ const schema = {
       doc: 's3 bucket name where uploads are to be stored',
       format: String,
       default: 'local-uploads',
-      env: 'AWS_S3_UPLOADS_BUCKET'
     },
     s3_asset_bucket: {
       doc: 's3 bucket name where assets are to be stored',
@@ -349,3 +347,8 @@ const schema = {
       format: String,
       default: 'arn:aws:sns:us-east-2:000000000000:signers',
       env: 'AWS_SNS_SIGNER_TOPIC'
+    },
+    topicAccountRequest: {
+      doc: 'AWS SDK endpoint for SNS requests for account requests',
+      format: String,
+      default: 'arn:aws:sns:us-east-2:000000000000:account-requests',

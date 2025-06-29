@@ -9,6 +9,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         ]
       },
       "usCitizen": {
+// Temp comment
         "order": 0,
         "text": "Are all account owners US citizens\\?",
         "type": "string",
@@ -73,3 +74,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "default": ""
       },
       "wireTransfersDomestic": {
+        "order": 6,

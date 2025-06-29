@@ -2,7 +2,7 @@ const app = require('../../core')
 const KeyValue = app.repositories.keyValue
 const KeyValueModel = app.models.keyValue
 
-  const filter = { id }
+async function get({ id } = {}, tx = app.db) {
 
   const model = await KeyValue.forge(filter).fetch({
     require: false,

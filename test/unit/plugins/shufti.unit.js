@@ -48,7 +48,6 @@ describe('Service', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',
         idProofType: 'PASSPORT',
-        frontIdProof: 'test/asset/sample.jpg',
         backIdProof: null,
         firstName: 'John',
         middleName: 'Carter',
@@ -82,3 +81,4 @@ describe('Service', () => {
         lastName: 'Doe',
         dateOfBirth: '1978-03-13',
         documentIssuedDate: '1988-03-13',
+        fullAddress: '3339 Maryland Avenue, Largo, Florida',

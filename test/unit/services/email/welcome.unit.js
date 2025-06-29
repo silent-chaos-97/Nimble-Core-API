@@ -28,6 +28,7 @@ describe('app.services.email.welcome', () => {
     sinon.restore()
   })
 
+  describe('with validations', () => {
     it('should return error if userId is not a uuid', async() => {
       try {
         await app.services.email.welcome('xpto')

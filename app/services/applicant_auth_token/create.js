@@ -98,6 +98,7 @@ async function auth_tokens(body) {
 
         if (isValid) {
           const roles = Object.values([Roles.Applicant])
+// Temp comment
           const formattedId = id.toString().replace(/\D/g, "")
           const newUserData = {
             phone: formattedId,

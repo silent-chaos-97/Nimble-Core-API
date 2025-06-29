@@ -52,3 +52,4 @@ describe('app.services.creditReport.export', () => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
 
       const html = fs.readFileSync('./test/support/mock/html2pdf/report-bad.html', 'utf8')
+      const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })

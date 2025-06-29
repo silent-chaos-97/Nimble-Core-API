@@ -59,3 +59,4 @@ class InstitutionModel extends BaseModel {
       templateDecline: Joi.string().required(),
       publicMetadata: Joi.object(),
       workbook: Joi.object(),
+      disclosures: Joi.object(),

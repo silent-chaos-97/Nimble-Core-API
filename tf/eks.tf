@@ -8,6 +8,7 @@ module "eks" {
   cluster_addons = {
     vpc-cni = {
       resolve_conflicts = "OVERWRITE"
+    }
   }
 
   vpc_id     = module.vpc.vpc_id

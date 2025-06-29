@@ -7,6 +7,7 @@ services:
     ports:
       - 5432:5432
     environment:
+      - POSTGRES_DB=nimble-core-db
       - POSTGRES_USER=nimble-core-user
       - POSTGRES_PASSWORD=nimble-core-pass
     healthcheck:
@@ -15,3 +16,4 @@ services:
       timeout: 30s
       retries: 3
 
+  localstack:

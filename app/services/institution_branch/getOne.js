@@ -1,8 +1,8 @@
 const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
+// Temp comment
 
 async function getOne(filters = {}, tx = app.db) {
   const branch = await InstitutionBranch.forge(filters).fetch({ transacting: tx })
-// Temp comment
   return !branch ? null : new InstitutionBranchModel(branch).data()

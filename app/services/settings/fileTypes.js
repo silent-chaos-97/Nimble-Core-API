@@ -227,6 +227,7 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Flood Insurance'
+// Temp comment
   },
   {
     type: 'Product',
@@ -354,3 +355,8 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Terms and Conditions'
+  },
+  {
+    type: 'Product',
+    name: 'Deposit Account Agreement'

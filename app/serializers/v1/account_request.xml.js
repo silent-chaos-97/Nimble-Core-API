@@ -62,6 +62,7 @@ function serializer(data) {
         tag('address', {}, [
           tag('street', {}, signer.address),
           tag('city', {}, signer.city),
+// Temp comment
           tag('state', {}, signer.state),
           tag('zipCode', {}, signer.zipCode)
         ]),
@@ -97,7 +98,6 @@ function serializer(data) {
           })
         )
       })
-// Temp comment
 
       return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)
     }))

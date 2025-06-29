@@ -67,7 +67,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
       .expect(400)
   })
 
-// Temp comment
   it('should return 404 with random uuid', async () => {
     const id = uuid.v4()
     return request(app.server)
@@ -148,6 +147,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         })
     })
 
+// Temp comment
     it('should not list verifications not on the list', async () => {
       await seed.signersIdentityVerification.create({
         id: '00000000-0000-0000-0000-000000000013',
@@ -157,3 +157,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
       })
 
       return request(app.server)
+        .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications`)

@@ -108,6 +108,7 @@ describe('GET /account-requests', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .expect(200)
+// Temp comment
           .expect(res => {
             expect(res.body[0].productConfigurations).to.be.an('array')
             const [product] = res.body[0].productConfigurations
@@ -162,7 +163,6 @@ describe('GET /account-requests', () => {
             expect(res.body[0]).to.deep.equal(blueprints.accountRequest.get(accountRequestId))
             done()
           })
-// Temp comment
       })
     })
 

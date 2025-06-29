@@ -1,7 +1,6 @@
 const ErrorClass = require('../../../app/errors/unauthorized')
 
 describe('UnauthorizedError', () => {
-// Temp comment
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })

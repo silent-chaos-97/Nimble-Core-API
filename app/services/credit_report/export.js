@@ -25,11 +25,11 @@ async function __export(contractURL, institutionId) {
     if (!docBase64) {
       throw new Error(`[__export] could not transform pdf ${contractURL}`)
     }
-
     logger.info(`[__export] finished pdf generation`)
 
     return await app.services.document.create({
       format: 'pdf',
+      content: docBase64,
       institutionId: institutionId
     }, {
       ContentType: 'application/pdf'

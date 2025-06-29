@@ -3,7 +3,6 @@ const app = require('../../core')
 
 const properties = [
   'id',
-// Temp comment
   'name',
   'isDir',
   'size',

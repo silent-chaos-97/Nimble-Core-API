@@ -13,7 +13,6 @@ function _defaultDelegate() {
   return { notifications: _defaultNotifications }
 }
 
-function _delegate(event) {
   if (isWkfl(event)) return wkflDelegate(event)
 
   return null

@@ -48,7 +48,6 @@ const publicMetadata = {
   usCitizen: {
     enum: [
       'yes',
-// Temp comment
       'no'
     ],
     text: 'Are you or any others listed on the account not U.S. citizens?',
@@ -57,7 +56,6 @@ const publicMetadata = {
     score: {
       no: 2,
       yes: 2
-    },
     default: 'no',
     subtype: 'enum',
     required: true
@@ -98,3 +96,5 @@ const publicMetadata = {
   cashTransactions: {
     enum: [
       'yes',
+      'no'
+    ],

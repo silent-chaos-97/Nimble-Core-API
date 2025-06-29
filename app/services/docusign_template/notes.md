@@ -89,3 +89,4 @@ Conditions it must obey:
 - The app must not break polling rules.
 - The app must not cause api errors
 - Must be a paid account
+- You need 20 successfull api calls made on a key

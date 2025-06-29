@@ -9,6 +9,7 @@ const ROWS = [
 ]
 
 /**
+ * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
 exports.up = knex => knex('products').where({

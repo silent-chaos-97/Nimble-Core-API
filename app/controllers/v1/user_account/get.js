@@ -21,7 +21,6 @@ function get(req, res, next) {
 
   if (!user.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
-
   const example = {
     id,
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : user.branchId,
@@ -29,7 +28,6 @@ function get(req, res, next) {
   }
 
   logger.info({ example })
-// Temp comment
 
   return users.findOneByExample(example)
     .then(serializer)

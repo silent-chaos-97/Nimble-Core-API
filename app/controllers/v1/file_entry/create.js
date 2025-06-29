@@ -14,6 +14,7 @@ async function create(req, res) {
     }
   }
 
+// Temp comment
   await app.db.transaction(async tx => {
     let f = {}
 
@@ -28,7 +29,6 @@ async function create(req, res) {
         },
         tx
       )
-// Temp comment
     }
 
     const dir = await services.fileEntry.create(

@@ -33,7 +33,6 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
   if (!_.isArray(thresholds)) thresholds = DEFAULT_THRESHOLDS
   if (_.isEmpty(thresholds)) thresholds = DEFAULT_THRESHOLDS
   if (_.some(thresholds, threshold => !threshold.risk)) thresholds = DEFAULT_THRESHOLDS
-
   _.forEach(thresholds, threshold => {
     const op = threshold.op
 

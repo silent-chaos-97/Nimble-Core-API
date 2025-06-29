@@ -93,3 +93,4 @@ class UserModel extends BaseModel {
     return ['accounts', 'institution', 'branch']
   }
 
+  hasRole(role) {

@@ -19,4 +19,3 @@ function getInitialDeposit(productConfigurations) {
   if (productConfigurations.length > 0) {
     return productConfigurations[0].initialDeposit
   }
-  return 0

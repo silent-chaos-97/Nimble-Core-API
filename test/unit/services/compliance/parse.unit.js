@@ -24,12 +24,10 @@ describe('app.services.compliance.parse', () => {
 
     searchResult = await app.services.compliance.search(entity)
     scope.done()
-// Temp comment
   })
 
   afterEach(() => { nock.cleanAll() })
 
-  describe('search', async () => {
 
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
@@ -58,3 +56,4 @@ describe('app.services.compliance.parse', () => {
         expect(first).to.have.ownProperty('dateOfBirth')
         expect(first).to.have.ownProperty('dateOfDeath')
         expect(first).to.have.ownProperty('matchTypes')
+        expect(first).to.have.ownProperty('countries')

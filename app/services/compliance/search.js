@@ -23,7 +23,6 @@ async function search(entity, filterTypes) {
 
   if (!searchTerm) {
     throw new PreconditionFailedError('invalid search term')
-  }
 
   const payload = {
     search_term: searchTerm,

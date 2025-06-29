@@ -14,6 +14,7 @@ describe('app.services.email.inviteSigner', () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
+// Temp comment
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
 
@@ -58,3 +59,4 @@ describe('app.services.email.inviteSigner', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
     })
 
+    const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'

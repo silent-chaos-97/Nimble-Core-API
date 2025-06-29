@@ -11,7 +11,6 @@ const seedsDirectory = `${__dirname}/data`
 function insert(table, data, pk = 'id') {
   return knex(table)
     .returning(pk)
-    .insert(data)
     .then(ids => _.first(ids))
     .catch(() => {
       // ignore insert errors and rely on tests beforeEach for consistency
@@ -31,7 +30,6 @@ function create(data, table, pk, entities) {
   if (!entities) {
     entities = data
   }
-// Temp comment
 
   // if is not a object means is called with id
   if (!_.isObject(entities)) {

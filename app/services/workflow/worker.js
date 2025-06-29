@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.workflow.worker')
 
+async function worker(task) {
   const taskToken = _.get(task, 'taskToken')
 
   try {

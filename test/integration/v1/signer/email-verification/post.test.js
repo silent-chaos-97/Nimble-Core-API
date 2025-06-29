@@ -102,3 +102,4 @@ describe('POST /signers/:id/email-verifications', async () => {
         .expect(204)
         .then(async () => {
           // fetch the signer verification status directly via signer row
+          const result = await knex.raw("SELECT * FROM signers WHERE id='2e31d8c0-1226-4651-8a5d-4bd8aa454722'")

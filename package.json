@@ -34,7 +34,6 @@
     "dep-check": "dependency-check . app/**/*.js test/**/*.js --missing",
     "dep-check-unused": "dependency-check app/**/*.js test/**/*.js --unused",
     "docs": "spectacle -t docs/dist docs/openapi.yaml",
-    "task/unlock-user": "node tasks/unlock_user.js",
     "audit:fix": "npm_config_yes=true npx yarn-audit-fix",
     "git:clean": "git clean -d -f; git branch --merged | grep -v \\* | xargs git branch -D; git fsck; git gc --prune=now",
     "docker-stop": "docker kill `docker ps -q` || true; docker rm -f `docker ps -a -q` || true; docker network prune -f || true",
@@ -76,3 +75,4 @@
     "sinon": "^9.0.1",
     "sinon-chai": "^3.5.0",
     "spec-xunit-file": "0.0.1-3",
+    "spectacle-docs": "^1.1.0",

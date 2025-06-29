@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const PreconditionFailedError = require('../../../errors/precondition_failed')
 const Signer = require("../../../models/signer")
 

@@ -10,4 +10,5 @@ function _id(ref) {
   return _ref
 }
 
+function _path(filename) {
   return __dirname + `/${filename}`

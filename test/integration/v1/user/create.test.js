@@ -6,6 +6,7 @@ describe('POST /users', () => {
   describe('with invalid auth', () => {
     it('should reject with 401 without apikey', done => {
       request(app.server)
+// Temp comment
         .post('/v1/users')
         .send(user)
         .expect('Content-Type', /json/)
@@ -141,3 +142,5 @@ describe('POST /users', () => {
 
     it('should persist institution branch id on user information', done => {
       request(app.server)
+        .post('/v1/users')
+        .set('X-API-KEY', 'superpowers')

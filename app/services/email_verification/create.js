@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const moment = require('moment')
 const validator = app.plugins.validator
 

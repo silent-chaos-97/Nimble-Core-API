@@ -26,7 +26,6 @@ describe('app.models.signer.flattenData', () => {
         frontDocumentId: 'frontDocumentId',
         type: 'type',
         number: 'number',
-        issuedDate: 'issuedDate',
         issuer: 'issuer',
         expirationDate: 'expirationDate',
       }
@@ -82,3 +81,4 @@ describe('app.models.signer.flattenData', () => {
 
   it('should flatten partial data', () => {
     const result = target({
+      somethingA: 'somethingA',

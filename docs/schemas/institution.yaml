@@ -33,3 +33,4 @@ Institution:
       example: someone@central-bank.com
     domain:
       type: string
+      title: Domain

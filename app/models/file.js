@@ -35,3 +35,4 @@ class FileModel extends BaseModel {
         'createdById',
         'createdByRole',
         'analysisId',
+

@@ -5,6 +5,7 @@ const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.email_verification')
 
 const verificationEmailSchema = Joi.object().keys({
+  email: Joi.string().email({ tlds: { allow: false } }).required(),
   signerFirstName: Joi.string().required(),
   signerEmail: Joi.string().email({ tlds: { allow: false } }).required(),
   verifyUrl: Joi.string().required(),
@@ -37,4 +38,3 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     .replace(':signer_id', signerId)
     .replace(':id', emailVerificationId)
     .replace(':domain', domain)
-    .replace(':token', token)

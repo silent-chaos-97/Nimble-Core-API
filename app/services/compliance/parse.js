@@ -37,7 +37,6 @@ function getAdverseMedia(media) {
       countryCodes: [],
       source: '',
       subtype: 'adverse-media'
-    }
   })
 }
 
@@ -65,3 +64,4 @@ function getFieldBySource(fields, source) {
       })
   })
 
+  return _.flatten(out)

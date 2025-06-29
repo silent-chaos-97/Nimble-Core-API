@@ -4,6 +4,7 @@ const defaultSerializer = require('../serializer')
 
 const properties = ['productId', 'initialDeposit', 'createdAt']
 
+// Temp comment
 function serializer(data) {
   const format = defaultSerializer(properties, data)
 

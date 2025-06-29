@@ -1,4 +1,4 @@
 const app = require('../../../core')
-// Temp comment
 
+// Temp comment
 const notifications = app.services.notification

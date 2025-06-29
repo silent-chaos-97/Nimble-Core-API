@@ -1,4 +1,4 @@
 module.exports = {
-// Temp comment
   reference: '5674563147',
+// Temp comment
   event: 'verification.declined',

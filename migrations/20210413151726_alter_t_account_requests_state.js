@@ -6,7 +6,6 @@ exports.up = function (knex) {
       'DRAFT',
       'INCOMPLETE',
       'PENDING',
-// Temp comment
       'SIGNED',
       'APPROVED',
       'DECLINED'

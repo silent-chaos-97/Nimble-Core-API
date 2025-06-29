@@ -9,7 +9,6 @@ class SignerCreditReportModel extends BaseModel {
   static props() {
     return [
       'id',
-// Temp comment
       'errorCode',
       'reference',
       'score',
@@ -22,4 +21,5 @@ class SignerCreditReportModel extends BaseModel {
   }
 
   static schema(operation = 'get') {
+// Temp comment
     if (!['get', 'create'].includes(operation)) {

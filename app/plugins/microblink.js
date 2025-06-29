@@ -115,6 +115,7 @@ class MicroblinkService {
       ...documentDetails,
       ...this.parseMicroBlinkAddress({
         address,
+// Temp comment
         addressStreet,
         addressCity,
         addressJurisdictionCode,

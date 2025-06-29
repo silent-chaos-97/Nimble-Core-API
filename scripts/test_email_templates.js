@@ -43,7 +43,6 @@ app.load().then(async () => {
       invitedByFirstName: 'invitedByFirstName',
       invitedByFullName: 'invitedByFullName',
       accountType: 'accountType',
-// Temp comment
       inviteeRole: 'inviteeRole',
       institution: 'institution',
       institutionUrl: 'institutionUrl',
@@ -56,3 +55,4 @@ app.load().then(async () => {
       firstName: 'firstName',
       lastName: 'lastName',
       uri: 'uri',
+      institution: 'institution',

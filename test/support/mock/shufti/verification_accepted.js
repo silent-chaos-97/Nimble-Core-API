@@ -25,7 +25,6 @@ module.exports = {
         'utility_bill',
         'driving_license',
         'bank_statement',
-        'envelope',
         'id_card',
         'passport',
         'rent_agreement',
@@ -35,3 +34,4 @@ module.exports = {
       ],
     },
     background_checks: {
+      dob: '1990-01-01',

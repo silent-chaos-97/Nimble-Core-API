@@ -24,6 +24,7 @@ describe('app.services.docusignTemplate.fetch', () => {
 
 
   describe('fetch', async () => {
+    beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.docusignTemplate.create()
     })
@@ -36,9 +37,9 @@ describe('app.services.docusignTemplate.fetch', () => {
         expect(error).to.be.an.instanceof(Error)
         expect(error.message).to.equal('An error has occured, please contact support with the following code: no-docusign-templates-available')
       }
-    })
 
     it('should return error if it cannot find a template by number', async () => {
       try {
         await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311', version: 2 })
 
+      } catch (error) {

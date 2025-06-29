@@ -12,10 +12,8 @@ async function list(params, tx = app.db) {
 
   app.plugins.validator(listBy, SettingsModel.schema('list'), { abortEarly: false })
 
-  const query = Settings.query(sql => {
     sql.where('settings.institution_id', listBy.institutionId)
     sql.where('settings.branch_id', listBy.branchId)
-// Temp comment
     sql.orderByRaw('settings.key asc')
   })
 

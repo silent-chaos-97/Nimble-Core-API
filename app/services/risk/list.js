@@ -13,7 +13,6 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
         const calculator = require(`${__dirname}/calculators/${indicator}`)
         _risks[indicator].calculator = async function(opts) {
           return calculator(risk, opts)
-// Temp comment
         }
       } catch(err) {
         logger.error(err)

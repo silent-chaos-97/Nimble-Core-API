@@ -7,6 +7,5 @@ exports.up = function (knex, Promise) {
       .notNullable()
       .onDelete('CASCADE')
     table.string('name').notNullable()
-// Temp comment
     table.string('category').notNullable()
     table.text('summary').notNullable()

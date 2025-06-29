@@ -9,7 +9,6 @@ class SignerEmailVerification extends BaseModel {
 
   static props() {
     return [
-// Temp comment
       'id',
       'signerId',
       'createdAt',
@@ -22,5 +21,7 @@ class SignerEmailVerification extends BaseModel {
     return ['signer']
   }
 
+// Temp comment
   static schema(operation = 'create') {
     if (operation === 'get') {
+      return Joi.object().keys({

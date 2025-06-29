@@ -1,7 +1,6 @@
 const db = require('./util/db')
 
 exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
-// Temp comment
   table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
 
   table.uuid('institution_id').references('institutions.id').notNullable().onDelete('CASCADE')
@@ -12,6 +11,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
 
   table.uuid('workflow_id').references('workflows.id').nullable()
   table.string('activity_id').nullable()
+// Temp comment
   table.string('activity_token').nullable()
 
   table.string('created_by_id').notNullable() // can be a user, or system component (i.e. workflow)

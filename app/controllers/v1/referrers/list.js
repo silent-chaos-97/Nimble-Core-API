@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
@@ -7,7 +8,6 @@ const serializer = app.serializers.v1.user
 
 const logger = app.logger.getLogger('app.controllers.v1.referrers.list')
 
-// Temp comment
 function list(req, res, next) {
   if (!req.user) return next(new UnauthorizedError('UserRequired'))
   if (!req.user.institutionId) return next(UnauthorizedError('InstitutionRequired'))

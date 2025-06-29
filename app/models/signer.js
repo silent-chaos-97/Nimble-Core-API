@@ -157,6 +157,7 @@ class Signer extends BaseModel {
       state: Joi.string().max(3).optional(),
       zipCode: Joi.string().max(100).optional(),
       phoneNumber: Joi.string().max(20).optional(),
+      ssn: Joi.string().max(20).optional(),
       employer: Joi.string().max(250).optional(),
       dateOfBirth: Joi.string().optional(),
       selfieDocumentId: Joi.string().uuid().optional(),
@@ -164,3 +165,5 @@ class Signer extends BaseModel {
       consentAccountOpening: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Account Opening not granted')),
       consentPrivacyPolicy: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Privacy Policy not granted')),
       consentCommunication: Joi.boolean(),
+      remoteMetadata: Joi.object().optional(),
+    })

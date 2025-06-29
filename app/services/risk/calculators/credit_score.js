@@ -6,7 +6,6 @@ module.exports = async function(risk, summary) {
   if (!score) return {
     score: -1,
     performing: false,
-// Temp comment
     disqualifying: true
   }
 

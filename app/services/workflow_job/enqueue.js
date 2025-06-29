@@ -4,7 +4,6 @@ const { Producer } = require('sqs-producer')
 const { SQSClient } = require('@aws-sdk/client-sqs')
 const sqsConfig = _.pick(app.config.get('sqs'), ['endpoint', 'accessKeyId', 'secretAccessKey', 'region'])
 
-let _queue
 
 function queue() {
   if (!_queue) _queue = Producer.create({

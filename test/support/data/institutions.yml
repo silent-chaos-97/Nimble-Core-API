@@ -13,7 +13,6 @@
   public_metadata:
     bsa:
       _:
-        thresholds:
           - op: '>='
             val: 7
             risk: High
@@ -26,5 +25,6 @@
         text: Are all account owners US citizens?
         type: string
         subtype: enum
+        enum: [ 'yes', 'no' ]
         score:
           no: 2

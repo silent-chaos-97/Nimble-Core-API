@@ -14,4 +14,4 @@ const WORKGROUPS = {
 
 const DEPARTMENT = {
   key: 'departments',
-  title: 'Departments',
+  schema: { $ref: 'departments' }

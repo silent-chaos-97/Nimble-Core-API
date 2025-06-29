@@ -77,3 +77,5 @@ describe("AWS Facade for s3", () => {
     })
 
     it('should have error message', (done) => {
+      try {
+        AWS.s3ImgUpload('folder', 'just a string')

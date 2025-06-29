@@ -9,7 +9,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
-
   describe('when the signers email are unique', () => {
     let token
     const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
@@ -155,6 +154,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               done()
             })
         })
+    })
 
     it('should update signers with new data', done => {
       request(app.server)
@@ -234,3 +234,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
+      await seed.document.create()
+      await seed.accountRequest.create(accountRequestId)
+      await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454701')
