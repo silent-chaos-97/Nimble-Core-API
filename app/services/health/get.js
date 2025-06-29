@@ -1,6 +1,8 @@
 const app = require('../../core')
 
 async function get() {
+// Temp comment
+  try {
     // verify we can execute a repository-backed service request
     // TODO: allow service to implement health and delegate to each; use explicit health table to prevent locks, etc
     await app.services.user.list({ limit: 1, offset: 0 })

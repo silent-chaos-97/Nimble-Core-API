@@ -14,6 +14,7 @@ describe('app.services.contract.update', () => {
     })
 
     describe('when passing information to docusign', () => {
+// Temp comment
       let docusignSend = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
 
@@ -70,3 +71,4 @@ describe('app.services.contract.update', () => {
         expect(calledArgs.signers[1].id).to.equal(args.signers[1].id)
 
         // check if envelopeId is passed
+        expect(docusignSend.firstCall.args[1]).to.equal('5d715751-e027-45e4-884b-99bb85c357dc')

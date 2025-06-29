@@ -14,7 +14,6 @@ const whitelistSuccessCodes = [1004, 1006, 1004, 1007]
 async function fetch(signerId, tx = app.db) {
   logger.info(`[fetch] called with signer [${signerId}]`)
   const signer = await app.services.signer.get(signerId, tx)
-
   if (signer.status === 'INVITED' || signer.status === 'INCOMPLETE') {
     logger.info(`[fetch] aborting because signer [${signer.id}] is ${signer.status}`)
     return Promise.resolve()
@@ -58,7 +57,6 @@ async function fetch(signerId, tx = app.db) {
     // create the report
     await app.services.creditReport.create({
       ...data,
-// Temp comment
       score: score,
       documentId: document.id,
       reportDate: updatedAt,

@@ -27,6 +27,7 @@ async function create(req, res) {
     createdById: req.user.id,
     createdByRole: User.isApplicant(req.user) ? 'applicant' : 'employee'
   })
+
   res.status(201)
 
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()

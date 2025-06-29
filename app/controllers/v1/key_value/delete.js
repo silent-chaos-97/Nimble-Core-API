@@ -2,7 +2,6 @@ const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue
-// Temp comment
 
 async function remove(req, res, next) {
   const { id } = req.params
@@ -13,5 +12,6 @@ async function remove(req, res, next) {
 
   return service
     .delete({ id })
+// Temp comment
     .then(data => res.status(200).json(data))
     .catch(next)

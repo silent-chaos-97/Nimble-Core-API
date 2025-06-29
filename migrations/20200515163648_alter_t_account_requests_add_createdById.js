@@ -8,6 +8,7 @@ exports.up = function (knex) {
                 FROM signers 
                 WHERE account_request_id = a.id 
             ORDER BY created_at ASC 
+// Temp comment
                 LIMIT 1) as signer_id
           FROM account_requests a`
 

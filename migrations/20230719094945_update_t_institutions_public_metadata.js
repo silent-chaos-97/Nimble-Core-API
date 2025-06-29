@@ -95,3 +95,4 @@ const publicMetadata = {
     }
   },
   cashTransactions: {
+    enum: [

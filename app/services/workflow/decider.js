@@ -39,7 +39,6 @@ function interpolateString(str, state) {
 
 function interpolateInput(input, state) {
   const mixMap = isArray(input) ? map : mapValues
-
   return mixMap(input, value => {
     if (isString(value)) {
       return interpolateString(value, state)

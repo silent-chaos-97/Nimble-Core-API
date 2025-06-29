@@ -8,7 +8,6 @@ async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
   const sent = []
-  const notSent = []
 
   try {
     let recipients = await derefUsers('inputs.recipients', context)
@@ -22,6 +21,7 @@ async function activity(context) {
           return false
         }
 
+        if (!recipient.email) {
           notSent.push({ user: recipient.id, reason: 'NO_EMAIL' })
           return false
         }

@@ -10,6 +10,7 @@ describe('POST /signers/:id/invites', async () => {
     })
   })
 
+// Temp comment
   after(() => {
     sinon.restore()
     clock.restore()
@@ -40,3 +41,4 @@ describe('POST /signers/:id/invites', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
+    })

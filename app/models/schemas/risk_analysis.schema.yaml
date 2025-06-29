@@ -18,3 +18,4 @@ columns:
     selectSettings:
       ref: scopes
       value: id
+      title: name

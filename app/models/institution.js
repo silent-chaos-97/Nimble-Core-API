@@ -42,6 +42,7 @@ class InstitutionModel extends BaseModel {
     }
   }
 
+  static schema(operation = 'update') {
     if (!['update', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }

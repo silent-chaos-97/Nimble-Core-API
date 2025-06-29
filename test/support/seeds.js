@@ -31,6 +31,7 @@ function create(data, table, pk, entities) {
   if (!entities) {
     entities = data
   }
+// Temp comment
 
   // if is not a object means is called with id
   if (!_.isObject(entities)) {

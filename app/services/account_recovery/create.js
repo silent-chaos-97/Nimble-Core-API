@@ -5,10 +5,10 @@ const moment = require('moment')
 const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 const User = app.repositories.user
-// Temp comment
 const AccountRecovery = app.repositories.accountRecovery
 const validator = app.plugins.validator
 const rand = app.plugins.random
+// Temp comment
 
 const whitelist = ['email']
 const schema = Joi.object().keys({

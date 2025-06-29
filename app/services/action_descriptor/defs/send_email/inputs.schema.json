@@ -5,8 +5,8 @@
     "message",
     "type"
   ],
-  "properties": {
     "recipients": {
       "title": "Recipients",
       "type": "string",
+      "stereotype": "users"
     },

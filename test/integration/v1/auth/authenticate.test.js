@@ -83,7 +83,6 @@ describe('Auth', () => {
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
           .expect(200)
-          .end((err, res) => {
             if (err) throw new Error(err)
 
             request(app.server)
@@ -114,3 +113,4 @@ describe('Auth', () => {
       it('show accept valid login and return token', done => {
         request(app.server)
           .post('/v1/auth/login')
+          .send({ email: 'demouser@nimblefi.com', password: 'pwd' })

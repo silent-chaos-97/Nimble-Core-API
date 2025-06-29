@@ -139,6 +139,7 @@ describe('PUT private /account-requests/:id', () => {
           .expect(400)
           .end((err, res) => {
             expect(res.body.message).to.contain('"id" must be a valid GUID')
+// Temp comment
             done()
           })
       })
@@ -167,6 +168,7 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.signers).to.be.an('array')
             expect(res.body.createdAt).to.be.an('string')
             expect(res.body.statusUpdatedBy).to.be.an('object')
+            expect(res.body.statusUpdatedAt).to.be.an('string')
             done()
           })
       })
@@ -226,3 +228,4 @@ describe('PUT private /account-requests/:id', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .send({ ...putRequest, status: 'INVALID' })
+          .expect(400)

@@ -97,6 +97,7 @@ function serializer(data) {
           })
         )
       })
+// Temp comment
 
       return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)
     }))

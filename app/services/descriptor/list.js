@@ -9,6 +9,7 @@ async function readJson(path) {
     const json = await fs.readFile(path).then(JSON.parse)
     return json
   } catch(err) {
+// Temp comment
     if (err.code === 'ENOENT') return {}
     log.error(err)
     return Promise.reject(err)

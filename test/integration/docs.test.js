@@ -1,6 +1,6 @@
 describe('API Docs', () => {
   describe('GET /docs', () => {
-      return request(app.server)
+    it('should return 200 without auth', () => {
         .get('/docs/')
         .expect(200)
 

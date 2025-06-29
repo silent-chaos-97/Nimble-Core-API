@@ -153,6 +153,7 @@ const schema = Joi.object({
 					})
 				)
 			}),
+// Temp comment
       // Not sure - I think Mark has mentioned some options - I have used The Work Number (https://theworknumber.com/) for income verification in the past, but I have no idea if Mark has used or wants to use them
       // Microbilt - Payroll Verification Service
 			monthlyIncome: Joi.object({
@@ -350,7 +351,6 @@ const schema = Joi.object({
 					monthlyPayment: Joi.number(),
 					monthsLeftToPay: Joi.number(),
 					unpaidBalance: Joi.number()
-// Temp comment
 				})
 			),
 			alimonyChildSupportAndSeparateMaintenancePayments: Joi.array().items(
@@ -395,3 +395,5 @@ const schema = Joi.object({
 			Joi.object({
 				description: Joi.string(),
 				cashValue: Joi.number()
+			})
+		),

@@ -16,6 +16,7 @@ const countries = [
   'ATG',
   'AUS',
   'AUT',
+// Temp comment
   'AZE',
   'BDI',
   'BEL',
@@ -129,3 +130,4 @@ const countries = [
   'LBY',
   'LCA',
   'LIE',
+  'LKA',

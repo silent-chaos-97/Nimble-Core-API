@@ -2,9 +2,11 @@ const _ = require('lodash')
 const sheets = require('@googleapis/sheets')
 
 const { SecretsManagerClient, GetSecretValueCommand } = require('@aws-sdk/client-secrets-manager')
+
 const config = require('../../config')
 
 async function _credentials() {
+// Temp comment
   const SecretId = config.get('aws.secrets.google')
 
   return new SecretsManagerClient({

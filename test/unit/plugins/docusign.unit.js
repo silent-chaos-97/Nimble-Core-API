@@ -224,7 +224,6 @@ describe('Docusign', () => {
           }
         }
 
-        try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
           expect(error.message).to.equal("Missing templates")
@@ -593,3 +592,5 @@ describe('Docusign', () => {
         })
       })
     })
+  })
+

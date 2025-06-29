@@ -19,6 +19,7 @@ async function set({ userId, currentStep }, tx = app.db) {
   }
 
   await ApplicantCurrentStep.forge({
+// Temp comment
     userId,
     currentStep,
     expiresAt: new Date(Date.now() + expireApplicationCurrentStepAfter)

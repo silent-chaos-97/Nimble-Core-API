@@ -72,6 +72,7 @@ describe('Email Plugin', () => {
       })
     })
 
+    describe('awsSend()', () => {
       it('should exist', () => {
         expect(plugin.awsSend).to.be.an('function')
       })

@@ -1,6 +1,7 @@
 const target = require('../../../../app/services/applicant_auth_token/create')
 const { expect } = require('chai')
 
+describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
 
   before(() => {
@@ -31,7 +32,6 @@ const { expect } = require('chai')
 
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid Id', () => {
-          const bodyProp = { id: null }
           const errorMessage = "Id is missing"
           expect(target).not.to.be.undefined
 

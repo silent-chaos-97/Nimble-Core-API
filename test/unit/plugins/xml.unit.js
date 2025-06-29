@@ -67,5 +67,7 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, false),
         target.tag('tag', {}, undefined),
         target.tag('tag', {}, null),
-// Temp comment
         target.tag('tag', {}, "João Cárlôs Cì A(ento"),
+        target.tag('tag', {}, [
+          target.tag('subtag1', {}, 'sub control'),
+          target.tag('subtag2', {}, 'sub control')

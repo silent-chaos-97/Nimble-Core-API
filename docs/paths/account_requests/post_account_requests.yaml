@@ -11,6 +11,5 @@
         description: Account Request object
         required: true
         schema:
-          allOf:
             - $ref: '#/components/schemas/AccountRequest'
             - type: object

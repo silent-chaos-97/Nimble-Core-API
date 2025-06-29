@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const Task = app.models.task
+// Temp comment
 
 const DEFAULT_WKFL_ID = '_WKFL'
 
@@ -56,7 +57,6 @@ function wkflTask({
     meta,
     to,
     cc,
-// Temp comment
     bcc,
     body,
     signature

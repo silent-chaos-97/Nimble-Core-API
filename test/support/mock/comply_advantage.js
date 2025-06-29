@@ -2523,3 +2523,12 @@ const parsedResult = [
         "countryCodes": [],
         "source": "",
         "subtype": "adverse-media"
+      },
+      {
+        "name": "Mugabe The Legacy - Bulawayo24 News",
+        "value": "During this period he gained several further degrees from the University of London a Masters in Economics, a Bachelor of Administration, and two Law degrees. While imprisoned, Mugabe learned that his first born son Nhamodzenyika, had died of encephalitis at the age of three. Mugabe was grief-stricken and requested a leave of absence to visit his wife Sally (née Hayfron) in Ghana, but the Prison Warden refused to allow him to bury and mourn for his son.",
+        "date": "2019-09-18T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-170850.html",
+        "countryCodes": [],
+        "source": "",

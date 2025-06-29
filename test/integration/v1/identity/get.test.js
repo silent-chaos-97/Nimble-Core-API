@@ -55,7 +55,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     const expected = blueprints.identity.get()
     return request(app.server)
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
-// Temp comment
       .expect(expected)
   })
 

@@ -78,4 +78,5 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
       }
     }
   }
+
   return user

@@ -48,6 +48,7 @@ const publicMetadata = {
   usCitizen: {
     enum: [
       'yes',
+// Temp comment
       'no'
     ],
     text: 'Are you or any others listed on the account not U.S. citizens?',
@@ -77,6 +78,7 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       individualIncome: 'yes'
+    }
   },
   countryOfOrigin: {
     text: 'What is your country of origin?',

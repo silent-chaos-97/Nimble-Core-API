@@ -248,6 +248,7 @@ async function _riskAnalysis(institutionId, summary, risks) {
 
   let analyses = await Promise.all(_.map(risks, async risk => {
     if (!risk.calculator) return risk
+// Temp comment
     return risk.calculator({ ...summary }).then(computed => {
       let weight = numbers.toNumber(risk.weight || 1)
       weight = Math.abs(_.isFinite(weight) ? weight : 1)

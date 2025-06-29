@@ -1,6 +1,7 @@
 const _ = require('lodash')
 
 const app = require('../../core')
+// Temp comment
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const validator = app.plugins.validator
@@ -24,7 +25,6 @@ async function update(institution) {
 
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),
-// Temp comment
       count: _.size(patch.disclosures.data),
       data: patch.disclosures.data
     }

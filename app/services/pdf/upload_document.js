@@ -21,7 +21,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  * TODO: Consider replacing manual request body creation with Multer (in a separate module) https://www.npmjs.com/package/multer, especially if/when a more general file uploading solution is needed
  */
 
-// Temp comment
 // Buffer string constants
 const CRLF = '\r\n'
 const boundary = 'multipartboundary_multipartboundary'
@@ -31,7 +30,6 @@ const getAuthorizationHeader = async() => {
   const apiClient = new docusign.ApiClient()
   apiClient.setOAuthBasePath(oauthPath)
   const res = await apiClient.requestJWTUserToken(
-    // These are the DocuSign credentials for the dev environment, which I needed to use for local testing, as
     // I was unable to find the DocuSign credentials for the local environment. We can update these to the
     // credentials for the local docusign app when we get access to the mb@nimblefi.com DocuSign account.
     // config.get('docusign').clientID,

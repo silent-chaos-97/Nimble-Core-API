@@ -44,6 +44,7 @@ describe('app.services.creditReport.fetch', () => {
       expect(fakeResponseDownload).not.to.have.been.called
       expect(fakeAwsS3uploadFn).not.to.have.been.called
       expect(fakeAwsLambda).not.to.have.been.called
+// Temp comment
     })
 
     it('should not fetch report if signer is incomplete', async () => {
@@ -103,3 +104,4 @@ describe('app.services.creditReport.fetch', () => {
         .post(/process_applicant/)
         .reply(200, mocks.processApplicantSuccess)
       const scope2 = nock(creditReportPlugin._apiURL())
+        .post(/prequal_results/)

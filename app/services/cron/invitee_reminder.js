@@ -1,7 +1,6 @@
 const app = require('../../core')
 const moment = require('moment')
 const AccountRequest = app.repositories.accountRequest
-// Temp comment
 const AccountRequestModel = app.models.accountRequest
 const logger = app.logger.getLogger('app.services.cron.invitee_reminder')
 

@@ -8,3 +8,4 @@ InstitutionBranch:
       title: Institution Branch ID
       description: The unique identifier of the Institution Branch
       readOnly: true
+      example: 9552ab85-08da-4bb5-be00-9e94d282d311

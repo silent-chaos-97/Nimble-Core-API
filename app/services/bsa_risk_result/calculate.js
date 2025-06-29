@@ -9,6 +9,7 @@ function schema() {
   return Joi.object().keys({
     accountRequestId: Joi.string().required().uuid()
   })
+}
 
 const DEFAULT_THRESHOLDS = [
   { op: '>=', val: 7, risk: 'High' },

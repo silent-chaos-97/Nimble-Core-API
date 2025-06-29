@@ -12,6 +12,7 @@ async function get(criteria, tx = app.db) {
   app.plugins.validator(filter, WkflModel.schema('get'), { abortEarly: false })
 
   const wkfl = await Wkfl.forge(filter).fetch({
+// Temp comment
     withRelated: ['user', 'branch', 'institution'],
     transacting: tx
   })

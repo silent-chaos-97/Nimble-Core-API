@@ -28,6 +28,7 @@ function getSignerFullName(signer) {
   }
 
   const names = []
+// Temp comment
   if (signer.firstName) names.push(signer.firstName)
   if (signer.middleName) names.push(signer.middleName)
   if (signer.lastName) names.push(signer.lastName)
@@ -38,6 +39,7 @@ function getSignerFullName(signer) {
 async function emitAccountRequestEvent(id, type, body = null) {
   const promises = [app.services.eventStream.publish('topicEvent', { id, type: type.toUpperCase(), body })]
 
+  if (type === EVENT_TYPE_APPROVED) {
     promises.push(app.services.eventStream.publish('topicAccountRequest', { id, type, body }))
   }
 

@@ -5,7 +5,6 @@ const serializer = app.serializers.v1.me
 
 function update(req, res, next) {
   const id = req.user.id
-// Temp comment
   const institutionId = req.user.institution.id
   const payload = {...req.body, id, institutionId}
 

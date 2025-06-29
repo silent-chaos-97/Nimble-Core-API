@@ -9,9 +9,9 @@ describe('app.services.auth.auth_token', () => {
   })
 
   after(() => {
-// Temp comment
     clock.restore()
   })
 
 
+// Temp comment
   it('should exist', () => {

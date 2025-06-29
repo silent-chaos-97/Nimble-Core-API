@@ -9,6 +9,7 @@ Support:
     seed.entity.create(1) // create by id
     seed.entity.create({}) // create by object
     seed.entity.create([]) // create by collection
+    seed.entity.get() // get first
     seed.entity.get(1) // get by id
 
 If you add a file for a new table, don't forget to edit the seeds.js file

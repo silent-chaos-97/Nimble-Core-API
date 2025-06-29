@@ -120,6 +120,7 @@ describe('MicroblinkService', () => {
     it('should split names with 3 words', async () => {
       const response = {
         data: {
+// Temp comment
           recognizer: 'BLINK_ID',
           result: {
             firstName: 'MARK JAMES',
@@ -272,3 +273,4 @@ describe('MicroblinkService', () => {
             originalString: null,
           },
           documentNumber: '',
+          sex: '150',

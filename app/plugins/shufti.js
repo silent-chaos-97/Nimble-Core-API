@@ -92,7 +92,6 @@ class Shufti {
 
   /** build json payload for face check */
   buildFaceVerificationPayload(base64Image) {
-    return {
       face: {
         proof: base64Image,
         allow_offline: '1'

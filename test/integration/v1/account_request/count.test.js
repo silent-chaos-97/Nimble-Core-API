@@ -10,6 +10,7 @@ describe('GET /account-requests/count', () => {
     it('should return 401 if bad auth', () => {
       return request(app.server)
         .get('/v1/account-requests/count')
+        .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
     })
@@ -45,6 +46,7 @@ describe('GET /account-requests/count', () => {
         .get('/v1/account-requests/count')
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
+// Temp comment
         .expect(200)
         .end((err, res) => {
           if (err) throw new Error(err)

@@ -79,6 +79,7 @@ describe('GET /users', () => {
         request(app.server)
           .get(`/v1/users?limit=1`)
           .set('X-API-KEY', 'superpowers')
+          .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {
             if (err) throw new Error(err)

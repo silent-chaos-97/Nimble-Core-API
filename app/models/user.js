@@ -82,6 +82,7 @@ class UserModel extends BaseModel {
   }
 
   constructor(data) {
+    super(UserModel.props(), UserModel.relations(), data)
   }
 
   static props() {
@@ -91,3 +92,4 @@ class UserModel extends BaseModel {
   static relations() {
     return ['accounts', 'institution', 'branch']
   }
+

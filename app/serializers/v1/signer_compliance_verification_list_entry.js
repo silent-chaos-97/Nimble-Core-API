@@ -2,7 +2,6 @@ const _ = require('lodash')
 const defaultSerializer = require('../serializer')
 
 const properties = [
-  'id',
   'name',
   'value',
   'source',
@@ -15,6 +14,7 @@ const properties = [
   'createdAt',
   'updatedAt'
 ]
+
 function serializer(data) {
   return {
     ...defaultSerializer(properties, data),

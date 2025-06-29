@@ -1847,6 +1847,7 @@ const mockDocumentTabs = {
       'locked': 'true',
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',
+      'maxLength': '4000',
       'tabLabel': 'govID_number#4',
       'font': 'lucidaconsole',
       'bold': 'false',
@@ -2730,3 +2731,12 @@ const mockDocumentTabs = {
       'pageNumber': '1',
       'xPosition': '313',
       'yPosition': '124',
+      'width': '78',
+      'height': '12',
+      'tabId': '1df2eb12-5b77-4af0-9aaa-673a9308023f',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'text'
+    },
+    {
+      'validationPattern': '',

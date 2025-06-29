@@ -6,6 +6,5 @@
     operationId: authLogin
     requestBody:
       content:
-        application/json:
           schema:
             $ref: '#/components/schemas/UserLogin'

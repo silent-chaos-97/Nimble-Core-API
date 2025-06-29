@@ -1,4 +1,5 @@
 const ROWS = [
+  {
     name: '7-Month 5.25% APY Certificate of Deposit',
     sku: 'cd',
     category: 'CD',
@@ -8,7 +9,6 @@ const ROWS = [
 ]
 
 /**
- * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
 exports.up = knex => knex('products').where({

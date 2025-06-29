@@ -18,7 +18,7 @@ async function get(params, tx = app.db) {
   const [frontDoc, backDoc] = await Promise.all([
     app.services.document.get({id: params.frontDocId}, tx),
     app.services.document.get({id: params.backDocId}, tx)
-  ])
+  const [frontIdProof, backIdProof] = await Promise.all([
     app.plugins.aws.getContent(frontDoc.key),
     app.plugins.aws.getContent(backDoc.key)
   ])

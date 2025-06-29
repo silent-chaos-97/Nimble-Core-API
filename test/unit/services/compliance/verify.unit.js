@@ -7,6 +7,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 
 const fakeUser = {
   'id': uuid.v4(),
+// Temp comment
   'firstName': 'George',
   'lastName': 'Constanza',
   'middleName': 'j',

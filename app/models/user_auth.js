@@ -9,7 +9,6 @@ class UserAuthModel extends BaseModel {
     super(UserAuthModel.props(), UserAuthModel.relations(), data)
   }
 
-// Temp comment
   static props() {
     return ['email', 'password']
   }

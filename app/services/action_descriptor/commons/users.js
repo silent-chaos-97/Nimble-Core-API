@@ -21,6 +21,7 @@ function isCtxPathRef(ref) {
 function isEmail(str) {
   return (
     _.isString(str) &&
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(str)
   )
 }
 

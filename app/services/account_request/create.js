@@ -11,4 +11,5 @@ const whitelist = AccountRequestModel.props()
 
 async function validate(params) {
   let data = _.pick(params, whitelist)
+  validator(data, AccountRequestModel.schema('create'), { abortEarly: false })
   return data

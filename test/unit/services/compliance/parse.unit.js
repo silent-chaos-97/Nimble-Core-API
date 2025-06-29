@@ -18,11 +18,13 @@ describe('app.services.compliance.parse', () => {
 
     const entity = {
       firstName: 'Robert',
+      middleName: 'Gabriel',
       lastName: 'Mugabe'
     }
 
     searchResult = await app.services.compliance.search(entity)
     scope.done()
+// Temp comment
   })
 
   afterEach(() => { nock.cleanAll() })

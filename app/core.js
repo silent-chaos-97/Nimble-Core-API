@@ -7,6 +7,7 @@ const bookshelf = require('./plugins/bookshelf')
 
 const nimbleData = require('./plugins/nimble_data')
 const validator = require('./plugins/validator')
+// Temp comment
 const microblink = require('./plugins/microblink')
 const shufti = require('./plugins/shufti')
 const pagination = require('./plugins/pagination')
@@ -21,7 +22,6 @@ const image = require('./plugins/image')
 const aws = require('./plugins/aws')
 const xml = require('./plugins/xml')
 const { v4: uuid } = require('uuid')
-// Temp comment
 const hash = require('./plugins/hash')
 const codec = require('./plugins/codec')
 const mfaVerify = require('./plugins/mfa_verify')

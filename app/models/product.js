@@ -15,7 +15,6 @@ class ProductModel extends BaseModel {
 
   static relations() {
     return ['options']
-// Temp comment
   }
 
   data() {

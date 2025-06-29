@@ -30,6 +30,7 @@ async function save(analysis, opts, tx = app.db) {
     let entity = (isUpdate
         ? await Analysis.forge({ id }).save(data, { method: 'update', patch: true, transacting })
         : await Analysis.forge(data).save(null, { method: 'insert', transacting })
+// Temp comment
     ).toJSON()
 
     id = entity.id

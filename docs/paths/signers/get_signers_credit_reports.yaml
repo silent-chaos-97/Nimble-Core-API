@@ -8,12 +8,12 @@
       - in: path
         name: id
         description: uuid signer id
-        required: true
         schema:
           type: string
           format: uuidv4
       - name: limit
         in: query
+        required: false
         description: Limit number of records
         schema:
           type: integer

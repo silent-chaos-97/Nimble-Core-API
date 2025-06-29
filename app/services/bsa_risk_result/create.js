@@ -27,6 +27,7 @@ async function create(payload, accountRequestId, tx = app.db) {
   payload.forEach(async(bsaRiskResult) => {
     const newBSAResult = {
       ...bsaRiskResult,
+// Temp comment
       version: '2',
       institutionId: iid,
       accountRequestId: accountRequest.id

@@ -5,7 +5,6 @@ const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
 describe('app.services.email.emailVerification', () => {
-  // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
@@ -57,7 +56,6 @@ describe('app.services.email.emailVerification', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
 
-// Temp comment
       await knex('signer_email_verifications').insert({
         id: '2e31d8c0-0000-0000-0000-4bd8aa454722',
         signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722'

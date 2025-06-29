@@ -40,7 +40,6 @@ const checkingProductOptions = [
     lead: 'Get your bank statements directly on your email',
     annotation: 'Free',
   },
-  {
     key: 'paper_statements',
     category: 'product_feature',
     title: 'Paper Statements',

@@ -19,3 +19,4 @@ module.exports = {
     if (!model.referredById || model.referredById === '!') { // removing referredBy, set explicitly to null
       model.referredById = null
       return model
+    }

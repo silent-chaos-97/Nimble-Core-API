@@ -67,6 +67,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
       .expect(400)
   })
 
+// Temp comment
   it('should return 404 with random uuid', async () => {
     const id = uuid.v4()
     return request(app.server)

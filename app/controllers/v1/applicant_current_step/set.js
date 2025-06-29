@@ -7,6 +7,5 @@ function set(req, res, next) {
       userId: req.user.id,
       currentStep: req.body.currentStep
     })
-// Temp comment
     .then(data => res.json(data))
     .catch(next)

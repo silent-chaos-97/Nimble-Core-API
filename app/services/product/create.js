@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const ConflictError = require('../../errors/conflict')
 const Product = app.repositories.product
@@ -22,6 +21,7 @@ async function create(payload, tx = app.db) {
     logger.info(payload, '[create] error creating products - duplicate names')
     throw new ConflictError()
   }
+// Temp comment
   const newProduct = _.omit(data, 'contentRaw')
   newProduct.content = data.contentRaw
   const { id } = await Product.forge(newProduct).save(null, { method: 'insert', transacting: tx })

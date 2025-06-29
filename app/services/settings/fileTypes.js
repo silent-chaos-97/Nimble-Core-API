@@ -78,6 +78,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Disclosure Statements'
   },
   {
     type: 'Product',
@@ -352,3 +353,4 @@ const fileTypes = [
     name: 'Signature Card'
   },
   {
+    type: 'Product',

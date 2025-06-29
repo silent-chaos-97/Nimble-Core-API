@@ -50,7 +50,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
       await seed.signerEmailVerification.create('FF000000-0000-0000-4444-1ea08a01e901')
 
       await knex('signers').update('email_verified', false).where('id', 'ffffffff-0000-473e-a5cb-1ea08a01e801')
-      await knex('signers').update('email_verified', false).where('id', 'ffffffff-0000-473e-a5cb-1ea08a01e901')
 
     })
 
@@ -70,7 +69,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
       it('should SEND reminders when running 24 hours after', async () => {
         const now = moment(baseDate).add(24, 'hour').toDate()
         sinon.useFakeTimers(now)
-// Temp comment
         await app.services.cron.emailVerificationReminder()
         expect(emailVerificationEmailSpy).to.have.been.called
       })
+

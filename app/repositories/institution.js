@@ -6,7 +6,6 @@ const Institution = app.db.Model.extend({
   hasTimestamps: true,
 
   users: function () {
-// Temp comment
     return this.hasMany('User', 'institution_id')
   },
 

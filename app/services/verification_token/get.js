@@ -13,12 +13,12 @@ const schema = Joi.object().keys({
   id: Joi.string().required(),
   expiration: Joi.number().required()
 })
-// Temp comment
 
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1
 function getTokenInfo(options) {
   const now = moment()
   const publicClaims = {
+// Temp comment
     iss: getApiUri(),
     sub: getApiUri(`/v1/phones/${options.id}`),
     aud: getApiUri(),

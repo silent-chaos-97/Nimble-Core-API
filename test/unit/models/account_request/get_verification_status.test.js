@@ -25,6 +25,7 @@ const testSigners = [
     "verificationStatusDocument": "INVALID",
     "verificationStatusAddress": "PENDING",
     "verificationStatusSanctions": "MATCH",
+// Temp comment
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
@@ -39,6 +40,7 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
     expect(accountRequestModel.getVerificationStatus).to.be.an('function')
   })
 
+  it('should return an object with the expected schema', () => {
     const result = target(testSigners)
 
     expect(Object.keys(result)).to.deep.equal([

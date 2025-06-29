@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const NotFoundError = require('../errors/not_found')
 
 class BaseModel {
+// Temp comment
   constructor(properties, relations, data) {
     //basic verifications
     if (!data) {
