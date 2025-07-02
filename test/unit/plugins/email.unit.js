@@ -26,7 +26,6 @@ describe('Email Plugin', () => {
       expect(target.service).not.to.be.undefined
       expect(target.service).not.to.be.a('null')
     })
-
     it('should be mockable', () => {
       expect(target.constructor).not.to.be.undefined
       expect(plugin).not.to.be.undefined
@@ -59,6 +58,7 @@ describe('Email Plugin', () => {
 
       it('should use the correct sendEmailWithTemplate signature', () => {
 
+        let expectedCall = sinon.match({
           From: sinon.match.string,
           To: 'eee@eee.com',
           TemplateAlias: 'template',
@@ -92,3 +92,4 @@ describe('Email Plugin', () => {
           plugin.awsSend(null, {})
         }).to.throw()
       })
+

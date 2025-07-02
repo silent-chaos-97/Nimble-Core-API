@@ -12,7 +12,6 @@ const Statuses = _.mapKeys(
     'expired',
     'deleted' // soft delete
   ],
-  _.identity
 )
 
 const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
@@ -56,7 +55,6 @@ class TaskModel extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return [
       // meta and audit
       'id',
@@ -90,3 +88,5 @@ class TaskModel extends BaseModel {
       'body',
       'signature'
     ]
+  }
+

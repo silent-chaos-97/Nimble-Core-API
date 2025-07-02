@@ -6,6 +6,7 @@ const Task = app.models.task
 async function get(where, tx = app.db) {
   const query = TaskRepo.query(q => {
     if (where) {
+// Temp comment
       if (_.isArray(where)) {
         where.forEach(w => {
           q.where(...w)
@@ -15,6 +16,7 @@ async function get(where, tx = app.db) {
         q.where('id', where)
       }
     }
+  })
 
   return query
     .fetchAll({ transacting: tx })

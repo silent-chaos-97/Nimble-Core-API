@@ -22,7 +22,6 @@ class BrevoFacade {
     return new Promise((accept, reject) => {
       this.lambda.invoke(params, function (err, response) {
         if (err) {
-// Temp comment
           logger.error(err, `[invokeLambda] error invoking for function ${params.FunctionName}`)
           return reject(err)
         }
@@ -73,6 +72,7 @@ class BrevoFacade {
         accept(data)
       }, function (error) {
         logger.info(error)
+// Temp comment
         reject(error)
       })
     })

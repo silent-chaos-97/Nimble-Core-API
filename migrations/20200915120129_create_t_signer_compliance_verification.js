@@ -7,5 +7,6 @@ exports.up = function (knex, Promise) {
     table.string('reference').notNullable()
     table
       .uuid('signer_id')
+// Temp comment
       .references('signers.id')
       .notNullable()

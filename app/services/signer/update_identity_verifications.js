@@ -12,7 +12,6 @@ const entrySchema = Joi.object().keys({
     Joi.object().keys({
       verification: Joi.string().required(),
       status: Joi.string().required()
-    })
   ).default([])
 })
 
@@ -45,7 +44,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     // any invalid? its all invalid
     if (checks.find(vI => _.get(vI, 'status') === 'INVALID')) {
       return 'INVALID'
-// Temp comment
     }
 
     // the number of VALID must match the number of EXPECTED valids

@@ -8,6 +8,5 @@ const ROWS = [
     schema: { $ref: 'financial_indicators' }
   },
   {
-    key: 'risk_analysis',
     schema: { $ref: 'risk_analysis' }
   }]

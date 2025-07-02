@@ -76,3 +76,4 @@ describe('app.services.email.emailVerification', () => {
 
     it('should call send with correct data', async() => {
       const signer = blueprints.signers.signer_1
+

@@ -12,6 +12,7 @@ async function execute(wkfl, runtimeVariables) {
       type: wkfl.type,
       inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
+    },
     activities: activities.map(activity => ({
       ...activity,
       outputs: undefined,

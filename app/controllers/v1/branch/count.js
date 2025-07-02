@@ -20,9 +20,9 @@ function count(req, res, next) {
     institutionId: isSuperAdmin ? null : me.institutionId
   })
 
-// Temp comment
   return service
     .count(filters)
     .then(serializer)
+// Temp comment
     .then(data => res.status(200).json(data))
     .catch(next)

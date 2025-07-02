@@ -60,3 +60,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
         })
+      })

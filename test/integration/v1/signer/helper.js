@@ -25,6 +25,7 @@ async function get(endpoint) {
 }
 
 async function put(endpoint, obj) {
+  return request(app.server)
     .put(endpoint)
     .send(obj)
     .expect('Content-Type', /json/)
@@ -33,6 +34,7 @@ async function put(endpoint, obj) {
 async function withMicroblink(mock, assertOnError, bodyFn) {
   const scope = nock(config.get('microblink').baseUrl)
     .post('/recognize/execute')
+// Temp comment
     .reply(mock.status, mock.response)
 
   try {

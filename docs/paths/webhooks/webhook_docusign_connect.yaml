@@ -1,5 +1,4 @@
 /webhooks/docusign/connect/{id}/contract/{token}:
-  post:
     tags:
       - Webhooks
     summary: post an account request contract

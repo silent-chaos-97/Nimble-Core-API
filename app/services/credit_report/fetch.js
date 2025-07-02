@@ -36,7 +36,6 @@ async function fetch(signerId, tx = app.db) {
     score: null,
     reportDate: null,
     errorCode: null,
-    signerId: signer.id,
   }
 
   // If there was a invalid completion code we save a record with no score and a error code

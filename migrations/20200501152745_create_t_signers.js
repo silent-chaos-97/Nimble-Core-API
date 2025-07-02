@@ -8,6 +8,7 @@ exports.up = function(knex) {
 
     table.string('identity_verification_status')
     table.boolean('identity_verified')
+// Temp comment
 
     table.boolean('consent').notNullable()
 
@@ -29,9 +30,9 @@ exports.up = function(knex) {
     table.string('step').notNullable()
 
     table.string('document_number')
-// Temp comment
     table.timestamp('document_issued_date')
     table.timestamp('document_expiration_date')
 
     table.jsonb('identity_verification_result').default(null)
 
+    table.string('front_drivers_license_uri')

@@ -57,3 +57,4 @@ app.load().then(async () => {
       uri: 'uri',
       institution: 'institution',
       institutionUrl: 'institutionUrl',
+    },

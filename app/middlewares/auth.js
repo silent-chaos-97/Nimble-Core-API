@@ -62,3 +62,26 @@ async function checkRoles(roles, req, res, next) {
   if (_.isEmpty(roles)) return next() // no role required
   if (_.isEmpty(req.user.roles)) return next(new UnauthorizedTokenError('Unauthorized:0'))
   for (const role of roles) { if (_.includes(req.user.roles, role)) return next() }
+  next(new UnauthorizedTokenError('Unauthorized:1'))
+}
+
+async function checkMemberships(memberships, req, res, next) {
+  if (req.isAuthorized) return next() // already authorized
+  if (!req.isAuthenticated) return next(new UnauthorizedTokenError('Memberships require authentication'))
+  if (!req.user) return next(new UnauthorizedTokenError('Memberships require authentication'))
+  if (User.isSuperAdmin(req.user)) return next() // super-admin is always permitted
+  if (_.isEmpty(memberships)) return next(new UnauthorizedTokenError('Unauthorized:0')) // membership can't be verified
+
+  let atLeastOne = false
+
+  if (memberships.institution) {
+    if (req.user.institutionId !== req.params[memberships.institution]) return next(new UnauthorizedTokenError('Unauthorized:Institution'))
+    atLeastOne = true
+  }
+
+  if (memberships.branch) {
+    if (req.user.branchId !== req.params[memberships.branch]) return next(new UnauthorizedTokenError('Unauthorized:Branch'))
+    atLeastOne = true
+  }
+
+  next(atLeastOne ? undefined : new UnauthorizedTokenError('Unauthorized:0'))

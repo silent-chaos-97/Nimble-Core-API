@@ -62,6 +62,7 @@ class AccountRequest extends BaseModel {
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
     }
   }
+
   mapProductConfigurations() {
     if (!_.has(this._data, 'productConfigurations')) {
       return []
@@ -133,3 +134,5 @@ class AccountRequest extends BaseModel {
       return { // create an object with the same keys
         ...acountStatus,
         [key]: value < 0 ? 'PENDING' : KEYMAP[key][0 + !!value] // fetch the correct value from the KEYMAP based on 0 or 1
+      }
+    }, {})

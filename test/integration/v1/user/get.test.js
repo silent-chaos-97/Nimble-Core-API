@@ -7,8 +7,8 @@ describe('GET /users/:id', () => {
         .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')
         .expect('Content-Type', /json/)
         .expect(401)
-        .end(done)
     })
+
     it('should return 400 if :id is not a uuid', done => {
       request(app.server)
         .get('/v1/users/string')
@@ -56,3 +56,4 @@ describe('GET /users/:id', () => {
 
     it('should return valid user object', done => {
       request(app.server)
+        .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')

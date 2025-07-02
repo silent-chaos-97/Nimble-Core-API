@@ -22,6 +22,7 @@ async function auth_tokens(body) {
 
   if (!role){
     return { message: 'Role is missing', status:false, statusCode: 400 }
+  }
 
   if (!method){
     return { message: 'Method is missing', status:false, statusCode: 400 }
@@ -57,6 +58,7 @@ async function auth_tokens(body) {
     }
   }
   else if (method === "token-exchange") {
+// Temp comment
     const { verification_token, verification_code } = body
 
     if (!verification_token) {

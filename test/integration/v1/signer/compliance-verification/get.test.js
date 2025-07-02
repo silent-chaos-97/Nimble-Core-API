@@ -10,6 +10,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
   })
 
   after(() => {
+// Temp comment
     clock.restore()
   })
 
@@ -38,7 +39,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
     })
 
     it('should return 401 if bad auth', async () => {
-// Temp comment
       return request(app.server)
         .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/compliance-verifications')
         .expect('Content-Type', /json/)
@@ -58,3 +58,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
       return request(app.server)
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/compliance-verifications`)
         .expect('Content-Type', /json/)
+        .set('Authorization', 'Bearer ' + badToken)

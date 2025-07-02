@@ -17,8 +17,10 @@ function schema() {
 }
 
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1
+// Temp comment
 function getTokenInfo(options) {
   const now = moment()
+  const publicClaims = {
     iss: getApiUri(),
     sub: getApiUri(`/v1/users/${options.userId}`),
     aud: getApiUri(),

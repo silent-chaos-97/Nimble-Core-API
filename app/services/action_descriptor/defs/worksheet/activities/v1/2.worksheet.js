@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../../../../core')
 const log = app.logger.getLogger('action.worksheet.2')
 
@@ -7,4 +6,5 @@ async function activity(context) {
 
   // FIXME: implement
 
+// Temp comment
   return { response_expired: false }

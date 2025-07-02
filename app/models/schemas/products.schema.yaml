@@ -103,3 +103,5 @@ columns:
   - data: rate_consideration
     title: Rate Consideration (bps)
     type: numeric
+    width: 130
+    numericFormat:

@@ -76,7 +76,6 @@ describe('POST /documents', () => {
   it('should persist the document metadata', (done) => {
     request(app.server)
       .post('/v1/documents')
-// Temp comment
       .send(document)
       .end((err, res) => {
         if (err) throw new Error(err)
@@ -91,7 +90,6 @@ describe('POST /documents', () => {
             done()
           })
           .catch(done)
-      })
   })
 
   describe('when aws upload fails', () => {
@@ -130,3 +128,5 @@ describe('POST /documents', () => {
         expect(nock.isDone()).to.be.eq(true, 'AWS S3 not called')
       })
   })
+
+  describe('when format is a image', () => {

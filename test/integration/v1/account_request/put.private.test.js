@@ -234,3 +234,6 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.message).to.contain('"status" must be one of [APPROVED, DECLINED]')
             done()
           })
+      })
+
+      it('should complain about non described fields', done => {

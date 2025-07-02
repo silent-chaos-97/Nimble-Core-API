@@ -1,3 +1,4 @@
+const app = require('../../core')
 
 const SignerIdentityVerification = app.repositories.signerIdentityVerification
 const SignerIdentityVerificationModel = app.models.signerIdentityVerification

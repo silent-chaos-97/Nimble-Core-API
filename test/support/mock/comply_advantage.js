@@ -2604,3 +2604,37 @@ const parsedResult = [
         "source": "",
         "subtype": "adverse-media"
       },
+      {
+        "name": "WHO Rescinds Mugabe's Appointment as WHO Ambassador Amid Public Outrage - Sputnik International",
+        "value": "President Mugabe, in office since 1987, has been repeatedly criticized by various watchdogs and several Western states for violations of human rights and repression against Zimbabwean people. Mugabe has also been blamed for failure to tackle economic problems in the country, which led to the collapse of the health care system.",
+        "date": "2020-03-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://sputniknews.com/world/201710221058449815-who-mugabe-ambassador-reaction/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Walk with the wise to be wise - NewsDay Zimbabwe",
+        "value": "The government critic was later arraigned before a military court and charged for illegal possession of arms, a charge which was condemned by the international community as politically-motivated. When Bobi Wine came to Zimbabwe in May this year, he was detained and interrogated by State security agents at the Robert Gabriel Mugabe International Airport. Boby Wine had been invited to preside as guest of honour at Nelson Chamisa-led MDC congress in Gweru on May 26.",
+        "date": "2019-10-23T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.newsday.co.zw/2019/10/walk-with-the-wise-to-be-wise/amp/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Zimbabwe proclaims former President Mugabe (1924-2019) a national hero | Pambazuka News",
+        "value": "Both Mugabe and Sally were arrested. Mugabe spent a decade imprisoned between the years of 1964-1974. After his release, he travelled to Mozambique in 1975 after the neighbouring country's independence from Portuguese colonialism.",
+        "date": "2019-10-08T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.pambazuka.org/node/100387",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Zimbabwe ruling party ZANU-PF begins Robert Mugabe impeachment | The West Australian",
+        "value": "The move came after Mugabe called his cabinet for a meeting at his State House offices despite the parliamentary plan, which could result in Mugabe being kicked out in days. In the draft motion, the party accused Mugabe of being a \"source of instability\", flouting the rule of law and presiding over an \"unprecedented economic tailspin\" in the past 15 years. It also said he had abused his constitutional mandate to favour his unpopular wife Grace, 52, whose tilt at power triggered the backlash from the army that brought tanks onto the streets of the capital last week.",
+        "date": "2020-03-17T00:00:00Z",

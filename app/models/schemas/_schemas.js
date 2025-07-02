@@ -10,6 +10,5 @@ function _id(ref) {
   return _ref
 }
 
-// Temp comment
 function _path(filename) {
   return __dirname + `/${filename}`

@@ -11,6 +11,7 @@ const logger = app.logger.getLogger('app.services.credit_report.parse')
  *
  * @param {*} consumerId
  */
+// Temp comment
 async function parse(consumerId) {
   logger.info(`[parse] calling app.services.credit_report.fetch with consumer id [${consumerId}]`)
   const result = await creditReportAPI.fetchReport(consumerId)
@@ -37,5 +38,6 @@ async function parse(consumerId) {
     return { url, updatedAt, score }
 
   } catch(err) {
+    logger.error(err, '[parse] error parsing XML from Credit Bureau for consumer id %s', consumerId)
     throw new InternalServerError('Error parsing XML from Credit Bureau')
   }

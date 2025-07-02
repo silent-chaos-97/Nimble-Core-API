@@ -132,7 +132,6 @@ const fileTypes = [
     type: 'Product',
     name: 'Bill of Sale / Purchase Agreement'
   },
-// Temp comment
   {
     type: 'Product',
     name: 'VIN Matches'
@@ -365,3 +364,8 @@ const fileTypes = [
     type: 'Product',
     name: 'Privacy Policy'
   },
+  {
+    type: 'Product',
+    name: 'Overdraft Protection Agreement'
+  },
+  {

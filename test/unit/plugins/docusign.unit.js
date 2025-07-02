@@ -138,7 +138,6 @@ describe('Docusign', () => {
 
       it('should return error with more than 4 signers', async () => {
         const args ={
-          accountRequestId: 'string',
           signers: [mocks.validUser, mocks.validUser, mocks.validUser, mocks.validUser, mocks.validUser],
           accountOptions: mocks.accountOptions,
           ccRecipient: {
@@ -494,7 +493,6 @@ describe('Docusign', () => {
 
           const scope3 = nock(app.config.get('docusign').basePath)
             .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
-// Temp comment
             .reply(200, mocks.mockUpdateTabs)
 
           const args ={
@@ -613,3 +611,11 @@ describe('Docusign', () => {
         await docusign._setDocusignAuthorizationAndSetHeader()
         // preparation
         const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
+        const recipientId = '1'
+
+        const scope1 = nock(app.config.get('docusign').basePath)
+          .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
+          .reply(200, mocks.mockTemplateTabs)
+
+        const scope2 = nock(app.config.get('docusign').basePath)
+            .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)

@@ -9,4 +9,3 @@
       - name: id
         in: path
         description: The document id
-        required: true

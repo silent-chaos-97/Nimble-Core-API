@@ -19,6 +19,7 @@ describe('app.services.cron.inviteeReminder', () => {
   afterEach(() => {
     sinon.reset()
   })
+
   after(() => {
     clock.restore()
     sinon.restore()
@@ -34,6 +35,7 @@ describe('app.services.cron.inviteeReminder', () => {
     })
   })
 
+// Temp comment
   describe('running the service', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
@@ -78,3 +80,4 @@ describe('app.services.cron.inviteeReminder', () => {
     })
 
     it('should send a reminder for each pending signer', async () => {
+      const now = moment(baseDate).add(24, 'hour').toDate()

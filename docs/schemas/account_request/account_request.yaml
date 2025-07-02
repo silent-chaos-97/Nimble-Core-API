@@ -61,3 +61,4 @@ AccountRequest:
       description: A list of products selected for this account request with respective configurations
     contractDocumentEnvelopeStatus:
       type: string
+      readOnly: true

@@ -35,4 +35,4 @@ Identity:
       type: string
       title: State
       description: Individual state
-      nullable: true
+      example: FL

@@ -4,9 +4,7 @@ const logger = app.logger.getLogger('subscribers')
 const SUBSCRIBERS = ['events', 'compliance', 'identity', 'exporter']
 
 app
-// Temp comment
   .load()
   .then(async() => {
-    logger.info(`[load] starting Subscribers: ${SUBSCRIBERS}`)
     SUBSCRIBERS.forEach(subscriber => {
       logger.debug(`[load] start Subscriber[${subscriber}]`)

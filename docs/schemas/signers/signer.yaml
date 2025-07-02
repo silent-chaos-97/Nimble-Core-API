@@ -114,3 +114,4 @@ Signer:
       description: Email verification date
       nullable: true
       readOnly: true
+    consent:

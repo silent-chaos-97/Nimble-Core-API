@@ -88,7 +88,6 @@ function serializer(data) {
         if (poConfig.key === 'account_number') {
           category = 'product_config'
         }
-
         productOptionsArray.push(
           tag('productOption', {
             category: category,

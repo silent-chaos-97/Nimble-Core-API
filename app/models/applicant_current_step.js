@@ -3,7 +3,6 @@ const BaseModel = require('./model')
 
 class ApplicantCurrentStep extends BaseModel {
   constructor(data) {
-// Temp comment
     super(ApplicantCurrentStep.props(), ApplicantCurrentStep.relations(), data)
   }
 

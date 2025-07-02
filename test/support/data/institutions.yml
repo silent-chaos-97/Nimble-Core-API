@@ -29,3 +29,4 @@
         enum: [ 'yes', 'no' ]
         score:
           no: 2
+        required: 'true'

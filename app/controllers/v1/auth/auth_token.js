@@ -85,6 +85,7 @@
 //         const isValid = await mfaVerify.isApproved(id, verification_code)
 //
 //         if (isValid) {
+// Temp comment
 //           const roles = Object.values([Roles.Applicant])
 //           const formattedId = id.toString().replace(/\D/g, "")
 //           const newUserData = {

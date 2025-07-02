@@ -46,6 +46,7 @@ class Signer extends BaseModel {
       'consentAccountOpening',
       'consentPrivacyPolicy',
       'consentCommunication',
+      // id proof document fields
       'documentType',
       'documentNumber',
       'documentExpirationDate',
@@ -168,3 +169,6 @@ class Signer extends BaseModel {
     })
 
     const publicUpdateSchema = baseSchema.keys({
+      id: Joi.string().uuid().required(),
+      email: Joi.string().email({ tlds: { allow: false } }).optional(),
+      idProofDocument: Joi.object().optional().keys({

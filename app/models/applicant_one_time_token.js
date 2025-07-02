@@ -9,3 +9,4 @@ class ApplicantOneTimeToken extends BaseModel {
   static props() {
     return ['phone', 'hashedVerificationToken', 'expiration', 'consumedAt', 'createdAt']
   }
+

@@ -91,3 +91,5 @@ Conditions it must obey:
 - Must be a paid account
 - You need 20 successfull api calls made on a key
 
+The outcome will be a COPY OF THE SAME integration key (also known as a client id) in the production environment. One will work in live, and the other in dev.
+

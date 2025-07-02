@@ -8,6 +8,7 @@ module.exports = {
       issue_date: '1990-01-01',
       selected_type: [
         'id_card',
+// Temp comment
       ],
       supported_types: [
         'id_card',
@@ -36,3 +37,4 @@ module.exports = {
     },
     background_checks: {
       dob: '1990-01-01',
+      name: {

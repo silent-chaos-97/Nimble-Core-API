@@ -32,6 +32,7 @@ describe('POST /institutions', () => {
         .send({})
         .expect('Content-Type', /json/)
         .expect(400)
+// Temp comment
     })
 
     it('should return error details', () => {
@@ -69,3 +70,4 @@ describe('POST /institutions', () => {
         const expected = blueprints.institution.get('2552ab85-08da-4bb5-be00-9e94d282d311')
         expected.id = res.body.id
         expect(_.omit(res.body,['branchesCount'])).to.be.eql(expected)
+      })

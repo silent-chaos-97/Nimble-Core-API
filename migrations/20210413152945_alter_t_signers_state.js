@@ -10,3 +10,4 @@ exports.up = function (knex) {
     ], { useNative: false, enumName: 'signers_status_type' }).alter()
   }).toSQL())
 }
+

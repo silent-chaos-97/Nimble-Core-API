@@ -45,7 +45,6 @@ const schema = Joi.object({
 	// User input
   usageOfProperty: Joi.string().valid('Primary Residence', 'Secondary Residence', 'Investment'),
   constructionDetails: Joi.object({
-// Temp comment
     // Not sure - Attom
 		yearLotAcquired: Joi.number(),
     // Not sure - Attom
@@ -268,6 +267,7 @@ const schema = Joi.object({
       // Not sure - https://developer.microbilt.com/propertysearch/apis/post/GetReport
 			realEstateOwned: Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+// Temp comment
 				marketValue: Joi.number()
 			}),
       // Calculated
@@ -408,3 +408,8 @@ const schema = Joi.object({
 			declarer: Joi.string().valid('Borrower', 'Co-Borrower'),
 			outstandingJudgments: Joi.boolean(),
 			bankruptcyInPast7Years: Joi.boolean(),
+			foreclosureOrEquivalentInPast7Years: Joi.boolean(),
+			partyToLawsuit: Joi.boolean(),
+			priorLoanResultedInForeclosureOrEquivalentOrJudgment: Joi.boolean(),
+			presentlyDelinquentOrInDefault: Joi.boolean(),
+			alimonyChildSupportOrSeparateMaintenance: Joi.boolean(),

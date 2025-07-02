@@ -8,7 +8,6 @@ Institution:
     - slug
     - logo
     - backgroundImage
-  properties:
     id:
       type: string
       format: uuidv4
@@ -20,6 +19,7 @@ Institution:
       type: string
       title: Name
       description: The institution name
+      example: Central Bank
     slug:
       type: string
       title: Slug
@@ -33,3 +33,4 @@ Institution:
     domain:
       type: string
       title: Domain
+      description: The institution domain

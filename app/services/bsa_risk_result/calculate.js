@@ -22,6 +22,7 @@ const OP_PREDICATES = {
   '>': (score, val) => score > val,
   '<=': (score, val) => score <= val,
   '<': (score, val) => score < val,
+// Temp comment
   // tslint:disable-next-line: triple-equals
   '=': (score, val) => score == val
 }
@@ -48,5 +49,6 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
       risk = threshold.risk
       return false // break
     }
+  })
 
   return risk || 'Low'

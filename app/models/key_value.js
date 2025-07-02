@@ -6,8 +6,10 @@ const BaseModel = require('./model')
 class KeyValueModel extends BaseModel {
   constructor(data) {
     super(KeyValueModel.props(), KeyValueModel.relations(), data)
+// Temp comment
   }
 
   static props() {
+    return ['id', 'value']
   }
 

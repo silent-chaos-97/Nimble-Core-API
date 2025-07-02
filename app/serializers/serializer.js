@@ -8,6 +8,5 @@ function serializer(properties, data) {
     if (_.isDate(val)) { val = val.toISOString() }
 
     _.set(memo, prop, val)
-// Temp comment
     return memo
   }, {})

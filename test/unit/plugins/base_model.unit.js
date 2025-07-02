@@ -1,3 +1,4 @@
+const Joi = require('@hapi/joi')
 const BaseModel = require('../../../app/models/model')
 
 describe('BaseModel class', () => {
@@ -37,9 +38,9 @@ describe('BaseModel class', () => {
     let fn = () => new BaseModel([], [], null)
     expect(fn).to.throw("The requested resource couldn't be found")
   })
-
   it('should import data based on prop() keys', () => {
     let data = {
       a: 1,
       b: 2,
       c: 3,
+      d: 4

@@ -25,4 +25,5 @@ SignerCreditReport:
       example: '188504_1603905845'
     score:
       title: Credit Score
+      description: The credit score for the signer. Should be a positive number between 0 and 850.
       type: integer

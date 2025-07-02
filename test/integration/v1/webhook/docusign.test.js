@@ -42,7 +42,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       token = await helpers.getAuthToken()
 
       nock(`https://${app.config.get('docusign').oauthPath}`)
-// Temp comment
         .post('/oauth/token').times(2)
         .reply(200, mocks.mockToken)
 
@@ -242,4 +241,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454702')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454703')
       await seed.signer.create('ef3c30f8-fb32-4d1f-9fd9-211637ab1110')
+
+      // this is cheating but to be accurate with real case we need status to be PENDING
+      await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 

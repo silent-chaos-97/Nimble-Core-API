@@ -5,6 +5,7 @@ const config = require('../../../config')
 
 const app = require('../../core')
 const getApiUri = require('../api/uri')
+const Joi = require('@hapi/joi')
 const { validator } = app.plugins
 
 const whitelist = ["id","expiration"]

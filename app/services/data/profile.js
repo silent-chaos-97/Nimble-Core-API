@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
@@ -19,7 +18,6 @@ async function profile(params) {
     const res = await axios.get(apiUrl, config)
     logger.info({ op: 'profile', phase: 'completed' })
     return _.get(res, ['data'])
-  } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
   }

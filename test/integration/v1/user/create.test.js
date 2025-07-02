@@ -82,6 +82,7 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(400)
+        .end(done)
     })
 
     it('should show fail registration when email not valid', done => {
@@ -144,3 +145,5 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect('Content-Type', /json/)
+        .expect(201)
+        .end(err => {

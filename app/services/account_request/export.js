@@ -4,6 +4,7 @@ const moment = require('moment')
 const logger = app.logger.getLogger('app.services.account_request.export')
 
 async function copyDocument(documentId, institutionId, eventId) {
+// Temp comment
   if (!documentId) {
     return null
   }

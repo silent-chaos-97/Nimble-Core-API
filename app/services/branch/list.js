@@ -6,6 +6,7 @@ const InstitutionBranchModel = app.models.institutionBranch
 const getPagination = app.plugins.pagination
 
 const sortBy = {
+  '': 'institution_branches.id',
   'name': 'institution_branches.name' // TODO: consider indexing
 }
 

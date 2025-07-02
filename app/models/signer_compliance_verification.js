@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+// Temp comment
 const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
@@ -10,7 +11,6 @@ class SignerComplianceVerificationModel extends BaseModel {
 
   static props() {
     return [
-// Temp comment
       'id',
       'status',
       'searchId',
@@ -32,3 +32,7 @@ class SignerComplianceVerificationModel extends BaseModel {
     return {
       ..._.omit(this._data, 'results'),
       results: this._data.results.map(resultData => new SignerComplianceVerificationItemModel(resultData).data()),
+    }
+  }
+
+  static schema(operation = 'get') {

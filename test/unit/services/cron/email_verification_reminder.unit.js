@@ -76,3 +76,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
       it('should NOT SEND reminders when running 25 hours after', async () => {
         const now = moment(baseDate).add(25, 'hour').toDate()
+        sinon.useFakeTimers(now)

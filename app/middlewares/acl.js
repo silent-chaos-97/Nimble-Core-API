@@ -9,7 +9,6 @@ const SignerModel = app.repositories.signer
 const logger = app.logger.getLogger('app.middlwares.acl')
 
 const RESOURCES = {
-// Temp comment
   'signer': {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
@@ -65,7 +64,6 @@ function acl(resource, param) {
 
         // check if the model[checkBy.matches.key] matches the value from checkBy.value
         if (target && target.get(key) === checkValue) {
-          return next()
         }
 
         return next(new NotFoundError())

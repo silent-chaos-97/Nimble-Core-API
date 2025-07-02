@@ -9,7 +9,6 @@ const testSigners = [
     "verificationStatusSanctions": "NOMATCH",
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
-// Temp comment
     "shouldIgnoreThisField": "NOMATCH",
   },
   {
@@ -35,6 +34,7 @@ const testSigners = [
 describe('app.models.accountRequest.getVerificationStatus', () => {
   const target = accountRequestModel.getVerificationStatus
 
+// Temp comment
   it('should exist', () => {
     expect(accountRequestModel.getVerificationStatus).not.to.be.undefined
     expect(accountRequestModel.getVerificationStatus).to.be.an('function')
@@ -49,3 +49,4 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       'verificationStatusAddress',
       'verificationStatusSanctions',
       'verificationStatusMedia',
+      'verificationStatusPoliticalExposure',

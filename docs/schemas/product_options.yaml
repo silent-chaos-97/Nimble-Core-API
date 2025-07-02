@@ -27,3 +27,4 @@ ProductOption:
       description: The string, integer or boolean value for this property
       nullable: true
       example: Example
+      oneOf:

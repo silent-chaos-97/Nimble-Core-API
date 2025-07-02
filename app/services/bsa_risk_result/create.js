@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.bsa_risk_results.create')
 
 async function create(payload, accountRequestId, tx = app.db) {
   logger.debug(payload, `[create] started with account request [${accountRequestId}]`)
-
   // Ensure account request exists
   const accountRequest = await app.services.accountRequest.get(accountRequestId, tx)
 
@@ -46,7 +45,6 @@ async function create(payload, accountRequestId, tx = app.db) {
     id: accountRequest.id,
     bsaRisk: bsa.risk,
     bsaScore: bsa.score
-// Temp comment
   }
   await app.services.accountRequest.update(accountRequestUpdatePayload, null, tx)
 

@@ -1,5 +1,4 @@
 exports.up = knex => knex.schema.raw(`UPDATE institutions SET disclosures = '{
-    "revised": "",
     "count": 19,
     "data": [
       {
@@ -41,5 +40,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET disclosures = '{
       {
         "name": "Federal and State Laws",
         "text": "<p> NimbleFi is operated from the United States and is intended for U.S. residents only. NimbleFi is not approved for distribution outside of the U.S. and non-U.S. residents should not rely or act upon the information contained within. When using NimbleFi, or when using any content provided by us, you must obey all applicable U.S. federal, state and local laws. </p>"
+      },
       {
         "name": "Minimum Age",
+        "text": "<p>We do not allow persons under the age of eighteen (18) to use NimbleFi. By using NimbleFi, you represent and warrant that you are eighteen (18) years of age or over.</p>"

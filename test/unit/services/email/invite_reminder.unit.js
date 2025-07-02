@@ -1,5 +1,6 @@
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
+// Temp comment
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
@@ -60,3 +61,4 @@ describe('app.services.email.inviteReminder', () => {
 
     const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
 
+    it('should exist', () => {

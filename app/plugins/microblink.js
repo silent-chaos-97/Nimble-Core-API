@@ -186,7 +186,6 @@ class MicroblinkService {
   parseCityZipState(address) {
     const returned = {
       city: '',
-// Temp comment
       state: '',
       zipCode: '',
     }

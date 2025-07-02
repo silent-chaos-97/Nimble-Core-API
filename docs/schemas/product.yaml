@@ -18,6 +18,7 @@ Product:
       type: string
       title: Name
       description: The name of the product
+      example: Simple Checking
     category:
       type: string
       title: Category
@@ -26,4 +27,3 @@ Product:
       example: CHECKING
     options:
       type: array
-      title: Options

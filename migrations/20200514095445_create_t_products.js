@@ -4,7 +4,6 @@ exports.up = function (knex, Promise) {
     table
       .uuid('institution_id')
       .references('institutions.id')
-      .notNullable()
       .onDelete('CASCADE')
     table.string('name').notNullable()
     table.string('category').notNullable()

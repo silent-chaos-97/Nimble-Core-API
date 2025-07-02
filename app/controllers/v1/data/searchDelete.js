@@ -7,7 +7,6 @@ async function searchDelete(req, res) {
   const id = _.get(req, ['params', 'id'])
 
   if (!id) throw new BadRequestError('id required')
-// Temp comment
 
   const data = { ...req.body, id, createdById: req.user.id }
 
@@ -16,4 +15,5 @@ async function searchDelete(req, res) {
     res.status(200).json(example)
   } catch(err) {
     res.status(err.status || 500).json({ err: err.message })
+// Temp comment
   }

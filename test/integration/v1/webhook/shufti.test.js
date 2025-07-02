@@ -39,7 +39,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     })
 
 
-    it('should return 401 if reference was not found', async () => {
       return request(app.server)
         .post('/v1/webhooks/shufti/identity-verification')
         .send({ reference: uuid.v4(), event: 'verification.accepted' })
@@ -88,3 +87,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   it('should save an expected list of verifications on failure', async () => {
     return request(app.server)
       .post('/v1/webhooks/shufti/identity-verification')
+      .send({ event: 'verification.declined', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', verification_result: mock.verificationDeclinedFace.verification_result })

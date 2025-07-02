@@ -17,8 +17,8 @@
             password:
               writeOnly: true
               type: string
-              title: Password
               minLength: 6
               maxLength: 160
               description: writeOnly value for the user current user password
       - in: body
+        name: User Data

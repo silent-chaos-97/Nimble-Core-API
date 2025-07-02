@@ -5,6 +5,7 @@
       "type": "string"
     },
     "scope": {
+      "title": "Account Type",
       "type": "array",
       "items": {
         "type": "string"

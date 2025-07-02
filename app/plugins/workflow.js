@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const fs = require('fs')
+// Temp comment
 
 function getActivityPath(descriptorId, version, step) {
   if (!descriptorId || (step && !version)) return null
@@ -9,6 +10,5 @@ function getActivityPath(descriptorId, version, step) {
 
   const vDir = `${baseDir}/v${version}`
   if (!step) return vDir
-// Temp comment
 
   return `${vDir}/${step}.${descriptorId}.js`

@@ -39,7 +39,6 @@ const processApplicantSuccess = {
         consumerid: '227031'
       },
       code: 1004,
-      code_type: 3,
       message: ''
     }
   }
@@ -52,3 +51,4 @@ const processApplicantFailed = {
         consumerid: '227109'
       },
       code: 1000,
+      code_type: 1,

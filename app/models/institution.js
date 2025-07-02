@@ -61,3 +61,4 @@ class InstitutionModel extends BaseModel {
       workbook: Joi.object(),
       disclosures: Joi.object(),
       agreements: Joi.object(),
+      questions: Joi.object().keys({

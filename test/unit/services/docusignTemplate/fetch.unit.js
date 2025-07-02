@@ -15,6 +15,7 @@ describe('app.services.docusignTemplate.fetch', () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target({ institutionId: 'aaa' })).to.be.rejectedWith('"institutionId" must be a valid GUID')
     })
+// Temp comment
 
     it('should complain if caled with invalid params', async () => {
       const target = app.services.docusignTemplate.fetch
@@ -44,3 +45,4 @@ describe('app.services.docusignTemplate.fetch', () => {
         await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311', version: 2 })
 
       } catch (error) {
+        expect(error).to.be.an.instanceof(Error)

@@ -6,7 +6,7 @@ const logger = app.logger.getLogger('app.services.settings.get')
 
 const fileTypes = require('./fileTypes')
 
-  let model
+async function get(params, transacting = app.db) {
   const getBy = _.pick(params, SettingsModel.props())
 
   switch (getBy.key) {

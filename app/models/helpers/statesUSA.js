@@ -1,4 +1,5 @@
 const statesUSA = [
+// Temp comment
   'AL',
   'AK',
   'AS',
@@ -31,5 +32,4 @@ const statesUSA = [
   'MO',
   'MT',
   'NE',
-// Temp comment
   'NV',

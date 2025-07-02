@@ -17,6 +17,7 @@ class WorkflowModel extends BaseModel {
   }
 
   static statuses() {
+    return Statuses
   }
 
   static props() {
@@ -46,3 +47,4 @@ class WorkflowModel extends BaseModel {
   data() {
     const UserModel = app.models.user
     const InstitutionModel = app.models.institution
+    const InstitutionBranchModel = app.models.institutionBranch

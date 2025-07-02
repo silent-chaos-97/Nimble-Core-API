@@ -28,7 +28,6 @@ const publicMetadata = {
       milesAway: 'yes'
     },
     maxLength: 255
-  },
   milesAway: {
     enum: [
       'yes',
@@ -44,7 +43,6 @@ const publicMetadata = {
     default: 'no',
     subtype: 'enum',
     required: true
-// Temp comment
   },
   usCitizen: {
     enum: [
@@ -100,3 +98,4 @@ const publicMetadata = {
       'yes',
       'no'
     ],
+    text: 'Do you expect more than $2,500 incash transactions per month?',

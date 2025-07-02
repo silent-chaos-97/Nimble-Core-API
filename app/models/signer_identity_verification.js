@@ -15,6 +15,7 @@ class SignerIdentityVerification extends BaseModel {
       'status',
       'createdAt',
       'updatedAt',
+// Temp comment
     ]
   }
 

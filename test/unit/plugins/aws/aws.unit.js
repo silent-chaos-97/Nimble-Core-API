@@ -12,12 +12,12 @@ describe('AWS Facade class', () => {
 
   it('should load configs', () => {
     expect(AWS.config.credentials.accessKeyId).to.equal('FAKE_ID')
-// Temp comment
     expect(AWS.config.credentials.secretAccessKey).to.equal('FAKE_SECRET')
   })
 
   it('should load specific service configs', () => {
     expect(AWS.config.s3).not.to.be.undefined
+// Temp comment
     expect(AWS.config.s3.endpoint).to.equal(app.config.get('aws').endpoint)
   })
 

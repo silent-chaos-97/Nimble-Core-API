@@ -358,3 +358,8 @@ const schema = {
   },
   sqs: {
     endpoint: {
+      doc: 'AWS SDK endpoint for SQS requests',
+      format: String,
+      default: '',
+      env: 'AWS_SQS_ENDPOINT'
+    },

@@ -7,6 +7,7 @@ class FileEntryModel extends BaseModel {
   constructor(data) {
     super(FileEntryModel.props(), FileEntryModel.relations(), data)
   }
+
   static props() {
     return ['id', 'name', 'isFile', 'size', 'mimetype', 'createdById', 'parentId', 'fileId', 'createdAt', 'updatedAt']
   }
@@ -21,3 +22,4 @@ class FileEntryModel extends BaseModel {
     const FileEntryModel = app.models.fileEntry
 
     return {
+      ..._.omit(this._data, ['owner', 'parent', 'file']),

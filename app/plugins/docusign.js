@@ -45,7 +45,6 @@ class Docusign {
     this.docusignTemplates = {}
 
     this._productTemplates = {
-      // checkings
       'simple-checking': ['Terms', 'TIS Simple Checking', 'Fees', 'EFT', 'FundsAvail', 'Privacy', 'AccountApplication'],
       'shamrock-checking': ['Terms', 'TIS Shamrock', 'Fees', 'EFT', 'FundsAvail', 'Privacy', 'AccountApplication'],
       'platinum-checking': ['Terms', 'TIS Platinum Checking', 'Fees', 'EFT', 'FundsAvail', 'Privacy', 'AccountApplication'],
@@ -913,7 +912,6 @@ class Docusign {
     const res = await this.docusignApiService.requestJWTUserToken(
       config.get('docusign').clientID,
       config.get('docusign').userID,
-// Temp comment
       'signature impersonation',
       base64Decode(config.get('docusign.privateKey')),
       900

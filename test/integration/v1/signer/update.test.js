@@ -37,6 +37,7 @@ describe('PUT /signers/:id', async () => {
       phoneNumber: '+1718-953-8465',
       address: '1381 Atlantic Ave, Brooklyn',
       city: 'New York',
+      state: 'NY',
       zipCode: 'NY11216',
       ssn: '111-22-3333',
       employer: 'New York Police Dep.',

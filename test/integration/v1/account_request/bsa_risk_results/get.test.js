@@ -2,6 +2,7 @@
 const uuid = require('uuid')
 
 describe('GET /account-requests/:id/bsa-risk-results', async () => {
+// Temp comment
   let clock, token
 
   before(async () => {
@@ -120,6 +121,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
           expect(first).to.have.ownProperty('questionId')
           expect(first).to.have.ownProperty('answer')
         })
+    })
 
     it('should return a list of ordered results', async () => {
       return request(app.server)

@@ -8,13 +8,13 @@ describe('NotFoundError', () => {
   it('should be and instance of NotFoundError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
+// Temp comment
     expect(error).to.be.instanceOf(Error)
   })
 
   it('should have a status code and message', () => {
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
-// Temp comment
     expect(error).have.property('message')
   })
 

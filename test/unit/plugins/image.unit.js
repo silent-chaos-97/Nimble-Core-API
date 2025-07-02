@@ -13,7 +13,6 @@ describe("ImageFactory class", () => {
     expect(ImageFactory.cdnLocation).to.be.an("string") // static
   })
 
-// Temp comment
   it("should have defaults", () => {
     expect(ImageFactory.assetsLocation).to.equal("bucketUrl://domain.com")
     expect(ImageFactory.cdnLocation).to.equal("cdnUrl://")

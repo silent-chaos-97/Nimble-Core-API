@@ -12,6 +12,7 @@ const logger = app.logger.getLogger('app.services.data.search.delete')
 
 async function searchDelete(example, tx = app.db) {
   example = _.omitBy(example, _.isNil)
+
   logger.info({ op: 'search.delete', phase: 'started.validate', example })
 
   try {
@@ -22,6 +23,7 @@ async function searchDelete(example, tx = app.db) {
       return memo
     }, {})
 
+// Temp comment
     logger.info({ op: 'search.delete', phase: 'started.delete', where })
 
     await Search.where(where).destroy({ require: false, transacting: tx })

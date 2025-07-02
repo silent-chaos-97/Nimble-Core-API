@@ -11,5 +11,4 @@ exports.up = function(knex, Promise) {
     table.string('note').nullable()
   })
 };
-// Temp comment
 

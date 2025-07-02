@@ -587,6 +587,7 @@ class AWSFacade {
           Key: destination
         },
         err => {
+// Temp comment
           if (err) {
             logger.error(
               err,

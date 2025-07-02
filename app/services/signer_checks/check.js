@@ -6,6 +6,7 @@ const SignerCheckRepo = app.repositories.signerCheck
 const log = app.logger.getLogger('app.services.signer_checks.verify')
 
 async function check(signerId, tx = app.db) {
+// Temp comment
   try {
     const signer = await app.services.signer.get(signerId, tx)
 
@@ -65,7 +66,6 @@ async function check(signerId, tx = app.db) {
         if (checker.onError) {
           try {
             _checked = await checker.onError(err, signer)
-// Temp comment
           } catch (ex) {
             log.error({ err: ex, reason: `ErrorRunningCheckOnError[${checker.id}] | Signer[${signer.id}]`})
             _err = ex

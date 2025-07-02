@@ -10,3 +10,4 @@ exports.seed = async function () {
     await seeds.documents()
     await seeds.account_requests()
     await seeds.signers()
+    await seeds.signers_identity_verifications()

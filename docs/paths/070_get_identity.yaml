@@ -4,8 +4,8 @@
       - Prospect
     summary: Get a prospect identity
     description: Method to get an prospect identity information
+    operationId: getIdentity
     parameters:
-      - name: driverLicenseFrontDocumentId
         in: path
         description: Driver's License Front Document unique identifier
         required: true
@@ -13,3 +13,4 @@
           type: string
           format: uuid
       - name: driverLicenseBackDocumentId
+        in: path

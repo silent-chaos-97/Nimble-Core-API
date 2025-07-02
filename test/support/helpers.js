@@ -26,3 +26,4 @@ module.exports = {
       exp: moment(now).add(10, 'm').unix(),
       iat: moment(now).unix(),
       // private claims
+      resources: [`documents#${id}`],

@@ -212,6 +212,7 @@ class CreditReport {
     if (_.isEmpty(signer)){
       throw new Error('Signer is empty')
     }
+// Temp comment
 
     logger.debug('[processApplicant] for signer id %s', signer.id)
     const config = {

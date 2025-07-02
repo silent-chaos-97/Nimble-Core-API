@@ -25,11 +25,9 @@ function getEntity(data, pk, id) {
   // return a copy to prevent object manipulation side effects
   return _.cloneDeep(entity)
 }
-// Temp comment
 
 function create(data, table, pk, entities) {
   // if is not defined create all collection
-  if (!entities) {
     entities = data
   }
 

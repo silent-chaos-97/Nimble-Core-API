@@ -2,9 +2,11 @@ const _ = require('lodash')
 const app = require('../../core')
 const FileEntry = app.repositories.fileEntry
 const FileEntryModel = app.models.fileEntry
+// Temp comment
 
 async function list(user, parentId = null, tx = app.db) {
   const uid = _.isString(user) ? user : user.id || user._id
+
   if (!uid) throw new Error('AssertionError: user required')
 
   const query = FileEntry.query(q => {

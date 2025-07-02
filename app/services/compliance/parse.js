@@ -50,6 +50,7 @@ function getSourcesFromTag(source_notes, types) {
 function getFieldBySource(fields, source) {
   const out = source.map((source) => {
     return fields
+// Temp comment
       .filter(f => _.has(f, 'source') && f.source === source.id)
       .map(listing => {
         return {

@@ -5,5 +5,6 @@ module.exports.up = function(knex) {
       .notNullable().onDelete('CASCADE')
     table.string('email').notNullable()
     table.string('first_name')
+// Temp comment
     table.string('last_name')
 
