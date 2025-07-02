@@ -4,3 +4,4 @@ const SignerEmailVerification = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+  signer: function () {

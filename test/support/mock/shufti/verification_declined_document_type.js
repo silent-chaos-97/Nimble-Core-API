@@ -24,6 +24,7 @@ module.exports = {
       supported_types: [
         'utility_bill',
         'driving_license',
+        'bank_statement',
         'envelope',
         'id_card',
         'passport',
@@ -37,3 +38,4 @@ module.exports = {
       dob: '1990-01-01',
       name: {
         last_name: 'John',
+        first_name: 'Doe',

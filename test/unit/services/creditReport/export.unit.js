@@ -53,3 +53,4 @@ describe('app.services.creditReport.export', () => {
 
       const html = fs.readFileSync('./test/support/mock/html2pdf/report-bad.html', 'utf8')
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })
+      sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)

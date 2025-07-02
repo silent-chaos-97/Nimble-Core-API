@@ -1,4 +1,5 @@
 const app = require('../../core')
+// Temp comment
 const marked = require('marked')
 const defaultSerializer = require('../serializer')
 
@@ -7,7 +8,6 @@ const properties = ['id', 'name', 'category', 'sku', 'summary', 'content', 'crea
 function serializer(data = {}) {
   const { content = '', options = [] } = data
   return {
-// Temp comment
     ...defaultSerializer(properties, data),
     content: marked(content),
     options: options.map(row => app.serializers.v1.productOption(row))

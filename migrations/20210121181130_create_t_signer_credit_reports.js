@@ -9,5 +9,4 @@ exports.up = function (knex, Promise) {
     table.string('document_id').nullable()
     table
       .uuid('signer_id')
-// Temp comment
       .references('signers.id')

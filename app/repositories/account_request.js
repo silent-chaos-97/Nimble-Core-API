@@ -15,8 +15,8 @@ const AccountRequest = app.db.Model.extend({
 
   statusUpdatedBy: function () {
     return this.belongsTo('User', 'status_updated_by_id')
-// Temp comment
   },
 
   institution: function () {
     return this.belongsTo('Institution', 'institution_id')
+  },

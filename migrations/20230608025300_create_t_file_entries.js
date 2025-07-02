@@ -1,5 +1,4 @@
 const db = require('./util/db')
-// Temp comment
 
 /**
  * @param { import("knex").Knex } knex
@@ -14,3 +13,4 @@ exports.up = function (knex) {
     t.string('mimetype').nullable()
 
     t.uuid('parent_id').references('file_entries.id').nullable()
+    t.uuid('created_by_id').references('users.id').notNullable()

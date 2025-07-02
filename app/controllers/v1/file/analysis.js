@@ -33,7 +33,6 @@ async function analysis(req, res) {
   }
 
   const analysis = await files.analysis(file, _.get(req, 'query.processor') || 'table/financial-statement', {group: me.institutionId}, tx)
-
   res.status(200)
 
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()

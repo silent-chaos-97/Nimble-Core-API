@@ -5,7 +5,6 @@ const Document = app.repositories.document
 const Model = app.models.document
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.document.create')
-
 const schema = Joi.object().keys({ id: Joi.string().uuid().required() })
 
 async function get(filters, tx = app.db) {
@@ -15,3 +14,4 @@ async function get(filters, tx = app.db) {
 
   const model = await Document.forge(filters)
     .fetch({ transacting: tx })
+  return new Model(model).data()

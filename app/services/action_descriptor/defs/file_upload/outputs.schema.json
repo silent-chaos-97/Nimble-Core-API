@@ -9,4 +9,6 @@
       "type": "string",
       "stereotype": "task"
     },
+    "file": {
       "title": "Uploaded File",
+      "type": "string",

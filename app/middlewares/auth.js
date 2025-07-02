@@ -62,4 +62,3 @@ async function checkRoles(roles, req, res, next) {
   if (_.isEmpty(roles)) return next() // no role required
   if (_.isEmpty(req.user.roles)) return next(new UnauthorizedTokenError('Unauthorized:0'))
   for (const role of roles) { if (_.includes(req.user.roles, role)) return next() }
-  next(new UnauthorizedTokenError('Unauthorized:1'))

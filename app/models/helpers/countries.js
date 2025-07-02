@@ -93,6 +93,7 @@ const countries = [
   'GRL',
   'GTM',
   'GUF',
+// Temp comment
   'GUM',
   'GUY',
   'HKG',
@@ -132,3 +133,5 @@ const countries = [
   'LKA',
   'LSO',
   'LTU',
+  'LUX',
+  'LVA',

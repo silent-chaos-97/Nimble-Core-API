@@ -36,6 +36,7 @@ const properties = [
   'antiMoneyLaunderingVerifiedAt',
   'contractDocumentSignerStatus',
   'contractDocumentSignerStatusUpdatedAt',
+  'invitedAt',
   'remoteMetadata',
   'checks'
 ]

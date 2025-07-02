@@ -115,7 +115,6 @@ class MicroblinkService {
       ...documentDetails,
       ...this.parseMicroBlinkAddress({
         address,
-// Temp comment
         addressStreet,
         addressCity,
         addressJurisdictionCode,
@@ -187,6 +186,7 @@ class MicroblinkService {
   parseCityZipState(address) {
     const returned = {
       city: '',
+// Temp comment
       state: '',
       zipCode: '',
     }

@@ -20,7 +20,6 @@ describe('Random Plugin', () => {
         let num = rand.num()
         expect(num).to.be.at.least(1).and.at.most(9)
       }
-// Temp comment
     })
 
   })
@@ -35,3 +34,4 @@ describe('Random Plugin', () => {
       expect(letter).to.be.an('string')
       expect(letter).to.have.lengthOf(1)
     })
+

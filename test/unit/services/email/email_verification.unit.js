@@ -3,7 +3,6 @@ const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
-// Temp comment
 
 describe('app.services.email.emailVerification', () => {
   // re-instanciate the class with a fake postmark service
@@ -76,3 +75,4 @@ describe('app.services.email.emailVerification', () => {
     })
 
     it('should call send with correct data', async() => {
+      const signer = blueprints.signers.signer_1

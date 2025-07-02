@@ -9,6 +9,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
+
   describe('when the signers email are unique', () => {
     let token
     const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
@@ -41,6 +42,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       token = await helpers.getAuthToken()
 
       nock(`https://${app.config.get('docusign').oauthPath}`)
+// Temp comment
         .post('/oauth/token').times(2)
         .reply(200, mocks.mockToken)
 
@@ -237,3 +239,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await seed.document.create()
       await seed.accountRequest.create(accountRequestId)
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454701')
+      await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454702')
+      await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454703')
+      await seed.signer.create('ef3c30f8-fb32-4d1f-9fd9-211637ab1110')
+

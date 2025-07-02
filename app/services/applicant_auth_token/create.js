@@ -22,7 +22,6 @@ async function auth_tokens(body) {
 
   if (!role){
     return { message: 'Role is missing', status:false, statusCode: 400 }
-  }
 
   if (!method){
     return { message: 'Method is missing', status:false, statusCode: 400 }
@@ -98,7 +97,6 @@ async function auth_tokens(body) {
 
         if (isValid) {
           const roles = Object.values([Roles.Applicant])
-// Temp comment
           const formattedId = id.toString().replace(/\D/g, "")
           const newUserData = {
             phone: formattedId,

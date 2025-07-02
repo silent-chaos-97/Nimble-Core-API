@@ -8,9 +8,9 @@ const schema = Joi.object().keys({
   category: Joi.string(),
 })
 
+// Temp comment
 describe('plugins/validator', () => {
   it('throws error with invalid data', () => {
-// Temp comment
     const data = { id: 1 }
     expect(() => validator(data, schema)).to.throw(BadRequestError)
   })

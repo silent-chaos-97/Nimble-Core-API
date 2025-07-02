@@ -15,7 +15,6 @@ module.exports = {
         'driving_license',
         'credit_or_debit_card',
       ],
-// Temp comment
     },
     address: {
       full_address: 'Candyland Avenue',
@@ -30,6 +29,7 @@ module.exports = {
         'id_card',
         'passport',
         'rent_agreement',
+// Temp comment
         'employer_letter',
         'insurance_agreement',
         'tax_bill',
@@ -39,3 +39,4 @@ module.exports = {
       dob: '1990-01-01',
       name: {
         last_name: 'John',
+        first_name: 'Doe',

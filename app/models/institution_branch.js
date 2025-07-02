@@ -1,5 +1,6 @@
 const BaseModel = require('./model')
 const Joi = require('@hapi/joi')
+const app = require('../core')
 const _ = require('lodash')
 
 class InstitutionBranchModel extends BaseModel {
@@ -9,7 +10,6 @@ class InstitutionBranchModel extends BaseModel {
   }
 
   static props() {
-    return ['id', 'name', 'externalId', 'institutionId', 'routingNumber', 'street', 'street2', 'city', 'state', 'zip', 'active', 'note']
   }
 
   static relations() {
@@ -28,3 +28,4 @@ class InstitutionBranchModel extends BaseModel {
       name: Joi.string().required(),
       institutionId: Joi.string().required(),
       externalId: Joi.string().required(),
+      routingNumber: Joi.string().optional(),

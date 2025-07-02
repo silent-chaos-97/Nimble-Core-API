@@ -44,7 +44,6 @@ const successResponse = {
       },
       documentNumber: 'S123-456-78-123-0',
       sex: 'M',
-// Temp comment
       additionalNameInformation: '',
       additionalAddressInformation: '',
       placeOfBirth: '',
@@ -127,3 +126,5 @@ const successUSDLAAMVABack = {
         "jurisdictionVersionNumber": "0",
         "jurisdictionVehicleClass": "C",
         "jurisdictionRestrictionCodes": "NONE",
+        "jurisdictionEndorsementCodes": "NONE",
+        "documentIssueDate": "07092014",

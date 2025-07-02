@@ -18,7 +18,6 @@ class FileModel extends BaseModel {
         'analysisId',
 
         // location
-        'bucket',
         'key',
 
         // file meta

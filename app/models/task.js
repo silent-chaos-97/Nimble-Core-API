@@ -56,6 +56,7 @@ class TaskModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return [
       // meta and audit
       'id',
@@ -88,3 +89,4 @@ class TaskModel extends BaseModel {
       'meta',
       'body',
       'signature'
+    ]

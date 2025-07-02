@@ -28,6 +28,7 @@ describe('app.services.compliance.parse', () => {
 
   afterEach(() => { nock.cleanAll() })
 
+  describe('search', async () => {
 
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
@@ -51,9 +52,9 @@ describe('app.services.compliance.parse', () => {
         const target = await app.services.compliance.parse(searchResult)
         const first = _.first(target)
 
-        expect(first).to.have.ownProperty('fullName')
         expect(first).to.have.ownProperty('nameAka')
         expect(first).to.have.ownProperty('dateOfBirth')
         expect(first).to.have.ownProperty('dateOfDeath')
         expect(first).to.have.ownProperty('matchTypes')
         expect(first).to.have.ownProperty('countries')
+        expect(first).to.have.ownProperty('associates')

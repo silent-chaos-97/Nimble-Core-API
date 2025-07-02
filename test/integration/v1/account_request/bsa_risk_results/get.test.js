@@ -16,6 +16,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
+    await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.document.create()
@@ -119,7 +120,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
           expect(first).to.have.ownProperty('questionId')
           expect(first).to.have.ownProperty('answer')
         })
-    })
 
     it('should return a list of ordered results', async () => {
       return request(app.server)

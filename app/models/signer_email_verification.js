@@ -21,7 +21,5 @@ class SignerEmailVerification extends BaseModel {
     return ['signer']
   }
 
-// Temp comment
   static schema(operation = 'create') {
-    if (operation === 'get') {
       return Joi.object().keys({

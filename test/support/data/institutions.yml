@@ -13,6 +13,7 @@
   public_metadata:
     bsa:
       _:
+        thresholds:
           - op: '>='
             val: 7
             risk: High

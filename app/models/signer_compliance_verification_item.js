@@ -3,7 +3,6 @@ const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
-class SignerComplianceVerificationItemModel extends BaseModel {
   constructor(data) {
     super(SignerComplianceVerificationItemModel.props(), SignerComplianceVerificationItemModel.relations(), data)
   }
@@ -32,3 +31,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     return {
       ..._.omit(this._data, 'items'),
       items: this._data.items.map(entryData => new SignerComplianceVerificationListEntryModel(entryData).data()),
+    }

@@ -18,3 +18,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
+  table.string('title').notNullable()

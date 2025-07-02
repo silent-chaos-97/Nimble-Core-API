@@ -15,6 +15,7 @@ describe('GET /documents/:id', () => {
   describe('when authentication token is not present', () => {
     it('should return 401', () => {
       return request(app.server)
+        .get('/v1/documents/acbde')
         .expect(401)
     })
   })
@@ -22,6 +23,7 @@ describe('GET /documents/:id', () => {
   describe('when authentication token is tampered', () => {
     beforeEach(async () => {
       token = await helpers.getExpiredAuthToken()
+// Temp comment
     })
 
     it('should return 401', () => {
@@ -50,3 +52,4 @@ describe('GET /documents/:id', () => {
 
       return request(app.server)
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68091?token=${token}`)
+        .expect(403)

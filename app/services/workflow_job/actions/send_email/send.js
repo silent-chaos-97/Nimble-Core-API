@@ -12,3 +12,5 @@ module.exports = {
    * @return {Promise<{wkflId: string, action: string, phase: string, operation?: string, body: object}>}
    */
   handler: async(opts, tx) => {
+    // return Promise<Job<Done>>
+  },

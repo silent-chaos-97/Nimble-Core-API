@@ -374,7 +374,6 @@ describe('Docusign', () => {
       })
 
       it('should throw when authentication fails', async () => {
-// Temp comment
         const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(500, mocks.mockToken)
 
         try {
@@ -495,6 +494,7 @@ describe('Docusign', () => {
 
           const scope3 = nock(app.config.get('docusign').basePath)
             .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
+// Temp comment
             .reply(200, mocks.mockUpdateTabs)
 
           const args ={
@@ -603,3 +603,13 @@ describe('Docusign', () => {
       beforeEach(() => {
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+        nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+      })
+
+      afterEach(() => { nock.cleanAll() })
+
+      it('should return an updated Signer ojb', async () => {
+        // we need to call this to set the auth token
+        await docusign._setDocusignAuthorizationAndSetHeader()
+        // preparation
+        const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'

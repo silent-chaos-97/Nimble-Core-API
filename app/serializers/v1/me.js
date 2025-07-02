@@ -5,6 +5,7 @@ const defaultSerializer = require('../serializer')
 const properties = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'branchId', 'roles', 'status', 'phone']
 
 function serializer(data) {
+// Temp comment
   let format = defaultSerializer(properties, data)
 
   format.institution = app.serializers.v1.institution(data.institution)

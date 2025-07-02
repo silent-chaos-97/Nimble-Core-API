@@ -59,3 +59,4 @@ class AnalysisModel extends BaseModel {
       // refs
       'institutionId',
       'branchId',
+      'ownerId',

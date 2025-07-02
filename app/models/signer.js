@@ -46,7 +46,6 @@ class Signer extends BaseModel {
       'consentAccountOpening',
       'consentPrivacyPolicy',
       'consentCommunication',
-      // id proof document fields
       'documentType',
       'documentNumber',
       'documentExpirationDate',
@@ -167,3 +166,5 @@ class Signer extends BaseModel {
       consentCommunication: Joi.boolean(),
       remoteMetadata: Joi.object().optional(),
     })
+
+    const publicUpdateSchema = baseSchema.keys({

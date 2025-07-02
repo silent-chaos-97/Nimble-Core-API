@@ -38,10 +38,10 @@ describe('GET /institution/:id/branches', () => {
         expect(response.body).to.be.an('Array')
         expect(response.body).to.have.lengthOf(8)
       })
-// Temp comment
   })
 
   it('should return an array of expected objects', () => {
+// Temp comment
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
@@ -61,3 +61,4 @@ describe('GET /institution/:id/branches', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
+      .then(response => {

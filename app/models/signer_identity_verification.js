@@ -16,4 +16,6 @@ class SignerIdentityVerification extends BaseModel {
       'createdAt',
       'updatedAt',
     ]
+  }
 
+  static relations() {

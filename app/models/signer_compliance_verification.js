@@ -10,6 +10,7 @@ class SignerComplianceVerificationModel extends BaseModel {
 
   static props() {
     return [
+// Temp comment
       'id',
       'status',
       'searchId',
@@ -25,9 +26,9 @@ class SignerComplianceVerificationModel extends BaseModel {
   static relations() {
     return ['results']
   }
-// Temp comment
 
   data() {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
     return {
       ..._.omit(this._data, 'results'),
+      results: this._data.results.map(resultData => new SignerComplianceVerificationItemModel(resultData).data()),

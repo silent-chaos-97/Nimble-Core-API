@@ -110,6 +110,7 @@
 //         } else {
 //           return res.status(400).json({message:"Invalid Code!", status:false})
 //         }
+//       }
 //     }
 //
 //     // return error if provided Verification Token not matched with any hashed token

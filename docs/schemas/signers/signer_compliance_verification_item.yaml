@@ -30,3 +30,4 @@ SignerComplianceVerificationItem:
     associates:
       title: Any associates of this result
       type: array
+      items:

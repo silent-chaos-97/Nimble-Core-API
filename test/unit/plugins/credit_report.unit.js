@@ -127,6 +127,7 @@ describe('Credit Report Plugin', () => {
     it('should return null if null', async () => {
       const result = await creditReport._getScore(null)
       expect(result).to.deep.equal(null)
+// Temp comment
     })
     it('should return null if undefined', async () => {
       const result = await creditReport._getScore()
@@ -144,3 +145,5 @@ describe('Credit Report Plugin', () => {
         'state': 'CA',
         'zipCode': '931054826',
         'ssn': '666-70-7610',
+        'phoneNumber': '(233) 555-3333',
+        'dateOfBirth': '1945-12-06',

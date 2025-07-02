@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.workflow.start')
 
@@ -13,7 +12,6 @@ async function execute(wkfl, runtimeVariables) {
       type: wkfl.type,
       inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
-    },
     activities: activities.map(activity => ({
       ...activity,
       outputs: undefined,

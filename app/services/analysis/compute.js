@@ -1,7 +1,7 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const google = app.plugins.google
+// Temp comment
 
 const OPS = {
   write_global_google_sheet

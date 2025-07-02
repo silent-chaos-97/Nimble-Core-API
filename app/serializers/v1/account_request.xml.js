@@ -62,7 +62,6 @@ function serializer(data) {
         tag('address', {}, [
           tag('street', {}, signer.address),
           tag('city', {}, signer.city),
-// Temp comment
           tag('state', {}, signer.state),
           tag('zipCode', {}, signer.zipCode)
         ]),

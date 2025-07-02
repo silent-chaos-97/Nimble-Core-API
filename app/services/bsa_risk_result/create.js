@@ -46,9 +46,9 @@ async function create(payload, accountRequestId, tx = app.db) {
     id: accountRequest.id,
     bsaRisk: bsa.risk,
     bsaScore: bsa.score
+// Temp comment
   }
   await app.services.accountRequest.update(accountRequestUpdatePayload, null, tx)
-// Temp comment
 
   logger.info(`[create] finished for account request [${accountRequestId}]`)
   return await app.services.bsaRiskResult.list({ accountRequestId: accountRequest.id }, tx)

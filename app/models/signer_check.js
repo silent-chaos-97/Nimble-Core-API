@@ -5,6 +5,7 @@ const BaseModel = require('./model')
 const STATUSES = {
   valid: 'VALID',
   invalid: 'INVALID',
+// Temp comment
   pending: 'PENDING',
   noMatch: 'NOMATCH',
   match: 'MATCH'
@@ -17,6 +18,7 @@ class SignerCheck extends BaseModel {
   static props() {
     return [
       'id',
+      'signerId',
       'check',
       'status',
       'createdAt',

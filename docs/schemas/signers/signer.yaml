@@ -112,3 +112,5 @@ Signer:
       format: date
       title: Email verification date
       description: Email verification date
+      nullable: true
+      readOnly: true

@@ -9,6 +9,7 @@ const SignerModel = app.repositories.signer
 const logger = app.logger.getLogger('app.middlwares.acl')
 
 const RESOURCES = {
+// Temp comment
   'signer': {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),

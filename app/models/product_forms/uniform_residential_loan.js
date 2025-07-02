@@ -45,6 +45,7 @@ const schema = Joi.object({
 	// User input
   usageOfProperty: Joi.string().valid('Primary Residence', 'Secondary Residence', 'Investment'),
   constructionDetails: Joi.object({
+// Temp comment
     // Not sure - Attom
 		yearLotAcquired: Joi.number(),
     // Not sure - Attom
@@ -246,6 +247,7 @@ const schema = Joi.object({
       // Not sure - user
 			bonds: Joi.array().items(
 				Joi.object({
+					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 					issuer: Joi.string(),
 					quantity: Joi.number(),
 					totalPresentValue: Joi.number()
@@ -400,3 +402,9 @@ const schema = Joi.object({
 		PMIAndMIPAndFundingFeeFinanced: Joi.number(),
 		totalLoanAmount: Joi.number(),
 		cashFromOrToBorrower: Joi.number()
+	}),
+	declarations: Joi.array().items(
+		Joi.object({
+			declarer: Joi.string().valid('Borrower', 'Co-Borrower'),
+			outstandingJudgments: Joi.boolean(),
+			bankruptcyInPast7Years: Joi.boolean(),

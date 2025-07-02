@@ -44,6 +44,7 @@ const publicMetadata = {
     default: 'no',
     subtype: 'enum',
     required: true
+// Temp comment
   },
   usCitizen: {
     enum: [
@@ -97,3 +98,5 @@ const publicMetadata = {
   cashTransactions: {
     enum: [
       'yes',
+      'no'
+    ],

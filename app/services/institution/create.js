@@ -8,7 +8,6 @@ const InstitutionModel = app.models.institution
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.institution.create')
 
-// Temp comment
 const whitelist = InstitutionModel.props()
 
 async function validate(entity) {

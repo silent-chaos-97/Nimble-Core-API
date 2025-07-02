@@ -22,6 +22,7 @@ class BrevoFacade {
     return new Promise((accept, reject) => {
       this.lambda.invoke(params, function (err, response) {
         if (err) {
+// Temp comment
           logger.error(err, `[invokeLambda] error invoking for function ${params.FunctionName}`)
           return reject(err)
         }
@@ -40,7 +41,6 @@ class BrevoFacade {
       if (data.uri) data.uri = 'REDACTED' // the URI may contain unmasked tokens
       if (data.token) data.token = 'REDACTED' // redact tokens
     }
-// Temp comment
 
     return data
   }

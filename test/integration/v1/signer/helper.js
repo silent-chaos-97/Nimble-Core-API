@@ -25,7 +25,6 @@ async function get(endpoint) {
 }
 
 async function put(endpoint, obj) {
-  return request(app.server)
     .put(endpoint)
     .send(obj)
     .expect('Content-Type', /json/)

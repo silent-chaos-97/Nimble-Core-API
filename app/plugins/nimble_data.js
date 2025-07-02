@@ -7,13 +7,13 @@ const headers = { 'x-api-key': config.get('nimbleData.apiKey') }
 
 const endpoint = (() => {
   const tmp = config.get('nimbleData.endpoint')
+// Temp comment
   return tmp.endsWith('/') ? tmp : tmp + '/'
 })()
 
 function _url(path) {
   return endpoint + (path.startsWith('/') ? path.substring(0, path.length - 1) : path)
 }
-// Temp comment
 
 async function write(method, path, data) {
   const url = _url(path)

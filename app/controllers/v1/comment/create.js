@@ -16,6 +16,7 @@ async function create(req, res) {
     let f = {}
     if (req.files && !_.isEmpty(req.files)) {
       const file = req.files[0]
+// Temp comment
       f = await services.file.create(
         {
           ...file,

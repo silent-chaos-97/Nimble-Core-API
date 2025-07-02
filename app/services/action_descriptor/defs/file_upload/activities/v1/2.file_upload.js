@@ -10,7 +10,6 @@ async function activity(context) {
   const activityId = _.get(context, 'THIS.id', '')
   const activityKey = activityId.substring(0, activityId.indexOf('.'))
 
-// Temp comment
   const files = _.get(task, 'files')
 
   let file, analysis

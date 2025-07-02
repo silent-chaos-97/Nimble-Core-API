@@ -53,6 +53,7 @@ describe('Auth', () => {
       })
 
       describe('with email domain case insensitive', () => {
+        it('should respond to valid auth with 200', done => {
           request(app.server)
             .post('/v1/auth/login')
             .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
@@ -115,3 +116,5 @@ describe('Auth', () => {
           .post('/v1/auth/login')
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
+          .expect(200)
+          .end((err, res) => {

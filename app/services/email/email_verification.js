@@ -17,7 +17,6 @@ const verificationEmailSchema = Joi.object().keys({
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
-})
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
@@ -38,3 +37,4 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     .replace(':signer_id', signerId)
     .replace(':id', emailVerificationId)
     .replace(':domain', domain)
+    .replace(':token', token)

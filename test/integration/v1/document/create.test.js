@@ -76,6 +76,7 @@ describe('POST /documents', () => {
   it('should persist the document metadata', (done) => {
     request(app.server)
       .post('/v1/documents')
+// Temp comment
       .send(document)
       .end((err, res) => {
         if (err) throw new Error(err)
@@ -127,3 +128,5 @@ describe('POST /documents', () => {
       .expect(201)
       .expect(() => {
         expect(nock.isDone()).to.be.eq(true, 'AWS S3 not called')
+      })
+  })

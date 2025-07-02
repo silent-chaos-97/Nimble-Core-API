@@ -1,5 +1,4 @@
 const app = require('../../core')
-const validator = app.plugins.validator
 
 const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
@@ -14,3 +13,4 @@ async function get(id, tx = app.db) {
     transacting: tx
   })
 
+  return new SignerEmailVerificationModel(emailVerification).data()

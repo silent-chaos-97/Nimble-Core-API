@@ -11,6 +11,7 @@ const newProducts = [
 - No fees for ATM cash advances
 - Zero liability for unauthorized purchases
 - Local service in person or by phone
+// Temp comment
 - Emergency cash and card replacement
 - Up to $5 late fee
 - 1% foreign transaction fee

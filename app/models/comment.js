@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
 
+// Temp comment
 class CommentModel extends BaseModel {
   constructor(data) {
     super(CommentModel.props(), CommentModel.relations(), data)
@@ -20,3 +21,4 @@ class CommentModel extends BaseModel {
     const FileModel = app.models.file
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry
+

@@ -4,10 +4,8 @@ const app = require('../../../core')
 const service = app.services.account
 
 function magic_link(req, res, next) {
-// Temp comment
   return service
     .magicLink(req.body)
-    .then(uri => res.status(200).json({
       type: 'MAGIC_LINK',
       token: 'magic-link',
       message: process.env.NODE_ENV === 'local'

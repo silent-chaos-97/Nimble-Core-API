@@ -2,4 +2,5 @@
 .github
 .gitlab
 .gitignore
+coverage
 helm

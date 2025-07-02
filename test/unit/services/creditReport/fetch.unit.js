@@ -83,6 +83,7 @@ describe('app.services.creditReport.fetch', () => {
         .post(/process_applicant/)
         .reply(200, response)
 
+// Temp comment
       try {
         const signerId = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
         await app.services.creditReport.fetch(signerId)
@@ -105,3 +106,5 @@ describe('app.services.creditReport.fetch', () => {
       const scope2 = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
         .reply(200, mocks.resultsSuccess)
+
+      // fake s3 calls

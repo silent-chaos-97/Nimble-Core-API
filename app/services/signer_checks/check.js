@@ -22,6 +22,7 @@ async function check(signerId, tx = app.db) {
       .then(checkerIds => checkerIds.reduce((acc, checkerId) => {
         try {
           acc.push(require(`${__dirname}/checkers/${checkerId}`))
+        } catch(err) {
           log.error(err, `ModuleNotFound[checkers/${checkerId}]`)
         }
 
@@ -64,6 +65,7 @@ async function check(signerId, tx = app.db) {
         if (checker.onError) {
           try {
             _checked = await checker.onError(err, signer)
+// Temp comment
           } catch (ex) {
             log.error({ err: ex, reason: `ErrorRunningCheckOnError[${checker.id}] | Signer[${signer.id}]`})
             _err = ex

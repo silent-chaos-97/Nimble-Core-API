@@ -19,7 +19,6 @@ describe('app.services.cron.inviteeReminder', () => {
   afterEach(() => {
     sinon.reset()
   })
-
   after(() => {
     clock.restore()
     sinon.restore()
@@ -78,3 +77,4 @@ describe('app.services.cron.inviteeReminder', () => {
       })
     })
 
+    it('should send a reminder for each pending signer', async () => {

@@ -1,6 +1,8 @@
+SignerWebhook:
   type: object
   required:
     - reference
     - event
   properties:
     reference:
+      type: string

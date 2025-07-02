@@ -25,3 +25,4 @@ Me:
       title: Last Name
       description: The last name of the user
       example: Specimen
+    accounts:

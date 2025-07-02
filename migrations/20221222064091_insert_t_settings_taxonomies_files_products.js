@@ -12,3 +12,4 @@ const FILES = {
 const PRODUCTS = {
   key: 'products',
   schema: { $ref: 'products' }
+}

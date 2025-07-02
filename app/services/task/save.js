@@ -9,4 +9,5 @@ const MUTUALLY_INCLUSIVE = ['workflowId', 'descriptorId', 'activityId', 'activit
 
 function validate(analysis) {
   let data = _.pick(analysis, Task.props())
+  validator(data, Task.schema(data.id ? 'update' : 'create'), { abortEarly: false })
   return data

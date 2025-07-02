@@ -15,9 +15,9 @@
     "swf_endpoint": "http://localhost:4566",
     "swf_region": "us-east-2"
   },
+  "sns": {
     "endpoint": "http://localhost:4566"
   },
-  "sqs": {
     "endpoint": "http://localhost:4566"
   },
   "lambda": {

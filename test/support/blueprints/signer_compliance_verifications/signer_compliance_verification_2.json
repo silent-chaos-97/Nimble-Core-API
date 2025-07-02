@@ -19,6 +19,7 @@
           "id": "20000000-0000-accc-0000-00bbbbbbb221",
           "name": "Some strange news",
           "date": "2008-12-06T00:00:00.000Z",
+          "deletedDate": null,
           "url": "https://github.com/typescript-cheatsheets/react",
           "type": "ADVERSE-MEDIA",
           "source": "complyadvantage",
@@ -33,3 +34,4 @@
         {
           "id": "20000000-0000-accc-0000-00bbbbbbb222",
           "name": "This is some serious warning",
+          "date": "2020-12-06T00:00:00.000Z",

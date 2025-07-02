@@ -24,7 +24,6 @@ async function worker(task) {
     const activityHandler = _activityHandler(task)
 
     const output = await activityHandler(context, taskToken)
-
     logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-executed', task: _.pick(task, ['taskToken']), context, output })
 
     await app.plugins.aws.completeActivity(task.taskToken, output || {})

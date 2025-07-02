@@ -8,7 +8,6 @@ const institutionBranches = [
   { name: 'Sioux Empire - 33rd & Minnesota', external_id: '40' },
   { name: 'Sioux Empire - W 12th', external_id: '41' },
   { name: 'Sioux Empire - Western', external_id: '42' },
-  { name: 'Brookings', external_id: '47' },
   { name: 'Sioux City Downtown', external_id: '50' },
   { name: 'Sioux City Hamilton', external_id: '51' },
   { name: 'Sioux City Morningside', external_id: '52' },
@@ -21,3 +20,4 @@ const institutionBranches = [
   { name: 'Drake', external_id: '75' },
   { name: 'Waukee', external_id: '78' },
   { name: 'Urbandale - 86th', external_id: '80' },
+  { name: 'Ingersoll', external_id: '81' },

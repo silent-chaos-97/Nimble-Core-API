@@ -19,7 +19,6 @@ function assignToSpec(spec, part, parent) {
     const section = parent ? spec[parent][part] : spec[part]
     Object.keys(obj).forEach(key => {
       if (_.has(section, key)) {
-        // if the key already exists, merge the specs
         let current_spec = section[key]
         let new_spec = obj[key]
         section[key] = { ...current_spec, ...new_spec }

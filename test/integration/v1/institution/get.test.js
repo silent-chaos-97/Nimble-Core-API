@@ -1,5 +1,4 @@
 describe('GET /institution/:domain', () => {
-// Temp comment
   let token
 
   beforeEach(async () => {
@@ -34,3 +33,4 @@ describe('GET /institution/:domain', () => {
         props.forEach(prop => {
           expect(res.body).to.have.own.property(prop)
         })
+

@@ -191,6 +191,7 @@ const schema = {
       doc: 's3 bucket name where uploads are to be stored',
       format: String,
       default: 'local-uploads',
+      env: 'AWS_S3_UPLOADS_BUCKET'
     },
     s3_asset_bucket: {
       doc: 's3 bucket name where assets are to be stored',
@@ -352,3 +353,8 @@ const schema = {
       doc: 'AWS SDK endpoint for SNS requests for account requests',
       format: String,
       default: 'arn:aws:sns:us-east-2:000000000000:account-requests',
+      env: 'AWS_SNS_ACCOUNT_REQUEST_TOPIC'
+    }
+  },
+  sqs: {
+    endpoint: {

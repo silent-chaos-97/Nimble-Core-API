@@ -82,3 +82,4 @@ describe('app.services.contract.send', () => {
         expect(calledArgs.ccRecipient).to.deep.equal(args.ccRecipient)
 
         expect(calledArgs.accountOptions.institutionName).to.equal(args.accountOptions.institutionName)
+        expect(calledArgs.accountOptions.openingAmount).to.equal(args.accountOptions.openingAmount)

@@ -16,3 +16,4 @@
     },
     "scan": {
       "title": "Scan Uploaded Document",
+      "type": "boolean",

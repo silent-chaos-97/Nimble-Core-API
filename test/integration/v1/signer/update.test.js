@@ -37,7 +37,6 @@ describe('PUT /signers/:id', async () => {
       phoneNumber: '+1718-953-8465',
       address: '1381 Atlantic Ave, Brooklyn',
       city: 'New York',
-      state: 'NY',
       zipCode: 'NY11216',
       ssn: '111-22-3333',
       employer: 'New York Police Dep.',
@@ -45,6 +44,7 @@ describe('PUT /signers/:id', async () => {
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
       consentCommunication: false,
+      idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         type: 'USDL',

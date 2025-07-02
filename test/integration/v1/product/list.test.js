@@ -32,6 +32,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
       .get(`/v1/institutions/${fakeInstitutionId}/products`)
       .expect(404)
       .expect((res) => {
+// Temp comment
         expect(res.body.statusCode).to.equal(404)
         expect(res.body.message).to.be.a('string')
       })
@@ -72,7 +73,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
       await seed.product.create(testProduct10)
     })
 
-// Temp comment
     it('should not return products of other institutions', () => {
       return request(app.server)
         .get(`/v1/institutions/${testInstitution1}/products?limit=10&sort=id`)
@@ -94,3 +94,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
         .expect(200)
         .expect((res) => {
           expect(res.body).to.be.an('array')
+          expect(res.body).to.have.lengthOf(1)

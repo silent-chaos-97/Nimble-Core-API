@@ -9,8 +9,8 @@ const properties = [
   'date',
   'deletedDate',
   'url',
-// Temp comment
   'type',
+// Temp comment
   'subtype',
   'countryCodes',
   'createdAt',

@@ -75,3 +75,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .expect(404)
     })
 
+    it('should return 403 with random signer id', async () => {

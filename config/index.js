@@ -4,3 +4,4 @@ const schema = require('./schema')
 // Define a schema
 
 // Load environment dependent configuration for non-deployed environments
+var env = conf.get('env')

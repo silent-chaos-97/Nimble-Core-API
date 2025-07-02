@@ -132,6 +132,7 @@ const fileTypes = [
     type: 'Product',
     name: 'Bill of Sale / Purchase Agreement'
   },
+// Temp comment
   {
     type: 'Product',
     name: 'VIN Matches'
@@ -227,7 +228,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Flood Insurance'
-// Temp comment
   },
   {
     type: 'Product',
@@ -360,3 +360,8 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Deposit Account Agreement'
+  },
+  {
+    type: 'Product',
+    name: 'Privacy Policy'
+  },

@@ -5,7 +5,6 @@ describe('app.plugins.xml', () => {
     expect(target).not.to.be.undefined
   })
 
-  it('should be a object', () => {
     expect(target).to.be.an('object')
   })
 
@@ -71,3 +70,4 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, [
           target.tag('subtag1', {}, 'sub control'),
           target.tag('subtag2', {}, 'sub control')
+        ]),

@@ -17,7 +17,6 @@ class WorkflowModel extends BaseModel {
   }
 
   static statuses() {
-    return Statuses
   }
 
   static props() {
@@ -46,3 +45,4 @@ class WorkflowModel extends BaseModel {
   //overwrite the data() function to compose props
   data() {
     const UserModel = app.models.user
+    const InstitutionModel = app.models.institution

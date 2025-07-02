@@ -60,3 +60,4 @@ class InstitutionModel extends BaseModel {
       publicMetadata: Joi.object(),
       workbook: Joi.object(),
       disclosures: Joi.object(),
+      agreements: Joi.object(),

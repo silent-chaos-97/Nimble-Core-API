@@ -19,7 +19,6 @@ describe('app.services.email.welcome', () => {
   })
 
   beforeEach(() => {
-    plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
 
@@ -51,3 +50,4 @@ describe('app.services.email.welcome', () => {
   describe('sendWelcomeEmail()', () => {
     beforeEach(async() => {
       // create a user
+      await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')

@@ -24,3 +24,4 @@ SignerComplianceVerification:
         search_term:
           type: string
         limit:
+          type: number

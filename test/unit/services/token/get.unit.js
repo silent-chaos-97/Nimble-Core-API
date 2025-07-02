@@ -84,3 +84,5 @@ describe('app.services.token.get', () => {
       expect(actual).to.have.deep.property('scopes', ['*'])
     })
 
+    it('should apply the default resources', () => {
+      const token = target(_.omit(options, 'resources'))

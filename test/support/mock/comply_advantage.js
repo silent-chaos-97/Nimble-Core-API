@@ -2564,3 +2564,43 @@ const parsedResult = [
         "source": "",
         "subtype": "adverse-media"
       },
+      {
+        "name": "No difference between Grace Mugabe & Judas Iscariot - Bulawayo24 News",
+        "value": "The war veterans/soldiers had to use a coup in order to push Grace Mugabe away. If Grace Mugabe was a genuine/supporting wife, she should have allowed R.G Mugabe to retire from politics long back but because of her love of planes and money, R.G Mugabe had to be subjected to a long period of political prison. On 11/09/2018, I wrote a piece condemning ZANU PF government for abusing taxpayers' money by chartering a plane for Grace Mugabe from Singapore.",
+        "date": "2018-09-11T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-144993.html",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Prince Harry, Meghan Markle Take 10-Day Tour in Southern Africa - allAfrica.com",
+        "value": "Blacklisting of South Africa's Gupta Brothers Means Govt Dept Slams 'Fake News' About Sex Education in South Africa #FeesMustFall Activist Admitted to Hospital in South Africa Relief For HIV/Aids Patients as Legal Battle Ends In Botswana Luyolo Yiba Wins Idols South Africa Season 15 Crown! Mugabe's Family Ordered to Register 'Billion-Dollar' Estate 'No Sympathy' for South African Student's Killer at Court Ruling South African Rail Agency Bleeds 10,000 Security Jobs Watch Bonang Matheba Get Candid on U.S. Radio Show Burna Boy to Donate Proceeds From Concert to Xenophobia Victims Two Die in Tornado in South Africa's KwaZulu-Natal Miss South Africa Asks Men to Write Love Letters Against Violence Prisoners's Lawsuit to Set South African Legal Precedent? Foreign Protesters Not Our Problem",
+        "date": "2019-09-24T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://allafrica.com/view/group/main/main/id/00070106.html",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Shocking details of Chombo passport seizure emerges – The Zimbabwe Mail",
+        "value": "\"...On Sunday, May 12, my client and his family abandoned their journey to South Africa where he had intended to seek medical attention. \"He went through all formalities at the Robert Gabriel Mugabe International Airport and when he was about to board his flight, a security agent approached him and asked to check his passport,\" he said. Madhuku further told court that after taking the passport, the officer vanished forcing Chombo and his family to abort the journey.",
+        "date": "2019-11-24T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.thezimbabwemail.com/law-crime/shocking-details-of-chombo-passport-seizure-emerges/?share=jetpack-whatsapp",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "UK invasion plot: Nujoma speaks out | The Herald",
+        "value": ": If you got rid of the gangsters in Sierra Leone, Milosevic, the Taliban and Saddam, why can't you get rid of Mugabe? The answer is",
+        "date": "2019-10-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.herald.co.zw/85007/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },

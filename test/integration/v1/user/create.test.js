@@ -6,7 +6,6 @@ describe('POST /users', () => {
   describe('with invalid auth', () => {
     it('should reject with 401 without apikey', done => {
       request(app.server)
-// Temp comment
         .post('/v1/users')
         .send(user)
         .expect('Content-Type', /json/)
@@ -83,7 +82,6 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(400)
-        .end(done)
     })
 
     it('should show fail registration when email not valid', done => {
@@ -144,3 +142,5 @@ describe('POST /users', () => {
       request(app.server)
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
+        .send(user)
+        .expect('Content-Type', /json/)

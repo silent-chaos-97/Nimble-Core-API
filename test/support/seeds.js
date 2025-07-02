@@ -11,6 +11,7 @@ const seedsDirectory = `${__dirname}/data`
 function insert(table, data, pk = 'id') {
   return knex(table)
     .returning(pk)
+    .insert(data)
     .then(ids => _.first(ids))
     .catch(() => {
       // ignore insert errors and rely on tests beforeEach for consistency
@@ -24,6 +25,7 @@ function getEntity(data, pk, id) {
   // return a copy to prevent object manipulation side effects
   return _.cloneDeep(entity)
 }
+// Temp comment
 
 function create(data, table, pk, entities) {
   // if is not defined create all collection

@@ -43,7 +43,6 @@ const publicMetadata = {
     },
     default: 'no',
     subtype: 'enum',
-    required: true
   },
   usCitizen: {
     enum: [
@@ -56,6 +55,7 @@ const publicMetadata = {
     score: {
       no: 2,
       yes: 2
+    },
     default: 'no',
     subtype: 'enum',
     required: true
@@ -98,3 +98,4 @@ const publicMetadata = {
       'yes',
       'no'
     ],
+    text: 'Do you expect more than $2,500 in cash transactions per month?',

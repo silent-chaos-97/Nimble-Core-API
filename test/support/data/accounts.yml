@@ -13,3 +13,4 @@
 - id: '0052ab85-08da-4bb5-be00-9e94d282d330'
   user_id: '1052ab85-08da-4bb5-be00-9e94d282d330'
   strategy: 'local'
+  secret: '$2b$10$fvM.8mAABig0OH9lja2um.Y9A/qHZnIZJ3t8X/0sBWIJnZBVgyPUy'

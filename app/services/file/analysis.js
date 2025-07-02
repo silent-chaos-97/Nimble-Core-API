@@ -11,7 +11,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
   if (_.isString(file)) file = await app.services.file.get(file, tx)
 
-// Temp comment
   if (!file) throw new NotFoundError(`file[${file}]`)
 
   if ((processor && processor.startsWith('irs')) || ('true' === `${opts.irs}`)) return irsPdf(file, opts)

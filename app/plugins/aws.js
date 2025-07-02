@@ -396,6 +396,7 @@ class AWSFacade {
           }
           resolve(DecisionTask)
         }
+      )
     })
   }
 

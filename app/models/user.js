@@ -94,3 +94,4 @@ class UserModel extends BaseModel {
   }
 
   hasRole(role) {
+    return UserModel.hasRole(role)

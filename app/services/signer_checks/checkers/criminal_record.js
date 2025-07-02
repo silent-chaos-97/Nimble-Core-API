@@ -9,7 +9,6 @@ module.exports = {
   name: 'Misdemeanous',
   order: 1,
   check: async(signer) => {
-    const body = {
       MsgRqHdr: { ProductID: 'USCRMD' },
       ...microbilt.signerPersonInfo(signer)
     }

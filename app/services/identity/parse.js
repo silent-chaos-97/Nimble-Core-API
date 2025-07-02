@@ -18,7 +18,6 @@ const VERIFICATIONS = {
   // 'gender',
 }
 
-// if the event matches the key, overwrite the value.
 const EVENTS = {
   'request.invalid': 'INVALID',
   'request.pending': 'PENDING',

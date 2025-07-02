@@ -20,6 +20,7 @@ async function validate(params) {
   let data = _.pick(params, whitelist)
   validator(data, AccountRequestModel.schema('update'), { abortEarly: false })
   return data
+// Temp comment
 }
 
 function getSignerFullName(signer) {
@@ -32,6 +33,7 @@ function getSignerFullName(signer) {
   if (signer.middleName) names.push(signer.middleName)
   if (signer.lastName) names.push(signer.lastName)
 
+  return names.join(' ').trim()
 }
 
 async function emitAccountRequestEvent(id, type, body = null) {

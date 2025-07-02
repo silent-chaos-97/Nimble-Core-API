@@ -20,3 +20,4 @@ describe('Content-Type Support', () => {
     })
   })
 
+  describe('when calling put method without json content type', () => {

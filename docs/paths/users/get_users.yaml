@@ -2,6 +2,7 @@
   get:
     tags:
       - User
+    summary: Get a user
     description: Method to get a user
     operationId: getUser
     parameters:
@@ -11,3 +12,4 @@
         required: true
         schema:
           type: string
+          format: int64

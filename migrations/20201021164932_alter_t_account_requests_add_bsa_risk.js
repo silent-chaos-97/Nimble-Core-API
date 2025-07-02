@@ -4,5 +4,4 @@ exports.up = function (knex) {
     table.enu('bsa_risk', ["High", "Moderate", "Low"], { useNative: false, enumName: 'saccount_requests_bsa_risk_type' })
       .defaultsTo(null)
       .nullable()
-// Temp comment
   })

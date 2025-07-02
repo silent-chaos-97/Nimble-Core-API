@@ -5,6 +5,7 @@ const File = app.repositories.file
 const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis
 const validator = app.plugins.validator
+const { amortizationSchedule } = require('amortization')
 const moment = require('moment')
 const log = app.logger.getLogger('app.services.analysis.save')
 
@@ -87,7 +88,6 @@ function debtSchedule(schedule) {
   const rows = _.get(schedule, 'rows', [])
     .filter(row => _.some(row, val => !_.isNil(val) && val !== ''))
     .map(debtScheduleRow) || []
-
   const liabilities = debtScheduleLiabilities(rows)
 
   return { ...schedule, rows, liabilities }

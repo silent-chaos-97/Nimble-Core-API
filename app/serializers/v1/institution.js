@@ -13,6 +13,7 @@ const properties = [
   'publicMetadata',
   'branchesCount',
   'workbook',
+  'disclosures',
   'agreements',
   'questions'
 ]

@@ -21,3 +21,4 @@
               - properties:
                   accountRequestId:
                     type: string
+                    writeOnly: true

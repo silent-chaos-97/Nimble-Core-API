@@ -5,7 +5,6 @@ const logger = app.logger.getLogger('app.services.event_stream.publish')
 
 const client = new AWS.SNS({
   apiVersion: '2010-03-31',
-  // removes empty string/undefineds
   ..._.pickBy(app.config.get('sns'), _.identity)
 })
 

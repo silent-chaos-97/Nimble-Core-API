@@ -64,8 +64,10 @@ describe('GET /me', () => {
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
         .expect((res) => {
+// Temp comment
           const props = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'accounts']
 
+          props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
           })
 
@@ -73,3 +75,4 @@ describe('GET /me', () => {
 
           expect(res.body.id).to.be.an('string')
           expect(res.body.email).to.be.an('string')
+          expect(res.body.firstName).to.be.an('string')

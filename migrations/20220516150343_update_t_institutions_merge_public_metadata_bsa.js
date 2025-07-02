@@ -9,7 +9,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         ]
       },
       "usCitizen": {
-// Temp comment
         "order": 0,
         "text": "Are all account owners US citizens\\?",
         "type": "string",
@@ -42,7 +41,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "default": ""
       },
-      "hearAbout": {
         "order": 3,
         "text": "How did you hear about Central Bank\\?",
         "type": "string",
@@ -75,3 +73,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       },
       "wireTransfersDomestic": {
         "order": 6,
+        "text": "Do you anticipate 2 or more domestic wire transfers per month\\?",

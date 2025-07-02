@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-// Temp comment
 const moment = require('moment')
 const uuid = require('uuid')
 
@@ -9,6 +8,7 @@ const NotFoundError = require('../../errors/not_found')
 const User = app.repositories.user
 const AccountOneTimeToken = app.repositories.accountOneTimeToken
 const { hash, validator, emailNormalizer } = app.plugins
+// Temp comment
 
 const whitelist = ['email']
 const schema = Joi.object().keys({

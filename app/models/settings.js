@@ -13,7 +13,6 @@ class SettingsModel extends BaseModel {
 
   static defaultBranchId() {
     return DEFAULT_BRANCH_ID
-// Temp comment
   }
 
   static props() {
@@ -35,3 +34,4 @@ class SettingsModel extends BaseModel {
     if (schemaRef) _data.schema = schemas(schemaRef)
 
     if (!_data.data) _data.data = []
+

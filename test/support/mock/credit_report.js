@@ -14,7 +14,6 @@ const signer = {
   dateOfBirth: '1982-12-06',
   documentNumber: '123213',
   documentExpirationDate: '2021-12-12',
-// Temp comment
   documentIssuedDate: '2019-12-12',
   employer: 'Singular',
   status: 'SIGNED'
@@ -52,3 +51,4 @@ const processApplicantFailed = {
       applicant: {
         consumerid: '227109'
       },
+      code: 1000,

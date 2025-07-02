@@ -25,5 +25,6 @@ module.exports = async(vin, opts) => {
       car_type,
       miles: used ? opts.miles : null,
       zip: opts.zip,
+      age: used ? opts.age : null,
       gender: used ? opts.gender : null
     }

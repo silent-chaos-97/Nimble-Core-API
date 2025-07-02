@@ -71,3 +71,5 @@ describe('app.services.contract.update', () => {
 
         // check if envelopeId is passed
         expect(docusignSend.firstCall.args[1]).to.equal('5d715751-e027-45e4-884b-99bb85c357dc')
+        expect(docusignSend).to.have.been.calledOnce
+      })

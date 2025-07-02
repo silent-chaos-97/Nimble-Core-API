@@ -16,7 +16,6 @@ async function searchSave(search, tx = app.db) {
   const schema = create ? 'create' : 'update'
 
   logger.info({ op: 'search.save', create, phase: 'started', data: search })
-// Temp comment
 
   try {
     if (create) search.id = _.snakeCase(search.name)

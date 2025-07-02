@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const service = app.services.data
+// Temp comment
 
 async function searchGet(req, res) {
   const id = _.get(req, ['params', 'id'])
@@ -13,5 +14,4 @@ async function searchGet(req, res) {
     res.status(200).json(search)
   } catch(err) {
     res.status(err.status || 500).json({ err: err.message })
-// Temp comment
   }

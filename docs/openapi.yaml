@@ -12,6 +12,7 @@ servers:
   - url: http://localhost/v1
 
 tags:
+  - name: Health
     description: Everything about service status
   - name: Auth
     description: Everything related to authentication
@@ -48,7 +49,6 @@ components:
         in: query
         name: until
         required: false
-        type: string
         format: RFC2822 date time format
         default: null
         description: filter records until this date.
@@ -93,3 +93,4 @@ components:
       name: Authorization
       in: header
     token:
+      description: >

@@ -26,11 +26,11 @@ describe('app.models.signer.flattenData', () => {
         frontDocumentId: 'frontDocumentId',
         type: 'type',
         number: 'number',
+        issuedDate: 'issuedDate',
         issuer: 'issuer',
         expirationDate: 'expirationDate',
       }
     })
-
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({
       'somethingA': 'somethingA',
@@ -82,3 +82,4 @@ describe('app.models.signer.flattenData', () => {
   it('should flatten partial data', () => {
     const result = target({
       somethingA: 'somethingA',
+      somethingB: 'somethingB',

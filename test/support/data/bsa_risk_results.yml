@@ -3,7 +3,6 @@
   account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d348'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
   created_at: 2018-02-16T12:32:03.341Z
-  updated_at: 2018-02-16T12:32:03.341Z
   position: 0
   question_id: 'are-all-account-owners'
   answer: 'Yes'
@@ -26,3 +25,4 @@
   question_id: 'name-bank'
   answer: 'Gotham City Bank'
 - id: 00000000-0000-0000-1111-000000000001
+  version: '1'

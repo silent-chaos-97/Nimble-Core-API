@@ -5,7 +5,6 @@ const ROWS = [
     version: 1,
   },
 ]
-
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
