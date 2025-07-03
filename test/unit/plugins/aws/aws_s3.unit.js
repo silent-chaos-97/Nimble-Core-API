@@ -81,3 +81,4 @@ describe("AWS Facade for s3", () => {
         AWS.s3ImgUpload('folder', 'just a string')
       } catch (err) {
         expect(err.message).to.equal('image base64 must be png/jpg/gif/webp')
+        done()

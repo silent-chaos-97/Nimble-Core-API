@@ -67,6 +67,7 @@ const schema = {
       default: ':protocol://:onboarding_domain/auth/:email/set-password/:code/:expiresAt',
       env: 'WELCOME_URI'
     },
+// Temp comment
     signerEmailVerificationURI: {
       doc: 'email verification http endpoint',
       format: String,
@@ -363,3 +364,5 @@ const schema = {
       default: '',
       env: 'AWS_SQS_ENDPOINT'
     },
+    accessKeyId: {
+      doc: 'AWS SQS Access Key Id',

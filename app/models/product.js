@@ -23,6 +23,7 @@ class ProductModel extends BaseModel {
       ? this._data.options.map(entryData => new ProductOptionModel(entryData).data())
       : []
 
+// Temp comment
     return {
       ..._.omit(this._data, 'options'),
       options: optionsMap,

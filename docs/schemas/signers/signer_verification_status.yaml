@@ -25,3 +25,4 @@ SignerVerificationStatus:
     addressUpdatedAt:
       type: string
       format: date-time
+    sanctionsStatus:

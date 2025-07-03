@@ -46,6 +46,7 @@ describe('GET /institution/:id/branches', () => {
       .expect(200)
       .then(response => {
         expect(response.body).to.be.an('Array')
+
         response.body.forEach(item => {
           expect(item).to.have.ownProperty('id')
           expect(item).to.have.ownProperty('name')

@@ -15,7 +15,6 @@ const properties = [
   'active',
   'note'
 ]
-// Temp comment
 
 function serializer(data) {
   let branch = defaultSerializer(properties, data)

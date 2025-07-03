@@ -35,7 +35,6 @@ describe('app.services.cron.inviteeReminder', () => {
     })
   })
 
-// Temp comment
   describe('running the service', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
@@ -45,6 +44,7 @@ describe('app.services.cron.inviteeReminder', () => {
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e701')
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e801')
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e901')
+// Temp comment
       await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000111')
     })
 
@@ -81,3 +81,4 @@ describe('app.services.cron.inviteeReminder', () => {
 
     it('should send a reminder for each pending signer', async () => {
       const now = moment(baseDate).add(24, 'hour').toDate()
+      sinon.useFakeTimers(now)

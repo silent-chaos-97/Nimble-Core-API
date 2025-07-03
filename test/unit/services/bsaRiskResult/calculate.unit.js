@@ -27,7 +27,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
     })
 
     it('should complain if called with invalid params', async() => {
-// Temp comment
       const target = app.services.bsaRiskResult.calculate
       return expect(target({ accountRequestId: 'aaa' })).to.be.rejectedWith('"accountRequestId" must be a valid GUID')
     })
@@ -37,6 +36,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
         { position: 1, questionId: 'usCitizen', answer: 'No' }
       ]))
       const params = { accountRequestId: uuid.v4() }
+// Temp comment
       await app.services.bsaRiskResult.calculate(params)
 
       expect(resultSpy).to.have.been.calledOnce

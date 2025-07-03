@@ -2638,3 +2638,17 @@ const parsedResult = [
         "name": "Zimbabwe ruling party ZANU-PF begins Robert Mugabe impeachment | The West Australian",
         "value": "The move came after Mugabe called his cabinet for a meeting at his State House offices despite the parliamentary plan, which could result in Mugabe being kicked out in days. In the draft motion, the party accused Mugabe of being a \"source of instability\", flouting the rule of law and presiding over an \"unprecedented economic tailspin\" in the past 15 years. It also said he had abused his constitutional mandate to favour his unpopular wife Grace, 52, whose tilt at power triggered the backlash from the army that brought tanks onto the streets of the capital last week.",
         "date": "2020-03-17T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://thewest.com.au/news/africa/zimbabwe-ruling-party-zanu-pf-begins-robert-mugabe-impeachment-ng-b88666171z.amp",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Zimbabwe will use fingerprint ID technology for its 2018 general elections – The Zimbabwe Mail",
+        "value": "The announcement and appointment of Ipsidy come a few months after ex-President Robert G. Mugabe resigned as president in Zimbabwe after several decades in the position. Mugabe had previously been accused of manipulating elections  to stay on as president. Ipsidy has its headquarters in New York and has operating subsidiaries in Colombia and in South Africa.",
+        "date": "2019-03-06T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.thezimbabwemail.com/technology-science/zimbabwe-will-use-fingerprint-id-technology-for-its-2018-general-elections/",
+        "countryCodes": [],
+        "source": "",

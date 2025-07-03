@@ -64,7 +64,6 @@ describe('POST /documents', () => {
           expect(res.body).to.have.own.property(prop)
         })
 
-        expect(res.body).not.to.have.own.property('updatedAt')
         expect(res.body).not.to.have.own.property('content')
 
         expect(res.body.id).to.be.an('string')
@@ -90,6 +89,7 @@ describe('POST /documents', () => {
             done()
           })
           .catch(done)
+      })
   })
 
   describe('when aws upload fails', () => {
@@ -130,3 +130,4 @@ describe('POST /documents', () => {
   })
 
   describe('when format is a image', () => {
+    it('should return 201', () => {

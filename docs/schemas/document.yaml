@@ -17,5 +17,6 @@ Document:
       type: string
       format: uuidv4
       title: Uploading document on behalf of this Institution
+      writeOnly: true
       description: institution identifier
       example: a74f9092-5889-430a-9c19-6712f9f68090

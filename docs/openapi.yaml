@@ -4,7 +4,6 @@ info:
     resources of our service.
   version: v1
   title: Nimble Core REST API
-  contact:
     name: Singular
     email: founders@wearesingular.com
 
@@ -74,6 +73,7 @@ components:
           maximum: 50
           default: 30
   securitySchemes:
+    bearer:
       description: >
         For accessing the API a valid JWT token must be passed in all the
         queries in

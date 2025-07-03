@@ -28,6 +28,7 @@ const publicMetadata = {
       milesAway: 'yes'
     },
     maxLength: 255
+  },
   milesAway: {
     enum: [
       'yes',

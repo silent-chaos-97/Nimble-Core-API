@@ -36,6 +36,7 @@ const INPUT_PROPS = {
   annualIncome: Joi.number().positive().required(),
   totalDebtObligation: Joi.number().positive().default(0),
   monthlyDebtObligation: Joi.number().positive().default(0),
+  injections: Joi.array().items(Joi.object().keys({
     id: Joi.string().required(), // vehicle = VIN, cash = client-identifier, ... etc
     type: Joi.string().required(), // e.g. vehicle, down-payment-cash (any advanced rate)
     props: Joi.object(), // e.g. {car_type: 'used', miles: 12000, zip: 85254} // for a vehicle trade-in

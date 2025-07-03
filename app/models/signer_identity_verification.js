@@ -1,4 +1,3 @@
-const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class SignerIdentityVerification extends BaseModel {
@@ -15,7 +14,6 @@ class SignerIdentityVerification extends BaseModel {
       'status',
       'createdAt',
       'updatedAt',
-// Temp comment
     ]
   }
 

@@ -115,3 +115,4 @@ Signer:
       nullable: true
       readOnly: true
     consent:
+      type: boolean

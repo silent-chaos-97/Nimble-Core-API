@@ -48,6 +48,7 @@ const createDocument = (name, fileExtension, documentId) => ({ name, fileExtensi
 
 const createRecipient = (email, name, recipientId, routingOrder, signHereTabs) => ({
   email,
+  name,
   recipientId,
   routingOrder,
   tabs: { signHereTabs }

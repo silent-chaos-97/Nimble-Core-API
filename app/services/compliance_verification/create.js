@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const validator = app.plugins.validator
 
-// Temp comment
 
 
 const Signer = app.repositories.signer
@@ -41,6 +40,7 @@ async function create(payload, tx = app.db) {
 
     for (const result of data.results) { // foreach result, 
 
+// Temp comment
       // save ComplianceVerificationItem
       const newItem = await SignerComplianceVerificationItem
         .forge(_.omit({

@@ -2,7 +2,6 @@
   "type": "object",
   "required": [
     "response_expired"
-  ],
   "properties": {
     "task": {
       "title": "Worksheet Task Assignment",

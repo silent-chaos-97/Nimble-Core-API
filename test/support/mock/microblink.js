@@ -13,7 +13,6 @@ const successResponse = {
   },
   data: {
     recognizer: 'BLINK_ID',
-    version: '2.8.1',
     startTime: '2019-11-20T12:13:05.052Z',
     finishTime: '2019-11-20T12:13:05.587Z',
     durationTimeInSeconds: 0.535,
@@ -72,6 +71,7 @@ const successUSDLAAMVABack = {
     "result": {
         "documentType": "AAMVA",
         "standardVersionNumber": "3",
+        "customerFamilyName": "MICROBLINK",
         "customerFirstName": "SAMPLE",
         "customerFullName": "MICROBLINK,SAMPLE",
         "dateOfBirth": "07011980",

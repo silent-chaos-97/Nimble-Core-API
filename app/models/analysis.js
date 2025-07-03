@@ -60,3 +60,4 @@ class AnalysisModel extends BaseModel {
       'institutionId',
       'branchId',
       'ownerId',
+      'customerId',

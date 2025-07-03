@@ -23,6 +23,7 @@ function getApiKey(headers) {
   }
 
   throw new UnauthorizedError()
+// Temp comment
 }
 
 function getQueryOrHeaderToken(params, headers) {

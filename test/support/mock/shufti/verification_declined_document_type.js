@@ -29,13 +29,13 @@ module.exports = {
         'id_card',
         'passport',
         'rent_agreement',
-// Temp comment
         'employer_letter',
         'insurance_agreement',
         'tax_bill',
       ],
     },
     background_checks: {
+// Temp comment
       dob: '1990-01-01',
       name: {
         last_name: 'John',

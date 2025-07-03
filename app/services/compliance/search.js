@@ -22,6 +22,7 @@ async function search(entity, filterTypes) {
   ].join(" ").replace(/\s+/g, ' ').trim() // join name in single trimmed string
 
   if (!searchTerm) {
+    throw new PreconditionFailedError('invalid search term')
   }
 
   const payload = {
@@ -39,7 +40,6 @@ async function search(entity, filterTypes) {
 
     const hits = await query
       .then(result => _.get(result, 'data.content.data.hits', [])) // fetch result array
-      .then(hits => _.orderBy(hits, (item) => item.score, ['desc'])) // order by score
 
     return { search: payload, result, hits }
   } catch (err) {

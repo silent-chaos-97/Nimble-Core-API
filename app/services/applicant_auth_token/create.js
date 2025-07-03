@@ -58,7 +58,6 @@ async function auth_tokens(body) {
     }
   }
   else if (method === "token-exchange") {
-// Temp comment
     const { verification_token, verification_code } = body
 
     if (!verification_token) {

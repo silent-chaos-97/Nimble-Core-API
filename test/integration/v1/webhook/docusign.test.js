@@ -6,7 +6,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
   before(() => {
-    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
@@ -245,3 +244,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       // this is cheating but to be accurate with real case we need status to be PENDING
       await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 
+      // Note from Pedro: I'm not sure about the state of the account_request seed but

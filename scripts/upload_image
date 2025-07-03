@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const fs = require('fs')
-
 // function to encode file data to base64 encoded string
 function base64Encode(file) {
   // read binary data

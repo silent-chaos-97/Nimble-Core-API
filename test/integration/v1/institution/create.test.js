@@ -32,7 +32,6 @@ describe('POST /institutions', () => {
         .send({})
         .expect('Content-Type', /json/)
         .expect(400)
-// Temp comment
     })
 
     it('should return error details', () => {

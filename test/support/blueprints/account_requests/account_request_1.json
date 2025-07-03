@@ -90,7 +90,6 @@
         "faceUpdatedAt": "2018-03-16T11:32:03.341Z",
         "documentStatus": "VALID",
         "documentUpdatedAt": "2018-03-16T11:32:03.341Z",
-        "addressStatus": "INVALID",
         "addressUpdatedAt": "2018-03-16T11:32:03.341Z",
         "sanctionsStatus": "NOMATCH",
         "sanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",
@@ -122,3 +121,4 @@
       "ssn": null,
       "state": null,
       "zipCode": null,
+      "employer": null,

@@ -8,6 +8,7 @@ Institution:
     - slug
     - logo
     - backgroundImage
+  properties:
     id:
       type: string
       format: uuidv4

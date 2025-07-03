@@ -4,6 +4,5 @@ UserAuthRecovery:
     - password
     - code
   properties:
-    password:
       type: string
       title: Password

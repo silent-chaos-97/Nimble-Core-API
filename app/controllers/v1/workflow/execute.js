@@ -19,7 +19,6 @@ async function execute(req, res) {
         } else {
           return { wkflId, success: false }
         }
-      } catch (err) {
         return { wkflId, success: false }
       }
     })

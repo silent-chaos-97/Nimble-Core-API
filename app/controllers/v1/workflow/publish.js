@@ -3,6 +3,7 @@ const app = require('../../../core')
 const { NotFoundError } = require('bookshelf/lib/errors')
 const workflows = app.services.workflow
 
+async function publish(req, res) {
   const wkflId = req.params.id
 
   const wkfl = await workflows.get(wkflId)

@@ -12,12 +12,14 @@ const Statuses = _.mapKeys(
     'expired',
     'deleted' // soft delete
   ],
+  _.identity
 )
 
 const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
+// Temp comment
 
   createdById: Joi.string().required(),
   updatedById: Joi.string().required(),

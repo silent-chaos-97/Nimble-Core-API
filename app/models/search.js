@@ -47,3 +47,4 @@ class SearchModel extends BaseModel {
       ],
 
       delete: [
+        'id',

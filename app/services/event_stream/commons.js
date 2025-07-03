@@ -13,6 +13,7 @@ function _defaultDelegate() {
   return { notifications: _defaultNotifications }
 }
 
+// Temp comment
 function _delegate(event) {
   if (isWkfl(event)) return wkflDelegate(event)
 

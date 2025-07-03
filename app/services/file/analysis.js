@@ -43,7 +43,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
       let _err
       let retry = 0
-      opts = { ...opts, async: false, jobs }
       while (retry++ < app.services.analysis.utils.timeoutRetries()) {
         await new Promise(resolve => setTimeout(resolve, 1000)) // wait prior to initial request
 

@@ -1,4 +1,3 @@
-// Temp comment
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('signers_identity_verifications', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
@@ -10,3 +9,4 @@ exports.up = function (knex) {
 
     table.string('verification').notNullable()
     table.enu('status', ['VALID', 'INVALID', 'PENDING'], { useNative: false, enumName: 'signers_identity_verifications_status' })
+      .notNullable()

@@ -44,6 +44,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
       .expect(200)
       .expect((res) => {
         const props = ['id', 'name', 'category', 'summary', 'content', 'options', 'createdAt']
+
         expect(res.body).to.have.lengthOf(1)
 
         const [product] = res.body
@@ -60,7 +61,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         expect(product).not.to.have.own.property('updatedAt')
         expect(product).not.to.have.own.property('institution')
       })
-  })
 
   describe('with multiple data', () => {
     beforeEach(async () => {
@@ -94,3 +94,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
           expect(res.body).to.be.an('array')
           expect(res.body).to.have.lengthOf(1)
           expect(res.body[0]).to.deep.equal(blueprints.product.get(testProduct40))
+        })

@@ -6,7 +6,6 @@ const SignerCheckRepo = app.repositories.signerCheck
 const log = app.logger.getLogger('app.services.signer_checks.verify')
 
 async function check(signerId, tx = app.db) {
-// Temp comment
   try {
     const signer = await app.services.signer.get(signerId, tx)
 
@@ -46,7 +45,6 @@ async function check(signerId, tx = app.db) {
 
         try {
           await SignerCheckRepo.forge(signerCheck).save(null, { method: 'insert', transacting: tx })
-          return Promise.resolve()
         } catch(err) {
           log.error(err, { msg: 'ErrorSavingPendingSignerCheck', signerCheck })
           return Promise.resolve()

@@ -1,5 +1,7 @@
 const app = require('../../../core')
+// Temp comment
 const service = app.services.applicantCurrentStep
+
 function set(req, res, next) {
   return service
     .set({

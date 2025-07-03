@@ -5,6 +5,7 @@ const nock = require('nock')
 const fs = require('fs')
 const { successResponse, errorResponse } = require('../../../support/mock/html2pdf/response')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
+
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.creditReport.export', () => {
@@ -13,6 +14,7 @@ describe('app.services.creditReport.export', () => {
   beforeEach(async () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+// Temp comment
 
     await seed.institution.create()
   })
@@ -53,3 +55,4 @@ describe('app.services.creditReport.export', () => {
       const html = fs.readFileSync('./test/support/mock/html2pdf/report-bad.html', 'utf8')
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
+

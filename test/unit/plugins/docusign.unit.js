@@ -138,6 +138,7 @@ describe('Docusign', () => {
 
       it('should return error with more than 4 signers', async () => {
         const args ={
+          accountRequestId: 'string',
           signers: [mocks.validUser, mocks.validUser, mocks.validUser, mocks.validUser, mocks.validUser],
           accountOptions: mocks.accountOptions,
           ccRecipient: {
@@ -268,7 +269,6 @@ describe('Docusign', () => {
         scope.done()
 
         scope = nock(config.get('docusign').basePath)
-          .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
           .reply(200, mocks.mockDocumentTabs)
 
         const ccRecipient = {
@@ -619,3 +619,6 @@ describe('Docusign', () => {
 
         const scope2 = nock(app.config.get('docusign').basePath)
             .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
+            .reply(200, mocks.mockUpdateTabs)
+
+        const result = await docusign._getUpdatedRecipientAndTabs(mocks.validUser, config.get('docusign').accountID, envelopeId, recipientId)

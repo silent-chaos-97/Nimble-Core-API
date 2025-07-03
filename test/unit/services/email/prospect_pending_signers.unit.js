@@ -8,6 +8,7 @@ describe('app.services.email.prospectPendingSigners', () => {
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
+
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')

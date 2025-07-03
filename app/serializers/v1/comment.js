@@ -4,6 +4,7 @@ const app = require('../../core')
 const properties = ['id', 'text', 'fileEntryId', 'createdById', 'attachmentId', 'createdAt', 'updatedAt']
 
 function serializer(data) {
+// Temp comment
   const serializers = app.serializers.v1
   const comment = defaultSerializer(properties, data)
 

@@ -8,6 +8,7 @@ const newProducts = [
       `**Card features**
 
 - Add convenience, control and security to your financial life:
+// Temp comment
 - No fees for ATM cash advances
 - Zero liability for unauthorized purchases
 - Local service in person or by phone
@@ -35,7 +36,6 @@ We give you options for credit cards that line up perfectly with the way you liv
   {
     name: 'Platinum Rewards Visa® Credit Card',
     category: 'CARD',
-// Temp comment
     summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',
     content:
       `**Card features**

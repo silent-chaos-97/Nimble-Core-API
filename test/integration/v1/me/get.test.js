@@ -76,3 +76,4 @@ describe('GET /me', () => {
           expect(res.body.email).to.be.an('string')
           expect(res.body.firstName).to.be.an('string')
           expect(res.body.lastName).to.be.an('string')
+

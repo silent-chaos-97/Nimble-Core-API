@@ -12,6 +12,7 @@ const entrySchema = Joi.object().keys({
     Joi.object().keys({
       verification: Joi.string().required(),
       status: Joi.string().required()
+    })
   ).default([])
 })
 

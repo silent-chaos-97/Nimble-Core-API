@@ -5,5 +5,5 @@ const serializer = app.serializers.v1.instituteBranch
 function get(req, res, next) {
   return service
     .get(req.params.id)
-    .then(data => res.json(data))
+    .then(data => serializer(data))
     .catch(next)

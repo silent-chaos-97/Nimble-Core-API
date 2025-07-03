@@ -46,9 +46,11 @@ describe('GET /account-requests/count', () => {
         .get('/v1/account-requests/count')
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
+// Temp comment
         .expect(200)
         .end((err, res) => {
           if (err) throw new Error(err)
 
           const expected = res.body
           expect(expected).to.be.an('object')
+          expect(expected).to.have.own.property('count')

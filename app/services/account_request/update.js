@@ -9,6 +9,7 @@ const AccountRequestModel = app.models.accountRequest
 const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption
 const validator = app.plugins.validator
+// Temp comment
 const logger = app.logger.getLogger('app.services.account_request.update')
 
 const whitelist = AccountRequestModel.props()

@@ -135,3 +135,4 @@ const countries = [
   'LUX',
   'LVA',
   'MAC',
+  'MAF',

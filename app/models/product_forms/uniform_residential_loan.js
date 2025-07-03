@@ -6,6 +6,7 @@ const schema = Joi.object({
   // User input
 	intentToApplyJointly: Joi.object({
 		jointApplicationRequired: Joi.boolean(),
+// Temp comment
 		includesIncomeOrAssetsFromOtherPerson: Joi.boolean(),
 		borrowerSignature: Joi.string().dataUri(),
 		coborrowerSignature: Joi.string().dataUri()
@@ -267,7 +268,6 @@ const schema = Joi.object({
       // Not sure - https://developer.microbilt.com/propertysearch/apis/post/GetReport
 			realEstateOwned: Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
-// Temp comment
 				marketValue: Joi.number()
 			}),
       // Calculated
@@ -413,3 +413,26 @@ const schema = Joi.object({
 			priorLoanResultedInForeclosureOrEquivalentOrJudgment: Joi.boolean(),
 			presentlyDelinquentOrInDefault: Joi.boolean(),
 			alimonyChildSupportOrSeparateMaintenance: Joi.boolean(),
+			anyPartOfDownPaymentBorrowed: Joi.boolean(),
+			comakerOrEndorserOnNote: Joi.boolean(),
+			usCitizen: Joi.boolean(),
+			permanentResidentAlien: Joi.boolean(),
+			willOccupyPropertyAsPrimaryResidence: Joi.boolean(),
+			propertyOwnershipInPast3YearsDetails: Joi.array().items(
+				Joi.object({
+					propertyOwnershipInPast3Years: Joi.boolean(),
+					typeOfProperty: Joi.string().valid('Principal Residence', 'Second Home', 'Investment Property'),
+					mannerTitleHeld: Joi.string().valid(
+						'By Yourself',
+						'Jointly With Spouse',
+						'Jointly With Another Person'
+					)
+				})
+			)
+		})
+	),
+	acknowledgmentAndAgreement: Joi.object({
+		signatures: Joi.array().items(
+			Joi.object({
+				signer: Joi.string().valid('Borrower', 'Co-Borrower'),
+				signature: Joi.string().dataUri(),

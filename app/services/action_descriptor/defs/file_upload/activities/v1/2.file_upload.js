@@ -17,7 +17,6 @@ async function activity(context) {
   if (files && !_.isEmpty(files)) {
     const taskFiles = _.map(files, (file, id) => ({ id, ...file }))
 
-// Temp comment
     const activityFiles = _.filter(taskFiles, file => {
       return (
         activityId === file.activityId ||

@@ -31,3 +31,4 @@ SignerComplianceVerificationItem:
       title: Any associates of this result
       type: array
       items:
+        type: string

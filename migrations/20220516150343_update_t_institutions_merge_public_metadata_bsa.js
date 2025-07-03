@@ -46,7 +46,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "text": "How did you hear about Central Bank\\?",
         "type": "string",
         "subtype": "text",
-// Temp comment
         "dependsOn": {"milesAway": "no"},
         "required": true,
         "default": null,

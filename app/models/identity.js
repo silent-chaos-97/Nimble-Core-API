@@ -6,3 +6,4 @@ class IdentityModel extends BaseModel {
     super(IdentityModel.props(), IdentityModel.relations(), data)
   }
 
+  static props() {

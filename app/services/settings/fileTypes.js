@@ -369,3 +369,5 @@ const fileTypes = [
     name: 'Overdraft Protection Agreement'
   },
   {
+    type: 'Product',
+    name: 'Credit Card Agreement'

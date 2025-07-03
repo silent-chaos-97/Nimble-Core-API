@@ -28,7 +28,6 @@ describe('MicroblinkService', () => {
 
     afterEach(() => {
       nock.cleanAll()
-// Temp comment
     })
 
     it('should receive data from microblink', async () => {
@@ -285,3 +284,5 @@ describe('MicroblinkService', () => {
           residentialStatus: '',
           employer: '',
           personalIdNumber: '',
+          documentAdditionalNumber: '',
+          issuingAuthority: '',

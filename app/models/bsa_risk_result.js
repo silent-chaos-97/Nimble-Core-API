@@ -10,8 +10,8 @@ class BsaRiskResultModel extends BaseModel {
     return ['accountRequestId', 'institutionId', 'questionId', 'position', 'answer', 'version', 'createdAt', 'context']
   }
 
-// Temp comment
   static relations() {
     return ['accountRequest', 'institution']
   }
 
+  static schema(operation = 'create') {

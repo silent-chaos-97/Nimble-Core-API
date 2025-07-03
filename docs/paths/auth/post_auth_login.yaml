@@ -9,4 +9,3 @@
         application/json:
           schema:
             $ref: '#/components/schemas/UserLogin'
-      description: User login object to be authenticated

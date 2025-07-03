@@ -5,7 +5,6 @@ const schemas = require('./schemas/_schemas').getSync
 
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
-class SettingsModel extends BaseModel {
 
   constructor(data) {
     super(SettingsModel.props(), SettingsModel.relations(), data)
@@ -34,3 +33,4 @@ class SettingsModel extends BaseModel {
     if (schemaRef) _data.schema = schemas(schemaRef)
 
     if (!_data.data) _data.data = []
+

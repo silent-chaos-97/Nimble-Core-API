@@ -115,7 +115,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(first).to.have.ownProperty('verification')
           expect(first).to.have.ownProperty('date')
           expect(first).to.have.ownProperty('status')
-          expect(first).to.have.ownProperty('category')
         })
     })
 

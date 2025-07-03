@@ -10,7 +10,6 @@
         description: uuid signer id
         required: true
         schema:
-          type: string
           format: uuidv4
       - name: limit
         in: query

@@ -5,7 +5,6 @@ Identity:
       type: string
       title: First Name
       description: The first name of the individual
-      nullable: true
       example: Sample
     middleName:
       type: string
@@ -35,4 +34,5 @@ Identity:
       type: string
       title: State
       description: Individual state
+      nullable: true
       example: FL

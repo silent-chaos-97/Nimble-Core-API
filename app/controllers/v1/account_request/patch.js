@@ -17,3 +17,4 @@ function patch(req, res, next) {
     .patch(patch)
     .then(data => serializer(data))
     .then(data => res.json(data))
+    .catch(next)

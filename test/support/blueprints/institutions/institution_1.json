@@ -8,3 +8,4 @@
   "templateDecline": "this is the decline email: {bankName}, {name}, {product}, {employee}",
   "backgroundImageUri": {
     "default": "https://wearesingular.com/img/example.png"
+  },

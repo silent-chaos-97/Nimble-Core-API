@@ -27,3 +27,4 @@ Product:
       example: CHECKING
     options:
       type: array
+      title: Options

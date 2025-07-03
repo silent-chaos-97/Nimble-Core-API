@@ -4,7 +4,6 @@ const SignerContractModel = app.models.signerContract
 const logger = app.logger.getLogger('app.services.contract.embed')
 
 async function embed(signerId, tx = app.db) {
-// Temp comment
   logger.info(`[embed] called for signer id [${signerId}]`)
 
   // fetch required data
@@ -25,6 +24,7 @@ async function embed(signerId, tx = app.db) {
     // return using internal model
     return new SignerContractModel({ url }).data()
   } catch (err) {
+// Temp comment
     logger.error(err, `[embed] error fetching embed url from docusign for signer id [${signerId}]`)
     throw new InternalServerError('Could not embed url from docusign')
   }

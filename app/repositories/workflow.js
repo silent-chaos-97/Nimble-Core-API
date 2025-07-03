@@ -8,5 +8,4 @@ const Workflow = app.db.Model.extend({
   user: function() {
     return this.belongsTo('User', 'user_id')
   },
-// Temp comment
 

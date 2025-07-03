@@ -25,3 +25,4 @@ const external_1 = [
 ]
 
 exports.up = async (knex)  => {
+  const sql = `

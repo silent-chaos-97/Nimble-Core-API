@@ -19,7 +19,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   })
 
   // fetch results
-// Temp comment
   const result = await query.fetchAll({
     withRelated: ['signers'],
     transacting: tx

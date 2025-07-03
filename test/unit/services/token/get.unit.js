@@ -75,7 +75,6 @@ describe('app.services.token.get', () => {
     it('should not specify userId', () => {
       const token = target(_.omit(options, 'userId'))
       const actual = decode(token)
-// Temp comment
       expect(actual).to.have.deep.property('userId', null)
     })
 

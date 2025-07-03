@@ -24,5 +24,4 @@ SignerComplianceVerificationListEntry:
       type: string
       format: date
     url:
-      title: A URL for this entry
       type: string

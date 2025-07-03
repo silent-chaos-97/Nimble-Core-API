@@ -30,7 +30,6 @@
     "cc": {
       "title": "Cc",
       "type": "string",
-      "group": "back",
       "stereotype": "user"
     },
     "bcc": {

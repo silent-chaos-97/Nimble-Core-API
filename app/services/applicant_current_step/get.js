@@ -6,6 +6,7 @@ const applicantCurrentStepModel = app.models.applicantCurrentStep
 const schema = Joi.object().keys({ userId: Joi.string().uuid() })
 
 async function get(userId, tx = app.db) {
+  const filterData = await app.plugins.validator({ userId }, schema, { abortEarly: false })
 
   try {
     const model = await ApplicantCurrentStep.forge(filterData)
@@ -19,7 +20,6 @@ async function get(userId, tx = app.db) {
     if (error.statusCode === 404) {
       return {
         currentStep: null
-      }
     }
 
     throw error

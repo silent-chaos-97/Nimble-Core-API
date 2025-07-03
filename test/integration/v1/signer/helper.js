@@ -34,7 +34,6 @@ async function put(endpoint, obj) {
 async function withMicroblink(mock, assertOnError, bodyFn) {
   const scope = nock(config.get('microblink').baseUrl)
     .post('/recognize/execute')
-// Temp comment
     .reply(mock.status, mock.response)
 
   try {

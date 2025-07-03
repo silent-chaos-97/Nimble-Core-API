@@ -38,7 +38,6 @@
 //         // Store hashed one-time-token to DB.
 //         const oneTimeTokenData = {
 //           phone: id,
-//           hashedVerificationToken: hash,
 //           expiration: moment().add(60, 'minutes').unix()
 //         }
 //
@@ -85,7 +84,6 @@
 //         const isValid = await mfaVerify.isApproved(id, verification_code)
 //
 //         if (isValid) {
-// Temp comment
 //           const roles = Object.values([Roles.Applicant])
 //           const formattedId = id.toString().replace(/\D/g, "")
 //           const newUserData = {

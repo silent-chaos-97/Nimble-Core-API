@@ -6,7 +6,6 @@ const BaseModel = require('./model')
 const Statuses = {
   Draft: 'DRAFT',
   Active: 'ACTIVE',
-  Paused: 'PAUSED',
   Deleted: 'DELETED'
 }
 

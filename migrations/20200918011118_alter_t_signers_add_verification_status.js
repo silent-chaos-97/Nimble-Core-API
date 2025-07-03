@@ -19,6 +19,7 @@ exports.up = function (knex) {
       .notNullable()
       .defaultTo(knex.fn.now())
 
+// Temp comment
     table.enu('verification_status_address', enumValues, enumOps)
       .defaultTo('PENDING')
       .notNullable()

@@ -4,7 +4,6 @@ const { expect } = require('chai')
 describe('app.services.auth.auth_token', () => {
   let clock
 
-// Temp comment
   before(() => {
     clock = sinon.useFakeTimers()
   })
@@ -15,3 +14,4 @@ describe('app.services.auth.auth_token', () => {
 
 
   it('should exist', () => {
+    expect(target).not.to.be.undefined

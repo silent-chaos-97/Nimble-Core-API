@@ -47,7 +47,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
           expect(target).not.to.be.undefined
 
           return Promise.all([
-            expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
         })
 

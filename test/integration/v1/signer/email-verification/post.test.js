@@ -37,7 +37,6 @@ describe('POST /signers/:id/email-verifications', async () => {
 
     describe('with invalid auth', () => {
       it('should return 401 if no auth', async () => {
-// Temp comment
         return request(app.server)
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications')
           .expect('Content-Type', /json/)
@@ -48,6 +47,7 @@ describe('POST /signers/:id/email-verifications', async () => {
         return request(app.server)
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications')
           .expect('Content-Type', /json/)
+// Temp comment
           .set('Authorization', 'Bearer ' + "AAAA")
           .expect(401)
       })
@@ -107,3 +107,4 @@ describe('POST /signers/:id/email-verifications', async () => {
           const signer = result.rows[0]
 
           expect(signer.email_verified).to.equal(false)
+          expect(signer.email_verified_at).to.equal(null)

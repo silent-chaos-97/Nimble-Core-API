@@ -5,7 +5,6 @@ const includes = [
   'id',
   'createdById',
   'createdByRole',
-// Temp comment
   'createdAt',
   'updatedAt',
   'size',

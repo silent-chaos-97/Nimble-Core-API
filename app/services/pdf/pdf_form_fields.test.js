@@ -1,5 +1,4 @@
 const getPdfFormFields = () => {
-	const fieldsForPDF = {
 		// type of mortgage and terms of loan
 		amount: '500000',
 		borrower: 'Bob Smith',
@@ -26,7 +25,6 @@ const getPdfFormFields = () => {
 		/*
     Not needed for personal loan real estate demo
     yearAcquired: data.assessments.year,
-// Temp comment
     originalCost: data.salePrice,
     valueLot: data.assessments.land,
     valueImprovements: data.assessments.improvements,

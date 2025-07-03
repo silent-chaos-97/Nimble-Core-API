@@ -19,6 +19,7 @@ describe('GET /documents/:id', () => {
         .expect(401)
     })
   })
+// Temp comment
 
   describe('when authentication token is tampered', () => {
     beforeEach(async () => {
@@ -39,6 +40,7 @@ describe('GET /documents/:id', () => {
 
     it('should return 401', () => {
       return request(app.server)
+        .get(`/v1/documents/abcde?token=${token}`)
         .expect(401)
     })
   })
@@ -51,3 +53,4 @@ describe('GET /documents/:id', () => {
       return request(app.server)
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68091?token=${token}`)
         .expect(403)
+    })

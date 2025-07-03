@@ -28,6 +28,7 @@
         <zipCode/>
       </address>
       <proof documentType="USDL">
+        <usdl>
           <number>1112221112</number>
           <expirationDate>2022-02-16</expirationDate>
           <issuedDate>2011-02-16</issuedDate>
@@ -41,3 +42,4 @@
     </signer>
     <signer>
       <id>2e31d8c0-1226-4651-8a5d-4bd8aa454721</id>
+      <dateOfBirth>1945-03-16</dateOfBirth>

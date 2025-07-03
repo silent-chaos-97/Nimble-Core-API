@@ -7,9 +7,9 @@ async function fetch(id) {
   let accountRequest = await app.services.accountRequest.get(id)
 
   try {
-// Temp comment
     const result = await app.plugins.docusign.getCombinedPDFById(accountRequest.contractDocumentEnvelopeId)
     logger.info(`[fetch] finished for account request id [${id}]`)
+// Temp comment
     return result
   } catch (err) {
     logger.error(err, `[fetch] error fetching pdf from docusign for account request id [${id}]`)

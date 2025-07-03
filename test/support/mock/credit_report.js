@@ -39,12 +39,12 @@ const processApplicantSuccess = {
         consumerid: '227031'
       },
       code: 1004,
+      code_type: 3,
       message: ''
     }
   }
 }
 
-const processApplicantFailed = {
   prequal: {
     response: {
       applicant: {

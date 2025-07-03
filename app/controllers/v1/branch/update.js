@@ -24,7 +24,6 @@ async function update(req, res, next) {
   if (!branch) return next(new NotFoundError(`user[${patch.id}]`))
 
   const hasRole = role => User.hasRole(me, role)
-
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))

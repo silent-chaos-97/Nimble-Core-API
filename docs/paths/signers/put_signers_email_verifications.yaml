@@ -15,5 +15,6 @@
       - in: path
         name: verificationId
         description: signer email verification id
+        required: true
         schema:
           type: string

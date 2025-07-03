@@ -16,4 +16,3 @@ module "vpc" {
   manage_default_route_table = true
 }
 
-resource "aws_security_group" "vpc" {

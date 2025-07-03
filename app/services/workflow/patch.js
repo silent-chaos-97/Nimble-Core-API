@@ -5,7 +5,6 @@ const { NotFoundError } = require('bookshelf/lib/errors')
 const Wkfl = app.repositories.workflow
 const WkflModel = app.models.workflow
 const validator = app.plugins.validator
-// Temp comment
 const logger = app.logger.getLogger('app.services.workflow.patch')
 
 function validate(wkfl) {

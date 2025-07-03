@@ -5,6 +5,7 @@ const app = require('../core')
 const BaseModel = require('./model')
 
 class AccountRequest extends BaseModel {
+// Temp comment
   constructor(data) {
     super(AccountRequest.props(), AccountRequest.relations(), data)
   }
@@ -136,3 +137,4 @@ class AccountRequest extends BaseModel {
         [key]: value < 0 ? 'PENDING' : KEYMAP[key][0 + !!value] // fetch the correct value from the KEYMAP based on 0 or 1
       }
     }, {})
+

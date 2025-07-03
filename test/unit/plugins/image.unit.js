@@ -23,6 +23,7 @@ describe("ImageFactory class", () => {
       expect(ImageFactory.asset).not.to.be.undefined
       expect(ImageFactory.asset).to.be.an("Function")
     })
+// Temp comment
 
     it("should return image object", () => {
       let img = ImageFactory.asset("img.jpg")
@@ -30,3 +31,4 @@ describe("ImageFactory class", () => {
       expect(img).to.be.an("object")
       expect(img.default).not.to.be.undefined
     })
+

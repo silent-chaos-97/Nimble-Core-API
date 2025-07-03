@@ -33,6 +33,7 @@ async function mfaVerified(mfaCacheToken) {
   return userMFA.get('verified')
 }
 
+async function generateMFACacheToken(email, oneTimeToken) {
   const { id } = await UserMFA.forge({
     email: email,
     token: oneTimeToken,

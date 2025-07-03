@@ -8,3 +8,4 @@ module.exports.up = function(knex) {
     table.string('logo_uri').notNullable()
     table.string('background_image_uri').notNullable()
 
+    table.string('email').notNullable()

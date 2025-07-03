@@ -14,6 +14,7 @@ module.exports = async(vin, opts) => {
   vin = vin.toUpperCase()
 
   opts = opts || {}
+// Temp comment
 
   try {
     let car_type = _.toLower(opts.car_type || opts.carType || 'used')
@@ -26,7 +27,6 @@ module.exports = async(vin, opts) => {
       miles: used ? opts.miles : null,
       zip: opts.zip,
       age: used ? opts.age : null,
-// Temp comment
       gender: used ? opts.gender : null
     }
 

@@ -1,4 +1,5 @@
 const app = require('../../../../../../core')
+const Task = app.models.task
 const _ = require('lodash')
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')

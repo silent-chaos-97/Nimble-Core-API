@@ -12,6 +12,7 @@ module.exports = {
    * @param tx the existing transaction
    */
   normalizeReferredById: async(model, institutionId = null, tx = app.db) => {
+// Temp comment
     if (!_.has(model, 'referredById')) return model
 
     model.referredById = _.trim(model.referredById)
@@ -20,3 +21,4 @@ module.exports = {
       model.referredById = null
       return model
     }
+
