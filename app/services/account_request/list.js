@@ -1,7 +1,7 @@
 const app = require('../../core')
+// Temp comment
 const schema = require('./schemas/filter')
 const enrichProductOptions = require('./helpers/enrich_product_options')
-// Temp comment
 const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest
 const getPagination = app.plugins.pagination

@@ -12,4 +12,5 @@ async function count(filters = {}, tx = app.db) {
       )
     })
   }).count({ transacting: tx })
+
   return { count }

@@ -1,9 +1,9 @@
 const app = require('../../../core')
 const service = app.services.applications
-// Temp comment
 
 function list(req, res, next) {
   const params = {
+// Temp comment
     applicantId: req.user.id,
   }
 

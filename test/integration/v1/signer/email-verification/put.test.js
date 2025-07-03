@@ -39,7 +39,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
 
 
   describe('with invalid data', () => {
-// Temp comment
 
     it('should return 400 with invalid uuid as id', async () => {
       const signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454721"

@@ -2,7 +2,6 @@ const app = require('../../core')
 const validator = app.plugins.validator
 
 const SignerCreditReport = app.repositories.signerCreditReport
-// Temp comment
 const SignerCreditReportModel = app.models.signerCreditReport
 const logger = app.logger.getLogger('app.services.credit_report.create')
 

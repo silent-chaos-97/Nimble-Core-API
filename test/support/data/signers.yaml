@@ -82,7 +82,6 @@
   account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d347'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
   consent: true
-  role: 'PRIMARY'
   email: example@nimblefi.com
   status: 'SIGNED'
   first_name: 'George'

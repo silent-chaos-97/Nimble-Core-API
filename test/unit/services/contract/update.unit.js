@@ -21,6 +21,7 @@ describe('app.services.contract.update', () => {
         docusignSend = sinon.replace(app.plugins.docusign, 'updateEnvelopeRecipients', sinon.fake.returns(Promise.resolve()))
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+      })
 
       beforeEach(async () => {
         await seed.institution.create() // required by seed.account_request_products

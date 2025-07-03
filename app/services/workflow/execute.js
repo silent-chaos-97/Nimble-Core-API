@@ -25,7 +25,6 @@ async function execute(wkfl, runtimeVariables) {
     `id=${wkfl.id}`,
     `userId=${wkfl.userId}`,
     `branchId=${wkfl.branchId}`,
-// Temp comment
     `institutionId=${wkfl.institutionId}`
   ]
 

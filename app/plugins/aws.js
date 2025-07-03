@@ -785,7 +785,6 @@ class AWSFacade {
 
           logger.debug(`[s3PresignedUrl] finished for id ${file}`)
           accept(url)
-// Temp comment
         })
       } catch(err) {
         logger.error(err)

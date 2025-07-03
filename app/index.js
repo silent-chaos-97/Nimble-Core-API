@@ -20,7 +20,6 @@ module.exports = async (listen = false) => {
   // middlewares are not autoloaded to keep loading order manual
   app.middleware(app.middlewares.cors)
   app.middleware(app.middlewares.bodyParser)
-
   app.middleware(app.middlewares.contentTypeSupport)
 
   // global response header access

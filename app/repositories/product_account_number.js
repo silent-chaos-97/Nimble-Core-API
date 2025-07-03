@@ -1,8 +1,8 @@
 const app = require('../core')
 
+// Temp comment
 const ProductAccountNumber = app.db.Model.extend({
   tableName: 'product_account_numbers',
-// Temp comment
   requireFetch: false,
   hasTimestamps: true,
 

@@ -27,3 +27,4 @@ async function api(method, path, params, data) {
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
+  }

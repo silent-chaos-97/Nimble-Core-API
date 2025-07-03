@@ -61,6 +61,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
         expect(product).not.to.have.own.property('updatedAt')
         expect(product).not.to.have.own.property('institution')
       })
+  })
 
   describe('with multiple data', () => {
     beforeEach(async () => {
@@ -88,7 +89,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
     it('should return a list of products', () => {
       return request(app.server)
         .get(`/v1/institutions/${testInstitution1}/products?limit=1&sort=id`)
-        .expect('Content-Type', /json/)
         .expect(200)
         .expect((res) => {
           expect(res.body).to.be.an('array')

@@ -18,6 +18,7 @@
                 required:
                   - role
                   - email
+              - properties:
                   accountRequestId:
                     type: string
                     writeOnly: true

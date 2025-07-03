@@ -9,7 +9,6 @@ async function get(id, tx = app.db) {
   const filterData = await app.plugins.validator({id}, schema, { abortEarly: false })
 
   const model = await ApplicantOneTimeToken.forge(filterData)
-    .fetch({
       withRelated: [],
       transacting: tx
     })

@@ -1,6 +1,5 @@
 const db = require('./util/db')
 
-const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const INITIAL_SETTINGS = [
   {
@@ -14,7 +13,6 @@ const INITIAL_SETTINGS = [
     }
   }
 ]
-// Temp comment
 
 exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
 

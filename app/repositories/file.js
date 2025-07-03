@@ -1,3 +1,3 @@
 const app = require('../core')
 
-  tableName: 'files',
+const File = app.db.Model.extend({

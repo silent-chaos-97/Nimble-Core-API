@@ -23,6 +23,7 @@ function assignToSpec(spec, part, parent) {
         let current_spec = section[key]
         let new_spec = obj[key]
         section[key] = { ...current_spec, ...new_spec }
+      } else {
         section[key] = obj[key]
       }
     })

@@ -4,6 +4,7 @@ info:
     resources of our service.
   version: v1
   title: Nimble Core REST API
+  contact:
     name: Singular
     email: founders@wearesingular.com
 

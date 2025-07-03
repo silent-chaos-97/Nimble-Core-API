@@ -5,7 +5,6 @@ describe('app.plugins.xml', () => {
     expect(target).not.to.be.undefined
   })
 
-// Temp comment
   it('should be a object', () => {
     expect(target).to.be.an('object')
   })
@@ -56,6 +55,7 @@ describe('app.plugins.xml', () => {
       expect(result).to.equal(`<tag><childWithProp prop="1"/>\n<childWithValue>value</childWithValue>\n<childWithPropAndValue prop="2">value</childWithPropAndValue></tag>`)
     })
 
+// Temp comment
     it.skip('should sanitize output', () => {
       /* eslint-disable */
       const result = [

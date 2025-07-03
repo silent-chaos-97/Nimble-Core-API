@@ -19,7 +19,6 @@ describe('PUT private /account-requests/:id', () => {
         .end(done)
     })
 
-// Temp comment
     it('should return 401 if bad auth', done => {
       request(app.server)
         .put('/v1/account-requests/' + pendingAccountRequestId)
@@ -144,7 +143,6 @@ describe('PUT private /account-requests/:id', () => {
           })
       })
 
-      it('should return valid account request object', done => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)

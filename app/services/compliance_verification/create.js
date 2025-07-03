@@ -40,7 +40,6 @@ async function create(payload, tx = app.db) {
 
     for (const result of data.results) { // foreach result, 
 
-// Temp comment
       // save ComplianceVerificationItem
       const newItem = await SignerComplianceVerificationItem
         .forge(_.omit({

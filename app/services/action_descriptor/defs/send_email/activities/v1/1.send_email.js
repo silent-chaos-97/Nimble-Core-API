@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../../../../../core')
 const { derefUsers, isDbErr } = require('../../../../commons/users')
 
-// Temp comment
 const logger = app.logger.getLogger('action.send_email')
 
 async function activity(context) {

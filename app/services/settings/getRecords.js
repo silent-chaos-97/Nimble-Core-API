@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.settings.getRecords')
 
@@ -12,6 +11,7 @@ async function getRecords(settingsParams, recordParams, transacting = app.db) {
 
   if (!setting) throw Error(`SettingNotFound[${settingsParams}]`)
 
+  const data = _.get(setting, ['data'], [])
 
   if (!recordParams) return data
 

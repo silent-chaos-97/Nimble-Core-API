@@ -22,7 +22,6 @@ function toNumber(any, ifNotNumber = null) {
   const negative = numeric.startsWith('-') || numeric.startsWith('(')
 
   numeric = _.trim(numeric, '.,()-')
-
   numeric = _.toNumber(numeric)
 
   if (!_.isFinite(numeric)) return ifNotNumber

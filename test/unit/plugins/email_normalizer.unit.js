@@ -8,4 +8,5 @@ describe('Email Normalise Plugin', () => {
   it('should return a email with domain in lowercase', () => {
     const actual = target('prnjanuario@WEARESINGULAR.COM')
     expect(actual).to.be.equal('prnjanuario@wearesingular.com')
+  })
 

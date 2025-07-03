@@ -64,6 +64,7 @@ describe('POST /documents', () => {
           expect(res.body).to.have.own.property(prop)
         })
 
+        expect(res.body).not.to.have.own.property('updatedAt')
         expect(res.body).not.to.have.own.property('content')
 
         expect(res.body.id).to.be.an('string')

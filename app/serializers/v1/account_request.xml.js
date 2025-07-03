@@ -8,6 +8,7 @@ function serializer(data) {
   const format = app.plugins.xml.format
 
   return format(tag('accountRequest', {
+    updatedAt: moment(data.statusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS'),
     updatedBy: data.statusUpdatedBy ? data.statusUpdatedBy.email : null,
     branchCode: data.branch ? data.branch.externalId : null
   }, [
@@ -95,7 +96,6 @@ function serializer(data) {
             value: poConfig.value
           })
         )
-      })
 
       return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)
     }))

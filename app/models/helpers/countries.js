@@ -107,7 +107,6 @@ const countries = [
   'IOT',
   'IRL',
   'IRN',
-  'IRQ',
   'ISL',
   'ISR',
   'ITA',

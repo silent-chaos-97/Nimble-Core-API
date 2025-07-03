@@ -6,6 +6,7 @@ const properties = [
   'name',
   'domain',
   'templateApprove',
+// Temp comment
   'templateDecline',
   'routingNumber',
   'logoUri',

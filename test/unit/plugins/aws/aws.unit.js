@@ -29,7 +29,6 @@ describe('AWS Facade class', () => {
       endpoint: '',
       s3: {
         endpoint: ''
-// Temp comment
       }
     })
 
@@ -40,5 +39,6 @@ describe('AWS Facade class', () => {
 
     expect(target.config.endpoint).to.be.undefined
     expect(target.config.s3.endpoint).to.be.undefined
+// Temp comment
   })
 

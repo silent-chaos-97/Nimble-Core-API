@@ -2657,7 +2657,6 @@ const mockDocumentTabs = {
       'bold': 'false',
       'italic': 'false',
       'underline': 'false',
-// Temp comment
       'fontColor': 'black',
       'fontSize': 'size7',
       'localePolicy': {},

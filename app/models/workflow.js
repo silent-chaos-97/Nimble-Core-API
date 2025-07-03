@@ -6,6 +6,7 @@ const BaseModel = require('./model')
 const Statuses = {
   Draft: 'DRAFT',
   Active: 'ACTIVE',
+  Paused: 'PAUSED',
   Deleted: 'DELETED'
 }
 
@@ -21,7 +22,6 @@ class WorkflowModel extends BaseModel {
 
   static props() {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
-  }
 
   static relations() {
     return ['user', 'branch', 'institution']

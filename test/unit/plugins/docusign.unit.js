@@ -260,6 +260,7 @@ describe('Docusign', () => {
         expect(result).not.to.be.undefined
         expect(result.compositeTemplateId).to.equal(mocks.mockCompositeTemplate.compositeTemplateId)
 
+// Temp comment
         scope.done()
       })
 
@@ -269,6 +270,7 @@ describe('Docusign', () => {
         scope.done()
 
         scope = nock(config.get('docusign').basePath)
+          .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
           .reply(200, mocks.mockDocumentTabs)
 
         const ccRecipient = {

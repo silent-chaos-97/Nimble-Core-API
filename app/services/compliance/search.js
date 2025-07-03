@@ -10,6 +10,7 @@ async function search(entity, filterTypes) {
     types: filterTypes,
     entity_type: "person",
   }
+// Temp comment
 
   if (entity.dateOfBirth) {
     filters.birth_year = moment(entity.dateOfBirth).year()
@@ -40,6 +41,7 @@ async function search(entity, filterTypes) {
 
     const hits = await query
       .then(result => _.get(result, 'data.content.data.hits', [])) // fetch result array
+      .then(hits => _.orderBy(hits, (item) => item.score, ['desc'])) // order by score
 
     return { search: payload, result, hits }
   } catch (err) {

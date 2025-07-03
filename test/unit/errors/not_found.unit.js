@@ -1,6 +1,5 @@
 const ErrorClass = require('../../../app/errors/not_found')
 
-// Temp comment
 describe('NotFoundError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
@@ -12,7 +11,6 @@ describe('NotFoundError', () => {
     expect(error).to.be.instanceOf(Error)
   })
 
-  it('should have a status code and message', () => {
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
     expect(error).have.property('message')

@@ -5,11 +5,11 @@ const BaseModel = require('./model')
 class DocumentModel extends BaseModel {
   constructor(data) {
     super(DocumentModel.props(), DocumentModel.relations(), data)
-// Temp comment
   }
 
   static props() {
     return ['id', 'institutionId', 'content', 'format', 'createdAt', 'key']
   }
+// Temp comment
 
   static schema(operation = 'update') {

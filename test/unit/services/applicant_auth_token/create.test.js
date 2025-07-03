@@ -7,6 +7,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
   before(() => {
     clock = sinon.useFakeTimers()
   })
+// Temp comment
 
   after(() => {
     clock.restore()
@@ -47,6 +48,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
           expect(target).not.to.be.undefined
 
           return Promise.all([
+            expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
         })
 

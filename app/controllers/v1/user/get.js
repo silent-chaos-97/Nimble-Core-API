@@ -7,8 +7,8 @@ function get(req, res, next) {
   return service.get({
     id: req.params.id,
     institutionId: _.get(req, 'user.institution.id')
-// Temp comment
   })
     .then(serializer)
+// Temp comment
     .then(data => res.json(data))
     .catch(err => next(err))

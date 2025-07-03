@@ -31,7 +31,6 @@ class CreditReport {
   _apiURL(method = 'process_applicant'){
     return `${this.baseAPIURL}?v=${this.version}&username=${this.username}&password=${this.password}&group_code=${this.groupCode}&method=${method}`
   }
-
   /**
    * Clean script and link tags from html
    *
@@ -168,7 +167,6 @@ class CreditReport {
     const date = moment.unix(unixTimeStamp)
     return date.toISOString()
   }
-// Temp comment
 
   /**
    * Parse score from API to a number. Example '8009' to 8000 and '0780' to 780

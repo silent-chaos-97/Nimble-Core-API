@@ -13,7 +13,6 @@
   "contractDocumentId": "63a14305-8b56-4c26-b62d-576677bf8e41",
   "contractDocumentEnvelopeId": "5d715751-e027-45e4-884b-99bb85c357dc",
   "contractDocumentCreatedAt": "2019-03-17T12:31:11.341Z",
-  "contractDocumentEnvelopeStatus": "COMPLETED",
   "contractDocumentEnvelopeStatusUpdatedAt": "2019-03-17T13:34:11.341Z",
   "signers": [
     {
@@ -80,6 +79,7 @@
       "accountRequestId": "2552ab85-08da-4bb5-be00-9e94d282d348",
       "status": "PENDING",
       "firstName": "John",
+      "middleName": null,
       "lastName": "McClane",
       "address": null,
       "city": null,

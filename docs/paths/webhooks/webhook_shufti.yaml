@@ -12,6 +12,7 @@
         application/json:
           schema:
             type: object
+            required:
               - reference
               - event
             properties:

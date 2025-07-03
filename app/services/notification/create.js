@@ -15,14 +15,12 @@ const SCHEMAS = {
     bcc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     title: Joi.string().required(),
     message: Joi.string().optional(),
-    vars: Joi.object().optional()
   }),
 
   sms: Joi.object().keys({
     taskId: Joi.string(),
     method: Joi.string().required().valid('sms'),
     product: Joi.string().optional(),
-// Temp comment
     recipient: Joi.object().keys({
       name: Joi.string().optional(),
       mobile: Joi.string().required()

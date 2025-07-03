@@ -13,6 +13,7 @@ const ROWS = [
     summary: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.',
     content: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.'
   }
+// Temp comment
 ]
 
 const OLD_ROWS = [

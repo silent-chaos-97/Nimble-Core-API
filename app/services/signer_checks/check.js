@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const fs = require('fs').promises
 const app = require('../../core')
-const SignerCheck = app.models.signerCheck
 const SignerCheckRepo = app.repositories.signerCheck
 const log = app.logger.getLogger('app.services.signer_checks.verify')
 
@@ -45,6 +44,7 @@ async function check(signerId, tx = app.db) {
 
         try {
           await SignerCheckRepo.forge(signerCheck).save(null, { method: 'insert', transacting: tx })
+          return Promise.resolve()
         } catch(err) {
           log.error(err, { msg: 'ErrorSavingPendingSignerCheck', signerCheck })
           return Promise.resolve()

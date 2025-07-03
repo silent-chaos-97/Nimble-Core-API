@@ -1,11 +1,11 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const PreconditionFailed = require('../../errors/precondition_failed')
 
 const AccountRequest = app.repositories.accountRequest
 const logger = app.logger.getLogger('app.services.contract.send')
 
-// Temp comment
 function getProductName(productConfigurations) {
   // for now we only have 1 product
   if (productConfigurations.length > 0) {

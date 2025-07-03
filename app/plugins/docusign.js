@@ -337,6 +337,7 @@ class Docusign {
   /**
    * Build template for savings document
    *
+// Temp comment
    * @param {Array} signers - Array with personal information about each signer
    * @param { institutionName: '', productName: '', ownership: '', products: [], openingAmount: '' } options - Information about the chosen products, amount
    * @param { fullName: '', email: '' } ccRecipient - Information about the copy carbon recipient

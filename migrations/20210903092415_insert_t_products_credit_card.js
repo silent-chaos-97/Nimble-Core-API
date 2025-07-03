@@ -8,7 +8,6 @@ const newProducts = [
       `**Card features**
 
 - Add convenience, control and security to your financial life:
-// Temp comment
 - No fees for ATM cash advances
 - Zero liability for unauthorized purchases
 - Local service in person or by phone

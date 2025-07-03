@@ -96,6 +96,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect(res => {
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(12)
+// Temp comment
         })
     })
 
@@ -115,6 +116,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(first).to.have.ownProperty('verification')
           expect(first).to.have.ownProperty('date')
           expect(first).to.have.ownProperty('status')
+          expect(first).to.have.ownProperty('category')
         })
     })
 

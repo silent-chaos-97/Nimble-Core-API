@@ -6,7 +6,6 @@ const schema = Joi.object({
   // User input
 	intentToApplyJointly: Joi.object({
 		jointApplicationRequired: Joi.boolean(),
-// Temp comment
 		includesIncomeOrAssetsFromOtherPerson: Joi.boolean(),
 		borrowerSignature: Joi.string().dataUri(),
 		coborrowerSignature: Joi.string().dataUri()
@@ -86,7 +85,6 @@ const schema = Joi.object({
       // User
 			applicant: Joi.string().valid('Borrower', 'Co-Borrower'),
       // Have it - Microblink
-			name: Joi.string(),
       // Have it - Microbilt
 			ssn: Joi.string(),
       // Not sure - Microbilt

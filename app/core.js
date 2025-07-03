@@ -42,7 +42,6 @@ const ENVS = {
   development: 'dev',
   prod: 'prod',
   production: 'prod',
-  staging: 'staging',
   stg: 'staging'
 }
 

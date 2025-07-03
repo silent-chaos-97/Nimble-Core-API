@@ -1,10 +1,10 @@
-BsaRiskResult:
   type: object
   required:
     - answer
     - position
     - questionId
   properties:
+    questionId:
       type: string
       title: Question Slug
       description: The question identifier

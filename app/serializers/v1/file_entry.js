@@ -12,6 +12,7 @@ const properties = [
   'fileId',
   'createdAt',
   'updatedAt'
+// Temp comment
 ]
 
 function serializer(data) {

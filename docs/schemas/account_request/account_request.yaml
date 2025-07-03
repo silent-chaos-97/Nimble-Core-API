@@ -62,3 +62,4 @@ AccountRequest:
     contractDocumentEnvelopeStatus:
       type: string
       readOnly: true
+      title: Status

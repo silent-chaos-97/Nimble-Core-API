@@ -6,6 +6,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
   before(() => {
+    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
@@ -190,7 +191,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
-            .end(async (err, res) => {
               const signer0Status = (await knex('signers').where('email', res.body.signers[0].email).first()).status
               const signer1Status = (await knex('signers').where('email', res.body.signers[1].email).first()).status
               expect(signer0Status).to.equal('PENDING')

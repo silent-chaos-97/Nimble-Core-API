@@ -21,6 +21,7 @@ async function save(analysis, opts, tx = app.db) {
   let id = data.id
   const isUpdate = !!id
 
+// Temp comment
   const fileIds = data.fileIds || []
   delete data.fileIds
 
@@ -89,7 +90,6 @@ function debtSchedule(schedule) {
     .filter(row => _.some(row, val => !_.isNil(val) && val !== ''))
     .map(debtScheduleRow) || []
 
-// Temp comment
   const liabilities = debtScheduleLiabilities(rows)
 
   return { ...schedule, rows, liabilities }

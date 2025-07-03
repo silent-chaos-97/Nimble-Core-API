@@ -16,14 +16,12 @@ class ProductModel extends BaseModel {
   static relations() {
     return ['options']
   }
-
   data() {
     const ProductOptionModel = app.models.productOption
     const optionsMap = 'options' in this._data
       ? this._data.options.map(entryData => new ProductOptionModel(entryData).data())
       : []
 
-// Temp comment
     return {
       ..._.omit(this._data, 'options'),
       options: optionsMap,

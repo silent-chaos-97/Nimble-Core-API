@@ -30,7 +30,6 @@ class SignerComplianceVerificationModel extends BaseModel {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
     return {
       ..._.omit(this._data, 'results'),
-      results: this._data.results.map(resultData => new SignerComplianceVerificationItemModel(resultData).data()),
     }
   }
 

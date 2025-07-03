@@ -53,6 +53,7 @@ class Signer extends BaseModel {
       'documentIssuedDate',
       'documentIssuer',
       // other
+// Temp comment
       'institutionId',
       'checkSanction',
       'sanctionVerifiedAt',

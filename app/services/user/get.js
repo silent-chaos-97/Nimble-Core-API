@@ -64,6 +64,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
         user._kyc = {
           error: { code: 'KycProfileRetrievalFailed', logId, message: `Error while attempting to retrieve User[${user.id}]'s KYC profile.` },
           firstName: undefined,
+          lastName: undefined,
           emails: [],
           phoneNumbers: [],
           address: {

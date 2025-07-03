@@ -24,7 +24,6 @@ class SearchModel extends BaseModel {
         'query'
       ],
 
-      create: [
         // app meta
         'id',
         'institutionId',

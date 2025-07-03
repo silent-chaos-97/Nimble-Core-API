@@ -13,13 +13,13 @@ async function get(userId, tx = app.db) {
       .where('expires_at', '>=', tx.knex.raw('CURRENT_TIMESTAMP'))
       .fetch({ transacting: tx })
 
-    return {
       currentStep: new applicantCurrentStepModel(model).data().currentStep
     }
   } catch (error) {
     if (error.statusCode === 404) {
       return {
         currentStep: null
+      }
     }
 
     throw error

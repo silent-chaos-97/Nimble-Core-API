@@ -5,11 +5,11 @@ function whenColumn(knex, tableName, columnName, ifExists, ifNotExists) {
       : (ifNotExists ? ifNotExists(knex) : Promise.resolve()))
 }
 
-function ifColumnExists(knex, tableName, columnName, ifExists) {
   return whenColumn(knex, tableName, columnName, ifExists)
 }
 
 function ifColumnNotExists(knex, tableName, columnName, ifNotExists) {
+  return whenColumn(knex, tableName, columnName, null, ifNotExists)
 }
 
 function dropColumnIfExists(knex, tableName, columnName) {

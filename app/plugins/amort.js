@@ -38,6 +38,7 @@ function payment(amount, rate, term) {
 }
 
 function _term(amount, rate, payment) {
+// Temp comment
   const i = rate / 12 / 100
   return Math.log(payment / (payment - amount * i)) / Math.log(i + 1)
 }

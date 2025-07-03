@@ -45,6 +45,7 @@ const processApplicantSuccess = {
   }
 }
 
+const processApplicantFailed = {
   prequal: {
     response: {
       applicant: {

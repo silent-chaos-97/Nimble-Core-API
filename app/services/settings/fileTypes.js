@@ -50,7 +50,6 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Certificate of Good Standing'
-  },
   {
     type: 'Entity',
     name: 'By-Laws'

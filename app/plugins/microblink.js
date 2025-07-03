@@ -1,4 +1,3 @@
-const axios = require('axios')
 const moment = require('moment')
 const _ = require('lodash')
 const config = require('../../config')
@@ -117,7 +116,6 @@ class MicroblinkService {
         address,
         addressStreet,
         addressCity,
-// Temp comment
         addressJurisdictionCode,
         addressPostalCode,
         type,

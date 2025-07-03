@@ -9,7 +9,6 @@ const logger = app.logger.getLogger('app.services.identity_verification.list')
 
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
-// Temp comment
   id: Joi.string().uuid().required(),
 })
 

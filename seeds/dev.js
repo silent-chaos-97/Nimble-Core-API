@@ -1,4 +1,3 @@
-// Temp comment
 const seeds = require('../test/support/seeds')
 
 exports.seed = async function () {
@@ -8,6 +7,7 @@ exports.seed = async function () {
     await seeds.users()
     await seeds.accounts()
     await seeds.account_recoveries()
+// Temp comment
     await seeds.documents()
     await seeds.account_requests()
     await seeds.signers()
