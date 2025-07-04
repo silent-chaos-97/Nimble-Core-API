@@ -7,6 +7,7 @@ const schema = Joi.object().keys({
   name: Joi.string(),
   category: Joi.string(),
 })
+
 describe('plugins/validator', () => {
   it('throws error with invalid data', () => {
     const data = { id: 1 }
@@ -15,3 +16,4 @@ describe('plugins/validator', () => {
 
   it('throws error with not-allowed properties', () => {
     const data = { notInSchema: 'some value' }
+    expect(() => validator(data, schema)).to.throw(BadRequestError)

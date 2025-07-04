@@ -19,6 +19,7 @@ const data = JSON.stringify({
   content: base64
 })
 
+const options = {
   hostname: 'localhost',
   port: 8080,
   path: '/v1/documents',

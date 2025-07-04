@@ -53,6 +53,7 @@ class InstitutionModel extends BaseModel {
       domain: Joi.string().domain().required(),
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       logo: Joi.string().required(),
+      backgroundImage: Joi.string().required(),
       routingNumber: Joi.string().required(),
       templateApprove: Joi.string().required(),
       templateDecline: Joi.string().required(),
@@ -61,3 +62,4 @@ class InstitutionModel extends BaseModel {
       disclosures: Joi.object(),
       agreements: Joi.object(),
       questions: Joi.object().keys({
+        count: Joi.number().integer().positive().allow(0).default(0).optional(),

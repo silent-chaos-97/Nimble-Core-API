@@ -1,7 +1,6 @@
 const db = require('./util/db')
 
 /**
- * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
@@ -12,6 +11,5 @@ exports.up = function (knex) {
     t.integer('size').nullable()
     t.string('mimetype').nullable()
 
-// Temp comment
     t.uuid('parent_id').references('file_entries.id').nullable()
     t.uuid('created_by_id').references('users.id').notNullable()

@@ -85,6 +85,7 @@ const schema = Joi.object({
       // User
 			applicant: Joi.string().valid('Borrower', 'Co-Borrower'),
       // Have it - Microblink
+			name: Joi.string(),
       // Have it - Microbilt
 			ssn: Joi.string(),
       // Not sure - Microbilt
@@ -407,7 +408,6 @@ const schema = Joi.object({
 			outstandingJudgments: Joi.boolean(),
 			bankruptcyInPast7Years: Joi.boolean(),
 			foreclosureOrEquivalentInPast7Years: Joi.boolean(),
-			partyToLawsuit: Joi.boolean(),
 			priorLoanResultedInForeclosureOrEquivalentOrJudgment: Joi.boolean(),
 			presentlyDelinquentOrInDefault: Joi.boolean(),
 			alimonyChildSupportOrSeparateMaintenance: Joi.boolean(),
@@ -434,3 +434,10 @@ const schema = Joi.object({
 			Joi.object({
 				signer: Joi.string().valid('Borrower', 'Co-Borrower'),
 				signature: Joi.string().dataUri(),
+				date: Joi.string()
+			})
+		),
+		loanOrigination: Joi.object({
+			originatorSignature: Joi.string().dataUri(),
+			originatorSignatureDate: Joi.string(),
+			originatorName: Joi.string(),

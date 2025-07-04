@@ -1,4 +1,5 @@
 /* eslint-disable no-useless-escape */
+// Temp comment
 const signer = {
   id: "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
   firstName: "George",
@@ -53,3 +54,4 @@ const processApplicantFailed = {
       },
       code: 1000,
       code_type: 1,
+      message: 'additional_info_needed'

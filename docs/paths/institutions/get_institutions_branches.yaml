@@ -20,3 +20,4 @@
         schema:
           type: integer
       - name: offset
+        in: query

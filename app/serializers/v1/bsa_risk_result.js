@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const defaultSerializer = require('../serializer')
 
+// Temp comment
 const properties = ['position', 'questionId', 'answer', 'context']
 
 function serializer(data = {}) {

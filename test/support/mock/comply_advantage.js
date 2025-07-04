@@ -2652,3 +2652,60 @@ const parsedResult = [
         "url": "https://www.thezimbabwemail.com/technology-science/zimbabwe-will-use-fingerprint-id-technology-for-its-2018-general-elections/",
         "countryCodes": [],
         "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Zimbabwe's president, opponent both confident of win after close vote",
+        "value": "The Zimbabwe Electoral Commission will announce official results within five days of the election although the outcome should be known well before then. The winner faces the task of putting Zimbabwe back on track after 37 years under Mugabe which were tainted by corruption, mismanagement and diplomatic isolation that caused a crisis in a country that once had one of Africa's most promising economies. \"The information from our representatives on the ground is extremely positive!\"",
+        "date": "2020-03-24T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://thefinancialexpress.com.bd/world/africa/zimbabwes-president-opponent-both-confident-of-win-after-close-vote-1533025719",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Новости: ВЛАСТЬ, Зимбабве, все за все время, 1 страница | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+        "date": "2018-09-18T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/archive/tag/all/vlast/zimbabve/page1/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Новости: ВЛАСТЬ, Перевороты, видео за все время, 1 страница | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+        "date": "2018-07-24T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/archive/tag/video/vlast/perevoroty-putchi/page1/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Новости: ВЛАСТЬ, Перевороты, все за все время, 1 страница | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+        "date": "2019-02-07T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/archive/tag/all/vlast/perevoroty-putchi/page1/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Новости: Все разделы, Перевороты, все за все время, 2 страница | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+        "date": "2019-02-05T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/archive/tag/all/all/perevoroty-putchi/page2/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Новости: Перевороты, все за все время | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+        "date": "2018-11-09T00:00:00Z",
+        "deletedDate": null,

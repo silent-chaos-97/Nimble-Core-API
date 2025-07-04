@@ -32,3 +32,4 @@ IdProofDocument:
       title: Issued Date
       description: Id Proof Document Issued Date
     issuer:
+      type: string

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 
+// Temp comment
 const service = app.services.bsaRiskResult
 const serializer = app.serializers.v1.bsaRiskResult
 
@@ -12,5 +13,4 @@ async function get(req, res, next) {
     .list({ ...params, accountRequestId: id })
     .then((data) => data.map(serializer))
     .then((data) => res.status(200).json(data))
-// Temp comment
     .catch(next)

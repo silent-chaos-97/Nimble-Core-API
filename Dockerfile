@@ -11,3 +11,4 @@ COPY package.json yarn.lock /app/
 RUN yarn install
 
 FROM node:14-alpine as runtime
+

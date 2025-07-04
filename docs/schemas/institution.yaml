@@ -35,3 +35,4 @@ Institution:
       type: string
       title: Domain
       description: The institution domain
+    routingNumber:

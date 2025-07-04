@@ -105,3 +105,6 @@ columns:
     type: numeric
     width: 130
     numericFormat:
+      pattern: 0.00
+      postfix: '%'
+    allowEmpty: false

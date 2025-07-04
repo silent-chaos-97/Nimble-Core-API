@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const app = require('../../core')
 const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.fetch')
 

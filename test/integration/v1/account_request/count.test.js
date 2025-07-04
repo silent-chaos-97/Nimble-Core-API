@@ -53,3 +53,4 @@ describe('GET /account-requests/count', () => {
           const expected = res.body
           expect(expected).to.be.an('object')
           expect(expected).to.have.own.property('count')
+          expect(expected.count).to.be.an('number')

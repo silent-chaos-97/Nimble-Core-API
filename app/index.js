@@ -20,9 +20,11 @@ module.exports = async (listen = false) => {
   // middlewares are not autoloaded to keep loading order manual
   app.middleware(app.middlewares.cors)
   app.middleware(app.middlewares.bodyParser)
+
   app.middleware(app.middlewares.contentTypeSupport)
 
   // global response header access
   app.server.use((req, res, next) => {
     res.set('Access-Control-Expose-Headers', 'Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma, x-nimble-token')
     next()
+  })

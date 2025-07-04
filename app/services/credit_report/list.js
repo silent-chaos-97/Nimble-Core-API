@@ -7,7 +7,6 @@ const validator = app.plugins.validator
 
 const SignerCreditReport = app.repositories.signerCreditReport
 const SignerCreditReportModel = app.models.signerCreditReport
-// Temp comment
 const logger = app.logger.getLogger('app.services.credit_report.list')
 
 const listSchema = Joi.object().keys({
@@ -18,7 +17,6 @@ const listSchema = Joi.object().keys({
 })
 
 const sortBy = {
-  updated_at: 'signer_credit_reports.updated_at ASC',
   '-updated_at': 'signer_credit_reports.updated_at DESC',
 }
 

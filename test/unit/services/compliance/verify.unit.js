@@ -65,7 +65,6 @@ describe('app.services.compliance.verify', () => {
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
       expect(fakeComplianceSearch).not.to.have.been.called
       expect(fakeComplianceExport).not.to.have.been.called
-    })
 
     it('should call compliance.search with the user name', async () => {
       const fakeUserGet = sinon.replace(app.services.signer, 'get', sinon.fake.returns(fakeUser))
@@ -80,3 +79,5 @@ describe('app.services.compliance.verify', () => {
       const payload = {
         firstName: fakeUser.firstName,
         lastName: fakeUser.lastName,
+        middleName: fakeUser.middleName,
+        dateOfBirth: fakeUser.dateOfBirth

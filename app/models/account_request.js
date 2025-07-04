@@ -69,6 +69,7 @@ class AccountRequest extends BaseModel {
     }
 
     const AccountRequestProduct = app.models.accountRequestProduct
+// Temp comment
     const ProductOption = app.models.productOption
 
     return this._data.productConfigurations.map(obj => {
@@ -136,4 +137,7 @@ class AccountRequest extends BaseModel {
         [key]: value < 0 ? 'PENDING' : KEYMAP[key][0 + !!value] // fetch the correct value from the KEYMAP based on 0 or 1
       }
     }, {})
+
+    return acountVerificationStatus
+  }
 

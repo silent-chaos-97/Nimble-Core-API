@@ -8,7 +8,6 @@ describe('app.services.applications.list', () => {
     clock = sinon.useFakeTimers()
   })
 
-  after(() => {
     clock.restore()
   })
 
@@ -26,3 +25,4 @@ describe('app.services.applications.list', () => {
       const errorMessage = 'ApplicantId must be provided.'
       expect(target).not.to.be.undefined
 
+      return Promise.all([

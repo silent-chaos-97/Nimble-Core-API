@@ -16,3 +16,4 @@ columns:
     allowEmpty: false
 
   - data: department
+    title: Department

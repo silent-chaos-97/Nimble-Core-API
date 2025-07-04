@@ -9,6 +9,7 @@ async function download(req, res) {
     // institutionId: req.user.institutionId FIXME: institution_id does not exist on files, but it should
   }
 
+  if (!User.isInstitutionAdmin(req.user)) {
     example.createdById = req.user.id // TODO: really should allow any type of "ownership"
   }
 

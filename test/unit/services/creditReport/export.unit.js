@@ -1,4 +1,3 @@
-// Temp comment
 
 const sinon = require('sinon')
 const axios = require('axios')
@@ -56,3 +55,4 @@ describe('app.services.creditReport.export', () => {
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
 
+      const fakeAwsLambda = sinon.fake.returns(errorResponse)

@@ -34,11 +34,14 @@ describe('POST /signers/:id/invites', async () => {
         .expect(401)
     })
 
+// Temp comment
     it('should return 401 if bad auth', async () => {
       return request(app.server)
         .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/invites`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
+        .expect(401)
     })
   })
 
+  it('should return 400 with invalid uuid as id', async () => {

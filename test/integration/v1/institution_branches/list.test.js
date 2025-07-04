@@ -62,3 +62,5 @@ describe('GET /institution/:id/branches', () => {
       .expect(200)
       .then(response => {
         expect(response.body).to.be.an('Array')
+        const firstResult = response.body.shift()
+        expect(firstResult).to.deep.equal({

@@ -50,6 +50,7 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Certificate of Good Standing'
+  },
   {
     type: 'Entity',
     name: 'By-Laws'
@@ -370,3 +371,11 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Credit Card Agreement'
+  },
+  {
+    type: 'Product',
+    name: 'Cardholder Agreement or Cardholder Terms'
+  },
+  {
+    type: 'Product',
+    name: 'Cardholder Disclosures'

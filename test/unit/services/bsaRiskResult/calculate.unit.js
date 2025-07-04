@@ -41,3 +41,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       expect(resultSpy).to.have.been.calledOnce
       expect(resultSpy).to.have.been.calledWith(params)
     })
+

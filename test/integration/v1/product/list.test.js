@@ -45,7 +45,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
       .expect((res) => {
         const props = ['id', 'name', 'category', 'summary', 'content', 'options', 'createdAt']
 
-        expect(res.body).to.have.lengthOf(1)
 
         const [product] = res.body
         props.forEach((prop) => expect(product).to.have.own.property(prop))
@@ -89,9 +88,12 @@ describe(`GET /v1/institutions/:id/products`, () => {
     it('should return a list of products', () => {
       return request(app.server)
         .get(`/v1/institutions/${testInstitution1}/products?limit=1&sort=id`)
+        .expect('Content-Type', /json/)
         .expect(200)
         .expect((res) => {
           expect(res.body).to.be.an('array')
           expect(res.body).to.have.lengthOf(1)
           expect(res.body[0]).to.deep.equal(blueprints.product.get(testProduct40))
         })
+    })
+

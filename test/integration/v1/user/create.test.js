@@ -148,3 +148,6 @@ describe('POST /users', () => {
         .expect(201)
         .end(err => {
           if (err) throw new Error(err)
+
+          // check if institutionCode was persisted
+          knex('users')

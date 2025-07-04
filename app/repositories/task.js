@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../core')
 
 const Task = app.db.Model.extend({
@@ -7,4 +8,5 @@ const Task = app.db.Model.extend({
 
   workflow: function() {
     return this.belongsTo('Workflow', 'workflow_id')
+  },
 

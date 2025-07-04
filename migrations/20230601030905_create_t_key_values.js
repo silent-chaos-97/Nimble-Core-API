@@ -2,9 +2,9 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
+// Temp comment
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('key_values', table => {
-// Temp comment
     table.string('id').primary()
     table.jsonb('value').notNullable()
 

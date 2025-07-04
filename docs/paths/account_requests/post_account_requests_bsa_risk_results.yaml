@@ -7,7 +7,6 @@
     operationId: postAccountRequestsBsaRiskResult
     parameters:
       - in: path
-        name: id
         description: uuid account request id
         required: true
         schema:
@@ -19,6 +18,7 @@
       content:
         application/json:
           schema:
+            type: array
             minItems: 1
             items:
               $ref: '#/components/schemas/BsaRiskResult'

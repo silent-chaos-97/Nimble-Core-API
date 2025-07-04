@@ -1,5 +1,6 @@
 const app = require('../../core')
 const _ = require('lodash')
+const logger = app.logger.getLogger('app.services.risk.list')
 
 module.exports = async function(institutionId, productId, transacting = app.db) {
   return riskSettings(institutionId, productId, transacting).then(risks => {
@@ -26,5 +27,4 @@ async function productSetting(institutionId, productId, transacting = app.db) {
   return app.services.settings.getRecord({ key: 'products', institutionId }, { id: productId }, transacting)
 }
 
-function isValid(risk) {
   return risk && risk.scope && risk.product && risk.indicator

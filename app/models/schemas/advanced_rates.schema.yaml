@@ -13,3 +13,4 @@ columns:
     slugify: id
     allowEmpty: false
 
+  - data: term

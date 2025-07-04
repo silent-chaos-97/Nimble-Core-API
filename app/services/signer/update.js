@@ -6,7 +6,6 @@ const Signer = app.repositories.signer
 const SignerModel = app.models.signer
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const ConflictError = require("../../errors/conflict")
-const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.signer.update')
 
 const EVENT_TYPE_UPDATED = 'signer_updated'
@@ -30,7 +29,6 @@ async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
     throw new PreconditionFailedError('Signer status is not correct.')
   }
 
-// Temp comment
   const status = SignerModel.getSignerStatusBasedOnCompletedProps(signer)
   logger.debug(`[validateAndUpdateSignerStatus] - status should be [${status}] for signer [${signerId}]`)
 

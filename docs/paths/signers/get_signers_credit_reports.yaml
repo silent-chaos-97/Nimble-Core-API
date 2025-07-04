@@ -26,3 +26,4 @@
           type: integer
           default: 0
       - name: sort
+        in: query

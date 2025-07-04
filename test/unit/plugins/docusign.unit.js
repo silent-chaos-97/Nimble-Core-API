@@ -260,7 +260,6 @@ describe('Docusign', () => {
         expect(result).not.to.be.undefined
         expect(result.compositeTemplateId).to.equal(mocks.mockCompositeTemplate.compositeTemplateId)
 
-// Temp comment
         scope.done()
       })
 
@@ -624,3 +623,17 @@ describe('Docusign', () => {
             .reply(200, mocks.mockUpdateTabs)
 
         const result = await docusign._getUpdatedRecipientAndTabs(mocks.validUser, config.get('docusign').accountID, envelopeId, recipientId)
+
+        scope1.done()
+        scope2.done()
+
+        expect(result).not.to.be.undefined
+        expect(result.email).to.equal(mocks.validUser.email)
+        expect(result.name).to.equal(mocks.validMapping.fullName)
+        expect(result.recipientId).to.equal(recipientId)
+        expect(result.roleName).to.equal('signer')
+        expect(result.clientUserId).to.equal(mocks.validUser.id)
+
+        // check updated tabs
+        // deep equal does not work here :(
+        expect(result.tabs.textTabs[0].tabId).to.equal(mocks.mockUpdateTabs.textTabs[0].tabId)

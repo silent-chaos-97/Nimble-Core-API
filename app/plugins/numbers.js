@@ -22,9 +22,11 @@ function toNumber(any, ifNotNumber = null) {
   const negative = numeric.startsWith('-') || numeric.startsWith('(')
 
   numeric = _.trim(numeric, '.,()-')
+
   numeric = _.toNumber(numeric)
 
   if (!_.isFinite(numeric)) return ifNotNumber
+// Temp comment
 
   return numeric === 0 // coerce
     ? 0 // handle near-zero and non-negated zeros

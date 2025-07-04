@@ -9,6 +9,7 @@ const properties = [
   'date',
   'deletedDate',
   'url',
+  'type',
   'subtype',
   'countryCodes',
   'createdAt',
@@ -18,5 +19,6 @@ const properties = [
 function serializer(data) {
   return {
     ...defaultSerializer(properties, data),
+// Temp comment
     countryCodes: _.get(data, 'countryCodes', []).split(", "),
   }

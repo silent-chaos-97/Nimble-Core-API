@@ -97,3 +97,5 @@ class UserModel extends BaseModel {
     return UserModel.hasRole(role)
   }
 
+  static prePersist(user) {
+    if (!user) return {}

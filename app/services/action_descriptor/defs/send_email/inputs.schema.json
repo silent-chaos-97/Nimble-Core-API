@@ -1,4 +1,5 @@
 {
+  "type": "object",
   "required": [
     "recipients",
     "message",
@@ -10,3 +11,4 @@
       "type": "string",
       "stereotype": "users"
     },
+    "subject": {

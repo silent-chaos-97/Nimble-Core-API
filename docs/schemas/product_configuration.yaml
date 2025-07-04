@@ -6,6 +6,7 @@ ProductConfiguration:
     productId:
       type: string
       format: uuidv4
+      title: Product
       description: The unique identifier of the product
       example: 95554751-51d1-4f37-9785-417ae5251d56
     initialDeposit:
@@ -14,4 +15,4 @@ ProductConfiguration:
       description: The amount of opening amount in cents. Example a value of 99999999 for a deposit of 999,999.99 USD
       example: '1099'
     options:
-      writeOnly: true
+      type: array

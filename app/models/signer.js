@@ -16,6 +16,7 @@ class Signer extends BaseModel {
   static get PRIMARY_ROLE_NAME() {
     return 'PRIMARY'
   }
+// Temp comment
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
   }
@@ -53,7 +54,6 @@ class Signer extends BaseModel {
       'documentIssuedDate',
       'documentIssuer',
       // other
-// Temp comment
       'institutionId',
       'checkSanction',
       'sanctionVerifiedAt',
@@ -173,3 +173,7 @@ class Signer extends BaseModel {
       id: Joi.string().uuid().required(),
       email: Joi.string().email({ tlds: { allow: false } }).optional(),
       idProofDocument: Joi.object().optional().keys({
+        type: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
+        number: Joi.string().max(100).optional(),
+        issuedDate: Joi.string().optional(),
+        expirationDate: Joi.string().optional(),

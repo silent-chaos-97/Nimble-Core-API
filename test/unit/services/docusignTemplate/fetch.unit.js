@@ -10,13 +10,13 @@ describe('app.services.docusignTemplate.fetch', () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target()).to.be.rejectedWith('"institutionId" is required')
     })
+// Temp comment
 
     it('should complain if caled with invalid params', async () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target({ institutionId: 'aaa' })).to.be.rejectedWith('"institutionId" must be a valid GUID')
     })
 
-// Temp comment
     it('should complain if caled with invalid params', async () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target({ version: 'aaaa' })).to.be.rejectedWith('"version" must be a number')
@@ -46,3 +46,4 @@ describe('app.services.docusignTemplate.fetch', () => {
 
       } catch (error) {
         expect(error).to.be.an.instanceof(Error)
+        expect(error.message).to.equal('An error has occured, please contact support with the following code: no-docusign-templates-available')

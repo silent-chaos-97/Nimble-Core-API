@@ -35,3 +35,4 @@ describe('Random Plugin', () => {
       expect(letter).to.have.lengthOf(1)
     })
 
+    describe('ambiguous letters', () => {

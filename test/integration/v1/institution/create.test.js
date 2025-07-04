@@ -70,3 +70,5 @@ describe('POST /institutions', () => {
         expected.id = res.body.id
         expect(_.omit(res.body,['branchesCount'])).to.be.eql(expected)
       })
+  })
+

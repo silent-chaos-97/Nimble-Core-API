@@ -1,5 +1,4 @@
 const defaultSerializer = require('../serializer')
-// Temp comment
 
 const properties = [
   'id',
@@ -7,5 +6,4 @@ const properties = [
   'externalId'
 ]
 
-function serializer(data) {
   return defaultSerializer(properties, data)

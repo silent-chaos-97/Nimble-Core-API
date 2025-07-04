@@ -1,3 +1,4 @@
+const axios = require('axios')
 const moment = require('moment')
 const _ = require('lodash')
 const config = require('../../config')
@@ -259,7 +260,6 @@ class MicroblinkService {
       exportImages: false,
       exportMrzImage: false,
       exportFullDocumentImage: false,
-      DEBUG: false,
     }
   }
 

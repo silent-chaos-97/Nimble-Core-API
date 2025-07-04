@@ -58,6 +58,7 @@ describe('Service', () => {
         fullAddress: '3339 Maryland Avenue, Largo, Florida',
         email: 'john@wearesingular.com',
       }
+
       const result = shufti.buildRequestPayload(userData)
       expect(result).not.to.be.undefined
       expect(result.document).not.to.be.undefined
@@ -85,3 +86,4 @@ describe('Service', () => {
         email: 'john@wearesingular.com',
       }
       const result = shufti.buildRequestPayload(userData, 'silly_rabbit')
+

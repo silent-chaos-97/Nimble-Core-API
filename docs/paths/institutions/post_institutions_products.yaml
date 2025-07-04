@@ -8,6 +8,8 @@
     security:
       - ApiKeyAuth: []
     requestBody:
+      content:
         application/json:
           schema:
             $ref: '#/components/schemas/Product'
+    responses:

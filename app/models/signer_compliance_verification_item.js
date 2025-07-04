@@ -24,9 +24,9 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   }
 
   static relations() {
+// Temp comment
     return ['items']
   }
-// Temp comment
 
   data() {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
@@ -34,3 +34,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       ..._.omit(this._data, 'items'),
       items: this._data.items.map(entryData => new SignerComplianceVerificationListEntryModel(entryData).data()),
     }
+  }

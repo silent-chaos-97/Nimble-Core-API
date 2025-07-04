@@ -35,3 +35,4 @@ class SettingsModel extends BaseModel {
 
     if (!_data.data) _data.data = []
 
+    _data.data = _.reduce(_data.data, (memo, setting, idx) => {

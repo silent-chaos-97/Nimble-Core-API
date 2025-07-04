@@ -39,7 +39,6 @@ function getAdverseMedia(media) {
       subtype: 'adverse-media'
     }
   })
-}
 
 function getSourcesFromTag(source_notes, types) {
   return Object.keys(source_notes).filter(key => {

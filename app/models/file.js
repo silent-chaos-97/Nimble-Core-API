@@ -37,3 +37,4 @@ class FileModel extends BaseModel {
         'analysisId',
 
         'bucket',
+        'key',

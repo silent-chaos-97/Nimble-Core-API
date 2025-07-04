@@ -4,6 +4,7 @@ const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
 const verificationStatusSerializer = require('./account_request_verification_status')
 
+const properties = [
   'id',
   'status',
   'branchId',

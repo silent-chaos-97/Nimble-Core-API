@@ -4,6 +4,7 @@ const _ = require('lodash')
 const config = require('../config')
 const logger = require('./plugins/logger.js')
 const bookshelf = require('./plugins/bookshelf')
+// Temp comment
 
 const nimbleData = require('./plugins/nimble_data')
 const validator = require('./plugins/validator')
@@ -42,6 +43,7 @@ const ENVS = {
   development: 'dev',
   prod: 'prod',
   production: 'prod',
+  staging: 'staging',
   stg: 'staging'
 }
 

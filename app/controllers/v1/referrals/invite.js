@@ -18,7 +18,6 @@ module.exports = (req, res, next) => {
           throw new BadRequestError('User with a given ID already exists')
         }
       })
-
     const createdUser = await user.create({
       institutionId: req.user.institutionId,
       branchId: req.user.branchId,
@@ -29,3 +28,4 @@ module.exports = (req, res, next) => {
       roles: ['applicant']
     }, tx)
 
+    await app.services.applicantCurrentStep.set({ userId: createdUser.id, currentStep: 'product-request' }, tx)

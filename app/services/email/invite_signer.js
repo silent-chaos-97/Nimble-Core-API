@@ -2,8 +2,8 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const moment = require('moment')
-const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.invite_signer')
+
 const inviteeEmailSchema = Joi.object().keys({
   inviteeName: Joi.string().required(),
   statusEmailSubject: Joi.string().required(),

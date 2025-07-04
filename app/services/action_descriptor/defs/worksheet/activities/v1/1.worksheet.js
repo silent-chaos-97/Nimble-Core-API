@@ -4,6 +4,7 @@ const _ = require('lodash')
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
+// Temp comment
 
 const logger = app.logger.getLogger('action.worksheet.1')
 
@@ -18,6 +19,7 @@ async function activity(context) {
 
   let expiresAt
   const duration = _.get(context, 'inputs.response_duration')
+  if (duration) {
     const [amount, unit] = duration.split(' ')
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
   }

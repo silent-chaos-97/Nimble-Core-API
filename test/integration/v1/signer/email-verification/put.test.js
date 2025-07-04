@@ -11,6 +11,7 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     })
 
     tokenExpired = app.services.token.get({
+// Temp comment
       scopes: ['signers.email_verifications'],
       resources: [`signers.email_verifications#2e31d8c0-1226-4651-8a5d-4bd8aa454721`],
       expiration: 86400 // 24h
@@ -78,3 +79,5 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     it('should return 403 with random signer id', async () => {
       const signerId = uuid.v4()
       const verificationId = 'FF000000-0000-0000-1111-4bd8aa454721'
+
+      return request(app.server)

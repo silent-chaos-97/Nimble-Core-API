@@ -1,3 +1,4 @@
+{
   "type": "object",
   "properties": {
     "status": {
@@ -12,3 +13,4 @@
         "Declined",
         "Approved"
       ],
+      "group": "hidden"

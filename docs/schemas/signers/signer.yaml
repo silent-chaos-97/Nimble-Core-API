@@ -116,3 +116,5 @@ Signer:
       readOnly: true
     consent:
       type: boolean
+      title: Consent Terms
+      description: Consent for Terms

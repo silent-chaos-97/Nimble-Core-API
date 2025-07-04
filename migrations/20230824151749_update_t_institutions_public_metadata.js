@@ -88,7 +88,6 @@ const publicMetadata = {
       default: 0
     },
     default: '',
-    subtype: 'country',
     required: true,
     dependsOn: {
       usCitizen: 'yes'
@@ -102,3 +101,5 @@ const publicMetadata = {
     text: 'Do you expect more than $2,500 in cash transactions per month?',
     type: 'string',
     order: 8,
+    score: {
+      yes: 2

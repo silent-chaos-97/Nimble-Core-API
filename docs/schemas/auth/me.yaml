@@ -26,3 +26,4 @@ Me:
       description: The last name of the user
       example: Specimen
     accounts:
+      type: array

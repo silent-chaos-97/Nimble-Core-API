@@ -17,6 +17,7 @@ describe('Auth', () => {
           .set('Authorization', 'Bearer ' + 'INVALID TOKEN')
           .expect('Content-Type', /json/)
           .expect(401)
+          .end(done)
       })
     })
 
@@ -67,7 +68,6 @@ describe('Auth', () => {
             .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
             .expect('Content-Type', /json/)
             .expect(200)
-            .end((err, res) => {
               if (err) throw new Error(err)
 
               expect(res.body.token).not.be.undefined
@@ -119,3 +119,6 @@ describe('Auth', () => {
           .end((err, res) => {
             if (err) throw new Error(err)
 
+            expect(res.body.token).not.be.undefined
+            done()
+          })

@@ -6,4 +6,4 @@ plugins:
 extends:
   - "eslint:recommended"
   - "plugin:node/recommended"
-rules:
+  semi: [2, "never"]

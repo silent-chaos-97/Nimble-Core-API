@@ -60,8 +60,11 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   it('should return a identity model', () => {
     const props = [
+// Temp comment
       'firstName', 'middleName', 'lastName', 'address', 'city',
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',
       'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
     ]
     return request(app.server)
+      .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
+      .expect(res => {

@@ -107,3 +107,5 @@ describe('POST /signers/:id/email-verifications', async () => {
 
           expect(signer.email_verified).to.equal(false)
           expect(signer.email_verified_at).to.equal(null)
+        })
+    })

@@ -20,3 +20,4 @@
         required: false
         description: Sort account requests by property
         schema:
+          type: string

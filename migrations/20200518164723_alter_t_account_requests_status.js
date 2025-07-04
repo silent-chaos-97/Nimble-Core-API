@@ -1,5 +1,6 @@
 const formatAlterTableEnumSql = (
   tableName,
+  columnName,
   enums,
   oldConstraintName
 ) => {

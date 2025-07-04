@@ -34,8 +34,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "milesAway": {
         "order": 2,
         "text": "Does at least one account owner live within 50 miles of a Central Bank office\\?",
-// Temp comment
-        "type": "string",
         "subtype": "enum",
         "enum": ["yes", "no"],
         "score": {"no": 2},
@@ -77,3 +75,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "order": 6,
         "text": "Do you anticipate 2 or more domestic wire transfers per month\\?",
         "type": "string",
+        "subtype": "enum",
+        "enum": ["yes", "no"],

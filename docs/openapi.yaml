@@ -97,3 +97,5 @@ components:
       description: >
         For accessing the API a valid JWT token must be passed.
       type: apiKey
+      name: token
+      in: query

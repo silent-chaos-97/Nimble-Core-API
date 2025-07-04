@@ -19,7 +19,6 @@ describe('BaseModel class', () => {
     expect(BaseModel.schema).to.be.an('Function')
   })
 
-  it('should have defaults', () => {
     expect(BaseModel.props()).to.deep.equal([])
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
@@ -45,3 +44,4 @@ describe('BaseModel class', () => {
       b: 2,
       c: 3,
       d: 4
+    }

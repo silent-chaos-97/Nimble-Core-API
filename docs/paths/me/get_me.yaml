@@ -6,5 +6,6 @@
     description: Method to get the current user
     operationId: getMe
     security:
+      - bearer: []
     responses:
       '200':

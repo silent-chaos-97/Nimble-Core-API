@@ -18,6 +18,7 @@ describe('app.models.signer.flattenData', () => {
 
 
   it('should flatten data', () => {
+// Temp comment
     const result = target({
       somethingA: 'somethingA',
       somethingB: 'somethingB',
@@ -86,3 +87,5 @@ describe('app.models.signer.flattenData', () => {
       somethingB: 'somethingB',
       idProofDocument: {
         backDocumentId: 'backDocumentId',
+        frontDocumentId: 'frontDocumentId',
+        type: 'type',

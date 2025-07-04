@@ -6,7 +6,6 @@
     description: Fetch Signer Contract
     operationId: getSignerContract
     security:
-      - bearer: ['signers']
     parameters:
       - name: id
         in: path
@@ -16,3 +15,4 @@
           type: string
           format: uuidv4
     responses:
+      '200':

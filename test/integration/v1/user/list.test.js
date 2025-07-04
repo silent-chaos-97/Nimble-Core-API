@@ -35,6 +35,7 @@ describe('GET /users', () => {
         .get('/v1/users?limit=1')
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
+        .expect(200)
         .end(done)
     })
 
@@ -101,5 +102,7 @@ describe('GET /users', () => {
 
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
-            done()
           })
+      })
+
+      it('should 400 on invalid sort parameter', done => {

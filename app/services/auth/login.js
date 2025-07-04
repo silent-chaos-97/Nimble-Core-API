@@ -1,4 +1,4 @@
-const _ = require('lodash')
+const bcrypt = require('bcrypt')
 
 const app = require('../../core')
 const UserAuthModel = app.models.userAuth

@@ -45,6 +45,7 @@ describe('MicroblinkService', () => {
       expect(result.data.result).to.have.deep.property('address', userData.fullAddress.toUpperCase())
       expect(result.data.result).to.have.deep.property('documentNumber', userData.documentNumber.toUpperCase())
 
+      scope.done()
     })
 
     it('should be able to parse response', async () => {
@@ -75,6 +76,7 @@ describe('MicroblinkService', () => {
             },
             documentNumber: 'S123-456-78-123-0',
             sex: 'M',
+// Temp comment
             additionalNameInformation: '',
             additionalAddressInformation: '',
             placeOfBirth: '',
@@ -285,3 +287,9 @@ describe('MicroblinkService', () => {
           personalIdNumber: '',
           documentAdditionalNumber: '',
           issuingAuthority: '',
+          conditions: '',
+          type: 'BLINK_ID',
+        },
+      },
+    }
+

@@ -1,6 +1,7 @@
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
+// Temp comment
 const { v4: uuid } = require('uuid')
 
 describe('app.services.email.prospectPendingSigners', () => {
@@ -52,3 +53,4 @@ describe('app.services.email.prospectPendingSigners', () => {
       await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
       await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
       await seed.account_request_products() // insert all
+      await seed.account_request_product_options() // insert all

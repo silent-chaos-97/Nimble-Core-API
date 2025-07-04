@@ -33,3 +33,4 @@
   "consentAccountOpening": true,
   "consentPrivacyPolicy": true,
   "consentCommunication": false,
+  "checkSanction": null,

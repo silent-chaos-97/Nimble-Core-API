@@ -19,7 +19,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
     q.where('consumed_at', null)
     q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)
-
     q.orderBy(tx.knex.raw('signer_id, created_at'), 'DESC') // order by created_at to fetch MOST RECENT
   })
 
@@ -38,6 +37,7 @@ async function email_verification_reminder(days = 1, tx = app.db) {
   // foreach signer email verification
   for (const signerEmailVerification of SignerEmailVerificationList) {
     logger.info(`[email_verification_reminder] reminding ${signerEmailVerification.signerId} with an email to verify email`)
+
     // update signer email verification
     await SignerEmailVerification.forge({ id: signerEmailVerification.id }).save({
       expiresAt: moment().add(1, 'days'),

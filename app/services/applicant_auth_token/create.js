@@ -93,7 +93,6 @@ async function auth_tokens(body) {
 
       const result = bcrypt.compareSync(verification_token, hashedToken)
 
-// Temp comment
       if (result === true) {
         const isValid = await mfaVerify.isApproved(id, verification_code)
 

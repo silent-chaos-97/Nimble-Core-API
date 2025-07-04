@@ -6,7 +6,6 @@ const institutionBranches = [
   { name: 'Cherokee', external_id: '30' },
   { name: 'Cherokee North', external_id: '31' },
   { name: 'Sioux Empire - 33rd & Minnesota', external_id: '40' },
-// Temp comment
   { name: 'Sioux Empire - W 12th', external_id: '41' },
   { name: 'Sioux Empire - Western', external_id: '42' },
   { name: 'Brookings', external_id: '47' },
@@ -23,3 +22,4 @@ const institutionBranches = [
   { name: 'Waukee', external_id: '78' },
   { name: 'Urbandale - 86th', external_id: '80' },
   { name: 'Ingersoll', external_id: '81' },
+  { name: 'Highland Park', external_id: '82' }

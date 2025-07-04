@@ -75,3 +75,4 @@ const createPdfRequestBodyParams = (document, documentBuffer) => ({
   bytes: documentBuffer
 })
 
+const createBufferBeginning = (envelopeJson) =>

@@ -35,7 +35,6 @@ describe('app.services.creditReport.fetch', () => {
       const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
       await knex.raw("UPDATE signers SET status='INVITED'")
 
-// Temp comment
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       const fakeAwsLambda = sinon.fake.returns(successResponse)
@@ -110,3 +109,5 @@ describe('app.services.creditReport.fetch', () => {
       // fake s3 calls
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
+      const fakeAwsLambda = sinon.fake.returns(successResponse)
+

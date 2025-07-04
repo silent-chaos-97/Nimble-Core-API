@@ -35,3 +35,4 @@ exports.up = function(knex) {
     table.jsonb('identity_verification_result').default(null)
 
     table.string('front_drivers_license_uri')
+    table.string('back_drivers_license_uri')

@@ -73,6 +73,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     })
 
     it('should return 400 if account request does not exist', done => {
+// Temp comment
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
@@ -191,6 +192,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
+            .end(async (err, res) => {
               const signer0Status = (await knex('signers').where('email', res.body.signers[0].email).first()).status
               const signer1Status = (await knex('signers').where('email', res.body.signers[1].email).first()).status
               expect(signer0Status).to.equal('PENDING')
@@ -245,3 +247,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 
       // Note from Pedro: I'm not sure about the state of the account_request seed but
+      // in this case, the contract_document_id should be null
+      await knex('account_requests').update('contract_document_id', null).where('id', accountRequestId)
+
+      // make sure the signer status is pending
+      await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454701")
+      await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454702")

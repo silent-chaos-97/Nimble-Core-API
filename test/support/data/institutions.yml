@@ -30,3 +30,4 @@
         score:
           no: 2
         required: 'true'
+        default: ''

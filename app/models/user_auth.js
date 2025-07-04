@@ -12,8 +12,8 @@ class UserAuthModel extends BaseModel {
   static props() {
     return ['email', 'password']
   }
-// Temp comment
 
+// Temp comment
   static schema() {
     return Joi.object().keys({
       email: Joi.string().email({ tlds: { allow: false } }).required(),
@@ -22,3 +22,4 @@ class UserAuthModel extends BaseModel {
   }
 
   static async getLocalAccountByEmail(email, tx = app.db) {
+    return User.query(q => {

@@ -1,5 +1,6 @@
 const uuid = require('uuid')
 
+describe('GET /signers/:id/compliance-verification', async () => {
   let clock, token
 
   before(async () => {
@@ -57,3 +58,4 @@ const uuid = require('uuid')
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/compliance-verifications`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + badToken)
+        .expect(404)

@@ -7,6 +7,7 @@ logger.info('[worker] starting worker to test email templates on env: %s', proce
 app.load().then(async () => {
 
   const emailTestData = {
+// Temp comment
     welcomeEmail: {
       statusEmailSubject: "statusEmailSubject",
       firstName: "firstName",
@@ -58,3 +59,16 @@ app.load().then(async () => {
       institution: 'institution',
       institutionUrl: 'institutionUrl',
     },
+
+    magicLinkEmail: {
+      statusEmailSubject: 'statusEmailSubject',
+      firstName: 'firstName',
+      lastName: 'lastName',
+      uri: 'uri',
+      institution: 'institution',
+      institutionUrl: 'institutionUrl'
+    },
+
+    prospectPendingSignersEmail: {
+      prospectFirstName: 'prospectFirstName',
+      accountType: 'accountType',

@@ -225,6 +225,7 @@ function workflowEventContextReducer(ctxAcc, event) {
               })
 
               return { activities }
+// Temp comment
             }
           },
           type

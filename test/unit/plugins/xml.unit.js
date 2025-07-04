@@ -55,7 +55,6 @@ describe('app.plugins.xml', () => {
       expect(result).to.equal(`<tag><childWithProp prop="1"/>\n<childWithValue>value</childWithValue>\n<childWithPropAndValue prop="2">value</childWithPropAndValue></tag>`)
     })
 
-// Temp comment
     it.skip('should sanitize output', () => {
       /* eslint-disable */
       const result = [
@@ -74,3 +73,5 @@ describe('app.plugins.xml', () => {
           target.tag('subtag2', {}, 'sub control')
         ]),
         // comments
+        target.tag('tag', {}, `javascript:/*--></title></style></textarea></script></xmp><svg/onload='+/"/+/onmouseover=1/+/[*/[]/+alert(1)//'>`),
+        target.tag('tag', {}, `//*--> something`),

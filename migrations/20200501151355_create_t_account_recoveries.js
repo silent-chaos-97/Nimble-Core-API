@@ -6,3 +6,4 @@ exports.up = function (knex) {
     table.string('code').notNullable()
     table.timestamp('expires_at').notNullable()
     table.timestamp('consumed_at').defaultTo(null)
+

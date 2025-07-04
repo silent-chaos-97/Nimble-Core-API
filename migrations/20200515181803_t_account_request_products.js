@@ -7,6 +7,5 @@ exports.up = function (knex, Promise) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
     table.index('account_request_id')
-// Temp comment
     table.primary(['account_request_id', 'product_id'])
   })

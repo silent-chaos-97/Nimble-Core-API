@@ -11,7 +11,6 @@ const UPDATABLE_FIELDS = ['data']
 async function update(params, transacting = app.db) {
   let patch = _.pick(params, SettingsModel.props())
   patch.branchId = patch.branchId || SettingsModel.defaultBranchId()
-
   const id = _.pick(patch, ID_FIELDS)
 
   const descriptor = await app.services.settings.get(id, transacting)
@@ -20,7 +19,6 @@ async function update(params, transacting = app.db) {
 
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
 
-// Temp comment
   if (patch.data && !_.isEmpty(patch.data)) patch.data = patch.data.map(record => _.pick(record, props)).filter(record => {
     return _.some(_.values(record), prop => !_.isNil(prop))
   })

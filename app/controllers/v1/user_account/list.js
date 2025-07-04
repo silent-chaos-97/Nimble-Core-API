@@ -6,6 +6,7 @@ const User = app.models.user
 const Roles = User.roles()
 const users = app.services.user
 const serializer = app.serializers.v1.userAccount
+
 const logger = app.logger.getLogger('app.controllers.v1.user_account.list')
 
 function list(req, res, next) {

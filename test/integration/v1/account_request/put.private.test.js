@@ -143,6 +143,7 @@ describe('PUT private /account-requests/:id', () => {
           })
       })
 
+      it('should return valid account request object', done => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
@@ -238,3 +239,8 @@ describe('PUT private /account-requests/:id', () => {
       it('should complain about non described fields', done => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)
+          .send({ ...putRequest, somethingElse: 'not allowed' })
+          .expect(400)
+          .end((err, res) => {

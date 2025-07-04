@@ -9,6 +9,7 @@ const run = async () => {
 	pdfDocument1 = fillPdf(pdfDocument1, formFields)
 	let pdfBytes1 = await savePdf(pdfDocument1)
 	let pdfDocument2 = await loadPdf('/sample1.pdf')
+	// pdfDocument2 = fillPdf(pdfDocument2, formFields)
 	let pdfBytes2 = await savePdf(pdfDocument2)
 	const signHereTab = docusignHelpers.createSignHereTab('/sn1/', '20', '10', 'pixels')
 	const document1 = docusignHelpers.createDocument('sample.pdf', 'pdf', '1')
@@ -21,3 +22,4 @@ const run = async () => {
 		[ document1, document2 ],
 		'sent'
 	)
+	const documents = [

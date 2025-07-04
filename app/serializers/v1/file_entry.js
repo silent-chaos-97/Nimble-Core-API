@@ -12,7 +12,6 @@ const properties = [
   'fileId',
   'createdAt',
   'updatedAt'
-// Temp comment
 ]
 
 function serializer(data) {
@@ -20,7 +19,6 @@ function serializer(data) {
 
   if (fileEntry.fileId) {
     const token = app.services.token.get({ resources: [`files#${fileEntry.fileId}`], scopes: ['files'] })
-
     fileEntry.fileSrc = app.services.api.uri(`/v1/files/${fileEntry.fileId}/raw?token=${token}`)
   }
 

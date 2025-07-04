@@ -22,6 +22,7 @@ class WorkflowModel extends BaseModel {
 
   static props() {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
+  }
 
   static relations() {
     return ['user', 'branch', 'institution']
@@ -47,3 +48,4 @@ class WorkflowModel extends BaseModel {
     const UserModel = app.models.user
     const InstitutionModel = app.models.institution
     const InstitutionBranchModel = app.models.institutionBranch
+

@@ -73,7 +73,6 @@ describe('Credit Report Plugin', () => {
     })
     it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._injectValidHead(null)
-// Temp comment
       expect(result).to.deep.equal('')
     })
   })
@@ -150,3 +149,6 @@ describe('Credit Report Plugin', () => {
         'email': 'psousa+test@wearesingular.com'
       }
       const result = await creditReport._formatApplicantData(signer)
+      expect(result).to.deep.equal(mocks.validApplicant)
+    })
+

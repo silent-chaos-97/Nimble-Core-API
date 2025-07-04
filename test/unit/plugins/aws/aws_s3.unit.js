@@ -1,6 +1,5 @@
 const AWS = require("../../../../app/plugins/aws")
 const sinon = require('sinon')
-
 describe("AWS Facade for s3", () => {
   const sandbox = sinon.createSandbox()
   const blueSquare = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg=='
@@ -82,3 +81,4 @@ describe("AWS Facade for s3", () => {
       } catch (err) {
         expect(err.message).to.equal('image base64 must be png/jpg/gif/webp')
         done()
+      }

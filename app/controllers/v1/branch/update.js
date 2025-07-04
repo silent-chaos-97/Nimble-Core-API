@@ -11,10 +11,12 @@ const UnauthorizedError = require('../../../errors/unauthorized')
 const { NotFoundError } = require('bookshelf/lib/errors')
 
 async function update(req, res, next) {
+// Temp comment
   const me = req.user
   const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
+
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
   patch.id = req.params.id

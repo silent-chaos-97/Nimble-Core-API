@@ -45,6 +45,7 @@ const publicMetadata = {
     subtype: 'enum',
     required: true
   },
+  usCitizen: {
     enum: [
       'yes',
       'no'
@@ -99,3 +100,6 @@ const publicMetadata = {
       'no'
     ],
     text: 'Do you expect more than $2,500 incash transactions per month?',
+    type: 'string',
+    order: 8,
+    score: {

@@ -24,7 +24,6 @@ SignerComplianceVerificationItem:
       type: string
     countries:
       title: Countries with information about this result
-      type: array
       items:
         type: string
     associates:

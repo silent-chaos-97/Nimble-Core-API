@@ -14,7 +14,6 @@ async function searchSave(search, tx = app.db) {
   const create = _.isNil(id)
 
   const schema = create ? 'create' : 'update'
-
   logger.info({ op: 'search.save', create, phase: 'started', data: search })
 
   try {
@@ -24,6 +23,7 @@ async function searchSave(search, tx = app.db) {
     search = _.omitBy(search, _.isNil)
 
     const model = SearchModel.prePersist(validator(_.pick(search, SearchModel.props(schema)), SearchModel.schema(schema), { abortEarly: false }))
+
     const entity = await Search.forge(model).save(null, { method: create ? 'insert' : 'update', patch: !create, transacting: tx })
 
     logger.info({ phase: 'data.search.create.entity:success', entity })

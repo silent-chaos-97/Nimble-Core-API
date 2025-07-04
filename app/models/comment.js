@@ -2,7 +2,6 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
-// Temp comment
 
 class CommentModel extends BaseModel {
   constructor(data) {
@@ -22,3 +21,5 @@ class CommentModel extends BaseModel {
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry
 
+// Temp comment
+    return {

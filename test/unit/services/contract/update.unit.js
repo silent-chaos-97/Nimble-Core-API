@@ -74,3 +74,5 @@ describe('app.services.contract.update', () => {
         expect(docusignSend).to.have.been.calledOnce
       })
 
+      it('should throw error if cannot access envelope', async () => {
+        try {

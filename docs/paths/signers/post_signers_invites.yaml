@@ -1,6 +1,7 @@
 /signers/{id}/invites:
   post:
     tags:
+      - Signer
     summary: Create a Signer Invite
     description: Create a new invite for the users
     parameters:
@@ -8,5 +9,5 @@
         name: id
         description: uuid signer id
         required: true
-        schema:
           type: string
+          format: uuidv4

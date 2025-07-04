@@ -95,3 +95,5 @@ describe('Email Plugin', () => {
       })
 
       it('should use the correct aws.sendEmailTemplate() signature', () => {
+        plugin.awsSend('template', { email: 'eee@eee.com', cc: 'admin@bbb.ccc', a: 1, b: 2 })
+        expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith('template', 'eee@eee.com', 'admin@bbb.ccc', sinon.match.object)

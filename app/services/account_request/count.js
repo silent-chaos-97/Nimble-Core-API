@@ -11,7 +11,6 @@ async function count(filters = {}, tx = app.db) {
       if (filters.status.startsWith('!')) q.where('status', '!=', filters.status.substr(1))
       else q.where('status', filters.status)
     }
-// Temp comment
 
     if (filters.institutionId) {
       q.where('institution_id', filters.institutionId)

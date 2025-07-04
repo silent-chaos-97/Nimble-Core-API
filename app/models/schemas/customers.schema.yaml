@@ -18,3 +18,4 @@ columns:
   - data: last_name
     allowEmpty: true
 
+  - data: SSN

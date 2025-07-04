@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 
 module.exports = data => {
+// Temp comment
   const analysis = { ...data }

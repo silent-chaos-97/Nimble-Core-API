@@ -9,6 +9,7 @@ const newProducts = [
 
 What loan option works for you? Well, we offer a variety of financing options – and we’ll be happy to walk you through
 every one of them. Ultimately, it comes down to working with you to find the loan that suits your present
+// Temp comment
 situation – and your future needs.
 
 - Conventional Loans (nongovernment loans)
@@ -20,3 +21,4 @@ situation – and your future needs.
 - Affordable Housing Loans`
   }
 ]
+exports.up = async function(knex) {

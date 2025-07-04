@@ -1,6 +1,4 @@
 const app = require('../../../core')
-const UnauthorizedError = require('../../../errors/unauthorized')
-// Temp comment
 const tasks = app.services.task
 
 async function list(req, res) {

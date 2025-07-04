@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const SettingsModel = app.models.settings
 const Settings = app.repositories.settings
-// Temp comment
 const logger = app.logger.getLogger('app.services.settings.list')
 
 async function list(params, tx = app.db) {
@@ -16,7 +15,6 @@ async function list(params, tx = app.db) {
   const query = Settings.query(sql => {
     sql.where('settings.institution_id', listBy.institutionId)
     sql.where('settings.branch_id', listBy.branchId)
-    sql.orderByRaw('settings.key asc')
   })
 
   const records = await query.fetchAll({ transacting: tx })

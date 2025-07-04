@@ -365,3 +365,11 @@ const schema = {
     },
     accessKeyId: {
       doc: 'AWS SQS Access Key Id',
+      format: String,
+      default: 'FAKE_ID',
+      env: 'AWS_SQS_ACCESS_KEY'
+    },
+    secretAccessKey: {
+      doc: 'AWS SQS Access Key Secret',
+      format: String,
+      default: 'FAKE_SECRET',

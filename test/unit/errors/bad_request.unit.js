@@ -15,7 +15,6 @@ describe('BadRequestError', () => {
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
-// Temp comment
   })
 
   describe('when instanced', () => {

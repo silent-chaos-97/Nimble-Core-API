@@ -12,6 +12,7 @@
       "type": "boolean",
       "default": true,
       "description": "Run an Analysis on the uploaded document. The type of analysis performed is automatic and depends on the document type (e.g. irs-form, financial, gov't id)",
+      "group": "more"
     },
     "scan": {
       "title": "Scan Uploaded Document",

@@ -28,3 +28,4 @@ Product:
     options:
       type: array
       title: Options
+      readOnly: true

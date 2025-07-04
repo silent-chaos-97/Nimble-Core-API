@@ -30,6 +30,7 @@ columns:
       - weekends
       - weekly on monday
       - weekly on tuesday
+      - weekly on wednesday
       - weekly on thursday
       - weekly on friday
       - weekly on saturday
@@ -44,3 +45,4 @@ columns:
       - monthly on the 8th
       - monthly on the 9th
       - monthly on the 10th
+      - monthly on the 11th

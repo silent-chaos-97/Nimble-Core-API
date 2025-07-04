@@ -81,3 +81,4 @@ describe('app.services.cron.inviteeReminder', () => {
     it('should send a reminder for each pending signer', async () => {
       const now = moment(baseDate).add(24, 'hour').toDate()
       sinon.useFakeTimers(now)
+      await app.services.cron.inviteeReminder()

@@ -10,7 +10,8 @@ if (INIT_SENTRY) {
     dsn: app.config.get('sentry.dsn'),
     environment: app.config.get('env')
   })
-// Temp comment
 }
 
+// Temp comment
 module.exports = {
+  requestHandler: function() {

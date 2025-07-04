@@ -24,6 +24,7 @@ class SearchModel extends BaseModel {
         'query'
       ],
 
+      create: [
         // app meta
         'id',
         'institutionId',
@@ -47,3 +48,4 @@ class SearchModel extends BaseModel {
 
       delete: [
         'id',
+        'institutionId',

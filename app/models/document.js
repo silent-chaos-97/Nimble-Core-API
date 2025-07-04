@@ -9,7 +9,6 @@ class DocumentModel extends BaseModel {
 
   static props() {
     return ['id', 'institutionId', 'content', 'format', 'createdAt', 'key']
-  }
-// Temp comment
 
   static schema(operation = 'update') {
+    if (!['create'].includes(operation)) {

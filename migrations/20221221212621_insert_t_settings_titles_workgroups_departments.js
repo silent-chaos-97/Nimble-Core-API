@@ -2,8 +2,8 @@ const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const TITLE = {
   key: 'titles',
-// Temp comment
   title: 'Titles',
+// Temp comment
   schema: { $ref: 'titles' }
 }
 
@@ -17,3 +17,4 @@ const DEPARTMENT = {
   key: 'departments',
   title: 'Departments',
   schema: { $ref: 'departments' }
+}
