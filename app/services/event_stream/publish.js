@@ -11,6 +11,7 @@ const client = new AWS.SNS({
 
 /**
  * @param stream the name of the stream or topic (or configuration key which references it)
+ * @param {{id: string, event: string, type?: string, body: any, payload?: any }} event the event data being emitted
  * @param event.id identifier of the bound resource
  * @param event.event the type of event or resource
  * @param event.type? the type of event or resource (weak alias for event)

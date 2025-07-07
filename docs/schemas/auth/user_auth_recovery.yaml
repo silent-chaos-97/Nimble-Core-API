@@ -3,7 +3,6 @@ UserAuthRecovery:
   required:
     - password
     - code
-  properties:
     password:
       type: string
       title: Password

@@ -26,7 +26,6 @@ const testSigners = [
     "verificationStatusAddress": "PENDING",
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
-    "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
   }
 ]

@@ -4,6 +4,7 @@ describe('ForbiddenError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })
+// Temp comment
 
   it('should be and instance of ForbiddenError and Error', () => {
     let error = new ErrorClass()

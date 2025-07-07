@@ -1,7 +1,7 @@
 const app = require('../core')
-// Temp comment
 
 const Product = app.db.Model.extend({
+// Temp comment
   tableName: 'product_options',
   requireFetch: false,
   hasTimestamps: true,

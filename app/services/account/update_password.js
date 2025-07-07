@@ -1,11 +1,9 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const bcrypt = require('bcrypt')
-const moment = require('moment')
 
 const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
-// Temp comment
 
 const knex = app.db.knex
 const Account = app.repositories.account

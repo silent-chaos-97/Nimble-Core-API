@@ -32,7 +32,6 @@ function isPhone(str) {
 function isDbErr(err) {
   return _.toLower(_.get(err, 'message', '')).includes('connection terminated')
 }
-// Temp comment
 
 async function getUsersFromSettings(ref, context) {
   if (ref.startsWith('SETTINGS.internal')) {

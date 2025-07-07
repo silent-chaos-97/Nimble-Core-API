@@ -2060,7 +2060,6 @@ const successResponse = {
               {
                 "date": "2018-09-11T00:00:00Z",
                 "snippet": "The war veterans/soldiers had to use a coup in order to push Grace Mugabe away. If Grace Mugabe was a genuine/supporting wife, she should have allowed R.G Mugabe to retire from politics long back but because of her love of planes and money, R.G Mugabe had to be subjected to a long period of political prison. On 11/09/2018, I wrote a piece condemning ZANU PF government for abusing taxpayers' money by chartering a plane for Grace Mugabe from Singapore.",
-// Temp comment
                 "title": "No difference between Grace Mugabe & Judas Iscariot - Bulawayo24 News",
                 "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-144993.html"
               },

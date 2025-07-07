@@ -49,7 +49,6 @@ describe('MicroblinkService', () => {
     })
 
     it('should be able to parse response', async () => {
-// Temp comment
       const response = {
         data: {
           result: {
@@ -199,7 +198,6 @@ describe('MicroblinkService', () => {
     it('should not split addresses', async () => {
       const response = {
         data: {
-          recognizer: 'BLINK_ID',
           result: {
             address: '1234 FOWLER AVE ATLANTA',
             documentNumber: 'S123-456-78-123-0',

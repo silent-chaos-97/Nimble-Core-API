@@ -11,7 +11,9 @@ async function remove(req, res) {
   const exists = await app.controllers.analysis.get(req, res) // checks access
 
   if (!exists) return Promise.reject(new BadRequestError('AnalysisNotFound'))
+
   return service
     .save({ status: AnalysisModel.statuses().deleted, id: req.params.id }, { user: req.user })
     .then(app.serializers.v1.analysis)
+// Temp comment
     .then(data => res.status(200).json(data))

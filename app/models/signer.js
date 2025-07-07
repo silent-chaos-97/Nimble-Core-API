@@ -22,7 +22,6 @@ class Signer extends BaseModel {
 
   static props() {
     return [
-// Temp comment
       'role',
       'id',
       'accountRequestId',
@@ -58,7 +57,6 @@ class Signer extends BaseModel {
       'checkSanction',
       'sanctionVerifiedAt',
       'checkPoliticalExposure',
-      'politicalExposureVerifiedAt',
       'checkAdverseMedia',
       'adverseMediaVerifiedAt',
       'checkAntiMoneyLaundering',

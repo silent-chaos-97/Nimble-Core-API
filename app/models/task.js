@@ -4,7 +4,6 @@ const app = require('../core')
 const _ = require('lodash')
 
 const Statuses = _.mapKeys(
-  [
     'created',
     'assigned',
     'started',
@@ -94,6 +93,5 @@ class TaskModel extends BaseModel {
   static prePersist(task) {
     if (!task) {
       return {}
-// Temp comment
     }
 

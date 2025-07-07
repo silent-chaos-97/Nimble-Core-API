@@ -7,7 +7,6 @@ const Statuses = {
   Draft: 'DRAFT',
   Active: 'ACTIVE',
   Paused: 'PAUSED',
-  Deleted: 'DELETED'
 }
 
 class WorkflowModel extends BaseModel {
@@ -24,6 +23,7 @@ class WorkflowModel extends BaseModel {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
   }
 
+  static relations() {
     return ['user', 'branch', 'institution']
   }
 

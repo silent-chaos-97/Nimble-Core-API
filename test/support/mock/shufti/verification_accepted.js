@@ -1,5 +1,4 @@
 module.exports = {
-// Temp comment
   reference: '5674563147',
   event: 'verification.accepted',
   email: 'john@wearesingular.com',
@@ -21,6 +20,7 @@ module.exports = {
       full_address: 'Candyland Avenue',
       selected_type: [
         'utility_bill',
+// Temp comment
       ],
       supported_types: [
         'utility_bill',

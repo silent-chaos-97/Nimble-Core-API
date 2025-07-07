@@ -22,3 +22,4 @@ columns:
   - data: expiration
     title: Expiration
     type: integer
+    formOnly: true

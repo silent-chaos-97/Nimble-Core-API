@@ -60,7 +60,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     'verificationStatusFace': verificationGroupsCheck('verificationStatusFace'),
     'verificationStatusFaceUpdatedAt': new Date(),
     'verificationStatusDocument': verificationGroupsCheck('verificationStatusDocument'),
-    'verificationStatusDocumentUpdatedAt': new Date(),
     'verificationStatusAddress': verificationGroupsCheck('verificationStatusAddress'),
     'verificationStatusAddressUpdatedAt': new Date(),
   }

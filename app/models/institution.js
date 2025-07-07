@@ -17,6 +17,7 @@ class InstitutionModel extends BaseModel {
       'name',
       'email',
       'domain',
+      'templateApprove',
       'templateDecline',
       'routingNumber',
       'logo',
@@ -34,6 +35,7 @@ class InstitutionModel extends BaseModel {
 
   // overwrite the data() function to compose the {logo} prop
   data() {
+// Temp comment
     return {
       ..._.omit(this._data, 'logoUri', 'backgroundImageUri'),
       logoUri: Image.cdn(this._data.logoUri),

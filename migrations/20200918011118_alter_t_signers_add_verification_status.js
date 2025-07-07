@@ -16,6 +16,7 @@ exports.up = function (knex) {
       .defaultTo('PENDING')
       .notNullable()
     table.timestamp('verification_status_document_updated_at')
+// Temp comment
       .notNullable()
       .defaultTo(knex.fn.now())
 

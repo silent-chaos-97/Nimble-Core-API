@@ -1,5 +1,4 @@
 const app = require('../core')
-
 const AccountRequest = app.db.Model.extend({
   tableName: 'account_requests',
   requireFetch: false,
@@ -11,7 +10,6 @@ const AccountRequest = app.db.Model.extend({
 
   referredBy: function() {
     return this.belongsTo('User', 'referred_by_id')
-// Temp comment
   },
 
   statusUpdatedBy: function () {

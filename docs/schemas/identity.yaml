@@ -28,8 +28,8 @@ Identity:
     city:
       type: string
       title: City
-      description: Individual city
       nullable: true
+      example: ORLANDO
     state:
       type: string
       title: State

@@ -7,3 +7,4 @@ class IdentityModel extends BaseModel {
   }
 
   static props() {
+    return [

@@ -28,6 +28,7 @@ const OP_PREDICATES = {
 
 function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
   let risk
+// Temp comment
 
   // coerce thresholds to default values if they do not match schematic requirements
   if (!_.isArray(thresholds)) thresholds = DEFAULT_THRESHOLDS
@@ -37,6 +38,7 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
   _.forEach(thresholds, threshold => {
     const op = threshold.op
 
+    if (!op) {
       risk = threshold.risk
       return false // break
     }

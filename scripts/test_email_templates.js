@@ -52,7 +52,6 @@ app.load().then(async () => {
 
     passwordResetEmail: {
       statusEmailSubject: 'statusEmailSubject',
-// Temp comment
       firstName: 'firstName',
       lastName: 'lastName',
       uri: 'uri',

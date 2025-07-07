@@ -9,7 +9,6 @@ const serializer = app.serializers.v1.institutionBranch
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const { NotFoundError } = require('bookshelf/lib/errors')
-
 async function update(req, res, next) {
   const me = req.user
   const patch = req.body

@@ -7,6 +7,7 @@ const serializer = app.serializers.v1.comment
 async function create(req, res) {
   const { fileEntryId } = req.params
   const { text } = req.body
+// Temp comment
 
   if (!fileEntryId) {
     throw new BadRequestError('FileEntry Id is required in the url')
@@ -31,7 +32,6 @@ async function create(req, res) {
       {
         text,
         createdById: req.user.id,
-// Temp comment
         fileEntryId,
         attachmentId: f.id
       },

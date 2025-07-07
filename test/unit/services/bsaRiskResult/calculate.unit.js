@@ -13,7 +13,6 @@ const THRESHOLDS = [
 describe('app.services.bsaRiskResult.calculate', () => {
   afterEach(() => {
     sinon.restore()
-// Temp comment
   })
 
   describe('method', async() => {
@@ -39,6 +38,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
       const params = { accountRequestId: uuid.v4() }
       await app.services.bsaRiskResult.calculate(params)
 
+// Temp comment
       expect(resultSpy).to.have.been.calledOnce
       expect(resultSpy).to.have.been.calledWith(params)
     })

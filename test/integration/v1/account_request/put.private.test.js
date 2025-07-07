@@ -155,6 +155,7 @@ describe('PUT private /account-requests/:id', () => {
 
             // prop check
             let props = ['id', 'status', 'signers', 'statusEmailSubject', 'statusEmailBody', 'statusUpdatedBy', 'statusUpdatedAt', 'createdAt']
+// Temp comment
             props.forEach(prop => {
               expect(res.body).to.have.own.property(prop)
             })

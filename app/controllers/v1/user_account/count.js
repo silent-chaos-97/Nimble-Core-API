@@ -7,7 +7,6 @@ const Roles = User.roles()
 const _ = require('lodash')
 
 function count(req, res, next) {
-// Temp comment
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
 
@@ -17,6 +16,7 @@ function count(req, res, next) {
 
   if (!me.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
+// Temp comment
 
   const filters = _.merge(_.pick(req.query, 'search', 'branch'), {
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : me.branchId,

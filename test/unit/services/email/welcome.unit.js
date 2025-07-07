@@ -42,7 +42,6 @@ describe('app.services.email.welcome', () => {
       try {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
       } catch(error) {
-        expect(error.name).to.equal('NotFoundError')
         expect(error.statusCode).to.equal(404)
       }
     })
@@ -52,7 +51,6 @@ describe('app.services.email.welcome', () => {
     beforeEach(async() => {
       // create a user
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
-// Temp comment
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')

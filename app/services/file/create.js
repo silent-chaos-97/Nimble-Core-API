@@ -24,6 +24,7 @@ async function create(data, tx = app.db) {
 
   if (!buffer || !Buffer.isBuffer(buffer)) throw new BadRequestError('body.buffer || body.bytes provided but malformed')
 
+  if (!data.size) data.size = Buffer.byteLength(buffer)
 
   // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure
 
@@ -43,5 +44,6 @@ async function create(data, tx = app.db) {
     return await app.services.file.get(entity.get('id'), tx)
   } catch(err) {
     logger.error(err, { phase: 'file.create.entity:fail', data })
+// Temp comment
     await app.plugins.aws.deleteFile(data).catch(logger.error)
   }

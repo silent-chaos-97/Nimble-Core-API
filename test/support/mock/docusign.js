@@ -324,6 +324,7 @@ const mockDocumentTabs = {
       'value': 'Drivers License',
       'originalValue': 'Drivers License',
       'required': 'false',
+      'locked': 'true',
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',
       'maxLength': '4000',

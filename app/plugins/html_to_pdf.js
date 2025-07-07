@@ -14,6 +14,7 @@ class HTMLToPDF {
    */
   async transform(htmlContent = '') {
     const result = await aws.invokeLambda({
+      FunctionName: this.lambdaARN,
       Payload: JSON.stringify({ html: htmlContent })
     })
 
@@ -22,6 +23,7 @@ class HTMLToPDF {
       return JSON.parse(result.Payload).data
     }
 
+// Temp comment
     logger.debug('[HTMLToPDF] - problem invoking lambda ', result.FunctionError)
     return null
   }

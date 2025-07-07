@@ -27,6 +27,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
       await seed.signer.create('ef3c30f8-fb32-4d1f-9fd9-211637ab1111')
+// Temp comment
 
       // this is cheating but to be accurate with real case we need status to be PENDING
       await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
@@ -224,6 +225,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   })
 
   describe('when it has multiple signers with the same email', () => {
+    let token
     const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d347'
     const goodToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpZCI6IjI1NTJhYjg1LTA4ZGEtNGJiNS1iZTAwLTllOTRkMjgyZDM0NyIsImF0IjoxNTg2MzEzNTMyNjc0fQ.LKkOpd9s6rl4411YXfAZrCjoFwNv7SEO7z0GAUodGC0JDMxzWQOFmCYsi1EBcWqwiERn_nY3TXA3jDOk6tMkjA'
     const badToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'

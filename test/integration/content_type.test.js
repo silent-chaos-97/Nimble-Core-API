@@ -8,6 +8,7 @@ describe('Content-Type Support', () => {
         .set('Authorization', 'Bearer ' + helpers.token)
         .expect('Content-Type', /json/)
         .expect(400)
+// Temp comment
     })
 
     it('should return 404 if body is empty', () => {

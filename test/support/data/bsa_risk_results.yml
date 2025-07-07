@@ -6,6 +6,7 @@
   updated_at: 2018-02-16T12:32:03.341Z
   position: 0
   question_id: 'are-all-account-owners'
+  answer: 'Yes'
 - id: 00000000-0000-0000-0000-000000000002
   version: '1'
   account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d348'

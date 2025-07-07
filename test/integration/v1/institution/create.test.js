@@ -33,6 +33,7 @@ describe('POST /institutions', () => {
         .expect('Content-Type', /json/)
         .expect(400)
     })
+
     it('should return error details', () => {
       return request(app.server)
         .post('/v1/institutions')

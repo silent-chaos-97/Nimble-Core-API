@@ -44,7 +44,9 @@ describe('GET /institution/:id/branches', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
+// Temp comment
       .then(response => {
+        expect(response.body).to.be.an('Array')
 
         response.body.forEach(item => {
           expect(item).to.have.ownProperty('id')

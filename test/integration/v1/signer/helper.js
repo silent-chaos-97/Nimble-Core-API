@@ -68,5 +68,4 @@ async function withDocusign(mockResponse, bodyFn) {
   try {
     await bodyFn()
   }finally {
-    nock.cleanAll()
   }

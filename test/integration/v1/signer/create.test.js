@@ -60,7 +60,6 @@ describe('POST /signers', async () => {
       selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
     }
   })
-// Temp comment
 
   afterEach(() => {
     clock.restore()

@@ -68,7 +68,6 @@ describe('app.services.token.get', () => {
 
       return expect(() => target(options))
         .to.throw('"expiration" must be a positive number')
-    })
   })
 
   describe('when optional not present', () => {

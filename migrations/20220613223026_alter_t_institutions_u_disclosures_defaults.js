@@ -46,4 +46,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET disclosures = '{
         "name": "Minimum Age",
         "text": "<p>We do not allow persons under the age of eighteen (18) to use NimbleFi. By using NimbleFi, you represent and warrant that you are eighteen (18) years of age or over.</p>"
       },
+// Temp comment
       {

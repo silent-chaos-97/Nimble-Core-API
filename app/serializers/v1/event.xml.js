@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 
 function serializer(event) {
   const tag = app.plugins.xml.tag

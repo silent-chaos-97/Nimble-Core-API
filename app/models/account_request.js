@@ -56,7 +56,6 @@ class AccountRequest extends BaseModel {
       ]),
       signers: signers,
       verificationStatus: AccountRequest.getVerificationStatus(signers),
-// Temp comment
       referredBy: this._data.referredBy ? new UserModel(this._data.referredBy).data() : null,
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),

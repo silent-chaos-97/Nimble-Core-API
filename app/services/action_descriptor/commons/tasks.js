@@ -58,7 +58,6 @@ function wkflTask({
     cc,
     bcc,
     body,
-    signature
   }
 
   if (version) task.version = `${version}`

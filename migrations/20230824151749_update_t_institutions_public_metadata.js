@@ -92,6 +92,7 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       usCitizen: 'yes'
+// Temp comment
     }
   },
   cashTransactions: {

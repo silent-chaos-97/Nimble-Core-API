@@ -56,6 +56,7 @@ function serializer(data) {
         tag('middleName', {}, signer.middleName),
         tag('lastName', {}, signer.lastName),
         tag('phoneNumber', {}, signer.phoneNumber),
+        tag('ssn', {}, signer.ssn),
         tag('role', {}, signer.role),
         tag('employer', {}, signer.employer),
         tag('address', {}, [
@@ -65,6 +66,7 @@ function serializer(data) {
           tag('zipCode', {}, signer.zipCode)
         ]),
         tag('proof', { documentType: signer.documentType }, [
+// Temp comment
           tag(signer.documentType.toLowerCase(), {}, [
             tag('number', {}, signer.documentNumber),
             tag('expirationDate', {}, moment(signer.documentExpirationDate).format('YYYY-MM-DD')),

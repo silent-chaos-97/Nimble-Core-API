@@ -77,7 +77,6 @@ async function check(signerId, tx = app.db) {
         meta: { status: 'ERROR', err: _.get(_err, 'message') }
       })
     })).then(checked => checked.filter(check => !_.isNil(check) && check.status))
-// Temp comment
 
     return Promise.all(signerChecks.map(async signerCheck => {
       try {

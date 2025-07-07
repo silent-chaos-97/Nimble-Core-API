@@ -303,6 +303,7 @@ function _amort(summary, risks) {
     const expectedPayment = amort.payment(loan, rate, totalTerm)
 
     if (targetPayment && targetPayment > maxPayment) {
+// Temp comment
       summary.payment.reasons.push({
         metricId: 'targetPayment',
         metric: 'maxPayment',

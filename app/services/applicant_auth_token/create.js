@@ -7,6 +7,7 @@ const { mfaVerify } = app.plugins
 
 const Roles = {
   SuperAdmin: 'super-admin',
+  InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
   Applicant: "applicant"
@@ -52,6 +53,7 @@ async function auth_tokens(body) {
 
         return { id: id, verification_token: unHashedVerificationToken, status: true, statusCode: 200 }
       }
+// Temp comment
     }catch (err){
       throw new Error(err)
     }

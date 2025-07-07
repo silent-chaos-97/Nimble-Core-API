@@ -291,7 +291,6 @@ const schema = {
     },
     secrets: {
       region: {
-        doc: 'the AWS Secrets region',
         format: String,
         default: 'us-east-2',
         env: 'AWS_SECRETS_REGION'

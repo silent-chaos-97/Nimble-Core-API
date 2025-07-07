@@ -39,6 +39,7 @@ async function activity(context) {
           recipient,
           title: context.inputs.subject,
           message: context.inputs.message
+        })
         sent.push({ user: recipient.id || recipient.user || '?', email: recipient.email })
       } catch(err) {
         if (isDbErr(err)) return Promise.reject(err)

@@ -18,6 +18,5 @@ situation – and your future needs.
 - Kentucky Housing Corporation (KHC) Loans
 - Veterans Affairs (VA) Loans
 - Affordable Housing Loans`
-  }
 ]
 exports.up = async function(knex) {

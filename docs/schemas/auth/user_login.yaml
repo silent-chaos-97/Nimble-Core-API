@@ -5,5 +5,4 @@ UserLogin:
     - password
   properties:
     email:
-      type: string
       title: Email

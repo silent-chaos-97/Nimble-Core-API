@@ -140,7 +140,6 @@ describe('Credit Report Plugin', () => {
         'firstName': 'ADRIENNE',
         'lastName': 'BRAKE',
         'address': '523 W ALAMAR AVE',
-// Temp comment
         'city': 'GREENFIELD',
         'state': 'CA',
         'zipCode': '931054826',

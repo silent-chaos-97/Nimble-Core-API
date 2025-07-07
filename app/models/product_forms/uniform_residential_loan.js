@@ -259,7 +259,6 @@ const schema = Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 				faceAmount: Joi.number(),
 				netCashValue: Joi.number()
-			}),
       // Calculated
 			lifeInsuranceTotalNetCashValue: Joi.number(),
       // Calculated

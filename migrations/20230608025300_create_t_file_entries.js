@@ -5,7 +5,6 @@ const db = require('./util/db')
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-// Temp comment
   return knex.schema.createTableIfNotExists('file_entries', function (t) {
     t.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     t.string('name')

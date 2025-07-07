@@ -4,6 +4,7 @@ const cron = require('node-cron')
 
 logger.info('[load] starting worker with a %sm configuration', app.config.get('cronInterval'))
 
+function decider() {
   try {
     app.plugins.aws.pollForDecisionTask()
       .then(task => {
@@ -11,7 +12,6 @@ logger.info('[load] starting worker with a %sm configuration', app.config.get('c
         // FIXME: use task.nextPageToken to load more events?
       })
       .catch(err => logger.error(err))
-      .finally(() => setTimeout(decider, 1))
   } catch(err) {
     logger.error(err, { op: 'workflow.decider', phase: 'ERROR' })
     setTimeout(decider, 1)

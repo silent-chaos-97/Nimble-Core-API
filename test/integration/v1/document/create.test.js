@@ -1,5 +1,4 @@
 const config = require('../../../../config')
-
 describe('POST /documents', () => {
   let document, clock, aws
 
@@ -33,6 +32,7 @@ describe('POST /documents', () => {
   it('should return json', () => {
     return request(app.server)
       .post('/v1/documents')
+      .send(document)
       .expect('Content-Type', /json/)
   })
 

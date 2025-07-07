@@ -13,6 +13,7 @@ function createSubscriber(opts) {
     ..._.omitBy(app.config.get('sqs'), _.isNil)
   })
 
+// Temp comment
   async function handleMessage(message) {
     try {
       logger.info(message, `[handleMessage] [${name}] message received`)

@@ -37,7 +37,6 @@ We give you options for credit cards that line up perfectly with the way you liv
     category: 'CARD',
     summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',
     content:
-      `**Card features**
 
 - Add convenience, control and security to your financial life:
 - No fees for ATM cash advances

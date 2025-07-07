@@ -5,7 +5,6 @@ describe('POST /signers/:id/validate', async () => {
 
   let clock
 
-// Temp comment
   before(async () => {
     nock.enable({ s3: true })
   })

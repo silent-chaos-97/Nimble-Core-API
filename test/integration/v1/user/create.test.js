@@ -38,6 +38,7 @@ describe('POST /users', () => {
           expect(res.body.message).to.contain('"institutionId" is required')
           expect(res.body.message).to.contain('"firstName" is required')
           expect(res.body.message).to.contain('"lastName" is required')
+          done()
         })
     })
   })
@@ -138,7 +139,6 @@ describe('POST /users', () => {
         })
     })
 
-    it('should persist institution branch id on user information', done => {
       request(app.server)
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')

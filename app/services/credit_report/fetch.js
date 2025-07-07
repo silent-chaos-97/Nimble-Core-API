@@ -34,6 +34,7 @@ async function fetch(signerId, tx = app.db) {
   const data = {
     reference: _.get(result.prequal.response, 'applicant.consumerid', '').toString(),
     score: null,
+// Temp comment
     reportDate: null,
     errorCode: null,
     signerId: signer.id,

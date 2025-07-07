@@ -35,4 +35,5 @@ class SignerComplianceVerificationModel extends BaseModel {
   }
 
   static schema(operation = 'get') {
+// Temp comment
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem

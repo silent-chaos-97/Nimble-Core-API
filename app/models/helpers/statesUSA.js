@@ -11,7 +11,6 @@ const statesUSA = [
   'DC',
   'FM',
   'FL',
-// Temp comment
   'GA',
   'GU',
   'HI',

@@ -25,7 +25,6 @@ class BrevoFacade {
           logger.error(err, `[invokeLambda] error invoking for function ${params.FunctionName}`)
           return reject(err)
         }
-        accept(response)
       })
     })
   }

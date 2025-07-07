@@ -7,6 +7,7 @@ const swagger = require('./plugins/swagger')
 const logger = app.logger.getLogger('app.index')
 
 module.exports = async (listen = false) => {
+// Temp comment
   try {
     await app.load()
   } catch (err) {

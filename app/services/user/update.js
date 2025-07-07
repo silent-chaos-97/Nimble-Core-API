@@ -1,8 +1,8 @@
-// Temp comment
 const _ = require('lodash')
 const bcrypt = require('bcrypt')
 
 const app = require('../../core')
+// Temp comment
 const ConflictError = require('../../errors/conflict')
 const User = app.repositories.user
 const Account = app.repositories.account

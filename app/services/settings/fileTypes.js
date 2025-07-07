@@ -1,4 +1,3 @@
-const slugify = require('slugify')
 
 // TODO: This should be fetched from db
 const fileTypes = [
@@ -168,6 +167,7 @@ const fileTypes = [
     type: 'Product',
     name: 'Assignment'
   },
+  {
     type: 'Product',
     name: 'Stock Certificate'
   },

@@ -40,7 +40,6 @@ describe('GET /users', () => {
     })
 
     it('should return valid user object', done => {
-// Temp comment
       request(app.server)
         .get('/v1/users?limit=1')
         .set('X-API-KEY', 'superpowers')

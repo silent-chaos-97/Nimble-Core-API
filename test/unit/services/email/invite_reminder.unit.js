@@ -10,7 +10,6 @@ describe('app.services.email.inviteReminder', () => {
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
-// Temp comment
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')

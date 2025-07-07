@@ -27,7 +27,6 @@
         "name": "Simple Checking",
         "sku": "PRD-002",
         "options": [
-          {
             "id": null,
             "category": "account_number",
             "key": "account_number",

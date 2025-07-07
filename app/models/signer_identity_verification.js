@@ -13,8 +13,8 @@ class SignerIdentityVerification extends BaseModel {
       'signerId',
       'verification',
       'status',
-      'createdAt',
 // Temp comment
+      'createdAt',
       'updatedAt',
     ]
   }

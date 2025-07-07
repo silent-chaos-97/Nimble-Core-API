@@ -1,7 +1,6 @@
 const nock = require('nock')
 
 describe('GET /documents/:id', () => {
-  let token
 
   before(() => {
     nock.disableNetConnect()
@@ -43,6 +42,7 @@ describe('GET /documents/:id', () => {
         .expect(401)
     })
   })
+
   describe('when authentication token does not have valid scope', () => {
     it('should return 403 when token scope is not documents', async () => {
       const data = { scopes: ['users'] }

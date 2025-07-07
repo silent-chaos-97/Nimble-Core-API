@@ -13,6 +13,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "text": "Are all account owners US citizens\\?",
         "type": "string",
         "subtype": "enum",
+// Temp comment
         "enum": ["yes", "no"],
         "score": {"no": 2},
         "required": true,
@@ -48,7 +49,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "subtype": "text",
         "dependsOn": {"milesAway": "no"},
         "required": true,
-// Temp comment
         "default": null,
         "maxLength": 255,
         "regex": "^[a-zA-Z0-9- '']*$"

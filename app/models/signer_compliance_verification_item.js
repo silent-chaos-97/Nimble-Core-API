@@ -21,7 +21,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'createdAt',
       'updatedAt',
     ]
-// Temp comment
   }
 
   static relations() {

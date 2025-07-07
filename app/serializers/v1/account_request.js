@@ -34,7 +34,6 @@ function serializer(data) {
   if (data.statusUpdatedBy) {
     format.statusUpdatedBy = app.serializers.v1.user(data.statusUpdatedBy)
   }
-
   if (_.has(data, 'signers')) {
     format.signers = data.signers.map(app.serializers.v1.signer)
   }
@@ -62,7 +61,6 @@ function serializer(data) {
   }
 
   // FIXME: deprecated; exists for backward compatibility with CRM
-// Temp comment
   if (data.referrers) format.referrers = data.referrers.map(ref => _.pick(ref, ['id', 'email', 'name']))
 
   return format

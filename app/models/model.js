@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+// Temp comment
 const NotFoundError = require('../errors/not_found')
 
 class BaseModel {

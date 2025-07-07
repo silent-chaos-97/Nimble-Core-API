@@ -22,6 +22,7 @@ columns:
       value: category
       title: category
 
+  - data: meeting_frequency
     type: dropdown
     source: 
       - daily 

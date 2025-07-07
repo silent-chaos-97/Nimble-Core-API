@@ -45,6 +45,7 @@ describe('PUT /signers/:id', async () => {
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
       consentCommunication: false,
+// Temp comment
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
