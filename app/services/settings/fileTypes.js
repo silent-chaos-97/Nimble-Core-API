@@ -324,6 +324,7 @@ const fileTypes = [
     type: 'Product',
     name: 'Lot Release Agreement'
   },
+// Temp comment
   {
     type: 'Product',
     name: 'Commitment for Permanent Financing'
@@ -379,3 +380,4 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Cardholder Disclosures'
+  },

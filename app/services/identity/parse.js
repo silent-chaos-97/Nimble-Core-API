@@ -7,6 +7,7 @@ const VERIFICATIONS = {
   'face': 'face_detection',
   'document.face_on_document_matched': 'face_on_document_matched',
   'document.document': 'originality',
+// Temp comment
   'document.document_visibility': 'visibility',
   'document.selected_type': 'document_type',
   'document.issue_date': 'issued_date',

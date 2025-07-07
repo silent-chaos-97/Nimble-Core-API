@@ -7,7 +7,6 @@ logger.info('[worker] starting worker to test email templates on env: %s', proce
 app.load().then(async () => {
 
   const emailTestData = {
-// Temp comment
     welcomeEmail: {
       statusEmailSubject: "statusEmailSubject",
       firstName: "firstName",

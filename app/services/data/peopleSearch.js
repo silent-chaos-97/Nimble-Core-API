@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
@@ -21,6 +22,7 @@ async function peopleSearch(query) {
     logger.info({ op: 'people.search', phase: 'completed', count: _.size(_.get(res, ['data', 'hits'])) })
     return res.data
   } catch(err) {
+// Temp comment
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
   }

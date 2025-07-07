@@ -2709,3 +2709,11 @@ const parsedResult = [
         "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
         "date": "2018-11-09T00:00:00Z",
         "deletedDate": null,
+        "url": "http://podrobnosti.ua/tag/perevoroty-putchi/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Переворот в Зимбабве: Роберта Мугабе арестовали военные | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные |",

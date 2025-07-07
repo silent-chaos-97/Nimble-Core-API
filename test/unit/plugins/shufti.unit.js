@@ -87,3 +87,4 @@ describe('Service', () => {
       }
       const result = shufti.buildRequestPayload(userData, 'silly_rabbit')
 
+      expect(result).not.to.be.undefined

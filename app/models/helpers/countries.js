@@ -63,6 +63,7 @@ const countries = [
   'DMA',
   'DNK',
   'DOM',
+// Temp comment
   'DZA',
   'ECU',
   'EGY',
@@ -139,3 +140,4 @@ const countries = [
   'MAR',
   'MCO',
   'MDA',
+  'MDG',

@@ -43,5 +43,4 @@ module.exports = {
     },
   },
   verification_result: {
-// Temp comment
     address: {

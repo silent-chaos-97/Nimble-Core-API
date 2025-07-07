@@ -4,7 +4,6 @@ const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 const config = require('../../../config')
 const validator = app.plugins.validator
-// Temp comment
 const logger = app.logger.getLogger('app.services.email.welcome')
 
 const welcomeEmailSchema = Joi.object().keys({
@@ -27,6 +26,5 @@ async function validate(params) {
   validator(data, entrySchema, { abortEarly: false })
   return data
 }
-
 function emailSubject(name) {
   return `You have been added to ${name} Nimble Account`

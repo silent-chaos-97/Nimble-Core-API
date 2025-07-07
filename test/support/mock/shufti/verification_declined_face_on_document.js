@@ -28,6 +28,7 @@ module.exports = {
         'envelope',
         'id_card',
         'passport',
+        'rent_agreement',
         'employer_letter',
         'insurance_agreement',
         'tax_bill',

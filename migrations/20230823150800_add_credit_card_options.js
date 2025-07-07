@@ -28,3 +28,4 @@ const OLD_ROWS = [
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
+ */

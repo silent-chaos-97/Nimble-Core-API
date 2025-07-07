@@ -3,7 +3,6 @@
   "required": [
     "recipients",
     "message",
-    "type"
   ],
   "properties": {
     "recipients": {

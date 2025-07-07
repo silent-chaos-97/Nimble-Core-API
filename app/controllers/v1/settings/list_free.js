@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../../core')
 
 function list_free(req, res, next) {

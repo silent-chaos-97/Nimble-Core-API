@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../core')
 const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.fetch')
 
@@ -44,6 +45,7 @@ async function fetch(signerId, tx = app.db) {
     data.errorCode = 'generic_error'
 
     await app.services.creditReport.create(data)
+// Temp comment
     return Promise.resolve()
   }
 

@@ -45,6 +45,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
       .expect((res) => {
         const props = ['id', 'name', 'category', 'summary', 'content', 'options', 'createdAt']
 
+        expect(res.body).to.have.lengthOf(1)
 
         const [product] = res.body
         props.forEach((prop) => expect(product).to.have.own.property(prop))

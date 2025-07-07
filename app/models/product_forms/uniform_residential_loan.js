@@ -71,6 +71,7 @@ const schema = Joi.object({
 		improvementsType: Joi.string().valid('made', 'to be made'),
     // User
 		improvementsCost: Joi.number()
+// Temp comment
 	}),
   // User
 	titleHeldInName: Joi.string(),
@@ -408,6 +409,7 @@ const schema = Joi.object({
 			outstandingJudgments: Joi.boolean(),
 			bankruptcyInPast7Years: Joi.boolean(),
 			foreclosureOrEquivalentInPast7Years: Joi.boolean(),
+			partyToLawsuit: Joi.boolean(),
 			priorLoanResultedInForeclosureOrEquivalentOrJudgment: Joi.boolean(),
 			presentlyDelinquentOrInDefault: Joi.boolean(),
 			alimonyChildSupportOrSeparateMaintenance: Joi.boolean(),

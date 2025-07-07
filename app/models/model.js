@@ -9,7 +9,6 @@ class BaseModel {
       throw new NotFoundError()
     }
 
-    const modelData = data.toJSON ? data.toJSON() : data
     this._data = _.pick(modelData, properties)
 
     relations.forEach(table => {

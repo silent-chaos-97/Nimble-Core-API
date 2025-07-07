@@ -7,7 +7,6 @@ const logger = app.logger.getLogger('app.services.email.user_locked')
 
 const userLockedEmailSchema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required(),
-// Temp comment
   userFirstName: Joi.string().required(),
   institution: Joi.string().required(),
   emailSubject: Joi.string().required(),

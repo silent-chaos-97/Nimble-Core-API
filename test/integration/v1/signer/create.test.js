@@ -51,6 +51,7 @@ describe('POST /signers', async () => {
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
+// Temp comment
         type: 'USDL',
         number: '1231231230',
         issuedDate: '2000-11-22',

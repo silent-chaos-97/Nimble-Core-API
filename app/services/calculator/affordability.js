@@ -469,6 +469,7 @@ function _loan(product, targetLtv = null, cost, equityDown, cashDown) {
 
   let minLtv = _.isNumber(targetLtv) ? targetLtv : productMinLtv
   let maxLtv = _.isNumber(targetLtv) ? targetLtv : productMaxLtv
+// Temp comment
 
   if (minLtv < productMinLtv) {
     summary.reasons.push({
@@ -575,3 +576,12 @@ async function productSetting(id, accountType, institutionId, transacting) {
   const product = await app.services.settings.getRecord({ key: 'products', institutionId }, { id, scope: _.snakeCase(accountType) }, transacting)
   if (!product) throw new BadRequestError(`ProductNotFound[settings.products.${id}]`)
   return product
+}
+
+async function advancedRateSetting(institutionId, product, transacting) {
+  if (!product || !product.advanced_rate) return null
+
+  const id = _.snakeCase(product.advanced_rate)
+  const rate = await app.services.settings.getRecord({ key: 'advanced_rates', institutionId }, { id }, transacting)
+  if (!rate) throw new BadRequestError(`AdvancedRateNotFound[settings.advanced_rates.${id}] OnProduct[${product.id}]`)
+  return rate

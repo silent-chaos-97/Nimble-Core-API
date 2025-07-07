@@ -6,3 +6,4 @@ exports.up = function(knex) {
     table.uuid('model_id')
     table.string('key').notNullable()
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

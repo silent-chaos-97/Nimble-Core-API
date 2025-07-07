@@ -24,7 +24,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   }
 
   static relations() {
-// Temp comment
     return ['items']
   }
 

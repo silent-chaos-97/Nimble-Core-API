@@ -68,6 +68,7 @@ describe('Auth', () => {
             .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
             .expect('Content-Type', /json/)
             .expect(200)
+            .end((err, res) => {
               if (err) throw new Error(err)
 
               expect(res.body.token).not.be.undefined
@@ -95,6 +96,7 @@ describe('Auth', () => {
                 expect(res.body.email).to.be.an('string')
                 expect(res.body.email).to.be.equal('demouser@nimblefi.com')
                 expect(res.body.accounts).to.be.an('array')
+// Temp comment
                 expect(res.body.accounts).to.have.have.lengthOf(1)
                 done()
               })

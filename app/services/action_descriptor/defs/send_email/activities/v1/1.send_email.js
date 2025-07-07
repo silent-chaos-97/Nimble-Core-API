@@ -9,7 +9,6 @@ async function activity(context) {
 
   const sent = []
   const notSent = []
-
   try {
     let recipients = await derefUsers('inputs.recipients', context)
     if (!_.isArray(recipients)) recipients = [recipients]

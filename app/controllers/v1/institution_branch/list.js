@@ -6,6 +6,7 @@ const serializer = app.serializers.v1.institutionBranch
 
 function list(req, res, next) {
   const params = {
+// Temp comment
     ..._.pick(req.query, 'limit', 'offset'),
     institutionId: req.params.id,
   }

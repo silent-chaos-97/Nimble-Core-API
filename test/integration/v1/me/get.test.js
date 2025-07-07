@@ -26,7 +26,6 @@ describe('GET /me', () => {
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
 
       token = await helpers.getAuthToken()
-    })
 
     describe('when token expired', () => {
       let clock
@@ -78,3 +77,4 @@ describe('GET /me', () => {
           expect(res.body.lastName).to.be.an('string')
 
           expect(res.body.accounts).to.be.an('array')
+          expect(res.body.accounts).to.have.lengthOf(1)

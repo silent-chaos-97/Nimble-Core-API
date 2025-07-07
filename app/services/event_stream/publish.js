@@ -1,3 +1,4 @@
+// Temp comment
 const AWS = require('aws-sdk')
 const _ = require('lodash')
 const app = require('../../core')
@@ -14,7 +15,6 @@ const client = new AWS.SNS({
  * @param {{id: string, event: string, type?: string, body: any, payload?: any }} event the event data being emitted
  * @param event.id identifier of the bound resource
  * @param event.event the type of event or resource
-// Temp comment
  * @param event.type? the type of event or resource (weak alias for event)
  * @param event.body the body of the event
  * @param event.payload? the body of the event (weak alias for body)

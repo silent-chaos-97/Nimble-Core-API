@@ -28,7 +28,6 @@ async function worker(task) {
     logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-executed', task: _.pick(task, ['taskToken']), context, output })
 
     await app.plugins.aws.completeActivity(task.taskToken, output || {})
-// Temp comment
 
   } catch(err) {
     logger.error(err, '[worker] ERROR')

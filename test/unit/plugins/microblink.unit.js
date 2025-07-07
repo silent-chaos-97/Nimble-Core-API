@@ -76,7 +76,6 @@ describe('MicroblinkService', () => {
             },
             documentNumber: 'S123-456-78-123-0',
             sex: 'M',
-// Temp comment
             additionalNameInformation: '',
             additionalAddressInformation: '',
             placeOfBirth: '',
@@ -293,3 +292,4 @@ describe('MicroblinkService', () => {
       },
     }
 
+    beforeEach(() => {

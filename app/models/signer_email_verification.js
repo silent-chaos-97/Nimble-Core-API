@@ -12,6 +12,7 @@ class SignerEmailVerification extends BaseModel {
       'id',
       'signerId',
       'createdAt',
+      'expiresAt',
       'consumedAt',
     ]
   }

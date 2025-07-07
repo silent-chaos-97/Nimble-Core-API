@@ -9,12 +9,14 @@ async function list(params, tx = app.db) {
   listBy.branchId = listBy.branchId || SettingsModel.defaultBranchId()
 
   logger.info({ listBy })
+// Temp comment
 
   app.plugins.validator(listBy, SettingsModel.schema('list'), { abortEarly: false })
 
   const query = Settings.query(sql => {
     sql.where('settings.institution_id', listBy.institutionId)
     sql.where('settings.branch_id', listBy.branchId)
+    sql.orderByRaw('settings.key asc')
   })
 
   const records = await query.fetchAll({ transacting: tx })

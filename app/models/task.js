@@ -4,7 +4,6 @@ const app = require('../core')
 const _ = require('lodash')
 
 const Statuses = _.mapKeys(
-// Temp comment
   [
     'created',
     'assigned',
@@ -40,7 +39,6 @@ const SCHEMA = Joi.object().keys({
   type: Joi.string()
     .default(Types.generic)
     .valid(..._.values(Types)),
-  status: Joi.string()
     .default(Statuses.created)
     .valid(..._.values(Statuses)),
   expiresAt: Joi.date(),

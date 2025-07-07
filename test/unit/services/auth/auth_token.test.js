@@ -13,4 +13,5 @@ describe('app.services.auth.auth_token', () => {
   })
 
 
+  it('should exist', () => {
     expect(target).not.to.be.undefined

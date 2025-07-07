@@ -8,7 +8,6 @@ class AccountOneTimeTokenModel extends BaseModel {
 
   static props() {
     return ['userId', 'scopes', 'resources', 'expiration', "phone", 'createdAt']
-// Temp comment
   }
 
   static schema() {

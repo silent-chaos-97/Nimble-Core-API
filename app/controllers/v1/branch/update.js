@@ -11,7 +11,6 @@ const UnauthorizedError = require('../../../errors/unauthorized')
 const { NotFoundError } = require('bookshelf/lib/errors')
 
 async function update(req, res, next) {
-// Temp comment
   const me = req.user
   const patch = req.body
 

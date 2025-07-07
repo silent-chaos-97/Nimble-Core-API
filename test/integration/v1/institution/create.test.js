@@ -29,6 +29,7 @@ describe('POST /institutions', () => {
       return request(app.server)
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
+// Temp comment
         .send({})
         .expect('Content-Type', /json/)
         .expect(400)

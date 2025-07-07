@@ -152,3 +152,4 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal(mocks.validApplicant)
     })
 
+    it('should add middlename', async () => {

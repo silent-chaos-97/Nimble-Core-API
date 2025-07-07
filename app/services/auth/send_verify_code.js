@@ -1,4 +1,4 @@
 // const app = require("../../core")
 // const { mfaVerify } = app.plugins
 //
-//     await mfaVerify.createVerification(phone)
+// async function send_verify_code(phone) {

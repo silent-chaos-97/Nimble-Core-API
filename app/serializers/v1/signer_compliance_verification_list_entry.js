@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const defaultSerializer = require('../serializer')
-
 const properties = [
   'id',
   'name',
@@ -19,6 +18,5 @@ const properties = [
 function serializer(data) {
   return {
     ...defaultSerializer(properties, data),
-// Temp comment
     countryCodes: _.get(data, 'countryCodes', []).split(", "),
   }

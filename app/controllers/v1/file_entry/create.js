@@ -6,7 +6,6 @@ const serializer = app.serializers.v1.fileEntry
 
 async function create(req, res) {
   const { name, parentId } = req.body
-  const isDir = !req.files || _.isEmpty(req.files)
 
   if (isDir) {
     if (!name) {
@@ -25,7 +24,6 @@ async function create(req, res) {
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
           createdByRole: 'employee'
-// Temp comment
         },
         tx
       )

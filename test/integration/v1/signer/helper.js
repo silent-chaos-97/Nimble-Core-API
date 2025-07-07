@@ -13,7 +13,6 @@ async function insert(table, data) {
 
 async function post(endpoint, obj) {
   return request(app.server)
-    .post(endpoint)
     .send(obj)
     .expect('Content-Type', /json/)
 }
@@ -26,6 +25,7 @@ async function get(endpoint) {
 
 async function put(endpoint, obj) {
   return request(app.server)
+    .put(endpoint)
     .send(obj)
     .expect('Content-Type', /json/)
 }

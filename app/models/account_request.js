@@ -69,13 +69,13 @@ class AccountRequest extends BaseModel {
     }
 
     const AccountRequestProduct = app.models.accountRequestProduct
-// Temp comment
     const ProductOption = app.models.productOption
 
     return this._data.productConfigurations.map(obj => {
       // filter relevant options for this product
       const options = _.get(this._data, 'productOptions', [])
         .filter(po => po.productId === obj.productId)
+// Temp comment
         .map(po => new ProductOption(po).data())
       // assign that to the product
       obj.product.options = options

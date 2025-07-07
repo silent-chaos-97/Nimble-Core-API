@@ -31,6 +31,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       // this is cheating but to be accurate with real case we need status to be PENDING
       await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 
+// Temp comment
       // Note from Pedro: I'm not sure about the state of the account_request seed but
       // in this case, the contract_document_id should be null
       await knex('account_requests').update('contract_document_id', null).where('id', accountRequestId)
@@ -73,7 +74,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     })
 
     it('should return 400 if account request does not exist', done => {
-// Temp comment
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)

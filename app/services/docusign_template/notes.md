@@ -38,7 +38,6 @@ Source:
 - https://github.com/docusign/eg-01-node-jwt
 
 ### IMPORTANT STEP: We need to grant admin consent for internal applications.
-
 This is very important because we need the api user to give consent to use the integration key.
 
 How can we do this?
@@ -95,3 +94,4 @@ The outcome will be a COPY OF THE SAME integration key (also known as a client i
 
 What is the difference ?
 
+Even though both keys will be the same, they will use DIFFERENT servers for the oath and api url's.

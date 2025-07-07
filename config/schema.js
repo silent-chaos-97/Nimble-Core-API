@@ -373,3 +373,4 @@ const schema = {
       doc: 'AWS SQS Access Key Secret',
       format: String,
       default: 'FAKE_SECRET',
+      env: 'AWS_SQS_SECRET_ACCESS_KEY'

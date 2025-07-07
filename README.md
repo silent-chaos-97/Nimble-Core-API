@@ -110,3 +110,4 @@ Cronjobs are configured to execute the `worker.js` content, to run locally you c
 
 ```bash
 yarn dev-worker
+```

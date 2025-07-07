@@ -8,7 +8,7 @@ function serializer(data) {
       resources: [`documents#${document}`],
       scopes: ['documents']
     }
-    format.uri = app.services.api.uri(`/v1/documents/${document}?token=${token}`)
+    const token = app.services.token.get(options)
   }
 
   return format

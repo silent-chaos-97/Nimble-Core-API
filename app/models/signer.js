@@ -11,12 +11,12 @@ class Signer extends BaseModel {
 
   constructor(data) {
     super(Signer.props(), Signer.relations(), data)
+// Temp comment
   }
 
   static get PRIMARY_ROLE_NAME() {
     return 'PRIMARY'
   }
-// Temp comment
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
   }
@@ -177,3 +177,4 @@ class Signer extends BaseModel {
         number: Joi.string().max(100).optional(),
         issuedDate: Joi.string().optional(),
         expirationDate: Joi.string().optional(),
+        issuer: Joi.alternatives().conditional('type', {

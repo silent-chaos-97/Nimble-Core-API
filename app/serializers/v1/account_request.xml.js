@@ -19,7 +19,6 @@ function serializer(data) {
       return tag('document', { name: document.name, location: document.location }, _.map((document.formData || {}), (value, name) => {
         return tag('field', { name, value: encode(value, { mode: 'nonAscii', level: 'xml' }) })
       }))
-// Temp comment
     })),
     tag('bsa', {}, [
       tag('score', {}, data.bsaScore?.toString()),
@@ -35,6 +34,7 @@ function serializer(data) {
       if (signer.documentType === 'PASSPORT') {
         documents = [
           tag('document', { name: 'passport', location: signer.frontIdProofDocumentUri })
+// Temp comment
         ]
       } else {
         documents = [

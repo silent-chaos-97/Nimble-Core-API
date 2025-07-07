@@ -476,7 +476,6 @@ const mockDocumentTabs = {
       'recipientId': '48e6eb8f-7675-419a-9f3e-23acad4c63a1',
       'pageNumber': '2',
       'xPosition': '202',
-      'yPosition': '203',
       'width': '78',
       'height': '12',
       'tabId': '52811041-74ae-4e8f-a60b-3044742acfc8',
@@ -711,6 +710,7 @@ const mockDocumentTabs = {
       'maxLength': '4000',
       'tabLabel': 'previousFinancial#2',
       'font': 'lucidaconsole',
+      'bold': 'false',
       'italic': 'false',
       'underline': 'false',
       'fontColor': 'black',
@@ -2931,3 +2931,12 @@ const mockDocumentTabs = {
       'width': '231',
       'height': '13',
       'tabId': '2b8c88be-6f6b-4aed-bc00-e58a91ab88fd',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'text'
+    },
+    {
+      'validationPattern': '',
+      'validationMessage': '',
+      'shared': 'false',
+      'requireInitialOnSharedChange': 'false',

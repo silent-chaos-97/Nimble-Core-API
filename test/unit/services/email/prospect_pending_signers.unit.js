@@ -1,7 +1,6 @@
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
-// Temp comment
 const { v4: uuid } = require('uuid')
 
 describe('app.services.email.prospectPendingSigners', () => {
@@ -42,7 +41,6 @@ describe('app.services.email.prospectPendingSigners', () => {
   })
 
   describe('when calling with valid data', () => {
-    beforeEach(async () => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')

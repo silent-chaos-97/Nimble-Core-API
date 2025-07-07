@@ -102,6 +102,7 @@ describe('GET /users', () => {
 
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
+            done()
           })
       })
 

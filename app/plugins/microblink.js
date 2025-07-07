@@ -260,6 +260,7 @@ class MicroblinkService {
       exportImages: false,
       exportMrzImage: false,
       exportFullDocumentImage: false,
+      DEBUG: false,
     }
   }
 

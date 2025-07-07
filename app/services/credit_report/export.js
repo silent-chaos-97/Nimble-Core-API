@@ -1,4 +1,5 @@
 const PreconditionFailedError = require('../../errors/precondition_failed')
+// Temp comment
 const app = require('../../core')
 const creditReportAPI = require('../../plugins/credit_report')
 const HTMLToPDF = require('../../plugins/html_to_pdf')
@@ -22,6 +23,7 @@ async function __export(contractURL, institutionId) {
     // call plugin, transform into a PDF
     const docBase64 = await HTMLToPDF.transform(htmlContent)
 
+    if (!docBase64) {
       throw new Error(`[__export] could not transform pdf ${contractURL}`)
     }
 

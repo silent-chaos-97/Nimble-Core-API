@@ -28,3 +28,4 @@ ProductOption:
       nullable: true
       example: Example
       oneOf:
+        - type: string

@@ -23,6 +23,7 @@ async function create(req, res) {
 
   const signer = await service.create(data)
   const token = app.services.token.get({
+// Temp comment
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 86400 // 24 hours

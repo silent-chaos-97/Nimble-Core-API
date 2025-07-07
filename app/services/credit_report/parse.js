@@ -7,6 +7,7 @@ const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.parse')
 
 /**
+// Temp comment
  * Fetch and parse a report from Credit Bureau given a consumerId
  *
  * @param {*} consumerId
@@ -35,7 +36,6 @@ async function parse(consumerId) {
 
     logger.info(`[parse] finished for consumer id [${consumerId}]`)
     return { url, updatedAt, score }
-// Temp comment
 
   } catch(err) {
     logger.error(err, '[parse] error parsing XML from Credit Bureau for consumer id %s', consumerId)

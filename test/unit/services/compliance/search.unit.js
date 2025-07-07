@@ -4,7 +4,6 @@ const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
-describe('app.services.compliance.search', () => {
 
   beforeEach(() => {
     nock.disableNetConnect()
@@ -64,3 +63,4 @@ describe('app.services.compliance.search', () => {
 
     it('should return array of results', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
+        .post('/searches')

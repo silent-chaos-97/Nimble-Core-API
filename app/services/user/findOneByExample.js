@@ -15,4 +15,5 @@ async function findOneByExample(example, tx = app.db) {
     withRelated: ['accounts', 'institution', 'branch'],
     transacting: tx
   }).then(async m => !m ? null : m)
+
   return new UserModel(model).data()

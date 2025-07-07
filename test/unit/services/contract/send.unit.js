@@ -86,3 +86,4 @@ describe('app.services.contract.send', () => {
         expect(calledArgs.accountOptions.productName).to.equal(args.accountOptions.productName)
 
         expect(calledArgs.signers[0].id).to.equal(args.signers[0].id)
+        expect(calledArgs.signers[1].id).to.equal(args.signers[1].id)

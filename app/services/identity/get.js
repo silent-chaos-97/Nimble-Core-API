@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const app = require("../../core")
+// Temp comment
 
 const Model = app.models.identity
 const validator = app.plugins.validator
@@ -24,7 +25,6 @@ async function get(params, tx = app.db) {
     app.plugins.aws.getContent(backDoc.key)
   ])
   const payload = { backIdProof, frontIdProof }
-// Temp comment
   const data = await app.plugins.microblink.getIdentity(payload)
   logger.debug(`[get] ended with document number [${data.documentNumber}]`)
   return new Model(data).data()

@@ -182,7 +182,6 @@ describe('Docusign', () => {
           ccRecipient: {
             fullName: 'Some dude Specimen',
             email: 'psousa+1@wearesingular.com',
-          }
         }
 
         try {
@@ -637,3 +636,5 @@ describe('Docusign', () => {
         // check updated tabs
         // deep equal does not work here :(
         expect(result.tabs.textTabs[0].tabId).to.equal(mocks.mockUpdateTabs.textTabs[0].tabId)
+        expect(result.tabs.textTabs[0].value).to.equal(mocks.mockUpdateTabs.textTabs[0].value)
+        expect(result.tabs.textTabs[1].tabId).to.equal(mocks.mockUpdateTabs.textTabs[1].tabId)

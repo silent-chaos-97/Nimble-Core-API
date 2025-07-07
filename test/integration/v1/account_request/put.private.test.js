@@ -135,7 +135,6 @@ describe('PUT private /account-requests/:id', () => {
           .put('/v1/account-requests/123')
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
-          .send(putRequest)
           .expect(400)
           .end((err, res) => {
             expect(res.body.message).to.contain('"id" must be a valid GUID')

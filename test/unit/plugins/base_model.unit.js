@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('../../../app/models/model')
 
 describe('BaseModel class', () => {
-  it('should exist', () => {
     expect(BaseModel).not.to.be.undefined
   })
 
@@ -19,6 +18,7 @@ describe('BaseModel class', () => {
     expect(BaseModel.schema).to.be.an('Function')
   })
 
+  it('should have defaults', () => {
     expect(BaseModel.props()).to.deep.equal([])
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())

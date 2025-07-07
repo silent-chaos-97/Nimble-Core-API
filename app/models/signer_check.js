@@ -24,3 +24,4 @@ class SignerCheck extends BaseModel {
       'updatedAt'
     ]
   }
+

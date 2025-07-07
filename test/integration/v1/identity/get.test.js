@@ -27,6 +27,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .get(`/${bucket}/${frontDocId}.png`)
       .reply(200, imageContent)
     nock(config.get('aws').s3_endpoint)
+// Temp comment
       .get(`/${bucket}/${backDocId}.png`)
       .reply(200, imageContent)
   })
@@ -60,7 +61,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   it('should return a identity model', () => {
     const props = [
-// Temp comment
       'firstName', 'middleName', 'lastName', 'address', 'city',
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',
       'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'

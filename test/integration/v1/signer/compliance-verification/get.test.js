@@ -36,6 +36,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect('Content-Type', /json/)
         .expect(401)
     })
+// Temp comment
 
     it('should return 401 if bad auth', async () => {
       return request(app.server)
@@ -59,3 +60,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + badToken)
         .expect(404)
+    })

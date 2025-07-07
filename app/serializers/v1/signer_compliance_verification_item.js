@@ -16,7 +16,6 @@ function serializer(data) {
 
   const format = {
     ...defaultSerializer(properties, data),
-    nameAka: _.get(data, 'nameAka', []).split(", "),
     countries: _.get(data, 'countries', []).split(", "),
     associates: _.get(data, 'associates', []).split(", "),
     matchTypes: _.get(data, 'matchTypes', []).split(", ")

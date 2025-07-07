@@ -88,6 +88,7 @@ const publicMetadata = {
       default: 0
     },
     default: '',
+    subtype: 'country',
     required: true,
     dependsOn: {
       usCitizen: 'yes'
@@ -103,3 +104,4 @@ const publicMetadata = {
     order: 8,
     score: {
       yes: 2
+    },
