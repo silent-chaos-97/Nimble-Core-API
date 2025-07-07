@@ -374,3 +374,12 @@ const schema = {
       format: String,
       default: 'FAKE_SECRET',
       env: 'AWS_SQS_SECRET_ACCESS_KEY'
+    },
+    region: {
+      doc: 'AWS SQS Region',
+      format: String,
+      default: 'us-east-2',
+      env: 'AWS_SQS_REGION'
+    },
+    creditReportQueue: {
+      doc: 'AWS SDK SQS queue for credit report',

@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const moment = require('moment')
 const SignerEmailVerification = app.repositories.signerEmailVerification

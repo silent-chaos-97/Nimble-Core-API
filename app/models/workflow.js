@@ -14,7 +14,6 @@ class WorkflowModel extends BaseModel {
 
   constructor(data) {
     super(WorkflowModel.props(), WorkflowModel.relations(), data)
-// Temp comment
   }
 
   static statuses() {
@@ -25,7 +24,6 @@ class WorkflowModel extends BaseModel {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
   }
 
-  static relations() {
     return ['user', 'branch', 'institution']
   }
 
@@ -50,3 +48,5 @@ class WorkflowModel extends BaseModel {
     const InstitutionModel = app.models.institution
     const InstitutionBranchModel = app.models.institutionBranch
 
+    return {
+      ..._.omit(this._data, ['user', 'branch', 'institution']),

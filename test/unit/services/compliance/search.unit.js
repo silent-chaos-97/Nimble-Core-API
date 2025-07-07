@@ -4,6 +4,7 @@ const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
+describe('app.services.compliance.search', () => {
 
   beforeEach(() => {
     nock.disableNetConnect()
@@ -17,6 +18,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('search')
       expect(app.services.compliance.search).to.be.an('Function')
+// Temp comment
     })
 
     it('should throw exception when there is no name for entity', async () => {
@@ -64,3 +66,4 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
     it('should return array of results', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
+        .reply(200, mocks.successResponse)

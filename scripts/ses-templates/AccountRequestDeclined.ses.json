@@ -1,4 +1,3 @@
 {
   "Template": {
-    "TemplateName": "AccountRequestDeclined",
     "SubjectPart": "{{statusEmailSubject}}",

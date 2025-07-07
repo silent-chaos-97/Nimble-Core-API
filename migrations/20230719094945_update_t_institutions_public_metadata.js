@@ -103,3 +103,5 @@ const publicMetadata = {
     type: 'string',
     order: 8,
     score: {
+      yes: 2
+    },

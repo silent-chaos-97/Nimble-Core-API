@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const fs = require('fs').promises
 const flatten = require('flat')
-// Temp comment
 const app = require('../../core')
 const log = app.logger.getLogger('app.services.descriptor.list')
 

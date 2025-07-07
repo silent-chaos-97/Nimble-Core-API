@@ -3,6 +3,7 @@
     tags:
       - Account Request
     summary: Get an account request
+    description: Method to get an account request
     operationId: getAccountRequest
     parameters:
       - name: id
@@ -13,3 +14,4 @@
           type: string
           format: uuidv4
     security:
+      - bearer: []

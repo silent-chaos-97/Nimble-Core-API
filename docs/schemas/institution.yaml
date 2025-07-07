@@ -7,6 +7,7 @@ Institution:
     - domain
     - slug
     - logo
+    - backgroundImage
   properties:
     id:
       type: string
@@ -35,3 +36,4 @@ Institution:
       title: Domain
       description: The institution domain
     routingNumber:
+      type: string

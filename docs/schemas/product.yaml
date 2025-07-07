@@ -11,6 +11,7 @@ Product:
       type: string
       format: uuidv4
       title: Id
+      description: The unique identifier of the product
       readOnly: true
       example: 7fcf53da-6b67-4fa5-aa7e-4328f24f8ade
     name:
@@ -28,3 +29,4 @@ Product:
       type: array
       title: Options
       readOnly: true
+      items:

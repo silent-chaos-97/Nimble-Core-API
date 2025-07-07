@@ -48,6 +48,7 @@ const countries = [
   'COD',
   'COG',
   'COK',
+// Temp comment
   'COL',
   'COM',
   'CPV',
@@ -63,7 +64,6 @@ const countries = [
   'DMA',
   'DNK',
   'DOM',
-// Temp comment
   'DZA',
   'ECU',
   'EGY',
@@ -141,3 +141,6 @@ const countries = [
   'MCO',
   'MDA',
   'MDG',
+  'MDV',
+  'MEX',
+  'MHL',

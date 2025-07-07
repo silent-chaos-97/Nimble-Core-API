@@ -45,6 +45,7 @@
   date_of_birth: 1945-12-06
 
 - id: '2e31d8c0-1226-4651-8a5d-4bd8aa454721'
+  account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d348'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
   consent: true
   role: 'SECONDARY'
@@ -214,3 +215,8 @@
   verification_status_political_exposure_updated_at: 2018-02-16T12:11:03.341Z
   consent_account_opening: true
   consent_privacy_policy: true
+  consent_communication: true
+
+- id: 'ef3c30f8-fb32-4d1f-9fd9-211637ab1111'
+  account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d348'
+  institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'

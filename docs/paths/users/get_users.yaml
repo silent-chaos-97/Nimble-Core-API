@@ -13,3 +13,4 @@
         schema:
           type: string
           format: int64
+    security:

@@ -1,4 +1,5 @@
 const db = require('./util/db')
+
 exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
 
@@ -10,7 +11,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
 
   // the user who owns the analysis, should default ot the creator
   table.uuid('owner_id').references('users.id').notNullable()
-
   table.uuid('created_by_id').references('users.id').notNullable()
   table.uuid('updated_by_id').references('users.id').notNullable()
 
@@ -18,3 +18,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
   table.string('title').notNullable()
+  table.string('status').notNullable().defaultTo('draft')

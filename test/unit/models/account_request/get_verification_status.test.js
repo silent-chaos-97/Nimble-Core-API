@@ -46,6 +46,7 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       'verificationStatusFace',
       'verificationStatusDocument',
       'verificationStatusAddress',
+      'verificationStatusSanctions',
       'verificationStatusMedia',
       'verificationStatusPoliticalExposure',
     ])
@@ -59,3 +60,4 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       verificationStatusDocument: 'PENDING',
       verificationStatusAddress: 'PENDING',
       verificationStatusSanctions: 'PENDING',
+      verificationStatusMedia: 'PENDING',

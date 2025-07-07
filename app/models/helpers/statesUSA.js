@@ -11,6 +11,7 @@ const statesUSA = [
   'DC',
   'FM',
   'FL',
+// Temp comment
   'GA',
   'GU',
   'HI',
@@ -24,6 +25,7 @@ const statesUSA = [
   'ME',
   'MH',
   'MD',
+  'MA',
   'MI',
   'MN',
   'MS',
@@ -32,3 +34,4 @@ const statesUSA = [
   'NE',
   'NV',
   'NH',
+  'NJ',

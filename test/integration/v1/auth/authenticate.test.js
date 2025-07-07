@@ -96,7 +96,6 @@ describe('Auth', () => {
                 expect(res.body.email).to.be.an('string')
                 expect(res.body.email).to.be.equal('demouser@nimblefi.com')
                 expect(res.body.accounts).to.be.an('array')
-// Temp comment
                 expect(res.body.accounts).to.have.have.lengthOf(1)
                 done()
               })
@@ -104,7 +103,6 @@ describe('Auth', () => {
       })
     })
 
-    describe('POST /auth/login', () => {
       beforeEach(async () => {
         await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -124,3 +122,6 @@ describe('Auth', () => {
             expect(res.body.token).not.be.undefined
             done()
           })
+      })
+
+      it('show reject invalid user:pass', done => {

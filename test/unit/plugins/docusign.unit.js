@@ -182,6 +182,7 @@ describe('Docusign', () => {
           ccRecipient: {
             fullName: 'Some dude Specimen',
             email: 'psousa+1@wearesingular.com',
+          }
         }
 
         try {
@@ -638,3 +639,18 @@ describe('Docusign', () => {
         expect(result.tabs.textTabs[0].tabId).to.equal(mocks.mockUpdateTabs.textTabs[0].tabId)
         expect(result.tabs.textTabs[0].value).to.equal(mocks.mockUpdateTabs.textTabs[0].value)
         expect(result.tabs.textTabs[1].tabId).to.equal(mocks.mockUpdateTabs.textTabs[1].tabId)
+        expect(result.tabs.textTabs[1].value).to.equal(mocks.mockUpdateTabs.textTabs[1].value)
+      })
+
+      it('should return null if failed to get tabs', async () => {
+        // we need to call this to set the auth token
+        await docusign._setDocusignAuthorizationAndSetHeader()
+        // preparation
+        const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
+        const recipientId = '1'
+        const scope1 = nock(app.config.get('docusign').basePath)
+          .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
+          .reply(200, { "textTabs": [] })
+
+        const result = await docusign._getUpdatedRecipientAndTabs(mocks.validUser, config.get('docusign').accountID, envelopeId, recipientId)
+

@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-
 const validator = app.plugins.validator
 const AccountRequestModel = app.models.accountRequest
 const AccountRequest = app.repositories.accountRequest
@@ -12,6 +11,7 @@ const UnauthorizedTokenError = require('../../errors/unauthorized_token')
 async function validate(params) {
   return validator(params, AccountRequestModel.schema('webhook'), { abortEarly: false })
 }
+
 
 function patchAccountRequest(id, status, tx = app.db) {
   return AccountRequest.forge({ id }).save({

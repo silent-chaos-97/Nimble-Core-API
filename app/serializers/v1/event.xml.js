@@ -1,4 +1,5 @@
 const app = require('../../core')
+// Temp comment
 
 function serializer(event) {
   const tag = app.plugins.xml.tag
@@ -12,4 +13,5 @@ function serializer(event) {
     name: event.name,
     rid: event.rid,
     timestamp: event.timestamp,
+    href: event.href
   }, [app.serializers.v1.accountRequestXml(event.data)]))

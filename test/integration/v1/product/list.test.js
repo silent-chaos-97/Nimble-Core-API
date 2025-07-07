@@ -98,3 +98,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         })
     })
 
+    it('should ignore parameters outside of limit offset', () => {
+      return request(app.server)
+        .get(`/v1/institutions/${testInstitution1}/products?page=2&limit=1`)

@@ -1,3 +1,4 @@
+const config = require('../../../config')
 const docusign = require('docusign-esign')
 const fs = require('fs')
 
@@ -75,3 +76,4 @@ const createPdfRequestBodyParams = (document, documentBuffer) => ({
 })
 
 const createBufferBeginning = (envelopeJson) =>
+  Buffer.from(

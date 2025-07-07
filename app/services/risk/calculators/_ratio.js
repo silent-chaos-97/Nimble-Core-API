@@ -49,7 +49,6 @@ module.exports = async function(risk, _opts) {
         denominator,
         ratio
       }
-    }
 
     calculated[numeratorKey] = numerator
     calculated[denominatorKey] = denominator

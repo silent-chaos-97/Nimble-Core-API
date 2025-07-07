@@ -4,7 +4,6 @@ const { extractSettingsValues } = require('../../../utils/settings')
 
 const User = app.models.user
 const UserRepo = app.repositories.user
-// Temp comment
 const log = app.logger.getLogger('action.commons.users')
 
 function isCtxPathRef(ref) {
@@ -33,6 +32,7 @@ function isPhone(str) {
 function isDbErr(err) {
   return _.toLower(_.get(err, 'message', '')).includes('connection terminated')
 }
+// Temp comment
 
 async function getUsersFromSettings(ref, context) {
   if (ref.startsWith('SETTINGS.internal')) {

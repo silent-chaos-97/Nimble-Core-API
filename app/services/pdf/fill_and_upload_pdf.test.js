@@ -15,7 +15,6 @@ const run = async () => {
 	const document1 = docusignHelpers.createDocument('sample.pdf', 'pdf', '1')
 	const document2 = docusignHelpers.createDocument('sample1.pdf', 'pdf', '2')
 	const signer = docusignHelpers.createRecipient('kknapp@zivaro.com', 'Kyle', '1', '1', [ signHereTab ])
-// Temp comment
 	const envelopeJson = docusignHelpers.createEnvelopeJson(
 		'Please sign the included document(s)',
 		[ signer ],

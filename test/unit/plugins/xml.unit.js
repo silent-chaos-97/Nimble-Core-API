@@ -1,4 +1,3 @@
-const target = require('../../../app/plugins/xml')
 
 describe('app.plugins.xml', () => {
   it('should exist', () => {
@@ -75,3 +74,4 @@ describe('app.plugins.xml', () => {
         // comments
         target.tag('tag', {}, `javascript:/*--></title></style></textarea></script></xmp><svg/onload='+/"/+/onmouseover=1/+/[*/[]/+alert(1)//'>`),
         target.tag('tag', {}, `//*--> something`),
+        target.tag('tag', {}, `<!-- something`),

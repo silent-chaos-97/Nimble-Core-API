@@ -12,6 +12,5 @@ if (INIT_SENTRY) {
   })
 }
 
-// Temp comment
 module.exports = {
   requestHandler: function() {

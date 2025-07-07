@@ -74,7 +74,6 @@ describe('GET /signers/:id/contract', async () => {
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
         .set('Authorization', 'Bearer ' + badtoken)
-// Temp comment
         .expect(403)
         .expect('Content-Type', /json/)
     })
@@ -104,3 +103,5 @@ describe('GET /signers/:id/contract', async () => {
       })
 
       return request(app.server)
+        .get(`/v1/signers/invalid/contract`)
+        .set('Authorization', 'Bearer ' + weirdtoken)

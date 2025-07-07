@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../core')
 const PreconditionFailed = require('../../errors/precondition_failed')
 
 const AccountRequest = app.repositories.accountRequest

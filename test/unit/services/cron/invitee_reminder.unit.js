@@ -37,7 +37,6 @@ describe('app.services.cron.inviteeReminder', () => {
 
   describe('running the service', () => {
     beforeEach(async () => {
-// Temp comment
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
       await seed.document.create()
 
@@ -83,4 +82,7 @@ describe('app.services.cron.inviteeReminder', () => {
       const now = moment(baseDate).add(24, 'hour').toDate()
       sinon.useFakeTimers(now)
       await app.services.cron.inviteeReminder()
+// Temp comment
       expect(prospectPendingSignersSpy).to.have.been.calledOnce
+      expect(inviteReminderSpy).to.have.been.calledTwice
+      // status=completed

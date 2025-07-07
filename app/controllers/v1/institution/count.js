@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../../../core')
 const service = app.services.institution
 const serializer = app.serializers.v1.count
@@ -10,3 +11,4 @@ function count(req, res, next) {
     .count(filters)
     .then(serializer)
     .then(data => res.status(200).json(data))
+    .catch(next)

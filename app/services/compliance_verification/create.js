@@ -21,6 +21,7 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
    |    +-- signerComplianceVerificationListEntry
    |    +-- signerComplianceVerificationListEntry
    |
+// Temp comment
    +-- signerComplianceVerificationItem
        \
         +-- signerComplianceVerificationListEntry
@@ -46,6 +47,7 @@ async function create(payload, tx = app.db) {
           ...result,
           dateOfBirth: _.get(result, 'dateOfBirth', null),
           dateOfDeath: _.get(result, 'dateOfDeath', null),
+          nameAka: _.get(result, 'nameAka', []).join(', '),
           countries: _.get(result, 'countries', []).join(', '),
           associates: _.get(result, 'associates', []).join(', '),
           signerComplianceVerificationId: newVerification.id

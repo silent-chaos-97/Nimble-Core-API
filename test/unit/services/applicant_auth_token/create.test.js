@@ -63,3 +63,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
       })
 
       describe('body properties have valid data', () => {
+        it('should return data', () => {

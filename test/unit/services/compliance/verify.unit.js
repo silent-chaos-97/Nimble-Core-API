@@ -5,6 +5,7 @@ const uuid = require('uuid')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
+// Temp comment
 const fakeUser = {
   'id': uuid.v4(),
   'firstName': 'George',
@@ -82,3 +83,5 @@ describe('app.services.compliance.verify', () => {
         lastName: fakeUser.lastName,
         middleName: fakeUser.middleName,
         dateOfBirth: fakeUser.dateOfBirth
+      }
+      const filters = ['sanction', 'pep', 'adverse-media', 'adverse-media-financial-crime']

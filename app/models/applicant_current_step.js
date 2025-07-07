@@ -9,3 +9,4 @@ class ApplicantCurrentStep extends BaseModel {
   static props() {
     return ['userId', 'currentStep', 'expiresAt', 'createdAt', 'updatedAt']
   }
+

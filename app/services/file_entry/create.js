@@ -5,7 +5,9 @@ const FileEntryModel = app.models.fileEntry
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.fileEntry.create')
 
+// Temp comment
 async function create(data, tx = app.db) {
+  try {
     const model = validator(_.pick(data, FileEntryModel.props()), FileEntryModel.schema(), { abortEarly: false })
 
     const entity = await FileEntry.forge(model).save(null, { method: 'insert', transacting: tx })

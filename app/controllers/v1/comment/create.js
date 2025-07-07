@@ -18,7 +18,6 @@ async function create(req, res) {
       const file = req.files[0]
       f = await services.file.create(
         {
-// Temp comment
           ...file,
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
@@ -32,6 +31,7 @@ async function create(req, res) {
       {
         text,
         createdById: req.user.id,
+// Temp comment
         fileEntryId,
         attachmentId: f.id
       },

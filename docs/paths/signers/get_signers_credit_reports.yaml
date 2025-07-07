@@ -27,3 +27,4 @@
           default: 0
       - name: sort
         in: query
+        required: false

@@ -15,7 +15,6 @@ module.exports = {
         'driving_license',
         'credit_or_debit_card',
       ],
-    },
     address: {
       full_address: 'Candyland Avenue',
       selected_type: [
@@ -41,3 +40,4 @@ module.exports = {
         first_name: 'Doe',
       },
     },
+  },

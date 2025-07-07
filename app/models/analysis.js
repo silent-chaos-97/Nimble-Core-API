@@ -48,6 +48,7 @@ class AnalysisModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return [
       // meta and audit
       'id',
@@ -62,3 +63,5 @@ class AnalysisModel extends BaseModel {
       'ownerId',
       'customerId',
       'fileIds',
+
+      // props

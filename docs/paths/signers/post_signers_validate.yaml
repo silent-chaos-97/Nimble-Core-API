@@ -9,7 +9,6 @@
         name: id
         description: uuid Signer Id
         required: true
-        schema:
           type: string
           format: uuidv4
     security:
@@ -44,3 +43,4 @@
       '200':
         description: Validated
       '400':
+        $ref: '#/components/responses/BadRequest'

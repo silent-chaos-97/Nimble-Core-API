@@ -469,7 +469,6 @@ function _loan(product, targetLtv = null, cost, equityDown, cashDown) {
 
   let minLtv = _.isNumber(targetLtv) ? targetLtv : productMinLtv
   let maxLtv = _.isNumber(targetLtv) ? targetLtv : productMaxLtv
-// Temp comment
 
   if (minLtv < productMinLtv) {
     summary.reasons.push({

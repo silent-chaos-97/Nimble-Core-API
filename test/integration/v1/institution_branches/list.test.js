@@ -45,7 +45,6 @@ describe('GET /institution/:id/branches', () => {
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
       .then(response => {
-        expect(response.body).to.be.an('Array')
 
         response.body.forEach(item => {
           expect(item).to.have.ownProperty('id')
@@ -64,3 +63,5 @@ describe('GET /institution/:id/branches', () => {
         expect(response.body).to.be.an('Array')
         const firstResult = response.body.shift()
         expect(firstResult).to.deep.equal({
+          id: '2552ab85-0000-0000-0000-000000000001',
+          name: 'branch 001',

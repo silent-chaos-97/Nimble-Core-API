@@ -8,6 +8,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
   before(() => {
     emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
+// Temp comment
   })
 
   beforeEach(() => {
@@ -50,6 +51,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
       await seed.signerEmailVerification.create('FF000000-0000-0000-4444-1ea08a01e901')
 
       await knex('signers').update('email_verified', false).where('id', 'ffffffff-0000-473e-a5cb-1ea08a01e801')
+      await knex('signers').update('email_verified', false).where('id', 'ffffffff-0000-473e-a5cb-1ea08a01e901')
 
     })
 
@@ -78,3 +80,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
         sinon.useFakeTimers(now)
         await app.services.cron.emailVerificationReminder()
         expect(emailVerificationEmailSpy).to.not.have.been.called
+      })
+    })

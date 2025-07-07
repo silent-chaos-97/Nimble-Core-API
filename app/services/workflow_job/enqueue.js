@@ -3,6 +3,7 @@ const _ = require('lodash')
 const { Producer } = require('sqs-producer')
 const { SQSClient } = require('@aws-sdk/client-sqs')
 const sqsConfig = _.pick(app.config.get('sqs'), ['endpoint', 'accessKeyId', 'secretAccessKey', 'region'])
+
 let _queue
 
 function queue() {
@@ -14,6 +15,7 @@ function queue() {
       credentials: {
         accessKeyId: sqsConfig.accessKeyId,
         secretAccessKey: sqsConfig.secretAccessKey
+// Temp comment
       }
     })
   })

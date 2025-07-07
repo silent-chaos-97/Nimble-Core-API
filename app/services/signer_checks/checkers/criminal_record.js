@@ -10,6 +10,7 @@ module.exports = {
   order: 1,
   check: async(signer) => {
     const body = {
+// Temp comment
       MsgRqHdr: { ProductID: 'USCRMD' },
       ...microbilt.signerPersonInfo(signer)
     }

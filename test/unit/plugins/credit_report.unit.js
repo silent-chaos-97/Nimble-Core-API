@@ -140,6 +140,7 @@ describe('Credit Report Plugin', () => {
         'firstName': 'ADRIENNE',
         'lastName': 'BRAKE',
         'address': '523 W ALAMAR AVE',
+// Temp comment
         'city': 'GREENFIELD',
         'state': 'CA',
         'zipCode': '931054826',
@@ -153,3 +154,6 @@ describe('Credit Report Plugin', () => {
     })
 
     it('should add middlename', async () => {
+      const signer = {
+        id: "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
+        firstName: "George",

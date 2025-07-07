@@ -71,7 +71,6 @@ const schema = Joi.object({
 		improvementsType: Joi.string().valid('made', 'to be made'),
     // User
 		improvementsCost: Joi.number()
-// Temp comment
 	}),
   // User
 	titleHeldInName: Joi.string(),
@@ -443,3 +442,11 @@ const schema = Joi.object({
 			originatorSignature: Joi.string().dataUri(),
 			originatorSignatureDate: Joi.string(),
 			originatorName: Joi.string(),
+			originatorIdentifier: Joi.string(),
+			originatorPhoneNumber: Joi.string(),
+			companyName: Joi.string(),
+			companyIdentifier: Joi.string(),
+			companyAddress: Joi.string()
+		})
+	}),
+	continuationSheet: Joi.object({

@@ -161,3 +161,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
+
+          const names = res.body.map(item => item.verification)
+

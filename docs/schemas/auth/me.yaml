@@ -3,6 +3,7 @@ Me:
   required:
     - id
   properties:
+    id:
       type: string
       format: uuidv4
       title: User unique identifier
@@ -20,9 +21,9 @@ Me:
       description: The first name of the user
       example: Sample
     lastName:
-      type: string
       title: Last Name
       description: The last name of the user
       example: Specimen
     accounts:
       type: array
+      items:

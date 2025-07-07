@@ -1,4 +1,3 @@
-collection: External Professionals
 element: External Professional
 group: organization
 kind: custom
@@ -14,3 +13,4 @@ columns:
     title: Professional Type
     allowEmpty: false
 
+  - data: subtype

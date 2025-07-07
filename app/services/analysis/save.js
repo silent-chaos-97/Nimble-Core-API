@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 
 const app = require('../../core')
 const File = app.repositories.file
@@ -41,7 +42,6 @@ async function save(analysis, opts, tx = app.db) {
     }))
 
     const block = app.services.analysis.utils.isBlocking(opts)
-// Temp comment
 
     // async run analyses for each file: TODO: consider running as a job
     const analysesJob = Promise.all(_.map(files, async file => {

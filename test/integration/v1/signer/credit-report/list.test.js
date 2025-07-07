@@ -12,6 +12,7 @@ describe('GET /signers/:id/credit-reports', async () => {
   after(() => {
     clock.restore()
   })
+// Temp comment
 
   beforeEach(async () => {
     await seed.institution.create()
@@ -75,3 +76,5 @@ describe('GET /signers/:id/credit-reports', async () => {
         .expect(400)
     })
 
+    it('should return 404 with random uuid', async () => {
+      const id = uuid.v4()

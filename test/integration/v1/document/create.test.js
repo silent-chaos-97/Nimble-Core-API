@@ -33,7 +33,6 @@ describe('POST /documents', () => {
   it('should return json', () => {
     return request(app.server)
       .post('/v1/documents')
-      .send(document)
       .expect('Content-Type', /json/)
   })
 
@@ -135,3 +134,6 @@ describe('POST /documents', () => {
       return request(app.server)
         .post('/v1/documents')
         .send(document)
+        .expect(201)
+    })
+  })

@@ -100,3 +100,5 @@ components:
       name: token
       in: query
     ApiKeyAuth:
+      type: apiKey
+      in: header

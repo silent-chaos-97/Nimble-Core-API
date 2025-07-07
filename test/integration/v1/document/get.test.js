@@ -43,7 +43,6 @@ describe('GET /documents/:id', () => {
         .expect(401)
     })
   })
-
   describe('when authentication token does not have valid scope', () => {
     it('should return 403 when token scope is not documents', async () => {
       const data = { scopes: ['users'] }
@@ -54,3 +53,4 @@ describe('GET /documents/:id', () => {
         .expect(403)
     })
 
+    it('should return 403 when resource id not whitelisted in token', async () => {

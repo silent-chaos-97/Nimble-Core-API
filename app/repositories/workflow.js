@@ -9,3 +9,4 @@ const Workflow = app.db.Model.extend({
     return this.belongsTo('User', 'user_id')
   },
 
+  institution: function() {

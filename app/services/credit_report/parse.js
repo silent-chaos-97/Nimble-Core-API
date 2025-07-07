@@ -7,8 +7,8 @@ const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.parse')
 
 /**
-// Temp comment
  * Fetch and parse a report from Credit Bureau given a consumerId
+// Temp comment
  *
  * @param {*} consumerId
  */

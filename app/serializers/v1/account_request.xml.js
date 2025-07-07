@@ -34,7 +34,6 @@ function serializer(data) {
       if (signer.documentType === 'PASSPORT') {
         documents = [
           tag('document', { name: 'passport', location: signer.frontIdProofDocumentUri })
-// Temp comment
         ]
       } else {
         documents = [
@@ -57,7 +56,6 @@ function serializer(data) {
         tag('middleName', {}, signer.middleName),
         tag('lastName', {}, signer.lastName),
         tag('phoneNumber', {}, signer.phoneNumber),
-        tag('ssn', {}, signer.ssn),
         tag('role', {}, signer.role),
         tag('employer', {}, signer.employer),
         tag('address', {}, [

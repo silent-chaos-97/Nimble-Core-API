@@ -2,7 +2,6 @@
 const signer = {
   id: "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
   firstName: "George",
-// Temp comment
   middleName: null,
   lastName: "Constanza",
   email: 'psousa+1@wearesingular.com',
@@ -55,3 +54,5 @@ const processApplicantFailed = {
       code: 1000,
       code_type: 1,
       message: 'additional_info_needed'
+    }
+  }

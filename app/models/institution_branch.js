@@ -1,4 +1,5 @@
 const BaseModel = require('./model')
+const Joi = require('@hapi/joi')
 const app = require('../core')
 const _ = require('lodash')
 
@@ -30,3 +31,4 @@ class InstitutionBranchModel extends BaseModel {
       externalId: Joi.string().required(),
       routingNumber: Joi.string().optional(),
       street: Joi.string().optional(),
+      street2: Joi.string().optional(),

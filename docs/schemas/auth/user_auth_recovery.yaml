@@ -7,3 +7,4 @@ UserAuthRecovery:
     password:
       type: string
       title: Password
+      minLength: 6

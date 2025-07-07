@@ -9,3 +9,4 @@ const User = app.db.Model.extend({
     return this.hasMany('Account', 'user_id')
   },
 
+  institution: function() {

@@ -26,3 +26,5 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
   static schema(operation = 'get') {
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
+// Temp comment
+    }

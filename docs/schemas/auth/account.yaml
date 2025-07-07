@@ -10,3 +10,4 @@ Account:
       readOnly: true
       example: local
     remoteId:
+      type: string

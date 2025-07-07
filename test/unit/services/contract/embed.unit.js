@@ -1,6 +1,5 @@
 const axios = require('axios')
 const nock = require('nock')
-axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.contract.embed', () => {
   describe('embed', async () => {
@@ -33,6 +32,7 @@ describe('app.services.contract.embed', () => {
         await seed.account_request_products() // insert all
         await seed.account_request_product_options() // insert all
         await seed.signer.create(signerId)
+        await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
         await seed.docusignTemplate.create()
       })
 
@@ -40,3 +40,4 @@ describe('app.services.contract.embed', () => {
         sinon.reset()
         nock.cleanAll()
       })
+

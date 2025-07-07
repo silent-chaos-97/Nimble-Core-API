@@ -100,7 +100,6 @@ class CreditReport {
    * Convert signer to data that Credit Report needs
    *
    * @param {*} signer
-   */
   _formatApplicantData(signer) {
     // get relevant fields from signer
     const { firstName, middleName, lastName, address, city, state, zipCode, phoneNumber, email, dateOfBirth, ssn } = signer

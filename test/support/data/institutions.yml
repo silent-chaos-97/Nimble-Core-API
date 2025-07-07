@@ -16,6 +16,7 @@
         thresholds:
           - op: '>='
             val: 7
+            risk: High
           - op: '>='
             val: 5
             risk: Moderate
@@ -30,3 +31,4 @@
           no: 2
         required: 'true'
         default: ''
+

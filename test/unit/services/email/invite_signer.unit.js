@@ -62,3 +62,5 @@ describe('app.services.email.inviteSigner', () => {
 
     it('should exist', () => {
       expect(app.services.email.inviteSigner).not.to.be.undefined
+    })
+

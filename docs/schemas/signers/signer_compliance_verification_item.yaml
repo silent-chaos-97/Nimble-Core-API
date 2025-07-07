@@ -3,6 +3,7 @@ SignerComplianceVerificationItem:
   properties:
     id:
       type: string
+      format: uuidv4
       title: uuid
       readOnly: true
       description: Result Identifier
@@ -31,3 +32,4 @@ SignerComplianceVerificationItem:
       type: array
       items:
         type: string
+    adverseMedia:

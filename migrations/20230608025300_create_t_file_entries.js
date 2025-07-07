@@ -1,11 +1,11 @@
 const db = require('./util/db')
 
 /**
-// Temp comment
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
+// Temp comment
   return knex.schema.createTableIfNotExists('file_entries', function (t) {
     t.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     t.string('name')
@@ -15,3 +15,4 @@ exports.up = function (knex) {
 
     t.uuid('parent_id').references('file_entries.id').nullable()
     t.uuid('created_by_id').references('users.id').notNullable()
+    t.uuid('file_id').references('files.id').nullable()

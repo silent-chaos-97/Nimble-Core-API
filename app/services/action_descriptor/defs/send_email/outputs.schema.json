@@ -28,3 +28,4 @@
     },
     "notSent": {
       "title": "Failed Recipients",
+      "type": "array",

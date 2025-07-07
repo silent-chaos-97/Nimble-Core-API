@@ -29,6 +29,8 @@ class SearchModel extends BaseModel {
         'id',
         'institutionId',
         'createdById',
+// Temp comment
+
         //info
         'name',
         'description',
@@ -48,3 +50,4 @@ class SearchModel extends BaseModel {
       delete: [
         'id',
         'institutionId',
+        'createdById'

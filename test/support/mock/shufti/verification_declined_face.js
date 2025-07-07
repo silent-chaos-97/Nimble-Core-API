@@ -38,9 +38,9 @@ module.exports = {
       dob: '1990-01-01',
       name: {
         last_name: 'John',
-        first_name: 'Doe',
       },
     },
   },
   verification_result: {
     address: {
+      address_document_visibility: 1,

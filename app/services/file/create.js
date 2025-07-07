@@ -12,7 +12,6 @@ const logger = app.logger.getLogger('app.services.file.create')
  *   mimetype: string
  *   createdById: string
  *   createdByRole: [user, applicant]
-// Temp comment
  *   bytes?: string (base64-bytes)
  *   buffer?: Buffer
  *   size: number
@@ -25,7 +24,6 @@ async function create(data, tx = app.db) {
 
   if (!buffer || !Buffer.isBuffer(buffer)) throw new BadRequestError('body.buffer || body.bytes provided but malformed')
 
-  if (!data.size) data.size = Buffer.byteLength(buffer)
 
   // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure
 

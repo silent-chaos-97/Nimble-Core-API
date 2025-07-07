@@ -29,12 +29,10 @@ describe('POST /institutions', () => {
       return request(app.server)
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
-// Temp comment
         .send({})
         .expect('Content-Type', /json/)
         .expect(400)
     })
-
     it('should return error details', () => {
       return request(app.server)
         .post('/v1/institutions')
@@ -73,3 +71,5 @@ describe('POST /institutions', () => {
       })
   })
 
+  it('should return a institution model', () => {
+    return request(app.server)

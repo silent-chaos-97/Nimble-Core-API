@@ -1,7 +1,7 @@
 {
   "properties": {
     "memo": {
-      "type": "string"
+      "title": "Memo",
     },
     "scope": {
       "title": "Account Type",
@@ -13,3 +13,4 @@
       "stereotype": "scope"
     },
     "product": {
+      "title": "Product",

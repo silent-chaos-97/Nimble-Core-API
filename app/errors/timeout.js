@@ -1,5 +1,5 @@
 const _ = require('lodash')
 
 class TimeoutError extends Error {
-    super(_.isError(error) ? error.message : (error || 'The request has timed out'))
+  constructor(error) {
     this.case = _.isError(error) ? error : null

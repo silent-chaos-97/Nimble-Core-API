@@ -267,6 +267,7 @@ class Docusign {
       const tabs = {
         textTabs: updatedTextTabs
       }
+      if (_.isEmpty(updatedTextTabs)) {
         logger.debug(`[_getUpdatedRecipientAndTabs] updatedTextTabs is empty for signer [${signer.id}] on position ${position}`)
         // return null
       } else {

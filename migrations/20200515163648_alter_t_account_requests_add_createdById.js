@@ -1,3 +1,4 @@
+exports.up = function (knex) {
   return knex.schema.alterTable('account_requests', function (table) {
     table.uuid('created_by_id').nullable()
 
@@ -12,3 +13,4 @@
 
     return knex.raw(q).then(function (result) {
       return Promise.all(
+        result.rows.map((row) => {

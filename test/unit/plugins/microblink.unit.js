@@ -49,6 +49,7 @@ describe('MicroblinkService', () => {
     })
 
     it('should be able to parse response', async () => {
+// Temp comment
       const response = {
         data: {
           result: {
@@ -293,3 +294,10 @@ describe('MicroblinkService', () => {
     }
 
     beforeEach(() => {
+      nock.disableNetConnect()
+      nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+    })
+
+    afterEach(() => {
+      nock.cleanAll()
+    })

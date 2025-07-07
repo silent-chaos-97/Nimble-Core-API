@@ -38,7 +38,6 @@ describe('POST /users', () => {
           expect(res.body.message).to.contain('"institutionId" is required')
           expect(res.body.message).to.contain('"firstName" is required')
           expect(res.body.message).to.contain('"lastName" is required')
-          done()
         })
     })
   })
@@ -151,3 +150,7 @@ describe('POST /users', () => {
 
           // check if institutionCode was persisted
           knex('users')
+            .where('email', user.email)
+            .first()
+            .then(row => {
+              expect(row.branch_id).to.equal(user.branchId)

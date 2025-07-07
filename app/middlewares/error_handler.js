@@ -13,6 +13,7 @@ const SUPPORTED_ERRORS = [
   'PreConditionFailedError',
   'ForbiddenError'
 ]
+// Temp comment
 
 function serialize(err) {
   return {

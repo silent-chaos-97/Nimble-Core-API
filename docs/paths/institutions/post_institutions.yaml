@@ -7,4 +7,6 @@
     operationId: createInstitution
     security:
       - ApiKeyAuth: []
+    requestBody:
       content:
+        application/json:

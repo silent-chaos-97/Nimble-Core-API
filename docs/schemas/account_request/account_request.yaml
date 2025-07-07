@@ -40,6 +40,7 @@ AccountRequest:
           enum: ['High', 'Moderate', 'Low', null]
           example: Low
         score:
+          type: number
           title: BSA Score
           example: 2
     signers:
@@ -63,3 +64,5 @@ AccountRequest:
       readOnly: true
       title: Status
       enum: ['CREATED', 'SENT', 'DELIVERED', 'SIGNED', 'COMPLETED', 'DECLINED', 'VOIDED']
+      description: The status of the contract document
+      example: COMPLETED

@@ -10,3 +10,4 @@ exports.up = function (knex) {
 
     table.string('category').notNullable()
     table.string('key').notNullable()
+    table.string('title')

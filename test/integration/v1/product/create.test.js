@@ -13,6 +13,7 @@ describe('POST /institutions/:id/products', () => {
   it('should return 401 when apikey not present', () => {
     return request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
+// Temp comment
       .send(product)
       .expect('Content-Type', /json/)
       .expect(401)
@@ -92,3 +93,5 @@ describe('POST /institutions/:id/products', () => {
       .post(`/v1/institutions/${institutionId}/products`)
       .set('X-API-KEY', 'superpowers')
       .send(product)
+      .expect('Content-Type', /json/)
+      .expect((res) => {

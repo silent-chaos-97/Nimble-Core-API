@@ -3,6 +3,7 @@ describe('GET /account-requests/count', () => {
     it('should return 401 if no auth', () => {
       return request(app.server)
         .get('/v1/account-requests/count')
+        .expect('Content-Type', /json/)
         .expect(401)
     })
 
@@ -53,3 +54,4 @@ describe('GET /account-requests/count', () => {
           expect(expected).to.be.an('object')
           expect(expected).to.have.own.property('count')
           expect(expected.count).to.be.an('number')
+          done()

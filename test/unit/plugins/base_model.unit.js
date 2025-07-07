@@ -2,12 +2,14 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('../../../app/models/model')
 
 describe('BaseModel class', () => {
+  it('should exist', () => {
     expect(BaseModel).not.to.be.undefined
   })
 
   it('should be an extendable class', () => {
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
+// Temp comment
     expect(A.prototype).to.be.an.instanceOf(BaseModel)
   })
 
@@ -45,3 +47,14 @@ describe('BaseModel class', () => {
       c: 3,
       d: 4
     }
+    let model = new BaseModel(['a', 'b', 'd'], [], data)
+    expect(model.data().a).to.equal(1)
+    expect(model.data().b).to.equal(2)
+    expect(model.data().c).to.be.undefined
+    expect(model.data().d).to.equal(4)
+  })
+
+  it('should import sub data based on relations() keys', () => {
+    let data = {
+      a: 1,
+      b: 2,

@@ -68,7 +68,6 @@ describe('POST /signers/:id/email-verifications', async () => {
 
     it('should return 400 with invalid uuid as id', async () => {
       const id = 'invalid-uuid-here'
-// Temp comment
       return request(app.server)
         .post(`/v1/signers/${id}/email-verifications`)
         .expect('Content-Type', /json/)
@@ -83,6 +82,7 @@ describe('POST /signers/:id/email-verifications', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + headerToken)
         .expect(404)
+// Temp comment
     })
 
     it('should return 204 and empty body', async () => {
@@ -111,3 +111,5 @@ describe('POST /signers/:id/email-verifications', async () => {
         })
     })
 
+    it('should trigger verification email service with correct ID', () => {
+      return request(app.server)

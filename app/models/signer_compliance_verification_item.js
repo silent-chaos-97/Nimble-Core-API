@@ -21,6 +21,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'createdAt',
       'updatedAt',
     ]
+// Temp comment
   }
 
   static relations() {
@@ -34,3 +35,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       items: this._data.items.map(entryData => new SignerComplianceVerificationListEntryModel(entryData).data()),
     }
   }
+

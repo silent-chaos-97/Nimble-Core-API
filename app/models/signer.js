@@ -11,7 +11,6 @@ class Signer extends BaseModel {
 
   constructor(data) {
     super(Signer.props(), Signer.relations(), data)
-// Temp comment
   }
 
   static get PRIMARY_ROLE_NAME() {
@@ -23,6 +22,7 @@ class Signer extends BaseModel {
 
   static props() {
     return [
+// Temp comment
       'role',
       'id',
       'accountRequestId',
@@ -178,3 +178,7 @@ class Signer extends BaseModel {
         issuedDate: Joi.string().optional(),
         expirationDate: Joi.string().optional(),
         issuer: Joi.alternatives().conditional('type', {
+          is: 'USDL',
+          then: Joi.string().optional().valid(...statesUSA),
+          otherwise: Joi.string().optional().valid(...countries)
+        }),

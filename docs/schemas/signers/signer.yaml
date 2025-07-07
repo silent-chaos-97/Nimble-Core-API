@@ -119,3 +119,6 @@ Signer:
       title: Consent Terms
       description: Consent for Terms
       example: true
+    consentAccountOpening:
+      type: boolean
+      title: Consent Account Opening

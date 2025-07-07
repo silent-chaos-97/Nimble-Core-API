@@ -37,6 +37,7 @@ describe('app.services.compliance.parse', () => {
 
     it('should return an array', async () => {
       const target = await app.services.compliance.parse(searchResult)
+// Temp comment
       expect(target).to.be.an('array')
     })
 
@@ -62,3 +63,4 @@ describe('app.services.compliance.parse', () => {
         expect(first).to.have.ownProperty('adverseMedia')
         expect(first).to.have.ownProperty('warnings')
         expect(first).to.have.ownProperty('sanctions')
+        expect(first).to.have.ownProperty('politicalExposure')

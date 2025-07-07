@@ -27,3 +27,4 @@ SignerComplianceVerificationListEntry:
       title: A URL for this entry
       type: string
     type:
+      type: string

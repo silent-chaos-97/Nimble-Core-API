@@ -17,7 +17,6 @@ class InstitutionModel extends BaseModel {
       'name',
       'email',
       'domain',
-      'templateApprove',
       'templateDecline',
       'routingNumber',
       'logo',
@@ -63,3 +62,5 @@ class InstitutionModel extends BaseModel {
       agreements: Joi.object(),
       questions: Joi.object().keys({
         count: Joi.number().integer().positive().allow(0).default(0).optional(),
+        thresholds: Joi.array().optional().default([]).items(Joi.object()),
+        data: Joi.array().default([]).items(Joi.object().keys({

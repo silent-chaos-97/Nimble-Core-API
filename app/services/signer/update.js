@@ -39,3 +39,22 @@ async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
   }
 
   logger.debug(`[validateAndUpdateSignerStatus] - end for signer [${signerId}]`)
+}
+
+async function updateSigner(id, data, tx = app.db) {
+  const updateData = {
+    id: id,
+    ...data
+  }
+
+  // Check for duplicates
+  const results = await validateService(updateData, tx)
+  if (results) {
+    // dupes exist - prevent update
+    throw new ConflictError('Duplicates values for fields which must be unique exist between multiple signers on the application')
+  }
+
+  await Signer.forge({ id: id }).save(updateData, {
+    method: 'update',
+    transacting: tx
+  })

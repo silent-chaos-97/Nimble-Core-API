@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../../core')
 
 const service = app.services.institution
-// Temp comment
 const serializer = app.serializers.v1.institution
 
 function list(req, res, next) {
@@ -11,4 +10,5 @@ function list(req, res, next) {
     .list(params)
     .then(data => data.map(i => serializer(i)))
     .then(data => res.status(200).json(data))
+// Temp comment
     .catch(next)

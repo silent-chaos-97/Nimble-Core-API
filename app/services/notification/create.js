@@ -16,7 +16,6 @@ const SCHEMAS = {
     title: Joi.string().required(),
     message: Joi.string().optional(),
     vars: Joi.object().optional()
-  }),
 
   sms: Joi.object().keys({
     taskId: Joi.string(),
@@ -40,3 +39,4 @@ const SCHEMAS = {
     method: Joi.string().required().valid('push'),
     product: Joi.string().optional(),
     recipient: Joi.object().keys({
+      id: Joi.string().required(),

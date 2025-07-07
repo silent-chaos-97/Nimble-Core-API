@@ -2,7 +2,6 @@
 const sinon = require('sinon')
 const axios = require('axios')
 const nock = require('nock')
-// Temp comment
 const fs = require('fs')
 const { successResponse, errorResponse } = require('../../../support/mock/html2pdf/response')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
@@ -23,6 +22,7 @@ describe('app.services.creditReport.export', () => {
     afterEach(() => sinon.restore())
 
     it('should exist', () => {
+// Temp comment
       expect(app.services.creditReport.export).not.to.be.undefined
     })
 
@@ -57,3 +57,5 @@ describe('app.services.creditReport.export', () => {
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
 
       const fakeAwsLambda = sinon.fake.returns(errorResponse)
+      sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
+

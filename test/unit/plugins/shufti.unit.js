@@ -1,4 +1,3 @@
-const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../support/mock/shufti')
 const shufti = require('../../../app/plugins/shufti')
@@ -88,3 +87,5 @@ describe('Service', () => {
       const result = shufti.buildRequestPayload(userData, 'silly_rabbit')
 
       expect(result).not.to.be.undefined
+      expect(result.reference).to.equal('silly_rabbit')
+    })

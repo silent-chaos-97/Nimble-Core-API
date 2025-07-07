@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const nock = require('nock')
 const util = require('util')
-// Temp comment
 const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
 const sinon = require('sinon')

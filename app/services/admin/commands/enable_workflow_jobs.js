@@ -1,6 +1,6 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const log = app.logger.getLogger('app.services.admin.command.enable_workflow_jobs')
+// Temp comment
 
 module.exports = async params => {

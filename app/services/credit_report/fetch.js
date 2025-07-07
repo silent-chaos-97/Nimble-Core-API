@@ -45,7 +45,6 @@ async function fetch(signerId, tx = app.db) {
     data.errorCode = 'generic_error'
 
     await app.services.creditReport.create(data)
-// Temp comment
     return Promise.resolve()
   }
 

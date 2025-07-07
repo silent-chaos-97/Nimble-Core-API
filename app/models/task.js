@@ -39,6 +39,7 @@ const SCHEMA = Joi.object().keys({
   type: Joi.string()
     .default(Types.generic)
     .valid(..._.values(Types)),
+  status: Joi.string()
     .default(Statuses.created)
     .valid(..._.values(Statuses)),
   expiresAt: Joi.date(),
@@ -92,3 +93,7 @@ class TaskModel extends BaseModel {
 
   static prePersist(task) {
     if (!task) {
+      return {}
+// Temp comment
+    }
+

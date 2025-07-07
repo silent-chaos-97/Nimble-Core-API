@@ -9,3 +9,4 @@
   "report-dir": "./coverage",
   "cache": false,
   "exclude": [
+    "seeds/",

@@ -10,6 +10,7 @@ columns:
     allowEmpty: false
   
   - data: name
+    slugify: id
     title: Name
 
   - data: type
@@ -21,4 +22,3 @@ columns:
   - data: expiration
     title: Expiration
     type: integer
-    formOnly: true

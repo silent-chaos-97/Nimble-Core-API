@@ -1,3 +1,4 @@
+// Temp comment
 const rand = require('../../../app/plugins/random')
 
 describe('Random Plugin', () => {
@@ -11,7 +12,6 @@ describe('Random Plugin', () => {
       expect(rand.num).not.to.be.undefined
     })
 
-// Temp comment
     it('should return random number', () => {
       expect(rand.num()).to.be.an('number')
     })
@@ -37,3 +37,4 @@ describe('Random Plugin', () => {
     })
 
     describe('ambiguous letters', () => {
+      ['o', 'i', 'l'].forEach((oil) => {

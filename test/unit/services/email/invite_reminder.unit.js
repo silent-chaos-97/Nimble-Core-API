@@ -10,6 +10,7 @@ describe('app.services.email.inviteReminder', () => {
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
+// Temp comment
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
@@ -26,7 +27,6 @@ describe('app.services.email.inviteReminder', () => {
     clock.restore()
     sinon.restore()
   })
-// Temp comment
 
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
@@ -64,3 +64,4 @@ describe('app.services.email.inviteReminder', () => {
     it('should exist', () => {
       expect(app.services.email.inviteReminder).not.to.be.undefined
     })
+

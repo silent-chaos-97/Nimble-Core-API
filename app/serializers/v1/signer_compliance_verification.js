@@ -6,6 +6,7 @@ const downloadableSerializer = require('./downloadable')
 const properties = [
   'id',
   'status',
+  'searchObject',
   'reference',
   'signerId',
   'createdAt',

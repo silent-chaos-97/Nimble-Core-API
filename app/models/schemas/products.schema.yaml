@@ -87,6 +87,7 @@ columns:
       'RIFLGFCM06_N.B': Treasury / Constant Maturities / 6-Month
       'RIFLGFCY01_N.B': Treasury / Constant Maturities / 1-Year
       'RIFLGFCY02_N.B': Treasury / Constant Maturities / 2-Year
+      'RIFLGFCY03_N.B': Treasury / Constant Maturities / 3-Year
       'RIFLGFCY05_N.B': Treasury / Constant Maturities / 5-Year
       'RIFLGFCY07_N.B': Treasury / Constant Maturities / 7-Year
       'RIFLGFCY10_N.B': Treasury / Constant Maturities / 10-Year
@@ -107,3 +108,6 @@ columns:
       pattern: 0.00
       postfix: '%'
     allowEmpty: false
+
+  - data: effective_rate
+    type: numeric

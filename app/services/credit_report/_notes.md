@@ -16,3 +16,4 @@ List of error codes for API from https://secure.isoftpull.com/index.php?m=prequa
 - 1020	1	Request was received successfully, but we could not find the user's credit file due to an issue with the submitted address.
 - 1021	1	Request was received successfully, but we could not find the user's credit file due to an issue with the submitted name.
 - 1022	2	A lenderid must be included in all requests.
+- 1008	2	Lender ID not found or this account is currently disabled.

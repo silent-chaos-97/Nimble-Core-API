@@ -34,3 +34,4 @@
   "consentPrivacyPolicy": true,
   "consentCommunication": false,
   "checkSanction": null,
+  "sanctionVerifiedAt": null,

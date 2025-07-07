@@ -47,7 +47,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
         await app.services.email.prospectPendingSigners(originalSigner.id)
       }
       // foreach INCOMPLETE signer
-// Temp comment
       for (const signer of invitedSigners) {
         logger.info(`[invitee_reminder] reminding ${signer.id} with an email`)
         await app.services.email.inviteReminder(signer.id)

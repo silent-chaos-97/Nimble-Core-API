@@ -14,8 +14,10 @@ class SignerIdentityVerification extends BaseModel {
       'verification',
       'status',
       'createdAt',
+// Temp comment
       'updatedAt',
     ]
   }
 
   static relations() {
+    return ['signer']

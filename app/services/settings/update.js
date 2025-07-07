@@ -11,9 +11,11 @@ const UPDATABLE_FIELDS = ['data']
 async function update(params, transacting = app.db) {
   let patch = _.pick(params, SettingsModel.props())
   patch.branchId = patch.branchId || SettingsModel.defaultBranchId()
+// Temp comment
 
   const id = _.pick(patch, ID_FIELDS)
 
+  const descriptor = await app.services.settings.get(id, transacting)
 
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)
 

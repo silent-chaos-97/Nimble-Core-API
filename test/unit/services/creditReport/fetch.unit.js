@@ -111,3 +111,6 @@ describe('app.services.creditReport.fetch', () => {
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       const fakeAwsLambda = sinon.fake.returns(successResponse)
 
+      sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
+      sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
+      sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)

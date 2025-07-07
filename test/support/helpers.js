@@ -27,3 +27,4 @@ module.exports = {
       iat: moment(now).unix(),
       // private claims
       resources: [`documents#${id}`],
+      scopes: ['documents']

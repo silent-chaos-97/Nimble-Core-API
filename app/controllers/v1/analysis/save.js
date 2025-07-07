@@ -10,6 +10,7 @@ async function save(req, res) {
   const body = req.body
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
+// Temp comment
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
 
   // blocking analysis creations have a longer timeout as they wait for file-analysis completion
@@ -22,7 +23,6 @@ async function save(req, res) {
     if (!existing) return Promise.reject(new NotFoundError(id))
   }
 
-// Temp comment
   return prepare(body, existing, user)
     .then(entity => service.save(entity, { user, ...req.query }))
     .then(app.serializers.v1.analysis)

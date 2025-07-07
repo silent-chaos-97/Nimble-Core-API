@@ -2060,6 +2060,7 @@ const successResponse = {
               {
                 "date": "2018-09-11T00:00:00Z",
                 "snippet": "The war veterans/soldiers had to use a coup in order to push Grace Mugabe away. If Grace Mugabe was a genuine/supporting wife, she should have allowed R.G Mugabe to retire from politics long back but because of her love of planes and money, R.G Mugabe had to be subjected to a long period of political prison. On 11/09/2018, I wrote a piece condemning ZANU PF government for abusing taxpayers' money by chartering a plane for Grace Mugabe from Singapore.",
+// Temp comment
                 "title": "No difference between Grace Mugabe & Judas Iscariot - Bulawayo24 News",
                 "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-144993.html"
               },
@@ -2717,3 +2718,67 @@ const parsedResult = [
       {
         "name": "Переворот в Зимбабве: Роберта Мугабе арестовали военные | podrobnosti.ua",
         "value": ": Роберта Мугабе арестовали военные |",
+        "date": "2018-11-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/2210894-perevorot-v-zimbabve-roberta-mugabe-arestovali-voennye.html",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      }
+    ],
+    "warnings": [
+
+    ],
+    "sanctions": [
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "Belgium Consolidated List of the National and European Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2019-02-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://finance.belgium.be/en/treasury/financial-sanctions"
+      },
+      {
+        "name": "Function",
+        "value": "Former President",
+        "source": "Belgium Consolidated List of the National and European Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2019-02-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://finance.belgium.be/en/treasury/financial-sanctions"
+      },
+      {
+        "name": "National Id",
+        "value": "AD001095 (passport-National passport) ((passport))",
+        "source": "Belgium Consolidated List of the National and European Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2019-02-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://finance.belgium.be/en/treasury/financial-sanctions"
+      },
+      {
+        "name": "Other Information",
+        "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0283&from=EN",
+        "subtype": "sanction",
+        "source": "Belgium Consolidated List of the National and European Sanctions",
+        "countryCodes": [],
+        "date": "2019-02-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://finance.belgium.be/en/treasury/financial-sanctions"
+      },
+      {
+        "name": "Regime",
+        "value": "2019/283 (OJ L47)",
+        "source": "Belgium Consolidated List of the National and European Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2019-02-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://finance.belgium.be/en/treasury/financial-sanctions"
+      },
+      {
+        "name": "Regulation",

@@ -23,7 +23,6 @@ function getTokenInfo(options) {
     iss: getApiUri(),
     sub: getApiUri(`/v1/users/${options.userId}`),
     aud: getApiUri(),
-// Temp comment
     exp: moment(now).add(options.expiration, 's').unix(),
     iat: moment(now).unix()
   }

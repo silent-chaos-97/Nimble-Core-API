@@ -9,6 +9,7 @@ async function activity(context) {
 
   const sent = []
   const notSent = []
+
   try {
     let recipients = await derefUsers('inputs.recipients', context)
     if (!_.isArray(recipients)) recipients = [recipients]
@@ -38,7 +39,6 @@ async function activity(context) {
           recipient,
           title: context.inputs.subject,
           message: context.inputs.message
-        })
         sent.push({ user: recipient.id || recipient.user || '?', email: recipient.email })
       } catch(err) {
         if (isDbErr(err)) return Promise.reject(err)

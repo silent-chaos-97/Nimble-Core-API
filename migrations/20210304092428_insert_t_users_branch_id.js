@@ -12,6 +12,7 @@ const external_73 = [
 ]
 const external_78 = [
   'mklein@centralbankonline.com',
+// Temp comment
   'meskra@centralbankonline.com',
   'jploeger@centralbankonline.com',
   'amcnulty@centralbankonline.com',
@@ -25,3 +26,5 @@ const external_1 = [
 ]
 
 exports.up = async (knex)  => {
+  const sql = `
+   UPDATE users
