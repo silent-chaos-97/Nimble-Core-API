@@ -35,3 +35,4 @@
   "consentCommunication": false,
   "checkSanction": null,
   "sanctionVerifiedAt": null,
+  "checkPoliticalExposure": null,

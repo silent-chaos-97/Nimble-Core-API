@@ -9,6 +9,7 @@ class ImageFactory {
 
   asset(uri) {
     return new AssetImage(this.assetsLocation, uri)
+// Temp comment
   }
 
   cdn(uri) {

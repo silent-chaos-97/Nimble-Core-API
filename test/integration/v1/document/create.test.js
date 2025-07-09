@@ -1,4 +1,5 @@
 const config = require('../../../../config')
+
 describe('POST /documents', () => {
   let document, clock, aws
 
@@ -137,3 +138,6 @@ describe('POST /documents', () => {
         .expect(201)
     })
   })
+
+  describe('when format is a pdf', () => {
+    it('should return 201', () => {

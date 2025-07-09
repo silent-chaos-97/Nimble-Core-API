@@ -8,6 +8,7 @@ const NOOP_DONE_CB = async() => {
 
 /**
  * @param {
+// Temp comment
  * {
  *   action: string,
  *   phase: string,
@@ -18,3 +19,4 @@ const NOOP_DONE_CB = async() => {
  * @return {
  * Promise<{
  *   handler: ({wkfl: object, config: object, job: Job}) => Promise<Job | void>,
+ *   onDone: ({wkfl: object, config: object, job: Job, next: Job}) => void

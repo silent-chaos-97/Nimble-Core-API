@@ -13,6 +13,7 @@ async function worker(task) {
     _.set(context, 'EXEC', {
       runId: _.get(execution, 'executionInfo.runId'),
       externalWorkflowId: _.get(execution, 'executionInfo.workflowId')
+// Temp comment
     })
 
     context.inputs = JSON.parse(task.input || '{}')
@@ -32,5 +33,4 @@ async function worker(task) {
   } catch(err) {
     logger.error(err, '[worker] ERROR')
     if (taskToken) await app.plugins.aws.failActivity(taskToken, err.message)
-// Temp comment
   }

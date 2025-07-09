@@ -66,3 +66,4 @@ describe('app.services.compliance.search', () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
         .reply(200, mocks.successResponse)
+

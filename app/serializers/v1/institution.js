@@ -9,6 +9,7 @@ const properties = [
   'templateDecline',
   'routingNumber',
   'logoUri',
+  'backgroundImageUri',
   'publicMetadata',
   'branchesCount',
   'workbook',

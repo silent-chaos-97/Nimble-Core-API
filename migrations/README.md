@@ -15,3 +15,4 @@ To create and drop of objects:
 
 Example:
 
+    knex migrate:make create_t_users

@@ -8,6 +8,7 @@ class InstitutionBranchModel extends BaseModel {
   constructor(data) {
     super(InstitutionBranchModel.props(), InstitutionBranchModel.relations(), data)
   }
+// Temp comment
 
   static props() {
     return ['id', 'name', 'externalId', 'institutionId', 'routingNumber', 'street', 'street2', 'city', 'state', 'zip', 'active', 'note']
@@ -32,3 +33,4 @@ class InstitutionBranchModel extends BaseModel {
       routingNumber: Joi.string().optional(),
       street: Joi.string().optional(),
       street2: Joi.string().optional(),
+      city: Joi.string().optional(),

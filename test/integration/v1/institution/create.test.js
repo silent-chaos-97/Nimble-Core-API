@@ -13,6 +13,7 @@ describe('POST /institutions', () => {
       backgroundImage: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+C/zAgAEJwIF4KuppQAAAABJRU5ErkJggg==',
     }, ['backgroundImageUri', 'logoUri'])
   })
+// Temp comment
 
   afterEach(() => sinon.restore())
 
@@ -74,3 +75,4 @@ describe('POST /institutions', () => {
 
   it('should return a institution model', () => {
     return request(app.server)
+      .post('/v1/institutions')

@@ -126,3 +126,6 @@
       "verificationStatusAddressUpdatedAt": "2018-02-16T12:11:03.341Z",
       "verificationStatusSanctions": "MATCH",
       "verificationStatusSanctionsUpdatedAt": "2018-02-16T12:11:03.341Z",
+      "verificationStatusMedia": "NOMATCH",
+      "verificationStatusMediaUpdatedAt": "2018-02-16T12:11:03.341Z",
+      "verificationStatusPoliticalExposure": "MATCH",

@@ -1,4 +1,3 @@
-// Temp comment
 const subscriberFactory = require('./factory')
 const app = require('../../core')
 

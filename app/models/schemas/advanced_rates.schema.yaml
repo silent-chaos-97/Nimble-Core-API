@@ -14,3 +14,4 @@ columns:
     allowEmpty: false
 
   - data: term
+    title: Term (months)

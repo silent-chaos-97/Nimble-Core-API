@@ -14,7 +14,6 @@ function validate(analysis) {
   validator(data, AnalysisModel.schema(data.id ? 'update' : 'create'), { abortEarly: false })
   return data
 }
-
 async function save(analysis, opts, tx = app.db) {
   opts = opts || {}
   const data = validate(analysis)

@@ -19,7 +19,6 @@ describe('app.services.token.get', () => {
       scopes: ['documents'],
       resources: ['documents#1'],
       expiration: 10
-    }
   })
 
   it('should exist', () => {
@@ -68,6 +67,7 @@ describe('app.services.token.get', () => {
 
       return expect(() => target(options))
         .to.throw('"expiration" must be a positive number')
+    })
   })
 
   describe('when optional not present', () => {
@@ -91,3 +91,4 @@ describe('app.services.token.get', () => {
 
     it('should apply the default expiration', () => {
       const token = target(_.omit(options, 'expiration'))
+      const actual = decode(token)

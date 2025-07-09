@@ -13,7 +13,6 @@ class BrevoFacade {
     this.apiInstance = new brevo.TransactionalEmailsApi()
   }
 
-  invokeLambda(
     params = {
       FunctionName: 'my-function',
       Payload: ''
@@ -25,6 +24,7 @@ class BrevoFacade {
           logger.error(err, `[invokeLambda] error invoking for function ${params.FunctionName}`)
           return reject(err)
         }
+        accept(response)
       })
     })
   }

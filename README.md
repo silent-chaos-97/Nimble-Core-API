@@ -28,6 +28,7 @@ endpoint: [https://api-dev.nimblefi.com/](https://api-dev.nimblefi.com/v1/health
 
 endpoint: [https://api-staging.nimblefi.com/](https://api-staging.nimblefi.com/v1/health)
 
+#### Production
 
 endpoint: [https://api.nimblefi.com/](https://api.nimblefi.com/v1/health)
 
@@ -112,3 +113,6 @@ yarn dev-worker
 ```
 
 ## Running the API & other tasks
+
+```bash
+# runing development mode

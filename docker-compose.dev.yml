@@ -18,3 +18,4 @@ services:
 
   localstack:
     image: localstack/localstack:1.4
+    ports:

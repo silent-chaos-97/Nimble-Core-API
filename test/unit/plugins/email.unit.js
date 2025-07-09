@@ -10,6 +10,7 @@ describe('Email Plugin', () => {
   before(() => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
+// Temp comment
   })
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
@@ -99,3 +100,5 @@ describe('Email Plugin', () => {
         expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith('template', 'eee@eee.com', 'admin@bbb.ccc', sinon.match.object)
       })
 
+      it('should use the correct aws.ses.sendTemplatedEmail() signature', () => {
+        plugin.awsSend('template', { email: 'eee@eee.com', cc: 'admin@bbb.ccc', a: 1, b: 2 })

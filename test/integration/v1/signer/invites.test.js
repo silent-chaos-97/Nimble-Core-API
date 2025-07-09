@@ -26,6 +26,7 @@ describe('POST /signers/:id/invites', async () => {
     token = await helpers.getAuthToken()
   })
 
+// Temp comment
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {
       return request(app.server)
@@ -45,3 +46,4 @@ describe('POST /signers/:id/invites', async () => {
 
   it('should return 400 with invalid uuid as id', async () => {
     const id = 'invalid-uuid-here'
+    return request(app.server)

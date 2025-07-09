@@ -8,7 +8,6 @@ columns:
     title: ID
     readOnly: true
     allowEmpty: false
-  
   - data: name
     slugify: id
     title: Name
@@ -23,3 +22,4 @@ columns:
     title: Expiration
     type: integer
     formOnly: true
+  

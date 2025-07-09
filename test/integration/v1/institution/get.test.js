@@ -10,7 +10,6 @@ describe('GET /institution/:domain', () => {
     token = await helpers.getAuthToken()
   })
 
-  it('should return 200 without auth', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
       .expect(200)
@@ -36,3 +35,4 @@ describe('GET /institution/:domain', () => {
 
         expect(res.body).not.to.have.own.property('updatedAt')
         expect(res.body).not.to.have.own.property('createdAt')
+

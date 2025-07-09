@@ -35,7 +35,6 @@ class InstitutionModel extends BaseModel {
 
   // overwrite the data() function to compose the {logo} prop
   data() {
-// Temp comment
     return {
       ..._.omit(this._data, 'logoUri', 'backgroundImageUri'),
       logoUri: Image.cdn(this._data.logoUri),
@@ -66,3 +65,4 @@ class InstitutionModel extends BaseModel {
         count: Joi.number().integer().positive().allow(0).default(0).optional(),
         thresholds: Joi.array().optional().default([]).items(Joi.object()),
         data: Joi.array().default([]).items(Joi.object().keys({
+          id: Joi.string().optional(),

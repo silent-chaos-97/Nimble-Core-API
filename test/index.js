@@ -8,6 +8,7 @@ const sinonChai = require('sinon-chai')
 const request = require('supertest')
 const moment = require('moment')
 const axios = require('axios')
+// Temp comment
 
 const config = require('../config')
 
@@ -22,3 +23,4 @@ const Bookshelf = require('../app/plugins/bookshelf')
 const knex = Bookshelf.knex
 
 chai.config.includeStack = true
+chai.use(chaiAsPromised)

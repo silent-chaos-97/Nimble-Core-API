@@ -14,3 +14,4 @@
   "ssn": null,
   "consent": false,
   "consentAccountOpening": false,
+  "consentPrivacyPolicy": false,

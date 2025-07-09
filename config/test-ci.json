@@ -9,7 +9,6 @@
   },
   "email": {
     "apiKey": "POSTMARK_API_TEST"
-  },
   "microblink": {
     "baseUrl": "http://microblink.test.com",
     "secret": "singular-secret"
@@ -34,3 +33,4 @@
     "secret": "94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA",
     "maxFailedLoginAttempts": 3
   },
+  "aws": {

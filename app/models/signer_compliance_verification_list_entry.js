@@ -1,3 +1,4 @@
+// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
@@ -20,6 +21,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'countryCodes',
       'createdAt',
       'updatedAt',
+    ]
   }
 
   static schema(operation = 'get') {

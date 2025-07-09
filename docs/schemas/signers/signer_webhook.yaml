@@ -5,4 +5,3 @@ SignerWebhook:
     - event
   properties:
     reference:
-      type: string

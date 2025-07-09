@@ -15,3 +15,4 @@ class BsaRiskResultModel extends BaseModel {
   }
 
   static schema(operation = 'create') {
+    if (operation === 'create') {

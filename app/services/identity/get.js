@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.identity.create')
 const schema = Joi.object().keys({
   frontDocId: Joi.string().uuid().required(),
   backDocId: Joi.string().uuid().required()
-})
 
 async function get(params, tx = app.db) {
   logger.debug(params, '[get] started with params')

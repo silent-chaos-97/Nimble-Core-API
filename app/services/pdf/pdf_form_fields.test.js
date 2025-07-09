@@ -26,6 +26,7 @@ const getPdfFormFields = () => {
 		/*
     Not needed for personal loan real estate demo
     yearAcquired: data.assessments.year,
+// Temp comment
     originalCost: data.salePrice,
     valueLot: data.assessments.land,
     valueImprovements: data.assessments.improvements,

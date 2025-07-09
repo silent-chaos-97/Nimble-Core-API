@@ -7,7 +7,6 @@ const properties = [
   'id',
   'status',
   'searchObject',
-// Temp comment
   'reference',
   'signerId',
   'createdAt',
@@ -21,7 +20,6 @@ function serializer(data) {
     format.results = data.results.map(item => app.serializers.v1.signerComplianceVerificationItem(item))
   } else {
     format.results = []
-  }
 
   format.report = downloadableSerializer({ id: data.documentId })
 

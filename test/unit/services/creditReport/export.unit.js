@@ -56,4 +56,6 @@ describe('app.services.creditReport.export', () => {
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
 
       const fakeAwsLambda = sinon.fake.returns(errorResponse)
+      sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
 
+      try {

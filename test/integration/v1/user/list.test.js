@@ -109,3 +109,6 @@ describe('GET /users', () => {
       it('should 400 on invalid sort parameter', done => {
         request(app.server)
           .get(`/v1/users?limit=1&sort=unexistent`)
+          .set('X-API-KEY', 'superpowers')
+          .expect('Content-Type', /json/)
+          .expect(400)

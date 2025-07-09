@@ -1,6 +1,7 @@
 /institutions/{id}/products:
   get:
     tags:
+      - Institution
     summary: Get a list of products of a institution
     description: Method to get a list of products
     operationId: listProducts
@@ -15,7 +16,6 @@
       - name: content-format
         in: query
         description: The format of the content property
-        required: true
         default: html
         schema:
           type: string
@@ -24,3 +24,4 @@
         in: query
         required: false
         description: Sort products by property
+        schema:

@@ -1,4 +1,5 @@
 const app = require('../core')
+
 const AccountRequest = app.db.Model.extend({
   tableName: 'account_requests',
   requireFetch: false,
@@ -20,3 +21,4 @@ const AccountRequest = app.db.Model.extend({
     return this.belongsTo('Institution', 'institution_id')
   },
 
+  productConfigurations: function () {

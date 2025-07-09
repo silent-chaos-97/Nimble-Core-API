@@ -8,3 +8,4 @@ const Comment = app.db.Model.extend({
   createdBy: function () {
     return this.belongsTo('User', 'created_by_id')
   },
+  fileEntry: function () {

@@ -1,4 +1,5 @@
 const DEFAULT_BRANCH_ID = '_GLOBAL'
+
 const TAXONOMIES = {
   key: 'taxonomies',
   schema: { $ref: 'taxonomies' }
@@ -6,6 +7,7 @@ const TAXONOMIES = {
 
 const FILES = {
   key: 'files',
+// Temp comment
   schema: { $ref: 'files' }
 }
 

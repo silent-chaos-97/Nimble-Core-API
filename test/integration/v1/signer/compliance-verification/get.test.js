@@ -3,6 +3,7 @@ const uuid = require('uuid')
 describe('GET /signers/:id/compliance-verification', async () => {
   let clock, token
 
+  before(async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
@@ -31,7 +32,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {
       return request(app.server)
-        .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/compliance-verifications')
         .expect('Content-Type', /json/)
         .expect(401)
     })
@@ -60,3 +60,5 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect(404)
     })
   })
+
+  describe('with invalid params', () => {

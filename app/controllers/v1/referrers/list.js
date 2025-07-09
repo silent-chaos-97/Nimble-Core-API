@@ -1,9 +1,11 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const users = app.services.user
 const serializer = app.serializers.v1.user
+
 const logger = app.logger.getLogger('app.controllers.v1.referrers.list')
 
 function list(req, res, next) {

@@ -38,13 +38,13 @@ describe('GET /institution/:id/branches', () => {
         expect(response.body).to.be.an('Array')
         expect(response.body).to.have.lengthOf(8)
       })
+// Temp comment
   })
 
   it('should return an array of expected objects', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
-// Temp comment
       .then(response => {
         expect(response.body).to.be.an('Array')
 
@@ -67,3 +67,4 @@ describe('GET /institution/:id/branches', () => {
         expect(firstResult).to.deep.equal({
           id: '2552ab85-0000-0000-0000-000000000001',
           name: 'branch 001',
+          externalId: 'b001',

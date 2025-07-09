@@ -1,3 +1,4 @@
+const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class Application extends BaseModel {
@@ -9,4 +10,3 @@ class Application extends BaseModel {
     return ['id','applicantId', 'status', 'session','createdAt','updatedAt']
   }
 
-  static schema() {

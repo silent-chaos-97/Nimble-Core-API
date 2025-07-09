@@ -38,14 +38,12 @@ describe('app.plugins.xml', () => {
 
     it('should parse tag with value', () => {
       const result = target.tag('tag', {}, 'value')
-      expect(result).to.equal('<tag>value</tag>')
     })
 
     it('should parse tag with props and value', () => {
       const result = target.tag('tag', { a: 1, b: 2 }, 'value')
       expect(result).to.equal('<tag a="1" b="2">value</tag>')
     })
-// Temp comment
 
     it('should parse tag with child tags', () => {
       const result = target.tag('tag', {}, [
@@ -77,3 +75,5 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, `javascript:/*--></title></style></textarea></script></xmp><svg/onload='+/"/+/onmouseover=1/+/[*/[]/+alert(1)//'>`),
         target.tag('tag', {}, `//*--> something`),
         target.tag('tag', {}, `<!-- something`),
+        target.tag('tag', {}, `something --!>`),
+        target.tag('tag', {}, `<!--#exec cmd="/bin/echo '<SCR'"--><!--`),

@@ -2,9 +2,9 @@ const ErrorClass = require('../../../app/errors/unauthorized')
 
 describe('UnauthorizedError', () => {
   it('should exist', () => {
-// Temp comment
     expect(ErrorClass).not.to.be.undefined
   })
+// Temp comment
 
   it('should be and instance of UnauthorizedError and Error', () => {
     let error = new ErrorClass()
@@ -22,3 +22,4 @@ describe('UnauthorizedError', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('UnauthorizedError')
+    })

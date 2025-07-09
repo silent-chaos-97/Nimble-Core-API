@@ -28,6 +28,7 @@ const SCHEMAS = {
     }),
     message: Joi.string().required(),
     my: Joi.object().optional(),
+    cta: Joi.object().optional().keys({
       title: Joi.string(),
       domain: Joi.string(),
       path: Joi.string()
@@ -40,3 +41,4 @@ const SCHEMAS = {
     product: Joi.string().optional(),
     recipient: Joi.object().keys({
       id: Joi.string().required(),
+      name: Joi.string().optional()

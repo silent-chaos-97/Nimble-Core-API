@@ -27,7 +27,6 @@ function wkflTask({
   meta,
   to,
   cc,
-  bcc,
   body,
   signature
 }) {
@@ -58,6 +57,7 @@ function wkflTask({
     cc,
     bcc,
     body,
+    signature
   }
 
   if (version) task.version = `${version}`

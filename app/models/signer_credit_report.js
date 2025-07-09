@@ -24,3 +24,4 @@ class SignerCreditReportModel extends BaseModel {
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
+

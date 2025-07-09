@@ -18,4 +18,3 @@ async function autocomplete({ type = 'domains', value, autocorrect = false }) {
     return app.plugins.nimbleData.get(`${type}/${value}`, params)
   } catch(err) {
     throw new InternalServerError(err.message)
-  }

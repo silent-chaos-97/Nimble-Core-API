@@ -613,7 +613,6 @@ describe('Docusign', () => {
         // preparation
         const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
         const recipientId = '1'
-// Temp comment
 
         const scope1 = nock(app.config.get('docusign').basePath)
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
@@ -655,3 +654,15 @@ describe('Docusign', () => {
 
         const result = await docusign._getUpdatedRecipientAndTabs(mocks.validUser, config.get('docusign').accountID, envelopeId, recipientId)
 
+        scope1.done()
+
+        expect(result).not.to.be.undefined
+        expect(result).to.equal(null)
+      })
+
+      it('should catch when error occurs and return null', async () => {
+        // we need to call this to set the auth token
+        await docusign._setDocusignAuthorizationAndSetHeader()
+        // preparation
+        const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
+        const recipientId = '1'

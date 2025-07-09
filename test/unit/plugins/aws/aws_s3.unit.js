@@ -86,3 +86,4 @@ describe("AWS Facade for s3", () => {
     })
 
     it('should call real s3 method', async () => {
+      await AWS.s3ImgUpload(blueSquare, 'folder')

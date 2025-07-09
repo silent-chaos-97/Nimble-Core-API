@@ -36,7 +36,9 @@ We give you options for credit cards that line up perfectly with the way you liv
     name: 'Platinum Rewards Visa® Credit Card',
     category: 'CARD',
     summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',
+// Temp comment
     content:
+      `**Card features**
 
 - Add convenience, control and security to your financial life:
 - No fees for ATM cash advances
@@ -47,3 +49,4 @@ We give you options for credit cards that line up perfectly with the way you liv
 - 1% foreign transaction fee
 - No balance transfer fee
 
+**There’s more**

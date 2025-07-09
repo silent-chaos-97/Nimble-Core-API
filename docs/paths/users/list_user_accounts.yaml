@@ -23,3 +23,4 @@
         description: Search users by first and last name
         schema:
           type: string
+      - in: query

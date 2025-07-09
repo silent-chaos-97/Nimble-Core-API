@@ -10,7 +10,6 @@ describe('app.services.email.welcome', () => {
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
-  before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
@@ -42,6 +41,7 @@ describe('app.services.email.welcome', () => {
       try {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
       } catch(error) {
+        expect(error.name).to.equal('NotFoundError')
         expect(error.statusCode).to.equal(404)
       }
     })
@@ -55,3 +55,4 @@ describe('app.services.email.welcome', () => {
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     })
+

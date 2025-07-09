@@ -30,7 +30,6 @@ class Signer extends BaseModel {
       'middleName',
       'lastName',
       'address',
-      'city',
       'state',
       'zipCode',
       'phoneNumber',
@@ -57,6 +56,7 @@ class Signer extends BaseModel {
       'checkSanction',
       'sanctionVerifiedAt',
       'checkPoliticalExposure',
+      'politicalExposureVerifiedAt',
       'checkAdverseMedia',
       'adverseMediaVerifiedAt',
       'checkAntiMoneyLaundering',
@@ -180,3 +180,7 @@ class Signer extends BaseModel {
           then: Joi.string().optional().valid(...statesUSA),
           otherwise: Joi.string().optional().valid(...countries)
         }),
+        frontDocumentId: Joi.string().uuid().optional(),
+        backDocumentId: Joi.string().uuid().optional(),
+      }).optional(),
+    })

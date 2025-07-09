@@ -11,6 +11,7 @@
       required: true
       content:
         application/json:
+          schema:
             allOf:
               - $ref: '#/components/schemas/Signer'
               - type: object
@@ -22,3 +23,4 @@
                     type: string
                     writeOnly: true
                     format: uuidv4
+                    title: the ID of the account request this signer is assigned to

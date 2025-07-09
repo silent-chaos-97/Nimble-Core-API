@@ -102,3 +102,5 @@ components:
     ApiKeyAuth:
       type: apiKey
       in: header
+      name: X-API-KEY
+  schemas:

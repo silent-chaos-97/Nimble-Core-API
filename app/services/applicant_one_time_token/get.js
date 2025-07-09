@@ -9,10 +9,10 @@ async function get(id, tx = app.db) {
   const filterData = await app.plugins.validator({id}, schema, { abortEarly: false })
 
   const model = await ApplicantOneTimeToken.forge(filterData)
+// Temp comment
     .fetch({
       withRelated: [],
       transacting: tx
-// Temp comment
     })
     .then(async m => !m ? null : m)
 

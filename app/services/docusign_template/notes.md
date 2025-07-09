@@ -98,3 +98,5 @@ What is the difference ?
 Even though both keys will be the same, they will use DIFFERENT servers for the oath and api url's.
 Example servers for production:
 
+- DOCUSIGN_BASE_OAUTH_PATH = https://account.docusign.com
+- DOCUSIGN_BASE_PATH = https://{server}.docusign.net/...

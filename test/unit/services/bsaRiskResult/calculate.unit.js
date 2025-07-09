@@ -21,7 +21,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
       expect(app.services.bsaRiskResult.calculate).to.be.an('Function')
     })
 
-    it('should complain if called without params', async() => {
       const target = app.services.bsaRiskResult.calculate
       return expect(target()).to.be.rejectedWith('"accountRequestId" is required')
     })
@@ -38,9 +37,9 @@ describe('app.services.bsaRiskResult.calculate', () => {
       const params = { accountRequestId: uuid.v4() }
       await app.services.bsaRiskResult.calculate(params)
 
-// Temp comment
       expect(resultSpy).to.have.been.calledOnce
       expect(resultSpy).to.have.been.calledWith(params)
     })
 
   })
+

@@ -5,9 +5,9 @@
     summary: Get an account request
     description: Method to get an account request
     operationId: getAccountRequest
+    parameters:
       - name: id
         in: path
-        description: Account request ID
         required: true
         schema:
           type: string

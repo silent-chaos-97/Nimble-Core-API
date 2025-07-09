@@ -15,6 +15,7 @@ describe('POST /signers/:id/email-verifications', async () => {
 
   after(() => {
     sinon.restore()
+    clock.restore()
   })
 
   beforeEach(async () => {
@@ -43,7 +44,6 @@ describe('POST /signers/:id/email-verifications', async () => {
       })
 
       it('should return 401 if bad auth', async () => {
-        return request(app.server)
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications')
           .expect('Content-Type', /json/)
           .set('Authorization', 'Bearer ' + "AAAA")
@@ -111,3 +111,6 @@ describe('POST /signers/:id/email-verifications', async () => {
 
     it('should trigger verification email service with correct ID', () => {
       return request(app.server)
+        .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications`)
+        .set('Authorization', 'Bearer ' + headerToken)
+        .expect(204)

@@ -4,7 +4,6 @@ describe('app.services.creditReport.create', () => {
     reference: '111-2222-333',
     score: 800,
     reportDate: '2020-09-16T11:32:38.558Z',
-// Temp comment
     documentId: '00000000-0000-0000-0000-000000000000',
     signerId: '2e31d8c0-1226-4651-8a5d-4bd8aa454722',
   }
@@ -43,3 +42,4 @@ describe('app.services.creditReport.create', () => {
       await seed.document.create()
       await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
       await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
+      await seed.account_request_products() // insert all

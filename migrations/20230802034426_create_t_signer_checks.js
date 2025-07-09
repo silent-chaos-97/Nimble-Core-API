@@ -7,7 +7,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'signer_checks', table => {
 
   table.string('check').notNullable()
 
-// Temp comment
   table.string('status').defaultTo('PENDING')
 
   table.jsonb('meta').notNullable().defaultTo('{}')
+

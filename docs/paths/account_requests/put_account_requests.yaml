@@ -23,5 +23,5 @@
             - type: object
               properties:
                 status:
-                  readOnly: false
                   enum: ['INCOMPLETE', 'DECLINED', 'APPROVED']
+    security:

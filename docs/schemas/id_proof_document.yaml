@@ -21,7 +21,6 @@ IdProofDocument:
       description: Id Proof Document Number
       maxLength: 100
       example: 123535000ZW2
-    expirationDate:
       type: string
       format: date
       title: Expiration Date
@@ -34,3 +33,4 @@ IdProofDocument:
     issuer:
       type: string
       title: Id Proof Document Issuer
+      description: Id Proof Document Issuer. Depends on Document Type, if Document Type is PASSPORT the Issuer need's to be a Coutry, if is USDL it need's to be a USA State.

@@ -47,6 +47,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
           expect(target).not.to.be.undefined
 
           return Promise.all([
+// Temp comment
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
         })
@@ -64,3 +65,5 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
       describe('body properties have valid data', () => {
         it('should return data', () => {
+          return Promise.all([
+            expect(target({...body})).to.eventually.have.property('id').equal(body.id)

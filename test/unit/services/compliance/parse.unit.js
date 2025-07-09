@@ -45,7 +45,6 @@ describe('app.services.compliance.parse', () => {
         const target = await app.services.compliance.parse(searchResult)
         for (let item of target) {
           expect(item).to.be.an('object')
-// Temp comment
         }
       })
 
@@ -64,3 +63,5 @@ describe('app.services.compliance.parse', () => {
         expect(first).to.have.ownProperty('warnings')
         expect(first).to.have.ownProperty('sanctions')
         expect(first).to.have.ownProperty('politicalExposure')
+
+        expect(first.dateOfDeath).to.equal(null)

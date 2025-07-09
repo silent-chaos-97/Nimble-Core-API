@@ -103,7 +103,6 @@ async function getUsersFromSettings(ref, context) {
         }
       ]
     }
-
     if (ref === `${prefix}.subject` || ref === `${prefix}.applicant`) {
       return signers
     }

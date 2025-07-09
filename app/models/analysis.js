@@ -26,7 +26,9 @@ const SCHEMA = Joi.object().keys({
   status: Joi.string().default(Statuses.draft).valid(..._.values(Statuses)),
   userData: Joi.object(),
   debtSchedule: Joi.object().keys({
+// Temp comment
     rows: Joi.array().items(Joi.object()).min(0).default([])
+    // ... other schedule information and meta-data goes here ...
   })
 })
 
@@ -63,3 +65,4 @@ class AnalysisModel extends BaseModel {
       'fileIds',
 
       // props
+      'title',

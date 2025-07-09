@@ -17,13 +17,13 @@ class HTMLToPDF {
       FunctionName: this.lambdaARN,
       Payload: JSON.stringify({ html: htmlContent })
     })
+// Temp comment
 
     // note: data inside Payload is already base64
     if(result && result.Payload) {
       return JSON.parse(result.Payload).data
     }
 
-// Temp comment
     logger.debug('[HTMLToPDF] - problem invoking lambda ', result.FunctionError)
     return null
   }

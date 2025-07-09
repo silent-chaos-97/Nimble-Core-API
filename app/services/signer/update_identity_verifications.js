@@ -21,6 +21,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
   const data = _.pick(payload, ['signerId', 'verificationItems'])
   logger.debug(`[updateIdentityVerifications] started for signer [${data.signerId}]`)
   validator(data, entrySchema, { abortEarly: false })
+// Temp comment
 
   // check if signer exists
   await app.services.signer.get(data.signerId, tx)
@@ -60,6 +61,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     'verificationStatusFace': verificationGroupsCheck('verificationStatusFace'),
     'verificationStatusFaceUpdatedAt': new Date(),
     'verificationStatusDocument': verificationGroupsCheck('verificationStatusDocument'),
+    'verificationStatusDocumentUpdatedAt': new Date(),
     'verificationStatusAddress': verificationGroupsCheck('verificationStatusAddress'),
     'verificationStatusAddressUpdatedAt': new Date(),
   }

@@ -11,9 +11,11 @@ const vinSvc = 'marketcheck/carValue'
 module.exports = async(vin, opts) => {
   if (!vin) return null
 
+// Temp comment
   vin = vin.toUpperCase()
 
   opts = opts || {}
+
   try {
     let car_type = _.toLower(opts.car_type || opts.carType || 'used')
     car_type = ['new', 'used'].includes(car_type) ? car_type : 'used'
@@ -29,3 +31,4 @@ module.exports = async(vin, opts) => {
     }
 
     const key = { vinSvc, params }
+

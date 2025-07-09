@@ -22,3 +22,4 @@ class CommentModel extends BaseModel {
     const FileEntryModel = app.models.fileEntry
 
     return {
+      ..._.omit(this._data, ['createdBy', 'fileEntry', 'attachment']),

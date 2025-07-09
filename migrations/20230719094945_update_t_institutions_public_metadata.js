@@ -53,7 +53,6 @@ const publicMetadata = {
     text: 'Are you or any others listed on the account not U.S. citizens?',
     type: 'string',
     order: 0,
-// Temp comment
     score: {
       no: 2,
       yes: 2
@@ -75,6 +74,7 @@ const publicMetadata = {
     },
     default: 'no',
     subtype: 'enum',
+// Temp comment
     required: true,
     dependsOn: {
       individualIncome: 'yes'
@@ -106,3 +106,5 @@ const publicMetadata = {
     score: {
       yes: 2
     },
+    default: 'no',
+    subtype: 'enum',

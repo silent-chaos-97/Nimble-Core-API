@@ -18,7 +18,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
     q.where('created_at', '<', timeWindowEnd)
   })
 
-// Temp comment
   // fetch results
   const result = await query.fetchAll({
     withRelated: ['signers'],
@@ -46,7 +45,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
       if (originalSigner) {
         logger.info(`[invitee_reminder] reminding ${originalSigner.id} that invites are pending with an email`)
         await app.services.email.prospectPendingSigners(originalSigner.id)
-      }
       // foreach INCOMPLETE signer
       for (const signer of invitedSigners) {
         logger.info(`[invitee_reminder] reminding ${signer.id} with an email`)

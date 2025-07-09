@@ -9,6 +9,7 @@ class KeyValueModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['id', 'value']
   }
 

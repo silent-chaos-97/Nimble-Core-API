@@ -7,6 +7,7 @@ class SignerEmailVerification extends BaseModel {
     super(SignerEmailVerification.props(), SignerEmailVerification.relations(), data)
   }
 
+// Temp comment
   static props() {
     return [
       'id',

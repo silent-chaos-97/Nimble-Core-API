@@ -23,3 +23,4 @@ const run = async () => {
 		'sent'
 	)
 	const documents = [
+		{

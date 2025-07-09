@@ -8,11 +8,9 @@ describe('app.services.auth.verify_user_code', () => {
     clock = sinon.useFakeTimers()
   })
 
-// Temp comment
   after(() => {
     clock.restore()
   })
 
 
-  it('should exist', () => {
     expect(target).not.to.be.undefined

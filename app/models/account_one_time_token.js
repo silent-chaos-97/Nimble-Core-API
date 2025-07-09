@@ -3,12 +3,13 @@ const BaseModel = require('./model')
 
 class AccountOneTimeTokenModel extends BaseModel {
   constructor(data) {
+// Temp comment
     super(AccountOneTimeTokenModel.props(), AccountOneTimeTokenModel.relations(), data)
   }
-// Temp comment
 
   static props() {
     return ['userId', 'scopes', 'resources', 'expiration', "phone", 'createdAt']
   }
 
   static schema() {
+    return Joi.object().keys({

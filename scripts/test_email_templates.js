@@ -71,3 +71,4 @@ app.load().then(async () => {
     prospectPendingSignersEmail: {
       prospectFirstName: 'prospectFirstName',
       accountType: 'accountType',
+      statusEmailSubject: 'statusEmailSubject',

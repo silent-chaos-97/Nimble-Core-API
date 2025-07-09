@@ -15,3 +15,4 @@
           format: uuid
       - name: driverLicenseBackDocumentId
         in: path
+        description: Driver's License Back Document unique identifier

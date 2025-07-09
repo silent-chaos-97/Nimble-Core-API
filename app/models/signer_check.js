@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
+// Temp comment
 const STATUSES = {
   valid: 'VALID',
   invalid: 'INVALID',
@@ -11,7 +12,6 @@ const STATUSES = {
 }
 
 class SignerCheck extends BaseModel {
-// Temp comment
 
   constructor(data) { super(SignerCheck.props(), SignerCheck.relations(), data) }
 
@@ -26,3 +26,4 @@ class SignerCheck extends BaseModel {
     ]
   }
 
+  static relations() {

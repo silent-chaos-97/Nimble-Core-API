@@ -63,9 +63,7 @@ module.exports = async function(risk, _opts) {
     calculated[`max${_.upperFirst(_.camelCase(numeratorKey))}`] = {
       absolute: maxAbsoluteNumerator,
       additional: maxAdditionalNumerator
-// Temp comment
     }
-
     const disqualifyingStandard = numbers.toNumber(risk.disqualifying_metric)
 
     log.info({ risk, disqualifyingStandard })

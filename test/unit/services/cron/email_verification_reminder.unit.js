@@ -4,6 +4,7 @@ const moment = require('moment')
 describe('app.services.cron.emailVerificationReminder', () => {
   let clock = null
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
+// Temp comment
   let emailVerificationEmailSpy
 
   before(() => {
@@ -81,3 +82,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
         expect(emailVerificationEmailSpy).to.not.have.been.called
       })
     })
+
+    it('should send a reminder for unverified signers', async () => {

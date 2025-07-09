@@ -18,4 +18,3 @@ services:
       timeout: 30s
       retries: 3
   api:
-    build: .

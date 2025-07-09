@@ -1,4 +1,3 @@
-
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('product_account_numbers', table => {
     table.string('account_number').notNullable()
@@ -8,3 +7,4 @@ exports.up = function (knex) {
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
+    table.index('institution_id')

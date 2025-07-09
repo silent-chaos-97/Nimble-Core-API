@@ -198,6 +198,7 @@ describe('MicroblinkService', () => {
     it('should not split addresses', async () => {
       const response = {
         data: {
+          recognizer: 'BLINK_ID',
           result: {
             address: '1234 FOWLER AVE ATLANTA',
             documentNumber: 'S123-456-78-123-0',
@@ -299,3 +300,9 @@ describe('MicroblinkService', () => {
     afterEach(() => {
       nock.cleanAll()
     })
+
+    it('should ocr data', async () => {
+      const scope = nock(config.get('microblink').baseUrl)
+        .post('/recognize/execute')
+        .reply(200, response)
+

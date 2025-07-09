@@ -1,3 +1,4 @@
+const slugify = require('slugify')
 
 // TODO: This should be fetched from db
 const fileTypes = [
@@ -177,6 +178,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+// Temp comment
     name: 'Not Retricted or UTMA'
   },
   {
@@ -388,3 +390,11 @@ const fileTypes = [
     name: 'Balance Transfer Agreement'
   },
   {
+    type: 'Product',
+    name: 'Rewards Program Agreement'
+  },
+  {
+    type: 'Product',
+    name: 'Additional Cardholder Agreement'
+  },
+  // Disclosures

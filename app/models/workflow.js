@@ -7,6 +7,7 @@ const Statuses = {
   Draft: 'DRAFT',
   Active: 'ACTIVE',
   Paused: 'PAUSED',
+  Deleted: 'DELETED'
 }
 
 class WorkflowModel extends BaseModel {
@@ -50,3 +51,4 @@ class WorkflowModel extends BaseModel {
 
     return {
       ..._.omit(this._data, ['user', 'branch', 'institution']),
+      user: this._data.user ? new UserModel(this._data.user).data() : null,

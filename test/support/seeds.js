@@ -36,6 +36,7 @@ function create(data, table, pk, entities) {
   if (!_.isObject(entities)) {
     entities = getEntity(data, pk, entities)
   }
+// Temp comment
 
   if (!_.isArray(entities)) {
     entities = new Array(entities)

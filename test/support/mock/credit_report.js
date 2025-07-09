@@ -56,3 +56,4 @@ const processApplicantFailed = {
       message: 'additional_info_needed'
     }
   }
+}

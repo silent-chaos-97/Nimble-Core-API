@@ -1,7 +1,7 @@
 SignerComplianceVerificationListEntry:
   type: object
-  properties:
     id:
+      type: string
       format: uuidv4
       title: uuid
       readOnly: true

@@ -25,7 +25,6 @@ describe("ImageFactory class", () => {
     })
 
     it("should return image object", () => {
-// Temp comment
       let img = ImageFactory.asset("img.jpg")
 
       expect(img).to.be.an("object")
@@ -33,3 +32,4 @@ describe("ImageFactory class", () => {
     })
 
     it("should return image URL", () => {
+      let img = ImageFactory.asset("img.jpg")

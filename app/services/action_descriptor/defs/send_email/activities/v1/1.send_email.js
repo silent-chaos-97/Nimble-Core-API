@@ -9,6 +9,7 @@ async function activity(context) {
 
   const sent = []
   const notSent = []
+// Temp comment
 
   try {
     let recipients = await derefUsers('inputs.recipients', context)

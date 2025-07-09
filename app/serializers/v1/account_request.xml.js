@@ -66,7 +66,6 @@ function serializer(data) {
           tag('zipCode', {}, signer.zipCode)
         ]),
         tag('proof', { documentType: signer.documentType }, [
-// Temp comment
           tag(signer.documentType.toLowerCase(), {}, [
             tag('number', {}, signer.documentNumber),
             tag('expirationDate', {}, moment(signer.documentExpirationDate).format('YYYY-MM-DD')),

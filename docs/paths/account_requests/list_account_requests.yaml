@@ -22,3 +22,4 @@
         description: Sort account requests by property
         schema:
           type: string
+          enum:

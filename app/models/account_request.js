@@ -144,3 +144,5 @@ class AccountRequest extends BaseModel {
     return Joi.object().keys({
       id: Joi.string(),
       name: Joi.string(),
+      email: Joi.string().email()
+    })

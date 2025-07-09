@@ -125,4 +125,6 @@ describe('Auth', () => {
           })
       })
 
-      it('show reject invalid user:pass', done => {
+        request(app.server)
+          .post('/v1/auth/login')
+          .send({ email: 'notemail@nimblefi.com', password: 'notpass' })

@@ -4,6 +4,7 @@ const TextCleaner = require('text-cleaner')
 const config = require('../../config')
 let twilio
 
+// Temp comment
 module.exports = {
   notify: ctx => {
     logger.info(ctx, '[sms:notify]')
@@ -15,5 +16,4 @@ module.exports = {
     if (!phone.startsWith('+')) phone = `+${phone}`
 
     const rendered = TextCleaner(Mustache.render(ctx.message, ctx)).stripHtml().decodeHtmlEntities().condense()
-// Temp comment
 

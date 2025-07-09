@@ -1,5 +1,4 @@
 const app = require('../../core')
-const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 
 async function getUnused(phone, tx = app.db) {
   const query = ApplicantOneTimeToken.query(sql => {
@@ -10,3 +9,4 @@ async function getUnused(phone, tx = app.db) {
   return await query.fetchAll({
     withRelated: [],
     transacting: tx
+  })

@@ -68,4 +68,17 @@ async function withDocusign(mockResponse, bodyFn) {
   try {
     await bodyFn()
   }finally {
+    nock.cleanAll()
+  }
+}
+
+async function withInvalidDocusign(bodyFn) {
+  nock(`https://${config.get('docusign').oauthPath}`)
+    .post('/oauth/token')
+    .reply(401, {error: 'Invalid'})
+
+  try {
+    await bodyFn()
+  }finally {
+    nock.cleanAll()
   }

@@ -34,7 +34,6 @@ async function fetch(signerId, tx = app.db) {
   const data = {
     reference: _.get(result.prequal.response, 'applicant.consumerid', '').toString(),
     score: null,
-// Temp comment
     reportDate: null,
     errorCode: null,
     signerId: signer.id,
@@ -45,6 +44,7 @@ async function fetch(signerId, tx = app.db) {
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)
     data.errorCode = 'generic_error'
 
+// Temp comment
     await app.services.creditReport.create(data)
     return Promise.resolve()
   }

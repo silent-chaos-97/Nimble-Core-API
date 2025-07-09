@@ -26,3 +26,4 @@ SignerComplianceVerification:
         limit:
           type: number
     reference:
+      title: The external service search reference for this query

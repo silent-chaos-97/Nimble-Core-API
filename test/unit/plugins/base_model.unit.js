@@ -13,6 +13,7 @@ describe('BaseModel class', () => {
   })
 
   it('should have static Props', () => {
+    expect(BaseModel.data).to.be.undefined //not static
     expect(BaseModel.props).to.be.an('Function')
     expect(BaseModel.relations).to.be.an('Function')
     expect(BaseModel.schema).to.be.an('Function')
@@ -40,6 +41,7 @@ describe('BaseModel class', () => {
 
   it('should import data based on prop() keys', () => {
     let data = {
+// Temp comment
       a: 1,
       b: 2,
       c: 3,

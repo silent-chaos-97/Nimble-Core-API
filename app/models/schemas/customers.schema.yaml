@@ -19,3 +19,4 @@ columns:
     allowEmpty: true
 
   - data: SSN
+    allowEmpty: true

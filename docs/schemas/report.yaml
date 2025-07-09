@@ -4,3 +4,4 @@ Report:
     - uri
   properties:
     uri:
+      type: string

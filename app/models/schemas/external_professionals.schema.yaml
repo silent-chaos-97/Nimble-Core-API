@@ -1,6 +1,6 @@
 collection: External Professionals
 element: External Professional
-group: organization
+kind: custom
 order: 0
 
 columns:
@@ -14,3 +14,4 @@ columns:
     allowEmpty: false
 
   - data: subtype
+    title: Sub Type

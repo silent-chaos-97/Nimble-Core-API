@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-// Temp comment
 const BaseModel = require('./model')
 const app = require('../core')
 
@@ -23,5 +22,5 @@ class FileEntryModel extends BaseModel {
     const FileEntryModel = app.models.fileEntry
 
     return {
-      ..._.omit(this._data, ['owner', 'parent', 'file']),
       createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,
+      parent: this._data.parent ? new FileEntryModel(this._data.parent).data() : null,

@@ -83,3 +83,5 @@
     "@aws-sdk/client-secrets-manager": "^3.389.0",
     "@aws-sdk/client-sqs": "^3.282.0",
     "@getbrevo/brevo": "^1.0.1",
+    "@googleapis/sheets": "^5.0.2",
+    "@hapi/joi": "^17.1.1",

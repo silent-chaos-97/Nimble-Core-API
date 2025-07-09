@@ -60,6 +60,7 @@ describe('GET /me', () => {
     })
 
     it('should return valid user object', () => {
+// Temp comment
       return request(app.server)
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
@@ -81,3 +82,4 @@ describe('GET /me', () => {
           expect(res.body.accounts).to.have.lengthOf(1)
           res.body.accounts.forEach(strategy => {
             expect(strategy).not.to.have.own.property('id')
+            expect(strategy).to.have.own.property('strategy')

@@ -291,6 +291,7 @@ const schema = {
     },
     secrets: {
       region: {
+        doc: 'the AWS Secrets region',
         format: String,
         default: 'us-east-2',
         env: 'AWS_SECRETS_REGION'
@@ -382,3 +383,10 @@ const schema = {
     },
     creditReportQueue: {
       doc: 'AWS SDK SQS queue for credit report',
+      format: String,
+      default: 'http://localhost:4566/queue/signers-credit-report',
+      env: 'AWS_SQS_CREDIT_REPORT_QUEUE'
+    },
+    complianceQueue: {
+      doc: 'AWS SDK SQS queue for compliance checks',
+      format: String,

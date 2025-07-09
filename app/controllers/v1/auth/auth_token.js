@@ -34,7 +34,6 @@
 //         if (err){
 //           return res.status(500).json({msg: err})
 //         }
-//
 //         // Store hashed one-time-token to DB.
 //         const oneTimeTokenData = {
 //           phone: id,
@@ -47,7 +46,6 @@
 //         return res.status(200).json({id: id, verification_token: unHashedVerificationToken})
 //       })
 //     })
-// Temp comment
 //   }
 // }
 

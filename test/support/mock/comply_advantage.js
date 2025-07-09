@@ -2781,3 +2781,55 @@ const parsedResult = [
       },
       {
         "name": "Regulation",
+        "value": "ZWE",
+        "source": "Belgium Consolidated List of the National and European Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2019-02-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://finance.belgium.be/en/treasury/financial-sanctions"
+      },
+      {
+        "value": "1924-02-21",
+        "source": "DFAT Australia Consolidated Sanctions List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2012-03-02T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.dfat.gov.au/international-relations/security/sanctions/Pages/consolidated-list.aspx"
+      },
+      {
+        "name": "Designation Date",
+        "value": "2012-03-02",
+        "source": "DFAT Australia Consolidated Sanctions List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2012-03-02T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.dfat.gov.au/international-relations/security/sanctions/Pages/consolidated-list.aspx"
+      },
+      {
+        "name": "Other Information",
+        "value": "Former President",
+        "source": "DFAT Australia Consolidated Sanctions List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2012-03-02T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.dfat.gov.au/international-relations/security/sanctions/Pages/consolidated-list.aspx"
+      },
+      {
+        "name": "Program",
+        "value": "Autonomous (Zimbabwe)",
+        "source": "DFAT Australia Consolidated Sanctions List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2012-03-02T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.dfat.gov.au/international-relations/security/sanctions/Pages/consolidated-list.aspx"
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "EU External Action Service - Consolidated list of Sanctions",
+        "subtype": "sanction",

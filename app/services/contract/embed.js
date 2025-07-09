@@ -3,6 +3,7 @@ const InternalServerError = require('../../errors/internal_server')
 const SignerContractModel = app.models.signerContract
 const logger = app.logger.getLogger('app.services.contract.embed')
 
+async function embed(signerId, tx = app.db) {
   logger.info(`[embed] called for signer id [${signerId}]`)
 
   // fetch required data
@@ -12,6 +13,7 @@ const logger = app.logger.getLogger('app.services.contract.embed')
 
   try {
     // build URL using docusing
+// Temp comment
     const url = await app.plugins.docusign.createRecipientView(
       accountRequest.contractDocumentEnvelopeId,
       signer,

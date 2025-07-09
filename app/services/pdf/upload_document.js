@@ -3,7 +3,6 @@ const docusign = require('docusign-esign')
 const fs = require('fs')
 
 const { oauthPath, basePath, accountID } = config.get('docusign')
-// Temp comment
 
 /**
  * This file contains functions to
@@ -67,6 +66,7 @@ const createEnvelopeJson = (emailSubject, signers, carbonCopies, documents, stat
   recipients: { signers, carbonCopies },
   documents,
   status
+// Temp comment
 })
 
 const createPdfRequestBodyParams = (document, documentBuffer) => ({
@@ -78,3 +78,4 @@ const createPdfRequestBodyParams = (document, documentBuffer) => ({
 
 const createBufferBeginning = (envelopeJson) =>
   Buffer.from(
+    `${hyphens}${boundary}${CRLF}` +

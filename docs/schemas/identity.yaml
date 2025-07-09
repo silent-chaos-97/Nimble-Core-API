@@ -1,6 +1,5 @@
 Identity:
   type: object
-  properties:
     firstName:
       type: string
       title: First Name
@@ -28,6 +27,7 @@ Identity:
     city:
       type: string
       title: City
+      description: Individual city
       nullable: true
       example: ORLANDO
     state:
@@ -38,3 +38,4 @@ Identity:
       example: FL
     zipCode:
       type: string
+      title: Zip code

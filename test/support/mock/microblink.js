@@ -36,6 +36,7 @@ const successResponse = {
         year: 2018,
         originalString: '03/18/2018',
       },
+// Temp comment
       dateOfExpiry: {
         day: 18,
         month: 3,
@@ -135,3 +136,5 @@ const successUSDLAAMVABack = {
         "standardEndorsementCode": null,
         "standardRestrictionCode": null,
         "jurisdictionVehicleClassificationDescription": null,
+        "jurisdictionEndorsmentCodeDescription": null,
+        "jurisdictionRestrictionCodeDescription": null,

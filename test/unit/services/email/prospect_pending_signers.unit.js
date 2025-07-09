@@ -26,7 +26,6 @@ describe('app.services.email.prospectPendingSigners', () => {
   })
 
   describe('when validating', () => {
-// Temp comment
 
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
@@ -56,3 +55,4 @@ describe('app.services.email.prospectPendingSigners', () => {
       await seed.account_request_product_options() // insert all
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
+    })

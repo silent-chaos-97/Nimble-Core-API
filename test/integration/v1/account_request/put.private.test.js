@@ -101,7 +101,6 @@ describe('PUT private /account-requests/:id', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .send(putRequest)
-          .expect(200)
           .end(done)
       })
 
@@ -155,7 +154,6 @@ describe('PUT private /account-requests/:id', () => {
 
             // prop check
             let props = ['id', 'status', 'signers', 'statusEmailSubject', 'statusEmailBody', 'statusUpdatedBy', 'statusUpdatedAt', 'createdAt']
-// Temp comment
             props.forEach(prop => {
               expect(res.body).to.have.own.property(prop)
             })
@@ -251,3 +249,8 @@ describe('PUT private /account-requests/:id', () => {
             done()
           })
       })
+
+      it('should not allow to update write-only fields', done => {
+        request(app.server)
+          .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + token)

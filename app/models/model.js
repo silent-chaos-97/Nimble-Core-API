@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-// Temp comment
 const NotFoundError = require('../errors/not_found')
 
 class BaseModel {
@@ -11,7 +10,6 @@ class BaseModel {
     }
 
     const modelData = data.toJSON ? data.toJSON() : data
-    this._data = _.pick(modelData, properties)
 
     relations.forEach(table => {
       if (_.has(modelData, table)) {

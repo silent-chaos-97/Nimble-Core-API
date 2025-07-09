@@ -10,7 +10,6 @@ class SignerContract extends BaseModel {
     super(SignerContract.props(), SignerContract.relations(), data)
   }
 
-  static props() {
     return [
       'url',
       'expiresAt'

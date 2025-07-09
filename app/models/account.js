@@ -12,5 +12,4 @@ class AccountModel extends BaseModel {
   }
 
   static schema() {
-// Temp comment
     return Joi.object().keys({

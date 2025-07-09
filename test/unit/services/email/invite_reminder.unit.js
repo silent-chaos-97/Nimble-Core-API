@@ -18,7 +18,6 @@ describe('app.services.email.inviteReminder', () => {
   })
 
   beforeEach(() => {
-    plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
 
@@ -64,3 +63,5 @@ describe('app.services.email.inviteReminder', () => {
       expect(app.services.email.inviteReminder).not.to.be.undefined
     })
 
+    it('should call sendEmailTemplate', async () => {
+      await app.services.email.inviteReminder(id)

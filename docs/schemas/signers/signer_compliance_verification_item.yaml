@@ -33,3 +33,4 @@ SignerComplianceVerificationItem:
       items:
         type: string
     adverseMedia:
+      title: A list of entries found about results of the type Media

@@ -203,7 +203,6 @@ const schema = Joi.object({
 			total: Joi.number()
 		}),
     // Not sure - User
-		proposed: Joi.object({
 			firstMortgagePAndI: Joi.number(),
 			otherFinancingPAndI: Joi.number(),
 			hazardInsurance: Joi.number(),
@@ -259,6 +258,7 @@ const schema = Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 				faceAmount: Joi.number(),
 				netCashValue: Joi.number()
+			}),
       // Calculated
 			lifeInsuranceTotalNetCashValue: Joi.number(),
       // Calculated
@@ -449,3 +449,10 @@ const schema = Joi.object({
 		})
 	}),
 	continuationSheet: Joi.object({
+		borrowerName: Joi.string(),
+		coborrowerName: Joi.string(),
+		agencyCaseNumber: Joi.string(),
+		lenderCaseNumber: Joi.string(),
+		signatures: Joi.array().items(
+			Joi.object({
+				signer: Joi.string().valid('Borrower', 'Co-Borrower'),

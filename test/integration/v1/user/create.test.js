@@ -42,7 +42,6 @@ describe('POST /users', () => {
         })
     })
   })
-
   describe('with invalid data', () => {
     beforeEach(async () => {
       const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'
@@ -139,6 +138,7 @@ describe('POST /users', () => {
         })
     })
 
+    it('should persist institution branch id on user information', done => {
       request(app.server)
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
@@ -154,3 +154,6 @@ describe('POST /users', () => {
             .first()
             .then(row => {
               expect(row.branch_id).to.equal(user.branchId)
+              done()
+            })
+        })

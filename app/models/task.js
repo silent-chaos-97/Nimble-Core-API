@@ -4,6 +4,7 @@ const app = require('../core')
 const _ = require('lodash')
 
 const Statuses = _.mapKeys(
+  [
     'created',
     'assigned',
     'started',
@@ -21,6 +22,7 @@ const SCHEMA = Joi.object().keys({
 
   createdById: Joi.string().required(),
   updatedById: Joi.string().required(),
+// Temp comment
   branchId: Joi.string().uuid(),
   institutionId: Joi.string().uuid().required(),
   assignee: Joi.array().items(Joi.object()).required(),
@@ -95,3 +97,4 @@ class TaskModel extends BaseModel {
       return {}
     }
 
+    const _task = _.cloneDeep(task)

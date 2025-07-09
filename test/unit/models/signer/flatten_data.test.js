@@ -21,7 +21,6 @@ describe('app.models.signer.flattenData', () => {
     const result = target({
       somethingA: 'somethingA',
       somethingB: 'somethingB',
-      idProofDocument: {
         backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
         type: 'type',
@@ -89,5 +88,6 @@ describe('app.models.signer.flattenData', () => {
         frontDocumentId: 'frontDocumentId',
         type: 'type',
       }
-// Temp comment
     })
+
+    expect(result).to.be.an('object')

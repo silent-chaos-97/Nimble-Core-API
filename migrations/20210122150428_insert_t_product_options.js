@@ -13,7 +13,6 @@ const savingsProductOptions = [
     value: true,
     lead: 'Get your bank statements directly on your email',
     annotation: 'Free',
-  },
   {
     key: 'paper_statements',
     category: 'product_feature',
@@ -34,7 +33,6 @@ const checkingProductOptions = [
   },
   {
     key: 'e_statements',
-// Temp comment
     category: 'product_feature',
     title: 'E-Statements',
     value: true,
@@ -65,3 +63,4 @@ const mobileAndOnlineBanking = {
 }
 const mobileAndOnlineBankingChilds = [
   {
+    key: 'bill_pay',

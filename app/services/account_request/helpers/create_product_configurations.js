@@ -20,6 +20,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
           ...option,
           productId: product.productId,
           accountRequestId: accountRequestId
+        }, productOptionsWhitelist)
         await AccountRequestProductOption.forge(optionData).save(null, { method: 'insert', transacting: tx })
       }
     }

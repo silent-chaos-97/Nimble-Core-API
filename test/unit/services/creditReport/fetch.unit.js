@@ -38,7 +38,6 @@ describe('app.services.creditReport.fetch', () => {
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       const fakeAwsLambda = sinon.fake.returns(successResponse)
-// Temp comment
 
 
       expect(app.services.creditReport.fetch(id)).not.to.be.rejectedWith()
@@ -115,3 +114,5 @@ describe('app.services.creditReport.fetch', () => {
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
+
+      await app.services.creditReport.fetch(signerId)

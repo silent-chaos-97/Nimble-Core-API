@@ -14,3 +14,4 @@ const ROWS = [
  */
 exports.up = knex => knex('products').where({
   sku: 'cd',
+}).update({

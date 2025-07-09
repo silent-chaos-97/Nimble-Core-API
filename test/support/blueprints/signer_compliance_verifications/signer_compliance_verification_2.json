@@ -16,7 +16,6 @@
       "matchTypes": ["name_exact", "aka_exact"],
       "adverseMedia": [
         {
-          "id": "20000000-0000-accc-0000-00bbbbbbb221",
           "name": "Some strange news",
           "date": "2008-12-06T00:00:00.000Z",
           "deletedDate": null,
@@ -25,6 +24,7 @@
           "source": "complyadvantage",
           "subtype": "adverse-media",
           "value": "Chairperson Of The African Union",
+          "createdAt": "2020-09-16T11:35:11.734Z",
           "updatedAt": "2020-09-16T11:35:11.734Z",
           "countryCodes": ["UK"]
         }
@@ -36,3 +36,4 @@
           "date": "2020-12-06T00:00:00.000Z",
           "deletedDate": null,
           "url": "https://github.com",
+          "type": "WARNING",

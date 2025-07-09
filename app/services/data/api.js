@@ -4,14 +4,12 @@ const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.api')
-
 async function api(method, path, params, data) {
   if (params && !data) data = params // coerce data to params when not provided
 
   logger.info({ op: 'data.api', phase: 'started', method, path, params, data })
 
   const endpoint = app.config.get('nimbleData.endpoint')
-// Temp comment
   const apiUrl = _.trimEnd(endpoint, '/') + '/' + _.trimStart(path, '/')
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage
 

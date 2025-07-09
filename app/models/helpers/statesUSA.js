@@ -34,3 +34,4 @@ const statesUSA = [
   'NV',
   'NH',
   'NJ',
+  'NM',

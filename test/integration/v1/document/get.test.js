@@ -1,6 +1,7 @@
 const nock = require('nock')
 
 describe('GET /documents/:id', () => {
+  let token
 
   before(() => {
     nock.disableNetConnect()
@@ -54,3 +55,4 @@ describe('GET /documents/:id', () => {
     })
 
     it('should return 403 when resource id not whitelisted in token', async () => {
+      token = await helpers.getScopedAuthToken()

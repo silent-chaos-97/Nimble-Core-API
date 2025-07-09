@@ -5,8 +5,10 @@ exports.up = function (knex) {
     table.enu('status', [
       'INVITED',
       'INCOMPLETE',
+      'PENDING',
       'SIGNED'
     ], { useNative: false, enumName: 'signers_status_type' }).alter()
   }).toSQL())
 }
 
+exports.down = function (knex) {

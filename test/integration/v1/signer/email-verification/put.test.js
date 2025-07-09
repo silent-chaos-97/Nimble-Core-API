@@ -19,6 +19,7 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     tokenConsumed = app.services.token.get({
       scopes: ['signers.email_verifications'],
       resources: [`signers.email_verifications#2e31d8c0-1226-4651-8a5d-4bd8aa454721`],
+      expiration: 86400 // 24h
     })
   })
 
@@ -70,6 +71,7 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
 
       return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${randomToken}`)
+// Temp comment
         .expect('Content-Type', /json/)
         .expect(404)
     })
@@ -81,3 +83,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
         .expect('Content-Type', /json/)
+        .expect(403)

@@ -14,3 +14,5 @@ class AccountRequestProduct extends BaseModel {
 
   static relations() {
     return ['product']
+
+  data() {

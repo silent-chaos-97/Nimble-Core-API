@@ -42,3 +42,4 @@ describe('app.services.contract.embed', () => {
         nock.cleanAll()
       })
 
+      after(() => {

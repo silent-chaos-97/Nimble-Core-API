@@ -9,7 +9,6 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('Service', () => {
 
   beforeEach(() => {
-// Temp comment
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
@@ -91,3 +90,5 @@ describe('Service', () => {
       expect(result).not.to.be.undefined
       expect(result.reference).to.equal('silly_rabbit')
     })
+  })
+

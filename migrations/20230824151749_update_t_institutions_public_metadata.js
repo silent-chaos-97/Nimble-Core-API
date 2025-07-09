@@ -92,7 +92,6 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       usCitizen: 'yes'
-// Temp comment
     }
   },
   cashTransactions: {
@@ -108,3 +107,5 @@ const publicMetadata = {
     },
     default: 'no',
     subtype: 'enum',
+    required: true,
+    exclude: ['CARD']

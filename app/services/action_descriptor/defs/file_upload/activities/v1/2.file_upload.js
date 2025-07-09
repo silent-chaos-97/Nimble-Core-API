@@ -18,6 +18,7 @@ async function activity(context) {
     const taskFiles = _.map(files, (file, id) => ({ id, ...file }))
 
     const activityFiles = _.filter(taskFiles, file => {
+      return (
         activityId === file.activityId ||
         activityKey === file.activityId ||
         task.activityId === file.activityId ||

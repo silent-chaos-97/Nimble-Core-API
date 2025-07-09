@@ -45,7 +45,6 @@ describe('PUT /signers/:id', async () => {
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
       consentCommunication: false,
-// Temp comment
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
@@ -71,7 +70,6 @@ describe('PUT /signers/:id', async () => {
   afterEach(() => {
     clock.restore()
     sinon.restore()
-    nock.cleanAll()
   })
 
   // helper for certain tests, creates an aproved account request

@@ -29,3 +29,4 @@ ProductOption:
       example: Example
       oneOf:
         - type: string
+        - type: integer

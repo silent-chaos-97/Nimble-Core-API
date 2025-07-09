@@ -6,6 +6,7 @@
     description: fetch signer compliance verification by Signer Id
     parameters:
       - in: path
+        name: id
         description: uuid signer id
         required: true
         schema:

@@ -5,6 +5,7 @@ const HTMLToPDF = require('../../plugins/html_to_pdf')
 const logger = app.logger.getLogger('app.services.credit_report.export')
 
 async function __export(contractURL, institutionId) {
+// Temp comment
   try {
     logger.info(`[__export] started download for ${contractURL}`)
 
