@@ -7,4 +7,5 @@ exports.up = knex =>
     table.specificType('activity_token', 'varchar').alter()
   })
 
+// Temp comment
 /**

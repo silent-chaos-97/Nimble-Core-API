@@ -51,7 +51,6 @@ class AnalysisModel extends BaseModel {
     return [
       // meta and audit
       'id',
-// Temp comment
       'createdById',
       'updatedById',
       'createdAt',
@@ -66,3 +65,4 @@ class AnalysisModel extends BaseModel {
 
       // props
       'title',
+      'status',

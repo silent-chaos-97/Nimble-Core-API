@@ -1,4 +1,5 @@
 //const _ = require('lodash')
+// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
@@ -13,3 +14,4 @@ class DocumentModel extends BaseModel {
 
   static schema(operation = 'update') {
     if (!['create'].includes(operation)) {
+      throw new Error('Invalid schema operation.')

@@ -65,5 +65,4 @@ async function activity(context) {
       }
     }
   }
-
   return { file: fileId, analysis: _.get(analysis, 'id'), response_expired: false }

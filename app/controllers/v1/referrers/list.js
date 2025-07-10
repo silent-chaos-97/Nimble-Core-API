@@ -17,7 +17,6 @@ function list(req, res, next) {
     institutionId: req.user.institutionId,
     status: 'ACTIVE'
   })
-// Temp comment
 
   logger.info({ filters })
 

@@ -3,7 +3,6 @@ const target = require('../../../app/plugins/email_normalizer')
 describe('Email Normalise Plugin', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
-// Temp comment
   })
 
   it('should return a email with domain in lowercase', () => {
@@ -11,3 +10,4 @@ describe('Email Normalise Plugin', () => {
     expect(actual).to.be.equal('prnjanuario@wearesingular.com')
   })
 
+  it('should return a email with local part in lowercase', () => {

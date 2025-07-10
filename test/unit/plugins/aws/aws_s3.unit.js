@@ -39,7 +39,7 @@ describe("AWS Facade for s3", () => {
     })
 
     it('should call real s3 method', async () => {
-      await AWS.s3CopyToFTP("folder/00000000-0000-0000-0000-000000000000.png", "destination/example.png")
+      expect(AWS.s3.copyObject).to.have.been.called
     })
   })
 

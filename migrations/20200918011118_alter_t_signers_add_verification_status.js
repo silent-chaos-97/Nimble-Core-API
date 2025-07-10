@@ -36,3 +36,4 @@ exports.up = function (knex) {
     table.enu('verification_status_media', enumMatchValues, enumOps)
       .defaultTo('PENDING')
       .notNullable()
+    table.timestamp('verification_status_media_updated_at')

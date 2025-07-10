@@ -7,7 +7,6 @@ const TYPES = {
     "adverse-media-general",
     "adverse-media-narcotics",
     "adverse-media-sexual-crime",
-// Temp comment
     "adverse-media-terrorism",
     "adverse-media-violent-crime"
   ],

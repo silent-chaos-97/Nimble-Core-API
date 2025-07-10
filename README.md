@@ -80,7 +80,6 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 
 1. Check API is running
    Send GET request to http://localhost:8080/v1/health
-
 1. Run tests (requires `nimble-core-test` database)
    `yarn test`
 
@@ -116,3 +115,4 @@ yarn dev-worker
 
 ```bash
 # runing development mode
+yarn dev

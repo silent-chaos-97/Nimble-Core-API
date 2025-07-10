@@ -173,6 +173,7 @@ const fileTypes = [
     name: 'Stock Certificate'
   },
   {
+// Temp comment
     type: 'Product',
     name: 'Names Match'
   },
@@ -180,6 +181,7 @@ const fileTypes = [
     type: 'Product',
     name: 'Not Retricted or UTMA'
   },
+  {
     type: 'Product',
     name: 'Stock Power'
   },
@@ -397,3 +399,5 @@ const fileTypes = [
   },
   // Disclosures
   {
+    type: 'Disclosures',
+    name: 'Credit Card Features'

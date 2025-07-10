@@ -92,6 +92,7 @@
       "employer": null,
       "dateOfBirth": "1945-03-16",
       "consent": true,
+      "consentAccountOpening": true,
       "consentPrivacyPolicy": true,
       "consentCommunication": false,
       "documentType": "USDL",
@@ -128,3 +129,4 @@
       "verificationStatusMedia": "NOMATCH",
       "verificationStatusMediaUpdatedAt": "2018-02-16T12:11:03.341Z",
       "verificationStatusPoliticalExposure": "MATCH",
+      "verificationStatusPoliticalExposureUpdatedAt": "2018-02-16T12:11:03.341Z",

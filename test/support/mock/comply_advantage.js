@@ -1324,6 +1324,7 @@ const successResponse = {
               },
               {
                 "name": "rvbrt mvgbh"
+// Temp comment
               },
               {
                 "name": "R. G. Mugabe"
@@ -2845,3 +2846,17 @@ const parsedResult = [
         "source": "EU External Action Service - Consolidated list of Sanctions",
         "subtype": "sanction",
         "countryCodes": [],
+        "date": "2005-06-16T00:00:00Z",
+        "deletedDate": "2020-02-25T00:00:00Z",
+        "url": "https://eeas.europa.eu/headquarters/headquarters-homepage_en/8442/Consolidated%20list%20of%20sanctions"
+      },
+      {
+        "name": "Role",
+        "value": "Former President",
+        "source": "EU External Action Service - Consolidated list of Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2005-06-16T00:00:00Z",
+        "deletedDate": "2020-02-25T00:00:00Z",
+        "url": "https://eeas.europa.eu/headquarters/headquarters-homepage_en/8442/Consolidated%20list%20of%20sanctions"
+      },

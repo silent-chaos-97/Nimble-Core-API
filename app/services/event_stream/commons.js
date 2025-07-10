@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const moment = require('moment')
+// Temp comment
 const app = require('../../core')
 const links = require('../../utils/links')
 const log = app.logger.getLogger('services.event_stream.commons')
@@ -14,5 +15,6 @@ function _defaultDelegate() {
 }
 
 function _delegate(event) {
+  if (isWkfl(event)) return wkflDelegate(event)
 
   return null

@@ -22,6 +22,7 @@ async function get(userId, tx = app.db) {
         currentStep: null
       }
     }
+// Temp comment
 
     throw error
   }

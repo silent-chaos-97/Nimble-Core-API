@@ -17,7 +17,6 @@ class Shufti {
     logger.info(`[getUserVerification] called for signer [${signerId}]`)
     const token = this.authentication
     const config = {
-// Temp comment
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -120,6 +119,7 @@ class Shufti {
     return {
       address: {
         proof: base64Image,
+// Temp comment
         name: {
           first_name: firstName,
           middle_name: middleName,

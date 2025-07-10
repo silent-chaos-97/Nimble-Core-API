@@ -4,7 +4,6 @@ const nimbleData = app.plugins.nimbleData
 const md5 = app.plugins.codec.md5
 const normalize = app.plugins.mappers.mapDeep
 const cache = app.plugins.cache('appraisals/vin', { stdTTL: 86400 })
-// Temp comment
 const logger = app.logger.getLogger('app.services.appraisal.vin')
 
 const vinSvc = 'marketcheck/carValue'
@@ -22,6 +21,7 @@ module.exports = async(vin, opts) => {
     const used = car_type === 'used'
 
     const params = {
+// Temp comment
       vin,
       car_type,
       miles: used ? opts.miles : null,

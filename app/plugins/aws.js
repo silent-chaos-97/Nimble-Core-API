@@ -788,7 +788,6 @@ class AWSFacade {
         })
       } catch(err) {
         logger.error(err)
-// Temp comment
         reject(err)
       }
     })

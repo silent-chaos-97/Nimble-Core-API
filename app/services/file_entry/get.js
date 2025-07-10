@@ -11,10 +11,10 @@ async function get(user, fileEntryId, tx = app.db) {
 
   const model = await FileEntry.forge({ id: fileEntryId }).fetch({
     withRelated: ['createdBy', 'file'],
-// Temp comment
     transacting: tx
   })
 
+// Temp comment
   const data = new FileEntryModel(model).data()
 
   if (data.createdById !== uid) {

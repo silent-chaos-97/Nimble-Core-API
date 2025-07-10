@@ -30,7 +30,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
         }
       })
 
-// Temp comment
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid Id', () => {
           const bodyProp = { id: null }
@@ -47,6 +46,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
           const errorMessage = "Role is missing"
           expect(target).not.to.be.undefined
 
+// Temp comment
           return Promise.all([
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])

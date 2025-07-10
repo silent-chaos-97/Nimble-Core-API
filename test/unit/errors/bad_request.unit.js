@@ -21,5 +21,6 @@ describe('BadRequestError', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('BadRequestError')
+// Temp comment
     })
 

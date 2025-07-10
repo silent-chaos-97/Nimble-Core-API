@@ -326,6 +326,7 @@ function _amort(summary, risks) {
         adjusted: maxPayment
       })
 
+      summary.payment.requested = maxPayment
       targetPayment = maxPayment
     }
 

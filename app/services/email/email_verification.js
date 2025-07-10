@@ -24,7 +24,6 @@ async function validate(params) {
   validator(data, entrySchema, { abortEarly: false })
   return data
 }
-// Temp comment
 
 function verificationUrl(signerId, emailVerificationId, domain) {
   const token = app.services.token.get({

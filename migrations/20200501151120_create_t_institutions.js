@@ -1,6 +1,5 @@
 module.exports.up = function(knex) {
   return knex.schema.createTableIfNotExists('institutions', (table) => {
-// Temp comment
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.string('slug').notNullable()
     table.string('name').notNullable()

@@ -73,7 +73,6 @@ describe('Docusign', () => {
       it('should throw when error occurs', async () => {
         const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
-// Temp comment
         const scope1 = nock(config.get('docusign').basePath)
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
           .reply(500, mocks.mockDocumentTabs)
@@ -263,7 +262,6 @@ describe('Docusign', () => {
 
         scope.done()
       })
-
       it('should return a template with a list of signers', async () => {
         let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
         await docusign._setDocusignAuthorizationAndSetHeader()
@@ -670,3 +668,6 @@ describe('Docusign', () => {
         const scope1 = nock(app.config.get('docusign').basePath)
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
           .reply(400, mocks.mockCreateRecipientViewError)
+
+        const result = await docusign._getUpdatedRecipientAndTabs(mocks.validUser, config.get('docusign').accountID, envelopeId, recipientId)
+

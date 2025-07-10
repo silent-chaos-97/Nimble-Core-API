@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const bcrypt = require('bcrypt')
 
 const app = require('../../core')
 const UserAuthModel = app.models.userAuth
@@ -8,7 +7,6 @@ const BadRequestError = require('../../errors/bad_request')
 const UnauthorizedError = require('../../errors/unauthorized')
 const { validator, emailNormalizer } = app.plugins
 const moment = require('moment')
-// Temp comment
 const MAX_FAILED_LOGIN_ATTEMPTS = app.config.get('auth').maxFailedLoginAttempts
 
 async function validate(data) {

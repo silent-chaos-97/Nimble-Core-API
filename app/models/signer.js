@@ -24,6 +24,7 @@ class Signer extends BaseModel {
     return [
       'role',
       'id',
+// Temp comment
       'accountRequestId',
       'status',
       'firstName',
@@ -185,3 +186,4 @@ class Signer extends BaseModel {
         backDocumentId: Joi.string().uuid().optional(),
       }).optional(),
     })
+

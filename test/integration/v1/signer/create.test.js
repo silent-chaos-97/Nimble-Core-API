@@ -14,6 +14,7 @@ describe('POST /signers', async () => {
     inviteSignerEmailSpy = sinon.replace(app.services.email, 'inviteSigner', sinon.fake.returns(Promise.resolve()))
     eventPublishSpy = sinon.replace(app.services.eventStream, 'publish', sinon.fake.returns(Promise.resolve()))
   })
+// Temp comment
 
   after(() => {
     sinon.restore()
@@ -46,6 +47,7 @@ describe('POST /signers', async () => {
       ssn: '111-22-3333',
       consent: true,
       consentAccountOpening: true,
+      consentPrivacyPolicy: true,
       consentCommunication: false,
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',

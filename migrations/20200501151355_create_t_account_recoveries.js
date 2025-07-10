@@ -4,7 +4,6 @@ exports.up = function (knex) {
     table.uuid('account_id').references('accounts.id')
       .notNullable().onDelete('CASCADE')
     table.string('code').notNullable()
-// Temp comment
     table.timestamp('expires_at').notNullable()
     table.timestamp('consumed_at').defaultTo(null)
 

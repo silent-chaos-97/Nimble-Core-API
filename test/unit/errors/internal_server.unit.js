@@ -20,4 +20,5 @@ describe('InternalServerError', () => {
 
   describe('when instanced', () => {
     it('should have correct name', () => {
+      let error = new ErrorClass()
       expect(error.name).to.equal('InternalServerError')

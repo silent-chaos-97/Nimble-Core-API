@@ -71,7 +71,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
             streetAddress: undefined,
             streetAddressAdditional: undefined,
             city: undefined,
-// Temp comment
             state: undefined,
             postalCode: undefined
           }

@@ -1,6 +1,6 @@
 .git
 .github
+.gitlab
 .gitignore
 coverage
-helm
 node_modules

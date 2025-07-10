@@ -76,7 +76,6 @@ Source:
 
 The process is deeply explained in this video and document:
 
-- https://developers.docusign.com/esign-rest-api/guides/go-live
 - https://developers.docusign.com/esign-rest-api/guides/go-live-steps
 - video: https://www.youtube.com/watch?v=QWzuXuxSm8Q
 
@@ -100,3 +99,4 @@ Example servers for production:
 
 - DOCUSIGN_BASE_OAUTH_PATH = https://account.docusign.com
 - DOCUSIGN_BASE_PATH = https://{server}.docusign.net/...
+

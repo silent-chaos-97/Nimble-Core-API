@@ -15,6 +15,7 @@ async function email_verification_reminder(days = 1, tx = app.db) {
   const query = SignerEmailVerification.query(q => {
     // we want the MOST RECENT signerEmailVerification grouped by signer_id
     q.select(tx.knex.raw('DISTINCT ON(signer_id) *')) // groupBy signer_id
+
     q.where('consumed_at', null)
     q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)
@@ -27,6 +28,7 @@ async function email_verification_reminder(days = 1, tx = app.db) {
 
   // map to SignerEmailVerificationModel
   const SignerEmailVerificationList = result.models.map(m => new SignerEmailVerificationModel(m).data())
+// Temp comment
 
   // if nothing was found, we are done
   logger.info(`[email_verification_reminder] found ${SignerEmailVerificationList.length} UNVERIFIED signers since ${timeWindowStart} until ${timeWindowEnd}`)

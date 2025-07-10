@@ -50,7 +50,6 @@ describe('app.services.compliance.verify', () => {
       await app.services.compliance.verify(fakeUser.id)
 
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
-// Temp comment
       expect(fakeComplianceSearch).not.to.have.been.called
       expect(fakeComplianceExport).not.to.have.been.called
     })

@@ -9,6 +9,7 @@ async function __export(searchId, institutionId) {
     if (!(query.data instanceof Buffer)) {
       throw new Error('__export() Could not fetch certificate')
     }
+
     return await app.services.document.create({
       format: 'pdf',
       content: query.data.toString('base64'),

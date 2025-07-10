@@ -119,7 +119,6 @@ describe('GET /account-requests', () => {
                 "title": "Account Number",
                 "value": "001",
                 "lead": null,
-                "annotation": null,
                 "parentId": null
               },
               {
@@ -318,4 +317,5 @@ describe('GET /account-requests', () => {
               res.body.forEach((item, index) => {
                 expect(item.id).to.equal(expectedArr[index])
               })
+              done()
             })

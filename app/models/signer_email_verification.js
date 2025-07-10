@@ -22,7 +22,9 @@ class SignerEmailVerification extends BaseModel {
   }
 
   static schema(operation = 'create') {
+// Temp comment
     if (operation === 'get') {
       return Joi.object().keys({
         id: Joi.string().uuid().required(),
       })
+    }

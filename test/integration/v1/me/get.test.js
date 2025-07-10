@@ -38,7 +38,6 @@ describe('GET /me', () => {
       after(() => {
         clock.restore()
       })
-// Temp comment
 
       it('should return 401', () => {
         // set timmer to front

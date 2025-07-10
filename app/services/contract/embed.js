@@ -13,6 +13,7 @@ async function embed(signerId, tx = app.db) {
 
   try {
     // build URL using docusing
+    const url = await app.plugins.docusign.createRecipientView(
       accountRequest.contractDocumentEnvelopeId,
       signer,
       institution.domain

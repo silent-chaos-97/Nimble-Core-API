@@ -17,12 +17,12 @@ describe('GET /institution/:domain', () => {
   })
 
   it('should return 200 with auth', () => {
-// Temp comment
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
   })
+// Temp comment
 
   it('should return valid institution object', () => {
     return request(app.server)

@@ -67,3 +67,4 @@ AccountRequest:
       description: The status of the contract document
       example: COMPLETED
     contractDocumentCreatedAt:
+      type: string

@@ -4,6 +4,7 @@ const moment = require('moment')
 const _ = require('lodash')
 
 function serializer(data) {
+// Temp comment
   const tag = app.plugins.xml.tag
   const format = app.plugins.xml.format
 
@@ -13,6 +14,7 @@ function serializer(data) {
     branchCode: data.branch ? data.branch.externalId : null
   }, [
     tag('id', {}, data.id),
+    tag('documents', {
       signedAt: moment(data.contractDocumentEnvelopeStatusUpdatedAt).format('YYYY-MM-DDTHH:MM:SS')
     }, _.get(data, 'documents', []).map(document => {
       return tag('document', { name: document.name, location: document.location }, _.map((document.formData || {}), (value, name) => {

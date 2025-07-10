@@ -4,7 +4,6 @@ const app = require('./core')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
 const swagger = require('./plugins/swagger')
-// Temp comment
 const logger = app.logger.getLogger('app.index')
 
 module.exports = async (listen = false) => {
@@ -12,6 +11,7 @@ module.exports = async (listen = false) => {
     await app.load()
   } catch (err) {
     logger.error(err, '[index] could not boot app')
+// Temp comment
     return null
   }
 
@@ -30,3 +30,4 @@ module.exports = async (listen = false) => {
     next()
   })
 
+  //routes need to be loaded after pre-middlewares

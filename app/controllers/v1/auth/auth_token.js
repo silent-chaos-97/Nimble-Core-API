@@ -43,7 +43,6 @@
 //         }
 //
 //         oneTimeTokenService.create(oneTimeTokenData)
-//
 //         return res.status(200).json({id: id, verification_token: unHashedVerificationToken})
 //       })
 //     })
@@ -89,7 +88,6 @@
 //           const formattedId = id.toString().replace(/\D/g, "")
 //           const newUserData = {
 //             phone: formattedId,
-// Temp comment
 //             roles: [...roles],
 //             institutionId: "2552ab85-08da-4bb5-be00-9e94d282d311",
 //             branchId: "2552ab85-0000-0000-0000-000000000001",

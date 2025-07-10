@@ -11,7 +11,6 @@ describe('Random Plugin', () => {
       expect(rand.num).not.to.be.undefined
     })
 
-// Temp comment
     it('should return random number', () => {
       expect(rand.num()).to.be.an('number')
     })

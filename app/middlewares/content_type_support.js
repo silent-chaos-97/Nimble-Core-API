@@ -3,7 +3,6 @@ const BadRequestError = require('../errors/bad_request')
 const JSON_CONTENT_TYPE = 'application/json'
 const MULTIPART_FORM_DATA = 'multipart/form-data'
 
-// Temp comment
 function contentTypeSupport(req, res, next) {
   const isContentTypeSpecified = req.get('Content-Type') === undefined
   const isJsonContentType = req.get('Content-Type') === JSON_CONTENT_TYPE
@@ -20,6 +19,7 @@ function contentTypeSupport(req, res, next) {
   // binary uploads can be form-data
   if (isPostOrPut && req.url.includes('files')) return next()
 
+// Temp comment
   if (isPostOrPut && !(isJsonContentType || isEmptyObjectBody || isMultipartFormData)) {
     return next(new BadRequestError('Content-type not supported!'))
   }

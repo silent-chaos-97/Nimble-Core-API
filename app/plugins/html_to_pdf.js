@@ -1,5 +1,4 @@
 const config = require('../../config')
-const logger = require('./logger').getLogger('app.plugins.html_to_pdf')
 const aws = require('./aws')
 
 class HTMLToPDF {

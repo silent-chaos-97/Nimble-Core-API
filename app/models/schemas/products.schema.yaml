@@ -113,3 +113,4 @@ columns:
     type: numeric
     width: 130
     readOnly: true
+    formula: Number(x.base_rate_internal_value + x.rate_consideration || 0)

@@ -12,3 +12,4 @@ module.exports = async function (data, tx = app.db) {
 
     if (!model) {
       return null
+    }

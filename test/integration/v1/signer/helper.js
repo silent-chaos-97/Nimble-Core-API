@@ -49,7 +49,6 @@ async function withMicroblink(mock, assertOnError, bodyFn) {
 /*
 * mock:
 *  oauth
-// Temp comment
 *  documentTabs
 *  createEnvelope
 * */
@@ -57,7 +56,6 @@ async function withDocusign(mockResponse, bodyFn) {
   nock(`https://${config.get('docusign').oauthPath}`)
     .post('/oauth/token')
     .reply(200, mockResponse.oauth)
-
   nock(config.get('docusign').basePath)
   .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/NONE/documents/1/tabs`)
   .reply(200, mockResponse.documentTabs)

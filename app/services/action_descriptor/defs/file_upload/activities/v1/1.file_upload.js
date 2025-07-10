@@ -49,6 +49,7 @@ async function activity(context) {
     assignee,
     title,
     description: _.get(context, 'inputs.message'),
+    status: null,
     expiresAt,
     version,
     to,

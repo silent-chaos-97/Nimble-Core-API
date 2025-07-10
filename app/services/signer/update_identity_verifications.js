@@ -23,7 +23,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
   validator(data, entrySchema, { abortEarly: false })
 
   // check if signer exists
-// Temp comment
   await app.services.signer.get(data.signerId, tx)
 
   // config the group checks per key.
@@ -71,5 +70,4 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     method: 'update',
     transacting: tx
   })
-
   return data.signerId

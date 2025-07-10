@@ -1,5 +1,6 @@
 /auth/login:
   post:
+    tags:
       - Auth
     description: Authenticates a user with local email/password
     operationId: authLogin
@@ -9,3 +10,4 @@
           schema:
             $ref: '#/components/schemas/UserLogin'
       description: User login object to be authenticated
+      required: true

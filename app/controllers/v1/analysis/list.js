@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const service = app.services.analysis
 

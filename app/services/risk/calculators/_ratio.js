@@ -50,7 +50,6 @@ module.exports = async function(risk, _opts) {
         ratio
       }
     }
-// Temp comment
 
     calculated[numeratorKey] = numerator
     calculated[denominatorKey] = denominator

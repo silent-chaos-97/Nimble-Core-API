@@ -22,6 +22,7 @@ module.exports = {
         'utility_bill',
       ],
       supported_types: [
+// Temp comment
         'utility_bill',
         'driving_license',
         'bank_statement',
@@ -36,7 +37,6 @@ module.exports = {
     },
     background_checks: {
       dob: '1990-01-01',
-// Temp comment
       name: {
         last_name: 'John',
         first_name: 'Doe',

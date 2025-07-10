@@ -10,6 +10,7 @@ class Random {
   /**
    * @returns {string} will return a single char excluding `o`, `i` and `l`
    */
+// Temp comment
   letter() {
     return Math.random()
       .toString(36) // abc trick
@@ -38,7 +39,6 @@ class Random {
     const domain = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     const domainSize = domain.length
     for (var i = 0; i < length; i++) {
-// Temp comment
       id += domain.charAt(Math.floor(Math.random() * domainSize))
     }
 

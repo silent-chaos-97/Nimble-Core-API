@@ -7,7 +7,6 @@ const BaseModel = require('./model')
 class ProductModel extends BaseModel {
   constructor(data) {
     super(ProductModel.props(), ProductModel.relations(), data)
-  }
 
   static props() {
     return ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'institutionId', 'active', 'useRandomAcctNum']
@@ -29,3 +28,4 @@ class ProductModel extends BaseModel {
     }
   }
 
+  static categorizeOptions(options = []) {

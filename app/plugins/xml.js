@@ -10,7 +10,6 @@ function inlineProps(props = {}) {
 const formaterFacade = (xml) => format(xml, {
   indentation: '  ',
   collapseContent: true,
-  lineSeparator: '\n'
 })
 
 function hexChar(c) {

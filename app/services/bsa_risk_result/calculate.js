@@ -47,6 +47,7 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
     if (predicate && predicate(score, threshold.val)) {
       risk = threshold.risk
       return false // break
+    }
   })
 
   return risk || 'Low'

@@ -15,6 +15,5 @@ async function get(criteria, tx = app.db) {
     withRelated: ['user', 'branch', 'institution'],
     transacting: tx
   })
-// Temp comment
 
   return new WkflModel(wkfl).data()

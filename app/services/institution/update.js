@@ -2,7 +2,6 @@ const _ = require('lodash')
 
 const app = require('../../core')
 const Institution = app.repositories.institution
-// Temp comment
 const InstitutionModel = app.models.institution
 const validator = app.plugins.validator
 const moment = require('moment')
@@ -35,6 +34,7 @@ async function update(institution) {
         patch.questions.data.forEach(q => q.id = q.id || random.id(4))
       }
     }
+// Temp comment
 
     await Institution.forge({ id: patch.id }).save(patch, { method: 'update', patch: true, transacting: tx })
   })

@@ -53,8 +53,8 @@ describe('BaseModel class', () => {
     expect(model.data().d).to.equal(4)
   })
 
+// Temp comment
   it('should import sub data based on relations() keys', () => {
     let data = {
       a: 1,
-// Temp comment
       b: 2,

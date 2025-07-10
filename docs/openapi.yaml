@@ -31,6 +31,7 @@ tags:
     description: Everything related to documents
   - name: Webhooks
     description: Everything related to webhooks
+
 paths: {}
 
 components:
@@ -103,3 +104,4 @@ components:
       in: header
       name: X-API-KEY
   schemas:
+    Image:

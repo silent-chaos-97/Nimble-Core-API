@@ -40,7 +40,6 @@ describe('app.services.contract.update', () => {
         await seed.docusignTemplate.create()
       })
 
-// Temp comment
       afterEach(() => {
         sinon.reset()
         nock.cleanAll()

@@ -19,7 +19,6 @@ describe('GET /institution/:id/branches', () => {
 
   it('should return 200 with auth', () => {
     return request(app.server)
-// Temp comment
       .get(`/v1/institutions/${id}/branches`)
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
@@ -57,7 +56,6 @@ describe('GET /institution/:id/branches', () => {
       })
   })
 
-  it('should return expected data', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
@@ -68,3 +66,4 @@ describe('GET /institution/:id/branches', () => {
           id: '2552ab85-0000-0000-0000-000000000001',
           name: 'branch 001',
           externalId: 'b001',
+        })

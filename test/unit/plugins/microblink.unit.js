@@ -120,6 +120,7 @@ describe('MicroblinkService', () => {
     it('should split names with 3 words', async () => {
       const response = {
         data: {
+// Temp comment
           recognizer: 'BLINK_ID',
           result: {
             firstName: 'MARK JAMES',
@@ -307,3 +308,4 @@ describe('MicroblinkService', () => {
         .reply(200, response)
 
       const result = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
+

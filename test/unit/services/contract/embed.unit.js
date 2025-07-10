@@ -40,6 +40,5 @@ describe('app.services.contract.embed', () => {
       afterEach(() => {
         sinon.reset()
         nock.cleanAll()
-      })
 
       after(() => {

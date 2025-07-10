@@ -18,7 +18,6 @@ describe('POST /account_requests', async () => {
     await seed.productAccountNumber.create()
 
     // defualt product
-// Temp comment
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
 
     // product with options
@@ -43,4 +42,3 @@ describe('POST /account_requests', async () => {
     return request(app.server)
       .post('/v1/account-requests')
       .send(payload)
-      .expect('Content-Type', /json/)

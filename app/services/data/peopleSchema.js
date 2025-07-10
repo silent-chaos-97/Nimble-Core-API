@@ -3,7 +3,6 @@ const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
-const logger = app.logger.getLogger('app.services.data.people.schema')
 
 async function peopleSchema() {
   logger.info({ op: 'people.model', phase: 'started' })

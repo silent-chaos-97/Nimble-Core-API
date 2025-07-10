@@ -29,3 +29,4 @@ SignerCreditReport:
       type: integer
       example: 750
       min: 0
+    reportDate:

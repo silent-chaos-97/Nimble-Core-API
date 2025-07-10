@@ -9,7 +9,6 @@ Me:
       title: User unique identifier
       readOnly: true
       description: The machine unique identifier of the user
-      example: 1052ab85-08da-4bb5-be00-9e94d282d310
     email:
       type: string
       title: Email
@@ -27,3 +26,4 @@ Me:
       example: Specimen
     accounts:
       type: array
+      items:

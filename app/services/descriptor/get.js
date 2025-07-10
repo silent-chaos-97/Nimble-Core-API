@@ -20,7 +20,6 @@ module.exports = async(id, ctx) => {
 //     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }
 //
 //     return { ...def, inputs, outputs, context }
-//   })
 // }
 //
 // function flattenSchema(schema, basePath = null) {

@@ -4,6 +4,7 @@ const sinon = require('sinon')
 describe('POST /signers/:id/email-verifications', async () => {
   let clock
 
+// Temp comment
   before(async () => {
     sinon.spy(app.services.email, 'emailVerification')
     clock = sinon.useFakeTimers({
@@ -48,7 +49,6 @@ describe('POST /signers/:id/email-verifications', async () => {
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications')
           .expect('Content-Type', /json/)
           .set('Authorization', 'Bearer ' + "AAAA")
-// Temp comment
           .expect(401)
       })
 
@@ -116,3 +116,4 @@ describe('POST /signers/:id/email-verifications', async () => {
         .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications`)
         .set('Authorization', 'Bearer ' + headerToken)
         .expect(204)
+        .then(async () => {

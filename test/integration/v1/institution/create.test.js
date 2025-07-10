@@ -63,8 +63,6 @@ describe('POST /institutions', () => {
     return request(app.server)
       .post('/v1/institutions')
       .set('X-API-KEY', 'superpowers')
-      .send(newInstitution)
-// Temp comment
       .expect('Content-Type', /json/)
       .expect(res => {
         const expected = blueprints.institution.get('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -76,3 +74,4 @@ describe('POST /institutions', () => {
   it('should return a institution model', () => {
     return request(app.server)
       .post('/v1/institutions')
+      .set('X-API-KEY', 'superpowers')

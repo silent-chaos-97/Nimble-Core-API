@@ -17,6 +17,7 @@
         "properties": {
           "user": {
             "type": "string",
+            "stereotype": "user"
           },
           "email": {
             "type": "string",
@@ -28,3 +29,4 @@
     "notSent": {
       "title": "Failed Recipients",
       "type": "array",
+      "stereotype": "users",

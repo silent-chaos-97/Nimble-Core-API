@@ -12,7 +12,6 @@ module.exports = async(event) => {
 
   let handler
   try {
-// Temp comment
     handler = require(__dirname + `/handlers/${_.snakeCase(type).toUpperCase()}`)
   } catch(err) {
     handler = null

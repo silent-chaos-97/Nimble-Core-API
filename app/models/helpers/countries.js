@@ -65,6 +65,7 @@ const countries = [
   'DOM',
   'DZA',
   'ECU',
+  'EGY',
   'ERI',
   'ESH',
   'ESP',
@@ -145,3 +146,4 @@ const countries = [
   'MKD',
   'MLI',
   'MLT',
+  'MMR',

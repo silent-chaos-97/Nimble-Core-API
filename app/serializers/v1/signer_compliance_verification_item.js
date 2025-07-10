@@ -27,6 +27,7 @@ function serializer(data) {
       .filter((item) => item.type == 'WARNING')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
+    format.adverseMedia = data.items
       .filter((item) => item.type == 'ADVERSE-MEDIA')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 

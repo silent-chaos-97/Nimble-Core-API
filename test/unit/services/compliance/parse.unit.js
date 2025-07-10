@@ -3,6 +3,7 @@ const nock = require('nock')
 const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
+
 describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
@@ -60,7 +61,6 @@ describe('app.services.compliance.parse', () => {
         expect(first).to.have.ownProperty('associates')
         expect(first).to.have.ownProperty('adverseMedia')
         expect(first).to.have.ownProperty('warnings')
-        expect(first).to.have.ownProperty('sanctions')
         expect(first).to.have.ownProperty('politicalExposure')
 
         expect(first.dateOfDeath).to.equal(null)

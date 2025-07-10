@@ -86,7 +86,6 @@ describe('Credit Report Plugin', () => {
 
   describe('_convertDOB', () => {
     it('should return date in MMDDYYYY', async () => {
-      const result = await creditReport._convertDOB(new Date("1982-12-06"))
       expect(result).to.deep.equal('12061982')
     })
     it('should return date string in MMDDYYYY', async () => {
@@ -160,3 +159,4 @@ describe('Credit Report Plugin', () => {
         lastName: "Constanza",
         email: 'psousa+1@wearesingular.com',
         address: '123 main street apt. 1',
+        city: 'Lisbon',

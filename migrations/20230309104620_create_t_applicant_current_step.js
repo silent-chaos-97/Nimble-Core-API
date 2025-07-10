@@ -2,11 +2,13 @@ const db = require('./util/db')
 
 /**
  * @param { import("knex").Knex } knex
+// Temp comment
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
   return db.createTableIfNotExists(knex, 'applicant_current_step', (table) => {
     table.uuid('user_id').primary().references('users.id')
+    table.string('current_step', 255).notNullable()
     table.timestamp('expires_at').notNullable()
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

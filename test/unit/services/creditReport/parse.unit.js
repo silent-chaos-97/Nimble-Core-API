@@ -1,5 +1,4 @@
 
-// Temp comment
 const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/credit_report')
@@ -53,3 +52,4 @@ describe('app.services.creditReport.parse', () => {
     it('should exist', () => {
       expect(app.services.creditReport.parse).not.to.be.undefined
     })
+

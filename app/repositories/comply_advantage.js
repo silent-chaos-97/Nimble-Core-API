@@ -6,7 +6,6 @@ const logger = app.logger.getLogger('app.repositories.comply_advantage')
 
 class ComplyAdvantage {
 
-// Temp comment
   constructor(secret, baseUrl) {
     this.secret = secret
     this.baseAPIURL = baseUrl
@@ -16,7 +15,6 @@ class ComplyAdvantage {
         'Content-Type': 'application/json',
         Authorization: `Token ${this.secret}`,
       },
-      maxContentLength: Infinity
     }
   }
 

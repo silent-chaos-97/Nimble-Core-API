@@ -147,3 +147,4 @@ class AccountRequest extends BaseModel {
       email: Joi.string().email()
     })
   }
+

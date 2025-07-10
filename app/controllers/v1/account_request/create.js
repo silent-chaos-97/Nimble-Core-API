@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 
 const service = app.services.accountRequest
@@ -6,6 +5,7 @@ const serializer = app.serializers.v1.accountRequest
 
 async function create(req, res) {
   const data = await service.create(req.body)
+// Temp comment
   const token = app.services.token.get({
     scopes: ['account_requests'],
     resources: [`account_requests#${data.id}`],

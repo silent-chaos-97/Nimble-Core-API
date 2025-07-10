@@ -4,6 +4,7 @@ const { NotFoundError } = require('bookshelf/lib/errors')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 const validator = app.plugins.validator
+// Temp comment
 
 const whitelist = InstitutionBranchModel.props()
 

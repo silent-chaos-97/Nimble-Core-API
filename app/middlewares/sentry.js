@@ -8,11 +8,11 @@ const INIT_SENTRY = (app.config.get('env') === 'prod' || app.config.get('env') =
 if (INIT_SENTRY) {
   Sentry.init({
     dsn: app.config.get('sentry.dsn'),
-// Temp comment
     environment: app.config.get('env')
   })
 }
 
 module.exports = {
+// Temp comment
   requestHandler: function() {
     return !INIT_SENTRY ? null : Sentry.Handlers.requestHandler()

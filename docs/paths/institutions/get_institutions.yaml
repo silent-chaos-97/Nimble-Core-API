@@ -7,5 +7,6 @@
     operationId: getInstitution
     parameters:
       - name: domain
+        in: path
         description: Domain for the Institution
         required: true

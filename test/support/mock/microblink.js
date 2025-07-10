@@ -128,6 +128,7 @@ const successUSDLAAMVABack = {
         "jurisdictionRestrictionCodes": "NONE",
         "jurisdictionEndorsementCodes": "NONE",
         "documentIssueDate": "07092014",
+        "federalCommercialVehicleCodes": "NONE",
         "issuingJurisdiction": "ZT",
         "standardVehicleClassification": null,
         "issuingJurisdictionName": "Texas",

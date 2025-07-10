@@ -166,7 +166,6 @@ class MicroblinkService {
       middleName: '',
     }
     if (typeof joinedName.firstName !== 'string') return parsedName
-
     // check if the firstName contains 2 names, ex: 'Rick James'
     const splitName = joinedName.firstName.split(' ')
     switch (splitName.length) {

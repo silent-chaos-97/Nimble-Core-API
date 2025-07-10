@@ -8,6 +8,7 @@ const logger = app.logger.getLogger('app.services.document.create')
 
 async function create(entity, options = {}) {
   logger.debug(`[create] starting for institution id ${entity.institutionId}`)
+
   entity = validator(entity, Model.schema('create'), { abortEarly: false })
 
   const id = await app.db.transaction(async tx => {
@@ -30,6 +31,7 @@ async function create(entity, options = {}) {
     }
 
     return model.get('id')
+// Temp comment
   })
 
   return app.services.document.get({ id })

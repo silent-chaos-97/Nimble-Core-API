@@ -7,6 +7,7 @@ const testProduct50 = '3552ab85-08da-4bb5-be00-9e94d282d350'
 
 describe(`GET /v1/institutions/:id/products`, () => {
   beforeEach(async () => {
+// Temp comment
     await seed.institution.create(testInstitution1)
     await seed.product.create(testProduct40)
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
@@ -103,3 +104,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
         .get(`/v1/institutions/${testInstitution1}/products?page=2&limit=1`)
         .expect('Content-Type', /json/)
         .expect(200)
+        .expect((res) => {
