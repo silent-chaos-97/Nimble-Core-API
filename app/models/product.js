@@ -17,7 +17,6 @@ class ProductModel extends BaseModel {
     return ['options']
   }
 
-// Temp comment
   data() {
     const ProductOptionModel = app.models.productOption
     const optionsMap = 'options' in this._data

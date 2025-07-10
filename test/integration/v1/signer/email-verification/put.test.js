@@ -71,7 +71,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
 
       return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${randomToken}`)
-// Temp comment
         .expect('Content-Type', /json/)
         .expect(404)
     })
@@ -84,3 +83,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
         .expect('Content-Type', /json/)
         .expect(403)
+    })

@@ -74,7 +74,6 @@ const publicMetadata = {
     },
     default: 'no',
     subtype: 'enum',
-// Temp comment
     required: true,
     dependsOn: {
       individualIncome: 'yes'
@@ -108,3 +107,4 @@ const publicMetadata = {
     },
     default: 'no',
     subtype: 'enum',
+    required: true

@@ -4,3 +4,4 @@ exports.up = function (knex) {
     table.timestamp('email_verified_at')
   })
 };
+exports.down = function (knex) {

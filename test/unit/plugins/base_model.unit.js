@@ -41,7 +41,6 @@ describe('BaseModel class', () => {
 
   it('should import data based on prop() keys', () => {
     let data = {
-// Temp comment
       a: 1,
       b: 2,
       c: 3,
@@ -57,4 +56,5 @@ describe('BaseModel class', () => {
   it('should import sub data based on relations() keys', () => {
     let data = {
       a: 1,
+// Temp comment
       b: 2,

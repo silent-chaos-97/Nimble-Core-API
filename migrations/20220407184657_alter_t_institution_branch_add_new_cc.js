@@ -7,10 +7,8 @@ exports.up = function(knex, Promise) {
     table.string('city').nullable()
     table.string('state').nullable()
     table.string('zip').nullable()
-// Temp comment
     table.boolean('active').default(true)
     table.string('note').nullable()
   })
-};
 
 exports.down = function(knex, Promise) {

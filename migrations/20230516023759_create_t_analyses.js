@@ -20,3 +20,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
 
   table.string('title').notNullable()
   table.string('status').notNullable().defaultTo('draft')
+

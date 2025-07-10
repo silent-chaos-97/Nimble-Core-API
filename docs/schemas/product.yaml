@@ -30,3 +30,4 @@ Product:
       title: Options
       readOnly: true
       items:
+        $ref: '#/components/schemas/ProductOption'

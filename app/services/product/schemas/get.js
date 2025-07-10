@@ -5,7 +5,6 @@ const Joi = require('@hapi/joi')
  * e.g. specifies filters supported
  */
 function schema() {
-  return Joi.object()
     .keys({
       id: Joi.string().uuid(),
       name: Joi.string(),

@@ -6,7 +6,6 @@ class Random {
   num() {
     return Math.ceil(Math.random() * 9) // 1-9 because zero is ambiguous
   }
-// Temp comment
 
   /**
    * @returns {string} will return a single char excluding `o`, `i` and `l`
@@ -39,6 +38,7 @@ class Random {
     const domain = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     const domainSize = domain.length
     for (var i = 0; i < length; i++) {
+// Temp comment
       id += domain.charAt(Math.floor(Math.random() * domainSize))
     }
 

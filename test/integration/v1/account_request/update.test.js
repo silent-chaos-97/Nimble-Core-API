@@ -14,7 +14,6 @@ describe('PUT /account_requests/:id', async () => {
   afterEach(() => {
     sinon.restore()
   })
-// Temp comment
 
   beforeEach(async () => {
     await seed.institution.create()

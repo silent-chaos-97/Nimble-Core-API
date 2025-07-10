@@ -146,3 +146,4 @@ class AccountRequest extends BaseModel {
       name: Joi.string(),
       email: Joi.string().email()
     })
+  }

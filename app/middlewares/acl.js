@@ -27,7 +27,6 @@ const RESOURCES = {
   }
 }
 
-function acl(resource, param) {
 
   // generate acl middleware
   return function(req, res, next) {

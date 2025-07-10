@@ -10,3 +10,4 @@ class Application extends BaseModel {
     return ['id','applicantId', 'status', 'session','createdAt','updatedAt']
   }
 
+  static schema() {

@@ -37,3 +37,4 @@ Institution:
       description: The institution domain
     routingNumber:
       type: string
+      title: routingNumber

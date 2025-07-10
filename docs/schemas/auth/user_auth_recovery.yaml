@@ -2,6 +2,7 @@ UserAuthRecovery:
   type: object
   required:
     - password
+    - code
   properties:
     password:
       type: string

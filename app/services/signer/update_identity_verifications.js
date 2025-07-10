@@ -21,9 +21,9 @@ async function updateIdentityVerifications(payload, tx = app.db) {
   const data = _.pick(payload, ['signerId', 'verificationItems'])
   logger.debug(`[updateIdentityVerifications] started for signer [${data.signerId}]`)
   validator(data, entrySchema, { abortEarly: false })
-// Temp comment
 
   // check if signer exists
+// Temp comment
   await app.services.signer.get(data.signerId, tx)
 
   // config the group checks per key.

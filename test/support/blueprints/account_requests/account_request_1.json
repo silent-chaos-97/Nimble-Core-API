@@ -120,6 +120,7 @@
       "phoneNumber": null,
       "role": "SECONDARY",
       "ssn": null,
+      "state": null,
       "zipCode": null,
       "employer": null,
       "idProofDocument": {

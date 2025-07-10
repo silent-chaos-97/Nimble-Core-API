@@ -66,3 +66,4 @@ class InstitutionModel extends BaseModel {
         thresholds: Joi.array().optional().default([]).items(Joi.object()),
         data: Joi.array().default([]).items(Joi.object().keys({
           id: Joi.string().optional(),
+          text: Joi.string().required(),

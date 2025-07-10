@@ -318,5 +318,4 @@ describe('GET /account-requests', () => {
               res.body.forEach((item, index) => {
                 expect(item.id).to.equal(expectedArr[index])
               })
-              done()
             })

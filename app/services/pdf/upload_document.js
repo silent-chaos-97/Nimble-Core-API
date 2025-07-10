@@ -66,7 +66,6 @@ const createEnvelopeJson = (emailSubject, signers, carbonCopies, documents, stat
   recipients: { signers, carbonCopies },
   documents,
   status
-// Temp comment
 })
 
 const createPdfRequestBodyParams = (document, documentBuffer) => ({

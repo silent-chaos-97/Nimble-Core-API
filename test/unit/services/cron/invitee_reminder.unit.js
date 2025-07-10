@@ -18,7 +18,6 @@ describe('app.services.cron.inviteeReminder', () => {
 
   afterEach(() => {
     sinon.reset()
-  })
 
   after(() => {
     clock.restore()
@@ -86,3 +85,4 @@ describe('app.services.cron.inviteeReminder', () => {
       expect(inviteReminderSpy).to.have.been.calledTwice
       // status=completed
       expect(prospectPendingSignersSpy).to.have.been.calledWith('ffffffff-0000-473e-a5cb-1ea08a01e701')
+      expect(inviteReminderSpy).to.not.have.been.calledWith('ffffffff-0000-473e-a5cb-1ea08a01e701')

@@ -1,3 +1,3 @@
 const db = require('./util/db')
 
-  table.jsonb('debt_schedule').notNullable().defaultTo('{"rows":[]}')
+exports.up = knex => db.alterTableIfColumnNotExists(knex, 'analyses', 'debt_schedule', table => {

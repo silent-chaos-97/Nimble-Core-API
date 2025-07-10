@@ -164,7 +164,6 @@
   role: 'SECONDARY'
   status: 'PENDING'
   email: 'psousa+dev1@wearesingular.com'
-  first_name: 'John Wife'
   last_name: 'McClane'
   contract_document_signer_status: 'SENT'
   contract_document_signer_status_updated_at: 2018-02-16T12:32:03.341Z

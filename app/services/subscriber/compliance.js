@@ -7,5 +7,6 @@ function callSafe(op, promiserProvider) {
     return promiserProvider().catch(err => log.error(err, op))
   } catch(err) {
     log.error(err, op)
+  }
 
   return Promise.resolve()

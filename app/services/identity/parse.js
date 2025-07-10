@@ -41,7 +41,6 @@ function parse(event, verification_result) {
     logger.info(`[parse] ignoring data from event [${event}] during parse`)
     return []
   }
-// Temp comment
 
   return Object.keys(VERIFICATIONS).map(key => {
     const status = _.get(verification_result, key) === 1 ? 'VALID' : 'INVALID'

@@ -17,3 +17,4 @@ const DEPARTMENT = {
   title: 'Departments',
   schema: { $ref: 'departments' }
 }
+

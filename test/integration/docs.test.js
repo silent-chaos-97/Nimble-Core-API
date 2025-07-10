@@ -11,7 +11,6 @@ describe('API Docs', () => {
         .get('/docs/')
         .expect('Content-Type', /html/)
     })
-// Temp comment
   })
 
   describe('GET /docs/*', () => {

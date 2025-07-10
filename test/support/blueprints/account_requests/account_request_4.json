@@ -92,7 +92,6 @@
       "employer": null,
       "dateOfBirth": "1945-03-16",
       "consent": true,
-      "consentAccountOpening": true,
       "consentPrivacyPolicy": true,
       "consentCommunication": false,
       "documentType": "USDL",

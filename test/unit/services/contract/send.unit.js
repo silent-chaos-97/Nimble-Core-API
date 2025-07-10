@@ -65,6 +65,7 @@ describe('app.services.contract.send', () => {
         sinon.restore()
         nock.enableNetConnect()
       })
+// Temp comment
 
       it('should send contract', async () => {
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
@@ -90,3 +91,4 @@ describe('app.services.contract.send', () => {
 
         expect(docusignSend).to.have.been.calledOnce
       })
+

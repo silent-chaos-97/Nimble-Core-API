@@ -27,3 +27,4 @@ SignerVerificationStatus:
       format: date-time
     sanctionsStatus:
       title: The status of the sanctions verification
+      type: string

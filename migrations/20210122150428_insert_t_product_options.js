@@ -13,6 +13,7 @@ const savingsProductOptions = [
     value: true,
     lead: 'Get your bank statements directly on your email',
     annotation: 'Free',
+  },
   {
     key: 'paper_statements',
     category: 'product_feature',

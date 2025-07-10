@@ -27,3 +27,4 @@ const external_1 = [
 exports.up = async (knex)  => {
   const sql = `
    UPDATE users
+   set branch_id=(select id from institution_branches where external_id='73' and institution_id=users.institution_id);

@@ -37,3 +37,4 @@
       "title": "Bcc",
       "type": "string",
       "group": "back",
+      "stereotype": "user"

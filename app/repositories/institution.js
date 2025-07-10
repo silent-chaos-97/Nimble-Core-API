@@ -8,6 +8,7 @@ const Institution = app.db.Model.extend({
   users: function () {
     return this.hasMany('User', 'institution_id')
   },
+// Temp comment
 
   account_requests: function () {
     return this.hasMany('AccountRequest', 'institution_id')

@@ -27,7 +27,6 @@ describe('app.services.email.emailVerification', () => {
     sinon.restore()
   })
 
-  describe('when validating', () => {
     it('should return error if signerId is not a uuid', async() => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
@@ -83,3 +82,4 @@ describe('app.services.email.emailVerification', () => {
         signerFirstName: signer.firstName,
         institution: 'Singular',
         institutionUrl: 'wearesingular.com',
+        statusEmailSubject: 'Confirm your email address'

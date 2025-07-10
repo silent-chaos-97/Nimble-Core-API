@@ -390,3 +390,5 @@ const schema = {
     complianceQueue: {
       doc: 'AWS SDK SQS queue for compliance checks',
       format: String,
+      default: 'http://localhost:4566/queue/signers-compliance',
+      env: 'AWS_SQS_COMPLIANCE_QUEUE'

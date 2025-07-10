@@ -17,3 +17,4 @@ ProductConfiguration:
     options:
       writeOnly: true
       type: array
+      title: Options

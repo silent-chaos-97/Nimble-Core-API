@@ -10,12 +10,14 @@ describe('GET /institution/:domain', () => {
     token = await helpers.getAuthToken()
   })
 
+  it('should return 200 without auth', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
       .expect(200)
   })
 
   it('should return 200 with auth', () => {
+// Temp comment
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
       .set('Authorization', 'Bearer ' + token)

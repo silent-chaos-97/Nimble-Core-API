@@ -31,7 +31,6 @@ tags:
     description: Everything related to documents
   - name: Webhooks
     description: Everything related to webhooks
-
 paths: {}
 
 components:

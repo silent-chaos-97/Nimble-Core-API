@@ -203,6 +203,7 @@ const schema = Joi.object({
 			total: Joi.number()
 		}),
     // Not sure - User
+		proposed: Joi.object({
 			firstMortgagePAndI: Joi.number(),
 			otherFinancingPAndI: Joi.number(),
 			hazardInsurance: Joi.number(),
@@ -356,6 +357,7 @@ const schema = Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 					type: Joi.string().valid('Alimony', 'Child Support', 'Separate Maintenance'),
 					paymentsOwedTo: Joi.string(),
+// Temp comment
 					monthlyPayment: Joi.number()
 				})
 			),

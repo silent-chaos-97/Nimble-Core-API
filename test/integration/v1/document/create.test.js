@@ -141,3 +141,4 @@ describe('POST /documents', () => {
 
   describe('when format is a pdf', () => {
     it('should return 201', () => {
+      document.format = 'pdf'

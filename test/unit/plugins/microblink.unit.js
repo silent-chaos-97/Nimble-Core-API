@@ -306,3 +306,4 @@ describe('MicroblinkService', () => {
         .post('/recognize/execute')
         .reply(200, response)
 
+      const result = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)

@@ -2790,6 +2790,7 @@ const parsedResult = [
         "url": "https://finance.belgium.be/en/treasury/financial-sanctions"
       },
       {
+        "name": "Date of Birth",
         "value": "1924-02-21",
         "source": "DFAT Australia Consolidated Sanctions List",
         "subtype": "sanction",
@@ -2833,3 +2834,14 @@ const parsedResult = [
         "value": "1924-02-21",
         "source": "EU External Action Service - Consolidated list of Sanctions",
         "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2005-06-16T00:00:00Z",
+        "deletedDate": "2020-02-25T00:00:00Z",
+        "url": "https://eeas.europa.eu/headquarters/headquarters-homepage_en/8442/Consolidated%20list%20of%20sanctions"
+      },
+      {
+        "name": "Passport",
+        "value": "AD001095",
+        "source": "EU External Action Service - Consolidated list of Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],

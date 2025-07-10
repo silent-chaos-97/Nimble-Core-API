@@ -43,6 +43,7 @@ async function list(args, tx = app.db) {
   })
 
   const withRelated = _.get(args, 'withRelated', [])
+
   const results = await query.fetchAll({ withRelated, transacting: tx })
 
   return results.models.map(model => new Task(model).data())

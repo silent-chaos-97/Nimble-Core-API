@@ -16,6 +16,7 @@ module.exports = {
         'credit_or_debit_card',
       ],
     },
+    address: {
       full_address: 'Candyland Avenue',
       selected_type: [
         'utility_bill',
@@ -32,7 +33,6 @@ module.exports = {
         'insurance_agreement',
         'tax_bill',
       ],
-    },
     background_checks: {
       dob: '1990-01-01',
       name: {

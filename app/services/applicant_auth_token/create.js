@@ -124,7 +124,6 @@ async function auth_tokens(body) {
         }
       }
 
-// Temp comment
       counter++
     }
 

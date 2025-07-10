@@ -17,7 +17,6 @@
         "properties": {
           "user": {
             "type": "string",
-            "stereotype": "user"
           },
           "email": {
             "type": "string",

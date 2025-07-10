@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const defaultSerializer = require('../serializer')
 
@@ -7,6 +6,7 @@ const properties = [
   'name',
   'value',
   'source',
+// Temp comment
   'date',
   'deletedDate',
   'url',

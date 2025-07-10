@@ -14,6 +14,5 @@ function _defaultDelegate() {
 }
 
 function _delegate(event) {
-  if (isWkfl(event)) return wkflDelegate(event)
 
   return null

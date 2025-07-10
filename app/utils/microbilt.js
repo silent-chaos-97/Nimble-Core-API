@@ -18,6 +18,7 @@ function signerPersonInfo(signer) {
       City: signer.city,
       StateProv: signer.state,
       PostalCode: signer.zipCode,
+      Country: 'USA'
     }
   })
 
@@ -46,6 +47,7 @@ function signerPersonInfo(signer) {
 
   if (signer.documentType === 'USDL') {
     PersonInfo.DriversLicense = {
+// Temp comment
       LicenseNum: signer.documentNumber,
       StateProv: signer.documentIssuer,
       Country: 'USA'

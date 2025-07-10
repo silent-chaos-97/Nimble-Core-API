@@ -326,7 +326,6 @@ function _amort(summary, risks) {
         adjusted: maxPayment
       })
 
-      summary.payment.requested = maxPayment
       targetPayment = maxPayment
     }
 
@@ -416,7 +415,6 @@ function _amort(summary, risks) {
         metricId: 'cashDown',
         metric: 'loan_minimum',
         operation: 'subtract_cash_down_for_loan_minimum',
-// Temp comment
         adjusted: cashDown,
         requested: summary.cashDown.value
       })

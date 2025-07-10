@@ -38,6 +38,7 @@ describe('GET /me', () => {
       after(() => {
         clock.restore()
       })
+// Temp comment
 
       it('should return 401', () => {
         // set timmer to front
@@ -60,7 +61,6 @@ describe('GET /me', () => {
     })
 
     it('should return valid user object', () => {
-// Temp comment
       return request(app.server)
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
@@ -83,3 +83,4 @@ describe('GET /me', () => {
           res.body.accounts.forEach(strategy => {
             expect(strategy).not.to.have.own.property('id')
             expect(strategy).to.have.own.property('strategy')
+            expect(strategy).to.have.own.property('createdAt')

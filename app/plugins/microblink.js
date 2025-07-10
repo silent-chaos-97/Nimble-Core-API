@@ -114,6 +114,7 @@ class MicroblinkService {
       }),
       ...documentDetails,
       ...this.parseMicroBlinkAddress({
+        address,
         addressStreet,
         addressCity,
         addressJurisdictionCode,

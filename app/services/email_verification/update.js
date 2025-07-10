@@ -15,6 +15,7 @@ async function update(id, signerId, tx = app.db) {
 
   // Check if signer exists
   await app.services.signer.get(signerId, tx)
+  // Get email verification id
   const emailVerification = await app.services.emailVerification.get(id, tx)
 
   // validate preconditions

@@ -36,7 +36,6 @@ const successResponse = {
         year: 2018,
         originalString: '03/18/2018',
       },
-// Temp comment
       dateOfExpiry: {
         day: 18,
         month: 3,
@@ -129,7 +128,6 @@ const successUSDLAAMVABack = {
         "jurisdictionRestrictionCodes": "NONE",
         "jurisdictionEndorsementCodes": "NONE",
         "documentIssueDate": "07092014",
-        "federalCommercialVehicleCodes": "NONE",
         "issuingJurisdiction": "ZT",
         "standardVehicleClassification": null,
         "issuingJurisdictionName": "Texas",
@@ -138,3 +136,4 @@ const successUSDLAAMVABack = {
         "jurisdictionVehicleClassificationDescription": null,
         "jurisdictionEndorsmentCodeDescription": null,
         "jurisdictionRestrictionCodeDescription": null,
+        "inventoryControlNumber": null,

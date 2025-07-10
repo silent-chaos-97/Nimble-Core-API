@@ -34,6 +34,7 @@
 //         if (err){
 //           return res.status(500).json({msg: err})
 //         }
+//
 //         // Store hashed one-time-token to DB.
 //         const oneTimeTokenData = {
 //           phone: id,
@@ -88,6 +89,7 @@
 //           const formattedId = id.toString().replace(/\D/g, "")
 //           const newUserData = {
 //             phone: formattedId,
+// Temp comment
 //             roles: [...roles],
 //             institutionId: "2552ab85-08da-4bb5-be00-9e94d282d311",
 //             branchId: "2552ab85-0000-0000-0000-000000000001",

@@ -18,6 +18,7 @@ describe('app.services.email.inviteReminder', () => {
   })
 
   beforeEach(() => {
+    plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
 
@@ -30,6 +31,7 @@ describe('app.services.email.inviteReminder', () => {
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
+// Temp comment
       return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
     })
 

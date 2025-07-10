@@ -1,4 +1,3 @@
-// Temp comment
 module.exports.up = function(knex) {
   return knex.schema.createTableIfNotExists('users', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
@@ -8,3 +7,4 @@ module.exports.up = function(knex) {
     table.string('first_name')
     table.string('last_name')
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

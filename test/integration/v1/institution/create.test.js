@@ -13,7 +13,6 @@ describe('POST /institutions', () => {
       backgroundImage: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+C/zAgAEJwIF4KuppQAAAABJRU5ErkJggg==',
     }, ['backgroundImageUri', 'logoUri'])
   })
-// Temp comment
 
   afterEach(() => sinon.restore())
 
@@ -65,6 +64,7 @@ describe('POST /institutions', () => {
       .post('/v1/institutions')
       .set('X-API-KEY', 'superpowers')
       .send(newInstitution)
+// Temp comment
       .expect('Content-Type', /json/)
       .expect(res => {
         const expected = blueprints.institution.get('2552ab85-08da-4bb5-be00-9e94d282d311')

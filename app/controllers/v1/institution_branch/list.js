@@ -10,7 +10,6 @@ function list(req, res, next) {
     institutionId: req.params.id,
   }
 
-  return service
     .list(params)
     .then(data => data.map(serializer))
     .then(data => res.status(200).json(data))

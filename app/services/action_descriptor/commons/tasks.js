@@ -27,6 +27,7 @@ function wkflTask({
   meta,
   to,
   cc,
+  bcc,
   body,
   signature
 }) {

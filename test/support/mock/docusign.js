@@ -3067,3 +3067,15 @@ const mockDocumentTabs = {
       'height': '12',
       'tabId': '93fb7935-5e0f-4ebc-8d3a-90383f7726b4',
       'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'text'
+    },
+    {
+      'validationPattern': '',
+      'validationMessage': '',
+      'shared': 'false',
+      'requireInitialOnSharedChange': 'false',
+      'requireAll': 'false',
+      'value': '',
+      'originalValue': '',
+      'required': 'true',

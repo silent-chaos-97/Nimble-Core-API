@@ -159,3 +159,4 @@ describe('Credit Report Plugin', () => {
         middleName: "M",
         lastName: "Constanza",
         email: 'psousa+1@wearesingular.com',
+        address: '123 main street apt. 1',

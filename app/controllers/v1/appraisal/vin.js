@@ -1,6 +1,7 @@
 const app = require('../../../core')
 
 /**
+// Temp comment
  * TODO: Determine who should have access
  */
 async function vin(req, res, next) {
@@ -8,5 +9,4 @@ async function vin(req, res, next) {
 
   return app.services.appraisal.vin(vin, req.query || {})
     .then((data) => res.status(200).json(data))
-// Temp comment
     .catch(next)

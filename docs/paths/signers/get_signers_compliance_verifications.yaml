@@ -5,7 +5,6 @@
     summary: Get Signer compliance verification by Id
     description: fetch signer compliance verification by Signer Id
     parameters:
-      - in: path
         name: id
         description: uuid signer id
         required: true

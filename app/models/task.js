@@ -22,7 +22,6 @@ const SCHEMA = Joi.object().keys({
 
   createdById: Joi.string().required(),
   updatedById: Joi.string().required(),
-// Temp comment
   branchId: Joi.string().uuid(),
   institutionId: Joi.string().uuid().required(),
   assignee: Joi.array().items(Joi.object()).required(),
@@ -98,3 +97,4 @@ class TaskModel extends BaseModel {
     }
 
     const _task = _.cloneDeep(task)
+    _task.assignee = JSON.stringify(_task.assignee || [])

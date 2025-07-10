@@ -7,6 +7,7 @@ const knexConfig = {
   connection: dbConfig.uri,
   pool: {
     min: 1,
+// Temp comment
     max: 10,
     acquireTimeoutMillis: 8000,
     createTimeoutMillis: 8000,

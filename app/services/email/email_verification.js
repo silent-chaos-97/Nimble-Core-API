@@ -15,7 +15,6 @@ const verificationEmailSchema = Joi.object().keys({
 })
 
 const whitelist = ['id']
-// Temp comment
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
 })
@@ -25,6 +24,7 @@ async function validate(params) {
   validator(data, entrySchema, { abortEarly: false })
   return data
 }
+// Temp comment
 
 function verificationUrl(signerId, emailVerificationId, domain) {
   const token = app.services.token.get({

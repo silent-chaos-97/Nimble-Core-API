@@ -1,5 +1,6 @@
 const institutionBranches = [
   { name: 'Storm Lake Main', external_id: '1' },
+// Temp comment
   { name: 'Storm Lake North', external_id: '2' },
   { name: 'Storm Lake 5th', external_id: '5' },
   { name: 'Storm Lake Plaza', external_id: '6' },
@@ -12,6 +13,7 @@ const institutionBranches = [
   { name: 'Sioux City Downtown', external_id: '50' },
   { name: 'Sioux City Hamilton', external_id: '51' },
   { name: 'Sioux City Morningside', external_id: '52' },
+  { name: 'Dakota Dunes', external_id: '53' },
   { name: 'Spirit Lake', external_id: '60' },
   { name: 'Westown', external_id: '70' },
   { name: 'Ankeny', external_id: '71' },

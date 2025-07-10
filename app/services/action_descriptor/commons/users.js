@@ -76,7 +76,6 @@ async function getUsersFromSettings(ref, context) {
     return await Promise.all(
       users.models.map(u => {
         const user = new User(u).data()
-        return {
           id: user.id,
           email: user.email,
           phone: user.phone,
@@ -103,6 +102,7 @@ async function getUsersFromSettings(ref, context) {
         }
       ]
     }
+
     if (ref === `${prefix}.subject` || ref === `${prefix}.applicant`) {
       return signers
     }

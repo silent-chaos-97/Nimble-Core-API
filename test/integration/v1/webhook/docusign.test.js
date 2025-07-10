@@ -24,7 +24,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
       await seed.accountRequest.create(accountRequestId)
-// Temp comment
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
       await seed.signer.create('ef3c30f8-fb32-4d1f-9fd9-211637ab1111')
@@ -264,3 +263,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       nock(app.config.get('docusign').basePath)
         .get(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc?include=recipients`)
         .reply(200, mocks.webhookRequestMultiple)
+

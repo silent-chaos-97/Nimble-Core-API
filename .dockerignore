@@ -1,6 +1,5 @@
 .git
 .github
-.gitlab
 .gitignore
 coverage
 helm

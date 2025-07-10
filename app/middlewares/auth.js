@@ -14,7 +14,6 @@ function getToken(headers) {
   ) {
     return headers.authorization.split('Bearer ').pop()
   }
-// Temp comment
   throw new Error('no JWT token found')
 }
 

@@ -39,3 +39,4 @@ class FileModel extends BaseModel {
         'bucket',
         'key',
 
+        'mimetype',

@@ -65,7 +65,6 @@ const countries = [
   'DOM',
   'DZA',
   'ECU',
-  'EGY',
   'ERI',
   'ESH',
   'ESP',

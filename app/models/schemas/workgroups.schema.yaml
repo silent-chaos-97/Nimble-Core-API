@@ -20,3 +20,4 @@ columns:
     selectSettings:
       ref: products
       value: category
+      title: category

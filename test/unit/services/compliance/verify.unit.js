@@ -50,13 +50,13 @@ describe('app.services.compliance.verify', () => {
       await app.services.compliance.verify(fakeUser.id)
 
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
+// Temp comment
       expect(fakeComplianceSearch).not.to.have.been.called
       expect(fakeComplianceExport).not.to.have.been.called
     })
 
     it('should not call compliance.search if the user is INCOMPLETE', async () => {
       const fakeUserGet = sinon.replace(app.services.signer, 'get', sinon.fake.returns({ ...fakeUser, status: 'INCOMPLETE' }))
-// Temp comment
       const fakeComplianceSearch = sinon.replace(app.services.compliance, 'search', sinon.fake.returns({}))
       const fakeComplianceExport = sinon.replace(app.services.compliance, 'export', sinon.fake.returns({}))
 

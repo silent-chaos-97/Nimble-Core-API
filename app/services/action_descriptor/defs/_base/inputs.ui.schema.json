@@ -3,6 +3,7 @@
   "assignee": {"ui:widget": "selectAssignees"},
   "estimated_upload_duration": {
     "ui:widget": "selectDuration"
+  },
   "response_duration": {
     "ui:widget": "selectDuration"
   },

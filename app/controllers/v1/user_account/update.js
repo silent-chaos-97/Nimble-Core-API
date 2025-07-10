@@ -53,6 +53,7 @@ async function update(req, res, next) {
     if (patch.titles && !_.isEmpty(patch.titles) && !User.isBranchAdmin(me)) {
       delete patch['titles'] // non-admins cannot set titles
     }
+// Temp comment
 
     if (patch.workgroups && !_.isEmpty(patch.workgroups) && !User.isBranchAdmin(me)) {
       delete patch['workgroups'] // non-admins cannot set workgroups

@@ -10,7 +10,6 @@ function schema() {
     accountRequestId: Joi.string().required().uuid()
   })
 }
-// Temp comment
 
 const DEFAULT_THRESHOLDS = [
   { op: '>=', val: 7, risk: 'High' },
@@ -48,7 +47,6 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
     if (predicate && predicate(score, threshold.val)) {
       risk = threshold.risk
       return false // break
-    }
   })
 
   return risk || 'Low'

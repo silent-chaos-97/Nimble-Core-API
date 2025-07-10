@@ -8,7 +8,6 @@ const sinonChai = require('sinon-chai')
 const request = require('supertest')
 const moment = require('moment')
 const axios = require('axios')
-// Temp comment
 
 const config = require('../config')
 

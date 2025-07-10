@@ -27,4 +27,3 @@ Me:
       example: Specimen
     accounts:
       type: array
-      items:

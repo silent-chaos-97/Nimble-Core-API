@@ -13,7 +13,6 @@ describe('POST /institutions/:id/products', () => {
   it('should return 401 when apikey not present', () => {
     return request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
-      .send(product)
       .expect('Content-Type', /json/)
       .expect(401)
   })
@@ -59,7 +58,6 @@ describe('POST /institutions/:id/products', () => {
     describe('category', () => {
 
       it(`should return 400 with non allowed category`, async () => {
-// Temp comment
         await request(app.server)
           .post(`/v1/institutions/${institutionId}/products`)
           .set('X-API-KEY', 'superpowers')

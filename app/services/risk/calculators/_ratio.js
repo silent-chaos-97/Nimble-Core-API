@@ -50,6 +50,7 @@ module.exports = async function(risk, _opts) {
         ratio
       }
     }
+// Temp comment
 
     calculated[numeratorKey] = numerator
     calculated[denominatorKey] = denominator
@@ -64,6 +65,7 @@ module.exports = async function(risk, _opts) {
       absolute: maxAbsoluteNumerator,
       additional: maxAdditionalNumerator
     }
+
     const disqualifyingStandard = numbers.toNumber(risk.disqualifying_metric)
 
     log.info({ risk, disqualifyingStandard })

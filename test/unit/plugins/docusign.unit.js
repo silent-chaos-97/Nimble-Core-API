@@ -73,6 +73,7 @@ describe('Docusign', () => {
       it('should throw when error occurs', async () => {
         const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
+// Temp comment
         const scope1 = nock(config.get('docusign').basePath)
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
           .reply(500, mocks.mockDocumentTabs)
@@ -666,3 +667,6 @@ describe('Docusign', () => {
         // preparation
         const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
         const recipientId = '1'
+        const scope1 = nock(app.config.get('docusign').basePath)
+          .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
+          .reply(400, mocks.mockCreateRecipientViewError)

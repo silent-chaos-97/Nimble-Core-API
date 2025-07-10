@@ -7,12 +7,12 @@ const InternalServerError = require('../../errors/internal_server')
 
 const PROPS = SearchModel.props('delete')
 const SCHEMA = SearchModel.schema('delete')
+
 const logger = app.logger.getLogger('app.services.data.search.delete')
 
 async function searchDelete(example, tx = app.db) {
   example = _.omitBy(example, _.isNil)
 
-  logger.info({ op: 'search.delete', phase: 'started.validate', example })
 
   try {
     const model = SearchModel.prePersist(validator(_.pick(example, PROPS), SCHEMA, { abortEarly: false }))

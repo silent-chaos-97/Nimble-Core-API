@@ -5,7 +5,6 @@ const BadRequestError = require('../../../app/errors/bad_request')
 const schema = Joi.object().keys({
   id: Joi.string().uuid(),
   name: Joi.string(),
-  category: Joi.string(),
 })
 
 describe('plugins/validator', () => {
@@ -17,3 +16,4 @@ describe('plugins/validator', () => {
   it('throws error with not-allowed properties', () => {
     const data = { notInSchema: 'some value' }
     expect(() => validator(data, schema)).to.throw(BadRequestError)
+  })

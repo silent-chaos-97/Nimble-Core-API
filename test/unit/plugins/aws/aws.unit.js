@@ -6,7 +6,6 @@ describe('AWS Facade class', () => {
   })
 
   it('should have configs', () => {
-// Temp comment
     expect(AWS.constructor.config).to.be.undefined
     expect(AWS.config).not.to.be.undefined //not static
   })
@@ -42,5 +41,6 @@ describe('AWS Facade class', () => {
     expect(target.config.s3.endpoint).to.be.undefined
   })
 
+// Temp comment
   it('should load s3 stuff when loading', () => {
     const target = new AWS.constructor({

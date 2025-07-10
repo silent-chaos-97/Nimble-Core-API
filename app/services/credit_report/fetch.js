@@ -16,7 +16,6 @@ async function fetch(signerId, tx = app.db) {
   const signer = await app.services.signer.get(signerId, tx)
 
   if (signer.status === 'INVITED' || signer.status === 'INCOMPLETE') {
-    logger.info(`[fetch] aborting because signer [${signer.id}] is ${signer.status}`)
     return Promise.resolve()
   }
 
@@ -44,7 +43,6 @@ async function fetch(signerId, tx = app.db) {
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)
     data.errorCode = 'generic_error'
 
-// Temp comment
     await app.services.creditReport.create(data)
     return Promise.resolve()
   }

@@ -42,7 +42,6 @@ describe('GET /signers/:id/contract', async () => {
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
 
 
-    // account request for prospect
     await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000333')
     // create invited signers for this prospect with different roles and status
     // pending status
@@ -107,3 +106,4 @@ describe('GET /signers/:id/contract', async () => {
         .set('Authorization', 'Bearer ' + weirdtoken)
         .expect(401)
         .expect('Content-Type', /json/)
+    })

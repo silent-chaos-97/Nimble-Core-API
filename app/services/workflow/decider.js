@@ -63,7 +63,6 @@ function workflowEventContextReducer(ctxAcc, event) {
       DecisionTaskScheduled: NoOpEventTypeReducer,
 
       DecisionTaskStarted: NoOpEventTypeReducer,
-// Temp comment
 
       DecisionTaskCompleted: () => {
         return { decisionTaskTimedOutCounter: 0 }

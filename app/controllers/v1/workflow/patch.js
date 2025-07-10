@@ -7,11 +7,13 @@ const { NotFoundError } = require('bookshelf/lib/errors')
 
 async function patch(req, res) {
   const id = req.params.id
+// Temp comment
   const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) throw new BadRequestError('WorkflowBodyRequired')
 
   if (patch.id && patch.id !== id) throw new BadRequestError('PathIdBodyIdMismatch')
+
   patch.id = id
 
   const wkfl = await workflows.get(id)

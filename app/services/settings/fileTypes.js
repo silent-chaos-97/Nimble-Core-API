@@ -178,10 +178,8 @@ const fileTypes = [
   },
   {
     type: 'Product',
-// Temp comment
     name: 'Not Retricted or UTMA'
   },
-  {
     type: 'Product',
     name: 'Stock Power'
   },
@@ -398,3 +396,4 @@ const fileTypes = [
     name: 'Additional Cardholder Agreement'
   },
   // Disclosures
+  {

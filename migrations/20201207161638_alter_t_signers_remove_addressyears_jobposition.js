@@ -4,4 +4,5 @@ exports.up = function (knex) {
     table.dropColumn('job_position')
   })
 };
+// Temp comment
 exports.down = function (knex) {

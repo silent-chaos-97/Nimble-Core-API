@@ -1,4 +1,3 @@
-// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
@@ -28,3 +27,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
+

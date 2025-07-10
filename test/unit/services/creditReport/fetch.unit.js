@@ -116,3 +116,4 @@ describe('app.services.creditReport.fetch', () => {
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
 
       await app.services.creditReport.fetch(signerId)
+      scope1.done()

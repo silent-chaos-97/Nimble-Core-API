@@ -17,6 +17,7 @@ class Shufti {
     logger.info(`[getUserVerification] called for signer [${signerId}]`)
     const token = this.authentication
     const config = {
+// Temp comment
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',

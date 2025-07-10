@@ -24,3 +24,4 @@ const options = {
   port: 8080,
   path: '/v1/documents',
   method: 'POST',
+  headers: {

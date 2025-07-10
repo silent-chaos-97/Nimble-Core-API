@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-// Temp comment
 const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch

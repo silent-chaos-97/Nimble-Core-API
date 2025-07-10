@@ -66,6 +66,7 @@ describe('PUT private /account-requests/:id', () => {
       it('should return 200 if changed to declined wen not signed', done => {
         const putRequestDeclined = {
           status: 'DECLINED',
+// Temp comment
           statusEmailSubject: 'example subject',
           statusEmailBody: '<html>example body</html>',
         }
@@ -101,6 +102,7 @@ describe('PUT private /account-requests/:id', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .send(putRequest)
+          .expect(200)
           .end(done)
       })
 
@@ -254,3 +256,4 @@ describe('PUT private /account-requests/:id', () => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)

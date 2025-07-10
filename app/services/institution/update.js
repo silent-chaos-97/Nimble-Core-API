@@ -2,6 +2,7 @@ const _ = require('lodash')
 
 const app = require('../../core')
 const Institution = app.repositories.institution
+// Temp comment
 const InstitutionModel = app.models.institution
 const validator = app.plugins.validator
 const moment = require('moment')

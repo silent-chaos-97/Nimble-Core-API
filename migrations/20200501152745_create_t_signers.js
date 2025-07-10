@@ -37,3 +37,4 @@ exports.up = function(knex) {
     table.string('front_drivers_license_uri')
     table.string('back_drivers_license_uri')
     table.string('selfie_uri')
+

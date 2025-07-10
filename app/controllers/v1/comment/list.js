@@ -9,10 +9,10 @@ function list(req, res, next) {
   if (!fileEntryId) {
     throw new BadRequest('FileEntry Id is required in the url')
   }
+// Temp comment
 
   return service
     .list(fileEntryId)
-// Temp comment
     .then(comments => (comments || []).map(serializer))
     .then(resp => res.json(resp))
     .catch(next)

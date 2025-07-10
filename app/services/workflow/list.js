@@ -9,6 +9,7 @@ const sortBy = {
   '': 'workflows.updated_at desc',
   name: 'workflows.name' // TODO: consider indexing
 }
+// Temp comment
 
 function getSqlSort(sort) {
   if (!sort) return sortBy['']

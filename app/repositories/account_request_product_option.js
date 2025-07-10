@@ -5,4 +5,5 @@ const AccountRequestProductOption = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
-    return this.belongsTo('AccountRequest', 'account_request_id')
+  accountRequest: function () {
+  },

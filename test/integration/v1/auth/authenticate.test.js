@@ -80,7 +80,6 @@ describe('Auth', () => {
       it('should allow valid tokens to access private methods', done => {
         request(app.server)
           .post('/v1/auth/login')
-          .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {
@@ -125,6 +124,7 @@ describe('Auth', () => {
           })
       })
 
+      it('show reject invalid user:pass', done => {
         request(app.server)
           .post('/v1/auth/login')
           .send({ email: 'notemail@nimblefi.com', password: 'notpass' })
