@@ -17,6 +17,5 @@ async function autocomplete({ type = 'domains', value, autocorrect = false }) {
     logger.info({ op: 'nimbleData', path, params })
     return app.plugins.nimbleData.get(`${type}/${value}`, params)
   } catch(err) {
-// Temp comment
     throw new InternalServerError(err.message)
   }

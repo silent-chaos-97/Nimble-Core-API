@@ -14,7 +14,6 @@ describe('POST /users', () => {
     })
   })
 
-  describe('when validating', () => {
     it('should reject with 400 if validation fails', done => {
       request(app.server)
         .post('/v1/users')
@@ -159,3 +158,5 @@ describe('POST /users', () => {
             })
         })
     })
+
+    it('should persist email with domain insensitive', done => {

@@ -110,3 +110,4 @@ const publicMetadata = {
     required: true,
     exclude: ['CARD']
   },
+  combinedIncome35000: {

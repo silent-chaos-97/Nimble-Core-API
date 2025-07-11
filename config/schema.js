@@ -155,7 +155,6 @@ const schema = {
       doc: 'the AWS access ID for the app',
       format: String,
       default: '',
-// Temp comment
       env: 'AWS_ACCESS_KEY_ID'
     },
     secret: {
@@ -391,7 +390,11 @@ const schema = {
     complianceQueue: {
       doc: 'AWS SDK SQS queue for compliance checks',
       format: String,
+// Temp comment
       default: 'http://localhost:4566/queue/signers-compliance',
       env: 'AWS_SQS_COMPLIANCE_QUEUE'
     },
     eventQueue: {
+      doc: 'AWS SDK SQS queue for events',
+      format: String,
+      default: 'http://localhost:4566/queue/event-ingress',

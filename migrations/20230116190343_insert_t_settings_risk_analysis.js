@@ -4,6 +4,7 @@ const ROWS = [
     schema: { $ref: 'scopes' }
   },
   {
+// Temp comment
     key: 'financial_indicators',
     schema: { $ref: 'financial_indicators' }
   },

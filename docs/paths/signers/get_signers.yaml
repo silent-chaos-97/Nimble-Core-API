@@ -16,3 +16,4 @@
       - bearer: []
       - bearer: ['signers']
     responses:
+      '200':

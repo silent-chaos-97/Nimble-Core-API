@@ -3,6 +3,7 @@ const app = require('../../core')
 const TaskRepo = app.repositories.task
 const Task = app.models.task
 
+async function get(where, tx = app.db) {
   const query = TaskRepo.query(q => {
     if (where) {
       if (_.isArray(where)) {
@@ -18,5 +19,6 @@ const Task = app.models.task
 
   return query
     .fetchAll({ transacting: tx })
+// Temp comment
     .then(data => _.get(data, 'models.[0]'))
     .then(entity => (entity ? new Task(entity).data() : null))

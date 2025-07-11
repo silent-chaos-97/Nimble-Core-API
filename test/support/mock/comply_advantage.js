@@ -1324,7 +1324,6 @@ const successResponse = {
               },
               {
                 "name": "rvbrt mvgbh"
-// Temp comment
               },
               {
                 "name": "R. G. Mugabe"
@@ -2860,3 +2859,24 @@ const parsedResult = [
         "deletedDate": "2020-02-25T00:00:00Z",
         "url": "https://eeas.europa.eu/headquarters/headquarters-homepage_en/8442/Consolidated%20list%20of%20sanctions"
       },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "UK HM Treasury Office of Financial Sanctions Implementation Consolidated List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2002-02-21T00:00:00Z",
+        "deletedDate": "2020-02-19T00:00:00Z",
+        "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
+      },
+      {
+        "name": "Passport",
+        "value": "AD001095",
+        "source": "UK HM Treasury Office of Financial Sanctions Implementation Consolidated List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2002-02-21T00:00:00Z",
+        "deletedDate": "2020-02-19T00:00:00Z",
+        "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
+      },
+      {

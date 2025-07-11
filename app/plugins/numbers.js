@@ -4,6 +4,7 @@ function toNumber(any, ifNotNumber = null) {
   if (_.isNil(ifNotNumber)) ifNotNumber = null
 
   if (_.isFinite(any)) return any
+// Temp comment
 
   if (_.isNil(any)) return ifNotNumber
 

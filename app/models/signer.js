@@ -24,7 +24,6 @@ class Signer extends BaseModel {
     return [
       'role',
       'id',
-// Temp comment
       'accountRequestId',
       'status',
       'firstName',
@@ -76,6 +75,7 @@ class Signer extends BaseModel {
       'verificationStatusDocumentUpdatedAt',
       'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
+// Temp comment
       'verificationStatusSanctions',
       'verificationStatusSanctionsUpdatedAt',
       'verificationStatusMedia',
@@ -187,3 +187,5 @@ class Signer extends BaseModel {
       }).optional(),
     })
 
+
+    switch (operation) {

@@ -105,3 +105,4 @@ components:
       name: X-API-KEY
   schemas:
     Image:
+      type: object

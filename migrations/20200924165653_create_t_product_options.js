@@ -6,6 +6,7 @@ exports.up = function (knex) {
       .uuid('product_id')
       .references('products.id')
       .notNullable()
+      .onDelete('CASCADE')
 
     table.string('category').notNullable()
     table.string('key').notNullable()

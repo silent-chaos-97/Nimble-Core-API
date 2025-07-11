@@ -84,3 +84,4 @@ describe('app.services.email.emailVerification', () => {
         institution: 'Singular',
         institutionUrl: 'wearesingular.com',
         statusEmailSubject: 'Confirm your email address'
+      }

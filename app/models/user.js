@@ -5,6 +5,7 @@ const BaseModel = require('./model')
 
 const Roles = {
   SuperAdmin: 'super-admin',
+  InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
   Applicant: 'applicant',
@@ -103,4 +104,4 @@ class UserModel extends BaseModel {
 
     if (_user.roles) _user.roles = JSON.stringify(_user.roles)
     if (_user.titles) _user.titles = JSON.stringify(_user.titles)
-    if (_user.workgroups) _user.workgroups = JSON.stringify(_user.workgroups)
+

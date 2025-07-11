@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 const app = require("../../core")
 
 const Model = app.models.identity
+const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.identity.create')
 
 const schema = Joi.object().keys({
@@ -20,7 +21,6 @@ async function get(params, tx = app.db) {
   ])
   const [frontIdProof, backIdProof] = await Promise.all([
     app.plugins.aws.getContent(frontDoc.key),
-    app.plugins.aws.getContent(backDoc.key)
   ])
   const payload = { backIdProof, frontIdProof }
   const data = await app.plugins.microblink.getIdentity(payload)

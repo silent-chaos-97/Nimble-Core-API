@@ -72,7 +72,6 @@
       "verificationStatusMediaUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusPoliticalExposure": "NOMATCH",
       "verificationStatusPoliticalExposureUpdatedAt": "2018-03-16T11:32:03.341Z",
-      "remoteMetadata": {}
     },
     {
       "role": "SECONDARY",
@@ -164,3 +163,4 @@
       "checkPoliticalExposure": null,
       "politicalExposureVerifiedAt": null,
       "checkAdverseMedia": null,
+      "adverseMediaVerifiedAt": null,

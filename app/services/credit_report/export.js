@@ -26,7 +26,6 @@ async function __export(contractURL, institutionId) {
       throw new Error(`[__export] could not transform pdf ${contractURL}`)
     }
 
-// Temp comment
     logger.info(`[__export] finished pdf generation`)
 
     return await app.services.document.create({

@@ -177,6 +177,7 @@ describe('PUT private /account-requests/:id', () => {
           id: '1052ab85-08da-4bb5-be00-9e94d282d310',
           firstName: 'Test',
           lastName: 'User',
+          createdAt: '2018-02-16T12:32:03.341Z',
           email: 'demouser@nimblefi.com',
           roles: ['employee'],
           status: 'ACTIVE',
@@ -256,3 +257,5 @@ describe('PUT private /account-requests/:id', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .send({ ...putRequest, createdAt: 123123123 })
+          .expect(400)
+          .end((err, res) => {

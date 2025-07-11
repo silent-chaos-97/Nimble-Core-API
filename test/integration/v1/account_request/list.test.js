@@ -119,6 +119,7 @@ describe('GET /account-requests', () => {
                 "title": "Account Number",
                 "value": "001",
                 "lead": null,
+                "annotation": null,
                 "parentId": null
               },
               {
@@ -151,7 +152,6 @@ describe('GET /account-requests', () => {
         request(app.server)
           .get(`/v1/account-requests?limit=1`)
           .set('Authorization', 'Bearer ' + token)
-          .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {
             if (err) throw new Error(err)

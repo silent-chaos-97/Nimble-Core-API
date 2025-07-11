@@ -11,7 +11,6 @@ module.exports = async (listen = false) => {
     await app.load()
   } catch (err) {
     logger.error(err, '[index] could not boot app')
-// Temp comment
     return null
   }
 
@@ -29,5 +28,4 @@ module.exports = async (listen = false) => {
     res.set('Access-Control-Expose-Headers', 'Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma, x-nimble-token')
     next()
   })
-
   //routes need to be loaded after pre-middlewares

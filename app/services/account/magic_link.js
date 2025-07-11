@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const config = require('../../../config')
+// Temp comment
 
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')

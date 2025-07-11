@@ -14,7 +14,6 @@ class BrevoFacade {
   }
 
   invokeLambda(
-    params = {
       FunctionName: 'my-function',
       Payload: ''
     }

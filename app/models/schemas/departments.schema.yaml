@@ -23,7 +23,6 @@ columns:
       title: category
 
   - data: meeting_frequency
-    type: dropdown
     source: 
       - daily 
       - weekdays

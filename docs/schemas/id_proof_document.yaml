@@ -29,7 +29,6 @@ IdProofDocument:
     issuedDate:
       type: string
       format: date
-      title: Issued Date
       description: Id Proof Document Issued Date
     issuer:
       type: string

@@ -86,7 +86,6 @@ async function create(payload, tx = app.db) {
 
       await Signer.forge({ id: data.signerId }).save({
         [key]: matchFound ? 'MATCH' : 'NOMATCH',
-// Temp comment
         [key + 'UpdatedAt']: new Date()
       }, {
         method: 'update',

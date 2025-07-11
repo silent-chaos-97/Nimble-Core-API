@@ -8,6 +8,7 @@ const external_73 = [
   'bryan.johnson@centralbankonline.com',
   'cbruening@centralbankonline.com',
   'mbrown@centralbankonline.com',
+  'rasman@centralbankonline.com'
 ]
 const external_78 = [
   'mklein@centralbankonline.com',

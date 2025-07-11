@@ -6,6 +6,7 @@ const AccountRequestModel = app.models.accountRequest
 const AccountRequest = app.repositories.accountRequest
 const Signer = app.repositories.signer
 const logger = app.logger.getLogger('app.services.account_request.webhook')
+
 const UnauthorizedTokenError = require('../../errors/unauthorized_token')
 
 async function validate(params) {
@@ -13,7 +14,6 @@ async function validate(params) {
 }
 
 
-function patchAccountRequest(id, status, tx = app.db) {
   return AccountRequest.forge({ id }).save({
     contractDocumentEnvelopeStatus: status.toUpperCase(),
     contractDocumentEnvelopeStatusUpdatedAt: new Date()

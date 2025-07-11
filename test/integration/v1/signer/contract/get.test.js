@@ -11,6 +11,7 @@ describe('GET /signers/:id/contract', async () => {
         `signers#00000000-9999-aaaa-0000-2ea08a01e901`,
         `signers#00000000-9999-aaaa-0000-2ea08a01e902`,
         `signers#00000000-9999-aaaa-0000-2ea08a01e903`,
+// Temp comment
       ],
       expiration: 1200
     })
@@ -94,7 +95,6 @@ describe('GET /signers/:id/contract', async () => {
     })
 
     it('should return 401 if sending bad signer.id', async () => {
-// Temp comment
       let weirdtoken = app.services.token.get({
         scopes: ['signers'],
         resources: [
@@ -109,3 +109,4 @@ describe('GET /signers/:id/contract', async () => {
         .expect(401)
         .expect('Content-Type', /json/)
     })
+    it('should return 404 if sending missing Signer', async () => {

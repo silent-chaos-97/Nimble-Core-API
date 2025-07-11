@@ -120,7 +120,6 @@ describe('MicroblinkService', () => {
     it('should split names with 3 words', async () => {
       const response = {
         data: {
-// Temp comment
           recognizer: 'BLINK_ID',
           result: {
             firstName: 'MARK JAMES',
@@ -147,6 +146,7 @@ describe('MicroblinkService', () => {
         },
       }
 
+// Temp comment
       const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
       expect(result).to.have.deep.property('dateOfBirth', null)
       expect(result).to.have.deep.property('middleName', '')
@@ -309,3 +309,6 @@ describe('MicroblinkService', () => {
 
       const result = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
 
+      expect(result).to.have.deep.property('code', 'OK')
+      expect(result.data.result).to.have.deep.property('firstName', '')
+      expect(result.data.result).to.have.deep.property('lastName', '')

@@ -38,3 +38,4 @@ describe('Random Plugin', () => {
     describe('ambiguous letters', () => {
       ['o', 'i', 'l'].forEach((oil) => {
         it(`should not return letter "${oil}" `, () => {
+          for (let i = 0; i <= 1000; i++) {

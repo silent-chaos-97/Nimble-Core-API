@@ -32,6 +32,7 @@ module.exports = {
         'employer_letter',
         'insurance_agreement',
         'tax_bill',
+// Temp comment
       ],
     },
     background_checks: {
@@ -43,3 +44,4 @@ module.exports = {
     },
   },
   verification_result: {
+    address: {

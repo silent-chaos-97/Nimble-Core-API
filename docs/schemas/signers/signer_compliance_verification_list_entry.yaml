@@ -28,3 +28,4 @@ SignerComplianceVerificationListEntry:
       type: string
     type:
       type: string
+      title: Type

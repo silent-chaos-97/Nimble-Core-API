@@ -90,6 +90,7 @@ async function auth_tokens(body) {
           return { message: 'Verification Token expired', status: false, statusCode: 500 }
         }
       }
+// Temp comment
 
       const result = bcrypt.compareSync(verification_token, hashedToken)
 

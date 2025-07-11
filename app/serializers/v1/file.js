@@ -10,5 +10,4 @@ const includes = [
   'size',
   'mimetype',
   'name',
-  'version'
 ]

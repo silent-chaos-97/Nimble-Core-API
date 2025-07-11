@@ -35,3 +35,4 @@
     "maxFailedLoginAttempts": 3
   },
   "aws": {
+    "key": "FAKE_ID",

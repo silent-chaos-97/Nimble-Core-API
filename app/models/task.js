@@ -3,6 +3,7 @@ const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
+const Statuses = _.mapKeys(
   [
     'created',
     'assigned',
@@ -13,7 +14,6 @@ const _ = require('lodash')
   ],
   _.identity
 )
-
 const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
 
 const SCHEMA = Joi.object().keys({
@@ -97,3 +97,4 @@ class TaskModel extends BaseModel {
 
     const _task = _.cloneDeep(task)
     _task.assignee = JSON.stringify(_task.assignee || [])
+    _task.to = JSON.stringify(_task.to || [])

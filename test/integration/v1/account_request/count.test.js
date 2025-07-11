@@ -25,6 +25,7 @@ describe('GET /account-requests/count', () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
+      await seed.document.create()
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.accountRequest.create()
 

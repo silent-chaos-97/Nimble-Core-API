@@ -108,6 +108,7 @@ const fileTypes = [
     type: 'Product',
     name: 'Name is Exact Match'
   },
+// Temp comment
   {
     type: 'Product',
     name: 'Final Search'
@@ -173,7 +174,6 @@ const fileTypes = [
     name: 'Stock Certificate'
   },
   {
-// Temp comment
     type: 'Product',
     name: 'Names Match'
   },
@@ -401,3 +401,6 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Credit Card Features'
+  },
+  {
+    type: 'Disclosures',

@@ -66,3 +66,4 @@ describe('app.services.email.inviteSigner', () => {
 
     it('should call sendEmailTemplate', async () => {
       await app.services.email.inviteSigner(id)
+      expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce

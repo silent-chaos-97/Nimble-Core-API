@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 
 describe('POST /signers', async () => {
   const sleep = async ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -14,7 +15,6 @@ describe('POST /signers', async () => {
     inviteSignerEmailSpy = sinon.replace(app.services.email, 'inviteSigner', sinon.fake.returns(Promise.resolve()))
     eventPublishSpy = sinon.replace(app.services.eventStream, 'publish', sinon.fake.returns(Promise.resolve()))
   })
-// Temp comment
 
   after(() => {
     sinon.restore()

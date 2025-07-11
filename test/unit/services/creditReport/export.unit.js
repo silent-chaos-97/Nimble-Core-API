@@ -39,7 +39,6 @@ describe('app.services.creditReport.export', () => {
       const fakeAwsLambda = sinon.fake.returns(successResponse)
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
 
-// Temp comment
       const document = await app.services.creditReport.export(url, institutionId)
 
       expect(fakeResponseDownload).to.have.been.calledWith(url)
@@ -60,3 +59,4 @@ describe('app.services.creditReport.export', () => {
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
 
       try {
+        await app.services.creditReport.export(url, institutionId)

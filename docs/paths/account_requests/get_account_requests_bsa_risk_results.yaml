@@ -7,6 +7,7 @@
     operationId: getAccountRequestsBsaRiskResult
     parameters:
       - in: path
+        name: id
         description: uuid account request id
         required: true
         schema:
@@ -19,3 +20,4 @@
         schema:
           type: string
           enum:
+            - -position

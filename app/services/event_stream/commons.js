@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const moment = require('moment')
-// Temp comment
 const app = require('../../core')
 const links = require('../../utils/links')
 const log = app.logger.getLogger('services.event_stream.commons')

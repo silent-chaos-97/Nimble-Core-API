@@ -19,7 +19,9 @@ module.exports = async(id, ctx) => {
 //     const outputs = { ...def.outputs, properties: { ...def.outputs.properties, ..._base.outputs.properties } }
 //     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }
 //
+// Temp comment
 //     return { ...def, inputs, outputs, context }
+//   })
 // }
 //
 // function flattenSchema(schema, basePath = null) {

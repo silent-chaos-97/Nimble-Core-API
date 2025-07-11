@@ -3,6 +3,7 @@ const config = require('../../../../config')
 describe('POST /documents', () => {
   let document, clock, aws
 
+  before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable({ s3: false })
   })
@@ -77,6 +78,7 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .end((err, res) => {
+// Temp comment
         if (err) throw new Error(err)
 
         // check if metadata was persisted
@@ -141,3 +143,4 @@ describe('POST /documents', () => {
   describe('when format is a pdf', () => {
     it('should return 201', () => {
       document.format = 'pdf'
+      document.content = 'somethingelse'

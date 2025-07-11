@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const _ = require('lodash')
 const moment = require('moment')
 const Joi = require('@hapi/joi')
@@ -13,4 +12,3 @@ const schema = function() {
   return Joi.object().keys({
     productId: Joi.string().uuid().required(),
     accountRequestId: Joi.string().uuid().required()
-  })

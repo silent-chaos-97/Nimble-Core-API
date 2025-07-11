@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
@@ -10,6 +11,7 @@ module.exports = (req, res, next) => {
 
   return app.db.transaction(async tx => {
     await app.repositories.user
+      .forge({ phone: recipient.mobile.slice(-10) })
       .fetch({ transacting: tx })
       .catch(() => null)
       .then((user) => {
@@ -30,3 +32,4 @@ module.exports = (req, res, next) => {
 
     await app.services.applicantCurrentStep.set({ userId: createdUser.id, currentStep: 'product-request' }, tx)
 
+    await app.repositories.accountRequest.forge({

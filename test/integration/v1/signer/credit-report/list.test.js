@@ -79,3 +79,4 @@ describe('GET /signers/:id/credit-reports', async () => {
       const id = uuid.v4()
       return request(app.server)
         .get(`/v1/signers/${id}/credit-reports`)
+        .expect('Content-Type', /json/)

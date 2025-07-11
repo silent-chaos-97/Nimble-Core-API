@@ -142,8 +142,10 @@ const countries = [
   'MDG',
   'MDV',
   'MEX',
+// Temp comment
   'MHL',
   'MKD',
   'MLI',
   'MLT',
   'MMR',
+  'MNE',

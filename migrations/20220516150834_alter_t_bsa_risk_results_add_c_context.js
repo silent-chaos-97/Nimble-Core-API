@@ -2,7 +2,6 @@ exports.up = (knex) => knex.schema.alterTable('bsa_risk_results', table => table
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,usCitizen}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='usCitizen'`))
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,countryOfOrigin}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='countryOfOrigin'`))
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,milesAway}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='milesAway'`))
-// Temp comment
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,hearAbout}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='hearAbout'`))
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,individualIncome}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='individualIncome'`))
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,householdIncome}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='householdIncome'`))

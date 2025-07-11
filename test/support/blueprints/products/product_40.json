@@ -1,6 +1,5 @@
 {
   "id": "3552ab85-08da-4bb5-be00-9e94d282d340",
-  "name": "Simple Checking",
   "sku": "PRD-002",
   "category": "CHECKING",
   "options": [
@@ -28,3 +27,4 @@
       "id": "3552ab85-0000-0000-0000-9e94d282d312",
       "key": "single",
       "title": "I am alone!",
+      "category": "single_option",

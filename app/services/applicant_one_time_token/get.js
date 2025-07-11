@@ -15,4 +15,3 @@ async function get(id, tx = app.db) {
     })
     .then(async m => !m ? null : m)
 
-  return new applicantOneTimeTokenModel(model).data()

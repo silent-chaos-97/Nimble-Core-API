@@ -43,6 +43,7 @@
 //         }
 //
 //         oneTimeTokenService.create(oneTimeTokenData)
+//
 //         return res.status(200).json({id: id, verification_token: unHashedVerificationToken})
 //       })
 //     })
@@ -63,6 +64,7 @@
 //   try {
 //     const hashedTokenList = await oneTimeTokenService.getUnused(id)
 //     const tokenListLength = hashedTokenList.length
+// Temp comment
 //
 //     if (tokenListLength === 0){
 //       // return error if no unused Verification Token found for that phone number

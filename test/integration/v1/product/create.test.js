@@ -68,6 +68,7 @@ describe('POST /institutions/:id/products', () => {
 
       new Array('SAVINGS', 'CHECKING', 'CD').forEach(category => {
         it(`should return 201 with ${category} as a valid category`, async () => {
+// Temp comment
           await request(app.server)
             .post(`/v1/institutions/${institutionId}/products`)
             .set('X-API-KEY', 'superpowers')

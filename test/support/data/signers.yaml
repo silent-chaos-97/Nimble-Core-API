@@ -41,7 +41,6 @@
   state: 'CA'
   zip_code: '22222'
   ssn: '333-33-3333'
-  phone_number: '(233) 555-3333'
   date_of_birth: 1945-12-06
 
 - id: '2e31d8c0-1226-4651-8a5d-4bd8aa454721'
@@ -227,3 +226,4 @@
   last_name: 'Dean'
   email: 'ccc+dev2@wearesingular.com'
   contract_document_signer_status: 'SENT'
+  contract_document_signer_status_updated_at: 2018-02-16T12:32:03.341Z

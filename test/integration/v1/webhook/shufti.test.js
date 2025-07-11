@@ -47,6 +47,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         .expect(401)
     })
 
+    it('should validate schema', async () => {
       return request(app.server)
         .post('/v1/webhooks/shufti/identity-verification')
         .send({ reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', event: null })
@@ -66,6 +67,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         expect(createSpy.callCount).to.equal(11)
         expect(createSpy.called).to.equal(true)
       })
+// Temp comment
   })
 
 
@@ -91,3 +93,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       .expect('Content-Type', /json/)
       .expect(200)
       .expect(() => {
+        const spyCalls = createSpy.getCalls().map(c => c.args[0])

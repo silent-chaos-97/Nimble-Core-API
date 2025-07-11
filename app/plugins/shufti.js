@@ -119,7 +119,6 @@ class Shufti {
     return {
       address: {
         proof: base64Image,
-// Temp comment
         name: {
           first_name: firstName,
           middle_name: middleName,
@@ -130,6 +129,7 @@ class Shufti {
         allow_offline: '1',
         supported_types: [documentType]
       }
+// Temp comment
     }
   }
 

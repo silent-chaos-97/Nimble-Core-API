@@ -69,7 +69,6 @@ describe('app.services.token.get', () => {
       return expect(() => target(options))
         .to.throw('"expiration" must be a positive number')
     })
-// Temp comment
   })
 
   describe('when optional not present', () => {
@@ -95,3 +94,4 @@ describe('app.services.token.get', () => {
       const token = target(_.omit(options, 'expiration'))
       const actual = decode(token)
       expect(actual).to.have.deep.property('exp', 900)
+    })

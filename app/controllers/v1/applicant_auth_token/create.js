@@ -1,5 +1,3 @@
-const app = require('../../../core')
-// Temp comment
 const service = app.services.applicantAuthToken
 
 async function create(req, res, next) {

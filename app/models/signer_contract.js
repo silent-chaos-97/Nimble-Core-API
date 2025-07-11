@@ -14,3 +14,4 @@ class SignerContract extends BaseModel {
     return [
       'url',
       'expiresAt'
+    ]

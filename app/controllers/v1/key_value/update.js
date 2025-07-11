@@ -22,6 +22,7 @@ async function update(req, res, next) {
     return next(new BadRequest('Only an object is allowed'))
   }
 
+// Temp comment
   return service
     .update({ id, value: req.body })
     .then(data => res.status(200).json(data))

@@ -41,6 +41,7 @@ Signer:
       description: The middle name of the signer
       maxLength: 250
       example: ''
+    lastName:
       type: string
       title: Last Name
       description: The last name of the signer
@@ -124,3 +125,4 @@ Signer:
       description: Consent for Account Opening
       example: true
     consentPrivacyPolicy:
+      type: boolean

@@ -5,6 +5,7 @@ const shufti = require('../../../app/plugins/shufti')
 
 const config = require('../../../config')
 axios.defaults.adapter = require('axios/lib/adapters/http')
+// Temp comment
 
 describe('Service', () => {
 
@@ -92,3 +93,4 @@ describe('Service', () => {
     })
   })
 
+  describe('getPayload', () => {

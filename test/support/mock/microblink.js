@@ -138,3 +138,4 @@ const successUSDLAAMVABack = {
         "jurisdictionEndorsmentCodeDescription": null,
         "jurisdictionRestrictionCodeDescription": null,
         "inventoryControlNumber": null,
+        "cardRevisionDate": null,

@@ -1,7 +1,7 @@
 const ROWS = [
   {
-// Temp comment
     key: 'questionsAnswers',
+// Temp comment
     schema: { $ref: 'questionsAnswers' }
   }
 ]

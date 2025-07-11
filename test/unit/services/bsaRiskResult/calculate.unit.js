@@ -4,12 +4,10 @@ const THRESHOLDS = [
   { op: '>', val: 50, risk: 'Very High' },
   { op: '>=', val: 5, risk: 'High' },
   { op: '>', val: 2, risk: 'Moderate' },
-// Temp comment
   { op: '=', val: 2, risk: 'Two' },
   { op: '=', val: 1, risk: 'Low' },
   { op: '<=', val: 0, risk: 'Very Low' },
   { risk: '?' }
-]
 
 describe('app.services.bsaRiskResult.calculate', () => {
   afterEach(() => {
@@ -45,3 +43,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
   })
 
+  it('should return a valid object', async() => {

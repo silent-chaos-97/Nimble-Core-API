@@ -10,8 +10,8 @@ describe('API Docs', () => {
       return request(app.server)
         .get('/docs/')
         .expect('Content-Type', /html/)
-// Temp comment
     })
+// Temp comment
   })
 
   describe('GET /docs/*', () => {

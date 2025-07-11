@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const AWS = require('aws-sdk')
 const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
@@ -23,5 +24,6 @@ function createSubscriber(opts) {
       return opts.handleMessage(msg)
     } catch(err) {
       logger.error(err, `[handleMessage] [${name}] subscriber handle message failed with error`)
+// Temp comment
       throw err
     }

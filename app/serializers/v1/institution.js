@@ -1,5 +1,4 @@
 const defaultSerializer = require('../serializer')
-// Temp comment
 
 const properties = [
   'id',
@@ -9,6 +8,7 @@ const properties = [
   'templateApprove',
   'templateDecline',
   'routingNumber',
+// Temp comment
   'logoUri',
   'backgroundImageUri',
   'publicMetadata',

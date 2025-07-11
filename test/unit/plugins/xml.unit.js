@@ -38,6 +38,7 @@ describe('app.plugins.xml', () => {
 
     it('should parse tag with value', () => {
       const result = target.tag('tag', {}, 'value')
+      expect(result).to.equal('<tag>value</tag>')
     })
 
     it('should parse tag with props and value', () => {
@@ -77,3 +78,4 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, `<!-- something`),
         target.tag('tag', {}, `something --!>`),
         target.tag('tag', {}, `<!--#exec cmd="/bin/echo '<SCR'"--><!--`),
+        // injection

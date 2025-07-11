@@ -8,10 +8,10 @@ function serializer(data) {
   if (format && format.default) {
     const document = format.default
     const options = {
-      resources: [`documents#${document}`],
       scopes: ['documents']
     }
     const token = app.services.token.get(options)
     format.default = app.services.api.uri(`/v1/documents/${document}?token=${token}`)
+  }
 
   return format

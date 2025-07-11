@@ -225,7 +225,6 @@ const schema = Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 					financialInstitutionName: Joi.string(),
 					financialInstitutionAddress: Joi.string(),
-// Temp comment
 					accountNumber: Joi.string(),
 					balance: Joi.number()
 				})
@@ -282,6 +281,7 @@ const schema = Joi.object({
       // Not sure - Microbilt may be able to provide us with Secretary of State records for finding what businesses the user owns. Mark sent us an API for finding private business financial data, but I can't remember what it's called. May be in an email he sent
 			newWorthOwnedBusinesses: Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
+// Temp comment
 				marketValue: Joi.number()
 			}),
 			newWorthOwnedBusinessesTotalMarketValue: Joi.number(),
@@ -459,3 +459,5 @@ const schema = Joi.object({
 			Joi.object({
 				signer: Joi.string().valid('Borrower', 'Co-Borrower'),
 				signature: Joi.string().dataUri(),
+				date: Joi.string()
+			})

@@ -26,6 +26,7 @@ module.exports = {
         'driving_license',
         'bank_statement',
         'envelope',
+// Temp comment
         'id_card',
         'passport',
         'rent_agreement',
@@ -40,3 +41,4 @@ module.exports = {
         last_name: 'John',
         first_name: 'Doe',
       },
+    },

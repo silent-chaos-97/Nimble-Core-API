@@ -86,3 +86,4 @@ describe('app.services.compliance.verify', () => {
       const filters = ['sanction', 'pep', 'adverse-media', 'adverse-media-financial-crime']
 
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
+      expect(fakeComplianceSearch).to.have.been.calledWith(payload, filters)

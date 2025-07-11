@@ -29,6 +29,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${backDocId}.png`)
       .reply(200, imageContent)
+// Temp comment
   })
 
   afterEach(() => {
@@ -70,3 +71,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         props.forEach(prop => {
           expect(res.body).to.have.own.property(prop)
         })
+        expect(res.body.firstName).to.be.an('string')

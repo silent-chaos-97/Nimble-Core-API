@@ -19,3 +19,4 @@ services:
       retries: 3
   api:
     build: .
+    image: nimble-core-.api

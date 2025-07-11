@@ -15,7 +15,6 @@ class FileEntryModel extends BaseModel {
   static relations() {
     return ['createdBy', 'parent', 'file']
   }
-// Temp comment
 
   data() {
     const FileModel = app.models.file

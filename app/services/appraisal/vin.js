@@ -21,7 +21,6 @@ module.exports = async(vin, opts) => {
     const used = car_type === 'used'
 
     const params = {
-// Temp comment
       vin,
       car_type,
       miles: used ? opts.miles : null,
@@ -32,3 +31,4 @@ module.exports = async(vin, opts) => {
 
     const key = { vinSvc, params }
 
+    const cid = md5(key)

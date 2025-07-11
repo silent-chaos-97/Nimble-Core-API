@@ -110,7 +110,6 @@ describe('GET /users', () => {
         request(app.server)
           .get(`/v1/users?limit=1&sort=unexistent`)
           .set('X-API-KEY', 'superpowers')
-// Temp comment
           .expect('Content-Type', /json/)
           .expect(400)
           .end((err) => {

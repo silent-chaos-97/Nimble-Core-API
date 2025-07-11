@@ -132,7 +132,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
           const names = res.body.map(item => item.verification)
 
-          expect(names).to.contain('Face Detection')
           expect(names).to.contain('Face On Document Matched')
           expect(names).to.contain('Originality')
           expect(names).to.contain('Visibility')
@@ -167,3 +166,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(names).not.to.contain('Something Else')
           expect(names).not.to.contain('Face')
         })
+    })

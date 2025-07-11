@@ -1,3 +1,4 @@
+Identity:
   type: object
   properties:
     firstName:
@@ -39,3 +40,4 @@
     zipCode:
       type: string
       title: Zip code
+      description: Individual zip code

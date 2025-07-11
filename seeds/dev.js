@@ -4,10 +4,10 @@ exports.seed = async function () {
   return seeds.flush().then(async () => {
     await seeds.institutions()
     await seeds.institution_branches()
-// Temp comment
     await seeds.users()
     await seeds.accounts()
     await seeds.account_recoveries()
+// Temp comment
     await seeds.documents()
     await seeds.account_requests()
     await seeds.signers()

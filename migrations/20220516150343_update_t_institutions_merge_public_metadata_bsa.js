@@ -31,7 +31,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         },
         "default": ""
       },
-      "milesAway": {
         "order": 2,
         "text": "Does at least one account owner live within 50 miles of a Central Bank office\\?",
         "type": "string",
@@ -82,3 +81,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "default": ""
       },
+      "wireTransfersInternational": {

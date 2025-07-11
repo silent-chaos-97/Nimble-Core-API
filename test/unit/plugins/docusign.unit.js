@@ -262,6 +262,7 @@ describe('Docusign', () => {
 
         scope.done()
       })
+
       it('should return a template with a list of signers', async () => {
         let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
         await docusign._setDocusignAuthorizationAndSetHeader()
@@ -671,3 +672,8 @@ describe('Docusign', () => {
 
         const result = await docusign._getUpdatedRecipientAndTabs(mocks.validUser, config.get('docusign').accountID, envelopeId, recipientId)
 
+        scope1.done()
+
+        expect(result).not.to.be.undefined
+        expect(result).to.equal(null)
+      })

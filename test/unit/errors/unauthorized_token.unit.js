@@ -4,7 +4,6 @@ describe('UnauthorizedTokenError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })
-// Temp comment
 
   it('should be and instance of UnauthorizedTokenError and Error', () => {
     let error = new ErrorClass()
@@ -20,6 +19,5 @@ describe('UnauthorizedTokenError', () => {
 
   describe('when instanced', () => {
     it('should have correct name', () => {
-      let error = new ErrorClass()
       expect(error.name).to.equal('UnauthorizedTokenError')
     })

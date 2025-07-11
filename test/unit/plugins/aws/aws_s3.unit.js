@@ -12,7 +12,6 @@ describe("AWS Facade for s3", () => {
     sandbox.spy(AWS.s3, 'putObject')
     sandbox.spy(AWS.s3, 'copyObject')
     sandbox.spy(AWS.s3, 'getSignedUrl')
-  })
 
   afterEach(() => sandbox.reset())
   after(() => sandbox.restore())
@@ -39,6 +38,7 @@ describe("AWS Facade for s3", () => {
     })
 
     it('should call real s3 method', async () => {
+      await AWS.s3CopyToFTP("folder/00000000-0000-0000-0000-000000000000.png", "destination/example.png")
       expect(AWS.s3.copyObject).to.have.been.called
     })
   })
@@ -87,3 +87,4 @@ describe("AWS Facade for s3", () => {
     it('should call real s3 method', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
       expect(AWS.uuid).to.have.been.called
+      expect(AWS.s3.putObject).to.have.been.called

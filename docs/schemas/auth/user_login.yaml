@@ -4,6 +4,7 @@ UserLogin:
     - email
     - password
   properties:
+    email:
       type: string
       title: Email
       description: The email of the user

@@ -45,13 +45,13 @@ async function emitAccountRequestEvent(id, type, body = null) {
   return Promise.all(promises)
 }
 
-/**
  * Send a message to all the signers informing the account was approved or declined
  *
  * @param {string} statusTo - status transitioned to
  * @param {*} accountRequest - account request obj
  * @param {*} options - extra options to send to the email (like subject, etc)
  */
+async function sendAprovedDeclinedMessage(statusTo, accountRequest, options) {
   // send email to each signer
   const statusEmailBody = options.statusEmailBody
   return Promise.all(accountRequest.signers.map(async signer => {

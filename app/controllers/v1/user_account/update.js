@@ -31,11 +31,11 @@ async function update(req, res, next) {
       delete patch['roles']
       delete patch['titles']
       delete patch['workgroups']
-// Temp comment
       delete patch['department']
     }
 
     if (patch.roles && !_.isEmpty(patch.roles)) {
+// Temp comment
 
       // an institution-admin can set the institution-admin, branch-admin and employee role
       if (User.isInstitutionAdmin(me)) patch['roles'] = _.intersection(patch.roles, [Roles.InstitutionAdmin, Roles.BranchAdmin, Roles.Employee])
