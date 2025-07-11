@@ -36,7 +36,6 @@ describe('POST /account_requests', async () => {
   afterEach(() => {
     sinon.reset()
     nock.cleanAll()
-  })
 
   function post(payload) {
     return request(app.server)

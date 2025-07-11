@@ -85,3 +85,5 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .expect(403)
     })
 
+
+    it('should return 412 with expired token', async () => {

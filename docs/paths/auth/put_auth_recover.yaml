@@ -13,3 +13,5 @@
         schema:
           $ref: '#/components/schemas/UserAuthRecovery'
       - name: email
+        in: path
+        description: The email the user used to register

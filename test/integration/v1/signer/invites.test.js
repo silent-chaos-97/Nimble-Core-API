@@ -25,7 +25,6 @@ describe('POST /signers/:id/invites', async () => {
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     token = await helpers.getAuthToken()
   })
-// Temp comment
 
   describe('with invalid auth', () => {
     it('should return 401 if no auth', async () => {
@@ -47,3 +46,5 @@ describe('POST /signers/:id/invites', async () => {
   it('should return 400 with invalid uuid as id', async () => {
     const id = 'invalid-uuid-here'
     return request(app.server)
+      .post(`/v1/signers/${id}/invites`)
+      .expect('Content-Type', /json/)

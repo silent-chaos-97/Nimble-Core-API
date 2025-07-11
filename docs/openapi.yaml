@@ -106,3 +106,5 @@ components:
   schemas:
     Image:
       type: object
+      properties:
+        default:

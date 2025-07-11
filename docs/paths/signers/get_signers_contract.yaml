@@ -9,6 +9,7 @@
       - bearer: ['signers']
     parameters:
       - name: id
+        in: path
         description: Signer id
         required: true
         schema:

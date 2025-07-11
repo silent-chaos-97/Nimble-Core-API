@@ -3,7 +3,6 @@ const _ = require('lodash')
 const app = require('../core')
 const BaseModel = require('./model')
 
-const Statuses = {
   Draft: 'DRAFT',
   Active: 'ACTIVE',
   Paused: 'PAUSED',
@@ -52,3 +51,5 @@ class WorkflowModel extends BaseModel {
     return {
       ..._.omit(this._data, ['user', 'branch', 'institution']),
       user: this._data.user ? new UserModel(this._data.user).data() : null,
+      branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,
+      institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null

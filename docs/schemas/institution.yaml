@@ -38,3 +38,4 @@ Institution:
     routingNumber:
       type: string
       title: routingNumber
+      description: The institution routing number

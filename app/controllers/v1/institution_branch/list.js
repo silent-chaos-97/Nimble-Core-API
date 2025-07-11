@@ -12,5 +12,5 @@ function list(req, res, next) {
 
   return service
     .list(params)
-    .then(data => res.status(200).json(data))
+    .then(data => data.map(serializer))
     .catch(next)

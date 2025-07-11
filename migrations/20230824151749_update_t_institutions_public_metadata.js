@@ -2,6 +2,7 @@ const publicMetadata = {
   _: {
     thresholds: [
       {
+// Temp comment
         op: '>=',
         val: 7,
         risk: 'High'
@@ -111,3 +112,5 @@ const publicMetadata = {
     exclude: ['CARD']
   },
   combinedIncome35000: {
+    enum: [
+      'yes',

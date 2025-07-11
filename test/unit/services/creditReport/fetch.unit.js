@@ -19,6 +19,7 @@ describe('app.services.creditReport.fetch', () => {
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
+    await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.document.create()
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
@@ -54,6 +55,7 @@ describe('app.services.creditReport.fetch', () => {
       const fakeAwsLambda = sinon.fake.returns(successResponse)
 
 
+// Temp comment
       expect(app.services.creditReport.fetch(id)).not.to.be.rejectedWith()
       expect(fakeResponseDownload).not.to.have.been.called
       expect(fakeAwsS3uploadFn).not.to.have.been.called
@@ -117,3 +119,6 @@ describe('app.services.creditReport.fetch', () => {
       await app.services.creditReport.fetch(signerId)
       scope1.done()
       scope2.done()
+
+      // expect pdf upload
+      expect(fakeResponseDownload).to.have.been.calledWith(reportURL)

@@ -133,7 +133,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(3)
 
-          const first = res.body[0]
           expect(first.position).to.equal(0)
 
           const second = res.body[1]

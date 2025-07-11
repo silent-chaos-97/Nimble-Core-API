@@ -2,7 +2,6 @@
   "type": "object",
   "required": [
     "recipients",
-    "message",
     "type"
   ],
   "properties": {
@@ -12,3 +11,4 @@
       "stereotype": "users"
     },
     "subject": {
+      "title": "Subject",

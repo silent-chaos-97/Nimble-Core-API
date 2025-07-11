@@ -10,6 +10,7 @@ class CommentModel extends BaseModel {
 
   static props() {
     return ['id', 'text', 'createdById', 'fileEntryId', 'attachmentId', 'createdAt', 'updatedAt']
+  }
 
   static relations() {
     return ['createdBy', 'fileEntry', 'attachment']
@@ -22,3 +23,4 @@ class CommentModel extends BaseModel {
 
     return {
       ..._.omit(this._data, ['createdBy', 'fileEntry', 'attachment']),
+      createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,

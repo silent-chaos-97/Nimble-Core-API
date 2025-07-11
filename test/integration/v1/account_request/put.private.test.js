@@ -259,3 +259,9 @@ describe('PUT private /account-requests/:id', () => {
           .send({ ...putRequest, createdAt: 123123123 })
           .expect(400)
           .end((err, res) => {
+            if (err) return done(err)
+
+            expect(res.body.message).to.contain('"createdAt" is not allowed')
+            done()
+          })
+      })

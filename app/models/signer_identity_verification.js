@@ -7,7 +7,6 @@ class SignerIdentityVerification extends BaseModel {
     super(SignerIdentityVerification.props(), SignerIdentityVerification.relations(), data)
   }
 
-  static props() {
     return [
       'id',
       'signerId',

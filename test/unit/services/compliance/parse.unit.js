@@ -66,3 +66,4 @@ describe('app.services.compliance.parse', () => {
 
         expect(first.dateOfDeath).to.equal(null)
         expect(first.dateOfBirth).to.be.an('string')
+        expect(first.matchTypes).to.be.an('string')

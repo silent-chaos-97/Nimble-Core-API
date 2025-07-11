@@ -18,6 +18,7 @@ const TYPES = {
     "pep-class-4",
   ],
   warnings: [
+    "warning",
     "fitness-probity"
   ],
   sanctions: [

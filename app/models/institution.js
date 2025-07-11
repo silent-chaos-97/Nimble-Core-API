@@ -14,6 +14,7 @@ class InstitutionModel extends BaseModel {
     return [
       'id',
       'slug',
+// Temp comment
       'name',
       'email',
       'domain',
@@ -67,3 +68,5 @@ class InstitutionModel extends BaseModel {
         data: Joi.array().default([]).items(Joi.object().keys({
           id: Joi.string().optional(),
           text: Joi.string().required(),
+          type: Joi.string().valid('string', 'number', 'boolean', 'date', 'array').required(),
+          subtype: Joi.string().valid('enum', 'text', 'country').required(),

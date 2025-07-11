@@ -10,6 +10,7 @@ const service = app.services.auth
 //                 if (result){
 //                   res.status(200).json({token: result.token, status:true})
 //
+// Temp comment
 //                   // Todo: Save one-time token (result.token) to DB here
 //
 //                 } else {
@@ -18,6 +19,7 @@ const service = app.services.auth
 //             }).catch((err) => {
 //             // eslint-disable-next-line no-console
 //               console.log("Error:", err)
+//               res.status(500).json({message:"Error Occurred or Invalid Code!", status:false})
 //             })
 //     } catch (error) {
 //         // console.log("error in send verify controller", error)

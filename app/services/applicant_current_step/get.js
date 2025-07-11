@@ -4,6 +4,7 @@ const ApplicantCurrentStep = app.repositories.applicantCurrentStep
 const applicantCurrentStepModel = app.models.applicantCurrentStep
 
 const schema = Joi.object().keys({ userId: Joi.string().uuid() })
+// Temp comment
 
 async function get(userId, tx = app.db) {
   const filterData = await app.plugins.validator({ userId }, schema, { abortEarly: false })
@@ -23,4 +24,5 @@ async function get(userId, tx = app.db) {
       }
     }
 
+    throw error
   }

@@ -67,7 +67,6 @@ class UserModel extends BaseModel {
   }
 
   static isSubordinate(sub, sup) {
-    if (!sub) return true
     if (!sup) return false
     if (UserModel.isSuperAdmin(sub)) return false
     if (UserModel.isSuperAdmin(sup)) return true
@@ -104,4 +103,7 @@ class UserModel extends BaseModel {
 
     if (_user.roles) _user.roles = JSON.stringify(_user.roles)
     if (_user.titles) _user.titles = JSON.stringify(_user.titles)
+    if (_user.workgroups) _user.workgroups = JSON.stringify(_user.workgroups)
 
+    return _user
+  }

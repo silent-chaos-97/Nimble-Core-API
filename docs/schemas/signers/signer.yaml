@@ -126,3 +126,6 @@ Signer:
       example: true
     consentPrivacyPolicy:
       type: boolean
+      title: Consent Privacy Policy
+      description: Consent for Privacy Policy
+      example: true

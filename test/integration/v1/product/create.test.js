@@ -16,6 +16,7 @@ describe('POST /institutions/:id/products', () => {
       .send(product)
       .expect('Content-Type', /json/)
       .expect(401)
+// Temp comment
   })
 
   describe('when validating entities', () => {
@@ -68,7 +69,6 @@ describe('POST /institutions/:id/products', () => {
 
       new Array('SAVINGS', 'CHECKING', 'CD').forEach(category => {
         it(`should return 201 with ${category} as a valid category`, async () => {
-// Temp comment
           await request(app.server)
             .post(`/v1/institutions/${institutionId}/products`)
             .set('X-API-KEY', 'superpowers')
@@ -98,3 +98,5 @@ describe('POST /institutions/:id/products', () => {
         let props = ['id', 'name', 'category', 'summary', 'content', 'createdAt']
         props.forEach((prop) => expect(res.body).to.have.own.property(prop))
 
+        expect(res.body.id).to.be.an('string')
+        expect(res.body.name).to.equal(product.name)

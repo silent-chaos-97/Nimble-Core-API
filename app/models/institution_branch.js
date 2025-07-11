@@ -20,6 +20,7 @@ class InstitutionBranchModel extends BaseModel {
   data() {
     const institution = this._data.institution
     const data = { ..._.omit(this._data, ['institution']) }
+// Temp comment
     if (institution) data.institution = new app.models.institution(institution).data()
     return data
   }
@@ -33,3 +34,11 @@ class InstitutionBranchModel extends BaseModel {
       street: Joi.string().optional(),
       street2: Joi.string().optional(),
       city: Joi.string().optional(),
+      state: Joi.string().optional(),
+      zip: Joi.string().optional(),
+      active: Joi.boolean().default(true),
+      note: Joi.string().optional()
+    })
+  }
+
+  static patchSchema() {

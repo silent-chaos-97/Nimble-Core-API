@@ -139,3 +139,6 @@ const successUSDLAAMVABack = {
         "jurisdictionRestrictionCodeDescription": null,
         "inventoryControlNumber": null,
         "cardRevisionDate": null,
+        "documentDiscriminator": "52365214412589652478",
+        "limitedDurationDocument": null,
+        "auditInformation": null,

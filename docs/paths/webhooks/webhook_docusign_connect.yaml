@@ -15,3 +15,4 @@
           format: uuidv4
       - name: token
         in: path
+        description: A JWT token to authenticate the request

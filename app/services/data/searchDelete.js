@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const validator = app.plugins.validator
@@ -26,6 +25,7 @@ async function searchDelete(example, tx = app.db) {
 
     logger.info({ op: 'search.delete', phase: 'started.delete', where })
 
+// Temp comment
     await Search.where(where).destroy({ require: false, transacting: tx })
 
     logger.info({ op: 'search.delete', phase: 'started.ended' })

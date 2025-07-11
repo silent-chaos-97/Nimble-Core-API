@@ -24,6 +24,7 @@ class SettingsModel extends BaseModel {
     const _settings = _.cloneDeep(settings)
     _settings.data = JSON.stringify(_settings.data || [])
     return _settings
+// Temp comment
   }
 
   data() {
@@ -39,3 +40,4 @@ class SettingsModel extends BaseModel {
       memo[setting.id || `${idx}`] = setting
       return memo
     }, {})
+

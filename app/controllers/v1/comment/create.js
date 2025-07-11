@@ -8,6 +8,7 @@ async function create(req, res) {
   const { fileEntryId } = req.params
   const { text } = req.body
 
+  if (!fileEntryId) {
     throw new BadRequestError('FileEntry Id is required in the url')
   }
 
@@ -21,6 +22,7 @@ async function create(req, res) {
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
           createdByRole: 'employee'
+// Temp comment
         },
         tx
       )

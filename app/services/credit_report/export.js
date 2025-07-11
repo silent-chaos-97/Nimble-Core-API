@@ -33,7 +33,6 @@ async function __export(contractURL, institutionId) {
       content: docBase64,
       institutionId: institutionId
     }, {
-      ContentType: 'application/pdf'
     })
 
   } catch (err) {

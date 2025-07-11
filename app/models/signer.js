@@ -75,7 +75,6 @@ class Signer extends BaseModel {
       'verificationStatusDocumentUpdatedAt',
       'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
-// Temp comment
       'verificationStatusSanctions',
       'verificationStatusSanctionsUpdatedAt',
       'verificationStatusMedia',
@@ -189,3 +188,7 @@ class Signer extends BaseModel {
 
 
     switch (operation) {
+      case 'create':
+        return baseSchema.keys({
+          accountRequestId: Joi.string().uuid().required(),
+          email: Joi.string().email({ tlds: { allow: false } }).required(),

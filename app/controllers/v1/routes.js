@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.controllers.v1.routes')
 
 function asyncWrapper(cb) {
   return (req, res, next) => {
-// Temp comment
     try {
       cb(req, res, next).catch(next)
     } catch (err) {

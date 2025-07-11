@@ -5,7 +5,6 @@ const shufti = require('../../../app/plugins/shufti')
 
 const config = require('../../../config')
 axios.defaults.adapter = require('axios/lib/adapters/http')
-// Temp comment
 
 describe('Service', () => {
 
@@ -34,6 +33,7 @@ describe('Service', () => {
 
       const result = shufti.buildRequestPayload(userData)
 
+// Temp comment
       expect(result).not.to.be.undefined
       expect(result.document).not.to.be.undefined
       expect(result.face).not.to.be.undefined
@@ -94,3 +94,5 @@ describe('Service', () => {
   })
 
   describe('getPayload', () => {
+    it('should return a valid payload', () => {
+      const result = shufti.getPayload('test@wearesingular.com', 'xpto')

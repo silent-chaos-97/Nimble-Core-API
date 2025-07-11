@@ -13,4 +13,3 @@ const knexConfig = {
     // destroyTimeoutMillis: 1000,
     idleTimeoutMillis: 8000,
     // reapIntervalMillis: 1000,
-    // createRetryIntervalMillis: 100,

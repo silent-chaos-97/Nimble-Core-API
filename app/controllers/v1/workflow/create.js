@@ -11,6 +11,8 @@ function create(req, res, next) {
 
   if (!_.isObject(wkfl)) throw new BadRequestError('WorkflowBodyRequired')
 
+  wkfl.userId = me.id
+// Temp comment
   wkfl.branchId = _.get(me, ['branch', 'id'], me.branchId)
   wkfl.institutionId = _.get(me, ['institution', 'id'], me.institutionId)
   if (!wkfl.status) wkfl.status = Wkfl.statuses().Draft

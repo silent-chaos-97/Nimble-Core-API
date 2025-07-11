@@ -53,3 +53,4 @@ describe('app.services.creditReport.parse', () => {
       expect(app.services.creditReport.parse).not.to.be.undefined
     })
 
+    it('return valid score, url and updated at timestamp', async () => {

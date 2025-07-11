@@ -69,7 +69,6 @@ describe('POST /signers/:id/email-verifications', async () => {
     it('should return 400 with invalid uuid as id', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
-        .post(`/v1/signers/${id}/email-verifications`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + headerToken)
         .expect(400)
@@ -116,3 +115,6 @@ describe('POST /signers/:id/email-verifications', async () => {
         .set('Authorization', 'Bearer ' + headerToken)
         .expect(204)
         .then(async () => {
+          // fetch the most recent email verification for this signer
+          const result = await knex.raw("SELECT * FROM signer_email_verifications WHERE signer_id='2e31d8c0-1226-4651-8a5d-4bd8aa454722' ORDER BY created_at DESC LIMIT 1")
+          const verification = result.rows[0]

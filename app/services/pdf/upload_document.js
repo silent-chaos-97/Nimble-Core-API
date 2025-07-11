@@ -78,3 +78,4 @@ const createPdfRequestBodyParams = (document, documentBuffer) => ({
 const createBufferBeginning = (envelopeJson) =>
   Buffer.from(
     `${hyphens}${boundary}${CRLF}` +
+    `Content-Type: application/json${CRLF}` +

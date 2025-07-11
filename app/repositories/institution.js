@@ -12,3 +12,4 @@ const Institution = app.db.Model.extend({
   account_requests: function () {
     return this.hasMany('AccountRequest', 'institution_id')
   },
+

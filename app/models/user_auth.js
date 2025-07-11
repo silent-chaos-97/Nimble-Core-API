@@ -22,3 +22,4 @@ class UserAuthModel extends BaseModel {
 
   static async getLocalAccountByEmail(email, tx = app.db) {
     return User.query(q => {
+      q.select([

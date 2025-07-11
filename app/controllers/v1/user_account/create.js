@@ -27,6 +27,7 @@ async function create(req, res, next) {
 
   if (!user.status) user['status'] = Statuses.Active
   if (!user.branchId) user['branchId'] = me.branchId
+// Temp comment
   if (!user.institutionId) user['institutionId'] = me.institutionId
   if (_.isEmpty(user.roles)) user['roles'] = [Roles.Employee]
 

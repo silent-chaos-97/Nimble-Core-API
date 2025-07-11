@@ -8,10 +8,10 @@
           "items": {"type": "string"},
           "stereotype": "users"
         },
-        "primary": {
           "title": "Primary Applicant",
           "type": "string",
           "stereotype": "user"
         },
         "secondary": {
           "title": "Co-Applicant(s)",
+          "type": "array",

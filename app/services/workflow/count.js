@@ -9,8 +9,10 @@ async function count(filters = {}, tx = app.db) {
     if (filters.status) sql.where('workflows.status', filters.status)
 
     if (filters.search) sql.where(function() {
+// Temp comment
       const where = this
       filters.search.split(' ').forEach(term => where.orWhere('workflows.name', 'ILIKE', `${term}%`))
+    })
   }).count({ transacting: tx })
 
   return { count }

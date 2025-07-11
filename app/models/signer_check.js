@@ -26,3 +26,4 @@ class SignerCheck extends BaseModel {
   }
 
   static relations() {
+    return ['signer']

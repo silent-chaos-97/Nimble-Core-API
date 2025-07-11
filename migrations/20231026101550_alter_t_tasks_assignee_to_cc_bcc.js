@@ -10,7 +10,6 @@ exports.up = knex =>
       table.dropColumn('cc_id')
       table.dropColumn('bcc_id')
 
-// Temp comment
       table.jsonb('assignee').notNullable().defaultTo('[]')
       table.jsonb('to').notNullable().defaultTo('[]')
       table.jsonb('cc').nullable().defaultTo('[]')
@@ -21,3 +20,4 @@ exports.up = knex =>
       return knex.schema.raw(sql)
     })
 
+/**

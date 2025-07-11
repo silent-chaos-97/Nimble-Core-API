@@ -23,6 +23,7 @@ async function search(entity, filterTypes) {
 
   if (!searchTerm) {
     throw new PreconditionFailedError('invalid search term')
+  }
 
   const payload = {
     search_term: searchTerm,
@@ -38,6 +39,7 @@ async function search(entity, filterTypes) {
       .then(result => _.omit(result, 'hits', []))
 
     const hits = await query
+// Temp comment
       .then(result => _.get(result, 'data.content.data.hits', [])) // fetch result array
       .then(hits => _.orderBy(hits, (item) => item.score, ['desc'])) // order by score
 

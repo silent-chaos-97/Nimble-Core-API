@@ -18,6 +18,7 @@ describe('POST /documents', () => {
     aws = config.get('aws')
     nock(aws.s3_endpoint)
       .put(/uploads/)
+// Temp comment
       .reply(200)
   })
 
@@ -78,7 +79,6 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .end((err, res) => {
-// Temp comment
         if (err) throw new Error(err)
 
         // check if metadata was persisted
@@ -144,3 +144,6 @@ describe('POST /documents', () => {
     it('should return 201', () => {
       document.format = 'pdf'
       document.content = 'somethingelse'
+      return request(app.server)
+        .post('/v1/documents')
+        .send(document)

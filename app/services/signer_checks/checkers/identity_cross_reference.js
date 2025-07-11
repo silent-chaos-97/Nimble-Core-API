@@ -18,3 +18,4 @@ module.exports = {
     log.info({ op: 'identity_cross_reference', phase: 'response', report, signer }) // FIXME: PII
 
     const noHit = _.get(report, 'MsgRsHdr.Status.StatusDesc') === 'NOHIT'
+

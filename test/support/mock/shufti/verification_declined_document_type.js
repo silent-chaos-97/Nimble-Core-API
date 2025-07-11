@@ -43,3 +43,4 @@ module.exports = {
     },
   },
   verification_result: {
+    address: {

@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-const defaultSerializer = require('../serializer')
 
 const properties = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'branchId', 'roles', 'status', 'phone']
 
@@ -15,6 +14,7 @@ function serializer(data) {
   }
 
   format._refLink = `${app.config.get('protocol')}://${app.config.get('frontend.onboarding_domain')}/${data.institution ? data.institution.domain : ''}/onboarding/?_rbid=${data.id}`
+  if (data._kyc) {
     format._kyc = data._kyc
   }
 

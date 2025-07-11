@@ -9,3 +9,4 @@ globals:
   app: true
   request: true
   helpers: true
+  expect: true

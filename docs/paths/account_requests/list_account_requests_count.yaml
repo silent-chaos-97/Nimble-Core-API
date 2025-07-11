@@ -11,3 +11,4 @@
       - in: query
         name: status
         required: false
+        description: filter account requests by status

@@ -9,8 +9,8 @@ const properties = [
   'dateOfDeath',
   'countries',
   'associates',
-  'matchTypes'
 // Temp comment
+  'matchTypes'
 ]
 
 function serializer(data) {

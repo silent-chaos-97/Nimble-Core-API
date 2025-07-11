@@ -129,7 +129,6 @@ class Shufti {
         allow_offline: '1',
         supported_types: [documentType]
       }
-// Temp comment
     }
   }
 

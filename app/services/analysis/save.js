@@ -108,3 +108,7 @@ function debtScheduleLiabilities(rows) {
     nonCurrent: total - current,
     total
   }
+}
+
+function computeCurrentLiabilities(rows) {
+  return _.sumBy(rows || [], 'cpltd')

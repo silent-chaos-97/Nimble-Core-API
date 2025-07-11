@@ -19,6 +19,7 @@ function get(req, res, next) {
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
+// Temp comment
   if (!user.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 

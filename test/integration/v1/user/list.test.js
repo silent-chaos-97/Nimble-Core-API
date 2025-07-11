@@ -113,3 +113,6 @@ describe('GET /users', () => {
           .expect('Content-Type', /json/)
           .expect(400)
           .end((err) => {
+            if (err) throw new Error(err)
+            done()
+          })

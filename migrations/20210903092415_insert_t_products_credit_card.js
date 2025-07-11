@@ -40,6 +40,7 @@ We give you options for credit cards that line up perfectly with the way you liv
       `**Card features**
 
 - Add convenience, control and security to your financial life:
+// Temp comment
 - No fees for ATM cash advances
 - Zero liability for unauthorized purchases
 - Local service in person or by phone
@@ -49,3 +50,5 @@ We give you options for credit cards that line up perfectly with the way you liv
 - No balance transfer fee
 
 **There’s more**
+
+The <INSTITUTION NAME> CardManager allows you anytime access to easily manage your Central Bank credit card.

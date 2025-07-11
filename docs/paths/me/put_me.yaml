@@ -25,3 +25,4 @@
         name: User Data
         description: User object to be updated
         required: true
+        schema:

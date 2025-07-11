@@ -5,7 +5,6 @@
 //
 // const UserModel = app.models.user
 // const usersService = app.services.user
-// const tokenService = app.services.token
 // const oneTimeTokenService = app.services.applicantOneTimeToken
 // const { mfaVerify } = app.plugins
 //
@@ -64,7 +63,6 @@
 //   try {
 //     const hashedTokenList = await oneTimeTokenService.getUnused(id)
 //     const tokenListLength = hashedTokenList.length
-// Temp comment
 //
 //     if (tokenListLength === 0){
 //       // return error if no unused Verification Token found for that phone number

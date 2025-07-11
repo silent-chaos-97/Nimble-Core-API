@@ -40,7 +40,6 @@ const INPUT_PROPS = {
     id: Joi.string().required(), // vehicle = VIN, cash = client-identifier, ... etc
     type: Joi.string().required(), // e.g. vehicle, down-payment-cash (any advanced rate)
     props: Joi.object(), // e.g. {car_type: 'used', miles: 12000, zip: 85254} // for a vehicle trade-in
-    value: Joi.number().positive(), // overrides the appraised value (if any)
     debtOutstanding: Joi.number().positive(),
     monthlyDebtObligation: Joi.number().positive().default(0)
   })).optional(),

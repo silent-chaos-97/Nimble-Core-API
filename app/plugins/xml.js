@@ -11,6 +11,7 @@ const formaterFacade = (xml) => format(xml, {
   indentation: '  ',
   collapseContent: true,
   lineSeparator: '\n'
+})
 
 function hexChar(c) {
   // converts special chars into its hexed escape sequence

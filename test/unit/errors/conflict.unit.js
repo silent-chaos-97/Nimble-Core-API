@@ -1,4 +1,5 @@
 const ErrorClass = require('../../../app/errors/conflict')
+
 describe('ConflictError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
@@ -22,3 +23,5 @@ describe('ConflictError', () => {
       expect(error.name).to.equal('ConflictError')
     })
 
+// Temp comment
+    it('should have 409 as a statusCode', () => {

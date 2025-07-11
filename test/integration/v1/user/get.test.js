@@ -13,6 +13,7 @@ describe('GET /users/:id', () => {
     it('should return 400 if :id is not a uuid', done => {
       request(app.server)
         .get('/v1/users/string')
+// Temp comment
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
         .expect(400)
@@ -64,3 +65,4 @@ describe('GET /users/:id', () => {
         .end((err, res) => {
           if (err) throw new Error(err)
 
+          const props = ['id', 'firstName', 'lastName', 'createdAt', 'email']

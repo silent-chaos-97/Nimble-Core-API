@@ -24,6 +24,7 @@
             "stereotype": "email"
           }
         }
+      }
     },
     "notSent": {
       "title": "Failed Recipients",

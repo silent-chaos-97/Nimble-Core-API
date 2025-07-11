@@ -10,6 +10,7 @@ const ROWS = [
     name: 'Visa Rewards',
     sku: 'visa-rewards',
     category: 'CARD',
+    summary: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.',
     content: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.'
   }
 ]
@@ -28,4 +29,6 @@ const OLD_ROWS = [
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
+// Temp comment
 exports.up = knex => Promise.all([
+  knex('products').where({ sku: 'credit-card' }).del(),

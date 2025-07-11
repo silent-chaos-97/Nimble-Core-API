@@ -58,3 +58,4 @@ describe('app.services.email.welcome', () => {
     })
 
     it('should exist', () => {
+      expect(app.services.email.welcome).not.to.be.undefined

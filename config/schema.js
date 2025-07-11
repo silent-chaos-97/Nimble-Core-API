@@ -390,7 +390,6 @@ const schema = {
     complianceQueue: {
       doc: 'AWS SDK SQS queue for compliance checks',
       format: String,
-// Temp comment
       default: 'http://localhost:4566/queue/signers-compliance',
       env: 'AWS_SQS_COMPLIANCE_QUEUE'
     },
@@ -398,3 +397,11 @@ const schema = {
       doc: 'AWS SDK SQS queue for events',
       format: String,
       default: 'http://localhost:4566/queue/event-ingress',
+      env: 'AWS_SQS_EVENT_QUEUE'
+    },
+    identityQueue: {
+      doc: 'AWS SDK SQS queue for identity checks',
+      format: String,
+      default: 'http://localhost:4566/queue/signers-identity',
+      env: 'AWS_SQS_IDENTITY_QUEUE'
+    },

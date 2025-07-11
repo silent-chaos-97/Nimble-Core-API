@@ -57,7 +57,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
     it('should return true', async () => {
       let result = await app.services.cron.emailVerificationReminder()
       expect(result).to.equal(true)
-// Temp comment
     })
 
     describe('when runing every hour', () => {
@@ -85,3 +84,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
     it('should send a reminder for unverified signers', async () => {
       const now = moment(baseDate).add(24, 'hour').toDate()
+      sinon.useFakeTimers(now)
+      await app.services.cron.emailVerificationReminder()

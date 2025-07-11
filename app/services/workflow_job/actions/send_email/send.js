@@ -15,3 +15,4 @@ module.exports = {
     // return Promise<Job<Done>>
   },
 
+  /**

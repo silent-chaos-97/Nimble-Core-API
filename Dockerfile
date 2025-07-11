@@ -12,3 +12,4 @@ RUN yarn install
 
 FROM node:14-alpine as runtime
 
+WORKDIR /app

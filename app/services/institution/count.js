@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../../core')
 const Institution = app.repositories.institution
 
@@ -6,6 +7,7 @@ async function count(filters = {}, tx = app.db) {
     if (filters.search) sql.where(function() {
       const where = this
       filters.search.split(' ').forEach(term => where
+        .orWhere('institutions.slug', 'ILIKE', `${term}%`)
         .orWhere('institutions.name', 'ILIKE', `${term}%`)
         .orWhere('institutions.domain', 'ILIKE', `${term}%`)
       )

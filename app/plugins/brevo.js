@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const brevo = require('@getbrevo/brevo')
+// Temp comment
 const logger = require('./logger').getLogger('app.plugins.aws')
 
 const config = require('../../config')
@@ -14,6 +15,7 @@ class BrevoFacade {
   }
 
   invokeLambda(
+    params = {
       FunctionName: 'my-function',
       Payload: ''
     }

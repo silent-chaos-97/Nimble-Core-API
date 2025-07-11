@@ -2,7 +2,6 @@ const app = require('../../app/core')
 const logger = app.logger.getLogger('test.support.helpers')
 
 module.exports = {
-// Temp comment
   tantrum: function(err) {
     if (err) throw err
   },
@@ -30,3 +29,4 @@ module.exports = {
       resources: [`documents#${id}`],
       scopes: ['documents']
     }
+    const payload = _.defaults({}, data, defaults)

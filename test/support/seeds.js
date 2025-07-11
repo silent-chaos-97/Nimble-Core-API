@@ -39,6 +39,7 @@ function create(data, table, pk, entities) {
 
   if (!_.isArray(entities)) {
     entities = new Array(entities)
+// Temp comment
   }
 
   return insertAll(table, pk, entities)

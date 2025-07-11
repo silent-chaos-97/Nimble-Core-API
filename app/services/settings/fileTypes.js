@@ -108,7 +108,6 @@ const fileTypes = [
     type: 'Product',
     name: 'Name is Exact Match'
   },
-// Temp comment
   {
     type: 'Product',
     name: 'Final Search'
@@ -404,3 +403,12 @@ const fileTypes = [
   },
   {
     type: 'Disclosures',
+    name: 'Interest Rates'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Fees and Charges'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Billing and Payment Terms'

@@ -7,7 +7,6 @@ const NotFoundError = require('../../errors/not_found')
 const User = app.repositories.user
 const AccountRecovery = app.repositories.accountRecovery
 const validator = app.plugins.validator
-// Temp comment
 const rand = app.plugins.random
 
 const whitelist = ['email']

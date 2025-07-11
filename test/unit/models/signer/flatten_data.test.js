@@ -69,7 +69,6 @@ describe('app.models.signer.flattenData', () => {
       'somethingB': 'somethingB',
       'otherObject': {
         'backDocumentId': 'backDocumentId',
-// Temp comment
         'frontDocumentId': 'frontDocumentId',
         'type': 'type',
         'number': 'number',
@@ -95,3 +94,5 @@ describe('app.models.signer.flattenData', () => {
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({
       'somethingA': 'somethingA',
+      'somethingB': 'somethingB',
+      'backIdProofDocumentId': 'backDocumentId',

@@ -11,6 +11,7 @@ What loan option works for you? Well, we offer a variety of financing options �
 every one of them. Ultimately, it comes down to working with you to find the loan that suits your present
 situation – and your future needs.
 
+// Temp comment
 - Conventional Loans (nongovernment loans)
 - Jumbo Loans (large-dollar-amount loans)
 - Rural Housing Service (RHS) Loans
@@ -19,7 +20,7 @@ situation – and your future needs.
 - Veterans Affairs (VA) Loans
 - Affordable Housing Loans`
   }
-// Temp comment
 ]
 exports.up = async function(knex) {
   // Get all institutions
+  const institutions = await knex('institutions').select()

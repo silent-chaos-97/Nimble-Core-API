@@ -36,7 +36,6 @@ describe('Credit Report Plugin', () => {
 
   describe('_removeTagsHTML', () => {
     it('should return valid html', async () => {
-      const input=`<style><html><div>ok</div><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><link type="text/css" rel="stylesheet" media="print" href="/templates/pushbutton/css/print_report.css" /><script src="/preq/js/preq.js"></script></html>`
 
       const output='<style><html><div>ok</div></html>'
 
@@ -162,3 +161,6 @@ describe('Credit Report Plugin', () => {
         address: '123 main street apt. 1',
         city: 'Lisbon',
         state: 'CA',
+        zipCode: '22222',
+        ssn: '333-33-3333',
+        phoneNumber: '(233) 555-3333',

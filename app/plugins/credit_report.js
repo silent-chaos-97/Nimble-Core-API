@@ -12,7 +12,6 @@ const validator = require('./validator')
  *
  * See: https://secure.isoftpull.com/index.php
  * Note: only accessible from the USA.
- */
 class CreditReport {
   constructor(username, password, groupCode, lenderId, url, version=2) {
     this.baseAPIURL = url

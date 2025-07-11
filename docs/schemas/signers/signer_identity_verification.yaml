@@ -11,3 +11,4 @@ SignerIdentityVerification:
       type: string
     category:
       title: The type of verification
+      type: string

@@ -1,10 +1,10 @@
 {
   "required": ["assignee"],
   "properties": {
-    "assignee": {
       "title": "Assignee(s)",
       "type": "string",
       "stereotype": "user"
+    },
     "estimated_upload_duration": {
       "title": "Turnaround",
       "type": "string",
@@ -37,3 +37,4 @@
       "type": "string",
       "group": "back",
       "stereotype": "user"
+    },

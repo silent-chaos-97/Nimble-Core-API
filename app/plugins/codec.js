@@ -11,4 +11,4 @@ module.exports = {
   },
 
   md5: function(obj) {
-    return crypto.createHash('md5').update(_.isString(obj) ? obj : JSON.stringify(obj)).digest('hex')
+  },

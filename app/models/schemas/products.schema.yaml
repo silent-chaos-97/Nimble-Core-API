@@ -5,7 +5,6 @@ kind: custom
 order: 0
 
 columns:
-  - data: id
     title: ID
     readOnly: true
     width: '50'
@@ -115,3 +114,5 @@ columns:
     readOnly: true
     formula: Number(x.base_rate_internal_value + x.rate_consideration || 0)
     numericFormat:
+      pattern: 0.00%
+      postfix: '%'

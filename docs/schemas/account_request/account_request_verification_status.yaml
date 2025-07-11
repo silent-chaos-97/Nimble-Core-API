@@ -17,3 +17,4 @@ AccountRequestVerificationStatus:
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     sanctionsStatus:
+      title: The status of the sanctions verification

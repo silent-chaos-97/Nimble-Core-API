@@ -12,7 +12,6 @@ const INITIAL_SETTINGS = [
         { data: 'name', _meta: { name: 'Tag', allowEmpty: false, slugify: 'id' } }
       ]
     }
-  }
 ]
 
 exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
@@ -26,3 +25,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
     .notNullable()
 
   table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()
+

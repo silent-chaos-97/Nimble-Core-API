@@ -6,3 +6,4 @@ SignerWebhook:
   properties:
     reference:
       type: string
+      format: uuidv4

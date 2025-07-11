@@ -13,7 +13,6 @@ describe('Email Plugin', () => {
   })
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
-// Temp comment
     sinon.reset()
   })
   after(() => sinon.restore())
@@ -104,3 +103,5 @@ describe('Email Plugin', () => {
         plugin.awsSend('template', { email: 'eee@eee.com', cc: 'admin@bbb.ccc', a: 1, b: 2 })
 
         let expectedCall = {
+          Destination: {
+            CcAddresses: ['admin@bbb.ccc'],

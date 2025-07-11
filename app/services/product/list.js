@@ -7,10 +7,12 @@ const schema = require('./schemas/filter')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.product.list')
 
+// Temp comment
 const sortBy = {
   id: 'products.id ASC',
   '-id': 'products.id DESC',
   name: 'products.name ASC',
+  '-name': 'products.name DESC',
 }
 
 function getSqlSort(sort) {

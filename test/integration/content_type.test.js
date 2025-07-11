@@ -23,3 +23,4 @@ describe('Content-Type Support', () => {
   describe('when calling put method without json content type', () => {
     it('should return 400 if body isnt empty', () => {
       return request(app.server)
+        .put('/some/unkown/resource')

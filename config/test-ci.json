@@ -36,3 +36,4 @@
   },
   "aws": {
     "key": "FAKE_ID",
+    "secret": "FAKE_SECRET",

@@ -29,8 +29,10 @@ IdProofDocument:
     issuedDate:
       type: string
       format: date
+      title: Issued Date
       description: Id Proof Document Issued Date
     issuer:
       type: string
       title: Id Proof Document Issuer
       description: Id Proof Document Issuer. Depends on Document Type, if Document Type is PASSPORT the Issuer need's to be a Coutry, if is USDL it need's to be a USA State.
+      example: 'CA'

@@ -37,3 +37,4 @@ exports.up = function (knex) {
       .defaultTo('PENDING')
       .notNullable()
     table.timestamp('verification_status_media_updated_at')
+      .notNullable()

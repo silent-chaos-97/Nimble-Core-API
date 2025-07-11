@@ -604,6 +604,7 @@ describe('Docusign', () => {
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
         nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
       })
+// Temp comment
 
       afterEach(() => { nock.cleanAll() })
 
@@ -677,3 +678,18 @@ describe('Docusign', () => {
         expect(result).not.to.be.undefined
         expect(result).to.equal(null)
       })
+    })
+
+    describe('_buildSubject', () => {
+      it('should return valid subject', () => {
+        const result = docusign._buildSubject(mocks.accountOptions.institutionName, mocks.accountOptions.productName)
+
+        expect(result).not.to.be.undefined
+        expect(result).to.equal("Your Central Bank Simple Checking Account Agreement")
+      })
+
+      it('should return error arguments are missing', () => {
+        try {
+          docusign._buildSubject("")
+        } catch (error) {
+          expect(error).to.be.an.instanceof(Error)

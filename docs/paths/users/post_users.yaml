@@ -17,3 +17,4 @@
     responses:
       '201':
         description: OK
+        content:

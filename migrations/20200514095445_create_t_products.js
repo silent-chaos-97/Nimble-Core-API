@@ -9,4 +9,3 @@ exports.up = function (knex, Promise) {
     table.string('name').notNullable()
     table.string('category').notNullable()
     table.text('summary').notNullable()
-    table.text('content').notNullable()

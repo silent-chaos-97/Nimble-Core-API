@@ -67,7 +67,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         expect(createSpy.callCount).to.equal(11)
         expect(createSpy.called).to.equal(true)
       })
-// Temp comment
   })
 
 
@@ -94,3 +93,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       .expect(200)
       .expect(() => {
         const spyCalls = createSpy.getCalls().map(c => c.args[0])
+        const status = spyCalls.map(c => c.status)

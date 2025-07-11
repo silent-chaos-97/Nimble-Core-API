@@ -15,7 +15,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'date',
       'deletedDate',
       'url',
-      'type',
       'subtype',
       'countryCodes',
       'createdAt',
@@ -28,3 +27,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
+    if (operation === 'create') {

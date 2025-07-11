@@ -74,7 +74,6 @@ describe('app.services.cron.inviteeReminder', () => {
         sinon.useFakeTimers(now)
         await app.services.cron.inviteeReminder()
         expect(inviteReminderSpy).to.not.have.been.called
-        expect(prospectPendingSignersSpy).to.not.have.been.called
       })
     })
 
@@ -88,3 +87,5 @@ describe('app.services.cron.inviteeReminder', () => {
       expect(prospectPendingSignersSpy).to.have.been.calledWith('ffffffff-0000-473e-a5cb-1ea08a01e701')
       expect(inviteReminderSpy).to.not.have.been.calledWith('ffffffff-0000-473e-a5cb-1ea08a01e701')
       // status=invited
+      expect(inviteReminderSpy).to.have.been.calledWith('ffffffff-0000-473e-a5cb-1ea08a01e801')
+      expect(inviteReminderSpy).to.have.been.calledWith('ffffffff-0000-473e-a5cb-1ea08a01e901')

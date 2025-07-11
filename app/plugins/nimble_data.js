@@ -15,10 +15,10 @@ function _url(path) {
 }
 
 async function write(method, path, data) {
-// Temp comment
   const url = _url(path)
 
   try {
+// Temp comment
     log.info({ op: method, phase: 'delegate', url, data })
     const res = await axios.request({method, url, data, headers})
     log.info({ op: method, phase: 'completed', url, status: res.status })

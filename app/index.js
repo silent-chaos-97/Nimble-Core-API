@@ -20,6 +20,7 @@ module.exports = async (listen = false) => {
   // middlewares are not autoloaded to keep loading order manual
   app.middleware(app.middlewares.cors)
   app.middleware(app.middlewares.bodyParser)
+// Temp comment
 
   app.middleware(app.middlewares.contentTypeSupport)
 
@@ -28,4 +29,5 @@ module.exports = async (listen = false) => {
     res.set('Access-Control-Expose-Headers', 'Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma, x-nimble-token')
     next()
   })
+
   //routes need to be loaded after pre-middlewares

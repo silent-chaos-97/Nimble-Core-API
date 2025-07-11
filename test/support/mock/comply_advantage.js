@@ -2880,3 +2880,65 @@ const parsedResult = [
         "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
       },
       {
+        "name": "Other Information",
+        "value": "Former President.",
+        "source": "UK HM Treasury Office of Financial Sanctions Implementation Consolidated List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2002-02-21T00:00:00Z",
+        "deletedDate": "2020-02-19T00:00:00Z",
+        "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
+      },
+      {
+        "name": "Regime",
+        "value": "Zimbabwe",
+        "source": "UK HM Treasury Office of Financial Sanctions Implementation Consolidated List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2002-02-21T00:00:00Z",
+        "deletedDate": "2020-02-19T00:00:00Z",
+        "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "Malta Financial Services Authority (MFSA) National Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2014-01-01T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"
+      },
+      {
+        "name": "Designation Date",
+        "value": "2014",
+        "source": "Malta Financial Services Authority (MFSA) National Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2014-01-01T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"
+      },
+      {
+        "name": "Other Information",
+        "value": "President; born 21.2.1924",
+        "source": "Malta Financial Services Authority (MFSA) National Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2014-01-01T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"
+      },
+      {
+        "name": "Program",
+        "value": "The lists published on the official site of The Malta Financial Services Authority include United Nations; European Union and United States sanctions; that have been implemented by Malta under its own laws and regulations during the 2010 - 2016 period. However; entities found on the present list are to be considered active (under current sanctions of Malta) only if they are also under current UN and/or EU sanctions. Also; all UN and EU current sanctions; even those that are not on the present list; are to be considered as active in Malta; as the Maltese National Interest (Enabling Powers) Act provides for the direct applicability into Maltese law of all the sanctions issued by the United Nations Security Council and the sanctions imposed by the Council of the European Union.",
+        "source": "Malta Financial Services Authority (MFSA) National Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2014-01-01T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"
+      },
+      {
+        "name": "Reason",
+        "value": "COUNCIL REGULATION (EC) No 314/2004 of 19 February 2004",

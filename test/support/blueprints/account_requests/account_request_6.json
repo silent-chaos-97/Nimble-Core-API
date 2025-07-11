@@ -72,6 +72,7 @@
       "verificationStatusMediaUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusPoliticalExposure": "NOMATCH",
       "verificationStatusPoliticalExposureUpdatedAt": "2018-03-16T11:32:03.341Z",
+      "remoteMetadata": {}
     },
     {
       "role": "SECONDARY",
@@ -164,3 +165,7 @@
       "politicalExposureVerifiedAt": null,
       "checkAdverseMedia": null,
       "adverseMediaVerifiedAt": null,
+      "checkAntiMoneyLaundering": null,
+      "antiMoneyLaunderingVerifiedAt": null,
+      "contractDocumentSignerStatus": "SENT",
+      "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",

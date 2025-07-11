@@ -23,6 +23,7 @@ columns:
       title: category
 
   - data: meeting_frequency
+    type: dropdown
     source: 
       - daily 
       - weekdays
@@ -48,3 +49,4 @@ columns:
       - monthly on the 12th
       - monthly on the 13th
       - monthly on the 14th
+      - monthly on the 15th

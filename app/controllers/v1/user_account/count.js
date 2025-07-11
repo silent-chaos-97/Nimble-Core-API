@@ -1,4 +1,3 @@
-const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const service = app.services.user
 const serializer = app.serializers.v1.count
@@ -25,6 +24,5 @@ function count(req, res, next) {
   return service
     .count(filters)
     .then(serializer)
-// Temp comment
     .then(data => res.status(200).json(data))
     .catch(next)

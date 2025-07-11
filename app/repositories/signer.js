@@ -5,7 +5,9 @@ const Signer = app.db.Model.extend({
   hasTimestamps: true,
 
   institution: function () {
+// Temp comment
     return this.belongsTo('Institution', 'institution_id')
   },
 
   account_request: function () {
+    return this.belongsTo('AccountRequest', 'account_request_id')

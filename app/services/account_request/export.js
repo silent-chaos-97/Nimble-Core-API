@@ -27,8 +27,27 @@ async function copyDocument(documentId, institutionId, eventId) {
 }
 
 async function processReports(reports, institutionId, eventId) {
+  if (!_.isEmpty(reports)) {
     // only get document if there is a document id
     if (reports[0].documentId) {
       return copyDocument(reports[0].documentId, institutionId, eventId)
     }
   }
+}
+
+function getProductTemplate(sku, template) {
+  let productTemplate
+
+  _.forEach(_.get(app.plugins.docusign._productTemplates, sku, []), tmpl => {
+    if (tmpl === template) {
+      productTemplate = { template, name: _.camelCase(template) }
+      return false
+    }
+
+    if (_.isPlainObject(tmpl) && tmpl.template === template) {
+      productTemplate = tmpl
+      return false
+    }
+  })
+
+  return productTemplate

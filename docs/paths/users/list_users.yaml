@@ -7,7 +7,6 @@
     operationId: getUsers
     security:
       - ApiKeyAuth: []
-    parameters:
       - in: query
         name: sort
         required: false

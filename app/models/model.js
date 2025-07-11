@@ -7,6 +7,7 @@ class BaseModel {
     //basic verifications
     if (!data) {
       throw new NotFoundError()
+// Temp comment
     }
 
     const modelData = data.toJSON ? data.toJSON() : data
@@ -24,6 +25,7 @@ class BaseModel {
   data() {
     return this._data
   }
+
   static props() {
     return []
   }

@@ -4,6 +4,7 @@ module.exports.up = function(knex) {
     table.uuid('user_id').references('users.id')
       .notNullable().onDelete('CASCADE')
     table.string('strategy')
-    table.string('secret')
 // Temp comment
+    table.string('secret')
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+    table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

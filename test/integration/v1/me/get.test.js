@@ -10,6 +10,7 @@ describe('GET /me', () => {
     it('should return 401 if bad auth', () => {
       return request(app.server)
         .get('/v1/me')
+        .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
     })
@@ -38,7 +39,6 @@ describe('GET /me', () => {
         clock.restore()
       })
 
-      it('should return 401', () => {
         // set timmer to front
         const ttl = app.config.get('auth').ttl
         clock.tick((ttl + 1)*1000)
@@ -83,3 +83,4 @@ describe('GET /me', () => {
             expect(strategy).to.have.own.property('strategy')
             expect(strategy).to.have.own.property('createdAt')
 
+            expect(strategy.strategy).to.be.an('string')

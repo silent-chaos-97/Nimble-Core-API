@@ -31,3 +31,4 @@ Product:
       readOnly: true
       items:
         $ref: '#/components/schemas/ProductOption'
+    summary:

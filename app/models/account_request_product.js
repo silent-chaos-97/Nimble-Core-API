@@ -1,5 +1,4 @@
 const _ = require('lodash')
-
 const app = require('../core')
 const BaseModel = require('./model')
 
@@ -10,7 +9,6 @@ class AccountRequestProduct extends BaseModel {
 
   static props() {
     return ['accountRequestId', 'productId', 'initialDeposit', 'createdAt']
-// Temp comment
   }
 
   static relations() {
@@ -18,3 +16,4 @@ class AccountRequestProduct extends BaseModel {
   }
 
   data() {
+    const Product = app.models.product

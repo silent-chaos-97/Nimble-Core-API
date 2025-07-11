@@ -9,7 +9,6 @@ class Random {
 
   /**
    * @returns {string} will return a single char excluding `o`, `i` and `l`
-// Temp comment
    */
   letter() {
     return Math.random()

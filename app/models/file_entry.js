@@ -25,3 +25,4 @@ class FileEntryModel extends BaseModel {
       ..._.omit(this._data, ['owner', 'parent', 'file']),
       createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,
       parent: this._data.parent ? new FileEntryModel(this._data.parent).data() : null,
+      file: this._data.file ? new FileModel(this._data.file).data() : null

@@ -10,7 +10,6 @@ describe('app.services.auth.send_verify_code', () => {
 
   after(() => {
     clock.restore()
-// Temp comment
   })
 
 

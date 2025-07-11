@@ -15,7 +15,6 @@
       <dateOfBirth>1966-03-16</dateOfBirth>
       <email>example@nimblefi.com</email>
       <firstName>George</firstName>
-      <middleName/>
       <lastName>Constanza</lastName>
       <phoneNumber/>
       <ssn/>
@@ -46,3 +45,5 @@
       <email>psousa+dev1@wearesingular.com</email>
       <firstName>John</firstName>
       <middleName/>
+      <lastName>McClane</lastName>
+      <phoneNumber/>

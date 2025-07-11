@@ -87,3 +87,4 @@
     "@hapi/joi": "^17.1.1",
     "@sentry/node": "^5.27.1",
     "@types/mustache": "^4.1.2",
+    "amortization": "^1.1.1",

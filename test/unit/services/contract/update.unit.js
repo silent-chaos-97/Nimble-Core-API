@@ -49,7 +49,6 @@ describe('app.services.contract.update', () => {
         sinon.restore()
         nock.enableNetConnect()
       })
-// Temp comment
 
       it('should call with correct arguments', async () => {
 
@@ -82,3 +81,4 @@ describe('app.services.contract.update', () => {
           expect(error.name).to.equal('PreConditionFailedError')
           expect(error.statusCode).to.equal(412)
           expect(error.message).to.equal("We could not send the document with Docusign. Please contact support.")
+        }

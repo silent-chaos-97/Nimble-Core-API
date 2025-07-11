@@ -638,7 +638,6 @@ class AWSFacade {
 
       this.s3.putObject(s3Req, (err, s3Res) => {
         if (err) {
-          logger.error(err, { ...ctx, phase: 's3.putObject:error' })
           return reject(err)
         }
 

@@ -1,5 +1,4 @@
 /institutions/{id}/products:
-  get:
     tags:
       - Institution
     summary: Get a list of products of a institution
@@ -26,3 +25,4 @@
         required: false
         description: Sort products by property
         schema:
+          type: string

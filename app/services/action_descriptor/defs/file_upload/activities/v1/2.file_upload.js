@@ -63,6 +63,7 @@ async function activity(context) {
       } catch (err) {
         log.error(err, { op: 'analysis.save', analysisArg: _analysis })
       }
+    }
   }
 
   return { file: fileId, analysis: _.get(analysis, 'id'), response_expired: false }

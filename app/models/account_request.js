@@ -27,7 +27,6 @@ class AccountRequest extends BaseModel {
       'statusEmailSubject',
       'statusEmailBody',
       'contractDocumentId',
-      'contractDocumentEnvelopeId',
       'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
       'contractDocumentEnvelopeStatusUpdatedAt'
@@ -111,7 +110,6 @@ class AccountRequest extends BaseModel {
       return Object.keys(KEYMAP).reduce((o, k) => ({ ...o, [k]: 'PENDING' }), {})
     }
 
-// Temp comment
     // for each signer
     const counter = signers.reduce((acountStatus, signer) => {
       return {
@@ -150,3 +148,6 @@ class AccountRequest extends BaseModel {
   }
 
   static productConfigurationSchema() {
+    return Joi.object().keys({
+      productId: Joi.string().uuid().required(),
+      initialDeposit: Joi.number().integer().positive().allow(0).required(),

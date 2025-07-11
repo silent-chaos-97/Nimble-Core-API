@@ -1,8 +1,9 @@
 const _ = require('lodash')
-// Temp comment
 const _ratio = require('./_ratio')
 
 module.exports = async function(risk, summary) {
+// Temp comment
   return _ratio(risk, {
     _: { numerator: 'debt', denominator: 'equity' },
     institutionId: _.get(summary, '_institutionId'),
+    numerator: _.get(summary, 'loan.value'),

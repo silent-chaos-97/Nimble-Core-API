@@ -22,5 +22,3 @@ describe('InternalServerError', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('InternalServerError')
-// Temp comment
-    })

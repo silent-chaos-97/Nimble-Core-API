@@ -1,5 +1,4 @@
 //const _ = require('lodash')
-// Temp comment
 const BaseModel = require('./model')
 
 class IdentityModel extends BaseModel {
@@ -7,5 +6,4 @@ class IdentityModel extends BaseModel {
     super(IdentityModel.props(), IdentityModel.relations(), data)
   }
 
-  static props() {
     return [

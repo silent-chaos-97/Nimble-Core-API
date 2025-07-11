@@ -2,7 +2,7 @@ const ImagePlugin = require("../../../app/plugins/image")
 
 let ImageFactory = new ImagePlugin.constructor("bucketUrl://domain.com", "cdnUrl://")
 
-  it("should exist", () => {
+describe("ImageFactory class", () => {
     expect(ImageFactory).not.to.be.undefined
   })
 
@@ -32,3 +32,4 @@ let ImageFactory = new ImagePlugin.constructor("bucketUrl://domain.com", "cdnUrl
 
     it("should return image URL", () => {
       let img = ImageFactory.asset("img.jpg")
+

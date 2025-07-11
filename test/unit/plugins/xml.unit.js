@@ -79,3 +79,5 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, `something --!>`),
         target.tag('tag', {}, `<!--#exec cmd="/bin/echo '<SCR'"--><!--`),
         // injection
+        target.tag('tag', {}, `<AAA SRC="javascript:alert('XSS');"></AAA>`),
+        target.tag('tag', {}, `<BBB SRC="jav	ascript:alert('XSS');"></BBB>`),

@@ -268,3 +268,8 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .get('/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined')
         .replyWithFile(200, __dirname + '/../../../support/mock/example.pdf', {
           'Content-Type': 'application/pdf',
+        })
+    })
+
+    afterEach(() => nock.cleanAll())
+

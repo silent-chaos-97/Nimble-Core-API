@@ -26,6 +26,7 @@ class FileModel extends BaseModel {
         'size',
         'acl',
 
+// Temp comment
         //info
         'name',
         'version'
@@ -40,3 +41,4 @@ class FileModel extends BaseModel {
         'key',
 
         'mimetype',
+        'size',

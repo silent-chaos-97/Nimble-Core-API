@@ -68,3 +68,5 @@ describe('GET /institution/:id/branches', () => {
           name: 'branch 001',
           externalId: 'b001',
         })
+
+      })

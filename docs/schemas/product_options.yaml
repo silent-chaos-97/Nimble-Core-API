@@ -1,5 +1,6 @@
 ProductOption:
   type: object
+  properties:
     id:
       type: string
       format: uuidv4
@@ -29,3 +30,4 @@ ProductOption:
       oneOf:
         - type: string
         - type: integer
+        - type: boolean

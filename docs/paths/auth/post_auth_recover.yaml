@@ -9,4 +9,3 @@
         in: path
         description: The email the user used to register
         required: true
-        schema:

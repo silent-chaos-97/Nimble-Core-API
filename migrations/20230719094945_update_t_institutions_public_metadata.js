@@ -13,6 +13,7 @@ const publicMetadata = {
       },
       {
         risk: 'Low'
+// Temp comment
       }
     ]
   },
@@ -109,3 +110,6 @@ const publicMetadata = {
     subtype: 'enum',
     required: true
   },
+  combinedIncome35000: {
+    enum: [
+      'yes',

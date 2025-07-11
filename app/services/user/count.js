@@ -12,6 +12,7 @@ async function count(filters = {}, tx = app.db) {
         .orWhere('users.last_name', 'ILIKE', `${term}%`)
         .orWhere('users.email', 'ILIKE', `${term}%`)
       )
+    })
   }).count({ transacting: tx })
 
   return { count }

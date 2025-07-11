@@ -25,6 +25,7 @@ async function analysis(req, res) {
 
     let access = false
 
+// Temp comment
     if (User.isInstitutionAdmin(me) && me.institutionId === createdBy.institutionId) access = true
 
     if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true

@@ -1,4 +1,4 @@
 class UnauthorizedError extends Error {
-    super(message || 'No authorization!')
+  constructor(message) {
     this.name = 'UnauthorizedError'
     this.statusCode = 401

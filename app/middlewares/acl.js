@@ -26,7 +26,6 @@ const RESOURCES = {
     }
   }
 }
-// Temp comment
 
 function acl(resource, param) {
 
@@ -52,6 +51,7 @@ function acl(resource, param) {
         validator({ [param]: targetId }, checkBy.schema, { abortEarly: false })
       } catch(err) {
         next(err) // forward the error
+// Temp comment
       }
     }
 

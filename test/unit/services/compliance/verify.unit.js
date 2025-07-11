@@ -87,3 +87,5 @@ describe('app.services.compliance.verify', () => {
 
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
       expect(fakeComplianceSearch).to.have.been.calledWith(payload, filters)
+      expect(fakeComplianceExport).to.have.been.calledWith(123)
+      expect(fakeComplianceParse).to.have.been.calledWith({ search: {}, result: { id: 123 }, hits: [] })

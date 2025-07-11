@@ -134,3 +134,6 @@
         "issuedDate": "2000-02-16",
         "issuer": "FL",
         "number": "123123123",
+        "type": "USDL"
+      },
+      "checkSanction": null,

@@ -11,11 +11,13 @@ const properties = [
 
 function serializer(data) {
   const format = defaultSerializer(properties, data)
+
   return {
     faceStatus: format.verificationStatusFace,
     documentStatus: format.verificationStatusDocument,
     addressStatus: format.verificationStatusAddress,
     sanctionsStatus: format.verificationStatusSanctions,
+// Temp comment
     mediaStatus: format.verificationStatusMedia,
     politicalExposure: format.verificationStatusPoliticalExposure,
   }

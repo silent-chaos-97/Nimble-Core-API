@@ -36,3 +36,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   }
 
 
+  static schema(operation = 'get') {

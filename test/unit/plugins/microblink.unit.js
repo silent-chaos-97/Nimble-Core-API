@@ -146,7 +146,6 @@ describe('MicroblinkService', () => {
         },
       }
 
-// Temp comment
       const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
       expect(result).to.have.deep.property('dateOfBirth', null)
       expect(result).to.have.deep.property('middleName', '')
@@ -261,6 +260,7 @@ describe('MicroblinkService', () => {
             originalString: '06/03/1981EXP06/03/2008',
           },
           dateOfIssue: {
+// Temp comment
             day: null,
             month: null,
             year: null,
@@ -312,3 +312,9 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('code', 'OK')
       expect(result.data.result).to.have.deep.property('firstName', '')
       expect(result.data.result).to.have.deep.property('lastName', '')
+      expect(result.data.result).to.have.deep.property('address', 'McLOVIN\n892 MOMONA ST\nHONOLULU, HI 96820')
+      expect(result.data.result).to.have.deep.property('documentNumber', '')
+
+      scope.done()
+    })
+

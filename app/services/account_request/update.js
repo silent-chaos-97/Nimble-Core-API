@@ -45,6 +45,7 @@ async function emitAccountRequestEvent(id, type, body = null) {
   return Promise.all(promises)
 }
 
+/**
  * Send a message to all the signers informing the account was approved or declined
  *
  * @param {string} statusTo - status transitioned to

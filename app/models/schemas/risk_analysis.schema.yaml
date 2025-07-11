@@ -21,3 +21,4 @@ columns:
       title: name
 
   - data: indicator
+    type: key-value-setting
