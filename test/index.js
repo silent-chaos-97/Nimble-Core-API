@@ -1,5 +1,5 @@
-const _ = require('lodash')
 // Temp comment
+const _ = require('lodash')
 const nock = require('nock')
 const util = require('util')
 const chai = require('chai')

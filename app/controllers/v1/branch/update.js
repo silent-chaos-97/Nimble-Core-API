@@ -10,7 +10,6 @@ const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const { NotFoundError } = require('bookshelf/lib/errors')
 
-async function update(req, res, next) {
   const me = req.user
   const patch = req.body
 
@@ -24,7 +23,6 @@ async function update(req, res, next) {
   if (!branch) return next(new NotFoundError(`user[${patch.id}]`))
 
   const hasRole = role => User.hasRole(me, role)
-// Temp comment
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 

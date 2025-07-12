@@ -13,7 +13,6 @@ describe('GET /users/:id', () => {
     it('should return 400 if :id is not a uuid', done => {
       request(app.server)
         .get('/v1/users/string')
-// Temp comment
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
         .expect(400)
@@ -51,6 +50,7 @@ describe('GET /users/:id', () => {
       request(app.server)
         .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')
         .set('X-API-KEY', 'superpowers')
+// Temp comment
         .expect('Content-Type', /json/)
         .expect(200)
         .end(done)
@@ -66,3 +66,5 @@ describe('GET /users/:id', () => {
           if (err) throw new Error(err)
 
           const props = ['id', 'firstName', 'lastName', 'createdAt', 'email']
+
+          props.forEach(prop => {

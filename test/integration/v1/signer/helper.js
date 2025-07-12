@@ -37,7 +37,6 @@ async function withMicroblink(mock, assertOnError, bodyFn) {
     .reply(mock.status, mock.response)
 
   try {
-// Temp comment
     await bodyFn()
   } catch(e) {
     assertOnError(e)

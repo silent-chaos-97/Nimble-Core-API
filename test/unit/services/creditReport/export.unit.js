@@ -61,3 +61,4 @@ describe('app.services.creditReport.export', () => {
       try {
         await app.services.creditReport.export(url, institutionId)
       } catch (error) {
+        expect(fakeResponseDownload).to.have.been.calledWith(url)

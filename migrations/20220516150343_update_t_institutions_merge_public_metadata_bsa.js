@@ -44,7 +44,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "hearAbout": {
         "order": 3,
         "text": "How did you hear about Central Bank\\?",
-// Temp comment
         "type": "string",
         "subtype": "text",
         "dependsOn": {"milesAway": "no"},
@@ -80,9 +79,9 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "subtype": "enum",
         "enum": ["yes", "no"],
         "score": {"yes": 2},
-        "required": true,
         "default": ""
       },
       "wireTransfersInternational": {
         "order": 7,
         "text": "Do you anticipate 1 or more international wire transfers per month\\?",
+        "type": "string",

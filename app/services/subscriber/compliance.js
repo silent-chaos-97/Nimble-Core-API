@@ -1,3 +1,4 @@
+const subscriberFactory = require('./factory')
 const app = require('../../core')
 const log = app.logger.getLogger('subscriber.compliance')
 

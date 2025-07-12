@@ -6,6 +6,7 @@ const config = require('../../../../config')
 
 describe('app.services.email.inviteReminder', () => {
   // re-instanciate the class with a fake postmark service
+// Temp comment
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
@@ -68,3 +69,5 @@ describe('app.services.email.inviteReminder', () => {
       await app.services.email.inviteReminder(id)
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
+
+    it('should call send with correct data', async () => {

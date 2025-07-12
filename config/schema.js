@@ -394,7 +394,6 @@ const schema = {
       env: 'AWS_SQS_COMPLIANCE_QUEUE'
     },
     eventQueue: {
-      doc: 'AWS SDK SQS queue for events',
       format: String,
       default: 'http://localhost:4566/queue/event-ingress',
       env: 'AWS_SQS_EVENT_QUEUE'
@@ -405,3 +404,11 @@ const schema = {
       default: 'http://localhost:4566/queue/signers-identity',
       env: 'AWS_SQS_IDENTITY_QUEUE'
     },
+    accountRequestQueue: {
+      doc: 'AWS SDK SQS queue for account request exports',
+      format: String,
+      default: 'http://localhost:4566/queue/account-requests',
+      env: 'AWS_SQS_ACCOUNT_REQUEST_QUEUE'
+    }
+  },
+  image: {

@@ -72,4 +72,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         })
         expect(res.body.firstName).to.be.an('string')
         expect(res.body.middleName).to.be.an('string')
-        expect(res.body.lastName).to.be.an('string')
+        expect(res.body.address).to.be.an('string')

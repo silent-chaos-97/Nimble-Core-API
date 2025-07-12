@@ -5,7 +5,6 @@
     summary: Get Signer credit reports by Id
     description: Fetch detailed information like credit score, debts and more by Signer Id
     parameters:
-      - in: path
         name: id
         description: uuid signer id
         required: true
@@ -29,3 +28,4 @@
         in: query
         required: false
         description: Sort records by property
+        schema:

@@ -67,5 +67,7 @@
     },
     {
       "initialDeposit": 500099,
+      "productId": "3552ab85-08da-4bb5-be00-9e94d282d340",
       "createdAt": "2019-01-10T02:34:11.341Z",
       "product": {
+        "id": "3552ab85-08da-4bb5-be00-9e94d282d340",

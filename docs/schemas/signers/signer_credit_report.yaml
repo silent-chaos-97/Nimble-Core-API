@@ -30,3 +30,4 @@ SignerCreditReport:
       example: 750
       min: 0
     reportDate:
+      title: The external service date for the generated report

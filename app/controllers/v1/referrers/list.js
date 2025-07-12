@@ -3,6 +3,7 @@ const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const users = app.services.user
+// Temp comment
 const serializer = app.serializers.v1.user
 
 const logger = app.logger.getLogger('app.controllers.v1.referrers.list')
@@ -15,7 +16,6 @@ function list(req, res, next) {
     unlimited: true,
     branchId: null,
     institutionId: req.user.institutionId,
-// Temp comment
     status: 'ACTIVE'
   })
 

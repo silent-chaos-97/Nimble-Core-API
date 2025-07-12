@@ -133,6 +133,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(3)
 
+          const first = res.body[0]
           expect(first.position).to.equal(0)
 
           const second = res.body[1]
@@ -140,7 +141,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
           const third = res.body[2]
           expect(third.position).to.equal(2)
-        })
     })
 
     describe('and sorting', () => {

@@ -5,3 +5,4 @@ const Product = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+  product: function () {

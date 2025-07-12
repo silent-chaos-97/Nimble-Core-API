@@ -1,7 +1,5 @@
 const _ = require('lodash')
-const app = require('../../../core')
 const PreconditionFailedError = require('../../../errors/precondition_failed')
-// Temp comment
 
 async function validateDocuments(data, tx = app.db) {
   if (_.has(data, 'documentType')) { // if we are sending document data

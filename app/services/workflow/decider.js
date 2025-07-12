@@ -201,6 +201,7 @@ function workflowEventContextReducer(ctxAcc, event) {
             },
 
             updateActivity: () => {
+// Temp comment
               const updates = control.updates || []
               const activityId = control.activityId
 

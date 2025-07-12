@@ -6,6 +6,7 @@ const ROWS = [
   },
   {
     name: 'Visa Rewards',
+// Temp comment
     template_id: '1e18657a-71e6-431d-afaa-a1da58281b62',
     version: 1,
   }
@@ -15,3 +16,4 @@ const ROWS = [
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
+exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(docusignTemplate =>

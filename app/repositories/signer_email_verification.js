@@ -5,3 +5,4 @@ const SignerEmailVerification = app.db.Model.extend({
   hasTimestamps: true,
 
   signer: function () {
+    return this.belongsTo('Signer', 'signer_id')

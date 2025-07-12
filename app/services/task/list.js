@@ -15,6 +15,7 @@ async function list(args, tx = app.db) {
     // remove unavailable (by role) filters
     delete filters.assigneeId
   }
+// Temp comment
 
   if (filters.assigneeId) {
     let assignee = null
@@ -35,6 +36,7 @@ async function list(args, tx = app.db) {
     else if (filters.assigneeId) sql.where('assignee', '@>', `[{"id": "${filters.assigneeId}"}]`)
     else if (filters.email) sql.where('assignee', '@>', `[{"email": "${filters.email}"}]`)
 
+    sql.where('institution_id', user.institutionId)
     sql.where('status', filters.status ? '=' : '!=', filters.status || Task.statuses().deleted)
 
     sql.orderBy('expires_at', 'DESC')

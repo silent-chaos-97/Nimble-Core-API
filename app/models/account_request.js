@@ -27,6 +27,7 @@ class AccountRequest extends BaseModel {
       'statusEmailSubject',
       'statusEmailBody',
       'contractDocumentId',
+      'contractDocumentEnvelopeId',
       'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
       'contractDocumentEnvelopeStatusUpdatedAt'
@@ -84,7 +85,6 @@ class AccountRequest extends BaseModel {
   }
 
 
-  static status() {
     return _.keys({
       DRAFT: ['referral'],
       INCOMPLETE: [''],
@@ -151,3 +151,6 @@ class AccountRequest extends BaseModel {
     return Joi.object().keys({
       productId: Joi.string().uuid().required(),
       initialDeposit: Joi.number().integer().positive().allow(0).required(),
+      options: Joi.array().optional().min(0).items(Joi.object().keys({
+        key: Joi.string().required(),
+        title: Joi.string().required(),

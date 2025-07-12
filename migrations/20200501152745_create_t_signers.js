@@ -1,4 +1,5 @@
 exports.up = function(knex) {
+// Temp comment
   return knex.schema.createTableIfNotExists('signers', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.uuid('institution_id').references('institutions.id')
@@ -7,7 +8,6 @@ exports.up = function(knex) {
       .notNullable().onDelete('CASCADE')
 
     table.string('identity_verification_status')
-// Temp comment
     table.boolean('identity_verified')
 
     table.boolean('consent').notNullable()
@@ -40,3 +40,4 @@ exports.up = function(knex) {
     table.string('selfie_uri')
 
     table.uuid('selfie_document_id').references('id').inTable('documents')
+    table.uuid('front_drivers_license_document_id').references('id').inTable('documents')

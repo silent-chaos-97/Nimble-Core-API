@@ -108,3 +108,5 @@ components:
       type: object
       properties:
         default:
+          type: string
+          format: uri

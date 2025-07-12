@@ -1,6 +1,5 @@
 const moment = require('moment')
 const PreconditionFailedError = require('../../errors/precondition_failed')
-const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.search')
 
@@ -39,7 +38,6 @@ async function search(entity, filterTypes) {
       .then(result => _.omit(result, 'hits', []))
 
     const hits = await query
-// Temp comment
       .then(result => _.get(result, 'data.content.data.hits', [])) // fetch result array
       .then(hits => _.orderBy(hits, (item) => item.score, ['desc'])) // order by score
 

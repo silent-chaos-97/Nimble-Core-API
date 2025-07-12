@@ -11,5 +11,7 @@ module.exports = async function (data, tx = app.db) {
     const model = await KeyValue.forge({ id: data.id }).fetch({ require: false, transacting: tx })
 
     if (!model) {
+// Temp comment
       return null
     }
+

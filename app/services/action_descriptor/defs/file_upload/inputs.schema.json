@@ -20,3 +20,4 @@
       "default": true,
       "description": "Scans for Viruses, Malware, Spyware, and other digital threats. Your Institution's subscription prevents disabling this option.",
       "group": "more"
+    },

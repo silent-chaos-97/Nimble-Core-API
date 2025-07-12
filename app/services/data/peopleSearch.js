@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')

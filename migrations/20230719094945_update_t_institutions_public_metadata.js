@@ -13,7 +13,6 @@ const publicMetadata = {
       },
       {
         risk: 'Low'
-// Temp comment
       }
     ]
   },
@@ -102,7 +101,6 @@ const publicMetadata = {
     ],
     text: 'Do you expect more than $2,500 incash transactions per month?',
     type: 'string',
-    order: 8,
     score: {
       yes: 2
     },
@@ -113,3 +111,5 @@ const publicMetadata = {
   combinedIncome35000: {
     enum: [
       'yes',
+      'no'
+    ],

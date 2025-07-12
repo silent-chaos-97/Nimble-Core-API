@@ -37,7 +37,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
 
   // foreach signer email verification
   for (const signerEmailVerification of SignerEmailVerificationList) {
-    logger.info(`[email_verification_reminder] reminding ${signerEmailVerification.signerId} with an email to verify email`)
 
     // update signer email verification
     await SignerEmailVerification.forge({ id: signerEmailVerification.id }).save({

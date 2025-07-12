@@ -151,3 +151,6 @@ const countries = [
   'MNG',
   'MNP',
   'MOZ',
+  'MRT',
+  'MSR',
+  'MTQ',

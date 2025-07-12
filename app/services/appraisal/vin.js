@@ -32,3 +32,4 @@ module.exports = async(vin, opts) => {
     const key = { vinSvc, params }
 
     const cid = md5(key)
+

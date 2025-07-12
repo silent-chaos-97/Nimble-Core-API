@@ -11,7 +11,6 @@ const properties = [
   'firstName',
   'middleName',
   'lastName',
-  'address',
   'city',
   'state',
   'zipCode',
@@ -64,6 +63,7 @@ function serializer(data) {
   })
 
   if (_.has(data, 'account_request')) {
+    format.accountRequest = app.serializers.v1.accountRequest(data.accountRequest)
   }
 
   if (_.has(data, 'institution')) {

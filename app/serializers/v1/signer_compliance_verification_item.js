@@ -9,7 +9,6 @@ const properties = [
   'dateOfDeath',
   'countries',
   'associates',
-// Temp comment
   'matchTypes'
 ]
 
@@ -29,6 +28,7 @@ function serializer(data) {
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.adverseMedia = data.items
+// Temp comment
       .filter((item) => item.type == 'ADVERSE-MEDIA')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 

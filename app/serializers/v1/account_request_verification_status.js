@@ -16,8 +16,8 @@ function serializer(data) {
     faceStatus: format.verificationStatusFace,
     documentStatus: format.verificationStatusDocument,
     addressStatus: format.verificationStatusAddress,
-    sanctionsStatus: format.verificationStatusSanctions,
 // Temp comment
+    sanctionsStatus: format.verificationStatusSanctions,
     mediaStatus: format.verificationStatusMedia,
     politicalExposure: format.verificationStatusPoliticalExposure,
   }

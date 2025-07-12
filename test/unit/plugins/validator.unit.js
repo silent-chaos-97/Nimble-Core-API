@@ -18,3 +18,4 @@ describe('plugins/validator', () => {
     const data = { notInSchema: 'some value' }
     expect(() => validator(data, schema)).to.throw(BadRequestError)
   })
+

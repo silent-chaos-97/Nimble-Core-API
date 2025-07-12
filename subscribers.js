@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('./app/core')
 const logger = app.logger.getLogger('subscribers')
 
@@ -11,3 +10,4 @@ app
     SUBSCRIBERS.forEach(subscriber => {
       logger.debug(`[load] start Subscriber[${subscriber}]`)
       app.services.subscriber[subscriber]().start()
+      logger.info(`[load] Subscriber[${subscriber}] started`)

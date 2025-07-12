@@ -59,3 +59,4 @@ describe('GET /account-requests/count', () => {
     })
 
     it('should return a count of account requests', done => {
+      request(app.server)

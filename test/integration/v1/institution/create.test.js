@@ -78,3 +78,5 @@ describe('POST /institutions', () => {
       .set('X-API-KEY', 'superpowers')
       .send(newInstitution)
       .expect('Content-Type', /json/)
+      .expect(res => {
+        let props = ['id', 'slug', 'name', 'domain', 'logoUri', 'backgroundImageUri']

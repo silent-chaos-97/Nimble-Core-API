@@ -3,7 +3,6 @@ const app = require('../../core')
 const random = app.plugins.random
 const log = app.logger.getLogger('eventStream.onEvent')
 
-// Temp comment
 module.exports = async(event) => {
   const _logId = random.id()
 
@@ -16,3 +15,4 @@ module.exports = async(event) => {
     handler = require(__dirname + `/handlers/${_.snakeCase(type).toUpperCase()}`)
   } catch(err) {
     handler = null
+  }

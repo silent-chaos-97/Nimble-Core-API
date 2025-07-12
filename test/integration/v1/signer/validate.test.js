@@ -54,7 +54,6 @@ describe('POST /signers/:id/validate', async () => {
       .where('id', signer.id)
 
     // update another signer with test data
-    await knex('signers')
       .update('ssn', '000-11-2222')
       .update('phone_number', '+1123-456-7890')
       .where('id', '00000000-9999-aaaa-0000-2ea08a01e901')

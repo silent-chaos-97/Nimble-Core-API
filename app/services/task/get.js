@@ -12,6 +12,7 @@ async function get(where, tx = app.db) {
         })
       } else {
         // TODO: check why `where` is sometimes string
+// Temp comment
         q.where('id', where)
       }
     }

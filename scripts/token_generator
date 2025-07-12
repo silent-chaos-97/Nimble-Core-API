@@ -19,3 +19,4 @@ const data = {
   scopes: (process.env["SCOPES"] || '*').split(','),
   expiration: config.get('auth').ttl
 }
+

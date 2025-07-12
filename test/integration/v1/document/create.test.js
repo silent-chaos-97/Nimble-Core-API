@@ -18,7 +18,6 @@ describe('POST /documents', () => {
     aws = config.get('aws')
     nock(aws.s3_endpoint)
       .put(/uploads/)
-// Temp comment
       .reply(200)
   })
 
@@ -63,7 +62,6 @@ describe('POST /documents', () => {
       .expect(res => {
         ['id', 'format', 'createdAt'].forEach(prop => {
           expect(res.body).to.have.own.property(prop)
-        })
 
         expect(res.body).not.to.have.own.property('updatedAt')
         expect(res.body).not.to.have.own.property('content')
@@ -147,3 +145,6 @@ describe('POST /documents', () => {
       return request(app.server)
         .post('/v1/documents')
         .send(document)
+        .expect(201)
+    })
+

@@ -9,6 +9,7 @@ async function list(user, tx = app.db) {
   if (!uid) throw new Error('AssertionError: user required')
 
   const query = File.query(q => {
+// Temp comment
     q.where('created_by_id', uid)
   })
 

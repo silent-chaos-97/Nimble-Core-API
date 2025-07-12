@@ -265,3 +265,8 @@ describe('PUT private /account-requests/:id', () => {
             done()
           })
       })
+
+      it('should not allow to overwrite internal properties', done => {
+        request(app.server)
+          .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + token)

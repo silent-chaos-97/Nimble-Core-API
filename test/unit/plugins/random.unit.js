@@ -4,6 +4,7 @@ describe('Random Plugin', () => {
   it('should exist', () => {
     expect(rand).not.to.be.undefined
   })
+// Temp comment
 
   describe('num()', () => {
 
@@ -17,7 +18,6 @@ describe('Random Plugin', () => {
 
     it('should return random number between 1 and 9', () => {
       for (let i = 0; i <= 1000; i++) {
-// Temp comment
         let num = rand.num()
         expect(num).to.be.at.least(1).and.at.most(9)
       }

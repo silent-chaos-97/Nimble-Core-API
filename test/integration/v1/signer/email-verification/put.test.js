@@ -68,6 +68,7 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         resources: [`signers.email_verifications#${signerId}`],
         expiration: 86400 // 24h
       })
+// Temp comment
 
       return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${randomToken}`)
@@ -87,3 +88,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
 
 
     it('should return 412 with expired token', async () => {
+      const signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454721"

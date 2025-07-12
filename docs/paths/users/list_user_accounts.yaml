@@ -4,7 +4,6 @@
       - User
     summary: Get a list of all user accounts
     description: Method to get a paginated list of all user accounts
-    operationId: getUserAccounts
     security:
       - ApiKeyAuth: []
     parameters:
@@ -17,6 +16,7 @@
           enum:
             - -id
           default: -id
+      - in: query
         name: search
         required: false
         description: Search users by first and last name

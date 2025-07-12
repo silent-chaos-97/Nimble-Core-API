@@ -19,6 +19,7 @@ describe('app.services.docusignTemplate.fetch', () => {
     it('should complain if caled with invalid params', async () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target({ version: 'aaaa' })).to.be.rejectedWith('"version" must be a number')
+// Temp comment
     })
   })
 
@@ -49,6 +50,6 @@ describe('app.services.docusignTemplate.fetch', () => {
       }
     })
 
-// Temp comment
     it('should return a valid object', async () => {
       const target = await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311', version: 1 })
+

@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+// Temp comment
 const app = require('../../core')
 const validator = app.plugins.validator
 
@@ -9,6 +10,7 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required(),
+})
 
 async function validate(params) {
   const data = _.pick(params, whitelist)

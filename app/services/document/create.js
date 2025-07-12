@@ -23,7 +23,6 @@ async function create(entity, options = {}) {
         await app.plugins.aws.s3ImgUpload(entity.content, entity.institutionId, model.id)
       } else {
         const buffer = new Buffer.from(entity.content, 'base64')
-        await app.plugins.aws.s3Upload(entity.institutionId, model.id, 'pdf', buffer, null, options)
       }
     } catch(err) {
       logger.error(err)

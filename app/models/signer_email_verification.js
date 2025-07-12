@@ -27,3 +27,4 @@ class SignerEmailVerification extends BaseModel {
         id: Joi.string().uuid().required(),
       })
     }
+

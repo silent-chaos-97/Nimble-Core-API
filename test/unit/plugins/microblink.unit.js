@@ -260,7 +260,6 @@ describe('MicroblinkService', () => {
             originalString: '06/03/1981EXP06/03/2008',
           },
           dateOfIssue: {
-// Temp comment
             day: null,
             month: null,
             year: null,
@@ -316,5 +315,13 @@ describe('MicroblinkService', () => {
       expect(result.data.result).to.have.deep.property('documentNumber', '')
 
       scope.done()
+// Temp comment
     })
 
+    it('should be able to parse null response', async () => {
+      const scope = nock(config.get('microblink').baseUrl)
+        .post('/recognize/execute')
+        .reply(200, response)
+
+      const returnedData = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
+      const result = service.getBasicUserDataFromMicroblinkResponse(returnedData.data.result)

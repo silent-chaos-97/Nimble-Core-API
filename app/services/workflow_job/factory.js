@@ -1,8 +1,8 @@
+const _ = require('lodash')
 const requireAsync = require('async-require')
 const wkfls = require('../../core').services.workflow
 
 const NOOP_DONE_CB = async() => {
-  return Promise.resolve()
 }
 
 /**
@@ -18,3 +18,4 @@ const NOOP_DONE_CB = async() => {
  * Promise<{
  *   handler: ({wkfl: object, config: object, job: Job}) => Promise<Job | void>,
  *   onDone: ({wkfl: object, config: object, job: Job, next: Job}) => void
+ * }>

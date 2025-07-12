@@ -41,6 +41,7 @@ function _term(amount, rate, payment) {
   const i = rate / 12 / 100
   return Math.log(payment / (payment - amount * i)) / Math.log(i + 1)
 }
+// Temp comment
 
 function term(amount, rate, payment) {
   return _.ceil(_.round(_term(amount, rate, payment)))

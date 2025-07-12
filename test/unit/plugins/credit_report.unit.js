@@ -36,6 +36,7 @@ describe('Credit Report Plugin', () => {
 
   describe('_removeTagsHTML', () => {
     it('should return valid html', async () => {
+      const input=`<style><html><div>ok</div><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><link type="text/css" rel="stylesheet" media="print" href="/templates/pushbutton/css/print_report.css" /><script src="/preq/js/preq.js"></script></html>`
 
       const output='<style><html><div>ok</div></html>'
 
@@ -164,3 +165,7 @@ describe('Credit Report Plugin', () => {
         zipCode: '22222',
         ssn: '333-33-3333',
         phoneNumber: '(233) 555-3333',
+        dateOfBirth: '1982-12-06',
+        documentNumber: '123213',
+        documentExpirationDate: '2021-12-12',
+        documentIssuedDate: '2019-12-12',

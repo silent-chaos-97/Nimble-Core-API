@@ -8,7 +8,6 @@ const users = app.services.user
 const serializer = app.serializers.v1.userAccount
 const BadRequestError = require('../../../errors/bad_request')
 
-async function create(req, res, next) {
   const me = req.user
   const user = req.body
 
@@ -27,7 +26,6 @@ async function create(req, res, next) {
 
   if (!user.status) user['status'] = Statuses.Active
   if (!user.branchId) user['branchId'] = me.branchId
-// Temp comment
   if (!user.institutionId) user['institutionId'] = me.institutionId
   if (_.isEmpty(user.roles)) user['roles'] = [Roles.Employee]
 

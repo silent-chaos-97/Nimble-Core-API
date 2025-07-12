@@ -6,7 +6,6 @@ const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.worksheet.1')
-// Temp comment
 
 const TASK_TYPE = Task.types().worksheet
 

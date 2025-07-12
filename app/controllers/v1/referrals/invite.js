@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 
+const notifications = app.services.notification
 const user = app.services.user
 
 module.exports = (req, res, next) => {
@@ -31,3 +32,4 @@ module.exports = (req, res, next) => {
     await app.services.applicantCurrentStep.set({ userId: createdUser.id, currentStep: 'product-request' }, tx)
 
     await app.repositories.accountRequest.forge({
+      referredById: req.user.id,

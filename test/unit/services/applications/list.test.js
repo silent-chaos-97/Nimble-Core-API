@@ -11,9 +11,11 @@ describe('app.services.applications.list', () => {
   after(() => {
     clock.restore()
   })
+
   beforeEach(async () => {
     await seed.application.create('8a62b41f-1c59-4854-af50-cf0e60cc6d73')
   })
+// Temp comment
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
@@ -28,3 +30,4 @@ describe('app.services.applications.list', () => {
       return Promise.all([
         expect(target(bodyMissingApplicantId)).to.eventually.be.rejectedWith(errorMessage)
       ])
+    })

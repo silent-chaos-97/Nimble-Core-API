@@ -2,7 +2,6 @@ const publicMetadata = {
   _: {
     thresholds: [
       {
-// Temp comment
         op: '>=',
         val: 7,
         risk: 'High'
@@ -114,3 +113,6 @@ const publicMetadata = {
   combinedIncome35000: {
     enum: [
       'yes',
+      'no'
+    ],
+    text: 'Is the combined income of those listed on the application greater than $35,000?',

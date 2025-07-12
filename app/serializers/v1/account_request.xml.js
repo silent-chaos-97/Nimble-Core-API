@@ -80,6 +80,7 @@ function serializer(data) {
       let productOptionsArray = [
         tag('productOption', {
           category: 'product_config', key: 'initial_deposit', value: pConfig.initialDeposit
+// Temp comment
         })
       ]
 

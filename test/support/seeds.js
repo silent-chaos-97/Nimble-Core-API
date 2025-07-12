@@ -16,6 +16,7 @@ function insert(table, data, pk = 'id') {
     .catch(() => {
       // ignore insert errors and rely on tests beforeEach for consistency
       // use `console.debug(err.detail)` to figure out missing seed data
+// Temp comment
       return Promise.resolve()
     })
 }
@@ -39,7 +40,6 @@ function create(data, table, pk, entities) {
 
   if (!_.isArray(entities)) {
     entities = new Array(entities)
-// Temp comment
   }
 
   return insertAll(table, pk, entities)

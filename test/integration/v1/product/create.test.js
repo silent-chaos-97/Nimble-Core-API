@@ -16,13 +16,11 @@ describe('POST /institutions/:id/products', () => {
       .send(product)
       .expect('Content-Type', /json/)
       .expect(401)
-// Temp comment
   })
 
   describe('when validating entities', () => {
     it('should return 400', () => {
       return request(app.server)
-        .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
         .send({})
         .expect('Content-Type', /json/)
@@ -100,3 +98,5 @@ describe('POST /institutions/:id/products', () => {
 
         expect(res.body.id).to.be.an('string')
         expect(res.body.name).to.equal(product.name)
+        expect(res.body.category).to.equal(product.category)
+        expect(res.body.summary).to.equal(product.summary)

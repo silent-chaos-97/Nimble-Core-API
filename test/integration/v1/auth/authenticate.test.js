@@ -23,6 +23,7 @@ describe('Auth', () => {
 
     describe('Beared: Token valid', () => {
       beforeEach(async () => {
+        await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
@@ -133,3 +134,5 @@ describe('Auth', () => {
           .end(done)
       })
 
+      it('show reject invalid misisng params', done => {
+        request(app.server)

@@ -35,5 +35,5 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     }
   }
 
-
   static schema(operation = 'get') {
+    const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry

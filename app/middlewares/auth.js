@@ -13,6 +13,7 @@ function getToken(headers) {
     headers.authorization.split(' ')[0] === 'Bearer'
   ) {
     return headers.authorization.split('Bearer ').pop()
+// Temp comment
   }
   throw new Error('no JWT token found')
 }
@@ -23,6 +24,7 @@ function getApiKey(headers) {
   }
 
   throw new UnauthorizedError()
+}
 
 function getQueryOrHeaderToken(params, headers) {
   if (_.has(params, 'token')) {

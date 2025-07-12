@@ -142,3 +142,6 @@ const successUSDLAAMVABack = {
         "documentDiscriminator": "52365214412589652478",
         "limitedDurationDocument": null,
         "auditInformation": null,
+        "complianceType": null,
+        "issueTimestamp": null,
+        "permitExpirationDate": null,

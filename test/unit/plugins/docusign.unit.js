@@ -604,7 +604,6 @@ describe('Docusign', () => {
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
         nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
       })
-// Temp comment
 
       afterEach(() => { nock.cleanAll() })
 
@@ -693,3 +692,16 @@ describe('Docusign', () => {
           docusign._buildSubject("")
         } catch (error) {
           expect(error).to.be.an.instanceof(Error)
+          expect(error.message).to.equal("Missing institutionName or productName")
+        }
+      })
+    })
+
+    describe('_getReturnURL', () => {
+      it('should return valid url', () => {
+        const result = docusign._getReturnURL(mocks.accountOptions.institutionDomain)
+
+        expect(result).not.to.be.undefined
+        expect(result).to.equal(`${config.get('protocol')}://${config.get('frontend.onboarding_domain')}/${mocks.accountOptions.institutionDomain}/onboarding/sign-contract/`)
+      })
+

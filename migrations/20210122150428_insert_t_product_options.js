@@ -68,3 +68,4 @@ const mobileAndOnlineBankingChilds = [
     category: 'product_feature',
     title: 'Bill Pay',
     value: true,
+    annotation: 'Free',

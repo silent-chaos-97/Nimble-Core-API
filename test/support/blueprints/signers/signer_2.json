@@ -14,7 +14,6 @@
   "email": "john.mf.mcclane@wearesingular.com",
   "employer": "New York Police Dep.",
   "dateOfBirth": "1955-05-22",
-  "emailVerified": false,
   "emailVerifiedAt": null,
   "idProofDocument": {
     "type": "USDL",
@@ -37,3 +36,4 @@
   "consentPrivacyPolicy": true,
   "consentCommunication": false,
   "checkSanction": null,
+  "sanctionVerifiedAt": null,

@@ -13,6 +13,7 @@ function validate(analysis) {
   let data = _.pick(analysis, AnalysisModel.props())
   validator(data, AnalysisModel.schema(data.id ? 'update' : 'create'), { abortEarly: false })
   return data
+// Temp comment
 }
 
 async function save(analysis, opts, tx = app.db) {

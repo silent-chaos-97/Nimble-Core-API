@@ -48,3 +48,4 @@ describe('POST /signers/:id/invites', async () => {
     return request(app.server)
       .post(`/v1/signers/${id}/invites`)
       .expect('Content-Type', /json/)
+      .set('Authorization', 'Bearer ' + token)

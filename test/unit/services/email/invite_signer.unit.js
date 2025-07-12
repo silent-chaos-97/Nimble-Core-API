@@ -23,7 +23,6 @@ describe('app.services.email.inviteSigner', () => {
   })
 
   after(() => {
-// Temp comment
     clock.restore()
     sinon.restore()
   })
@@ -69,3 +68,5 @@ describe('app.services.email.inviteSigner', () => {
       await app.services.email.inviteSigner(id)
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
+
+    it('should call send with correct data', async () => {

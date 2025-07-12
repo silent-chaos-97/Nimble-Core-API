@@ -51,13 +51,13 @@
       "adverseMediaVerifiedAt": null,
       "checkAntiMoneyLaundering": null,
       "antiMoneyLaunderingVerifiedAt": null,
-      "contractDocumentSignerStatus": "SIGNED",
       "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",
       "selfieDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",
       "backIdProofDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",
       "frontIdProofDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",
       "backIdProofDocumentUri": "/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/a74f9092-5889-430a-9c19-6712f9f68090.png",
       "frontIdProofDocumentUri": "/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/a74f9092-5889-430a-9c19-6712f9f68090.png",
+      "createdAt": "2020-11-17T19:03:45.903Z",
       "invitedAt": "2018-02-16T11:32:03.341Z",
       "verificationStatusFace": "VALID",
       "verificationStatusFaceUpdatedAt": "2018-03-16T11:32:03.341Z",
@@ -133,3 +133,5 @@
     }
   ],
   "verificationStatus": {
+    "verificationStatusFace": "VALID",
+    "verificationStatusDocument": "INVALID",

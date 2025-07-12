@@ -47,7 +47,6 @@ app.load().then(async () => {
       institution: 'institution',
       institutionUrl: 'institutionUrl',
       url: 'url',
-      statusEmailSubject: 'statusEmailSubject'
     },
 
     passwordResetEmail: {
@@ -72,3 +71,4 @@ app.load().then(async () => {
       prospectFirstName: 'prospectFirstName',
       accountType: 'accountType',
       statusEmailSubject: 'statusEmailSubject',
+      institution: 'institution',

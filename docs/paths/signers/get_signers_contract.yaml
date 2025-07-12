@@ -18,3 +18,4 @@
     responses:
       '200':
         description: Signer Contract information
+        content:

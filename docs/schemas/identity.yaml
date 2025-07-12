@@ -41,3 +41,4 @@ Identity:
       type: string
       title: Zip code
       description: Individual zip code
+      nullable: true

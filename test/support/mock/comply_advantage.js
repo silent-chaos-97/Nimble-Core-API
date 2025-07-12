@@ -2486,7 +2486,6 @@ const parsedResult = [
       },
       {
         "name": "Kent farmer appeals to Nelson Mandela",
-        "value": "The brother of a farmer murdered in Zimbabwe has appealed for Nelson Mandela to intervene to prevent further bloodshed in the country's deepening crisis. Paul Dunn, who farms 1,500 acres at Ash, called on the former South African president and ANC leader to condemn Robert Mugabe's murderous regime and help end the killings. Mr Dunn has campaigned for peace in Zimbabwe since his brother, Alan, was murdered by Mugabe's war veterans on his farm near Harare eight years ago.",
         "date": "2020-03-26T00:00:00Z",
         "deletedDate": null,
         "url": "https://www.kentonline.co.uk/kent/news/kent-farmer-appeals-to-nelson-ma-a40038/",
@@ -2942,3 +2941,60 @@ const parsedResult = [
       {
         "name": "Reason",
         "value": "COUNCIL REGULATION (EC) No 314/2004 of 19 February 2004",
+        "source": "Malta Financial Services Authority (MFSA) National Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2014-01-01T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"
+      },
+      {
+        "name": "Related URL",
+        "value": "https://mfsa.com.mt/pages/readfile.aspx?f=/files/International%20Affairs/Sanctions%202014/L.N.%20172.2014%20zimbabwe.pdf",
+        "source": "Malta Financial Services Authority (MFSA) National Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2014-01-01T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Passport",
+        "value": "Passport: AD002119, Issuing Country: Zimbabwe",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Designation Date",
+        "value": "2003-03-10",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "List Name",
+        "value": "SDN List",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },

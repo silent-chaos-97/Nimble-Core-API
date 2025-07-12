@@ -8,7 +8,6 @@ describe("AWS Facade for s3", () => {
 
   before(() => {
     sandbox.replace(AWS, 'uuid', () => '00000000-0000-0000-0000-000000000000')
-    sandbox.spy(AWS, 'uuid')
     sandbox.spy(AWS.s3, 'putObject')
     sandbox.spy(AWS.s3, 'copyObject')
     sandbox.spy(AWS.s3, 'getSignedUrl')
@@ -53,7 +52,6 @@ describe("AWS Facade for s3", () => {
     it('should return a promise', () => {
       let result = AWS.s3ImgUpload(blueSquare)
       expect(result).to.be.an('Promise')
-// Temp comment
     })
 
     it('should fail if not uploading an image', () => {
@@ -92,3 +90,5 @@ describe("AWS Facade for s3", () => {
       expect(AWS.s3.putObject).to.have.been.called
     })
 
+    it('should call real s3 without generating uuid', async () => {
+      await AWS.s3ImgUpload(blueSquare, 'folder', '00000000-0000-0000-0000-000000000001')

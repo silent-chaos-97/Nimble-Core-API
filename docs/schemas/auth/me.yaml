@@ -1,5 +1,4 @@
 Me:
-  type: object
   required:
     - id
   properties:
@@ -29,3 +28,4 @@ Me:
       type: array
       items:
         $ref: '#/components/schemas/Account'
+      title: Accounts

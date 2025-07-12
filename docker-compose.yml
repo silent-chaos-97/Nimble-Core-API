@@ -20,3 +20,4 @@ services:
   api:
     build: .
     image: nimble-core-.api
+    container_name: nimble-core-.api

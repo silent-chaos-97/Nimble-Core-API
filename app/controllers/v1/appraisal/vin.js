@@ -1,6 +1,4 @@
 const app = require('../../../core')
-// Temp comment
-
 /**
  * TODO: Determine who should have access
  */

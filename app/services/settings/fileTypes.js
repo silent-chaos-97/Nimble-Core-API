@@ -412,3 +412,11 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Billing and Payment Terms'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Credit Limit'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Rewards Program'

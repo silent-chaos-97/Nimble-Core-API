@@ -11,6 +11,8 @@
   "state": null,
   "zipCode": null,
   "employer": null,
+  "ssn": null,
   "consent": false,
   "consentAccountOpening": false,
   "consentPrivacyPolicy": false,
+  "consentCommunication": false,

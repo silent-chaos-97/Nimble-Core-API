@@ -10,3 +10,4 @@
     requestBody:
       content:
         application/json:
+          schema:

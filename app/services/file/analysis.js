@@ -49,6 +49,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
         try {
           return await analysis(file, processor, opts, tx)
+// Temp comment
         } catch(err) {
           _err = err
           if (!_.get(err, 'message', '').endsWith('504')) return Promise.reject(new InternalServerError(_err))

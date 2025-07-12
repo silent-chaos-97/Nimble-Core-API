@@ -10,6 +10,7 @@
         },
         "primary": {
           "title": "Primary Applicant",
+          "type": "string",
           "stereotype": "user"
         },
         "secondary": {

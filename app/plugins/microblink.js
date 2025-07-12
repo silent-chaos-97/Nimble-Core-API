@@ -47,7 +47,6 @@ class MicroblinkService {
     logger.debug(`[sendDocumentToMicroblink] finished`)
     return result.data
   }
-
   getBasicUserDataFromMicroblinkResponse(result) {
     // handle no result
     if (result == null) {

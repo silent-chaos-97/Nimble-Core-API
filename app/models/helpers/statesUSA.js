@@ -9,7 +9,6 @@ const statesUSA = [
   'CT',
   'DE',
   'DC',
-  'FM',
   'FL',
   'GA',
   'GU',
@@ -36,3 +35,4 @@ const statesUSA = [
   'NJ',
   'NM',
   'NY',
+  'NC',

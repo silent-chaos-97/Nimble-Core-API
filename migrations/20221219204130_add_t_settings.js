@@ -12,6 +12,7 @@ const INITIAL_SETTINGS = [
         { data: 'name', _meta: { name: 'Tag', allowEmpty: false, slugify: 'id' } }
       ]
     }
+  }
 ]
 
 exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {

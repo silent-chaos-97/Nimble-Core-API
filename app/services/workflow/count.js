@@ -2,6 +2,7 @@ const app = require('../../core')
 const Wkfl = app.repositories.workflow
 
 async function count(filters = {}, tx = app.db) {
+// Temp comment
   const count = await Wkfl.query(sql => {
     if (filters.userId || filters.user) sql.where('workflows.user_id', filters.userId || filters.user)
     if (filters.branchId || filters.branch) sql.where('workflows.branch_id', filters.branchId || filters.branch)
@@ -9,7 +10,6 @@ async function count(filters = {}, tx = app.db) {
     if (filters.status) sql.where('workflows.status', filters.status)
 
     if (filters.search) sql.where(function() {
-// Temp comment
       const where = this
       filters.search.split(' ').forEach(term => where.orWhere('workflows.name', 'ILIKE', `${term}%`))
     })

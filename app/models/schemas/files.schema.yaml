@@ -25,3 +25,4 @@ columns:
     formOnly: true
   
   - data: entity
+    title: Entity

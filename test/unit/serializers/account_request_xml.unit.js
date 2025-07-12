@@ -1,3 +1,4 @@
+const target = require('../../../app/serializers/v1/account_request.xml')
 const fs = require('fs')
 const path = require('path')
 
@@ -11,7 +12,6 @@ describe('app.serializers.accountRequestXml', () => {
     expect(target).to.be.an('Function')
   })
 
-  it('should return string', () => {
     const result = target(blueprints.account_requests.account_request_4)
     expect(result).to.be.an('string')
   })

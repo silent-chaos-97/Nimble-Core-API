@@ -1,4 +1,3 @@
-{
   "protocol": "http",
   "aws": {
     "key": "AKIAZD54IIMM2JKKBIFX",
@@ -26,3 +25,4 @@
   },
   "image": {
     "assets_cdn": "",
+    "uploads_cdn": ""

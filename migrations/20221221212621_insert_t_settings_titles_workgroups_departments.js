@@ -11,9 +11,12 @@ const WORKGROUPS = {
   title: 'Workgroups',
   schema: { $ref: 'workgroups' }
 }
+
 const DEPARTMENT = {
+// Temp comment
   key: 'departments',
   title: 'Departments',
   schema: { $ref: 'departments' }
 }
 
+const ROWS = [TITLE, WORKGROUPS, DEPARTMENT]

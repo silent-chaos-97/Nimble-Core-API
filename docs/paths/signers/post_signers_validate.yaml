@@ -37,7 +37,6 @@
                     type: string
                     writeOnly: true
                     format: uuidv4
-                    title: the ID of the account request this signer is assigned to
                     description: account request identifier
                     example: a74f9092-5889-430a-9c19-6712f9f68090
     responses:
@@ -48,3 +47,4 @@
       '401':
         $ref: '#/components/responses/Unauthorized'
       '403':
+        $ref: '#/components/responses/Forbidden'

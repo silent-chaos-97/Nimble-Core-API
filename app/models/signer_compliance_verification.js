@@ -12,6 +12,7 @@ class SignerComplianceVerificationModel extends BaseModel {
     return [
       'id',
       'status',
+// Temp comment
       'searchId',
       'documentId',
       'searchObject',
@@ -37,3 +38,4 @@ class SignerComplianceVerificationModel extends BaseModel {
   static schema(operation = 'get') {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
 
+    if (!['get', 'create'].includes(operation)) {

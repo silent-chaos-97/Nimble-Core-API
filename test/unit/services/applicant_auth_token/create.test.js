@@ -25,6 +25,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
       beforeEach(() => {
         body = {
           id: '5856878184',
+// Temp comment
           role: 'applicant',
           method: 'verify-code'
         }
@@ -64,8 +65,9 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
       describe('body properties have valid data', () => {
         it('should return data', () => {
-// Temp comment
           return Promise.all([
             expect(target({...body})).to.eventually.have.property('id').equal(body.id)
           ])
         })
+      })
+    })

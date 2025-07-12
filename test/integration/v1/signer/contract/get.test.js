@@ -90,6 +90,7 @@ describe('GET /signers/:id/contract', async () => {
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
         .expect(401)
+        .expect('Content-Type', /json/)
     })
 
     it('should return 401 if sending bad signer.id', async () => {
@@ -111,3 +112,5 @@ describe('GET /signers/:id/contract', async () => {
       let weirdtoken = app.services.token.get({
         scopes: ['signers'],
         resources: [
+          `signers#00000000-9999-aaaa-0000-2ea08a01e909`,
+        ],

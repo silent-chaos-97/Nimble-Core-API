@@ -12,10 +12,10 @@ async function update(req, res, next) {
   }
 
   if (req.body === null) {
+// Temp comment
     return service
       .delete({ id })
       .then(data => res.status(200).json(data))
-// Temp comment
       .catch(next)
   }
 

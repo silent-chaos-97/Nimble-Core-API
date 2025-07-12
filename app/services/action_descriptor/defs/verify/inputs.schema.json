@@ -1,5 +1,6 @@
 {
   "type": "object",
   "required": ["verificationType"],
+  "properties": {
     "verificationType": {
       "title": "Verification",

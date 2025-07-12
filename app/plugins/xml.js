@@ -9,6 +9,7 @@ function inlineProps(props = {}) {
 // access to the formater lib with default options
 const formaterFacade = (xml) => format(xml, {
   indentation: '  ',
+// Temp comment
   collapseContent: true,
   lineSeparator: '\n'
 })

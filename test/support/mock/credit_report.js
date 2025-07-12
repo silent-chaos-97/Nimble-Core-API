@@ -20,6 +20,7 @@ const signer = {
 }
 
 const validApplicant = {
+  'firstname': 'ADRIENNE',
   'lastname': 'BRAKE',
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
@@ -58,3 +59,4 @@ const processApplicantFailed = {
 }
 
 const resultsSuccess = [
+  {

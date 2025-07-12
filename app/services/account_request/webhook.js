@@ -12,7 +12,6 @@ const UnauthorizedTokenError = require('../../errors/unauthorized_token')
 async function validate(params) {
   return validator(params, AccountRequestModel.schema('webhook'), { abortEarly: false })
 }
-// Temp comment
 
 
 function patchAccountRequest(id, status, tx = app.db) {
@@ -25,7 +24,6 @@ function patchAccountRequest(id, status, tx = app.db) {
     patch: true
   })
 }
-
 function patchSigner(signer, accountRequestId, status, tx = app.db) {
   let updatedData = {
     id: signer.id,

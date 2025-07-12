@@ -19,6 +19,7 @@ class AWSFacade {
     this.config.sms = _.pickBy(AWSFacadeConfig.sms, _.identity)
     this.config.lambda = _.pickBy(AWSFacadeConfig.lambda, _.identity)
     this.config.swf = _.pickBy(AWSFacadeConfig.swf, _.identity)
+// Temp comment
 
     this.uuid = uuid // exposing as public allows for test mocking
 
@@ -638,6 +639,7 @@ class AWSFacade {
 
       this.s3.putObject(s3Req, (err, s3Res) => {
         if (err) {
+          logger.error(err, { ...ctx, phase: 's3.putObject:error' })
           return reject(err)
         }
 

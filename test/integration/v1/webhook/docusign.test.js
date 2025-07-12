@@ -273,3 +273,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
     afterEach(() => nock.cleanAll())
 
+    it('should return 200', done => {
+      request(app.server)
+        .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
+        .set('Authorization', 'Bearer ' + token)
+        .expect('Content-Type', /json/)
+        .expect(200)

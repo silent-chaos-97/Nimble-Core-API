@@ -8,3 +8,4 @@ extends:
   - "plugin:node/recommended"
 rules:
   semi: [2, "never"]
+  "node/exports-style":

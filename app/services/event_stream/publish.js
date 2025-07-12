@@ -7,7 +7,6 @@ const client = new AWS.SNS({
   apiVersion: '2010-03-31',
   // removes empty string/undefineds
   ..._.pickBy(app.config.get('sns'), _.identity)
-})
 
 /**
  * @param stream the name of the stream or topic (or configuration key which references it)
@@ -21,6 +20,7 @@ const client = new AWS.SNS({
  * @return {Promise<void>}
  */
 async function publish(stream, event = { id: null, event: null, type: null, body: null }) {
+  logger.info({ message: '[publish] PublishingEvent', stream, event })
 
   event = { ...event, event: event.event || event.type, body: event.body || event.payload }
 

@@ -1,3 +1,4 @@
+collection: Committees
 element: Committee
 group: organization
 kind: custom
@@ -20,3 +21,4 @@ columns:
       ref: products
       value: category
       title: category
+

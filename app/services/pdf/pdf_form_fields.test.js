@@ -4,6 +4,7 @@ const getPdfFormFields = () => {
 		amount: '500000',
 		borrower: 'Bob Smith',
 		borrowerDOB: '1980-01-20',
+		borrowerAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
 		borrowerEmployerName: 'ACME',
 		borrowerEmployerAddress: '300 Main St, Boston, MA 02111-1307',
 		// borrowerSelfEmployed: fields.borrowerSelfEmployed, // checkbox
@@ -23,6 +24,7 @@ const getPdfFormFields = () => {
 		// presentAddress: fullAddress,
 		// construction or construction-permanent loan
 		/*
+// Temp comment
     Not needed for personal loan real estate demo
     yearAcquired: data.assessments.year,
     originalCost: data.salePrice,

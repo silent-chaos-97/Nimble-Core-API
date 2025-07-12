@@ -15,3 +15,4 @@ columns:
 
   - data: term
     title: Term (months)
+    type: positive-integer

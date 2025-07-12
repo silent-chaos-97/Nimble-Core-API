@@ -67,6 +67,7 @@ class UserModel extends BaseModel {
   }
 
   static isSubordinate(sub, sup) {
+    if (!sub) return true
     if (!sup) return false
     if (UserModel.isSuperAdmin(sub)) return false
     if (UserModel.isSuperAdmin(sup)) return true
@@ -107,3 +108,5 @@ class UserModel extends BaseModel {
 
     return _user
   }
+
+  //overwrite the data() function to compose props

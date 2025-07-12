@@ -5,6 +5,7 @@
 //
 // const UserModel = app.models.user
 // const usersService = app.services.user
+// const tokenService = app.services.token
 // const oneTimeTokenService = app.services.applicantOneTimeToken
 // const { mfaVerify } = app.plugins
 //

@@ -7,7 +7,6 @@ const validator = app.plugins.validator
 
 const whitelist = UserModel.props()
 
-// Temp comment
 async function validate(user) {
   let data = _.pick(user, whitelist)
   validator(data, UserModel.schema(), { abortEarly: false })

@@ -11,6 +11,5 @@ class KeyValueModel extends BaseModel {
   static props() {
     return ['id', 'value']
   }
-
   data() {
     return _.get(this._data, 'value', null)

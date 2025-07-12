@@ -6,7 +6,6 @@ describe('GET /signers/:id/credit-reports', async () => {
   before(async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
-    })
   })
 
   after(() => {
@@ -81,3 +80,5 @@ describe('GET /signers/:id/credit-reports', async () => {
         .get(`/v1/signers/${id}/credit-reports`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
+        .expect(404)
+    })

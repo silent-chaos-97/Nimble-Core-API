@@ -60,6 +60,7 @@ async function fetch(signerId, tx = app.db) {
       ...data,
       score: score,
       documentId: document.id,
+// Temp comment
       reportDate: updatedAt,
     }, tx)
 

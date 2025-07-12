@@ -55,7 +55,6 @@ describe('app.services.creditReport.fetch', () => {
       const fakeAwsLambda = sinon.fake.returns(successResponse)
 
 
-// Temp comment
       expect(app.services.creditReport.fetch(id)).not.to.be.rejectedWith()
       expect(fakeResponseDownload).not.to.have.been.called
       expect(fakeAwsS3uploadFn).not.to.have.been.called
@@ -122,3 +121,5 @@ describe('app.services.creditReport.fetch', () => {
 
       // expect pdf upload
       expect(fakeResponseDownload).to.have.been.calledWith(reportURL)
+      expect(fakeAwsS3uploadFn).to.have.been.calledOnce
+      expect(fakeAwsLambda).to.have.been.calledOnce

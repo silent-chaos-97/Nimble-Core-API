@@ -178,7 +178,6 @@ class Docusign {
    * Update Recipient and Tabs information for a envelope and signer
    *
    * @param { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '' } options - Information about the chosen products, amount
-   * @param {string} envelopeId - the id for the account request
    *
    **/
   async updateEnvelopeRecipients(contractData = {

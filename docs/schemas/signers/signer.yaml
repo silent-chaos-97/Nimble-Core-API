@@ -87,7 +87,6 @@ Signer:
       title: Employer
       description: Signer current employer name
       maxLength: 250
-      example: Singular Thinking Lda
     ssn:
       type: string
       title: SSN
@@ -129,3 +128,5 @@ Signer:
       title: Consent Privacy Policy
       description: Consent for Privacy Policy
       example: true
+    consentCommunication:
+      type: boolean

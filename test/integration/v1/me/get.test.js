@@ -39,6 +39,7 @@ describe('GET /me', () => {
         clock.restore()
       })
 
+      it('should return 401', () => {
         // set timmer to front
         const ttl = app.config.get('auth').ttl
         clock.tick((ttl + 1)*1000)
@@ -68,6 +69,7 @@ describe('GET /me', () => {
           props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
           })
+// Temp comment
 
           expect(res.body).not.to.have.own.property('updatedAt')
 
@@ -84,3 +86,5 @@ describe('GET /me', () => {
             expect(strategy).to.have.own.property('createdAt')
 
             expect(strategy.strategy).to.be.an('string')
+            expect(strategy.remoteId).to.be.an('null')
+            expect(strategy.createdAt).to.be.an('string')

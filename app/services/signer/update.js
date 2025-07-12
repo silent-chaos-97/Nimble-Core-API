@@ -10,9 +10,9 @@ const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.signer.update')
 
 const EVENT_TYPE_UPDATED = 'signer_updated'
-
 function validate(payload) {
   return validator(payload, SignerModel.schema('update'), { abortEarly: false })
+}
 
 function validateAccountRequestStatus(status) {
   if (status !== 'DRAFT' && status !== 'INCOMPLETE') {

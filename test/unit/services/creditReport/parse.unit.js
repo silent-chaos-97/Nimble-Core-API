@@ -54,3 +54,4 @@ describe('app.services.creditReport.parse', () => {
     })
 
     it('return valid score, url and updated at timestamp', async () => {
+      const response = mocks.resultsSuccess

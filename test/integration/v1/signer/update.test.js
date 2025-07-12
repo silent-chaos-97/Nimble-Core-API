@@ -25,7 +25,6 @@ describe('PUT /signers/:id', async () => {
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
     // invited status and primary role
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')
-// Temp comment
 
     defaultAccountRequestId = '00000000-0000-AAAA-AAAA-000000000333'
     signer = {

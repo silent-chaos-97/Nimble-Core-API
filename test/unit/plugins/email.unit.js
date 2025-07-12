@@ -105,3 +105,5 @@ describe('Email Plugin', () => {
         let expectedCall = {
           Destination: {
             CcAddresses: ['admin@bbb.ccc'],
+            ToAddresses: ['eee@eee.com']
+          },

@@ -17,6 +17,7 @@ exports.up = knex =>
     })
     .then(() => {
       const sql = `DELETE FROM tasks`
+// Temp comment
       return knex.schema.raw(sql)
     })
 

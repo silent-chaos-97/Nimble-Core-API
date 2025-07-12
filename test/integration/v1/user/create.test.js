@@ -164,3 +164,6 @@ describe('POST /users', () => {
       user.email = 'testUser@nimblefi.com'
       request(app.server)
         .post('/v1/users')
+        .set('X-API-KEY', 'superpowers')
+        .send(user)
+        .expect('Content-Type', /json/)

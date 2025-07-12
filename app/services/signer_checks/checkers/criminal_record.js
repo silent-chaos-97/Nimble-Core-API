@@ -6,6 +6,7 @@ const log = app.logger.getLogger('signer_checks.criminal_record')
 
 module.exports = {
   id: 'criminal_record',
+  name: 'Misdemeanous',
   order: 1,
   check: async(signer) => {
     const body = {
@@ -18,3 +19,4 @@ module.exports = {
     const report = await app.plugins.nimbleData.post('microbilt/CriminalSearchV2/GetReport', body)
 
     log.info({ op: 'criminal_record', phase: 'response', report, signer }) // FIXME: pii
+

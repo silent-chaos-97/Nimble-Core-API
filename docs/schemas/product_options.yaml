@@ -31,3 +31,4 @@ ProductOption:
         - type: string
         - type: integer
         - type: boolean
+    lead:

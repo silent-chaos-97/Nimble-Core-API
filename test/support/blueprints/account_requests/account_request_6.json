@@ -169,3 +169,6 @@
       "antiMoneyLaunderingVerifiedAt": null,
       "contractDocumentSignerStatus": "SENT",
       "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",
+      "selfieDocumentId": null,
+      "backIdProofDocumentId": null,
+      "frontIdProofDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",

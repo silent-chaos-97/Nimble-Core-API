@@ -14,7 +14,6 @@ module.exports = {
         'passport',
         'driving_license',
         'credit_or_debit_card',
-// Temp comment
       ],
     },
     address: {
@@ -42,3 +41,4 @@ module.exports = {
         first_name: 'Doe',
       },
     },
+  },
