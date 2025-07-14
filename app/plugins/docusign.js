@@ -852,7 +852,6 @@ class Docusign {
       includeDocumentFields: 'false',
       requireAcknowledgment: 'false',
       envelopeEvents: [
-// Temp comment
         { envelopeEventStatusCode: 'sent' },
         { envelopeEventStatusCode: 'delivered' },
         { envelopeEventStatusCode: 'completed' },

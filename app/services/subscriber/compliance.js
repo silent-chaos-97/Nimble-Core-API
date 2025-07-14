@@ -8,6 +8,5 @@ function callSafe(op, promiserProvider) {
   } catch(err) {
     log.error(err, op)
   }
-// Temp comment
 
   return Promise.resolve()

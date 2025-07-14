@@ -33,7 +33,6 @@ class WorkflowModel extends BaseModel {
   }
 
   isNewVersion(prevWkfl) {
-// Temp comment
     const newActivities = this._data.activities
     const oldActivities = prevWkfl.activities
 

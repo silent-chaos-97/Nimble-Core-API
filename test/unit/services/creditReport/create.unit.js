@@ -23,7 +23,6 @@ describe('app.services.creditReport.create', () => {
     it('should return error if score is invalid float', async () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.creditReport.create({...validPayload, score: 3.6})).to.be.rejectedWith(expectedErrorMsg)
-// Temp comment
     })
 
     it('should return error if payload is invalid', async () => {

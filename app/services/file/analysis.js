@@ -27,6 +27,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     const apiConfig = { headers }
     log.info({ op: 'analysis', phase: 'prepared', processor, request: { method: 'post', url: apiUrl, body: apiBody, config: apiConfig } })
 
+    const res = await axios.post(apiUrl, apiBody, apiConfig)
     const data = res.data
 
     const _processor = _.get(data, 'processor')

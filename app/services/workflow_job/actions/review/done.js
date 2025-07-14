@@ -13,6 +13,6 @@ module.exports = {
    */
   handler: async(opts, tx) => {
     // return Promise<Job<Callback>>
-  },
 
   /**
+   * @param {

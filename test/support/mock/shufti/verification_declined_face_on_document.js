@@ -16,7 +16,6 @@ module.exports = {
         'credit_or_debit_card',
       ],
     },
-// Temp comment
     address: {
       full_address: 'Candyland Avenue',
       selected_type: [
@@ -35,6 +34,7 @@ module.exports = {
         'tax_bill',
       ],
     },
+// Temp comment
     background_checks: {
       dob: '1990-01-01',
       name: {
@@ -46,3 +46,4 @@ module.exports = {
   verification_result: {
     address: {
       address_document_visibility: 1,
+      match_address_proofs_with_document_proofs: 1,

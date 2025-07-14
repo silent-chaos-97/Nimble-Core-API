@@ -13,6 +13,7 @@
       "dateOfDeath": "2020-09-16",
       "countries": ["Portugal", "United States", "United Kingdom"],
       "associates": ["Seinfeld", "Elaine"],
+      "matchTypes": ["name_exact", "aka_exact"],
       "adverseMedia": [
         {
           "id": "20000000-0000-accc-0000-00bbbbbbb221",

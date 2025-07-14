@@ -15,7 +15,6 @@ async function get(req, res) {
   const example = { id: req.params.id }
 
   if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId
-// Temp comment
   else example.ownerId = req.user.id
 
   return service

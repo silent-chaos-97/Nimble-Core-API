@@ -43,6 +43,7 @@ describe('app.services.creditReport.fetch', () => {
       expect(app.services.creditReport.fetch(id)).not.to.be.rejectedWith()
       expect(fakeResponseDownload).not.to.have.been.called
       expect(fakeAwsS3uploadFn).not.to.have.been.called
+      expect(fakeAwsLambda).not.to.have.been.called
     })
 
     it('should not fetch report if signer is incomplete', async () => {
@@ -124,3 +125,4 @@ describe('app.services.creditReport.fetch', () => {
       expect(fakeAwsLambda).to.have.been.calledOnce
 
       const result = await knex.raw(`SELECT * FROM signer_credit_reports order by created_at DESC`)
+

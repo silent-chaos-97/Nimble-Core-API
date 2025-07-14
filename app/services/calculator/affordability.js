@@ -208,7 +208,6 @@ module.exports = async function(user, data, transacting = app.db) {
           operation: 'lower_target_payment_to_max_payment_allowable_by_dti',
           requested: opts.targetPayment,
           adjusted: summary.payment.requested
-        })
       }
     }
 
@@ -277,6 +276,7 @@ async function _riskAnalysis(institutionId, summary, risks) {
 
   const agg = { disqualifying, performing, score, risk, analyses }
 
+  if (disqualifying) agg.disqualifiers = disqualifiers
   if (!performing) agg.nonPerformers = nonPerformers
 
   return agg

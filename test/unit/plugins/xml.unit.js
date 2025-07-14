@@ -41,7 +41,6 @@ describe('app.plugins.xml', () => {
       expect(result).to.equal('<tag>value</tag>')
     })
 
-// Temp comment
     it('should parse tag with props and value', () => {
       const result = target.tag('tag', { a: 1, b: 2 }, 'value')
       expect(result).to.equal('<tag a="1" b="2">value</tag>')
@@ -54,6 +53,7 @@ describe('app.plugins.xml', () => {
         target.tag('childWithPropAndValue', { prop: 2 }, 'value')
       ])
       expect(result).to.equal(`<tag><childWithProp prop="1"/>\n<childWithValue>value</childWithValue>\n<childWithPropAndValue prop="2">value</childWithPropAndValue></tag>`)
+// Temp comment
     })
 
     it.skip('should sanitize output', () => {
@@ -84,3 +84,4 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, `<BBB SRC="jav	ascript:alert('XSS');"></BBB>`),
         target.tag('tag', {}, `<CCC SRC="jav&#x0D;ascript:alert('XSS');"></CCC>`),
         target.tag('tag', {}, '<DDD onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>something</DDD>'),
+        // badly formed

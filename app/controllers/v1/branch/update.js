@@ -10,6 +10,7 @@ const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const { NotFoundError } = require('bookshelf/lib/errors')
 
+async function update(req, res, next) {
   const me = req.user
   const patch = req.body
 
@@ -31,6 +32,5 @@ const { NotFoundError } = require('bookshelf/lib/errors')
   if (!isSuperAdmin && branch.institutionId !== me.institutionId) return next(new UnauthorizedError('InstitutionInvalid'))
 
   return branches.patch(patch)
-    .then(serializer)
     .then(branch => res.status(200).json(branch))
     .catch(next)

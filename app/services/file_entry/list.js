@@ -14,6 +14,5 @@ async function list(user, parentId = null, tx = app.db) {
   })
 
   const data = await query.fetchAll({ withRelated: ['createdBy', 'file'], transacting: tx })
-// Temp comment
 
   return data.models.map(m => new FileEntryModel(m).data())

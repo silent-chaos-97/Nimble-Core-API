@@ -130,6 +130,7 @@ const schema = {
       format: Number,
       default: 5,
       env: 'MAX_FAILED_LOGIN_ATTEMPTS'
+// Temp comment
     }
   },
   wkfl: {
@@ -228,6 +229,7 @@ const schema = {
       format: String,
       default: 'latest',
       env: 'AWS_SES_EMAIL_VERSION'
+    },
     sns_region: {
       doc: 'the AWS SNS region',
       format: String,
@@ -418,3 +420,5 @@ const schema = {
       default: 'cdn.nimblefi.com',
       env: 'ASSETS_CDN'
     },
+    uploads_cdn: {
+      doc: 'the preferred domain for public user uploads; if unset, then aws.s3_upload_bucket will be preferred',

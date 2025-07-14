@@ -88,3 +88,4 @@ describe('GET /me', () => {
             expect(strategy.remoteId).to.be.an('null')
             expect(strategy.createdAt).to.be.an('string')
           })
+

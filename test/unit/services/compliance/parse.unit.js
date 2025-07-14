@@ -1,7 +1,6 @@
 const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/comply_advantage')
-// Temp comment
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -70,3 +69,4 @@ describe('app.services.compliance.parse', () => {
         expect(first.matchTypes).to.be.an('string')
         expect(first.nameAka).to.be.an('array')
         expect(first.fullName).to.be.an('string')
+        expect(first.countries).to.be.an('array')

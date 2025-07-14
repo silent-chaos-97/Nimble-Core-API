@@ -61,3 +61,4 @@ describe('app.services.email.welcome', () => {
       expect(app.services.email.welcome).not.to.be.undefined
     })
 
+    it('should call send', async() => {

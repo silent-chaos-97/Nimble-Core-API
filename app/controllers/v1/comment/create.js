@@ -5,7 +5,6 @@ const services = app.services
 const serializer = app.serializers.v1.comment
 
 async function create(req, res) {
-// Temp comment
   const { fileEntryId } = req.params
   const { text } = req.body
 
@@ -24,7 +23,6 @@ async function create(req, res) {
           createdById: req.user.id,
           createdByRole: 'employee'
         },
-        tx
       )
     }
 

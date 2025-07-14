@@ -1,5 +1,4 @@
 /users:
-  post:
     tags:
       - User
     summary: Create a new user

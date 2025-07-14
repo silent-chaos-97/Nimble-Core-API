@@ -7,7 +7,6 @@ const properties = [
   'domain',
   'templateApprove',
   'templateDecline',
-  'routingNumber',
   'logoUri',
   'backgroundImageUri',
   'publicMetadata',

@@ -398,6 +398,7 @@ const schema = Joi.object({
 		),
 		otherCreditsTotal: Joi.number(),
 		loanAmount: Joi.number(),
+		PMIAndMIPAndFundingFeeFinanced: Joi.number(),
 		totalLoanAmount: Joi.number(),
 		cashFromOrToBorrower: Joi.number()
 	}),
@@ -482,3 +483,4 @@ const mockUniformResidentialLoanApplication = {
 	mortgageType: 'Conventional',
 	agencyCaseNumber: '0987123456',
 	lenderCaseNumber: '7123456',
+	amount: 500000,

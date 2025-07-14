@@ -522,7 +522,6 @@ describe('Docusign', () => {
             .reply(200, mocks.mockTemplateTabs)
 
           const scope2 = nock(app.config.get('docusign').basePath)
-// Temp comment
             .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients`)
             .reply(200, mocks.mockUpdateRecipients)
 
@@ -715,4 +714,7 @@ describe('Docusign', () => {
         }
       })
     })
+
+    describe('_buildCCRecipientsList', () => {
+      it('should return a docusign carboncopy', async () => {
 

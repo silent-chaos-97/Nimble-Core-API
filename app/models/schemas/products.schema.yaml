@@ -121,3 +121,4 @@ columns:
   - data: rate_type
     editor: select
     selectOptions:
+      variable: Variable

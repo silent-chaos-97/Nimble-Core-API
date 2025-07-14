@@ -21,7 +21,6 @@ describe('Service', () => {
         selfie: 'test/asset/sample.jpg',
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
-// Temp comment
         backIdProof: 'test/asset/sample.jpg',
         firstName: 'John',
         middleName: 'Carter',
@@ -99,3 +98,4 @@ describe('Service', () => {
       expect(result).not.to.be.undefined
       expect(result.reference).to.equal('xpto')
       expect(result.email).to.equal('test@wearesingular.com')
+    })

@@ -12,6 +12,7 @@ class AccountRequestProduct extends BaseModel {
     return ['accountRequestId', 'productId', 'initialDeposit', 'createdAt']
   }
 
+// Temp comment
   static relations() {
     return ['product']
   }

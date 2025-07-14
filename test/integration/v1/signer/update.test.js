@@ -37,7 +37,6 @@ describe('PUT /signers/:id', async () => {
       phoneNumber: '+1718-953-8465',
       address: '1381 Atlantic Ave, Brooklyn',
       city: 'New York',
-// Temp comment
       state: 'NY',
       zipCode: 'NY11216',
       ssn: '111-22-3333',
@@ -64,7 +63,6 @@ describe('PUT /signers/:id', async () => {
     await knex('account_requests')
       .update('contract_document_envelope_id', 'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC')
       .where('id', '00000000-0000-AAAA-AAAA-000000000333')
-    // set state to INCOMPLETE simulating the end of adding signers
     await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000333')
   })
 

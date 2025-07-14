@@ -5,7 +5,6 @@ const knexConfig = {
   client: 'pg',
   debug: dbConfig.debug,
   connection: dbConfig.uri,
-  pool: {
     min: 1,
     max: 10,
     acquireTimeoutMillis: 8000,

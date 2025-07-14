@@ -9,7 +9,6 @@ async function execute(wkfl, runtimeVariables) {
     wkfl: _.pick(wkfl, ['id', 'name', 'userId', 'institutionId', 'branchId']),
     trigger: {
       ..._.omit(wkfl.trigger, ['data']),
-      type: wkfl.type,
       inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
     },

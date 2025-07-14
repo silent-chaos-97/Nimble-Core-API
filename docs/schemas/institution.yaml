@@ -40,3 +40,4 @@ Institution:
       title: routingNumber
       description: The institution routing number
     templateApprove:
+      type: string

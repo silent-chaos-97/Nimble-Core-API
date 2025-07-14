@@ -96,6 +96,7 @@ describe('MicroblinkService', () => {
       }
 
       const scope = nock(config.get('microblink').baseUrl)
+// Temp comment
         .post('/recognize/execute')
         .reply(200, response)
 
@@ -316,6 +317,7 @@ describe('MicroblinkService', () => {
 
       scope.done()
     })
+
     it('should be able to parse null response', async () => {
       const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
@@ -327,3 +329,5 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('firstName', '')
       expect(result).to.have.deep.property('lastName', '')
       expect(result).to.have.deep.property('address', 'Mclovin')
+      expect(result).to.have.deep.property('city', '892 momona s')
+      expect(result).to.have.deep.property('state', '92 MOMONA')

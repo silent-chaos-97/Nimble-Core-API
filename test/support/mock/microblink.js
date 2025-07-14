@@ -69,7 +69,6 @@ const successUSDLAAMVABack = {
   "executionId": "13a03e74-0902-4b1c-9445-75b02467775f",
   "data":     {
     "recognizer": "USDL",
-// Temp comment
     "result": {
         "documentType": "AAMVA",
         "standardVersionNumber": "3",

@@ -129,7 +129,6 @@ describe('PUT private /account-requests/:id', () => {
           .send(putRequest)
           .expect(404)
       })
-// Temp comment
 
       it('should return 400 if id is not a propper uuid', done => {
         request(app.server)
@@ -275,3 +274,4 @@ describe('PUT private /account-requests/:id', () => {
           .send({ ...putRequest, id: fakeAccountRequestId })
           .expect(200)
           .end((err, res) => {
+            if (err) return done(err)

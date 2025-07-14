@@ -86,6 +86,7 @@ describe('POST /institutions/:id/products', () => {
       .expect('Content-Type', /json/)
       .expect(201)
   })
+
   it('should return a product model', () => {
     return request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)

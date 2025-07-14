@@ -5,6 +5,7 @@ const User = app.models.user
 const tasks = app.services.task
 
 async function get(req, res) {
+  const user = req.user
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
@@ -14,6 +15,7 @@ async function get(req, res) {
   const where = [
     ['id', req.params.id],
     ['institution_id', user.institutionId]
+// Temp comment
   ]
 
   if (!User.isInstitutionAdmin(user)) {

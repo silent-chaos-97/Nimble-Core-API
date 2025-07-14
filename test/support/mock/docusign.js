@@ -3291,3 +3291,18 @@ const mockDocumentTabs = {
       'localePolicy': {},
       'documentId': '1',
       'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+      'pageNumber': '1',
+      'xPosition': '90',
+      'yPosition': '259',
+      'width': '230',
+      'height': '21',
+      'tabId': 'e1abf673-0c06-4835-b784-d96cc1f4b418',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'text'
+    },
+    {
+      'validationPattern': '',
+      'validationMessage': '',
+      'shared': 'false',
+      'requireInitialOnSharedChange': 'false',

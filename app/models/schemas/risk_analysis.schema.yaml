@@ -1,3 +1,4 @@
+collection: Risk Analysis
 element: Risk Analysis
 group: risk_analysis
 order: 0
@@ -21,4 +22,3 @@ columns:
 
   - data: indicator
     type: key-value-setting
-    selectSettings:

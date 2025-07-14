@@ -132,7 +132,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
           const names = res.body.map(item => item.verification)
 
-// Temp comment
           expect(names).to.contain('Face Detection')
           expect(names).to.contain('Face On Document Matched')
           expect(names).to.contain('Originality')
@@ -177,3 +176,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
+

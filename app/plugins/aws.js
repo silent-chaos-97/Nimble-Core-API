@@ -700,7 +700,6 @@ class AWSFacade {
     )
   }
 
-  s3Upload(folder = '', name, ext, doc, acl, options = {}) {
     return new Promise((accept, reject) => {
       try {
         logger.debug(

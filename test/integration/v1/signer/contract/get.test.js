@@ -115,3 +115,4 @@ describe('GET /signers/:id/contract', async () => {
           `signers#00000000-9999-aaaa-0000-2ea08a01e909`,
         ],
         expiration: 10
+      })

@@ -1,4 +1,5 @@
 UserToken:
+  type: object
   properties:
     token:
       type: string

@@ -20,7 +20,6 @@ describe('app.services.contract.embed', () => {
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
 
-      beforeEach(async () => {
         await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
@@ -41,6 +40,7 @@ describe('app.services.contract.embed', () => {
         sinon.reset()
         nock.cleanAll()
       })
+
       after(() => {
         sinon.restore()
         nock.enableNetConnect()

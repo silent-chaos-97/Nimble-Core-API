@@ -17,6 +17,7 @@
   "contractDocumentEnvelopeStatusUpdatedAt": "2019-03-17T13:34:11.341Z",
   "signers": [
     {
+      "role": "PRIMARY",
       "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
       "accountRequestId": "2552ab85-08da-4bb5-be00-9e94d282d348",
       "status": "SIGNED",
@@ -65,7 +66,6 @@
       "verificationStatusDocumentUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusAddress": "INVALID",
       "verificationStatusAddressUpdatedAt": "2018-03-16T11:32:03.341Z",
-      "verificationStatusSanctions": "NOMATCH",
       "verificationStatusSanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusMedia": "MATCH",
       "verificationStatusMediaUpdatedAt": "2018-03-16T11:32:03.341Z",
@@ -137,3 +137,4 @@
     "verificationStatusDocument": "INVALID",
     "verificationStatusAddress": "INVALID",
     "verificationStatusSanctions": "MATCH",
+    "verificationStatusMedia": "MATCH",

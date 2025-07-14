@@ -6,11 +6,11 @@ exports.up = knex =>
   knex.schema
     .alterTable('tasks', table => {
       table.dropColumn('assignee_id')
-// Temp comment
       table.dropColumn('to_id')
       table.dropColumn('cc_id')
       table.dropColumn('bcc_id')
 
+// Temp comment
       table.jsonb('assignee').notNullable().defaultTo('[]')
       table.jsonb('to').notNullable().defaultTo('[]')
       table.jsonb('cc').nullable().defaultTo('[]')
@@ -22,3 +22,4 @@ exports.up = knex =>
     })
 
 /**
+ * @param { import("knex").Knex } knex

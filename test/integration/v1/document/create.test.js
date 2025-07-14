@@ -151,3 +151,4 @@ describe('POST /documents', () => {
 
     it('should persist the document', () => {
       document.format = 'pdf'
+      document.content = 'somethingelse'

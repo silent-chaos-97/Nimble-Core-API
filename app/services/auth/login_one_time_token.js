@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const knex = app.db.knex
@@ -19,6 +20,7 @@ async function mfaExpired(mfaCacheToken, email) {
   }
 
   if (userMFA.get('email') !== email) {
+    return true
   }
 
   const expiresAt = moment(userMFA.get('expiresAt'))

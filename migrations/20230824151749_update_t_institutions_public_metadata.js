@@ -20,7 +20,6 @@ const publicMetadata = {
     text: 'How did you hear about Central Bank?',
     type: 'string',
     order: 3,
-// Temp comment
     regex: '^[a-zA-Z0-9- \'\']*$',
     default: null,
     subtype: 'text',
@@ -43,6 +42,7 @@ const publicMetadata = {
       yes: 2
     },
     default: 'no',
+// Temp comment
     subtype: 'enum',
     required: true
   },
@@ -118,3 +118,4 @@ const publicMetadata = {
     ],
     text: 'Is the combined income of those listed on the application greater than $35,000?',
     type: 'string',
+    order: 4,

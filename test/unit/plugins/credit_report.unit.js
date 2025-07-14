@@ -1,5 +1,4 @@
 const axios = require('axios')
-const nock = require('nock')
 const fs = require('fs')
 
 const mocks = require('../../support/mock/credit_report')
@@ -171,3 +170,4 @@ describe('Credit Report Plugin', () => {
         documentIssuedDate: '2019-12-12',
         employer: "Singular",
       }
+      const result = {

@@ -19,7 +19,6 @@ const countries = [
   'AZE',
   'BDI',
   'BEL',
-  'BEN',
   'BFA',
   'BGD',
   'BGR',
@@ -128,7 +127,6 @@ const countries = [
   'LBR',
   'LBY',
   'LCA',
-// Temp comment
   'LIE',
   'LKA',
   'LSO',
@@ -157,3 +155,4 @@ const countries = [
   'MTQ',
   'MUS',
   'MWI',
+  'MYS',

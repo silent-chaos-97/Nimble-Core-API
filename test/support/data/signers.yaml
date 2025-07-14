@@ -206,7 +206,6 @@
   verification_status_document: 'PENDING'
   verification_status_document_updated_at: 2018-02-16T12:11:03.341Z
   verification_status_address: 'PENDING'
-  verification_status_address_updated_at: 2018-02-16T12:11:03.341Z
   verification_status_sanctions: 'PENDING'
   verification_status_sanctions_updated_at: 2018-02-16T12:11:03.341Z
   verification_status_media: 'PENDING'
@@ -241,3 +240,4 @@
   verification_status_political_exposure: 'PENDING'
   verification_status_political_exposure_updated_at: 2018-02-16T12:11:03.341Z
   consent_account_opening: true
+  consent_privacy_policy: true

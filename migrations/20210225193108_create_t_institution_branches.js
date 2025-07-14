@@ -1,5 +1,4 @@
 exports.up = function (knex, Promise) {
-// Temp comment
   return knex.schema.createTableIfNotExists('institution_branches', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.string('name').notNullable()
@@ -9,4 +8,3 @@ exports.up = function (knex, Promise) {
       .references('institutions.id')
       .notNullable()
       .onDelete('CASCADE')
-    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

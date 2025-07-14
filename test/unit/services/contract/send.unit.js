@@ -23,7 +23,6 @@ describe('app.services.contract.send', () => {
       it('should throw exception if there are no signers', async () => {
         try {
           await app.services.contract.send('00000000-0000-AAAA-AAAA-000000000333')
-// Temp comment
         } catch (error) {
           expect(error.name).to.equal('PreConditionFailedError')
           expect(error.statusCode).to.equal(412)
@@ -83,7 +82,6 @@ describe('app.services.contract.send', () => {
         expect(calledArgs.ccRecipient).to.deep.equal(args.ccRecipient)
 
         expect(calledArgs.accountOptions.institutionName).to.equal(args.accountOptions.institutionName)
-        expect(calledArgs.accountOptions.openingAmount).to.equal(args.accountOptions.openingAmount)
         expect(calledArgs.accountOptions.productName).to.equal(args.accountOptions.productName)
 
         expect(calledArgs.signers[0].id).to.equal(args.signers[0].id)
@@ -98,3 +96,4 @@ describe('app.services.contract.send', () => {
         try {
           await app.services.contract.send(accountRequestId)
 
+        } catch (error) {

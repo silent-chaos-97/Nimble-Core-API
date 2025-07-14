@@ -10,11 +10,13 @@ class CommentModel extends BaseModel {
 
   static props() {
     return ['id', 'text', 'createdById', 'fileEntryId', 'attachmentId', 'createdAt', 'updatedAt']
+  }
 
   static relations() {
     return ['createdBy', 'fileEntry', 'attachment']
   }
 
+// Temp comment
   data() {
     const FileModel = app.models.file
     const UserModel = app.models.user

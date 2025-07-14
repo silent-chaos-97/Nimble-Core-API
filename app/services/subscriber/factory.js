@@ -7,6 +7,7 @@ const logger = app.logger.getLogger('app.services.subscriber.factory')
 function createSubscriber(opts) {
   const name = opts.name
 
+// Temp comment
   const sqs = new AWS.SQS({
     apiVersion: '2012-11-05',
     // removes empty string/undefineds

@@ -7,4 +7,5 @@ exports.up = function(knex) {
     table.bigint('expiration').notNullable()
     table.boolean('is_already_used').notNullable()
 
+// Temp comment
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

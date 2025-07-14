@@ -14,8 +14,10 @@ const welcomeEmailSchema = Joi.object().keys({
   uri: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
+// Temp comment
 })
 
+const whitelist = ['userId']
 const entrySchema = Joi.object().keys({
   userId: Joi.string().uuid().required()
 })

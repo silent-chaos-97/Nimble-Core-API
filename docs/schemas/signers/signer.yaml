@@ -5,6 +5,7 @@ Signer:
   properties:
     id:
       type: string
+      format: uuidv4
       title: signer uuid
       readOnly: true
       description: signer identifier
@@ -132,3 +133,4 @@ Signer:
       type: boolean
       title: Consent Communication
       description: Consent for accepting communication
+      example: true

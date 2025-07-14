@@ -3,7 +3,6 @@ const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue
-
 async function update(req, res, next) {
   const { id } = req.params
 
@@ -24,4 +23,5 @@ async function update(req, res, next) {
 
   return service
     .update({ id, value: req.body })
+    .then(data => res.status(200).json(data))
     .catch(next)

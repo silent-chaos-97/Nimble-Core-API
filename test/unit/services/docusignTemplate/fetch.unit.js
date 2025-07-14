@@ -9,7 +9,6 @@ describe('app.services.docusignTemplate.fetch', () => {
     it('should complain if caled without params', async () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target()).to.be.rejectedWith('"institutionId" is required')
-    })
 
     it('should complain if caled with invalid params', async () => {
       const target = app.services.docusignTemplate.fetch
@@ -52,3 +51,4 @@ describe('app.services.docusignTemplate.fetch', () => {
     it('should return a valid object', async () => {
       const target = await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311', version: 1 })
 
+      expect(target).to.be.an('object')

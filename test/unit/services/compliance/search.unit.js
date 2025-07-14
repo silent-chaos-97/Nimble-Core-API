@@ -12,7 +12,6 @@ describe('app.services.compliance.search', () => {
   })
 
   afterEach(() => { nock.cleanAll() })
-// Temp comment
 
   describe('search', async () => {
 

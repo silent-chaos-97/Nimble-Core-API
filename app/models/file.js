@@ -23,6 +23,7 @@ class FileModel extends BaseModel {
 
         // file meta
         'mimetype',
+        'size',
         'acl',
 
         //info
@@ -41,3 +42,4 @@ class FileModel extends BaseModel {
         'mimetype',
         'size',
         'acl',
+

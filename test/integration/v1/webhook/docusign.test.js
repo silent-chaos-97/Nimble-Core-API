@@ -246,7 +246,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 
       // Note from Pedro: I'm not sure about the state of the account_request seed but
-      // in this case, the contract_document_id should be null
       await knex('account_requests').update('contract_document_id', null).where('id', accountRequestId)
 
       // make sure the signer status is pending
@@ -283,3 +282,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           if (err) return done(err)
           await sleep(100)
           downloadScope.done()
+          done()

@@ -1,4 +1,5 @@
 
+// Temp comment
 const sinon = require('sinon')
 const axios = require('axios')
 const nock = require('nock')
@@ -20,6 +21,7 @@ describe('app.services.creditReport.export', () => {
 
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
+
     it('should exist', () => {
       expect(app.services.creditReport.export).not.to.be.undefined
     })

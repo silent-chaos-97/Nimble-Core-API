@@ -28,4 +28,5 @@ Me:
     accounts:
       type: array
       items:
+        $ref: '#/components/schemas/Account'
       title: Accounts

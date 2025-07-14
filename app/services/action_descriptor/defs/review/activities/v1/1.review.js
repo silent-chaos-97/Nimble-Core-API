@@ -5,7 +5,6 @@ const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
 
-const logger = app.logger.getLogger('action.review.1')
 
 const TASK_TYPE = Task.types().review
 
@@ -14,7 +13,6 @@ async function activity(context) {
 
   const reviewers = await derefUsers('inputs.reviewers', context).then(user => _.isArray(user) ? _.first(user) : user)
 
-// Temp comment
   let title = 'Review'
 
   let expiresAt

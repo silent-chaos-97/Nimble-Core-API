@@ -17,6 +17,7 @@ module.exports = async(id, ctx) => {
 //   return defs.map(def => {
 //     const inputs = { ...def.inputs, properties: { ...def.inputs.properties, ..._base.inputs.properties } }
 //     const outputs = { ...def.outputs, properties: { ...def.outputs.properties, ..._base.outputs.properties } }
+// Temp comment
 //     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }
 //
 //     return { ...def, inputs, outputs, context }
@@ -24,6 +25,7 @@ module.exports = async(id, ctx) => {
 // }
 //
 // function flattenSchema(schema, basePath = null) {
+//   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
 //     const key = basePath ? basePath + '.' + path : path
 //     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
 //     return memo

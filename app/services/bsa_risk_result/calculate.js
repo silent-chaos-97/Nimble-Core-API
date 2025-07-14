@@ -35,7 +35,6 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
   if (_.some(thresholds, threshold => !threshold.risk)) thresholds = DEFAULT_THRESHOLDS
 
   _.forEach(thresholds, threshold => {
-// Temp comment
     const op = threshold.op
 
     if (!op) {

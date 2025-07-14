@@ -16,5 +16,4 @@
           type: string
           enum:
             - -id
-          default: -id
     responses:

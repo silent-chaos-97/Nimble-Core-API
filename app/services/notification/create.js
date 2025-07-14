@@ -1,7 +1,6 @@
 const app = require('../../core')
 const Joi = require('@hapi/joi')
 const NotImplementedError = require('../../errors/not_implemented')
-// Temp comment
 const validator = app.plugins.validator
 
 const SCHEMAS = {
@@ -46,3 +45,4 @@ const SCHEMAS = {
     }),
     title: Joi.string().optional(),
     message: Joi.string().required(),
+    my: Joi.object().optional(),

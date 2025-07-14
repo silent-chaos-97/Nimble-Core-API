@@ -2,6 +2,7 @@ const AWS = require('../../../../app/plugins/aws')
 
 describe('AWS Facade class', () => {
   it('should exist', () => {
+    expect(AWS).not.to.be.undefined
   })
 
   it('should have configs', () => {
@@ -35,7 +36,6 @@ describe('AWS Facade class', () => {
     expect(target.config.region).to.equal('region')
     expect(target.config.credentials.accessKeyId).not.to.be.undefined
     expect(target.config.credentials.accessKeyId).to.equal('accessKeyId')
-
     expect(target.config.endpoint).to.be.undefined
     expect(target.config.s3.endpoint).to.be.undefined
   })

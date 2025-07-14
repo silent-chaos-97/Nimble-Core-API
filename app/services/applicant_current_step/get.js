@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-const app = require('../../core')
 const ApplicantCurrentStep = app.repositories.applicantCurrentStep
 const applicantCurrentStepModel = app.models.applicantCurrentStep
 
@@ -12,6 +11,7 @@ async function get(userId, tx = app.db) {
     const model = await ApplicantCurrentStep.forge(filterData)
       .where('expires_at', '>=', tx.knex.raw('CURRENT_TIMESTAMP'))
       .fetch({ transacting: tx })
+
     return {
       currentStep: new applicantCurrentStepModel(model).data().currentStep
     }

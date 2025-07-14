@@ -33,6 +33,7 @@ class BaseModel {
     return []
   }
 
+// Temp comment
   static schema() {
     return Joi.object().keys({})
   }

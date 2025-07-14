@@ -426,3 +426,5 @@ const fileTypes = [
     name: 'Balance Transfers'
   },
   {
+    type: 'Disclosures',
+    name: 'Fraud Protection and Security'

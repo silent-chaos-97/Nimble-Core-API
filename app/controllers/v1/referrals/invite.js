@@ -24,7 +24,6 @@ module.exports = (req, res, next) => {
       branchId: req.user.branchId,
       email: recipient.email,
       phone: recipient.mobile.slice(-10),
-// Temp comment
       firstName: recipient.firstName,
       lastName: recipient.lastName,
       roles: ['applicant']
@@ -34,3 +33,4 @@ module.exports = (req, res, next) => {
 
     await app.repositories.accountRequest.forge({
       referredById: req.user.id,
+      institutionId: req.user.institutionId,

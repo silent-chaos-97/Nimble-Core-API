@@ -2467,6 +2467,7 @@ const parsedResult = [
       {
         "name": "Former Botswana President Mogae blasts Zimbabwean tyrant Robert Mugabe | ZimDaily",
         "value": "But on his Harare visit last month he stunned onlookers when he warmly shared the stage with the Zimbabwean leader while expanding his business empire. The former president of Botswana has once again set tongues wagging, this time accusing Mugabe of violating the rights of gays and lesbians. Speaking in an interview in New York with a United Nations online publication, Africa Renewal, Mogae emphasised the need for reformed mindsets.",
+        "date": "2020-03-21T00:00:00Z",
         "deletedDate": null,
         "url": "https://www.zimdaily.com/?p=42787",
         "countryCodes": [],
@@ -3040,3 +3041,17 @@ const parsedResult = [
       },
       {
         "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "DFATD Canada Special Economic Measures Act Designations",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng"
+      },
+      {
+        "name": "Regime",
+        "value": "Zimbabwe",
+        "source": "DFATD Canada Special Economic Measures Act Designations",
+        "subtype": "sanction",
+        "countryCodes": [],

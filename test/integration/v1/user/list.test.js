@@ -57,6 +57,7 @@ describe('GET /users', () => {
             expect(user).to.have.own.property(prop)
           })
 
+          expect(user).not.to.have.own.property('updatedAt')
 
           expect(user.id).to.be.an('string')
           expect(res.body).not.to.have.own.property('email')
@@ -102,7 +103,6 @@ describe('GET /users', () => {
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
             done()
-          })
       })
 
       it('should 400 on invalid sort parameter', done => {

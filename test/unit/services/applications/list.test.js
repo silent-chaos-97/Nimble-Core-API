@@ -7,7 +7,6 @@ describe('app.services.applications.list', () => {
   before(() => {
     clock = sinon.useFakeTimers()
   })
-
   after(() => {
     clock.restore()
   })
@@ -27,5 +26,6 @@ describe('app.services.applications.list', () => {
       expect(target).not.to.be.undefined
 
       return Promise.all([
+        expect(target(bodyMissingApplicantId)).to.eventually.be.rejectedWith(errorMessage)
       ])
     })

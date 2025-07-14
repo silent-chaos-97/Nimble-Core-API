@@ -89,6 +89,7 @@ class TaskModel extends BaseModel {
       'body',
       'signature'
     ]
+  }
 
   static prePersist(task) {
     if (!task) {

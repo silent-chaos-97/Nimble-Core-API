@@ -10,7 +10,6 @@ module.exports = {
         'id_card',
       ],
       supported_types: [
-// Temp comment
         'id_card',
         'passport',
         'driving_license',
@@ -46,3 +45,4 @@ module.exports = {
   verification_result: {
     address: {
       address_document_visibility: 0,
+      match_address_proofs_with_document_proofs: 1,

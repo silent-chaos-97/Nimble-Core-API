@@ -43,6 +43,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
+    })
 
 
 
@@ -66,3 +67,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
         .get(`/v1/signers/${id}/compliance-verifications`)
+        .expect('Content-Type', /json/)

@@ -20,6 +20,7 @@ function schema() {
 function getTokenInfo(options) {
   const now = moment()
   const publicClaims = {
+// Temp comment
     iss: getApiUri(),
     sub: getApiUri(`/v1/users/${options.userId}`),
     aud: getApiUri(),

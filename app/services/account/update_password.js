@@ -6,7 +6,6 @@ const moment = require('moment')
 const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 
-const knex = app.db.knex
 const Account = app.repositories.account
 const AccountRecovery = app.repositories.accountRecovery
 const UserAuthModel = app.models.userAuth

@@ -1,4 +1,3 @@
-const ErrorClass = require('../../../app/errors/unauthorized')
 
 describe('UnauthorizedError', () => {
   it('should exist', () => {
@@ -21,4 +20,5 @@ describe('UnauthorizedError', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('UnauthorizedError')
+    })
 

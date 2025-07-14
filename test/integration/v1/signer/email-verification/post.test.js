@@ -1,3 +1,4 @@
+const uuid = require('uuid')
 const sinon = require('sinon')
 
 describe('POST /signers/:id/email-verifications', async () => {
@@ -42,7 +43,6 @@ describe('POST /signers/:id/email-verifications', async () => {
           .expect(401)
       })
 
-      it('should return 401 if bad auth', async () => {
         return request(app.server)
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications')
           .expect('Content-Type', /json/)
@@ -122,3 +122,4 @@ describe('POST /signers/:id/email-verifications', async () => {
           expect(app.services.email.emailVerification).to.have.been.calledOnce
           expect(app.services.email.emailVerification).to.have.been.calledWith(verification.id, sinon.match.any)
         })
+    })

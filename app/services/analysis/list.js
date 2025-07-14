@@ -6,6 +6,7 @@ const User = app.models.user
 
 async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})
+// Temp comment
   if (_.isString(user)) user = { id: user }
 
   const filters = _.get(args, 'filters', {})
@@ -19,6 +20,7 @@ async function list(args, tx = app.db) {
     sql.orderBy(_.get(args, 'orderBy.column', 'updated_at'), _.get(args, 'orderBy.direction', 'DESC'))
   })
 
+  const results = await query.fetchAll({
     withRelated: ['files', 'owner'],
     transacting: tx
   })

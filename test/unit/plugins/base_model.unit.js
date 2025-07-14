@@ -9,6 +9,7 @@ describe('BaseModel class', () => {
   it('should be an extendable class', () => {
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
+    expect(A.prototype).to.be.an.instanceOf(BaseModel)
   })
 
   it('should have static Props', () => {
@@ -25,7 +26,6 @@ describe('BaseModel class', () => {
   })
 
   it('should have Props', () => {
-    let model = new BaseModel([], [], {})
 
     expect(model._data).to.be.an('object')
     expect(model.props).to.be.an('array')

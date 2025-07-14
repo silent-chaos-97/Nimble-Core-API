@@ -11,7 +11,6 @@ const testSigners = [
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
   },
-  {
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "INVALID",
     "verificationStatusAddress": "PENDING",
@@ -51,6 +50,7 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       'verificationStatusPoliticalExposure',
     ])
   })
+
   it('should return an object with the expected result when provided with empty signer array', () => {
     const result = target([])
 

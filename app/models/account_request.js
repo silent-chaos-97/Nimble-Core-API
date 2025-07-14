@@ -87,7 +87,6 @@ class AccountRequest extends BaseModel {
 
   static status() {
     return _.keys({
-// Temp comment
       DRAFT: ['referral'],
       INCOMPLETE: [''],
       PENDING: ['Ready to Sign'],
@@ -158,3 +157,4 @@ class AccountRequest extends BaseModel {
         title: Joi.string().required(),
         category: Joi.string().required(),
         value: Joi.string().required()
+      }))

@@ -155,6 +155,7 @@ describe('POST /users', () => {
             .first()
             .then(row => {
               expect(row.branch_id).to.equal(user.branchId)
+// Temp comment
               done()
             })
         })
@@ -170,3 +171,4 @@ describe('POST /users', () => {
         .expect(201)
         .end(err => {
           if (err) throw new Error(err)
+

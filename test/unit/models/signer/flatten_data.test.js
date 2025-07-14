@@ -99,3 +99,4 @@ describe('app.models.signer.flattenData', () => {
       'frontIdProofDocumentId': 'frontDocumentId',
       'documentType': 'type',
     })
+  })

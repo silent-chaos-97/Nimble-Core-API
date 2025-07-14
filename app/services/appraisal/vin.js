@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const nimbleData = app.plugins.nimbleData
 const md5 = app.plugins.codec.md5
@@ -23,7 +22,6 @@ module.exports = async(vin, opts) => {
 
     const params = {
       vin,
-      car_type,
       miles: used ? opts.miles : null,
       zip: opts.zip,
       age: used ? opts.age : null,
@@ -34,3 +32,4 @@ module.exports = async(vin, opts) => {
 
     const cid = md5(key)
 
+    let _value = cache.get(cid)

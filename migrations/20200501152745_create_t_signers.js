@@ -40,3 +40,4 @@ exports.up = function(knex) {
 
     table.uuid('selfie_document_id').references('id').inTable('documents')
     table.uuid('front_drivers_license_document_id').references('id').inTable('documents')
+    table.uuid('back_drivers_license_document_id').references('id').inTable('documents')

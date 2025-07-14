@@ -5,6 +5,7 @@ AccountRequest:
       type: string
       format: uuidv4
       title: Account request unique id
+      readOnly: true
       description: Account request unique identifier
       example: 2552ab85-08da-4bb5-be00-9e94d282d348
     institutionId:
@@ -71,3 +72,4 @@ AccountRequest:
       format: date-time
       title: Creation Date
       description: The date when the contract document was first created
+    contractDocumentEnvelopeStatusUpdatedAt:

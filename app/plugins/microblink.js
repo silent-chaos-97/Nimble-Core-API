@@ -190,7 +190,6 @@ class MicroblinkService {
       zipCode: '',
     }
 
-    const comma = address.indexOf(',')
 
     // Pull out the city.
     returned.city = _.capitalize(address.slice(0, comma))

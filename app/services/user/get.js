@@ -50,7 +50,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
             current: phoneNumber === _.get(profileData, 'person.mobile_phone')
           })),
           address: _.get(profileData, 'person.location_street_address') ? {
-            state: _.get(profileData, 'person.location_region'),
             city: _.get(profileData, 'person.location_locality'),
             streetAddress: _.get(profileData, 'person.location_street_address'),
             streetAddressAdditional: _.get(profileData, 'person.location_address_line_2'),
@@ -71,6 +70,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
             streetAddress: undefined,
             streetAddressAdditional: undefined,
             city: undefined,
+            state: undefined,
             postalCode: undefined
           }
         }

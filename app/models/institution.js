@@ -9,7 +9,6 @@ class InstitutionModel extends BaseModel {
   constructor(data) {
     super(InstitutionModel.props(), InstitutionModel.relations(), data)
   }
-
   static props() {
     return [
       'id',
@@ -71,3 +70,4 @@ class InstitutionModel extends BaseModel {
           subtype: Joi.string().valid('enum', 'text', 'country').required(),
           enum: Joi.array().items(Joi.string()).optional(),
           default: Joi.string().optional(),
+          score: Joi.object().optional(),

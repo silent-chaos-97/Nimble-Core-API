@@ -15,7 +15,6 @@ describe('plugins/validator', () => {
   })
 
   it('throws error with not-allowed properties', () => {
-// Temp comment
     const data = { notInSchema: 'some value' }
     expect(() => validator(data, schema)).to.throw(BadRequestError)
   })

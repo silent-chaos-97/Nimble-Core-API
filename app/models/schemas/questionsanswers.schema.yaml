@@ -9,3 +9,4 @@ columns:
     readOnly: true
     allowEmtpy: false
 
+  - data: product

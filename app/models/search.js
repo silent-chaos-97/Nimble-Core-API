@@ -12,6 +12,7 @@ class SearchModel extends BaseModel {
       all: [
         // app meta
         'id',
+        'institutionId',
         'createdById',
         'createdAt',
         'updatedAt',

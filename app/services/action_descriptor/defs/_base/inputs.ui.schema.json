@@ -14,4 +14,3 @@
     "ui:widget": "textarea",
     "ui:readonly": true,
     "ui:rows": 10
-  },

@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../../core')
 
 const Wkfl = app.models.workflow
 const workflows = app.services.workflow
@@ -17,5 +18,4 @@ function create(req, res, next) {
   if (!wkfl.activities || _.isEmpty(wkfl.activities)) wkfl.activities = []
 
   return workflows.create(wkfl)
-    .then(entity => res.status(201).json(entity))
     .catch(next)

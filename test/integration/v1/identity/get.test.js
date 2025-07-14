@@ -67,6 +67,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     return request(app.server)
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
       .expect(res => {
+// Temp comment
         props.forEach(prop => {
           expect(res.body).to.have.own.property(prop)
         })

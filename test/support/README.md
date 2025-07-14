@@ -16,7 +16,6 @@ If you add a file for a new table, don't forget to edit the seeds.js file
 to add an entry in the list of flush commands if needed, example:
 
 ```
- DELETE FROM signer_credit_reports CASCADE;
 ```
 
 ## Running in development

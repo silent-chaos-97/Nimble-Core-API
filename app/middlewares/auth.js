@@ -29,6 +29,7 @@ function getQueryOrHeaderToken(params, headers) {
   if (_.has(params, 'token')) {
     return params.token
   }
+
   if (_.has(headers, 'authorization')
     && headers.authorization.split(' ')[0] === 'Bearer') {
     return headers.authorization.split('Bearer ').pop()

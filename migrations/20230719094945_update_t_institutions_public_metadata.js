@@ -71,6 +71,7 @@ const publicMetadata = {
     order: 5,
     score: {
       no: 1
+    },
     default: 'no',
     subtype: 'enum',
     required: true,
@@ -114,3 +115,4 @@ const publicMetadata = {
       'no'
     ],
     text: 'Is the combined income of those listed on the application greater than $35,000?',
+    type: 'string',
