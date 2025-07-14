@@ -1,4 +1,3 @@
-const Joi = require('@hapi/joi')
 
 /**
  * Schema for services.product.get
@@ -12,3 +11,4 @@ function schema() {
       category: Joi.string(),
       institutionId: Joi.string().uuid(),
     })
+    .xor('id', 'name', 'category') // exclude 'institutionId' from xor

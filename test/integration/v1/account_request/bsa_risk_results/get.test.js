@@ -141,6 +141,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
           const third = res.body[2]
           expect(third.position).to.equal(2)
+        })
     })
 
     describe('and sorting', () => {

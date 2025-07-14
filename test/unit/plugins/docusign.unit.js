@@ -522,6 +522,7 @@ describe('Docusign', () => {
             .reply(200, mocks.mockTemplateTabs)
 
           const scope2 = nock(app.config.get('docusign').basePath)
+// Temp comment
             .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients`)
             .reply(200, mocks.mockUpdateRecipients)
 
@@ -704,4 +705,14 @@ describe('Docusign', () => {
         expect(result).not.to.be.undefined
         expect(result).to.equal(`${config.get('protocol')}://${config.get('frontend.onboarding_domain')}/${mocks.accountOptions.institutionDomain}/onboarding/sign-contract/`)
       })
+
+      it('should return error arguments are missing', () => {
+        try {
+          docusign._getReturnURL("")
+        } catch (error) {
+          expect(error).to.be.an.instanceof(Error)
+          expect(error.message).to.equal("Missing institutionDomain")
+        }
+      })
+    })
 

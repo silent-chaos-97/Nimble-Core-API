@@ -13,7 +13,6 @@ const logger = app.logger.getLogger('app.services.file.create')
  *   createdById: string
  *   createdByRole: [user, applicant]
  *   bytes?: string (base64-bytes)
- *   buffer?: Buffer
  *   size: number
  * }
  */
@@ -23,7 +22,6 @@ async function create(data, tx = app.db) {
   const buffer = data.buffer ? data.buffer : (data.bytes ? Buffer.from(data.bytes, 'base64') : null)
 
   if (!buffer || !Buffer.isBuffer(buffer)) throw new BadRequestError('body.buffer || body.bytes provided but malformed')
-// Temp comment
 
   if (!data.size) data.size = Buffer.byteLength(buffer)
 

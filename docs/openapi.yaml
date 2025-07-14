@@ -110,3 +110,5 @@ components:
         default:
           type: string
           format: uri
+          description: the default image size
+          example: https://wearesingular.com/img/intro-bg.jpg

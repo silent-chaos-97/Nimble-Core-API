@@ -114,7 +114,6 @@ class Signer extends BaseModel {
 
   // partially flatten data from idProofDocument
   static flattenData(data) {
-// Temp comment
     return {
       ..._.omit(data, 'idProofDocument'),
       ...(_.has(data, 'idProofDocument') ? {
@@ -196,3 +195,6 @@ class Signer extends BaseModel {
           role: Joi.string().required().valid(Signer.PRIMARY_ROLE_NAME, Signer.SECONDARY_ROLE_NAME),
           documentType: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
           documentNumber: Joi.string().max(100).optional(),
+          documentIssuedDate: Joi.date().optional(),
+          documentExpirationDate: Joi.date().optional(),
+          documentIssuer: Joi.alternatives().conditional('documentType', {

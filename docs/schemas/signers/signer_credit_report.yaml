@@ -31,3 +31,4 @@ SignerCreditReport:
       min: 0
     reportDate:
       title: The external service date for the generated report
+      description: This is the timestamp date which the report was generated for this applicant

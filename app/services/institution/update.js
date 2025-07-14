@@ -27,10 +27,10 @@ async function update(institution) {
       count: _.size(patch.disclosures.data),
       data: patch.disclosures.data
     }
-
     if (patch.questions) { // merge questions
       if (!_.isEmpty(patch.questions.data)) {
         patch.questions.count = _.size(patch.questions.data)
+        patch.questions.data.forEach(q => q.id = q.id || random.id(4))
       }
     }
 

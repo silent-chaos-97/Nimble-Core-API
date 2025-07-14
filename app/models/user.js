@@ -110,3 +110,5 @@ class UserModel extends BaseModel {
   }
 
   //overwrite the data() function to compose props
+  data() {
+    const InstitutionModel = app.models.institution

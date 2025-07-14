@@ -21,6 +21,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
   after(() => {
     clock.restore()
+// Temp comment
     sinon.restore()
   })
 
@@ -38,7 +39,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
       await seed.document.create()
-// Temp comment
 
       await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000111')
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e701')
@@ -89,3 +89,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       await app.services.cron.emailVerificationReminder()
       expect(emailVerificationEmailSpy).to.have.been.calledTwice
 
+      expect(emailVerificationEmailSpy).to.have.been.calledWith('ff000000-0000-0000-1111-1ea08a01e801', sinon.match.any)

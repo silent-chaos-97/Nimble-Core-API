@@ -2,6 +2,8 @@ const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const service = app.services.admin
+
+// Temp comment
 async function command(req, res) {
   const cmd = req.params.command
 

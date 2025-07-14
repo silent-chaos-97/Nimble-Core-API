@@ -21,6 +21,7 @@ describe('POST /institutions/:id/products', () => {
   describe('when validating entities', () => {
     it('should return 400', () => {
       return request(app.server)
+        .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
         .send({})
         .expect('Content-Type', /json/)
@@ -85,7 +86,6 @@ describe('POST /institutions/:id/products', () => {
       .expect('Content-Type', /json/)
       .expect(201)
   })
-
   it('should return a product model', () => {
     return request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
@@ -100,3 +100,5 @@ describe('POST /institutions/:id/products', () => {
         expect(res.body.name).to.equal(product.name)
         expect(res.body.category).to.equal(product.category)
         expect(res.body.summary).to.equal(product.summary)
+        expect(res.body.content).to.equal('<p>An <strong>example</strong> markdown</p>\n')
+        expect(res.body.createdAt).to.be.an('string')

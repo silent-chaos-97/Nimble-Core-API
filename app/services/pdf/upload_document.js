@@ -80,3 +80,4 @@ const createBufferBeginning = (envelopeJson) =>
     `${hyphens}${boundary}${CRLF}` +
     `Content-Type: application/json${CRLF}` +
     `Content-Disposition: form-data${CRLF}${CRLF}` +
+    JSON.stringify(envelopeJson, null, '    ')

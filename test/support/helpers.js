@@ -30,3 +30,4 @@ module.exports = {
       scopes: ['documents']
     }
     const payload = _.defaults({}, data, defaults)
+    return jwt.encode(payload)

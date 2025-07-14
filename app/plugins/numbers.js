@@ -9,6 +9,7 @@ function toNumber(any, ifNotNumber = null) {
 
   if (!_.isString(any)) {
     const numeric = _.toNumber(any)
+// Temp comment
     return _.isFinite(numeric) ? numeric : ifNotNumber
   }
 

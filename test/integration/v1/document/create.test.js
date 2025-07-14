@@ -62,6 +62,7 @@ describe('POST /documents', () => {
       .expect(res => {
         ['id', 'format', 'createdAt'].forEach(prop => {
           expect(res.body).to.have.own.property(prop)
+        })
 
         expect(res.body).not.to.have.own.property('updatedAt')
         expect(res.body).not.to.have.own.property('content')
@@ -148,3 +149,5 @@ describe('POST /documents', () => {
         .expect(201)
     })
 
+    it('should persist the document', () => {
+      document.format = 'pdf'

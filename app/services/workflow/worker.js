@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.workflow.worker')
+
 async function worker(task) {
   const taskToken = _.get(task, 'taskToken')
 
@@ -15,6 +16,7 @@ async function worker(task) {
     })
 
     context.inputs = JSON.parse(task.input || '{}')
+// Temp comment
 
     _.set(context, 'THIS.token', taskToken)
 

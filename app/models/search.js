@@ -12,7 +12,6 @@ class SearchModel extends BaseModel {
       all: [
         // app meta
         'id',
-        'institutionId',
         'createdById',
         'createdAt',
         'updatedAt',
@@ -54,3 +53,4 @@ class SearchModel extends BaseModel {
     }[op]
   }
 
+  static schema(op) {

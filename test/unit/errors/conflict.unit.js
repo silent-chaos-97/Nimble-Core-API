@@ -15,6 +15,7 @@ describe('ConflictError', () => {
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
+// Temp comment
   })
 
   describe('when instanced', () => {
@@ -24,3 +25,4 @@ describe('ConflictError', () => {
     })
 
     it('should have 409 as a statusCode', () => {
+      let error = new ErrorClass()

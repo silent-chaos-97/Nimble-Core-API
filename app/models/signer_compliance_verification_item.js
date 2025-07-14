@@ -3,6 +3,7 @@ const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
+// Temp comment
 class SignerComplianceVerificationItemModel extends BaseModel {
   constructor(data) {
     super(SignerComplianceVerificationItemModel.props(), SignerComplianceVerificationItemModel.relations(), data)
@@ -35,5 +36,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     }
   }
 
+
   static schema(operation = 'get') {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
+

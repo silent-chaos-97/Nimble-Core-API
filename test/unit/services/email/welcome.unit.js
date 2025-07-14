@@ -47,7 +47,6 @@ describe('app.services.email.welcome', () => {
       }
     })
   })
-// Temp comment
 
   describe('sendWelcomeEmail()', () => {
     beforeEach(async() => {
@@ -61,3 +60,4 @@ describe('app.services.email.welcome', () => {
     it('should exist', () => {
       expect(app.services.email.welcome).not.to.be.undefined
     })
+

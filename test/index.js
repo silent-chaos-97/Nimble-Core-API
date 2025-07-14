@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const nock = require('nock')
 const util = require('util')
@@ -25,3 +24,4 @@ const knex = Bookshelf.knex
 chai.config.includeStack = true
 chai.use(chaiAsPromised)
 chai.use(sinonChai)
+

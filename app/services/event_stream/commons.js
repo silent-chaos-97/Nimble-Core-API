@@ -9,7 +9,6 @@ function isWkfl(event) {
   return _.isString(workflowId) && workflowId.trim().length !== 0
 }
 
-function _defaultDelegate() {
   return { notifications: _defaultNotifications }
 }
 

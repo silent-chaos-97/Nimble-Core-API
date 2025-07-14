@@ -19,7 +19,6 @@ class AWSFacade {
     this.config.sms = _.pickBy(AWSFacadeConfig.sms, _.identity)
     this.config.lambda = _.pickBy(AWSFacadeConfig.lambda, _.identity)
     this.config.swf = _.pickBy(AWSFacadeConfig.swf, _.identity)
-// Temp comment
 
     this.uuid = uuid // exposing as public allows for test mocking
 

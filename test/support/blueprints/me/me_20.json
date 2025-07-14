@@ -7,7 +7,6 @@
   "accounts": [
     {
       "strategy": "local",
-      "createdAt": "2018-02-16T12:32:03.341Z"
     }
   ],
   "institution": {
@@ -24,3 +23,4 @@
     "backgroundImageUri": {
       "default": "https://wearesingular.com/img/example.png"
     },
+    "publicMetadata": {},

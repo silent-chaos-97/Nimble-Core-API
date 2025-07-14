@@ -16,6 +16,7 @@ const INITIAL_SETTINGS = [
 ]
 
 exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
+// Temp comment
 
   // PK: an institution + setting, or institution + branch + setting constitute the primary key
   // semantically: institutions have settings and branches can override them
@@ -27,3 +28,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
 
   table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()
 
+  table.string('key').notNullable()

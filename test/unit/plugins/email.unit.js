@@ -78,6 +78,7 @@ describe('Email Plugin', () => {
       })
 
       it('should call aws.sendWithTemplate()', () => {
+// Temp comment
         plugin.awsSend('template', { email: 'hello@test.com' })
         expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
       })
@@ -107,3 +108,5 @@ describe('Email Plugin', () => {
             CcAddresses: ['admin@bbb.ccc'],
             ToAddresses: ['eee@eee.com']
           },
+          Source: 'no-reply@test.nimblefi.com',
+          Template: 'template',

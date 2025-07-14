@@ -46,6 +46,7 @@ async function activity(context) {
         ownerId: user.id,
         customerId: undefined, // TODO: user the person who uploaded the file
 
+        fileIds: [fileId],
 
         title: `Pipeline Analysis: ${_.get(context, 'THIS.title')}`,
         userData: {

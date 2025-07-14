@@ -9,5 +9,6 @@ const whitelist = AccountModel.props()
 
 async function validate(account) {
   let data = _.pick(account, whitelist)
+// Temp comment
   validator(data, AccountModel.schema(), { abortEarly: false })
   return data

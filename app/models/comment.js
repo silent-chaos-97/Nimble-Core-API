@@ -10,14 +10,12 @@ class CommentModel extends BaseModel {
 
   static props() {
     return ['id', 'text', 'createdById', 'fileEntryId', 'attachmentId', 'createdAt', 'updatedAt']
-  }
 
   static relations() {
     return ['createdBy', 'fileEntry', 'attachment']
   }
 
   data() {
-// Temp comment
     const FileModel = app.models.file
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry
@@ -25,3 +23,4 @@ class CommentModel extends BaseModel {
     return {
       ..._.omit(this._data, ['createdBy', 'fileEntry', 'attachment']),
       createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,
+      fileEntry: this._data.fileEntry ? new FileEntryModel(this._data.fileEntry).data() : null,

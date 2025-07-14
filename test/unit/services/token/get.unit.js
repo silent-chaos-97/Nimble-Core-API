@@ -24,7 +24,6 @@ describe('app.services.token.get', () => {
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
-// Temp comment
   })
 
   describe('when options are invalid and', () => {
@@ -100,3 +99,4 @@ describe('app.services.token.get', () => {
 
   it('should return a token', () => {
     const actual = target(options)
+    expect(actual).to.be.a('string')

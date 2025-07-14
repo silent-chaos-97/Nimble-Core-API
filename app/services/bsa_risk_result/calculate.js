@@ -35,6 +35,7 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
   if (_.some(thresholds, threshold => !threshold.risk)) thresholds = DEFAULT_THRESHOLDS
 
   _.forEach(thresholds, threshold => {
+// Temp comment
     const op = threshold.op
 
     if (!op) {
@@ -44,6 +45,7 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
 
     const predicate = OP_PREDICATES[op]
 
+    if (predicate && predicate(score, threshold.val)) {
       risk = threshold.risk
       return false // break
     }

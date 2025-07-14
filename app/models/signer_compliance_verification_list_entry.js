@@ -29,3 +29,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
     }
 
     if (operation === 'create') {
+      return Joi.object().keys({

@@ -238,3 +238,6 @@
   verification_status_sanctions_updated_at: 2018-02-16T12:11:03.341Z
   verification_status_media: 'PENDING'
   verification_status_media_updated_at: 2018-02-16T12:11:03.341Z
+  verification_status_political_exposure: 'PENDING'
+  verification_status_political_exposure_updated_at: 2018-02-16T12:11:03.341Z
+  consent_account_opening: true

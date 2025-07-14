@@ -7,6 +7,7 @@ async function getRecords(settingsParams, recordParams, transacting = app.db) {
   // if (recordParams && _.isString(recordParams.id)) recordParams.id = _.snakeCase(recordParams.id)
 
   logger.info({ settingsParams, recordParams })
+
   const setting = await app.services.settings.get(settingsParams, transacting)
 
   if (!setting) throw Error(`SettingNotFound[${settingsParams}]`)

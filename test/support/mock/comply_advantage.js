@@ -2467,7 +2467,6 @@ const parsedResult = [
       {
         "name": "Former Botswana President Mogae blasts Zimbabwean tyrant Robert Mugabe | ZimDaily",
         "value": "But on his Harare visit last month he stunned onlookers when he warmly shared the stage with the Zimbabwean leader while expanding his business empire. The former president of Botswana has once again set tongues wagging, this time accusing Mugabe of violating the rights of gays and lesbians. Speaking in an interview in New York with a United Nations online publication, Africa Renewal, Mogae emphasised the need for reformed mindsets.",
-        "date": "2020-03-21T00:00:00Z",
         "deletedDate": null,
         "url": "https://www.zimdaily.com/?p=42787",
         "countryCodes": [],
@@ -2486,6 +2485,7 @@ const parsedResult = [
       },
       {
         "name": "Kent farmer appeals to Nelson Mandela",
+        "value": "The brother of a farmer murdered in Zimbabwe has appealed for Nelson Mandela to intervene to prevent further bloodshed in the country's deepening crisis. Paul Dunn, who farms 1,500 acres at Ash, called on the former South African president and ANC leader to condemn Robert Mugabe's murderous regime and help end the killings. Mr Dunn has campaigned for peace in Zimbabwe since his brother, Alan, was murdered by Mugabe's war veterans on his farm near Harare eight years ago.",
         "date": "2020-03-26T00:00:00Z",
         "deletedDate": null,
         "url": "https://www.kentonline.co.uk/kent/news/kent-farmer-appeals-to-nelson-ma-a40038/",
@@ -2998,3 +2998,45 @@ const parsedResult = [
         "deletedDate": null,
         "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
       },
+      {
+        "name": "Listing Id",
+        "value": "OFAC-7480",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Program",
+        "value": "ZIMBABWE",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Sanction Type",
+        "value": "Block",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Title",
+        "value": "President of the Republic of Zimbabwe",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Date of Birth",

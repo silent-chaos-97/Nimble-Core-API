@@ -13,7 +13,6 @@ const WORKGROUPS = {
 }
 
 const DEPARTMENT = {
-// Temp comment
   key: 'departments',
   title: 'Departments',
   schema: { $ref: 'departments' }

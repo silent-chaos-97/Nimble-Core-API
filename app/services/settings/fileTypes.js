@@ -420,3 +420,9 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Rewards Program'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Balance Transfers'
+  },
+  {

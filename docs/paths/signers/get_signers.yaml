@@ -17,3 +17,4 @@
       - bearer: ['signers']
     responses:
       '200':
+        description: Signer information

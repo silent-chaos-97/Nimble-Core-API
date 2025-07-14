@@ -44,7 +44,6 @@ describe('app.services.email.emailVerification', () => {
   describe('when calling with valid data', () => {
     beforeEach(async() => {
       await seed.institution.create()
-      await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
@@ -88,3 +87,5 @@ describe('app.services.email.emailVerification', () => {
 
       emailData.verifyUrl = config.get('frontend.signerEmailVerificationURI')
         .replace(':protocol', config.get('protocol'))
+        .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
+        .replace(':domain', 'wearesingular.com')

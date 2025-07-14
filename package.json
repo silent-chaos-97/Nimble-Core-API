@@ -1,5 +1,6 @@
 {
   "name": "nimble-core",
+  "version": "0.1.0",
   "description": "nimble-core API",
   "private": true,
   "main": "index.js",
@@ -87,5 +88,5 @@
     "@sentry/node": "^5.27.1",
     "@types/mustache": "^4.1.2",
     "amortization": "^1.1.1",
-    "amortize": "^1.1.0",
     "async-require": "^1.2.2",
+    "aws-sdk": "^2.1099.0",

@@ -29,3 +29,4 @@ exports.up = async (knex)  => {
    UPDATE users
    set branch_id=(select id from institution_branches where external_id='73' and institution_id=users.institution_id);
    UPDATE users
+   set branch_id=(select id from institution_branches where external_id='42' and institution_id='${productionInstitutionId}')

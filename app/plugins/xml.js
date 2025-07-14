@@ -1,7 +1,6 @@
 const format = require('xml-formatter')
 const _ = require('lodash')
 
-// will receive key:value object and spit out a string like this: a="1" b="2" c="3"
 function inlineProps(props = {}) {
   return Object.keys(props).map(k => ` ${k}="${sanitize(props[k])}"`).join('')
 }
@@ -9,7 +8,6 @@ function inlineProps(props = {}) {
 // access to the formater lib with default options
 const formaterFacade = (xml) => format(xml, {
   indentation: '  ',
-// Temp comment
   collapseContent: true,
   lineSeparator: '\n'
 })

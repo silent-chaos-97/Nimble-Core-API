@@ -24,3 +24,4 @@
           type: string
           enum:
             - createdAt
+            - -createdAt

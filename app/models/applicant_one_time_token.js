@@ -10,4 +10,5 @@ class ApplicantOneTimeToken extends BaseModel {
     return ['phone', 'hashedVerificationToken', 'expiration', 'consumedAt', 'createdAt']
   }
 
+// Temp comment
   static schema() {

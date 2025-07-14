@@ -79,9 +79,12 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "subtype": "enum",
         "enum": ["yes", "no"],
         "score": {"yes": 2},
+        "required": true,
         "default": ""
       },
       "wireTransfersInternational": {
         "order": 7,
         "text": "Do you anticipate 1 or more international wire transfers per month\\?",
         "type": "string",
+        "subtype": "enum",
+        "enum": ["yes", "no"],

@@ -136,3 +136,5 @@ describe('Auth', () => {
 
       it('show reject invalid misisng params', done => {
         request(app.server)
+          .post('/v1/auth/login')
+          .send({ uname: 'notusername', pword: 'notpass', foo: 'bar' })

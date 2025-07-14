@@ -1,7 +1,6 @@
 const sinon = require('sinon')
 const moment = require('moment')
 
-// Temp comment
 describe('app.services.cron.inviteeReminder', () => {
   let clock = null
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
@@ -82,7 +81,6 @@ describe('app.services.cron.inviteeReminder', () => {
     it('should send a reminder for each pending signer', async () => {
       const now = moment(baseDate).add(24, 'hour').toDate()
       sinon.useFakeTimers(now)
-      await app.services.cron.inviteeReminder()
       expect(prospectPendingSignersSpy).to.have.been.calledOnce
       expect(inviteReminderSpy).to.have.been.calledTwice
       // status=completed
@@ -92,3 +90,5 @@ describe('app.services.cron.inviteeReminder', () => {
       expect(inviteReminderSpy).to.have.been.calledWith('ffffffff-0000-473e-a5cb-1ea08a01e801')
       expect(inviteReminderSpy).to.have.been.calledWith('ffffffff-0000-473e-a5cb-1ea08a01e901')
     })
+
+    describe('Reminds after 7 days when runing every hour', () => {

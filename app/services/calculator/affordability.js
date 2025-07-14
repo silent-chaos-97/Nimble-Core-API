@@ -277,7 +277,6 @@ async function _riskAnalysis(institutionId, summary, risks) {
 
   const agg = { disqualifying, performing, score, risk, analyses }
 
-  if (disqualifying) agg.disqualifiers = disqualifiers
   if (!performing) agg.nonPerformers = nonPerformers
 
   return agg
@@ -584,3 +583,20 @@ async function advancedRateSetting(institutionId, product, transacting) {
   const rate = await app.services.settings.getRecord({ key: 'advanced_rates', institutionId }, { id }, transacting)
   if (!rate) throw new BadRequestError(`AdvancedRateNotFound[settings.advanced_rates.${id}] OnProduct[${product.id}]`)
   return rate
+}
+
+async function _rate(product) {
+  const series = _.get(product, ['base_rate'], DEFAULT_BASE_RATE)
+
+  const bps = _.get(product, ['rate_consideration'], DEFAULT_RATE_CONSIDERATION_BPS)
+
+  const latestRate = await nimbleData.get(`interest-rates/${series}/latest`)
+
+  const rate = latestRate.rate
+
+  return {
+    value: _.round(rate + (bps / 100), 3),
+    series,
+    currentValue: rate,
+    rateConsiderationBps: bps
+  }

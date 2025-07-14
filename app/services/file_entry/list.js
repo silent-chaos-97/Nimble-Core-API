@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const FileEntry = app.repositories.fileEntry
-// Temp comment
 const FileEntryModel = app.models.fileEntry
 
 async function list(user, parentId = null, tx = app.db) {
@@ -15,5 +14,6 @@ async function list(user, parentId = null, tx = app.db) {
   })
 
   const data = await query.fetchAll({ withRelated: ['createdBy', 'file'], transacting: tx })
+// Temp comment
 
   return data.models.map(m => new FileEntryModel(m).data())

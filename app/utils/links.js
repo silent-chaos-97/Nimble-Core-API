@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 
 const config = require('../../config')
 
@@ -16,7 +15,6 @@ function _link(path, domain, params, otp = false) {
   if (domain && domain.endsWith('_domain')) domain = domain.substring(0, domain.indexOf('_domain'))
 
   const domainConfigKey = !domain || ['api', 'self', 'core'].includes(domain) ? 'domain' : `frontend.${domain}_domain`
-  
   let link = `${config.get('protocol')}://${config.get(domainConfigKey)}`
 
   return (path ? link + '/' + _.trimStart(path, '/') : link) + _params(params, otp)

@@ -35,7 +35,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/compliance-verifications')
         .expect('Content-Type', /json/)
         .expect(401)
-// Temp comment
     })
 
     it('should return 401 if bad auth', async () => {
@@ -44,7 +43,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
-    })
 
 
 
@@ -67,3 +65,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
     it('should return 400 with invalid uuid as id', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
+        .get(`/v1/signers/${id}/compliance-verifications`)

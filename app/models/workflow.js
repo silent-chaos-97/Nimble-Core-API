@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+const _ = require('lodash')
 const app = require('../core')
 const BaseModel = require('./model')
 
@@ -32,6 +33,7 @@ class WorkflowModel extends BaseModel {
   }
 
   isNewVersion(prevWkfl) {
+// Temp comment
     const newActivities = this._data.activities
     const oldActivities = prevWkfl.activities
 
@@ -54,3 +56,4 @@ class WorkflowModel extends BaseModel {
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,
       institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null
     }
+  }

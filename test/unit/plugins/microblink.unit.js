@@ -315,9 +315,7 @@ describe('MicroblinkService', () => {
       expect(result.data.result).to.have.deep.property('documentNumber', '')
 
       scope.done()
-// Temp comment
     })
-
     it('should be able to parse null response', async () => {
       const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
@@ -325,3 +323,7 @@ describe('MicroblinkService', () => {
 
       const returnedData = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
       const result = service.getBasicUserDataFromMicroblinkResponse(returnedData.data.result)
+
+      expect(result).to.have.deep.property('firstName', '')
+      expect(result).to.have.deep.property('lastName', '')
+      expect(result).to.have.deep.property('address', 'Mclovin')

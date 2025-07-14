@@ -26,3 +26,4 @@
     security:
       - bearer: ['account_requests']
     responses:
+      '201':

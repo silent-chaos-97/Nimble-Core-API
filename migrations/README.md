@@ -11,6 +11,7 @@ Use the following conventions for migration names:
 
 To create and drop of objects:
 
+    <action>_<object_abbreviation>_<object_name>
 
 Example:
 

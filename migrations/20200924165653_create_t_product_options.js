@@ -7,9 +7,9 @@ exports.up = function (knex) {
       .references('products.id')
       .notNullable()
       .onDelete('CASCADE')
-// Temp comment
 
     table.string('category').notNullable()
     table.string('key').notNullable()
+// Temp comment
     table.string('title')
     table.string('value')

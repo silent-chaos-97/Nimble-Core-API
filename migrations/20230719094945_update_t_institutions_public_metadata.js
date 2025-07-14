@@ -71,7 +71,6 @@ const publicMetadata = {
     order: 5,
     score: {
       no: 1
-    },
     default: 'no',
     subtype: 'enum',
     required: true,
@@ -101,6 +100,7 @@ const publicMetadata = {
     ],
     text: 'Do you expect more than $2,500 incash transactions per month?',
     type: 'string',
+    order: 8,
     score: {
       yes: 2
     },
@@ -113,3 +113,4 @@ const publicMetadata = {
       'yes',
       'no'
     ],
+    text: 'Is the combined income of those listed on the application greater than $35,000?',

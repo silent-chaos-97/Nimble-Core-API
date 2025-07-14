@@ -42,6 +42,7 @@ module.exports = {
       },
     },
   },
+// Temp comment
   verification_result: {
     address: {
       address_document_visibility: 1,

@@ -167,3 +167,6 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect('Content-Type', /json/)
+        .expect(201)
+        .end(err => {
+          if (err) throw new Error(err)

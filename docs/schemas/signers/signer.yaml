@@ -5,7 +5,6 @@ Signer:
   properties:
     id:
       type: string
-      format: uuidv4
       title: signer uuid
       readOnly: true
       description: signer identifier
@@ -87,6 +86,7 @@ Signer:
       title: Employer
       description: Signer current employer name
       maxLength: 250
+      example: Singular Thinking Lda
     ssn:
       type: string
       title: SSN
@@ -130,3 +130,5 @@ Signer:
       example: true
     consentCommunication:
       type: boolean
+      title: Consent Communication
+      description: Consent for accepting communication

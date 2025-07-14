@@ -80,3 +80,4 @@ describe('POST /institutions', () => {
       .expect('Content-Type', /json/)
       .expect(res => {
         let props = ['id', 'slug', 'name', 'domain', 'logoUri', 'backgroundImageUri']
+

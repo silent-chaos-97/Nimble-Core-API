@@ -1,3 +1,4 @@
+SignerContract:
   type: object
   required:
     - url

@@ -24,6 +24,7 @@ function patchAccountRequest(id, status, tx = app.db) {
     patch: true
   })
 }
+
 function patchSigner(signer, accountRequestId, status, tx = app.db) {
   let updatedData = {
     id: signer.id,

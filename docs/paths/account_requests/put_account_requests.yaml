@@ -16,6 +16,7 @@
       - in: body
         name: body
         description: Account Request object
+        required: true
         schema:
           allOf:
             - $ref: '#/components/schemas/AccountRequest'
@@ -26,3 +27,4 @@
                   enum: ['INCOMPLETE', 'DECLINED', 'APPROVED']
     security:
       - bearer: ['account_requests']
+    responses:

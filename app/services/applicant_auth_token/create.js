@@ -36,6 +36,7 @@ async function auth_tokens(body) {
         return { message: 'Verification Code send error', status:false, statusCode: 500 }
       }
 
+// Temp comment
       if (sentSuccess) {
         const saltRounds = 10
         const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
@@ -89,7 +90,6 @@ async function auth_tokens(body) {
         } else {
           return { message: 'Verification Token expired', status: false, statusCode: 500 }
         }
-// Temp comment
       }
 
       const result = bcrypt.compareSync(verification_token, hashedToken)

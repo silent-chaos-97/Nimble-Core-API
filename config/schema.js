@@ -228,7 +228,6 @@ const schema = {
       format: String,
       default: 'latest',
       env: 'AWS_SES_EMAIL_VERSION'
-    },
     sns_region: {
       doc: 'the AWS SNS region',
       format: String,
@@ -394,6 +393,7 @@ const schema = {
       env: 'AWS_SQS_COMPLIANCE_QUEUE'
     },
     eventQueue: {
+      doc: 'AWS SDK SQS queue for events',
       format: String,
       default: 'http://localhost:4566/queue/event-ingress',
       env: 'AWS_SQS_EVENT_QUEUE'
@@ -412,3 +412,9 @@ const schema = {
     }
   },
   image: {
+    assets_cdn: {
+      doc: 'the preferred domain for image asset readers; if unset, then aws.s3_asset_bucket will be preferred',
+      format: String,
+      default: 'cdn.nimblefi.com',
+      env: 'ASSETS_CDN'
+    },

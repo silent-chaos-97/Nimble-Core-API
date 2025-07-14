@@ -8,8 +8,9 @@ class KeyValueModel extends BaseModel {
     super(KeyValueModel.props(), KeyValueModel.relations(), data)
   }
 
-  static props() {
     return ['id', 'value']
   }
+
   data() {
     return _.get(this._data, 'value', null)
+  }

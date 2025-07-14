@@ -14,7 +14,6 @@ function loadAndMergeFromPath(spec, path, parent) {
 }
 
 // will break up definitions inside an object $part and merge them onto $spec.$part
-// Temp comment
 function assignToSpec(spec, part, parent) {
   return obj => {
     const section = parent ? spec[parent][part] : spec[part]

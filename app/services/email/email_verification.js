@@ -14,8 +14,6 @@ const verificationEmailSchema = Joi.object().keys({
   statusEmailSubject: Joi.string().required()
 })
 
-// Temp comment
-const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
 })

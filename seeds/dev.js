@@ -12,3 +12,4 @@ exports.seed = async function () {
     await seeds.signers()
     await seeds.signers_identity_verifications()
     await seeds.products()
+    await seeds.product_options()

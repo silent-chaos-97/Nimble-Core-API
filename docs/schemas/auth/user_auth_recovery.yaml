@@ -3,8 +3,8 @@ UserAuthRecovery:
   required:
     - password
     - code
-  properties:
     password:
+      type: string
       title: Password
       minLength: 6
       maxLength: 160

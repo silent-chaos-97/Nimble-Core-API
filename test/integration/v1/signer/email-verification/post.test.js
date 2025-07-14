@@ -1,4 +1,3 @@
-const uuid = require('uuid')
 const sinon = require('sinon')
 
 describe('POST /signers/:id/email-verifications', async () => {
@@ -31,6 +30,7 @@ describe('POST /signers/:id/email-verifications', async () => {
 
   describe('when using header Bearer token', () => {
     let headerToken
+    beforeEach(async () => {
       headerToken = await helpers.getAuthToken()
     })
 
@@ -120,3 +120,5 @@ describe('POST /signers/:id/email-verifications', async () => {
           const verification = result.rows[0]
 
           expect(app.services.email.emailVerification).to.have.been.calledOnce
+          expect(app.services.email.emailVerification).to.have.been.calledWith(verification.id, sinon.match.any)
+        })

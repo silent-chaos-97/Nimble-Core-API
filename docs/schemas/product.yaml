@@ -32,3 +32,4 @@ Product:
       items:
         $ref: '#/components/schemas/ProductOption'
     summary:
+      type: string

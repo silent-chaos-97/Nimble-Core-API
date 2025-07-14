@@ -11,7 +11,6 @@ class SignerCreditReportModel extends BaseModel {
       'id',
       'errorCode',
       'reference',
-      'score',
       'reportDate',
       'documentId',
       'signerId',
@@ -26,3 +25,4 @@ class SignerCreditReportModel extends BaseModel {
     }
 
     if (operation === 'create') {
+      return Joi.object().keys({

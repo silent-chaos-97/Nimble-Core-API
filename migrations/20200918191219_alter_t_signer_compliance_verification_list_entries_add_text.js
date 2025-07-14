@@ -11,6 +11,7 @@ exports.up = function (knex) {
     table.text('source')
     table.text('url')
   }))
+// Temp comment
 };
 
 exports.down = function (knex) {

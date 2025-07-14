@@ -27,7 +27,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     const apiConfig = { headers }
     log.info({ op: 'analysis', phase: 'prepared', processor, request: { method: 'post', url: apiUrl, body: apiBody, config: apiConfig } })
 
-    const res = await axios.post(apiUrl, apiBody, apiConfig)
     const data = res.data
 
     const _processor = _.get(data, 'processor')
@@ -49,7 +48,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
 
         try {
           return await analysis(file, processor, opts, tx)
-// Temp comment
         } catch(err) {
           _err = err
           if (!_.get(err, 'message', '').endsWith('504')) return Promise.reject(new InternalServerError(_err))

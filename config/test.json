@@ -39,5 +39,6 @@
   },
   "aws": {
     "key": "FAKE_ID",
+    "secret": "FAKE_SECRET",
     "endpoint": "http://localhost:4566",
     "region": "us-east-2",

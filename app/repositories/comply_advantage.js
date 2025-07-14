@@ -7,6 +7,7 @@ const logger = app.logger.getLogger('app.repositories.comply_advantage')
 class ComplyAdvantage {
 
   constructor(secret, baseUrl) {
+    this.secret = secret
     this.baseAPIURL = baseUrl
     this.config = {
       headers: {
@@ -33,7 +34,6 @@ class ComplyAdvantage {
   async getCertificate(searchId) {
     return await axios.get(`${this.baseAPIURL}/searches/${searchId}/certificate`, {
       headers: {
-        Authorization: `Token ${this.secret}`,
       },
       responseType: 'arraybuffer',
     })

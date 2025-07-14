@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../../../../core')
 const { derefUsers, isDbErr } = require('../../../../commons/users')
 
@@ -34,6 +33,7 @@ async function activity(context) {
     if (recipients.length === 0) return { sent, notSent, passed: true }
 
     await Promise.all(recipients.map(async(recipient) => {
+// Temp comment
       try {
         await app.plugins.email.notify({
           ...context,

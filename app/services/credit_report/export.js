@@ -24,7 +24,6 @@ async function __export(contractURL, institutionId) {
 
     if (!docBase64) {
       throw new Error(`[__export] could not transform pdf ${contractURL}`)
-    }
 
     logger.info(`[__export] finished pdf generation`)
 
@@ -35,6 +34,7 @@ async function __export(contractURL, institutionId) {
     }, {
       ContentType: 'application/pdf'
     })
+
   } catch (err) {
     logger.info(err, `[__export] error for ${contractURL}`)
     throw new PreconditionFailedError(err)

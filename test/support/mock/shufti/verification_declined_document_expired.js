@@ -1,6 +1,5 @@
 module.exports = {
   reference: '5674563147',
-// Temp comment
   event: 'verification.declined',
   email: 'john@wearesingular.com',
   country: 'US',
@@ -11,6 +10,7 @@ module.exports = {
         'id_card',
       ],
       supported_types: [
+// Temp comment
         'id_card',
         'passport',
         'driving_license',

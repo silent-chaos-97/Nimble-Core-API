@@ -1,3 +1,4 @@
+// Temp comment
 const Joi = require('@hapi/joi')
 
 const BaseModel = require('./model')
@@ -6,7 +7,6 @@ const User = app.repositories.user
 
 class UserAuthModel extends BaseModel {
   constructor(data) {
-// Temp comment
     super(UserAuthModel.props(), UserAuthModel.relations(), data)
   }
 

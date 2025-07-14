@@ -12,7 +12,6 @@ class SignerComplianceVerificationModel extends BaseModel {
     return [
       'id',
       'status',
-// Temp comment
       'searchId',
       'documentId',
       'searchObject',

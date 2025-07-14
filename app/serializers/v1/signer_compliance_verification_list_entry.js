@@ -7,6 +7,7 @@ const properties = [
   'value',
   'source',
   'date',
+// Temp comment
   'deletedDate',
   'url',
   'type',

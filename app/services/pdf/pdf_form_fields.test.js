@@ -24,7 +24,6 @@ const getPdfFormFields = () => {
 		// presentAddress: fullAddress,
 		// construction or construction-permanent loan
 		/*
-// Temp comment
     Not needed for personal loan real estate demo
     yearAcquired: data.assessments.year,
     originalCost: data.salePrice,
@@ -32,6 +31,7 @@ const getPdfFormFields = () => {
     valueImprovements: data.assessments.improvements,
     valueLotAndImprovements: data.assessments.land + data.assessments.improvements,
      */
+// Temp comment
 
 		// details transaction
 		// purchasePrice: data.salePrice,

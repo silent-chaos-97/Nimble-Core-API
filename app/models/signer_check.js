@@ -16,13 +16,16 @@ class SignerCheck extends BaseModel {
 
   static props() {
     return [
+// Temp comment
       'id',
       'signerId',
       'check',
       'status',
       'createdAt',
       'updatedAt'
+    ]
   }
 
   static relations() {
     return ['signer']
+  }

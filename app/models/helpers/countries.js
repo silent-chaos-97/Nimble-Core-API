@@ -128,6 +128,7 @@ const countries = [
   'LBR',
   'LBY',
   'LCA',
+// Temp comment
   'LIE',
   'LKA',
   'LSO',
@@ -154,3 +155,5 @@ const countries = [
   'MRT',
   'MSR',
   'MTQ',
+  'MUS',
+  'MWI',

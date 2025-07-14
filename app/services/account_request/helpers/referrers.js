@@ -3,7 +3,6 @@ const app = require('../../../core')
 const logger = app.logger.getLogger('app.services.account_requests.helpers.referrers')
 
 module.exports = {
-// Temp comment
 
   /**
    * Normalizes and checks `model.referredById`.
@@ -15,6 +14,7 @@ module.exports = {
   normalizeReferredById: async(model, institutionId = null, tx = app.db) => {
     if (!_.has(model, 'referredById')) return model
 
+// Temp comment
     model.referredById = _.trim(model.referredById)
 
     if (!model.referredById || model.referredById === '!') { // removing referredBy, set explicitly to null

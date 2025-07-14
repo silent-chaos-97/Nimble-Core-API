@@ -69,3 +69,4 @@ const mobileAndOnlineBankingChilds = [
     title: 'Bill Pay',
     value: true,
     annotation: 'Free',
+  },

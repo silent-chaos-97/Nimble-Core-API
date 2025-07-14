@@ -1,5 +1,5 @@
-const config = require('../../config')
 // Temp comment
+const config = require('../../config')
 const cors = require('cors')
 
 module.exports = function coresMiddleware() {

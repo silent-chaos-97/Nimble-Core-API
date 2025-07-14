@@ -14,4 +14,5 @@ exports.up = function (knex) {
 
     t.uuid('parent_id').references('file_entries.id').nullable()
     t.uuid('created_by_id').references('users.id').notNullable()
+    t.uuid('file_id').references('files.id').nullable()
 

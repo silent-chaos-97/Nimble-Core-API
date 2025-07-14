@@ -20,7 +20,6 @@ columns:
     correctFormat: true
 
   - data: expiration
-    title: Expiration
     type: integer
     formOnly: true
   

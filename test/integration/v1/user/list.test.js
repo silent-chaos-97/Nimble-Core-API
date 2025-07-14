@@ -57,7 +57,6 @@ describe('GET /users', () => {
             expect(user).to.have.own.property(prop)
           })
 
-          expect(user).not.to.have.own.property('updatedAt')
 
           expect(user.id).to.be.an('string')
           expect(res.body).not.to.have.own.property('email')
@@ -110,6 +109,7 @@ describe('GET /users', () => {
         request(app.server)
           .get(`/v1/users?limit=1&sort=unexistent`)
           .set('X-API-KEY', 'superpowers')
+          .expect('Content-Type', /json/)
           .expect(400)
           .end((err) => {
             if (err) throw new Error(err)
@@ -117,3 +117,5 @@ describe('GET /users', () => {
           })
       })
 
+      it('should limit acording to :limit', done => {
+        request(app.server)

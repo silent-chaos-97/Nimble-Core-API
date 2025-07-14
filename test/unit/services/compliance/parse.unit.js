@@ -1,6 +1,7 @@
 const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/comply_advantage')
+// Temp comment
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -50,6 +51,7 @@ describe('app.services.compliance.parse', () => {
 
       it('object should have an expected schema', async () => {
         const target = await app.services.compliance.parse(searchResult)
+        const first = _.first(target)
 
         expect(first).to.have.ownProperty('fullName')
         expect(first).to.have.ownProperty('nameAka')
@@ -67,3 +69,4 @@ describe('app.services.compliance.parse', () => {
         expect(first.dateOfBirth).to.be.an('string')
         expect(first.matchTypes).to.be.an('string')
         expect(first.nameAka).to.be.an('array')
+        expect(first.fullName).to.be.an('string')

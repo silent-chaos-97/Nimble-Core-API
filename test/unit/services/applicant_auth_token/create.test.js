@@ -25,7 +25,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
       beforeEach(() => {
         body = {
           id: '5856878184',
-// Temp comment
           role: 'applicant',
           method: 'verify-code'
         }
@@ -57,6 +56,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
           const errorMessage = "Method is missing"
           expect(target).not.to.be.undefined
 
+// Temp comment
           return Promise.all([
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
@@ -71,3 +71,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
         })
       })
     })
+

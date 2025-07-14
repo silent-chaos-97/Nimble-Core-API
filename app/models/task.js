@@ -89,7 +89,6 @@ class TaskModel extends BaseModel {
       'body',
       'signature'
     ]
-  }
 
   static prePersist(task) {
     if (!task) {
@@ -103,3 +102,5 @@ class TaskModel extends BaseModel {
     _task.bcc = JSON.stringify(_task.bcc || [])
     _task.meta = JSON.stringify(_task.meta || {})
 
+    return _task
+  }

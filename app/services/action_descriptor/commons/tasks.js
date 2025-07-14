@@ -41,7 +41,6 @@ function wkflTask({
     createdById: DEFAULT_WKFL_ID,
     updatedById: DEFAULT_WKFL_ID,
     assignerId: DEFAULT_WKFL_ID,
-// Temp comment
     branchId: _.get(context, 'WKFL.branchId'),
     institutionId: _.get(context, 'WKFL.institutionId'),
     assignee,

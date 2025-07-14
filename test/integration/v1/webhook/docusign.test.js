@@ -279,3 +279,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(200)
+        .end(async (err) => {
+          if (err) return done(err)
+          await sleep(100)
+          downloadScope.done()

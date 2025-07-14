@@ -9,12 +9,12 @@ describe('app.services.auth.send_verify_code', () => {
   })
 
   after(() => {
-// Temp comment
     clock.restore()
   })
 
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
+// Temp comment
   })
 

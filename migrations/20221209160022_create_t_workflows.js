@@ -7,9 +7,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'workflows', table => {
     table.uuid('institution_id').references('institutions.id').notNullable().onDelete('CASCADE')
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
-// Temp comment
     table.string('name').notNullable()
     table.string('description')
-    table.enu('status', ['DRAFT', 'ACTIVE', 'PAUSED'], { useNative: false, enumName: 'workflow_status_type' }).notNullable().defaultTo('DRAFT')
     table.jsonb('trigger')
     table.jsonb('activities').notNullable().default('[]')

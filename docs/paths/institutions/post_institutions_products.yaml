@@ -13,3 +13,5 @@
           schema:
             $ref: '#/components/schemas/Product'
     responses:
+      '201':
+        $ref: '#/components/schemas/Product'

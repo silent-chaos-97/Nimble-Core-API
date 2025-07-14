@@ -42,3 +42,4 @@ Identity:
       title: Zip code
       description: Individual zip code
       nullable: true
+      example: 17101-0000

@@ -119,3 +119,5 @@ columns:
       postfix: '%'
 
   - data: rate_type
+    editor: select
+    selectOptions:

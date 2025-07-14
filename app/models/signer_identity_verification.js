@@ -13,7 +13,6 @@ class SignerIdentityVerification extends BaseModel {
       'signerId',
       'verification',
       'status',
-      'createdAt',
       'updatedAt',
     ]
   }

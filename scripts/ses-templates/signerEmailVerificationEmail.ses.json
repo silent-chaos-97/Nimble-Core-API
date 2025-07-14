@@ -1,4 +1,4 @@
 {
-  "Template": {
     "TemplateName": "signerEmailVerificationEmail",
     "SubjectPart": "{{statusEmailSubject}}",
+    "TextPart": "Dear {{signerFirstName}},\nTo finish setting up your Central Bank account opening request, please click the button below to verify that {{signerEmail}} is your email.\nBy clicking on the button you are confirming you rightfully own this email account.\n\nVerify your email: {{verifyUrl}}\n\nDidn't request this email?\nNo worries! Your address may have been entered by mistake. If you ignore or delete this email, nothing further will happen.\n\n{{institution}},\n{{institutionUrl}}",

@@ -8,6 +8,7 @@ describe("AWS Facade for s3", () => {
 
   before(() => {
     sandbox.replace(AWS, 'uuid', () => '00000000-0000-0000-0000-000000000000')
+    sandbox.spy(AWS, 'uuid')
     sandbox.spy(AWS.s3, 'putObject')
     sandbox.spy(AWS.s3, 'copyObject')
     sandbox.spy(AWS.s3, 'getSignedUrl')
@@ -92,3 +93,4 @@ describe("AWS Facade for s3", () => {
 
     it('should call real s3 without generating uuid', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder', '00000000-0000-0000-0000-000000000001')
+      let expectedCall = {

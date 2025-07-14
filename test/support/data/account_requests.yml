@@ -22,7 +22,6 @@
   created_by_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
   status: 'APPROVED'
   branch_id: '2552ab85-0000-0000-0000-000000000001'
-  bsa_risk: 'Low'
   bsa_score: 2
   created_at: 2019-03-16T12:24:11.341Z
   updated_at: 2019-03-16T12:24:11.341Z
@@ -65,3 +64,4 @@
   status_email_body: 'example body'
   status_email_subject: 'example subject'
   status_updated_at: 2019-03-17T12:34:11.341Z
+  contract_document_envelope_id: '5d715751-e027-45e4-884b-99bb85c357dc'

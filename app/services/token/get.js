@@ -16,7 +16,6 @@ function schema() {
   })
 }
 
-// Temp comment
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1
 function getTokenInfo(options) {
   const now = moment()

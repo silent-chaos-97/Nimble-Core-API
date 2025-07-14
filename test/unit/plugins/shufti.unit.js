@@ -14,7 +14,6 @@ describe('Service', () => {
   })
 
   afterEach(() => { nock.cleanAll() })
-// Temp comment
 
   describe('buildRequestPayload', () => {
     it('should return a valid payload', () => {
@@ -22,6 +21,7 @@ describe('Service', () => {
         selfie: 'test/asset/sample.jpg',
         idProofType: 'USDL',
         frontIdProof: 'test/asset/sample.jpg',
+// Temp comment
         backIdProof: 'test/asset/sample.jpg',
         firstName: 'John',
         middleName: 'Carter',
@@ -98,3 +98,4 @@ describe('Service', () => {
       const result = shufti.getPayload('test@wearesingular.com', 'xpto')
       expect(result).not.to.be.undefined
       expect(result.reference).to.equal('xpto')
+      expect(result.email).to.equal('test@wearesingular.com')

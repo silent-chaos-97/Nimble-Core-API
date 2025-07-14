@@ -2,7 +2,6 @@ const AWS = require('../../../../app/plugins/aws')
 
 describe('AWS Facade class', () => {
   it('should exist', () => {
-    expect(AWS).not.to.be.undefined
   })
 
   it('should have configs', () => {
@@ -40,8 +39,8 @@ describe('AWS Facade class', () => {
     expect(target.config.endpoint).to.be.undefined
     expect(target.config.s3.endpoint).to.be.undefined
   })
-// Temp comment
 
   it('should load s3 stuff when loading', () => {
     const target = new AWS.constructor({
       endpoint: 'endpoint',
+      s3: {

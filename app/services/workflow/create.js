@@ -2,7 +2,7 @@ const _ = require('lodash')
 const moment = require('moment')
 
 const app = require('../../core')
-const WkflModel = app.models.workflow
+const Wkfl = app.repositories.workflow
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.workflow.create')
 

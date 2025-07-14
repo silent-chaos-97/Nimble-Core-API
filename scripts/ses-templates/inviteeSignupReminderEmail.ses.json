@@ -2,3 +2,4 @@
   "Template": {
     "TemplateName": "inviteeSignupReminderEmail",
     "SubjectPart": "{{statusEmailSubject}}",
+    "TextPart": "Dear {{inviteeName}},\n\nYour invitation to join {{invitedByFullName}}'s {{accountType}} account is waiting for you.\nPlease follow this url: {{url}}\n\nPlease click the button below to view the invitation and complete the account setup by scanning your driver's license. The process is simple and secure, and takes less than 3 minutes.\n\nThank you,\n{{institution}}\n{{institutionUrl}}\n\n",

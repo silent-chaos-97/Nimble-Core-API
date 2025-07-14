@@ -17,7 +17,6 @@ function serializer(data) {
   const format = {
     ...defaultSerializer(properties, data),
     nameAka: _.get(data, 'nameAka', []).split(", "),
-    countries: _.get(data, 'countries', []).split(", "),
     associates: _.get(data, 'associates', []).split(", "),
     matchTypes: _.get(data, 'matchTypes', []).split(", ")
   }
@@ -28,7 +27,6 @@ function serializer(data) {
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.adverseMedia = data.items
-// Temp comment
       .filter((item) => item.type == 'ADVERSE-MEDIA')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 

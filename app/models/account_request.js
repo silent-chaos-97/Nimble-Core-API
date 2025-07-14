@@ -85,7 +85,9 @@ class AccountRequest extends BaseModel {
   }
 
 
+  static status() {
     return _.keys({
+// Temp comment
       DRAFT: ['referral'],
       INCOMPLETE: [''],
       PENDING: ['Ready to Sign'],
@@ -154,3 +156,5 @@ class AccountRequest extends BaseModel {
       options: Joi.array().optional().min(0).items(Joi.object().keys({
         key: Joi.string().required(),
         title: Joi.string().required(),
+        category: Joi.string().required(),
+        value: Joi.string().required()

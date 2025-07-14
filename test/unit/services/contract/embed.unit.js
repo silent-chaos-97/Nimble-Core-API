@@ -41,6 +41,7 @@ describe('app.services.contract.embed', () => {
         sinon.reset()
         nock.cleanAll()
       })
-
       after(() => {
         sinon.restore()
+        nock.enableNetConnect()
+      })

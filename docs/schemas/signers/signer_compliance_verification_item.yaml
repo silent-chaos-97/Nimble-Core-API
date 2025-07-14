@@ -27,6 +27,7 @@ SignerComplianceVerificationItem:
       type: array
       items:
         type: string
+    associates:
       title: Any associates of this result
       type: array
       items:
@@ -35,3 +36,4 @@ SignerComplianceVerificationItem:
       title: A list of entries found about results of the type Media
       type: array
       items:
+        $ref: '#/components/schemas/SignerComplianceVerificationListEntry'

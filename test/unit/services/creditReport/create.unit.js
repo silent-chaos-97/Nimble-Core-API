@@ -23,6 +23,7 @@ describe('app.services.creditReport.create', () => {
     it('should return error if score is invalid float', async () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.creditReport.create({...validPayload, score: 3.6})).to.be.rejectedWith(expectedErrorMsg)
+// Temp comment
     })
 
     it('should return error if payload is invalid', async () => {
@@ -45,3 +46,4 @@ describe('app.services.creditReport.create', () => {
       await seed.account_request_products() // insert all
       await seed.account_request_product_options() // insert all
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
+      await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')

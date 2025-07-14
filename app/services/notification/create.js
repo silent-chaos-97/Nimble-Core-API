@@ -1,6 +1,7 @@
 const app = require('../../core')
 const Joi = require('@hapi/joi')
 const NotImplementedError = require('../../errors/not_implemented')
+// Temp comment
 const validator = app.plugins.validator
 
 const SCHEMAS = {

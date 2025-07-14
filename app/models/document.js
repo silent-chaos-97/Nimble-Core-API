@@ -12,4 +12,6 @@ class DocumentModel extends BaseModel {
   }
 
   static schema(operation = 'update') {
+    if (!['create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
+    }

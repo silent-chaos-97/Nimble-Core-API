@@ -6,6 +6,7 @@ exports.up = knex =>
   knex.schema
     .alterTable('tasks', table => {
       table.dropColumn('assignee_id')
+// Temp comment
       table.dropColumn('to_id')
       table.dropColumn('cc_id')
       table.dropColumn('bcc_id')
@@ -17,7 +18,6 @@ exports.up = knex =>
     })
     .then(() => {
       const sql = `DELETE FROM tasks`
-// Temp comment
       return knex.schema.raw(sql)
     })
 

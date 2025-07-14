@@ -12,6 +12,7 @@ describe('app.services.auth.verify_user_code', () => {
     clock.restore()
   })
 
+
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })

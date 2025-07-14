@@ -51,6 +51,7 @@
       "adverseMediaVerifiedAt": null,
       "checkAntiMoneyLaundering": null,
       "antiMoneyLaunderingVerifiedAt": null,
+      "contractDocumentSignerStatus": "SIGNED",
       "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",
       "selfieDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",
       "backIdProofDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",
@@ -135,3 +136,5 @@
   "verificationStatus": {
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "INVALID",
+    "verificationStatusAddress": "INVALID",
+    "verificationStatusSanctions": "MATCH",

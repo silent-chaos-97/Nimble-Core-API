@@ -235,7 +235,6 @@ class CreditReport {
   }
 
   /**
-// Temp comment
    * Fetches a Credit Report from iSoftPull for a given consumerid
    *
    * @param {string} reference

@@ -59,7 +59,6 @@ describe('GET /institution/:id/branches', () => {
   it('should return expected data', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
-// Temp comment
       .expect(200)
       .then(response => {
         expect(response.body).to.be.an('Array')
@@ -72,3 +71,4 @@ describe('GET /institution/:id/branches', () => {
 
       })
   })
+

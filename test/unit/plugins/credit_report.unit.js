@@ -169,3 +169,5 @@ describe('Credit Report Plugin', () => {
         documentNumber: '123213',
         documentExpirationDate: '2021-12-12',
         documentIssuedDate: '2019-12-12',
+        employer: "Singular",
+      }

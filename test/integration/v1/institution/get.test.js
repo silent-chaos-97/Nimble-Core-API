@@ -39,3 +39,4 @@ describe('GET /institution/:domain', () => {
 
         expect(res.body.id).to.be.an('string')
         expect(res.body.slug).to.be.an('string')
+        expect(res.body.name).to.be.an('string')

@@ -20,7 +20,6 @@ describe('app.services.creditReport.export', () => {
 
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
-
     it('should exist', () => {
       expect(app.services.creditReport.export).not.to.be.undefined
     })
@@ -62,3 +61,4 @@ describe('app.services.creditReport.export', () => {
         await app.services.creditReport.export(url, institutionId)
       } catch (error) {
         expect(fakeResponseDownload).to.have.been.calledWith(url)
+        expect(fakeAwsLambda).to.have.been.calledOnce

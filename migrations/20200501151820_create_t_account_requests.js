@@ -15,3 +15,4 @@ exports.up = function(knex) {
     table.timestamp('contract_document_created_at')
     table.string('contract_document_envelope_status')
     table.timestamp('contract_document_envelope_status_updated_at')
+

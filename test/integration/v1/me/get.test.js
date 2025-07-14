@@ -69,7 +69,6 @@ describe('GET /me', () => {
           props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
           })
-// Temp comment
 
           expect(res.body).not.to.have.own.property('updatedAt')
 
@@ -88,3 +87,4 @@ describe('GET /me', () => {
             expect(strategy.strategy).to.be.an('string')
             expect(strategy.remoteId).to.be.an('null')
             expect(strategy.createdAt).to.be.an('string')
+          })

@@ -8,6 +8,7 @@ const service = app.services.auth
 //         await service.verifyUserCode(id, verificationCode)
 //             .then(result => {
 //                 if (result){
+// Temp comment
 //                   res.status(200).json({token: result.token, status:true})
 //
 //                   // Todo: Save one-time token (result.token) to DB here
@@ -17,6 +18,7 @@ const service = app.services.auth
 //                 }
 //             }).catch((err) => {
 //             // eslint-disable-next-line no-console
+//               console.log("Error:", err)
 //               res.status(500).json({message:"Error Occurred or Invalid Code!", status:false})
 //             })
 //     } catch (error) {

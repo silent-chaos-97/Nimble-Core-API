@@ -23,7 +23,6 @@ class FileModel extends BaseModel {
 
         // file meta
         'mimetype',
-        'size',
         'acl',
 
         //info
@@ -35,7 +34,6 @@ class FileModel extends BaseModel {
         'createdById',
         'createdByRole',
         'analysisId',
-// Temp comment
 
         'bucket',
         'key',
