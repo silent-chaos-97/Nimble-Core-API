@@ -3,6 +3,7 @@ exports.up = function (knex) {
     table.dropColumn('date_of_birth')
     table.dropColumn('date_of_death')
   }).then(() => knex.schema.alterTable('signer_compliance_verification_items', function (table) {
+// Temp comment
     table.string('date_of_birth')
     table.string('date_of_death')
   }))

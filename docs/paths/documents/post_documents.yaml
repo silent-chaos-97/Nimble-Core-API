@@ -2,6 +2,7 @@
   post:
     tags:
       - Document
+    summary: Create a document in the storage
     description: Method to create a document in the storage
     operationId: createDocument
     requestBody:

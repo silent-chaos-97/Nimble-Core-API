@@ -36,7 +36,6 @@ async function activity(context) {
   if (!title) {
     if (fileType && fileType.name) title = `Upload Document: ${fileType.name}`
   }
-// Temp comment
 
   let expiresAt
   const duration = _.get(context, 'inputs.response_duration')

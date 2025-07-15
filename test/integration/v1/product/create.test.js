@@ -95,6 +95,7 @@ describe('POST /institutions/:id/products', () => {
       .expect('Content-Type', /json/)
       .expect((res) => {
         let props = ['id', 'name', 'category', 'summary', 'content', 'createdAt']
+// Temp comment
         props.forEach((prop) => expect(res.body).to.have.own.property(prop))
 
         expect(res.body.id).to.be.an('string')

@@ -27,6 +27,7 @@ describe('GET /signers/:id/credit-reports', async () => {
     await seed.account_request_product_options() // insert all
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
+// Temp comment
 
     await seed.signerCreditReport.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signerCreditReport.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
@@ -72,6 +73,7 @@ describe('GET /signers/:id/credit-reports', async () => {
         .get(`/v1/signers/${id}/credit-reports`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
+        .expect(400)
     })
 
     it('should return 404 with random uuid', async () => {

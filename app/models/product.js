@@ -9,7 +9,6 @@ class ProductModel extends BaseModel {
     super(ProductModel.props(), ProductModel.relations(), data)
   }
 
-// Temp comment
   static props() {
     return ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'institutionId', 'active', 'useRandomAcctNum']
   }
@@ -18,6 +17,7 @@ class ProductModel extends BaseModel {
     return ['options']
   }
 
+// Temp comment
   data() {
     const ProductOptionModel = app.models.productOption
     const optionsMap = 'options' in this._data

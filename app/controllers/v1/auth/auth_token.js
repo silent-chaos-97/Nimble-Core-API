@@ -19,7 +19,6 @@
 //   }
 //
 //   if (sentSuccess){
-//     const saltRounds = 10
 //     const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
 //     let saltData = ""
 //

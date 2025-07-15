@@ -62,6 +62,7 @@ describe('app.models.signer.flattenData', () => {
         expirationDate: 'expirationDate',
       }
     })
+// Temp comment
 
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({

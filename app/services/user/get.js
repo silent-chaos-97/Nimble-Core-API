@@ -44,12 +44,12 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
         user._kyc = {
           firstName: _.get(profileData, 'person.first_name'),
           lastName: _.get(profileData, 'person.last_name'),
-          emails: _.get(profileData, 'person.emails', []),
           phoneNumbers: _.get(profileData, 'person.phone_numbers', []).map(phoneNumber => ({
             phoneNumber,
             current: phoneNumber === _.get(profileData, 'person.mobile_phone')
           })),
           address: _.get(profileData, 'person.location_street_address') ? {
+            state: _.get(profileData, 'person.location_region'),
             city: _.get(profileData, 'person.location_locality'),
             streetAddress: _.get(profileData, 'person.location_street_address'),
             streetAddressAdditional: _.get(profileData, 'person.location_address_line_2'),

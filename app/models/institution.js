@@ -9,6 +9,7 @@ class InstitutionModel extends BaseModel {
   constructor(data) {
     super(InstitutionModel.props(), InstitutionModel.relations(), data)
   }
+
   static props() {
     return [
       'id',

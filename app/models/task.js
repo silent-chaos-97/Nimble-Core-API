@@ -40,7 +40,6 @@ const SCHEMA = Joi.object().keys({
     .default(Types.generic)
     .valid(..._.values(Types)),
   status: Joi.string()
-    .default(Statuses.created)
     .valid(..._.values(Statuses)),
   expiresAt: Joi.date(),
   files: Joi.object(),

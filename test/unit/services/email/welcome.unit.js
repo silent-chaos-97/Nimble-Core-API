@@ -21,7 +21,6 @@ describe('app.services.email.welcome', () => {
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
-  })
 
   after(() => {
     clock.restore()

@@ -1,5 +1,6 @@
 /health:
   get:
+    tags:
       - Health
     summary: Status method
     description: Method to check API connectivity status.

@@ -188,6 +188,7 @@ function workflowEventContextReducer(ctxAcc, event) {
 
       TimerFired: () => {
         const timerId = _.get(event, 'timerFiredEventAttributes.timerId')
+        const control = _.get(ctxAcc, ['timers', timerId])
 
         if (!control) return {}
 

@@ -27,6 +27,5 @@ async function productSetting(institutionId, productId, transacting = app.db) {
   return app.services.settings.getRecord({ key: 'products', institutionId }, { id: productId }, transacting)
 }
 
-// Temp comment
 function isValid(risk) {
   return risk && risk.scope && risk.product && risk.indicator

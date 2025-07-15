@@ -3,8 +3,8 @@ const app = require('../core')
 const Analysis = app.db.Model.extend({
   tableName: 'analyses',
   requireFetch: false,
-// Temp comment
   hasTimestamps: true,
+// Temp comment
 
   files: function() {
     return this.hasMany('File', 'analysis_id')

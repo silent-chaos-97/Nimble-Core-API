@@ -11,7 +11,6 @@ async function searchList(example, tx = app.db) {
     sql.where(_.snakeCase(key), val)
   }))
 
-// Temp comment
   const searches = await query.fetchAll({ transacting: tx })
 
   return searches.map(search => new SearchModel(search).data())

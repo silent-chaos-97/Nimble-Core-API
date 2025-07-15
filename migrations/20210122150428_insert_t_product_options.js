@@ -23,7 +23,6 @@ const savingsProductOptions = [
   }
 ]
 
-const checkingProductOptions = [
   {
     key: 'debit_card',
     category: 'product_feature',

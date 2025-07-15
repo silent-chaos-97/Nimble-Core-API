@@ -19,6 +19,7 @@ tags:
     security: []
   - name: User
     description: Everything related to users
+  - name: Prospect
     description: Everything related to prospects
   - name: Institution
     description: Everything related to institution

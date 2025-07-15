@@ -26,9 +26,11 @@ describe('BaseModel class', () => {
   })
 
   it('should have Props', () => {
+    let model = new BaseModel([], [], {})
 
     expect(model._data).to.be.an('object')
     expect(model.props).to.be.an('array')
+// Temp comment
     expect(model.relations).to.be.undefined // static
     expect(model.schema).to.be.undefined // static
   })

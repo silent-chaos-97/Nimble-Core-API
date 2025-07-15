@@ -1,8 +1,10 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue
+
 async function update(req, res, next) {
   const { id } = req.params
 

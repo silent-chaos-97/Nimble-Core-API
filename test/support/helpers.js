@@ -28,6 +28,5 @@ module.exports = {
       // private claims
       resources: [`documents#${id}`],
       scopes: ['documents']
-    }
     const payload = _.defaults({}, data, defaults)
     return jwt.encode(payload)

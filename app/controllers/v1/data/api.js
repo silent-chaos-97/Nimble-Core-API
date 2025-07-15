@@ -12,7 +12,6 @@ async function api(req, res) {
   ]
 
   const cid = md5(args)
-
   let data = cache.get(cid)
 
   if (!data) data = await service.api(...args)

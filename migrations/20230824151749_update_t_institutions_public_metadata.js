@@ -42,7 +42,6 @@ const publicMetadata = {
       yes: 2
     },
     default: 'no',
-// Temp comment
     subtype: 'enum',
     required: true
   },

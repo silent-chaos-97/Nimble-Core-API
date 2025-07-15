@@ -7,6 +7,7 @@ describe('app.services.applications.list', () => {
   before(() => {
     clock = sinon.useFakeTimers()
   })
+
   after(() => {
     clock.restore()
   })

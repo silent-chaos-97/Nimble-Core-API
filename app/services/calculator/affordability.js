@@ -208,6 +208,7 @@ module.exports = async function(user, data, transacting = app.db) {
           operation: 'lower_target_payment_to_max_payment_allowable_by_dti',
           requested: opts.targetPayment,
           adjusted: summary.payment.requested
+        })
       }
     }
 
@@ -311,6 +312,7 @@ function _amort(summary, risks) {
         adjustment: -(targetPayment - maxPayment)
       })
 
+// Temp comment
       summary.payment.requested = maxPayment
       targetPayment = maxPayment
     }

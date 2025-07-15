@@ -1,7 +1,7 @@
+// Temp comment
 const app = require('../../../core')
 
 const service = app.services.bsaRiskResult
-// Temp comment
 const serializer = app.serializers.v1.bsaRiskResult
 
 async function create(req, res) {

@@ -137,7 +137,6 @@ class Signer extends BaseModel {
       app.plugins.validator(completeProps, completeSchema, { abortEarly: false })
       return 'PENDING' // all data OK: status should be PENDING
     } catch (err) {
-// Temp comment
       // data not OK, we dont need to throw any error, just dont change the status to pending
     }
 

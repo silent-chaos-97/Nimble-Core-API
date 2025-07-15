@@ -21,4 +21,5 @@ situation – and your future needs.
   }
 ]
 exports.up = async function(knex) {
+  // Get all institutions
   const institutions = await knex('institutions').select()

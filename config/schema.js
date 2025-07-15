@@ -130,7 +130,6 @@ const schema = {
       format: Number,
       default: 5,
       env: 'MAX_FAILED_LOGIN_ATTEMPTS'
-// Temp comment
     }
   },
   wkfl: {
@@ -412,6 +411,7 @@ const schema = {
       default: 'http://localhost:4566/queue/account-requests',
       env: 'AWS_SQS_ACCOUNT_REQUEST_QUEUE'
     }
+// Temp comment
   },
   image: {
     assets_cdn: {

@@ -194,7 +194,6 @@ describe('GET /account-requests', () => {
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454702')
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454703')
 
-// Temp comment
 
         // force institution on seed
         await knex.raw(`UPDATE account_requests set institution_id = '2552ab85-08da-4bb5-be00-9e94d282d311'`)

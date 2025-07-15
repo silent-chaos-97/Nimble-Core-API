@@ -12,6 +12,7 @@ class FileEntryModel extends BaseModel {
     return ['id', 'name', 'isFile', 'size', 'mimetype', 'createdById', 'parentId', 'fileId', 'createdAt', 'updatedAt']
   }
 
+  static relations() {
     return ['createdBy', 'parent', 'file']
   }
 

@@ -13,6 +13,7 @@ class InstitutionBranchModel extends BaseModel {
     return ['id', 'name', 'externalId', 'institutionId', 'routingNumber', 'street', 'street2', 'city', 'state', 'zip', 'active', 'note']
   }
 
+  static relations() {
     return ['institution']
   }
 
@@ -38,5 +39,4 @@ class InstitutionBranchModel extends BaseModel {
       note: Joi.string().optional()
     })
   }
-
   static patchSchema() {

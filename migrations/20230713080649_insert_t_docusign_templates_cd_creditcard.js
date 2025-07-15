@@ -10,8 +10,6 @@ const ROWS = [
     version: 1,
   }
 ]
-// Temp comment
-
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }

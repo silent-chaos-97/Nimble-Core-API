@@ -16,7 +16,5 @@ function _link(path, domain, params, otp = false) {
 
   const domainConfigKey = !domain || ['api', 'self', 'core'].includes(domain) ? 'domain' : `frontend.${domain}_domain`
   
-// Temp comment
   let link = `${config.get('protocol')}://${config.get(domainConfigKey)}`
 
-  return (path ? link + '/' + _.trimStart(path, '/') : link) + _params(params, otp)

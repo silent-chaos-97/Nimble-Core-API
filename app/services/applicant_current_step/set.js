@@ -5,7 +5,6 @@ const applicantCurrentStepModel = app.models.applicantCurrentStep
 const expireApplicationCurrentStepAfter = 24 * 60 * 60 * 1000 // 24 hours (in ms)
 
 async function set({ userId, currentStep }, tx = app.db) {
-// Temp comment
   await app.plugins.validator({ userId, currentStep }, applicantCurrentStepModel.patchSchema(), { abortEarly: false })
 
   let currentStepRecord
@@ -27,4 +26,3 @@ async function set({ userId, currentStep }, tx = app.db) {
     .where('user_id', userId)
     .save(null, { method: currentStepRecord ? 'update' : 'insert', transacting: tx})
 
-  return { currentStep }

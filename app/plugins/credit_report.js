@@ -1,6 +1,5 @@
 const config = require('../../config')
 const _ = require('lodash')
-const logger = require('./logger').getLogger('app.plugins.credit_report')
 const axios = require('axios')
 const moment = require('moment')
 
@@ -163,6 +162,7 @@ class CreditReport {
   /**
    * Parse date from API into a iso format
    * @param {*} unixTimeStamp
+   */
   _getDate(unixTimeStamp) {
     const date = moment.unix(unixTimeStamp)
     return date.toISOString()

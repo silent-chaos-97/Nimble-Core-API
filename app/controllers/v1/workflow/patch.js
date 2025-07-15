@@ -10,6 +10,7 @@ async function patch(req, res) {
   const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) throw new BadRequestError('WorkflowBodyRequired')
+
   if (patch.id && patch.id !== id) throw new BadRequestError('PathIdBodyIdMismatch')
 
   patch.id = id

@@ -95,7 +95,6 @@ describe('app.services.token.get', () => {
       const actual = decode(token)
       expect(actual).to.have.deep.property('exp', 900)
     })
-// Temp comment
   })
 
   it('should return a token', () => {

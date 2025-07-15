@@ -167,7 +167,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(names).not.to.contain('Something Else')
           expect(names).not.to.contain('Face')
         })
-    })
 
     it('should return a list of verifications with categories', async () => {
       return request(app.server)

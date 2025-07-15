@@ -27,7 +27,6 @@ describe('app.services.email.prospectPendingSigners', () => {
 
   describe('when validating', () => {
 
-    it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.prospectPendingSigners(id)).to.be.rejectedWith(expectedErrorMsg)
@@ -41,6 +40,7 @@ describe('app.services.email.prospectPendingSigners', () => {
   })
 
   describe('when calling with valid data', () => {
+    beforeEach(async () => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')

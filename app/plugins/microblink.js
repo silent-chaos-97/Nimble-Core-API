@@ -190,6 +190,7 @@ class MicroblinkService {
       zipCode: '',
     }
 
+    const comma = address.indexOf(',')
 
     // Pull out the city.
     returned.city = _.capitalize(address.slice(0, comma))
@@ -241,7 +242,6 @@ class MicroblinkService {
         dateObject.day.toString().length == 1
           ? '0' + dateObject.day.toString()
           : dateObject.day
-      }`
     : ''
 
     if (!moment(date, 'YYYY-MM-DD').isValid()) {

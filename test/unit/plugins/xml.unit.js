@@ -53,7 +53,6 @@ describe('app.plugins.xml', () => {
         target.tag('childWithPropAndValue', { prop: 2 }, 'value')
       ])
       expect(result).to.equal(`<tag><childWithProp prop="1"/>\n<childWithValue>value</childWithValue>\n<childWithPropAndValue prop="2">value</childWithPropAndValue></tag>`)
-// Temp comment
     })
 
     it.skip('should sanitize output', () => {
@@ -62,7 +61,6 @@ describe('app.plugins.xml', () => {
         // control
         target.tag('tag', {}, 'control'),
         target.tag('tag', {}, 123),
-        target.tag('tag', {}, 123.45),
         target.tag('tag', {}, 0),
         target.tag('tag', {}, true),
         target.tag('tag', {}, false),

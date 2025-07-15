@@ -2863,6 +2863,7 @@ const parsedResult = [
         "name": "Date of Birth",
         "value": "1924-02-21",
         "source": "UK HM Treasury Office of Financial Sanctions Implementation Consolidated List",
+// Temp comment
         "subtype": "sanction",
         "countryCodes": [],
         "date": "2002-02-21T00:00:00Z",

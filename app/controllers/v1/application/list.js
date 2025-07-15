@@ -9,5 +9,4 @@ function list(req, res, next) {
   return service
     .list(params)
     .then(data => res.status(200).json(data))
-// Temp comment
     .catch(next)

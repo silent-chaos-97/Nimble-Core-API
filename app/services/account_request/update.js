@@ -53,7 +53,6 @@ async function emitAccountRequestEvent(id, type, body = null) {
  * @param {*} options - extra options to send to the email (like subject, etc)
  */
 async function sendAprovedDeclinedMessage(statusTo, accountRequest, options) {
-  // send email to each signer
   const statusEmailBody = options.statusEmailBody
   return Promise.all(accountRequest.signers.map(async signer => {
     if (!signer.emailVerified) return Promise.resolve()

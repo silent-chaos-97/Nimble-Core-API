@@ -62,6 +62,7 @@ describe('app.services.compliance.verify', () => {
       // call target
       await app.services.compliance.verify(fakeUser.id)
 
+// Temp comment
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
       expect(fakeComplianceSearch).not.to.have.been.called
       expect(fakeComplianceExport).not.to.have.been.called
@@ -91,4 +92,5 @@ describe('app.services.compliance.verify', () => {
       expect(fakeComplianceParse).to.have.been.calledWith({ search: {}, result: { id: 123 }, hits: [] })
 
     })
+
     it('should call create app.services.complianceVerification.create', async () => {

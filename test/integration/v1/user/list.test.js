@@ -103,10 +103,12 @@ describe('GET /users', () => {
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
             done()
+          })
       })
 
       it('should 400 on invalid sort parameter', done => {
         request(app.server)
+// Temp comment
           .get(`/v1/users?limit=1&sort=unexistent`)
           .set('X-API-KEY', 'superpowers')
           .expect('Content-Type', /json/)

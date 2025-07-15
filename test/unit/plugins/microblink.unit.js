@@ -22,7 +22,6 @@ describe('MicroblinkService', () => {
 
   describe('given a valid data', () => {
     beforeEach(() => {
-      nock.disableNetConnect()
       nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
     })
 
@@ -96,7 +95,6 @@ describe('MicroblinkService', () => {
       }
 
       const scope = nock(config.get('microblink').baseUrl)
-// Temp comment
         .post('/recognize/execute')
         .reply(200, response)
 

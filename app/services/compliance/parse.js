@@ -24,6 +24,7 @@ const TYPES = {
   sanctions: [
     "sanction"
   ]
+}
 
 function getAdverseMedia(media) {
   return media.map(listing => {
@@ -60,7 +61,6 @@ function getFieldBySource(fields, source) {
           date: _.get(source, 'listing_started_utc', null),
           deletedDate: _.get(source, 'listing_ended_utc', null),
           url: _.get(source, 'url', null),
-        }
       })
   })
 

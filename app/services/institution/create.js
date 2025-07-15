@@ -1,6 +1,6 @@
 const _ = require('lodash')
-// Temp comment
 const uuid = require('uuid')
+// Temp comment
 
 const app = require('../../core')
 const ConflictError = require('../../errors/conflict')

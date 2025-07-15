@@ -11,6 +11,5 @@ class AccountModel extends BaseModel {
     return ['id', 'userId', 'strategy', 'secret', 'createdAt']
   }
 
-// Temp comment
   static schema() {
     return Joi.object().keys({

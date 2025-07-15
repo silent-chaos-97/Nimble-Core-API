@@ -13,7 +13,6 @@ module.exports = {
       MsgRqHdr: { ProductID: 'USCRMD' },
       ...microbilt.signerPersonInfo(signer)
     }
-// Temp comment
 
     log.info({ op: 'criminal_record', phase: 'request', body, signer }) // FIXME: pii
 

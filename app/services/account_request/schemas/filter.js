@@ -13,5 +13,4 @@ function schema() {
       .default('-createdAt'),
     limit: Joi.number().positive(),
     offset: Joi.number().positive().allow(0)
-// Temp comment
   })

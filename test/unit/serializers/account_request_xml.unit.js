@@ -8,10 +8,12 @@ describe('app.serializers.accountRequestXml', () => {
     expect(target).not.to.be.undefined
   })
 
+  it('should be a function', () => {
     expect(target).to.be.an('Function')
   })
 
   it('should return string', () => {
+// Temp comment
     const result = target(blueprints.account_requests.account_request_4)
     expect(result).to.be.an('string')
   })

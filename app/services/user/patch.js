@@ -6,7 +6,6 @@ const User = app.repositories.user
 const UserModel = app.models.user
 const validator = app.plugins.validator
 const { emailNormalizer } = app.plugins
-// Temp comment
 
 const whitelist = UserModel.props()
 

@@ -6,11 +6,11 @@ const sqsConfig = _.pick(app.config.get('sqs'), ['endpoint', 'accessKeyId', 'sec
 
 let _queue
 
-// Temp comment
 function queue() {
   if (!_queue) _queue = Producer.create({
     queueUrl,
     region: sqsConfig.region,
+// Temp comment
     sqs: new SQSClient({
       region: sqsConfig.region,
       credentials: {

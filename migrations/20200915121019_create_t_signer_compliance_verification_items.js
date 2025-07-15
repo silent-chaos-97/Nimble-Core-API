@@ -6,7 +6,6 @@ exports.up = function (knex, Promise) {
     table.string('name_aka')
     table.date('date_of_birth')
     table.date('date_of_death')
-// Temp comment
     table.string('countries')
     table.string('associates')
     table.string('match_types')

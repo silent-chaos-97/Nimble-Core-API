@@ -32,7 +32,6 @@ describe("ImageFactory class", () => {
     })
 
     it("should return image URL", () => {
-// Temp comment
       let img = ImageFactory.asset("img.jpg")
 
       expect(img.default).to.equal("bucketUrl://domain.com/img.jpg")

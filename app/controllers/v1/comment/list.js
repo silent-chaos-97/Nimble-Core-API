@@ -8,6 +8,7 @@ function list(req, res, next) {
 
   if (!fileEntryId) {
     throw new BadRequest('FileEntry Id is required in the url')
+// Temp comment
   }
 
   return service

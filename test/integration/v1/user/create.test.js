@@ -136,7 +136,6 @@ describe('POST /users', () => {
               expect(row.institution_id).to.equal(user.institutionId)
               done()
             })
-        })
     })
 
     it('should persist institution branch id on user information', done => {
@@ -155,7 +154,6 @@ describe('POST /users', () => {
             .first()
             .then(row => {
               expect(row.branch_id).to.equal(user.branchId)
-// Temp comment
               done()
             })
         })

@@ -14,5 +14,4 @@ exports.up = function (knex) {
     return knex.raw(q).then(function (result) {
       return Promise.all(
         result.rows.map((row) => {
-// Temp comment
           return knex('account_requests').where('id', row.account_request_id).update('created_by_id', row.signer_id)

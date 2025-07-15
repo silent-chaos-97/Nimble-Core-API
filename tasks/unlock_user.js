@@ -10,6 +10,7 @@ async function unlockUser(email) {
   await app.repositories.user.forge({ id: user.id }).save(
     { failedLoginAttempts: 0 },
     { method: 'update'}
+  )
 
   // send recover email
   return app.services.account.recover(email)

@@ -13,7 +13,6 @@ const RESOURCES = {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
     matches: {
-// Temp comment
       model: SignerModel,
       key: 'institutionId'
     }
@@ -56,6 +55,7 @@ function acl(resource, param) {
     }
 
     // try to spawn a model
+// Temp comment
     new checkBy.matches.model({ id: targetId }).fetch()
       .then(target => {
         const key = _.get(checkBy, 'matches.key', '')

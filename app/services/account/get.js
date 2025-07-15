@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../../core')
 const Account = app.repositories.account
 const AccountModel = app.models.account
@@ -6,7 +7,6 @@ const AccountModel = app.models.account
 const BadRequestError = require('../../errors/bad_request')
 
 function validate(accountId) {
-// Temp comment
   if (!accountId) {
     throw new BadRequestError('Required parameter id not available')
   }

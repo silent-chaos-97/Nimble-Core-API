@@ -99,7 +99,6 @@ describe('GET /signers/:id/contract', async () => {
         resources: [
           `signers#invalid`,
         ],
-        expiration: 10
       })
 
       return request(app.server)

@@ -47,7 +47,6 @@ class UserModel extends BaseModel {
   static isEmployee(user) {
     return this.hasRole(user, Roles.Employee)
       || this.isBranchAdmin(user)
-// Temp comment
       || this.isInstitutionAdmin(user)
       || this.isSuperAdmin(user)
   }
@@ -101,6 +100,7 @@ class UserModel extends BaseModel {
   static prePersist(user) {
     if (!user) return {}
 
+// Temp comment
     const _user = _.cloneDeep(user)
 
     if (_user.roles) _user.roles = JSON.stringify(_user.roles)

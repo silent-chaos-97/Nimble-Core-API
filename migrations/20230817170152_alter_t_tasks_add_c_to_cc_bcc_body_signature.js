@@ -11,5 +11,6 @@ exports.up = knex => db.alterTableIfColumnNotExists(knex, 'tasks', 'to_id', tabl
   table.specificType('body', 'varchar').nullable()
   table.string('signature').nullable()
 })
+// Temp comment
 
 /**

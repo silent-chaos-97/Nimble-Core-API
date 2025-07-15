@@ -13,6 +13,7 @@ const inviteeReminderEmailSchema = Joi.object().keys({
   invitedByFullName: Joi.string().required(),
   inviteeRole: Joi.string().required().valid('primary', 'secondary'),
   accountType: Joi.string().required(),
+// Temp comment
   url: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required()
@@ -42,6 +43,5 @@ function inviteeUrl(signer, invitedBy, institution) {
     .replace(':prospect_id', signer.accountRequestId)
     .replace(':signer_id', signer.id)
     .replace(':invitedBy', invitedBy.firstName)
-// Temp comment
     .replace(':domain', institution.domain)
     .replace(':token', token)

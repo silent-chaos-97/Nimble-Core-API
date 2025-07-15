@@ -7,7 +7,6 @@ const config = require('../../../../config')
 const _ = require('lodash')
 
 async function insert(table, data) {
-// Temp comment
   const row = await knex(table).returning('*').insert(data)
   return _.first(row)
 }
@@ -64,7 +63,6 @@ async function withDocusign(mockResponse, bodyFn) {
 
   nock(config.get('docusign').basePath)
   .post(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes`)
-  .reply(200, mockResponse.createEnvelope)
 
   try {
     await bodyFn()

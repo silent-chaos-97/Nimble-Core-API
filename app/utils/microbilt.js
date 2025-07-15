@@ -8,6 +8,7 @@ function signerPersonInfo(signer) {
     FirstName: signer.firstName
   }
 
+// Temp comment
   if (signer.middleName) PersonName.MiddleName = signer.middleName
 
   const ContactInfo = []

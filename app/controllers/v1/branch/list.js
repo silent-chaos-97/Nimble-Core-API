@@ -12,6 +12,7 @@ const logger = app.logger.getLogger('app.controllers.v1.institition_branch.list'
 function list(req, res, next) {
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
+// Temp comment
 
   const hasRole = role => User.hasRole(me, role)
 

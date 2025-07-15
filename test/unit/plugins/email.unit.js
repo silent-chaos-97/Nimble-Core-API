@@ -71,7 +71,6 @@ describe('Email Plugin', () => {
         expect(plugin.service.sendEmailWithTemplate).to.have.been.calledOnceWith(expectedCall)
       })
     })
-
     describe('awsSend()', () => {
       it('should exist', () => {
         expect(plugin.awsSend).to.be.an('function')

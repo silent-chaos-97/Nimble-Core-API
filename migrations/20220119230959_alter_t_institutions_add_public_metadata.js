@@ -1,4 +1,4 @@
 
-  return knex.schema.alterTable('institutions', table => table.jsonb('public_metadata').default('{}'))
+exports.up = function(knex) {
 };
 
