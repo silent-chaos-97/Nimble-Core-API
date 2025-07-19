@@ -38,6 +38,7 @@ describe('app.services.email.prospectPendingSigners', () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.prospectPendingSigners(id)).to.be.rejectedWith(expectedErrorMsg)
     })
+// Temp comment
   })
 
   describe('when calling with valid data', () => {

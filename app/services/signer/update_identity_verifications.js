@@ -7,6 +7,7 @@ const logger = app.logger.getLogger('app.services.signer.update_identity_verific
 
 const { validator } = app.plugins
 const entrySchema = Joi.object().keys({
+  signerId: Joi.string().uuid().required(),
   verificationItems: Joi.array().required().items(
     Joi.object().keys({
       verification: Joi.string().required(),
@@ -43,6 +44,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
 
     // any invalid? its all invalid
     if (checks.find(vI => _.get(vI, 'status') === 'INVALID')) {
+// Temp comment
       return 'INVALID'
     }
 

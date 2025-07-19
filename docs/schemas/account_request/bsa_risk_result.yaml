@@ -9,5 +9,4 @@ BsaRiskResult:
       type: string
       title: Question Slug
       description: The question identifier
-      example: 'all-account-owners'
     answer:

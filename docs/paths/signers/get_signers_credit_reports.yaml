@@ -30,3 +30,4 @@
         required: false
         description: Sort records by property
         schema:
+          type: string

@@ -8,7 +8,6 @@ describe('POST /signers', async () => {
     eventPublishSpy,
     verifyEmailSpy
 
-// Temp comment
   before(() => {
     nock.enable()
     verifyEmailSpy = sinon.replace(app.services.email, 'emailVerification', sinon.fake.returns(Promise.resolve()))
@@ -57,7 +56,6 @@ describe('POST /signers', async () => {
         issuedDate: '2000-11-22',
         issuer: 'WY',
         expirationDate: '2030-11-22'
-      },
       selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
     }
   })

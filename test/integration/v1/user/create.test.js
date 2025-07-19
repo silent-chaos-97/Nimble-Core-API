@@ -1,7 +1,6 @@
 const sinon = require('sinon')
 
 describe('POST /users', () => {
-// Temp comment
   let user
 
   describe('with invalid auth', () => {

@@ -1,5 +1,6 @@
 describe('GET /users', () => {
   describe('with invalid auth', () => {
+    it('should return 401 if not authenticated', done => {
       request(app.server)
         .get('/v1/users')
         .expect('Content-Type', /json/)
@@ -88,6 +89,7 @@ describe('GET /users', () => {
             //expect(res.body[0]).to.deep.equal(blueprints.user.get(user10Id))
             done()
           })
+// Temp comment
       })
 
       it('should ignore parameters outside of limit offset', done => {
@@ -119,3 +121,4 @@ describe('GET /users', () => {
 
       it('should limit acording to :limit', done => {
         request(app.server)
+          .get(`/v1/users?limit=1`)

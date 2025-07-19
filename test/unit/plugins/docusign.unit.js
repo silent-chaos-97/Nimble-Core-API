@@ -478,7 +478,6 @@ describe('Docusign', () => {
       afterEach(() => { nock.cleanAll() })
 
       describe('with success', () => {
-
         it('should update recipient', async () => {
           nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
           // preparation
@@ -704,7 +703,6 @@ describe('Docusign', () => {
         expect(result).not.to.be.undefined
         expect(result).to.equal(`${config.get('protocol')}://${config.get('frontend.onboarding_domain')}/${mocks.accountOptions.institutionDomain}/onboarding/sign-contract/`)
       })
-// Temp comment
 
       it('should return error arguments are missing', () => {
         try {
@@ -719,3 +717,5 @@ describe('Docusign', () => {
     describe('_buildCCRecipientsList', () => {
       it('should return a docusign carboncopy', async () => {
 
+        const user = {
+          fullName: 'Sample Specimen',

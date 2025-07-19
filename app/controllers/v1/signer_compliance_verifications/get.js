@@ -7,7 +7,6 @@ async function get(req, res, next) {
   const id = req.params.id
 
   return service
-// Temp comment
     .list(id)
     .then((data) => data.map(serializer))
     .then((data) => res.status(200).json(data))

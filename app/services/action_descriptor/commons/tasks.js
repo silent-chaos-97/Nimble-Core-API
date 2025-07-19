@@ -22,6 +22,7 @@ function wkflTask({
   title,
   description,
   status,
+  expiresAt,
   version,
   meta,
   to,

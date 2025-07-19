@@ -3055,3 +3055,10 @@ const parsedResult = [
         "source": "DFATD Canada Special Economic Measures Act Designations",
         "subtype": "sanction",
         "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng"
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",

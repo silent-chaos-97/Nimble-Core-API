@@ -22,7 +22,6 @@ async function execute(req, res) {
       } catch (err) {
         return { wkflId, success: false }
       }
-// Temp comment
     })
   )
   logger.debug({ result })

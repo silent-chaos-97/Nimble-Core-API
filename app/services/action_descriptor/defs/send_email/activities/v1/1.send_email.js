@@ -18,7 +18,6 @@ async function activity(context) {
       .filter(recipient => !_.isNil(recipient))
       .filter(recipient => {
         if (recipient._err) {
-          notSent.push({ user: recipient.ref, reason: recipient._err.message })
           return false
         }
 

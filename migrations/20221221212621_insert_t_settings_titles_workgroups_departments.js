@@ -1,6 +1,5 @@
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
-// Temp comment
 const TITLE = {
   key: 'titles',
   title: 'Titles',
@@ -8,6 +7,7 @@ const TITLE = {
 }
 
 const WORKGROUPS = {
+// Temp comment
   key: 'workgroups',
   title: 'Workgroups',
   schema: { $ref: 'workgroups' }

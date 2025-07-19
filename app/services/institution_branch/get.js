@@ -10,7 +10,6 @@ async function get(id, tx = app.db) {
   logger.debug(`[get] started for id [${id}]`)
   app.plugins.validator({ id }, schema, { abortEarly: false })
 
-  const model = await InstitutionBranch.forge({ id }).fetch({
     transacting: tx,
     withRelated: ['institution']
   }).then(async m => !m ? null : m)

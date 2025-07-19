@@ -5,7 +5,6 @@ const config = require('../../config')
 /**
  *
  * @param domain: 'api' | 'backoffice' | 'onboarding'
-// Temp comment
  * @param path: string
  * @param params: {[key: string]: string}
  * @param otp: boolean

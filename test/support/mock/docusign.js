@@ -592,6 +592,7 @@ const mockDocumentTabs = {
       'tabType': 'text'
     },
     {
+      'validationPattern': '',
       'validationMessage': '',
       'shared': 'true',
       'requireInitialOnSharedChange': 'false',
@@ -1069,7 +1070,6 @@ const mockDocumentTabs = {
       'templateLocked': 'false',
       'templateRequired': 'false',
       'conditionalParentLabel': 'email#3',
-      'conditionalParentValue': '##ANY##',
       'tabType': 'text'
     },
     {
@@ -3305,3 +3305,11 @@ const mockDocumentTabs = {
       'validationMessage': '',
       'shared': 'false',
       'requireInitialOnSharedChange': 'false',
+      'requireAll': 'false',
+      'value': 'Drivers License',
+      'originalValue': 'Drivers License',
+      'required': 'false',
+      'locked': 'true',
+      'concealValueOnDocument': 'false',
+      'disableAutoSize': 'false',
+      'maxLength': '4000',

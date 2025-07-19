@@ -9,7 +9,6 @@ const Statuses = {
   deleted: 'deleted'
 }
 
-const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
   createdById: Joi.string().uuid().required(),
   updatedById: Joi.string().uuid().required(),
@@ -53,6 +52,7 @@ class AnalysisModel extends BaseModel {
       'id',
       'createdById',
       'updatedById',
+      'createdAt',
       'updatedAt',
 
       // refs
@@ -69,3 +69,4 @@ class AnalysisModel extends BaseModel {
       'debtSchedule'
     ]
   }
+

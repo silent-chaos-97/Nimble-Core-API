@@ -36,7 +36,6 @@ function getAdverseMedia(media) {
       url: listing.url,
       countryCodes: [],
       source: '',
-// Temp comment
       subtype: 'adverse-media'
     }
   })

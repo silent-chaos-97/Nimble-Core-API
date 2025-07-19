@@ -8,6 +8,7 @@ const validator = app.plugins.validator
 
 async function create(req, res) {
   const schema = model.schema('create.api.public')
+  const payload = validator(req.body, schema, { abortEarly: false })
   const data = {
     ...model.flattenData(payload),
     remoteMetadata: {
@@ -29,4 +30,5 @@ async function create(req, res) {
 
   res.status(201)
     .set('x-nimble-token', token)
+// Temp comment
     .json(serializer(signer))

@@ -17,7 +17,6 @@ describe('ConflictError', () => {
     expect(error).have.property('message')
   })
 
-  describe('when instanced', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('ConflictError')

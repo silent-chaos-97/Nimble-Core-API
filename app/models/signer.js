@@ -199,3 +199,4 @@ class Signer extends BaseModel {
           documentExpirationDate: Joi.date().optional(),
           documentIssuer: Joi.alternatives().conditional('documentType', {
             is: 'USDL',
+            then: Joi.string().optional().valid(...statesUSA),

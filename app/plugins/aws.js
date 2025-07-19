@@ -182,6 +182,7 @@ class AWSFacade {
           },
           'AWS.MM.SMS.OriginationNumber': {
             DataType: 'String',
+            StringValue: _.sample(this.config.sms.originationNumbers)
           }
         }
       }

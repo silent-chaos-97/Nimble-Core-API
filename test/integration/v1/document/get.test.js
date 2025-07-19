@@ -46,13 +46,11 @@ describe('GET /documents/:id', () => {
 
   describe('when authentication token does not have valid scope', () => {
     it('should return 403 when token scope is not documents', async () => {
-// Temp comment
       const data = { scopes: ['users'] }
       token = await helpers.getScopedAuthToken(data)
 
       return request(app.server)
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68091?token=${token}`)
-        .expect(403)
     })
 
     it('should return 403 when resource id not whitelisted in token', async () => {

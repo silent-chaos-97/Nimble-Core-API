@@ -30,3 +30,4 @@ SignerComplianceVerificationListEntry:
       type: string
       title: Type
       description: Type of item associated with this entry
+      enum: ['ADVERSE-MEDIA', 'WARNING', 'SANCTION', 'POLITICAL']

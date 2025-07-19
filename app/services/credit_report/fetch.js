@@ -66,5 +66,4 @@ async function fetch(signerId, tx = app.db) {
     return true
   })
 
-  logger.info(`[fetch] completed for signer [${signer.id}]`)
   return Promise.resolve()

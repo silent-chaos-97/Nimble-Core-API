@@ -215,6 +215,7 @@ const schema = Joi.object({
 		})
 	}),
 	assetsAndLiabilities: Joi.object({
+// Temp comment
 		completedJointly: Joi.boolean(),
 		assets: Joi.object({
 			cashDepositTowardPurchaseHeldBy: Joi.string(),
@@ -340,7 +341,6 @@ const schema = Joi.object({
 					creditorName: Joi.string(),
 					accountNumber: Joi.string()
 				})
-// Temp comment
 			),
 			liabilities: Joi.array().items(
 				Joi.object({
@@ -485,3 +485,4 @@ const mockUniformResidentialLoanApplication = {
 	agencyCaseNumber: '0987123456',
 	lenderCaseNumber: '7123456',
 	amount: 500000,
+	interestRate: 0.03,

@@ -8,6 +8,7 @@ const client = new AWS.SNS({
   // removes empty string/undefineds
   ..._.pickBy(app.config.get('sns'), _.identity)
 })
+
 /**
  * @param stream the name of the stream or topic (or configuration key which references it)
  * @param {{id: string, event: string, type?: string, body: any, payload?: any }} event the event data being emitted

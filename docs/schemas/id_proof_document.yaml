@@ -3,13 +3,13 @@ IdProofDocument:
   required:
     - type
     - number
-    - expirationDate
     - issuedDate
     - issuer
     - frontDocumentId
     - backDocumentId
   properties:
     type:
+      type: string
       title: Document Type
       description: Id Proof Document Type
       enum: ['USDL', 'USID', 'USLR', 'PASSPORT']
@@ -36,3 +36,4 @@ IdProofDocument:
       description: Id Proof Document Issuer. Depends on Document Type, if Document Type is PASSPORT the Issuer need's to be a Coutry, if is USDL it need's to be a USA State.
       example: 'CA'
       oneOf:
+        - $ref: '#/components/schemas/Countries'

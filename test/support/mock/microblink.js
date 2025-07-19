@@ -23,6 +23,7 @@ const successResponse = {
       firstName: 'SAMPLE',
       lastName: 'SPECIMEN',
       fullName: '',
+      address: '123 MAIN STREET APT. 1\nORLANDO, FL 17101-0000',
       dateOfBirth: {
         day: 18,
         month: 3,
@@ -146,3 +147,4 @@ const successUSDLAAMVABack = {
         "permitExpirationDate": null,
         "permitIdentifier": null,
         "permitIssueDate": null,
+        "numberOfDuplicates": null,

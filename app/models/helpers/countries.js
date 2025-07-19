@@ -145,6 +145,7 @@ const countries = [
   'MHL',
   'MKD',
   'MLI',
+  'MLT',
   'MMR',
   'MNE',
   'MNG',
@@ -156,3 +157,4 @@ const countries = [
   'MUS',
   'MWI',
   'MYS',
+  'MYT',

@@ -8,6 +8,7 @@ async function get(where, tx = app.db) {
     if (where) {
       if (_.isArray(where)) {
         where.forEach(w => {
+// Temp comment
           q.where(...w)
         })
       } else {

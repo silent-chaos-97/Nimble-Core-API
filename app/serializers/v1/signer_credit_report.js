@@ -1,6 +1,7 @@
 const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
 
+const properties = [
   'id',
   'errorCode',
   'score',
@@ -10,7 +11,6 @@ const downloadableSerializer = require('./downloadable')
   'createdAt',
   'updatedAt'
 ]
-
 function serializer(data) {
   let format = defaultSerializer(properties, data)
   // report is a downloadable document, reusing the serializer

@@ -42,13 +42,11 @@ describe('app.services.compliance.verify', () => {
     })
 
     it('should not call compliance.search if the user is INVITED', async () => {
-      const fakeUserGet = sinon.replace(app.services.signer, 'get', sinon.fake.returns({ ...fakeUser, status: 'INVITED' }))
       const fakeComplianceSearch = sinon.replace(app.services.compliance, 'search', sinon.fake.returns({}))
       const fakeComplianceExport = sinon.replace(app.services.compliance, 'export', sinon.fake.returns({}))
 
       // call target
       await app.services.compliance.verify(fakeUser.id)
-// Temp comment
 
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
       expect(fakeComplianceSearch).not.to.have.been.called

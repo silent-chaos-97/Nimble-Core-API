@@ -42,6 +42,7 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .expect(201)
+// Temp comment
   })
 
   it('should return a document', () => {
@@ -152,3 +153,4 @@ describe('POST /documents', () => {
     it('should persist the document', () => {
       document.format = 'pdf'
       document.content = 'somethingelse'
+      return request(app.server)

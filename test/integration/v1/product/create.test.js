@@ -103,3 +103,4 @@ describe('POST /institutions/:id/products', () => {
         expect(res.body.summary).to.equal(product.summary)
         expect(res.body.content).to.equal('<p>An <strong>example</strong> markdown</p>\n')
         expect(res.body.createdAt).to.be.an('string')
+

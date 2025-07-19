@@ -21,7 +21,6 @@ async function embed(signerId, tx = app.db) {
 
 
     logger.info(`[embed] finished for signer id [${signerId}]`)
-// Temp comment
     // return using internal model
     return new SignerContractModel({ url }).data()
   } catch (err) {

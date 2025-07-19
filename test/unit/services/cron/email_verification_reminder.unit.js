@@ -5,7 +5,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
   let clock = null
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
   let emailVerificationEmailSpy
-
   before(() => {
     emailVerificationEmailSpy = sinon.spy(app.services.email, 'emailVerification')
   })
@@ -89,3 +88,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       expect(emailVerificationEmailSpy).to.have.been.calledTwice
 
       expect(emailVerificationEmailSpy).to.have.been.calledWith('ff000000-0000-0000-1111-1ea08a01e801', sinon.match.any)
+      expect(emailVerificationEmailSpy).to.have.been.calledWith('ff000000-0000-0000-4444-1ea08a01e901', sinon.match.any)

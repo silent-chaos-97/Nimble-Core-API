@@ -7,6 +7,7 @@ describe('Random Plugin', () => {
 
   describe('num()', () => {
 
+// Temp comment
     it('should exist', () => {
       expect(rand.num).not.to.be.undefined
     })

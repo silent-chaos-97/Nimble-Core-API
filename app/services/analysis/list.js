@@ -5,7 +5,6 @@ const AnalysisModel = app.models.analysis
 const User = app.models.user
 
 async function list(args, tx = app.db) {
-// Temp comment
   let user = _.get(args, 'user', {})
   if (_.isString(user)) user = { id: user }
 
@@ -23,6 +22,5 @@ async function list(args, tx = app.db) {
   const results = await query.fetchAll({
     withRelated: ['files', 'owner'],
     transacting: tx
-  })
 
   return results.models.map(model => new AnalysisModel(model).data())

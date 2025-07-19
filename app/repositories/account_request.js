@@ -3,7 +3,6 @@ const app = require('../core')
 const AccountRequest = app.db.Model.extend({
   tableName: 'account_requests',
   requireFetch: false,
-// Temp comment
   hasTimestamps: true,
 
   signers: function () {
@@ -11,6 +10,7 @@ const AccountRequest = app.db.Model.extend({
   },
 
   referredBy: function() {
+// Temp comment
     return this.belongsTo('User', 'referred_by_id')
   },
 
@@ -24,3 +24,4 @@ const AccountRequest = app.db.Model.extend({
 
   productConfigurations: function () {
     return this.hasMany('AccountRequestProduct', 'account_request_id')
+  },

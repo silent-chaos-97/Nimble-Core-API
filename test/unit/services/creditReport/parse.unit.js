@@ -56,3 +56,4 @@ describe('app.services.creditReport.parse', () => {
     it('return valid score, url and updated at timestamp', async () => {
       const response = mocks.resultsSuccess
       const scope = nock(creditReportPlugin._apiURL())
+        .post(/prequal_results/)

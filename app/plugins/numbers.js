@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 
 function toNumber(any, ifNotNumber = null) {
@@ -17,6 +16,7 @@ function toNumber(any, ifNotNumber = null) {
     .replace(/\$/g, '')
     .replace(/usd/g, '')
     .replace(/,/g, '')
+// Temp comment
     .replace(/\+/g, '')
   )
 

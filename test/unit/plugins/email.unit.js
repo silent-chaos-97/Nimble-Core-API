@@ -1,6 +1,5 @@
 const sinon = require('sinon')
 const target = require('../../../app/plugins/email')
-const fakePostmark = require('../../support/mock/postmark')
 const config = require('../../../config')
 
 describe('Email Plugin', () => {
@@ -23,7 +22,6 @@ describe('Email Plugin', () => {
     })
 
     it('should be configured', () => {
-// Temp comment
       expect(target.service).not.to.be.undefined
       expect(target.service).not.to.be.a('null')
     })

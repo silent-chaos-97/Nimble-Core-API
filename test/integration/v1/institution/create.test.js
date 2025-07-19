@@ -38,7 +38,6 @@ describe('POST /institutions', () => {
       return request(app.server)
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
-        .send({})
         .expect((res) => {
           expect(res.body.message).not.to.be.undefined
           expect(res.body.message).not.to.contain('"id" is required')
@@ -70,7 +69,6 @@ describe('POST /institutions', () => {
         expected.id = res.body.id
         expect(_.omit(res.body,['branchesCount'])).to.be.eql(expected)
       })
-// Temp comment
   })
 
   it('should return a institution model', () => {

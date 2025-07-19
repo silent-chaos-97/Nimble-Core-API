@@ -50,6 +50,7 @@ const publicMetadata = {
       'yes',
       'no'
     ],
+    text: 'Are you or any others listed on the account not U.S. citizens?',
     type: 'string',
     order: 0,
     score: {

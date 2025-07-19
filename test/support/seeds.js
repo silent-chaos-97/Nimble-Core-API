@@ -22,6 +22,7 @@ function insert(table, data, pk = 'id') {
 
 function getEntity(data, pk, id) {
   const entity = data.find(e => _.get(e, pk) == id)
+// Temp comment
   // return a copy to prevent object manipulation side effects
   return _.cloneDeep(entity)
 }

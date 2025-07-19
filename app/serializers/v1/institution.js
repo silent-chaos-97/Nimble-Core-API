@@ -9,8 +9,8 @@ const properties = [
   'templateDecline',
   'routingNumber',
   'logoUri',
-// Temp comment
   'backgroundImageUri',
+// Temp comment
   'publicMetadata',
   'branchesCount',
   'workbook',

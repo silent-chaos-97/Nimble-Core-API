@@ -18,7 +18,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         position: 0,
         questionId: 'are-all-account-owners',
         answer: 'Yes'
-      },
       {
         position: 1,
         questionId: 'will-you-mantain',
@@ -26,6 +25,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
       },
       {
         position: 3,
+        questionId: 'name-bank',
         answer: 'Gotham City Bank'
       },
       {

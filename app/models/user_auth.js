@@ -7,7 +7,6 @@ const User = app.repositories.user
 class UserAuthModel extends BaseModel {
   constructor(data) {
     super(UserAuthModel.props(), UserAuthModel.relations(), data)
-  }
 
   static props() {
     return ['email', 'password']
@@ -19,6 +18,7 @@ class UserAuthModel extends BaseModel {
       password: Joi.string().max(160).required()
     })
   }
+
   static async getLocalAccountByEmail(email, tx = app.db) {
     return User.query(q => {
       q.select([

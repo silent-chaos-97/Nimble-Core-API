@@ -417,6 +417,7 @@ const fileTypes = [
     type: 'Disclosures',
     name: 'Credit Limit'
   },
+  {
     type: 'Disclosures',
     name: 'Rewards Program'
   },
@@ -427,3 +428,4 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Fraud Protection and Security'
+  },

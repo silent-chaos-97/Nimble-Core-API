@@ -12,6 +12,7 @@ const AccountRecovery = app.repositories.accountRecovery
 const UserAuthModel = app.models.userAuth
 const validator = app.plugins.validator
 
+// Temp comment
 // extend UserAuthModel props and schema
 const whitelist = [...UserAuthModel.props(), 'code']
 const schema = UserAuthModel.schema().keys({

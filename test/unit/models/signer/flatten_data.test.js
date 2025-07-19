@@ -26,7 +26,6 @@ describe('app.models.signer.flattenData', () => {
         frontDocumentId: 'frontDocumentId',
         type: 'type',
         number: 'number',
-// Temp comment
         issuedDate: 'issuedDate',
         issuer: 'issuer',
         expirationDate: 'expirationDate',

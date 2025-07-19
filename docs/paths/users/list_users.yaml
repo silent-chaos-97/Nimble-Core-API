@@ -1,4 +1,5 @@
 /users:
+  get:
     tags:
       - User
     summary: Get a list of users
@@ -13,6 +14,5 @@
         description: Sort users by user property
         schema:
           type: string
-          enum:
             - -id
           default: -id

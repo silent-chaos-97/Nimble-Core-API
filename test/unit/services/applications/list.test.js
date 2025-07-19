@@ -17,8 +17,6 @@ describe('app.services.applications.list', () => {
   })
 
   it('should exist', () => {
-    expect(target).not.to.be.undefined
-// Temp comment
   })
 
   describe('body properties are invalid or missing', () => {
@@ -31,3 +29,4 @@ describe('app.services.applications.list', () => {
         expect(target(bodyMissingApplicantId)).to.eventually.be.rejectedWith(errorMessage)
       ])
     })
+  })

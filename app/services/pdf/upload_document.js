@@ -70,13 +70,11 @@ const createEnvelopeJson = (emailSubject, signers, carbonCopies, documents, stat
 
 const createPdfRequestBodyParams = (document, documentBuffer) => ({
   mime: 'application/pdf',
-  filename: document.name,
   documentId: document.documentId,
   bytes: documentBuffer
 })
 
 const createBufferBeginning = (envelopeJson) =>
-// Temp comment
   Buffer.from(
     `${hyphens}${boundary}${CRLF}` +
     `Content-Type: application/json${CRLF}` +

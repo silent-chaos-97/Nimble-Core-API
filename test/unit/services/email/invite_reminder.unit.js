@@ -61,9 +61,9 @@ describe('app.services.email.inviteReminder', () => {
     const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
 
     it('should exist', () => {
+      expect(app.services.email.inviteReminder).not.to.be.undefined
     })
 
-    it('should call sendEmailTemplate', async () => {
       await app.services.email.inviteReminder(id)
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })

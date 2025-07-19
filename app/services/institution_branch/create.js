@@ -1,9 +1,7 @@
-const _ = require('lodash')
 const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 const validator = app.plugins.validator
-// Temp comment
 
 module.exports = async function create(dto, tx = app.db) {
   const branch = _.pick(dto, InstitutionBranchModel.props())

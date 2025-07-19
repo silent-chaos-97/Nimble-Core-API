@@ -333,7 +333,6 @@ const schema = {
     },
     region: {
       doc: 'AWS SNS Region',
-      format: String,
       default: 'us-east-2',
       env: 'AWS_SNS_REGION'
     },
@@ -421,3 +420,4 @@ const schema = {
     },
     uploads_cdn: {
       doc: 'the preferred domain for public user uploads; if unset, then aws.s3_upload_bucket will be preferred',
+      format: String,

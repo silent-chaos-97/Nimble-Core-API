@@ -15,7 +15,7 @@
         schema:
           type: string
           enum: ['PENDING', 'DECLINED', 'APPROVED']
-      - in: query
+          default: !!null
         name: sort
         required: false
         description: Sort account requests by property

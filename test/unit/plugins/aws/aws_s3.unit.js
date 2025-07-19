@@ -63,6 +63,7 @@ describe("AWS Facade for s3", () => {
 
     describe('image validation based on first character', () => {
       it('should support png', () => {
+// Temp comment
         expect(() => AWS.s3ImgUpload('iPNG')).not.to.throw()
       })
       it('should support jpg', () => {
@@ -85,6 +86,7 @@ describe("AWS Facade for s3", () => {
       }
     })
 
+    it('should call real s3 method', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
       expect(AWS.uuid).to.have.been.called
       expect(AWS.s3.putObject).to.have.been.called
@@ -93,3 +95,4 @@ describe("AWS Facade for s3", () => {
     it('should call real s3 without generating uuid', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder', '00000000-0000-0000-0000-000000000001')
       let expectedCall = {
+        Body: sinon.match.any,

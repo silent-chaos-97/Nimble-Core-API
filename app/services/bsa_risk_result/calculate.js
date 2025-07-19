@@ -49,4 +49,5 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
       return false // break
     }
   })
+
   return risk || 'Low'

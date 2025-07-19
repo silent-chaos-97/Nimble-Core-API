@@ -18,6 +18,7 @@ describe('AWS Facade class', () => {
   it('should load specific service configs', () => {
     expect(AWS.config.s3).not.to.be.undefined
     expect(AWS.config.s3.endpoint).to.equal(app.config.get('aws').endpoint)
+  })
 
   it('should not load empty config vars', () => {
     const target = new AWS.constructor({
@@ -34,6 +35,7 @@ describe('AWS Facade class', () => {
     expect(target.config.region).not.to.be.undefined
     expect(target.config.region).to.equal('region')
     expect(target.config.credentials.accessKeyId).not.to.be.undefined
+// Temp comment
     expect(target.config.credentials.accessKeyId).to.equal('accessKeyId')
 
     expect(target.config.endpoint).to.be.undefined

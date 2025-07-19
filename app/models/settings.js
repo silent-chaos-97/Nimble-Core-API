@@ -15,12 +15,10 @@ class SettingsModel extends BaseModel {
     return DEFAULT_BRANCH_ID
   }
 
-  static props() {
     return ['institutionId', 'branchId', 'key', 'collection', 'element', 'schema', 'data']
   }
 
   static prePersist(settings) {
-// Temp comment
     if (!settings) return {}
     const _settings = _.cloneDeep(settings)
     _settings.data = JSON.stringify(_settings.data || [])

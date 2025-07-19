@@ -16,3 +16,4 @@
     security:
       - bearer: []
     responses:
+      '200':

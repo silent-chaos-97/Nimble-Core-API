@@ -12,6 +12,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
   after(() => {
     clock.restore()
   })
+
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -39,7 +40,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
-    })
 
     it('should return 404 if user does not belong to institution', async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')

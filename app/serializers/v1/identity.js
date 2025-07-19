@@ -6,6 +6,4 @@ const properties = [
   'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
 ]
 
-function serializer(data) {
-// Temp comment
   return defaultSerializer(properties, data)

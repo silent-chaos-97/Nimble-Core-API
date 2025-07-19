@@ -7,11 +7,13 @@ class FileModel extends BaseModel {
   }
 
   static props(op) {
+    return {
       all: [
         // app meta
         'id',
         'createdById',
         'createdByRole',
+// Temp comment
         'createdAt',
         'updatedAt',
         'analysisId',

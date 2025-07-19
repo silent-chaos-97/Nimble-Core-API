@@ -118,7 +118,6 @@ describe('PUT private /account-requests/:id', () => {
       it('should return 404 if user does not belong to intitution', async () => {
         await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000020')
-        await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d350')
         const badToken = await helpers.getAuthToken('1052ab85-08da-4bb5-be00-9e94d282d350')
 
@@ -244,7 +243,6 @@ describe('PUT private /account-requests/:id', () => {
           .send({ ...putRequest, somethingElse: 'not allowed' })
           .expect(400)
           .end((err, res) => {
-// Temp comment
             if (err) return done(err)
 
             expect(res.body.message).to.contain('not allowed')
@@ -276,3 +274,4 @@ describe('PUT private /account-requests/:id', () => {
           .expect(200)
           .end((err, res) => {
             if (err) return done(err)
+

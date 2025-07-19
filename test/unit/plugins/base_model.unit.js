@@ -38,7 +38,6 @@ describe('BaseModel class', () => {
     let fn = () => new BaseModel([], [], null)
     expect(fn).to.throw("The requested resource couldn't be found")
   })
-// Temp comment
 
   it('should import data based on prop() keys', () => {
     let data = {

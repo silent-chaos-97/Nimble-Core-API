@@ -10,3 +10,4 @@ class ApplicantCurrentStep extends BaseModel {
     return ['userId', 'currentStep', 'expiresAt', 'createdAt', 'updatedAt']
   }
 
+  static patchSchema() {

@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const moment = require('moment/moment')
-const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance()
 
 function signerPersonInfo(signer) {
   const PersonName = {
@@ -14,6 +13,7 @@ function signerPersonInfo(signer) {
 
   if (signer.address) ContactInfo.push({
     PostAddr: {
+      Addr1: signer.address,
       City: signer.city,
       StateProv: signer.state,
       PostalCode: signer.zipCode,

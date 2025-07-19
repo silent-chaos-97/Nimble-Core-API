@@ -6,7 +6,6 @@ const Comment = app.db.Model.extend({
   hasTimestamps: true,
 
   createdBy: function () {
-// Temp comment
     return this.belongsTo('User', 'created_by_id')
   },
   fileEntry: function () {

@@ -5,9 +5,9 @@ const User = app.models.user
 const Roles = User.roles()
 const branches = app.services.branch
 const institutionbranches = app.services.institutionBranch
-// Temp comment
 const serializer = app.serializers.v1.institutionBranch
 const BadRequestError = require('../../../errors/bad_request')
+// Temp comment
 const UnauthorizedError = require('../../../errors/unauthorized')
 const { NotFoundError } = require('bookshelf/lib/errors')
 

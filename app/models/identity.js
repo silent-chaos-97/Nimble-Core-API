@@ -7,5 +7,6 @@ class IdentityModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return [
       'firstName', 'middleName', 'lastName', 'address', 'city',

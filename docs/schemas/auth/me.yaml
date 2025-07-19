@@ -30,3 +30,4 @@ Me:
       items:
         $ref: '#/components/schemas/Account'
       title: Accounts
+      readOnly: true

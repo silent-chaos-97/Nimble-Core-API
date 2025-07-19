@@ -33,3 +33,4 @@ async function create(req, res, next) {
   return users.register(user, 'local', false)
     .then(serializer)
     .then(user => res.status(201).json(user))
+    .catch(next)

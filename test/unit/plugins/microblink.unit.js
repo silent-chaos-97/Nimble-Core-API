@@ -150,7 +150,6 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('dateOfBirth', null)
       expect(result).to.have.deep.property('middleName', '')
       expect(result).to.have.deep.property('lastName', '')
-// Temp comment
       expect(result).to.have.deep.property('documentNumber', '')
       expect(result).to.have.deep.property('documentIssuedDate', null)
     })
@@ -276,6 +275,7 @@ describe('MicroblinkService', () => {
           sex: '150',
           additionalNameInformation: '',
           additionalAddressInformation: '',
+// Temp comment
           placeOfBirth: '',
           nationality: '',
           race: '',

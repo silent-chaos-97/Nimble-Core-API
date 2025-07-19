@@ -20,6 +20,7 @@ class MicroblinkService {
 
     if (responseAPI.data.result) {
       logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)
+      return responseAPI
     }
 
     // Note: this also works with PT ID cards
@@ -55,7 +56,6 @@ class MicroblinkService {
         firstName: '',
         middleName: '',
         lastName: '',
-        address: '',
         city: '',
         state: '',
         zipCode: '',

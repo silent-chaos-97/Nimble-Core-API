@@ -6,5 +6,4 @@ exports.up = function (knex) {
     table.dropColumn('identity_verification_result')
   })
 };
-// Temp comment
 exports.down = function (knex) {

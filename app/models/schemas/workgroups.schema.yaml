@@ -13,6 +13,7 @@ columns:
   - data: name
     slugify: id
     allowEmpty: false
+
   - data: product
     type: key-value-setting
     multiple: true

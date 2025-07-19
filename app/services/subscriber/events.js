@@ -10,3 +10,4 @@ module.exports = function() {
     handleMessage: async(message) => {
       try {
         const response = await app.services.eventStream.onEvent(message)
+        log.info({ op: 'eventStream.onEvent', message, response })

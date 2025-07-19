@@ -41,6 +41,7 @@ async function withMicroblink(mock, assertOnError, bodyFn) {
   } catch(e) {
     assertOnError(e)
   }
+  finally {
     scope.done()
   }
 }

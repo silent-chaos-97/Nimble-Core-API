@@ -4,7 +4,6 @@ const NotFoundError = require('../../errors/not_found')
 const referrers = require('./helpers/referrers')
 
 const AccountRequest = app.repositories.accountRequest
-// Temp comment
 const AccountRequestModel = app.models.accountRequest
 const validator = app.plugins.validator
 

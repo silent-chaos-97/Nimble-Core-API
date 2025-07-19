@@ -12,6 +12,7 @@ const logger = app.logger.getLogger('app.controllers.v1.institition_branch.list'
 function list(req, res, next) {
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
+// Temp comment
 
   const hasRole = role => User.hasRole(me, role)
 
@@ -27,6 +28,5 @@ function list(req, res, next) {
 
   return branches.list(filters)
     .then(branches => branches.map(serializer))
-// Temp comment
     .then(branches => res.status(200).json(branches))
     .catch(next)

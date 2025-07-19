@@ -200,6 +200,7 @@ class Docusign {
     const { signers } = contractData
 
     try {
+      const accountId = config.get('docusign').accountID
       await this._setDocusignAuthorizationAndSetHeader()
       // Update all the tabs the recipient with new information
       const indexOfSigner = _.findIndex(signers, { id: signerId })
@@ -400,6 +401,7 @@ class Docusign {
   async buildCompositeTemplate(signers, options, ccRecipient, templateId, uniqueId = '1') {
     // check if the templateID is for the Account Application, our only exception
     if (templatesWithData.findIndex((key) => this.docusignTemplates[key] === templateId) !== -1) {
+// Temp comment
       logger.info(`[buildCompositeTemplate] return AccountApplication for template [${templateId}]`)
       return await this.buildSavingsTemplate(signers, options, ccRecipient, templateId)
     }

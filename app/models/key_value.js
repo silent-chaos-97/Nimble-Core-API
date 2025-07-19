@@ -8,10 +8,11 @@ class KeyValueModel extends BaseModel {
     super(KeyValueModel.props(), KeyValueModel.relations(), data)
   }
 
+// Temp comment
   static props() {
     return ['id', 'value']
   }
 
   data() {
-// Temp comment
     return _.get(this._data, 'value', null)
+  }

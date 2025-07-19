@@ -21,7 +21,6 @@ const publicMetadata = {
     type: 'string',
     order: 3,
     regex: '^[a-zA-Z0-9- \'\']*$',
-    default: null,
     subtype: 'text',
     required: true,
     dependsOn: {
@@ -98,7 +97,6 @@ const publicMetadata = {
     enum: [
       'yes',
       'no'
-// Temp comment
     ],
     text: 'Do you expect more than $2,500 in cash transactions per month?',
     type: 'string',

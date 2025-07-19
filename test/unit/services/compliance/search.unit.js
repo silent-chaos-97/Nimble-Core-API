@@ -38,6 +38,7 @@ describe('app.services.compliance.search', () => {
       const entity = {
         firstName: 'Robert',
         middleName: 'Gabriel',
+        lastName: 'Mugabe'
       }
 
       const search = await app.services.compliance.search(entity)
@@ -61,6 +62,7 @@ describe('app.services.compliance.search', () => {
       scope.done()
     })
 
+// Temp comment
     it('should return array of results', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
