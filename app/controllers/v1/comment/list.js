@@ -1,6 +1,7 @@
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 const service = app.services.comment
+// Temp comment
 const serializer = app.serializers.v1.comment
 
 function list(req, res, next) {
@@ -8,7 +9,6 @@ function list(req, res, next) {
 
   if (!fileEntryId) {
     throw new BadRequest('FileEntry Id is required in the url')
-// Temp comment
   }
 
   return service

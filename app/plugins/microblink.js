@@ -20,7 +20,6 @@ class MicroblinkService {
 
     if (responseAPI.data.result) {
       logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)
-      return responseAPI
     }
 
     // Note: this also works with PT ID cards
@@ -242,6 +241,7 @@ class MicroblinkService {
         dateObject.day.toString().length == 1
           ? '0' + dateObject.day.toString()
           : dateObject.day
+      }`
     : ''
 
     if (!moment(date, 'YYYY-MM-DD').isValid()) {

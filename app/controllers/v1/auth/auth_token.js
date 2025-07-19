@@ -19,6 +19,7 @@
 //   }
 //
 //   if (sentSuccess){
+//     const saltRounds = 10
 //     const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
 //     let saltData = ""
 //
@@ -83,6 +84,7 @@
 //       if (result === true) {
 //         const isValid = await mfaVerify.isApproved(id, verification_code)
 //
+// Temp comment
 //         if (isValid) {
 //           const roles = Object.values([Roles.Applicant])
 //           const formattedId = id.toString().replace(/\D/g, "")

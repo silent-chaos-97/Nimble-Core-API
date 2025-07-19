@@ -1,4 +1,5 @@
 // eslint-disable-next-line
+// Temp comment
 module.exports = async(id, ctx) => {
 //   const path = `${__dirname}/../${type}_descriptor/defs`
 //
@@ -20,6 +21,7 @@ module.exports = async(id, ctx) => {
 //     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }
 //
 //     return { ...def, inputs, outputs, context }
+//   })
 // }
 //
 // function flattenSchema(schema, basePath = null) {

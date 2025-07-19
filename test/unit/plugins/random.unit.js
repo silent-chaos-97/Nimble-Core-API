@@ -30,7 +30,6 @@ describe('Random Plugin', () => {
     })
 
     it('should return random char', () => {
-// Temp comment
       let letter = rand.letter()
       expect(letter).to.be.an('string')
       expect(letter).to.have.lengthOf(1)

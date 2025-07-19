@@ -28,5 +28,4 @@ SignerVerificationStatus:
     sanctionsStatus:
       title: The status of the sanctions verification
       type: string
-      enum: ['MATCH', 'NOMATCH', 'PENDING']
       default: 'PENDING'

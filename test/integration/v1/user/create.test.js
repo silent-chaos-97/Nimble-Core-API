@@ -1,6 +1,7 @@
 const sinon = require('sinon')
 
 describe('POST /users', () => {
+// Temp comment
   let user
 
   describe('with invalid auth', () => {
@@ -136,6 +137,7 @@ describe('POST /users', () => {
               expect(row.institution_id).to.equal(user.institutionId)
               done()
             })
+        })
     })
 
     it('should persist institution branch id on user information', done => {

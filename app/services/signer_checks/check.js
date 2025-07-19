@@ -6,7 +6,6 @@ const SignerCheckRepo = app.repositories.signerCheck
 const log = app.logger.getLogger('app.services.signer_checks.verify')
 
 async function check(signerId, tx = app.db) {
-  try {
     const signer = await app.services.signer.get(signerId, tx)
 
     if (!signer) {

@@ -118,7 +118,6 @@ class AccountRequest extends BaseModel {
         ...Object.keys(KEYMAP).reduce((status, key) => { // with the keys from KEYMAP
           return {
             ...status,
-            [key]: signer[key] + (acountStatus[key] === undefined ? '' : ',' + acountStatus[key]) // create a list of results
           }
         }, {})
       }

@@ -7,6 +7,7 @@ exports.seed = async function () {
     await seeds.users()
     await seeds.accounts()
     await seeds.account_recoveries()
+    await seeds.documents()
     await seeds.account_requests()
     await seeds.signers()
     await seeds.signers_identity_verifications()

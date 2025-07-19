@@ -26,7 +26,6 @@ async function create(payload, accountRequestId, tx = app.db) {
   // for each answer from the BSA test, we insert them into the database
   payload.forEach(async(bsaRiskResult) => {
     const newBSAResult = {
-      ...bsaRiskResult,
       version: '2',
       institutionId: iid,
       accountRequestId: accountRequest.id
@@ -43,7 +42,6 @@ async function create(payload, accountRequestId, tx = app.db) {
   )
 
   const accountRequestUpdatePayload = {
-// Temp comment
     id: accountRequest.id,
     bsaRisk: bsa.risk,
     bsaScore: bsa.score

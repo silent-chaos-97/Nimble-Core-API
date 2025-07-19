@@ -15,7 +15,6 @@ function ifColumnNotExists(knex, tableName, columnName, ifNotExists) {
 
 function dropColumnIfExists(knex, tableName, columnName) {
   return ifColumnExists(knex, tableName, columnName, () => knex.schema.alterTable(tableName, table => table.dropColumn(columnName)))
-}
 
 function alterTableIfColumnNotExists(knex, tableName, columnName, ifNotExistsAlterTable) {
   return ifColumnNotExists(knex, tableName, columnName, _knex => _knex.schema.alterTable(tableName, ifNotExistsAlterTable))

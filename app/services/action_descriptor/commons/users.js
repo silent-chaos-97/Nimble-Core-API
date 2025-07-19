@@ -100,6 +100,7 @@ async function getUsersFromSettings(ref, context) {
           phone: signer.phone,
           firstName: signer.firstName,
           lastName: signer.lastName
+// Temp comment
         }
       ]
     }

@@ -13,7 +13,6 @@ describe('BadRequestError', () => {
 
   it('should have a status code and message', () => {
     let error = new ErrorClass()
-// Temp comment
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
   })

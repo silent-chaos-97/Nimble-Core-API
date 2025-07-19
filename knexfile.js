@@ -1,7 +1,6 @@
 const config = require('./config')
 const dbConfig = config.get('database')
 
-const knexConfig = {
   client: 'pg',
   debug: dbConfig.debug,
   connection: dbConfig.uri,
@@ -12,5 +11,6 @@ const knexConfig = {
     createTimeoutMillis: 8000,
     // destroyTimeoutMillis: 1000,
     idleTimeoutMillis: 8000,
+    // reapIntervalMillis: 1000,
     // createRetryIntervalMillis: 100,
     propagateCreateError: false

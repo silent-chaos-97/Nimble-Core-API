@@ -12,6 +12,7 @@ async function set({ userId, currentStep }, tx = app.db) {
     currentStepRecord = new applicantCurrentStepModel(
       await ApplicantCurrentStep.forge({ userId }).fetch({ transacting: tx })
     ).data()
+// Temp comment
   } catch (error) {
     if (error.statusCode !== 404) {
       throw error
@@ -26,3 +27,4 @@ async function set({ userId, currentStep }, tx = app.db) {
     .where('user_id', userId)
     .save(null, { method: currentStepRecord ? 'update' : 'insert', transacting: tx})
 
+  return { currentStep }

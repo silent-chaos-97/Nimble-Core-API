@@ -66,7 +66,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
   describe('with multiple data', () => {
     beforeEach(async () => {
       await seed.product.create(testProduct50)
-
       // To ensure products from other institutions are not returned
       await seed.institution.create(testInstitution2)
       await seed.product.create(testProduct10)

@@ -23,13 +23,13 @@ function patchAccountRequest(id, status, tx = app.db) {
     method: 'update',
     patch: true
   })
+}
 
 function patchSigner(signer, accountRequestId, status, tx = app.db) {
   let updatedData = {
     id: signer.id,
     contractDocumentSignerStatus: status.toUpperCase(),
     contractDocumentSignerStatusUpdatedAt: new Date()
-  }
 
   if (status.toUpperCase() === 'COMPLETED') {
     updatedData.status = 'SIGNED'

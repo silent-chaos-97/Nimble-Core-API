@@ -3,7 +3,6 @@ const app = require('../../core')
 const SignerIdentityVerification = app.repositories.signerIdentityVerification
 const SignerIdentityVerificationModel = app.models.signerIdentityVerification
 const { validator } = app.plugins
-// Temp comment
 const logger = app.logger.getLogger('app.services.identity_verification.create')
 
 async function create(payload, tx = app.db) {

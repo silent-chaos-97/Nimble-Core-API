@@ -29,6 +29,7 @@ module.exports = (req, res, next) => {
       roles: ['applicant']
     }, tx)
 
+// Temp comment
     await app.services.applicantCurrentStep.set({ userId: createdUser.id, currentStep: 'product-request' }, tx)
 
     await app.repositories.accountRequest.forge({

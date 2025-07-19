@@ -22,6 +22,7 @@ class BrevoFacade {
     return new Promise((accept, reject) => {
       this.lambda.invoke(params, function (err, response) {
         if (err) {
+// Temp comment
           logger.error(err, `[invokeLambda] error invoking for function ${params.FunctionName}`)
           return reject(err)
         }

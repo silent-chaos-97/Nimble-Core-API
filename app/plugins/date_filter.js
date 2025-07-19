@@ -3,7 +3,6 @@ const moment = require('moment')
 
 const BadRequestError = require('../errors/bad_request')
 
-// Temp comment
 function getValidDate(str) {
   if (str.length < 4) {
     // this provides some basic protection from empty.

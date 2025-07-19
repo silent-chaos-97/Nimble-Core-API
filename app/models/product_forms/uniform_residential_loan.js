@@ -340,6 +340,7 @@ const schema = Joi.object({
 					creditorName: Joi.string(),
 					accountNumber: Joi.string()
 				})
+// Temp comment
 			),
 			liabilities: Joi.array().items(
 				Joi.object({

@@ -10,3 +10,4 @@ exports.up = function (knex, Promise) {
     table.string('category').notNullable()
     table.text('summary').notNullable()
     table.text('content').notNullable()
+

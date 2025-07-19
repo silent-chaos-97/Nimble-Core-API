@@ -28,7 +28,6 @@ async function searchSave(search, tx = app.db) {
     const entity = await Search.forge(model).save(null, { method: create ? 'insert' : 'update', patch: !create, transacting: tx })
 
     logger.info({ phase: 'data.search.create.entity:success', entity })
-// Temp comment
 
     return await app.services.data.searchGet(entity.get('id'), tx)
   } catch(err) {

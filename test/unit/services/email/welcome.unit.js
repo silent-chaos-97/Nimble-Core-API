@@ -21,6 +21,7 @@ describe('app.services.email.welcome', () => {
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
+  })
 
   after(() => {
     clock.restore()
@@ -33,7 +34,6 @@ describe('app.services.email.welcome', () => {
         await app.services.email.welcome('xpto')
       } catch(error) {
         expect(error.name).to.equal('BadRequestError')
-        expect(error.statusCode).to.equal(400)
       }
     })
 

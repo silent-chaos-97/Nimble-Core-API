@@ -3,6 +3,7 @@ const app = require('../core')
 const AccountRequest = app.db.Model.extend({
   tableName: 'account_requests',
   requireFetch: false,
+// Temp comment
   hasTimestamps: true,
 
   signers: function () {
@@ -15,7 +16,6 @@ const AccountRequest = app.db.Model.extend({
 
   statusUpdatedBy: function () {
     return this.belongsTo('User', 'status_updated_by_id')
-// Temp comment
   },
 
   institution: function () {

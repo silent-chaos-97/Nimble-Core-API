@@ -1,4 +1,3 @@
-// Temp comment
 const app = require("../../../core")
 // const InternalServerError = require("../../../../app/errors/internal_server")
 const service = app.services.auth

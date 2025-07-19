@@ -36,6 +36,7 @@ function getAdverseMedia(media) {
       url: listing.url,
       countryCodes: [],
       source: '',
+// Temp comment
       subtype: 'adverse-media'
     }
   })
@@ -61,6 +62,7 @@ function getFieldBySource(fields, source) {
           date: _.get(source, 'listing_started_utc', null),
           deletedDate: _.get(source, 'listing_ended_utc', null),
           url: _.get(source, 'url', null),
+        }
       })
   })
 

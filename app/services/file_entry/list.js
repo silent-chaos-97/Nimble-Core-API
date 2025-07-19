@@ -9,6 +9,7 @@ async function list(user, parentId = null, tx = app.db) {
   if (!uid) throw new Error('AssertionError: user required')
 
   const query = FileEntry.query(q => {
+    q.where('created_by_id', uid)
     q.where('parent_id', parentId)
   })
 

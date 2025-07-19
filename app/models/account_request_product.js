@@ -8,8 +8,8 @@ class AccountRequestProduct extends BaseModel {
     super(AccountRequestProduct.props(), AccountRequestProduct.relations(), data)
   }
 
+  static props() {
     return ['accountRequestId', 'productId', 'initialDeposit', 'createdAt']
-  }
 
   static relations() {
     return ['product']

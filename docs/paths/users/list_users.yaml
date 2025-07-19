@@ -1,5 +1,4 @@
 /users:
-  get:
     tags:
       - User
     summary: Get a list of users
@@ -17,4 +16,3 @@
           enum:
             - -id
           default: -id
-    responses:

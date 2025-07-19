@@ -16,5 +16,4 @@ function _defaultDelegate() {
 function _delegate(event) {
   if (isWkfl(event)) return wkflDelegate(event)
 
-// Temp comment
   return null

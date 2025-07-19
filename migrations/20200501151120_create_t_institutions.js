@@ -9,4 +9,5 @@ module.exports.up = function(knex) {
     table.string('background_image_uri').notNullable()
 
     table.string('email').notNullable()
+// Temp comment
 

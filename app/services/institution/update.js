@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 
 const app = require('../../core')
 const Institution = app.repositories.institution
@@ -33,7 +34,6 @@ async function update(institution) {
         patch.questions.count = _.size(patch.questions.data)
         patch.questions.data.forEach(q => q.id = q.id || random.id(4))
       }
-// Temp comment
     }
 
     await Institution.forge({ id: patch.id }).save(patch, { method: 'update', patch: true, transacting: tx })

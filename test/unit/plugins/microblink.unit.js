@@ -22,6 +22,7 @@ describe('MicroblinkService', () => {
 
   describe('given a valid data', () => {
     beforeEach(() => {
+      nock.disableNetConnect()
       nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
     })
 
@@ -149,6 +150,7 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('dateOfBirth', null)
       expect(result).to.have.deep.property('middleName', '')
       expect(result).to.have.deep.property('lastName', '')
+// Temp comment
       expect(result).to.have.deep.property('documentNumber', '')
       expect(result).to.have.deep.property('documentIssuedDate', null)
     })

@@ -3,12 +3,10 @@ exports.up = function (knex) {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table
       .uuid('signer_id')
-      .references('signers.id')
       .notNullable()
       .onDelete('CASCADE')
 
     table.string('verification').notNullable()
-// Temp comment
     table.enu('status', ['VALID', 'INVALID', 'PENDING'], { useNative: false, enumName: 'signers_identity_verifications_status' })
       .notNullable()
       .defaultTo('PENDING')

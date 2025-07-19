@@ -8,6 +8,7 @@ describe('POST /signers', async () => {
     eventPublishSpy,
     verifyEmailSpy
 
+// Temp comment
   before(() => {
     nock.enable()
     verifyEmailSpy = sinon.replace(app.services.email, 'emailVerification', sinon.fake.returns(Promise.resolve()))

@@ -7,7 +7,6 @@ describe('app.plugins.xml', () => {
 
   it('should be a object', () => {
     expect(target).to.be.an('object')
-  })
 
   it('should explose format() method', () => {
     expect(target.format).not.to.be.undefined
@@ -61,6 +60,7 @@ describe('app.plugins.xml', () => {
         // control
         target.tag('tag', {}, 'control'),
         target.tag('tag', {}, 123),
+        target.tag('tag', {}, 123.45),
         target.tag('tag', {}, 0),
         target.tag('tag', {}, true),
         target.tag('tag', {}, false),

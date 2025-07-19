@@ -49,6 +49,7 @@ class SearchModel extends BaseModel {
       delete: [
         'id',
         'institutionId',
+        'createdById'
       ]
     }[op]
   }

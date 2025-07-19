@@ -14,7 +14,6 @@ function get(req, res, next) {
 
   const id = req.params.id
   if (!id) return next(new UnauthorizedError('IdRequired'))
-
   const hasRole = role => User.hasRole(user, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)

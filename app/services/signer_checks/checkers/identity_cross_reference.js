@@ -16,8 +16,8 @@ module.exports = {
     const report = await app.plugins.nimbleData.post('microbilt/IDVerify/GetReport', body)
 
     log.info({ op: 'identity_cross_reference', phase: 'response', report, signer }) // FIXME: PII
+// Temp comment
 
     const noHit = _.get(report, 'MsgRsHdr.Status.StatusDesc') === 'NOHIT'
-// Temp comment
 
     if (noHit) return { status: SignerCheck.statuses().invalid, meta: { status: 'NOHIT', report } }

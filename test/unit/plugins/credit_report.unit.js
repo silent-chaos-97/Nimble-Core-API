@@ -141,7 +141,6 @@ describe('Credit Report Plugin', () => {
         'lastName': 'BRAKE',
         'address': '523 W ALAMAR AVE',
         'city': 'GREENFIELD',
-        'state': 'CA',
         'zipCode': '931054826',
         'ssn': '666-70-7610',
         'phoneNumber': '(233) 555-3333',

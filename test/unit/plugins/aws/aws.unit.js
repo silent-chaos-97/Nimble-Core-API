@@ -18,7 +18,6 @@ describe('AWS Facade class', () => {
   it('should load specific service configs', () => {
     expect(AWS.config.s3).not.to.be.undefined
     expect(AWS.config.s3.endpoint).to.equal(app.config.get('aws').endpoint)
-  })
 
   it('should not load empty config vars', () => {
     const target = new AWS.constructor({
@@ -40,7 +39,6 @@ describe('AWS Facade class', () => {
     expect(target.config.endpoint).to.be.undefined
     expect(target.config.s3.endpoint).to.be.undefined
   })
-// Temp comment
 
   it('should load s3 stuff when loading', () => {
     const target = new AWS.constructor({

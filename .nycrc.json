@@ -10,4 +10,3 @@
   "cache": false,
   "exclude": [
     "seeds/",
-    "coverage/",

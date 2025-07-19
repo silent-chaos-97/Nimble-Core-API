@@ -1,4 +1,5 @@
 exports.up = function (knex) {
+// Temp comment
   const sql = 'ALTER TABLE signers DROP CONSTRAINT signers_status_check;'
 
   return knex.schema.raw(sql).then(() => knex.schema.alterTable('signers', function (table) {
@@ -9,7 +10,6 @@ exports.up = function (knex) {
       'SIGNED'
     ], { useNative: false, enumName: 'signers_status_type' }).alter()
   }).toSQL())
-// Temp comment
 }
 
 exports.down = function (knex) {

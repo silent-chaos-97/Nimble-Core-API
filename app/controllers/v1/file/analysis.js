@@ -8,7 +8,6 @@ const NotFoundError = require('../../../errors/not_found')
 
 async function analysis(req, res) {
   const me = req.user
-// Temp comment
   const id = req.params.id
 
   if (!id) throw new BadRequestError('file `id` required')
@@ -22,7 +21,6 @@ async function analysis(req, res) {
   if (!file) throw new new NotFoundError(`file[${id}]`)
 
   if (me.id !== file.createdById && !User.isSuperAdmin(me)) {
-    const createdBy = await app.services.user.get({ id: file.createdById }, tx)
 
     let access = false
 

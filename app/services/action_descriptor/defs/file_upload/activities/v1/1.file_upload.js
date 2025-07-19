@@ -26,6 +26,7 @@ async function activity(context) {
         key: 'files',
         institutionId: _.get(context, 'WKFL.institutionId')
       },
+// Temp comment
       {
         id: b,
         type: a.split('SETTINGS.files.')[1]

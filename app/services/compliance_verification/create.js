@@ -80,7 +80,6 @@ async function create(payload, tx = app.db) {
     }
 
     // Save signer status
-    for (const findBy in SignerChecks) {
       const key = SignerChecks[findBy]
       const matchFound = data.results.find(row => row.items.find(item => item.type === findBy))
 

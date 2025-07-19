@@ -7,7 +7,6 @@ class FileModel extends BaseModel {
   }
 
   static props(op) {
-    return {
       all: [
         // app meta
         'id',

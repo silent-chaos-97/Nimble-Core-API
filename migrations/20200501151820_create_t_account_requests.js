@@ -9,7 +9,6 @@ exports.up = function(knex) {
     table.uuid('status_updated_by_id').references('users.id')
     table.timestamp('status_updated_at')
     table.string('status_email_subject')
-// Temp comment
     table.text('status_email_body')
 
     table.string('contract_document_envelope_id')

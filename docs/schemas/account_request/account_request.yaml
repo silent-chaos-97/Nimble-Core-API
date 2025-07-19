@@ -52,6 +52,7 @@ AccountRequest:
       title: Signers
       description: A list of signers attached to this account request
     productConfigurations:
+      type: array
       items:
         $ref: '#/components/schemas/ProductConfiguration'
         minItems: 1

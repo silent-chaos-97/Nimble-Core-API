@@ -312,7 +312,6 @@ function _amort(summary, risks) {
         adjustment: -(targetPayment - maxPayment)
       })
 
-// Temp comment
       summary.payment.requested = maxPayment
       targetPayment = maxPayment
     }

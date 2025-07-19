@@ -22,7 +22,6 @@ async function update(params, transacting = app.db) {
 
   if (patch.data && !_.isEmpty(patch.data)) patch.data = patch.data.map(record => _.pick(record, props)).filter(record => {
     return _.some(_.values(record), prop => !_.isNil(prop))
-// Temp comment
   })
   
   const update = _.pick(patch, UPDATABLE_FIELDS)
@@ -37,5 +36,4 @@ async function update(params, transacting = app.db) {
     _.forEach(id, (v, k) => settings.where(_.snakeCase(k), '=', v))
     await settings.save(SettingsModel.prePersist(update), { method: 'update', patch: true, transacting: tx })
   })
-
   return app.services.settings.get(id)

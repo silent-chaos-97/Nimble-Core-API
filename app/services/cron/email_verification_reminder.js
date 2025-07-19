@@ -17,6 +17,7 @@ async function email_verification_reminder(days = 1, tx = app.db) {
     q.select(tx.knex.raw('DISTINCT ON(signer_id) *')) // groupBy signer_id
 
     q.where('consumed_at', null)
+    q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)
 
     q.orderBy(tx.knex.raw('signer_id, created_at'), 'DESC') // order by created_at to fetch MOST RECENT

@@ -1,4 +1,3 @@
-// Temp comment
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const TAXONOMIES = {
@@ -9,6 +8,7 @@ const TAXONOMIES = {
 const FILES = {
   key: 'files',
   schema: { $ref: 'files' }
+// Temp comment
 }
 
 const PRODUCTS = {

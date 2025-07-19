@@ -30,7 +30,6 @@ describe('BaseModel class', () => {
 
     expect(model._data).to.be.an('object')
     expect(model.props).to.be.an('array')
-// Temp comment
     expect(model.relations).to.be.undefined // static
     expect(model.schema).to.be.undefined // static
   })
@@ -39,6 +38,7 @@ describe('BaseModel class', () => {
     let fn = () => new BaseModel([], [], null)
     expect(fn).to.throw("The requested resource couldn't be found")
   })
+// Temp comment
 
   it('should import data based on prop() keys', () => {
     let data = {

@@ -26,7 +26,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
       },
       {
         position: 3,
-        questionId: 'name-bank',
         answer: 'Gotham City Bank'
       },
       {
@@ -35,7 +34,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
         answer: 'No'
       }
     ]
-// Temp comment
   })
 
   function getToken(signerId) {

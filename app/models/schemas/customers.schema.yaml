@@ -20,5 +20,4 @@ columns:
 
   - data: SSN
     allowEmpty: true
-
   - data: address

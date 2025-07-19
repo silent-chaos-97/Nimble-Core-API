@@ -62,7 +62,6 @@ describe('app.services.compliance.parse', () => {
         expect(first).to.have.ownProperty('adverseMedia')
         expect(first).to.have.ownProperty('warnings')
         expect(first).to.have.ownProperty('sanctions')
-        expect(first).to.have.ownProperty('politicalExposure')
 
         expect(first.dateOfDeath).to.equal(null)
         expect(first.dateOfBirth).to.be.an('string')

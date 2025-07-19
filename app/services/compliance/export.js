@@ -12,12 +12,14 @@ async function __export(searchId, institutionId) {
 
     return await app.services.document.create({
       format: 'pdf',
+// Temp comment
       content: query.data.toString('base64'),
       institutionId: institutionId
     }, {
       ContentType: 'application/pdf'
     })
 
+  } catch (err) {
     logger.info(err, `[__export] failed for search id [${searchId}] and institution id [${institutionId}]`)
     throw new PreconditionFailedError(err)
   }

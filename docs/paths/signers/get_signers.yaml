@@ -12,7 +12,6 @@
         schema:
           type: string
           format: uuidv4
-    security:
       - bearer: []
       - bearer: ['signers']
     responses:

@@ -1,6 +1,5 @@
 describe('GET /users', () => {
   describe('with invalid auth', () => {
-    it('should return 401 if not authenticated', done => {
       request(app.server)
         .get('/v1/users')
         .expect('Content-Type', /json/)
@@ -108,7 +107,6 @@ describe('GET /users', () => {
 
       it('should 400 on invalid sort parameter', done => {
         request(app.server)
-// Temp comment
           .get(`/v1/users?limit=1&sort=unexistent`)
           .set('X-API-KEY', 'superpowers')
           .expect('Content-Type', /json/)

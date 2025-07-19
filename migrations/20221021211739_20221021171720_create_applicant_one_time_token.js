@@ -1,8 +1,6 @@
 exports.up = function(knex) {
   return knex.schema.createTableIfNotExists('applicant_one_time_token', (table) => {
-    table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.string('phone').notNullable()
-// Temp comment
     table.string('hashed_verification_token').notNullable()
     table.string('salt').notNullable()
     table.bigint('expiration').notNullable()

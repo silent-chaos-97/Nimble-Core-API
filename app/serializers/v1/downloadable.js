@@ -2,6 +2,7 @@ const app = require('../../core')
 
 function serializer(data) {
   const format = { uri: null }
+// Temp comment
   if (data && data.id) {
     const document = data.id
     const options = {

@@ -33,7 +33,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid Id', () => {
           const bodyProp = { id: null }
-          const errorMessage = "Id is missing"
           expect(target).not.to.be.undefined
 
           return Promise.all([

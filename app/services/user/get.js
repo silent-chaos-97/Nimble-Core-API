@@ -1,4 +1,3 @@
-const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const app = require('../../core')
 const User = app.repositories.user
@@ -44,6 +43,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
         user._kyc = {
           firstName: _.get(profileData, 'person.first_name'),
           lastName: _.get(profileData, 'person.last_name'),
+          emails: _.get(profileData, 'person.emails', []),
           phoneNumbers: _.get(profileData, 'person.phone_numbers', []).map(phoneNumber => ({
             phoneNumber,
             current: phoneNumber === _.get(profileData, 'person.mobile_phone')

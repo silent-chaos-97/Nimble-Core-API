@@ -23,6 +23,7 @@ describe('Email Plugin', () => {
     })
 
     it('should be configured', () => {
+// Temp comment
       expect(target.service).not.to.be.undefined
       expect(target.service).not.to.be.a('null')
     })
@@ -71,6 +72,7 @@ describe('Email Plugin', () => {
         expect(plugin.service.sendEmailWithTemplate).to.have.been.calledOnceWith(expectedCall)
       })
     })
+
     describe('awsSend()', () => {
       it('should exist', () => {
         expect(plugin.awsSend).to.be.an('function')

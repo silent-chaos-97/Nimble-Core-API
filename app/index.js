@@ -27,7 +27,6 @@ module.exports = async (listen = false) => {
   app.server.use((req, res, next) => {
     res.set('Access-Control-Expose-Headers', 'Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma, x-nimble-token')
     next()
-// Temp comment
   })
 
   //routes need to be loaded after pre-middlewares

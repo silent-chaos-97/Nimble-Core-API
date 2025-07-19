@@ -10,6 +10,7 @@ describe('GET /documents/:id', () => {
 
   after(() => {
     nock.cleanAll()
+  })
 
   describe('when authentication token is not present', () => {
     it('should return 401', () => {
@@ -45,6 +46,7 @@ describe('GET /documents/:id', () => {
 
   describe('when authentication token does not have valid scope', () => {
     it('should return 403 when token scope is not documents', async () => {
+// Temp comment
       const data = { scopes: ['users'] }
       token = await helpers.getScopedAuthToken(data)
 

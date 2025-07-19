@@ -26,6 +26,7 @@ const SCHEMAS = {
       name: Joi.string().optional(),
       mobile: Joi.string().required()
     }),
+    message: Joi.string().required(),
     my: Joi.object().optional(),
     cta: Joi.object().optional().keys({
       title: Joi.string(),

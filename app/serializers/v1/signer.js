@@ -91,4 +91,3 @@ function serializer(data) {
     politicalExposureUpdatedAt: data.verificationStatusPoliticalExposureUpdatedAt,
   }
 
-  return format

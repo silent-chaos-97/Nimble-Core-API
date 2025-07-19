@@ -15,7 +15,6 @@
         schema:
           type: string
           enum:
-            - -id
           default: -id
       - in: query
         name: search

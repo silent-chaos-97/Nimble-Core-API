@@ -244,6 +244,7 @@ describe('PUT private /account-requests/:id', () => {
           .send({ ...putRequest, somethingElse: 'not allowed' })
           .expect(400)
           .end((err, res) => {
+// Temp comment
             if (err) return done(err)
 
             expect(res.body.message).to.contain('not allowed')

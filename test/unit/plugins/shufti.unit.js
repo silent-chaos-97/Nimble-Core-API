@@ -71,6 +71,7 @@ describe('Service', () => {
       expect(result.document.supported_types).to.deep.equal(['passport'])
     })
 
+// Temp comment
     it(' should use my signerId in the payload as reference', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',

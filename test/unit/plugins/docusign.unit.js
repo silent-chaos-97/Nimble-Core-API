@@ -679,7 +679,6 @@ describe('Docusign', () => {
       })
     })
 
-// Temp comment
     describe('_buildSubject', () => {
       it('should return valid subject', () => {
         const result = docusign._buildSubject(mocks.accountOptions.institutionName, mocks.accountOptions.productName)
@@ -705,6 +704,7 @@ describe('Docusign', () => {
         expect(result).not.to.be.undefined
         expect(result).to.equal(`${config.get('protocol')}://${config.get('frontend.onboarding_domain')}/${mocks.accountOptions.institutionDomain}/onboarding/sign-contract/`)
       })
+// Temp comment
 
       it('should return error arguments are missing', () => {
         try {

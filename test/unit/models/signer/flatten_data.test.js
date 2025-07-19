@@ -26,6 +26,7 @@ describe('app.models.signer.flattenData', () => {
         frontDocumentId: 'frontDocumentId',
         type: 'type',
         number: 'number',
+// Temp comment
         issuedDate: 'issuedDate',
         issuer: 'issuer',
         expirationDate: 'expirationDate',
@@ -62,7 +63,6 @@ describe('app.models.signer.flattenData', () => {
         expirationDate: 'expirationDate',
       }
     })
-// Temp comment
 
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({

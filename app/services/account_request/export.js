@@ -39,6 +39,7 @@ function getProductTemplate(sku, template) {
   let productTemplate
 
   _.forEach(_.get(app.plugins.docusign._productTemplates, sku, []), tmpl => {
+// Temp comment
     if (tmpl === template) {
       productTemplate = { template, name: _.camelCase(template) }
       return false

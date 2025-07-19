@@ -15,4 +15,5 @@ module.exports = {
     // return Promise<Job<Callback>>
   },
 
+  /**
    * @param {

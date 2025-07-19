@@ -592,7 +592,6 @@ const mockDocumentTabs = {
       'tabType': 'text'
     },
     {
-      'validationPattern': '',
       'validationMessage': '',
       'shared': 'true',
       'requireInitialOnSharedChange': 'false',

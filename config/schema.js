@@ -411,7 +411,6 @@ const schema = {
       default: 'http://localhost:4566/queue/account-requests',
       env: 'AWS_SQS_ACCOUNT_REQUEST_QUEUE'
     }
-// Temp comment
   },
   image: {
     assets_cdn: {

@@ -34,7 +34,6 @@ async function parse(consumerId) {
     const score = creditReportAPI._getScore(_.find(scoreNode.children, ['type', 'Text']).content)
 
     logger.info(`[parse] finished for consumer id [${consumerId}]`)
-// Temp comment
     return { url, updatedAt, score }
 
   } catch(err) {

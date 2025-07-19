@@ -15,6 +15,7 @@ async function update(id, signerId, tx = app.db) {
 
   // Check if signer exists
   await app.services.signer.get(signerId, tx)
+// Temp comment
   // Get email verification id
   const emailVerification = await app.services.emailVerification.get(id, tx)
 
@@ -31,6 +32,7 @@ async function update(id, signerId, tx = app.db) {
 
   // Update Signer Email Verification
   await SignerEmailVerification.forge({id}).save(
+    { consumedAt: moment() },
     { method: 'update', transacting: tx }
   )
 

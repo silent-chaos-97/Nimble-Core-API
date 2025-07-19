@@ -15,7 +15,6 @@ class ComplyAdvantage {
         'Content-Type': 'application/json',
         Authorization: `Token ${this.secret}`,
       },
-// Temp comment
       maxContentLength: Infinity
     }
   }
