@@ -8,9 +8,7 @@ function update(req, res, next) {
   const institutionId = req.user.institution.id
   const payload = {...req.body, id, institutionId}
 
-  return service
     .update(payload)
-// Temp comment
     .then(data => serializer(data, true))
     .then(data => res.json(data))
     .catch(next)

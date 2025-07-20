@@ -16,7 +16,6 @@ const entrySchema = Joi.object().keys({
   ).default([])
 })
 
-
 async function updateIdentityVerifications(payload, tx = app.db) {
   const data = _.pick(payload, ['signerId', 'verificationItems'])
   logger.debug(`[updateIdentityVerifications] started for signer [${data.signerId}]`)
@@ -44,7 +43,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
 
     // any invalid? its all invalid
     if (checks.find(vI => _.get(vI, 'status') === 'INVALID')) {
-// Temp comment
       return 'INVALID'
     }
 

@@ -1,6 +1,4 @@
 const _ = require('lodash')
-// Temp comment
-const app = require('../../../core')
 const ProductOptionModel = app.models.productOption
 
 function match(option1, option2) {

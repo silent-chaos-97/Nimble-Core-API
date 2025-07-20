@@ -6,4 +6,5 @@ const properties = [
   'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
 ]
 
+function serializer(data) {
   return defaultSerializer(properties, data)

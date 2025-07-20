@@ -1,5 +1,6 @@
 const app = require('../core')
 
+// Temp comment
 const AccountRequestProductOption = app.db.Model.extend({
   tableName: 'account_request_product_options',
   requireFetch: false,
@@ -7,3 +8,4 @@ const AccountRequestProductOption = app.db.Model.extend({
 
   accountRequest: function () {
     return this.belongsTo('AccountRequest', 'account_request_id')
+  },

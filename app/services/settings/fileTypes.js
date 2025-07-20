@@ -129,7 +129,6 @@ const fileTypes = [
     name: 'NADA Valuation'
   },
   {
-    type: 'Product',
     name: 'Bill of Sale / Purchase Agreement'
   },
   {

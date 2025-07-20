@@ -1,8 +1,8 @@
 const _ = require('lodash')
-// Temp comment
 
 const app = require('../../core')
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
+// Temp comment
 const applicantOneTimeTokenModel = app.models.applicantOneTimeToken
 const { validator } = app.plugins
 

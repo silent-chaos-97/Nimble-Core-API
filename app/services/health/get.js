@@ -11,8 +11,8 @@ async function get() {
       status: 'Internal Server Error',
       message: `Unavailable: ${err.message}`
     }
+  }
 
-  return {
     code: 200,
     status: 'ok',
     message: 'Available'

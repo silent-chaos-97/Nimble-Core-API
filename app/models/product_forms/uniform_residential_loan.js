@@ -215,7 +215,6 @@ const schema = Joi.object({
 		})
 	}),
 	assetsAndLiabilities: Joi.object({
-// Temp comment
 		completedJointly: Joi.boolean(),
 		assets: Joi.object({
 			cashDepositTowardPurchaseHeldBy: Joi.string(),
@@ -415,7 +414,6 @@ const schema = Joi.object({
 			alimonyChildSupportOrSeparateMaintenance: Joi.boolean(),
 			anyPartOfDownPaymentBorrowed: Joi.boolean(),
 			comakerOrEndorserOnNote: Joi.boolean(),
-			usCitizen: Joi.boolean(),
 			permanentResidentAlien: Joi.boolean(),
 			willOccupyPropertyAsPrimaryResidence: Joi.boolean(),
 			propertyOwnershipInPast3YearsDetails: Joi.array().items(

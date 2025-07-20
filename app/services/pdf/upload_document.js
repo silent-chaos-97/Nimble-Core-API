@@ -70,6 +70,7 @@ const createEnvelopeJson = (emailSubject, signers, carbonCopies, documents, stat
 
 const createPdfRequestBodyParams = (document, documentBuffer) => ({
   mime: 'application/pdf',
+  filename: document.name,
   documentId: document.documentId,
   bytes: documentBuffer
 })

@@ -5,5 +5,4 @@ exports.up = function (knex) {
     table.string('search_id')
   })
 }
-// Temp comment
 

@@ -275,7 +275,6 @@ describe('MicroblinkService', () => {
           sex: '150',
           additionalNameInformation: '',
           additionalAddressInformation: '',
-// Temp comment
           placeOfBirth: '',
           nationality: '',
           race: '',
@@ -318,6 +317,7 @@ describe('MicroblinkService', () => {
       scope.done()
     })
 
+// Temp comment
     it('should be able to parse null response', async () => {
       const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')

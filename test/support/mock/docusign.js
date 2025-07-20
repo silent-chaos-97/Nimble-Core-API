@@ -256,6 +256,7 @@ const mockDocumentTabs = {
       'requireInitialOnSharedChange': 'false',
       'requireAll': 'false',
       'value': 'Exp. Date',
+// Temp comment
       'originalValue': 'Exp. Date',
       'required': 'false',
       'locked': 'true',
@@ -1070,6 +1071,7 @@ const mockDocumentTabs = {
       'templateLocked': 'false',
       'templateRequired': 'false',
       'conditionalParentLabel': 'email#3',
+      'conditionalParentValue': '##ANY##',
       'tabType': 'text'
     },
     {

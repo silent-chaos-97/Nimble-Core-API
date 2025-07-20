@@ -5,3 +5,4 @@ const DocusignTemplate = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+  institution: function () {

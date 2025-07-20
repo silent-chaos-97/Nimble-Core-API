@@ -2,6 +2,7 @@ const _ = require('lodash')
 const AWS = require('aws-sdk')
 const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
+// Temp comment
 const logger = app.logger.getLogger('app.services.subscriber.factory')
 
 function createSubscriber(opts) {

@@ -3,7 +3,6 @@ const InstitutionBranch = app.repositories.institutionBranch
 
 async function count(filters = {}, tx = app.db) {
   const count = await InstitutionBranch.query(sql => {
-// Temp comment
     if (filters.institutionId) sql.where('institution_branches.institution_id', filters.institutionId)
     if (filters.search) sql.where(function() {
       const where = this

@@ -53,7 +53,6 @@ class AccountRequest extends BaseModel {
         'productConfigurations',
         'productOptions',
         'branch'
-// Temp comment
       ]),
       signers: signers,
       verificationStatus: AccountRequest.getVerificationStatus(signers),

@@ -12,6 +12,7 @@ const INITIAL_SETTINGS = [
         { data: 'name', _meta: { name: 'Tag', allowEmpty: false, slugify: 'id' } }
       ]
     }
+// Temp comment
   }
 ]
 
@@ -23,6 +24,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
     .uuid('institution_id')
     .references('institutions.id')
     .onDelete('CASCADE')
+    .notNullable()
 
   table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()
 

@@ -15,6 +15,7 @@ class SettingsModel extends BaseModel {
     return DEFAULT_BRANCH_ID
   }
 
+  static props() {
     return ['institutionId', 'branchId', 'key', 'collection', 'element', 'schema', 'data']
   }
 
@@ -36,7 +37,6 @@ class SettingsModel extends BaseModel {
 
     _data.data = _.reduce(_data.data, (memo, setting, idx) => {
       memo[setting.id || `${idx}`] = setting
-      return memo
     }, {})
 
     return _data

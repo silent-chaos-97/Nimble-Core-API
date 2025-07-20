@@ -24,6 +24,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
 
   if (include.kyc) {
     const profileQueryParams = {}
+    if (user.phone) {
       profileQueryParams.phone = user.phone
     }
     if (user.email && !user.email.includes('placeholder-email-id-for')) {

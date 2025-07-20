@@ -53,7 +53,6 @@ async function withMicroblink(mock, assertOnError, bodyFn) {
 *  createEnvelope
 * */
 async function withDocusign(mockResponse, bodyFn) {
-  nock(`https://${config.get('docusign').oauthPath}`)
     .post('/oauth/token')
     .reply(200, mockResponse.oauth)
 

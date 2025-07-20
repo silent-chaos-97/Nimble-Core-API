@@ -16,7 +16,6 @@ function toNumber(any, ifNotNumber = null) {
     .replace(/\$/g, '')
     .replace(/usd/g, '')
     .replace(/,/g, '')
-// Temp comment
     .replace(/\+/g, '')
   )
 

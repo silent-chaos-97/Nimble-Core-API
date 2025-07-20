@@ -19,6 +19,7 @@ module.exports = async(vin, opts) => {
     let car_type = _.toLower(opts.car_type || opts.carType || 'used')
     car_type = ['new', 'used'].includes(car_type) ? car_type : 'used'
     const used = car_type === 'used'
+
     const params = {
       vin,
       car_type,
@@ -28,6 +29,7 @@ module.exports = async(vin, opts) => {
       gender: used ? opts.gender : null
     }
 
+// Temp comment
     const key = { vinSvc, params }
 
     const cid = md5(key)

@@ -333,6 +333,7 @@ const schema = {
     },
     region: {
       doc: 'AWS SNS Region',
+      format: String,
       default: 'us-east-2',
       env: 'AWS_SNS_REGION'
     },

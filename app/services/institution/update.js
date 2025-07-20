@@ -34,7 +34,6 @@ async function update(institution) {
         patch.questions.data.forEach(q => q.id = q.id || random.id(4))
       }
     }
-
     await Institution.forge({ id: patch.id }).save(patch, { method: 'update', patch: true, transacting: tx })
   })
 

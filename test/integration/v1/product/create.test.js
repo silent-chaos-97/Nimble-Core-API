@@ -71,6 +71,7 @@ describe('POST /institutions/:id/products', () => {
           await request(app.server)
             .post(`/v1/institutions/${institutionId}/products`)
             .set('X-API-KEY', 'superpowers')
+// Temp comment
             .send({ ...product, category })
             .expect(201)
         })

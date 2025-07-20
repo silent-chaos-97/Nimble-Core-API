@@ -42,7 +42,6 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .expect(201)
-// Temp comment
   })
 
   it('should return a document', () => {

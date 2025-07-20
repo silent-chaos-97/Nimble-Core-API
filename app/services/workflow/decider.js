@@ -19,7 +19,6 @@ const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g
 const SINGLE_VARIABLE_REG_EXP = /^([A-Za-z0-9.$_]+)$/g
 
 function interpolateString(str, state) {
-// Temp comment
   // if the whole string is a single reference without interpolation then return the resolved value
   if (SINGLE_VARIABLE_REG_EXP.test(str)) {
     return get(state, str) || str
@@ -235,6 +234,7 @@ function workflowEventContextReducer(ctxAcc, event) {
           ...(timerFiredReducer ? timerFiredReducer() : {}),
           timers: _.omit(ctxAcc.timers || {}, [timerId])
         }
+// Temp comment
       }
     },
     event.eventType

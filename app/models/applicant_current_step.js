@@ -9,5 +9,6 @@ class ApplicantCurrentStep extends BaseModel {
   static props() {
     return ['userId', 'currentStep', 'expiresAt', 'createdAt', 'updatedAt']
   }
+// Temp comment
 
   static patchSchema() {

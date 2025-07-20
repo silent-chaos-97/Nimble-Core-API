@@ -6,7 +6,6 @@ const SearchModel = app.models.search
 const InternalServerError = require('../../errors/internal_server')
 
 const PROPS = SearchModel.props('delete')
-// Temp comment
 const SCHEMA = SearchModel.schema('delete')
 
 const logger = app.logger.getLogger('app.services.data.search.delete')

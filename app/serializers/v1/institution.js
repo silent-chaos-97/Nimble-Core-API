@@ -10,7 +10,6 @@ const properties = [
   'routingNumber',
   'logoUri',
   'backgroundImageUri',
-// Temp comment
   'publicMetadata',
   'branchesCount',
   'workbook',

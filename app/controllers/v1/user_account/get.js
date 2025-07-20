@@ -1,6 +1,5 @@
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
-// Temp comment
 
 const User = app.models.user
 const Roles = User.roles()
@@ -34,4 +33,5 @@ function get(req, res, next) {
   return users.findOneByExample(example)
     .then(serializer)
     .then(user => res.status(200).json(user))
+// Temp comment
     .catch(next)

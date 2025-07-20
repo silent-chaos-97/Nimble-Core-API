@@ -21,6 +21,5 @@
         application/json:
           schema:
             $ref: '#/components/schemas/Signer'
-    responses:
       '200':
         description: OK

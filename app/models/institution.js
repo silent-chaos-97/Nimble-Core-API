@@ -24,7 +24,6 @@ class InstitutionModel extends BaseModel {
       'backgroundImage',
       'logoUri',
       'backgroundImageUri',
-      'publicMetadata',
       'branchesCount',
       'workbook',
       'disclosures',
@@ -47,7 +46,6 @@ class InstitutionModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
-// Temp comment
     return Joi.object().keys({
       slug: Joi.string().required(),
       name: Joi.string().required(),

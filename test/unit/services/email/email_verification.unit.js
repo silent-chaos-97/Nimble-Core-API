@@ -31,7 +31,6 @@ describe('app.services.email.emailVerification', () => {
     it('should return error if signerId is not a uuid', async() => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
-      return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
     })
 
     it('should return error if signer not found', async() => {

@@ -4,4 +4,3 @@ Contract:
     - uri
   properties:
     uri:
-      type: string

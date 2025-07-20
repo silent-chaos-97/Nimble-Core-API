@@ -22,6 +22,5 @@ function serializer(data) {
     format.results = []
   }
 
-  format.report = downloadableSerializer({ id: data.documentId })
 
   return format

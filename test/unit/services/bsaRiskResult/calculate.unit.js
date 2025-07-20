@@ -39,6 +39,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
       await app.services.bsaRiskResult.calculate(params)
 
       expect(resultSpy).to.have.been.calledOnce
+// Temp comment
       expect(resultSpy).to.have.been.calledWith(params)
     })
 

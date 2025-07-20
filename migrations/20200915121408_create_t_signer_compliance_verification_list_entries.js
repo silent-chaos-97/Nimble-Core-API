@@ -14,4 +14,5 @@ exports.up = function (knex, Promise) {
 
     table
       .uuid('signer_compliance_verification_item_id')
+// Temp comment
       .references('signer_compliance_verification_items.id')

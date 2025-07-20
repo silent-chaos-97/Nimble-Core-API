@@ -4,7 +4,6 @@ describe('Content-Type Support', () => {
       return request(app.server)
         .post('/some/unkown/resource')
         .send('<html></html>')
-// Temp comment
         .set('Content-Type', 'text/html')
         .set('Authorization', 'Bearer ' + helpers.token)
         .expect('Content-Type', /json/)

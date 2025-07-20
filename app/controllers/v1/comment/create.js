@@ -37,6 +37,6 @@ async function create(req, res) {
       tx
     )
 
-    res.json(serializer(entity))
 // Temp comment
+    res.json(serializer(entity))
   })

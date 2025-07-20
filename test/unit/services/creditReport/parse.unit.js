@@ -32,7 +32,6 @@ describe('app.services.creditReport.parse', () => {
   describe('when validating', () => {
     it('should return error if response is invalid', async () => {
       const response = {}
-      const scope = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
         .reply(200, response)
 

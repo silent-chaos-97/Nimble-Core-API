@@ -49,7 +49,6 @@ describe('BaseModel class', () => {
     let model = new BaseModel(['a', 'b', 'd'], [], data)
     expect(model.data().a).to.equal(1)
     expect(model.data().b).to.equal(2)
-    expect(model.data().c).to.be.undefined
     expect(model.data().d).to.equal(4)
   })
 

@@ -1,8 +1,8 @@
 module.exports = {
 
   /**
-// Temp comment
    * @param {
+// Temp comment
    * {
    *   wkfl: object,
    *   config: object,

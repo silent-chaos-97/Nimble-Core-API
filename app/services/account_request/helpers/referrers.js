@@ -13,7 +13,6 @@ module.exports = {
    */
   normalizeReferredById: async(model, institutionId = null, tx = app.db) => {
     if (!_.has(model, 'referredById')) return model
-
     model.referredById = _.trim(model.referredById)
 
     if (!model.referredById || model.referredById === '!') { // removing referredBy, set explicitly to null

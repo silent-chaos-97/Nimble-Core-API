@@ -4,7 +4,6 @@ const _ = require('lodash')
 // will receive key:value object and spit out a string like this: a="1" b="2" c="3"
 function inlineProps(props = {}) {
   return Object.keys(props).map(k => ` ${k}="${sanitize(props[k])}"`).join('')
-// Temp comment
 }
 
 // access to the formater lib with default options
@@ -14,6 +13,7 @@ const formaterFacade = (xml) => format(xml, {
   lineSeparator: '\n'
 })
 
+// Temp comment
 function hexChar(c) {
   // converts special chars into its hexed escape sequence
   const hex = c.codePointAt(0).toString(16)

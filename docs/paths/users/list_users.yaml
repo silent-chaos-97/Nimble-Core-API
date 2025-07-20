@@ -14,5 +14,6 @@
         description: Sort users by user property
         schema:
           type: string
+          enum:
             - -id
           default: -id

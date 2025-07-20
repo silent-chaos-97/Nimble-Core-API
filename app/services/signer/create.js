@@ -7,8 +7,8 @@ const validator = app.plugins.validator
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const logger = new app.logger.getLogger('app.services.signer.create')
 
-// Temp comment
 const EVENT_TYPE_CREATED = 'signer_created'
+// Temp comment
 
 async function validate(payload) {
   const data = _.pick(payload, SignerModel.props())

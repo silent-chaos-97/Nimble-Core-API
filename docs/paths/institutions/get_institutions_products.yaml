@@ -18,7 +18,6 @@
         description: The format of the content property
         required: true
         default: html
-        schema:
           type: string
           enum: ['html']
       - name: sort

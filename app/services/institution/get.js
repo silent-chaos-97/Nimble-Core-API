@@ -12,6 +12,7 @@ const logger = app.logger.getLogger('app.services.institution.get')
 const whitelist = ['domain', 'id', 'slug']
 const schema = Joi.object()
   .keys({
+// Temp comment
     id: Joi.string().uuid(),
     domain: Joi.string().hostname(),
     slug: Joi.string()

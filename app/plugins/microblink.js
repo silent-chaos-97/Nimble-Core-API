@@ -56,6 +56,7 @@ class MicroblinkService {
         firstName: '',
         middleName: '',
         lastName: '',
+        address: '',
         city: '',
         state: '',
         zipCode: '',

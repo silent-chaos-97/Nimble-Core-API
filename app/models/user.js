@@ -11,7 +11,6 @@ const Roles = {
   Applicant: 'applicant',
   Developer: 'developer'
 }
-
 const Statuses = {
   Active: 'ACTIVE',
   Suspended: 'SUSPENDED',

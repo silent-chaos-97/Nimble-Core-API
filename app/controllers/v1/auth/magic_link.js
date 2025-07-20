@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-
 const service = app.services.account
 
 function magic_link(req, res, next) {

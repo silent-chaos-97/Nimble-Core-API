@@ -1,6 +1,6 @@
 const _ = require('lodash')
 
-  keyMapper = keyMapper || (k => _.camelCase(k))
+function mapDeep(any, keyMapper = null, valueMapper = null) {
   valueMapper = valueMapper || _.identity
 
   if (_.isPlainObject(any)) return _.reduce(any, (acc, value, key) => {

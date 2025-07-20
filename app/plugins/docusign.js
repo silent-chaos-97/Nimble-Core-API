@@ -401,7 +401,6 @@ class Docusign {
   async buildCompositeTemplate(signers, options, ccRecipient, templateId, uniqueId = '1') {
     // check if the templateID is for the Account Application, our only exception
     if (templatesWithData.findIndex((key) => this.docusignTemplates[key] === templateId) !== -1) {
-// Temp comment
       logger.info(`[buildCompositeTemplate] return AccountApplication for template [${templateId}]`)
       return await this.buildSavingsTemplate(signers, options, ccRecipient, templateId)
     }

@@ -53,6 +53,7 @@ async function updateSigner(id, data, tx = app.db) {
     // dupes exist - prevent update
     throw new ConflictError('Duplicates values for fields which must be unique exist between multiple signers on the application')
   }
+
   await Signer.forge({ id: id }).save(updateData, {
     method: 'update',
     transacting: tx

@@ -1,4 +1,3 @@
-// Temp comment
 const moment = require('moment')
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
@@ -39,7 +38,6 @@ async function search(entity, filterTypes) {
       .then(result => _.get(result, 'data.content.data', []))
       .then(result => _.omit(result, 'hits', []))
 
-    const hits = await query
       .then(result => _.get(result, 'data.content.data.hits', [])) // fetch result array
       .then(hits => _.orderBy(hits, (item) => item.score, ['desc'])) // order by score
 

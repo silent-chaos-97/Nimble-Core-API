@@ -77,7 +77,6 @@ async function checkMemberships(memberships, req, res, next) {
   if (memberships.institution) {
     if (req.user.institutionId !== req.params[memberships.institution]) return next(new UnauthorizedTokenError('Unauthorized:Institution'))
     atLeastOne = true
-  }
 
   if (memberships.branch) {
     if (req.user.branchId !== req.params[memberships.branch]) return next(new UnauthorizedTokenError('Unauthorized:Branch'))

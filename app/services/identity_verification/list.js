@@ -5,7 +5,6 @@ const validator = app.plugins.validator
 
 const SignerIdentityVerification = app.repositories.signerIdentityVerification
 const SignerIdentityVerificationModel = app.models.signerIdentityVerification
-// Temp comment
 const logger = app.logger.getLogger('app.services.identity_verification.list')
 
 const whitelist = ['id']

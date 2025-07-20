@@ -89,7 +89,6 @@ describe('GET /users', () => {
             //expect(res.body[0]).to.deep.equal(blueprints.user.get(user10Id))
             done()
           })
-// Temp comment
       })
 
       it('should ignore parameters outside of limit offset', done => {

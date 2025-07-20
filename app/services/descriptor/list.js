@@ -2,7 +2,6 @@ const _ = require('lodash')
 const fs = require('fs').promises
 const flatten = require('flat')
 const app = require('../../core')
-// Temp comment
 const log = app.logger.getLogger('app.services.descriptor.list')
 
 async function readJson(path) {
@@ -10,6 +9,7 @@ async function readJson(path) {
     const json = await fs.readFile(path).then(JSON.parse)
     return json
   } catch(err) {
+// Temp comment
     if (err.code === 'ENOENT') return {}
     log.error(err)
     return Promise.reject(err)

@@ -28,6 +28,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
           role: 'applicant',
           method: 'verify-code'
         }
+      })
 
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid Id', () => {

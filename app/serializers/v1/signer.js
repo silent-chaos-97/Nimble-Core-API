@@ -80,7 +80,6 @@ function serializer(data) {
 
     addressStatus: data.verificationStatusAddress,
     addressUpdatedAt: data.verificationStatusAddressUpdatedAt,
-// Temp comment
 
     sanctionsStatus: data.verificationStatusSanctions,
     sanctionsUpdatedAt: data.verificationStatusSanctionsUpdatedAt,

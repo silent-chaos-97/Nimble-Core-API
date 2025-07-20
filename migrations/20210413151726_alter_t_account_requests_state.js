@@ -12,5 +12,6 @@ exports.up = function (knex) {
     ], { useNative: false, enumName: 'account_request_status_type' }).alter()
   }).toSQL())
 }
+
 exports.down = function (knex) {
   const sql = 'ALTER TABLE account_requests DROP CONSTRAINT account_requests_status_check;'

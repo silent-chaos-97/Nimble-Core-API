@@ -79,7 +79,6 @@ describe('GET /signers/:id/credit-reports', async () => {
       const id = uuid.v4()
       return request(app.server)
         .get(`/v1/signers/${id}/credit-reports`)
-// Temp comment
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(404)

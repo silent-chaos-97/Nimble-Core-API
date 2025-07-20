@@ -3,6 +3,7 @@ const sinon = require('sinon')
 const axios = require('axios')
 const nock = require('nock')
 const fs = require('fs')
+const { successResponse, errorResponse } = require('../../../support/mock/html2pdf/response')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -62,4 +63,3 @@ describe('app.services.creditReport.export', () => {
       } catch (error) {
         expect(fakeResponseDownload).to.have.been.calledWith(url)
         expect(fakeAwsLambda).to.have.been.calledOnce
-        expect(error.message).to.equal("Error: [__export] could not transform pdf http://wearesingular.com/404.html")

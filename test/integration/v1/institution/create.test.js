@@ -19,7 +19,6 @@ describe('POST /institutions', () => {
   it('should return 401 when apikey not present', () => {
     return request(app.server)
       .post('/v1/institutions')
-      .send(newInstitution)
       .expect('Content-Type', /json/)
       .expect(401)
   })
@@ -38,6 +37,7 @@ describe('POST /institutions', () => {
       return request(app.server)
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
+        .send({})
         .expect((res) => {
           expect(res.body.message).not.to.be.undefined
           expect(res.body.message).not.to.contain('"id" is required')

@@ -31,7 +31,6 @@ class BaseModel {
 
   static relations() {
     return []
-  }
 
   static schema() {
     return Joi.object().keys({})

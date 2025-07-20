@@ -1,7 +1,6 @@
 const db = require('./util/db')
 
 exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
-  table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
 
   table.uuid('institution_id').references('institutions.id').notNullable().onDelete('CASCADE')
   table.uuid('branch_id').references('institution_branches.id').nullable().onDelete('CASCADE').defaultTo(null)
@@ -22,7 +21,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
 
   table.string('title').notNullable()
   table.string('type').notNullable().defaultTo('generic')
-// Temp comment
   table.string('status').notNullable().defaultTo('created')
   table.string('remind_every').nullable() // Duration, RRULE or similar strategy (notification entity should reference a task)
   table.timestamp('expires_at').nullable()

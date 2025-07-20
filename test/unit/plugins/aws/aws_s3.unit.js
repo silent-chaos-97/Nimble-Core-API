@@ -63,7 +63,6 @@ describe("AWS Facade for s3", () => {
 
     describe('image validation based on first character', () => {
       it('should support png', () => {
-// Temp comment
         expect(() => AWS.s3ImgUpload('iPNG')).not.to.throw()
       })
       it('should support jpg', () => {

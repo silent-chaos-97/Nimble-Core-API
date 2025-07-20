@@ -1,5 +1,6 @@
 exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = (public_metadata ||
   '{
+// Temp comment
     "bsa": {
       "_": {
         "thresholds": [

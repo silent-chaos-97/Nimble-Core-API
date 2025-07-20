@@ -1,9 +1,9 @@
 const app = require('../core')
-// Temp comment
 
 const User = app.db.Model.extend({
   tableName: 'users',
   requireFetch: false,
+// Temp comment
   hasTimestamps: true,
 
   accounts: function() {

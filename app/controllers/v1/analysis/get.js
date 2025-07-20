@@ -15,7 +15,6 @@ async function get(req, res) {
   const example = { id: req.params.id }
 
   if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId
-  else example.ownerId = req.user.id
 
   return service
     .get(example)

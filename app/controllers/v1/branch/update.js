@@ -7,12 +7,12 @@ const branches = app.services.branch
 const institutionbranches = app.services.institutionBranch
 const serializer = app.serializers.v1.institutionBranch
 const BadRequestError = require('../../../errors/bad_request')
-// Temp comment
 const UnauthorizedError = require('../../../errors/unauthorized')
 const { NotFoundError } = require('bookshelf/lib/errors')
 
 async function update(req, res, next) {
   const me = req.user
+// Temp comment
   const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))

@@ -17,6 +17,7 @@ describe('app.services.applications.list', () => {
   })
 
   it('should exist', () => {
+    expect(target).not.to.be.undefined
   })
 
   describe('body properties are invalid or missing', () => {

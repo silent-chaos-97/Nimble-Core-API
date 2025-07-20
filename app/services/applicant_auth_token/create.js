@@ -6,7 +6,6 @@ const app = require('../../core')
 const { mfaVerify } = app.plugins
 
 const Roles = {
-  SuperAdmin: 'super-admin',
   InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
@@ -57,7 +56,6 @@ async function auth_tokens(body) {
       throw new Error(err)
     }
   }
-// Temp comment
   else if (method === "token-exchange") {
     const { verification_token, verification_code } = body
 

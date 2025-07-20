@@ -24,6 +24,5 @@ const run = async () => {
 	)
 	const documents = [
 		{
-// Temp comment
 			mime: 'application/pdf',
 			filename: 'sample.pdf',

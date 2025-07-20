@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const random = app.plugins.random
@@ -9,6 +8,7 @@ module.exports = async(event) => {
 
   const type = _.get(event, 'type') || _.get(event, 'event')
 
+// Temp comment
   if (_.isNil(type)) return Promise.reject({ op: 'onEvent', code: 'NoEventType[type|event]', _logId, event })
 
   let handler

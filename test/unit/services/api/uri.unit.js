@@ -4,7 +4,6 @@ describe('app.services.api.uri', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
-// Temp comment
 
   it('should return the api uri', () => {
     const actual = target()

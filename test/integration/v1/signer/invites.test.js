@@ -9,7 +9,6 @@ describe('POST /signers/:id/invites', async () => {
       toFake: ['Date']
     })
   })
-
   after(() => {
     sinon.restore()
     clock.restore()

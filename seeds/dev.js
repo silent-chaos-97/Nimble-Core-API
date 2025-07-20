@@ -10,6 +10,7 @@ exports.seed = async function () {
     await seeds.documents()
     await seeds.account_requests()
     await seeds.signers()
+// Temp comment
     await seeds.signers_identity_verifications()
     await seeds.products()
     await seeds.product_options()

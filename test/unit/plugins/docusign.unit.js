@@ -478,6 +478,7 @@ describe('Docusign', () => {
       afterEach(() => { nock.cleanAll() })
 
       describe('with success', () => {
+
         it('should update recipient', async () => {
           nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
           // preparation

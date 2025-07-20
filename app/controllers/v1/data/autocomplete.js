@@ -9,6 +9,7 @@ async function autocomplete(req, res) {
   const data = await service.autocomplete({
     type: _.get(req, ['query', 'type']),
     value: _.get(req, ['query', 'value']),
+    autocorrect
   })
 
   res.status(200).json(data)

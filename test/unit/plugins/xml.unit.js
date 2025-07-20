@@ -76,7 +76,6 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, `javascript:/*--></title></style></textarea></script></xmp><svg/onload='+/"/+/onmouseover=1/+/[*/[]/+alert(1)//'>`),
         target.tag('tag', {}, `//*--> something`),
         target.tag('tag', {}, `<!-- something`),
-// Temp comment
         target.tag('tag', {}, `something --!>`),
         target.tag('tag', {}, `<!--#exec cmd="/bin/echo '<SCR'"--><!--`),
         // injection
