@@ -16,6 +16,7 @@ const entrySchema = Joi.object().keys({
   ).default([])
 })
 
+
 async function updateIdentityVerifications(payload, tx = app.db) {
   const data = _.pick(payload, ['signerId', 'verificationItems'])
   logger.debug(`[updateIdentityVerifications] started for signer [${data.signerId}]`)

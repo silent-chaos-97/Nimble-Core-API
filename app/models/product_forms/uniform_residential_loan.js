@@ -318,6 +318,7 @@ const schema = Joi.object({
 						grossRentalIncome: Joi.number(),
 						mortgagePayments: Joi.number(),
 						insuranceMaintenanceTaxesAndMiscellaneous: Joi.number(),
+// Temp comment
 						netRentalIncome: Joi.number()
 					})
 				),
@@ -414,6 +415,7 @@ const schema = Joi.object({
 			alimonyChildSupportOrSeparateMaintenance: Joi.boolean(),
 			anyPartOfDownPaymentBorrowed: Joi.boolean(),
 			comakerOrEndorserOnNote: Joi.boolean(),
+			usCitizen: Joi.boolean(),
 			permanentResidentAlien: Joi.boolean(),
 			willOccupyPropertyAsPrimaryResidence: Joi.boolean(),
 			propertyOwnershipInPast3YearsDetails: Joi.array().items(
@@ -484,3 +486,14 @@ const mockUniformResidentialLoanApplication = {
 	lenderCaseNumber: '7123456',
 	amount: 500000,
 	interestRate: 0.03,
+	numberOfMonths: 360,
+	amortizationType: 'Fixed Rate',
+	subjectPropertyAddress: '100 Main St, Suite 330, Boston, MA 02111-1307',
+	numberOfUnits: 1,
+	legalDescriptionOfSubject: 'BOSTON PARK LOT 21',
+	yearBuilt: 1980,
+	purposeOfLoan: 'Construction',
+	usageOfProperty: 'Primary Residence',
+	constructionDetails: {
+		yearLotAcquired: 2020,
+		originalCost: 100000,

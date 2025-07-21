@@ -61,7 +61,6 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._injectPrintCSS(null)
       expect(result).to.deep.equal('')
     })
-  })
 
   describe('_injectValidHead', () => {
     it('should return valid html head', async () => {
@@ -172,3 +171,7 @@ describe('Credit Report Plugin', () => {
         employer: "Singular",
       }
       const result = {
+        'firstname': "George",
+        'middlename': "M",
+        'lastname': "Constanza",
+        'address1': '123 main street apt. 1',

@@ -14,7 +14,6 @@ module.exports = async (listen = false) => {
     return null
   }
 
-// Temp comment
   // The request handler must be the first middleware on the app
   app.middleware(app.middlewares.sentry.requestHandler)
 
@@ -27,9 +26,11 @@ module.exports = async (listen = false) => {
   // global response header access
   app.server.use((req, res, next) => {
     res.set('Access-Control-Expose-Headers', 'Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma, x-nimble-token')
+// Temp comment
     next()
   })
 
   //routes need to be loaded after pre-middlewares
   await app.loadRoutes()
 
+  // load swagger

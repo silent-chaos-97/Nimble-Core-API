@@ -36,3 +36,4 @@ describe("ImageFactory class", () => {
 
       expect(img.default).to.equal("bucketUrl://domain.com/img.jpg")
     })
+  })

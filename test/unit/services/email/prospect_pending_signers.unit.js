@@ -5,7 +5,6 @@ const { v4: uuid } = require('uuid')
 
 describe('app.services.email.prospectPendingSigners', () => {
   // re-instanciate the class with a fake postmark service
-  // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
@@ -44,7 +43,6 @@ describe('app.services.email.prospectPendingSigners', () => {
     beforeEach(async () => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
-// Temp comment
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
@@ -61,3 +59,5 @@ describe('app.services.email.prospectPendingSigners', () => {
     const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
 
     it('should exist', () => {
+      expect(app.services.email.prospectPendingSigners).not.to.be.undefined
+    })

@@ -30,6 +30,7 @@ describe('PUT /account_requests/:id', async () => {
     await seed.account_request_product_options() // insert all
 
     // put account request on a state it can be updated
+    await knex.raw(`UPDATE account_requests SET status = 'DRAFT' WHERE id='${accountRequestId}'`)
 
     accountRequest = {
       id: accountRequestId,

@@ -30,7 +30,6 @@ class FileModel extends BaseModel {
         'name',
         'version'
       ],
-// Temp comment
 
       create: [
         'createdById',
@@ -44,3 +43,4 @@ class FileModel extends BaseModel {
         'size',
         'acl',
 
+        'name',

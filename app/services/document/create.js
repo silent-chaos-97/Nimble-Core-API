@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../core')
 const { v4: uuid } = require('uuid')
 const validator = app.plugins.validator

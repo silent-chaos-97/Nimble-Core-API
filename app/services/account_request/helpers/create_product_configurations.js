@@ -5,6 +5,7 @@ const AccountRequestProductOption = app.repositories.accountRequestProductOption
 
 
 async function createProductConfigurations(accountRequestId, data, tx = app.db) {
+  // Create selected products
   for (const product of data.productConfigurations) {
     // filter out potentially bad props
     const productWhitelist = ['productId', 'accountRequestId', 'initialDeposit']
@@ -27,7 +28,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     // fetch and assign the nex available product account number
     const newAccountNumber = await app.services.productAccountNumber.next({
       productId: product.productId,
-      accountRequestId: accountRequestId
     })
 
     // save the account number as generic product option

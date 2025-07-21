@@ -1,5 +1,4 @@
 const uuid = require('uuid')
-
 describe('GET /signers/:id/identity-verifications', async () => {
   let clock, token
 
@@ -177,3 +176,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect(200)
         .expect(res => {
 
+          const face = res.body.find(item => item.verification === 'Face Detection')
+          const doc = res.body.find(item => item.verification === 'Name')
+
+          expect(face.category).to.equal('Face')

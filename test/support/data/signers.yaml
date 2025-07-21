@@ -214,7 +214,6 @@
   verification_status_political_exposure: 'PENDING'
   verification_status_political_exposure_updated_at: 2018-02-16T12:11:03.341Z
   consent_account_opening: true
-  consent_privacy_policy: true
   consent_communication: true
 
 - id: 'ef3c30f8-fb32-4d1f-9fd9-211637ab1111'
@@ -243,3 +242,9 @@
   consent_account_opening: true
   consent_privacy_policy: true
   consent_communication: true
+
+- id: '00000000-0000-ACCC-0000-00BBBBBBB111'
+  account_request_id: '00000000-0000-AAAA-AAAA-000000000444'
+  institution_id: '2552ab85-08da-4bb5-be00-9e94d282d312'
+  consent: true
+  consent_account_opening: false

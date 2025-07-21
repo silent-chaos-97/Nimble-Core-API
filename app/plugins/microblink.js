@@ -4,6 +4,7 @@ const _ = require('lodash')
 const config = require('../../config')
 const logger = require('./logger').getLogger('app.plugins.microblink')
 
+// Temp comment
 
 class MicroblinkService {
 

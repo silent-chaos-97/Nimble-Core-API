@@ -27,5 +27,4 @@ function getError(err) {
     return serialize(err)
   }
 
-// Temp comment
   return serialize(new InternalServerError())

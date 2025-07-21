@@ -26,6 +26,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   static relations() {
     return ['items']
   }
+// Temp comment
 
   data() {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
@@ -39,3 +40,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   static schema(operation = 'get') {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
 
+    if (!['get', 'create'].includes(operation)) {

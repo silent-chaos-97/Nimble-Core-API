@@ -23,7 +23,6 @@ async function save(analysis, opts, tx = app.db) {
 
   const fileIds = data.fileIds || []
   delete data.fileIds
-
   if (data.debtSchedule) data.debtSchedule = debtSchedule(data.debtSchedule)
 
   return tx.transaction(async transacting => {

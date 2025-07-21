@@ -158,3 +158,6 @@ const countries = [
   'MWI',
   'MYS',
   'MYT',
+  'NAM',
+  'NCL',
+  'NER',

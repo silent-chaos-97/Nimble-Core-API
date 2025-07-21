@@ -102,7 +102,6 @@ describe('POST /documents', () => {
     })
 
     it('should not persist the document metadata', (done) => {
-      request(app.server)
         .post('/v1/documents')
         .send(document)
         .end((err) => {
@@ -153,3 +152,6 @@ describe('POST /documents', () => {
       document.format = 'pdf'
       document.content = 'somethingelse'
       return request(app.server)
+        .post('/v1/documents')
+        .send(document)
+        .expect(201)

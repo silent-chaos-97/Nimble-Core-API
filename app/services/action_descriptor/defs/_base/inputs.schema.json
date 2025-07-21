@@ -1,4 +1,3 @@
-{
   "required": ["assignee"],
   "properties": {
     "assignee": {
@@ -41,3 +40,4 @@
     },
     "signature": {
       "title": "Signature",
+      "type": "string",

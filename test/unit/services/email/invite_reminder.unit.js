@@ -68,7 +68,9 @@ describe('app.services.email.inviteReminder', () => {
       await app.services.email.inviteReminder(id)
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
-// Temp comment
 
     it('should call send with correct data', async () => {
       const invitedSigner = blueprints.signers.signer_1
+// Temp comment
+      const institution = blueprints.institutions.institution_1
+      const invitedBy = blueprints.signers.signer_1

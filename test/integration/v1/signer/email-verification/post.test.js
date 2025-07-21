@@ -66,7 +66,6 @@ describe('POST /signers/:id/email-verifications', async () => {
       })
     })
 
-// Temp comment
     it('should return 400 with invalid uuid as id', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
@@ -125,3 +124,6 @@ describe('POST /signers/:id/email-verifications', async () => {
           expect(app.services.email.emailVerification).to.have.been.calledWith(verification.id, sinon.match.any)
         })
     })
+
+  })
+

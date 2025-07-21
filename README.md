@@ -125,3 +125,6 @@ yarn watch
 ```
 
 #### Testing
+
+```bash
+# linting the code before pushing

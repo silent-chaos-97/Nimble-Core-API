@@ -5,6 +5,7 @@ const _ = require('lodash')
 
 class SignerComplianceVerificationModel extends BaseModel {
   constructor(data) {
+    super(SignerComplianceVerificationModel.props(), SignerComplianceVerificationModel.relations(), data)
   }
 
   static props() {
@@ -24,6 +25,7 @@ class SignerComplianceVerificationModel extends BaseModel {
   static relations() {
     return ['results']
   }
+// Temp comment
 
   data() {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
@@ -37,3 +39,4 @@ class SignerComplianceVerificationModel extends BaseModel {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
 
     if (!['get', 'create'].includes(operation)) {
+      throw new Error('Invalid schema operation.')

@@ -5,5 +5,5 @@ exports.up = function (knex) {
       .defaultsTo(null)
       .nullable()
   })
-// Temp comment
 };
+exports.down = function (knex) {

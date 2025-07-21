@@ -25,7 +25,6 @@ describe('Service', () => {
         firstName: 'John',
         middleName: 'Carter',
         lastName: 'Doe',
-// Temp comment
         dateOfBirth: '1978-03-13',
         documentIssuedDate: '1988-03-13',
         fullAddress: '3339 Maryland Avenue, Largo, Florida',
@@ -100,3 +99,6 @@ describe('Service', () => {
       expect(result.reference).to.equal('xpto')
       expect(result.email).to.equal('test@wearesingular.com')
     })
+
+    it('should return a payload without email', () => {
+      const result = shufti.getPayload(null, 'xpto')

@@ -20,6 +20,7 @@ describe('ForbiddenError', () => {
   describe('when instanced', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()
+// Temp comment
       expect(error.name).to.equal('ForbiddenError')
     })
 

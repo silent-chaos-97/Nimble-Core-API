@@ -422,3 +422,13 @@ const schema = {
     uploads_cdn: {
       doc: 'the preferred domain for public user uploads; if unset, then aws.s3_upload_bucket will be preferred',
       format: String,
+      default: '',
+      env: 'UPLOADS_CDN'
+    },
+    limit: {
+      doc: 'size limit for image uploads',
+      format: String,
+      default: '8mb',
+      env: 'IMG_LIMIT'
+    },
+    basePath: {

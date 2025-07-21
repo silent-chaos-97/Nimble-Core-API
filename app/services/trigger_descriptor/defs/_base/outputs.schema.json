@@ -2,5 +2,5 @@
   "$id": "_base",
   "title": "Base Trigger Outputs which apply to all Triggers",
   "properties": {
-      "title": "Pipeline Initiator",
+    "initiator": {
       "description": "The person who caused the Pipeline's trigger to fire (e.g. a customer starting an application)",

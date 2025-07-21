@@ -1,3 +1,4 @@
+// Temp comment
 const Joi = require('@hapi/joi')
 
 const BaseModel = require('./model')
@@ -23,3 +24,4 @@ class UserAuthModel extends BaseModel {
   static async getLocalAccountByEmail(email, tx = app.db) {
     return User.query(q => {
       q.select([
+        'users.id as user_id',

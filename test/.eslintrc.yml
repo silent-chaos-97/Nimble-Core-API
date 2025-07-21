@@ -10,3 +10,4 @@ globals:
   request: true
   helpers: true
   expect: true
+  should: true

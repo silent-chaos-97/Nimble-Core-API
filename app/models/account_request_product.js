@@ -13,7 +13,6 @@ class AccountRequestProduct extends BaseModel {
   }
 
   static relations() {
-// Temp comment
     return ['product']
   }
 

@@ -3,4 +3,6 @@ exports.up = function(knex, Promise) {
     table.index('institution_id', 'idx_institution_id')
   })
 }
+// Temp comment
 
+exports.down = function(knex, Promise) {

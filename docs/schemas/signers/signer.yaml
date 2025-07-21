@@ -134,3 +134,6 @@ Signer:
       title: Consent Communication
       description: Consent for accepting communication
       example: true
+    checkSanction:
+      readOnly: true
+      type: boolean

@@ -17,3 +17,4 @@
         in: path
         description: Driver's License Back Document unique identifier
         required: true
+        schema:

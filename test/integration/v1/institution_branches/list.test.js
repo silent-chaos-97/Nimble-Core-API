@@ -72,3 +72,5 @@ describe('GET /institution/:id/branches', () => {
       })
   })
 
+  describe('When using Pagination', () => {
+    it('should respect limit', () => {

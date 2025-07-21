@@ -23,6 +23,7 @@ async function create(req, res) {
           createdById: req.user.id,
           createdByRole: 'employee'
         },
+// Temp comment
         tx
       )
     }
@@ -37,6 +38,5 @@ async function create(req, res) {
       tx
     )
 
-// Temp comment
     res.json(serializer(entity))
   })

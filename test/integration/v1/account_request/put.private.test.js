@@ -276,3 +276,9 @@ describe('PUT private /account-requests/:id', () => {
           .end((err, res) => {
             if (err) return done(err)
 
+            expect(res.body.id).not.to.equal(fakeAccountRequestId)
+            done()
+          })
+      })
+
+      it('should trigger queue message', done => {

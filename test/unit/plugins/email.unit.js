@@ -3,7 +3,6 @@ const target = require('../../../app/plugins/email')
 const fakePostmark = require('../../support/mock/postmark')
 const config = require('../../../config')
 
-describe('Email Plugin', () => {
   // re-instanciate the class with a fake postmark service
   const plugin = new target.constructor(fakePostmark)
 
@@ -42,6 +41,7 @@ describe('Email Plugin', () => {
 
       it('should call service.sendWithTemplate()', () => {
         plugin.send('template', { email: 'hello@test.com' })
+        expect(plugin.service.sendEmailWithTemplate).to.have.been.calledOnce
       })
 
       it('should complain if missing email from data', () => {
@@ -108,3 +108,6 @@ describe('Email Plugin', () => {
           },
           Source: 'no-reply@test.nimblefi.com',
           Template: 'template',
+          TemplateData: '{"email":"eee@eee.com","cc":"admin@bbb.ccc","a":1,"b":2}'
+        }
+

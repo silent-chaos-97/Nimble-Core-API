@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const Joi = require('@hapi/joi')
 
 const BaseModel = require('./model')
@@ -14,5 +15,4 @@ class KeyValueModel extends BaseModel {
 
   data() {
     return _.get(this._data, 'value', null)
-// Temp comment
   }

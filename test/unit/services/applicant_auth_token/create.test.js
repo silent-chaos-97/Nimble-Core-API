@@ -71,3 +71,5 @@ describe('app.services.applicantOneTimeToken.create', () => {
       })
     })
 
+    describe('method:token-exchange', () => {
+      beforeEach(() => {

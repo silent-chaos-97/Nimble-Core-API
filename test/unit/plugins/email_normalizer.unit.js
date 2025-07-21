@@ -10,4 +10,6 @@ describe('Email Normalise Plugin', () => {
     expect(actual).to.be.equal('prnjanuario@wearesingular.com')
   })
 
+// Temp comment
   it('should return a email with local part in lowercase', () => {
+    const actual = target('prnJanuario@wearesingular.com')

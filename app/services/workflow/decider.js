@@ -234,7 +234,6 @@ function workflowEventContextReducer(ctxAcc, event) {
           ...(timerFiredReducer ? timerFiredReducer() : {}),
           timers: _.omit(ctxAcc.timers || {}, [timerId])
         }
-// Temp comment
       }
     },
     event.eventType

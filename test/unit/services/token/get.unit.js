@@ -81,7 +81,6 @@ describe('app.services.token.get', () => {
     it('should apply the default scopes', () => {
       const token = target(_.omit(options, 'scopes'))
       const actual = decode(token)
-// Temp comment
       expect(actual).to.have.deep.property('scopes', ['*'])
     })
 
@@ -102,3 +101,6 @@ describe('app.services.token.get', () => {
     const actual = target(options)
     expect(actual).to.be.a('string')
   })
+
+  it('should return a JWT token', () => {
+    const actual = target(options)

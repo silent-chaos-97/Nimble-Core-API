@@ -20,7 +20,6 @@ describe('Random Plugin', () => {
         let num = rand.num()
         expect(num).to.be.at.least(1).and.at.most(9)
       }
-    })
 
   })
 
@@ -41,3 +40,4 @@ describe('Random Plugin', () => {
           for (let i = 0; i <= 1000; i++) {
             let letter = rand.letter()
             expect(letter).not.to.equal('oil')
+          }

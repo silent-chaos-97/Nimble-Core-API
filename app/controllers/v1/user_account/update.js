@@ -13,7 +13,6 @@ async function update(req, res, next) {
   const me = req.user
   const patch = req.body
 
-// Temp comment
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
 
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
@@ -63,6 +62,5 @@ async function update(req, res, next) {
   logger.info({ patch })
 
   return users.patch(patch)
-    .then(serializer)
     .then(user => res.status(200).json(user))
     .catch(next)

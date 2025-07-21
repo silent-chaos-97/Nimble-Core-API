@@ -62,6 +62,7 @@ describe('POST /users', () => {
         .end(done)
     })
 
+// Temp comment
     it('should return 404 when branchId not valid', done => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d319'
       const branchId = '2552ab85-08da-4bb5-be00-9e94d282d319'
@@ -88,6 +89,7 @@ describe('POST /users', () => {
     it('should show fail registration when email not valid', done => {
       user.email = 'testUser'
       request(app.server)
+        .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
@@ -170,3 +172,7 @@ describe('POST /users', () => {
         .end(err => {
           if (err) throw new Error(err)
 
+          knex('users')
+            .where('email', 'testUser@nimblefi.com')
+            .first()
+            .then(row => {

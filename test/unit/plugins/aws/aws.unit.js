@@ -1,5 +1,4 @@
 const AWS = require('../../../../app/plugins/aws')
-// Temp comment
 
 describe('AWS Facade class', () => {
   it('should exist', () => {
@@ -46,3 +45,4 @@ describe('AWS Facade class', () => {
     const target = new AWS.constructor({
       endpoint: 'endpoint',
       s3: {
+        endpoint: 'endpointoverwrite'

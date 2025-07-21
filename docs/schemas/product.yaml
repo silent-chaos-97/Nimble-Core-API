@@ -33,3 +33,4 @@ Product:
         $ref: '#/components/schemas/ProductOption'
     summary:
       type: string
+      title: Summary

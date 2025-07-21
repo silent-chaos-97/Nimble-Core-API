@@ -126,3 +126,6 @@ describe('app.services.creditReport.fetch', () => {
 
       const result = await knex.raw(`SELECT * FROM signer_credit_reports order by created_at DESC`)
 
+      expect(result.rows[0].score).to.equal(767)
+      expect(result.rows[0].document_id).not.to.equal('0000')
+      expect(result.rows[0].error_code).to.equal(null)

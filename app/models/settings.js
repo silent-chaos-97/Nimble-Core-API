@@ -16,6 +16,7 @@ class SettingsModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['institutionId', 'branchId', 'key', 'collection', 'element', 'schema', 'data']
   }
 
@@ -37,6 +38,8 @@ class SettingsModel extends BaseModel {
 
     _data.data = _.reduce(_data.data, (memo, setting, idx) => {
       memo[setting.id || `${idx}`] = setting
+      return memo
     }, {})
 
     return _data
+  }

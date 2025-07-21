@@ -63,3 +63,5 @@ describe('app.services.creditReport.export', () => {
       } catch (error) {
         expect(fakeResponseDownload).to.have.been.calledWith(url)
         expect(fakeAwsLambda).to.have.been.calledOnce
+        expect(error.message).to.equal("Error: [__export] could not transform pdf http://wearesingular.com/404.html")
+        expect(error).to.be.an.instanceof(Error)

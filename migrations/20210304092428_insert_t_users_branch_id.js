@@ -1,5 +1,6 @@
 const _ = require('lodash')
 
+// Temp comment
 const productionInstitutionId = '30a12701-2879-4a3f-8aa5-ae2f08118b8d'
 
 const external_42 = ['lkading@centralbankonline.com']
@@ -30,3 +31,4 @@ exports.up = async (knex)  => {
    set branch_id=(select id from institution_branches where external_id='73' and institution_id=users.institution_id);
    UPDATE users
    set branch_id=(select id from institution_branches where external_id='42' and institution_id='${productionInstitutionId}')
+   where institution_id='30a12701-2879-4a3f-8aa5-ae2f08118b8d' and email in ('${external_42}');

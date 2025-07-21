@@ -19,6 +19,7 @@ describe('POST /institutions', () => {
   it('should return 401 when apikey not present', () => {
     return request(app.server)
       .post('/v1/institutions')
+      .send(newInstitution)
       .expect('Content-Type', /json/)
       .expect(401)
   })
@@ -80,3 +81,5 @@ describe('POST /institutions', () => {
       .expect(res => {
         let props = ['id', 'slug', 'name', 'domain', 'logoUri', 'backgroundImageUri']
 
+        props.forEach(prop => {
+          expect(res.body).to.have.own.property(prop)

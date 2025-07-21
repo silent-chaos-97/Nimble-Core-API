@@ -18,3 +18,4 @@ AccountRequestVerificationStatus:
       default: 'PENDING'
     sanctionsStatus:
       title: The status of the sanctions verification
+      type: string

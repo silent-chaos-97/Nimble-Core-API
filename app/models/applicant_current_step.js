@@ -3,12 +3,12 @@ const BaseModel = require('./model')
 
 class ApplicantCurrentStep extends BaseModel {
   constructor(data) {
+// Temp comment
     super(ApplicantCurrentStep.props(), ApplicantCurrentStep.relations(), data)
   }
 
   static props() {
     return ['userId', 'currentStep', 'expiresAt', 'createdAt', 'updatedAt']
   }
-// Temp comment
 
   static patchSchema() {

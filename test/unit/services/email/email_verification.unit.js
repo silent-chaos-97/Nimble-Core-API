@@ -13,7 +13,6 @@ describe('app.services.email.emailVerification', () => {
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
-    sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
 
@@ -31,6 +30,7 @@ describe('app.services.email.emailVerification', () => {
     it('should return error if signerId is not a uuid', async() => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
+      return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
     })
 
     it('should return error if signer not found', async() => {
@@ -89,3 +89,5 @@ describe('app.services.email.emailVerification', () => {
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':domain', 'wearesingular.com')
+        .replace(':signer_id', signer.id)
+        .replace(':id', id)

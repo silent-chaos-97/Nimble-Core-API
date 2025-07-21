@@ -24,7 +24,6 @@ describe('app.services.compliance.verify', () => {
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
       expect(app.services.compliance.verify).to.be.an('Function')
-    })
 
 
     describe('validations', () => {
@@ -93,3 +92,5 @@ describe('app.services.compliance.verify', () => {
     })
 
     it('should call create app.services.complianceVerification.create', async () => {
+      sinon.replace(app.services.signer, 'get', sinon.fake.returns(fakeUser))
+      sinon.replace(app.services.compliance, 'search', sinon.fake.returns({ search: {}, result: { id: 123 }, hits: [] }))

@@ -118,3 +118,6 @@ const publicMetadata = {
     text: 'Is the combined income of those listed on the application greater than $35,000?',
     type: 'string',
     order: 4,
+    score: {
+      no: 1
+    },

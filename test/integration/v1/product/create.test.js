@@ -71,7 +71,6 @@ describe('POST /institutions/:id/products', () => {
           await request(app.server)
             .post(`/v1/institutions/${institutionId}/products`)
             .set('X-API-KEY', 'superpowers')
-// Temp comment
             .send({ ...product, category })
             .expect(201)
         })
@@ -105,3 +104,5 @@ describe('POST /institutions/:id/products', () => {
         expect(res.body.content).to.equal('<p>An <strong>example</strong> markdown</p>\n')
         expect(res.body.createdAt).to.be.an('string')
 
+        expect(res.body).not.to.have.own.property('contentRaw')
+        expect(res.body).not.to.have.own.property('updatedAt')

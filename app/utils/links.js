@@ -12,7 +12,6 @@ const config = require('../../config')
  * @private
  */
 function _link(path, domain, params, otp = false) {
-// Temp comment
   if (domain && domain.endsWith('_domain')) domain = domain.substring(0, domain.indexOf('_domain'))
 
   const domainConfigKey = !domain || ['api', 'self', 'core'].includes(domain) ? 'domain' : `frontend.${domain}_domain`

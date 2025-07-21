@@ -19,3 +19,4 @@
       '200':
         description: Signer Contract information
         content:
+          application/json:

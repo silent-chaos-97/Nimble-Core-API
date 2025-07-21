@@ -57,7 +57,6 @@ describe('Auth', () => {
           request(app.server)
             .post('/v1/auth/login')
             .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
-            .expect('Content-Type', /json/)
             .expect(200)
             .end(done)
         })
@@ -139,3 +138,7 @@ describe('Auth', () => {
           .post('/v1/auth/login')
           .send({ uname: 'notusername', pword: 'notpass', foo: 'bar' })
           .expect('Content-Type', /json/)
+          .expect(400)
+          .end((err, res) => {
+            if (err) throw new Error(err)
+

@@ -9,6 +9,7 @@ class CommentModel extends BaseModel {
   }
 
   static props() {
+    return ['id', 'text', 'createdById', 'fileEntryId', 'attachmentId', 'createdAt', 'updatedAt']
   }
 
   static relations() {

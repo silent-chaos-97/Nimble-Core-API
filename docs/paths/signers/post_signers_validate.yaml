@@ -50,3 +50,4 @@
       '403':
         $ref: '#/components/responses/Forbidden'
       '409':
+        description: Duplicate values identified

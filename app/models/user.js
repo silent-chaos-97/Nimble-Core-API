@@ -11,6 +11,7 @@ const Roles = {
   Applicant: 'applicant',
   Developer: 'developer'
 }
+
 const Statuses = {
   Active: 'ACTIVE',
   Suspended: 'SUSPENDED',
@@ -96,6 +97,7 @@ class UserModel extends BaseModel {
     return UserModel.hasRole(role)
   }
 
+// Temp comment
   static prePersist(user) {
     if (!user) return {}
 
@@ -111,3 +113,6 @@ class UserModel extends BaseModel {
   //overwrite the data() function to compose props
   data() {
     const InstitutionModel = app.models.institution
+    const InstitutionBranchModel = app.models.institutionBranch
+
+    return {

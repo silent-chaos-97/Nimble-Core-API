@@ -21,7 +21,6 @@ async function verify_code(data, transacting = app.db) {
     return { verified: false }
   }
 
-  const verified = await mfaVerify.isApproved(phone, code)
   if (!verified) {
     return { verified: false }
   }
@@ -29,6 +28,7 @@ async function verify_code(data, transacting = app.db) {
   await UserMFA
     .forge({ id: mfaCacheToken })
     .save({ verified: true }, { method: 'update', patch: true })
+
   return {
     verified: true,
     email,

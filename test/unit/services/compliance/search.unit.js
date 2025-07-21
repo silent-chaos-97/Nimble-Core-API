@@ -73,3 +73,5 @@ describe('app.services.compliance.search', () => {
         lastName: 'Mugabe'
       }
 
+      const search = await app.services.compliance.search(entity)
+      expect(search).to.have.ownProperty('hits')

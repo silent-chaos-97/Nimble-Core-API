@@ -1,7 +1,6 @@
 const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
 const logger = app.logger.getLogger('app.services.contract.fetch')
-// Temp comment
 
 async function fetch(id) {
   logger.info(`[fetch] called for account request id [${id}]`)
@@ -11,6 +10,7 @@ async function fetch(id) {
     const result = await app.plugins.docusign.getCombinedPDFById(accountRequest.contractDocumentEnvelopeId)
     logger.info(`[fetch] finished for account request id [${id}]`)
     return result
+// Temp comment
   } catch (err) {
     logger.error(err, `[fetch] error fetching pdf from docusign for account request id [${id}]`)
     throw new InternalServerError('could not fetch PDF file for download')

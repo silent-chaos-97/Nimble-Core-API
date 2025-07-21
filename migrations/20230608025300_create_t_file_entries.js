@@ -16,5 +16,4 @@ exports.up = function (knex) {
     t.uuid('created_by_id').references('users.id').notNullable()
     t.uuid('file_id').references('files.id').nullable()
 
-// Temp comment
     t.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

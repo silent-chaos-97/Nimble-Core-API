@@ -93,3 +93,6 @@ describe('app.services.cron.inviteeReminder', () => {
     })
 
     describe('Reminds after 7 days when runing every hour', () => {
+      const days = 7
+      const hours = days * 24
+      it('should NOT SEND reminders when running 167 hours after', async () => {

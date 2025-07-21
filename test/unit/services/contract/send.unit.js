@@ -31,7 +31,6 @@ describe('app.services.contract.send', () => {
     })
 
     describe('when passing information to docusign', () => {
-      let docusignSend = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
       before(() => {
         docusignSend = sinon.replace(app.plugins.docusign, 'sendEnvelopeWithMultipleDocuments', sinon.fake.returns(Promise.resolve()))
@@ -42,6 +41,7 @@ describe('app.services.contract.send', () => {
       beforeEach(async () => {
         await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
+        await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
@@ -97,3 +97,5 @@ describe('app.services.contract.send', () => {
           await app.services.contract.send(accountRequestId)
 
         } catch (error) {
+          expect(error.name).to.equal('PreConditionFailedError')
+          expect(error.statusCode).to.equal(412)

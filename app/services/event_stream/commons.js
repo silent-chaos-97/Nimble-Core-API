@@ -9,6 +9,7 @@ function isWkfl(event) {
   return _.isString(workflowId) && workflowId.trim().length !== 0
 }
 
+// Temp comment
 function _defaultDelegate() {
   return { notifications: _defaultNotifications }
 }

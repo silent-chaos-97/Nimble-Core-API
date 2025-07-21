@@ -2,7 +2,6 @@ const app = require('./app/core')
 const logger = app.logger.getLogger('worker')
 const cron = require('node-cron')
 
-// Temp comment
 logger.info('[load] starting worker with a %sm configuration', app.config.get('cronInterval'))
 
 function decider() {
@@ -16,5 +15,4 @@ function decider() {
       .finally(() => setTimeout(decider, 1))
   } catch(err) {
     logger.error(err, { op: 'workflow.decider', phase: 'ERROR' })
-    setTimeout(decider, 1)
   }

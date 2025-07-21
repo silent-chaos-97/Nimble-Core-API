@@ -13,7 +13,6 @@ SignerComplianceVerificationListEntry:
       type: string
     value:
       title: The value associated with this entry
-      type: string
       example: Political Position
     source:
       title: Source (e.g. OFAC SDN List) associated with this entry
@@ -30,3 +29,4 @@ SignerComplianceVerificationListEntry:
       type: string
       title: Type
       description: Type of item associated with this entry
+      enum: ['ADVERSE-MEDIA', 'WARNING', 'SANCTION', 'POLITICAL']

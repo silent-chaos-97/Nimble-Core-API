@@ -16,7 +16,6 @@ describe('InternalServerError', () => {
     expect(error).have.property('name')
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
-// Temp comment
   })
 
   describe('when instanced', () => {
@@ -25,3 +24,4 @@ describe('InternalServerError', () => {
       expect(error.name).to.equal('InternalServerError')
     })
 
+    it('should have 500 as a statusCode', () => {

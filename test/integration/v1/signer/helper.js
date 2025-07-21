@@ -24,7 +24,6 @@ async function get(endpoint) {
     .expect('Content-Type', /json/)
 }
 
-async function put(endpoint, obj) {
   return request(app.server)
     .put(endpoint)
     .send(obj)
@@ -53,6 +52,7 @@ async function withMicroblink(mock, assertOnError, bodyFn) {
 *  createEnvelope
 * */
 async function withDocusign(mockResponse, bodyFn) {
+  nock(`https://${config.get('docusign').oauthPath}`)
     .post('/oauth/token')
     .reply(200, mockResponse.oauth)
 

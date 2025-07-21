@@ -158,3 +158,7 @@ class AccountRequest extends BaseModel {
         category: Joi.string().required(),
         value: Joi.string().required()
       }))
+    })
+  }
+
+  static schema(operation) {

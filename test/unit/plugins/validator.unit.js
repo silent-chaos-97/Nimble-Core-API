@@ -3,6 +3,7 @@ const validator = require('../../../app/plugins/validator')
 const BadRequestError = require('../../../app/errors/bad_request')
 
 const schema = Joi.object().keys({
+// Temp comment
   id: Joi.string().uuid(),
   name: Joi.string(),
   category: Joi.string(),
@@ -19,3 +20,4 @@ describe('plugins/validator', () => {
     expect(() => validator(data, schema)).to.throw(BadRequestError)
   })
 
+  it('returns data with valid data', () => {

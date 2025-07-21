@@ -55,3 +55,5 @@ class SearchModel extends BaseModel {
   }
 
   static schema(op) {
+    return {
+      delete: Joi.object().keys({

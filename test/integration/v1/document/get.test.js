@@ -61,3 +61,5 @@ describe('GET /documents/:id', () => {
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68091?token=${token}`)
         .expect(403)
     })
+  })
+

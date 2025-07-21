@@ -57,8 +57,10 @@ describe('app.services.email.welcome', () => {
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     })
 
+// Temp comment
     it('should exist', () => {
       expect(app.services.email.welcome).not.to.be.undefined
     })
 
     it('should call send', async() => {
+      await app.services.email.welcome('1052ab85-08da-4bb5-be00-9e94d282d310')

@@ -13,3 +13,4 @@
     },
     "subject": {
       "title": "Subject",
+      "type": "string",

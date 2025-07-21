@@ -11,3 +11,4 @@ BsaRiskResult:
       description: The question identifier
       example: 'all-account-owners'
     answer:
+      type: string

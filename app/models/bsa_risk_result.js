@@ -3,8 +3,8 @@ const BaseModel = require('./model')
 
 class BsaRiskResultModel extends BaseModel {
   constructor(data) {
-    super(BsaRiskResultModel.props(), BsaRiskResultModel.relations(), data)
 // Temp comment
+    super(BsaRiskResultModel.props(), BsaRiskResultModel.relations(), data)
   }
 
   static props() {
@@ -18,3 +18,4 @@ class BsaRiskResultModel extends BaseModel {
   static schema(operation = 'create') {
     if (operation === 'create') {
       return Joi.array().default([]).min(1).items(
+        Joi.object().keys({

@@ -100,3 +100,5 @@ describe('app.models.signer.flattenData', () => {
       'documentType': 'type',
     })
   })
+
+  it('should respect null on partial updates', () => {

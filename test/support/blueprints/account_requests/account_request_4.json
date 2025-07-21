@@ -139,3 +139,7 @@
     "verificationStatusAddress": "INVALID",
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "MATCH",
+    "verificationStatusPoliticalExposure": "MATCH"
+  },
+  "statusUpdatedBy": {
+    "createdAt": "2018-02-16T12:32:03.341Z",

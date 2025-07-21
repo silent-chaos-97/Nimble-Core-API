@@ -77,6 +77,7 @@ async function checkMemberships(memberships, req, res, next) {
   if (memberships.institution) {
     if (req.user.institutionId !== req.params[memberships.institution]) return next(new UnauthorizedTokenError('Unauthorized:Institution'))
     atLeastOne = true
+  }
 
   if (memberships.branch) {
     if (req.user.branchId !== req.params[memberships.branch]) return next(new UnauthorizedTokenError('Unauthorized:Branch'))
@@ -84,3 +85,23 @@ async function checkMemberships(memberships, req, res, next) {
   }
 
   next(atLeastOne ? undefined : new UnauthorizedTokenError('Unauthorized:0'))
+}
+
+async function checkApiKey(req, res, next) {
+  if (req.isAuthenticated && req.user && User.isSuperAdmin(req.user)) {
+    req.isAuthorized = true
+    return next()
+  }
+
+  try {
+    const apiKey = getApiKey(req.headers)
+    if (apiKey != app.config.get('auth').adminApiKey) {
+      return next(new UnauthorizedError())
+    }
+
+    req.isAuthenticated = true
+    req.isAuthorized = true
+  } catch (err) {
+    return next(new UnauthorizedError())
+  }
+  next()

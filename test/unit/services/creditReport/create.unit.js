@@ -46,3 +46,5 @@ describe('app.services.creditReport.create', () => {
       await seed.account_request_product_options() // insert all
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
+      await knex.raw("UPDATE signers SET status='PENDING'")
+    })

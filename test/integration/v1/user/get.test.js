@@ -1,6 +1,5 @@
 describe('GET /users/:id', () => {
   let token
-
   describe('with invalid data', () => {
     it('should return 401 if not authenticated', done => {
       request(app.server)
@@ -68,3 +67,5 @@ describe('GET /users/:id', () => {
 
           props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
+          })
+

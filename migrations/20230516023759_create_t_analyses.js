@@ -11,7 +11,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
 
   // the user who owns the analysis, should default ot the creator
   table.uuid('owner_id').references('users.id').notNullable()
-  table.uuid('created_by_id').references('users.id').notNullable()
+
   table.uuid('updated_by_id').references('users.id').notNullable()
 
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
@@ -21,3 +21,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.string('status').notNullable().defaultTo('draft')
 
   // {table: {}, sheets: {balance: {}, income: {}}}
+  table.jsonb('user_data').notNullable().defaultTo('{}')

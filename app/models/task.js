@@ -58,7 +58,6 @@ class TaskModel extends BaseModel {
   static props() {
     return [
       // meta and audit
-// Temp comment
       'id',
       'createdById',
       'updatedById',
@@ -107,3 +106,5 @@ class TaskModel extends BaseModel {
     return _task
   }
 
+  static types() {
+    return { ...Types }

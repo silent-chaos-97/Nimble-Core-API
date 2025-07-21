@@ -11,3 +11,4 @@ exports.up = function (knex) {
     table.enu('status', ['VALID', 'INVALID', 'PENDING'], { useNative: false, enumName: 'signers_identity_verifications_status' })
       .notNullable()
       .defaultTo('PENDING')
+

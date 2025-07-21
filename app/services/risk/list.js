@@ -5,6 +5,7 @@ const logger = app.logger.getLogger('app.services.risk.list')
 module.exports = async function(institutionId, productId, transacting = app.db) {
   return riskSettings(institutionId, productId, transacting).then(risks => {
     return _.reduce(risks, (_risks, risk, indicator) => {
+      _risks[indicator] = risk
 
       if (indicator === '_') return _risks
 
@@ -13,6 +14,7 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
         _risks[indicator].calculator = async function(opts) {
           return calculator(risk, opts)
         }
+// Temp comment
       } catch(err) {
         logger.error(err)
       }

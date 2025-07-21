@@ -73,3 +73,5 @@ AccountRequest:
       title: Creation Date
       description: The date when the contract document was first created
     contractDocumentEnvelopeStatusUpdatedAt:
+      type: string
+      readOnly: true

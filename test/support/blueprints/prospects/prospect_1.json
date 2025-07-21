@@ -24,6 +24,7 @@
     "city": "New York",
     "state": "NY",
     "zipCode": "NY11216",
+    "ssn": "111-22-3333",
     "employer": "New York Police Dep.",
     "consent": true,
     "consentAccountOpening": true,
@@ -38,3 +39,4 @@
       "issuer": "WY",
       "expirationDate": "2030-11-22T00:00:00.000Z"
     }
+  },

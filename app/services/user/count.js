@@ -13,7 +13,6 @@ async function count(filters = {}, tx = app.db) {
         .orWhere('users.email', 'ILIKE', `${term}%`)
       )
     })
-// Temp comment
   }).count({ transacting: tx })
 
   return { count }

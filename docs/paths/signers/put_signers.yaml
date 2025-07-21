@@ -4,7 +4,6 @@
       - Signer
     summary: Update Signer by Id
     description: Update Signer by Id
-    parameters:
       - in: path
         name: id
         description: uuid Signer Id
@@ -21,5 +20,7 @@
         application/json:
           schema:
             $ref: '#/components/schemas/Signer'
+    responses:
       '200':
         description: OK
+        content:

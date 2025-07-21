@@ -98,6 +98,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .end((err) => {
           if (err) return done(err)
 
+          request(app.server)
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
@@ -147,7 +148,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .expect(200)
             .end(async (err, res) => {
               if (err) return done(err)
-
               expect(res.body.status).to.equal('SIGNED')
               await sleep(30)
               downloadScope.done()
@@ -284,3 +284,10 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           downloadScope.done()
           done()
         })
+    })
+
+    it('should return 400 if account request does not exist', done => {
+      request(app.server)
+        .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
+        .set('Authorization', 'Bearer ' + token)
+        .expect('Content-Type', /json/)

@@ -76,3 +76,5 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         expect(res.body.address).to.be.an('string')
         expect(res.body.city).to.be.an('string')
         expect(res.body.state).to.be.an('string')
+        expect(res.body.zipCode).to.be.an('string')
+        expect(res.body.dateOfBirth).to.be.an('string')

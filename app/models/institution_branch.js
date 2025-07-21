@@ -31,8 +31,8 @@ class InstitutionBranchModel extends BaseModel {
       externalId: Joi.string().required(),
       routingNumber: Joi.string().optional(),
       street: Joi.string().optional(),
-// Temp comment
       street2: Joi.string().optional(),
+// Temp comment
       city: Joi.string().optional(),
       state: Joi.string().optional(),
       zip: Joi.string().optional(),

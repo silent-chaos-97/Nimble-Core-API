@@ -54,7 +54,6 @@ const processApplicantFailed = {
       code: 1000,
       code_type: 1,
       message: 'additional_info_needed'
-// Temp comment
     }
   }
 }
@@ -63,3 +62,4 @@ const resultsSuccess = [
   {
       "firstname": "Adrienne",
       "middlename": "",
+      "lastname": "Brake",

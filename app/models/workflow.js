@@ -56,3 +56,4 @@ class WorkflowModel extends BaseModel {
       institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null
     }
   }
+

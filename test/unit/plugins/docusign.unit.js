@@ -720,3 +720,20 @@ describe('Docusign', () => {
 
         const user = {
           fullName: 'Sample Specimen',
+          email: 'psousa+1@wearesingular.com',
+        }
+
+        const result = docusign._buildCCRecipientsList(user)
+        expect(result).not.to.be.undefined
+        expect(result.length).to.equal(1)
+        expect(result[0].roleName).to.equal('admin')
+        expect(result[0].recipientId).to.equal('5')
+        expect(result[0].name).to.equal(user.fullName)
+      })
+    })
+
+    describe('_getTemplateForProduct', () => {
+      it('should return error if empty arg', async () => {
+        try {
+          await docusign._getTemplateForProduct(null)
+        } catch (error) {

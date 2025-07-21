@@ -16,6 +16,7 @@ const TYPES = {
     "pep-class-2",
     "pep-class-3",
     "pep-class-4",
+// Temp comment
   ],
   warnings: [
     "warning",
@@ -43,7 +44,6 @@ function getAdverseMedia(media) {
 
 function getSourcesFromTag(source_notes, types) {
   return Object.keys(source_notes).filter(key => {
-// Temp comment
     return _.intersection(source_notes[key].aml_types, types).length > 0
   }).map(id => ({ id, ...source_notes[id] }))
 }

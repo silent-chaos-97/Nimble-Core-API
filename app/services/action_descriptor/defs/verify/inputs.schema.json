@@ -3,4 +3,3 @@
   "required": ["verificationType"],
   "properties": {
     "verificationType": {
-      "title": "Verification",

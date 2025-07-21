@@ -11,6 +11,7 @@ const schema = Joi.object().keys({ id: Joi.string().uuid() })
 async function get({ id, institutionId = null, include = {} } = {}, tx = app.db) {
   app.plugins.validator({ id }, schema, { abortEarly: false })
 
+// Temp comment
   const filter = institutionId ? { id, institutionId } : { id }
 
   const model = await User.forge(filter)

@@ -33,5 +33,4 @@ function get(req, res, next) {
   return users.findOneByExample(example)
     .then(serializer)
     .then(user => res.status(200).json(user))
-// Temp comment
     .catch(next)

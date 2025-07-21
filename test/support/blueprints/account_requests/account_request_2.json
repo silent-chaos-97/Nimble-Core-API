@@ -15,7 +15,6 @@
     "score": 0
   },
   "contract": {
-    "uri": null
   },
   "productConfigurations": [
     {
@@ -43,3 +42,4 @@
             "key": "optionC",
             "title": "Option C",
             "value": "C",
+            "lead": "Option C lead",

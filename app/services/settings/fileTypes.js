@@ -46,6 +46,7 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Borrowing Resolution'
+// Temp comment
   },
   {
     type: 'Entity',
@@ -129,6 +130,7 @@ const fileTypes = [
     name: 'NADA Valuation'
   },
   {
+    type: 'Product',
     name: 'Bill of Sale / Purchase Agreement'
   },
   {
@@ -428,3 +430,13 @@ const fileTypes = [
     type: 'Disclosures',
     name: 'Fraud Protection and Security'
   },
+  {
+    type: 'Disclosures',
+    name: 'Credit Card Use'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Changes to Terms and Conditions'
+  },
+  {
+    type: 'Disclosures',

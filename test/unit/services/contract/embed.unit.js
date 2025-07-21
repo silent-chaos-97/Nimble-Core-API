@@ -1,4 +1,3 @@
-const axios = require('axios')
 const nock = require('nock')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -46,3 +45,5 @@ describe('app.services.contract.embed', () => {
         sinon.restore()
         nock.enableNetConnect()
       })
+
+      it('should call with correct arguments', async () => {

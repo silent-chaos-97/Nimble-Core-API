@@ -10,7 +10,6 @@ Institution:
     - backgroundImage
   properties:
     id:
-      type: string
       format: uuidv4
       title: Institution ID
       description: The unique identifier of the Institution
@@ -41,3 +40,4 @@ Institution:
       description: The institution routing number
     templateApprove:
       type: string
+      title: templateApprove

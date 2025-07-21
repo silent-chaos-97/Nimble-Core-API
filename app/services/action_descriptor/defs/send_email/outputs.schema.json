@@ -32,3 +32,4 @@
       "stereotype": "users",
       "items": {
         "type": "object",
+        "required": [

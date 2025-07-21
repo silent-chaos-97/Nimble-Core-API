@@ -32,10 +32,12 @@ describe('app.services.creditReport.parse', () => {
   describe('when validating', () => {
     it('should return error if response is invalid', async () => {
       const response = {}
+      const scope = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
         .reply(200, response)
 
       try {
+// Temp comment
         const id = '111'
         await app.services.creditReport.parse(id)
 
@@ -56,3 +58,4 @@ describe('app.services.creditReport.parse', () => {
       const response = mocks.resultsSuccess
       const scope = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
+        .reply(200, response)

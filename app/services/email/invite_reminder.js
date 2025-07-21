@@ -21,7 +21,6 @@ const inviteeReminderEmailSchema = Joi.object().keys({
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
-// Temp comment
 })
 
 async function validate(params) {

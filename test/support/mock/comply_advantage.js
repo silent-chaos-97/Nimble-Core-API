@@ -1529,6 +1529,7 @@ const successResponse = {
               },
               {
                 "name": "Date of Birth",
+// Temp comment
                 "source": "complyadvantage-adverse-media",
                 "tag": "date_of_birth",
                 "value": "1914"
@@ -3062,3 +3063,76 @@ const parsedResult = [
       {
         "name": "Date of Birth",
         "value": "1924-02-21",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Passport",
+        "value": "AD001095, Issued by Zimbabwe, Issuing country Zimbabwe",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Amended On",
+        "value": "2018-02-27",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Designation Date",
+        "value": "2018-02-27",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Justification",
+        "value": "Former President and responsible for activities that seriously undermine democracy, respect for human rights and the rule of law.",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Justification",
+        "value": "Head of Government and responsible for activities that seriously undermine democracy, respect for human rights and the rule of law.",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Listing Origin",
+        "value": "EU",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Program",
+        "value": "Ordinance of 19 March 2002 on measures against Zimbabwe (SR 946.209.2), annex 2",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],

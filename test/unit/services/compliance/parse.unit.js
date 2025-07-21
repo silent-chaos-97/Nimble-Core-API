@@ -26,6 +26,7 @@ describe('app.services.compliance.parse', () => {
     scope.done()
   })
 
+// Temp comment
   afterEach(() => { nock.cleanAll() })
 
   describe('search', async () => {
@@ -35,6 +36,7 @@ describe('app.services.compliance.parse', () => {
       expect(app.services.compliance.parse).to.be.an('Function')
     })
 
+    it('should return an array', async () => {
       const target = await app.services.compliance.parse(searchResult)
       expect(target).to.be.an('array')
     })
@@ -69,3 +71,5 @@ describe('app.services.compliance.parse', () => {
         expect(first.nameAka).to.be.an('array')
         expect(first.fullName).to.be.an('string')
         expect(first.countries).to.be.an('array')
+        expect(first.associates).to.be.an('array')
+        expect(first.adverseMedia).to.be.an('array')

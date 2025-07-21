@@ -9,7 +9,6 @@ const logger = app.logger.getLogger('app.plugins.swagger')
 function loadAndMergeFromPath(spec, path, parent) {
   glob
     .sync(`${__dirname}/../../docs/${path}/**/*.yaml`)
-    .map(file => YAML.load(file))
     .forEach(assignToSpec(spec, path, parent))
 }
 
@@ -26,4 +25,5 @@ function assignToSpec(spec, part, parent) {
       } else {
         section[key] = obj[key]
       }
+    })
   }

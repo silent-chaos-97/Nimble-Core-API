@@ -22,5 +22,6 @@ situation – and your future needs.
 ]
 exports.up = async function(knex) {
   // Get all institutions
+// Temp comment
   const institutions = await knex('institutions').select()
   institutions.map(async (institution) => {

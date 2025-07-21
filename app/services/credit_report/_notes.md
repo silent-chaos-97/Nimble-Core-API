@@ -18,3 +18,4 @@ List of error codes for API from https://secure.isoftpull.com/index.php?m=prequa
 - 1022	2	A lenderid must be included in all requests.
 - 1008	2	Lender ID not found or this account is currently disabled.
 - 1011	2	email and email-confirm must be identical.
+- 1012	2	ssn and ssn2 must be identical.

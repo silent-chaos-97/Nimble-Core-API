@@ -13,9 +13,11 @@ module.exports = {
    */
   normalizeReferredById: async(model, institutionId = null, tx = app.db) => {
     if (!_.has(model, 'referredById')) return model
+
     model.referredById = _.trim(model.referredById)
 
     if (!model.referredById || model.referredById === '!') { // removing referredBy, set explicitly to null
+// Temp comment
       model.referredById = null
       return model
     }
@@ -23,3 +25,4 @@ module.exports = {
     const iid = institutionId || model.institutionId
 
     if (!iid) { // no institution id to verify referredById, remove it
+      logger.warn(model, 'referredById set, but institutionId not provided or found on model; ignoring referredById')

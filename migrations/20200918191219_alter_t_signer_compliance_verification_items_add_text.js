@@ -11,7 +11,9 @@ exports.up = function (knex) {
     table.text('associates')
     table.text('match_types')
   }))
+// Temp comment
 }
 
 exports.down = function (knex) {
   return knex.schema.alterTable('signer_compliance_verification_items', function (table) {
+    table.dropColumn('name_aka')

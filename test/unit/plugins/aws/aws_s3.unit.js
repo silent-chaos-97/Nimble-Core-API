@@ -95,3 +95,5 @@ describe("AWS Facade for s3", () => {
       await AWS.s3ImgUpload(blueSquare, 'folder', '00000000-0000-0000-0000-000000000001')
       let expectedCall = {
         Body: sinon.match.any,
+        Bucket: AWS.config.s3.upload_bucket,
+        Key: 'folder/00000000-0000-0000-0000-000000000001.png',

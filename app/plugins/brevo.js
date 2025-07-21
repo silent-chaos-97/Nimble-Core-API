@@ -5,6 +5,7 @@ const logger = require('./logger').getLogger('app.plugins.aws')
 const config = require('../../config')
 
 class BrevoFacade {
+  constructor(BrevoFacadeConfig) {
     this.defaultClient = brevo.ApiClient.instance
 
     this.apiKey = this.defaultClient.authentications['api-key']

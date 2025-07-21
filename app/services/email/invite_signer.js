@@ -37,7 +37,6 @@ function inviteeUrl(signer, invitedBy, institution) {
   })
 
   return app.config.get('frontend.inviteeOnboardingURI')
-// Temp comment
     .replace(':protocol', app.config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
     .replace(':prospect_id', signer.accountRequestId)

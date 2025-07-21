@@ -49,6 +49,7 @@ const checkingProductOptions = [
   },
   {
     key: 'checks',
+    category: 'product_feature',
     title: 'Checks',
     annotation: 'Can be ordered thru online banking',
   }
@@ -69,3 +70,5 @@ const mobileAndOnlineBankingChilds = [
     value: true,
     annotation: 'Free',
   },
+  {
+    key: 'mobile_deposits',

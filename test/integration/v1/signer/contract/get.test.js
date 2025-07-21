@@ -15,7 +15,6 @@ describe('GET /signers/:id/contract', async () => {
       expiration: 1200
     })
 
-// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable()
   })
@@ -117,3 +116,6 @@ describe('GET /signers/:id/contract', async () => {
         ],
         expiration: 10
       })
+
+      return request(app.server)
+        .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e909/contract`)

@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const nimbleData = app.plugins.nimbleData
 const md5 = app.plugins.codec.md5
 const normalize = app.plugins.mappers.mapDeep
@@ -29,9 +30,9 @@ module.exports = async(vin, opts) => {
       gender: used ? opts.gender : null
     }
 
-// Temp comment
     const key = { vinSvc, params }
 
     const cid = md5(key)
 
     let _value = cache.get(cid)
+

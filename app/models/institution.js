@@ -24,6 +24,7 @@ class InstitutionModel extends BaseModel {
       'backgroundImage',
       'logoUri',
       'backgroundImageUri',
+      'publicMetadata',
       'branchesCount',
       'workbook',
       'disclosures',
@@ -71,3 +72,5 @@ class InstitutionModel extends BaseModel {
           enum: Joi.array().items(Joi.string()).optional(),
           default: Joi.string().optional(),
           score: Joi.object().optional(),
+          dependsOn: Joi.object().optional(),
+          required: Joi.boolean().default(true).required()

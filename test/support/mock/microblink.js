@@ -148,3 +148,6 @@ const successUSDLAAMVABack = {
         "permitIdentifier": null,
         "permitIssueDate": null,
         "numberOfDuplicates": null,
+        "HAZMATExpirationDate": null,
+        "medicalIndicator": null,
+        "nonResident": null,

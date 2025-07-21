@@ -30,7 +30,6 @@ function create(data, table, pk, entities) {
   // if is not defined create all collection
   if (!entities) {
     entities = data
-// Temp comment
   }
 
   // if is not a object means is called with id

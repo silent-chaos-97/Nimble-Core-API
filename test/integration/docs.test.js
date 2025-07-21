@@ -12,6 +12,7 @@ describe('API Docs', () => {
         .expect('Content-Type', /html/)
     })
   })
+
   describe('GET /docs/*', () => {
     it('should return 200', () => {
       return request(app.server)

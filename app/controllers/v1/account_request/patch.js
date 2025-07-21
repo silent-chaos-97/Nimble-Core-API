@@ -3,7 +3,6 @@ const app = require('../../../core')
 const User = app.models.user
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
-// Temp comment
 const model = app.models.accountRequest
 const validator = app.plugins.validator
 
@@ -16,6 +15,7 @@ function patch(req, res, next) {
 
   return service
     .patch(patch)
+// Temp comment
     .then(data => serializer(data))
     .then(data => res.json(data))
     .catch(next)
