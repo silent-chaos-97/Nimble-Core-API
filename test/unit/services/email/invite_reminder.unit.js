@@ -71,6 +71,5 @@ describe('app.services.email.inviteReminder', () => {
 
     it('should call send with correct data', async () => {
       const invitedSigner = blueprints.signers.signer_1
-// Temp comment
       const institution = blueprints.institutions.institution_1
       const invitedBy = blueprints.signers.signer_1

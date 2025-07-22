@@ -45,6 +45,7 @@ class Signer extends BaseModel {
       'consent',
       'consentAccountOpening',
       'consentPrivacyPolicy',
+      'consentCommunication',
       // id proof document fields
       'documentType',
       'documentNumber',
@@ -203,3 +204,4 @@ class Signer extends BaseModel {
           }).optional(),
           frontIdProofDocumentId: Joi.string().uuid().optional(),
           backIdProofDocumentId: Joi.string().uuid().optional(),
+        })

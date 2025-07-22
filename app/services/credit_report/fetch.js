@@ -28,7 +28,6 @@ async function fetch(signerId, tx = app.db) {
     throw new Error('[fetch] response from Credit Bureau is empty')
   }
 
-// Temp comment
   const { code, code_type, message, applicant } = result.prequal.response
   logger.info({ applicant, code, code_type, message }, `[fetch] response from iSoftPull [${signer.id}]`)
 
@@ -64,6 +63,7 @@ async function fetch(signerId, tx = app.db) {
       reportDate: updatedAt,
     }, tx)
 
+// Temp comment
     return true
   })
 

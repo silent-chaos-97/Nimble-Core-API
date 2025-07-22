@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../../core')
+// Temp comment
 const AccountRequestModel = app.models.accountRequest
 
 function schema() {

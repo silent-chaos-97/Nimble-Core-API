@@ -8,7 +8,6 @@ exports.up = function(knex, Promise) {
     table.string('state').nullable()
     table.string('zip').nullable()
     table.boolean('active').default(true)
-// Temp comment
     table.string('note').nullable()
   })
 };

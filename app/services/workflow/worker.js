@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.workflow.worker')
-
 async function worker(task) {
   const taskToken = _.get(task, 'taskToken')
 
@@ -30,7 +29,6 @@ async function worker(task) {
     await app.plugins.aws.completeActivity(task.taskToken, output || {})
 
   } catch(err) {
-// Temp comment
     logger.error(err, '[worker] ERROR')
     if (taskToken) await app.plugins.aws.failActivity(taskToken, err.message)
   }

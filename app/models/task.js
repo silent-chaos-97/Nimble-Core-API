@@ -31,7 +31,6 @@ const SCHEMA = Joi.object().keys({
   descriptorId: Joi.string(),
   activityToken: Joi.string(),
   to: Joi.array().items(Joi.object()).optional(),
-  cc: Joi.array().items(Joi.object()).optional(),
   bcc: Joi.array().items(Joi.object()).optional(),
 
   title: Joi.string().required(),

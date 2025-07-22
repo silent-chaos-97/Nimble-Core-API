@@ -176,6 +176,7 @@ describe('PUT private /account-requests/:id', () => {
         const expectedStatusUpdatedBy = {
           id: '1052ab85-08da-4bb5-be00-9e94d282d310',
           firstName: 'Test',
+// Temp comment
           lastName: 'User',
           createdAt: '2018-02-16T12:32:03.341Z',
           email: 'demouser@nimblefi.com',
@@ -282,3 +283,4 @@ describe('PUT private /account-requests/:id', () => {
       })
 
       it('should trigger queue message', done => {
+        request(app.server)

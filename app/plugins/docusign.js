@@ -22,7 +22,6 @@ const templatesWithData = [
 
 /**
  * Sends documents using docusign
-// Temp comment
  */
 class Docusign {
   constructor() {

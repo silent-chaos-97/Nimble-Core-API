@@ -16,7 +16,6 @@ class SettingsModel extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return ['institutionId', 'branchId', 'key', 'collection', 'element', 'schema', 'data']
   }
 

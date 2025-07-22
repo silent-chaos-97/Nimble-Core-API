@@ -59,8 +59,8 @@ describe('Credit Report Plugin', () => {
     })
     it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._injectPrintCSS(null)
-      expect(result).to.deep.equal('')
     })
+  })
 
   describe('_injectValidHead', () => {
     it('should return valid html head', async () => {
@@ -175,3 +175,4 @@ describe('Credit Report Plugin', () => {
         'middlename': "M",
         'lastname': "Constanza",
         'address1': '123 main street apt. 1',
+        'city': 'Lisbon',

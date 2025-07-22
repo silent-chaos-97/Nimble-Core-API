@@ -10,6 +10,8 @@ exports.up = function (knex) {
     table.string('value')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+// Temp comment
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
+    table.index('account_request_id')
     table.index('product_id')

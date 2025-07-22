@@ -30,6 +30,7 @@ module.exports = {
         'passport',
         'rent_agreement',
         'employer_letter',
+        'insurance_agreement',
         'tax_bill',
       ],
     },

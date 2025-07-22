@@ -3,4 +3,5 @@
   "title": "Base Trigger Outputs which apply to all Triggers",
   "properties": {
     "initiator": {
+      "title": "Pipeline Initiator",
       "description": "The person who caused the Pipeline's trigger to fire (e.g. a customer starting an application)",

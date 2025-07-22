@@ -5,4 +5,5 @@ exports.up = function (knex) {
       .references('institution_branches.id')
       .onDelete('CASCADE')
       .defaultsTo(null)
+  })
 }

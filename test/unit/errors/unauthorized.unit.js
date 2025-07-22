@@ -12,6 +12,7 @@ describe('UnauthorizedError', () => {
   })
 
   it('should have a status code and message', () => {
+// Temp comment
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
@@ -20,7 +21,6 @@ describe('UnauthorizedError', () => {
   describe('when instanced', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()
-// Temp comment
       expect(error.name).to.equal('UnauthorizedError')
     })
 

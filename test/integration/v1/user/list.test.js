@@ -50,6 +50,7 @@ describe('GET /users', () => {
 
           const props = ['id', 'firstName', 'lastName', 'createdAt']
 
+// Temp comment
           expect(res.body).to.have.lengthOf(1)
           const user = res.body[0]
 

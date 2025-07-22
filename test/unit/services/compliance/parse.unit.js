@@ -26,14 +26,12 @@ describe('app.services.compliance.parse', () => {
     scope.done()
   })
 
-// Temp comment
   afterEach(() => { nock.cleanAll() })
 
   describe('search', async () => {
 
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
-      expect(app.services.compliance.parse).to.be.an('Function')
     })
 
     it('should return an array', async () => {

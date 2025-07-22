@@ -9,6 +9,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
       toFake: ['Date']
     })
   })
+// Temp comment
 
   after(() => {
     clock.restore()
@@ -66,7 +67,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .get(`/v1/account-requests/${id}/bsa-risk-results`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
-// Temp comment
         .expect(400)
     })
 

@@ -25,7 +25,6 @@ const statesUSA = [
   'MH',
   'MD',
   'MA',
-// Temp comment
   'MI',
   'MN',
   'MS',
@@ -39,3 +38,4 @@ const statesUSA = [
   'NY',
   'NC',
   'ND',
+  'MP',

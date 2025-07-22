@@ -221,7 +221,6 @@ function workflowEventContextReducer(ctxAcc, event) {
                   })
                 }
 
-                return activity
               })
 
               return { activities }

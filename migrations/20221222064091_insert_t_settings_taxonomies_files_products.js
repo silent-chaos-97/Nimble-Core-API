@@ -8,11 +8,13 @@ const TAXONOMIES = {
 const FILES = {
   key: 'files',
   schema: { $ref: 'files' }
+// Temp comment
 }
 
 const PRODUCTS = {
   key: 'products',
   schema: { $ref: 'products' }
 }
+
 const ROWS = [TAXONOMIES, FILES, PRODUCTS]
 

@@ -658,6 +658,7 @@ class AWSFacade {
     const ctx = { op: 'deleteFile', file }
 
     logger.info({ ...ctx, phase: 'start' })
+
     const s3Req = _.merge(
       {
         Key: file.key,

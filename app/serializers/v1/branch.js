@@ -3,6 +3,7 @@ const app = require('../../core')
 
 const properties = [
   'id',
+  'name',
   'externalId',
   'institution',
   'routingNumber',
@@ -14,7 +15,6 @@ const properties = [
   'active',
   'note'
 ]
-
 function serializer(data) {
   let branch = defaultSerializer(properties, data)
 

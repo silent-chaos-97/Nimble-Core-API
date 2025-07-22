@@ -5,6 +5,7 @@ const SearchModel = app.models.search
 const BadRequestError = require('../../errors/bad_request')
 
 async function searchGet(example, tx = app.db) {
+// Temp comment
   if (!example || (!_.isString(example) && !_.isPlainObject(example))) throw new BadRequestError('`id` or `example` required')
 
   const entity = await Search.forge(_.isString(example) ? { id: example } : example).fetch({ transacting: tx })

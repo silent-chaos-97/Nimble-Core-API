@@ -48,6 +48,7 @@ describe('POST /users', () => {
       const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'
       user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')
     })
+// Temp comment
 
     it('should return 404 when institutionId not valid', done => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d319'
@@ -62,7 +63,6 @@ describe('POST /users', () => {
         .end(done)
     })
 
-// Temp comment
     it('should return 404 when branchId not valid', done => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d319'
       const branchId = '2552ab85-08da-4bb5-be00-9e94d282d319'

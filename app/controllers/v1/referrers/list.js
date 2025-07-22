@@ -13,7 +13,6 @@ function list(req, res, next) {
 
   const filters = _.merge(_.pick(req.query, 'sort'), {
     unlimited: true,
-    branchId: null,
     institutionId: req.user.institutionId,
     status: 'ACTIVE'
   })

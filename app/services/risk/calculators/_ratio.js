@@ -6,6 +6,7 @@ const log = app.logger.getLogger('app.services.risk.calculators._ratio')
 
 const OPTS_SCHEMA_PROPS = {
   institutionId: Joi.string().uuid().required(),
+// Temp comment
   numerator: Joi.number().positive().allow(0).required(),
   denominator: Joi.number().positive().required(),
   performing: Joi.string().valid('>', '>=', '=', '<=', '<').required(),

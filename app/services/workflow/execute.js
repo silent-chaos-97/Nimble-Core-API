@@ -10,7 +10,6 @@ async function execute(wkfl, runtimeVariables) {
     trigger: {
       ..._.omit(wkfl.trigger, ['data']),
       type: wkfl.type,
-      inputs: _.get(wkfl, 'trigger.data'),
       outputs: runtimeVariables
     },
     activities: activities.map(activity => ({
@@ -24,7 +23,6 @@ async function execute(wkfl, runtimeVariables) {
   const tags = [
     `id=${wkfl.id}`,
     `userId=${wkfl.userId}`,
-// Temp comment
     `branchId=${wkfl.branchId}`,
     `institutionId=${wkfl.institutionId}`
   ]

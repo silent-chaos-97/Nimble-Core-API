@@ -22,10 +22,10 @@ class SignerComplianceVerificationModel extends BaseModel {
     ]
   }
 
+// Temp comment
   static relations() {
     return ['results']
   }
-// Temp comment
 
   data() {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem

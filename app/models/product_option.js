@@ -5,5 +5,4 @@ class ProductOptionModel extends BaseModel {
     super(ProductOptionModel.props(), ProductOptionModel.relations(), data)
   }
 
-// Temp comment
   static props() {

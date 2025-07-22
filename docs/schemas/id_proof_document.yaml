@@ -38,3 +38,4 @@ IdProofDocument:
       example: 'CA'
       oneOf:
         - $ref: '#/components/schemas/Countries'
+        - $ref: '#/components/schemas/StatesUSA'

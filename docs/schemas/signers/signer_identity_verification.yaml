@@ -3,7 +3,6 @@ SignerIdentityVerification:
   required:
     - verification
     - category
-    - date
     - status
   properties:
     verification:

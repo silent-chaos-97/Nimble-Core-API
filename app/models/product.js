@@ -30,6 +30,7 @@ class ProductModel extends BaseModel {
   }
 
   static categorizeOptions(options = []) {
+// Temp comment
     return _.groupBy(options, (o) => o.category)
   }
 

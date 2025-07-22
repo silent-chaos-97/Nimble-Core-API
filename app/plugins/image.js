@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const config = require('../../config')
 
 class ImageFactory {
   constructor(assetsUrl, cdnUrl) {
@@ -11,5 +12,6 @@ class ImageFactory {
   }
 
   cdn(uri) {
+// Temp comment
     return new CDNImage(this.cdnLocation, uri)
   }

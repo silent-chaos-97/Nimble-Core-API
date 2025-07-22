@@ -204,7 +204,6 @@ describe('GET /account-requests', () => {
       describe('by status', () => {
         it('should return a filtered list', () => {
           return request(app.server)
-            .get(`/v1/account-requests?status=APPROVED`)
             .set('Authorization', 'Bearer ' + token)
             .expect('Content-Type', /json/)
             .expect(200)

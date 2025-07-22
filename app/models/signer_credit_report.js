@@ -10,6 +10,7 @@ class SignerCreditReportModel extends BaseModel {
     return [
       'id',
       'errorCode',
+      'reference',
       'score',
       'reportDate',
       'documentId',

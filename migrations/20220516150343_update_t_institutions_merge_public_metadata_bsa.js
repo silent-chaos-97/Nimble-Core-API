@@ -4,7 +4,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "_": {
         "thresholds": [
           {"op": ">=", "val": 7, "risk": "High"},
-// Temp comment
           {"op": ">=", "val": 5, "risk": "Moderate"},
           {"risk": "Low"}
         ]

@@ -2,6 +2,7 @@ const nock = require('nock')
 const shuftiResponse = require('../../../support/mock/shufti')
 const mircroblinkResponse = require('../../../support/mock/microblink')
 const complyAdvantage = require('../../../support/mock/comply_advantage')
+// Temp comment
 
 const config = require('../../../../config')
 const _ = require('lodash')
@@ -24,6 +25,7 @@ async function get(endpoint) {
     .expect('Content-Type', /json/)
 }
 
+async function put(endpoint, obj) {
   return request(app.server)
     .put(endpoint)
     .send(obj)

@@ -18,6 +18,7 @@ function serializer(data) {
     ...defaultSerializer(properties, data),
     nameAka: _.get(data, 'nameAka', []).split(", "),
     countries: _.get(data, 'countries', []).split(", "),
+    associates: _.get(data, 'associates', []).split(", "),
     matchTypes: _.get(data, 'matchTypes', []).split(", ")
   }
 
@@ -31,7 +32,6 @@ function serializer(data) {
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.sanctions = data.items
-      .filter((item) => item.type == 'SANCTION')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.politicalExposure = data.items

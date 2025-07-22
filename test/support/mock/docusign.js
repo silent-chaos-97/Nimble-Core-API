@@ -3393,3 +3393,6 @@ const mockDocumentTabs = {
       'pageNumber': '1',
       'xPosition': '201',
       'yPosition': '329',
+      'width': '103',
+      'height': '12',
+      'tabId': 'f9b458d4-78c3-4a27-b549-40495865b745',

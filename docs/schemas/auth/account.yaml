@@ -11,3 +11,4 @@ Account:
       example: local
     remoteId:
       type: string
+      title: Remote ID

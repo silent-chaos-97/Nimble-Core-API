@@ -737,3 +737,4 @@ describe('Docusign', () => {
         try {
           await docusign._getTemplateForProduct(null)
         } catch (error) {
+          expect(error).to.be.an.instanceof(Error)

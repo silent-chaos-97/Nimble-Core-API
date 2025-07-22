@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 
 function serializer(properties, data) {
   return _.reduce(properties, (memo, prop) => {

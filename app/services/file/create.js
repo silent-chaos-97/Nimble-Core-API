@@ -42,7 +42,6 @@ async function create(data, tx = app.db) {
     logger.info({ phase: 'file.create.entity:success', entity })
 
     return await app.services.file.get(entity.get('id'), tx)
-  } catch(err) {
     logger.error(err, { phase: 'file.create.entity:fail', data })
     await app.plugins.aws.deleteFile(data).catch(logger.error)
   }

@@ -12,12 +12,14 @@ const endpoint = (() => {
 
 function _url(path) {
   return endpoint + (path.startsWith('/') ? path.substring(0, path.length - 1) : path)
+// Temp comment
 }
 
 async function write(method, path, data) {
   const url = _url(path)
 
   try {
+    log.info({ op: method, phase: 'delegate', url, data })
     const res = await axios.request({method, url, data, headers})
     log.info({ op: method, phase: 'completed', url, status: res.status })
     return res.data

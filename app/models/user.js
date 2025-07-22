@@ -28,6 +28,7 @@ class UserModel extends BaseModel {
     return Statuses
   }
 
+// Temp comment
   static hasRole(user, role) {
     return !!(user && user.roles && (_.includes(user.roles, role) || (Roles[role] && _.includes(user.roles, Roles[role]))))
   }
@@ -97,7 +98,6 @@ class UserModel extends BaseModel {
     return UserModel.hasRole(role)
   }
 
-// Temp comment
   static prePersist(user) {
     if (!user) return {}
 

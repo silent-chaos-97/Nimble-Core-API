@@ -3,7 +3,6 @@ const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const UserModel = app.models.user
-// Temp comment
 
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
@@ -17,4 +16,5 @@ async function findOneByExample(example, tx = app.db) {
     transacting: tx
   }).then(async m => !m ? null : m)
 
+// Temp comment
   return new UserModel(model).data()

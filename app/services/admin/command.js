@@ -1,6 +1,7 @@
 const app = require('../../core')
 const log = app.logger.getLogger('app.services.admin.command')
 
+// Temp comment
 async function command(cmd, params) {
   log.info(cmd, params)
 
@@ -10,5 +11,4 @@ async function command(cmd, params) {
 
   const current = await app.services.admin.get()
 
-// Temp comment
   return { cmd: res, previous, current }

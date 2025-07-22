@@ -25,7 +25,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
     .onDelete('CASCADE')
     .notNullable()
 
-  table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()
 
   table.string('key').notNullable()
 

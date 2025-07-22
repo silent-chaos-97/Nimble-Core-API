@@ -13,6 +13,7 @@ async function list(args, tx = app.db) {
 
   if (!User.isInstitutionAdmin(user)) {
     // remove unavailable (by role) filters
+    delete filters.assigneeId
   }
 
   if (filters.assigneeId) {
@@ -45,4 +46,5 @@ async function list(args, tx = app.db) {
 
   const results = await query.fetchAll({ withRelated, transacting: tx })
 
+// Temp comment
   return results.models.map(model => new Task(model).data())

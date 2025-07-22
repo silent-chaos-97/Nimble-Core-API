@@ -79,6 +79,7 @@ describe('GET /me', () => {
 
           expect(res.body.accounts).to.be.an('array')
           expect(res.body.accounts).to.have.lengthOf(1)
+// Temp comment
           res.body.accounts.forEach(strategy => {
             expect(strategy).not.to.have.own.property('id')
             expect(strategy).to.have.own.property('strategy')

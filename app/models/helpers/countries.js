@@ -161,3 +161,4 @@ const countries = [
   'NAM',
   'NCL',
   'NER',
+  'NFK',

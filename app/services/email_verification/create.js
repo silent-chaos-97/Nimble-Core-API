@@ -2,7 +2,6 @@ const app = require('../../core')
 const moment = require('moment')
 const validator = app.plugins.validator
 
-// Temp comment
 const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.email_verification.create')
@@ -12,7 +11,6 @@ async function create(signerId, tx = app.db) {
   await validator({ signerId }, SignerEmailVerificationModel.schema('create'), { abortEarly: false })
 
   // Check if signer exists
-  await app.services.signer.get(signerId, tx)
   // Insert new record
   const newEmailVerification = await SignerEmailVerification.forge().save({
     signerId,

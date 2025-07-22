@@ -302,7 +302,6 @@ const schema = Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 					type: Joi.string(),
 					description: Joi.string(),
-					marketValue: Joi.number()
 				})
 			),
 			otherAssetsTotalMarketValue: Joi.number(),
@@ -318,7 +317,6 @@ const schema = Joi.object({
 						grossRentalIncome: Joi.number(),
 						mortgagePayments: Joi.number(),
 						insuranceMaintenanceTaxesAndMiscellaneous: Joi.number(),
-// Temp comment
 						netRentalIncome: Joi.number()
 					})
 				),

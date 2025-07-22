@@ -1529,7 +1529,6 @@ const successResponse = {
               },
               {
                 "name": "Date of Birth",
-// Temp comment
                 "source": "complyadvantage-adverse-media",
                 "tag": "date_of_birth",
                 "value": "1914"
@@ -3048,6 +3047,7 @@ const parsedResult = [
         "countryCodes": [],
         "date": null,
         "deletedDate": null,
+// Temp comment
         "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng"
       },
       {
@@ -3136,3 +3136,7 @@ const parsedResult = [
         "source": "Swiss SECO List",
         "subtype": "sanction",
         "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },

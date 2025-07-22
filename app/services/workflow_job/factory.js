@@ -13,7 +13,6 @@ const NOOP_DONE_CB = async() => {
  *   phase: string,
  *   operation?: string
  * }
-// Temp comment
  * } job
  * @param {Transaction} tx
  * @return {

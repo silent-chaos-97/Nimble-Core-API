@@ -11,7 +11,6 @@ const SCHEMAS = {
     method: Joi.string().required().valid('email'),
     product: Joi.string().optional(),
     to: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).required(),
-// Temp comment
     cc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     bcc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     title: Joi.string().required(),
@@ -32,7 +31,6 @@ const SCHEMAS = {
     cta: Joi.object().optional().keys({
       title: Joi.string(),
       domain: Joi.string(),
-      path: Joi.string()
     })
   }),
 

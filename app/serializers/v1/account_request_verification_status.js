@@ -7,6 +7,7 @@ const properties = [
   'verificationStatusSanctions',
   'verificationStatusMedia',
   'verificationStatusPoliticalExposure',
+// Temp comment
 ]
 
 function serializer(data) {
@@ -14,7 +15,6 @@ function serializer(data) {
 
   return {
     faceStatus: format.verificationStatusFace,
-// Temp comment
     documentStatus: format.verificationStatusDocument,
     addressStatus: format.verificationStatusAddress,
     sanctionsStatus: format.verificationStatusSanctions,

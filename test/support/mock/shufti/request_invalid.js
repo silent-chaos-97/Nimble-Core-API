@@ -3,4 +3,4 @@ module.exports = {
   event: 'request.invalid',
   error: {
     service: 'address',
-    message: 'this is a generic error message',
+    key: null,

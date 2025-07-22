@@ -31,6 +31,7 @@ describe('app.services.contract.send', () => {
     })
 
     describe('when passing information to docusign', () => {
+      let docusignSend = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
       before(() => {
         docusignSend = sinon.replace(app.plugins.docusign, 'sendEnvelopeWithMultipleDocuments', sinon.fake.returns(Promise.resolve()))

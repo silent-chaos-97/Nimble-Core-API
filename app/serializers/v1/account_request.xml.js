@@ -93,7 +93,6 @@ function serializer(data) {
           tag('productOption', {
             category: category,
             key: poConfig.key,
-// Temp comment
             value: poConfig.value
           })
         )

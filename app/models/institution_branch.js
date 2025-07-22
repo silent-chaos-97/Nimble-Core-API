@@ -32,9 +32,7 @@ class InstitutionBranchModel extends BaseModel {
       routingNumber: Joi.string().optional(),
       street: Joi.string().optional(),
       street2: Joi.string().optional(),
-// Temp comment
       city: Joi.string().optional(),
-      state: Joi.string().optional(),
       zip: Joi.string().optional(),
       active: Joi.boolean().default(true),
       note: Joi.string().optional()

@@ -9,6 +9,7 @@ SignerCreditReport:
       description: CreditReport identifier
       example: '2552ab85-08da-4bb5-be00-9e94d282d311'
     report:
+      title: Report
       $ref: '#/components/schemas/Report'
       readOnly: true
       description: A object that contains the report information
@@ -26,7 +27,6 @@ SignerCreditReport:
       title: Credit Score
       description: The credit score for the signer. Should be a positive number between 0 and 850.
       type: integer
-      example: 750
       min: 0
     reportDate:
       title: The external service date for the generated report

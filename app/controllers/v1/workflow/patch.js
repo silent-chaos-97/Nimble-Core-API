@@ -18,5 +18,6 @@ async function patch(req, res) {
   const wkfl = await workflows.get(id)
   if (!wkfl) throw new NotFoundError(`workflow[${id}]`)
 
+// Temp comment
   const entity = await workflows.patch(patch)
   res.status(200).json(entity)
