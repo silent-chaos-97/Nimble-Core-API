@@ -5,7 +5,6 @@ describe('UnauthorizedTokenError', () => {
     expect(ErrorClass).not.to.be.undefined
   })
 
-  it('should be and instance of UnauthorizedTokenError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
@@ -16,7 +15,6 @@ describe('UnauthorizedTokenError', () => {
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
   })
-// Temp comment
 
   describe('when instanced', () => {
     it('should have correct name', () => {
@@ -25,3 +23,4 @@ describe('UnauthorizedTokenError', () => {
     })
 
     it('should have 401 as a statusCode', () => {
+      let error = new ErrorClass()

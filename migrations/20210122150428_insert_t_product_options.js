@@ -72,3 +72,4 @@ const mobileAndOnlineBankingChilds = [
   },
   {
     key: 'mobile_deposits',
+    category: 'product_feature',

@@ -143,3 +143,5 @@ describe('Auth', () => {
           .end((err, res) => {
             if (err) throw new Error(err)
 
+            expect(res.body.message).to.not.be.undefined
+            expect(res.body.message).to.contain('"email" is required')

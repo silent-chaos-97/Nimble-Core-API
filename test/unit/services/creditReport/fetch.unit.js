@@ -129,3 +129,5 @@ describe('app.services.creditReport.fetch', () => {
       expect(result.rows[0].score).to.equal(767)
       expect(result.rows[0].document_id).not.to.equal('0000')
       expect(result.rows[0].error_code).to.equal(null)
+      expect(result.rows[0].signer_id).to.equal(signerId)
+    })

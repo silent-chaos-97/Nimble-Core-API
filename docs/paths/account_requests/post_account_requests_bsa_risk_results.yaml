@@ -25,4 +25,5 @@
               $ref: '#/components/schemas/BsaRiskResult'
     security:
       - bearer: ['account_requests']
-      '201':
+    responses:
+        description: OK

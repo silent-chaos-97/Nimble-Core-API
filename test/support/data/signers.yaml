@@ -249,3 +249,7 @@
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d312'
   consent: true
   consent_account_opening: false
+  consent_privacy_policy: false
+  consent_communication: false
+  role: 'PRIMARY'
+  status: 'PENDING'

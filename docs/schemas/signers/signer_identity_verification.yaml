@@ -1,8 +1,8 @@
 SignerIdentityVerification:
   type: object
   required:
-    - verification
     - category
+    - date
     - status
   properties:
     verification:
@@ -11,3 +11,4 @@ SignerIdentityVerification:
     category:
       title: The type of verification
       type: string
+    date:

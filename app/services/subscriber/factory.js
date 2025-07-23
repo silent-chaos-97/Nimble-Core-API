@@ -19,7 +19,6 @@ function createSubscriber(opts) {
 
       const msg = unwrap(message) // unwrap the AWS message envelope (typically SNS -> SQS -> handler)
 
-      logger.info(msg, `[handleMessage] delegating normalized message to [${name}].handleMessage...`)
 
       return opts.handleMessage(msg)
     } catch(err) {

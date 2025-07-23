@@ -78,7 +78,6 @@ describe('app.services.contract.send', () => {
         }
         const calledArgs = docusignSend.firstCall.firstArg
 
-        expect(calledArgs.accountRequestId).to.equal(args.accountRequestId)
         expect(calledArgs.ccRecipient).to.deep.equal(args.ccRecipient)
 
         expect(calledArgs.accountOptions.institutionName).to.equal(args.accountOptions.institutionName)
@@ -100,3 +99,5 @@ describe('app.services.contract.send', () => {
         } catch (error) {
           expect(error.name).to.equal('PreConditionFailedError')
           expect(error.statusCode).to.equal(412)
+          expect(error.message).to.equal("We could not send the document with Docusign. Please contact support.")
+        }

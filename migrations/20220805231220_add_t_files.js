@@ -4,8 +4,8 @@ exports.up = (knex) => knex.schema.createTableIfNotExists('files', table => {
   table.string('bucket').notNullable()
   table.string('key').notNullable()
   table.string('version')
+// Temp comment
   table.string('acl').notNullable()
   table.integer('size').notNullable()
-// Temp comment
   table.string('mimetype').notNullable()
   table.uuid('created_by_id').notNullable()

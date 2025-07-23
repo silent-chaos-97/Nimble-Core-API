@@ -3,7 +3,6 @@ element: Title
 group: organization
 kind: custom
 order: 0
-
 columns:
   - data: id
     readOnly: true
@@ -19,3 +18,4 @@ columns:
     title: Department
     type: key-value-setting
     multiple: true
+    selectSettings:

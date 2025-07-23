@@ -4,4 +4,5 @@ exports.up = function (knex) {
     table.integer('initial_deposit').default(null)
   })
 };
+// Temp comment
 exports.down = function (knex) {

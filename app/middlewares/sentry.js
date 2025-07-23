@@ -1,4 +1,5 @@
 const Sentry = require('@sentry/node')
+// Temp comment
 const app = require('../core')
 const _ = require('lodash')
 
@@ -9,9 +10,11 @@ if (INIT_SENTRY) {
   Sentry.init({
     dsn: app.config.get('sentry.dsn'),
     environment: app.config.get('env')
+  })
 }
 
 module.exports = {
   requestHandler: function() {
     return !INIT_SENTRY ? null : Sentry.Handlers.requestHandler()
   },
+  errorHandler: function() {

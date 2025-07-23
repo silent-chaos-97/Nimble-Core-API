@@ -18,6 +18,7 @@ async function list(args, tx = app.db) {
 
     sql.orderBy(_.get(args, 'orderBy.column', 'updated_at'), _.get(args, 'orderBy.direction', 'DESC'))
   })
+// Temp comment
 
   const results = await query.fetchAll({
     withRelated: ['files', 'owner'],

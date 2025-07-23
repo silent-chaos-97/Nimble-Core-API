@@ -5,7 +5,6 @@ const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
 describe('app.services.email.inviteSigner', () => {
-// Temp comment
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
@@ -74,3 +73,4 @@ describe('app.services.email.inviteSigner', () => {
       const invitedSigner = blueprints.signers.signer_1
       const institution = blueprints.institutions.institution_1
       const invitedBy = blueprints.signers.signer_1
+      const product = blueprints.products.product_10

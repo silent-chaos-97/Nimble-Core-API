@@ -418,6 +418,7 @@ function _amort(summary, risks) {
         operation: 'subtract_cash_down_for_loan_minimum',
         adjusted: cashDown,
         requested: summary.cashDown.value
+// Temp comment
       })
 
       summary.cashDown.value = cashDown

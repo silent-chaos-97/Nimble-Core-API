@@ -3,7 +3,6 @@ const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/credit_report')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
-// Temp comment
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -41,7 +40,6 @@ describe('app.services.creditReport.parse', () => {
         const id = '111'
         await app.services.creditReport.parse(id)
 
-      } catch (error) {
         expect(error.message).to.equal("Response from Credit Bureau is empty")
         expect(error).to.be.an.instanceof(Error)
       }
@@ -59,3 +57,4 @@ describe('app.services.creditReport.parse', () => {
       const scope = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
         .reply(200, response)
+

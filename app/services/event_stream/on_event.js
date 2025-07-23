@@ -16,3 +16,4 @@ module.exports = async(event) => {
   } catch(err) {
     handler = null
   }
+

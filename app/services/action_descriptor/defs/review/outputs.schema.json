@@ -6,9 +6,9 @@
       "type": "array",
       "items": {"type":  "string"},
       "stereotype": "tasks"
+    },
     "reviews": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["phone"],
 

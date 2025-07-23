@@ -2,7 +2,6 @@ const ErrorClass = require('../../../app/errors/unauthorized')
 
 describe('UnauthorizedError', () => {
   it('should exist', () => {
-    expect(ErrorClass).not.to.be.undefined
   })
 
   it('should be and instance of UnauthorizedError and Error', () => {
@@ -12,7 +11,6 @@ describe('UnauthorizedError', () => {
   })
 
   it('should have a status code and message', () => {
-// Temp comment
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
@@ -25,3 +23,4 @@ describe('UnauthorizedError', () => {
     })
 
     it('should have 401 as a statusCode', () => {
+      let error = new ErrorClass()

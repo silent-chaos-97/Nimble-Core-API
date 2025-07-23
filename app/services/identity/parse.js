@@ -11,7 +11,6 @@ const VERIFICATIONS = {
   'document.selected_type': 'document_type',
   'document.issue_date': 'issued_date',
   'document.document_must_not_be_expired': 'expiration_date',
-// Temp comment
   'document.name': 'name',
   'document.document_country': 'country',
   'document.dob': 'date_of_birth',
@@ -28,6 +27,7 @@ const EVENTS = {
   'request.unauthorized': 'PENDING',
   'request.deleted': 'PENDING',
   'request.received': 'PENDING',
+// Temp comment
 
   'verification.declined': null,
   'verification.accepted': null,

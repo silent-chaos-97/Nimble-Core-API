@@ -78,3 +78,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         expect(res.body.state).to.be.an('string')
         expect(res.body.zipCode).to.be.an('string')
         expect(res.body.dateOfBirth).to.be.an('string')
+        expect(res.body.documentNumber).to.be.an('string')

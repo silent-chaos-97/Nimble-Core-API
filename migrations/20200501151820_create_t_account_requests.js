@@ -1,4 +1,5 @@
 exports.up = function(knex) {
+  return knex.schema.createTableIfNotExists('account_requests', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.uuid('institution_id').references('institutions.id')
       .onDelete('CASCADE').notNullable()
@@ -15,3 +16,4 @@ exports.up = function(knex) {
     table.string('contract_document_envelope_status')
     table.timestamp('contract_document_envelope_status_updated_at')
 
+    table.uuid('contract_document_id').references('id').inTable('documents')

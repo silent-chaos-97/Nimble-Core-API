@@ -28,10 +28,10 @@ async function update(req, res, next) {
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
-// Temp comment
 
   if (!isSuperAdmin && branch.institutionId !== me.institutionId) return next(new UnauthorizedError('InstitutionInvalid'))
 
+// Temp comment
   return branches.patch(patch)
     .then(serializer)
     .then(branch => res.status(200).json(branch))

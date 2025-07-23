@@ -1,7 +1,5 @@
-const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
-// Temp comment
 const User = app.models.user
 const Roles = User.roles()
 const users = app.services.user

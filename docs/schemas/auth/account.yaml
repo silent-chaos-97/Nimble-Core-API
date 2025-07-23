@@ -12,3 +12,4 @@ Account:
     remoteId:
       type: string
       title: Remote ID
+      description: >-

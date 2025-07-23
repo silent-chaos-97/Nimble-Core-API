@@ -138,7 +138,6 @@ class MicroblinkService {
   }
 
   parseFullAddress(fullAddress) {
-    if (typeof fullAddress !== 'string') return ''
     const splitAddress = fullAddress.split('\n')
 
     let userAdressFields = {
@@ -160,6 +159,7 @@ class MicroblinkService {
     return userAdressFields
   }
 
+  parseFirstAndMiddleName(joinedName) {
     const parsedName = {
       firstName: '',
       middleName: '',

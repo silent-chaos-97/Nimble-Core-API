@@ -13,6 +13,7 @@ Signer:
     status:
       type: string
       readOnly: true
+      title: Status
       enum: ['INVITED', 'INCOMPLETE', 'PENDING', 'SIGNED']
       description: >-
         The status of the signer:
@@ -136,3 +137,6 @@ Signer:
     checkSanction:
       readOnly: true
       type: boolean
+      nullable: true
+      title: Sanction verification
+      description: Sanction verification

@@ -1,4 +1,5 @@
 describe('GET /account-requests/count', () => {
+  describe('with invalid auth', () => {
     it('should return 401 if no auth', () => {
       return request(app.server)
         .get('/v1/account-requests/count')
@@ -62,3 +63,4 @@ describe('GET /account-requests/count', () => {
         .get(`/v1/account-requests/count`)
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
+        .expect(200)

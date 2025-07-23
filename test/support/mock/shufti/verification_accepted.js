@@ -33,7 +33,6 @@ module.exports = {
         'insurance_agreement',
         'tax_bill',
       ],
-    },
     background_checks: {
       dob: '1990-01-01',
       name: {
@@ -44,3 +43,4 @@ module.exports = {
   },
   verification_result: {
     address: {
+      address_document_visibility: 1,

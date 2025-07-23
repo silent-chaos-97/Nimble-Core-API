@@ -325,6 +325,7 @@ const schema = {
       default: 'FAKE_ID',
       env: 'AWS_SNS_ACCESS_KEY'
     },
+// Temp comment
     secretAccessKey: {
       doc: 'AWS SNS Access Key Secret',
       format: String,
@@ -432,3 +433,10 @@ const schema = {
       env: 'IMG_LIMIT'
     },
     basePath: {
+      doc: 'the path where uploaded images get saved',
+      format: String,
+      default: '/tmp/nimble/',
+      env: 'IMG_BASE_PATH'
+    }
+  },
+  database: {

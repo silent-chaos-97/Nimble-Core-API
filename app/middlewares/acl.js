@@ -17,7 +17,6 @@ const RESOURCES = {
       key: 'institutionId'
     }
   },
-  'account_request': {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
     matches: {

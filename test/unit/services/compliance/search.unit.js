@@ -40,7 +40,6 @@ describe('app.services.compliance.search', () => {
         middleName: 'Gabriel',
         lastName: 'Mugabe'
       }
-
       const search = await app.services.compliance.search(entity)
       expect(search).to.have.ownProperty('search')
       scope.done()
@@ -75,3 +74,4 @@ describe('app.services.compliance.search', () => {
 
       const search = await app.services.compliance.search(entity)
       expect(search).to.have.ownProperty('hits')
+      expect(search.hits).to.be.an('array')

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const nock = require('nock')
 const util = require('util')
+const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
 const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
@@ -24,3 +25,4 @@ chai.config.includeStack = true
 chai.use(chaiAsPromised)
 chai.use(sinonChai)
 
+axios.defaults.adapter = require('axios/lib/adapters/http')

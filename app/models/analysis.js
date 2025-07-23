@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
-const app = require('../core')
 const _ = require('lodash')
 
 const Statuses = {
@@ -24,6 +23,7 @@ const SCHEMA = Joi.object().keys({
 
   title: Joi.string().required(),
   status: Joi.string().default(Statuses.draft).valid(..._.values(Statuses)),
+  userData: Joi.object(),
   debtSchedule: Joi.object().keys({
     rows: Joi.array().items(Joi.object()).min(0).default([])
     // ... other schedule information and meta-data goes here ...
@@ -71,3 +71,5 @@ class AnalysisModel extends BaseModel {
   }
 
   static relations() {
+    return ['institution', 'branch', 'owner', 'files']
+  }

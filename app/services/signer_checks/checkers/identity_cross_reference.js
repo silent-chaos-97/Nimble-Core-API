@@ -20,3 +20,4 @@ module.exports = {
     const noHit = _.get(report, 'MsgRsHdr.Status.StatusDesc') === 'NOHIT'
 
     if (noHit) return { status: SignerCheck.statuses().invalid, meta: { status: 'NOHIT', report } }
+

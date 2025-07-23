@@ -4,7 +4,6 @@ const app = require('../../core')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const validator = app.plugins.validator
-const moment = require('moment')
 const random = app.plugins.random
 
 const whitelist = InstitutionModel.props()
@@ -27,7 +26,6 @@ async function update(institution) {
       count: _.size(patch.disclosures.data),
       data: patch.disclosures.data
     }
-// Temp comment
 
     if (patch.questions) { // merge questions
       if (!_.isEmpty(patch.questions.data)) {

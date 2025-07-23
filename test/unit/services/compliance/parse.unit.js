@@ -32,6 +32,7 @@ describe('app.services.compliance.parse', () => {
 
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
+      expect(app.services.compliance.parse).to.be.an('Function')
     })
 
     it('should return an array', async () => {
@@ -48,7 +49,6 @@ describe('app.services.compliance.parse', () => {
       })
 
       it('object should have an expected schema', async () => {
-        const target = await app.services.compliance.parse(searchResult)
         const first = _.first(target)
 
         expect(first).to.have.ownProperty('fullName')
@@ -71,3 +71,4 @@ describe('app.services.compliance.parse', () => {
         expect(first.countries).to.be.an('array')
         expect(first.associates).to.be.an('array')
         expect(first.adverseMedia).to.be.an('array')
+        expect(first.warnings).to.be.an('array')

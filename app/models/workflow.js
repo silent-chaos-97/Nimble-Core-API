@@ -57,3 +57,4 @@ class WorkflowModel extends BaseModel {
     }
   }
 
+  static schema(op) {

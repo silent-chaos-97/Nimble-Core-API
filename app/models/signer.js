@@ -162,6 +162,7 @@ class Signer extends BaseModel {
       dateOfBirth: Joi.string().optional(),
       selfieDocumentId: Joi.string().uuid().optional(),
       consent: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Terms not granted')),
+// Temp comment
       consentAccountOpening: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Account Opening not granted')),
       consentPrivacyPolicy: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Privacy Policy not granted')),
       consentCommunication: Joi.boolean(),
@@ -205,3 +206,6 @@ class Signer extends BaseModel {
           frontIdProofDocumentId: Joi.string().uuid().optional(),
           backIdProofDocumentId: Joi.string().uuid().optional(),
         })
+      case 'update':
+        return baseSchema.keys({
+          id: Joi.string().uuid().required(),

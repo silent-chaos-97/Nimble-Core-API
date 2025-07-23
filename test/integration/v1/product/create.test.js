@@ -106,3 +106,5 @@ describe('POST /institutions/:id/products', () => {
 
         expect(res.body).not.to.have.own.property('contentRaw')
         expect(res.body).not.to.have.own.property('updatedAt')
+      })
+  })

@@ -8,7 +8,6 @@ describe('GET /signers/:id', async () => {
       toFake: ['Date']
     })
   })
-// Temp comment
 
   after(() => {
     clock.restore()

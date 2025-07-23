@@ -125,3 +125,5 @@ columns:
       fixed: Fixed
 
   - data: update_frequency
+    editor: select
+    selectOptions:

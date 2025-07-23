@@ -59,6 +59,7 @@ describe('Credit Report Plugin', () => {
     })
     it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._injectPrintCSS(null)
+      expect(result).to.deep.equal('')
     })
   })
 
@@ -176,3 +177,5 @@ describe('Credit Report Plugin', () => {
         'lastname': "Constanza",
         'address1': '123 main street apt. 1',
         'city': 'Lisbon',
+        'state': 'CA',
+        'postcode': '22222',

@@ -52,7 +52,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
         expect(product.id).to.be.an('string')
         expect(product.name).to.be.an('string')
-        expect(product.category).to.be.an('string')
         expect(product.summary).to.be.an('string')
         expect(product.content).to.be.an('string')
         expect(product.options).to.be.an('array')
@@ -94,6 +93,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
         .expect((res) => {
           expect(res.body).to.be.an('array')
           expect(res.body).to.have.lengthOf(1)
+          expect(res.body[0]).to.deep.equal(blueprints.product.get(testProduct40))
         })
     })
 
@@ -113,3 +113,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
       return request(app.server)
         .get(`/v1/institutions/${testInstitution1}/products?limit=1&sort=unexistent`)
         .expect('Content-Type', /json/)
+        .expect(400)
+    })

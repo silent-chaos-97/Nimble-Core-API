@@ -42,6 +42,7 @@ describe('app.services.email.inviteReminder', () => {
   })
 
   describe('when calling with valid data', () => {
+// Temp comment
     beforeEach(async () => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -73,3 +74,4 @@ describe('app.services.email.inviteReminder', () => {
       const invitedSigner = blueprints.signers.signer_1
       const institution = blueprints.institutions.institution_1
       const invitedBy = blueprints.signers.signer_1
+      const product = blueprints.products.product_10

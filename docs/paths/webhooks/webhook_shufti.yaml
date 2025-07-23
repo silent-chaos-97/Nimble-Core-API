@@ -7,7 +7,6 @@
     operationId: postShuftiWebhook
     requestBody:
       description: identity verifications object
-      required: true
       content:
         application/json:
           schema:
@@ -22,3 +21,4 @@
                 title: signer reference uuid
                 description: signer id
               event:
+                type: string

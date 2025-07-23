@@ -3,4 +3,3 @@ exports.up = function (knex) {
     table.dropColumn('step')
   })
 };
-exports.down = function (knex) {

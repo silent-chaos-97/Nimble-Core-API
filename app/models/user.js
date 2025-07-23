@@ -20,7 +20,6 @@ const Statuses = {
 
 class UserModel extends BaseModel {
 
-  static roles() {
     return Roles
   }
 
@@ -28,7 +27,6 @@ class UserModel extends BaseModel {
     return Statuses
   }
 
-// Temp comment
   static hasRole(user, role) {
     return !!(user && user.roles && (_.includes(user.roles, role) || (Roles[role] && _.includes(user.roles, Roles[role]))))
   }
@@ -116,3 +114,5 @@ class UserModel extends BaseModel {
     const InstitutionBranchModel = app.models.institutionBranch
 
     return {
+      ..._.omit(this._data, ['institution', 'branch']),
+      institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null,

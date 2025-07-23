@@ -112,3 +112,5 @@ describe('Email Plugin', () => {
           TemplateData: '{"email":"eee@eee.com","cc":"admin@bbb.ccc","a":1,"b":2}'
         }
 
+        expect(plugin.aws.ses.sendTemplatedEmail).to.have.been.calledWith(expectedCall, sinon.match.func)
+      })

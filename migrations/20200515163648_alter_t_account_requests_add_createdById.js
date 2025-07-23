@@ -5,6 +5,7 @@ exports.up = function (knex) {
     // update existing rows
     const q = `SELECT a.id as account_request_id,
               (SELECT id 
+                FROM signers 
                 WHERE account_request_id = a.id 
             ORDER BY created_at ASC 
                 LIMIT 1) as signer_id

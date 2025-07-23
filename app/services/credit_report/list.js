@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 
@@ -10,7 +9,6 @@ const SignerCreditReportModel = app.models.signerCreditReport
 const logger = app.logger.getLogger('app.services.credit_report.list')
 
 const listSchema = Joi.object().keys({
-// Temp comment
   signerId: Joi.string().uuid().required(),
   sort: Joi.string().valid('updated_at', '-updated_at').default('updated_at'),
   limit: Joi.number().positive(),
@@ -24,3 +22,7 @@ const sortBy = {
 
 async function validate(params) {
   return validator(params, listSchema, { abortEarly: false })
+}
+
+function getSqlSort(sort) {
+  return _.get(sortBy, sort, sortBy['-updated_at'])

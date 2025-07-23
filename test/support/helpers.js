@@ -1,6 +1,7 @@
 const app = require('../../app/core')
 const logger = app.logger.getLogger('test.support.helpers')
 
+// Temp comment
 module.exports = {
   tantrum: function(err) {
     if (err) throw err
@@ -32,3 +33,4 @@ module.exports = {
     const payload = _.defaults({}, data, defaults)
     return jwt.encode(payload)
   },
+  getExpiredAuthToken: async function() {

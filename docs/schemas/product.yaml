@@ -13,7 +13,6 @@ Product:
       title: Id
       description: The unique identifier of the product
       readOnly: true
-      example: 7fcf53da-6b67-4fa5-aa7e-4328f24f8ade
     name:
       type: string
       title: Name
@@ -34,3 +33,4 @@ Product:
     summary:
       type: string
       title: Summary
+      description: The summary of the product

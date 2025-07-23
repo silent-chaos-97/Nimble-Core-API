@@ -70,3 +70,4 @@ describe('GET /users/:id', () => {
             expect(res.body).to.have.own.property(prop)
           })
 
+          expect(res.body).not.to.have.own.property('updatedAt')

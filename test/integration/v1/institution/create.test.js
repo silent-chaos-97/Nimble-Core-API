@@ -83,3 +83,5 @@ describe('POST /institutions', () => {
 
         props.forEach(prop => {
           expect(res.body).to.have.own.property(prop)
+        })
+

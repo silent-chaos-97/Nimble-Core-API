@@ -151,3 +151,5 @@ const successUSDLAAMVABack = {
         "HAZMATExpirationDate": null,
         "medicalIndicator": null,
         "nonResident": null,
+        "uniqueCustomerId": null,
+        "dataDiscriminator": null,

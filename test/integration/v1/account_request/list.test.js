@@ -167,6 +167,7 @@ describe('GET /account-requests', () => {
 
     describe('when filtering', () => {
       beforeEach(async () => {
+// Temp comment
         await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create()
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
@@ -204,6 +205,7 @@ describe('GET /account-requests', () => {
       describe('by status', () => {
         it('should return a filtered list', () => {
           return request(app.server)
+            .get(`/v1/account-requests?status=APPROVED`)
             .set('Authorization', 'Bearer ' + token)
             .expect('Content-Type', /json/)
             .expect(200)

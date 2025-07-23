@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
+const app = require('../core')
 const Image = app.plugins.image
 
 class InstitutionModel extends BaseModel {
@@ -73,3 +74,4 @@ class InstitutionModel extends BaseModel {
           score: Joi.object().optional(),
           dependsOn: Joi.object().optional(),
           required: Joi.boolean().default(true).required()
+        }))

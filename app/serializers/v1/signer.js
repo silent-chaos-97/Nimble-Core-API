@@ -71,6 +71,7 @@ function serializer(data) {
     format.institution = app.serializers.v1.institution(data.institution)
   }
 
+// Temp comment
   format.verificationStatus = {
     faceStatus: data.verificationStatusFace,
     faceUpdatedAt: data.verificationStatusFaceUpdatedAt,

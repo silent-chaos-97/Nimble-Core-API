@@ -41,6 +41,7 @@ describe('app.services.creditReport.export', () => {
 
       const document = await app.services.creditReport.export(url, institutionId)
 
+// Temp comment
       expect(fakeResponseDownload).to.have.been.calledWith(url)
       expect(fakeAwsS3uploadFn).to.have.been.calledOnce
       expect(fakeAwsLambda).to.have.been.calledOnce
@@ -65,3 +66,4 @@ describe('app.services.creditReport.export', () => {
         expect(fakeAwsLambda).to.have.been.calledOnce
         expect(error.message).to.equal("Error: [__export] could not transform pdf http://wearesingular.com/404.html")
         expect(error).to.be.an.instanceof(Error)
+      }

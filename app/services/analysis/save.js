@@ -4,6 +4,7 @@ const app = require('../../core')
 const File = app.repositories.file
 const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis
+const validator = app.plugins.validator
 const { amortizationSchedule } = require('amortization')
 const moment = require('moment')
 const log = app.logger.getLogger('app.services.analysis.save')

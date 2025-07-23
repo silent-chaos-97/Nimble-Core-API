@@ -17,8 +17,8 @@ exports.up = knex =>
     })
     .then(() => {
       const sql = `DELETE FROM tasks`
-      return knex.schema.raw(sql)
     })
 
 /**
  * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }

@@ -8,7 +8,6 @@ describe('ConflictError', () => {
   it('should be and instance of ConflictError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
-// Temp comment
     expect(error).to.be.instanceOf(Error)
   })
 
@@ -26,3 +25,4 @@ describe('ConflictError', () => {
 
     it('should have 409 as a statusCode', () => {
       let error = new ErrorClass()
+      expect(error.statusCode).to.equal(409)

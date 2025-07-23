@@ -147,7 +147,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Statement of Account'
-// Temp comment
   },
   {
     type: 'Product',
@@ -441,3 +440,9 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Dispute Resolution'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Credit Reporting'
+  },
+  {

@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const Joi = require('@hapi/joi')
@@ -48,6 +47,7 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
     if (predicate && predicate(score, threshold.val)) {
       risk = threshold.risk
       return false // break
+// Temp comment
     }
   })
 

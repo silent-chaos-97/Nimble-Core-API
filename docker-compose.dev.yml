@@ -19,4 +19,5 @@ services:
   localstack:
     image: localstack/localstack:1.4
     ports:
+      - 4566:4566
       - 4571:4571

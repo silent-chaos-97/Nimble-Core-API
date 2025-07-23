@@ -27,7 +27,6 @@ function getApiKey(headers) {
 
 function getQueryOrHeaderToken(params, headers) {
   if (_.has(params, 'token')) {
-    return params.token
   }
 
   if (_.has(headers, 'authorization')
@@ -71,7 +70,6 @@ async function checkMemberships(memberships, req, res, next) {
   if (!req.user) return next(new UnauthorizedTokenError('Memberships require authentication'))
   if (User.isSuperAdmin(req.user)) return next() // super-admin is always permitted
   if (_.isEmpty(memberships)) return next(new UnauthorizedTokenError('Unauthorized:0')) // membership can't be verified
-// Temp comment
 
   let atLeastOne = false
 

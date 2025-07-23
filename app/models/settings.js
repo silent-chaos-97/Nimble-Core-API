@@ -42,3 +42,4 @@ class SettingsModel extends BaseModel {
 
     return _data
   }
+

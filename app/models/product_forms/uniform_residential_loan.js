@@ -302,6 +302,7 @@ const schema = Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 					type: Joi.string(),
 					description: Joi.string(),
+					marketValue: Joi.number()
 				})
 			),
 			otherAssetsTotalMarketValue: Joi.number(),
@@ -495,3 +496,10 @@ const mockUniformResidentialLoanApplication = {
 	constructionDetails: {
 		yearLotAcquired: 2020,
 		originalCost: 100000,
+		amountExistingLiens: 0,
+		presentValueOfLot: 99999,
+		costOfImprovements: 50000,
+		total: 149999
+	},
+	titleHeldInName: 'Bob Smith',
+	titleHeldInManner: 'Joint Tenancy',

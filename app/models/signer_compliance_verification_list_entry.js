@@ -10,7 +10,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
     return [
       'id',
       'name',
-      'value',
       'source',
       'date',
       'deletedDate',

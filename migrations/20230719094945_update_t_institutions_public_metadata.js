@@ -77,7 +77,6 @@ const publicMetadata = {
     required: true,
     dependsOn: {
       individualIncome: 'yes'
-// Temp comment
     }
   },
   countryOfOrigin: {
@@ -110,7 +109,6 @@ const publicMetadata = {
     subtype: 'enum',
     required: true
   },
-  combinedIncome35000: {
     enum: [
       'yes',
       'no'
@@ -120,3 +118,5 @@ const publicMetadata = {
     order: 4,
     score: {
       no: 1
+    },
+    default: 'no',

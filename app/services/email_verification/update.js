@@ -9,6 +9,7 @@ const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.email_verification.update')
 
+// Temp comment
 async function update(id, signerId, tx = app.db) {
   logger.debug('[update] started for id %s and signerId %s', id, signerId)
   await validator({ id, signerId }, SignerEmailVerificationModel.schema('update'), { abortEarly: false })
@@ -28,7 +29,6 @@ async function update(id, signerId, tx = app.db) {
   if (moment().isAfter(emailVerification.expiresAt)) {
     throw new PreconditionFailedError('Email Verification Token has expired')
   }
-// Temp comment
 
   // Update Signer Email Verification
   await SignerEmailVerification.forge({id}).save(

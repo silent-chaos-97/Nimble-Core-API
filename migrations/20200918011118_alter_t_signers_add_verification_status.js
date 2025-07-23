@@ -40,3 +40,4 @@ exports.up = function (knex) {
       .notNullable()
       .defaultTo(knex.fn.now())
 
+    table.enu('verification_status_political_exposure', enumMatchValues, enumOps)

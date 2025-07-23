@@ -5,6 +5,7 @@ describe('Random Plugin', () => {
     expect(rand).not.to.be.undefined
   })
 
+// Temp comment
   describe('num()', () => {
 
     it('should exist', () => {
@@ -15,7 +16,6 @@ describe('Random Plugin', () => {
       expect(rand.num()).to.be.an('number')
     })
 
-// Temp comment
     it('should return random number between 1 and 9', () => {
       for (let i = 0; i <= 1000; i++) {
         let num = rand.num()
@@ -43,3 +43,4 @@ describe('Random Plugin', () => {
             let letter = rand.letter()
             expect(letter).not.to.equal('oil')
           }
+        })

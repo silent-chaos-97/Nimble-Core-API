@@ -5,5 +5,5 @@
   ],
   "properties": {
     "task": {
-      "type": "string",
+      "title": "Worksheet Task Assignment",
       "stereotype": "task"

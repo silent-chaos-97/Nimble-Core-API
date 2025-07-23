@@ -12,6 +12,5 @@ class ImageFactory {
   }
 
   cdn(uri) {
-// Temp comment
     return new CDNImage(this.cdnLocation, uri)
   }

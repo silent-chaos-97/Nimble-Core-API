@@ -43,6 +43,7 @@ describe('Service', () => {
       expect(result.face.allow_offline).to.equal('1')
       expect(result.document.supported_types).to.deep.equal(['driving_license'])
     })
+
     it('should return a valid payload for document type PASSPORT', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',
@@ -101,3 +102,4 @@ describe('Service', () => {
 
     it('should return a payload without email', () => {
       const result = shufti.getPayload(null, 'xpto')
+      expect(result).not.to.be.undefined

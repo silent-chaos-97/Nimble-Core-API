@@ -11,6 +11,7 @@ Support:
     seed.entity.create([]) // create by collection
     seed.entity.get() // get first
     seed.entity.get(1) // get by id
+
 If you add a file for a new table, don't forget to edit the seeds.js file
 to add an entry in the list of flush commands if needed, example:
 
@@ -20,5 +21,4 @@ to add an entry in the list of flush commands if needed, example:
 
 ## Running in development
 
-If you want to run these seeds in your local database,
 you must add the seed name to the list in /seeds/dev.js and

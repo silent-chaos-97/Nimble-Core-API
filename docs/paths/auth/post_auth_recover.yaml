@@ -11,3 +11,4 @@
         required: true
         schema:
           type: string
+          format: email

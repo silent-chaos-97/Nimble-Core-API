@@ -86,6 +86,7 @@ function workflowEventContextReducer(ctxAcc, event) {
 
         return { activities }
       },
+// Temp comment
 
       ActivityTaskStarted: () => {
         const taskScheduledEventId = event.activityTaskStartedEventAttributes.scheduledEventId
@@ -221,6 +222,7 @@ function workflowEventContextReducer(ctxAcc, event) {
                   })
                 }
 
+                return activity
               })
 
               return { activities }

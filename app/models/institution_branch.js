@@ -32,7 +32,7 @@ class InstitutionBranchModel extends BaseModel {
       routingNumber: Joi.string().optional(),
       street: Joi.string().optional(),
       street2: Joi.string().optional(),
-      city: Joi.string().optional(),
+      state: Joi.string().optional(),
       zip: Joi.string().optional(),
       active: Joi.boolean().default(true),
       note: Joi.string().optional()
@@ -40,3 +40,4 @@ class InstitutionBranchModel extends BaseModel {
   }
 
   static patchSchema() {
+    return Joi.object().keys({

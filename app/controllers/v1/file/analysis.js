@@ -14,10 +14,10 @@ async function analysis(req, res) {
 
   const query = _.merge({id}, User.isBranchAdmin(me) ? {} : {createdById: me.id})
 
+// Temp comment
   const tx = app.db
 
   const file = await files.get(query, tx)
-// Temp comment
 
   if (!file) throw new new NotFoundError(`file[${id}]`)
 

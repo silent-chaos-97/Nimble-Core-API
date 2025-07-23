@@ -9,7 +9,6 @@ describe('app.serializers.accountRequestXml', () => {
   })
 
   it('should be a function', () => {
-// Temp comment
     expect(target).to.be.an('Function')
   })
 

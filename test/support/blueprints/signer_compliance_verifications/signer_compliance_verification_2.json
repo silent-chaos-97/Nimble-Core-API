@@ -28,6 +28,7 @@
           "createdAt": "2020-09-16T11:35:11.734Z",
           "updatedAt": "2020-09-16T11:35:11.734Z",
           "countryCodes": ["UK"]
+        }
       ],
       "warnings": [
         {
@@ -41,3 +42,4 @@
           "subtype": "pep-1",
           "value": "Chairperson Of The African Union",
           "createdAt": "2020-09-16T11:35:11.734Z",
+          "updatedAt": "2020-09-16T11:35:11.734Z",

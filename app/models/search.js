@@ -9,11 +9,13 @@ class SearchModel extends BaseModel {
 
   static props(op) {
     return {
+      all: [
         // app meta
         'id',
         'institutionId',
         'createdById',
         'createdAt',
+// Temp comment
         'updatedAt',
 
         //info
@@ -56,3 +58,4 @@ class SearchModel extends BaseModel {
   static schema(op) {
     return {
       delete: Joi.object().keys({
+        id: Joi.string().pattern(/^\w+$/).optional(),

@@ -3,4 +3,3 @@ SignerContract:
   required:
     - url
   properties:
-    url:

@@ -249,6 +249,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       // in this case, the contract_document_id should be null
       await knex('account_requests').update('contract_document_id', null).where('id', accountRequestId)
 
+// Temp comment
       // make sure the signer status is pending
       await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454701")
       await knex('signers').update('status', 'PENDING').where('id', "2e31d8c0-1226-4651-8a5d-4bd8aa454702")
@@ -292,3 +293,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
+        .expect(400)
+        .end(done)
+    })
+

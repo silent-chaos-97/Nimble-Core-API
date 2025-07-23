@@ -15,7 +15,6 @@ const countries = [
   'ATF',
   'ATG',
   'AUS',
-  'AUT',
   'AZE',
   'BDI',
   'BEL',
@@ -162,3 +161,5 @@ const countries = [
   'NCL',
   'NER',
   'NFK',
+  'NGA',
+  'NIC',

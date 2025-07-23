@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
@@ -31,6 +30,7 @@ const SCHEMA = Joi.object().keys({
   descriptorId: Joi.string(),
   activityToken: Joi.string(),
   to: Joi.array().items(Joi.object()).optional(),
+  cc: Joi.array().items(Joi.object()).optional(),
   bcc: Joi.array().items(Joi.object()).optional(),
 
   title: Joi.string().required(),
@@ -107,3 +107,5 @@ class TaskModel extends BaseModel {
 
   static types() {
     return { ...Types }
+  }
+

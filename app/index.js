@@ -13,6 +13,7 @@ module.exports = async (listen = false) => {
     logger.error(err, '[index] could not boot app')
     return null
   }
+
   // The request handler must be the first middleware on the app
   app.middleware(app.middlewares.sentry.requestHandler)
 
@@ -21,7 +22,6 @@ module.exports = async (listen = false) => {
   app.middleware(app.middlewares.bodyParser)
 
   app.middleware(app.middlewares.contentTypeSupport)
-
   // global response header access
   app.server.use((req, res, next) => {
     res.set('Access-Control-Expose-Headers', 'Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma, x-nimble-token')

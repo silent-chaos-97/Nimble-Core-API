@@ -92,3 +92,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       expect(emailVerificationEmailSpy).to.have.been.calledWith('ff000000-0000-0000-4444-1ea08a01e901', sinon.match.any)
     })
 
+    describe('Reminds after 7 days when runing every hour', () => {

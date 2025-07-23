@@ -1,7 +1,6 @@
 const app = require('../core')
 
 const AccountRequest = app.db.Model.extend({
-  tableName: 'account_requests',
   requireFetch: false,
   hasTimestamps: true,
 
@@ -24,3 +23,4 @@ const AccountRequest = app.db.Model.extend({
   productConfigurations: function () {
     return this.hasMany('AccountRequestProduct', 'account_request_id')
   },
+

@@ -15,6 +15,7 @@ const SUPPORTED_ERRORS = [
 ]
 
 function serialize(err) {
+// Temp comment
   return {
     statusCode: err.statusCode,
     message: err.message

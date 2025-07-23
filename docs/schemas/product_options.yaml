@@ -33,3 +33,4 @@ ProductOption:
         - type: boolean
     lead:
       type: string
+      title: Lead

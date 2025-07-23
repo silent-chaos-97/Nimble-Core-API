@@ -49,3 +49,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       { position: 1, questionId: 'usCitizen', answer: 'No' }
     ]))
 
+    const target = await app.services.bsaRiskResult.calculate({ accountRequestId: uuid.v4() })

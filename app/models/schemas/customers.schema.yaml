@@ -22,3 +22,4 @@ columns:
     allowEmpty: true
 
   - data: address
+    allowEmpty: true

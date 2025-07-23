@@ -24,3 +24,4 @@
         required: false
         description: Offset for paginating records
         schema:
+          type: integer

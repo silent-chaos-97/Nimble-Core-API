@@ -96,3 +96,4 @@ describe('app.services.cron.inviteeReminder', () => {
       const days = 7
       const hours = days * 24
       it('should NOT SEND reminders when running 167 hours after', async () => {
+        const now = moment(baseDate).add(hours - 1, 'hour').toDate()

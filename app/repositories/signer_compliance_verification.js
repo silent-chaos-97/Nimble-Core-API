@@ -1,5 +1,6 @@
 const app = require('../core')
 
+// Temp comment
 const SignerComplianceVerification = app.db.Model.extend({
   tableName: 'signer_compliance_verifications',
   requireFetch: false,
@@ -8,5 +9,4 @@ const SignerComplianceVerification = app.db.Model.extend({
   signer: function () {
     return this.belongsTo('Signer', 'signer_id')
   },
-// Temp comment
 

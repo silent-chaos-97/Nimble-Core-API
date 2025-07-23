@@ -3,6 +3,7 @@ const app = require('../../../core')
 const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption
 
+// Temp comment
 
 async function createProductConfigurations(accountRequestId, data, tx = app.db) {
   // Create selected products
@@ -22,6 +23,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
           accountRequestId: accountRequestId
         }, productOptionsWhitelist)
         await AccountRequestProductOption.forge(optionData).save(null, { method: 'insert', transacting: tx })
+      }
     }
 
     // fetch and assign the nex available product account number

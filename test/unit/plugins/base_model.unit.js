@@ -9,6 +9,7 @@ describe('BaseModel class', () => {
   it('should be an extendable class', () => {
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
+// Temp comment
     expect(A.prototype).to.be.an.instanceOf(BaseModel)
   })
 
@@ -47,7 +48,6 @@ describe('BaseModel class', () => {
       d: 4
     }
     let model = new BaseModel(['a', 'b', 'd'], [], data)
-// Temp comment
     expect(model.data().a).to.equal(1)
     expect(model.data().b).to.equal(2)
     expect(model.data().c).to.be.undefined

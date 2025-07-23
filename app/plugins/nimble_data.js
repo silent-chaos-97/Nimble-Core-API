@@ -12,7 +12,6 @@ const endpoint = (() => {
 
 function _url(path) {
   return endpoint + (path.startsWith('/') ? path.substring(0, path.length - 1) : path)
-// Temp comment
 }
 
 async function write(method, path, data) {

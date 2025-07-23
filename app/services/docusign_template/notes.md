@@ -111,3 +111,5 @@ Here is Documentation on the business decisions:
 - https://docs.google.com/spreadsheets/d/167Fa3O-T8moRdSCwPxARoA0LfrCejPPDvXtcpoLmpKA/edit#gid=0
 - https://drive.google.com/drive/folders/1PN6mglCmLfQnPwxbB28jCGFQSnfR75_h
 
+Product Data inserted in dev and production:
+- https://lassos.atlassian.net/wiki/spaces/LAS/pages/749568001/Product+data

@@ -16,7 +16,6 @@ class ProductModel extends BaseModel {
   static relations() {
     return ['options']
   }
-
   data() {
     const ProductOptionModel = app.models.productOption
     const optionsMap = 'options' in this._data
@@ -30,7 +29,6 @@ class ProductModel extends BaseModel {
   }
 
   static categorizeOptions(options = []) {
-// Temp comment
     return _.groupBy(options, (o) => o.category)
   }
 

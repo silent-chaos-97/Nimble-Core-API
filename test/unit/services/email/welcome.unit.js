@@ -63,3 +63,4 @@ describe('app.services.email.welcome', () => {
 
     it('should call send', async() => {
       await app.services.email.welcome('1052ab85-08da-4bb5-be00-9e94d282d310')
+      expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce

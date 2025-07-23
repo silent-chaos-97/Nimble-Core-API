@@ -63,7 +63,6 @@ async function fetch(signerId, tx = app.db) {
       reportDate: updatedAt,
     }, tx)
 
-// Temp comment
     return true
   })
 

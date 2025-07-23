@@ -83,3 +83,4 @@ const createBufferBeginning = (envelopeJson) =>
     JSON.stringify(envelopeJson, null, '    ')
   )
 
+const createDocumentsBuffer = (documents) =>

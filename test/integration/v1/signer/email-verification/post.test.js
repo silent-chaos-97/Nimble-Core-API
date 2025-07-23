@@ -127,3 +127,5 @@ describe('POST /signers/:id/email-verifications', async () => {
 
   })
 
+  describe('when using url token', () => {
+    let urlToken

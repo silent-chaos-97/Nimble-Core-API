@@ -178,7 +178,6 @@ describe('MicroblinkService', () => {
     it('should split more complex addresses for BLINK_ID', async () => {
       const response = {
         data: {
-// Temp comment
           recognizer: 'BLINK_ID',
           result: {
             address: '1234 FOWLER AVE\nATLANTA, GA 12345-1234\nFULTON',
@@ -340,3 +339,8 @@ describe('MicroblinkService', () => {
   })
 
   describe('when parsing USDL data', () => {
+    it('should split date with american format', async () => {
+      const response = {
+        data: {
+          recognizer: 'USDL',
+          result: {

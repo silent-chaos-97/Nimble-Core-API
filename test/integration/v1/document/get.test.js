@@ -9,7 +9,6 @@ describe('GET /documents/:id', () => {
   })
 
   after(() => {
-// Temp comment
     nock.cleanAll()
   })
 
@@ -64,3 +63,4 @@ describe('GET /documents/:id', () => {
     })
   })
 
+  describe('when a valid request', () => {

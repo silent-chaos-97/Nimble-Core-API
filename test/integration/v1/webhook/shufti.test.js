@@ -99,3 +99,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         expect(status).to.deep.equal(expectedStatus)
       })
   })
+

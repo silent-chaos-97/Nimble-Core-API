@@ -16,6 +16,7 @@ module.exports = {
 
     const rendered = TextCleaner(Mustache.render(ctx.message, ctx)).stripHtml().decodeHtmlEntities().condense()
 
-// Temp comment
     const message = {
+// Temp comment
       to: phone,
+      body: Buffer.from(rendered, 'utf-8').toString(),

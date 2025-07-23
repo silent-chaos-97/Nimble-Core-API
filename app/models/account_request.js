@@ -47,7 +47,6 @@ class AccountRequest extends BaseModel {
     return {
       ..._.omit(this._data, [
         'signers',
-        'referredBy',
         'statusUpdatedBy',
         'verificationStatus',
         'productConfigurations',
@@ -162,3 +161,6 @@ class AccountRequest extends BaseModel {
   }
 
   static schema(operation) {
+    if (![
+      'get',
+      'create',

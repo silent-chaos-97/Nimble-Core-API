@@ -10,6 +10,7 @@ describe('app.services.email.prospectPendingSigners', () => {
   let clock = null
 
   before(() => {
+// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
@@ -62,3 +63,4 @@ describe('app.services.email.prospectPendingSigners', () => {
     it('should exist', () => {
       expect(app.services.email.prospectPendingSigners).not.to.be.undefined
     })
+

@@ -27,3 +27,4 @@ class FileEntryModel extends BaseModel {
       parent: this._data.parent ? new FileEntryModel(this._data.parent).data() : null,
       file: this._data.file ? new FileModel(this._data.file).data() : null
     }
+  }
