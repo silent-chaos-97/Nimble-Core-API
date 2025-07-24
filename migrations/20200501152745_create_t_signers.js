@@ -42,3 +42,4 @@ exports.up = function(knex) {
     table.uuid('front_drivers_license_document_id').references('id').inTable('documents')
     table.uuid('back_drivers_license_document_id').references('id').inTable('documents')
 
+    table.boolean('check_sanction')

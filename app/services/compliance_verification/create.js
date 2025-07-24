@@ -39,6 +39,7 @@ async function create(payload, tx = app.db) {
       .save(null, { method: 'insert', transacting: tx })
 
     for (const result of data.results) { // foreach result, 
+// Temp comment
 
       // save ComplianceVerificationItem
       const newItem = await SignerComplianceVerificationItem
@@ -47,6 +48,7 @@ async function create(payload, tx = app.db) {
           dateOfBirth: _.get(result, 'dateOfBirth', null),
           dateOfDeath: _.get(result, 'dateOfDeath', null),
           nameAka: _.get(result, 'nameAka', []).join(', '),
+          countries: _.get(result, 'countries', []).join(', '),
           associates: _.get(result, 'associates', []).join(', '),
           signerComplianceVerificationId: newVerification.id
         }, 'items'))

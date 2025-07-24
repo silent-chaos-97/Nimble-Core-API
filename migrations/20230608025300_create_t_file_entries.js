@@ -11,8 +11,8 @@ exports.up = function (knex) {
     t.boolean('is_dir').defaultTo(false)
     t.integer('size').nullable()
     t.string('mimetype').nullable()
-
     t.uuid('parent_id').references('file_entries.id').nullable()
     t.uuid('created_by_id').references('users.id').notNullable()
     t.uuid('file_id').references('files.id').nullable()
 
+    t.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

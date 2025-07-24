@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class SignerCreditReportModel extends BaseModel {
-  constructor(data) {
     super(SignerCreditReportModel.props(), SignerCreditReportModel.relations(), data)
   }
 
@@ -12,7 +11,6 @@ class SignerCreditReportModel extends BaseModel {
       'errorCode',
       'reference',
       'score',
-// Temp comment
       'reportDate',
       'documentId',
       'signerId',

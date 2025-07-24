@@ -53,6 +53,7 @@ describe('app.services.compliance.search', () => {
 
       const entity = {
         firstName: 'Robert',
+        middleName: 'Gabriel',
         lastName: 'Mugabe'
       }
 
@@ -75,3 +76,5 @@ describe('app.services.compliance.search', () => {
       const search = await app.services.compliance.search(entity)
       expect(search).to.have.ownProperty('hits')
       expect(search.hits).to.be.an('array')
+      expect(search.hits).to.have.lengthOf(2)
+      scope.done()

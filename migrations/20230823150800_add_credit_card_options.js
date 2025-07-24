@@ -11,6 +11,7 @@ const ROWS = [
     sku: 'visa-rewards',
     category: 'CARD',
     summary: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.',
+    content: 'Experience the fun of earning rewards with every purchase using the Visa Rewards card. This card transforms your everyday spending into points you can redeem for a variety of valuable rewards.'
   }
 ]
 
@@ -24,7 +25,6 @@ const OLD_ROWS = [
   }
 ]
 
-/**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
@@ -33,3 +33,4 @@ exports.up = knex => Promise.all([
   knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(product =>
     knex('products').insert({
       institution_id: inst.id,
+      ...product

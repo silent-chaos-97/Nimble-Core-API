@@ -181,7 +181,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     })
 
     it('should update signer status', done => {
-      request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
         .expect('Content-Type', /json/)
         .expect(200)
@@ -296,3 +295,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .end(done)
     })
 
+    it('should return 401 if token does not match signature', done => {
+      request(app.server)
+        .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${badToken}`)
+        .set('Authorization', 'Bearer ' + token)
+        .expect('Content-Type', /json/)
+        .expect(401)

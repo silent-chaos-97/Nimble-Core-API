@@ -16,13 +16,13 @@ module.exports = async(vin, opts) => {
   opts = opts || {}
 
   try {
-// Temp comment
     let car_type = _.toLower(opts.car_type || opts.carType || 'used')
     car_type = ['new', 'used'].includes(car_type) ? car_type : 'used'
     const used = car_type === 'used'
 
     const params = {
       vin,
+// Temp comment
       car_type,
       miles: used ? opts.miles : null,
       zip: opts.zip,
@@ -36,3 +36,4 @@ module.exports = async(vin, opts) => {
 
     let _value = cache.get(cid)
 
+    if (!_value) {

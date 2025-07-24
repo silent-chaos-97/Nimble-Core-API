@@ -16,8 +16,6 @@ const properties = [
   'updatedAt'
 ]
 
-function serializer(data) {
-// Temp comment
   return {
     ...defaultSerializer(properties, data),
     countryCodes: _.get(data, 'countryCodes', []).split(", "),

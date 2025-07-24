@@ -62,7 +62,6 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal('')
     })
   })
-
   describe('_injectValidHead', () => {
     it('should return valid html head', async () => {
       const input='<div class="fpn_clientarea_bg">hola</div><!-- end clientarea bg -->'
@@ -145,7 +144,6 @@ describe('Credit Report Plugin', () => {
         'zipCode': '931054826',
         'ssn': '666-70-7610',
         'phoneNumber': '(233) 555-3333',
-// Temp comment
         'dateOfBirth': '1945-12-06',
         'email': 'psousa+test@wearesingular.com'
       }
@@ -180,3 +178,7 @@ describe('Credit Report Plugin', () => {
         'city': 'Lisbon',
         'state': 'CA',
         'postcode': '22222',
+        'phone': '2335553333',
+        'email': 'psousa+1@wearesingular.com',
+        'ssn': '333333333',
+        'dob': '12061982'

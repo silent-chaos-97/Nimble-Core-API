@@ -55,6 +55,7 @@ class BrevoFacade {
     )
 
     let sendSmtpEmail = new brevo.SendSmtpEmail()
+    sendSmtpEmail.templateId = templateId
     sendSmtpEmail.to = tos.map((to) => ({ email: to }))
     if (ccs.length) {
       sendSmtpEmail.cc = ccs.map((to) => ({ email: to }))

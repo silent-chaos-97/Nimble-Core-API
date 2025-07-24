@@ -32,7 +32,6 @@ function interpolateString(str, state) {
   }
 
   return references.reduce((memo, [placeholder, reference]) => {
-// Temp comment
     const value = get(state, reference) || placeholder
     return memo.replace(placeholder, value)
   }, str)
@@ -196,7 +195,6 @@ function workflowEventContextReducer(ctxAcc, event) {
         const type = control.type
 
         const timerFiredReducer = _.get(
-          {
             defer: () => {
               return {} // defer timers flow throw common decision logic: TODO: only run defer decision logic if this is the current event
             },
@@ -258,3 +256,113 @@ function workflowEventContextReducer(ctxAcc, event) {
   ctxAcc.nextActivity = ctxAcc.activities.find(activity => !activity.completed)
 
   return ctxAcc
+}
+
+async function decider(task) {
+  try {
+    if (!task || !task.taskToken) return Promise.resolve()
+
+    const currentEvent = _.findLast(
+      task.events,
+      event => !['DecisionTaskScheduled', 'DecisionTaskStarted'].includes(event.eventType)
+    )
+
+    const context = task.events.reduce(workflowEventContextReducer, INITIAL_CONTEXT)
+
+    const executionContext = _executionContext(context, task)
+
+    log.info({
+      op: 'decider',
+      phase: 'wkfl-decision-task-received',
+      task: _.pick(task, ['taskToken']),
+      context,
+      executionContext,
+      currentEvent
+    })
+
+    const nextActivity = context.nextActivity || {}
+    const defer = nextActivity.defer
+    if (defer && !_.isEmpty(defer) && !nextActivity.completed) {
+      const pendingDeferrals = await Promise.all(
+        defer.map(tsk => app.services.task.get([['id', tsk]]))
+      ).then(tsks => tsks.filter(tsk => tsk.status !== TASK_STATUS_COMPLETED))
+
+      log.info({ op: 'defer', pendingDeferrals, completed: pendingDeferrals.length === 0 })
+
+      // all defers completed (i.e. tasks in completed status)
+      if (pendingDeferrals.length === 0)
+        return app.plugins.aws.nextDecisions(
+          task.taskToken,
+          [
+            {
+              decisionType: 'StartTimer',
+              startTimerDecisionAttributes: {
+                timerId: uuid(),
+                control: JSON.stringify({
+                  type: 'updateActivity',
+                  activityId: nextActivity.id,
+                  updates: [
+                    { op: 'set', path: 'defer', value: null },
+                    { op: 'set', path: 'completed', value: true }
+                  ]
+                }),
+                startToFireTimeout: '1'
+              }
+            }
+          ],
+          executionContext
+        )
+
+      // TODO: read the list of tasks in defer and schedule a StartTimer to check on task completion
+      // TODO: once all tasks are complete, then schedule the next activity
+      // TODO: as tasks are completed, remove them from the `defer` list
+      // TODO: end the workflow when all tasks have expired
+
+      // start a timer to check for defers
+      return app.plugins.aws.nextDecisions(
+        task.taskToken,
+        [
+          {
+            decisionType: 'StartTimer',
+            startTimerDecisionAttributes: {
+              timerId: uuid(),
+              control: JSON.stringify({
+                type: 'defer',
+                activityId: nextActivity.id,
+                pendingDeferrals
+              }),
+              startToFireTimeout: '60'
+            }
+          }
+        ],
+        executionContext
+      )
+    }
+
+    let decisions
+
+    if (!context.nextActivity) {
+      decisions = app.plugins.aws.getCompleteWorkflowDecision(
+        _.get(_.last(context.activities), 'outputs') || {}
+      )
+    } else if (context.decisionTaskTimedOutCounter >= MAX_DECISION_RETRY_ATTEMPTS) {
+      decisions = app.plugins.aws.getFailWorkflowDecision('Reached max decision retry attempts.')
+    } else if (context.nextActivity.retryAttempts >= MAX_ACTIVITY_RETRY_ATTEMPTS) {
+      decisions = app.plugins.aws.getFailWorkflowDecision('Reached max activity retry attempts.')
+    } else {
+      decisions = app.plugins.aws.getScheduleActivityDecision(context.nextActivity)
+    }
+
+    await app.plugins.aws.nextDecisions(task.taskToken, decisions, executionContext)
+
+    log.info({
+      op: 'decider',
+      phase: 'wkfl-decision-task-executed',
+      task: _.pick(task, ['taskToken']),
+      executionContext,
+      currentEvent,
+      decisions
+    })
+  } catch (error) {
+    log.error(error, '[decider] there was an error polling for desicions')
+  }

@@ -131,3 +131,5 @@ describe('app.services.creditReport.fetch', () => {
       expect(result.rows[0].error_code).to.equal(null)
       expect(result.rows[0].signer_id).to.equal(signerId)
     })
+
+    it('should create a valid credit report of score 0', async () => {

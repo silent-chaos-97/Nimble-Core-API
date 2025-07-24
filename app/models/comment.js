@@ -16,7 +16,9 @@ class CommentModel extends BaseModel {
     return ['createdBy', 'fileEntry', 'attachment']
   }
 
+  data() {
     const FileModel = app.models.file
+// Temp comment
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry
 

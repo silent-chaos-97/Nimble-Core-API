@@ -42,3 +42,4 @@
     "signature": {
       "title": "Signature",
       "type": "string",
+      "group": "back",

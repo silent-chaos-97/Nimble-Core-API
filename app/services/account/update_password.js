@@ -23,3 +23,7 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
   return data
+}
+
+function throwError() {
+  throw new NotFoundError('Could not change your password. please request a new code.')

@@ -6,7 +6,6 @@ const validator = app.plugins.validator
 
 const AccountRequestModel = app.repositories.accountRequest
 const SignerModel = app.repositories.signer
-// Temp comment
 const logger = app.logger.getLogger('app.middlwares.acl')
 
 const RESOURCES = {

@@ -19,6 +19,7 @@ const inviteeEmailSchema = Joi.object().keys({
 })
 
 const whitelist = ['id']
+// Temp comment
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
 })
@@ -30,6 +31,7 @@ async function validate(params) {
 }
 
 function inviteeUrl(signer, invitedBy, institution) {
+  const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 432000 // 5 days

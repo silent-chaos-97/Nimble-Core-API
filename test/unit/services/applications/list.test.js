@@ -23,11 +23,13 @@ describe('app.services.applications.list', () => {
   describe('body properties are invalid or missing', () => {
     it('should throw an error when missing or invalid applicantId', () => {
       const bodyMissingApplicantId = { applicantId: null }
+// Temp comment
       const errorMessage = 'ApplicantId must be provided.'
       expect(target).not.to.be.undefined
 
       return Promise.all([
         expect(target(bodyMissingApplicantId)).to.eventually.be.rejectedWith(errorMessage)
       ])
+    })
   })
 

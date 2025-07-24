@@ -2173,7 +2173,6 @@ const successResponse = {
               "complyadvantage-adverse-media": {
                 "aml_types": [
                   "adverse-media"
-                ],
                 "country_codes": [
                   "ZW"
                 ],
@@ -2931,7 +2930,6 @@ const parsedResult = [
       },
       {
         "name": "Program",
-// Temp comment
         "value": "The lists published on the official site of The Malta Financial Services Authority include United Nations; European Union and United States sanctions; that have been implemented by Malta under its own laws and regulations during the 2010 - 2016 period. However; entities found on the present list are to be considered active (under current sanctions of Malta) only if they are also under current UN and/or EU sanctions. Also; all UN and EU current sanctions; even those that are not on the present list; are to be considered as active in Malta; as the Maltese National Interest (Enabling Powers) Act provides for the direct applicability into Maltese law of all the sanctions issued by the United Nations Security Council and the sanctions imposed by the Council of the European Union.",
         "source": "Malta Financial Services Authority (MFSA) National Sanctions",
         "subtype": "sanction",
@@ -3187,3 +3185,61 @@ const parsedResult = [
       {
         "name": "Date of Birth",
         "value": "1924-02-21",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {
+        "name": "Passport",
+        "value": "Passeport n° AD001095",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {
+        "name": "Other Information",
+        "value": "Désigné par l'Union européenne le 21/02/2002, par les règlements (UE) 2016/218 du 16/02/2016, (UE) 2018/223 du 15/02/2018, (UE)2019/283 du 18/02/2019",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {
+        "name": "Other Information",
+        "value": "Renseignements complémentaires : Ancien président; responsable d'activités qui portent gravement atteinte à la démocratie, au respect des droits de l'homme et à l'État de droit",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {
+        "name": "Regime",
+        "value": "Zimbabwe (annexe III Gel actif)",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {

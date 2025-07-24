@@ -43,3 +43,4 @@ describe('Random Plugin', () => {
             expect(letter).not.to.equal('oil')
           }
         })
+      })

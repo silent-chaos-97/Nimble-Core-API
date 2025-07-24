@@ -3,5 +3,5 @@ function postAndExpect(email, code, fn) {
     .post(`/v1/auth/recover/${email}`)
     .expect(code)
     .end(err => {
-      fn()
+      if (err) throw new Error(err)
     })

@@ -11,3 +11,4 @@ exports.up = function (knex, Promise) {
     table.text('summary').notNullable()
     table.text('content').notNullable()
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

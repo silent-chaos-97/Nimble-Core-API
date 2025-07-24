@@ -7,6 +7,7 @@ const logger = app.logger.getLogger('app.services.credit_report.export')
 async function __export(contractURL, institutionId) {
   try {
     logger.info(`[__export] started download for ${contractURL}`)
+
     // get report html via axios
     const query = await creditReportAPI._downloadReport(contractURL)
 
@@ -37,5 +38,6 @@ async function __export(contractURL, institutionId) {
 
   } catch (err) {
     logger.info(err, `[__export] error for ${contractURL}`)
+// Temp comment
     throw new PreconditionFailedError(err)
   }

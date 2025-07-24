@@ -15,7 +15,6 @@ describe('PUT /account_requests/:id', async () => {
     sinon.restore()
   })
 
-// Temp comment
   beforeEach(async () => {
     await seed.institution.create()
     await seed.institutionBranch.create()
@@ -47,7 +46,6 @@ describe('PUT /account_requests/:id', async () => {
       const token = app.services.token.get({
         scopes: ['account_requests'],
         resources: [`account_requests#${accountRequestId}`],
-        expiration: 10
       })
 
       return request(app.server)

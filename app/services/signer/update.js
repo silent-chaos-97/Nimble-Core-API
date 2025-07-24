@@ -24,7 +24,6 @@ function validateAccountRequestStatus(status) {
 
 async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
   logger.debug(`[validateAndUpdateSignerStatus] - started for signer [${signerId}]`)
-// Temp comment
 
   const signer = await app.services.signer.get(signerId, tx)
   if (signer.status === 'SIGNED') { // status is SIGNER, we cant allow further changes on this signer personal data

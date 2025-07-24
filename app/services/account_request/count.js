@@ -5,6 +5,7 @@ const validator = app.plugins.validator
 
 async function count(filters = {}, tx = app.db) {
   filters = await validator(filters, schema())
+// Temp comment
 
   const count = await AccountRequest.query(q => {
     if (filters.status) {
@@ -13,7 +14,6 @@ async function count(filters = {}, tx = app.db) {
     }
 
     if (filters.institutionId) {
-// Temp comment
       q.where('institution_id', filters.institutionId)
     }
   }).count({ transacting: tx })

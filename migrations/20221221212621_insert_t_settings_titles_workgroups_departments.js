@@ -6,6 +6,7 @@ const TITLE = {
   schema: { $ref: 'titles' }
 }
 
+const WORKGROUPS = {
   key: 'workgroups',
   title: 'Workgroups',
   schema: { $ref: 'workgroups' }

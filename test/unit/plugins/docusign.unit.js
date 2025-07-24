@@ -344,7 +344,6 @@ describe('Docusign', () => {
       afterEach(() => { nock.cleanAll() })
 
       it('should return a pdf', async () => {
-        const scope1 = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
         const scope2 = nock(config.get('docusign').basePath)
           .get('/v2.1/accounts/8872016/envelopes/xxx/documents/combined')
@@ -718,6 +717,7 @@ describe('Docusign', () => {
     describe('_buildCCRecipientsList', () => {
       it('should return a docusign carboncopy', async () => {
 
+        const user = {
           fullName: 'Sample Specimen',
           email: 'psousa+1@wearesingular.com',
         }
@@ -748,3 +748,17 @@ describe('Docusign', () => {
           "e241451d-a10b-41ab-b1fc-37be09e3880b",
           "05db6673-5bb1-421f-be65-c71580bc28a9", // funds avail
           "5d397906-e438-4597-b5e7-fb6c3d5a1217", // privacy
+          "b60fec89-18e3-41b8-8873-808d3c665569"
+        ]
+
+        const result = await docusign._getTemplateForProduct('simple-checking')
+        expect(result).to.deep.equal(expectedResult)
+      })
+
+      it('should return a list of templates for savings accounts', async () => {
+        const expectedResult = [
+          "5313cde2-5926-47b1-b358-56cc7bb786cc",
+          "ecd5df78-d3e4-4234-b643-3a711b4cc09c", // platinum
+          "c2b862c6-7827-46a1-bdcd-fea345785daa", //fees
+          "e241451d-a10b-41ab-b1fc-37be09e3880b",
+          "5d397906-e438-4597-b5e7-fb6c3d5a1217",

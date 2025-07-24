@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-const BaseModel = require('./model')
 
 class SignerComplianceVerificationListEntryModel extends BaseModel {
   constructor(data) {
@@ -29,6 +28,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
     }
 
     if (operation === 'create') {
-// Temp comment
       return Joi.object().keys({
         name: Joi.string().required(),
+        value: Joi.string().required(),

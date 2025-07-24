@@ -5,7 +5,6 @@
     summary: Create Signer
     description: Create Signer
     security:
-      - bearer: ['account_requests']
     requestBody:
       description: Signer information
       required: true
@@ -27,3 +26,4 @@
                     description: account request identifier
                     example: a74f9092-5889-430a-9c19-6712f9f68090
     responses:
+      '201':

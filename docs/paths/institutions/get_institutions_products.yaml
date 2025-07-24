@@ -6,7 +6,6 @@
     description: Method to get a list of products
     operationId: listProducts
     parameters:
-      - name: id
         in: path
         description: Id of the Institution
         required: true
@@ -24,7 +23,9 @@
       - name: sort
         in: query
         required: false
+        description: Sort products by property
         schema:
           type: string
           enum:
             - id
+            - -id

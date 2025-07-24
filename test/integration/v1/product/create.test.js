@@ -74,6 +74,7 @@ describe('POST /institutions/:id/products', () => {
             .send({ ...product, category })
             .expect(201)
         })
+      })
     })
   })
 
@@ -107,3 +108,5 @@ describe('POST /institutions/:id/products', () => {
         expect(res.body).not.to.have.own.property('updatedAt')
       })
   })
+
+  it('should persist product', async () => {

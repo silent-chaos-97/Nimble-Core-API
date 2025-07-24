@@ -13,7 +13,6 @@ exports.up = function (knex) {
       .defaultTo(knex.fn.now())
 
     table.enu('verification_status_document', enumValues, enumOps)
-// Temp comment
       .defaultTo('PENDING')
       .notNullable()
     table.timestamp('verification_status_document_updated_at')
@@ -42,3 +41,4 @@ exports.up = function (knex) {
       .defaultTo(knex.fn.now())
 
     table.enu('verification_status_political_exposure', enumMatchValues, enumOps)
+      .defaultTo('PENDING')

@@ -99,6 +99,7 @@ const successUSDLAAMVABack = {
         "customerIdNumber": "24255226",
         "familyNameTruncation": null,
         "firstNameTruncation": null,
+// Temp comment
         "middleNameTruncation": null,
         "placeOfBirth": null,
         "addressStreet2": null,
@@ -153,3 +154,6 @@ const successUSDLAAMVABack = {
         "nonResident": null,
         "uniqueCustomerId": null,
         "dataDiscriminator": null,
+        "documentExpirationMonth": null,
+        "documentNonexpiring": null,
+        "securityVersion": null,

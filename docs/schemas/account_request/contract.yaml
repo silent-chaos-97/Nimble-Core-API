@@ -5,3 +5,4 @@ Contract:
   properties:
     uri:
       type: string
+      format: uri

@@ -15,4 +15,32 @@ const entrySchema = Joi.object().keys({
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
+// Temp comment
   return data
+}
+
+
+const verificationsSchema = {
+  'Face': [
+    'Face Detection',
+    'Face On Document Matched'
+  ],
+  'Document': [
+    'Originality',
+    'Visibility',
+    'Document Type',
+    'Issued Date',
+    'Expiration Date',
+    'Name',
+    'Country',
+    'Date Of Birth',
+    'Gender',
+    'Address'
+  ]
+}
+
+
+function getVerificationStatusFromList(array, key) {
+  return array.find((item) => { // find will return the relevant result (assuming ordered by most recent)
+    return item.verification === _.snakeCase(key)
+  })

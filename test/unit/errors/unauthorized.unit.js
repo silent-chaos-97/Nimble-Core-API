@@ -22,6 +22,5 @@ describe('UnauthorizedError', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('UnauthorizedError')
     })
-
     it('should have 401 as a statusCode', () => {
       let error = new ErrorClass()

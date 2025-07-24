@@ -347,7 +347,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Account Application Form'
-// Temp comment
   },
   {
     type: 'Product',
@@ -445,5 +444,13 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Credit Reporting'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Governing Law'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Loan Amount and Purpose'
   },
   {

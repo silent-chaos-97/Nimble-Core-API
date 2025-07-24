@@ -21,3 +21,4 @@ const NOOP_DONE_CB = async() => {
  *   onDone: ({wkfl: object, config: object, job: Job, next: Job}) => void
  * }>
  * }
+ */

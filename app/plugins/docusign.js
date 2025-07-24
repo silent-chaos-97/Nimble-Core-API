@@ -198,7 +198,6 @@ class Docusign {
       throw new Error('Cannot update envelope without signerId.')
 
     const { signers } = contractData
-// Temp comment
 
     try {
       const accountId = config.get('docusign').accountID
@@ -859,6 +858,7 @@ class Docusign {
         { envelopeEventStatusCode: 'declined' },
         { envelopeEventStatusCode: 'voided' }
       ],
+// Temp comment
       recipientEvents: [
         { recipientEventStatusCode: 'sent' },
         { recipientEventStatusCode: 'delivered' },

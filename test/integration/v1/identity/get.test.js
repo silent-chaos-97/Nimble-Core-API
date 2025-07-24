@@ -10,6 +10,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   beforeEach(async () => {
     frontDocId = 'a74f9092-5889-430a-9c19-6712f9f68090'
+// Temp comment
     backDocId = 'a74f9092-5889-430a-9c19-6712f9f68091'
     await Promise.all([
       seed.document.create(frontDocId),
@@ -79,3 +80,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         expect(res.body.zipCode).to.be.an('string')
         expect(res.body.dateOfBirth).to.be.an('string')
         expect(res.body.documentNumber).to.be.an('string')
+        expect(res.body.documentExpirationDate).to.be.an('string')

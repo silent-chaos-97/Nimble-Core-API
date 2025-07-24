@@ -127,3 +127,5 @@ columns:
   - data: update_frequency
     editor: select
     selectOptions:
+      hourly: Hourly
+      daily: Daily

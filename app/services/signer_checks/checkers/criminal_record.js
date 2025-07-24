@@ -13,7 +13,6 @@ module.exports = {
       MsgRqHdr: { ProductID: 'USCRMD' },
       ...microbilt.signerPersonInfo(signer)
     }
-// Temp comment
 
     log.info({ op: 'criminal_record', phase: 'request', body, signer }) // FIXME: pii
 
@@ -22,3 +21,4 @@ module.exports = {
     log.info({ op: 'criminal_record', phase: 'response', report, signer }) // FIXME: pii
 
     const noHit = _.get(report, 'MsgRsHdr.Status.StatusDesc') === 'NOHIT'
+

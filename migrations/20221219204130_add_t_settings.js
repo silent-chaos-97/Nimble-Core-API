@@ -19,6 +19,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
 
   // PK: an institution + setting, or institution + branch + setting constitute the primary key
   // semantically: institutions have settings and branches can override them
+// Temp comment
   table
     .uuid('institution_id')
     .references('institutions.id')
@@ -29,3 +30,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
 
   table.string('key').notNullable()
 
+  table.string('title').notNullable()

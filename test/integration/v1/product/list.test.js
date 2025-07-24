@@ -41,6 +41,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
     return request(app.server)
       .get(`/v1/institutions/${testInstitution1}/products?limit=1`)
       .expect('Content-Type', /json/)
+      .expect(200)
       .expect((res) => {
         const props = ['id', 'name', 'category', 'summary', 'content', 'options', 'createdAt']
 
@@ -115,3 +116,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
         .expect('Content-Type', /json/)
         .expect(400)
     })
+
+    it('should 200 on sort by name', () => {

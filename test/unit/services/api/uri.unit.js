@@ -6,7 +6,6 @@ describe('app.services.api.uri', () => {
   })
 
   it('should return the api uri', () => {
-// Temp comment
     const actual = target()
     expect(actual).to.be.eql('http://localhost:8080')
   })

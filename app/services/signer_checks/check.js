@@ -26,7 +26,6 @@ async function check(signerId, tx = app.db) {
           log.error(err, `ModuleNotFound[checkers/${checkerId}]`)
         }
 
-        return acc
       }, []))
 
     const signerChecks = await Promise.all(checkers.map(async checker => {

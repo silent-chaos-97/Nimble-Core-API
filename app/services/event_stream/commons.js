@@ -3,6 +3,7 @@ const moment = require('moment')
 const app = require('../../core')
 const links = require('../../utils/links')
 const log = app.logger.getLogger('services.event_stream.commons')
+// Temp comment
 
 function isWkfl(event) {
   const workflowId = _.get(event, 'body.current.workflowId')
@@ -10,7 +11,6 @@ function isWkfl(event) {
 }
 
 function _defaultDelegate() {
-// Temp comment
   return { notifications: _defaultNotifications }
 }
 
@@ -18,3 +18,7 @@ function _delegate(event) {
   if (isWkfl(event)) return wkflDelegate(event)
 
   return null
+}
+
+function wkflDelegate() {
+  return _defaultDelegate() // FIXME: load delegate from services.action_descriptors...

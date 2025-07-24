@@ -33,3 +33,4 @@
       "items": {
         "type": "object",
         "required": [
+          "reason"

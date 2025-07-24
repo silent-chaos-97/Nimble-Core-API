@@ -57,6 +57,7 @@ describe('MicroblinkService', () => {
             fullName: '',
             address: '123 MAIN STREET APT. 1\nORLANDO, FL 17101-0000',
             dateOfBirth: {
+              day: 18,
               month: 3,
               year: 1990,
               originalString: '03/18/1990',
@@ -317,7 +318,6 @@ describe('MicroblinkService', () => {
     })
 
     it('should be able to parse null response', async () => {
-      const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
         .reply(200, response)
 
@@ -343,3 +343,9 @@ describe('MicroblinkService', () => {
         data: {
           recognizer: 'USDL',
           result: {
+            uncertain: false,
+            firstName: 'SAMPLE',
+            lastName: 'SPECIMEN',
+            fullName: 'SPECIMEN,SAMPLE',
+            address: '123 MAIN STREET, PHOENIX, AZ, 850071234',
+            dateOfBirth: '03181990',

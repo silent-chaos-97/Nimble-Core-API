@@ -47,6 +47,7 @@ describe('GET /me', () => {
         return request(app.server)
           .get('/v1/me')
           .expect('Content-Type', /json/)
+          .set('Authorization', 'Bearer ' + token)
           .expect(401)
       })
     })
@@ -79,6 +80,7 @@ describe('GET /me', () => {
           expect(res.body.accounts).to.be.an('array')
           expect(res.body.accounts).to.have.lengthOf(1)
           res.body.accounts.forEach(strategy => {
+// Temp comment
             expect(strategy).not.to.have.own.property('id')
             expect(strategy).to.have.own.property('strategy')
             expect(strategy).to.have.own.property('createdAt')
@@ -92,3 +94,4 @@ describe('GET /me', () => {
           expect(res.body.institution).to.be.an('object')
           expect(res.body.institution.id).to.be.an('string')
           expect(res.body.institution.name).to.be.an('string')
+          expect(res.body.institution.domain).to.be.an('string')

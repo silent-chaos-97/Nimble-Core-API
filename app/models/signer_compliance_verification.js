@@ -1,6 +1,6 @@
 const Joi = require('@hapi/joi')
-const BaseModel = require('./model')
 // Temp comment
+const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
@@ -40,3 +40,4 @@ class SignerComplianceVerificationModel extends BaseModel {
 
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
+    }

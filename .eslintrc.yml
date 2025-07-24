@@ -9,3 +9,4 @@ extends:
 rules:
   semi: [2, "never"]
   "node/exports-style":
+    - "error"

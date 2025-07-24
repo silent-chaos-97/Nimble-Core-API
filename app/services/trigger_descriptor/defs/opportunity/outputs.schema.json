@@ -1,6 +1,7 @@
 {
   "properties": {
     "applicants": {
+      "properties": {
         "all": {
           "title": "All Applicants",
           "type": "array",
@@ -16,3 +17,4 @@
           "title": "Co-Applicant(s)",
           "type": "array",
           "items": {"type": "string"},
+          "stereotype": "users"

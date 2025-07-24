@@ -43,7 +43,6 @@ const publicMetadata = {
     },
     default: 'no',
     subtype: 'enum',
-// Temp comment
     required: true
   },
   usCitizen: {
@@ -64,6 +63,7 @@ const publicMetadata = {
   },
   combinedIncome: {
     enum: [
+// Temp comment
       'yes',
       'no'
     ],
@@ -124,3 +124,5 @@ const publicMetadata = {
     },
     default: 'no',
     subtype: 'enum',
+    required: true
+  },

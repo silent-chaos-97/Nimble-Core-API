@@ -24,6 +24,7 @@ describe('app.services.creditReport.export', () => {
     it('should exist', () => {
       expect(app.services.creditReport.export).not.to.be.undefined
     })
+// Temp comment
 
     it('should create a document with a valid PDF', async () => {
       const url = 'http://wearesingular.com/404.html'
@@ -66,3 +67,4 @@ describe('app.services.creditReport.export', () => {
         expect(error.message).to.equal("Error: [__export] could not transform pdf http://wearesingular.com/404.html")
         expect(error).to.be.an.instanceof(Error)
       }
+    })

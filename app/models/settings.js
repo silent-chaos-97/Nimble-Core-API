@@ -24,12 +24,12 @@ class SettingsModel extends BaseModel {
     const _settings = _.cloneDeep(settings)
     _settings.data = JSON.stringify(_settings.data || [])
     return _settings
+  }
 
   data() {
     let _data = _.cloneDeep(this._data)
 
     const schemaRef = _.get(_data, ['schema', '$ref'])
-
     if (schemaRef) _data.schema = schemas(schemaRef)
 
     if (!_data.data) _data.data = []
@@ -42,3 +42,4 @@ class SettingsModel extends BaseModel {
     return _data
   }
 
+  static schema(op) {

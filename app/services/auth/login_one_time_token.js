@@ -9,6 +9,7 @@ const UnauthorizedError = require('../../errors/unauthorized')
 const moment = require('moment')
 const { hash, emailNormalizer, mfaVerify } = app.plugins
 
+const logger = app.logger.getLogger('login_one_time_token')
 
 async function mfaExpired(mfaCacheToken, email) {
   const userMFA = await UserMFA.forge({ id: mfaCacheToken }).fetch()
@@ -40,3 +41,9 @@ async function generateMFACacheToken(email, oneTimeToken) {
   }).save(null, { method: 'insert' })
 
   return id
+}
+
+async function updateMFACacheToken(mfaCacheToken, oneTimeToken) {
+  await UserMFA
+    .forge({ id: mfaCacheToken })
+    .save({ token: oneTimeToken }, { method: 'update', patch: true })

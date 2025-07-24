@@ -15,3 +15,4 @@ class KeyValueModel extends BaseModel {
   data() {
     return _.get(this._data, 'value', null)
   }
+

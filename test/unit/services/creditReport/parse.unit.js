@@ -59,3 +59,4 @@ describe('app.services.creditReport.parse', () => {
         .post(/prequal_results/)
         .reply(200, response)
 
+      const { url, score, updatedAt } = await app.services.creditReport.parse('0000')

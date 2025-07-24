@@ -24,6 +24,7 @@
     "issuer": "WY",
     "frontIdProof": {
       "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
+    },
     "backIdProof": {
       "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
     }
@@ -39,3 +40,4 @@
   "sanctionVerifiedAt": null,
   "checkPoliticalExposure": null,
   "politicalExposureVerifiedAt": null,
+  "checkAdverseMedia": null,

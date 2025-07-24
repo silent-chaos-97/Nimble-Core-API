@@ -6,4 +6,5 @@ exports.up = function (knex) {
     table.boolean('consent_communication')
   })
 }
+
 exports.down = function (knex) {

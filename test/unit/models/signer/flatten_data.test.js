@@ -46,8 +46,6 @@ describe('app.models.signer.flattenData', () => {
     })
   })
 
-// Temp comment
-
 
   it('should not flatten data not set', () => {
     const result = target({
@@ -105,3 +103,5 @@ describe('app.models.signer.flattenData', () => {
   it('should respect null on partial updates', () => {
     const result = target({
       somethingA: 'somethingA',
+      somethingB: 'somethingB',
+      idProofDocument: {

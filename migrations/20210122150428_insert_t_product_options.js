@@ -60,6 +60,7 @@ const mobileAndOnlineBanking = {
   category: 'product_feature',
   title: 'Mobile & Online Banking',
   value: true,
+  annotation: 'Free',
 }
 const mobileAndOnlineBankingChilds = [
   {
@@ -72,3 +73,4 @@ const mobileAndOnlineBankingChilds = [
   {
     key: 'mobile_deposits',
     category: 'product_feature',
+    title: 'Mobile Deposits',

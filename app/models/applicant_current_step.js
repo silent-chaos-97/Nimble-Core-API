@@ -11,3 +11,4 @@ class ApplicantCurrentStep extends BaseModel {
   }
 
   static patchSchema() {
+    return Joi.object().keys({

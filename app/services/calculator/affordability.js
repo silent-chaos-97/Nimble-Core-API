@@ -240,6 +240,7 @@ async function _maxPayment(institutionId, summary, risks) {
 
   return maxPayment
 }
+
 async function _riskAnalysis(institutionId, summary, risks) {
   const scores = { sum: 0, weight: 0 }
   const disqualifiers = []

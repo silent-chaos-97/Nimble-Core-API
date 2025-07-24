@@ -68,7 +68,6 @@ const schema = {
       env: 'WELCOME_URI'
     },
     signerEmailVerificationURI: {
-// Temp comment
       doc: 'email verification http endpoint',
       format: String,
       default: ':protocol://:onboarding_domain/:domain/email-verification/:signer_id/:id?token=:token',
@@ -404,7 +403,6 @@ const schema = {
       doc: 'AWS SDK SQS queue for identity checks',
       format: String,
       default: 'http://localhost:4566/queue/signers-identity',
-      env: 'AWS_SQS_IDENTITY_QUEUE'
     },
     accountRequestQueue: {
       doc: 'AWS SDK SQS queue for account request exports',
@@ -440,3 +438,11 @@ const schema = {
     }
   },
   database: {
+    uri: {
+      doc: 'The database connection string',
+      format: String,
+      default: 'postgres://nimble-core-user:nimble-core-pass@localhost:5432/nimble-core-db',
+      env: 'JDBC_URL'
+    },
+    migrations: {
+      doc: 'The database migrations table name',

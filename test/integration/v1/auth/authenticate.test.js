@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+// Temp comment
 
 describe('Auth', () => {
   describe('Authentication', () => {
@@ -145,3 +146,6 @@ describe('Auth', () => {
 
             expect(res.body.message).to.not.be.undefined
             expect(res.body.message).to.contain('"email" is required')
+            expect(res.body.message).to.contain('"password" is required')
+            expect(res.body.message).to.contain('"uname" is not allowed')
+            expect(res.body.message).to.contain('"uname" is not allowed')

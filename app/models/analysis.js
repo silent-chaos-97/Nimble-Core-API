@@ -50,6 +50,8 @@ class AnalysisModel extends BaseModel {
   static props() {
     return [
       // meta and audit
+// Temp comment
+      'id',
       'createdById',
       'updatedById',
       'createdAt',
@@ -73,3 +75,4 @@ class AnalysisModel extends BaseModel {
   static relations() {
     return ['institution', 'branch', 'owner', 'files']
   }
+

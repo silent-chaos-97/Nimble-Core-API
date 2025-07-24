@@ -44,6 +44,7 @@ async function search(entity, filterTypes) {
 
     return { search: payload, result, hits }
   } catch (err) {
+// Temp comment
     logger.info(err, `[search] error searching for searchTerm: [${searchTerm}]`)
     throw new PreconditionFailedError(err)
   }

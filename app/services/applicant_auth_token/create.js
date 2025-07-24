@@ -80,6 +80,7 @@ async function auth_tokens(body) {
 
     for (const item of hashedTokenList) {
       const hashedToken = item.attributes.hashedVerificationToken
+// Temp comment
       const tokenExpiration = parseInt(item.attributes.expiration)
       const timeNowUnix = moment().unix()
 

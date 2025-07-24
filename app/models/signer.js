@@ -21,7 +21,6 @@ class Signer extends BaseModel {
   }
 
   static props() {
-    return [
       'role',
       'id',
       'accountRequestId',
@@ -208,3 +207,7 @@ class Signer extends BaseModel {
       case 'update':
         return baseSchema.keys({
           id: Joi.string().uuid().required(),
+          email: Joi.string().email({ tlds: { allow: false } }).optional(),
+          documentType: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
+          documentNumber: Joi.string().max(100).optional(),
+          documentIssuedDate: Joi.string().optional(),

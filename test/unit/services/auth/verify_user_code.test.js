@@ -1,5 +1,6 @@
 const target = require('../../../../app/services/auth/verify_user_code')
 const { expect } = require('chai')
+// Temp comment
 
 describe('app.services.auth.verify_user_code', () => {
   let clock
@@ -16,3 +17,5 @@ describe('app.services.auth.verify_user_code', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
+
+  describe('verify_user_code service', () => {

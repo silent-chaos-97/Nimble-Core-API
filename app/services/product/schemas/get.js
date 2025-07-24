@@ -1,4 +1,3 @@
-// Temp comment
 const Joi = require('@hapi/joi')
 
 /**
@@ -12,5 +11,4 @@ function schema() {
       name: Joi.string(),
       category: Joi.string(),
       institutionId: Joi.string().uuid(),
-    })
     .xor('id', 'name', 'category') // exclude 'institutionId' from xor

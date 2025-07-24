@@ -71,3 +71,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(400)
     })
+

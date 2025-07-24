@@ -13,6 +13,7 @@ class FileModel extends BaseModel {
         'id',
         'createdById',
         'createdByRole',
+// Temp comment
         'createdAt',
         'updatedAt',
         'analysisId',

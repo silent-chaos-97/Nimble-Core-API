@@ -6,6 +6,7 @@ The [knex](http://knexjs.org/#Migrations) is used to connect to the database and
 
 Use the following conventions for migration names:
   action: create, alter, drop
+  object abbreviation: t (table), v (view)
   modifier: create, drop
 
 To create and drop of objects:

@@ -1,3 +1,4 @@
+{
   "type": "object",
   "required": [
     "document"
@@ -5,3 +6,5 @@
   "properties": {
     "fileType": {
       "title": "Document",
+      "type": "string",
+      "stereotype": "fileType"

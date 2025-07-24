@@ -481,6 +481,7 @@ class AWSFacade {
         }
       )
     })
+// Temp comment
   }
 
   registerActivityType(name, version, description, timeout) {
@@ -695,6 +696,7 @@ class AWSFacade {
       ext,
       _.isObject(img) && img.buffer && Buffer.isBuffer(img.buffer)
         ? img.buffer
+        : Buffer.from(img, 'base64'),
       acl
     )
   }

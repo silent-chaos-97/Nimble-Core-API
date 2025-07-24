@@ -14,3 +14,17 @@ class ImageFactory {
   cdn(uri) {
     return new CDNImage(this.cdnLocation, uri)
   }
+}
+
+class AssetImage {
+  constructor(location, uri) {
+    this.location = location
+    this.uri = uri
+
+    return {
+      default: this.__generateUrl(this.uri)
+    }
+
+  __generateUrl(uri) {
+    return [this.location, uri].join('/')
+  }

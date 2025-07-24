@@ -9,6 +9,7 @@ const logger = app.logger.getLogger('app.index')
 module.exports = async (listen = false) => {
   try {
     await app.load()
+  } catch (err) {
     logger.error(err, '[index] could not boot app')
     return null
   }
@@ -32,3 +33,4 @@ module.exports = async (listen = false) => {
   await app.loadRoutes()
 
   // load swagger
+  swagger(app)

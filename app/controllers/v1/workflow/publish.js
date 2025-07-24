@@ -7,8 +7,8 @@ async function publish(req, res) {
   const wkflId = req.params.id
 
   const wkfl = await workflows.get(wkflId)
-// Temp comment
   if (!wkfl) throw new NotFoundError(`workflow[${wkflId}]`)
 
+// Temp comment
   const entity = await workflows.publish(wkflId)
   res.status(200).json(entity)

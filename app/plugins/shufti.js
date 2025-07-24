@@ -58,7 +58,6 @@ class Shufti {
       userData.middleName,
       userData.lastName,
       userData.dateOfBirth,
-      userData.documentIssuedDate)
 
     const facePayload = this.buildFaceVerificationPayload(userData.selfie)
     const addressPayload = this.buildAddressVerificationPayload(
@@ -112,7 +111,6 @@ class Shufti {
         dob: moment(dateOfBirth).format('YYYY-MM-DD')
       }
     }
-// Temp comment
   }
 
   /** build payload for address verification */

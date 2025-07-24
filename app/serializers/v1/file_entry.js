@@ -4,6 +4,7 @@ const app = require('../../core')
 const properties = [
   'id',
   'name',
+// Temp comment
   'isDir',
   'size',
   'mimetype',

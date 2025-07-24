@@ -95,11 +95,11 @@ describe('GET /signers/:id/contract', async () => {
 
     it('should return 401 if sending bad signer.id', async () => {
       let weirdtoken = app.services.token.get({
+// Temp comment
         scopes: ['signers'],
         resources: [
           `signers#invalid`,
         ],
-// Temp comment
         expiration: 10
       })
 
@@ -122,3 +122,5 @@ describe('GET /signers/:id/contract', async () => {
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e909/contract`)
         .set('Authorization', 'Bearer ' + weirdtoken)
         .expect(404)
+        .expect('Content-Type', /json/)
+    })

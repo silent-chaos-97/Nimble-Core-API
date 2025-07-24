@@ -2,3 +2,4 @@
   "Template": {
     "TemplateName": "template",
     "SubjectPart": "{{title}}",
+    "TextPart": "{{plain}}",

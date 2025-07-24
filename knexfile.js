@@ -15,3 +15,4 @@ const knexConfig = {
     // reapIntervalMillis: 1000,
     // createRetryIntervalMillis: 100,
     propagateCreateError: false
+  },

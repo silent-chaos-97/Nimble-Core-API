@@ -38,3 +38,4 @@ SignerComplianceVerificationItem:
       items:
         $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
     warnings:
+      title: A list of entries found about results of the type Warning

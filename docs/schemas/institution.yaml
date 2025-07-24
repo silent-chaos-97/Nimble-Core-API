@@ -14,7 +14,6 @@ Institution:
       format: uuidv4
       title: Institution ID
       description: The unique identifier of the Institution
-      readOnly: true
       example: 9552ab85-08da-4bb5-be00-9e94d282d311
     name:
       type: string
@@ -42,3 +41,4 @@ Institution:
     templateApprove:
       type: string
       title: templateApprove
+      description: Email Template for Approval notifications

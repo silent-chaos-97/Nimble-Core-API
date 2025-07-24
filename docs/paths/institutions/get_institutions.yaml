@@ -11,3 +11,4 @@
         description: Domain for the Institution
         required: true
         schema:
+          type: string

@@ -1,6 +1,6 @@
-// Temp comment
 const _ = require('lodash')
 const crypto = require('crypto')
+// Temp comment
 
 module.exports = {
   base64Encode: function(str) {

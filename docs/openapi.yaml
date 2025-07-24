@@ -117,3 +117,5 @@ components:
       required:
         - statusCode
         - message
+      properties:
+        statusCode:

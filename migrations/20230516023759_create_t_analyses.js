@@ -23,3 +23,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
 
   // {table: {}, sheets: {balance: {}, income: {}}}
   table.jsonb('user_data').notNullable().defaultTo('{}')
+

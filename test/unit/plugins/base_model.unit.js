@@ -35,6 +35,7 @@ describe('BaseModel class', () => {
   })
 
   it('should throw if data is empty', () => {
+    let fn = () => new BaseModel([], [], null)
     expect(fn).to.throw("The requested resource couldn't be found")
   })
 
@@ -58,3 +59,4 @@ describe('BaseModel class', () => {
       b: 2,
       c: {
         z: 11,
+        y: 22

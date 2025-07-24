@@ -30,6 +30,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     const res = await axios.post(apiUrl, apiBody, apiConfig)
     const data = res.data
 
+    const _processor = _.get(data, 'processor')
 
     if (_processor && _processor !== processor) { // re-route to different processor
       log.info({ op: 'analysis', phase: 're-route', from: processor, to: _processor })

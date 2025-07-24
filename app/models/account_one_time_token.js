@@ -13,3 +13,4 @@ class AccountOneTimeTokenModel extends BaseModel {
   static schema() {
     return Joi.object().keys({
       userId: Joi.string().optional().default(null),
+      scopes: Joi.array().items(Joi.string()).min(1).default(['*']),

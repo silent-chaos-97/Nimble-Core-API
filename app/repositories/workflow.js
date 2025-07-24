@@ -7,6 +7,8 @@ const Workflow = app.db.Model.extend({
 
   user: function() {
     return this.belongsTo('User', 'user_id')
+  },
 
   institution: function() {
     return this.belongsTo('Institution', 'institution_id')
+  },

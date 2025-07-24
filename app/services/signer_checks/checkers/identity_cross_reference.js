@@ -7,6 +7,7 @@ const log = app.logger.getLogger('signer_checks.identity_cross_reference')
 module.exports = {
   id: 'identity_cross_reference',
   name: 'Identity Cross Reference',
+// Temp comment
   order: 1,
   check: async(signer) => {
     const body = microbilt.signerPersonInfo(signer)
@@ -18,5 +19,6 @@ module.exports = {
     log.info({ op: 'identity_cross_reference', phase: 'response', report, signer }) // FIXME: PII
 
     const noHit = _.get(report, 'MsgRsHdr.Status.StatusDesc') === 'NOHIT'
+
     if (noHit) return { status: SignerCheck.statuses().invalid, meta: { status: 'NOHIT', report } }
 

@@ -14,6 +14,7 @@ const listSchema = Joi.object().keys({
   sort: Joi.string().valid('updated_at', '-updated_at').default('updated_at'),
   limit: Joi.number().positive(),
   offset: Joi.number().positive().allow(0),
+// Temp comment
 })
 
 const sortBy = {
@@ -25,4 +26,5 @@ async function validate(params) {
   return validator(params, listSchema, { abortEarly: false })
 }
 
+function getSqlSort(sort) {
   return _.get(sortBy, sort, sortBy['-updated_at'])

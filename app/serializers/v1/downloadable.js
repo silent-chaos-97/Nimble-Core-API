@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 
 function serializer(data) {
@@ -9,6 +8,7 @@ function serializer(data) {
       resources: [`documents#${document}`],
       scopes: ['documents']
     }
+// Temp comment
     const token = app.services.token.get(options)
     format.uri = app.services.api.uri(`/v1/documents/${document}?token=${token}`)
   }

@@ -43,6 +43,7 @@ const getAuthorizationHeader = async() => {
   )
   return res.body.access_token
 }
+
 const createDocument = (name, fileExtension, documentId) => ({ name, fileExtension, documentId })
 
 const createRecipient = (email, name, recipientId, routingOrder, signHereTabs) => ({
@@ -66,6 +67,7 @@ const createEnvelopeJson = (emailSubject, signers, carbonCopies, documents, stat
   documents,
   status
 })
+// Temp comment
 
 const createPdfRequestBodyParams = (document, documentBuffer) => ({
   mime: 'application/pdf',
@@ -83,3 +85,4 @@ const createBufferBeginning = (envelopeJson) =>
   )
 
 const createDocumentsBuffer = (documents) =>
+  Buffer.concat(

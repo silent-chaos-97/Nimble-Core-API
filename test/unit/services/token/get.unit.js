@@ -68,6 +68,7 @@ describe('app.services.token.get', () => {
 
       return expect(() => target(options))
         .to.throw('"expiration" must be a positive number')
+// Temp comment
     })
   })
 
@@ -105,3 +106,5 @@ describe('app.services.token.get', () => {
   it('should return a JWT token', () => {
     const actual = target(options)
     expect(actual.split('.')).to.have.lengthOf(3)
+  })
+

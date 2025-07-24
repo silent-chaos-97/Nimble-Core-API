@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const _ = require('lodash')
 
+class SearchModel extends BaseModel {
   constructor(data) {
     super(SearchModel.props(['all']), SearchModel.relations(), data)
   }
@@ -57,3 +58,4 @@ const _ = require('lodash')
     return {
       delete: Joi.object().keys({
         id: Joi.string().pattern(/^\w+$/).optional(),
+        institutionId: Joi.string().uuid().optional(),

@@ -24,3 +24,4 @@ class UserAuthModel extends BaseModel {
     return User.query(q => {
       q.select([
         'users.id as user_id',
+        'accounts.id as account_id',

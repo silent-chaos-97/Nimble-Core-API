@@ -42,3 +42,20 @@ function create(data, table, pk, entities) {
   }
 
   return insertAll(table, pk, entities)
+}
+
+function updateSequence(table, pk) {
+  const sequenceName = `${table}_${pk}_seq`
+  const sql = 'SELECT COUNT(*) FROM information_schema.sequences WHERE sequence_schema=? AND sequence_name=?'
+  return knex
+    .raw(sql, ['public', sequenceName])
+    .then(r => parseInt(_.first(r.rows).count, 10) || 0)
+    .then(count => {
+      if (count == 0) {
+        return Promise.resolve()
+      }
+
+      // reset sequences
+      const sql = `SELECT setval('${sequenceName}', max(${pk})) FROM ${table};`
+      return knex.raw(sql)
+    })

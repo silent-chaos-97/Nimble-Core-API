@@ -87,3 +87,5 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, `<unclosed`),
         target.tag('tag', {}, `something</unopened>`),
         target.tag('tag', {}, `something unopened/>`),
+        target.tag('tag', {}, `<<<<`),
+        target.tag('tag', {}, `</></></>`),

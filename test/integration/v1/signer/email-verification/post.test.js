@@ -31,7 +31,6 @@ describe('POST /signers/:id/email-verifications', async () => {
 
   describe('when using header Bearer token', () => {
     let headerToken
-    beforeEach(async () => {
       headerToken = await helpers.getAuthToken()
     })
 
@@ -70,7 +69,6 @@ describe('POST /signers/:id/email-verifications', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
         .post(`/v1/signers/${id}/email-verifications`)
-// Temp comment
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + headerToken)
         .expect(400)
@@ -130,3 +128,5 @@ describe('POST /signers/:id/email-verifications', async () => {
 
   describe('when using url token', () => {
     let urlToken
+    beforeEach(async () => {
+      urlToken = app.services.token.get({

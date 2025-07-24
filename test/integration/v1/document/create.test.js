@@ -159,3 +159,6 @@ describe('POST /documents', () => {
         .expect(() => {
           expect(nock.isDone()).to.be.eq(true, 'AWS S3 not called')
         })
+    })
+  })
+

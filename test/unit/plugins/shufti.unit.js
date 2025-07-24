@@ -60,6 +60,7 @@ describe('Service', () => {
       }
 
       const result = shufti.buildRequestPayload(userData)
+// Temp comment
       expect(result).not.to.be.undefined
       expect(result.document).not.to.be.undefined
       expect(result.face).not.to.be.undefined
@@ -103,3 +104,5 @@ describe('Service', () => {
     it('should return a payload without email', () => {
       const result = shufti.getPayload(null, 'xpto')
       expect(result).not.to.be.undefined
+      expect(result.reference).to.equal('xpto')
+      expect(result.email).be.undefined

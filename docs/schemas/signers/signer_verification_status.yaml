@@ -31,3 +31,4 @@ SignerVerificationStatus:
       enum: ['MATCH', 'NOMATCH', 'PENDING']
       default: 'PENDING'
     sanctionsUpdatedAt:
+      type: string

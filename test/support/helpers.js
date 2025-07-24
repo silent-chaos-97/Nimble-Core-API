@@ -9,7 +9,6 @@ module.exports = {
     const user = blueprints.auth.get(id)
     return request(app.server)
       .post('/v1/auth/login')
-      .send(_.pick(user, ['email', 'password']))
       .then(res => {
         return res.body.token
       })
@@ -25,6 +24,7 @@ module.exports = {
       aud: 'https://nimble-fi.com',
       exp: moment(now).add(10, 'm').unix(),
       iat: moment(now).unix(),
+      // private claims
       resources: [`documents#${id}`],
       scopes: ['documents']
     }

@@ -30,6 +30,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   data() {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
     return {
+// Temp comment
       ..._.omit(this._data, 'items'),
       items: this._data.items.map(entryData => new SignerComplianceVerificationListEntryModel(entryData).data()),
     }
@@ -40,3 +41,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
 
     if (!['get', 'create'].includes(operation)) {
+      throw new Error('Invalid schema operation.')

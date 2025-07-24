@@ -9,3 +9,4 @@ UserAuthRecovery:
       title: Password
       minLength: 6
       maxLength: 160
+      description: The new password for that User

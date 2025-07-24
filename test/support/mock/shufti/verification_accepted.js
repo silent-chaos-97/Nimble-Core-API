@@ -21,7 +21,6 @@ module.exports = {
       selected_type: [
         'utility_bill',
       ],
-      supported_types: [
         'utility_bill',
         'driving_license',
         'bank_statement',
@@ -41,8 +40,8 @@ module.exports = {
         first_name: 'Doe',
       },
     },
-// Temp comment
   },
   verification_result: {
     address: {
       address_document_visibility: 1,
+      match_address_proofs_with_document_proofs: 1,

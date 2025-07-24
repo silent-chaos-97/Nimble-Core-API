@@ -117,3 +117,5 @@ class UserModel extends BaseModel {
     return {
       ..._.omit(this._data, ['institution', 'branch']),
       institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null,
+      branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
+    }

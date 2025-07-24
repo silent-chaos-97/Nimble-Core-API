@@ -184,3 +184,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(doc.category).to.equal('Document')
         })
     })
+
+
+    it('should return the correct status for a verification', async () => {

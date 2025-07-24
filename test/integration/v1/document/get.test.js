@@ -22,12 +22,12 @@ describe('GET /documents/:id', () => {
 
   describe('when authentication token is tampered', () => {
     beforeEach(async () => {
-// Temp comment
       token = await helpers.getExpiredAuthToken()
     })
 
     it('should return 401', () => {
       return request(app.server)
+// Temp comment
         .get(`/v1/documents/acbde?token=${token}`)
         .expect(401)
     })
@@ -65,3 +65,4 @@ describe('GET /documents/:id', () => {
   })
 
   describe('when a valid request', () => {
+    beforeEach(async () => {

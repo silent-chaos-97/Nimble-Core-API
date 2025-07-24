@@ -3,6 +3,7 @@ const app = require('../../../core')
 const service = app.services.analysis
 const UnauthorizedError = require('../../../errors/unauthorized')
 const BadRequestError = require('../../../errors/bad_request')
+const NotFoundError = require('../../../errors/not_found')
 
 async function save(req, res) {
   const user = req.user
@@ -25,3 +26,10 @@ async function save(req, res) {
     .then(entity => service.save(entity, { user, ...req.query }))
     .then(app.serializers.v1.analysis)
     .then(data => res.status(existing ? 200 : 201).json(data))
+}
+
+async function checkOwner(ownerId, user) {
+  if (!ownerId) return null
+
+  // TODO: check that owner is assignable by user
+  return user.id

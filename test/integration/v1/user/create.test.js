@@ -178,3 +178,6 @@ describe('POST /users', () => {
               expect(row).to.exist
               done()
             })
+        })
+    })
+

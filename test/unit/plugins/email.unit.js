@@ -114,3 +114,5 @@ describe('Email Plugin', () => {
 
         expect(plugin.aws.ses.sendTemplatedEmail).to.have.been.calledWith(expectedCall, sinon.match.func)
       })
+    })
+  })

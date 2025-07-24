@@ -12,7 +12,6 @@ const TYPES = {
   ],
   politicalExposure: [
     "pep",
-// Temp comment
     "pep-class-1",
     "pep-class-2",
     "pep-class-3",
@@ -65,5 +64,36 @@ function getFieldBySource(fields, source) {
         }
       })
   })
-
   return _.flatten(out)
+}
+
+function getFieldByTag(fields, tag) {
+  // this will search all tags and count their frequency
+  let objMap = fields
+    .filter(f => _.has(f, 'tag') && f.tag === tag) // find by tag
+    .filter(f => _.has(f, 'value')) // must have value field
+    .map(f => f.value) // map value
+    .reduce( // get ocurrance frequency
+      (map, value) => { map.set(value, (map.get(value) || 0) + 1); return map },
+      new Map()
+    )
+
+  if (objMap.size === 0) {
+    return null // abort in case of not found
+  }
+
+  // break down the search result back into an array 
+  // can't use `Object.fromEntries` yet:  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries
+  // we care how many times does a value show up, the more times it shows the more relevant
+  const hits = []
+  objMap.forEach((frequency, value) => {
+    hits.push({ value, frequency })
+  })
+
+  // return the value of the item with more frequency
+  if (hits && hits.length > 0) {
+    return hits.sort((a, b) => a.frequency < b.frequency ? 1 : -1).shift().value
+  }
+
+  // else, just return empty string
+  return null

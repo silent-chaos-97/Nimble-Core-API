@@ -42,3 +42,4 @@ describe('GET /institution/:domain', () => {
         expect(res.body.name).to.be.an('string')
         expect(res.body.domain).to.be.an('string')
 
+        expect(res.body.logoUri).to.be.an('object')

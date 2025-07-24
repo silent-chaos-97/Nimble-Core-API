@@ -1,7 +1,7 @@
 Report:
   type: object
-  required:
     - uri
   properties:
     uri:
       type: string
+      format: uri

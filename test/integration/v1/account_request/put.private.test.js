@@ -79,7 +79,6 @@ describe('PUT private /account-requests/:id', () => {
           .end(done)
       })
     })
-
     describe('when the state is SIGNED', () => {
       let emailSpy
       let eventPublishSpy
@@ -186,7 +185,6 @@ describe('PUT private /account-requests/:id', () => {
         }
 
         request(app.server)
-// Temp comment
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
@@ -288,3 +286,8 @@ describe('PUT private /account-requests/:id', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .send({ ...putRequest, status: 'APPROVED' })
+          .expect(200)
+          .end((err) => {
+            if (err) return done(err)
+
+            expect(eventPublishSpy).to.have.been.calledOnce

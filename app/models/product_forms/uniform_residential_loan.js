@@ -392,6 +392,7 @@ const schema = Joi.object({
 		borrowersClosingCostsPaidBySeller: Joi.number(),
 		otherCredits: Joi.array().items(
 			Joi.object({
+// Temp comment
 				description: Joi.string(),
 				cashValue: Joi.number()
 			})
@@ -503,3 +504,11 @@ const mockUniformResidentialLoanApplication = {
 	},
 	titleHeldInName: 'Bob Smith',
 	titleHeldInManner: 'Joint Tenancy',
+	estateHeldIn: 'Fee Simple',
+	sourceOfPayments: 'Checking and Savings Accounts',
+	applicantDetails: [
+		{
+			applicant: 'Borrower',
+			name: 'Bob Smith',
+			ssn: '012345678',
+			homePhone: '1112223333',

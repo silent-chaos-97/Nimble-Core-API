@@ -25,3 +25,4 @@ module.exports = {
 
     if (!iid) { // no institution id to verify referredById, remove it
       logger.warn(model, 'referredById set, but institutionId not provided or found on model; ignoring referredById')
+      _.unset(model, 'referredById')

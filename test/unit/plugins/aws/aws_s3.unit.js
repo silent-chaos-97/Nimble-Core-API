@@ -68,6 +68,7 @@ describe("AWS Facade for s3", () => {
       it('should support jpg', () => {
         expect(() => AWS.s3ImgUpload('/JPG')).not.to.throw()
       })
+      it('should support gif', () => {
         expect(() => AWS.s3ImgUpload('RGIF')).not.to.throw()
       })
       it('should support webp', () => {
@@ -98,3 +99,4 @@ describe("AWS Facade for s3", () => {
         Key: 'folder/00000000-0000-0000-0000-000000000001.png',
       }
       expect(AWS.uuid).to.not.have.been.called
+      expect(AWS.s3.putObject).to.have.been.calledWith(expectedCall)

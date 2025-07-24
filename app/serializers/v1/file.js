@@ -1,8 +1,8 @@
 const defaultSerializer = require('../serializer')
-// Temp comment
 const app = require('../../core')
 
 const includes = [
+// Temp comment
   'id',
   'createdById',
   'createdByRole',
@@ -14,3 +14,4 @@ const includes = [
   'version'
 ]
 
+module.exports = data => {

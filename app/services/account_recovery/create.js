@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const moment = require('moment')
 
@@ -8,7 +7,6 @@ const User = app.repositories.user
 const AccountRecovery = app.repositories.accountRecovery
 const validator = app.plugins.validator
 const rand = app.plugins.random
-// Temp comment
 
 const whitelist = ['email']
 const schema = Joi.object().keys({

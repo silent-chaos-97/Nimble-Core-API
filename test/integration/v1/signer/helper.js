@@ -19,10 +19,10 @@ async function post(endpoint, obj) {
 }
 
 async function get(endpoint) {
+  return request(app.server)
     .get(endpoint)
     .expect('Content-Type', /json/)
 }
-
 async function put(endpoint, obj) {
   return request(app.server)
     .put(endpoint)
@@ -81,3 +81,40 @@ async function withInvalidDocusign(bodyFn) {
   }finally {
     nock.cleanAll()
   }
+}
+
+
+async function signerById(id) {
+  return await knex('signers')
+    .join('account_requests', 'account_requests.id', 'signers.account_request_id')
+    .where('signers.id', id)
+    .select(
+      'signers.id as signer_id',
+      'signers.role as signer_role',
+      'signers.first_name as signer_first_name',
+      'signers.address as signer_address',
+      'signers.middle_name as signer_middle_name',
+      'signers.last_name as signer_last_name',
+      'signers.city as signer_city',
+      'signers.date_of_birth as signer_date_of_birth',
+      'signers.state as signer_state',
+      'signers.zip_code as signer_zip_code',
+      'signers.address as signer_address',
+      'signers.document_type as signer_document_type',
+      'signers.document_number as signer_document_number',
+      'signers.document_expiration_date as signer_document_expiration_date',
+      'signers.document_issued_date as signer_document_issued_date',
+      'signers.identity_verification_result as signer_identity_verification_result',
+      'signers.identity_verification_status as signer_identity_verification_status',
+      'signers.identity_verified as signer_identity_verified',
+      'signers.institution_id as signer_institution_id',
+      'signers.check_sanction as signer_check_sanction',
+      'signers.sanction_verified_at as signer_sanction_verified_at',
+      'signers.check_political_exposure as signer_check_political_exposure',
+      'signers.political_exposure_verified_at as signer_political_exposure_verified_at',
+      'signers.check_adverse_media as signer_check_adverse_media',
+      'signers.adverse_media_verified_at as signer_adverse_media_verified_at',
+      'signers.check_anti_money_laundering as signer_check_anti_money_laundering',
+      'signers.anti_money_laundering_verified_at as signer_anti_money_laundering_verified_at',
+      'account_requests.status as account_request_status')
+    .first()

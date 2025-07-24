@@ -45,3 +45,4 @@ Identity:
       example: 17101-0000
     dateOfBirth:
       type: string
+      format: date

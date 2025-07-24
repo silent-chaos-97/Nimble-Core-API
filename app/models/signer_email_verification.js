@@ -16,7 +16,6 @@ class SignerEmailVerification extends BaseModel {
       'consumedAt',
     ]
   }
-
   static relations() {
     return ['signer']
   }
@@ -25,6 +24,7 @@ class SignerEmailVerification extends BaseModel {
     if (operation === 'get') {
       return Joi.object().keys({
         id: Joi.string().uuid().required(),
+      })
     }
 
     if (operation === 'create') {

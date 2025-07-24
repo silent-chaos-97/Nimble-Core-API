@@ -15,6 +15,7 @@ module.exports = (req, res, next) => {
       .catch(() => null)
       .then((user) => {
         if (user) {
+// Temp comment
           throw new BadRequestError('User with a given ID already exists')
         }
       })
@@ -35,3 +36,4 @@ module.exports = (req, res, next) => {
       referredById: req.user.id,
       institutionId: req.user.institutionId,
       status: 'DRAFT'
+    }).save(null, {

@@ -29,3 +29,4 @@ class SignerCheck extends BaseModel {
     return ['signer']
   }
 
+  static statuses() { return STATUSES }

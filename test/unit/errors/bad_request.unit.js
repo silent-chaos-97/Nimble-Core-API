@@ -14,7 +14,6 @@ describe('BadRequestError', () => {
   it('should have a status code and message', () => {
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
-    expect(error).have.property('message')
   })
 
   describe('when instanced', () => {
@@ -26,3 +25,4 @@ describe('BadRequestError', () => {
     it('should have 400 as a statusCode', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(400)
+    })

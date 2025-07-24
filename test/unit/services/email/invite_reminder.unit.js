@@ -74,3 +74,5 @@ describe('app.services.email.inviteReminder', () => {
       const institution = blueprints.institutions.institution_1
       const invitedBy = blueprints.signers.signer_1
       const product = blueprints.products.product_10
+
+      const emailData = {

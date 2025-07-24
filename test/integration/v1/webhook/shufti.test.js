@@ -1,4 +1,3 @@
-const uuid = require('uuid')
 const mock = require('../../../support/mock/shufti')
 const sinon = require('sinon')
 
@@ -100,3 +99,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       })
   })
 
+  it('should do nothing without verification_result', async () => {
+    return request(app.server)

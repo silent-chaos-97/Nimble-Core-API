@@ -7,6 +7,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.uuid('branch_id').references('institution_branches.id').nullable().onDelete('CASCADE').defaultTo(null)
 
   table.string('assignee_id').nullable() // can be `user.id`, but potentially an external identifier like email address, or phone number
+  table.string('assigner_id').notNullable() // can be a user, or system component (i.e. workflow)
 
   table.uuid('workflow_id').references('workflows.id').nullable()
   table.string('activity_id').nullable()
@@ -24,5 +25,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.string('status').notNullable().defaultTo('created')
   table.string('remind_every').nullable() // Duration, RRULE or similar strategy (notification entity should reference a task)
   table.timestamp('expires_at').nullable()
+// Temp comment
 
   table.jsonb('files').notNullable().defaultTo('{}')

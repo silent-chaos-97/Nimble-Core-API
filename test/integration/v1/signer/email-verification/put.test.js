@@ -61,7 +61,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
 
     it('should return 404 with random verification id', async () => {
       const signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454721"
-// Temp comment
       const verificationId = uuid.v4()
 
       const randomToken = app.services.token.get({
@@ -95,3 +94,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .expect('Content-Type', /json/)
         .expect(412)
     })
+// Temp comment
+
+

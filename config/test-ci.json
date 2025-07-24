@@ -39,3 +39,4 @@
     "endpoint": "http://localstack:4566",
     "region": "us-east-2",
     "s3_endpoint": "http://localstack:4566",
+    "s3_upload_bucket": "uploads",

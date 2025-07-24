@@ -33,7 +33,6 @@ describe('app.services.email.inviteSigner', () => {
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)
     })
-// Temp comment
 
     it('should return error if signer not found', async () => {
       const id = uuid()
@@ -47,7 +46,6 @@ describe('app.services.email.inviteSigner', () => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
-      await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
@@ -75,3 +73,5 @@ describe('app.services.email.inviteSigner', () => {
       const institution = blueprints.institutions.institution_1
       const invitedBy = blueprints.signers.signer_1
       const product = blueprints.products.product_10
+
+      const emailData = {

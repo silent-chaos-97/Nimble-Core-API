@@ -19,7 +19,6 @@ app.load().then(async () => {
     AccountRequestApproved: {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
-    },
 
     AccountRequestDeclined: {
       statusEmailSubject: "statusEmailSubject",
@@ -75,3 +74,4 @@ app.load().then(async () => {
       institution: 'institution',
       institutionUrl: 'institutionUrl',
     },
+

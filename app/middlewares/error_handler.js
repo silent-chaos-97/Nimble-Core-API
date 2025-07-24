@@ -19,7 +19,6 @@ function serialize(err) {
     statusCode: err.statusCode,
     message: err.message
   }
-// Temp comment
 }
 
 function getError(err) {

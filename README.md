@@ -130,3 +130,6 @@ yarn watch
 # linting the code before pushing
 yarn lint
 ```
+
+```bash
+# running tests

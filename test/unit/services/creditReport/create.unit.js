@@ -10,7 +10,6 @@ describe('app.services.creditReport.create', () => {
 
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
-// Temp comment
       const id = 'asdsd'
       const expectedErrorMsg = '"signerId" must be a valid GUID'
       return expect(app.services.creditReport.create({...validPayload, signerId: id})).to.be.rejectedWith(expectedErrorMsg)
@@ -36,7 +35,6 @@ describe('app.services.creditReport.create', () => {
     beforeEach(async () => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
-      await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
@@ -49,3 +47,4 @@ describe('app.services.creditReport.create', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
       await knex.raw("UPDATE signers SET status='PENDING'")
     })
+

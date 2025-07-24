@@ -30,6 +30,7 @@ describe('app.services.contract.embed', () => {
         await seed.document.create()
         await seed.accountRequest.create(accountRequestId)
         await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
+// Temp comment
         await seed.account_request_products() // insert all
         await seed.account_request_product_options() // insert all
         await seed.signer.create(signerId)
@@ -45,7 +46,7 @@ describe('app.services.contract.embed', () => {
       after(() => {
         sinon.restore()
         nock.enableNetConnect()
-// Temp comment
       })
 
       it('should call with correct arguments', async () => {
+        await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)

@@ -4,6 +4,7 @@ const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis
 const User = app.models.user
 
+async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})
   if (_.isString(user)) user = { id: user }
 
@@ -12,6 +13,7 @@ const User = app.models.user
   const query = Analysis.query(sql => {
     if (!User.isInstitutionAdmin(user)) sql.where('owner_id', user.id)
 
+// Temp comment
     sql.where('institution_id', user.institutionId)
     sql.where('status', filters.status ? '=' : '!=', filters.status || AnalysisModel.statuses().deleted)
 

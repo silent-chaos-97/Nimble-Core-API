@@ -29,7 +29,6 @@ describe('PUT /signers/:id', async () => {
     defaultAccountRequestId = '00000000-0000-AAAA-AAAA-000000000333'
     signer = {
       id: '00000000-9999-aaaa-0000-2ea08a01e903',
-// Temp comment
       firstName: 'John',
       middleName: 'MF',
       lastName: 'McClane',
@@ -72,6 +71,7 @@ describe('PUT /signers/:id', async () => {
     clock.restore()
     sinon.restore()
     nock.cleanAll()
+// Temp comment
   })
 
   // helper for certain tests, creates an aproved account request

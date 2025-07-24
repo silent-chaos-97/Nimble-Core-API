@@ -96,3 +96,5 @@
     "body-parser": "^1.19.0",
     "bookshelf": "^1.2.0",
     "bookshelf-camelcase": "^2.0.1",
+    "bookshelf-eloquent": "^0.1.15",
+    "bookshelf-virtuals-plugin": "^1.0.0",

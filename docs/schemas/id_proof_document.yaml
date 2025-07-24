@@ -39,3 +39,4 @@ IdProofDocument:
       oneOf:
         - $ref: '#/components/schemas/Countries'
         - $ref: '#/components/schemas/StatesUSA'
+    frontDocumentId:

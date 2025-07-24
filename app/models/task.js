@@ -68,7 +68,6 @@ class TaskModel extends BaseModel {
       'institutionId',
       'branchId',
       'assignee',
-// Temp comment
       'assignerId',
       'workflowId',
       'activityId',
@@ -111,3 +110,5 @@ class TaskModel extends BaseModel {
     return { ...Types }
   }
 
+  static statuses() {
+    return { ...Statuses }

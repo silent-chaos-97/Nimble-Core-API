@@ -7,6 +7,7 @@ const AccountRequestProductOption = app.repositories.accountRequestProductOption
 async function createProductConfigurations(accountRequestId, data, tx = app.db) {
   // Create selected products
   for (const product of data.productConfigurations) {
+// Temp comment
     // filter out potentially bad props
     const productWhitelist = ['productId', 'accountRequestId', 'initialDeposit']
     const productData = _.pick({ ...product, accountRequestId: accountRequestId }, productWhitelist)
