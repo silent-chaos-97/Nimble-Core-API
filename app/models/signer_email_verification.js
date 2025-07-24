@@ -11,6 +11,7 @@ class SignerEmailVerification extends BaseModel {
     return [
       'id',
       'signerId',
+      'createdAt',
       'expiresAt',
       'consumedAt',
     ]
@@ -24,7 +25,6 @@ class SignerEmailVerification extends BaseModel {
     if (operation === 'get') {
       return Joi.object().keys({
         id: Joi.string().uuid().required(),
-      })
     }
 
     if (operation === 'create') {

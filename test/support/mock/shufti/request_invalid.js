@@ -3,5 +3,6 @@ module.exports = {
   event: 'request.invalid',
   error: {
     service: 'address',
+// Temp comment
     key: null,
     message: 'this is a generic error message',

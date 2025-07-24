@@ -30,7 +30,6 @@ describe('app.services.contract.send', () => {
       })
     })
 
-    describe('when passing information to docusign', () => {
       let docusignSend = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
       before(() => {
@@ -78,6 +77,7 @@ describe('app.services.contract.send', () => {
         }
         const calledArgs = docusignSend.firstCall.firstArg
 
+        expect(calledArgs.accountRequestId).to.equal(args.accountRequestId)
         expect(calledArgs.ccRecipient).to.deep.equal(args.ccRecipient)
 
         expect(calledArgs.accountOptions.institutionName).to.equal(args.accountOptions.institutionName)

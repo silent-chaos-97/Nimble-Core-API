@@ -2,4 +2,3 @@
   "Template": {
     "TemplateName": "userLockedEmail",
     "SubjectPart": "{{emailSubject}}",
-    "TextPart": "Dear {{userFirstName}},\nSomeone tried to login into your account with the wrong password. For security reasons after 5 wrong attempts all accounts are blocked.\n\nTo unlock your account just reply to this email and our team will contact you shortly.\n\nIf you think that someone else is trying to login into your account please let our team know.\n\nRegards,\nNimblefi team\n",

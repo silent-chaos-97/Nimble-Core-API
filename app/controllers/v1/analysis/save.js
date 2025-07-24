@@ -2,7 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const service = app.services.analysis
 const UnauthorizedError = require('../../../errors/unauthorized')
-const NotFoundError = require('../../../errors/not_found')
+const BadRequestError = require('../../../errors/bad_request')
 
 async function save(req, res) {
   const user = req.user

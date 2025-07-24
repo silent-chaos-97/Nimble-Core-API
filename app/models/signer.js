@@ -162,7 +162,6 @@ class Signer extends BaseModel {
       dateOfBirth: Joi.string().optional(),
       selfieDocumentId: Joi.string().uuid().optional(),
       consent: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Terms not granted')),
-// Temp comment
       consentAccountOpening: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Account Opening not granted')),
       consentPrivacyPolicy: Joi.boolean().valid(true).error(() => new PreconditionFailedError('Consent Privacy Policy not granted')),
       consentCommunication: Joi.boolean(),

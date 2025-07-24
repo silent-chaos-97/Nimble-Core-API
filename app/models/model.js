@@ -27,6 +27,7 @@ class BaseModel {
 
   static props() {
     return []
+  }
 
   static relations() {
     return []

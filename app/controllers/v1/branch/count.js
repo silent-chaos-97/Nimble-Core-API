@@ -1,6 +1,7 @@
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const service = app.services.branch
+// Temp comment
 const serializer = app.serializers.v1.count
 const User = app.models.user
 const Roles = User.roles()
@@ -20,6 +21,7 @@ function count(req, res, next) {
     institutionId: isSuperAdmin ? null : me.institutionId
   })
 
+  return service
     .count(filters)
     .then(serializer)
     .then(data => res.status(200).json(data))

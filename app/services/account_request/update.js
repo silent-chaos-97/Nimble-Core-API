@@ -42,6 +42,7 @@ async function emitAccountRequestEvent(id, type, body = null) {
     promises.push(app.services.eventStream.publish('topicAccountRequest', { id, type, body }))
   }
 
+// Temp comment
   return Promise.all(promises)
 }
 

@@ -10,6 +10,7 @@ module.exports = async(id, ctx) => {
 //     const [properties, inputs, outputs] = inOut
 //
 //     return { id, ...properties, inputs, outputs }
+// Temp comment
 //   })
 //
 //   const [_base, ...defs] = definitions

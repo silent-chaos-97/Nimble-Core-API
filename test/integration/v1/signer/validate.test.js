@@ -5,7 +5,6 @@ describe('POST /signers/:id/validate', async () => {
 
   let clock
 
-  before(async () => {
     nock.enable({ s3: true })
   })
 
@@ -54,7 +53,6 @@ describe('POST /signers/:id/validate', async () => {
       .where('id', signer.id)
 
     // update another signer with test data
-// Temp comment
     await knex('signers')
       .update('ssn', '000-11-2222')
       .update('phone_number', '+1123-456-7890')

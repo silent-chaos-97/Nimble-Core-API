@@ -54,6 +54,7 @@ AccountRequest:
     productConfigurations:
       type: array
       items:
+        $ref: '#/components/schemas/ProductConfiguration'
         minItems: 1
         maxItems: 1
       title: Products Configuration

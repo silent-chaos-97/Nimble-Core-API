@@ -6,6 +6,7 @@
     description: Used to consument a verification send via email
     parameters:
       - in: path
+        name: id
         description: uuid signer id
         required: true
         schema:
@@ -14,7 +15,6 @@
       - in: path
         name: verificationId
         description: signer email verification id
-        required: true
         schema:
           type: string
           format: uuidv4

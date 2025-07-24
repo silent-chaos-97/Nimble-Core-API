@@ -11,4 +11,5 @@
       "type": "array",
       "items": {
         "type": "object",
+        "required": ["phone"],
 

@@ -43,6 +43,7 @@ const publicMetadata = {
     },
     default: 'no',
     subtype: 'enum',
+// Temp comment
     required: true
   },
   usCitizen: {

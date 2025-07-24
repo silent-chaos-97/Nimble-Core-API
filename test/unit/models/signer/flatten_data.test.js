@@ -46,6 +46,7 @@ describe('app.models.signer.flattenData', () => {
     })
   })
 
+// Temp comment
 
 
   it('should not flatten data not set', () => {

@@ -43,7 +43,6 @@ const getAuthorizationHeader = async() => {
   )
   return res.body.access_token
 }
-
 const createDocument = (name, fileExtension, documentId) => ({ name, fileExtension, documentId })
 
 const createRecipient = (email, name, recipientId, routingOrder, signHereTabs) => ({

@@ -9,7 +9,6 @@ describe('BaseModel class', () => {
   it('should be an extendable class', () => {
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
-// Temp comment
     expect(A.prototype).to.be.an.instanceOf(BaseModel)
   })
 
@@ -36,7 +35,6 @@ describe('BaseModel class', () => {
   })
 
   it('should throw if data is empty', () => {
-    let fn = () => new BaseModel([], [], null)
     expect(fn).to.throw("The requested resource couldn't be found")
   })
 

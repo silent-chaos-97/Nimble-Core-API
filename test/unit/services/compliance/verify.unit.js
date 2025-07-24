@@ -70,6 +70,7 @@ describe('app.services.compliance.verify', () => {
     it('should call compliance.search with the user name', async () => {
       const fakeUserGet = sinon.replace(app.services.signer, 'get', sinon.fake.returns(fakeUser))
       const fakeComplianceSearch = sinon.replace(app.services.compliance, 'search', sinon.fake.returns({ search: {}, result: { id: 123 }, hits: [] }))
+      const fakeComplianceExport = sinon.replace(app.services.compliance, 'export', sinon.fake.returns({ id: '00000000-0000-0000-0000-000000000000' }))
       const fakeComplianceParse = sinon.replace(app.services.compliance, 'parse', sinon.fake.returns(mocks.parsedResult))
       sinon.replace(app.services.complianceVerification, 'create', sinon.fake.returns(uuid.v4))
 

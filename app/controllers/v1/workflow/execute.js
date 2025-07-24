@@ -32,6 +32,7 @@ async function execute(req, res) {
     if (r.success) {
       successfulWkfls.push(r.wkflId)
     } else {
+      failedWkfls.push(r.wkfl)
     }
   })
 

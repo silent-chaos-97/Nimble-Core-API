@@ -3070,6 +3070,7 @@ code-point-at@^1.0.0:
   integrity sha512-RpAVKQA5T63xEj6/giIbUEtZwJ4UFIc3ZtvEkiaUERylqe8xb5IvqcgOurZLahv93CLKfxcw5YI+DZcUBRyLXA==
 
 coffee-script@~1.7.1:
+  version "1.7.1"
   resolved "https://registry.npmjs.org/coffee-script/-/coffee-script-1.7.1.tgz"
   integrity sha512-W3s+SROY73OmrSGtPTTW/2wp2rmW5vuh0/tUuCK1NvTuyzLOVPccIP9whmhZ4cYWcr2NJPNENZIFaAMkTD5G3w==
   dependencies:

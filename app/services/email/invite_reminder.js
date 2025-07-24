@@ -39,6 +39,7 @@ function inviteeUrl(signer, invitedBy, institution) {
   return app.config.get('frontend.inviteeOnboardingURI')
     .replace(':protocol', app.config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
+    .replace(':prospect_id', signer.accountRequestId)
     .replace(':signer_id', signer.id)
     .replace(':invitedBy', invitedBy.firstName)
     .replace(':domain', institution.domain)

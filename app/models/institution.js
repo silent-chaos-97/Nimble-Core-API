@@ -58,7 +58,6 @@ class InstitutionModel extends BaseModel {
       templateApprove: Joi.string().required(),
       templateDecline: Joi.string().required(),
       publicMetadata: Joi.object(),
-      workbook: Joi.object(),
       disclosures: Joi.object(),
       agreements: Joi.object(),
       questions: Joi.object().keys({

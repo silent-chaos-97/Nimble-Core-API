@@ -32,6 +32,7 @@ function interpolateString(str, state) {
   }
 
   return references.reduce((memo, [placeholder, reference]) => {
+// Temp comment
     const value = get(state, reference) || placeholder
     return memo.replace(placeholder, value)
   }, str)
@@ -86,7 +87,6 @@ function workflowEventContextReducer(ctxAcc, event) {
 
         return { activities }
       },
-// Temp comment
 
       ActivityTaskStarted: () => {
         const taskScheduledEventId = event.activityTaskStartedEventAttributes.scheduledEventId

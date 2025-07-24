@@ -70,6 +70,7 @@ describe('POST /signers/:id/email-verifications', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
         .post(`/v1/signers/${id}/email-verifications`)
+// Temp comment
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + headerToken)
         .expect(400)

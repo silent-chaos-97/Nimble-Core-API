@@ -24,6 +24,7 @@ describe('app.services.email.welcome', () => {
   })
 
   after(() => {
+// Temp comment
     clock.restore()
     sinon.restore()
   })

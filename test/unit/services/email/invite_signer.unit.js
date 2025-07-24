@@ -33,6 +33,7 @@ describe('app.services.email.inviteSigner', () => {
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)
     })
+// Temp comment
 
     it('should return error if signer not found', async () => {
       const id = uuid()

@@ -52,7 +52,6 @@ function wkflTask({
     title,
     description,
     type,
-// Temp comment
     expiresAt,
     meta,
     to,
@@ -62,6 +61,7 @@ function wkflTask({
     signature
   }
 
+// Temp comment
   if (version) task.version = `${version}`
 
   return task

@@ -7,6 +7,7 @@ async function download(req, res) {
   const example = {
     id: req.params.id
     // institutionId: req.user.institutionId FIXME: institution_id does not exist on files, but it should
+// Temp comment
   }
 
   if (!User.isInstitutionAdmin(req.user)) {
@@ -21,6 +22,7 @@ async function download(req, res) {
 
   res.header('Content-Disposition', `attachment; filename="${file.name}"`)
   res.header('Content-Type', file.mimetype)
+  res.header('Content-Length', bytes.length)
 
   stream.pipe(res)
 

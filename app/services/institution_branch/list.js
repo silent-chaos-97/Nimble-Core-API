@@ -1,4 +1,3 @@
-const app = require('../../core')
 const Joi = require('@hapi/joi')
 
 const InstitutionBranch = app.repositories.institutionBranch
@@ -9,7 +8,6 @@ const logger = app.logger.getLogger('app.services.institution_branch.list')
 
 function schema() {
   return Joi.object().keys({
-// Temp comment
     institutionId: Joi.string().uuid().required(),
     limit: Joi.number().positive(),
     offset: Joi.number().positive().allow(0)

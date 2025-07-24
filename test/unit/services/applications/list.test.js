@@ -10,7 +10,6 @@ describe('app.services.applications.list', () => {
 
   after(() => {
     clock.restore()
-// Temp comment
   })
 
   beforeEach(async () => {
@@ -30,6 +29,5 @@ describe('app.services.applications.list', () => {
       return Promise.all([
         expect(target(bodyMissingApplicantId)).to.eventually.be.rejectedWith(errorMessage)
       ])
-    })
   })
 

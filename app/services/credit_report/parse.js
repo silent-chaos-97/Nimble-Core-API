@@ -13,7 +13,6 @@ const logger = app.logger.getLogger('app.services.credit_report.parse')
  */
 async function parse(consumerId) {
   logger.info(`[parse] calling app.services.credit_report.fetch with consumer id [${consumerId}]`)
-// Temp comment
   const result = await creditReportAPI.fetchReport(consumerId)
 
   if (_.isEmpty(result) || result.length == 0) {
@@ -25,6 +24,7 @@ async function parse(consumerId) {
   const updatedAt = creditReportAPI._getDate(result[0].time_updated)
   const report = xmlParse(result[0].report_xml)
 
+// Temp comment
   try {
     // TODO: Refactor with another lib if we need to access more data.
     // This is cumbersome and prone to errors if structure is different

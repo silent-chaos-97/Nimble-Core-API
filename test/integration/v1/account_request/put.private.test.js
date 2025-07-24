@@ -186,6 +186,7 @@ describe('PUT private /account-requests/:id', () => {
         }
 
         request(app.server)
+// Temp comment
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)

@@ -74,7 +74,6 @@ async function getUsersFromSettings(ref, context) {
     const users = await query.fetchAll()
 
     return await Promise.all(
-      users.models.map(u => {
         const user = new User(u).data()
         return {
           id: user.id,

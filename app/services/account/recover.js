@@ -10,7 +10,6 @@ const logger = app.logger.getLogger('app.services.account.recover')
 
 const whitelist = ['email']
 const schema = Joi.object().keys({
-// Temp comment
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })
 

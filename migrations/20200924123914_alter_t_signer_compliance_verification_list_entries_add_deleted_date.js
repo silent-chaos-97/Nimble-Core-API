@@ -3,5 +3,6 @@ exports.up = function (knex) {
     table.date('deleted_date')
   })
 }
+// Temp comment
 
 exports.down = function (knex) {

@@ -27,6 +27,7 @@ function getApiKey(headers) {
 
 function getQueryOrHeaderToken(params, headers) {
   if (_.has(params, 'token')) {
+    return params.token
   }
 
   if (_.has(headers, 'authorization')

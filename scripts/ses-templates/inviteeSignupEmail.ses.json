@@ -1,4 +1,5 @@
 {
+  "Template": {
     "TemplateName": "inviteeSignupEmail",
     "SubjectPart": "{{statusEmailSubject}}",
     "TextPart": "Dear {{inviteeName}},\n \n{{invitedByFirstName}} has invited you to be a {{inviteeRole}} signer of a {{accountType}} account at {{institution}}.\n \nTo complete the account setup, please click the button below and follow the prompts to verify your identity by scanning your driver's license. The process is simple and secure, and takes less than 3 minutes.\n \n{{url}}\n \nIf you have any questions, please contact {{invitedByFullName}} or your nearest {{institution}} office.\n \nThank you,\n{{institution}}\n{{institutionUrl}}\n",

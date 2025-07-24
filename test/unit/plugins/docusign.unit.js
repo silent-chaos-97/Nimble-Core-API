@@ -176,6 +176,7 @@ describe('Docusign', () => {
 
       it('should return error with no products', async () => {
         const args ={
+          accountRequestId: 'string',
           signers: [mocks.validUser],
           accountOptions: {...mocks.accountOptions, productConfigurations: []},
           ccRecipient: {
@@ -717,7 +718,6 @@ describe('Docusign', () => {
     describe('_buildCCRecipientsList', () => {
       it('should return a docusign carboncopy', async () => {
 
-        const user = {
           fullName: 'Sample Specimen',
           email: 'psousa+1@wearesingular.com',
         }

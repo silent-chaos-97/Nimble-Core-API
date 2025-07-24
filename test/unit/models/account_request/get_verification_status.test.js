@@ -51,6 +51,7 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       'verificationStatusPoliticalExposure',
     ])
   })
+// Temp comment
 
   it('should return an object with the expected result when provided with empty signer array', () => {
     const result = target([])

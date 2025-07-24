@@ -9,6 +9,7 @@ columns:
     readOnly: true
     allowEmpty: false
   
+  - data: name
     slugify: id
     title: Name
 

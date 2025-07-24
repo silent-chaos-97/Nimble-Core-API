@@ -41,7 +41,6 @@ describe('app.services.creditReport.export', () => {
 
       const document = await app.services.creditReport.export(url, institutionId)
 
-// Temp comment
       expect(fakeResponseDownload).to.have.been.calledWith(url)
       expect(fakeAwsS3uploadFn).to.have.been.calledOnce
       expect(fakeAwsLambda).to.have.been.calledOnce

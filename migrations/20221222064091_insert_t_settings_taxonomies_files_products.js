@@ -10,9 +10,9 @@ const FILES = {
   schema: { $ref: 'files' }
 }
 
-const PRODUCTS = {
   key: 'products',
   schema: { $ref: 'products' }
 }
+
 const ROWS = [TAXONOMIES, FILES, PRODUCTS]
 

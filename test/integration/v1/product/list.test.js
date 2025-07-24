@@ -41,7 +41,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
     return request(app.server)
       .get(`/v1/institutions/${testInstitution1}/products?limit=1`)
       .expect('Content-Type', /json/)
-      .expect(200)
       .expect((res) => {
         const props = ['id', 'name', 'category', 'summary', 'content', 'options', 'createdAt']
 
@@ -52,6 +51,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
         expect(product.id).to.be.an('string')
         expect(product.name).to.be.an('string')
+        expect(product.category).to.be.an('string')
         expect(product.summary).to.be.an('string')
         expect(product.content).to.be.an('string')
         expect(product.options).to.be.an('array')

@@ -109,6 +109,7 @@ const publicMetadata = {
     subtype: 'enum',
     required: true
   },
+  combinedIncome35000: {
     enum: [
       'yes',
       'no'

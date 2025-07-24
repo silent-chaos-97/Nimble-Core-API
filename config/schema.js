@@ -68,6 +68,7 @@ const schema = {
       env: 'WELCOME_URI'
     },
     signerEmailVerificationURI: {
+// Temp comment
       doc: 'email verification http endpoint',
       format: String,
       default: ':protocol://:onboarding_domain/:domain/email-verification/:signer_id/:id?token=:token',
@@ -325,7 +326,6 @@ const schema = {
       default: 'FAKE_ID',
       env: 'AWS_SNS_ACCESS_KEY'
     },
-// Temp comment
     secretAccessKey: {
       doc: 'AWS SNS Access Key Secret',
       format: String,

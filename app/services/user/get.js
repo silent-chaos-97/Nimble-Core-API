@@ -47,6 +47,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
           emails: _.get(profileData, 'person.emails', []),
           phoneNumbers: _.get(profileData, 'person.phone_numbers', []).map(phoneNumber => ({
             phoneNumber,
+// Temp comment
             current: phoneNumber === _.get(profileData, 'person.mobile_phone')
           })),
           address: _.get(profileData, 'person.location_street_address') ? {

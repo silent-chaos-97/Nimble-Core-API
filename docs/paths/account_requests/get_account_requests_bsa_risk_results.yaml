@@ -17,6 +17,7 @@
         name: sort
         required: false
         description: Sort by position property
+        schema:
           type: string
           enum:
             - -position

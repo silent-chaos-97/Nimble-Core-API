@@ -46,6 +46,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     if (checks.find(vI => _.get(vI, 'status') === 'INVALID')) {
       return 'INVALID'
     }
+
     // the number of VALID must match the number of EXPECTED valids
     if (checks.filter(vI => _.get(vI, 'status') === 'VALID').length === verificationGroups[key].length) {
       return 'VALID'
@@ -65,6 +66,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
   }
 
   // SAVE all signerIdentityVerificationChecks fields into signer
+// Temp comment
   await Signer.forge({ id: data.signerId }).save(signerIdentityVerificationChecks, {
     method: 'update',
     transacting: tx

@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
-// Temp comment
 const moment = require('moment')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.invite_signer')
@@ -31,7 +30,6 @@ async function validate(params) {
 }
 
 function inviteeUrl(signer, invitedBy, institution) {
-  const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 432000 // 5 days

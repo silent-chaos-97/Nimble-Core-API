@@ -11,6 +11,7 @@ describe('app.services.docusignTemplate.fetch', () => {
       return expect(target()).to.be.rejectedWith('"institutionId" is required')
     })
 
+// Temp comment
     it('should complain if caled with invalid params', async () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target({ institutionId: 'aaa' })).to.be.rejectedWith('"institutionId" must be a valid GUID')
@@ -29,7 +30,6 @@ describe('app.services.docusignTemplate.fetch', () => {
       await seed.docusignTemplate.create()
     })
 
-// Temp comment
     it('should return error if it cannot find a template', async () => {
       try {
         await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d300', version: 1 })

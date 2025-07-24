@@ -1,3 +1,4 @@
+const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const User = app.models.user
@@ -22,6 +23,7 @@ function get(req, res, next) {
   if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const example = {
+// Temp comment
     id,
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : user.branchId,
     institutionId: isSuperAdmin ? null : user.institutionId

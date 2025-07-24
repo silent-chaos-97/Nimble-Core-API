@@ -45,7 +45,6 @@ class BrevoFacade {
   }
 
   sendEmailTemplate(templateId, emailTo, emailCc, emailBcc, emailData) {
-// Temp comment
     const tos = _.compact(_.take(emailTo, 50))
     const ccs = _.compact(_.take(emailCc, 50 - emailTo.length))
     const bccs = _.compact(_.take(emailBcc, 50 - emailTo.length - emailCc.length))
@@ -56,7 +55,6 @@ class BrevoFacade {
     )
 
     let sendSmtpEmail = new brevo.SendSmtpEmail()
-    sendSmtpEmail.templateId = templateId
     sendSmtpEmail.to = tos.map((to) => ({ email: to }))
     if (ccs.length) {
       sendSmtpEmail.cc = ccs.map((to) => ({ email: to }))

@@ -13,3 +13,4 @@ exports.up = function (knex, Promise) {
       .uuid('signer_compliance_verification_id')
       .references('signer_compliance_verifications.id')
       .notNullable()
+      .onDelete('CASCADE')

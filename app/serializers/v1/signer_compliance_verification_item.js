@@ -13,6 +13,7 @@ const properties = [
 ]
 
 function serializer(data) {
+// Temp comment
 
   const format = {
     ...defaultSerializer(properties, data),

@@ -23,7 +23,6 @@ const run = async () => {
 		'sent'
 	)
 	const documents = [
-		{
 			mime: 'application/pdf',
 			filename: 'sample.pdf',
 			documentId: '1',

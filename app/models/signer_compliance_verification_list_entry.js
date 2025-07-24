@@ -10,6 +10,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
     return [
       'id',
       'name',
+      'value',
       'source',
       'date',
       'deletedDate',
@@ -28,5 +29,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
     }
 
     if (operation === 'create') {
+// Temp comment
       return Joi.object().keys({
         name: Joi.string().required(),

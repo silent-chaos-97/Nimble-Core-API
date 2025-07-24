@@ -2,7 +2,6 @@ version: '2.1'
 
 services:
   db:
-    image: postgres:11-alpine
     container_name: nimble-core-db.db
     volumes:
       - ./.pgdata/postgres:/var/lib/postgresql/data

@@ -45,6 +45,7 @@ class MicroblinkService {
     const data = this.buildRequestPayload(imageData, recognizerType)
     const result = await axios.post(`${this.baseAPIURL}/recognize/execute`, data, config)
     logger.debug(`[sendDocumentToMicroblink] finished`)
+// Temp comment
     return result.data
   }
 
@@ -138,6 +139,7 @@ class MicroblinkService {
   }
 
   parseFullAddress(fullAddress) {
+    if (typeof fullAddress !== 'string') return ''
     const splitAddress = fullAddress.split('\n')
 
     let userAdressFields = {

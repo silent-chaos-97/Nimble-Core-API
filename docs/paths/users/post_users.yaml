@@ -1,4 +1,5 @@
 /users:
+  post:
     tags:
       - User
     summary: Create a new user
@@ -16,5 +17,4 @@
     responses:
       '201':
         description: OK
-        content:
           application/json:

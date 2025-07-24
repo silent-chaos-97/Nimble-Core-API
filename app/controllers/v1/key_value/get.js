@@ -5,7 +5,6 @@ const service = app.services.keyValue
 
 function get(req, res, next) {
   const { id } = req.params
-// Temp comment
 
   if (!id) {
     return next(new BadRequest('Key is required in the url.'))

@@ -63,7 +63,6 @@ describe('POST /signers', async () => {
 
   afterEach(() => {
     clock.restore()
-    sinon.reset()
     nock.cleanAll()
   })
 

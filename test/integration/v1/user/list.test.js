@@ -9,6 +9,7 @@ describe('GET /users', () => {
     })
   })
 
+  describe('with valid auth', () => {
     let token
     const user10Id = '1052ab85-08da-4bb5-be00-9e94d282d310'
 
@@ -36,7 +37,6 @@ describe('GET /users', () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .end(done)
-    })
 
     it('should return valid user object', done => {
       request(app.server)

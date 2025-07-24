@@ -43,6 +43,7 @@ describe('app.services.token.get', () => {
     })
 
     it('should throw a error resources not prensent', () => {
+      options.resources = null
 
       return expect(() => target(options))
         .to.throw('"resources" must be an array')

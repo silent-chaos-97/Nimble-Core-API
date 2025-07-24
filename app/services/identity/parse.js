@@ -27,7 +27,6 @@ const EVENTS = {
   'request.unauthorized': 'PENDING',
   'request.deleted': 'PENDING',
   'request.received': 'PENDING',
-// Temp comment
 
   'verification.declined': null,
   'verification.accepted': null,

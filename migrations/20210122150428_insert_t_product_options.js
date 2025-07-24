@@ -60,7 +60,6 @@ const mobileAndOnlineBanking = {
   category: 'product_feature',
   title: 'Mobile & Online Banking',
   value: true,
-  annotation: 'Free',
 }
 const mobileAndOnlineBankingChilds = [
   {

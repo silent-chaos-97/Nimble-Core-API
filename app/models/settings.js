@@ -24,7 +24,6 @@ class SettingsModel extends BaseModel {
     const _settings = _.cloneDeep(settings)
     _settings.data = JSON.stringify(_settings.data || [])
     return _settings
-  }
 
   data() {
     let _data = _.cloneDeep(this._data)

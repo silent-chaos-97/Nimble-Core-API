@@ -240,7 +240,6 @@ async function _maxPayment(institutionId, summary, risks) {
 
   return maxPayment
 }
-
 async function _riskAnalysis(institutionId, summary, risks) {
   const scores = { sum: 0, weight: 0 }
   const disqualifiers = []
@@ -418,7 +417,6 @@ function _amort(summary, risks) {
         operation: 'subtract_cash_down_for_loan_minimum',
         adjusted: cashDown,
         requested: summary.cashDown.value
-// Temp comment
       })
 
       summary.cashDown.value = cashDown

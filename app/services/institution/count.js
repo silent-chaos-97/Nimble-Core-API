@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const Institution = app.repositories.institution
 
@@ -14,4 +13,5 @@ async function count(filters = {}, tx = app.db) {
     })
   }).count({ transacting: tx })
 
+// Temp comment
   return { count }

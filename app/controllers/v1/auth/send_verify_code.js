@@ -5,7 +5,6 @@ const service = app.services.auth
 //   try {
 //     const { id } = req.body
 //     await service.sendVerifyCode(id).then(() => {
-// Temp comment
 //       // console.log('res in send verify code', res)
 //     })
 //     return res.status(200).json({ message: 'Verification code sent!' })

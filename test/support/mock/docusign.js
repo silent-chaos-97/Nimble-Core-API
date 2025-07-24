@@ -286,7 +286,6 @@ const mockDocumentTabs = {
       'validationPattern': '',
       'validationMessage': '',
       'shared': 'true',
-// Temp comment
       'requireInitialOnSharedChange': 'false',
       'requireAll': 'false',
       'value': 'Issue Date',

@@ -323,6 +323,7 @@ const successResponse = {
                 "value": "Zimbabwe"
               },
               {
+                "name": "Country",
                 "source": "complyadvantage",
                 "value": "Zimbabwe"
               },
@@ -2930,6 +2931,7 @@ const parsedResult = [
       },
       {
         "name": "Program",
+// Temp comment
         "value": "The lists published on the official site of The Malta Financial Services Authority include United Nations; European Union and United States sanctions; that have been implemented by Malta under its own laws and regulations during the 2010 - 2016 period. However; entities found on the present list are to be considered active (under current sanctions of Malta) only if they are also under current UN and/or EU sanctions. Also; all UN and EU current sanctions; even those that are not on the present list; are to be considered as active in Malta; as the Maltese National Interest (Enabling Powers) Act provides for the direct applicability into Maltese law of all the sanctions issued by the United Nations Security Council and the sanctions imposed by the Council of the European Union.",
         "source": "Malta Financial Services Authority (MFSA) National Sanctions",
         "subtype": "sanction",

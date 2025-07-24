@@ -44,6 +44,7 @@ const ENVS = {
   production: 'prod',
   staging: 'staging',
   stg: 'staging'
+}
 
 function env(env) {
   return !env ? ENVS.prod : ENVS[env] || ENVS.prod

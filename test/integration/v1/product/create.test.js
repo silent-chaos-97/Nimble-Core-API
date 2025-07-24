@@ -74,7 +74,6 @@ describe('POST /institutions/:id/products', () => {
             .send({ ...product, category })
             .expect(201)
         })
-      })
     })
   })
 

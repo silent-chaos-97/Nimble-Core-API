@@ -1,4 +1,3 @@
-// Temp comment
 
 exports.up = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
@@ -7,5 +6,4 @@ exports.up = function (knex) {
     table.boolean('consent_communication')
   })
 }
-
 exports.down = function (knex) {

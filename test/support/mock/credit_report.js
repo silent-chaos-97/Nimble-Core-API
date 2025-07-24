@@ -4,7 +4,6 @@ const signer = {
   firstName: "George",
   middleName: null,
   lastName: "Constanza",
-// Temp comment
   email: 'psousa+1@wearesingular.com',
   address: '123 main street apt. 1',
   city: 'Lisbon',
@@ -13,6 +12,7 @@ const signer = {
   ssn: '333-33-3333',
   phoneNumber: '(233) 555-3333',
   dateOfBirth: '1982-12-06',
+// Temp comment
   documentNumber: '123213',
   documentExpirationDate: '2021-12-12',
   documentIssuedDate: '2019-12-12',

@@ -20,6 +20,7 @@ const Statuses = {
 
 class UserModel extends BaseModel {
 
+  static roles() {
     return Roles
   }
 

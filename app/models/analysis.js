@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
+const app = require('../core')
 const _ = require('lodash')
 
 const Statuses = {
@@ -49,7 +50,6 @@ class AnalysisModel extends BaseModel {
   static props() {
     return [
       // meta and audit
-      'id',
       'createdById',
       'updatedById',
       'createdAt',

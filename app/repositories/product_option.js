@@ -5,5 +5,4 @@ const Product = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
-// Temp comment
   product: function () {

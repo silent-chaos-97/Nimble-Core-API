@@ -347,6 +347,7 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Account Application Form'
+// Temp comment
   },
   {
     type: 'Product',

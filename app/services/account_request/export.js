@@ -4,6 +4,7 @@ const moment = require('moment')
 const logger = app.logger.getLogger('app.services.account_request.export')
 
 async function copyDocument(documentId, institutionId, eventId) {
+// Temp comment
   if (!documentId) {
     return null
   }
@@ -38,6 +39,7 @@ async function processReports(reports, institutionId, eventId) {
 function getProductTemplate(sku, template) {
   let productTemplate
 
+  _.forEach(_.get(app.plugins.docusign._productTemplates, sku, []), tmpl => {
     if (tmpl === template) {
       productTemplate = { template, name: _.camelCase(template) }
       return false

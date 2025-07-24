@@ -16,6 +16,7 @@ const NOOP_DONE_CB = async() => {
  * } job
  * @param {Transaction} tx
  * @return {
+ * Promise<{
  *   handler: ({wkfl: object, config: object, job: Job}) => Promise<Job | void>,
  *   onDone: ({wkfl: object, config: object, job: Job, next: Job}) => void
  * }>

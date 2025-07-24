@@ -109,6 +109,7 @@ describe('GET /account-requests', () => {
           .expect('Content-Type', /json/)
           .expect(200)
           .expect(res => {
+// Temp comment
             expect(res.body[0].productConfigurations).to.be.an('array')
             const [product] = res.body[0].productConfigurations
             const expectedOptions = [
@@ -167,7 +168,6 @@ describe('GET /account-requests', () => {
 
     describe('when filtering', () => {
       beforeEach(async () => {
-// Temp comment
         await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create()
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')

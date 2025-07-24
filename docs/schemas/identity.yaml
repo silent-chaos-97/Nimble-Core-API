@@ -26,6 +26,7 @@ Identity:
       nullable: true
       example: 123 Main Streey Apt. 1
     city:
+      type: string
       title: City
       description: Individual city
       nullable: true

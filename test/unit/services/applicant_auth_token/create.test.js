@@ -28,6 +28,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
           role: 'applicant',
           method: 'verify-code'
         }
+// Temp comment
       })
 
       describe('body properties are invalid or missing', () => {
@@ -62,7 +63,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
         })
       })
 
-// Temp comment
       describe('body properties have valid data', () => {
         it('should return data', () => {
           return Promise.all([

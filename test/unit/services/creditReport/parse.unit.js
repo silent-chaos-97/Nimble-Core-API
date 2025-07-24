@@ -40,6 +40,7 @@ describe('app.services.creditReport.parse', () => {
         const id = '111'
         await app.services.creditReport.parse(id)
 
+      } catch (error) {
         expect(error.message).to.equal("Response from Credit Bureau is empty")
         expect(error).to.be.an.instanceof(Error)
       }

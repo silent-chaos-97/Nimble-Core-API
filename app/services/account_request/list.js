@@ -14,7 +14,6 @@ const sortBy = {
   '-status': 'account_requests.status DESC'
 }
 
-// Temp comment
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
   return sortBy[sort]

@@ -7,7 +7,6 @@ const logger = app.logger.getLogger('app.services.data.api')
 
 async function api(method, path, params, data) {
   if (params && !data) data = params // coerce data to params when not provided
-
   logger.info({ op: 'data.api', phase: 'started', method, path, params, data })
 
   const endpoint = app.config.get('nimbleData.endpoint')
@@ -25,5 +24,6 @@ async function api(method, path, params, data) {
     logger.info({ op: 'data.api', phase: 'completed', res: _.get(res, ['data'], res) })
     return res.data
   } catch(err) {
+    logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
   }

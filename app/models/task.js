@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
@@ -67,6 +68,7 @@ class TaskModel extends BaseModel {
       'institutionId',
       'branchId',
       'assignee',
+// Temp comment
       'assignerId',
       'workflowId',
       'activityId',

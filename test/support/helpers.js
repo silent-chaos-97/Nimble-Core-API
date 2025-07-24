@@ -1,7 +1,6 @@
 const app = require('../../app/core')
 const logger = app.logger.getLogger('test.support.helpers')
 
-// Temp comment
 module.exports = {
   tantrum: function(err) {
     if (err) throw err
@@ -26,7 +25,6 @@ module.exports = {
       aud: 'https://nimble-fi.com',
       exp: moment(now).add(10, 'm').unix(),
       iat: moment(now).unix(),
-      // private claims
       resources: [`documents#${id}`],
       scopes: ['documents']
     }
