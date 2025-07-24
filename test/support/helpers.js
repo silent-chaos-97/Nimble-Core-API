@@ -9,6 +9,7 @@ module.exports = {
     const user = blueprints.auth.get(id)
     return request(app.server)
       .post('/v1/auth/login')
+      .send(_.pick(user, ['email', 'password']))
       .then(res => {
         return res.body.token
       })
@@ -31,4 +32,3 @@ module.exports = {
     const payload = _.defaults({}, data, defaults)
     return jwt.encode(payload)
   },
-  getExpiredAuthToken: async function() {

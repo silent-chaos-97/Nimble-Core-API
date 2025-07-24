@@ -20,7 +20,7 @@ const statesUSA = [
   'IA',
   'KS',
   'KY',
-  'ME',
+  'LA',
   'MH',
   'MD',
   'MA',

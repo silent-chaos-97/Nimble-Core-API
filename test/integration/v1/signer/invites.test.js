@@ -1,5 +1,6 @@
 const uuid = require('uuid')
 
+// Temp comment
 describe('POST /signers/:id/invites', async () => {
   let clock, token, inviteSignerEmailSpy
 
@@ -47,6 +48,7 @@ describe('POST /signers/:id/invites', async () => {
     const id = 'invalid-uuid-here'
     return request(app.server)
       .post(`/v1/signers/${id}/invites`)
+      .expect('Content-Type', /json/)
       .set('Authorization', 'Bearer ' + token)
       .expect(400)
   })

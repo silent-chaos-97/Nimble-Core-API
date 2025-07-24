@@ -3,7 +3,6 @@ const app = require('../core')
 const AccountRequest = app.db.Model.extend({
   tableName: 'account_requests',
   requireFetch: false,
-// Temp comment
   hasTimestamps: true,
 
   signers: function () {
@@ -21,6 +20,7 @@ const AccountRequest = app.db.Model.extend({
   institution: function () {
     return this.belongsTo('Institution', 'institution_id')
   },
+// Temp comment
 
   productConfigurations: function () {
     return this.hasMany('AccountRequestProduct', 'account_request_id')

@@ -2173,6 +2173,7 @@ const successResponse = {
               "complyadvantage-adverse-media": {
                 "aml_types": [
                   "adverse-media"
+                ],
                 "country_codes": [
                   "ZW"
                 ],
@@ -3177,7 +3178,6 @@ const parsedResult = [
         "subtype": "sanction",
         "countryCodes": [
           "ZW"
-        ],
         "date": "2018-09-10T00:00:00Z",
         "deletedDate": "2020-02-18T00:00:00Z",
         "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"

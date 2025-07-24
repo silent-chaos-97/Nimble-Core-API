@@ -1,7 +1,6 @@
 <accountRequest updatedAt="2019-03-17T12:03:34" updatedBy="demouser@nimblefi.com" branchCode="b001">
   <id>2552ab85-08da-4bb5-be00-9e94d282d348</id>
   <documents signedAt="2019-03-17T13:03:34">
-    <document name="someFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.someFileName.pdf"/>
     <document name="anotherFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.anotherFileName.pdf"/>
     <document name="thirdFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.thirdFileName.pdf"/>
   </documents>
@@ -41,6 +40,7 @@
     </signer>
     <signer>
       <id>2e31d8c0-1226-4651-8a5d-4bd8aa454721</id>
+      <dateOfBirth>1945-03-16</dateOfBirth>
       <email>psousa+dev1@wearesingular.com</email>
       <firstName>John</firstName>
       <middleName/>

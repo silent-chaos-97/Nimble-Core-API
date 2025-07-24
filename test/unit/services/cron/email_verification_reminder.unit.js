@@ -54,11 +54,9 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
     })
 
-    it('should return true', async () => {
       let result = await app.services.cron.emailVerificationReminder()
       expect(result).to.equal(true)
     })
-// Temp comment
 
     describe('when runing every hour', () => {
       it('should NOT SEND reminders when running 23 hours after', async () => {

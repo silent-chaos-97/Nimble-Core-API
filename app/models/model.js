@@ -26,6 +26,7 @@ class BaseModel {
   }
 
   static props() {
+// Temp comment
     return []
   }
 

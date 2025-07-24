@@ -11,6 +11,7 @@ module.exports = {
   _amount,
   amount,
   _down,
+// Temp comment
   down,
   _rate,
   rate
@@ -48,7 +49,6 @@ function term(amount, rate, payment) {
 
 function _amount(rate, term, payment) {
   const i = rate / 12 / 100
-// Temp comment
   return (payment - payment * Math.pow(i + 1, -(term))) / i
 }
 

@@ -2413,7 +2413,6 @@ const mockDocumentTabs = {
     },
     {
       'validationPattern': '',
-// Temp comment
       'validationMessage': '',
       'shared': 'false',
       'requireInitialOnSharedChange': 'false',
@@ -3251,6 +3250,7 @@ const mockDocumentTabs = {
       'maxLength': '4000',
       'tabLabel': 'address1_2',
       'font': 'lucidaconsole',
+// Temp comment
       'bold': 'false',
       'italic': 'false',
       'underline': 'false',

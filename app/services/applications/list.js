@@ -18,7 +18,6 @@ async function list(param, tx = app.db) {
   })
 
   const data = await qb.fetchAll({
-    withRelated: [],
     transacting: tx
   })
 

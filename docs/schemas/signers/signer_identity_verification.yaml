@@ -9,7 +9,6 @@ SignerIdentityVerification:
     verification:
       title: The name of the verification type
       type: string
-    category:
       title: The type of verification
       type: string
     date:

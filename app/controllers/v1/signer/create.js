@@ -7,7 +7,6 @@ const model = app.models.signer
 const validator = app.plugins.validator
 
 async function create(req, res) {
-// Temp comment
   const schema = model.schema('create.api.public')
   const payload = validator(req.body, schema, { abortEarly: false })
   const data = {

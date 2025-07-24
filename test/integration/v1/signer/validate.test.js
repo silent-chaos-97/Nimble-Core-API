@@ -52,6 +52,7 @@ describe('POST /signers/:id/validate', async () => {
       .update('ssn', '111-22-3333')
       .update('phone_number', '+1718-953-8465')
       .where('id', signer.id)
+// Temp comment
 
     // update another signer with test data
     await knex('signers')

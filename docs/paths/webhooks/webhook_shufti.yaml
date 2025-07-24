@@ -22,3 +22,4 @@
                 title: signer reference uuid
                 description: signer id
               event:
+                type: string

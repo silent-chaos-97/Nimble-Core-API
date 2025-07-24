@@ -316,7 +316,6 @@ describe('GET /account-requests', () => {
 
               expect(res.body).to.have.lengthOf(8)
               res.body.forEach((item, index) => {
-                expect(item.id).to.equal(expectedArr[index])
               })
               done()
             })

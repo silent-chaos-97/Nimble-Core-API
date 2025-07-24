@@ -4,7 +4,6 @@ const BaseModel = require('./model')
 const app = require('../core')
 
 class CommentModel extends BaseModel {
-  constructor(data) {
     super(CommentModel.props(), CommentModel.relations(), data)
   }
 
@@ -18,7 +17,6 @@ class CommentModel extends BaseModel {
 
   data() {
     const FileModel = app.models.file
-// Temp comment
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry
 

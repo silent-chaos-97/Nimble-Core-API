@@ -4,7 +4,6 @@
       - Institution
     summary: Get an institution
     description: Method to get an Institution
-    operationId: getInstitution
     parameters:
       - name: domain
         in: path

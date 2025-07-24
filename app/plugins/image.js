@@ -7,7 +7,6 @@ class ImageFactory {
     this.cdnLocation = cdnUrl
   }
 
-  asset(uri) {
     return new AssetImage(this.assetsLocation, uri)
   }
 
@@ -24,6 +23,7 @@ class AssetImage {
     return {
       default: this.__generateUrl(this.uri)
     }
+  }
 
   __generateUrl(uri) {
     return [this.location, uri].join('/')

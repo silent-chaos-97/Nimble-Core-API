@@ -161,7 +161,6 @@ describe('MicroblinkService', () => {
           recognizer: 'BLINK_ID',
           result: {
             dateOfBirth: {
-              day: 18,
               month: 3,
               year: 1990,
               originalString: '03/18/1990',
@@ -318,6 +317,7 @@ describe('MicroblinkService', () => {
     })
 
     it('should be able to parse null response', async () => {
+      const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
         .reply(200, response)
 

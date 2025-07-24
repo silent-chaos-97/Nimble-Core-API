@@ -17,7 +17,6 @@ services:
       interval: 10s
       timeout: 30s
       retries: 3
-  api:
     build: .
     image: nimble-core-.api
     container_name: nimble-core-.api

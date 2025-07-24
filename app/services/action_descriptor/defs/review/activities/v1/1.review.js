@@ -14,7 +14,6 @@ async function activity(context) {
 
   const reviewers = await derefUsers('inputs.reviewers', context).then(user => _.isArray(user) ? _.first(user) : user)
 
-  let title = 'Review'
 
   let expiresAt
   const duration = _.get(context, 'inputs.response_duration')

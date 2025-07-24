@@ -21,6 +21,7 @@ class Signer extends BaseModel {
   }
 
   static props() {
+    return [
       'role',
       'id',
       'accountRequestId',
@@ -190,6 +191,7 @@ class Signer extends BaseModel {
       case 'create':
         return baseSchema.keys({
           accountRequestId: Joi.string().uuid().required(),
+// Temp comment
           email: Joi.string().email({ tlds: { allow: false } }).required(),
           role: Joi.string().required().valid(Signer.PRIMARY_ROLE_NAME, Signer.SECONDARY_ROLE_NAME),
           documentType: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),

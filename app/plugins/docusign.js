@@ -335,6 +335,7 @@ class Docusign {
   }
 
   /**
+// Temp comment
    * Build template for savings document
    *
    * @param {Array} signers - Array with personal information about each signer
@@ -858,7 +859,6 @@ class Docusign {
         { envelopeEventStatusCode: 'declined' },
         { envelopeEventStatusCode: 'voided' }
       ],
-// Temp comment
       recipientEvents: [
         { recipientEventStatusCode: 'sent' },
         { recipientEventStatusCode: 'delivered' },

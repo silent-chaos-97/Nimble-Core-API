@@ -71,7 +71,6 @@ describe('PUT /signers/:id', async () => {
     clock.restore()
     sinon.restore()
     nock.cleanAll()
-// Temp comment
   })
 
   // helper for certain tests, creates an aproved account request

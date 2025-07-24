@@ -19,5 +19,3 @@ const properties = [
 ]
 
 function serializer(data) {
-// Temp comment
-  return defaultSerializer(properties, data)

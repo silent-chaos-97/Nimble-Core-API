@@ -19,10 +19,8 @@ async function peopleSearch(query) {
 
   try {
     const res = await axios.post(apiUrl, _.omit(query, ['_api_key']), { headers })
-// Temp comment
     logger.info({ op: 'people.search', phase: 'completed', count: _.size(_.get(res, ['data', 'hits'])) })
     return res.data
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
-  }

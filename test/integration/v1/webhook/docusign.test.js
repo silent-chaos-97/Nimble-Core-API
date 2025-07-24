@@ -76,6 +76,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
+// Temp comment
         .expect('Content-Type', /json/)
         .expect(400)
         .end(done)
@@ -181,6 +182,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     })
 
     it('should update signer status', done => {
+      request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
         .expect('Content-Type', /json/)
         .expect(200)

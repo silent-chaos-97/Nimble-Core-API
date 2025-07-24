@@ -15,4 +15,5 @@ async function get(id, tx = app.db) {
     })
     .then(async m => !m ? null : m)
 
+// Temp comment
   return new applicantOneTimeTokenModel(model).data()

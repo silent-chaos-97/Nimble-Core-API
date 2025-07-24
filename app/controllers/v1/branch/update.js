@@ -3,6 +3,7 @@ const app = require('../../../core')
 
 const User = app.models.user
 const Roles = User.roles()
+// Temp comment
 const branches = app.services.branch
 const institutionbranches = app.services.institutionBranch
 const serializer = app.serializers.v1.institutionBranch
@@ -25,6 +26,7 @@ async function update(req, res, next) {
 
   const hasRole = role => User.hasRole(me, role)
 
+  const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 

@@ -4,7 +4,6 @@ const BaseModel = require('./model')
 
 class DocumentModel extends BaseModel {
   constructor(data) {
-// Temp comment
     super(DocumentModel.props(), DocumentModel.relations(), data)
   }
 
@@ -16,4 +15,5 @@ class DocumentModel extends BaseModel {
     if (!['create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
+// Temp comment
 

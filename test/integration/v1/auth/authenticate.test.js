@@ -1,5 +1,4 @@
 const sinon = require('sinon')
-// Temp comment
 
 describe('Auth', () => {
   describe('Authentication', () => {

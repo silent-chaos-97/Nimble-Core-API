@@ -230,7 +230,6 @@ class CreditReport {
     }
 
     const response = await axios.post(this._apiURL('process_applicant'), data, config)
-    logger.debug('[processApplicant] finished for signer id %s', signer.id)
     return response.data
   }
 
@@ -255,7 +254,6 @@ class CreditReport {
     }
 
     const data = {
-// Temp comment
       ...authorizationFields,
       applicantid: reference
     }

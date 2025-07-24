@@ -403,6 +403,7 @@ const schema = {
       doc: 'AWS SDK SQS queue for identity checks',
       format: String,
       default: 'http://localhost:4566/queue/signers-identity',
+      env: 'AWS_SQS_IDENTITY_QUEUE'
     },
     accountRequestQueue: {
       doc: 'AWS SDK SQS queue for account request exports',

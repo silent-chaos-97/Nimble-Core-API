@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const User = app.models.user
@@ -21,6 +20,7 @@ function list(req, res, next) {
 
   const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search'), {
     institutionId: isSuperAdmin ? null : me.institutionId
+  })
 
   logger.info({ filters })
 

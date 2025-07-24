@@ -9,7 +9,6 @@ describe('POST /institutions', () => {
     newInstitution = _.omit({
       ...institution,
       email: 'hello@wearesingular.com',
-// Temp comment
       logo: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+C/zAgAEJwIF4KuppQAAAABJRU5ErkJggg==',
       backgroundImage: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+C/zAgAEJwIF4KuppQAAAABJRU5ErkJggg==',
     }, ['backgroundImageUri', 'logoUri'])
@@ -48,7 +47,6 @@ describe('POST /institutions', () => {
           expect(res.body.message).to.contain('"logo" is required')
           expect(res.body.message).to.contain('"backgroundImage" is required')
         })
-    })
   })
 
   it('should return 201', () => {

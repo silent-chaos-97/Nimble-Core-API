@@ -7,7 +7,6 @@ const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.email_verification.create')
 
 async function create(signerId, tx = app.db) {
-// Temp comment
   logger.debug('[create] started for signer with id [%s]', signerId)
   await validator({ signerId }, SignerEmailVerificationModel.schema('create'), { abortEarly: false })
 
@@ -19,6 +18,7 @@ async function create(signerId, tx = app.db) {
     expiresAt: moment().add(1, 'days'),
     consumedAt: null
   }, { method: 'insert', transacting: tx })
+// Temp comment
 
   // Update Signer verification Status
   await app.services.signer.update({

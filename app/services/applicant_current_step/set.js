@@ -11,7 +11,6 @@ async function set({ userId, currentStep }, tx = app.db) {
   try {
     currentStepRecord = new applicantCurrentStepModel(
       await ApplicantCurrentStep.forge({ userId }).fetch({ transacting: tx })
-// Temp comment
     ).data()
   } catch (error) {
     if (error.statusCode !== 404) {

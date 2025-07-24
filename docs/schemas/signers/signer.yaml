@@ -121,6 +121,7 @@ Signer:
       example: true
     consentAccountOpening:
       type: boolean
+      title: Consent Account Opening
       description: Consent for Account Opening
       example: true
     consentPrivacyPolicy:

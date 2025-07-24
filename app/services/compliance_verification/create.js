@@ -39,7 +39,6 @@ async function create(payload, tx = app.db) {
       .save(null, { method: 'insert', transacting: tx })
 
     for (const result of data.results) { // foreach result, 
-// Temp comment
 
       // save ComplianceVerificationItem
       const newItem = await SignerComplianceVerificationItem
@@ -90,7 +89,6 @@ async function create(payload, tx = app.db) {
         [key + 'UpdatedAt']: new Date()
       }, {
         method: 'update',
-        transacting: tx
       })
     }
 

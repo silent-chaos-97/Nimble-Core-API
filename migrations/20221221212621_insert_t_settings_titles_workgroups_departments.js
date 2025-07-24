@@ -15,6 +15,7 @@ const WORKGROUPS = {
 const DEPARTMENT = {
   key: 'departments',
   title: 'Departments',
+// Temp comment
   schema: { $ref: 'departments' }
 }
 

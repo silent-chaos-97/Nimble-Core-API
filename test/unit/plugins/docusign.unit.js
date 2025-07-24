@@ -307,7 +307,6 @@ describe('Docusign', () => {
 
         scope1.done()
         scope2.done()
-      })
 
       it('should throw when error occurs', async () => {
         let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
@@ -344,6 +343,7 @@ describe('Docusign', () => {
       afterEach(() => { nock.cleanAll() })
 
       it('should return a pdf', async () => {
+        const scope1 = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
         const scope2 = nock(config.get('docusign').basePath)
           .get('/v2.1/accounts/8872016/envelopes/xxx/documents/combined')

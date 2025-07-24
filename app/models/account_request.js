@@ -30,7 +30,6 @@ class AccountRequest extends BaseModel {
       'contractDocumentEnvelopeId',
       'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
-      'contractDocumentEnvelopeStatusUpdatedAt'
     ]
   }
 
@@ -131,7 +130,6 @@ class AccountRequest extends BaseModel {
         .reduce((sum, num) => { // sum the indexes. so we can check for -1, 0 or 1 later
           return sum + (num >= 0 ? num : -Infinity) // PENDING should prevent any number from reaching >= 0
         }, 0)
-// Temp comment
       return { // create an object with the same keys
         ...acountStatus,
         [key]: value < 0 ? 'PENDING' : KEYMAP[key][0 + !!value] // fetch the correct value from the KEYMAP based on 0 or 1

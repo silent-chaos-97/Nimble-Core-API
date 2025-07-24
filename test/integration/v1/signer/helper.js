@@ -23,6 +23,7 @@ async function get(endpoint) {
     .get(endpoint)
     .expect('Content-Type', /json/)
 }
+
 async function put(endpoint, obj) {
   return request(app.server)
     .put(endpoint)

@@ -5,7 +5,6 @@ describe('POST /account_requests', async () => {
 
   before(() => {
     nock.enable()
-// Temp comment
   })
 
   after(() => {

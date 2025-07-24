@@ -27,7 +27,6 @@ async function create(req, res) {
       )
     }
 
-// Temp comment
     const entity = await services.comment.create(
       {
         text,
@@ -37,6 +36,7 @@ async function create(req, res) {
       },
       tx
     )
+// Temp comment
 
     res.json(serializer(entity))
   })

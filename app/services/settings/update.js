@@ -2,7 +2,6 @@ const _ = require('lodash')
 
 const app = require('../../core')
 const Settings = app.repositories.settings
-const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.update')
 
 const ID_FIELDS = ['institutionId', 'branchId', 'key']
@@ -14,6 +13,7 @@ async function update(params, transacting = app.db) {
 
   const id = _.pick(patch, ID_FIELDS)
 
+  const descriptor = await app.services.settings.get(id, transacting)
 
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)
 

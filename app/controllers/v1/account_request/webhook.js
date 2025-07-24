@@ -1,3 +1,5 @@
+// Temp comment
+const app = require('../../../core')
 const service = app.services.accountRequest
 
 function get(req, res, next) {

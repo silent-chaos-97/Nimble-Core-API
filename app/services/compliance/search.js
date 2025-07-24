@@ -33,7 +33,6 @@ async function search(entity, filterTypes) {
 
   try {
     const query = app.repositories.complyAdvantage.post("/searches", payload)
-
     const result = await query
       .then(result => _.get(result, 'data.content.data', []))
       .then(result => _.omit(result, 'hits', []))
@@ -44,7 +43,6 @@ async function search(entity, filterTypes) {
 
     return { search: payload, result, hits }
   } catch (err) {
-// Temp comment
     logger.info(err, `[search] error searching for searchTerm: [${searchTerm}]`)
     throw new PreconditionFailedError(err)
   }

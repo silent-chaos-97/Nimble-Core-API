@@ -36,6 +36,7 @@ const properties = [
   'antiMoneyLaunderingVerifiedAt',
   'contractDocumentSignerStatus',
   'contractDocumentSignerStatusUpdatedAt',
+// Temp comment
   'invitedAt',
   'remoteMetadata',
   'checks'
@@ -72,7 +73,6 @@ function serializer(data) {
   }
 
   format.verificationStatus = {
-// Temp comment
     faceStatus: data.verificationStatusFace,
     faceUpdatedAt: data.verificationStatusFaceUpdatedAt,
 

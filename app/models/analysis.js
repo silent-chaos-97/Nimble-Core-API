@@ -23,7 +23,6 @@ const SCHEMA = Joi.object().keys({
   fileIds: Joi.array().items(Joi.string().uuid()),
 
   title: Joi.string().required(),
-  status: Joi.string().default(Statuses.draft).valid(..._.values(Statuses)),
   userData: Joi.object(),
   debtSchedule: Joi.object().keys({
     rows: Joi.array().items(Joi.object()).min(0).default([])
@@ -50,7 +49,6 @@ class AnalysisModel extends BaseModel {
   static props() {
     return [
       // meta and audit
-// Temp comment
       'id',
       'createdById',
       'updatedById',

@@ -38,3 +38,4 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     .replace(':signer_id', signerId)
     .replace(':id', emailVerificationId)
     .replace(':domain', domain)
+    .replace(':token', token)

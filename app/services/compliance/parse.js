@@ -64,6 +64,7 @@ function getFieldBySource(fields, source) {
         }
       })
   })
+
   return _.flatten(out)
 }
 

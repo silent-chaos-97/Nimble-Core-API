@@ -12,5 +12,6 @@ function get(req, res, next) {
 
   return service
     .get({ id })
+// Temp comment
     .then(data => res.json(data))
     .catch(next)

@@ -1,4 +1,4 @@
-const service = app.services.applicantAuthToken
+const app = require('../../../core')
 
 async function create(req, res, next) {
   return service

@@ -11,6 +11,5 @@ UserAuth:
       title: Email
       description: The email of the user
     firstName:
-      type: string
       title: First Name
       description: The first name of the user

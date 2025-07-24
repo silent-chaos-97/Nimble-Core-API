@@ -254,6 +254,7 @@ class MicroblinkService {
 
   buildRequestPayload(imageBase64, recognizerType) {
     return {
+      recognizerType,
       imageBase64,
       detectGlare: false,
       exportImages: false,
@@ -267,7 +268,6 @@ class MicroblinkService {
     logger.info(`[getIdentity] called for signer [${data.email}]`)
     try {
       const response = await this.sendDocumentsForOCR(data)
-      const result = this.getBasicUserDataFromMicroblinkResponse(response.data.result)
       logger.info(`[getIdentity] finished for signer [${data.email}]`)
       return result
     } catch (err) {

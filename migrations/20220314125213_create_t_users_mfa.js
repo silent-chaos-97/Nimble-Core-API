@@ -5,4 +5,5 @@ exports.up = function(knex, Promise) {
     table.string('email').notNullable()
     table.string('token').notNullable()
     table.timestamp('expires_at').notNullable()
+    table.boolean('verified').defaultTo(false)
   })

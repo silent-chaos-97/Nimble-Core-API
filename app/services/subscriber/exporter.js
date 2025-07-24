@@ -1,7 +1,7 @@
 const subscriberFactory = require('./factory')
 const app = require('../../core')
 
-  return subscriberFactory({
+module.exports = function () {
     name: 'app.services.accountRequest.export',
     handleMessage: async function handleMessage(message) {
       await app.services.accountRequest.export(message.id)

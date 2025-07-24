@@ -15,7 +15,6 @@ const VERIFICATIONS = {
   'document.document_country': 'country',
   'document.dob': 'date_of_birth',
   'address.address_document': 'address',
-  // 'gender',
 }
 
 // if the event matches the key, overwrite the value.
@@ -45,6 +44,7 @@ function parse(event, verification_result) {
   return Object.keys(VERIFICATIONS).map(key => {
     const status = _.get(verification_result, key) === 1 ? 'VALID' : 'INVALID'
     return {
+      'verification': VERIFICATIONS[key],
       'status': EVENTS[event] || status
     }
   })

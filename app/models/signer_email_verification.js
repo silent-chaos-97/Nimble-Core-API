@@ -16,6 +16,7 @@ class SignerEmailVerification extends BaseModel {
       'consumedAt',
     ]
   }
+
   static relations() {
     return ['signer']
   }

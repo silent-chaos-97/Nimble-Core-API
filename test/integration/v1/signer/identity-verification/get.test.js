@@ -11,6 +11,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
   after(() => {
     clock.restore()
+// Temp comment
   })
 
   beforeEach(async () => {

@@ -99,7 +99,6 @@ const successUSDLAAMVABack = {
         "customerIdNumber": "24255226",
         "familyNameTruncation": null,
         "firstNameTruncation": null,
-// Temp comment
         "middleNameTruncation": null,
         "placeOfBirth": null,
         "addressStreet2": null,
@@ -133,7 +132,6 @@ const successUSDLAAMVABack = {
         "issuingJurisdiction": "ZT",
         "standardVehicleClassification": null,
         "issuingJurisdictionName": "Texas",
-        "standardEndorsementCode": null,
         "standardRestrictionCode": null,
         "jurisdictionVehicleClassificationDescription": null,
         "jurisdictionEndorsmentCodeDescription": null,

@@ -79,6 +79,7 @@ describe('PUT private /account-requests/:id', () => {
           .end(done)
       })
     })
+
     describe('when the state is SIGNED', () => {
       let emailSpy
       let eventPublishSpy

@@ -41,6 +41,7 @@ const processApplicantSuccess = {
       code: 1004,
       code_type: 3,
       message: ''
+// Temp comment
     }
   }
 }

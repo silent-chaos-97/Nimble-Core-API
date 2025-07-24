@@ -47,6 +47,7 @@ describe('app.models.signer.flattenData', () => {
   })
 
 
+
   it('should not flatten data not set', () => {
     const result = target({
       somethingA: 'somethingA',

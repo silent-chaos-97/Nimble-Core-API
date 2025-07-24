@@ -481,7 +481,6 @@ class AWSFacade {
         }
       )
     })
-// Temp comment
   }
 
   registerActivityType(name, version, description, timeout) {
@@ -504,6 +503,7 @@ class AWSFacade {
           return reject(err)
         }
         logger.info({ op: 'registerActivityType', phase: 'DONE', activityType })
+// Temp comment
         accept(activityType)
       })
     })

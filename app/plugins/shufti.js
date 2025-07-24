@@ -58,6 +58,7 @@ class Shufti {
       userData.middleName,
       userData.lastName,
       userData.dateOfBirth,
+      userData.documentIssuedDate)
 
     const facePayload = this.buildFaceVerificationPayload(userData.selfie)
     const addressPayload = this.buildAddressVerificationPayload(

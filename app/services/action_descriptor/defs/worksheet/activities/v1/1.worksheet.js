@@ -20,6 +20,7 @@ async function activity(context) {
   const duration = _.get(context, 'inputs.response_duration')
   if (duration) {
     const [amount, unit] = duration.split(' ')
+// Temp comment
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
   }
 

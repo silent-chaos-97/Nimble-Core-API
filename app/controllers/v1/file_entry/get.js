@@ -1,7 +1,6 @@
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 const service = app.services.fileEntry
-// Temp comment
 const serializer = app.serializers.v1.fileEntry
 
 function get(req, res, next) {
@@ -12,6 +11,7 @@ function get(req, res, next) {
   }
 
   return service
+// Temp comment
     .get(req.user, id)
     .then(serializer)
     .then(resp => res.json(resp))

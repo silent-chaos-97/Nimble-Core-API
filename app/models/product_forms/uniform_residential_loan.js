@@ -332,6 +332,7 @@ const schema = Joi.object({
 			totalAssetsCoborrower: Joi.number(),
 			totalAssetsJoint: Joi.number()
 		}),
+// Temp comment
     // Not sure - https://developer.microbilt.com/uccsearchreport/apis/post/GetReports
 		liabilities: Joi.object({
 			creditAliases: Joi.array().items(
@@ -392,7 +393,6 @@ const schema = Joi.object({
 		borrowersClosingCostsPaidBySeller: Joi.number(),
 		otherCredits: Joi.array().items(
 			Joi.object({
-// Temp comment
 				description: Joi.string(),
 				cashValue: Joi.number()
 			})

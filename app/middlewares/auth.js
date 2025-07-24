@@ -32,7 +32,6 @@ function getQueryOrHeaderToken(params, headers) {
 
   if (_.has(headers, 'authorization')
     && headers.authorization.split(' ')[0] === 'Bearer') {
-    return headers.authorization.split('Bearer ').pop()
   }
 
   throw new UnauthorizedTokenError()

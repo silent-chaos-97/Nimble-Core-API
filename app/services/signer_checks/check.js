@@ -26,12 +26,12 @@ async function check(signerId, tx = app.db) {
           log.error(err, `ModuleNotFound[checkers/${checkerId}]`)
         }
 
+        return acc
       }, []))
 
     const signerChecks = await Promise.all(checkers.map(async checker => {
       let _hasStarted = checker.hasStarted
       if (!_hasStarted) _hasStarted = async(_signer, check) => !['NIL', SignerCheck.statuses().pending].includes(_.get(_signer, ['checks', check, 'status'], 'NIL'))
-
       const hasStarted = await _hasStarted(signer, checker.id)
 
       if (hasStarted) return Promise.resolve()

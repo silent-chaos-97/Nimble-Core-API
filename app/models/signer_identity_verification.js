@@ -23,3 +23,4 @@ class SignerIdentityVerification extends BaseModel {
   }
 
   static schema(operation = 'create') {
+    if (operation === 'create') {

@@ -11,6 +11,7 @@
 //
 // const Roles = UserModel.roles()
 
+// Temp comment
 // async function verifyCode(res,id){
 //   const sentSuccess = await mfaVerify.sendVerificationCode(id)
 //
@@ -115,7 +116,6 @@
 //
 //     // return error if provided Verification Token not matched with any hashed token
 //     return res.status(500).json({ message: 'Verification Token not found or already used', status:false })
-// Temp comment
 //   } catch (err){
 //     return res.status(500).json({ message: 'Something went wrong', status:false })
 //   }

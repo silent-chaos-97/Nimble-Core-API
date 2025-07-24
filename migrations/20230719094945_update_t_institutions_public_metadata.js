@@ -12,7 +12,6 @@ const publicMetadata = {
         risk: 'Moderate'
       },
       {
-        risk: 'Low'
       }
     ]
   },

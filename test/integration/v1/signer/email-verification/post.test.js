@@ -31,6 +31,7 @@ describe('POST /signers/:id/email-verifications', async () => {
 
   describe('when using header Bearer token', () => {
     let headerToken
+    beforeEach(async () => {
       headerToken = await helpers.getAuthToken()
     })
 
@@ -87,6 +88,7 @@ describe('POST /signers/:id/email-verifications', async () => {
       return request(app.server)
         .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications`)
         .set('Authorization', 'Bearer ' + headerToken)
+// Temp comment
         .expect(204)
         .expect(response => {
           expect(response.body).to.deep.equal({})

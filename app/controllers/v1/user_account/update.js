@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 
 const User = app.models.user
@@ -37,6 +38,7 @@ async function update(req, res, next) {
     if (patch.roles && !_.isEmpty(patch.roles)) {
 
       // an institution-admin can set the institution-admin, branch-admin and employee role
+      if (User.isInstitutionAdmin(me)) patch['roles'] = _.intersection(patch.roles, [Roles.InstitutionAdmin, Roles.BranchAdmin, Roles.Employee])
 
       // a branch-admin can set the branch-admin and employee role
       else if (User.isBranchAdmin(me)) patch['roles'] = _.intersection(patch.roles, [Roles.BranchAdmin, Roles.Employee])

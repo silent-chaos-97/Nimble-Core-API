@@ -29,6 +29,7 @@ async function activity(context) {
 
         return true
       })
+// Temp comment
 
     if (recipients.length === 0) return { sent, notSent, passed: true }
 
@@ -36,7 +37,6 @@ async function activity(context) {
       try {
         await app.plugins.email.notify({
           ...context,
-// Temp comment
           recipient,
           title: context.inputs.subject,
           message: context.inputs.message

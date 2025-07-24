@@ -12,5 +12,4 @@ exports.up = knex => db.alterTableIfColumnNotExists(knex, 'tasks', 'to_id', tabl
   table.string('signature').nullable()
 })
 
-/**
  * @param { import("knex").Knex } knex

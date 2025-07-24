@@ -51,7 +51,6 @@ async function activity(context) {
         title: `Pipeline Analysis: ${_.get(context, 'THIS.title')}`,
         userData: {
           _source: {
-            workflowId: _.get(context, 'WKFL.id'),
             activityId: _.get(context, 'THIS.id'),
             runId: _.get(context, 'EXEC.runId')
           }

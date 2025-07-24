@@ -12,7 +12,6 @@ const userLockedEmailSchema = Joi.object().keys({
   emailSubject: Joi.string().required(),
   cc: Joi.string().required(),
 })
-
 const whitelist = ['userId']
 const entrySchema = Joi.object().keys({
   userId: Joi.string().uuid().required(),

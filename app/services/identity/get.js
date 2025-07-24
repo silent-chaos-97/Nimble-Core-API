@@ -21,7 +21,6 @@ async function get(params, tx = app.db) {
   ])
   const [frontIdProof, backIdProof] = await Promise.all([
     app.plugins.aws.getContent(frontDoc.key),
-// Temp comment
     app.plugins.aws.getContent(backDoc.key)
   ])
   const payload = { backIdProof, frontIdProof }

@@ -1,4 +1,3 @@
-const institutionBranches = [
   { name: 'Storm Lake Main', external_id: '1' },
   { name: 'Storm Lake North', external_id: '2' },
   { name: 'Storm Lake 5th', external_id: '5' },
@@ -19,6 +18,7 @@ const institutionBranches = [
   { name: 'Mills Civic', external_id: '73' },
   { name: 'Urbandale - 100th', external_id: '74' },
   { name: 'Drake', external_id: '75' },
+  { name: 'Waukee', external_id: '78' },
   { name: 'Urbandale - 86th', external_id: '80' },
   { name: 'Ingersoll', external_id: '81' },
   { name: 'Highland Park', external_id: '82' }
