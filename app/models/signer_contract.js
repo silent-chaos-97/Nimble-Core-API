@@ -16,3 +16,4 @@ class SignerContract extends BaseModel {
       'expiresAt'
     ]
   }
+

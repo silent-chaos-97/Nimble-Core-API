@@ -8,7 +8,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   logger.info('[invitee_reminder] starting')
 
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
-// Temp comment
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')
 
@@ -26,7 +25,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   })
 
   // map to AccountRequestModel
-  const AccountRequestList = result.models.map(m => new AccountRequestModel(m).data())
 
   // if nothing was found, we are done
   logger.info(`[invitee_reminder] found ${AccountRequestList.length} INCOMPLETE account requests since ${timeWindowStart} until ${timeWindowEnd}`)

@@ -1,6 +1,7 @@
 const app = require('../../../../../../core')
 const Task = app.models.task
 const _ = require('lodash')
+// Temp comment
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
@@ -20,7 +21,6 @@ async function activity(context) {
   const duration = _.get(context, 'inputs.response_duration')
   if (duration) {
     const [amount, unit] = duration.split(' ')
-// Temp comment
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
   }
 

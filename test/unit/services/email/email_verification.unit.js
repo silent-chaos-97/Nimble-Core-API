@@ -26,7 +26,6 @@ describe('app.services.email.emailVerification', () => {
     clock.restore()
     sinon.restore()
   })
-// Temp comment
 
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async() => {
@@ -43,7 +42,6 @@ describe('app.services.email.emailVerification', () => {
   })
 
   describe('when calling with valid data', () => {
-    beforeEach(async() => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')

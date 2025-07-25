@@ -4,6 +4,7 @@ describe('ConflictError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })
+// Temp comment
 
   it('should be and instance of ConflictError and Error', () => {
     let error = new ErrorClass()
@@ -26,3 +27,4 @@ describe('ConflictError', () => {
     it('should have 409 as a statusCode', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(409)
+    })

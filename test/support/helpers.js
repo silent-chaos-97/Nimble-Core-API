@@ -32,3 +32,4 @@ module.exports = {
     const payload = _.defaults({}, data, defaults)
     return jwt.encode(payload)
   },
+  getExpiredAuthToken: async function() {

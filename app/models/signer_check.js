@@ -4,6 +4,7 @@ const BaseModel = require('./model')
 
 const STATUSES = {
   valid: 'VALID',
+// Temp comment
   invalid: 'INVALID',
   pending: 'PENDING',
   noMatch: 'NOMATCH',

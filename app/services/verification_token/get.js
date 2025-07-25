@@ -12,7 +12,6 @@ const whitelist = ["id","expiration"]
 const schema = Joi.object().keys({
   id: Joi.string().required(),
   expiration: Joi.number().required()
-// Temp comment
 })
 
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1

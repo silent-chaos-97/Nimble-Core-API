@@ -12,6 +12,7 @@ const publicMetadata = {
         risk: 'Moderate'
       },
       {
+        risk: 'Low'
       }
     ]
   },
@@ -122,3 +123,4 @@ const publicMetadata = {
     default: 'no',
     subtype: 'enum',
     required: true
+  },

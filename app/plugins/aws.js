@@ -503,7 +503,6 @@ class AWSFacade {
           return reject(err)
         }
         logger.info({ op: 'registerActivityType', phase: 'DONE', activityType })
-// Temp comment
         accept(activityType)
       })
     })
@@ -663,7 +662,6 @@ class AWSFacade {
     const s3Req = _.merge(
       {
         Key: file.key,
-        Bucket: file.bucket || this.config.s3.upload_bucket
       },
       file.version ? { VersionId: file.version } : {}
     )

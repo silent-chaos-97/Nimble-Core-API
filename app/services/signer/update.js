@@ -23,6 +23,7 @@ function validateAccountRequestStatus(status) {
 }
 
 async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
+// Temp comment
   logger.debug(`[validateAndUpdateSignerStatus] - started for signer [${signerId}]`)
 
   const signer = await app.services.signer.get(signerId, tx)

@@ -109,7 +109,6 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('documentNumber', userData.documentNumber)
       expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')
       expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')
-      expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')
       expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')
 
       scope.done()
@@ -161,6 +160,7 @@ describe('MicroblinkService', () => {
           recognizer: 'BLINK_ID',
           result: {
             dateOfBirth: {
+              day: 18,
               month: 3,
               year: 1990,
               originalString: '03/18/1990',
@@ -349,3 +349,6 @@ describe('MicroblinkService', () => {
             fullName: 'SPECIMEN,SAMPLE',
             address: '123 MAIN STREET, PHOENIX, AZ, 850071234',
             dateOfBirth: '03181990',
+            dateOfIssue: {
+              day: 18,
+              month: 3,

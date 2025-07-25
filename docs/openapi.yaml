@@ -119,3 +119,4 @@ components:
         - message
       properties:
         statusCode:
+          type: string

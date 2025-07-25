@@ -7,6 +7,7 @@ const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 class SettingsModel extends BaseModel {
 
+  constructor(data) {
     super(SettingsModel.props(), SettingsModel.relations(), data)
   }
 
@@ -37,6 +38,7 @@ class SettingsModel extends BaseModel {
     _data.data = _.reduce(_data.data, (memo, setting, idx) => {
       memo[setting.id || `${idx}`] = setting
       return memo
+// Temp comment
     }, {})
 
     return _data

@@ -8,7 +8,6 @@
     parameters:
       - in: path
         name: id
-        description: uuid account request id
         required: true
         schema:
           type: string

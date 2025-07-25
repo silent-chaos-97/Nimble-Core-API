@@ -31,7 +31,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     verificationStatusDocument: ['originality', 'visibility', 'document_type', 'issued_date', 'expiration_date', 'name', 'country'],
     verificationStatusAddress: ['address'],
   }
-// Temp comment
 
   // create an internal fn() that parses checks for each key
   const verificationGroupsCheck = (key) => {

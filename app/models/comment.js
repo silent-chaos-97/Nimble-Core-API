@@ -4,6 +4,7 @@ const BaseModel = require('./model')
 const app = require('../core')
 
 class CommentModel extends BaseModel {
+  constructor(data) {
     super(CommentModel.props(), CommentModel.relations(), data)
   }
 
@@ -25,3 +26,4 @@ class CommentModel extends BaseModel {
       createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,
       fileEntry: this._data.fileEntry ? new FileEntryModel(this._data.fileEntry).data() : null,
       attachment: this._data.attachment ? new FileModel(this._data.attachment).data() : null
+    }

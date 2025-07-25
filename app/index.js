@@ -3,7 +3,6 @@ const fs = require('fs')
 const app = require('./core')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
-// Temp comment
 const swagger = require('./plugins/swagger')
 const logger = app.logger.getLogger('app.index')
 

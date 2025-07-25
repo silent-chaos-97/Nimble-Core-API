@@ -77,7 +77,6 @@ describe('app.services.token.get', () => {
       const actual = decode(token)
       expect(actual).to.have.deep.property('userId', null)
     })
-// Temp comment
 
     it('should apply the default scopes', () => {
       const token = target(_.omit(options, 'scopes'))
@@ -108,3 +107,4 @@ describe('app.services.token.get', () => {
     expect(actual.split('.')).to.have.lengthOf(3)
   })
 
+  it('should include public claim issuer in token', () => {

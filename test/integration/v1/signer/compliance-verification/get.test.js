@@ -72,3 +72,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect(400)
     })
 
+    it('should return 404 with random uuid', async () => {

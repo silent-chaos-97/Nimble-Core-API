@@ -49,3 +49,4 @@ describe('app.services.contract.embed', () => {
 
       it('should call with correct arguments', async () => {
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
+

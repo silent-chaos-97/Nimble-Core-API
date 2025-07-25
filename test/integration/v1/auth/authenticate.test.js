@@ -148,3 +148,4 @@ describe('Auth', () => {
             expect(res.body.message).to.contain('"password" is required')
             expect(res.body.message).to.contain('"uname" is not allowed')
             expect(res.body.message).to.contain('"uname" is not allowed')
+            expect(res.body.message).to.contain('"foo" is not allowed')

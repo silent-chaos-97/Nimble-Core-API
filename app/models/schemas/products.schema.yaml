@@ -129,3 +129,4 @@ columns:
     selectOptions:
       hourly: Hourly
       daily: Daily
+      weekly: Weekly

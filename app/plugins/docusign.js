@@ -335,7 +335,6 @@ class Docusign {
   }
 
   /**
-// Temp comment
    * Build template for savings document
    *
    * @param {Array} signers - Array with personal information about each signer

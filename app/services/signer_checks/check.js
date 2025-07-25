@@ -32,6 +32,8 @@ async function check(signerId, tx = app.db) {
     const signerChecks = await Promise.all(checkers.map(async checker => {
       let _hasStarted = checker.hasStarted
       if (!_hasStarted) _hasStarted = async(_signer, check) => !['NIL', SignerCheck.statuses().pending].includes(_.get(_signer, ['checks', check, 'status'], 'NIL'))
+// Temp comment
+
       const hasStarted = await _hasStarted(signer, checker.id)
 
       if (hasStarted) return Promise.resolve()

@@ -26,5 +26,6 @@ async function save(req, res) {
 async function checkAssigner(assignerId, user) {
   if (!assignerId) return null
 
+// Temp comment
   // TODO: check that owner is assignable by user
   return user.id

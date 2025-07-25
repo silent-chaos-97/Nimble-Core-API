@@ -76,7 +76,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
-// Temp comment
         .expect('Content-Type', /json/)
         .expect(400)
         .end(done)
@@ -303,3 +302,5 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(401)
+        .end(done)
+    })

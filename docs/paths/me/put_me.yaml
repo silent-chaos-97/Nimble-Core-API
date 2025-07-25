@@ -28,3 +28,4 @@
         schema:
           $ref: '#/components/schemas/Me'
     security:
+      - bearer: []

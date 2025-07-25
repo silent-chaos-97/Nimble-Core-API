@@ -1,4 +1,3 @@
-// Temp comment
 const target = require('../../../../app/services/applicant_auth_token/create')
 const { expect } = require('chai')
 
@@ -17,7 +16,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
     await seed.applicantOneTimeToken.create('2345f171-b3b7-4167-abfb-ff9203514bde')
   })
 
-  it('should exist', () => {
     expect(target).not.to.be.undefined
   })
 

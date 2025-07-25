@@ -24,4 +24,3 @@ Document:
       type: string
       format: byte
       title: Document content in Base64 format
-      description: Document content in Base64 format

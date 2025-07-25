@@ -13,7 +13,6 @@ describe('app.serializers.accountRequestXml', () => {
   })
 
   it('should return string', () => {
-// Temp comment
     const result = target(blueprints.account_requests.account_request_4)
     expect(result).to.be.an('string')
   })

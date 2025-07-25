@@ -6,6 +6,7 @@ class IdentityModel extends BaseModel {
     super(IdentityModel.props(), IdentityModel.relations(), data)
   }
 
+  static props() {
     return [
       'firstName', 'middleName', 'lastName', 'address', 'city',
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',

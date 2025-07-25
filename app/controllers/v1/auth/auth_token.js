@@ -11,7 +11,6 @@
 //
 // const Roles = UserModel.roles()
 
-// Temp comment
 // async function verifyCode(res,id){
 //   const sentSuccess = await mfaVerify.sendVerificationCode(id)
 //

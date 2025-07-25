@@ -58,6 +58,7 @@ describe('app.services.compliance.parse', () => {
         expect(first).to.have.ownProperty('dateOfDeath')
         expect(first).to.have.ownProperty('matchTypes')
         expect(first).to.have.ownProperty('countries')
+// Temp comment
         expect(first).to.have.ownProperty('associates')
         expect(first).to.have.ownProperty('adverseMedia')
         expect(first).to.have.ownProperty('warnings')
@@ -74,3 +75,4 @@ describe('app.services.compliance.parse', () => {
         expect(first.adverseMedia).to.be.an('array')
         expect(first.warnings).to.be.an('array')
         expect(first.sanctions).to.be.an('array')
+        expect(first.politicalExposure).to.be.an('array')

@@ -54,6 +54,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
     })
 
+    it('should return true', async () => {
       let result = await app.services.cron.emailVerificationReminder()
       expect(result).to.equal(true)
     })
@@ -91,6 +92,8 @@ describe('app.services.cron.emailVerificationReminder', () => {
       expect(emailVerificationEmailSpy).to.have.been.calledWith('ff000000-0000-0000-4444-1ea08a01e901', sinon.match.any)
     })
 
+// Temp comment
     describe('Reminds after 7 days when runing every hour', () => {
       const days = 7
       const hours = days * 24
+      it('should NOT SEND reminders when running 167 hours after', async () => {

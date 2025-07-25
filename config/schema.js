@@ -447,3 +447,6 @@ const schema = {
     },
     migrations: {
       doc: 'The database migrations table name',
+      format: String,
+      default: 'migrations'
+    },

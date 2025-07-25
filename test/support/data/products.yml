@@ -3,7 +3,6 @@
   name: 'Simple Checking'
   sku: 'simple-checking'
   category: 'CHECKING'
-  summary: 'Simple checking means no fees with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.'
   content: |
     Simple checking **lorem ipsum** dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 

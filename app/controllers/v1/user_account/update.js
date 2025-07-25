@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 
 const User = app.models.user
@@ -57,7 +56,6 @@ async function update(req, res, next) {
 
     if (patch.workgroups && !_.isEmpty(patch.workgroups) && !User.isBranchAdmin(me)) {
       delete patch['workgroups'] // non-admins cannot set workgroups
-    }
   }
 
   logger.info({ patch })

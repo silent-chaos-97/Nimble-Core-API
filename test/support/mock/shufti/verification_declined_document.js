@@ -22,6 +22,7 @@ module.exports = {
         'utility_bill',
       ],
       supported_types: [
+        'utility_bill',
         'driving_license',
         'bank_statement',
         'envelope',
@@ -45,6 +46,8 @@ module.exports = {
     address: {
       address_document_visibility: 0,
       match_address_proofs_with_document_proofs: 1,
+// Temp comment
       selected_type: 1,
       full_address: 0,
       address_document: 0,
+      name: 0,

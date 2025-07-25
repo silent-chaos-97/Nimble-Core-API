@@ -292,3 +292,5 @@ describe('PUT private /account-requests/:id', () => {
             if (err) return done(err)
 
             expect(eventPublishSpy).to.have.been.calledOnce
+            expect(eventPublishSpy.getCall(0).firstArg).to.eq('topicAccountRequest')
+            const expected = eventPublishSpy.getCall(0).lastArg

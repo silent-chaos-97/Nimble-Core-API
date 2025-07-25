@@ -1,7 +1,6 @@
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
-// Temp comment
 const service = app.services.keyValue
 
 async function remove(req, res, next) {
@@ -10,6 +9,7 @@ async function remove(req, res, next) {
   if (!id) {
     return next(new BadRequest('Key is required in the url.'))
   }
+// Temp comment
 
   return service
     .delete({ id })

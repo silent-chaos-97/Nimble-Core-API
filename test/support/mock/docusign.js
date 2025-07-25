@@ -3250,7 +3250,6 @@ const mockDocumentTabs = {
       'maxLength': '4000',
       'tabLabel': 'address1_2',
       'font': 'lucidaconsole',
-// Temp comment
       'bold': 'false',
       'italic': 'false',
       'underline': 'false',
@@ -3511,3 +3510,27 @@ const mockDocumentTabs = {
       'yPosition': '354',
       'width': '0',
       'height': '0',
+      'tabId': '06133c79-457a-4d57-8b8f-aae8d85ef43e',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'checkbox',
+      'tabGroupLabels': [
+        'Checkbox Group aa78751c-ba33-430b-9733-ce098542ef07'
+      ]
+    },
+    {
+      'name': '',
+      'tabLabel': 'service 9f203722-6640-4bed-b16f-6797af2764e6',
+      'selected': 'true',
+      'shared': 'false',
+      'requireInitialOnSharedChange': 'false',
+      'font': 'lucidaconsole',
+      'bold': 'false',
+      'italic': 'false',
+      'underline': 'false',
+      'fontColor': 'black',
+      'fontSize': 'size9',
+      'required': 'false',
+      'locked': 'false',
+      'documentId': '1',
+      'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',

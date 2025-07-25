@@ -132,6 +132,7 @@ const successUSDLAAMVABack = {
         "issuingJurisdiction": "ZT",
         "standardVehicleClassification": null,
         "issuingJurisdictionName": "Texas",
+        "standardEndorsementCode": null,
         "standardRestrictionCode": null,
         "jurisdictionVehicleClassificationDescription": null,
         "jurisdictionEndorsmentCodeDescription": null,
@@ -155,3 +156,4 @@ const successUSDLAAMVABack = {
         "documentExpirationMonth": null,
         "documentNonexpiring": null,
         "securityVersion": null,
+        "type": "USDL"

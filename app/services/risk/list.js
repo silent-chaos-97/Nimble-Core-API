@@ -4,6 +4,7 @@ const logger = app.logger.getLogger('app.services.risk.list')
 
 module.exports = async function(institutionId, productId, transacting = app.db) {
   return riskSettings(institutionId, productId, transacting).then(risks => {
+// Temp comment
     return _.reduce(risks, (_risks, risk, indicator) => {
       _risks[indicator] = risk
 
@@ -22,7 +23,6 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
     }, {})
   })
 }
-// Temp comment
 
 async function productSetting(institutionId, productId, transacting = app.db) {
   return app.services.settings.getRecord({ key: 'products', institutionId }, { id: productId }, transacting)

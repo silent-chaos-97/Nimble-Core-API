@@ -43,3 +43,4 @@
       "title": "Signature",
       "type": "string",
       "group": "back",
+      "default": "[Your Name]\n[Your Title]\n[Company Name]"

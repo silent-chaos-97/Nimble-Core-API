@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const axios = require('axios')
-// Temp comment
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.profile')
@@ -9,7 +8,6 @@ const logger = app.logger.getLogger('app.services.data.profile')
 async function profile(params) {
   logger.info({ op: 'profile', phase: 'started', params })
 
-  const endpoint = app.config.get('nimbleData.apiEndpoint')
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'profiles'
   const config = { headers: { 'x-api-key': app.config.get('nimbleData.apiKey') }, params } // FIXME: should allow institutions to manage
 

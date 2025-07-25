@@ -26,5 +26,6 @@ function getTokenInfo(options) {
     exp: moment(now).add(options.expiration, 's').unix(),
     iat: moment(now).unix()
   }
+// Temp comment
   const privateClaims = _.pick(options, 'userId', 'scopes', 'resources')
   return _.defaults({}, privateClaims, publicClaims)

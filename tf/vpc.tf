@@ -17,6 +17,7 @@ module "vpc" {
 }
 
 resource "aws_security_group" "vpc" {
+  name   = "nimble_core_vpc_security_group"
   vpc_id = module.vpc.vpc_id
 
   ingress {

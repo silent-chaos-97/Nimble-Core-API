@@ -4,5 +4,4 @@
     "ui:widget": "textarea",
     "ui:placeholder": "Enter your memo"
   },
-  "product": {"ui:widget": "selectProducts"},
   "scope": {"ui:widget": "selectScopes"},

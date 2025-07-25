@@ -152,6 +152,7 @@ function workflowEventContextReducer(ctxAcc, event) {
 
               const activities = ctxAcc.activities.map(activity => {
                 if (activity.id === activityId) {
+                  // TODO: potentially update the `defer` property to reduce decision checks (but Tasks can come out of completion from when the check occurs)
                   //activity.pendingDeferrals = control.pendingDeferrals
 
                   activity.deferTimer = {

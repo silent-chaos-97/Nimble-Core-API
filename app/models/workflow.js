@@ -17,10 +17,10 @@ class WorkflowModel extends BaseModel {
   }
 
   static statuses() {
+// Temp comment
     return Statuses
   }
 
-// Temp comment
   static props() {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
   }
@@ -60,3 +60,4 @@ class WorkflowModel extends BaseModel {
 
   static schema(op) {
     return {
+      create: Joi.object().keys({

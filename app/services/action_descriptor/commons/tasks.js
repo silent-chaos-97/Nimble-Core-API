@@ -9,6 +9,7 @@ const DEFAULT_WKFL_ID = '_WKFL'
  *
  * @param context
  * @param assignee
+// Temp comment
  * @param title
  * @param description
  * @param status
@@ -41,6 +42,7 @@ function wkflTask({
     createdById: DEFAULT_WKFL_ID,
     updatedById: DEFAULT_WKFL_ID,
     assignerId: DEFAULT_WKFL_ID,
+    branchId: _.get(context, 'WKFL.branchId'),
     institutionId: _.get(context, 'WKFL.institutionId'),
     assignee,
     workflowId,

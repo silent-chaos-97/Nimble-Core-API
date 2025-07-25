@@ -53,3 +53,4 @@
         description: Duplicate values identified
         content:
           application/json:
+            schema:

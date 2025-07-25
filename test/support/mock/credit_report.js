@@ -26,7 +26,6 @@ const validApplicant = {
   'city': 'GREENFIELD',
   'state': 'CA',
   'postcode': '931054826',
-  'phone': '2335553333',
   'email': 'psousa+test@wearesingular.com',
   "ssn": "666707610",
   "dob": "12061945"
@@ -41,7 +40,6 @@ const processApplicantSuccess = {
       code: 1004,
       code_type: 3,
       message: ''
-// Temp comment
     }
   }
 }
@@ -66,3 +64,4 @@ const resultsSuccess = [
       "lastname": "Brake",
       "phone": "54326534",
       "address": "523 W Alamar Ave",
+      "city": "Greenfield",

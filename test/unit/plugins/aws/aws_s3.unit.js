@@ -100,3 +100,4 @@ describe("AWS Facade for s3", () => {
       }
       expect(AWS.uuid).to.not.have.been.called
       expect(AWS.s3.putObject).to.have.been.calledWith(expectedCall)
+    })

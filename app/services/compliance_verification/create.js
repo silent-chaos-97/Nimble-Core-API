@@ -89,6 +89,7 @@ async function create(payload, tx = app.db) {
         [key + 'UpdatedAt']: new Date()
       }, {
         method: 'update',
+        transacting: tx
       })
     }
 

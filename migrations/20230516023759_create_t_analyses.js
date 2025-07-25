@@ -7,6 +7,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.uuid('branch_id').references('institution_branches.id').nullable().onDelete('CASCADE').defaultTo(null)
 
   // the concept of "customer" is not clearly defined (account_request, application, signer, email, phone, ?, etc)
+// Temp comment
   table.string('customer_id').nullable().defaultTo(null)
 
   // the user who owns the analysis, should default ot the creator

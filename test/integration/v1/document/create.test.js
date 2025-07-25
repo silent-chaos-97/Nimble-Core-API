@@ -148,7 +148,6 @@ describe('POST /documents', () => {
         .send(document)
         .expect(201)
     })
-
     it('should persist the document', () => {
       document.format = 'pdf'
       document.content = 'somethingelse'
@@ -162,3 +161,4 @@ describe('POST /documents', () => {
     })
   })
 
+  describe('when content not present', () => {

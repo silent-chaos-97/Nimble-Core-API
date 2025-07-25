@@ -18,3 +18,4 @@ Example:
     knex migrate:make create_t_users
 
 When altering objects mention the changes when not too many other wise use generic alter.
+

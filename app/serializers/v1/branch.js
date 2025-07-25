@@ -1,3 +1,4 @@
+// Temp comment
 const defaultSerializer = require('../serializer')
 const app = require('../../core')
 
@@ -8,6 +9,7 @@ const properties = [
   'institution',
   'routingNumber',
   'street',
+  'street2',
   'city',
   'state',
   'zip',

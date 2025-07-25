@@ -67,3 +67,4 @@ describe('app.services.creditReport.export', () => {
         expect(error).to.be.an.instanceof(Error)
       }
     })
+

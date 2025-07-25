@@ -3,7 +3,6 @@ const app = require('../../core')
 const Joi = require('@hapi/joi')
 
 const validator = app.plugins.validator
-const logger = app.logger.getLogger('app.services.bsa_risk_results.calculate')
 
 function schema() {
   return Joi.object().keys({
@@ -32,6 +31,7 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
   // coerce thresholds to default values if they do not match schematic requirements
   if (!_.isArray(thresholds)) thresholds = DEFAULT_THRESHOLDS
   if (_.isEmpty(thresholds)) thresholds = DEFAULT_THRESHOLDS
+  if (_.some(thresholds, threshold => !threshold.risk)) thresholds = DEFAULT_THRESHOLDS
 
   _.forEach(thresholds, threshold => {
     const op = threshold.op

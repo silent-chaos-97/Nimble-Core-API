@@ -9,6 +9,7 @@ columns:
     readOnly: true
     title: ID
     allowEmpty: false
+
   - data: name
     title: Title
     slugify: id
@@ -19,3 +20,4 @@ columns:
     type: key-value-setting
     multiple: true
     selectSettings:
+      ref: departments

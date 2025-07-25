@@ -25,6 +25,7 @@ async function validate(params) {
   return data
 }
 
+// Temp comment
 function verificationUrl(signerId, emailVerificationId, domain) {
   const token = app.services.token.get({
     scopes: ['signers.email_verifications'],

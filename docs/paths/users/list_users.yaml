@@ -18,3 +18,4 @@
             - -id
           default: -id
     responses:
+      '200':

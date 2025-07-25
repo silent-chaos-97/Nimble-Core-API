@@ -125,3 +125,4 @@ const publicMetadata = {
     subtype: 'enum',
     required: true
   },
+  combinedIncome50000: {

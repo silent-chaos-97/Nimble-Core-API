@@ -30,6 +30,7 @@ class AccountRequest extends BaseModel {
       'contractDocumentEnvelopeId',
       'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
+      'contractDocumentEnvelopeStatusUpdatedAt'
     ]
   }
 
@@ -167,3 +168,4 @@ class AccountRequest extends BaseModel {
       'patch',
       'patch.api.public',
       'update',
+      'update.api.public',

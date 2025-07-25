@@ -19,7 +19,6 @@ class FileModel extends BaseModel {
 
         // location
         'bucket',
-        'key',
 
         // file meta
         'mimetype',
@@ -45,3 +44,4 @@ class FileModel extends BaseModel {
 
         'name',
         'version'
+      ]

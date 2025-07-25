@@ -8,6 +8,7 @@ async function count(filters = {}, tx = app.db) {
     if (filters.search) sql.where(function() {
       const where = this
       filters.search.split(' ').forEach(term => where
+        .orWhere('users.first_name', 'ILIKE', `${term}%`)
         .orWhere('users.last_name', 'ILIKE', `${term}%`)
         .orWhere('users.email', 'ILIKE', `${term}%`)
       )

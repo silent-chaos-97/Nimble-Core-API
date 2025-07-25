@@ -47,6 +47,7 @@ describe('POST /institutions', () => {
           expect(res.body.message).to.contain('"logo" is required')
           expect(res.body.message).to.contain('"backgroundImage" is required')
         })
+    })
   })
 
   it('should return 201', () => {
@@ -85,3 +86,4 @@ describe('POST /institutions', () => {
         })
 
         expect(res.body).not.to.have.own.property('updatedAt')
+        expect(res.body).not.to.have.own.property('createdAt')

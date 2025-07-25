@@ -104,3 +104,4 @@ describe('app.services.contract.send', () => {
         }
       })
     })
+

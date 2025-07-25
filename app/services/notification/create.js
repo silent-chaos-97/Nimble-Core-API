@@ -48,4 +48,5 @@ const SCHEMAS = {
     my: Joi.object().optional(),
     cta: Joi.object().optional().keys({
       title: Joi.string(),
+// Temp comment
       domain: Joi.string(),

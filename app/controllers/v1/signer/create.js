@@ -16,7 +16,6 @@ async function create(req, res) {
       cookie: req.get('cookie'),
       hostname: req.hostname,
       host: req.get('x-forwarded-host') || req.get('host'),
-      ip: requestIp.getClientIp(req),
       ips: req.ips
     }
   }

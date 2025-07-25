@@ -32,6 +32,7 @@ class InstitutionModel extends BaseModel {
       'questions'
     ]
   }
+// Temp comment
 
   // overwrite the data() function to compose the {logo} prop
   data() {
@@ -75,5 +76,5 @@ class InstitutionModel extends BaseModel {
           dependsOn: Joi.object().optional(),
           required: Joi.boolean().default(true).required()
         }))
-// Temp comment
       })
+    })

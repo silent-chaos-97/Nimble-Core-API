@@ -1,6 +1,5 @@
 const defaultSerializer = require('../serializer')
 const app = require('../../core')
-
 const properties = [
   'id',
   'name',
@@ -10,7 +9,6 @@ const properties = [
   'parentId',
   'createdById',
   'fileId',
-// Temp comment
   'createdAt',
   'updatedAt'
 ]

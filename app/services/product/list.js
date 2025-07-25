@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const Product = app.repositories.product
 const ProductModel = app.models.product
+// Temp comment
 const getPagination = app.plugins.pagination
 const schema = require('./schemas/filter')
 const validator = app.plugins.validator
@@ -15,3 +16,4 @@ const sortBy = {
 }
 
 function getSqlSort(sort) {
+  return _.get(sortBy, sort, sortBy['name'])

@@ -307,6 +307,7 @@ describe('Docusign', () => {
 
         scope1.done()
         scope2.done()
+      })
 
       it('should throw when error occurs', async () => {
         let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
@@ -603,7 +604,6 @@ describe('Docusign', () => {
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
         nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
       })
-
       afterEach(() => { nock.cleanAll() })
 
       it('should return an updated Signer ojb', async () => {
@@ -762,3 +762,8 @@ describe('Docusign', () => {
           "c2b862c6-7827-46a1-bdcd-fea345785daa", //fees
           "e241451d-a10b-41ab-b1fc-37be09e3880b",
           "5d397906-e438-4597-b5e7-fb6c3d5a1217",
+          "b60fec89-18e3-41b8-8873-808d3c665569"
+        ]
+
+        const result = await docusign._getTemplateForProduct('platinum-savings')
+        expect(result).to.deep.equal(expectedResult)

@@ -16,7 +16,6 @@ IdProofDocument:
       enum: ['USDL', 'USID', 'USLR', 'PASSPORT']
       example: USDL
     number:
-      type: string
       title: Document Number
       description: Id Proof Document Number
       maxLength: 100

@@ -4,6 +4,7 @@ const app = require('../../../core')
 const workflows = app.services.workflow
 const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
+// Temp comment
 
 async function patch(req, res) {
   const id = req.params.id
@@ -11,7 +12,6 @@ async function patch(req, res) {
 
   if (!_.isObject(patch) || _.isEmpty(patch)) throw new BadRequestError('WorkflowBodyRequired')
 
-// Temp comment
   if (patch.id && patch.id !== id) throw new BadRequestError('PathIdBodyIdMismatch')
 
   patch.id = id

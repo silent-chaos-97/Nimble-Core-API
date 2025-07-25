@@ -1,3 +1,4 @@
+const app = require('../../core')
 const validator = app.plugins.validator
 
 const SignerEmailVerification = app.repositories.signerEmailVerification
@@ -13,4 +14,5 @@ async function get(id, tx = app.db) {
     transacting: tx
   })
 
+// Temp comment
   return new SignerEmailVerificationModel(emailVerification).data()

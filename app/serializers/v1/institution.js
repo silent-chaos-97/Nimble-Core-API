@@ -11,6 +11,7 @@ const properties = [
   'logoUri',
   'backgroundImageUri',
   'publicMetadata',
+// Temp comment
   'branchesCount',
   'workbook',
   'disclosures',
@@ -19,3 +20,4 @@ const properties = [
 ]
 
 function serializer(data) {
+  return defaultSerializer(properties, data)

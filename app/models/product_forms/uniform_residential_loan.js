@@ -332,7 +332,6 @@ const schema = Joi.object({
 			totalAssetsCoborrower: Joi.number(),
 			totalAssetsJoint: Joi.number()
 		}),
-// Temp comment
     // Not sure - https://developer.microbilt.com/uccsearchreport/apis/post/GetReports
 		liabilities: Joi.object({
 			creditAliases: Joi.array().items(
@@ -512,3 +511,7 @@ const mockUniformResidentialLoanApplication = {
 			name: 'Bob Smith',
 			ssn: '012345678',
 			homePhone: '1112223333',
+			dob: '1980-01-20',
+			yearsOfSchool: 16,
+			maritalStatus: 'Married',
+			numberOfDependents: 2,

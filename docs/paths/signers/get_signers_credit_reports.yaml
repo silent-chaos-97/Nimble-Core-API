@@ -32,3 +32,4 @@
         schema:
           type: string
           enum:
+            - updated_at

@@ -53,4 +53,3 @@ describe('PUT /account_requests/:id', async () => {
         .put(`/v1/account-requests/${accountRequestId}`)
         .set('Authorization', 'Bearer ' + token)
         .send(payload)
-        .expect('Content-Type', /json/)

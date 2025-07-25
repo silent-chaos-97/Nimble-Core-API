@@ -77,4 +77,3 @@ describe('app.services.compliance.search', () => {
       expect(search).to.have.ownProperty('hits')
       expect(search.hits).to.be.an('array')
       expect(search.hits).to.have.lengthOf(2)
-      scope.done()

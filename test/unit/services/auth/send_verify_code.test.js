@@ -18,3 +18,4 @@ describe('app.services.auth.send_verify_code', () => {
   })
 
   describe('send_verify_code service', () => {
+    it('should return data', () => {

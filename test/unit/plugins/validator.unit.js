@@ -20,3 +20,4 @@ describe('plugins/validator', () => {
   })
 
   it('returns data with valid data', () => {
+    const data = {

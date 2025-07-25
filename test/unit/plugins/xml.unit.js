@@ -65,6 +65,7 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, 0),
         target.tag('tag', {}, true),
         target.tag('tag', {}, false),
+// Temp comment
         target.tag('tag', {}, undefined),
         target.tag('tag', {}, null),
         target.tag('tag', {}, "João Cárlôs Cì A(ento"),

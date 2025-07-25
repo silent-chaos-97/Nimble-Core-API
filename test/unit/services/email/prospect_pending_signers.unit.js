@@ -64,3 +64,4 @@ describe('app.services.email.prospectPendingSigners', () => {
     })
 
     it('should call sendEmailTemplate', async () => {
+      await app.services.email.prospectPendingSigners(id)

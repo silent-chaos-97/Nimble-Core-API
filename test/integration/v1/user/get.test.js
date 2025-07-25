@@ -55,6 +55,7 @@ describe('GET /users/:id', () => {
         .end(done)
     })
 
+    it('should return valid user object', done => {
       request(app.server)
         .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')
         .set('X-API-KEY', 'superpowers')
@@ -71,3 +72,4 @@ describe('GET /users/:id', () => {
 
           expect(res.body).not.to.have.own.property('updatedAt')
 
+          expect(res.body.id).to.be.an('string')

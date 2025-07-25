@@ -15,6 +15,7 @@ describe('GET /account-requests/count', () => {
         .expect(401)
     })
   })
+
   describe('with valid auth', () => {
     let token
 

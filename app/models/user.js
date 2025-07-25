@@ -35,6 +35,7 @@ class UserModel extends BaseModel {
   static isSuperAdmin(user) {
     return this.hasRole(user, Roles.SuperAdmin)
   }
+
   static isInstitutionAdmin(user) {
     return this.isSuperAdmin(user) || this.hasRole(user, Roles.InstitutionAdmin)
   }
@@ -118,3 +119,4 @@ class UserModel extends BaseModel {
       institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null,
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
     }
+  }

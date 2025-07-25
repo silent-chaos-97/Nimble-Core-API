@@ -6,12 +6,12 @@ describe('GET /signers/:id/identity-verifications', async () => {
   before(async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
+// Temp comment
     })
   })
 
   after(() => {
     clock.restore()
-// Temp comment
   })
 
   beforeEach(async () => {
@@ -188,3 +188,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
 
     it('should return the correct status for a verification', async () => {
+      return request(app.server)

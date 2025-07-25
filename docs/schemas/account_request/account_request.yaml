@@ -77,3 +77,4 @@ AccountRequest:
       readOnly: true
       format: date-time
       title: Creation Date
+      description: The date when the contract document status was last updated

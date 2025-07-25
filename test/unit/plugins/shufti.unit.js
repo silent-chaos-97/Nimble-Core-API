@@ -99,10 +99,10 @@ describe('Service', () => {
       expect(result.reference).to.equal('xpto')
       expect(result.email).to.equal('test@wearesingular.com')
     })
-// Temp comment
 
     it('should return a payload without email', () => {
       const result = shufti.getPayload(null, 'xpto')
       expect(result).not.to.be.undefined
       expect(result.reference).to.equal('xpto')
       expect(result.email).be.undefined
+    })

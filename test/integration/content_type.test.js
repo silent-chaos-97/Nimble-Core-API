@@ -26,3 +26,4 @@ describe('Content-Type Support', () => {
         .put('/some/unkown/resource')
         .send('<html></html>')
         .set('Content-Type', 'text/html')
+        .set('Authorization', 'Bearer ' + helpers.token)

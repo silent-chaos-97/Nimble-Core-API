@@ -20,3 +20,4 @@ ProductConfiguration:
       title: Options
       items:
         $ref: '#/components/schemas/ProductOption'
+    product:

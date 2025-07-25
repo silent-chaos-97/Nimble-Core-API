@@ -15,9 +15,9 @@ const WORKGROUPS = {
 const DEPARTMENT = {
   key: 'departments',
   title: 'Departments',
-// Temp comment
   schema: { $ref: 'departments' }
 }
 
 const ROWS = [TITLE, WORKGROUPS, DEPARTMENT]
 
+exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(setting =>

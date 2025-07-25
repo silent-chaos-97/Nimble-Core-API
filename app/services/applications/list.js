@@ -1,4 +1,3 @@
-const Joi = require('@hapi/joi')
 const app = require('../../core')
 const ApplicationRepositories = app.repositories.application
 const ApplicationModel = app.models.application
@@ -18,6 +17,7 @@ async function list(param, tx = app.db) {
   })
 
   const data = await qb.fetchAll({
+    withRelated: [],
     transacting: tx
   })
 

@@ -9,6 +9,7 @@ const fakeUser = {
   'id': uuid.v4(),
   'firstName': 'George',
   'lastName': 'Constanza',
+  'middleName': 'j',
   'dateOfBirth': '2020-10-10',
   'status': 'PENDING'
 }
@@ -83,7 +84,6 @@ describe('app.services.compliance.verify', () => {
         dateOfBirth: fakeUser.dateOfBirth
       }
       const filters = ['sanction', 'pep', 'adverse-media', 'adverse-media-financial-crime']
-
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
       expect(fakeComplianceSearch).to.have.been.calledWith(payload, filters)
       expect(fakeComplianceExport).to.have.been.calledWith(123)
@@ -97,3 +97,4 @@ describe('app.services.compliance.verify', () => {
       sinon.replace(app.services.compliance, 'export', sinon.fake.returns({ id: '00000000-0000-0000-0000-000000000000' }))
       sinon.replace(app.services.compliance, 'parse', sinon.fake.returns(mocks.parsedResult))
 
+      const fakeForgeForVerification = sinon.replace(app.repositories.signerComplianceVerification, 'forge', sinon.fake.returns({ save: () => ({ id: 'fake-signerComplianceVerificationId' }) }))

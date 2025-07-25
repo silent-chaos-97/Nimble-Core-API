@@ -15,7 +15,6 @@ function decode(token) {
 const now = moment()
 const data = {
   userId: process.env["USER_ID"] || '1',
-  resources: (process.env["RESOURCES"] || '*').split(','),
   scopes: (process.env["SCOPES"] || '*').split(','),
   expiration: config.get('auth').ttl
 }

@@ -46,7 +46,6 @@ describe('app.services.creditReport.fetch', () => {
       expect(fakeAwsLambda).not.to.have.been.called
     })
 
-    it('should not fetch report if signer is incomplete', async () => {
       const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
       await knex.raw("UPDATE signers SET status='INCOMPLETE'")
 
@@ -133,3 +132,4 @@ describe('app.services.creditReport.fetch', () => {
     })
 
     it('should create a valid credit report of score 0', async () => {
+      const reportURL = 'https://secure.prequalsolutions.com/preq/api/viewReport.php?id=188278&t=1603885023&sc=896410fd9450d10c1547559fad90d69d320393793af4be6ef3052557949b0a84'

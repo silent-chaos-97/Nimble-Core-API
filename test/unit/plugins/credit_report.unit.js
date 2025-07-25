@@ -63,6 +63,7 @@ describe('Credit Report Plugin', () => {
     })
   })
 
+  describe('_injectValidHead', () => {
     it('should return valid html head', async () => {
       const input='<div class="fpn_clientarea_bg">hola</div><!-- end clientarea bg -->'
       const output='<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><meta charset="UTF-8" /></head><body><div class="fpn_clientarea_bg">hola</div><!-- end clientarea bg --></body></html>'
@@ -97,7 +98,6 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal('')
     })
     it('should return if date is invalid arg', async () => {
-      const result = await creditReport._convertDOB('1982')
       expect(result).to.deep.equal('')
     })
     it('should return if blank arg', async () => {
@@ -182,3 +182,4 @@ describe('Credit Report Plugin', () => {
         'email': 'psousa+1@wearesingular.com',
         'ssn': '333333333',
         'dob': '12061982'
+      }

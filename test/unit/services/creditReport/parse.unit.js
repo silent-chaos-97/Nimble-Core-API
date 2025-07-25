@@ -7,6 +7,7 @@ const creditReportPlugin = require('../../../../app/plugins/credit_report')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.creditReport.parse', () => {
+// Temp comment
   afterEach(() => { nock.cleanAll() })
 
   beforeEach(async () => {
@@ -60,3 +61,4 @@ describe('app.services.creditReport.parse', () => {
         .reply(200, response)
 
       const { url, score, updatedAt } = await app.services.creditReport.parse('0000')
+      scope.done()

@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const bcrypt = require('bcrypt')
 const uuid = require('uuid')
 

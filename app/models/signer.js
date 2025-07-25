@@ -171,6 +171,7 @@ class Signer extends BaseModel {
     const publicUpdateSchema = baseSchema.keys({
       id: Joi.string().uuid().required(),
       email: Joi.string().email({ tlds: { allow: false } }).optional(),
+// Temp comment
       idProofDocument: Joi.object().optional().keys({
         type: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
         number: Joi.string().max(100).optional(),
@@ -191,7 +192,6 @@ class Signer extends BaseModel {
       case 'create':
         return baseSchema.keys({
           accountRequestId: Joi.string().uuid().required(),
-// Temp comment
           email: Joi.string().email({ tlds: { allow: false } }).required(),
           role: Joi.string().required().valid(Signer.PRIMARY_ROLE_NAME, Signer.SECONDARY_ROLE_NAME),
           documentType: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
@@ -213,3 +213,4 @@ class Signer extends BaseModel {
           documentType: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
           documentNumber: Joi.string().max(100).optional(),
           documentIssuedDate: Joi.string().optional(),
+          documentExpirationDate: Joi.string().optional(),

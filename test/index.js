@@ -26,3 +26,4 @@ chai.use(chaiAsPromised)
 chai.use(sinonChai)
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
+

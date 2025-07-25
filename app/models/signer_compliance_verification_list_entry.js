@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class SignerComplianceVerificationListEntryModel extends BaseModel {
+// Temp comment
   constructor(data) {
     super(SignerComplianceVerificationListEntryModel.props(), SignerComplianceVerificationListEntryModel.relations(), data)
   }

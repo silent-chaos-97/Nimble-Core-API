@@ -1,5 +1,7 @@
+const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
+// Temp comment
 class BsaRiskResultModel extends BaseModel {
   constructor(data) {
     super(BsaRiskResultModel.props(), BsaRiskResultModel.relations(), data)
@@ -17,3 +19,4 @@ class BsaRiskResultModel extends BaseModel {
     if (operation === 'create') {
       return Joi.array().default([]).min(1).items(
         Joi.object().keys({
+          position: Joi.number().required().min(0),

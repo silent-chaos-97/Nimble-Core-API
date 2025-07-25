@@ -57,7 +57,6 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
    - edit the `roles` column to look like `["employee", "developer", "institution-admin"]`
 
 1. and run the account number script (for testing onboarding e2e)
-
    ```sql
      do $$
      declare
@@ -133,3 +132,4 @@ yarn lint
 
 ```bash
 # running tests
+yarn test

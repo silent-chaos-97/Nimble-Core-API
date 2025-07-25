@@ -7,6 +7,7 @@ const serializer = app.serializers.v1.file
 
 /**
  * data: {
+ *   originalname: string
  *   mimetype: string
  *   createdById: string
  *   bytes?: string (base64-bytes)

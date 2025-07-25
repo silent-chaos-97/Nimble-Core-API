@@ -7,7 +7,6 @@ const ConflictError = require('../../errors/conflict')
 
 const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
-const logger = app.logger.getLogger('app.services.email_verification.update')
 
 async function update(id, signerId, tx = app.db) {
   logger.debug('[update] started for id %s and signerId %s', id, signerId)
@@ -42,5 +41,4 @@ async function update(id, signerId, tx = app.db) {
     emailVerifiedAt: new Date()
   }, tx)
 
-// Temp comment
   return emailVerification

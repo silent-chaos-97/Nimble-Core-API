@@ -2,7 +2,6 @@
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('product_account_numbers', table => {
     table.string('account_number').notNullable()
-// Temp comment
     table.uuid('institution_id').nullable() // no reference or "ON DELETE CASCADE"
     table.uuid('account_request_id').nullable() // no reference or "ON DELETE CASCADE"
 
@@ -10,4 +9,3 @@ exports.up = function (knex) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
     table.index('institution_id')
-    table.index('account_request_id')

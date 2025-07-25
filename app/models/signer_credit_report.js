@@ -8,6 +8,7 @@ class SignerCreditReportModel extends BaseModel {
 
   static props() {
     return [
+      'id',
       'errorCode',
       'reference',
       'score',
@@ -27,3 +28,4 @@ class SignerCreditReportModel extends BaseModel {
     if (operation === 'create') {
       return Joi.object().keys({
         errorCode: Joi.string().allow(null),
+        reference: Joi.string().required(),

@@ -1,4 +1,3 @@
-const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/docusign')
 const config = require('../../../../config')
@@ -37,7 +36,6 @@ describe('app.services.contract.update', () => {
         await seed.account_request_product_options() // insert all
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
-// Temp comment
         await seed.docusignTemplate.create()
       })
 
@@ -92,3 +90,4 @@ describe('app.services.contract.update', () => {
       beforeEach(async () => {
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+

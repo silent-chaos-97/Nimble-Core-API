@@ -142,3 +142,4 @@ Signer:
       description: Sanction verification
     sanctionVerifiedAt:
       readOnly: true
+      type: string

@@ -36,7 +36,6 @@ const properties = [
   'antiMoneyLaunderingVerifiedAt',
   'contractDocumentSignerStatus',
   'contractDocumentSignerStatusUpdatedAt',
-// Temp comment
   'invitedAt',
   'remoteMetadata',
   'checks'
@@ -61,7 +60,6 @@ function serializer(data) {
   }
 
   imageProperties.forEach(p => {
-    format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
   })
 
   if (_.has(data, 'account_request')) {

@@ -9,7 +9,6 @@ function contentTypeSupport(req, res, next) {
   const isMultipartFormData = req.get('Content-Type') && req.get('Content-Type').startsWith(MULTIPART_FORM_DATA)
   const isEmptyObjectBody = isContentTypeSpecified && Object.keys(req.body || {}).length === 0
   const isPostOrPut = /^POST|PUT$/.test(req.method)
-// Temp comment
   req.headers['content-type'] = req.get('Content-Type') || JSON_CONTENT_TYPE
 
   // skip content check if dealing with docusign webhooks webhooks/docusign/connect
@@ -23,5 +22,4 @@ function contentTypeSupport(req, res, next) {
   if (isPostOrPut && !(isJsonContentType || isEmptyObjectBody || isMultipartFormData)) {
     return next(new BadRequestError('Content-type not supported!'))
   }
-
   next()

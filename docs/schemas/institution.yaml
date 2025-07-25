@@ -19,6 +19,7 @@ Institution:
     name:
       type: string
       title: Name
+      description: The institution name
       example: Central Bank
     slug:
       type: string
@@ -42,3 +43,4 @@ Institution:
       type: string
       title: templateApprove
       description: Email Template for Approval notifications
+    templateDecline:
