@@ -12,3 +12,4 @@ BsaRiskResult:
       example: 'all-account-owners'
     answer:
       type: string
+      title: Answer

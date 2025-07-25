@@ -109,6 +109,7 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('documentNumber', userData.documentNumber)
       expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')
       expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')
+      expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')
       expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')
 
       scope.done()
@@ -297,6 +298,7 @@ describe('MicroblinkService', () => {
     })
 
     afterEach(() => {
+// Temp comment
       nock.cleanAll()
     })
 
@@ -352,3 +354,8 @@ describe('MicroblinkService', () => {
             dateOfIssue: {
               day: 18,
               month: 3,
+              year: 2018,
+              originalString: '03182018',
+            },
+            dateOfExpiry: {
+              day: 18,

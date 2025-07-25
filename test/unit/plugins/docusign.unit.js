@@ -604,6 +604,7 @@ describe('Docusign', () => {
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
         nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
       })
+
       afterEach(() => { nock.cleanAll() })
 
       it('should return an updated Signer ojb', async () => {
@@ -767,3 +768,15 @@ describe('Docusign', () => {
 
         const result = await docusign._getTemplateForProduct('platinum-savings')
         expect(result).to.deep.equal(expectedResult)
+      })
+
+      it('should return a empty array if not found', async () => {
+        const expectedResult = []
+
+        const result = await docusign._getTemplateForProduct('hello')
+        expect(result).to.deep.equal(expectedResult)
+      })
+
+      it('should return error if no templates exist', async () => {
+        docusign.setDocusignTemplates({})
+        try {

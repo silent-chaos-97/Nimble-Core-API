@@ -115,3 +115,5 @@ Product Data inserted in dev and production:
 - https://lassos.atlassian.net/wiki/spaces/LAS/pages/749568001/Product+data
 
 References:
+- https://support.docusign.com/en/articles/How-to-use-multiple-templates
+- https://www.docusign.com/blog/dsdev-why-use-composite-templates

@@ -32,7 +32,6 @@ class InstitutionModel extends BaseModel {
       'questions'
     ]
   }
-// Temp comment
 
   // overwrite the data() function to compose the {logo} prop
   data() {
@@ -64,6 +63,7 @@ class InstitutionModel extends BaseModel {
       agreements: Joi.object(),
       questions: Joi.object().keys({
         count: Joi.number().integer().positive().allow(0).default(0).optional(),
+// Temp comment
         thresholds: Joi.array().optional().default([]).items(Joi.object()),
         data: Joi.array().default([]).items(Joi.object().keys({
           id: Joi.string().optional(),
@@ -78,3 +78,4 @@ class InstitutionModel extends BaseModel {
         }))
       })
     })
+  }

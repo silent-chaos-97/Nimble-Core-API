@@ -143,3 +143,5 @@ Signer:
     sanctionVerifiedAt:
       readOnly: true
       type: string
+      format: date
+      title: Sanction verification Date

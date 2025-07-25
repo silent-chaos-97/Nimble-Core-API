@@ -10,7 +10,6 @@ function schema() {
   return Joi.object().keys({
     userId: Joi.string().optional().default(null),
     scopes: Joi.array().items(Joi.string()).min(1).default(['*']),
-    resources: Joi.array().items(Joi.string()).min(1).default(['*']),
     expiration: Joi.number().positive().default(900),
     phone: Joi.string().optional()
   })
@@ -26,6 +25,5 @@ function getTokenInfo(options) {
     exp: moment(now).add(options.expiration, 's').unix(),
     iat: moment(now).unix()
   }
-// Temp comment
   const privateClaims = _.pick(options, 'userId', 'scopes', 'resources')
   return _.defaults({}, privateClaims, publicClaims)

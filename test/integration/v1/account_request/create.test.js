@@ -4,7 +4,6 @@ describe('POST /account_requests', async () => {
   let newAccountRequest
 
   before(() => {
-// Temp comment
     nock.enable()
   })
 

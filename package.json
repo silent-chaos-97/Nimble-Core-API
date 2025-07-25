@@ -1,6 +1,7 @@
 {
   "name": "nimble-core",
   "version": "0.1.0",
+  "description": "nimble-core API",
   "private": true,
   "main": "index.js",
   "directories": {
@@ -97,3 +98,5 @@
     "bookshelf-camelcase": "^2.0.1",
     "bookshelf-eloquent": "^0.1.15",
     "bookshelf-virtuals-plugin": "^1.0.0",
+    "bunyan": "^1.8.12",
+    "convict": "^5.2.0",

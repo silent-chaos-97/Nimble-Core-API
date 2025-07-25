@@ -7,6 +7,7 @@ module "eks" {
 
   cluster_addons = {
     vpc-cni = {
+      resolve_conflicts = "OVERWRITE"
     }
   }
 
@@ -20,3 +21,4 @@ module "eks" {
   }
 
   eks_managed_node_groups = {
+    ng1 = {

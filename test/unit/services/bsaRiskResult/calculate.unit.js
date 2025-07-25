@@ -51,3 +51,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
     const target = await app.services.bsaRiskResult.calculate({ accountRequestId: uuid.v4() })
 
+    expect(target).to.be.an('object')

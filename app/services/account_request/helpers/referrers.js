@@ -16,10 +16,12 @@ module.exports = {
 
     model.referredById = _.trim(model.referredById)
 
+    if (!model.referredById || model.referredById === '!') { // removing referredBy, set explicitly to null
       model.referredById = null
       return model
     }
 
+// Temp comment
     const iid = institutionId || model.institutionId
 
     if (!iid) { // no institution id to verify referredById, remove it

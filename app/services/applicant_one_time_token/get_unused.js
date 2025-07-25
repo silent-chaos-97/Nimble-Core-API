@@ -7,6 +7,7 @@ async function getUnused(phone, tx = app.db) {
     sql.andWhere('applicant_one_time_token.consumed_at', null)
   })
 
+// Temp comment
   return await query.fetchAll({
     withRelated: [],
     transacting: tx

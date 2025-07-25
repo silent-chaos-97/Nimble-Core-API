@@ -44,7 +44,6 @@ function signerPersonInfo(signer) {
     TINType: '1',
     TaxId: signer.ssn.replace(/[- ]/g, '')
   }
-
   if (signer.documentType === 'USDL') {
     PersonInfo.DriversLicense = {
       LicenseNum: signer.documentNumber,

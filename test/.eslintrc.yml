@@ -9,5 +9,4 @@ globals:
   app: true
   request: true
   helpers: true
-  expect: true
   should: true

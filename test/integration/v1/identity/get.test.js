@@ -47,7 +47,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   it('should return 200', () => {
     return request(app.server)
-      .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
       .expect(200)
   })
 
@@ -81,3 +80,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         expect(res.body.documentNumber).to.be.an('string')
         expect(res.body.documentExpirationDate).to.be.an('string')
         expect(res.body.documentIssuedDate).to.be.an('string')
+        expect(res.body.documentIssuer).to.be.an('string')

@@ -62,7 +62,6 @@ describe('POST /institutions', () => {
   it('should return a institution', () => {
     return request(app.server)
       .post('/v1/institutions')
-      .set('X-API-KEY', 'superpowers')
       .send(newInstitution)
       .expect('Content-Type', /json/)
       .expect(res => {
@@ -87,3 +86,4 @@ describe('POST /institutions', () => {
 
         expect(res.body).not.to.have.own.property('updatedAt')
         expect(res.body).not.to.have.own.property('createdAt')
+

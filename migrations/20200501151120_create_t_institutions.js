@@ -4,7 +4,6 @@ module.exports.up = function(knex) {
     table.string('slug').notNullable()
     table.string('name').notNullable()
     table.string('domain').notNullable()
-
     table.string('logo_uri').notNullable()
     table.string('background_image_uri').notNullable()
 

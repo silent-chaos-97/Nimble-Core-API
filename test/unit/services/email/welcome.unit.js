@@ -66,3 +66,4 @@ describe('app.services.email.welcome', () => {
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
 
+    it('should call send with correct data', async() => {

@@ -42,6 +42,5 @@ exports.up = function(knex) {
     table.uuid('front_drivers_license_document_id').references('id').inTable('documents')
     table.uuid('back_drivers_license_document_id').references('id').inTable('documents')
 
-// Temp comment
     table.boolean('check_sanction')
     table.timestamp('sanction_verified_at')

@@ -40,7 +40,6 @@ describe('POST /users', () => {
           expect(res.body.message).to.contain('"lastName" is required')
           done()
         })
-// Temp comment
     })
   })
 
@@ -183,3 +182,6 @@ describe('POST /users', () => {
     })
 
     it('should return newly created user account', done => {
+      request(app.server)
+        .post('/v1/users')
+        .set('X-API-KEY', 'superpowers')

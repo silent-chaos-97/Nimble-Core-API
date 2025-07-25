@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../../core')
 const numbers = app.plugins.numbers
@@ -22,6 +21,7 @@ const PERFORMANCE_CALC = {
   '<': (ratio, performanceStandard) => ratio < performanceStandard
 }
 
+module.exports = async function(risk, _opts) {
   log.info({ _opts, risk })
 
   try {

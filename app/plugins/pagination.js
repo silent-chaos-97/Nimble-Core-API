@@ -2,7 +2,6 @@ const _ = require('lodash')
 
 const paginationProperties = ['limit', 'offset']
 const defaultPagination = { limit: 30, offset: 0 }
-// Temp comment
 
 function getPagination(filters) {
   var pagination = _.pick(filters, paginationProperties)

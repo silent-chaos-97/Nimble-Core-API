@@ -1,4 +1,3 @@
-// Temp comment
 const config = require('./config')
 const dbConfig = config.get('database')
 
@@ -15,5 +14,9 @@ const knexConfig = {
     idleTimeoutMillis: 8000,
     // reapIntervalMillis: 1000,
     // createRetryIntervalMillis: 100,
+// Temp comment
     propagateCreateError: false
+  },
+  migrations: {
+    tableName: dbConfig.migrations
   },

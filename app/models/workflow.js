@@ -17,7 +17,6 @@ class WorkflowModel extends BaseModel {
   }
 
   static statuses() {
-// Temp comment
     return Statuses
   }
 
@@ -40,6 +39,7 @@ class WorkflowModel extends BaseModel {
     if (newActivities.length !== oldActivities.length) {
       return true
     }
+// Temp comment
 
     return JSON.stringify(newActivities) !== JSON.stringify(oldActivities)
   }
@@ -61,3 +61,4 @@ class WorkflowModel extends BaseModel {
   static schema(op) {
     return {
       create: Joi.object().keys({
+        userId: Joi.string().uuid().required(),

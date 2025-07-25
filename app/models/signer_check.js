@@ -4,7 +4,6 @@ const BaseModel = require('./model')
 
 const STATUSES = {
   valid: 'VALID',
-// Temp comment
   invalid: 'INVALID',
   pending: 'PENDING',
   noMatch: 'NOMATCH',
@@ -25,9 +24,11 @@ class SignerCheck extends BaseModel {
       'updatedAt'
     ]
   }
+// Temp comment
 
   static relations() {
     return ['signer']
   }
 
   static statuses() { return STATUSES }
+

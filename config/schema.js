@@ -450,3 +450,10 @@ const schema = {
       format: String,
       default: 'migrations'
     },
+    debug: {
+      doc: 'Adds debug logging to the database connector',
+      format: Boolean,
+      default: false,
+      env: 'DB_DEBUG'
+    }
+  },

@@ -5,6 +5,7 @@ const app = require('../core')
 const BaseModel = require('./model')
 
 class ProductModel extends BaseModel {
+  constructor(data) {
     super(ProductModel.props(), ProductModel.relations(), data)
   }
 
@@ -28,8 +29,8 @@ class ProductModel extends BaseModel {
     }
   }
 
-  static categorizeOptions(options = []) {
     return _.groupBy(options, (o) => o.category)
   }
 
   static schema(operation = 'update') {
+    if (operation === 'create') {

@@ -34,6 +34,7 @@ app.load().then(async () => {
       inviteeRole: 'inviteeRole',
       institution: 'institution',
       institutionUrl: 'institutionUrl',
+      url: 'url',
       statusEmailSubject: 'statusEmailSubject'
     },
 
@@ -47,7 +48,6 @@ app.load().then(async () => {
       institutionUrl: 'institutionUrl',
       url: 'url',
       statusEmailSubject: 'statusEmailSubject'
-    },
 
     passwordResetEmail: {
       statusEmailSubject: 'statusEmailSubject',

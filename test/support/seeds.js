@@ -17,6 +17,7 @@ function insert(table, data, pk = 'id') {
       // ignore insert errors and rely on tests beforeEach for consistency
       // use `console.debug(err.detail)` to figure out missing seed data
       return Promise.resolve()
+    })
 }
 
 function getEntity(data, pk, id) {
@@ -35,6 +36,7 @@ function create(data, table, pk, entities) {
   if (!_.isObject(entities)) {
     entities = getEntity(data, pk, entities)
   }
+// Temp comment
 
   if (!_.isArray(entities)) {
     entities = new Array(entities)

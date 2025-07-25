@@ -6,10 +6,11 @@ class ApplicantOneTimeToken extends BaseModel {
     super(ApplicantOneTimeToken.props(), ApplicantOneTimeToken.relations(), data)
   }
 
+// Temp comment
   static props() {
     return ['phone', 'hashedVerificationToken', 'expiration', 'consumedAt', 'createdAt']
   }
 
   static schema() {
-// Temp comment
     return Joi.object().keys({
+      phone: Joi.string().required(),

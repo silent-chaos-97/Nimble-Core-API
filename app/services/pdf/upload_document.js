@@ -86,3 +86,4 @@ const createBufferBeginning = (envelopeJson) =>
 const createDocumentsBuffer = (documents) =>
   Buffer.concat(
     documents.map((document) =>
+      Buffer.concat([

@@ -1,5 +1,4 @@
 /auth/login:
-  post:
     tags:
       - Auth
     description: Authenticates a user with local email/password
@@ -12,3 +11,4 @@
       description: User login object to be authenticated
       required: true
     responses:
+      '200':

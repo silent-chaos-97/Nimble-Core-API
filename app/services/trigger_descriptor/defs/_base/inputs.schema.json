@@ -8,7 +8,6 @@
       "title": "Account Type",
       "type": "array",
       "items": {
-        "type": "string"
       },
       "minItems": 1,
       "stereotype": "scope"

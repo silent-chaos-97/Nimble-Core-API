@@ -5,6 +5,7 @@ const logger = require('./logger').getLogger('app.plugins.aws')
 const config = require('../../config')
 
 class BrevoFacade {
+// Temp comment
   constructor(BrevoFacadeConfig) {
     this.defaultClient = brevo.ApiClient.instance
 
@@ -36,6 +37,7 @@ class BrevoFacade {
     let data = _.clone(emailData)
 
     if (config.get('env') === 'prod') {
+      // do production redactions
       if (data.uri) data.uri = 'REDACTED' // the URI may contain unmasked tokens
       if (data.token) data.token = 'REDACTED' // redact tokens
     }

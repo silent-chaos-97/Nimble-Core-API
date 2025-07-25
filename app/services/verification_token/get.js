@@ -30,4 +30,3 @@ function getTokenInfo(options) {
 
 async function validate(options) {
   const data = _.pick(options, whitelist)
-  return validator(data, schema, { abortEarly: false })

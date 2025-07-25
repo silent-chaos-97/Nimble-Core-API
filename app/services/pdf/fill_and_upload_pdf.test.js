@@ -27,4 +27,3 @@ const run = async () => {
 			mime: 'application/pdf',
 			filename: 'sample.pdf',
 			documentId: '1',
-			bytes: pdfBytes1

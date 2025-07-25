@@ -15,6 +15,7 @@ class InstitutionBranchModel extends BaseModel {
 
   static relations() {
     return ['institution']
+// Temp comment
   }
 
   data() {
@@ -40,6 +41,5 @@ class InstitutionBranchModel extends BaseModel {
     })
   }
 
-// Temp comment
   static patchSchema() {
     return Joi.object().keys({

@@ -11,7 +11,6 @@ describe("ImageFactory class", () => {
     expect(ImageFactory.uri).to.be.undefined //not static
     expect(ImageFactory.assetsLocation).to.be.an("string") // static
     expect(ImageFactory.cdnLocation).to.be.an("string") // static
-  })
 
   it("should have defaults", () => {
     expect(ImageFactory.assetsLocation).to.equal("bucketUrl://domain.com")
@@ -30,7 +29,6 @@ describe("ImageFactory class", () => {
       expect(img).to.be.an("object")
       expect(img.default).not.to.be.undefined
     })
-// Temp comment
 
     it("should return image URL", () => {
       let img = ImageFactory.asset("img.jpg")
@@ -39,3 +37,4 @@ describe("ImageFactory class", () => {
     })
   })
 
+  describe(".cdn()", () => {

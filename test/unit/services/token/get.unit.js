@@ -108,3 +108,5 @@ describe('app.services.token.get', () => {
   })
 
   it('should include public claim issuer in token', () => {
+    const token = target(options)
+    const actual = decode(token)

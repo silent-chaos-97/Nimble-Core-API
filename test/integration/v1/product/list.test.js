@@ -87,7 +87,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
     })
 
     it('should return a list of products', () => {
-// Temp comment
       return request(app.server)
         .get(`/v1/institutions/${testInstitution1}/products?limit=1&sort=id`)
         .expect('Content-Type', /json/)
@@ -120,3 +119,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
     it('should 200 on sort by name', () => {
       return request(app.server)
+        .get(`/v1/institutions/${testInstitution1}/products?limit=1&sort=name`)
+        .expect('Content-Type', /json/)

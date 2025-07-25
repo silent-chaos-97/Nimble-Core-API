@@ -10,6 +10,7 @@ describe('Random Plugin', () => {
     it('should exist', () => {
       expect(rand.num).not.to.be.undefined
     })
+// Temp comment
 
     it('should return random number', () => {
       expect(rand.num()).to.be.an('number')
@@ -44,3 +45,4 @@ describe('Random Plugin', () => {
           }
         })
       })
+    })

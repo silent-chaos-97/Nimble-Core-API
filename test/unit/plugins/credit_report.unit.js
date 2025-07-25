@@ -98,6 +98,7 @@ describe('Credit Report Plugin', () => {
       expect(result).to.deep.equal('')
     })
     it('should return if date is invalid arg', async () => {
+      const result = await creditReport._convertDOB('1982')
       expect(result).to.deep.equal('')
     })
     it('should return if blank arg', async () => {
@@ -183,3 +184,6 @@ describe('Credit Report Plugin', () => {
         'ssn': '333333333',
         'dob': '12061982'
       }
+
+      const response = await creditReport._formatApplicantData(signer)
+      expect(response).to.deep.equal(result)

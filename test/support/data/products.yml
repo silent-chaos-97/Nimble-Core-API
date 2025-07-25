@@ -3,6 +3,7 @@
   name: 'Simple Checking'
   sku: 'simple-checking'
   category: 'CHECKING'
+  summary: 'Simple checking means no fees with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.'
   content: |
     Simple checking **lorem ipsum** dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
@@ -29,3 +30,4 @@
   sku: 'PRD-003'
   category: 'CHECKING'
   summary: 'With variable interest paid at tiered rates - the higher your balance, the better your rates – Platinum Checking is perfect for when you want to have cash available and make that balance work for you.'
+  content: |

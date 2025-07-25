@@ -10,9 +10,9 @@ User:
       description: The machine unique identifier of the user
       readOnly: true
       example: 1052ab85-08da-4bb5-be00-9e94d282d310
+    firstName:
       type: string
       title: First Name
-      description: The first name of the user
       example: Sample
     lastName:
       type: string

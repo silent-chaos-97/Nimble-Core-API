@@ -80,7 +80,6 @@ class AccountRequest extends BaseModel {
       obj.product.options = options
 
       // build sub model
-      return new AccountRequestProduct(obj).data()
     })
   }
 
@@ -169,3 +168,6 @@ class AccountRequest extends BaseModel {
       'patch.api.public',
       'update',
       'update.api.public',
+      'update.api.private',
+      'webhook'
+    ].includes(operation)) {

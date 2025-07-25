@@ -6,7 +6,6 @@ describe('GET /documents/:id', () => {
   before(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1)/)
-  })
 
   after(() => {
     nock.cleanAll()
@@ -52,6 +51,7 @@ describe('GET /documents/:id', () => {
       return request(app.server)
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68091?token=${token}`)
         .expect(403)
+    })
 
     it('should return 403 when resource id not whitelisted in token', async () => {
       token = await helpers.getScopedAuthToken()
@@ -64,3 +64,4 @@ describe('GET /documents/:id', () => {
 
   describe('when a valid request', () => {
     beforeEach(async () => {
+      await seed.document.create()

@@ -13,6 +13,7 @@ describe('app.services.email.prospectPendingSigners', () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
+// Temp comment
   })
 
   beforeEach(() => {
@@ -65,3 +66,4 @@ describe('app.services.email.prospectPendingSigners', () => {
 
     it('should call sendEmailTemplate', async () => {
       await app.services.email.prospectPendingSigners(id)
+      expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce

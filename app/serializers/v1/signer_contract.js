@@ -1,7 +1,7 @@
 const defaultSerializer = require('../serializer')
 
+// Temp comment
 const properties = ['url', 'expiresAt']
 
 function serializer(data) {
-// Temp comment
   return defaultSerializer(properties, data)

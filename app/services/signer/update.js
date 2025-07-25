@@ -23,7 +23,6 @@ function validateAccountRequestStatus(status) {
 }
 
 async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
-// Temp comment
   logger.debug(`[validateAndUpdateSignerStatus] - started for signer [${signerId}]`)
 
   const signer = await app.services.signer.get(signerId, tx)
@@ -31,7 +30,6 @@ async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
     throw new PreconditionFailedError('Signer status is not correct.')
   }
 
-  const status = SignerModel.getSignerStatusBasedOnCompletedProps(signer)
   logger.debug(`[validateAndUpdateSignerStatus] - status should be [${status}] for signer [${signerId}]`)
 
   if (status !== signer.status) { // only update if changing

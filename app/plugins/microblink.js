@@ -19,7 +19,6 @@ class MicroblinkService {
     let responseAPI = await this.sendDocumentToMicroblink(userData.backIdProof, 'USDL')
 
     if (responseAPI.data.result) {
-      logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)
       return responseAPI
     }
 

@@ -120,3 +120,5 @@ class UserModel extends BaseModel {
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
     }
   }
+
+  static updateSchema() {

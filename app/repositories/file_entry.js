@@ -10,3 +10,4 @@ const FileEntry = app.db.Model.extend({
   },
   parent: function () {
     return this.belongsTo('Directory', 'parent_id')
+  },

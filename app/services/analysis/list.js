@@ -15,7 +15,6 @@ async function list(args, tx = app.db) {
 
     sql.where('institution_id', user.institutionId)
     sql.where('status', filters.status ? '=' : '!=', filters.status || AnalysisModel.statuses().deleted)
-// Temp comment
 
     sql.orderBy(_.get(args, 'orderBy.column', 'updated_at'), _.get(args, 'orderBy.direction', 'DESC'))
   })

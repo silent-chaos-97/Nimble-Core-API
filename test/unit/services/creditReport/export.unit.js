@@ -68,3 +68,4 @@ describe('app.services.creditReport.export', () => {
       }
     })
 
+    it('return a error if download has expired or malformed ', async () => {

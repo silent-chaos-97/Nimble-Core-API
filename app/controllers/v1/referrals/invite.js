@@ -36,3 +36,4 @@ module.exports = (req, res, next) => {
       institutionId: req.user.institutionId,
       status: 'DRAFT'
     }).save(null, {
+      method: 'insert',

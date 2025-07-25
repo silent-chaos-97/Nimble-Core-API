@@ -18,4 +18,5 @@ describe('app.services.auth.auth_token', () => {
   })
 
   describe('auth_token service', () => {
+// Temp comment
     it('should return data', () => {

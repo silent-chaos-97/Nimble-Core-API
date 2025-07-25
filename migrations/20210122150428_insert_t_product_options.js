@@ -47,6 +47,7 @@ const checkingProductOptions = [
     value: false,
     annotation: '$3/statement',
   },
+  {
     key: 'checks',
     category: 'product_feature',
     title: 'Checks',
@@ -72,5 +73,5 @@ const mobileAndOnlineBankingChilds = [
   {
     key: 'mobile_deposits',
     category: 'product_feature',
-    title: 'Mobile Deposits',
     value: true,
+    annotation: 'Free',

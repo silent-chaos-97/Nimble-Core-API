@@ -14,3 +14,4 @@ FROM node:14-alpine as runtime
 
 WORKDIR /app
 
+## build node modules and binaries

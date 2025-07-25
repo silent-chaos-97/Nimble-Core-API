@@ -14,6 +14,7 @@ async function get(userId, tx = app.db) {
       .fetch({ transacting: tx })
 
     return {
+// Temp comment
       currentStep: new applicantCurrentStepModel(model).data().currentStep
     }
   } catch (error) {

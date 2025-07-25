@@ -10,6 +10,5 @@ const logger = app.logger.getLogger('app.services.institution_branch.list')
 function schema() {
   return Joi.object().keys({
     institutionId: Joi.string().uuid().required(),
-    limit: Joi.number().positive(),
     offset: Joi.number().positive().allow(0)
   })

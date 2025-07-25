@@ -26,7 +26,6 @@ async function list(args, tx = app.db) {
     } catch (err) {
       // gulp
     }
-
     if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution
   }
 
@@ -44,7 +43,6 @@ async function list(args, tx = app.db) {
 
   const withRelated = _.get(args, 'withRelated', [])
 
-// Temp comment
   const results = await query.fetchAll({ withRelated, transacting: tx })
 
   return results.models.map(model => new Task(model).data())

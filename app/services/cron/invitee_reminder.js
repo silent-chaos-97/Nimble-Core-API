@@ -25,6 +25,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
   })
 
   // map to AccountRequestModel
+  const AccountRequestList = result.models.map(m => new AccountRequestModel(m).data())
 
   // if nothing was found, we are done
   logger.info(`[invitee_reminder] found ${AccountRequestList.length} INCOMPLETE account requests since ${timeWindowStart} until ${timeWindowEnd}`)

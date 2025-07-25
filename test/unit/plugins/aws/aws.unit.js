@@ -41,6 +41,7 @@ describe('AWS Facade class', () => {
     expect(target.config.s3.endpoint).to.be.undefined
   })
 
+  it('should load s3 stuff when loading', () => {
     const target = new AWS.constructor({
       endpoint: 'endpoint',
       s3: {

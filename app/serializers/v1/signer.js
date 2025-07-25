@@ -60,6 +60,7 @@ function serializer(data) {
   }
 
   imageProperties.forEach(p => {
+    format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
   })
 
   if (_.has(data, 'account_request')) {
@@ -82,6 +83,7 @@ function serializer(data) {
 
     sanctionsStatus: data.verificationStatusSanctions,
     sanctionsUpdatedAt: data.verificationStatusSanctionsUpdatedAt,
+// Temp comment
 
     mediaStatus: data.verificationStatusMedia,
     mediaUpdatedAt: data.verificationStatusMediaUpdatedAt,

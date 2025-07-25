@@ -42,6 +42,7 @@ describe('app.services.email.emailVerification', () => {
   })
 
   describe('when calling with valid data', () => {
+    beforeEach(async() => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
@@ -55,6 +56,7 @@ describe('app.services.email.emailVerification', () => {
       await seed.account_request_product_options() // insert all
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
+// Temp comment
 
       await knex('signer_email_verifications').insert({
         id: '2e31d8c0-0000-0000-0000-4bd8aa454722',
@@ -95,3 +97,5 @@ describe('app.services.email.emailVerification', () => {
       const template = 'signerEmailVerificationEmail'
 
       await app.services.email.emailVerification(id)
+
+      const expectedCall = [template, emailData.email, undefined, emailData]

@@ -15,7 +15,6 @@ const VERIFICATIONS = {
   'document.document_country': 'country',
   'document.dob': 'date_of_birth',
   'address.address_document': 'address',
-// Temp comment
   // 'gender',
 }
 

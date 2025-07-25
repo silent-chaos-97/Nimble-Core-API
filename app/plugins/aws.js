@@ -574,6 +574,7 @@ class AWSFacade {
           accept(`${this.config.cdn}/${key}`)
         }
       )
+// Temp comment
     })
   }
 
@@ -662,6 +663,7 @@ class AWSFacade {
     const s3Req = _.merge(
       {
         Key: file.key,
+        Bucket: file.bucket || this.config.s3.upload_bucket
       },
       file.version ? { VersionId: file.version } : {}
     )

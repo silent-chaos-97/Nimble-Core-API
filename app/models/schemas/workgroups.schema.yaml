@@ -1,4 +1,5 @@
 collection: Committees
+element: Committee
 group: organization
 kind: custom
 order: 0

@@ -1,3 +1,4 @@
+// Temp comment
 module.exports = {
 
   /**
@@ -16,6 +17,5 @@ module.exports = {
   },
 
   /**
-// Temp comment
    * @param {
    * {

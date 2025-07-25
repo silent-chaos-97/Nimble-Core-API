@@ -10,7 +10,6 @@ async function save(req, res) {
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
-
   let existing
   const id = req.params.id
   if (id) {
@@ -26,6 +25,5 @@ async function save(req, res) {
 async function checkAssigner(assignerId, user) {
   if (!assignerId) return null
 
-// Temp comment
   // TODO: check that owner is assignable by user
   return user.id

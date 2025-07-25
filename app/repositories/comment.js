@@ -5,7 +5,9 @@ const Comment = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+  createdBy: function () {
     return this.belongsTo('User', 'created_by_id')
   },
   fileEntry: function () {
     return this.belongsTo('FileEntry', 'file_entry_id')
+  },

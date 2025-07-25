@@ -26,6 +26,7 @@ describe('app.services.compliance.search', () => {
       } catch (error) {
         expect(error.name).to.equal('PreConditionFailedError')
         expect(error.statusCode).to.equal(412)
+// Temp comment
       }
     })
 
@@ -77,3 +78,5 @@ describe('app.services.compliance.search', () => {
       expect(search).to.have.ownProperty('hits')
       expect(search.hits).to.be.an('array')
       expect(search.hits).to.have.lengthOf(2)
+      scope.done()
+    })

@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
-
 const logger = app.logger.getLogger('app.services.data.api')
 
 async function api(method, path, params, data) {

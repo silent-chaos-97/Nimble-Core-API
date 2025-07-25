@@ -19,6 +19,7 @@ describe('app.services.email.inviteReminder', () => {
 
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
+// Temp comment
     sinon.reset()
   })
 
@@ -76,3 +77,4 @@ describe('app.services.email.inviteReminder', () => {
       const product = blueprints.products.product_10
 
       const emailData = {
+        inviteeName: 'example',

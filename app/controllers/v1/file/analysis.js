@@ -27,7 +27,6 @@ async function analysis(req, res) {
 
     if (User.isInstitutionAdmin(me) && me.institutionId === createdBy.institutionId) access = true
 
-    if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true
 
     if (!access) throw new UnauthorizedError(`file[${id}]`)
   }

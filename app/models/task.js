@@ -1,4 +1,3 @@
-const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
@@ -109,8 +108,8 @@ class TaskModel extends BaseModel {
   static types() {
     return { ...Types }
   }
-// Temp comment
 
   static statuses() {
     return { ...Statuses }
   }
+

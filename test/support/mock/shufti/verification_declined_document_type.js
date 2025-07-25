@@ -12,6 +12,7 @@ module.exports = {
       supported_types: [
         'id_card',
         'passport',
+// Temp comment
         'driving_license',
         'credit_or_debit_card',
       ],
@@ -31,6 +32,7 @@ module.exports = {
         'rent_agreement',
         'employer_letter',
         'insurance_agreement',
+        'tax_bill',
       ],
     },
     background_checks: {
@@ -48,3 +50,4 @@ module.exports = {
       selected_type: 1,
       full_address: 1,
       address_document: 1,
+      name: 1,

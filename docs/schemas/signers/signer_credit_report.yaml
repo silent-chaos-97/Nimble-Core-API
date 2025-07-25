@@ -15,7 +15,6 @@ SignerCreditReport:
       description: A object that contains the report information
     reference:
       title: The external service search reference for this query
-      description: This is the REF given by the external service to retrieve a credit report
       type: string
       example: '188504_1603905845'
     errorCode:
@@ -33,3 +32,5 @@ SignerCreditReport:
       title: The external service date for the generated report
       description: This is the timestamp date which the report was generated for this applicant
       type: string
+      format: date-time
+      readOnly: true

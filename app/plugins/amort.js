@@ -29,6 +29,7 @@ function amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, p
 }
 
 function _payment(amount, rate, term) {
+  const i = rate / 12 / 100
   return (i * amount) / (1 - Math.pow(1 + i, -(term)))
 }
 
@@ -37,7 +38,6 @@ function payment(amount, rate, term) {
 }
 
 function _term(amount, rate, payment) {
-  const i = rate / 12 / 100
   return Math.log(payment / (payment - amount * i)) / Math.log(i + 1)
 }
 

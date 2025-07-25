@@ -30,3 +30,4 @@
           enum:
             - id
             - -id
+            - name

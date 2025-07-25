@@ -601,3 +601,61 @@ async function _rate(product) {
     currentValue: rate,
     rateConsiderationBps: bps
   }
+}
+
+async function enrichAssets(institutionId, product, assets, isCollateral, profile = null) {
+  if (_.isPlainObject(assets)) assets = [assets]
+
+  assets = assets || []
+
+  const summary = {
+    ...BASE_SUMMARY_VALUE_PROVIDER(),
+    appraised: { value: 0, low: 0, high: 0 },
+    debt: { total: 0, monthly: 0 },
+    equity: { value: 0, low: 0, high: 0 }
+  }
+
+  const acc = {
+    summary,
+    items: assets
+  }
+
+  if (_.isEmpty(assets)) return acc
+
+  acc.items = await Promise.all(assets.map(injection => enrichAsset(institutionId, product, injection, isCollateral, profile)))
+
+  summary.appraised.value = _.sumBy(acc.items, offset => _.get(offset, 'appraisal.value', 0))
+  summary.appraised.low = _.sumBy(acc.items, offset => _.get(offset, 'appraisal.low', 0))
+  summary.appraised.high = _.sumBy(acc.items, offset => _.get(offset, 'appraisal.high', 0))
+
+  summary.debt.total = _.sumBy(acc.items, 'debtOutstanding')
+  summary.debt.monthly = _.sumBy(acc.items, 'monthlyDebtObligation')
+
+  summary.equity.value = _.sumBy(acc.items, offset => _.get(offset, 'equity.value', 0))
+  summary.equity.low = _.sumBy(acc.items, offset => _.get(offset, 'equity.low', 0))
+  summary.equity.high = _.sumBy(acc.items, offset => _.get(offset, 'equity.high', 0))
+
+  summary.value = _.sumBy(acc.items, item => {
+    const value = numbers.toNumber(_.get(item, 'value'))
+    if (!_.isFinite(value)) return _.get(item, 'equity.value', 0)
+    return value - (item.debtOutstanding || 0)
+  })
+
+  summary.requested = summary.equity.value
+
+  _.forEach(acc.items, injection => {
+    const adjusted = injection.value
+    const requested = _.get(injection, 'appraisal.value')
+
+    if (adjusted && requested && adjusted !== requested) summary.reasons.push({
+      metric: 'injection_value',
+      metricId: injection.id,
+      operation: 'appraisal_overridden',
+      adjusted,
+      requested
+    })
+  })
+
+  acc.monthlyDebtObligation = -(_.sumBy(assets, 'monthlyDebtObligation'))
+
+  return acc

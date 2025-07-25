@@ -27,3 +27,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.timestamp('expires_at').nullable()
 
   table.jsonb('files').notNullable().defaultTo('{}')
+

@@ -304,3 +304,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .expect(401)
         .end(done)
     })
+
+    it('should update account request with new data', done => {
+      request(app.server)
+        .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)

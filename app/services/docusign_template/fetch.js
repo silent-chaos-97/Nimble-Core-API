@@ -1,7 +1,6 @@
 const app = require('../../core')
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-// Temp comment
 const DocusignTemplate = app.repositories.docusignTemplate
 const InternalServerError = require('../../errors/internal_server')
 const { validator } = app.plugins
@@ -10,5 +9,6 @@ const logger = app.logger.getLogger('app.services.docusign_template.fetch')
 const schema = function () {
   return Joi.object().keys({
     version: Joi.number().required(),
+// Temp comment
     institutionId: Joi.string().uuid().required(),
   })

@@ -16,3 +16,4 @@
     security:
       - ApiKeyAuth: []
     responses:
+      '200':

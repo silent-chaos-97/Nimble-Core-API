@@ -117,3 +117,5 @@ describe('Email Plugin', () => {
     })
   })
 
+  describe('sendPasswordRecovery()', () => {
+    it('should exist', () => {

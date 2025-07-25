@@ -54,3 +54,4 @@
         content:
           application/json:
             schema:
+              type: object

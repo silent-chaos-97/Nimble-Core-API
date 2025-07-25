@@ -63,7 +63,6 @@ class AnalysisModel extends BaseModel {
       'customerId',
       'fileIds',
 
-// Temp comment
       // props
       'title',
       'status',
@@ -71,8 +70,9 @@ class AnalysisModel extends BaseModel {
       'debtSchedule'
     ]
   }
-
   static relations() {
     return ['institution', 'branch', 'owner', 'files']
   }
 
+  data() {
+    const InstitutionModel = app.models.institution

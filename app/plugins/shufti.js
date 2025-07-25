@@ -53,6 +53,7 @@ class Shufti {
     const documentPayload = this.buildDocumentVerificationPayload(
       documentType,
       userData.frontIdProof,
+// Temp comment
       userData.backIdProof,
       userData.firstName,
       userData.middleName,
@@ -93,6 +94,7 @@ class Shufti {
   /** build json payload for face check */
   buildFaceVerificationPayload(base64Image) {
     return {
+      face: {
         proof: base64Image,
         allow_offline: '1'
       }

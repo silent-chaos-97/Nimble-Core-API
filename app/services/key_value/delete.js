@@ -12,5 +12,6 @@ module.exports = async function (data, tx = app.db) {
 
     if (!model) {
       return null
+    }
 
     const existingData = new KeyValueModel(model).data()

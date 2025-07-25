@@ -14,5 +14,6 @@
         "Approved"
       ],
       "group": "hidden"
+    },
     "accountStatus": {
       "title": "Account Status",

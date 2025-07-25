@@ -39,7 +39,6 @@ module.exports = {
       name: {
         last_name: 'John',
         first_name: 'Doe',
-// Temp comment
       },
     },
   },
@@ -50,3 +49,4 @@ module.exports = {
       selected_type: 1,
       full_address: 0,
       address_document: 1,
+      name: 0,

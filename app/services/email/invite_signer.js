@@ -27,11 +27,9 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
-// Temp comment
 }
 
 function inviteeUrl(signer, invitedBy, institution) {
-  const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 432000 // 5 days

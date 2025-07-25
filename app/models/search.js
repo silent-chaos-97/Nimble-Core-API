@@ -59,3 +59,4 @@ class SearchModel extends BaseModel {
       delete: Joi.object().keys({
         id: Joi.string().pattern(/^\w+$/).optional(),
         institutionId: Joi.string().uuid().optional(),
+        createdById: Joi.string().uuid().optional()

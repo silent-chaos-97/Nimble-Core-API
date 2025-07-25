@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../core')
 
 const AccountRecovery = app.db.Model.extend({
@@ -6,4 +5,3 @@ const AccountRecovery = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
-  account: function() {

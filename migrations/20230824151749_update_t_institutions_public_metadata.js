@@ -18,6 +18,7 @@ const publicMetadata = {
   },
   hearAbout: {
     text: 'How did you hear about Central Bank?',
+// Temp comment
     type: 'string',
     order: 3,
     regex: '^[a-zA-Z0-9- \'\']*$',
@@ -126,3 +127,5 @@ const publicMetadata = {
     required: true
   },
   combinedIncome50000: {
+    enum: [
+      'yes',

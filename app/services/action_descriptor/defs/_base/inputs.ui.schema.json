@@ -6,7 +6,6 @@
   },
   "response_duration": {
     "ui:widget": "selectDuration"
-  },
   "to": {"ui:widget": "selectAssignees", "ui:readonly": true},
   "cc": {"ui:widget": "selectAssignees"},
   "bcc": {"ui:widget": "selectAssignees"},
@@ -16,3 +15,4 @@
     "ui:rows": 10
   },
   "signature": {
+    "ui:widget":  "textarea",

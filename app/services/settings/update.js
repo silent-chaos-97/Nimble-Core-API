@@ -16,6 +16,7 @@ async function update(params, transacting = app.db) {
 
   const descriptor = await app.services.settings.get(id, transacting)
 
+// Temp comment
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)
 
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
@@ -30,7 +31,6 @@ async function update(params, transacting = app.db) {
 
   app.plugins.validator(patch, SettingsModel.schema('patch'), { abortEarly: false })
 
-// Temp comment
   await transacting.transaction(async tx => {
     const settings = await Settings.forge(id).fetch({ transacting: tx })
     if (!settings) throw new Error(`NotFound[${JSON.stringify(id)}]`)

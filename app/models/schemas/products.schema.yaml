@@ -130,3 +130,5 @@ columns:
       hourly: Hourly
       daily: Daily
       weekly: Weekly
+      montly: Monthly
+  

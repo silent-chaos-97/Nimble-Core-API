@@ -38,10 +38,9 @@ class SettingsModel extends BaseModel {
     _data.data = _.reduce(_data.data, (memo, setting, idx) => {
       memo[setting.id || `${idx}`] = setting
       return memo
-// Temp comment
     }, {})
 
     return _data
   }
-
   static schema(op) {
+    return {

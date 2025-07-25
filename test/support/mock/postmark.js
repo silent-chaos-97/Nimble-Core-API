@@ -1,11 +1,11 @@
 const sinon = require('sinon')
 
-// Temp comment
 const postmarkClientMock = {
   sendEmailWithTemplate: sinon.spy()
 }
 
 
+// Temp comment
 // fake factory that mocks postmark signature
 // new postmark.ServerClient(code)
 class mockConstructor {

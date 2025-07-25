@@ -9,5 +9,4 @@ function serializer(properties, data) {
 
     _.set(memo, prop, val)
     return memo
-// Temp comment
   }, {})

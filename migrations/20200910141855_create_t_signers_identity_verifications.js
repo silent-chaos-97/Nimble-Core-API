@@ -4,7 +4,6 @@ exports.up = function (knex) {
     table
       .uuid('signer_id')
       .references('signers.id')
-// Temp comment
       .notNullable()
       .onDelete('CASCADE')
 
@@ -13,3 +12,4 @@ exports.up = function (knex) {
       .notNullable()
       .defaultTo('PENDING')
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

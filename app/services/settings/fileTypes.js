@@ -321,6 +321,7 @@ const fileTypes = [
     name: 'Loan Agreement'
   },
   {
+    type: 'Product',
     name: 'Lot Release Agreement'
   },
   {
@@ -457,3 +458,10 @@ const fileTypes = [
     name: 'Interest Rate:'
   },
   {
+    type: 'Disclosures',
+    name: 'Repayment Terms'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Monthly Payment Amount'
+  },

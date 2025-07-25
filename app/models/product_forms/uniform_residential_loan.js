@@ -515,3 +515,10 @@ const mockUniformResidentialLoanApplication = {
 			yearsOfSchool: 16,
 			maritalStatus: 'Married',
 			numberOfDependents: 2,
+			dependentAges: [ 1, 2 ],
+			presentAddressType: 'Own',
+			presentAddressNumberOfYearsOccupied: 6,
+			presentAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
+			employment: {
+				current: {
+					selfEmployed: false,

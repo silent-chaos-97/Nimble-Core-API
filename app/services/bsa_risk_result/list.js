@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../core')
 const BsaRiskResult = app.repositories.bsaRiskResult
 const BsaRiskResultModel = app.models.bsaRiskResult
@@ -12,3 +11,4 @@ const sortBy = {
 }
 
 function getSqlSort(sort) {
+  return _.get(sortBy, sort, sortBy['position'])

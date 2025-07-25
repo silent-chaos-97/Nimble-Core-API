@@ -16,6 +16,5 @@ describe('app.services.auth.send_verify_code', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
-
   describe('send_verify_code service', () => {
     it('should return data', () => {

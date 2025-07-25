@@ -1,3 +1,4 @@
+const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/docusign')
 const config = require('../../../../config')
@@ -91,3 +92,4 @@ describe('app.services.contract.update', () => {
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
+        await seed.institution.create() // required by seed.account_request_products

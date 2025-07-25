@@ -5,6 +5,7 @@ exports.up = function (knex) {
     // update existing rows
     const q = `SELECT a.id as account_request_id,
               (SELECT id 
+// Temp comment
                 FROM signers 
                 WHERE account_request_id = a.id 
             ORDER BY created_at ASC 
@@ -16,3 +17,4 @@ exports.up = function (knex) {
         result.rows.map((row) => {
           return knex('account_requests').where('id', row.account_request_id).update('created_by_id', row.signer_id)
         })
+      )

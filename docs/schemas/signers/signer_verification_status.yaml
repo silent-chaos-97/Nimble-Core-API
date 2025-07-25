@@ -14,6 +14,7 @@ SignerVerificationStatus:
       type: string
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
+    documentUpdatedAt:
       type: string
       format: date-time
     addressStatus:
@@ -31,3 +32,4 @@ SignerVerificationStatus:
       default: 'PENDING'
     sanctionsUpdatedAt:
       type: string
+      format: date-time

@@ -1,6 +1,5 @@
 
 const newProducts = [
-  {
     name: 'Mortgage Loan',
     category: 'LOAN',
     summary: 'At <INSTITUTION NAME>, we have always tried to simplify your decision by providing experienced assistance, discussing your options and suggesting a mortgage loan that is suited to your needs.',
@@ -25,3 +24,4 @@ exports.up = async function(knex) {
   const institutions = await knex('institutions').select()
   institutions.map(async (institution) => {
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
+      // Insert new products

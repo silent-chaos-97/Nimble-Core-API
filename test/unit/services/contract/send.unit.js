@@ -105,3 +105,4 @@ describe('app.services.contract.send', () => {
       })
     })
 
+    describe('when updating an account request', () => {

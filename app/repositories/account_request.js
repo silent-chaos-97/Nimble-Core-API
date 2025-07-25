@@ -19,8 +19,9 @@ const AccountRequest = app.db.Model.extend({
 
   institution: function () {
     return this.belongsTo('Institution', 'institution_id')
+  },
 
-  productConfigurations: function () {
     return this.hasMany('AccountRequestProduct', 'account_request_id')
   },
 
+  productOptions: function () {

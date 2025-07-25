@@ -9,10 +9,10 @@
       - in: body
         name: body
         description: Account Recovery object
-        required: true
         schema:
           $ref: '#/components/schemas/UserAuthRecovery'
       - name: email
         in: path
         description: The email the user used to register
         required: true
+        schema:

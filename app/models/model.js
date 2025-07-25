@@ -25,6 +25,7 @@ class BaseModel {
     return this._data
   }
 
+  static props() {
     return []
   }
 

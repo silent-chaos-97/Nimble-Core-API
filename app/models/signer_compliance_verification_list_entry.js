@@ -2,14 +2,12 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class SignerComplianceVerificationListEntryModel extends BaseModel {
-// Temp comment
   constructor(data) {
     super(SignerComplianceVerificationListEntryModel.props(), SignerComplianceVerificationListEntryModel.relations(), data)
   }
 
   static props() {
     return [
-      'id',
       'name',
       'value',
       'source',
@@ -33,3 +31,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       return Joi.object().keys({
         name: Joi.string().required(),
         value: Joi.string().required(),
+        source: Joi.string().optional().allow(null).allow(''),

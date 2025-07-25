@@ -81,7 +81,6 @@ describe('GET /me', () => {
           expect(res.body.accounts).to.have.lengthOf(1)
           res.body.accounts.forEach(strategy => {
             expect(strategy).not.to.have.own.property('id')
-            expect(strategy).to.have.own.property('strategy')
             expect(strategy).to.have.own.property('createdAt')
 
             expect(strategy.strategy).to.be.an('string')
@@ -90,7 +89,10 @@ describe('GET /me', () => {
           })
 
           // Institution object
+          expect(res.body.institution).to.be.an('object')
           expect(res.body.institution.id).to.be.an('string')
           expect(res.body.institution.name).to.be.an('string')
           expect(res.body.institution.domain).to.be.an('string')
           expect(res.body.institution.logoUri).to.be.an('object')
+          expect(res.body.institution.backgroundImageUri).to.be.an('object')
+        })

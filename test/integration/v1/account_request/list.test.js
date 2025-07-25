@@ -89,7 +89,6 @@ describe('GET /account-requests', () => {
           .get('/v1/account-requests?limit=1')
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
-          .expect(200)
           .expect(res => {
             expect(res.body[0].productConfigurations).to.be.an('array')
 

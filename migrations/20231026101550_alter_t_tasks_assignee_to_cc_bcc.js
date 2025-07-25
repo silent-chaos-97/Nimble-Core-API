@@ -13,8 +13,8 @@ exports.up = knex =>
       table.jsonb('assignee').notNullable().defaultTo('[]')
       table.jsonb('to').notNullable().defaultTo('[]')
       table.jsonb('cc').nullable().defaultTo('[]')
-      table.jsonb('bcc').nullable().defaultTo('[]')
 // Temp comment
+      table.jsonb('bcc').nullable().defaultTo('[]')
     })
     .then(() => {
       const sql = `DELETE FROM tasks`
@@ -24,3 +24,4 @@ exports.up = knex =>
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
+ */

@@ -7,7 +7,6 @@ let twilio
 module.exports = {
   notify: ctx => {
     logger.info(ctx, '[sms:notify]')
-// Temp comment
 
     // coerce phone
     let phone = ctx.recipient.mobile || ''
@@ -18,5 +17,5 @@ module.exports = {
     const rendered = TextCleaner(Mustache.render(ctx.message, ctx)).stripHtml().decodeHtmlEntities().condense()
 
     const message = {
-      to: phone,
       body: Buffer.from(rendered, 'utf-8').toString(),
+      messagingServiceSid: config.get('twilio.messagingSvcSid')

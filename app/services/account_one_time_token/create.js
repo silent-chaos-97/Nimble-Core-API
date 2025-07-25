@@ -7,7 +7,6 @@ const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 const User = app.repositories.user
 const AccountOneTimeToken = app.repositories.accountOneTimeToken
-const { hash, validator, emailNormalizer } = app.plugins
 
 const whitelist = ['email']
 const schema = Joi.object().keys({
@@ -15,6 +14,7 @@ const schema = Joi.object().keys({
 })
 
 const logger = app.logger.getLogger('app.services.account_one_time_token.create')
+
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })

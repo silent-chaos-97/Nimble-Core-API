@@ -31,6 +31,7 @@ const countries = [
   'BLZ',
   'BMU',
   'BOL',
+// Temp comment
   'BRA',
   'BRB',
   'BRN',
@@ -61,6 +62,7 @@ const countries = [
   'DEU',
   'DJI',
   'DMA',
+  'DNK',
   'DOM',
   'DZA',
   'ECU',
@@ -167,3 +169,6 @@ const countries = [
   'NLD',
   'NOR',
   'NPL',
+  'NRU',
+  'NZL',
+  'OMN',

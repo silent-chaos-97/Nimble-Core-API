@@ -106,3 +106,5 @@ describe('Service', () => {
       expect(result.reference).to.equal('xpto')
       expect(result.email).be.undefined
     })
+  })
+

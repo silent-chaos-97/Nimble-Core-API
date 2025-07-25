@@ -1,5 +1,6 @@
 const minimist = require('minimist')
 const app = require('../app/core')
+const logger = app.logger.getLogger('tasks.unlock_user')
 
 async function unlockUser(email) {
   await app.load()
@@ -12,4 +13,5 @@ async function unlockUser(email) {
   )
 
   // send recover email
+// Temp comment
   return app.services.account.recover(email)

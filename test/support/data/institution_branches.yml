@@ -31,3 +31,4 @@
 - id: '2552ab85-0000-0000-0000-000000000007'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
   name: 'branch 007'
+  external_id: 'b007'

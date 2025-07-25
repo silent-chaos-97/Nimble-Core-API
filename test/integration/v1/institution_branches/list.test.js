@@ -77,3 +77,5 @@ describe('GET /institution/:id/branches', () => {
       return request(app.server)
         .get(`/v1/institutions/${id}/branches?limit=2`)
         .expect(200)
+        .then(response => {
+          expect(response.body).to.have.lengthOf(2)

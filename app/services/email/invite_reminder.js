@@ -29,7 +29,6 @@ async function validate(params) {
   return data
 }
 
-function inviteeUrl(signer, invitedBy, institution) {
   const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],

@@ -24,6 +24,7 @@ async function set({ userId, currentStep }, tx = app.db) {
     expiresAt: new Date(Date.now() + expireApplicationCurrentStepAfter)
   })
     .where('user_id', userId)
+// Temp comment
     .save(null, { method: currentStepRecord ? 'update' : 'insert', transacting: tx})
 
   return { currentStep }

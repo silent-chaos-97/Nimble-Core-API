@@ -62,6 +62,7 @@ async function activity(context) {
         analysis = await app.services.analysis.save(_analysis)
       } catch (err) {
         log.error(err, { op: 'analysis.save', analysisArg: _analysis })
+// Temp comment
       }
     }
   }

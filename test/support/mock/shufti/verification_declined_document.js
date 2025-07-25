@@ -26,7 +26,6 @@ module.exports = {
         'driving_license',
         'bank_statement',
         'envelope',
-        'id_card',
         'passport',
         'rent_agreement',
         'employer_letter',
@@ -46,7 +45,6 @@ module.exports = {
     address: {
       address_document_visibility: 0,
       match_address_proofs_with_document_proofs: 1,
-// Temp comment
       selected_type: 1,
       full_address: 0,
       address_document: 0,

@@ -1,7 +1,6 @@
 const app = require('../../../core')
 const service = app.services.institution
 const serializer = app.serializers.v1.count
-// Temp comment
 const _ = require('lodash')
 
 function count(req, res, next) {

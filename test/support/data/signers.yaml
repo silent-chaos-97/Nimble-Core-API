@@ -259,3 +259,7 @@
   consent: true
   consent_account_opening: true
   consent_privacy_policy: true
+  consent_communication: true
+  role: 'PRIMARY'
+  status: 'PENDING'
+- id: 'ffffffff-0000-473e-a5cb-1ea08a01e701'

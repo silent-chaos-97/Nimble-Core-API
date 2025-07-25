@@ -19,7 +19,6 @@ const external_78 = [
 ]
 const external_1 = [
   'areinert@centralbankonline.com',
-  'smeyer@centralbankonline.com',
   'jhamer@centralbankonline.com',
   'jhernandez@centralbankonline.com'
 ]
@@ -32,3 +31,4 @@ exports.up = async (knex)  => {
    set branch_id=(select id from institution_branches where external_id='42' and institution_id='${productionInstitutionId}')
    where institution_id='30a12701-2879-4a3f-8aa5-ae2f08118b8d' and email in ('${external_42}');
    UPDATE users
+   set branch_id=(select id from institution_branches where external_id='53' and institution_id='${productionInstitutionId}')

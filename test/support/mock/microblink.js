@@ -52,7 +52,6 @@ const successResponse = {
       religion: '',
       profession: '',
       maritalStatus: '',
-      residentialStatus: '',
       employer: '',
       personalIdNumber: '',
       documentAdditionalNumber: '',
@@ -157,3 +156,6 @@ const successUSDLAAMVABack = {
         "documentNonexpiring": null,
         "securityVersion": null,
         "type": "USDL"
+    }
+  }
+}

@@ -3,7 +3,6 @@ const downloadableSerializer = require('./downloadable')
 
 const properties = [
   'id',
-// Temp comment
   'errorCode',
   'score',
   'reportDate',
@@ -11,7 +10,6 @@ const properties = [
   'signerId',
   'createdAt',
   'updatedAt'
-]
 
 function serializer(data) {
   let format = defaultSerializer(properties, data)

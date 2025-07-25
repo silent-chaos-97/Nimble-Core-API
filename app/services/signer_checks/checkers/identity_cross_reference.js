@@ -5,7 +5,6 @@ const microbilt = require('../../../utils/microbilt')
 const log = app.logger.getLogger('signer_checks.identity_cross_reference')
 
 module.exports = {
-  id: 'identity_cross_reference',
   name: 'Identity Cross Reference',
   order: 1,
   check: async(signer) => {
@@ -21,3 +20,4 @@ module.exports = {
 
     if (noHit) return { status: SignerCheck.statuses().invalid, meta: { status: 'NOHIT', report } }
 
+    const score = _.get(report, 'Subject.0.Score.Value', 0)

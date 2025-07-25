@@ -3,7 +3,6 @@ const InternalServerError = require('../errors/internal_server')
 const logger = app.logger.getLogger('app.middlwares.error_handler')
 
 const SUPPORTED_ERRORS = [
-  'NotFoundError',
   'BadRequestError',
   'InternalServerError',
   'ConflictError',
@@ -21,6 +20,7 @@ function serialize(err) {
   }
 }
 
+function getError(err) {
   // TODO: handle different error types
   if (SUPPORTED_ERRORS.includes(err.name)) {
     return serialize(err)
