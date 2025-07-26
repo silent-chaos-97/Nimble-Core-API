@@ -6,6 +6,7 @@ module.exports = {
   verification_data: {
     document: {
       issue_date: '1990-01-01',
+      selected_type: [
         'id_card',
       ],
       supported_types: [
@@ -50,3 +51,4 @@ module.exports = {
       address_document: 0,
       name: 0,
       address_document_proof: 0,
+      address_document_must_not_be_expired: 0,

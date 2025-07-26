@@ -41,6 +41,7 @@ module.exports = {
         first_name: 'Doe',
       },
     },
+  },
   verification_result: {
     address: {
       address_document_visibility: 0,
@@ -50,3 +51,4 @@ module.exports = {
       address_document: 1,
       name: 1,
       address_document_proof: 1,
+      address_document_must_not_be_expired: 1,

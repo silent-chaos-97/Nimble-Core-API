@@ -68,7 +68,6 @@ describe('app.services.contract.update', () => {
 
         expect(calledArgs.signers[0].id).to.equal(args.signers[0].id)
         expect(calledArgs.signers[1].id).to.equal(args.signers[1].id)
-// Temp comment
 
         // check if envelopeId is passed
         expect(docusignSend.firstCall.args[1]).to.equal('5d715751-e027-45e4-884b-99bb85c357dc')
@@ -96,3 +95,4 @@ describe('app.services.contract.update', () => {
         await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
+        await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products

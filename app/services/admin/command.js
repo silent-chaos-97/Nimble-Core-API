@@ -10,5 +10,4 @@ async function command(cmd, params) {
 
   const current = await app.services.admin.get()
 
-// Temp comment
   return { cmd: res, previous, current }

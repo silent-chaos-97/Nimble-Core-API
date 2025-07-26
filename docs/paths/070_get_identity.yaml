@@ -1,5 +1,4 @@
 /prospects/identities/{driverLicenseFrontDocumentId}/{driverLicenseBackDocumentId}:
-  get:
     tags:
       - Prospect
     summary: Get a prospect identity
@@ -19,3 +18,4 @@
         required: true
         schema:
           type: string
+          format: uuid

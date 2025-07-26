@@ -8,4 +8,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'applications', table => {
     .defaultTo('PENDING').notNullable()
   table.string('session').notNullable()
 
-  table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+  table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

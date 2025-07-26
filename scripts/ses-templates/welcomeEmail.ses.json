@@ -1,5 +1,4 @@
 {
   "Template": {
-    "TemplateName": "welcomeEmail",
     "SubjectPart": "{{statusEmailSubject}}",
     "TextPart": "Dear {{firstName}} {{lastName}},\n\nWelcome to NimbleFi's banker access.\n\nPlease click the button below to set your account password and complete your registration.\n\n{{uri}}\n\nThank you,\n{{institution}}\n{{institutionUrl}}",

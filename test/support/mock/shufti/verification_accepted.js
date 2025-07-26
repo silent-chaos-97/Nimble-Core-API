@@ -3,6 +3,7 @@ module.exports = {
   event: 'verification.accepted',
   email: 'john@wearesingular.com',
   country: 'US',
+// Temp comment
   verification_data: {
     document: {
       issue_date: '1990-01-01',
@@ -37,6 +38,7 @@ module.exports = {
     background_checks: {
       dob: '1990-01-01',
       name: {
+        last_name: 'John',
         first_name: 'Doe',
       },
     },
@@ -47,3 +49,4 @@ module.exports = {
       match_address_proofs_with_document_proofs: 1,
       selected_type: 1,
       full_address: 1,
+      address_document: 1,

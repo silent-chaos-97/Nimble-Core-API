@@ -27,7 +27,6 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
-}
 
 function inviteeUrl(signer, invitedBy, institution) {
   const token = app.services.token.get({
@@ -42,4 +41,5 @@ function inviteeUrl(signer, invitedBy, institution) {
     .replace(':prospect_id', signer.accountRequestId)
     .replace(':signer_id', signer.id)
     .replace(':invitedBy', invitedBy.firstName)
+    .replace(':domain', institution.domain)
     .replace(':token', token)

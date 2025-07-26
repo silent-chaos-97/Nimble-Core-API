@@ -57,7 +57,6 @@ const processApplicantFailed = {
     }
   }
 }
-
 const resultsSuccess = [
   {
       "firstname": "Adrienne",
@@ -68,3 +67,4 @@ const resultsSuccess = [
       "city": "Greenfield",
       "state": "Ca",
       "zip": "931054826",
+      "email": "bruno@nimblefi.com",

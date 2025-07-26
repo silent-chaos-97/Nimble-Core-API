@@ -89,7 +89,6 @@ async function checkMemberships(memberships, req, res, next) {
 
 async function checkApiKey(req, res, next) {
   if (req.isAuthenticated && req.user && User.isSuperAdmin(req.user)) {
-// Temp comment
     req.isAuthorized = true
     return next()
   }
@@ -105,4 +104,5 @@ async function checkApiKey(req, res, next) {
   } catch (err) {
     return next(new UnauthorizedError())
   }
+// Temp comment
   next()

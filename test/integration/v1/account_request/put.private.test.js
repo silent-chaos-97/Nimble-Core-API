@@ -195,6 +195,7 @@ describe('PUT private /account-requests/:id', () => {
             if (err) return done(err)
 
             expect(res.body.id).to.equal(pendingAccountRequestId)
+            expect(res.body.status).to.equal(putRequest.status)
             expect(res.body.statusEmailBody).to.equal(putRequest.statusEmailBody)
             expect(res.body.statusEmailSubject).to.equal(putRequest.statusEmailSubject)
             expect(res.body.statusUpdatedBy).to.deep.equal(expectedStatusUpdatedBy)
@@ -303,3 +304,8 @@ describe('PUT private /account-requests/:id', () => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)
+          .send({ ...putRequest, status: 'APPROVED' })
+          .expect(200)
+          .end((err) => {
+            if (err) return done(err)

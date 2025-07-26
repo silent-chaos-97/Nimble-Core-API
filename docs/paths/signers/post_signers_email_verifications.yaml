@@ -14,7 +14,9 @@
           format: uuidv4
       - name: token
         in: path
+        description: A JWT token to authenticate the request as an alternative to the Authentication Bearer header
         required: false
         schema:
           type: string
     security:
+      - bearer: []

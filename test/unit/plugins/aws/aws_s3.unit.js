@@ -32,6 +32,7 @@ describe("AWS Facade for s3", () => {
       let result = AWS.s3CopyToFTP("folder/00000000-0000-0000-0000-000000000000.png", "destination/example.png")
       expect(result).to.be.an('Promise')
     })
+
     it('should return a path to the destination object', async () => {
       let result = await AWS.s3CopyToFTP("folder/00000000-0000-0000-0000-000000000000.png", "destination/example.png")
       expect(result).to.contain('/uploads/destination/example.png')
@@ -103,3 +104,5 @@ describe("AWS Facade for s3", () => {
 
     it('should call real s3 with correct parameters', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
+      let expectedCall = {
+        Body: sinon.match.any,

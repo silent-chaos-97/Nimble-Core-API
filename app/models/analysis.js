@@ -27,7 +27,6 @@ const SCHEMA = Joi.object().keys({
   userData: Joi.object(),
   debtSchedule: Joi.object().keys({
     rows: Joi.array().items(Joi.object()).min(0).default([])
-    // ... other schedule information and meta-data goes here ...
   })
 })
 
@@ -38,7 +37,6 @@ class AnalysisModel extends BaseModel {
 
   static statuses() {
     return { ...Statuses }
-// Temp comment
   }
 
   static privateProps() {
@@ -79,3 +77,4 @@ class AnalysisModel extends BaseModel {
   data() {
     const InstitutionModel = app.models.institution
     const InstitutionBranchModel = app.models.institutionBranch
+    const FileModel = app.models.file

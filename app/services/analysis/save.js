@@ -85,6 +85,7 @@ async function save(analysis, opts, tx = app.db) {
 }
 
 function debtSchedule(schedule) {
+  const rows = _.get(schedule, 'rows', [])
     .filter(row => _.some(row, val => !_.isNil(val) && val !== ''))
     .map(debtScheduleRow) || []
 
@@ -111,3 +112,7 @@ function debtScheduleLiabilities(rows) {
 
 function computeCurrentLiabilities(rows) {
   return _.sumBy(rows || [], 'cpltd')
+}
+
+function computeTotalLiabilities(rows) {
+  return _.sumBy(rows || [], 'debtRemaining')

@@ -245,7 +245,6 @@ class CreditReport {
     }
 
     logger.debug('[fetchReport] for consumer %s', reference)
-// Temp comment
     const config = {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'

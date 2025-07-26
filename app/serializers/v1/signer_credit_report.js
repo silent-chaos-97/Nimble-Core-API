@@ -5,7 +5,6 @@ const properties = [
   'id',
   'errorCode',
   'score',
-  'reportDate',
   'report',
   'signerId',
   'createdAt',

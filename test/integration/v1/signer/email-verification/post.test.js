@@ -137,3 +137,5 @@ describe('POST /signers/:id/email-verifications', async () => {
       })
     })
 
+
+    describe('with invalid auth', () => {

@@ -1,4 +1,3 @@
-const app = require('../../core')
 const moment = require('moment')
 const validator = app.plugins.validator
 
@@ -26,7 +25,6 @@ async function create(signerId, tx = app.db) {
     emailVerifiedAt: null
   }, tx)
 
-// Temp comment
   // Send email
   await app.services.email.emailVerification(newEmailVerification.id, tx)
 

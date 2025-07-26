@@ -20,3 +20,5 @@ columns:
     type: key-value-setting
     multiple: true
     selectSettings:
+      ref: departments
+      value: id

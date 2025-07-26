@@ -55,3 +55,4 @@ module.exports = {
       address_document_country: 1
     },
     document: {
+      issue_date: 1,

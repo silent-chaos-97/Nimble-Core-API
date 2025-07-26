@@ -3368,3 +3368,63 @@ const parsedResult = [
         "url": null
       },
       {
+        "name": "Political Position",
+        "value": "Politician",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Pres.",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "President",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "President Of Zimbabwe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Presidents",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Prime Minister Of Zimbabwe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {

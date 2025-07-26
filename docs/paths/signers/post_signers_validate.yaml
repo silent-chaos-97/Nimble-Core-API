@@ -55,3 +55,5 @@
           application/json:
             schema:
               type: object
+              properties:
+                <signerId>:

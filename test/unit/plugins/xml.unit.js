@@ -92,3 +92,5 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, `\";alert('XSS');//`),
         // props
         target.tag('tag', {prop: 'should url encode this string', another: 'João Cárlôs Cì A(ento'})
+      ]
+

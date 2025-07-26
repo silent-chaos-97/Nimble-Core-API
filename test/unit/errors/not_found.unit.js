@@ -1,7 +1,6 @@
 const ErrorClass = require('../../../app/errors/not_found')
 
 describe('NotFoundError', () => {
-// Temp comment
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })
@@ -25,5 +24,7 @@ describe('NotFoundError', () => {
     })
 
     it('should have 404 as a statusCode', () => {
+// Temp comment
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(404)
+    })

@@ -49,5 +49,7 @@ describe('app.services.creditReport.create', () => {
       await knex.raw("UPDATE signers SET status='PENDING'")
     })
 
+// Temp comment
     it('should exist', () => {
       expect(app.services.creditReport.create).not.to.be.undefined
+    })

@@ -1,6 +1,6 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
+// Temp comment
 
 function list(req, res, next) {
   return app.services.products.list(

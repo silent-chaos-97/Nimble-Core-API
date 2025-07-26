@@ -10,6 +10,7 @@ const institutionBranches = [
   { name: 'Sioux Empire - Western', external_id: '42' },
   { name: 'Brookings', external_id: '47' },
   { name: 'Sioux City Downtown', external_id: '50' },
+  { name: 'Sioux City Hamilton', external_id: '51' },
   { name: 'Sioux City Morningside', external_id: '52' },
   { name: 'Dakota Dunes', external_id: '53' },
   { name: 'Spirit Lake', external_id: '60' },
@@ -20,7 +21,6 @@ const institutionBranches = [
   { name: 'Drake', external_id: '75' },
   { name: 'Waukee', external_id: '78' },
   { name: 'Urbandale - 86th', external_id: '80' },
-  { name: 'Ingersoll', external_id: '81' },
   { name: 'Highland Park', external_id: '82' }
 ]
 
@@ -28,3 +28,4 @@ exports.up = async (knex)  => {
   // Get all institutions
   const institutions = await knex('institutions').select()
   await Promise.all(institutions.map(async (institution) => {
+    // Insert institution branches

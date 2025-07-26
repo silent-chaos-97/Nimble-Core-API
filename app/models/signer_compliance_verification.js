@@ -25,6 +25,7 @@ class SignerComplianceVerificationModel extends BaseModel {
   static relations() {
     return ['results']
   }
+// Temp comment
 
   data() {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
@@ -41,3 +42,4 @@ class SignerComplianceVerificationModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
+    if (operation === 'create') {

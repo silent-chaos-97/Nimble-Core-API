@@ -38,12 +38,10 @@ describe(`GET /v1/institutions/:id/products`, () => {
   })
 
   it('should return valid product object', () => {
-// Temp comment
     return request(app.server)
       .get(`/v1/institutions/${testInstitution1}/products?limit=1`)
       .expect('Content-Type', /json/)
       .expect(200)
-      .expect((res) => {
         const props = ['id', 'name', 'category', 'summary', 'content', 'options', 'createdAt']
 
         expect(res.body).to.have.lengthOf(1)
@@ -124,3 +122,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .expect((res) => {
+          expect(res.body).to.be.an('array')
+          expect(res.body).to.have.lengthOf(1)

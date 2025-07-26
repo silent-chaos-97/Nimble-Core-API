@@ -29,6 +29,5 @@ class SignerEmailVerification extends BaseModel {
     }
 
     if (operation === 'create') {
-      return Joi.object().keys({
         signerId: Joi.string().uuid().required(),
       })

@@ -33,3 +33,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
         name: Joi.string().required(),
         value: Joi.string().required(),
         source: Joi.string().optional().allow(null).allow(''),
+        date: Joi.string().optional().allow(null).allow(''),

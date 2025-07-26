@@ -21,7 +21,6 @@ class BaseModel {
     this.props = properties
   }
 
-  data() {
     return this._data
   }
 
@@ -30,7 +29,6 @@ class BaseModel {
   }
 
   static relations() {
-// Temp comment
     return []
   }
 

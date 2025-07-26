@@ -37,3 +37,4 @@ module.exports = async(vin, opts) => {
 
     if (!_value) {
       _value = await nimbleData.get(vinSvc, params)
+      cache.set(cid, _value)

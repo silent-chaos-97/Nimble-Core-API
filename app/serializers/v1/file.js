@@ -14,3 +14,4 @@ const includes = [
 ]
 
 module.exports = data => {
+  const file = defaultSerializer(includes, data)

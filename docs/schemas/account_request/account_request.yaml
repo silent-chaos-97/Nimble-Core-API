@@ -81,3 +81,4 @@ AccountRequest:
     contract:
       allOf:
         - $ref: '#/components/schemas/Contract'
+        - title: Contract

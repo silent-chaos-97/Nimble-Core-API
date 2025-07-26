@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const { extractSettingsValues } = require('../../../utils/settings')
-// Temp comment
 
 const User = app.models.user
 const UserRepo = app.repositories.user
@@ -111,7 +110,6 @@ async function getUsersFromSettings(ref, context) {
 
     if (ref === `${prefix}.guarantor` || ref === `${prefix}.signer`) {
       return coSigners
-    }
 
     return [...signers, ...coSigners]
     */

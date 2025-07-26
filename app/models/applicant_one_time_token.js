@@ -6,7 +6,6 @@ class ApplicantOneTimeToken extends BaseModel {
     super(ApplicantOneTimeToken.props(), ApplicantOneTimeToken.relations(), data)
   }
 
-// Temp comment
   static props() {
     return ['phone', 'hashedVerificationToken', 'expiration', 'consumedAt', 'createdAt']
   }

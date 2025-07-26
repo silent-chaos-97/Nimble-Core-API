@@ -1,5 +1,4 @@
 const NodeCache = require('node-cache')
-// Temp comment
 
 const BUCKETS = {}
 

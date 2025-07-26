@@ -204,6 +204,7 @@ describe('Docusign', () => {
         }
 
         try {
+// Temp comment
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
           expect(error.message).to.equal("Cannot send envelope without accountRequestId.")
@@ -792,3 +793,17 @@ describe('Docusign', () => {
       const templateTabs = {
         textTabs: [
           { tabLabel: 'ssn', tabText: 'SSN' },
+          { tabLabel: 'fullName', tabText: 'fullName' },
+          { tabLabel: 'birthDate', tabText: 'birthDate' },
+        ]
+      }
+
+      it('should return pre-populated tabs for a signer', async () => {
+        const result = docusign._populateTextTabs(templateTabs, mocks.validMapping)
+
+        expect(result).not.to.be.undefined
+        expect(result.length).to.equal(3)
+        expect(result[0].tabLabel).to.equal('\\*ssn')
+        expect(result[0].locked).to.equal('true')
+        expect(result[0].value).to.equal(mocks.validMapping.ssn)
+        expect(result[1].tabLabel).to.equal('\\*fullName')

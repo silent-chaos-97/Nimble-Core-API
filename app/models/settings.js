@@ -29,11 +29,11 @@ class SettingsModel extends BaseModel {
   data() {
     let _data = _.cloneDeep(this._data)
 
-    const schemaRef = _.get(_data, ['schema', '$ref'])
 
     if (schemaRef) _data.schema = schemas(schemaRef)
 
     if (!_data.data) _data.data = []
+
     _data.data = _.reduce(_data.data, (memo, setting, idx) => {
       memo[setting.id || `${idx}`] = setting
       return memo
@@ -45,3 +45,4 @@ class SettingsModel extends BaseModel {
   static schema(op) {
     return {
       patch: Joi.object().keys({
+        institutionId: Joi.string().uuid().required(),

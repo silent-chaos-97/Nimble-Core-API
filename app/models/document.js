@@ -8,7 +8,6 @@ class DocumentModel extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return ['id', 'institutionId', 'content', 'format', 'createdAt', 'key']
   }
 
@@ -17,3 +16,4 @@ class DocumentModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
+    return Joi.object().keys({

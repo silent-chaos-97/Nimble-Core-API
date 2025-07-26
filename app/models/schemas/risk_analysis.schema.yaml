@@ -25,3 +25,4 @@ columns:
     selectSettings:
       ref: financial_indicators
       value: id
+      title: name

@@ -116,3 +116,5 @@ class TaskModel extends BaseModel {
 
   static relations() {
     return ['institution', 'branch', 'workflow']
+  }
+

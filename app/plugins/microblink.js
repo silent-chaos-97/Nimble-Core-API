@@ -40,6 +40,7 @@ class MicroblinkService {
         Authorization: `Bearer ${this.authorization}`,
       },
       maxContentLength: Infinity
+    }
 
     const data = this.buildRequestPayload(imageData, recognizerType)
     const result = await axios.post(`${this.baseAPIURL}/recognize/execute`, data, config)

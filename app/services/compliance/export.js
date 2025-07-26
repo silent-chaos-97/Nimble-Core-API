@@ -1,4 +1,3 @@
-const PreconditionFailedError = require('../../errors/precondition_failed')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.export')
 
@@ -19,5 +18,6 @@ async function __export(searchId, institutionId) {
     })
 
   } catch (err) {
+    logger.info(err, `[__export] failed for search id [${searchId}] and institution id [${institutionId}]`)
     throw new PreconditionFailedError(err)
   }

@@ -45,3 +45,4 @@ Institution:
       description: Email Template for Approval notifications
     templateDecline:
       type: string
+      title: templateDecline

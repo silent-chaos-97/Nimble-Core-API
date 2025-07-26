@@ -1,5 +1,4 @@
 /webhooks/docusign/connect/{id}/contract/{token}:
-  post:
     tags:
       - Webhooks
     summary: post an account request contract
@@ -18,3 +17,4 @@
         description: A JWT token to authenticate the request
         required: true
         schema:
+          type: string

@@ -18,6 +18,7 @@ module.exports = {
 
     const report = await app.plugins.nimbleData.post('microbilt/CriminalSearchV2/GetReport', body)
 
+    log.info({ op: 'criminal_record', phase: 'response', report, signer }) // FIXME: pii
 
     const noHit = _.get(report, 'MsgRsHdr.Status.StatusDesc') === 'NOHIT'
 

@@ -188,3 +188,7 @@ describe('POST /users', () => {
         .send(user)
         .expect('Content-Type', /json/)
         .expect(201)
+        .end((err, res) => {
+          if (err) throw new Error(err)
+
+          expect(res.body.id).to.be.an('string')

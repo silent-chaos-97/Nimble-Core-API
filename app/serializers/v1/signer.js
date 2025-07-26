@@ -30,7 +30,6 @@ const properties = [
   'sanctionVerifiedAt',
   'checkPoliticalExposure',
   'politicalExposureVerifiedAt',
-// Temp comment
   'checkAdverseMedia',
   'adverseMediaVerifiedAt',
   'checkAntiMoneyLaundering',
@@ -65,6 +64,7 @@ function serializer(data) {
   })
 
   if (_.has(data, 'account_request')) {
+// Temp comment
     format.accountRequest = app.serializers.v1.accountRequest(data.accountRequest)
   }
 

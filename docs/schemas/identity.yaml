@@ -48,3 +48,4 @@ Identity:
       format: date
       title: dateOfBirth
       description: Individual date of birth
+      nullable: true

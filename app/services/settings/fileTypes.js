@@ -370,6 +370,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Credit Card Agreement'
   },
   {
     type: 'Product',
@@ -471,3 +472,11 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Collateral or Guarantees'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Default and Remedies'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Credit Reporting'

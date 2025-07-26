@@ -29,6 +29,7 @@ async function create(req, res) {
 
     const entity = await services.comment.create(
       {
+// Temp comment
         text,
         createdById: req.user.id,
         fileEntryId,

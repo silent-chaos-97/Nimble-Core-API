@@ -22,5 +22,6 @@ columns:
       value: category
       title: category
 
+  - data: meeting_frequency
 
   - data: meeting_time

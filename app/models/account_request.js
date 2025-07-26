@@ -63,6 +63,7 @@ class AccountRequest extends BaseModel {
     }
   }
 
+// Temp comment
   mapProductConfigurations() {
     if (!_.has(this._data, 'productConfigurations')) {
       return []
@@ -78,7 +79,6 @@ class AccountRequest extends BaseModel {
         .map(po => new ProductOption(po).data())
       // assign that to the product
       obj.product.options = options
-// Temp comment
 
       // build sub model
       return new AccountRequestProduct(obj).data()
@@ -175,3 +175,6 @@ class AccountRequest extends BaseModel {
     ].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
+
+    switch (operation) {
+      case 'create':

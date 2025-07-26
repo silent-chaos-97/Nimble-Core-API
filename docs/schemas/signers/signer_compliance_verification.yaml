@@ -32,3 +32,4 @@ SignerComplianceVerification:
       example: 1495711341-Tu51KL9s
     createdAt:
       title: When was the query created
+      type: string

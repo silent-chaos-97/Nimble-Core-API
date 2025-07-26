@@ -28,7 +28,6 @@
         <zipCode/>
       </address>
       <proof documentType="PASSPORT">
-        <passport>
           <number>1112221112</number>
           <expirationDate>2022-02-16</expirationDate>
           <issuedDate>2011-02-16</issuedDate>
@@ -53,3 +52,4 @@
       <address>
         <street/>
         <city/>
+        <state/>

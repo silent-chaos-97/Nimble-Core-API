@@ -16,7 +16,6 @@ columns:
     allowEmpty: true
 
   - data: last_name
-    allowEmpty: true
 
   - data: SSN
     allowEmpty: true
@@ -24,3 +23,4 @@ columns:
   - data: address
     allowEmpty: true
 
+  - data: address_2

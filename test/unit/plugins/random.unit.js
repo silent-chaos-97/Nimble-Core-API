@@ -29,6 +29,7 @@ describe('Random Plugin', () => {
       expect(rand.letter).not.to.be.undefined
     })
 
+    it('should return random char', () => {
       let letter = rand.letter()
       expect(letter).to.be.an('string')
       expect(letter).to.have.lengthOf(1)
@@ -45,3 +46,4 @@ describe('Random Plugin', () => {
       })
     })
 
+  })

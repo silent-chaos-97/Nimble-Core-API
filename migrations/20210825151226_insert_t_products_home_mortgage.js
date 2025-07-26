@@ -26,3 +26,4 @@ exports.up = async function(knex) {
   institutions.map(async (institution) => {
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
       // Insert new products
+      return newProducts.map(async (newProduct) => {

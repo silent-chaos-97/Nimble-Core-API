@@ -5,5 +5,4 @@ before(async function() {
 })
 
 afterEach(async function() {
-  this.timeout(10000)
 

@@ -38,6 +38,7 @@ class FileModel extends BaseModel {
 
         'bucket',
         'key',
+
         'mimetype',
         'size',
         'acl',
@@ -46,3 +47,4 @@ class FileModel extends BaseModel {
         'version'
       ]
     }[op || 'all']
+  }

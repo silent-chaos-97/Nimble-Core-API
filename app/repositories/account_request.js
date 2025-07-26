@@ -26,3 +26,4 @@ const AccountRequest = app.db.Model.extend({
   },
 
   productOptions: function () {
+    return this.hasMany('AccountRequestProductOption', 'account_request_id')

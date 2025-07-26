@@ -63,6 +63,7 @@ components:
           type: string
           minimum: 0
           default: 0
+      limit:
         in: query
         name: limit
         required: false
@@ -123,3 +124,5 @@ components:
           description: the HTTP error code
         message:
           type: string
+          title: Developer message
+          description: A message that have more detailed information than the previous one

@@ -305,6 +305,7 @@ function _amort(summary, risks) {
     if (targetPayment && targetPayment > maxPayment) {
       summary.payment.reasons.push({
         metricId: 'targetPayment',
+        metric: 'maxPayment',
         operation: 'target_payment_greater_than_max_payment',
         message: 'The targeted payment was more than the maximum payment based on risk factors (e.g. DTI).',
         requested: maxPayment,

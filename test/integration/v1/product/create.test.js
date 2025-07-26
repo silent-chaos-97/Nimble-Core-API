@@ -114,3 +114,5 @@ describe('POST /institutions/:id/products', () => {
     await request(app.server)
       .get(`/v1/institutions/${institutionId}/products`)
       .expect('Content-Type', /json/)
+      .expect(200)
+      .expect((res) => {

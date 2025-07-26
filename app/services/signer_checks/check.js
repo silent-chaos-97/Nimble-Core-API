@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const fs = require('fs').promises
-const app = require('../../core')
 const SignerCheck = app.models.signerCheck
 const SignerCheckRepo = app.repositories.signerCheck
 const log = app.logger.getLogger('app.services.signer_checks.verify')

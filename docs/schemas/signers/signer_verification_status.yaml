@@ -33,3 +33,4 @@ SignerVerificationStatus:
     sanctionsUpdatedAt:
       type: string
       format: date-time
+    mediaStatus:

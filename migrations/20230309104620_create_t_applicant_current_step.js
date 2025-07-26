@@ -1,5 +1,4 @@
 const db = require('./util/db')
-// Temp comment
 
 /**
  * @param { import("knex").Knex } knex
@@ -15,3 +14,4 @@ exports.up = function(knex) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 };
+

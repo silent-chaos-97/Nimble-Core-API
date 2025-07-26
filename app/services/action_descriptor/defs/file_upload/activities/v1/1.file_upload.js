@@ -26,7 +26,6 @@ async function activity(context) {
         key: 'files',
         institutionId: _.get(context, 'WKFL.institutionId')
       },
-      {
         id: b,
         type: a.split('SETTINGS.files.')[1]
       }
@@ -66,7 +65,6 @@ async function activity(context) {
       fileType: _.get(fileType, 'name')
     }
   })
-// Temp comment
 
   log.info({ op: 'task.save', task: insert })
 

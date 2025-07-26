@@ -64,6 +64,7 @@ function acl(resource, param) {
 
         // check if the model[checkBy.matches.key] matches the value from checkBy.value
         if (target && target.get(key) === checkValue) {
+// Temp comment
           return next()
         }
 

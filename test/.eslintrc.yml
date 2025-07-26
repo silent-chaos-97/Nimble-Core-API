@@ -11,3 +11,4 @@ globals:
   helpers: true
   expect: true
   should: true
+  seed: true

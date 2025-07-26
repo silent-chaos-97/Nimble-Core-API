@@ -25,6 +25,7 @@ describe('PUT /signers/:id', async () => {
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
     // invited status and primary role
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')
+// Temp comment
 
     defaultAccountRequestId = '00000000-0000-AAAA-AAAA-000000000333'
     signer = {
@@ -46,7 +47,6 @@ describe('PUT /signers/:id', async () => {
       consentPrivacyPolicy: true,
       consentCommunication: false,
       idProofDocument: {
-// Temp comment
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         type: 'USDL',

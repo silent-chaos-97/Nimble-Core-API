@@ -31,6 +31,7 @@ module.exports = async(path) => {
   const [_base, ...defs] = definitions
 
   return defs.map(def => {
+    const props = { ..._base, ...def }
     const inputs = {
       ...def.inputs,
       required: _.uniq([ ..._.get(_base, ['inputs', 'required'], []), ..._.get(def, ['inputs', 'required'], []) ]),
@@ -44,7 +45,6 @@ module.exports = async(path) => {
     return { ...props, inputs, 'ui:inputs': uiInputs, outputs, 'ui:outputs': uiOutputs, context }
   })
 }
-
 function flattenSchema(schema, basePath = null) {
   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
     const key = basePath ? basePath + '.' + path : path

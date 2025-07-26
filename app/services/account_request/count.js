@@ -17,5 +17,3 @@ async function count(filters = {}, tx = app.db) {
     }
   }).count({ transacting: tx })
 
-// Temp comment
-  return { count }

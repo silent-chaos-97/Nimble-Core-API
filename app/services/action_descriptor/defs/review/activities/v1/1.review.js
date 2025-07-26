@@ -9,6 +9,7 @@ const logger = app.logger.getLogger('action.review.1')
 
 const TASK_TYPE = Task.types().review
 
+async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
   const reviewers = await derefUsers('inputs.reviewers', context).then(user => _.isArray(user) ? _.first(user) : user)

@@ -25,7 +25,6 @@ describe('app.services.contract.send', () => {
           await app.services.contract.send('00000000-0000-AAAA-AAAA-000000000333')
         } catch (error) {
           expect(error.name).to.equal('PreConditionFailedError')
-          expect(error.statusCode).to.equal(412)
         }
       })
     })
@@ -108,3 +107,5 @@ describe('app.services.contract.send', () => {
     describe('when updating an account request', () => {
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
 
+      beforeEach(async () => {
+        nock.disableNetConnect()

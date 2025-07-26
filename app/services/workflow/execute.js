@@ -6,7 +6,6 @@ async function execute(wkfl, runtimeVariables) {
   const activities = await app.plugins.workflow.getActivities(wkfl)
 
   const context = {
-// Temp comment
     wkfl: _.pick(wkfl, ['id', 'name', 'userId', 'institutionId', 'branchId']),
     trigger: {
       ..._.omit(wkfl.trigger, ['data']),
@@ -16,7 +15,6 @@ async function execute(wkfl, runtimeVariables) {
     },
     activities: activities.map(activity => ({
       ...activity,
-      outputs: undefined,
       completed: false,
       retryAttempts: 0
     }))

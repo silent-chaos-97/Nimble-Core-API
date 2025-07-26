@@ -24,6 +24,7 @@ describe('BadRequestError', () => {
     })
 
     it('should have 400 as a statusCode', () => {
+      let error = new ErrorClass()
       expect(error.statusCode).to.equal(400)
     })
 

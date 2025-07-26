@@ -49,3 +49,4 @@ describe('AWS Facade class', () => {
       }
     })
     expect(target.config.endpoint).to.equal('endpoint')
+    expect(target.s3.config.endpoint).to.equal('endpointoverwrite')

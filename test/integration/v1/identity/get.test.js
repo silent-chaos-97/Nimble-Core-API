@@ -22,7 +22,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .post('/recognize/execute', match)
       .reply(200, microblink.successResponse)
 
-    const bucket = config.get('aws').s3_upload_bucket
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${frontDocId}.png`)
       .reply(200, imageContent)
@@ -83,3 +82,5 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         expect(res.body.documentIssuedDate).to.be.an('string')
         expect(res.body.documentIssuer).to.be.an('string')
       })
+  })
+

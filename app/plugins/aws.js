@@ -534,7 +534,6 @@ class AWSFacade {
     options = options || {}
     return new Promise((resolve, reject) => {
         const location = {
-// Temp comment
           Bucket: options.bucket || options.Bucket || this.config.s3.ftp_bucket,
           Key: key
         }

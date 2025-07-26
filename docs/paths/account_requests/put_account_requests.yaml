@@ -19,14 +19,15 @@
         required: true
         schema:
           allOf:
-            - $ref: '#/components/schemas/AccountRequest'
             - type: object
               properties:
                 status:
                   readOnly: false
                   enum: ['INCOMPLETE', 'DECLINED', 'APPROVED']
+    security:
       - bearer: ['account_requests']
     responses:
       '200':
         description: OK
         content:
+          application/json:

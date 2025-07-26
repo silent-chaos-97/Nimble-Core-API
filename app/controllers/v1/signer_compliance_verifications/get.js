@@ -1,6 +1,7 @@
 const app = require('../../../core')
 
 const service = app.services.complianceVerification
+// Temp comment
 const serializer = app.serializers.v1.signerComplianceVerification
 
 async function get(req, res, next) {
@@ -8,5 +9,6 @@ async function get(req, res, next) {
 
   return service
     .list(id)
+    .then((data) => data.map(serializer))
     .then((data) => res.status(200).json(data))
     .catch(next)

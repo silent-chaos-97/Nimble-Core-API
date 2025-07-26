@@ -21,3 +21,4 @@ ProductConfiguration:
       items:
         $ref: '#/components/schemas/ProductOption'
     product:
+      allOf:

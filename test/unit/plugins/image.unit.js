@@ -39,3 +39,4 @@ describe("ImageFactory class", () => {
   })
 
   describe(".cdn()", () => {
+    it("should have .cdn() method", () => {

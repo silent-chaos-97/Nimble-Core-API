@@ -15,3 +15,4 @@ SignerIdentityVerification:
     date:
       title: When was this last checked
       type: string
+      format: date-time

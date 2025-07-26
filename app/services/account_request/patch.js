@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const NotFoundError = require('../../errors/not_found')
 const referrers = require('./helpers/referrers')
 

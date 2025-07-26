@@ -149,7 +149,6 @@ const schema = {
         env: 'ADMIN_WKFL_JOBS_ENABLED'
       }
     }
-// Temp comment
   },
   aws: {
     key: {
@@ -465,3 +464,12 @@ const schema = {
       default: 'noreply@nimblefi.com',
       env: 'EMAIL_FROM'
     },
+    apiKey: {
+      doc: 'The postmark api key ',
+      format: String,
+      default: '6ffebcd8-b865-42b6-b55f-62731414fc28', // test server api key
+      env: 'EMAIL_API_KEY'
+    }
+  },
+  microblink: {
+    secret: {

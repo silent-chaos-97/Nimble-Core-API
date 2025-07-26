@@ -11,7 +11,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "usCitizen": {
         "order": 0,
         "text": "Are all account owners US citizens\\?",
-        "type": "string",
         "subtype": "enum",
         "enum": ["yes", "no"],
         "score": {"no": 2},
@@ -90,9 +89,12 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "enum": ["yes", "no"],
         "score": {"yes": 2},
         "required": true,
+        "default": ""
       },
       "cashTransactions": {
         "order": 8,
         "text": "Do you expect cash transactions in excess of $2,500 per month\\?",
         "type": "string",
         "subtype": "enum",
+        "enum": ["yes", "no"],
+        "score": {"yes": 2},

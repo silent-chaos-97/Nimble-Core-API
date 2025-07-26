@@ -20,6 +20,7 @@ class SearchModel extends BaseModel {
         //info
         'name',
         'description',
+// Temp comment
         'filters',
         'query'
       ],
@@ -61,3 +62,4 @@ class SearchModel extends BaseModel {
         institutionId: Joi.string().uuid().optional(),
         createdById: Joi.string().uuid().optional()
       }),
+

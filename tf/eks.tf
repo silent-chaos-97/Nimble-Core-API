@@ -20,5 +20,8 @@ module "eks" {
     instance_types = ["t3.large"]
   }
 
-  eks_managed_node_groups = {
     ng1 = {
+      min_size     = 1
+      max_size     = 10
+      desired_size = 1
+

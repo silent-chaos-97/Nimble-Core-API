@@ -110,3 +110,5 @@ describe('app.models.signer.flattenData', () => {
         frontDocumentId: 'frontDocumentId',
         type: null,
       }
+    })
+

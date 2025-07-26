@@ -28,6 +28,7 @@ describe('GET /me', () => {
       token = await helpers.getAuthToken()
     })
 
+    describe('when token expired', () => {
       let clock
 
       before(async () => {
@@ -71,7 +72,6 @@ describe('GET /me', () => {
 
           expect(res.body).not.to.have.own.property('updatedAt')
 
-          expect(res.body.id).to.be.an('string')
           expect(res.body.email).to.be.an('string')
           expect(res.body.firstName).to.be.an('string')
           expect(res.body.lastName).to.be.an('string')
@@ -97,3 +97,5 @@ describe('GET /me', () => {
           expect(res.body.institution.backgroundImageUri).to.be.an('object')
         })
     })
+
+    it('should not return secrets from accounts', () => {

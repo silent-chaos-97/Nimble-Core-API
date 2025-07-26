@@ -19,6 +19,7 @@ describe('app.services.contract.embed', () => {
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
+// Temp comment
 
       beforeEach(async () => {
         await seed.institution.create() // required by seed.account_request_products
@@ -49,4 +50,6 @@ describe('app.services.contract.embed', () => {
 
       it('should call with correct arguments', async () => {
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
+
         await app.services.contract.embed(signerId)
+

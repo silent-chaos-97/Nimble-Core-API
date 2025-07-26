@@ -80,3 +80,4 @@ describe('GET /institution/:id/branches', () => {
         .then(response => {
           expect(response.body).to.have.lengthOf(2)
         })
+    })

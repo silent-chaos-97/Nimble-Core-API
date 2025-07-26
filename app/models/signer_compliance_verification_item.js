@@ -23,6 +23,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     ]
   }
 
+  static relations() {
     return ['items']
   }
 
@@ -42,3 +43,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
+    if (operation === 'create') {

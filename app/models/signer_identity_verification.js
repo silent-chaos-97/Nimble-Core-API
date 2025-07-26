@@ -19,10 +19,8 @@ class SignerIdentityVerification extends BaseModel {
   }
 
   static relations() {
-// Temp comment
     return ['signer']
   }
 
   static schema(operation = 'create') {
-    if (operation === 'create') {
       return Joi.object().keys({

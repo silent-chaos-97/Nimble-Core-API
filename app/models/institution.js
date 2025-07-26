@@ -79,3 +79,5 @@ class InstitutionModel extends BaseModel {
     })
   }
 
+  static patchSchema() {
+    return Joi.object().keys({

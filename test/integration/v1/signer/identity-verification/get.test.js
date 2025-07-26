@@ -172,6 +172,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
     it('should return a list of verifications with categories', async () => {
       return request(app.server)
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications`)
+        .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
@@ -192,3 +193,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
+
+          const face = res.body.find(item => item.verification === 'Face Detection')
+          const doc = res.body.find(item => item.verification === 'Issued Date')
+

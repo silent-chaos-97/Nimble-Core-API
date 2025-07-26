@@ -73,6 +73,7 @@ const createPdfRequestBodyParams = (document, documentBuffer) => ({
   filename: document.name,
   documentId: document.documentId,
   bytes: documentBuffer
+})
 
 const createBufferBeginning = (envelopeJson) =>
   Buffer.from(
@@ -87,3 +88,5 @@ const createDocumentsBuffer = (documents) =>
     documents.map((document) =>
       Buffer.concat([
         Buffer.from(
+          `${CRLF}${hyphens}${boundary}${CRLF}` +
+          `Content-Type: ${document.mime}${CRLF}` +

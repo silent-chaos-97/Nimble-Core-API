@@ -15,7 +15,6 @@ class ImageFactory {
     return new CDNImage(this.cdnLocation, uri)
   }
 }
-
 class AssetImage {
   constructor(location, uri) {
     this.location = location

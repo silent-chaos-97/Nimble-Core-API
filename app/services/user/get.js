@@ -67,6 +67,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
           lastName: undefined,
           emails: [],
           phoneNumbers: [],
+          address: {
             streetAddress: undefined,
             streetAddressAdditional: undefined,
             city: undefined,

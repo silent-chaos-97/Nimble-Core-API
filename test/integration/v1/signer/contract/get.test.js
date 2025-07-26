@@ -128,3 +128,5 @@ describe('GET /signers/:id/contract', async () => {
   describe('when called with valid data', () => {
     it('should return 200', async () => {
       return request(app.server)
+        .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
+        .set('Authorization', 'Bearer ' + token)

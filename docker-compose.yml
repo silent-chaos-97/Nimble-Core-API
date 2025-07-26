@@ -23,3 +23,4 @@ services:
     container_name: nimble-core-.api
     working_dir: /app
     volumes:
+      - .:/app

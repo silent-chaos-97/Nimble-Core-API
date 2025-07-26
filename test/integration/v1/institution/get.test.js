@@ -28,7 +28,6 @@ describe('GET /institution/:domain', () => {
       .get('/v1/institutions/wearesingular.com')
       .set('Authorization', 'Bearer ' + token)
       .expect((res) => {
-        const props = ['id', 'slug', 'name', 'domain', 'logoUri', 'backgroundImageUri']
 
         props.forEach(prop => {
           expect(res.body).to.have.own.property(prop)
@@ -44,3 +43,4 @@ describe('GET /institution/:domain', () => {
 
         expect(res.body.logoUri).to.be.an('object')
         expect(res.body.logoUri).to.have.own.property('default')
+        expect(res.body.backgroundImageUri).to.be.an('object')

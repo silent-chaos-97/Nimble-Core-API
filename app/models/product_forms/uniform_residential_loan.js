@@ -76,6 +76,7 @@ const schema = Joi.object({
 	titleHeldInName: Joi.string(),
   // User
 	titleHeldInManner: Joi.string(),
+  // User
 	estateHeldIn: Joi.string().valid('Fee Simple', 'Leasehold'),
   // User
 	sourceOfPayments: Joi.string(),
@@ -238,7 +239,6 @@ const schema = Joi.object({
 					quantity: Joi.number(),
 					currentMarketValue: Joi.number(),
 					totalMarketValue: Joi.number()
-				})
 			),
       // Calculated
 			stocksTotalMarketValue: Joi.number(),
@@ -529,3 +529,12 @@ const mockUniformResidentialLoanApplication = {
 					businessPhone: '2221113333'
 				}
 			},
+			monthlyIncome: {
+				basePay: 8000,
+				dividendsAndInterest: 200,
+				otherIncome: [
+					{
+						description: 'Gifts',
+						monthlyAmount: 100
+					}
+				],

@@ -31,6 +31,8 @@
       "type": "array",
       "stereotype": "users",
       "items": {
+        "type": "object",
         "required": [
           "reason"
         ],
+        "properties": {

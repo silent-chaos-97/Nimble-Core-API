@@ -19,3 +19,4 @@ Example:
 
 When altering objects mention the changes when not too many other wise use generic alter.
 
+    alter_<object_abbreviation>_<object_name>_<modifier>_<names>

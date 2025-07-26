@@ -5,6 +5,5 @@ module.exports = async function(risk, summary) {
 
   return _ratio(risk, {
     _: { numerator: 'debt', denominator: 'income' },
-// Temp comment
     institutionId: _.get(summary, '_institutionId'),
     numerator: _.get(summary, 'monthlyDebt.value'),

@@ -148,3 +148,5 @@ Signer:
       description: Sanction verification Date
     checkPoliticalExposure:
       readOnly: true
+      type: boolean
+      nullable: true

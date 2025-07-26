@@ -77,3 +77,4 @@ app.load().then(async () => {
     },
 
     signerEmailVerificationEmail: {
+      signerEmail: "signerEmail",

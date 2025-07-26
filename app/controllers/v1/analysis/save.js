@@ -28,6 +28,7 @@ async function save(req, res) {
     .then(data => res.status(existing ? 200 : 201).json(data))
 }
 
+async function checkOwner(ownerId, user) {
   if (!ownerId) return null
 
   // TODO: check that owner is assignable by user

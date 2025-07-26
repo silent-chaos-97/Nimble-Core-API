@@ -4,6 +4,7 @@ const config = require('../../../../config')
 const emailPlugin = require('../../../../app/plugins/email')
 const moment = require('moment')
 
+describe('app.services.email.welcome', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
@@ -67,3 +68,4 @@ const moment = require('moment')
 
     it('should call send with correct data', async() => {
       const user = blueprints.me.get('1052ab85-08da-4bb5-be00-9e94d282d310')
+

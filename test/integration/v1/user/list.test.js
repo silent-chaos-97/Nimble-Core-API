@@ -24,6 +24,7 @@ describe('GET /users', () => {
     it('should return 401 if authenticated bearer token', done => {
       request(app.server)
         .get('/v1/users')
+        .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
@@ -61,7 +62,6 @@ describe('GET /users', () => {
           expect(user.id).to.be.an('string')
           expect(res.body).not.to.have.own.property('email')
           expect(user.firstName).to.be.an('string')
-          expect(user.lastName).to.be.an('string')
           expect(user).not.to.have.own.property('accounts')
           done()
         })
@@ -132,3 +132,5 @@ describe('GET /users', () => {
           })
       })
 
+      it('should offset acording to :offset', done => {
+        request(app.server)

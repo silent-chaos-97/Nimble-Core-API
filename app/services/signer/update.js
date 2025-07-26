@@ -3,7 +3,6 @@ const app = require('../../core')
 const validateDocuments = require('./helpers/validate_documents')
 const validateService = require('./validate')
 const Signer = app.repositories.signer
-const SignerModel = app.models.signer
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const ConflictError = require("../../errors/conflict")
 const validator = app.plugins.validator
@@ -54,6 +53,7 @@ async function updateSigner(id, data, tx = app.db) {
     throw new ConflictError('Duplicates values for fields which must be unique exist between multiple signers on the application')
   }
 
+  await Signer.forge({ id: id }).save(updateData, {
     method: 'update',
     transacting: tx
   })

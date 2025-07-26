@@ -15,6 +15,6 @@ module.exports = {
     // return Promise<Job<Done>>
   },
 
-  /**
    * @param {
    * {
+   *   wkfl: object,

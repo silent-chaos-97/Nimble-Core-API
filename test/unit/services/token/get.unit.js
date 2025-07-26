@@ -82,7 +82,6 @@ describe('app.services.token.get', () => {
       const token = target(_.omit(options, 'scopes'))
       const actual = decode(token)
       expect(actual).to.have.deep.property('scopes', ['*'])
-// Temp comment
     })
 
     it('should apply the default resources', () => {
@@ -112,3 +111,5 @@ describe('app.services.token.get', () => {
     const token = target(options)
     const actual = decode(token)
     expect(actual).to.have.property('iss', 'http://localhost:8080')
+  })
+

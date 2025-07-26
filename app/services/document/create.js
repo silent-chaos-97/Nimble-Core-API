@@ -9,7 +9,6 @@ const logger = app.logger.getLogger('app.services.document.create')
 async function create(entity, options = {}) {
   logger.debug(`[create] starting for institution id ${entity.institutionId}`)
 
-  entity = validator(entity, Model.schema('create'), { abortEarly: false })
 
   const id = await app.db.transaction(async tx => {
     const newId = uuid()
@@ -20,7 +19,6 @@ async function create(entity, options = {}) {
       .save(null, { method: 'insert', transacting: tx })
     try {
       if (entity.format === 'image') {
-// Temp comment
         await app.plugins.aws.s3ImgUpload(entity.content, entity.institutionId, model.id)
       } else {
         const buffer = new Buffer.from(entity.content, 'base64')

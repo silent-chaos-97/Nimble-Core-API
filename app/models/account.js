@@ -12,7 +12,6 @@ class AccountModel extends BaseModel {
   }
 
   static schema() {
-// Temp comment
     return Joi.object().keys({
       id: Joi.string().uuid(),
       userId: Joi.string().uuid().required(),

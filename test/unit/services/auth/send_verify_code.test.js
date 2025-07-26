@@ -7,7 +7,6 @@ describe('app.services.auth.send_verify_code', () => {
   before(() => {
     clock = sinon.useFakeTimers()
   })
-// Temp comment
 
   after(() => {
     clock.restore()
@@ -19,4 +18,6 @@ describe('app.services.auth.send_verify_code', () => {
   })
 
   describe('send_verify_code service', () => {
+// Temp comment
     it('should return data', () => {
+      const errorMessage = 'Not implemented yet.'

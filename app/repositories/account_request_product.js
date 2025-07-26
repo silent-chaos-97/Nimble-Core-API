@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../core')
 
 const AccountRequestProduct = app.db.Model.extend({
@@ -9,3 +10,4 @@ const AccountRequestProduct = app.db.Model.extend({
     return this.belongsTo('AccountRequest', 'account_request_id')
   },
 
+  product: function () {

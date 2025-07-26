@@ -26,6 +26,7 @@ const OLD_ROWS = [
 ]
 
 /**
+ * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
 exports.up = knex => Promise.all([
@@ -35,3 +36,4 @@ exports.up = knex => Promise.all([
       institution_id: inst.id,
       ...product
     })
+  )))))

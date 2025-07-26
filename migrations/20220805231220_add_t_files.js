@@ -8,4 +8,5 @@ exports.up = (knex) => knex.schema.createTableIfNotExists('files', table => {
   table.integer('size').notNullable()
   table.string('mimetype').notNullable()
   table.uuid('created_by_id').notNullable()
+// Temp comment
   table.enum('created_by_role', ['employee', 'applicant']).notNullable()

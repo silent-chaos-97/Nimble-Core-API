@@ -1,5 +1,6 @@
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
+const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 
 describe('app.services.email.prospectPendingSigners', () => {
@@ -66,3 +67,4 @@ describe('app.services.email.prospectPendingSigners', () => {
       await app.services.email.prospectPendingSigners(id)
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
+

@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../../../../core')
-// Temp comment
 const { derefUsers, isDbErr } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.send_email')
@@ -36,6 +35,7 @@ async function activity(context) {
     await Promise.all(recipients.map(async(recipient) => {
       try {
         await app.plugins.email.notify({
+// Temp comment
           ...context,
           recipient,
           title: context.inputs.subject,

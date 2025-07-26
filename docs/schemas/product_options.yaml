@@ -13,6 +13,7 @@ ProductOption:
       description: the property key
       example: loan_max_value
     title:
+      type: string
       title: Name
       description: The human readable title for the property
       example: Loan Max Value
@@ -35,3 +36,4 @@ ProductOption:
       title: Lead
       description: A string used to add additional information
       readOnly: true
+      nullable: true

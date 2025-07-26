@@ -17,6 +17,7 @@ const verificationEmailSchema = Joi.object().keys({
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
+})
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
@@ -31,7 +32,6 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     expiration: 999999999 // endless
   })
 
-  return app.config.get('frontend.signerEmailVerificationURI')
     .replace(':protocol', app.config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
     .replace(':signer_id', signerId)

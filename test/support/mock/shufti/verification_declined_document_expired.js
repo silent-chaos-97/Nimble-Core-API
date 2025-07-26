@@ -13,6 +13,7 @@ module.exports = {
         'id_card',
         'passport',
         'driving_license',
+        'credit_or_debit_card',
       ],
     },
     address: {
@@ -50,3 +51,4 @@ module.exports = {
       address_document: 1,
       name: 0,
       address_document_proof: 0,
+      address_document_must_not_be_expired: 0,

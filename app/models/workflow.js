@@ -21,6 +21,7 @@ class WorkflowModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
   }
 
@@ -62,3 +63,4 @@ class WorkflowModel extends BaseModel {
       create: Joi.object().keys({
         userId: Joi.string().uuid().required(),
         branchId: Joi.string().uuid().required(),
+        institutionId: Joi.string().uuid().required(),

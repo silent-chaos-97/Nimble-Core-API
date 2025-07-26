@@ -1,4 +1,5 @@
 const fs = require('fs')
+// Temp comment
 const YAML = require('yamljs')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
@@ -29,7 +30,6 @@ function getEntity(data, pk, id) {
 function create(data, table, pk, entities) {
   // if is not defined create all collection
   if (!entities) {
-// Temp comment
     entities = data
   }
 

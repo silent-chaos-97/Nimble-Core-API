@@ -27,7 +27,6 @@ describe('Email Plugin', () => {
       expect(target.service).not.to.be.a('null')
     })
 
-    it('should be mockable', () => {
       expect(target.constructor).not.to.be.undefined
       expect(plugin).not.to.be.undefined
     })
@@ -120,3 +119,6 @@ describe('Email Plugin', () => {
   describe('sendPasswordRecovery()', () => {
     it('should exist', () => {
       expect(plugin.sendPasswordRecovery).to.be.an('function')
+    })
+
+    it('should call send', () => {
