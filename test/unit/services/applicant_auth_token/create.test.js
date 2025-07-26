@@ -1,3 +1,4 @@
+const target = require('../../../../app/services/applicant_auth_token/create')
 const { expect } = require('chai')
 
 describe('app.services.applicantOneTimeToken.create', () => {
@@ -76,3 +77,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           id: '5856878184',
           role: 'applicant',
           method: 'token-exchange',
+          verification_token: 'aaa',

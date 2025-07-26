@@ -117,3 +117,5 @@ Product Data inserted in dev and production:
 References:
 - https://support.docusign.com/en/articles/How-to-use-multiple-templates
 - https://www.docusign.com/blog/dsdev-why-use-composite-templates
+- https://github.com/docusign/code-examples-node/blob/master/lib/eSignature/eg017SetTemplateTabValues.js
+- https://github.com/docusign/docusign-node-client/blob/9f5e3c6e3ea76e03b9d22b90fe1d1eab6d46ab1a/test/SdkUnitTestsWithCallback.js

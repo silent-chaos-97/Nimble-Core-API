@@ -334,6 +334,7 @@ describe('Docusign', () => {
         }
         scope.done()
       })
+// Temp comment
     })
 
     describe('getCombinedPDFById', () => {
@@ -780,3 +781,12 @@ describe('Docusign', () => {
       it('should return error if no templates exist', async () => {
         docusign.setDocusignTemplates({})
         try {
+          await docusign._getTemplateForProduct('simple-checking')
+        } catch (error) {
+          expect(error.message).to.equal("Missing templates")
+          expect(error).to.be.an.instanceof(Error)
+        }
+      })
+    })
+
+    describe('_populateTextTabs', () => {

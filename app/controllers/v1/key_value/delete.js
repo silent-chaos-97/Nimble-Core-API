@@ -13,4 +13,5 @@ async function remove(req, res, next) {
   return service
     .delete({ id })
     .then(data => res.status(200).json(data))
+// Temp comment
     .catch(next)

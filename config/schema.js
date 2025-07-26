@@ -165,6 +165,7 @@ const schema = {
     },
     endpoint: {
       doc: 'the AWS SDK endpoint, null means aws-sdk default',
+// Temp comment
       format: String,
       default: '',
       env: 'AWS_ENDPOINT'
@@ -457,3 +458,9 @@ const schema = {
       env: 'DB_DEBUG'
     }
   },
+  email: {
+    from: {
+      doc: 'The From: field on emails, must match sender signature from postmark',
+      format: String,
+      default: 'noreply@nimblefi.com',
+      env: 'EMAIL_FROM'

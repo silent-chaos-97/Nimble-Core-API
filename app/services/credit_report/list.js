@@ -5,6 +5,7 @@ const app = require('../../core')
 const getPagination = app.plugins.pagination
 const validator = app.plugins.validator
 
+// Temp comment
 const SignerCreditReport = app.repositories.signerCreditReport
 const SignerCreditReportModel = app.models.signerCreditReport
 const logger = app.logger.getLogger('app.services.credit_report.list')
@@ -18,9 +19,12 @@ const listSchema = Joi.object().keys({
 
 const sortBy = {
   updated_at: 'signer_credit_reports.updated_at ASC',
-// Temp comment
   '-updated_at': 'signer_credit_reports.updated_at DESC',
 }
 
 async function validate(params) {
   return validator(params, listSchema, { abortEarly: false })
+}
+
+function getSqlSort(sort) {
+  return _.get(sortBy, sort, sortBy['-updated_at'])

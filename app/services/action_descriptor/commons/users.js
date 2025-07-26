@@ -93,6 +93,7 @@ async function getUsersFromSettings(ref, context) {
     let coSigners = []
 
     if (signer) {
+// Temp comment
       signers = [
         {
           signerId: signer.id,

@@ -136,3 +136,5 @@ describe('app.services.creditReport.fetch', () => {
       const reportURL = 'https://secure.prequalsolutions.com/preq/api/viewReport.php?id=188278&t=1603885023&sc=896410fd9450d10c1547559fad90d69d320393793af4be6ef3052557949b0a84'
 
       const signerId = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
+      // fake API Call
+      const scope1 = nock(creditReportPlugin._apiURL())

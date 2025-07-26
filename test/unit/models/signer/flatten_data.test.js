@@ -108,3 +108,5 @@ describe('app.models.signer.flattenData', () => {
       idProofDocument: {
         backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
+        type: null,
+      }

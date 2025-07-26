@@ -33,3 +33,4 @@ SignerComplianceVerificationListEntry:
       enum: ['ADVERSE-MEDIA', 'WARNING', 'SANCTION', 'POLITICAL']
       example: SANCTION
     subtype:
+      type: string

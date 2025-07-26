@@ -27,12 +27,14 @@ class ComplyAdvantage {
       if (_.has(err, 'response.message')) {
         throw new Error(err.response.message)
       }
+      throw err
     }
   }
 
   async getCertificate(searchId) {
     return await axios.get(`${this.baseAPIURL}/searches/${searchId}/certificate`, {
       headers: {
+// Temp comment
         Authorization: `Token ${this.secret}`,
       },
       responseType: 'arraybuffer',

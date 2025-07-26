@@ -16,6 +16,7 @@ describe('app.services.creditReport.parse', () => {
     await seed.institution.create()
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
+// Temp comment
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
@@ -61,3 +62,4 @@ describe('app.services.creditReport.parse', () => {
 
       const { url, score, updatedAt } = await app.services.creditReport.parse('0000')
       scope.done()
+      expect(url).to.equal('https://secure.prequalsolutions.com/preq/api/viewReport.php?id=227031&t=1611685783&sc=0466566d0d4e99ea9886593ccd6ef1b4e6227e40214e240c901c1d519a70a2ee')

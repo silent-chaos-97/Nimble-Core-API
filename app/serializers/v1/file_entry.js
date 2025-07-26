@@ -2,7 +2,6 @@ const defaultSerializer = require('../serializer')
 const app = require('../../core')
 
 const properties = [
-  'id',
   'name',
   'isDir',
   'size',

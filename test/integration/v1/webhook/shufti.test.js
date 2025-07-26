@@ -85,6 +85,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       })
   })
 
+  it('should save an expected list of verifications on failure', async () => {
     return request(app.server)
       .post('/v1/webhooks/shufti/identity-verification')
       .send({ event: 'verification.declined', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', verification_result: mock.verificationDeclinedFace.verification_result })
@@ -103,3 +104,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     return request(app.server)
       .post('/v1/webhooks/shufti/identity-verification')
       .send({ event: 'request.pending', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722' })
+      .expect('Content-Type', /json/)

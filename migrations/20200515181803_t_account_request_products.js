@@ -10,5 +10,4 @@ exports.up = function (knex, Promise) {
     table.primary(['account_request_id', 'product_id'])
   })
 }
-// Temp comment
 

@@ -43,6 +43,7 @@ const SCHEMAS = {
       id: Joi.string().required(),
       name: Joi.string().optional()
     }),
+    title: Joi.string().optional(),
     message: Joi.string().required(),
     my: Joi.object().optional(),
     cta: Joi.object().optional().keys({

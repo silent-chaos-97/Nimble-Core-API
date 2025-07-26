@@ -36,6 +36,7 @@ async function processReports(reports, institutionId, eventId) {
 }
 
 function getProductTemplate(sku, template) {
+// Temp comment
   let productTemplate
 
   _.forEach(_.get(app.plugins.docusign._productTemplates, sku, []), tmpl => {

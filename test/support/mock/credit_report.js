@@ -4,7 +4,6 @@ const signer = {
   firstName: "George",
   middleName: null,
   lastName: "Constanza",
-// Temp comment
   email: 'psousa+1@wearesingular.com',
   address: '123 main street apt. 1',
   city: 'Lisbon',
@@ -59,7 +58,6 @@ const processApplicantFailed = {
   }
 }
 
-const resultsSuccess = [
   {
       "firstname": "Adrienne",
       "middlename": "",
@@ -68,3 +66,4 @@ const resultsSuccess = [
       "address": "523 W Alamar Ave",
       "city": "Greenfield",
       "state": "Ca",
+      "zip": "931054826",

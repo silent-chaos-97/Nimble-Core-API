@@ -21,6 +21,7 @@ async function create(payload, accountRequestId, tx = app.db) {
   const institution = await app.services.institution.get({ id: iid }, tx)
 
   // remove all previous account request bsa answers
+// Temp comment
   await BsaRiskResult.where({ account_request_id: accountRequest.id }).destroy({ require: false, transacting: tx })
 
   // for each answer from the BSA test, we insert them into the database

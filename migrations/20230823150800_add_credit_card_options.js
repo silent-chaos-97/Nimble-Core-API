@@ -27,10 +27,11 @@ const OLD_ROWS = [
 
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
  */
 exports.up = knex => Promise.all([
   knex('products').where({ sku: 'credit-card' }).del(),
   knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(product =>
     knex('products').insert({
       institution_id: inst.id,
+      ...product
+    })

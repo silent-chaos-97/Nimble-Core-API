@@ -16,6 +16,7 @@
               - reference
               - event
             properties:
+              reference:
                 type: string
                 format: uuidv4
                 title: signer reference uuid

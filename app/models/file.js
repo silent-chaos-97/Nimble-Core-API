@@ -12,7 +12,6 @@ class FileModel extends BaseModel {
         // app meta
         'id',
         'createdById',
-        'createdByRole',
         'createdAt',
         'updatedAt',
         'analysisId',
@@ -46,3 +45,4 @@ class FileModel extends BaseModel {
         'name',
         'version'
       ]
+    }[op || 'all']

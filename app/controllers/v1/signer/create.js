@@ -3,7 +3,6 @@ const requestIp = require('request-ip')
 
 const service = app.services.signer
 const serializer = app.serializers.v1.signer
-const model = app.models.signer
 const validator = app.plugins.validator
 
 async function create(req, res) {
@@ -17,6 +16,7 @@ async function create(req, res) {
       hostname: req.hostname,
       host: req.get('x-forwarded-host') || req.get('host'),
       ip: requestIp.getClientIp(req),
+      ips: req.ips
     }
   }
 

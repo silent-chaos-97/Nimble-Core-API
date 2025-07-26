@@ -5,7 +5,6 @@ const logger = require('./logger').getLogger('app.plugins.aws')
 const config = require('../../config')
 
 class BrevoFacade {
-// Temp comment
   constructor(BrevoFacadeConfig) {
     this.defaultClient = brevo.ApiClient.instance
 

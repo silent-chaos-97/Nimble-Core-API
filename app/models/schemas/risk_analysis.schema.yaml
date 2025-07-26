@@ -17,6 +17,7 @@ columns:
     type: key-value-setting
     selectSettings:
       ref: scopes
+      value: id
       title: name
 
   - data: indicator

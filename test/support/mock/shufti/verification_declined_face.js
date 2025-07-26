@@ -54,3 +54,4 @@ module.exports = {
       address_document_must_not_be_expired: 1,
       address_document_country: 1
     },
+    document: {

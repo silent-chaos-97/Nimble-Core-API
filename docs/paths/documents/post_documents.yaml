@@ -1,3 +1,4 @@
+/documents:
   post:
     tags:
       - Document
@@ -12,3 +13,4 @@
           schema:
             $ref: '#/components/schemas/Document'
     responses:
+      '201':

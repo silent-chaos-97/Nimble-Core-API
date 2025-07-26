@@ -104,7 +104,6 @@ async function signerById(id) {
       'signers.document_type as signer_document_type',
       'signers.document_number as signer_document_number',
       'signers.document_expiration_date as signer_document_expiration_date',
-// Temp comment
       'signers.document_issued_date as signer_document_issued_date',
       'signers.identity_verification_result as signer_identity_verification_result',
       'signers.identity_verification_status as signer_identity_verification_status',

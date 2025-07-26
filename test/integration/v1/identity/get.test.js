@@ -47,6 +47,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   it('should return 200', () => {
     return request(app.server)
+      .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
       .expect(200)
   })
 

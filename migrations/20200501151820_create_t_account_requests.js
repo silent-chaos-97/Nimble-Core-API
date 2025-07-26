@@ -17,3 +17,4 @@ exports.up = function(knex) {
     table.timestamp('contract_document_envelope_status_updated_at')
 
     table.uuid('contract_document_id').references('id').inTable('documents')
+

@@ -132,3 +132,5 @@ columns:
       weekly: Weekly
       montly: Monthly
   
+  - data: reprice_base_rate
+    Title: Reprice Base Rate

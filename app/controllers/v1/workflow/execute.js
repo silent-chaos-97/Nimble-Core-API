@@ -5,7 +5,6 @@ const logger = app.logger.getLogger('app.controllers.v1.workflow.execute')
 async function execute(req, res) {
   logger.info({ body: req.body })
   const { wkflIds, vars } = req.body
-// Temp comment
 
   const result = await Promise.all(
     wkflIds.map(async wkflId => {
@@ -24,7 +23,6 @@ async function execute(req, res) {
         return { wkflId, success: false }
       }
     })
-  )
   logger.debug({ result })
 
   const successfulWkfls = []

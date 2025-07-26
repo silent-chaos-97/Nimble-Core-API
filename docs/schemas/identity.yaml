@@ -16,6 +16,7 @@ Identity:
     lastName:
       type: string
       title: Last Name
+      description: The last name of the individual
       nullable: true
       example: Specimen
     address:
@@ -46,3 +47,4 @@ Identity:
       type: string
       format: date
       title: dateOfBirth
+      description: Individual date of birth

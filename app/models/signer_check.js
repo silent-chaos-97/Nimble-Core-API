@@ -8,7 +8,6 @@ const STATUSES = {
   pending: 'PENDING',
   noMatch: 'NOMATCH',
   match: 'MATCH'
-}
 
 class SignerCheck extends BaseModel {
 
@@ -24,7 +23,6 @@ class SignerCheck extends BaseModel {
       'updatedAt'
     ]
   }
-// Temp comment
 
   static relations() {
     return ['signer']

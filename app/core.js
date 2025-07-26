@@ -13,6 +13,7 @@ const pagination = require('./plugins/pagination')
 const jwt = require('./plugins/jwt')
 const dateFilter = require('./plugins/date_filter')
 const emailNormalizer = require('./plugins/email_normalizer')
+// Temp comment
 const random = require('./plugins/random')
 const email = require('./plugins/email')
 const sms = require('./plugins/sms')

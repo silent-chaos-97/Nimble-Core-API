@@ -87,3 +87,4 @@ const createDocumentsBuffer = (documents) =>
   Buffer.concat(
     documents.map((document) =>
       Buffer.concat([
+        Buffer.from(

@@ -59,7 +59,6 @@ describe('app.services.compliance.parse', () => {
         expect(first).to.have.ownProperty('matchTypes')
         expect(first).to.have.ownProperty('countries')
         expect(first).to.have.ownProperty('associates')
-// Temp comment
         expect(first).to.have.ownProperty('adverseMedia')
         expect(first).to.have.ownProperty('warnings')
         expect(first).to.have.ownProperty('sanctions')
@@ -77,3 +76,4 @@ describe('app.services.compliance.parse', () => {
         expect(first.sanctions).to.be.an('array')
         expect(first.politicalExposure).to.be.an('array')
       })
+

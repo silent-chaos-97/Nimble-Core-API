@@ -56,7 +56,6 @@ describe('app.services.email.emailVerification', () => {
       await seed.account_request_product_options() // insert all
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
-// Temp comment
 
       await knex('signer_email_verifications').insert({
         id: '2e31d8c0-0000-0000-0000-4bd8aa454722',
@@ -91,7 +90,6 @@ describe('app.services.email.emailVerification', () => {
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':domain', 'wearesingular.com')
-        .replace(':signer_id', signer.id)
         .replace(':id', id)
         .replace(':token', 'xxxx')
       const template = 'signerEmailVerificationEmail'
@@ -99,3 +97,4 @@ describe('app.services.email.emailVerification', () => {
       await app.services.email.emailVerification(id)
 
       const expectedCall = [template, emailData.email, undefined, emailData]
+      expect(emailData.verifyUrl).to.equal(`${config.get('protocol')}://${config.get('frontend.onboarding_domain')}/wearesingular.com/email-verification/2e31d8c0-1226-4651-8a5d-4bd8aa454722/2e31d8c0-0000-0000-0000-4bd8aa454722?token=xxxx`)

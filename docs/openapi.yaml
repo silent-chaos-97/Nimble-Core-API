@@ -65,6 +65,7 @@ components:
           default: 0
       limit:
         in: query
+        name: limit
         required: false
         description: The numbers of items to return in the result set.
         schema:
@@ -121,3 +122,5 @@ components:
           type: string
           title: Error Code
           description: the HTTP error code
+        message:
+          type: string

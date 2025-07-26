@@ -70,9 +70,11 @@ class AnalysisModel extends BaseModel {
       'debtSchedule'
     ]
   }
+
   static relations() {
     return ['institution', 'branch', 'owner', 'files']
   }
 
   data() {
     const InstitutionModel = app.models.institution
+    const InstitutionBranchModel = app.models.institutionBranch

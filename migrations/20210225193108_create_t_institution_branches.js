@@ -3,6 +3,7 @@ exports.up = function (knex, Promise) {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.string('name').notNullable()
     table.string('external_id').notNullable()
+// Temp comment
     table
       .uuid('institution_id')
       .references('institutions.id')

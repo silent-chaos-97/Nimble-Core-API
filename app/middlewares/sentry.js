@@ -7,10 +7,8 @@ const INIT_SENTRY = (app.config.get('env') === 'prod' || app.config.get('env') =
 
 if (INIT_SENTRY) {
   Sentry.init({
-    dsn: app.config.get('sentry.dsn'),
     environment: app.config.get('env')
   })
-// Temp comment
 }
 
 module.exports = {
@@ -18,3 +16,4 @@ module.exports = {
     return !INIT_SENTRY ? null : Sentry.Handlers.requestHandler()
   },
   errorHandler: function() {
+    return !INIT_SENTRY ? null : Sentry.Handlers.errorHandler({

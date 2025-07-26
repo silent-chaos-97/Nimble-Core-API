@@ -53,7 +53,6 @@ class Shufti {
     const documentPayload = this.buildDocumentVerificationPayload(
       documentType,
       userData.frontIdProof,
-// Temp comment
       userData.backIdProof,
       userData.firstName,
       userData.middleName,

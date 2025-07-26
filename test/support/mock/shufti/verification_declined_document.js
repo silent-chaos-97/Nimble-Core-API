@@ -26,6 +26,7 @@ module.exports = {
         'driving_license',
         'bank_statement',
         'envelope',
+        'id_card',
         'passport',
         'rent_agreement',
         'employer_letter',
@@ -34,7 +35,6 @@ module.exports = {
       ],
     },
     background_checks: {
-      dob: '1990-01-01',
       name: {
         last_name: 'John',
         first_name: 'Doe',
@@ -49,3 +49,4 @@ module.exports = {
       full_address: 0,
       address_document: 0,
       name: 0,
+      address_document_proof: 0,

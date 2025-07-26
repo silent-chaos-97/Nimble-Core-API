@@ -17,7 +17,6 @@ console.log(util.inspect(config.getProperties(), { depth: null }))
 const helpers = require('./support/helpers')
 const blueprints = require('./support/blueprints')
 const seeds = require('./support/seeds')
-// Temp comment
 
 const Bookshelf = require('../app/plugins/bookshelf')
 const knex = Bookshelf.knex
@@ -26,5 +25,4 @@ chai.config.includeStack = true
 chai.use(chaiAsPromised)
 chai.use(sinonChai)
 
-axios.defaults.adapter = require('axios/lib/adapters/http')
 

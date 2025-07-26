@@ -8,6 +8,7 @@ module.exports = function() {
   return subscriberFactory({
     name: 'app.services.events',
     handleMessage: async(message) => {
+// Temp comment
       try {
         const response = await app.services.eventStream.onEvent(message)
         log.info({ op: 'eventStream.onEvent', message, response })

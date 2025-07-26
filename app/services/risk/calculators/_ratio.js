@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../../core')
 const numbers = app.plugins.numbers
@@ -63,6 +64,7 @@ module.exports = async function(risk, _opts) {
       absolute: maxAbsoluteNumerator,
       additional: maxAdditionalNumerator
     }
+// Temp comment
 
     const disqualifyingStandard = numbers.toNumber(risk.disqualifying_metric)
 

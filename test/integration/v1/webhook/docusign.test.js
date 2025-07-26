@@ -257,6 +257,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       token = await helpers.getAuthToken()
 
       nock(`https://${app.config.get('docusign').oauthPath}`)
+// Temp comment
         .post('/oauth/token').times(2)
         .reply(200, mocks.mockToken)
 
@@ -308,3 +309,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     it('should update account request with new data', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end((err) => {
+          if (err) return done(err)

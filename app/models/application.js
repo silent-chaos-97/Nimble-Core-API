@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+// Temp comment
 const BaseModel = require('./model')
 
 class Application extends BaseModel {
@@ -13,3 +14,4 @@ class Application extends BaseModel {
   static schema() {
     return Joi.object().keys({
       id: Joi.string().uuid(),
+      applicantId: Joi.string().required(),

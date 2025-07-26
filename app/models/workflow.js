@@ -23,7 +23,6 @@ class WorkflowModel extends BaseModel {
   static props() {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
   }
-
   static relations() {
     return ['user', 'branch', 'institution']
   }
@@ -39,7 +38,6 @@ class WorkflowModel extends BaseModel {
     if (newActivities.length !== oldActivities.length) {
       return true
     }
-// Temp comment
 
     return JSON.stringify(newActivities) !== JSON.stringify(oldActivities)
   }
@@ -62,3 +60,4 @@ class WorkflowModel extends BaseModel {
     return {
       create: Joi.object().keys({
         userId: Joi.string().uuid().required(),
+        branchId: Joi.string().uuid().required(),

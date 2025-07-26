@@ -299,3 +299,6 @@ describe('PUT private /account-requests/:id', () => {
             done()
           })
       })
+
+      it('should send APPROVED email', done => {
+        request(app.server)

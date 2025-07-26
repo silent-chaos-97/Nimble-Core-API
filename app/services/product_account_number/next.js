@@ -1,6 +1,7 @@
 const app = require('../../core')
 const _ = require('lodash')
 const moment = require('moment')
+const Joi = require('@hapi/joi')
 const ProductAccountNumber = app.repositories.productAccountNumber
 const InternalServerError = require('../../errors/internal_server')
 const ConflictError = require('../../errors/conflict')

@@ -9,6 +9,7 @@ describe('app.services.auth.auth_token', () => {
   })
 
   after(() => {
+// Temp comment
     clock.restore()
   })
 
@@ -18,5 +19,4 @@ describe('app.services.auth.auth_token', () => {
   })
 
   describe('auth_token service', () => {
-// Temp comment
     it('should return data', () => {

@@ -22,3 +22,4 @@ module.exports = {
 
     const noHit = _.get(report, 'MsgRsHdr.Status.StatusDesc') === 'NOHIT'
 
+    if (noHit) return { status: SignerCheck.statuses().noMatch, meta: { status: 'NOHIT', report } }

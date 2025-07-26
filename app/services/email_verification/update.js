@@ -34,7 +34,6 @@ async function update(id, signerId, tx = app.db) {
     { consumedAt: moment() },
     { method: 'update', transacting: tx }
   )
-
   // Update Signer verification Status
   await app.services.signer.update({
     id: signerId,
@@ -42,3 +41,4 @@ async function update(id, signerId, tx = app.db) {
     emailVerifiedAt: new Date()
   }, tx)
 
+  return emailVerification

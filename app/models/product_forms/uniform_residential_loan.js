@@ -522,3 +522,9 @@ const mockUniformResidentialLoanApplication = {
 			employment: {
 				current: {
 					selfEmployed: false,
+					employerName: 'ACME',
+					employerAddress: '300 Main St, Boston, MA 02111-1307',
+					yearsOnJob: 3,
+					yearsInProfession: 10,
+					positionOrTypeOfBusiness: 'Auditor',
+					businessPhone: '2221113333'

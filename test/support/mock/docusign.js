@@ -3588,3 +3588,47 @@ const mockDocumentTabs = {
       'fontSize': 'size7',
       'required': 'false',
       'locked': 'false',
+      'documentId': '1',
+      'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+      'pageNumber': '1',
+      'xPosition': '305',
+      'yPosition': '318',
+      'width': '0',
+      'height': '0',
+      'tabId': '22332185-9e8d-4519-a021-e5b7c13d7023',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'checkbox',
+      'tabGroupLabels': [
+        'Checkbox Group 5579945d-3834-4b42-b924-43f7154cfe3f'
+      ]
+    },
+    {
+      'name': '',
+      'tabLabel': 'Checkbox f52cc50e-679d-4519-90e6-13236ecc815e',
+      'selected': 'true',
+      'shared': 'false',
+      'font': 'lucidaconsole',
+      'bold': 'false',
+      'italic': 'false',
+      'underline': 'false',
+      'fontColor': 'black',
+      'fontSize': 'size7',
+      'required': 'false',
+      'locked': 'false',
+      'documentId': '1',
+      'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+      'pageNumber': '1',
+      'xPosition': '493',
+      'yPosition': '294',
+      'width': '0',
+      'height': '0',
+      'tabId': '39812673-40b0-43d1-bdfd-5994cedc94f4',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'checkbox',
+      'tabGroupLabels': [
+        'Checkbox Group 5579945d-3834-4b42-b924-43f7154cfe3f'
+      ]
+    },
+    {

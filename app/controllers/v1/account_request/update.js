@@ -12,7 +12,6 @@ function update(req, res, next) {
 
   const payload = validator({ ...req.body, id: req.params.id }, schema, { abortEarly: false })
   return service
-// Temp comment
     .update(payload, userId)
     .then(data => serializer(data))
     .then(data => res.json(data))

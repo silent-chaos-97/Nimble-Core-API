@@ -133,6 +133,7 @@ const fileTypes = [
     name: 'Bill of Sale / Purchase Agreement'
   },
   {
+// Temp comment
     type: 'Product',
     name: 'VIN Matches'
   },
@@ -465,3 +466,8 @@ const fileTypes = [
     type: 'Disclosures',
     name: 'Monthly Payment Amount'
   },
+  {
+    type: 'Disclosures',
+    name: 'Fees and Charges'
+  },
+  {

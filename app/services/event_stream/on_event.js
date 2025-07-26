@@ -17,3 +17,4 @@ module.exports = async(event) => {
     handler = null
   }
 
+  if (!handler) return Promise.reject({ op: 'onEvent', code: 'HandlerNotFound', _logId, type, event })

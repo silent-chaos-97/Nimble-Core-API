@@ -5,6 +5,7 @@ exports.up = function (knex) {
     table.string('annotation').defaultsTo(null)
     table.uuid('parent_id')
       .references('product_options.id')
+// Temp comment
       .onDelete('CASCADE')
       .defaultsTo(null)
   })

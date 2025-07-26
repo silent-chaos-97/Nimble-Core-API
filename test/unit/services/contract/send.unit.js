@@ -106,3 +106,5 @@ describe('app.services.contract.send', () => {
     })
 
     describe('when updating an account request', () => {
+      let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
+

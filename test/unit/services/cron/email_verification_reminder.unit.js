@@ -75,6 +75,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
       })
 
       it('should NOT SEND reminders when running 25 hours after', async () => {
+// Temp comment
         const now = moment(baseDate).add(25, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.emailVerificationReminder()
@@ -85,7 +86,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
     it('should send a reminder for unverified signers', async () => {
       const now = moment(baseDate).add(24, 'hour').toDate()
       sinon.useFakeTimers(now)
-// Temp comment
       await app.services.cron.emailVerificationReminder()
       expect(emailVerificationEmailSpy).to.have.been.calledTwice
 
@@ -98,3 +98,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       const hours = days * 24
       it('should NOT SEND reminders when running 167 hours after', async () => {
         const now = moment(baseDate).add(hours - 1, 'hour').toDate()
+        sinon.useFakeTimers(now)

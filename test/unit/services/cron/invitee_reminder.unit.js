@@ -4,6 +4,7 @@ const moment = require('moment')
 describe('app.services.cron.inviteeReminder', () => {
   let clock = null
   const baseDate = new Date('2019-01-01T01:00:00.001Z')
+  let inviteReminderSpy, prospectPendingSignersSpy = null
 
   before(() => {
     inviteReminderSpy = sinon.spy(app.services.email, 'inviteReminder')
@@ -22,7 +23,6 @@ describe('app.services.cron.inviteeReminder', () => {
   after(() => {
     clock.restore()
     sinon.restore()
-  })
 
   describe('service method', () => {
     it('should exist', () => {
@@ -100,3 +100,5 @@ describe('app.services.cron.inviteeReminder', () => {
         await app.services.cron.inviteeReminder(days)
         expect(inviteReminderSpy).to.not.have.been.called
         expect(prospectPendingSignersSpy).to.not.have.been.called
+      })
+

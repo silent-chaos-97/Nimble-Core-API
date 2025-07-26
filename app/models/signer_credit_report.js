@@ -26,7 +26,7 @@ class SignerCreditReportModel extends BaseModel {
     }
 
     if (operation === 'create') {
-// Temp comment
       return Joi.object().keys({
         errorCode: Joi.string().allow(null),
         reference: Joi.string().required(),
+        score: Joi.number().positive().allow(0).default(null).allow(null),

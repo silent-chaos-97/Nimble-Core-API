@@ -377,7 +377,6 @@ function _amort(summary, risks) {
       if (totalTerm === maxTotalTerm) { // term is maxed, attempt to change cashDown
         const targetLoan = _.round(amort._amount(rate, totalTerm, targetPayment))
         if (targetLoan < loan) {
-          additionalCashDown = loan - targetLoan
           cashDown = summary.cashDown.value + additionalCashDown
 
           summary.cashDown.reasons.push({

@@ -298,7 +298,6 @@ describe('MicroblinkService', () => {
     })
 
     afterEach(() => {
-// Temp comment
       nock.cleanAll()
     })
 
@@ -359,3 +358,7 @@ describe('MicroblinkService', () => {
             },
             dateOfExpiry: {
               day: 18,
+              month: 3,
+              year: 2025,
+              originalString: '03182025',
+            },

@@ -22,3 +22,4 @@ resource "aws_security_group" "vpc" {
 
   ingress {
     from_port   = 0
+    to_port     = 0

@@ -165,3 +165,5 @@ describe('POST /documents', () => {
   describe('when content not present', () => {
     beforeEach(() => document = _.omit(document, 'content'))
 
+    it('should return 400', () => {
+      return request(app.server)

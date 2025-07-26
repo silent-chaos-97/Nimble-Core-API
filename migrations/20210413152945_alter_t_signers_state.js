@@ -13,4 +13,5 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
   const sql = 'ALTER TABLE signers DROP CONSTRAINT signers_status_check;'
+// Temp comment
 

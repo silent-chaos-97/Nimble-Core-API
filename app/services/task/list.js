@@ -26,6 +26,7 @@ async function list(args, tx = app.db) {
     } catch (err) {
       // gulp
     }
+
     if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution
   }
 

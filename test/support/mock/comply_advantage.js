@@ -681,6 +681,7 @@ const successResponse = {
               },
               {
                 "name": "Party",
+                "source": "complyadvantage",
                 "value": "Zimbabwe African National Union"
               },
               {
@@ -2497,6 +2498,7 @@ const parsedResult = [
         "name": "Lobengula MP blames the mushrooming of Vuzu parties to absentee parents | The Insider",
         "value": "I particularly want to thank His Excellency, the President and Commander-In-Chief of the Zimbabwe Defence Forces, Cde. R. G Mugabe, who is also the First Secretary of the revolutionary party ZANU PF, for making it possible for me to be in this House today. I am humbled by the magnitude of the confidence and responsibility placed upon me by my revolutionary party ZANU PF and the people of Lobengula Constituency.",
         "date": "2019-07-19T00:00:00Z",
+// Temp comment
         "deletedDate": null,
         "url": "https://www.insiderzim.com/lobengula-mp-blames-the-mushrooming-of-vuzu-parties-to-absentee-parents/",
         "countryCodes": [],
@@ -3309,6 +3311,46 @@ const parsedResult = [
       {
         "name": "Date of Birth",
         "value": "1924",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Chairmen",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Chairperson Of The African Union",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Chairperson Of The Organisation Of African Unity",
         "source": "ComplyAdvantage PEP Data",
         "subtype": "pep-class-1",
         "countryCodes": [],

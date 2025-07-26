@@ -93,3 +93,4 @@ describe('app.services.contract.update', () => {
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
         await seed.institution.create() // required by seed.account_request_products
+        await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')

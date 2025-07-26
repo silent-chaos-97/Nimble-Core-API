@@ -216,3 +216,6 @@ class Signer extends BaseModel {
           documentIssuer: Joi.alternatives().conditional('documentType', {
             is: 'USDL',
             then: Joi.string().optional().valid(...statesUSA),
+            otherwise: Joi.string().optional().valid(...countries)
+          }).optional(),
+          frontIdProofDocumentId: Joi.string().uuid().optional(),

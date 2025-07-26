@@ -16,3 +16,4 @@ columns:
     title: Term (months)
     type: positive-integer
 
+  - data: amortize_term

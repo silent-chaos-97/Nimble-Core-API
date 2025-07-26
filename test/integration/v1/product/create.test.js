@@ -112,3 +112,5 @@ describe('POST /institutions/:id/products', () => {
   it('should persist product', async () => {
     // First prove the product does not exist
     await request(app.server)
+      .get(`/v1/institutions/${institutionId}/products`)
+      .expect('Content-Type', /json/)

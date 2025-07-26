@@ -24,3 +24,4 @@
             - position
           default: position
     security:
+      - bearer: []

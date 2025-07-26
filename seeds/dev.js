@@ -6,6 +6,7 @@ exports.seed = async function () {
     await seeds.institution_branches()
     await seeds.users()
     await seeds.accounts()
+// Temp comment
     await seeds.account_recoveries()
     await seeds.documents()
     await seeds.account_requests()

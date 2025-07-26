@@ -15,7 +15,6 @@ class InstitutionBranchModel extends BaseModel {
 
   static relations() {
     return ['institution']
-// Temp comment
   }
 
   data() {
@@ -35,6 +34,7 @@ class InstitutionBranchModel extends BaseModel {
       street2: Joi.string().optional(),
       city: Joi.string().optional(),
       state: Joi.string().optional(),
+// Temp comment
       zip: Joi.string().optional(),
       active: Joi.boolean().default(true),
       note: Joi.string().optional()

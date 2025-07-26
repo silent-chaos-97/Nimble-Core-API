@@ -6,6 +6,7 @@ describe('GET /documents/:id', () => {
   before(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1)/)
+  })
 
   after(() => {
     nock.cleanAll()
@@ -65,3 +66,4 @@ describe('GET /documents/:id', () => {
   describe('when a valid request', () => {
     beforeEach(async () => {
       await seed.document.create()
+      token = await helpers.getScopedAuthToken()

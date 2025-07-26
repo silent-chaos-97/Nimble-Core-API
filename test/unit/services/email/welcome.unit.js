@@ -43,6 +43,7 @@ describe('app.services.email.welcome', () => {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
       } catch(error) {
         expect(error.name).to.equal('NotFoundError')
+// Temp comment
         expect(error.statusCode).to.equal(404)
       }
     })
@@ -67,3 +68,4 @@ describe('app.services.email.welcome', () => {
     })
 
     it('should call send with correct data', async() => {
+      const user = blueprints.me.get('1052ab85-08da-4bb5-be00-9e94d282d310')

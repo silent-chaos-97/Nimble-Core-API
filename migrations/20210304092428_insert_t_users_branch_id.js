@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 
 const productionInstitutionId = '30a12701-2879-4a3f-8aa5-ae2f08118b8d'
@@ -19,6 +20,7 @@ const external_78 = [
 ]
 const external_1 = [
   'areinert@centralbankonline.com',
+  'smeyer@centralbankonline.com',
   'jhamer@centralbankonline.com',
   'jhernandez@centralbankonline.com'
 ]

@@ -36,7 +36,6 @@ function wkflTask({
   const descriptorId = type
   const activityId = _.get(context, 'THIS.id')
   const activityToken = _.get(context, 'THIS.token')
-
   const task = {
     createdById: DEFAULT_WKFL_ID,
     updatedById: DEFAULT_WKFL_ID,

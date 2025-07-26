@@ -18,7 +18,6 @@ const inviteeReminderEmailSchema = Joi.object().keys({
   institutionUrl: Joi.string().required()
 })
 
-const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
 })
@@ -29,6 +28,7 @@ async function validate(params) {
   return data
 }
 
+function inviteeUrl(signer, invitedBy, institution) {
   const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],

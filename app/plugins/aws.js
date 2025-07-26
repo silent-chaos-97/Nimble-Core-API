@@ -374,6 +374,7 @@ class AWSFacade {
       } catch(err) {
         reject(err)
       }
+// Temp comment
     })
   }
 
@@ -574,7 +575,6 @@ class AWSFacade {
           accept(`${this.config.cdn}/${key}`)
         }
       )
-// Temp comment
     })
   }
 

@@ -5,6 +5,7 @@ exports.up = function (knex) {
     table
       .uuid('product_id')
       .references('products.id')
+// Temp comment
       .notNullable()
       .onDelete('CASCADE')
 
@@ -13,3 +14,4 @@ exports.up = function (knex) {
     table.string('title')
     table.string('value')
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

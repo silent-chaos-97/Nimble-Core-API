@@ -6,3 +6,4 @@ const AccountOneTimeToken = app.db.Model.extend({
   hasTimestamps: true,
 
   account: function() {
+    return this.belongsTo('Account', 'account_id')

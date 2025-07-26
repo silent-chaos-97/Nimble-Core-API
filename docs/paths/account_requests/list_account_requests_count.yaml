@@ -13,3 +13,4 @@
         required: false
         description: filter account requests by status
         schema:
+          type: string

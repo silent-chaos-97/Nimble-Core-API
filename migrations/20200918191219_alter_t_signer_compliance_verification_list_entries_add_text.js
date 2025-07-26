@@ -11,7 +11,6 @@ exports.up = function (knex) {
     table.text('source')
     table.text('url')
   }))
-};
 
 exports.down = function (knex) {
   return knex.schema.alterTable('signer_compliance_verification_list_entries', function (table) {

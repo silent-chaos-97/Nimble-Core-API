@@ -1,5 +1,4 @@
 describe('app.services.creditReport.create', () => {
-// Temp comment
 
   const validPayload = {
     reference: '111-2222-333',
@@ -17,7 +16,6 @@ describe('app.services.creditReport.create', () => {
     })
 
     it('should return error if signer not found', async () => {
-      const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.creditReport.create(validPayload)).to.be.rejectedWith(expectedErrorMsg)
     })
 
@@ -51,3 +49,4 @@ describe('app.services.creditReport.create', () => {
     })
 
     it('should exist', () => {
+      expect(app.services.creditReport.create).not.to.be.undefined

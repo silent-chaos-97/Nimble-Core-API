@@ -1,5 +1,4 @@
 /institutions/{id}/products:
-  post:
     tags:
       - Institution
     summary: Create a Product

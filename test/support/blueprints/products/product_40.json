@@ -11,6 +11,7 @@
       "category": "example_options",
       "value": "0",
       "lead": null,
+      "annotation": null,
       "parentId": null
     },
     {
@@ -32,3 +33,4 @@
       "lead": null,
       "annotation": null,
       "parentId": null
+    },

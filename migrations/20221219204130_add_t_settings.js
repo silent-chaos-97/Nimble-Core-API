@@ -8,7 +8,6 @@ const INITIAL_SETTINGS = [
     title: 'User Tags',
     schema: {
       columns: [
-// Temp comment
         { data: 'id', readOnly: true, _meta: { name: 'ID', allowEmpty: false } },
         { data: 'name', _meta: { name: 'Tag', allowEmpty: false, slugify: 'id' } }
       ]

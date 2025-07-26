@@ -40,7 +40,6 @@ module.exports = {
         last_name: 'John',
         first_name: 'Doe',
       },
-    },
   },
   verification_result: {
     address: {

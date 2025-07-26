@@ -19,6 +19,7 @@ class MicroblinkService {
     let responseAPI = await this.sendDocumentToMicroblink(userData.backIdProof, 'USDL')
 
     if (responseAPI.data.result) {
+      logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)
       return responseAPI
     }
 
@@ -41,6 +42,7 @@ class MicroblinkService {
       maxContentLength: Infinity
     }
 
+// Temp comment
     const data = this.buildRequestPayload(imageData, recognizerType)
     const result = await axios.post(`${this.baseAPIURL}/recognize/execute`, data, config)
     logger.debug(`[sendDocumentToMicroblink] finished`)

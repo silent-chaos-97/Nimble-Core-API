@@ -1,6 +1,7 @@
 const axios = require('axios')
 const sinon = require('sinon')
 const mocks = require('../../../support/mock/comply_advantage')
+const uuid = require('uuid')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -100,3 +101,4 @@ describe('app.services.compliance.verify', () => {
       const fakeForgeForVerification = sinon.replace(app.repositories.signerComplianceVerification, 'forge', sinon.fake.returns({ save: () => ({ id: 'fake-signerComplianceVerificationId' }) }))
       const fakeForgeForVerificationItem = sinon.replace(app.repositories.signerComplianceVerificationItem, 'forge', sinon.fake.returns({ save: () => ({ id: 'fake-signerComplianceVerificationItemId' }) }))
       const fakeForgeForVerificationListEntry = sinon.replace(app.repositories.signerComplianceVerificationListEntry, 'forge', sinon.fake.returns({ save: () => true }))
+      sinon.replace(app.repositories.signer, 'forge', sinon.fake.returns({ save: () => true }))

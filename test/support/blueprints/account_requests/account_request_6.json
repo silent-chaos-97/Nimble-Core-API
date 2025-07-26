@@ -178,6 +178,7 @@
       "invitedAt": "2018-02-16T12:11:03.341Z",
       "verificationStatusFace": "VALID",
       "verificationStatusFaceUpdatedAt": "2018-02-16T12:11:03.341Z",
+      "verificationStatusDocument": "INVALID",
       "verificationStatusDocumentUpdatedAt": "2018-02-16T12:11:03.341Z",
       "verificationStatusAddress": "VALID",
       "verificationStatusAddressUpdatedAt": "2018-02-16T12:11:03.341Z",
@@ -190,3 +191,5 @@
       "remoteMetadata": {}
     }
   ],
+  "verificationStatus": {
+    "verificationStatusFace": "VALID",

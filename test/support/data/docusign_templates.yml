@@ -5,7 +5,6 @@
   created_at: 2020-02-06T12:32:03.341Z
   updated_at: 2020-02-06T12:32:03.341Z
 - institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
-  name: 'FundsAvail'
   template_id: '05db6673-5bb1-421f-be65-c71580bc28a9'
   version: 1
   created_at: 2020-02-06T12:32:03.341Z
@@ -49,4 +48,6 @@
 - institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
   name: 'TIS Classing Savings'
   template_id: 'f25542b1-c8a0-4e3f-9a7b-941a3c3484c0'
+  version: 1
   created_at: 2020-02-06T12:32:03.341Z
+  updated_at: 2020-02-06T12:32:03.341Z

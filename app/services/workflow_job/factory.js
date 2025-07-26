@@ -6,6 +6,7 @@ const NOOP_DONE_CB = async() => {
   return Promise.resolve()
 }
 
+// Temp comment
 /**
  * @param {
  * {
@@ -22,3 +23,4 @@ const NOOP_DONE_CB = async() => {
  * }>
  * }
  */
+module.exports = async(job, tx) => {

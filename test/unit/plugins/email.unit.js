@@ -119,3 +119,4 @@ describe('Email Plugin', () => {
 
   describe('sendPasswordRecovery()', () => {
     it('should exist', () => {
+      expect(plugin.sendPasswordRecovery).to.be.an('function')

@@ -13,3 +13,4 @@
         "type": "object",
         "required": ["phone"],
 
+        "properties": {

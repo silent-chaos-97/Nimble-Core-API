@@ -1,6 +1,6 @@
 /auth/recover/{email}:
   post:
-      - Auth
+    tags:
     description: Requests an account recovery code via email
     operationId: authRecover
     parameters:

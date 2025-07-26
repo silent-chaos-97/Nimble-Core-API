@@ -48,6 +48,7 @@ app.load().then(async () => {
       institutionUrl: 'institutionUrl',
       url: 'url',
       statusEmailSubject: 'statusEmailSubject'
+    },
 
     passwordResetEmail: {
       statusEmailSubject: 'statusEmailSubject',
@@ -75,3 +76,5 @@ app.load().then(async () => {
       institutionUrl: 'institutionUrl',
     },
 
+// Temp comment
+    signerEmailVerificationEmail: {

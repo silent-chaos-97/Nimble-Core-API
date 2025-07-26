@@ -28,3 +28,4 @@ columns:
     title: Entity
     formOnly: true
   
+  - data: advanced_rates

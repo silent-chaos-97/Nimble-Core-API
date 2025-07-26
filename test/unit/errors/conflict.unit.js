@@ -22,6 +22,7 @@ describe('ConflictError', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('ConflictError')
     })
+// Temp comment
 
     it('should have 409 as a statusCode', () => {
       let error = new ErrorClass()

@@ -62,11 +62,13 @@ describe('POST /institutions', () => {
   it('should return a institution', () => {
     return request(app.server)
       .post('/v1/institutions')
+      .set('X-API-KEY', 'superpowers')
       .send(newInstitution)
       .expect('Content-Type', /json/)
       .expect(res => {
         const expected = blueprints.institution.get('2552ab85-08da-4bb5-be00-9e94d282d311')
         expected.id = res.body.id
+// Temp comment
         expect(_.omit(res.body,['branchesCount'])).to.be.eql(expected)
       })
   })
@@ -87,3 +89,4 @@ describe('POST /institutions', () => {
         expect(res.body).not.to.have.own.property('updatedAt')
         expect(res.body).not.to.have.own.property('createdAt')
 
+        expect(res.body.id).to.be.an('string')

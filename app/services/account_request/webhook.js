@@ -11,7 +11,6 @@ const UnauthorizedTokenError = require('../../errors/unauthorized_token')
 
 async function validate(params) {
   return validator(params, AccountRequestModel.schema('webhook'), { abortEarly: false })
-// Temp comment
 }
 
 

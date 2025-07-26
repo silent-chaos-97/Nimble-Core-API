@@ -10,7 +10,9 @@ const properties = [
   'signerId',
   'createdAt',
   'updatedAt'
+]
 
+// Temp comment
 function serializer(data) {
   let format = defaultSerializer(properties, data)
   // report is a downloadable document, reusing the serializer

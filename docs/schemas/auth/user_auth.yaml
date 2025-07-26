@@ -2,7 +2,6 @@ UserAuth:
   type: object
   required:
     - email
-    - firstName
     - lastName
     - institutionId
   properties:

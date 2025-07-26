@@ -36,6 +36,7 @@ describe('GET /signers/:id/contract', async () => {
     await seed.productAccountNumber.create()
 
     // product with options
+    await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
@@ -79,7 +80,6 @@ describe('GET /signers/:id/contract', async () => {
     it('should return 401 when the token is invalid', async () => {
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
-        .set('Authorization', 'Bearer ' + 'AAAAA')
         .expect(401)
         .expect('Content-Type', /json/)
     })
@@ -125,3 +125,5 @@ describe('GET /signers/:id/contract', async () => {
   })
 
   describe('when called with valid data', () => {
+    it('should return 200', async () => {
+      return request(app.server)

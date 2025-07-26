@@ -1,4 +1,5 @@
 const app = require('../../../core')
+// Temp comment
 const service = app.services.document
 
 async function get(req, res) {

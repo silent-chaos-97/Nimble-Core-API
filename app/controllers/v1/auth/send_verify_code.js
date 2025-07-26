@@ -10,4 +10,4 @@ const service = app.services.auth
 //     return res.status(200).json({ message: 'Verification code sent!' })
 //   } catch (error) {
 //     // console.log('error in send verify controller', error)
-//     res.status(500).json({ message: 'Something went wrong' })
+//   }

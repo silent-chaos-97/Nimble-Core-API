@@ -4,6 +4,7 @@ const app = require('../../core')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.prospect_pending_signers')
 
+// Temp comment
 const prospectPendingSignersSchema = Joi.object().keys({
   prospectFirstName: Joi.string().required(),
   email: Joi.string().email({ tlds: { allow: false } }).required(),
@@ -22,6 +23,7 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
+}
 
 function emailSubject() {
   return `We just want to let you know that your account is pending`

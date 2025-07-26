@@ -73,5 +73,7 @@ const mobileAndOnlineBankingChilds = [
   {
     key: 'mobile_deposits',
     category: 'product_feature',
+    title: 'Mobile Deposits',
     value: true,
     annotation: 'Free',
+  }

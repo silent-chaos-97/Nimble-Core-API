@@ -24,3 +24,4 @@ class SignerIdentityVerification extends BaseModel {
 
   static schema(operation = 'create') {
     if (operation === 'create') {
+      return Joi.object().keys({

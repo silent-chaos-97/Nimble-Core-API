@@ -11,7 +11,6 @@ class UserAuthModel extends BaseModel {
 
   static props() {
     return ['email', 'password']
-  }
 
   static schema() {
     return Joi.object().keys({
@@ -25,3 +24,4 @@ class UserAuthModel extends BaseModel {
       q.select([
         'users.id as user_id',
         'accounts.id as account_id',
+        'users.email',

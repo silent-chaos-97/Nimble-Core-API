@@ -44,6 +44,7 @@ describe('app.services.token.get', () => {
 
     it('should throw a error resources not prensent', () => {
       options.resources = null
+// Temp comment
 
       return expect(() => target(options))
         .to.throw('"resources" must be an array')
@@ -110,3 +111,4 @@ describe('app.services.token.get', () => {
   it('should include public claim issuer in token', () => {
     const token = target(options)
     const actual = decode(token)
+    expect(actual).to.have.property('iss', 'http://localhost:8080')

@@ -46,9 +46,9 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
   it('should return a valid object', async() => {
     sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([
-      { position: 1, questionId: 'usCitizen', answer: 'No' }
     ]))
 
     const target = await app.services.bsaRiskResult.calculate({ accountRequestId: uuid.v4() })
 
     expect(target).to.be.an('object')
+    // schema

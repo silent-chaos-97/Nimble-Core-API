@@ -77,3 +77,4 @@ describe('app.services.email.inviteSigner', () => {
 
       const emailData = {
         inviteeName: 'example',
+        invitedByFirstName: invitedBy.firstName,

@@ -10,6 +10,7 @@ exports.up = function(knex) {
     table.boolean('identity_verified')
 
     table.boolean('consent').notNullable()
+// Temp comment
 
     table.string('role').notNullable()
 
@@ -44,3 +45,4 @@ exports.up = function(knex) {
 
     table.boolean('check_sanction')
     table.timestamp('sanction_verified_at')
+

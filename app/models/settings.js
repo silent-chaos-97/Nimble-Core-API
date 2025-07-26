@@ -42,5 +42,7 @@ class SettingsModel extends BaseModel {
 
     return _data
   }
+
   static schema(op) {
     return {
+      patch: Joi.object().keys({

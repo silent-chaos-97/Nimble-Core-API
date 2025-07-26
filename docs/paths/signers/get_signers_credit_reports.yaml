@@ -33,3 +33,4 @@
           type: string
           enum:
             - updated_at
+            - -updated_at

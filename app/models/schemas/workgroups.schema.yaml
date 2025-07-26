@@ -24,3 +24,4 @@ columns:
 
   - data: meeting_frequency
 
+  - data: meeting_time

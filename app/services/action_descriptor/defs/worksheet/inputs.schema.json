@@ -6,3 +6,4 @@
   "properties": {
     "fileType": {
       "title": "Document",
+      "type": "string",

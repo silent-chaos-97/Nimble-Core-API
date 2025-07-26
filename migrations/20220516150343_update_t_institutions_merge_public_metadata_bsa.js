@@ -96,3 +96,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "order": 8,
         "text": "Do you expect cash transactions in excess of $2,500 per month\\?",
         "type": "string",
+        "subtype": "enum",

@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const app = require('../../core')
 const Wkfl = app.repositories.workflow
 const WkflModel = app.models.workflow
 const logger = app.logger.getLogger('app.services.workflow.get')

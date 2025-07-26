@@ -5,6 +5,7 @@ describe('app.services.applications.list', () => {
   let clock
 
   before(() => {
+    clock = sinon.useFakeTimers()
   })
 
   after(() => {
@@ -32,3 +33,4 @@ describe('app.services.applications.list', () => {
   })
 
   // describe('body properties are valid', () => {
+  //   describe('calling applications list', () => {

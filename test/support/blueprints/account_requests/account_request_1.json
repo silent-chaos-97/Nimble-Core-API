@@ -154,3 +154,5 @@
         "faceStatus": "VALID",
         "faceUpdatedAt": "2018-02-16T12:11:03.341Z",
         "documentStatus": "INVALID",
+        "documentUpdatedAt": "2018-02-16T12:11:03.341Z",
+        "addressStatus": "VALID",
