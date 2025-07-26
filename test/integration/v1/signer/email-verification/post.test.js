@@ -136,3 +136,4 @@ describe('POST /signers/:id/email-verifications', async () => {
         expiration: 86400 // 24h
       })
     })
+

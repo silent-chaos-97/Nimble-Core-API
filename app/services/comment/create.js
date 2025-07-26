@@ -5,7 +5,6 @@ const CommentModel = app.models.comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.comment.create')
 
-// Temp comment
 async function create(data, tx = app.db) {
   try {
     const model = validator(_.pick(data, CommentModel.props()), CommentModel.schema(), { abortEarly: false })
@@ -15,6 +14,7 @@ async function create(data, tx = app.db) {
     logger.info({ phase: 'comment.create.entity:success', entity })
 
     return new CommentModel(entity).data()
+// Temp comment
   } catch (err) {
     logger.error(err, { phase: 'comment.create.entity:fail', data })
   }

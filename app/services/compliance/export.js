@@ -6,6 +6,7 @@ async function __export(searchId, institutionId) {
   logger.debug(`[__export] started for search id [${searchId}] and institution id [${institutionId}]`)
   try {
     const query = await app.repositories.complyAdvantage.getCertificate(searchId)
+    if (!(query.data instanceof Buffer)) {
       throw new Error('__export() Could not fetch certificate')
     }
 
@@ -18,6 +19,5 @@ async function __export(searchId, institutionId) {
     })
 
   } catch (err) {
-    logger.info(err, `[__export] failed for search id [${searchId}] and institution id [${institutionId}]`)
     throw new PreconditionFailedError(err)
   }

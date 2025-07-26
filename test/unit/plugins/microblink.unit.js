@@ -362,3 +362,5 @@ describe('MicroblinkService', () => {
               year: 2025,
               originalString: '03182025',
             },
+            documentNumber: 'D12345678',
+            sex: '2',

@@ -9,7 +9,6 @@ describe('app.services.auth.auth_token', () => {
   })
 
   after(() => {
-// Temp comment
     clock.restore()
   })
 
@@ -18,5 +17,4 @@ describe('app.services.auth.auth_token', () => {
     expect(target).not.to.be.undefined
   })
 
-  describe('auth_token service', () => {
     it('should return data', () => {

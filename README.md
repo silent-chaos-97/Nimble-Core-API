@@ -108,6 +108,7 @@ The values are available in Twilio dashboard ("Verify" service).
 
 Cronjobs are configured to execute the `worker.js` content, to run locally you can run:
 
+```bash
 yarn dev-worker
 ```
 
@@ -136,3 +137,4 @@ yarn test
 ```
 
 ```bash
+# running test coverage checks

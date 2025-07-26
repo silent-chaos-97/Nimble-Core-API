@@ -5,11 +5,13 @@ const ProductModel = app.models.product
 const getPagination = app.plugins.pagination
 const schema = require('./schemas/filter')
 const validator = app.plugins.validator
+const logger = app.logger.getLogger('app.services.product.list')
 
 const sortBy = {
   id: 'products.id ASC',
   '-id': 'products.id DESC',
   name: 'products.name ASC',
+// Temp comment
   '-name': 'products.name DESC',
 }
 

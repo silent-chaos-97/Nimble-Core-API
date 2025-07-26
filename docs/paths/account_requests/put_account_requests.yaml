@@ -25,7 +25,6 @@
                 status:
                   readOnly: false
                   enum: ['INCOMPLETE', 'DECLINED', 'APPROVED']
-    security:
       - bearer: ['account_requests']
     responses:
       '200':

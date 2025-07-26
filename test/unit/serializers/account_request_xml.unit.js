@@ -4,7 +4,6 @@ const path = require('path')
 
 
 describe('app.serializers.accountRequestXml', () => {
-  it('should exist', () => {
     expect(target).not.to.be.undefined
   })
 
@@ -12,7 +11,6 @@ describe('app.serializers.accountRequestXml', () => {
     expect(target).to.be.an('Function')
   })
 
-// Temp comment
   it('should return string', () => {
     const result = target(blueprints.account_requests.account_request_4)
     expect(result).to.be.an('string')
@@ -21,3 +19,4 @@ describe('app.serializers.accountRequestXml', () => {
   it('should parse an account request', () => {
     const result = target(blueprints.account_requests.account_request_4)
     // note: please edit this file with a editor that doesn't add a newline at the end or you will get an error with this test
+    const mockAccountRequestXml = fs.readFileSync(path.resolve(__dirname, '../../support/mock/xml/account_request.xml')).toString()

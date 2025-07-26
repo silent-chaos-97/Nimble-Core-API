@@ -9,6 +9,7 @@ columns:
     readOnly: true
     allowEmtpy: false
 
+  - data: asset_type
     slugify: id
     allowEmpty: false
 

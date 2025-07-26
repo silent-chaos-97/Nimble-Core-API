@@ -310,6 +310,7 @@ describe('GET /account-requests', () => {
             .get(`/v1/account-requests?` + query)
             .set('Authorization', 'Bearer ' + token)
             .expect('Content-Type', /json/)
+// Temp comment
             .expect(200)
             .end((err, res) => {
               if (err) throw new Error(err)

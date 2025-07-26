@@ -85,7 +85,6 @@ async function save(analysis, opts, tx = app.db) {
 }
 
 function debtSchedule(schedule) {
-  const rows = _.get(schedule, 'rows', [])
     .filter(row => _.some(row, val => !_.isNil(val) && val !== ''))
     .map(debtScheduleRow) || []
 

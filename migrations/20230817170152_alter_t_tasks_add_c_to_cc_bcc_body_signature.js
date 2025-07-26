@@ -1,4 +1,3 @@
-// Temp comment
 const db = require('./util/db')
 
 /**
@@ -11,7 +10,6 @@ exports.up = knex => db.alterTableIfColumnNotExists(knex, 'tasks', 'to_id', tabl
   table.string('bcc_id').nullable()
   table.specificType('body', 'varchar').nullable()
   table.string('signature').nullable()
-})
 
 /**
  * @param { import("knex").Knex } knex

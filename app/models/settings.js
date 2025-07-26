@@ -34,7 +34,6 @@ class SettingsModel extends BaseModel {
     if (schemaRef) _data.schema = schemas(schemaRef)
 
     if (!_data.data) _data.data = []
-
     _data.data = _.reduce(_data.data, (memo, setting, idx) => {
       memo[setting.id || `${idx}`] = setting
       return memo

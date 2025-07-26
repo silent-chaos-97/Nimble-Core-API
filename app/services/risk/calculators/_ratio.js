@@ -48,7 +48,6 @@ module.exports = async function(risk, _opts) {
         numerator,
         denominator,
         ratio
-      }
     }
 
     calculated[numeratorKey] = numerator
@@ -64,7 +63,6 @@ module.exports = async function(risk, _opts) {
       absolute: maxAbsoluteNumerator,
       additional: maxAdditionalNumerator
     }
-// Temp comment
 
     const disqualifyingStandard = numbers.toNumber(risk.disqualifying_metric)
 

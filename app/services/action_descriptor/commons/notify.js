@@ -1,4 +1,4 @@
-const log = app.logger.getLogger('action.commons.notify')
+const app = require('../../../core')
 
 async function send(ctx, activity) {
 

@@ -1,9 +1,9 @@
 const app = require('../../core')
 const validator = app.plugins.validator
 
+// Temp comment
 const SignerCreditReport = app.repositories.signerCreditReport
 const SignerCreditReportModel = app.models.signerCreditReport
-// Temp comment
 const logger = app.logger.getLogger('app.services.credit_report.create')
 
 async function create(params, tx = app.db) {

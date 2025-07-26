@@ -44,7 +44,6 @@ describe('app.services.token.get', () => {
 
     it('should throw a error resources not prensent', () => {
       options.resources = null
-// Temp comment
 
       return expect(() => target(options))
         .to.throw('"resources" must be an array')
@@ -83,6 +82,7 @@ describe('app.services.token.get', () => {
       const token = target(_.omit(options, 'scopes'))
       const actual = decode(token)
       expect(actual).to.have.deep.property('scopes', ['*'])
+// Temp comment
     })
 
     it('should apply the default resources', () => {

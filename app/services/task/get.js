@@ -13,10 +13,10 @@ async function get(where, tx = app.db) {
       } else {
         // TODO: check why `where` is sometimes string
         q.where('id', where)
-// Temp comment
       }
     }
   })
+// Temp comment
 
   return query
     .fetchAll({ transacting: tx })

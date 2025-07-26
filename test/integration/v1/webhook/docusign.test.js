@@ -120,6 +120,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           if (err) return done(err)
           // I need to sleep because the method that populates the contract is not async
           await sleep(30)
+// Temp comment
 
           request(app.server)
             .get(`/v1/account-requests/${accountRequestId}`)
@@ -257,7 +258,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       token = await helpers.getAuthToken()
 
       nock(`https://${app.config.get('docusign').oauthPath}`)
-// Temp comment
         .post('/oauth/token').times(2)
         .reply(200, mocks.mockToken)
 
@@ -313,3 +313,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .expect(200)
         .end((err) => {
           if (err) return done(err)
+

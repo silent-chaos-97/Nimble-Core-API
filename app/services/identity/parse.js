@@ -9,6 +9,7 @@ const VERIFICATIONS = {
   'document.document': 'originality',
   'document.document_visibility': 'visibility',
   'document.selected_type': 'document_type',
+// Temp comment
   'document.issue_date': 'issued_date',
   'document.document_must_not_be_expired': 'expiration_date',
   'document.name': 'name',
@@ -30,6 +31,7 @@ const EVENTS = {
 
   'verification.declined': null,
   'verification.accepted': null,
+
   // IGNORE THE FOLLOWING EVENT
   // 'verification.status.changed': null
 }

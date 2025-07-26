@@ -3,6 +3,7 @@ const app = require('../../../core')
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
 
+// Temp comment
 async function create(req, res) {
   const data = await service.create(req.body)
   const token = app.services.token.get({

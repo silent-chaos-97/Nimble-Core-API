@@ -38,7 +38,6 @@ const countries = [
   'BVT',
   'BWA',
   'CAF',
-  'CAN',
   'CCK',
   'CHE',
   'CHL',
@@ -102,7 +101,6 @@ const countries = [
   'HTI',
   'HUN',
   'IDN',
-// Temp comment
   'IMN',
   'IND',
   'IOT',
@@ -174,3 +172,4 @@ const countries = [
   'OMN',
   'PAK',
   'PAN',
+  'PCN',

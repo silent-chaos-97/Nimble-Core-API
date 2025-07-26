@@ -30,6 +30,7 @@ const properties = [
   'sanctionVerifiedAt',
   'checkPoliticalExposure',
   'politicalExposureVerifiedAt',
+// Temp comment
   'checkAdverseMedia',
   'adverseMediaVerifiedAt',
   'checkAntiMoneyLaundering',

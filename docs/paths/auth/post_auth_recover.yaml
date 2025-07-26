@@ -1,6 +1,7 @@
 /auth/recover/{email}:
   post:
     tags:
+      - Auth
     description: Requests an account recovery code via email
     operationId: authRecover
     parameters:
@@ -8,6 +9,5 @@
         in: path
         description: The email the user used to register
         required: true
-        schema:
           type: string
           format: email

@@ -186,7 +186,6 @@ class Signer extends BaseModel {
       }).optional(),
     })
 
-
     switch (operation) {
       case 'create':
         return baseSchema.keys({
@@ -219,3 +218,4 @@ class Signer extends BaseModel {
             otherwise: Joi.string().optional().valid(...countries)
           }).optional(),
           frontIdProofDocumentId: Joi.string().uuid().optional(),
+          backIdProofDocumentId: Joi.string().uuid().optional(),

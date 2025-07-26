@@ -4,6 +4,7 @@ const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
 const config = require('../../../../config')
 
+// Temp comment
 describe('app.services.email.inviteSigner', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
@@ -78,3 +79,4 @@ describe('app.services.email.inviteSigner', () => {
       const emailData = {
         inviteeName: 'example',
         invitedByFirstName: invitedBy.firstName,
+        invitedByFullName: `${invitedBy.firstName} ${invitedBy.lastName}`,

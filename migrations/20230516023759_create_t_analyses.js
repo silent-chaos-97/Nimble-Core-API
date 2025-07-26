@@ -19,6 +19,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
   table.string('title').notNullable()
+  table.string('status').notNullable().defaultTo('draft')
 
   // {table: {}, sheets: {balance: {}, income: {}}}
   table.jsonb('user_data').notNullable().defaultTo('{}')

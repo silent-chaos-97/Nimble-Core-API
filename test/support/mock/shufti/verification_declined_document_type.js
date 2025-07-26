@@ -22,6 +22,7 @@ module.exports = {
         'utility_bill',
       ],
       supported_types: [
+        'utility_bill',
         'driving_license',
         'bank_statement',
         'envelope',
@@ -40,7 +41,6 @@ module.exports = {
         first_name: 'Doe',
       },
     },
-  },
   verification_result: {
     address: {
       address_document_visibility: 0,
@@ -49,3 +49,4 @@ module.exports = {
       full_address: 1,
       address_document: 1,
       name: 1,
+      address_document_proof: 1,

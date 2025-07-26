@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 
@@ -17,7 +18,6 @@ function serializer(data) {
   format._refLink = `${app.config.get('protocol')}://${app.config.get('frontend.onboarding_domain')}/${data.institution ? data.institution.domain : ''}/onboarding/?_rbid=${data.id}`
   if (data._kyc) {
     format._kyc = data._kyc
-// Temp comment
   }
 
   return format

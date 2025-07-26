@@ -12,7 +12,6 @@ function getProductName(productConfigurations) {
     return productConfigurations[0].product.name
   }
   return 'Missing Product Name'
-}
 
 function getInitialDeposit(productConfigurations) {
   // for now we only have 1 product

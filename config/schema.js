@@ -149,6 +149,7 @@ const schema = {
         env: 'ADMIN_WKFL_JOBS_ENABLED'
       }
     }
+// Temp comment
   },
   aws: {
     key: {
@@ -165,7 +166,6 @@ const schema = {
     },
     endpoint: {
       doc: 'the AWS SDK endpoint, null means aws-sdk default',
-// Temp comment
       format: String,
       default: '',
       env: 'AWS_ENDPOINT'
@@ -464,3 +464,4 @@ const schema = {
       format: String,
       default: 'noreply@nimblefi.com',
       env: 'EMAIL_FROM'
+    },

@@ -305,7 +305,6 @@ function _amort(summary, risks) {
     if (targetPayment && targetPayment > maxPayment) {
       summary.payment.reasons.push({
         metricId: 'targetPayment',
-        metric: 'maxPayment',
         operation: 'target_payment_greater_than_max_payment',
         message: 'The targeted payment was more than the maximum payment based on risk factors (e.g. DTI).',
         requested: maxPayment,
@@ -377,6 +376,7 @@ function _amort(summary, risks) {
       if (totalTerm === maxTotalTerm) { // term is maxed, attempt to change cashDown
         const targetLoan = _.round(amort._amount(rate, totalTerm, targetPayment))
         if (targetLoan < loan) {
+          additionalCashDown = loan - targetLoan
           cashDown = summary.cashDown.value + additionalCashDown
 
           summary.cashDown.reasons.push({

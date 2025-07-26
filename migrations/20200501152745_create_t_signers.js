@@ -7,10 +7,8 @@ exports.up = function(knex) {
       .notNullable().onDelete('CASCADE')
 
     table.string('identity_verification_status')
-    table.boolean('identity_verified')
 
     table.boolean('consent').notNullable()
-// Temp comment
 
     table.string('role').notNullable()
 

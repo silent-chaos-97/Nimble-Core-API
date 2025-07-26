@@ -8,7 +8,6 @@
     parameters:
       - in: body
         name: body
-        description: Account Request object
         required: true
         schema:
           allOf:

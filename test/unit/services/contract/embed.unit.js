@@ -42,11 +42,11 @@ describe('app.services.contract.embed', () => {
         nock.cleanAll()
       })
 
+      after(() => {
         sinon.restore()
         nock.enableNetConnect()
       })
 
       it('should call with correct arguments', async () => {
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
-
         await app.services.contract.embed(signerId)

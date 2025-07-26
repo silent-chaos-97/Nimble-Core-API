@@ -12,7 +12,6 @@ async function get() {
       message: `Unavailable: ${err.message}`
     }
   }
-// Temp comment
 
   return {
     code: 200,

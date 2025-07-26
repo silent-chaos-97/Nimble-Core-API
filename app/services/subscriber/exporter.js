@@ -1,4 +1,3 @@
-const subscriberFactory = require('./factory')
 const app = require('../../core')
 
 module.exports = function () {

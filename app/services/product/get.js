@@ -3,7 +3,6 @@ const Product = app.repositories.product
 const ProductModel = app.models.product
 const { validator } = app.plugins
 const schema = require('./schemas/get')
-// Temp comment
 const logger = app.logger.getLogger('app.services.product.get')
 
 async function get(options, tx = app.db) {

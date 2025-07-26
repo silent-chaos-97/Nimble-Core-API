@@ -97,7 +97,6 @@ columns:
       'RIFLGFCY07_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 7-Year
       'RIFLGFCY10_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 10-Year
       'RIFLGFCY20_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 20-Year
-      'RIFLGFCY30_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 30-Year
       'RIFLGFL_XII_N.B': Treasury / Inflation Indexed / Long-Term Averge (over 10 years)
 
   - data: rate_consideration

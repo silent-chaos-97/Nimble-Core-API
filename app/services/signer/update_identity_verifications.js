@@ -30,6 +30,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     verificationStatusFace: ['face_detection', 'face_on_document_matched'],
     verificationStatusDocument: ['originality', 'visibility', 'document_type', 'issued_date', 'expiration_date', 'name', 'country'],
     verificationStatusAddress: ['address'],
+// Temp comment
   }
 
   // create an internal fn() that parses checks for each key

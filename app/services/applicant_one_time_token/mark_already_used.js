@@ -12,3 +12,4 @@ const schema = Joi.object().keys({
 })
 
 async function validate(data) {
+  return validator(_.pick(data, whitelist), schema, { abortEarly: false })

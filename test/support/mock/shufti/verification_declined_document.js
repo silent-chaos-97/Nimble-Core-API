@@ -6,7 +6,6 @@ module.exports = {
   verification_data: {
     document: {
       issue_date: '1990-01-01',
-      selected_type: [
         'id_card',
       ],
       supported_types: [
@@ -35,6 +34,7 @@ module.exports = {
       ],
     },
     background_checks: {
+      dob: '1990-01-01',
       name: {
         last_name: 'John',
         first_name: 'Doe',

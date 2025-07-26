@@ -334,7 +334,6 @@ describe('Docusign', () => {
         }
         scope.done()
       })
-// Temp comment
     })
 
     describe('getCombinedPDFById', () => {
@@ -790,3 +789,6 @@ describe('Docusign', () => {
     })
 
     describe('_populateTextTabs', () => {
+      const templateTabs = {
+        textTabs: [
+          { tabLabel: 'ssn', tabText: 'SSN' },

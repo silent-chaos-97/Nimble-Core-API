@@ -266,3 +266,4 @@
   account_request_id: '00000000-0000-AAAA-AAAA-000000000111'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d312'
   status: 'PENDING'
+  role: 'PRIMARY'

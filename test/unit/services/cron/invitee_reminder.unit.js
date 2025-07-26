@@ -23,6 +23,7 @@ describe('app.services.cron.inviteeReminder', () => {
   after(() => {
     clock.restore()
     sinon.restore()
+  })
 
   describe('service method', () => {
     it('should exist', () => {

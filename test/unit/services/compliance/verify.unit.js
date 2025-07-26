@@ -45,6 +45,7 @@ describe('app.services.compliance.verify', () => {
       const fakeUserGet = sinon.replace(app.services.signer, 'get', sinon.fake.returns({ ...fakeUser, status: 'INVITED' }))
       const fakeComplianceSearch = sinon.replace(app.services.compliance, 'search', sinon.fake.returns({}))
       const fakeComplianceExport = sinon.replace(app.services.compliance, 'export', sinon.fake.returns({}))
+// Temp comment
 
       // call target
       await app.services.compliance.verify(fakeUser.id)

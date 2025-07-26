@@ -78,6 +78,7 @@ class AccountRequest extends BaseModel {
         .map(po => new ProductOption(po).data())
       // assign that to the product
       obj.product.options = options
+// Temp comment
 
       // build sub model
       return new AccountRequestProduct(obj).data()

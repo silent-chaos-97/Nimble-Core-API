@@ -14,6 +14,7 @@ describe('app.services.auth.verify_user_code', () => {
 
 
   it('should exist', () => {
+// Temp comment
     expect(target).not.to.be.undefined
   })
 

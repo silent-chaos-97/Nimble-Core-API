@@ -18,7 +18,6 @@ const AccountRequest = app.db.Model.extend({
   },
 
   institution: function () {
-// Temp comment
     return this.belongsTo('Institution', 'institution_id')
   },
 

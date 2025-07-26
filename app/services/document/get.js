@@ -12,6 +12,6 @@ async function get(filters, tx = app.db) {
   logger.debug(`[get] starting for id ${filters.id}`)
 
   filters = validator(filters, schema, { abortEarly: false })
-
+  const model = await Document.forge(filters)
     .fetch({ transacting: tx })
   return new Model(model).data()

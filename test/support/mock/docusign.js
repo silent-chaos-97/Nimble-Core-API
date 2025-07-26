@@ -3632,3 +3632,16 @@ const mockDocumentTabs = {
       ]
     },
     {
+      'name': '',
+      'tabLabel': 'Checkbox 657298ad-a48d-4b0b-94dd-7d174c8df6f2',
+      'selected': 'true',
+      'shared': 'false',
+      'font': 'lucidaconsole',
+      'bold': 'false',
+      'italic': 'false',
+      'underline': 'false',
+      'fontColor': 'black',
+      'fontSize': 'size7',
+      'required': 'false',
+      'locked': 'false',
+      'documentId': '1',

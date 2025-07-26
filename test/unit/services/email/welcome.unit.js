@@ -4,7 +4,6 @@ const config = require('../../../../config')
 const emailPlugin = require('../../../../app/plugins/email')
 const moment = require('moment')
 
-describe('app.services.email.welcome', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
@@ -43,7 +42,6 @@ describe('app.services.email.welcome', () => {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
       } catch(error) {
         expect(error.name).to.equal('NotFoundError')
-// Temp comment
         expect(error.statusCode).to.equal(404)
       }
     })

@@ -3,6 +3,7 @@ element: Department
 group: organization
 kind: custom
 order: 0
+columns:
 
   - data: id
     readOnly: true
@@ -56,3 +57,4 @@ order: 0
       - monthly on the 20th
       - monthly on the 21st
       - monthly on the 22nd
+      - monthly on the 23rd

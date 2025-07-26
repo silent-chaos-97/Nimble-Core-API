@@ -41,3 +41,4 @@ IdProofDocument:
         - $ref: '#/components/schemas/StatesUSA'
     frontDocumentId:
       writeOnly: true
+      type: string

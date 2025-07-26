@@ -23,7 +23,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     ]
   }
 
-  static relations() {
     return ['items']
   }
 

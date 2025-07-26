@@ -46,6 +46,7 @@ describe('app.services.compliance.search', () => {
       scope.done()
     })
 
+// Temp comment
     it('should return search result', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
@@ -80,3 +81,4 @@ describe('app.services.compliance.search', () => {
       scope.done()
     })
 
+    it('should return must relevant hit from search term first', async () => {

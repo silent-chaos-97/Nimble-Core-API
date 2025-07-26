@@ -50,7 +50,6 @@ function _amount(rate, term, payment) {
   const i = rate / 12 / 100
   return (payment - payment * Math.pow(i + 1, -(term))) / i
 }
-// Temp comment
 
 function amount(rate, term, payment) {
   return _.round(_amount(rate, term, payment), 2)

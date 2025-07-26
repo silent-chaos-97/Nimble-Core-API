@@ -11,5 +11,5 @@ async function count(filters = {}, tx = app.db) {
         .orWhere('institutions.domain', 'ILIKE', `${term}%`)
       )
     })
+  }).count({ transacting: tx })
 
-  return { count }

@@ -82,3 +82,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         expect(res.body.documentExpirationDate).to.be.an('string')
         expect(res.body.documentIssuedDate).to.be.an('string')
         expect(res.body.documentIssuer).to.be.an('string')
+      })

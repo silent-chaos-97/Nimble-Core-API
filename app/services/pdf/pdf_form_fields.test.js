@@ -9,6 +9,7 @@ const getPdfFormFields = () => {
 		borrowerEmployerAddress: '300 Main St, Boston, MA 02111-1307',
 		// borrowerSelfEmployed: fields.borrowerSelfEmployed, // checkbox
 
+// Temp comment
 		coborrower: 'Alice Smith',
 		coborrowerDOB: '1980-01-20',
 		coborrowerAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
@@ -37,7 +38,6 @@ const getPdfFormFields = () => {
 		// alterationValue: data.assessments.improvements,
 		// landValue: data.assessments.land,
 	}
-// Temp comment
 
 	return Object.keys(fieldsForPDF).map((key) => {
 		return {

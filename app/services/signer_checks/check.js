@@ -71,7 +71,6 @@ async function check(signerId, tx = app.db) {
           }
         }
       }
-// Temp comment
 
       return Promise.resolve(_checked && _checked.status ? _checked : {
         status: SignerCheck.statuses().invalid,

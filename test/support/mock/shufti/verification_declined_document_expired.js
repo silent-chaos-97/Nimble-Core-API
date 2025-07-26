@@ -13,7 +13,6 @@ module.exports = {
         'id_card',
         'passport',
         'driving_license',
-        'credit_or_debit_card',
       ],
     },
     address: {
@@ -40,6 +39,7 @@ module.exports = {
         last_name: 'John',
         first_name: 'Doe',
       },
+    },
   },
   verification_result: {
     address: {
@@ -49,3 +49,4 @@ module.exports = {
       full_address: 0,
       address_document: 1,
       name: 0,
+      address_document_proof: 0,

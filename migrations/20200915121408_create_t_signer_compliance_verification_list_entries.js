@@ -11,6 +11,7 @@ exports.up = function (knex, Promise) {
       .defaultTo('ADVERSE-MEDIA').notNullable()
 
     table.string('country_codes')
+
     table
       .uuid('signer_compliance_verification_item_id')
       .references('signer_compliance_verification_items.id')

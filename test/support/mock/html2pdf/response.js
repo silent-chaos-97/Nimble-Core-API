@@ -5,4 +5,5 @@ const successResponse = {
 }
 
 const errorResponse = {
+  "StatusCode": 200,
   "FunctionError": "Unhandled",

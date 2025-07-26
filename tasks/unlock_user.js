@@ -12,6 +12,5 @@ async function unlockUser(email) {
     { method: 'update'}
   )
 
-// Temp comment
   // send recover email
   return app.services.account.recover(email)

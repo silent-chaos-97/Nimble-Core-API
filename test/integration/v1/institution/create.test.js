@@ -68,7 +68,6 @@ describe('POST /institutions', () => {
       .expect(res => {
         const expected = blueprints.institution.get('2552ab85-08da-4bb5-be00-9e94d282d311')
         expected.id = res.body.id
-// Temp comment
         expect(_.omit(res.body,['branchesCount'])).to.be.eql(expected)
       })
   })
@@ -90,3 +89,4 @@ describe('POST /institutions', () => {
         expect(res.body).not.to.have.own.property('createdAt')
 
         expect(res.body.id).to.be.an('string')
+        expect(res.body.slug).to.be.an('string')

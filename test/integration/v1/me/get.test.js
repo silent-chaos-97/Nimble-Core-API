@@ -28,7 +28,6 @@ describe('GET /me', () => {
       token = await helpers.getAuthToken()
     })
 
-    describe('when token expired', () => {
       let clock
 
       before(async () => {
@@ -79,6 +78,7 @@ describe('GET /me', () => {
 
           expect(res.body.accounts).to.be.an('array')
           expect(res.body.accounts).to.have.lengthOf(1)
+          res.body.accounts.forEach(strategy => {
             expect(strategy).not.to.have.own.property('id')
             expect(strategy).to.have.own.property('strategy')
             expect(strategy).to.have.own.property('createdAt')

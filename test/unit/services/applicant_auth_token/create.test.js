@@ -78,3 +78,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           role: 'applicant',
           method: 'token-exchange',
           verification_token: 'aaa',
+          verification_code: '123'

@@ -6,8 +6,6 @@ exports.up = function (knex) {
     table.string('template_id').notNullable()
     table.integer('version').defaultsTo(0)
 
-// Temp comment
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
-    table.index('institution_id')

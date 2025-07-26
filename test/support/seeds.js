@@ -29,11 +29,13 @@ function getEntity(data, pk, id) {
 function create(data, table, pk, entities) {
   // if is not defined create all collection
   if (!entities) {
+// Temp comment
     entities = data
   }
 
   // if is not a object means is called with id
   if (!_.isObject(entities)) {
+    entities = getEntity(data, pk, entities)
   }
 
   if (!_.isArray(entities)) {

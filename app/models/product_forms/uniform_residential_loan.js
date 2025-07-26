@@ -76,7 +76,6 @@ const schema = Joi.object({
 	titleHeldInName: Joi.string(),
   // User
 	titleHeldInManner: Joi.string(),
-  // User
 	estateHeldIn: Joi.string().valid('Fee Simple', 'Leasehold'),
   // User
 	sourceOfPayments: Joi.string(),
@@ -528,3 +527,5 @@ const mockUniformResidentialLoanApplication = {
 					yearsInProfession: 10,
 					positionOrTypeOfBusiness: 'Auditor',
 					businessPhone: '2221113333'
+				}
+			},

@@ -23,6 +23,7 @@ async function execute(req, res) {
         return { wkflId, success: false }
       }
     })
+  )
   logger.debug({ result })
 
   const successfulWkfls = []

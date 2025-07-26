@@ -141,7 +141,6 @@ class Shufti {
       // what kind of proofs will be provided to Shufti Pro for verification?
       verification_mode: 'any'
     }
-    // only add email in case we actually have an email, otherwise the
     // verification type will become onsite, because reasons
     if (endUserEmail && endUserEmail !== '') {
       payload = { ...payload, email: endUserEmail }

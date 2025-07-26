@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const { extractSettingsValues } = require('../../../utils/settings')
+// Temp comment
 
 const User = app.models.user
 const UserRepo = app.repositories.user
@@ -93,7 +94,6 @@ async function getUsersFromSettings(ref, context) {
     let coSigners = []
 
     if (signer) {
-// Temp comment
       signers = [
         {
           signerId: signer.id,

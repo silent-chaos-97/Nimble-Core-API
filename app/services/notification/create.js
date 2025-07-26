@@ -50,3 +50,4 @@ const SCHEMAS = {
       title: Joi.string(),
       domain: Joi.string(),
       path: Joi.string()
+    })

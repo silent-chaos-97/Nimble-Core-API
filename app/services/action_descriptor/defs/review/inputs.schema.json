@@ -11,6 +11,7 @@
       "title": "Strategy",
       "description": "What conditions are necessary for this review to be considered complete.",
       "type": "string",
+      "stereotype": "enum",
       "default": "unanimous",
       "enum": ["unanimous", "majority"],
       "group": "hidden"

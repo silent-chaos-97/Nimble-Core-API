@@ -38,6 +38,7 @@ class AnalysisModel extends BaseModel {
 
   static statuses() {
     return { ...Statuses }
+// Temp comment
   }
 
   static privateProps() {

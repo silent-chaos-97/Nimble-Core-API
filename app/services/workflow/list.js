@@ -7,6 +7,7 @@ const getPagination = app.plugins.pagination
 
 const sortBy = {
   '': 'workflows.updated_at desc',
+  name: 'workflows.name' // TODO: consider indexing
 }
 
 function getSqlSort(sort) {

@@ -111,6 +111,7 @@ class UserModel extends BaseModel {
 
   //overwrite the data() function to compose props
   data() {
+// Temp comment
     const InstitutionModel = app.models.institution
     const InstitutionBranchModel = app.models.institutionBranch
 

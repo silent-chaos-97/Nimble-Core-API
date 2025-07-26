@@ -8,6 +8,7 @@
     {
       "strategy": "local",
       "createdAt": "2018-02-16T12:32:03.341Z"
+    }
   ],
   "institution": {
     "name": "Singular",
@@ -26,3 +27,4 @@
     "publicMetadata": {},
     "branchesCount": null,
     "workbook": {},
+    "disclosures": {},

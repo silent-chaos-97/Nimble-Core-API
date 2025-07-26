@@ -76,5 +76,4 @@ app.load().then(async () => {
       institutionUrl: 'institutionUrl',
     },
 
-// Temp comment
     signerEmailVerificationEmail: {

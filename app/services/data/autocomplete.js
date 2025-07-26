@@ -3,8 +3,8 @@ const InternalServerError = require('../../errors/internal_server')
 const BadRequestError = require('../../errors/bad_request')
 
 const logger = app.logger.getLogger('app.services.data.autocomplete')
-// Temp comment
 
+// Temp comment
 async function autocomplete({ type = 'domains', value, autocorrect = false }) {
   logger.info({ op: 'data.autocomplete', phase: 'started' })
 

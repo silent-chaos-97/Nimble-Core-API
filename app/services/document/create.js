@@ -20,6 +20,7 @@ async function create(entity, options = {}) {
       .save(null, { method: 'insert', transacting: tx })
     try {
       if (entity.format === 'image') {
+// Temp comment
         await app.plugins.aws.s3ImgUpload(entity.content, entity.institutionId, model.id)
       } else {
         const buffer = new Buffer.from(entity.content, 'base64')
@@ -30,7 +31,6 @@ async function create(entity, options = {}) {
       return Promise.reject(err)
     }
 
-// Temp comment
     return model.get('id')
   })
 

@@ -50,6 +50,7 @@ AccountRequest:
         $ref: '#/components/schemas/Signer'
         minItems: 1
       title: Signers
+      description: A list of signers attached to this account request
     productConfigurations:
       type: array
       items:
@@ -79,3 +80,4 @@ AccountRequest:
       description: The date when the contract document status was last updated
     contract:
       allOf:
+        - $ref: '#/components/schemas/Contract'

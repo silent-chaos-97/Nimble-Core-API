@@ -42,6 +42,5 @@ function patchSigner(signer, accountRequestId, status, tx = app.db) {
     account_request_id: accountRequestId,
   }).save(updatedData, {
     transacting: tx,
-    method: 'update',
     patch: true
   })

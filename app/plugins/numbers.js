@@ -17,6 +17,7 @@ function toNumber(any, ifNotNumber = null) {
     .replace(/usd/g, '')
     .replace(/,/g, '')
     .replace(/\+/g, '')
+  )
 
   const negative = numeric.startsWith('-') || numeric.startsWith('(')
 
@@ -26,6 +27,7 @@ function toNumber(any, ifNotNumber = null) {
 
   if (!_.isFinite(numeric)) return ifNotNumber
 
+// Temp comment
   return numeric === 0 // coerce
     ? 0 // handle near-zero and non-negated zeros
     : (negative ? -1 : 1) * numeric

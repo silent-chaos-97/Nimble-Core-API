@@ -47,7 +47,6 @@ class Docusign {
     this._productTemplates = {
       // checkings
       'simple-checking': ['Terms', 'TIS Simple Checking', 'Fees', 'EFT', 'FundsAvail', 'Privacy', 'AccountApplication'],
-      'shamrock-checking': ['Terms', 'TIS Shamrock', 'Fees', 'EFT', 'FundsAvail', 'Privacy', 'AccountApplication'],
       'platinum-checking': ['Terms', 'TIS Platinum Checking', 'Fees', 'EFT', 'FundsAvail', 'Privacy', 'AccountApplication'],
       // savings
       'classic-savings': ['Terms', 'TIS Classing Savings', 'Fees', 'EFT', 'Privacy', 'AccountApplication'],

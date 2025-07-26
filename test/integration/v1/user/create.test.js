@@ -68,7 +68,6 @@ describe('POST /users', () => {
       user.institutionId = institutionId
       user.branchId = branchId
       request(app.server)
-// Temp comment
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)

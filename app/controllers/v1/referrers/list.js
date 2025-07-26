@@ -17,6 +17,7 @@ function list(req, res, next) {
     institutionId: req.user.institutionId,
     status: 'ACTIVE'
   })
+
   logger.info({ filters })
 
   return users

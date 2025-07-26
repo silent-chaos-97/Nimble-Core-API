@@ -72,7 +72,6 @@ function serializer(data) {
             tag('issuedDate', {}, moment(signer.documentIssuedDate).format('YYYY-MM-DD')),
             tag(signer.documentType === 'USDL' ? 'issuedState' : 'issuer', {}, signer.documentIssuer),
             tag('documents', {}, documents)
-          ])
         ])
       ])
     })),

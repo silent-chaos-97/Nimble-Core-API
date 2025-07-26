@@ -12,6 +12,7 @@ async function readJson(path) {
     if (err.code === 'ENOENT') return {}
     log.error(err)
     return Promise.reject(err)
+  }
 }
 
 module.exports = async(path) => {
@@ -30,7 +31,6 @@ module.exports = async(path) => {
   const [_base, ...defs] = definitions
 
   return defs.map(def => {
-    const props = { ..._base, ...def }
     const inputs = {
       ...def.inputs,
       required: _.uniq([ ..._.get(_base, ['inputs', 'required'], []), ..._.get(def, ['inputs', 'required'], []) ]),

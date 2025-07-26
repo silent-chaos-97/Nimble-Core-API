@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 // const config = require('../../config')
 
 // const accountSid = config.get('twilio.accountSid')
@@ -16,5 +15,4 @@ const authToken = "7fd100bb4d96bbde0718581c7598de47"
 function normalize(phone) {
   if (!phone) return phone
   if (phone.startsWith('+1')) return phone
-  if (phone.startsWith('1')) return '+' + phone
   return '+1' + phone

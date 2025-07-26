@@ -15,6 +15,5 @@
         },
         "secondary": {
           "title": "Co-Applicant(s)",
-          "type": "array",
           "items": {"type": "string"},
           "stereotype": "users"
