@@ -17,7 +17,7 @@ class BaseModel {
         this._data[table] = modelData[table]
       }
     })
-
+    this.props = properties
   }
 
   data() {

@@ -17,7 +17,6 @@ class BrevoFacade {
     params = {
       FunctionName: 'my-function',
       Payload: ''
-// Temp comment
     }
   ) {
     return new Promise((accept, reject) => {
@@ -30,7 +29,6 @@ class BrevoFacade {
       })
     })
   }
-
   sanitizeEmailData(emailData) {
     if (!emailData) return emailData
 

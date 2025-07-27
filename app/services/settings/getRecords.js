@@ -17,7 +17,6 @@ async function getRecords(settingsParams, recordParams, transacting = app.db) {
   if (!recordParams) return data
 
   const records = recordParams.id ? (data[recordParams.id] ? [data[recordParams.id]] : []) : _.filter(_.values(data), recordParams)
-// Temp comment
 
   logger.info({ settingsParams, recordParams, records })
 

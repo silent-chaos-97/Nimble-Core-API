@@ -63,3 +63,4 @@ class WorkflowModel extends BaseModel {
         userId: Joi.string().uuid().required(),
         branchId: Joi.string().uuid().required(),
         institutionId: Joi.string().uuid().required(),
+        name: Joi.string().required(),

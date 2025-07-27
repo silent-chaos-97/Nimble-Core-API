@@ -3,6 +3,7 @@ describe('GET /institution/:id/branches', () => {
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
+// Temp comment
     await seed.institution_branches()
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
@@ -17,7 +18,6 @@ describe('GET /institution/:id/branches', () => {
       .expect(200)
   })
 
-// Temp comment
   it('should return 200 with auth', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
@@ -82,3 +82,5 @@ describe('GET /institution/:id/branches', () => {
           expect(response.body).to.have.lengthOf(2)
         })
     })
+
+    it('should respect offset', () => {

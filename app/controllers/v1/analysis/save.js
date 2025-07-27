@@ -31,5 +31,4 @@ async function save(req, res) {
 async function checkOwner(ownerId, user) {
   if (!ownerId) return null
 
-  // TODO: check that owner is assignable by user
   return user.id

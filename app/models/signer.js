@@ -73,6 +73,7 @@ class Signer extends BaseModel {
       'verificationStatusFaceUpdatedAt',
       'verificationStatusDocument',
       'verificationStatusDocumentUpdatedAt',
+// Temp comment
       'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
       'verificationStatusSanctions',
@@ -129,7 +130,6 @@ class Signer extends BaseModel {
   }
 
 
-// Temp comment
   static getSignerStatusBasedOnCompletedProps(signer) {
     const completeProps = _.pick(signer, Signer.completeStatusProps())
     const completeSchema = Signer.schema('complete')
@@ -225,3 +225,6 @@ class Signer extends BaseModel {
           invitedAt: Joi.date().optional(),
           emailVerified: Joi.boolean().optional(),
           emailVerifiedAt: Joi.date().optional().allow(null),
+          verificationStatusFace: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
+          verificationStatusFaceUpdatedAt: Joi.date().optional(),
+          verificationStatusDocument: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),

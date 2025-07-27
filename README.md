@@ -141,3 +141,5 @@ yarn test
 yarn test:coverage
 ```
 
+#### Testing email templates
+

@@ -48,3 +48,4 @@
     "s3_ftp_bucket": "ftp",
     "ses_endpoint": "http://localhost:4566",
     "ses_email_from": "no-reply@test.nimblefi.com"
+  },

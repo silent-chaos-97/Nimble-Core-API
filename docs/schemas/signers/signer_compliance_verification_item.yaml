@@ -37,6 +37,7 @@ SignerComplianceVerificationItem:
       type: array
       items:
         $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
+    warnings:
       title: A list of entries found about results of the type Warning
       type: array
       items:

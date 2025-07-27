@@ -1,4 +1,5 @@
 module.exports = {
+  // Invalid
   requestInvalid: require('./shufti/request_invalid'),
   requestPending: require('./shufti/request_pending'),
   // Accepted
@@ -6,3 +7,4 @@ module.exports = {
   // Decline
   verificationDeclinedDocument: require('./shufti/verification_declined_document'),
   verificationDeclinedDocumentExpired: require('./shufti/verification_declined_document_expired'),
+  verificationDeclinedFace: require('./shufti/verification_declined_face'),

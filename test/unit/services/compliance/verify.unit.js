@@ -104,3 +104,5 @@ describe('app.services.compliance.verify', () => {
       sinon.replace(app.repositories.signer, 'forge', sinon.fake.returns({ save: () => true }))
 
       // call target
+      await app.services.compliance.verify(fakeUser.id)
+

@@ -72,3 +72,4 @@ describe('app.services.creditReport.export', () => {
       const url = 'doesnotmather'
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
 
+      const fakeResponseDownload = sinon.fake.returns({ data: 'coco' })

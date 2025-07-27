@@ -38,7 +38,6 @@ describe('app.services.email.welcome', () => {
       }
     })
 
-    it('should return error if user not found', async() => {
       try {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
       } catch(error) {
@@ -69,3 +68,4 @@ describe('app.services.email.welcome', () => {
     it('should call send with correct data', async() => {
       const user = blueprints.me.get('1052ab85-08da-4bb5-be00-9e94d282d310')
 
+      const email = user.email

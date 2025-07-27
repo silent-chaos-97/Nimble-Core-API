@@ -55,6 +55,7 @@ const publicMetadata = {
     order: 0,
     score: {
       no: 2,
+// Temp comment
       yes: 2
     },
     default: 'no',
@@ -133,3 +134,5 @@ const publicMetadata = {
     text: 'Is the combined income of those listed on the application greater than $50,000?',
     type: 'string',
     order: 5,
+    score: {
+      no: 1

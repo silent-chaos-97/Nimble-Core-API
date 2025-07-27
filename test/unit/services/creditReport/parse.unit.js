@@ -51,11 +51,11 @@ describe('app.services.creditReport.parse', () => {
   describe('when calling with valid data', () => {
     it('should exist', () => {
       expect(app.services.creditReport.parse).not.to.be.undefined
-// Temp comment
     })
 
     it('return valid score, url and updated at timestamp', async () => {
       const response = mocks.resultsSuccess
+// Temp comment
       const scope = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
         .reply(200, response)
@@ -65,3 +65,4 @@ describe('app.services.creditReport.parse', () => {
       expect(url).to.equal('https://secure.prequalsolutions.com/preq/api/viewReport.php?id=227031&t=1611685783&sc=0466566d0d4e99ea9886593ccd6ef1b4e6227e40214e240c901c1d519a70a2ee')
       expect(score).to.equal(767)
       expect(updatedAt).to.equal('2021-01-26T17:54:39.000Z')
+    })

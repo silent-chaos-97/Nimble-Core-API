@@ -70,7 +70,6 @@ describe('Service', () => {
       expect(result.face.allow_offline).to.equal('1')
       expect(result.document.supported_types).to.deep.equal(['passport'])
     })
-
     it(' should use my signerId in the payload as reference', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',
@@ -111,3 +110,5 @@ describe('Service', () => {
   // this makes actual api call
   describe('getDocumentVerification', () => {
     const userData = {
+      selfie: 'test/asset/sample.jpg',
+      idProofType: 'USDL',

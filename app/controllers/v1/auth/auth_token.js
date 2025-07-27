@@ -76,7 +76,6 @@
 //       const timeNowUnix = moment().unix()
 //
 //       if (tokenExpiration < timeNowUnix){
-// Temp comment
 //         res.status(500).json({ message: 'Verification Token expired', status:false })
 //       }
 //

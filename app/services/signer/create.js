@@ -10,6 +10,7 @@ const logger = new app.logger.getLogger('app.services.signer.create')
 const EVENT_TYPE_CREATED = 'signer_created'
 
 async function validate(payload) {
+  const data = _.pick(payload, SignerModel.props())
   return validator(data, SignerModel.schema('create'), { abortEarly: false })
 }
 
@@ -28,5 +29,4 @@ function validatePreconditions(signer, accountRequest) {
   }
   // can only have 4 signers
   if (accountRequest.signers.length >= 4) {
-    throw new PreconditionFailedError('Account request has reached maximum number of signers')
   }

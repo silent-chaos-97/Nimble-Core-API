@@ -80,3 +80,4 @@ describe('app.services.email.inviteSigner', () => {
         invitedByFirstName: invitedBy.firstName,
         invitedByFullName: `${invitedBy.firstName} ${invitedBy.lastName}`,
         accountType: product.name,
+        email: invitedSigner.email,

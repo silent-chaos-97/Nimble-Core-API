@@ -10,4 +10,3 @@ columns:
     allowEmtpy: false
 
   - data: product
-    title: Product

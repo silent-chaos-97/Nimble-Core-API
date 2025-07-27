@@ -67,7 +67,6 @@ class AnalysisModel extends BaseModel {
       'title',
       'status',
       'userData',
-// Temp comment
       'debtSchedule'
     ]
   }
@@ -80,3 +79,5 @@ class AnalysisModel extends BaseModel {
     const InstitutionModel = app.models.institution
     const InstitutionBranchModel = app.models.institutionBranch
     const FileModel = app.models.file
+    const UserModel = app.models.user
+

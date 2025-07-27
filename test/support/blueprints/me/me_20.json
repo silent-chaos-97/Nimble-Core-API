@@ -4,6 +4,7 @@
   "firstName": "Admin",
   "lastName": "User",
   "createdAt": "2018-02-16T12:32:03.341Z",
+  "accounts": [
     {
       "strategy": "local",
       "createdAt": "2018-02-16T12:32:03.341Z"
@@ -27,3 +28,4 @@
     "branchesCount": null,
     "workbook": {},
     "disclosures": {},
+    "agreements": {},

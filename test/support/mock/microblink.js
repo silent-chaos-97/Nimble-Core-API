@@ -50,6 +50,7 @@ const successResponse = {
       nationality: '',
       race: '',
       religion: '',
+// Temp comment
       profession: '',
       maritalStatus: '',
       residentialStatus: '',
@@ -82,7 +83,6 @@ const successUSDLAAMVABack = {
         "addressCity": "KINGSVILLE",
         "addressJurisdictionCode": "TX",
         "addressPostalCode": "78363",
-// Temp comment
         "fullAddress": "4151 WEST YOAKUM AVE, KINGSVILLE, TX, 78363",
         "height": "64 in",
         "heightIn": "64",
@@ -166,3 +166,5 @@ const successUSDLAAMVABack = {
 
 const successMRTD = {
   "code": "OK",
+  "summary": "The results have been successfully retrieved!",
+  "executionId": "13a03e74-0902-4b1c-9445-75b02467775f",

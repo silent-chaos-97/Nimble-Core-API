@@ -43,5 +43,4 @@ const getPdfFormFields = () => {
 			key,
 			value: '' + fieldsForPDF[key],
 			readOnly: false
-		}
 	})

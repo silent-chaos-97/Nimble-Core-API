@@ -1,4 +1,4 @@
 {
-  "type": "object",
   "required": ["passed"],
   "properties": {
+    "passed": {"type": "boolean"}

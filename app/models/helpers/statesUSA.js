@@ -42,3 +42,4 @@ const statesUSA = [
   'OH',
   'OK',
   'OR',
+  'PW',

@@ -1,3 +1,4 @@
+// Temp comment
 exports.up = (knex) => knex.schema.alterTable('bsa_risk_results', table => table.jsonb('context').default('{}'))
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,usCitizen}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='usCitizen'`))
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,countryOfOrigin}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='countryOfOrigin'`))
@@ -8,4 +9,5 @@ exports.up = (knex) => knex.schema.alterTable('bsa_risk_results', table => table
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,wireTransfersDomestic}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='wireTransfersDomestic'`))
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,wireTransfersInternational}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='wireTransfersInternational'`))
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,cashTransactions}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='cashTransactions'`))
+  .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,anotherBank}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='anotherBank'`))
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,otherBankName}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='otherBankName'`))

@@ -150,3 +150,6 @@ Signer:
       readOnly: true
       type: boolean
       nullable: true
+      title: Political exposure verification
+      description: Political exposure verification
+    politicalExposureVerifiedAt:

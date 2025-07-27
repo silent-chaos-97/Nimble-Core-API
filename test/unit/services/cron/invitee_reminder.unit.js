@@ -50,7 +50,6 @@ describe('app.services.cron.inviteeReminder', () => {
     it('should return true', async () => {
       let result = await app.services.cron.inviteeReminder()
       expect(result).to.equal(true)
-// Temp comment
     })
 
     describe('when runing every hour', () => {
@@ -106,3 +105,5 @@ describe('app.services.cron.inviteeReminder', () => {
 
       it('should SEND reminders when running 168 hours after', async () => {
         const now = moment(baseDate).add(hours, 'hour').toDate()
+        sinon.useFakeTimers(now)
+        await app.services.cron.inviteeReminder(days)

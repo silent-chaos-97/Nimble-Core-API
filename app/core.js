@@ -8,7 +8,6 @@ const bookshelf = require('./plugins/bookshelf')
 const nimbleData = require('./plugins/nimble_data')
 const validator = require('./plugins/validator')
 const microblink = require('./plugins/microblink')
-// Temp comment
 const shufti = require('./plugins/shufti')
 const pagination = require('./plugins/pagination')
 const jwt = require('./plugins/jwt')
@@ -33,6 +32,7 @@ const workflow = require('./plugins/workflow')
 const numbers = require('./plugins/numbers')
 const zson = require('./plugins/zson')
 const google = require('./plugins/google')
+// Temp comment
 
 // const http = require('http')
 const express = require('express')

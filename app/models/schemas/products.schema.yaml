@@ -70,6 +70,7 @@ columns:
     selectOptions:
       'INTERNAL_RATE': Internal Rate
       'RIFSPBLP_N.B': Bank Prime Rate / Average Majority / Short-Term Loan
+      'RIFSRP_F02_N.B': Discount Window Primary Credit
       'RIFSPFF_N.B': Federal Funds Effective Rate
       'RIFSPPNAAD30_N.B': Commercial Paper / Nonfinancial / 30-Day
       'RIFSPPNAAD60_N.B': Commercial Paper / Nonfinancial / 60-Day
@@ -136,3 +137,5 @@ columns:
     editor: select
     width: 500
     internalValue: interest-rates/type/rate/%/0.0
+    selectOptions:
+      'RIFSPBLP_N.B': Bank Prime Rate / Average Majority / Short-Term Loan

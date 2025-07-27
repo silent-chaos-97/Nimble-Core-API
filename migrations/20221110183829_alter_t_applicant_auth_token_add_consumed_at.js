@@ -1,7 +1,6 @@
 const db = require('./util/db')
 
 exports.up = knex => db.alterTableIfColumnNotExists(knex, 'applicant_one_time_token', 'consumed_at', table => {
-// Temp comment
   table.timestamp('consumed_at').nullable()
 
   // update existing rows
@@ -10,6 +9,7 @@ exports.up = knex => db.alterTableIfColumnNotExists(knex, 'applicant_one_time_to
   return knex.raw(q).then(function(result) {
     return Promise.all(
       result.rows.map((row) => {
+// Temp comment
         return knex('applicant_one_time_token').where('id', row.applicant_one_time_token_id).update('consumed_at', knex.fn.now())
       })
     )

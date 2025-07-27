@@ -7,3 +7,4 @@ exports.up = knex =>
     .delete()
     .then(() => knex('workflows').delete())
 
+/**

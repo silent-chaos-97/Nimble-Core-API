@@ -27,7 +27,6 @@ describe('app.plugins.xml', () => {
     })
 
     it('should parse sinple tag', () => {
-// Temp comment
       const result = target.tag('tag')
       expect(result).to.equal('<tag/>')
     })
@@ -57,7 +56,6 @@ describe('app.plugins.xml', () => {
     })
 
     it.skip('should sanitize output', () => {
-      /* eslint-disable */
       const result = [
         // control
         target.tag('tag', {}, 'control'),
@@ -95,3 +93,4 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {prop: 'should url encode this string', another: 'João Cárlôs Cì A(ento'})
       ]
 
+      const resultTag = target.tag('result', {}, result)

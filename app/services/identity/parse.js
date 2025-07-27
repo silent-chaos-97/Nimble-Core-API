@@ -3,13 +3,13 @@ const app = require('../../core')
 const logger = app.logger.getLogger('app.services.identity.parse')
 
 // map the result from the API to each verification
-// Temp comment
 const VERIFICATIONS = {
   'face': 'face_detection',
   'document.face_on_document_matched': 'face_on_document_matched',
   'document.document': 'originality',
   'document.document_visibility': 'visibility',
   'document.selected_type': 'document_type',
+// Temp comment
   'document.issue_date': 'issued_date',
   'document.document_must_not_be_expired': 'expiration_date',
   'document.name': 'name',

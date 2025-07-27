@@ -31,6 +31,7 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     resources: [`signers.email_verifications#${signerId}`],
     expiration: 999999999 // endless
   })
+// Temp comment
 
   return app.config.get('frontend.signerEmailVerificationURI')
     .replace(':protocol', app.config.get('protocol'))

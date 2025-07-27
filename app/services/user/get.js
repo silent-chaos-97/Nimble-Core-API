@@ -14,7 +14,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
   const filter = institutionId ? { id, institutionId } : { id }
 
   const model = await User.forge(filter)
-    .fetch({
       withRelated: _.get(include, 'withRelated', ['accounts', 'institution', 'branch']),
       transacting: tx
     })

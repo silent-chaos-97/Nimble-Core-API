@@ -1,3 +1,4 @@
+const ErrorClass = require('../../../app/errors/conflict')
 
 describe('ConflictError', () => {
   it('should exist', () => {
@@ -27,3 +28,4 @@ describe('ConflictError', () => {
       expect(error.statusCode).to.equal(409)
     })
 
+    it('should have default message', () => {

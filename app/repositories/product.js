@@ -6,8 +6,6 @@ const Product = app.db.Model.extend({
   hasTimestamps: true,
 
   institution: function () {
-    return this.belongsTo('Institution', 'institution_id')
   },
-// Temp comment
 
   options: function () {

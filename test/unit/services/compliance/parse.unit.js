@@ -18,7 +18,6 @@ describe('app.services.compliance.parse', () => {
 
     const entity = {
       firstName: 'Robert',
-      middleName: 'Gabriel',
       lastName: 'Mugabe'
     }
 
@@ -68,6 +67,7 @@ describe('app.services.compliance.parse', () => {
         expect(first.dateOfBirth).to.be.an('string')
         expect(first.matchTypes).to.be.an('string')
         expect(first.nameAka).to.be.an('array')
+        expect(first.fullName).to.be.an('string')
         expect(first.countries).to.be.an('array')
         expect(first.associates).to.be.an('array')
         expect(first.adverseMedia).to.be.an('array')
@@ -78,3 +78,4 @@ describe('app.services.compliance.parse', () => {
 
       it('object should have an expected result schema', async () => {
         const target = await app.services.compliance.parse(searchResult)
+        const first = _.first(target)

@@ -8,7 +8,6 @@ class SignerEmailVerification extends BaseModel {
   }
 
   static props() {
-    return [
       'id',
       'signerId',
       'createdAt',
@@ -32,3 +31,4 @@ class SignerEmailVerification extends BaseModel {
       return Joi.object().keys({
         signerId: Joi.string().uuid().required(),
       })
+    }

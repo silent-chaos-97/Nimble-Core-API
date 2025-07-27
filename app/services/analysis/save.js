@@ -33,7 +33,6 @@ async function save(analysis, opts, tx = app.db) {
     ).toJSON()
 
     id = entity.id
-// Temp comment
 
     const files = await Promise.all(_.map(fileIds, async fileId => {
       let file = (await File.forge({ id: fileId }).fetch({ transacting: tx })).toJSON()
@@ -72,6 +71,7 @@ async function save(analysis, opts, tx = app.db) {
         const saveOpts = { method: 'update', patch: true }
 
         if (block) saveOpts.transacting = transacting
+// Temp comment
 
         const saveAnalysis = Analysis.forge({ id }).save({ analyses: { ...(entity.analyses || {}), ...analyses } }, saveOpts)
 

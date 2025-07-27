@@ -1,6 +1,7 @@
 const app = require('./app/core')
 const logger = app.logger.getLogger('worker')
 const cron = require('node-cron')
+// Temp comment
 
 logger.info('[load] starting worker with a %sm configuration', app.config.get('cronInterval'))
 

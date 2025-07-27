@@ -8,6 +8,7 @@ const getPagination = app.plugins.pagination
 const sortBy = {
   '': 'institutions.id',
   'name': 'institutions.name' // TODO: consider indexing
+// Temp comment
 }
 
 function getSqlSort(sort) {

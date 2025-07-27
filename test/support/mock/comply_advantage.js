@@ -551,6 +551,7 @@ const successResponse = {
               },
               {
                 "name": "Passport",
+                "source": "hm-treasury-list",
                 "tag": "passport",
                 "value": "AD001095"
               },
@@ -2243,7 +2244,6 @@ const successResponse = {
                 "country_codes": [
                   "ZW"
                 ],
-                "listing_ended_utc": "2020-02-18T00:00:00Z",
                 "listing_started_utc": "2018-09-10T00:00:00Z",
                 "name": "France Tresor Direction Generale Liste Unique de Gels",
                 "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
@@ -3429,3 +3429,54 @@ const parsedResult = [
       {
         "name": "Political Position",
         "value": "Secretary General Of The Non-aligned Movement",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Spouse of Grace Mugabe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "former President of Zimbabwe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Gender",
+        "value": "male",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Chamber",
+        "value": "African Union",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Party",
+        "value": "Zimbabwe African National Union",
+        "source": "ComplyAdvantage PEP Data",

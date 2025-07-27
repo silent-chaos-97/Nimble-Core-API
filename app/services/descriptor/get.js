@@ -13,7 +13,6 @@ module.exports = async(id, ctx) => {
 //   })
 //
 //   const [_base, ...defs] = definitions
-//
 //   return defs.map(def => {
 //     const inputs = { ...def.inputs, properties: { ...def.inputs.properties, ..._base.inputs.properties } }
 //     const outputs = { ...def.outputs, properties: { ...def.outputs.properties, ..._base.outputs.properties } }
@@ -28,7 +27,6 @@ module.exports = async(id, ctx) => {
 //     const key = basePath ? basePath + '.' + path : path
 //     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
 //     return memo
-// Temp comment
 //   }, {})
 // }
 //

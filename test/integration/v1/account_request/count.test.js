@@ -15,6 +15,7 @@ describe('GET /account-requests/count', () => {
         .expect(401)
     })
   })
+
   describe('with valid auth', () => {
     let token
 
@@ -68,3 +69,4 @@ describe('GET /account-requests/count', () => {
 
           const expected = res.body
           expect(expected).to.be.an('object')
+          expect(expected).to.deep.equal({ count: 4 })

@@ -82,3 +82,4 @@ AccountRequest:
       allOf:
         - $ref: '#/components/schemas/Contract'
         - title: Contract
+        - readOnly: true

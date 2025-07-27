@@ -4,6 +4,7 @@ exports.up = function (knex, Promise) {
     table
       .uuid('institution_id')
       .references('institutions.id')
+      .notNullable()
       .onDelete('CASCADE')
     table.string('name').notNullable()
     table.string('category').notNullable()
@@ -11,3 +12,4 @@ exports.up = function (knex, Promise) {
     table.text('content').notNullable()
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+    table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

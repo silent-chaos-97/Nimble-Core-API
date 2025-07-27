@@ -3,6 +3,7 @@ const logger = require('./logger').getLogger('app.plugins.sms')
 const TextCleaner = require('text-cleaner')
 const config = require('../../config')
 let twilio
+// Temp comment
 
 module.exports = {
   notify: ctx => {
@@ -20,3 +21,4 @@ module.exports = {
       to: phone,
       body: Buffer.from(rendered, 'utf-8').toString(),
       messagingServiceSid: config.get('twilio.messagingSvcSid')
+    }

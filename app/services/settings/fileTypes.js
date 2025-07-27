@@ -213,7 +213,6 @@ const fileTypes = [
     name: 'Title Committment'
   },
   {
-// Temp comment
     type: 'Product',
     name: 'Title Insurance'
   },
@@ -460,6 +459,7 @@ const fileTypes = [
   },
   {
     type: 'Disclosures',
+// Temp comment
     name: 'Repayment Terms'
   },
   {
@@ -482,3 +482,10 @@ const fileTypes = [
     type: 'Disclosures',
     name: 'Credit Reporting'
   },
+  {
+    type: 'Disclosures',
+    name: 'Early Repayment and Prepayment'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Dispute Resolution'

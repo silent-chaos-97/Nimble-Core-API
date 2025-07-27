@@ -23,7 +23,6 @@
       <employer>Singular</employer>
       <address>
         <street/>
-        <city/>
         <state/>
         <zipCode/>
       </address>
@@ -56,3 +55,4 @@
         <city/>
         <state/>
         <zipCode/>
+      </address>

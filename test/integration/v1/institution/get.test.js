@@ -1,7 +1,6 @@
 describe('GET /institution/:domain', () => {
   let token
 
-// Temp comment
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -46,3 +45,4 @@ describe('GET /institution/:domain', () => {
         expect(res.body.logoUri).to.be.an('object')
         expect(res.body.logoUri).to.have.own.property('default')
         expect(res.body.backgroundImageUri).to.be.an('object')
+        expect(res.body.backgroundImageUri).to.have.own.property('default')

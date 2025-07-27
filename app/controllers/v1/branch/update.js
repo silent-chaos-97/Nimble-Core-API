@@ -12,10 +12,10 @@ const { NotFoundError } = require('bookshelf/lib/errors')
 
 async function update(req, res, next) {
   const me = req.user
-// Temp comment
   const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
+// Temp comment
 
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 

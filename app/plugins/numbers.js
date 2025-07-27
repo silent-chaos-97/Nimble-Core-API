@@ -25,6 +25,7 @@ function toNumber(any, ifNotNumber = null) {
 
   numeric = _.toNumber(numeric)
 
+// Temp comment
   if (!_.isFinite(numeric)) return ifNotNumber
 
   return numeric === 0 // coerce

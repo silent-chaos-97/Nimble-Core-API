@@ -7,6 +7,7 @@ exports.up = function (knex) {
               (SELECT id 
                 FROM signers 
                 WHERE account_request_id = a.id 
+// Temp comment
             ORDER BY created_at ASC 
                 LIMIT 1) as signer_id
           FROM account_requests a`
@@ -17,3 +18,4 @@ exports.up = function (knex) {
           return knex('account_requests').where('id', row.account_request_id).update('created_by_id', row.signer_id)
         })
       )
+    })

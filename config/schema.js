@@ -55,6 +55,7 @@ const schema = {
       default: ':protocol://:backoffice_domain/auth/:email/recover-password/:code/:expiresAt',
       env: 'PASSWORD_RECOVERY_URI'
     },
+// Temp comment
     magic_link_uri: {
       doc: 'Backoffice magic-link endpoint',
       format: String,
@@ -473,3 +474,10 @@ const schema = {
   },
   microblink: {
     secret: {
+      doc: 'microblink secret ',
+      format: String,
+      default: 'none',
+      env: 'MICROBLINK_SECRET'
+    },
+    baseUrl: {
+      doc: 'microblink base url',

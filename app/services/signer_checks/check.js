@@ -91,7 +91,6 @@ async function check(signerId, tx = app.db) {
         return new SignerCheck(entity).data()
       } catch(err) {
         log.error({err, reason: 'ErrorSavingSignerCheck', signerCheck })
-        return Promise.resolve()
       }
     }))
   } catch(err) {

@@ -309,3 +309,8 @@ describe('PUT private /account-requests/:id', () => {
           .expect(200)
           .end((err) => {
             if (err) return done(err)
+
+            expect(emailSpy.callCount).to.equal(1)
+            expect(emailSpy.getCall(0).args[0]).to.equal('APPROVED')
+            expect(emailSpy.getCall(0).args[1].statusEmailSubject).to.equal(putRequest.statusEmailSubject)
+            expect(emailSpy.getCall(0).args[1].statusEmailBody).to.equal(putRequest.statusEmailBody)

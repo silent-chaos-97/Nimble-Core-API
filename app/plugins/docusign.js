@@ -5,7 +5,6 @@ const converter = require('number-to-words')
 
 const config = require('../../config')
 const getNextWorkday = require('../utils/getNextWorkday')
-
 const logger = require('./logger').getLogger('app.plugins.docusign')
 const { base64Decode } = require('./codec')
 const jwt = require('./jwt')
@@ -903,6 +902,7 @@ class Docusign {
   }
 
   /**
+   *  Sets docusign header information and authorization for the api
    */
   async _setDocusignAuthorizationAndSetHeader() {
     const oauthPath = config.get('docusign').oauthPath

@@ -11,6 +11,7 @@ const vinSvc = 'marketcheck/carValue'
 module.exports = async(vin, opts) => {
   if (!vin) return null
 
+  vin = vin.toUpperCase()
 
   opts = opts || {}
 
@@ -37,3 +38,4 @@ module.exports = async(vin, opts) => {
     if (!_value) {
       _value = await nimbleData.get(vinSvc, params)
       cache.set(cid, _value)
+    } else logger.info({ cacheHit: key })

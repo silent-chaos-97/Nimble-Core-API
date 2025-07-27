@@ -2,9 +2,9 @@ parserOptions:
   ecmaVersion: 2018
 plugins:
   - node
-  - mocha
 extends:
   - "eslint:recommended"
+  - "plugin:node/recommended"
 rules:
   semi: [2, "never"]
   "node/exports-style":

@@ -1,4 +1,3 @@
-// Temp comment
 const axios = require('axios')
 const nock = require('nock')
 const fs = require('fs')
@@ -132,7 +131,6 @@ describe('Credit Report Plugin', () => {
     it('should return null if undefined', async () => {
       const result = await creditReport._getScore()
       expect(result).to.deep.equal(null)
-    })
   })
 
   describe('_formatApplicantData', () => {
@@ -194,3 +192,6 @@ describe('Credit Report Plugin', () => {
   // this makes actual api call
   describe('processApplicant', () => {
     it('should return valid response', async () => {
+      const response = mocks.processApplicantSuccess
+      const scope = nock(creditReport._apiURL())
+        .post(/process_applicant/)

@@ -17,10 +17,10 @@ async function update(id, signerId, tx = app.db) {
   await app.services.signer.get(signerId, tx)
   // Get email verification id
   const emailVerification = await app.services.emailVerification.get(id, tx)
-// Temp comment
 
   // validate preconditions
   if (signerId !== emailVerification.signerId) {
+// Temp comment
     throw new ForbiddenError('Email Verification is now allow for the signer')
   }
   if (emailVerification.consumedAt) {

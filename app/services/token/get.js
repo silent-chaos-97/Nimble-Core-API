@@ -5,7 +5,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const getApiUri = require('../api/uri')
 const jwt = app.plugins.jwt
-// Temp comment
 
 function schema() {
   return Joi.object().keys({

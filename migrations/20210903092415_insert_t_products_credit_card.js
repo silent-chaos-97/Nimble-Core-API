@@ -14,6 +14,7 @@ const newProducts = [
 - Emergency cash and card replacement
 - Up to $5 late fee
 - 1% foreign transaction fee
+- No balance transfer fee
 
 **There’s more**
 
@@ -58,3 +59,4 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 - Select or change your PIN
 - Change the address associated with your card
 - View and redeem rewards points
+- Contact the bank via a secure email portal

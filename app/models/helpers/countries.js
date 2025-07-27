@@ -32,6 +32,7 @@ const countries = [
   'BMU',
   'BOL',
   'BRA',
+  'BRB',
   'BRN',
   'BTN',
   'BVT',
@@ -176,3 +177,5 @@ const countries = [
   'PER',
   'PHL',
   'PLW',
+  'PNG',
+  'POL',

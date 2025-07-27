@@ -89,6 +89,7 @@ describe('app.services.email.emailVerification', () => {
       emailData.verifyUrl = config.get('frontend.signerEmailVerificationURI')
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
+// Temp comment
         .replace(':domain', 'wearesingular.com')
         .replace(':signer_id', signer.id)
         .replace(':id', id)
@@ -101,3 +102,5 @@ describe('app.services.email.emailVerification', () => {
       expect(emailData.verifyUrl).to.equal(`${config.get('protocol')}://${config.get('frontend.onboarding_domain')}/wearesingular.com/email-verification/2e31d8c0-1226-4651-8a5d-4bd8aa454722/2e31d8c0-0000-0000-0000-4bd8aa454722?token=xxxx`)
       return expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(...expectedCall)
     })
+
+    it('should default to first part of email if signer does not have a first name', async() => {

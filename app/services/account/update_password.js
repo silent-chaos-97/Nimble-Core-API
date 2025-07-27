@@ -19,7 +19,6 @@ const schema = UserAuthModel.schema().keys({
   code: Joi.string().required()
 })
 
-// Temp comment
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })

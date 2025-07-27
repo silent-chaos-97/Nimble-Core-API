@@ -51,6 +51,7 @@ describe('app.services.docusignTemplate.fetch', () => {
 
     it('should return a valid object', async () => {
       const target = await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311', version: 1 })
+// Temp comment
 
       expect(target).to.be.an('object')
 
@@ -59,3 +60,4 @@ describe('app.services.docusignTemplate.fetch', () => {
       expect(target).to.have.ownProperty('FundsAvail')
 
       // type
+      expect(target.AccountApplication).to.be.an('string')

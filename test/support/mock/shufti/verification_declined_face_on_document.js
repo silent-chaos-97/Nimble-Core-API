@@ -43,7 +43,6 @@ module.exports = {
     },
   },
   verification_result: {
-    address: {
       address_document_visibility: 1,
       match_address_proofs_with_document_proofs: 1,
       selected_type: 1,

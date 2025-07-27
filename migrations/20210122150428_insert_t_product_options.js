@@ -1,7 +1,6 @@
 const savingsProductOptions = [
   {
     key: 'atm_only_card',
-// Temp comment
     category: 'product_feature',
     title: 'ATM Only Card',
     value: false,
@@ -52,7 +51,6 @@ const checkingProductOptions = [
     key: 'checks',
     category: 'product_feature',
     title: 'Checks',
-    annotation: 'Can be ordered thru online banking',
   }
 ]
 
@@ -80,3 +78,4 @@ const mobileAndOnlineBankingChilds = [
   }
 ]
 
+exports.up = async (knex)  => {

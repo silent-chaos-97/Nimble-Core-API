@@ -13,7 +13,6 @@ class UserAuthModel extends BaseModel {
     return ['email', 'password']
   }
 
-  static schema() {
     return Joi.object().keys({
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       password: Joi.string().max(160).required()
@@ -21,7 +20,9 @@ class UserAuthModel extends BaseModel {
   }
 
   static async getLocalAccountByEmail(email, tx = app.db) {
+    return User.query(q => {
       q.select([
         'users.id as user_id',
         'accounts.id as account_id',
         'users.email',
+        'users.failed_login_attempts',

@@ -147,7 +147,6 @@
     "firstName": "Test",
     "id": "1052ab85-08da-4bb5-be00-9e94d282d310",
     "lastName": "User",
-    "roles": ["employee"],
     "status": "ACTIVE",
     "phone": null,
     "_refLink": "http://localhost:3001/wearesingular.com/onboarding/?_rbid=1052ab85-08da-4bb5-be00-9e94d282d310"
@@ -156,3 +155,6 @@
     {
       "accountRequestId": "2552ab85-08da-4bb5-be00-9e94d282d348",
       "productId": "3552ab85-08da-4bb5-be00-9e94d282d310",
+      "initialDeposit": 250000099,
+      "createdAt": "2019-03-16T12:34:11.341Z",
+      "product": {

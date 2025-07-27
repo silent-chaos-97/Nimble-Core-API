@@ -91,7 +91,6 @@ describe('Email Plugin', () => {
       it('should complain if missing template', () => {
         expect(() => {
           plugin.awsSend(null, {})
-        }).to.throw()
       })
 
       it('should use the correct aws.sendEmailTemplate() signature', () => {
@@ -123,3 +122,5 @@ describe('Email Plugin', () => {
     })
 
     it('should call send', () => {
+      plugin.sendPasswordRecovery({ email: 'recover@test.com' })
+      expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce

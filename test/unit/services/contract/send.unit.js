@@ -28,7 +28,6 @@ describe('app.services.contract.send', () => {
           expect(error.statusCode).to.equal(412)
         }
       })
-    })
 
     describe('when passing information to docusign', () => {
       let docusignSend = null
@@ -110,3 +109,5 @@ describe('app.services.contract.send', () => {
 
       beforeEach(async () => {
         nock.disableNetConnect()
+        nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+

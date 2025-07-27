@@ -30,3 +30,4 @@ class FileEntryModel extends BaseModel {
   }
 
   static schema() {
+    return Joi.object().keys({

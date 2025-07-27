@@ -65,7 +65,6 @@ describe('app.services.token.get', () => {
 
     it('should throw a error expiration is negative', () => {
       options.expiration = -1
-
       return expect(() => target(options))
         .to.throw('"expiration" must be a positive number')
     })
@@ -113,3 +112,5 @@ describe('app.services.token.get', () => {
     expect(actual).to.have.property('iss', 'http://localhost:8080')
   })
 
+  it('should include public claim subject in token', () => {
+    const token = target(options)

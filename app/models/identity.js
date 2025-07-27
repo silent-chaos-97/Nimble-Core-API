@@ -6,7 +6,6 @@ class IdentityModel extends BaseModel {
     super(IdentityModel.props(), IdentityModel.relations(), data)
   }
 
-// Temp comment
   static props() {
     return [
       'firstName', 'middleName', 'lastName', 'address', 'city',

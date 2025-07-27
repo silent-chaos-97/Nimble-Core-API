@@ -27,6 +27,7 @@ describe('POST /signers/:id/validate', async () => {
 
     defaultAccountRequestId = '00000000-0000-AAAA-AAAA-000000000333'
     signer = {
+      id: '00000000-9999-aaaa-0000-2ea08a01e903',
       firstName: 'John',
       middleName: 'MF',
       lastName: 'McClane',

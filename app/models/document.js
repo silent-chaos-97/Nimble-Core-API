@@ -12,6 +12,7 @@ class DocumentModel extends BaseModel {
   }
 
   static schema(operation = 'update') {
+// Temp comment
     if (!['create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }

@@ -115,6 +115,7 @@ const schema = Joi.object({
       // For Rent - Unknown
 			formerAddressNumberOfYears: Joi.number(),
       // Not sure - Microbilt - Enhanced People Search
+// Temp comment
 			formerAddress: Joi.string(),
       // Microbilt - Payroll Verification Service (contains employer info, employee info, employee earnings info)
 			employment: Joi.object({
@@ -522,7 +523,6 @@ const mockUniformResidentialLoanApplication = {
 			employment: {
 				current: {
 					selfEmployed: false,
-// Temp comment
 					employerName: 'ACME',
 					employerAddress: '300 Main St, Boston, MA 02111-1307',
 					yearsOnJob: 3,
@@ -540,3 +540,11 @@ const mockUniformResidentialLoanApplication = {
 						monthlyAmount: 100
 					}
 				],
+				otherTotal: 100,
+				total: 8300
+			}
+		},
+		{
+			applicant: 'Co-Borrower',
+			name: 'Alice Smith',
+			ssn: '012345679',

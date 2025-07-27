@@ -20,6 +20,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
     expect(target).not.to.be.undefined
   })
 
+  describe('auth_tokens', () => {
     describe('method:verify-code', () => {
       beforeEach(() => {
         body = {
@@ -79,3 +80,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           verification_token: 'aaa',
           verification_code: '123'
         }
+      })

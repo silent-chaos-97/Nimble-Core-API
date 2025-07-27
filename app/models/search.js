@@ -48,6 +48,7 @@ class SearchModel extends BaseModel {
 
       delete: [
         'id',
+// Temp comment
         'institutionId',
         'createdById'
       ]
@@ -62,3 +63,4 @@ class SearchModel extends BaseModel {
         createdById: Joi.string().uuid().optional()
       }),
 
+      create: Joi.object().keys({

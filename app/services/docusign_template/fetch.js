@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.docusign_template.fetch')
 
 const schema = function () {
   return Joi.object().keys({
-// Temp comment
     version: Joi.number().required(),
     institutionId: Joi.string().uuid().required(),
   })

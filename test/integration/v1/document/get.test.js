@@ -23,6 +23,7 @@ describe('GET /documents/:id', () => {
   describe('when authentication token is tampered', () => {
     beforeEach(async () => {
       token = await helpers.getExpiredAuthToken()
+    })
 
     it('should return 401', () => {
       return request(app.server)
@@ -68,3 +69,4 @@ describe('GET /documents/:id', () => {
       token = await helpers.getScopedAuthToken()
     })
 
+    it('should return 401', async () => {

@@ -42,3 +42,4 @@ IdProofDocument:
     frontDocumentId:
       writeOnly: true
       type: string
+      format: uuidv4

@@ -121,3 +121,5 @@ References:
 - https://github.com/docusign/docusign-node-client/blob/9f5e3c6e3ea76e03b9d22b90fe1d1eab6d46ab1a/test/SdkUnitTestsWithCallback.js
 
 
+### How to embed a signature
+

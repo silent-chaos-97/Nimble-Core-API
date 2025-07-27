@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const requireAsync = require('async-require')
-// Temp comment
 const wkfls = require('../../core').services.workflow
 
 const NOOP_DONE_CB = async() => {
@@ -18,7 +17,6 @@ const NOOP_DONE_CB = async() => {
  * @param {Transaction} tx
  * @return {
  * Promise<{
- *   handler: ({wkfl: object, config: object, job: Job}) => Promise<Job | void>,
  *   onDone: ({wkfl: object, config: object, job: Job, next: Job}) => void
  * }>
  * }

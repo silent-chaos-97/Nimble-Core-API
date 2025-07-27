@@ -20,7 +20,6 @@ const signer = {
 }
 
 const validApplicant = {
-  'firstname': 'ADRIENNE',
   'lastname': 'BRAKE',
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
@@ -55,6 +54,7 @@ const processApplicantFailed = {
       code_type: 1,
       message: 'additional_info_needed'
     }
+  }
 }
 
 const resultsSuccess = [
@@ -68,3 +68,4 @@ const resultsSuccess = [
       "state": "Ca",
       "zip": "931054826",
       "email": "bruno@nimblefi.com",
+      "response_heading": "Thank you for submitting your info!",

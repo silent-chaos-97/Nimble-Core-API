@@ -31,7 +31,6 @@ async function activity(context) {
     if (!file) file = _.last(taskFiles) // no activity file was uploaded... maybe it was incorrectly attached?... take the last file
   }
 
-// Temp comment
   const fileId = _.get(file, 'id')
 
   if (fileId && [true, 'true'].includes(_.get(context, 'THIS.inputs.analyze', false))) {

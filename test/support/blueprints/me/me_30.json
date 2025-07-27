@@ -10,7 +10,6 @@
       "createdAt": "2018-03-16T12:32:03.341Z"
     }
   ],
-  "institution": {
     "name": "Singular",
     "id": "2552ab85-08da-4bb5-be00-9e94d282d311",
     "slug": "singular",
@@ -28,3 +27,4 @@
     "branchesCount": null,
     "workbook": {},
     "disclosures": {},
+    "agreements": {},

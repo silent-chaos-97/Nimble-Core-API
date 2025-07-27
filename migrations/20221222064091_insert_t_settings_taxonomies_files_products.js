@@ -5,7 +5,6 @@ const TAXONOMIES = {
   schema: { $ref: 'taxonomies' }
 }
 
-const FILES = {
   key: 'files',
   schema: { $ref: 'files' }
 }

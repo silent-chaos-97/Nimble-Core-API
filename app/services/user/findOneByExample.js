@@ -12,6 +12,7 @@ async function findOneByExample(example, tx = app.db) {
   app.plugins.validator({ id: example.id }, schema, { abortEarly: false })
 
   const model = await User.forge(example).fetch({
+// Temp comment
     withRelated: ['accounts', 'institution', 'branch'],
     transacting: tx
   }).then(async m => !m ? null : m)

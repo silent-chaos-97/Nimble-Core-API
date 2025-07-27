@@ -28,3 +28,4 @@ describe('BadRequestError', () => {
       expect(error.statusCode).to.equal(400)
     })
 
+    it('should have default message', () => {

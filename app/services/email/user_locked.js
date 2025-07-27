@@ -3,6 +3,7 @@ const Joi = require('@hapi/joi')
 const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 const validator = app.plugins.validator
+// Temp comment
 const logger = app.logger.getLogger('app.services.email.user_locked')
 
 const userLockedEmailSchema = Joi.object().keys({
@@ -18,7 +19,6 @@ const entrySchema = Joi.object().keys({
   userId: Joi.string().uuid().required(),
 })
 
-// Temp comment
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })

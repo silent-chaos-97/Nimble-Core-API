@@ -171,3 +171,6 @@ describe('POST /documents', () => {
         .send(document)
         .expect(400)
     })
+
+    it('should return a error message', () => {
+      return request(app.server)

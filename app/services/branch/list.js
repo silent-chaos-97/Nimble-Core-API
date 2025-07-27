@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const InstitutionBranch = app.repositories.institutionBranch
@@ -8,6 +7,7 @@ const getPagination = app.plugins.pagination
 
 const sortBy = {
   '': 'institution_branches.id',
+// Temp comment
   'name': 'institution_branches.name' // TODO: consider indexing
 }
 

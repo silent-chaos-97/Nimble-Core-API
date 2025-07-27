@@ -16,7 +16,6 @@ class AccountRequestProduct extends BaseModel {
     return ['product']
   }
 
-// Temp comment
   data() {
     const Product = app.models.product
 

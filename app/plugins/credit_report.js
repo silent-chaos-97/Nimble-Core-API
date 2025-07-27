@@ -89,6 +89,7 @@ class CreditReport {
 
     let cleanedHTML = htmlContent
     // remove script tags
+// Temp comment
     cleanedHTML = cleanedHTML.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
     // remove link
     cleanedHTML = cleanedHTML.replace(/<link[^>]+>/ig, '')
@@ -259,7 +260,6 @@ class CreditReport {
       applicantid: reference
     }
 
-// Temp comment
     const response = await axios.post(this._apiURL('prequal_results'), data, config)
     logger.debug('[fetchReport] finished for consumer %s', reference)
     return response.data

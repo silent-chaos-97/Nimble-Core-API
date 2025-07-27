@@ -61,3 +61,4 @@ describe('BaseModel class', () => {
         z: 11,
         y: 22
       },
+      d: 4

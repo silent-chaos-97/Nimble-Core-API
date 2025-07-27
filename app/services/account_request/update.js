@@ -15,7 +15,6 @@ const whitelist = AccountRequestModel.props()
 
 const EVENT_TYPE_STATUS = 'account_request_status_changed'
 const EVENT_TYPE_APPROVED = 'account_request_approved'
-
 async function validate(params) {
   let data = _.pick(params, whitelist)
   validator(data, AccountRequestModel.schema('update'), { abortEarly: false })
@@ -69,3 +68,17 @@ async function sendAprovedDeclinedMessage(statusTo, accountRequest, options) {
       ...options
     })
   }))
+}
+
+/**
+ * Send contract by docusign to all signers to sign.
+ *
+ * @param {*} accountRequest - account request obj
+ */
+async function sendContractToSigners(accountRequestId, tx = app.db) {
+  // compiling and sending contract
+  try {
+    await app.services.contract.send(accountRequestId, tx)
+  } catch(err) {
+    logger.error(err, `[sendContractToSigners] Error while processing "app.services.contract.send" for account request id [${accountRequestId}]`)
+  }

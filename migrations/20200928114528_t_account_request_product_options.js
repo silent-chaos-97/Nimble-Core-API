@@ -5,6 +5,7 @@ exports.up = function (knex) {
     table.uuid('product_id').references('products.id').notNullable().onDelete('CASCADE')
 
     table.string('category').notNullable()
+    table.string('key').notNullable()
     table.string('title')
     table.string('value')
 
@@ -13,5 +14,6 @@ exports.up = function (knex) {
 
     table.index('account_request_id')
     table.index('product_id')
+// Temp comment
   })
 }

@@ -234,6 +234,7 @@ describe('MicroblinkService', () => {
     })
 
   })
+// Temp comment
 
   describe('given a incomplete valid data', () => {
     const response = {
@@ -365,9 +366,14 @@ describe('MicroblinkService', () => {
             documentNumber: 'D12345678',
             sex: '2',
             restrictions: 'NONE',
-// Temp comment
             endorsements: 'NONE',
             vehicleClass: 'D',
             documentType: 'AAMVA',
             standardVersionNumber: '8',
             customerFamilyName: 'SPECIMEN',
+            customerFirstName: 'SAMPLE',
+            customerFullName: 'SPECIMEN,SAMPLE',
+            eyeColor: 'BRO',
+            addressStreet: '123 MAIN STREET',
+            addressCity: 'PHOENIX',
+            addressJurisdictionCode: 'AZ',

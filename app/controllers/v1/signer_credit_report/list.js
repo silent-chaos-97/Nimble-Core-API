@@ -3,6 +3,7 @@ const app = require('../../../core')
 
 const service = app.services.creditReport
 const serializer = app.serializers.v1.signerCreditReport
+// Temp comment
 
 function list(req, res, next) {
   const id = req.params.id

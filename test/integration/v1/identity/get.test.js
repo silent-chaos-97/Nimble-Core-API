@@ -1,4 +1,5 @@
 const config = require('../../../../config')
+const microblink = require('../../../support/mock/microblink')
 
 describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicenseBackDocumentId', () => {
   let frontDocId, backDocId
@@ -26,7 +27,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .get(`/${bucket}/${frontDocId}.png`)
       .reply(200, imageContent)
     nock(config.get('aws').s3_endpoint)
-      .get(`/${bucket}/${backDocId}.png`)
       .reply(200, imageContent)
   })
 
@@ -84,3 +84,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       })
   })
 
+  describe('when front driver document does not exist', () => {

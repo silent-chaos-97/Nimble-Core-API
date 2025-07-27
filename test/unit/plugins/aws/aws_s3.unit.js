@@ -102,7 +102,8 @@ describe("AWS Facade for s3", () => {
       expect(AWS.s3.putObject).to.have.been.calledWith(expectedCall)
     })
 
-    it('should call real s3 with correct parameters', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
       let expectedCall = {
         Body: sinon.match.any,
+        Bucket: AWS.config.s3.upload_bucket,
+        Key: 'folder/00000000-0000-0000-0000-000000000000.png',

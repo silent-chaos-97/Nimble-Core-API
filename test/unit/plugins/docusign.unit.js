@@ -365,6 +365,7 @@ describe('Docusign', () => {
           .get('/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined')
           .reply(500, 'ok')
 
+        try {
           await docusign.getCombinedPDFById('5d715751-e027-45e4-884b-99bb85c357dc')
         } catch (error) {
           expect(error).to.be.an.instanceof(Error)
@@ -806,3 +807,14 @@ describe('Docusign', () => {
         expect(result[0].value).to.equal(mocks.validMapping.ssn)
         expect(result[1].tabLabel).to.equal('\\*fullName')
         expect(result[2].tabLabel).to.equal('\\*birthDate')
+      })
+
+      it('should add a suffix for second signer', async () => {
+        const result = docusign._populateTextTabs(templateTabs, mocks.validMapping, 2)
+
+        expect(result).not.to.be.undefined
+        expect(result.length).to.equal(3)
+        expect(result[0].tabLabel).to.equal('\\*ssn#2')
+        expect(result[1].tabLabel).to.equal('\\*fullName#2')
+        expect(result[2].tabLabel).to.equal('\\*birthDate#2')
+      })

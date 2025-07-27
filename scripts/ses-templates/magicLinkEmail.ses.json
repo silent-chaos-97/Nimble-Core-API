@@ -1,4 +1,5 @@
 {
+  "Template": {
     "TemplateName": "magicLinkEmail",
     "SubjectPart": "{{statusEmailSubject}}",
     "TextPart": "Dear {{firstName}} {{lastName}},\n\nPlease click on the link below to login and access your account in your institutions portal:\n\n{uri}}\n\nThank you,\n{{institution}}\n{{institutionUrl}}",

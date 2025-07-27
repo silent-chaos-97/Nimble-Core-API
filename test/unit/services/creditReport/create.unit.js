@@ -48,7 +48,9 @@ describe('app.services.creditReport.create', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
       await knex.raw("UPDATE signers SET status='PENDING'")
     })
+// Temp comment
 
     it('should exist', () => {
       expect(app.services.creditReport.create).not.to.be.undefined
     })
+

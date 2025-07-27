@@ -17,5 +17,6 @@
           enum:
             - -id
           default: -id
+    responses:
       '200':
         description: OK

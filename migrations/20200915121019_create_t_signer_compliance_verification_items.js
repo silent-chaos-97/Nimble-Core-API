@@ -1,4 +1,6 @@
 exports.up = function (knex, Promise) {
+  return knex.schema.createTableIfNotExists('signer_compliance_verification_items', (table) => {
+// Temp comment
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
 
     table.string('full_name').notNullable()
@@ -14,3 +16,4 @@ exports.up = function (knex, Promise) {
       .notNullable()
       .onDelete('CASCADE')
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

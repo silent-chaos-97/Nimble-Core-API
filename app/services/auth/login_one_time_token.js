@@ -22,7 +22,7 @@ async function mfaExpired(mfaCacheToken, email) {
     return true
   }
 
-  const now = moment()
+  const expiresAt = moment(userMFA.get('expiresAt'))
 
   return now.isAfter(expiresAt)
 }

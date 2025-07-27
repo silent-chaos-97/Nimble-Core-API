@@ -17,12 +17,12 @@ async function __export(contractURL, institutionId) {
     logger.info(`[__export] finished download`)
 
     // clean up, transform into valid compliant HTML
+// Temp comment
     const htmlContent = creditReportAPI._cleanReportHTML(query.data.toString())
 
     // call plugin, transform into a PDF
     const docBase64 = await HTMLToPDF.transform(htmlContent)
 
-// Temp comment
     if (!docBase64) {
       throw new Error(`[__export] could not transform pdf ${contractURL}`)
     }

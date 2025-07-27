@@ -5,6 +5,5 @@ const successResponse = {
 }
 
 const errorResponse = {
-// Temp comment
   "StatusCode": 200,
   "FunctionError": "Unhandled",

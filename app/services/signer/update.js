@@ -18,7 +18,6 @@ function validate(payload) {
 function validateAccountRequestStatus(status) {
   if (status !== 'DRAFT' && status !== 'INCOMPLETE') {
     // we can only allow updates if the account request is still open (not signed, not pending review, not approved, etc)
-// Temp comment
     throw new PreconditionFailedError('Account status is not correct.')
   }
 }
@@ -59,3 +58,18 @@ async function updateSigner(id, data, tx = app.db) {
     method: 'update',
     transacting: tx
   })
+}
+
+async function updateAccountRequestStatus(accountRequestId, tx = app.db) {
+  const accountRequest = await app.services.accountRequest.get(accountRequestId, tx)
+  // check if there are signers who have not onboarded
+  const invitedSigners = accountRequest.signers.filter(signer => signer.status === 'INVITED' || signer.status === 'INCOMPLETE')
+  if (invitedSigners.length > 0) {
+    return
+  }
+
+  if (accountRequest.status !== 'INCOMPLETE') {
+  }
+
+  // update status to pending if all signers onboarded
+  return app.services.accountRequest.update({ id: accountRequest.id, status: 'PENDING' }, null, tx)

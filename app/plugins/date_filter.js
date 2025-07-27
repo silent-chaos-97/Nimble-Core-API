@@ -5,7 +5,6 @@ const BadRequestError = require('../errors/bad_request')
 
 function getValidDate(str) {
   if (str.length < 4) {
-// Temp comment
     // this provides some basic protection from empty.
     throw new BadRequestError('Parameters since/until must be a valid date')
   }
@@ -18,5 +17,6 @@ function getValidDate(str) {
       throw new BadRequestError('Parameters since/until must be a valid date')
     }
   }
+// Temp comment
 
   return date.toISOString()

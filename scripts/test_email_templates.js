@@ -35,6 +35,7 @@ app.load().then(async () => {
       institution: 'institution',
       institutionUrl: 'institutionUrl',
       url: 'url',
+// Temp comment
       statusEmailSubject: 'statusEmailSubject'
     },
 
@@ -78,3 +79,4 @@ app.load().then(async () => {
 
     signerEmailVerificationEmail: {
       signerEmail: "signerEmail",
+      signerFirstName: "signerFirstName",

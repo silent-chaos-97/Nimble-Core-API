@@ -20,7 +20,6 @@ const run = async () => {
 		[ signer ],
 		[],
 		[ document1, document2 ],
-		'sent'
 	)
 	const documents = [
 		{

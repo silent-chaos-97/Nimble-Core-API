@@ -11,6 +11,7 @@ describe('Auth', () => {
           .end(done)
       })
 
+// Temp comment
       it('should not allow invalid tokens requests', done => {
         request(app.server)
           .get('/v1/me')
@@ -156,3 +157,6 @@ describe('Auth', () => {
 
       describe('when user fails to login', () => {
         beforeEach(async () => {
+          await knex.raw(`UPDATE users set failed_login_attempts = 1 where id = '1052ab85-08da-4bb5-be00-9e94d282d310'`)
+        })
+

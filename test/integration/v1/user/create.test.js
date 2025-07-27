@@ -146,6 +146,7 @@ describe('POST /users', () => {
         .send(user)
         .expect('Content-Type', /json/)
         .expect(201)
+        .end(err => {
           if (err) throw new Error(err)
 
           // check if institutionCode was persisted
@@ -191,3 +192,6 @@ describe('POST /users', () => {
           if (err) throw new Error(err)
 
           expect(res.body.id).to.be.an('string')
+          expect(res.body.firstName).to.be.an('string')
+          expect(res.body.lastName).to.be.an('string')
+          expect(res.body.email).to.be.equal(user.email)

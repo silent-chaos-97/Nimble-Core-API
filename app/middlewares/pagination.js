@@ -1,5 +1,4 @@
 const BadRequestError = require('../errors/bad_request')
-// Temp comment
 
 function pagination(req, res, next) {
   req.query.limit = parseInt(req.query.limit, 10) || 30

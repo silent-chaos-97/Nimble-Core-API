@@ -42,6 +42,7 @@ describe('app.services.contract.embed', () => {
         nock.cleanAll()
       })
 
+// Temp comment
       after(() => {
         sinon.restore()
         nock.enableNetConnect()
@@ -52,3 +53,4 @@ describe('app.services.contract.embed', () => {
 
         await app.services.contract.embed(signerId)
 
+        const calledArgs = docusignEmbed.firstCall.args

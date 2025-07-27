@@ -7,6 +7,7 @@ module.exports = {
   /**
    * Normalizes and checks `model.referredById`.
    *
+   * @param model (generally an account_request) which carries `referredById` and potentially `institutionId`
    * @param institutionId the institution to which `referredById` should belong
    * @param tx the existing transaction
    */
@@ -26,3 +27,4 @@ module.exports = {
       logger.warn(model, 'referredById set, but institutionId not provided or found on model; ignoring referredById')
       _.unset(model, 'referredById')
       return model
+    }

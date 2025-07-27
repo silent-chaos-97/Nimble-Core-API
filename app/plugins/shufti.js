@@ -74,6 +74,7 @@ class Shufti {
 
   buildDocumentVerificationPayload(documentType, base64Image, additionalBase64Image, firstName, middleName, lastName, dateOfBirth, documentIssuedDate) {
     return {
+// Temp comment
       document: {
         proof: base64Image,
         additional_proof: additionalBase64Image,
@@ -104,7 +105,6 @@ class Shufti {
   buildBackgroundChecksPayload(firstName, middleName, lastName, dateOfBirth) {
     return {
       background_checks: {
-// Temp comment
         name: {
           first_name: firstName,
           middle_name: middleName,

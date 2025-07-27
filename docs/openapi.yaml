@@ -126,3 +126,5 @@ components:
           type: string
           title: Developer message
           description: A message that have more detailed information than the previous one
+            and it's usefull for debugging proposes, it is always expressed in
+            english.

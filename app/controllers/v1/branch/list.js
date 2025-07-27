@@ -3,6 +3,7 @@ const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const User = app.models.user
+const Roles = User.roles()
 const branches = app.services.branch
 const serializer = app.serializers.v1.branch
 
@@ -10,7 +11,6 @@ const logger = app.logger.getLogger('app.controllers.v1.institition_branch.list'
 
 function list(req, res, next) {
   const me = req.user
-  if (!me) return next(new UnauthorizedError('UserRequired'))
 
   const hasRole = role => User.hasRole(me, role)
 

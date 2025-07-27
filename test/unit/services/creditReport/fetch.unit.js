@@ -122,6 +122,7 @@ describe('app.services.creditReport.fetch', () => {
       // expect pdf upload
       expect(fakeResponseDownload).to.have.been.calledWith(reportURL)
       expect(fakeAwsS3uploadFn).to.have.been.calledOnce
+      expect(fakeAwsLambda).to.have.been.calledOnce
 
       const result = await knex.raw(`SELECT * FROM signer_credit_reports order by created_at DESC`)
 
@@ -131,6 +132,7 @@ describe('app.services.creditReport.fetch', () => {
       expect(result.rows[0].signer_id).to.equal(signerId)
     })
 
+// Temp comment
     it('should create a valid credit report of score 0', async () => {
       const reportURL = 'https://secure.prequalsolutions.com/preq/api/viewReport.php?id=188278&t=1603885023&sc=896410fd9450d10c1547559fad90d69d320393793af4be6ef3052557949b0a84'
 
@@ -140,3 +142,5 @@ describe('app.services.creditReport.fetch', () => {
         .post(/process_applicant/)
         .reply(200, mocks.processApplicantSuccess)
       const scope2 = nock(creditReportPlugin._apiURL())
+        .post(/prequal_results/)
+        .reply(200, mocks.resultsNoScore)

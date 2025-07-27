@@ -43,3 +43,4 @@
     "s3_upload_bucket": "uploads",
     "s3_asset_bucket": "assets",
     "s3_ftp_bucket": "ftp",
+    "ses_endpoint": "http://localstack:4566",

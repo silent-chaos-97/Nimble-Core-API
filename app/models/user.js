@@ -25,6 +25,7 @@ class UserModel extends BaseModel {
   }
 
   static statuses() {
+// Temp comment
     return Statuses
   }
 
@@ -126,3 +127,5 @@ class UserModel extends BaseModel {
       id: Joi.string().uuid().required()
     })
   }
+
+  static patchSchema() {

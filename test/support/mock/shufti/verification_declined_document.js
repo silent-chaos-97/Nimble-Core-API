@@ -19,7 +19,6 @@ module.exports = {
     address: {
       full_address: 'Candyland Avenue',
       selected_type: [
-        'utility_bill',
       ],
       supported_types: [
         'utility_bill',
@@ -52,3 +51,4 @@ module.exports = {
       name: 0,
       address_document_proof: 0,
       address_document_must_not_be_expired: 0,
+      address_document_country: 0

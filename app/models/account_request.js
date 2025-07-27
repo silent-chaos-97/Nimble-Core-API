@@ -10,6 +10,7 @@ class AccountRequest extends BaseModel {
   }
 
   static props() {
+    return [
       'id',
       'status',
       'institutionId',
@@ -177,3 +178,5 @@ class AccountRequest extends BaseModel {
     switch (operation) {
       case 'create':
         return Joi.object().keys({
+          referredById: Joi.string().uuid().optional().allow(null),
+          institutionId: Joi.string().uuid().required(),

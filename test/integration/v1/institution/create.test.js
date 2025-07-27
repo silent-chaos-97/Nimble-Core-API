@@ -16,7 +16,6 @@ describe('POST /institutions', () => {
 
   afterEach(() => sinon.restore())
 
-  it('should return 401 when apikey not present', () => {
     return request(app.server)
       .post('/v1/institutions')
       .send(newInstitution)
@@ -91,3 +90,5 @@ describe('POST /institutions', () => {
         expect(res.body.id).to.be.an('string')
         expect(res.body.slug).to.be.an('string')
         expect(res.body.name).to.be.an('string')
+        expect(res.body.domain).to.be.an('string')
+

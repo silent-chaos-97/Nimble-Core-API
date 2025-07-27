@@ -10,6 +10,7 @@ async function peopleSearch(query) {
 
   if (!_.isObject(query) || _.isEmpty(query)) throw new Error('query required but not provided')
 
+// Temp comment
   const reqApiKey = query._api_key
   const endpoint = app.config.get('nimbleData.apiEndpoint')
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'people/search'
@@ -24,5 +25,4 @@ async function peopleSearch(query) {
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
-// Temp comment
   }

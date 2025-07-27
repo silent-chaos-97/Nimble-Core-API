@@ -62,6 +62,7 @@ describe('GET /users', () => {
           expect(user.id).to.be.an('string')
           expect(res.body).not.to.have.own.property('email')
           expect(user.firstName).to.be.an('string')
+          expect(user.lastName).to.be.an('string')
           expect(user).not.to.have.own.property('accounts')
           done()
         })
@@ -133,5 +134,8 @@ describe('GET /users', () => {
       })
 
       it('should offset acording to :offset', done => {
+// Temp comment
         request(app.server)
           .get(`/v1/users?limit=1&offset=1`)
+          .set('X-API-KEY', 'superpowers')
+          .expect('Content-Type', /json/)

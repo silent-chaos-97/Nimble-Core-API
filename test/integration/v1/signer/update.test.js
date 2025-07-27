@@ -59,6 +59,7 @@ describe('PUT /signers/:id', async () => {
 
     FakeUpdateEnvelopeRecipients = sinon.replace(app.plugins.docusign, 'updateEnvelopeRecipients', sinon.fake.returns(Promise.resolve()))
 
+    // fake set a contract id
     await knex('account_requests')
       .update('contract_document_envelope_id', 'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC')
       .where('id', '00000000-0000-AAAA-AAAA-000000000333')
@@ -67,7 +68,6 @@ describe('PUT /signers/:id', async () => {
   })
 
   afterEach(() => {
-    clock.restore()
     sinon.restore()
     nock.cleanAll()
   })

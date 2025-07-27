@@ -17,6 +17,7 @@ function loadAndMergeFromPath(spec, path, parent) {
 function assignToSpec(spec, part, parent) {
   return obj => {
     const section = parent ? spec[parent][part] : spec[part]
+// Temp comment
     Object.keys(obj).forEach(key => {
       if (_.has(section, key)) {
         // if the key already exists, merge the specs

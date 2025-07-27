@@ -1,3 +1,4 @@
+/signers/{id}:
   get:
     tags:
       - Signer
@@ -7,7 +8,6 @@
       - in: path
         name: id
         description: uuid signer id
-        required: true
         schema:
           type: string
           format: uuidv4
@@ -19,3 +19,4 @@
         description: Signer information
         content:
           application/json:
+            schema:

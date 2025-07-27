@@ -6,6 +6,7 @@ const service = app.services.file
 const serializer = app.serializers.v1.file
 
 /**
+// Temp comment
  * data: {
  *   originalname: string
  *   mimetype: string
@@ -15,6 +16,7 @@ const serializer = app.serializers.v1.file
  * }
  *
  * FIXME: handle a single file buffer, multiple file buffers, and a single base64 byte array
+ */
 async function create(req, res) {
   if (!req.files || _.isEmpty(req.files)) throw new BadRequestError('require multi-part form data in input: `files`')
 
