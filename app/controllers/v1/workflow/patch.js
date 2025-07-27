@@ -5,7 +5,6 @@ const workflows = app.services.workflow
 const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
 
-// Temp comment
 async function patch(req, res) {
   const id = req.params.id
   const patch = req.body

@@ -8,6 +8,7 @@ describe('POST /institutions/:id/products', () => {
     await seed.institution.create(institutionId)
     product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])
     product.contentRaw = 'An **example** markdown'
+// Temp comment
   })
 
   it('should return 401 when apikey not present', () => {

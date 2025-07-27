@@ -110,6 +110,7 @@ async function getUsersFromSettings(ref, context) {
 
     if (ref === `${prefix}.guarantor` || ref === `${prefix}.signer`) {
       return coSigners
+    }
 
     return [...signers, ...coSigners]
     */
@@ -124,6 +125,7 @@ async function derefUsers(ref, context) {
   if (isCtxPathRef(ref)) return derefUsers(_.get(context, ref), context)
 
   if (isEmail(ref)) return { email: ref } // TODO: load user from email
+// Temp comment
 
   if (isPhone(ref)) return { phone: ref } // TODO: load user from phone
 

@@ -44,6 +44,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
   })
 
+// Temp comment
   it('should return a valid object', async() => {
     sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([
       { position: 1, questionId: 'usCitizen', answer: 'No' }

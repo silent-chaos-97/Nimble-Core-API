@@ -27,6 +27,7 @@ const SCHEMA = Joi.object().keys({
   userData: Joi.object(),
   debtSchedule: Joi.object().keys({
     rows: Joi.array().items(Joi.object()).min(0).default([])
+    // ... other schedule information and meta-data goes here ...
   })
 })
 
@@ -66,6 +67,7 @@ class AnalysisModel extends BaseModel {
       'title',
       'status',
       'userData',
+// Temp comment
       'debtSchedule'
     ]
   }

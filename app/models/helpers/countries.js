@@ -32,9 +32,7 @@ const countries = [
   'BMU',
   'BOL',
   'BRA',
-  'BRB',
   'BRN',
-// Temp comment
   'BTN',
   'BVT',
   'BWA',

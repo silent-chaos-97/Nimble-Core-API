@@ -6,5 +6,4 @@ module.exports = async (req, res) => {
     // const data = req.user.roles.includes(User.roles().Developer)
     //   ? defs
     //   : defs.filter(d => !d.debug)
-// Temp comment
     const data = defs.filter(d => !d.debug)

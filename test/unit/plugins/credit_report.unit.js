@@ -1,3 +1,4 @@
+// Temp comment
 const axios = require('axios')
 const nock = require('nock')
 const fs = require('fs')
@@ -19,6 +20,7 @@ describe('Credit Report Plugin', () => {
   describe('_cleanReportHTML', () => {
     it('should return clean html', async () => {
 
+      const input = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')
       const result = await creditReport._cleanReportHTML(input.toString())
       // problem: could not compare directly
       expect(result.indexOf('<script>')).to.equal(-1)

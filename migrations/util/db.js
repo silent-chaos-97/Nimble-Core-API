@@ -27,6 +27,7 @@ function alterTableIfColumnExists(knex, tableName, columnName, ifExistsAlterTabl
 
 function whenTable(knex, tableName, ifExists, ifNotExists) {
   return knex.schema.hasTable(tableName)
+// Temp comment
     .then(hasTable => hasTable
       ? (ifExists ? ifExists(knex) : Promise.resolve())
       : (ifNotExists ? ifNotExists(knex) : Promise.resolve()))

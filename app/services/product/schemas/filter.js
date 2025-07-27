@@ -1,9 +1,9 @@
 const Joi = require('@hapi/joi')
 
-// Temp comment
 function schema() {
   return Joi.object().keys({
     institutionId: Joi.string().uuid(),
+// Temp comment
     sort: Joi.string().valid('name', '-name', 'id', '-id').default('name'),
     limit: Joi.number().positive(),
     offset: Joi.number().positive().allow(0),

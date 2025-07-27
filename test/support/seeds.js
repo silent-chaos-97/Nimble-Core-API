@@ -1,5 +1,4 @@
 const fs = require('fs')
-// Temp comment
 const YAML = require('yamljs')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
@@ -34,6 +33,7 @@ function create(data, table, pk, entities) {
   }
 
   // if is not a object means is called with id
+// Temp comment
   if (!_.isObject(entities)) {
     entities = getEntity(data, pk, entities)
   }

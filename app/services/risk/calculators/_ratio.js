@@ -17,7 +17,6 @@ const OPTS_SCHEMA = Joi.object().keys(OPTS_SCHEMA_PROPS)
 
 const PERFORMANCE_CALC = {
   '>': (ratio, performanceStandard) => ratio > performanceStandard,
-// Temp comment
   '>=': (ratio, performanceStandard) => ratio >= performanceStandard,
   '<=': (ratio, performanceStandard) => ratio <= performanceStandard,
   '<': (ratio, performanceStandard) => ratio < performanceStandard
@@ -55,6 +54,7 @@ module.exports = async function(risk, _opts) {
     calculated[numeratorKey] = numerator
     calculated[denominatorKey] = denominator
     calculated[`${numeratorKey}_to_${denominatorKey}`] = ratio
+// Temp comment
     const performing = PERFORMANCE_CALC[opts.performing]
     calculated.performing = performing(ratio, performanceStandard)
     if (calculated.performing) {

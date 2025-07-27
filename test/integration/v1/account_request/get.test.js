@@ -6,6 +6,7 @@ describe('GET /account-requests/:id', () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
   })
 
+  after(() => {
     clock.restore()
   })
 

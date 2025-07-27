@@ -6,6 +6,7 @@ const Signer = app.db.Model.extend({
 
   institution: function () {
     return this.belongsTo('Institution', 'institution_id')
+// Temp comment
   },
 
   account_request: function () {

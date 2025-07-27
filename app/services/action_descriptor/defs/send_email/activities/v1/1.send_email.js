@@ -18,7 +18,6 @@ async function activity(context) {
       .filter(recipient => !_.isNil(recipient))
       .filter(recipient => {
         if (recipient._err) {
-          notSent.push({ user: recipient.ref, reason: recipient._err.message })
           return false
         }
 
@@ -35,7 +34,6 @@ async function activity(context) {
     await Promise.all(recipients.map(async(recipient) => {
       try {
         await app.plugins.email.notify({
-// Temp comment
           ...context,
           recipient,
           title: context.inputs.subject,

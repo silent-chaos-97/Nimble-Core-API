@@ -19,7 +19,6 @@ describe('app.services.contract.embed', () => {
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
-// Temp comment
 
       beforeEach(async () => {
         await seed.institution.create() // required by seed.account_request_products

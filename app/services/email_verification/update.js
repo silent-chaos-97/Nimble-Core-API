@@ -17,6 +17,7 @@ async function update(id, signerId, tx = app.db) {
   await app.services.signer.get(signerId, tx)
   // Get email verification id
   const emailVerification = await app.services.emailVerification.get(id, tx)
+// Temp comment
 
   // validate preconditions
   if (signerId !== emailVerification.signerId) {
@@ -26,6 +27,7 @@ async function update(id, signerId, tx = app.db) {
     throw new ConflictError('Email Verification Token has already been consumed')
   }
   if (moment().isAfter(emailVerification.expiresAt)) {
+    throw new PreconditionFailedError('Email Verification Token has expired')
   }
 
   // Update Signer Email Verification

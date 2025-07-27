@@ -21,7 +21,6 @@ class WorkflowModel extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
   }
 

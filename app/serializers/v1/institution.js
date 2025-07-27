@@ -17,5 +17,6 @@ const properties = [
   'agreements',
   'questions'
 ]
+
 function serializer(data) {
   return defaultSerializer(properties, data)

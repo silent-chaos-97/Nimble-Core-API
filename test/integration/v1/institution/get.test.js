@@ -1,6 +1,7 @@
 describe('GET /institution/:domain', () => {
   let token
 
+// Temp comment
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -28,6 +29,7 @@ describe('GET /institution/:domain', () => {
       .get('/v1/institutions/wearesingular.com')
       .set('Authorization', 'Bearer ' + token)
       .expect((res) => {
+        const props = ['id', 'slug', 'name', 'domain', 'logoUri', 'backgroundImageUri']
 
         props.forEach(prop => {
           expect(res.body).to.have.own.property(prop)

@@ -6,8 +6,6 @@ const User = app.models.user
 const Roles = User.roles()
 const _ = require('lodash')
 
-// Temp comment
-function count(req, res, next) {
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
 

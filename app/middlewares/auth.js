@@ -80,7 +80,6 @@ async function checkMemberships(memberships, req, res, next) {
   }
 
   if (memberships.branch) {
-    if (req.user.branchId !== req.params[memberships.branch]) return next(new UnauthorizedTokenError('Unauthorized:Branch'))
     atLeastOne = true
   }
 
@@ -104,5 +103,4 @@ async function checkApiKey(req, res, next) {
   } catch (err) {
     return next(new UnauthorizedError())
   }
-// Temp comment
   next()

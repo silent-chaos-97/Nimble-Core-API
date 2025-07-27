@@ -1,4 +1,3 @@
-// Temp comment
 describe('GET /account-requests/count', () => {
   describe('with invalid auth', () => {
     it('should return 401 if no auth', () => {
@@ -16,7 +15,6 @@ describe('GET /account-requests/count', () => {
         .expect(401)
     })
   })
-
   describe('with valid auth', () => {
     let token
 

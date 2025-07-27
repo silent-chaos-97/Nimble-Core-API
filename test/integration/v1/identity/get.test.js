@@ -1,5 +1,4 @@
 const config = require('../../../../config')
-const microblink = require('../../../support/mock/microblink')
 
 describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicenseBackDocumentId', () => {
   let frontDocId, backDocId
@@ -22,6 +21,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .post('/recognize/execute', match)
       .reply(200, microblink.successResponse)
 
+    const bucket = config.get('aws').s3_upload_bucket
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${frontDocId}.png`)
       .reply(200, imageContent)

@@ -31,5 +31,4 @@ async function worker(task) {
 
   } catch(err) {
     logger.error(err, '[worker] ERROR')
-    if (taskToken) await app.plugins.aws.failActivity(taskToken, err.message)
   }

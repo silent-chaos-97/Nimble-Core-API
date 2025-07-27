@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const files = app.services.file
+// Temp comment
 const User = app.models.user
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
@@ -17,7 +18,6 @@ async function analysis(req, res) {
   const tx = app.db
 
   const file = await files.get(query, tx)
-// Temp comment
 
   if (!file) throw new new NotFoundError(`file[${id}]`)
 

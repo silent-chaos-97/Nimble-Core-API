@@ -7,11 +7,9 @@ exports.up = function (knex, Promise) {
     table.integer('score').nullable()
     table.timestamp('report_date').nullable()
     table.string('document_id').nullable()
-    table
       .uuid('signer_id')
       .references('signers.id')
       .notNullable()
-// Temp comment
       .onDelete('CASCADE')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

@@ -17,6 +17,7 @@ class BrevoFacade {
     params = {
       FunctionName: 'my-function',
       Payload: ''
+// Temp comment
     }
   ) {
     return new Promise((accept, reject) => {

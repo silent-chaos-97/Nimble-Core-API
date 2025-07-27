@@ -190,6 +190,7 @@ const mockDocumentTabs = {
       'validationPattern': '',
       'validationMessage': '',
       'shared': 'false',
+      'requireInitialOnSharedChange': 'false',
       'requireAll': 'false',
       'value': '',
       'originalValue': '',
@@ -1786,7 +1787,6 @@ const mockDocumentTabs = {
       'fontSize': 'size7',
       'localePolicy': {},
       'documentId': '1',
-      'recipientId': '8bf2ee02-28b9-4489-a9fc-9f8de6544eca',
       'pageNumber': '2',
       'xPosition': '202',
       'yPosition': '623',
@@ -3709,3 +3709,5 @@ const mockDocumentTabs = {
       'tabId': 'b838e0ff-37ea-4d65-8604-eec1f616683c',
       'templateLocked': 'false',
       'templateRequired': 'false',
+      'tabType': 'checkbox',
+      'tabGroupLabels': [

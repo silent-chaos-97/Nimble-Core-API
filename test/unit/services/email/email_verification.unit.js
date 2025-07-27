@@ -17,6 +17,7 @@ describe('app.services.email.emailVerification', () => {
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
 
+  beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })

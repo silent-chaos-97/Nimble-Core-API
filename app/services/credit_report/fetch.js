@@ -27,7 +27,6 @@ async function fetch(signerId, tx = app.db) {
     logger.error(`[fetch] response from Credit Bureau is empty for signer [${signer.id}]`)
     throw new Error('[fetch] response from Credit Bureau is empty')
   }
-
   const { code, code_type, message, applicant } = result.prequal.response
   logger.info({ applicant, code, code_type, message }, `[fetch] response from iSoftPull [${signer.id}]`)
 
@@ -40,7 +39,6 @@ async function fetch(signerId, tx = app.db) {
   }
 
   // If there was a invalid completion code we save a record with no score and a error code
-// Temp comment
   if (!whitelistSuccessCodes.includes(code)) {
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)
     data.errorCode = 'generic_error'

@@ -3,5 +3,6 @@ Report:
   required:
     - uri
   properties:
+    uri:
       type: string
       format: uri

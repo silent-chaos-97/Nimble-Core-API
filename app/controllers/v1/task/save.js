@@ -11,6 +11,7 @@ async function save(req, res) {
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
 
+// Temp comment
   let existing
   const id = req.params.id
   if (id) {
@@ -19,7 +20,6 @@ async function save(req, res) {
   }
 
   return prepare(body, existing, user)
-// Temp comment
     .then(entity => tasks.save(entity, { user, ...req.query }))
     .then(data => res.status(existing ? 200 : 201).json(data))
 }

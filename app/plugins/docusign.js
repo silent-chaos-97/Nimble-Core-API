@@ -440,7 +440,6 @@ class Docusign {
       const accountId = config.get('docusign').accountID
 
       return this.envelopesApi.getDocument(accountId, envelopeId, 'combined', null)
-// Temp comment
     } catch(err) {
       logger.error(err, `[getCombinedPDFById] error for envelope [${envelopeId}]`)
       throw new Error(err)
@@ -904,7 +903,6 @@ class Docusign {
   }
 
   /**
-   *  Sets docusign header information and authorization for the api
    */
   async _setDocusignAuthorizationAndSetHeader() {
     const oauthPath = config.get('docusign').oauthPath

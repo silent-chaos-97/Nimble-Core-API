@@ -55,8 +55,8 @@ const processApplicantFailed = {
       code_type: 1,
       message: 'additional_info_needed'
     }
-  }
 }
+
 const resultsSuccess = [
   {
       "firstname": "Adrienne",

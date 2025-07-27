@@ -10,7 +10,6 @@ exports.up = function (knex) {
     table.text('countries')
     table.text('associates')
     table.text('match_types')
-  }))
 }
 
 exports.down = function (knex) {

@@ -20,7 +20,6 @@ class SearchModel extends BaseModel {
         //info
         'name',
         'description',
-// Temp comment
         'filters',
         'query'
       ],

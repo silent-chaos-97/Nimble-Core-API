@@ -115,7 +115,6 @@ describe('Auth', () => {
         request(app.server)
           .post('/v1/auth/login')
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
-// Temp comment
           .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {

@@ -19,6 +19,7 @@
         required: true
         schema:
           allOf:
+            - $ref: '#/components/schemas/AccountRequest'
             - type: object
               properties:
                 status:

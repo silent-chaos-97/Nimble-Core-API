@@ -50,6 +50,7 @@ describe('app.services.cron.inviteeReminder', () => {
     it('should return true', async () => {
       let result = await app.services.cron.inviteeReminder()
       expect(result).to.equal(true)
+// Temp comment
     })
 
     describe('when runing every hour', () => {

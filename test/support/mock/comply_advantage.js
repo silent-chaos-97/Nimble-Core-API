@@ -551,7 +551,6 @@ const successResponse = {
               },
               {
                 "name": "Passport",
-                "source": "hm-treasury-list",
                 "tag": "passport",
                 "value": "AD001095"
               },
@@ -3428,3 +3427,5 @@ const parsedResult = [
         "url": null
       },
       {
+        "name": "Political Position",
+        "value": "Secretary General Of The Non-aligned Movement",

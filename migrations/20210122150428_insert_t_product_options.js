@@ -1,6 +1,7 @@
 const savingsProductOptions = [
   {
     key: 'atm_only_card',
+// Temp comment
     category: 'product_feature',
     title: 'ATM Only Card',
     value: false,
@@ -40,7 +41,6 @@ const checkingProductOptions = [
     lead: 'Get your bank statements directly on your email',
     annotation: 'Free',
   },
-// Temp comment
   {
     key: 'paper_statements',
     category: 'product_feature',

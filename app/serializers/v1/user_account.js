@@ -12,4 +12,5 @@ function serializer(data) {
 
   if (data.accounts) projection.accounts = data.accounts.map(app.serializers.v1.account)
 
+// Temp comment
   return projection

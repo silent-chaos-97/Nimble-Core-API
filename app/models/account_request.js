@@ -10,7 +10,6 @@ class AccountRequest extends BaseModel {
   }
 
   static props() {
-    return [
       'id',
       'status',
       'institutionId',
@@ -63,7 +62,6 @@ class AccountRequest extends BaseModel {
     }
   }
 
-// Temp comment
   mapProductConfigurations() {
     if (!_.has(this._data, 'productConfigurations')) {
       return []
@@ -178,3 +176,4 @@ class AccountRequest extends BaseModel {
 
     switch (operation) {
       case 'create':
+        return Joi.object().keys({

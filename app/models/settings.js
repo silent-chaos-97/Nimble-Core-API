@@ -29,6 +29,7 @@ class SettingsModel extends BaseModel {
   data() {
     let _data = _.cloneDeep(this._data)
 
+    const schemaRef = _.get(_data, ['schema', '$ref'])
 
     if (schemaRef) _data.schema = schemas(schemaRef)
 

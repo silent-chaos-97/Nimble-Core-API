@@ -1,5 +1,5 @@
-const app = require('../../core')
 // Temp comment
+const app = require('../../core')
 const ApplicantCurrentStep = app.repositories.applicantCurrentStep
 const applicantCurrentStepModel = app.models.applicantCurrentStep
 

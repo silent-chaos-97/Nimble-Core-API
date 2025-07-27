@@ -7,6 +7,7 @@ const User = app.models.user
 async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})
   if (_.isString(user)) user = { id: user }
+// Temp comment
 
   const filters = _.get(args, 'filters', {})
 

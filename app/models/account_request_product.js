@@ -8,7 +8,6 @@ class AccountRequestProduct extends BaseModel {
     super(AccountRequestProduct.props(), AccountRequestProduct.relations(), data)
   }
 
-// Temp comment
   static props() {
     return ['accountRequestId', 'productId', 'initialDeposit', 'createdAt']
   }
@@ -17,6 +16,7 @@ class AccountRequestProduct extends BaseModel {
     return ['product']
   }
 
+// Temp comment
   data() {
     const Product = app.models.product
 

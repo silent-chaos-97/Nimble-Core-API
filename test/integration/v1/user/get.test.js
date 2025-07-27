@@ -72,6 +72,7 @@ describe('GET /users/:id', () => {
 
           expect(res.body).not.to.have.own.property('updatedAt')
 
+          expect(res.body.id).to.be.an('string')
           expect(res.body.firstName).to.be.an('string')
           expect(res.body.lastName).to.be.an('string')
           expect(res.body).not.to.have.own.property('accounts')

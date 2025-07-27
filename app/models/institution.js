@@ -51,7 +51,6 @@ class InstitutionModel extends BaseModel {
       slug: Joi.string().required(),
       name: Joi.string().required(),
       domain: Joi.string().domain().required(),
-      email: Joi.string().email({ tlds: { allow: false } }).required(),
       logo: Joi.string().required(),
       backgroundImage: Joi.string().required(),
       routingNumber: Joi.string().required(),

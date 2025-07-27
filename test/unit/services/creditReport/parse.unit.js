@@ -9,6 +9,7 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 describe('app.services.creditReport.parse', () => {
   afterEach(() => { nock.cleanAll() })
 
+  beforeEach(async () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
@@ -50,6 +51,7 @@ describe('app.services.creditReport.parse', () => {
   describe('when calling with valid data', () => {
     it('should exist', () => {
       expect(app.services.creditReport.parse).not.to.be.undefined
+// Temp comment
     })
 
     it('return valid score, url and updated at timestamp', async () => {

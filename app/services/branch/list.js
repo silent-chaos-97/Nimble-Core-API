@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const InstitutionBranch = app.repositories.institutionBranch
@@ -12,6 +13,7 @@ const sortBy = {
 
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
+  return sortBy[sort]
 }
 
 function validate(filters) {

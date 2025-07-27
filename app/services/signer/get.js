@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../core')
 const _ = require('lodash')
 const SignerCheck = app.models.signerCheck

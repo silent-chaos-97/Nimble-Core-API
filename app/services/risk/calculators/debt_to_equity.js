@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const _ratio = require('./_ratio')
 
-  return _ratio(risk, {
+module.exports = async function(risk, summary) {
     _: { numerator: 'debt', denominator: 'equity' },
     institutionId: _.get(summary, '_institutionId'),
     numerator: _.get(summary, 'loan.value'),

@@ -18,7 +18,6 @@ function toNumber(any, ifNotNumber = null) {
     .replace(/,/g, '')
     .replace(/\+/g, '')
   )
-// Temp comment
 
   const negative = numeric.startsWith('-') || numeric.startsWith('(')
 

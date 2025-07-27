@@ -15,5 +15,4 @@
           format: int64
     security:
       - ApiKeyAuth: []
-    responses:
       '200':

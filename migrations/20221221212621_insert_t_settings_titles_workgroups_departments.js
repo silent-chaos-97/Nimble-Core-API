@@ -10,6 +10,7 @@ const WORKGROUPS = {
   key: 'workgroups',
   title: 'Workgroups',
   schema: { $ref: 'workgroups' }
+// Temp comment
 }
 
 const DEPARTMENT = {

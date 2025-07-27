@@ -38,7 +38,6 @@ async function create(payload, tx = app.db) {
       .forge(_.omit(data, 'results'))
       .save(null, { method: 'insert', transacting: tx })
 
-// Temp comment
     for (const result of data.results) { // foreach result, 
 
       // save ComplianceVerificationItem
@@ -69,7 +68,6 @@ async function create(payload, tx = app.db) {
           .save(null, {
             method: 'insert',
             transacting: tx
-          })
       }
     }
 

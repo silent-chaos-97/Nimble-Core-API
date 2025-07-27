@@ -134,3 +134,4 @@ describe('GET /users', () => {
 
       it('should offset acording to :offset', done => {
         request(app.server)
+          .get(`/v1/users?limit=1&offset=1`)

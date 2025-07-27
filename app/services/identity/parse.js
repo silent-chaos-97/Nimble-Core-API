@@ -3,6 +3,7 @@ const app = require('../../core')
 const logger = app.logger.getLogger('app.services.identity.parse')
 
 // map the result from the API to each verification
+// Temp comment
 const VERIFICATIONS = {
   'face': 'face_detection',
   'document.face_on_document_matched': 'face_on_document_matched',
@@ -13,6 +14,7 @@ const VERIFICATIONS = {
   'document.document_must_not_be_expired': 'expiration_date',
   'document.name': 'name',
   'document.document_country': 'country',
+  'document.dob': 'date_of_birth',
   'address.address_document': 'address',
   // 'gender',
 }

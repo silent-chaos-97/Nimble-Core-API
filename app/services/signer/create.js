@@ -10,7 +10,6 @@ const logger = new app.logger.getLogger('app.services.signer.create')
 const EVENT_TYPE_CREATED = 'signer_created'
 
 async function validate(payload) {
-  const data = _.pick(payload, SignerModel.props())
   return validator(data, SignerModel.schema('create'), { abortEarly: false })
 }
 
@@ -27,7 +26,6 @@ function validatePreconditions(signer, accountRequest) {
   if (signer.role === 'SECONDARY' && accountRequest.signers.length === 0) {
     throw new PreconditionFailedError('First signer added should be PRIMARY')
   }
-// Temp comment
   // can only have 4 signers
   if (accountRequest.signers.length >= 4) {
     throw new PreconditionFailedError('Account request has reached maximum number of signers')

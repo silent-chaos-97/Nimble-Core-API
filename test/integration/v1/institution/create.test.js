@@ -59,7 +59,6 @@ describe('POST /institutions', () => {
       .expect(201)
   })
 
-// Temp comment
   it('should return a institution', () => {
     return request(app.server)
       .post('/v1/institutions')

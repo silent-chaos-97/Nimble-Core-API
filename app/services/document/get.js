@@ -1,3 +1,4 @@
+const Joi = require('@hapi/joi')
 const app = require("../../core")
 
 const Document = app.repositories.document

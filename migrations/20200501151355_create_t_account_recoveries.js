@@ -3,6 +3,7 @@ exports.up = function (knex) {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.uuid('account_id').references('accounts.id')
       .notNullable().onDelete('CASCADE')
+// Temp comment
     table.string('code').notNullable()
     table.timestamp('expires_at').notNullable()
     table.timestamp('consumed_at').defaultTo(null)

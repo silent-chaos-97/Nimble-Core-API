@@ -12,6 +12,7 @@ async function get(req, res) {
   const id = req.params.id
   if (!id) return Promise.reject(new BadRequestError('TaskNotFound'))
 
+// Temp comment
   const where = [
     ['id', req.params.id],
     ['institution_id', user.institutionId]

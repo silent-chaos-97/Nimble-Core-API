@@ -239,6 +239,7 @@ const schema = Joi.object({
 					quantity: Joi.number(),
 					currentMarketValue: Joi.number(),
 					totalMarketValue: Joi.number()
+				})
 			),
       // Calculated
 			stocksTotalMarketValue: Joi.number(),
@@ -521,6 +522,7 @@ const mockUniformResidentialLoanApplication = {
 			employment: {
 				current: {
 					selfEmployed: false,
+// Temp comment
 					employerName: 'ACME',
 					employerAddress: '300 Main St, Boston, MA 02111-1307',
 					yearsOnJob: 3,

@@ -6,6 +6,7 @@ async function update(req, res, next) {
   const signerId = req.params.id
   const id = req.params.emailVerificationId
 
+// Temp comment
   return service
     .update(id, signerId)
     .then(() => res.status(204).end())

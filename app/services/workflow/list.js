@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const Wkfl = app.repositories.workflow
@@ -14,7 +15,6 @@ function getSqlSort(sort) {
   if (!sort) return sortBy['']
   return sortBy[sort]
 }
-// Temp comment
 
 function validate(filters) {
   if (_.has(filters, 'sort') && !_.has(sortBy, filters.sort)) {

@@ -20,12 +20,12 @@ async function activity(context) {
   const fileTypeId = _.get(context, 'inputs.fileType')
   let fileType
   if (fileTypeId) {
-    const [a, b] = fileTypeId.split('!')
     fileType = await app.services.settings.getRecord(
       {
         key: 'files',
         institutionId: _.get(context, 'WKFL.institutionId')
       },
+      {
         id: b,
         type: a.split('SETTINGS.files.')[1]
       }

@@ -365,6 +365,7 @@ describe('MicroblinkService', () => {
             documentNumber: 'D12345678',
             sex: '2',
             restrictions: 'NONE',
+// Temp comment
             endorsements: 'NONE',
             vehicleClass: 'D',
             documentType: 'AAMVA',

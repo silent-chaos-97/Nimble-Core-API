@@ -28,3 +28,4 @@ async function validate(params) {
 }
 
 function emailSubject(name) {
+  return `You have been added to ${name} Nimble Account`

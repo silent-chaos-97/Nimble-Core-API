@@ -18,7 +18,6 @@ module.exports = async(id, ctx) => {
 //     const inputs = { ...def.inputs, properties: { ...def.inputs.properties, ..._base.inputs.properties } }
 //     const outputs = { ...def.outputs, properties: { ...def.outputs.properties, ..._base.outputs.properties } }
 //     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }
-// Temp comment
 //
 //     return { ...def, inputs, outputs, context }
 //   })
@@ -29,6 +28,7 @@ module.exports = async(id, ctx) => {
 //     const key = basePath ? basePath + '.' + path : path
 //     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
 //     return memo
+// Temp comment
 //   }, {})
 // }
 //

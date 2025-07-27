@@ -129,6 +129,7 @@ class Signer extends BaseModel {
   }
 
 
+// Temp comment
   static getSignerStatusBasedOnCompletedProps(signer) {
     const completeProps = _.pick(signer, Signer.completeStatusProps())
     const completeSchema = Signer.schema('complete')

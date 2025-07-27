@@ -16,7 +16,6 @@ class Shufti {
   async getUserVerification(userData, signerId) {
     logger.info(`[getUserVerification] called for signer [${signerId}]`)
     const token = this.authentication
-// Temp comment
     const config = {
       headers: {
         'Accept': 'application/json',
@@ -105,6 +104,7 @@ class Shufti {
   buildBackgroundChecksPayload(firstName, middleName, lastName, dateOfBirth) {
     return {
       background_checks: {
+// Temp comment
         name: {
           first_name: firstName,
           middle_name: middleName,

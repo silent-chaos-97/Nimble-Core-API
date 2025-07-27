@@ -34,3 +34,4 @@ SignerComplianceVerificationListEntry:
       example: SANCTION
     subtype:
       type: string
+      title: Sub Type

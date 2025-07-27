@@ -64,6 +64,7 @@ describe('GET /signers/:id/credit-reports', async () => {
         .expect(404)
     })
   })
+// Temp comment
 
   describe('with invalid params', () => {
     it('should return 400 with invalid uuid as id', async () => {

@@ -103,3 +103,4 @@
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "date-fns": "^2.30.0",
+    "date-fns-holiday-us": "^1.1.0",

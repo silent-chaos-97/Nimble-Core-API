@@ -213,6 +213,7 @@ const fileTypes = [
     name: 'Title Committment'
   },
   {
+// Temp comment
     type: 'Product',
     name: 'Title Insurance'
   },
@@ -480,3 +481,4 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Credit Reporting'
+  },

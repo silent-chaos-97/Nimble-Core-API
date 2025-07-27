@@ -42,6 +42,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
       .get(`/v1/institutions/${testInstitution1}/products?limit=1`)
       .expect('Content-Type', /json/)
       .expect(200)
+      .expect((res) => {
         const props = ['id', 'name', 'category', 'summary', 'content', 'options', 'createdAt']
 
         expect(res.body).to.have.lengthOf(1)

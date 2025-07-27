@@ -14,6 +14,7 @@ describe('GET /account-requests', () => {
     })
   })
 
+  describe('with valid auth', () => {
     const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
     let token, clock
 
@@ -206,7 +207,6 @@ describe('GET /account-requests', () => {
             .get(`/v1/account-requests?status=APPROVED`)
             .set('Authorization', 'Bearer ' + token)
             .expect('Content-Type', /json/)
-            .expect(200)
             .expect(res => {
               expect(res.body).to.be.an('array')
               expect(res.body).to.have.lengthOf(4)

@@ -29,5 +29,4 @@ describe('GET /signers/:id', async () => {
       return app.services.token.get({
         scopes: ['signers'],
         resources: [`signers#${signerId}`],
-        expiration: 10
       })

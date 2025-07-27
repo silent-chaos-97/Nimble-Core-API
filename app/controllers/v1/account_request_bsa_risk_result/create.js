@@ -1,6 +1,6 @@
-// Temp comment
 const app = require('../../../core')
 
+// Temp comment
 const service = app.services.bsaRiskResult
 const serializer = app.serializers.v1.bsaRiskResult
 

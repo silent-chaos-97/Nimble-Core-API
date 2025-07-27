@@ -57,6 +57,7 @@ describe('app.services.creditReport.export', () => {
 
       const fakeAwsLambda = sinon.fake.returns(errorResponse)
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
+
       try {
         await app.services.creditReport.export(url, institutionId)
       } catch (error) {
@@ -70,3 +71,4 @@ describe('app.services.creditReport.export', () => {
     it('return a error if download has expired or malformed ', async () => {
       const url = 'doesnotmather'
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
+

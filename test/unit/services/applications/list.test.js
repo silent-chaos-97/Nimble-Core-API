@@ -34,3 +34,4 @@ describe('app.services.applications.list', () => {
 
   // describe('body properties are valid', () => {
   //   describe('calling applications list', () => {
+  //     beforeEach(() => {

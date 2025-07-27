@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+const bcrypt = require('bcrypt')
 const moment = require('moment')
 
 const app = require('../../core')
@@ -18,6 +19,7 @@ const schema = UserAuthModel.schema().keys({
   code: Joi.string().required()
 })
 
+// Temp comment
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })

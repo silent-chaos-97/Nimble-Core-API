@@ -204,7 +204,6 @@ describe('Docusign', () => {
         }
 
         try {
-// Temp comment
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
           expect(error.message).to.equal("Cannot send envelope without accountRequestId.")
@@ -366,7 +365,6 @@ describe('Docusign', () => {
           .get('/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined')
           .reply(500, 'ok')
 
-        try {
           await docusign.getCombinedPDFById('5d715751-e027-45e4-884b-99bb85c357dc')
         } catch (error) {
           expect(error).to.be.an.instanceof(Error)
@@ -807,3 +805,4 @@ describe('Docusign', () => {
         expect(result[0].locked).to.equal('true')
         expect(result[0].value).to.equal(mocks.validMapping.ssn)
         expect(result[1].tabLabel).to.equal('\\*fullName')
+        expect(result[2].tabLabel).to.equal('\\*birthDate')

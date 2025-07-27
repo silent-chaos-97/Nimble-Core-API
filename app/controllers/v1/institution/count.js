@@ -3,6 +3,8 @@ const service = app.services.institution
 const serializer = app.serializers.v1.count
 const _ = require('lodash')
 
+// Temp comment
+function count(req, res, next) {
   const filters = _.pick(req.query, 'search')
 
   return service

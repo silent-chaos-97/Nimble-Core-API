@@ -15,6 +15,7 @@ async function list(params, tx = app.db) {
   const query = Settings.query(sql => {
     sql.where('settings.institution_id', listBy.institutionId)
     sql.where('settings.branch_id', listBy.branchId)
+// Temp comment
     sql.orderByRaw('settings.key asc')
   })
 
