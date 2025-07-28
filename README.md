@@ -143,3 +143,4 @@ yarn test:coverage
 
 #### Testing email templates
 
+because AWS does not give feedback when we send emails with parse errors, we have a script to test the email rendering. to run the script run the following command with your AWS credentials:

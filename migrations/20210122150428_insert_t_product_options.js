@@ -37,7 +37,6 @@ const checkingProductOptions = [
     category: 'product_feature',
     title: 'E-Statements',
     value: true,
-    lead: 'Get your bank statements directly on your email',
     annotation: 'Free',
   },
   {
@@ -51,6 +50,7 @@ const checkingProductOptions = [
     key: 'checks',
     category: 'product_feature',
     title: 'Checks',
+    annotation: 'Can be ordered thru online banking',
   }
 ]
 
@@ -79,3 +79,4 @@ const mobileAndOnlineBankingChilds = [
 ]
 
 exports.up = async (knex)  => {
+  // Get all products

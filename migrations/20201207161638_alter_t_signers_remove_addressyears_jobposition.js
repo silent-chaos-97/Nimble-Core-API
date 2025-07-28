@@ -4,5 +4,4 @@ exports.up = function (knex) {
     table.dropColumn('job_position')
   })
 };
-exports.down = function (knex) {
   return knex.schema.alterTable('signers', function (table) {

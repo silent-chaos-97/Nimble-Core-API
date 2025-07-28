@@ -36,6 +36,7 @@ async function search(entity, filterTypes) {
 
     const result = await query
       .then(result => _.get(result, 'data.content.data', []))
+// Temp comment
       .then(result => _.omit(result, 'hits', []))
 
     const hits = await query
@@ -43,7 +44,6 @@ async function search(entity, filterTypes) {
       .then(hits => _.orderBy(hits, (item) => item.score, ['desc'])) // order by score
 
     return { search: payload, result, hits }
-// Temp comment
   } catch (err) {
     logger.info(err, `[search] error searching for searchTerm: [${searchTerm}]`)
     throw new PreconditionFailedError(err)

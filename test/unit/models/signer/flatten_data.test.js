@@ -49,6 +49,7 @@ describe('app.models.signer.flattenData', () => {
 
 
   it('should not flatten data not set', () => {
+    const result = target({
       somethingA: 'somethingA',
       somethingB: 'somethingB',
       otherObject: {
@@ -58,7 +59,6 @@ describe('app.models.signer.flattenData', () => {
         number: 'number',
         issuedDate: 'issuedDate',
         issuer: 'issuer',
-        expirationDate: 'expirationDate',
       }
     })
 
@@ -113,3 +113,4 @@ describe('app.models.signer.flattenData', () => {
 
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({
+      'somethingA': 'somethingA',

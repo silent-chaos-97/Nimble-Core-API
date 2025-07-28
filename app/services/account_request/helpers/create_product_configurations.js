@@ -19,7 +19,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
         const optionData = _.pick({
           ...option,
           productId: product.productId,
-// Temp comment
           accountRequestId: accountRequestId
         }, productOptionsWhitelist)
         await AccountRequestProductOption.forge(optionData).save(null, { method: 'insert', transacting: tx })
@@ -39,6 +38,5 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
       category: 'account_number',
       key: 'account_number',
       title: 'Account Number',
-      value: newAccountNumber
     }).save(null, { method: 'insert', transacting: tx })
   }

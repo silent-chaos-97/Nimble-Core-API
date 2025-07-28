@@ -73,7 +73,6 @@ class Signer extends BaseModel {
       'verificationStatusFaceUpdatedAt',
       'verificationStatusDocument',
       'verificationStatusDocumentUpdatedAt',
-// Temp comment
       'verificationStatusAddress',
       'verificationStatusAddressUpdatedAt',
       'verificationStatusSanctions',
@@ -228,3 +227,6 @@ class Signer extends BaseModel {
           verificationStatusFace: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
           verificationStatusFaceUpdatedAt: Joi.date().optional(),
           verificationStatusDocument: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
+          verificationStatusDocumentUpdatedAt: Joi.date().optional(),
+          verificationStatusAddress: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
+          verificationStatusAddressUpdatedAt: Joi.date().optional(),

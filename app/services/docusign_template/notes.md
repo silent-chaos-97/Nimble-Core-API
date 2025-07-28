@@ -102,7 +102,6 @@ Example servers for production:
 - DOCUSIGN_BASE_PATH = https://{server}.docusign.net/...
 
 Also, the Private Key pair will be different as well.
-
 ### Multiple Composite Templates
 
 We are creating Envelopes on the fly with multiple composite templates.
@@ -122,4 +121,6 @@ References:
 
 
 ### How to embed a signature
+
+After we create a envelope, we need to take the envelopeId and call new docusign.RecipientViewRequest()
 

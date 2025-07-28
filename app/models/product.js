@@ -36,3 +36,4 @@ class ProductModel extends BaseModel {
   static schema(operation = 'update') {
     if (operation === 'create') {
       return Joi.object().keys({
+        institutionId: Joi.string().uuid().required(),

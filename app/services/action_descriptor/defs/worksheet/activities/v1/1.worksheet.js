@@ -21,10 +21,10 @@ async function activity(context) {
   if (duration) {
     const [amount, unit] = duration.split(' ')
     expiresAt = moment().add(amount, unit).toDate() // TODO: should probably "snap" to next day
+  }
 
   const task = await app.services.task.save(wkflTask(assignee, context, title, TASK_TYPE, null, expiresAt))
 
   return {
-    task: task.id,
     _defer: [task.id]
   }

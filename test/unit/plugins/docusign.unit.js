@@ -235,7 +235,6 @@ describe('Docusign', () => {
 
     describe('buildSavingsTemplate', () => {
       beforeEach(() => {
-        nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
 
@@ -817,4 +816,14 @@ describe('Docusign', () => {
         expect(result[0].tabLabel).to.equal('\\*ssn#2')
         expect(result[1].tabLabel).to.equal('\\*fullName#2')
         expect(result[2].tabLabel).to.equal('\\*birthDate#2')
+      })
+
+      it('should add a suffix for third signer', async () => {
+        const result = docusign._populateTextTabs(templateTabs, mocks.validMapping, 3)
+
+        expect(result).not.to.be.undefined
+        expect(result.length).to.equal(3)
+        expect(result[0].tabLabel).to.equal('\\*ssn#3')
+        expect(result[1].tabLabel).to.equal('\\*fullName#3')
+        expect(result[2].tabLabel).to.equal('\\*birthDate#3')
       })

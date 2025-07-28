@@ -12,3 +12,4 @@ InstitutionBranch:
     name:
       type: string
       title: Name
+      description: The institution branch name

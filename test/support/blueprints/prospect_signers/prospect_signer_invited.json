@@ -18,3 +18,4 @@
   "consentCommunication": false,
   "selfieDocumentId": null,
   "idProofDocument": {
+    "type": "USDL",

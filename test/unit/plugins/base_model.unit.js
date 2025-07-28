@@ -25,6 +25,7 @@ describe('BaseModel class', () => {
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
   })
 
+// Temp comment
   it('should have Props', () => {
     let model = new BaseModel([], [], {})
 

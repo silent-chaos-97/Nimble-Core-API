@@ -133,3 +133,4 @@ describe('GET /signers/:id/contract', async () => {
         .expect(200)
         .expect('Content-Type', /json/)
     })
+

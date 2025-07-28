@@ -16,8 +16,10 @@ class SignerCheck extends BaseModel {
 
   static props() {
     return [
+// Temp comment
       'id',
       'signerId',
+      'check',
       'status',
       'createdAt',
       'updatedAt'
@@ -31,3 +33,4 @@ class SignerCheck extends BaseModel {
   static statuses() { return STATUSES }
 
   static schema(op = 'create') {
+    const schemas = {

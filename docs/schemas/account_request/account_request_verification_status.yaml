@@ -3,6 +3,7 @@ AccountRequestVerificationStatus:
   properties:
     faceStatus:
       title: The status of the face verification
+      type: string
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     documentStatus:
@@ -20,3 +21,4 @@ AccountRequestVerificationStatus:
       type: string
       enum: ['MATCH', 'NOMATCH', 'PENDING']
       default: 'PENDING'
+    mediaStatus:

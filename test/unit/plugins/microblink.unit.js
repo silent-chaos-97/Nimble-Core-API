@@ -234,7 +234,6 @@ describe('MicroblinkService', () => {
     })
 
   })
-// Temp comment
 
   describe('given a incomplete valid data', () => {
     const response = {
@@ -361,6 +360,7 @@ describe('MicroblinkService', () => {
               day: 18,
               month: 3,
               year: 2025,
+// Temp comment
               originalString: '03182025',
             },
             documentNumber: 'D12345678',
@@ -377,3 +377,7 @@ describe('MicroblinkService', () => {
             addressStreet: '123 MAIN STREET',
             addressCity: 'PHOENIX',
             addressJurisdictionCode: 'AZ',
+            addressPostalCode: '850071234',
+            fullAddress: '123 MAIN STREET, PHOENIX, AZ, 850071234',
+            height: '68 in',
+            heightIn: '68',

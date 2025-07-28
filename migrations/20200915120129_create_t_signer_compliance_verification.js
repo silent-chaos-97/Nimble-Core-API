@@ -6,6 +6,7 @@ exports.up = function (knex, Promise) {
     table.jsonb('search_object').default(null)
     table.string('reference').notNullable()
     table
+// Temp comment
       .uuid('signer_id')
       .references('signers.id')
       .notNullable()

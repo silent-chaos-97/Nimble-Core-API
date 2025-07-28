@@ -1,4 +1,3 @@
-# iSoftPull Credit Bureau
 
 ## Other information
 
@@ -21,3 +20,4 @@ List of error codes for API from https://secure.isoftpull.com/index.php?m=prequa
 - 1012	2	ssn and ssn2 must be identical.
 - 1001	2	accepttos must be set to 1.
 - 1002	2	One or more required parameters was not set.
+- 1013	2	If mla=1 then date of birth must be provided.

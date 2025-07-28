@@ -15,4 +15,3 @@ UserAuth:
       title: First Name
       description: The first name of the user
     lastName:
-      type: string

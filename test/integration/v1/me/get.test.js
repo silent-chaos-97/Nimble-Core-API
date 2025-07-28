@@ -75,7 +75,6 @@ describe('GET /me', () => {
           expect(res.body.id).to.be.an('string')
           expect(res.body.email).to.be.an('string')
           expect(res.body.firstName).to.be.an('string')
-// Temp comment
           expect(res.body.lastName).to.be.an('string')
 
           expect(res.body.accounts).to.be.an('array')
@@ -102,3 +101,5 @@ describe('GET /me', () => {
 
     it('should not return secrets from accounts', () => {
       return request(app.server)
+        .get('/v1/me')
+        .set('Authorization', 'Bearer ' + token)

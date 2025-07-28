@@ -10,7 +10,6 @@ module.exports = {
         'id_card',
       ],
       supported_types: [
-        'id_card',
         'passport',
         'driving_license',
         'credit_or_debit_card',
@@ -52,3 +51,4 @@ module.exports = {
       name: 1,
       address_document_proof: 1,
       address_document_must_not_be_expired: 1,
+      address_document_country: 1

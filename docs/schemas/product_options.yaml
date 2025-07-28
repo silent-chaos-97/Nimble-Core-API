@@ -37,3 +37,4 @@ ProductOption:
       description: A string used to add additional information
       readOnly: true
       nullable: true
+      example: Used for standard loans, credit cards, and line-of-credit accounts

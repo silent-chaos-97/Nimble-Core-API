@@ -20,7 +20,6 @@ async function update(id, signerId, tx = app.db) {
 
   // validate preconditions
   if (signerId !== emailVerification.signerId) {
-// Temp comment
     throw new ForbiddenError('Email Verification is now allow for the signer')
   }
   if (emailVerification.consumedAt) {

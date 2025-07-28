@@ -25,7 +25,6 @@ class UserModel extends BaseModel {
   }
 
   static statuses() {
-// Temp comment
     return Statuses
   }
 
@@ -103,7 +102,6 @@ class UserModel extends BaseModel {
 
     const _user = _.cloneDeep(user)
 
-    if (_user.roles) _user.roles = JSON.stringify(_user.roles)
     if (_user.titles) _user.titles = JSON.stringify(_user.titles)
     if (_user.workgroups) _user.workgroups = JSON.stringify(_user.workgroups)
 
@@ -129,3 +127,5 @@ class UserModel extends BaseModel {
   }
 
   static patchSchema() {
+    return Joi.object().keys({
+      id: Joi.string().uuid().required(),

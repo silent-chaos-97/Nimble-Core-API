@@ -96,3 +96,4 @@ describe('GET /signers/:id/credit-reports', async () => {
           expect(response.body).to.be.an('array')
           expect(response.body[0]).to.be.an('object')
         })
+        .expect(200)

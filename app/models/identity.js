@@ -10,3 +10,4 @@ class IdentityModel extends BaseModel {
     return [
       'firstName', 'middleName', 'lastName', 'address', 'city',
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',
+      'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'

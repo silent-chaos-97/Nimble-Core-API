@@ -14,6 +14,7 @@ module "vpc" {
   enable_dns_hostnames       = true
   enable_dns_support         = true
   manage_default_route_table = true
+}
 
 resource "aws_security_group" "vpc" {
   name   = "nimble_core_vpc_security_group"
@@ -22,3 +23,4 @@ resource "aws_security_group" "vpc" {
   ingress {
     from_port   = 0
     to_port     = 0
+    protocol    = "-1"

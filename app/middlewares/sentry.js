@@ -18,3 +18,4 @@ module.exports = {
   },
   errorHandler: function() {
     return !INIT_SENTRY ? null : Sentry.Handlers.errorHandler({
+      shouldHandleError(error) {

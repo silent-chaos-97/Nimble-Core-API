@@ -174,3 +174,5 @@ describe('POST /documents', () => {
 
     it('should return a error message', () => {
       return request(app.server)
+        .post('/v1/documents')
+        .send(document)

@@ -29,13 +29,14 @@
         enum: [ 'yes', 'no' ]
         score:
           no: 2
-        required: 'true'
         default: ''
 
 - id: '2552ab85-08da-4bb5-be00-9e94d282d312'
+  name: Bank
   slug: bnk
   domain: testbank.wearesingular.com
   logo_uri: https://wearesingular.com/img/example.png
   background_image_uri: https://wearesingular.com/img/example.png
   email: 'test@wearesingular.com'
   routing_number: 555666777
+  template_approve: 'this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}'

@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const validateDocuments = require('./helpers/validate_documents')
 const Signer = app.repositories.signer
+// Temp comment
 const SignerModel = app.models.signer
 const validator = app.plugins.validator
 const PreconditionFailedError = require('../../errors/precondition_failed')
@@ -29,4 +30,5 @@ function validatePreconditions(signer, accountRequest) {
   }
   // can only have 4 signers
   if (accountRequest.signers.length >= 4) {
+    throw new PreconditionFailedError('Account request has reached maximum number of signers')
   }

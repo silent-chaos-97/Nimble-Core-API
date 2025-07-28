@@ -15,7 +15,6 @@
   "employer": "New York Police Dep.",
   "dateOfBirth": "1955-05-22",
   "emailVerified": false,
-  "emailVerifiedAt": null,
   "idProofDocument": {
     "type": "USDL",
     "number": "1231231230",
@@ -44,3 +43,4 @@
   "adverseMediaVerifiedAt": null,
   "checkAntiMoneyLaundering": null,
   "antiMoneyLaunderingVerifiedAt": null,
+  "contractDocumentSignerStatus": null,

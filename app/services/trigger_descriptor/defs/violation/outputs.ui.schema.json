@@ -1,3 +1,4 @@
+{
   "applicants": {
     "all": {"ui:widget": "selectUsers"},
     "primary": {"ui:widget": "selectUser"},

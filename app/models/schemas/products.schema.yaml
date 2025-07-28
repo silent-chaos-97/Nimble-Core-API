@@ -139,3 +139,5 @@ columns:
     internalValue: interest-rates/type/rate/%/0.0
     selectOptions:
       'RIFSPBLP_N.B': Bank Prime Rate / Average Majority / Short-Term Loan
+      'RIFSRP_F02_N.B': Discount Window Primary Credit
+      'RIFSPFF_N.B': Federal Funds Effective Rate

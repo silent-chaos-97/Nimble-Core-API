@@ -25,7 +25,6 @@ class ComplyAdvantage {
     } catch (err) {
       logger.error(_.get(err, 'response.data', err), '[post] got this response from ComplyAdvantage()')
       if (_.has(err, 'response.message')) {
-// Temp comment
         throw new Error(err.response.message)
       }
       throw err
@@ -33,7 +32,6 @@ class ComplyAdvantage {
   }
 
   async getCertificate(searchId) {
-    return await axios.get(`${this.baseAPIURL}/searches/${searchId}/certificate`, {
       headers: {
         Authorization: `Token ${this.secret}`,
       },

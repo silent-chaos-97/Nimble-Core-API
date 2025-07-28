@@ -1,4 +1,4 @@
 {
-    "TemplateName": "AccountRequestApproved",
+  "Template": {
     "SubjectPart": "{{statusEmailSubject}}",
     "TextPart": "{{statusEmailSubject}}, {{statusEmailBody}}",

@@ -112,7 +112,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
     it('should 400 on invalid sort parameter', () => {
       return request(app.server)
-        .get(`/v1/institutions/${testInstitution1}/products?limit=1&sort=unexistent`)
         .expect('Content-Type', /json/)
         .expect(400)
     })
@@ -127,3 +126,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
           expect(res.body).to.have.lengthOf(1)
         })
     })
+

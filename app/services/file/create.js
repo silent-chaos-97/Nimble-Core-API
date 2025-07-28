@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const File = app.repositories.file
@@ -10,7 +11,6 @@ const logger = app.logger.getLogger('app.services.file.create')
  * data: {
  *   originalname: string
  *   mimetype: string
-// Temp comment
  *   createdById: string
  *   createdByRole: [user, applicant]
  *   bytes?: string (base64-bytes)

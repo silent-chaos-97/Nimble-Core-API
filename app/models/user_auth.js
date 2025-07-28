@@ -3,7 +3,6 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
 const User = app.repositories.user
-
 class UserAuthModel extends BaseModel {
   constructor(data) {
     super(UserAuthModel.props(), UserAuthModel.relations(), data)
@@ -13,6 +12,7 @@ class UserAuthModel extends BaseModel {
     return ['email', 'password']
   }
 
+  static schema() {
     return Joi.object().keys({
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       password: Joi.string().max(160).required()

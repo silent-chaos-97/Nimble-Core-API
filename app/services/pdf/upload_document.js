@@ -32,6 +32,7 @@ const getAuthorizationHeader = async() => {
   const res = await apiClient.requestJWTUserToken(
     // These are the DocuSign credentials for the dev environment, which I needed to use for local testing, as
     // I was unable to find the DocuSign credentials for the local environment. We can update these to the
+    // credentials for the local docusign app when we get access to the mb@nimblefi.com DocuSign account.
     // config.get('docusign').clientID,
     'ecd19816-cccc-467c-8b4a-52003de82777',
     // config.get('docusign').userID,
@@ -90,3 +91,4 @@ const createDocumentsBuffer = (documents) =>
           `${CRLF}${hyphens}${boundary}${CRLF}` +
           `Content-Type: ${document.mime}${CRLF}` +
           `Content-Disposition: filefilename="${document.filename}"documentId=${document.documentId}` +
+          `${CRLF}${CRLF}`

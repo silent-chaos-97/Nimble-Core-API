@@ -21,6 +21,7 @@ const seeds = require('./support/seeds')
 const Bookshelf = require('../app/plugins/bookshelf')
 const knex = Bookshelf.knex
 
+chai.config.includeStack = true
 chai.use(chaiAsPromised)
 chai.use(sinonChai)
 

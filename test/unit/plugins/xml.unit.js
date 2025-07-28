@@ -44,7 +44,6 @@ describe('app.plugins.xml', () => {
     it('should parse tag with props and value', () => {
       const result = target.tag('tag', { a: 1, b: 2 }, 'value')
       expect(result).to.equal('<tag a="1" b="2">value</tag>')
-    })
 
     it('should parse tag with child tags', () => {
       const result = target.tag('tag', {}, [
@@ -56,6 +55,7 @@ describe('app.plugins.xml', () => {
     })
 
     it.skip('should sanitize output', () => {
+      /* eslint-disable */
       const result = [
         // control
         target.tag('tag', {}, 'control'),
@@ -94,3 +94,4 @@ describe('app.plugins.xml', () => {
       ]
 
       const resultTag = target.tag('result', {}, result)
+      expect(target.format(resultTag)).to.equal(`<result>

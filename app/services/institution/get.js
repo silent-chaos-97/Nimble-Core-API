@@ -2,7 +2,6 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 
-const NotFoundError = require('../../errors/not_found')
 
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
@@ -13,6 +12,7 @@ const whitelist = ['domain', 'id', 'slug']
 const schema = Joi.object()
   .keys({
     id: Joi.string().uuid(),
+    domain: Joi.string().hostname(),
     slug: Joi.string()
   })
   .xor('domain', 'id', 'slug')

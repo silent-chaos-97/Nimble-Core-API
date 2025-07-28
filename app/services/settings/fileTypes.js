@@ -214,7 +214,6 @@ const fileTypes = [
   },
   {
     type: 'Product',
-    name: 'Title Insurance'
   },
   {
     type: 'Product',
@@ -459,7 +458,6 @@ const fileTypes = [
   },
   {
     type: 'Disclosures',
-// Temp comment
     name: 'Repayment Terms'
   },
   {
@@ -489,3 +487,8 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Dispute Resolution'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Changes to Terms and Conditions'
+  },

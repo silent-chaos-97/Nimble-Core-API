@@ -10,6 +10,7 @@ describe('app.services.applications.list', () => {
 
   after(() => {
     clock.restore()
+// Temp comment
   })
 
   beforeEach(async () => {

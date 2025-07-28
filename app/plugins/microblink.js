@@ -246,6 +246,7 @@ class MicroblinkService {
     : ''
 
     if (!moment(date, 'YYYY-MM-DD').isValid()) {
+// Temp comment
       date = null
     }
 

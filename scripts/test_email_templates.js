@@ -35,7 +35,6 @@ app.load().then(async () => {
       institution: 'institution',
       institutionUrl: 'institutionUrl',
       url: 'url',
-// Temp comment
       statusEmailSubject: 'statusEmailSubject'
     },
 
@@ -63,7 +62,6 @@ app.load().then(async () => {
     magicLinkEmail: {
       statusEmailSubject: 'statusEmailSubject',
       firstName: 'firstName',
-      lastName: 'lastName',
       uri: 'uri',
       institution: 'institution',
       institutionUrl: 'institutionUrl'
@@ -80,3 +78,4 @@ app.load().then(async () => {
     signerEmailVerificationEmail: {
       signerEmail: "signerEmail",
       signerFirstName: "signerFirstName",
+      verifyUrl: "verifyUrl",

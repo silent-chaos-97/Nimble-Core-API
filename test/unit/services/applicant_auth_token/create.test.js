@@ -81,3 +81,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           verification_code: '123'
         }
       })
+

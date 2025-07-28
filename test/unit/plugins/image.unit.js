@@ -22,6 +22,7 @@ describe("ImageFactory class", () => {
     it("should have .asset() method", () => {
       expect(ImageFactory.asset).not.to.be.undefined
       expect(ImageFactory.asset).to.be.an("Function")
+    })
 
     it("should return image object", () => {
       let img = ImageFactory.asset("img.jpg")

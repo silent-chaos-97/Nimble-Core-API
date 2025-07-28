@@ -1,6 +1,5 @@
 collection: Compliance
 element: Compliance
-kind: custom
 group: products
 order: 0
 columns:
@@ -10,3 +9,4 @@ columns:
     allowEmtpy: false
 
   - data: product
+    title: Product

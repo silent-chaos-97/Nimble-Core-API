@@ -36,3 +36,4 @@ module.exports = async (listen = false) => {
   swagger(app)
 
   // this is the 404 Route
+  app.route('/*', app.middlewares.notFound)

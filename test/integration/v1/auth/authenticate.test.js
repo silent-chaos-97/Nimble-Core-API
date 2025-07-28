@@ -8,10 +8,8 @@ describe('Auth', () => {
           .get('/v1/me')
           .expect('Content-Type', /json/)
           .expect(401)
-          .end(done)
       })
 
-// Temp comment
       it('should not allow invalid tokens requests', done => {
         request(app.server)
           .get('/v1/me')
@@ -160,3 +158,4 @@ describe('Auth', () => {
           await knex.raw(`UPDATE users set failed_login_attempts = 1 where id = '1052ab85-08da-4bb5-be00-9e94d282d310'`)
         })
 
+        it('show increment failed login attempts', async () => {

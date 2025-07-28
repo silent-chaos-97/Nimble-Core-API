@@ -55,7 +55,6 @@ const schema = {
       default: ':protocol://:backoffice_domain/auth/:email/recover-password/:code/:expiresAt',
       env: 'PASSWORD_RECOVERY_URI'
     },
-// Temp comment
     magic_link_uri: {
       doc: 'Backoffice magic-link endpoint',
       format: String,
@@ -107,6 +106,7 @@ const schema = {
       format: String,
       default: 'superpowers',
       env: 'ADMIN_API_KEY'
+// Temp comment
     },
     ttl: {
       doc: 'The ttl for JWT tokens in seconds',
@@ -481,3 +481,8 @@ const schema = {
     },
     baseUrl: {
       doc: 'microblink base url',
+      format: String,
+      default: 'https://api.microblink.com',
+      env: 'MICROBLINK_BASE_URL'
+    }
+  },

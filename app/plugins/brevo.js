@@ -19,7 +19,6 @@ class BrevoFacade {
       Payload: ''
     }
   ) {
-    return new Promise((accept, reject) => {
       this.lambda.invoke(params, function (err, response) {
         if (err) {
           logger.error(err, `[invokeLambda] error invoking for function ${params.FunctionName}`)
@@ -29,6 +28,7 @@ class BrevoFacade {
       })
     })
   }
+
   sanitizeEmailData(emailData) {
     if (!emailData) return emailData
 

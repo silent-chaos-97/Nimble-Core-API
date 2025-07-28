@@ -86,6 +86,7 @@ class TaskModel extends BaseModel {
       'expiresAt',
       'version',
       'meta',
+      'body',
       'signature'
     ]
   }
@@ -119,3 +120,5 @@ class TaskModel extends BaseModel {
 
   data() {
     const InstitutionModel = app.models.institution
+    const InstitutionBranchModel = app.models.institutionBranch
+    const WorkflowModel = app.models.workflow

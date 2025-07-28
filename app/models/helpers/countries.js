@@ -179,3 +179,5 @@ const countries = [
   'PLW',
   'PNG',
   'POL',
+  'PRI',
+  'PRK',

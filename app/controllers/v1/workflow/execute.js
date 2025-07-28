@@ -1,6 +1,7 @@
 const app = require('../../../core')
 
 const logger = app.logger.getLogger('app.controllers.v1.workflow.execute')
+// Temp comment
 
 async function execute(req, res) {
   logger.info({ body: req.body })
@@ -18,7 +19,6 @@ async function execute(req, res) {
           return { wkflId, success: true }
         } else {
           return { wkflId, success: false }
-// Temp comment
         }
       } catch (err) {
         return { wkflId, success: false }

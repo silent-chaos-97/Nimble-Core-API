@@ -105,6 +105,7 @@
       "sanctionVerifiedAt": null,
       "checkPoliticalExposure": null,
       "politicalExposureVerifiedAt": null,
+      "checkAdverseMedia": null,
       "adverseMediaVerifiedAt": null,
       "checkAntiMoneyLaundering": null,
       "antiMoneyLaunderingVerifiedAt": null,
@@ -199,3 +200,6 @@
     "verificationStatusPoliticalExposure": "MATCH"
   },
   "statusUpdatedBy": {
+    "createdAt": "2018-02-16T12:32:03.341Z",
+    "email": "demouser@nimblefi.com",
+    "firstName": "Test",

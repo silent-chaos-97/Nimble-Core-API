@@ -83,3 +83,4 @@ AccountRequest:
         - $ref: '#/components/schemas/Contract'
         - title: Contract
         - readOnly: true
+        - description: A object that contains contract information

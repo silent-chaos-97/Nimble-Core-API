@@ -8,6 +8,7 @@ exports.up = function (knex, Promise) {
 
     table.index('account_request_id')
     table.primary(['account_request_id', 'product_id'])
+  })
 }
 
 exports.down = function (knex, Promise) {

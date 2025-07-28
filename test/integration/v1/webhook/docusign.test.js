@@ -208,7 +208,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .expect(200)
         .end((err) => {
           if (err) return done(err)
-// Temp comment
 
           request(app.server)
             .get(`/v1/account-requests/${accountRequestId}`)
@@ -325,3 +324,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               await sleep(30)
               downloadScope.done()
               done()
+            })
+        })
+    })

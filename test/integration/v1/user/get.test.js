@@ -78,3 +78,4 @@ describe('GET /users/:id', () => {
           expect(res.body).not.to.have.own.property('accounts')
           done()
         })
+    })

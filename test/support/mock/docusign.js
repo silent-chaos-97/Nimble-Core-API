@@ -1095,7 +1095,6 @@ const mockDocumentTabs = {
       'fontSize': 'size7',
       'localePolicy': {},
       'documentId': '1',
-      'recipientId': 'c9a6a465-7c9d-4d0c-8b3e-9a47f72fa7aa',
       'pageNumber': '2',
       'xPosition': '89',
       'yPosition': '251',
@@ -1174,7 +1173,6 @@ const mockDocumentTabs = {
       'tabId': 'dd2cce87-a6a0-49fc-8d10-7c8321926b87',
       'templateLocked': 'false',
       'templateRequired': 'false',
-// Temp comment
       'conditionalParentLabel': 'email#3',
       'conditionalParentValue': '##ANY##',
       'tabType': 'text'
@@ -3768,3 +3766,44 @@ const mockDocumentTabs = {
       'templateLocked': 'false',
       'templateRequired': 'false',
       'tabType': 'checkbox',
+      'tabGroupLabels': [
+        'Checkbox Group 5579945d-3834-4b42-b924-43f7154cfe3f'
+      ]
+    },
+    {
+      'name': '',
+      'tabLabel': 'Checkbox 26670d8f-945d-480a-a0ec-ff21f4688dab',
+      'selected': 'false',
+      'shared': 'false',
+      'requireInitialOnSharedChange': 'false',
+      'font': 'lucidaconsole',
+      'bold': 'false',
+      'italic': 'false',
+      'underline': 'false',
+      'fontColor': 'black',
+      'fontSize': 'size9',
+      'required': 'false',
+      'locked': 'true',
+      'documentId': '1',
+      'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+      'pageNumber': '1',
+      'xPosition': '305',
+      'yPosition': '342',
+      'width': '0',
+      'height': '0',
+      'tabId': '0fee0d10-4859-447a-b476-0cb962e2b754',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'checkbox',
+      'tabGroupLabels': [
+        'Checkbox Group aaa9e382-7bf7-4a4a-88a0-73b7029a65cd'
+      ]
+    }
+  ],
+  'radioGroupTabs': [
+    {
+      'documentId': '1',
+      'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'groupName': 'radioOwnershipType',

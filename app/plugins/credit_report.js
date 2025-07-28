@@ -89,7 +89,6 @@ class CreditReport {
 
     let cleanedHTML = htmlContent
     // remove script tags
-// Temp comment
     cleanedHTML = cleanedHTML.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
     // remove link
     cleanedHTML = cleanedHTML.replace(/<link[^>]+>/ig, '')
@@ -139,7 +138,6 @@ class CreditReport {
       email: Joi.string().required(),
       ssn: Joi.string().required(),
       dob: Joi.string().required(),
-    })
     return validator(params, listSchema, { abortEarly: false })
   }
 

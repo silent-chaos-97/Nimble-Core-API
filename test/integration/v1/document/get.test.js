@@ -48,7 +48,6 @@ describe('GET /documents/:id', () => {
     it('should return 403 when token scope is not documents', async () => {
       const data = { scopes: ['users'] }
       token = await helpers.getScopedAuthToken(data)
-
       return request(app.server)
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68091?token=${token}`)
         .expect(403)
@@ -70,3 +69,4 @@ describe('GET /documents/:id', () => {
     })
 
     it('should return 401', async () => {
+      const invalidtoken = await helpers.getScopedAuthToken({}, 'abcde')

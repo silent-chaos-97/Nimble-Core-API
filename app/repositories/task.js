@@ -6,7 +6,6 @@ const Task = app.db.Model.extend({
   hasTimestamps: true,
 
   workflow: function() {
-    return this.belongsTo('Workflow', 'workflow_id')
   },
 
   institution: function() {

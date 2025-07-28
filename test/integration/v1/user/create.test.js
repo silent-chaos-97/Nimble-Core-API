@@ -32,7 +32,6 @@ describe('POST /users', () => {
         .send({uname: 'testUser', foo: 'bar'})
         .end((err, res) => {
           if (err) throw new Error(err)
-
           expect(res.body.message).to.not.be.undefined
           expect(res.body.message).to.contain('"email" is required')
           expect(res.body.message).to.contain('"institutionId" is required')
@@ -195,3 +194,5 @@ describe('POST /users', () => {
           expect(res.body.firstName).to.be.an('string')
           expect(res.body.lastName).to.be.an('string')
           expect(res.body.email).to.be.equal(user.email)
+          done()
+        })

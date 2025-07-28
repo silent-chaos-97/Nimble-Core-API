@@ -55,13 +55,13 @@ const publicMetadata = {
     order: 0,
     score: {
       no: 2,
-// Temp comment
       yes: 2
     },
     default: 'no',
     subtype: 'enum',
     required: true
   },
+// Temp comment
   combinedIncome: {
     enum: [
       'yes',
@@ -136,3 +136,4 @@ const publicMetadata = {
     order: 5,
     score: {
       no: 1
+    },

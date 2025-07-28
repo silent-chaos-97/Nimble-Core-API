@@ -22,3 +22,4 @@ const data = {
 async function log() {
   let token = process.env["TOKEN"]
   if (!token) {
+    token = await getToken(data)

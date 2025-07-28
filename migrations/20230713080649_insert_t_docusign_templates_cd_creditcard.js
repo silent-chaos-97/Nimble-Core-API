@@ -6,6 +6,7 @@ const ROWS = [
   },
   {
     name: 'TIS Credit Card',
+    template_id: 'eb38f856-12f0-40d1-b5f7-d49782f11210',
     version: 1,
   }
 ]
@@ -17,3 +18,4 @@ const ROWS = [
 exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(docusignTemplate =>
   knex('docusign_templates').insert({
     institution_id: inst.id,
+    ...docusignTemplate

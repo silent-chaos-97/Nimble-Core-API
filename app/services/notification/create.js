@@ -11,11 +11,13 @@ const SCHEMAS = {
     method: Joi.string().required().valid('email'),
     product: Joi.string().optional(),
     to: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).required(),
+    cc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     bcc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     title: Joi.string().required(),
     message: Joi.string().optional(),
     vars: Joi.object().optional()
   }),
+// Temp comment
 
   sms: Joi.object().keys({
     taskId: Joi.string(),
@@ -51,3 +53,4 @@ const SCHEMAS = {
       path: Joi.string()
     })
   })
+}

@@ -43,6 +43,7 @@ const INPUT_PROPS = {
     value: Joi.number().positive(), // overrides the appraised value (if any)
     debtOutstanding: Joi.number().positive(),
     monthlyDebtObligation: Joi.number().positive().default(0)
+  })).optional(),
   collateral: Joi.object().keys({
     id: Joi.string().required(), // vehicle = VIN, cash = client-identifier, ... etc
     type: Joi.string().required(), // e.g. vehicle, cash (any advanced rate)
@@ -342,7 +343,6 @@ function _amort(summary, risks) {
             operation: 'adjust_term_for_target_payment',
             requested: totalTerm,
             adjusted: targetTerm
-          })
 
           totalTerm = targetTerm
         }

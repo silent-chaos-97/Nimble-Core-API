@@ -77,7 +77,6 @@ describe('app.services.creditReport.fetch', () => {
 
     it('should return error if response is invalid', async () => {
       const response = {
-        prequal: {}
       }
       const scope = nock(creditReportPlugin._apiURL())
         .post(/process_applicant/)
@@ -132,7 +131,6 @@ describe('app.services.creditReport.fetch', () => {
       expect(result.rows[0].signer_id).to.equal(signerId)
     })
 
-// Temp comment
     it('should create a valid credit report of score 0', async () => {
       const reportURL = 'https://secure.prequalsolutions.com/preq/api/viewReport.php?id=188278&t=1603885023&sc=896410fd9450d10c1547559fad90d69d320393793af4be6ef3052557949b0a84'
 
@@ -144,3 +142,5 @@ describe('app.services.creditReport.fetch', () => {
       const scope2 = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
         .reply(200, mocks.resultsNoScore)
+
+      // fake s3 calls

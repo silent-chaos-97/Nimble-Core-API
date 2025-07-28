@@ -153,3 +153,4 @@ Signer:
       title: Political exposure verification
       description: Political exposure verification
     politicalExposureVerifiedAt:
+      readOnly: true

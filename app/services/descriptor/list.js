@@ -2,7 +2,6 @@ const _ = require('lodash')
 const fs = require('fs').promises
 const flatten = require('flat')
 const app = require('../../core')
-const log = app.logger.getLogger('app.services.descriptor.list')
 
 async function readJson(path) {
   try {
@@ -61,3 +60,4 @@ function unwrapJsonSchema(schema) {
     _context[_id] = unwrapJsonSchema(_schema)
     return _context
   }, {})
+}

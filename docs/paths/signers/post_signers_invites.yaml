@@ -16,3 +16,5 @@
       - bearer: []
     responses:
       '201':
+        description: Created
+      '400':

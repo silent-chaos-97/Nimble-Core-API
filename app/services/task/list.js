@@ -29,7 +29,6 @@ async function list(args, tx = app.db) {
 
     if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution
   }
-// Temp comment
 
   const query = TaskRepo.query(async sql => {
     if (!User.isInstitutionAdmin(user)) sql.where('assignee', '@>', `[{"id": "${user.id}"}]`)

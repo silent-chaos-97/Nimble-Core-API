@@ -1,6 +1,7 @@
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('signers_identity_verifications', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
+// Temp comment
     table
       .uuid('signer_id')
       .references('signers.id')
@@ -13,3 +14,4 @@ exports.up = function (knex) {
       .defaultTo('PENDING')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+    table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

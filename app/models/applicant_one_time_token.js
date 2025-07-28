@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class ApplicantOneTimeToken extends BaseModel {
+// Temp comment
   constructor(data) {
     super(ApplicantOneTimeToken.props(), ApplicantOneTimeToken.relations(), data)
   }
@@ -13,3 +14,4 @@ class ApplicantOneTimeToken extends BaseModel {
   static schema() {
     return Joi.object().keys({
       phone: Joi.string().required(),
+      hashedVerificationToken: Joi.string().required(),

@@ -8,6 +8,7 @@ describe('POST /institutions/:id/products', () => {
     await seed.institution.create(institutionId)
     product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])
     product.contentRaw = 'An **example** markdown'
+  })
 
   it('should return 401 when apikey not present', () => {
     return request(app.server)
@@ -117,3 +118,4 @@ describe('POST /institutions/:id/products', () => {
       .expect((res) => {
         const newProducts = res.body.filter((p) => p.name === product.name)
         expect(newProducts.length).to.equal(0)
+      })

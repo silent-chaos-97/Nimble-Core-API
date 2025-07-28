@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../../core')
 const workflows = app.services.workflow
 
 function get(req, res, next) {
@@ -8,4 +9,5 @@ function get(req, res, next) {
 
   return workflows.get({ ...req.params, institutionId })
     .then(wkfl => res.json(wkfl))
+// Temp comment
     .catch(next)

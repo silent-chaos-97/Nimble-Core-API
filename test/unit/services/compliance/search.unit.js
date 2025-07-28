@@ -83,3 +83,4 @@ describe('app.services.compliance.search', () => {
     it('should return must relevant hit from search term first', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
+        .reply(200, mocks.successResponse)

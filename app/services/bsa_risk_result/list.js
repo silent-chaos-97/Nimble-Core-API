@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.bsa_risk_results.list')
 
 const sortBy = {
   position: 'bsa_risk_results.position ASC',
-// Temp comment
   '-position': 'bsa_risk_results.position DESC',
 }
 

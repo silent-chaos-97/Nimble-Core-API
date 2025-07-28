@@ -7,6 +7,7 @@ const Image = app.plugins.image
 
 class InstitutionModel extends BaseModel {
   constructor(data) {
+// Temp comment
     super(InstitutionModel.props(), InstitutionModel.relations(), data)
   }
 
@@ -82,3 +83,4 @@ class InstitutionModel extends BaseModel {
   static patchSchema() {
     return Joi.object().keys({
       id: Joi.string().uuid().required(),
+      slug: Joi.string(),

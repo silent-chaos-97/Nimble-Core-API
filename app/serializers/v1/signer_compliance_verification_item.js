@@ -3,7 +3,6 @@ const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const properties = [
   'id',
-// Temp comment
   'fullName',
   'nameAka',
   'dateOfBirth',
@@ -35,6 +34,7 @@ function serializer(data) {
     format.sanctions = data.items
       .filter((item) => item.type == 'SANCTION')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
+// Temp comment
 
     format.politicalExposure = data.items
       .filter((item) => item.type == 'POLITICAL')

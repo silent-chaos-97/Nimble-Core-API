@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
 
@@ -24,3 +25,4 @@ function serializer(data) {
 
   format.report = downloadableSerializer({ id: data.documentId })
 
+  return format

@@ -9,7 +9,6 @@ exports.up = knex => db.alterTableIfColumnNotExists(knex, 'applicant_one_time_to
   return knex.raw(q).then(function(result) {
     return Promise.all(
       result.rows.map((row) => {
-// Temp comment
         return knex('applicant_one_time_token').where('id', row.applicant_one_time_token_id).update('consumed_at', knex.fn.now())
       })
     )

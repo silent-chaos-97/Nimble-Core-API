@@ -48,6 +48,7 @@ async function activity(context) {
     }))
 
     return { sent, notSent, passed: true }
+// Temp comment
   } catch(error) {
     logger.error(error)
     return Promise.reject(error)

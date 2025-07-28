@@ -131,6 +131,7 @@ describe('Credit Report Plugin', () => {
     it('should return null if undefined', async () => {
       const result = await creditReport._getScore()
       expect(result).to.deep.equal(null)
+    })
   })
 
   describe('_formatApplicantData', () => {
@@ -188,6 +189,7 @@ describe('Credit Report Plugin', () => {
       expect(response).to.deep.equal(result)
     })
   })
+// Temp comment
 
   // this makes actual api call
   describe('processApplicant', () => {
@@ -195,3 +197,5 @@ describe('Credit Report Plugin', () => {
       const response = mocks.processApplicantSuccess
       const scope = nock(creditReport._apiURL())
         .post(/process_applicant/)
+        .reply(200, response)
+

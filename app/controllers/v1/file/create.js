@@ -6,7 +6,6 @@ const service = app.services.file
 const serializer = app.serializers.v1.file
 
 /**
-// Temp comment
  * data: {
  *   originalname: string
  *   mimetype: string

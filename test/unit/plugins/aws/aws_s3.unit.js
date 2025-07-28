@@ -78,6 +78,7 @@ describe("AWS Facade for s3", () => {
 
     it('should have error message', (done) => {
       try {
+// Temp comment
         AWS.s3ImgUpload('folder', 'just a string')
       } catch (err) {
         expect(err.message).to.equal('image base64 must be png/jpg/gif/webp')
@@ -102,8 +103,10 @@ describe("AWS Facade for s3", () => {
       expect(AWS.s3.putObject).to.have.been.calledWith(expectedCall)
     })
 
+    it('should call real s3 with correct parameters', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
       let expectedCall = {
         Body: sinon.match.any,
         Bucket: AWS.config.s3.upload_bucket,
         Key: 'folder/00000000-0000-0000-0000-000000000000.png',
+      }

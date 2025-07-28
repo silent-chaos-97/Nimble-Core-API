@@ -1,5 +1,4 @@
 /users/{id}:
-  get:
     tags:
       - User
     summary: Get a user

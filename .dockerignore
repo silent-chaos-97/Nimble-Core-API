@@ -4,4 +4,5 @@
 .gitignore
 coverage
 helm
+node_modules
 scripts

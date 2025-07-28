@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const validateDocuments = require('./helpers/validate_documents')
 const validateService = require('./validate')
+// Temp comment
 const Signer = app.repositories.signer
 const SignerModel = app.models.signer
 const PreconditionFailedError = require('../../errors/precondition_failed')
@@ -69,6 +70,7 @@ async function updateAccountRequestStatus(accountRequestId, tx = app.db) {
   }
 
   if (accountRequest.status !== 'INCOMPLETE') {
+    return
   }
 
   // update status to pending if all signers onboarded

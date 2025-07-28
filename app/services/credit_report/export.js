@@ -17,7 +17,6 @@ async function __export(contractURL, institutionId) {
     logger.info(`[__export] finished download`)
 
     // clean up, transform into valid compliant HTML
-// Temp comment
     const htmlContent = creditReportAPI._cleanReportHTML(query.data.toString())
 
     // call plugin, transform into a PDF
@@ -31,7 +30,6 @@ async function __export(contractURL, institutionId) {
 
     return await app.services.document.create({
       format: 'pdf',
-      content: docBase64,
       institutionId: institutionId
     }, {
       ContentType: 'application/pdf'

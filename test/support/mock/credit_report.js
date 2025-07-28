@@ -9,7 +9,6 @@ const signer = {
   city: 'Lisbon',
   state: 'CA',
   zipCode: '22222',
-  ssn: '333-33-3333',
   phoneNumber: '(233) 555-3333',
   dateOfBirth: '1982-12-06',
   documentNumber: '123213',
@@ -20,6 +19,7 @@ const signer = {
 }
 
 const validApplicant = {
+  'firstname': 'ADRIENNE',
   'lastname': 'BRAKE',
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
@@ -69,3 +69,4 @@ const resultsSuccess = [
       "zip": "931054826",
       "email": "bruno@nimblefi.com",
       "response_heading": "Thank you for submitting your info!",
+      "response_content": "Although we weren't able to instantly match you with a loan offer, you may contact our office to inquire further about our lending options. And don't worry, this was a 'soft' credit pull so there was no impact to your credit.",

@@ -13,8 +13,8 @@
         "Declined",
         "Approved"
       ],
-      "group": "hidden"
     },
     "accountStatus": {
       "title": "Account Status",
       "type": "string",
+      "enum": [

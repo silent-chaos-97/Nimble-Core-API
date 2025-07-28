@@ -2,7 +2,6 @@ const target = require('../../../../app/services/token/get')
 const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
 
-describe('app.services.token.get', () => {
   let options, clock
 
   before(() => {
@@ -65,6 +64,7 @@ describe('app.services.token.get', () => {
 
     it('should throw a error expiration is negative', () => {
       options.expiration = -1
+
       return expect(() => target(options))
         .to.throw('"expiration" must be a positive number')
     })
@@ -114,3 +114,5 @@ describe('app.services.token.get', () => {
 
   it('should include public claim subject in token', () => {
     const token = target(options)
+    const actual = decode(token)
+    expect(actual).to.have.property('sub', 'http://localhost:8080/v1/users/123')

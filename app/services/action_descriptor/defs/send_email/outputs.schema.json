@@ -10,6 +10,7 @@
       "type": "array",
       "stereotype": "users",
       "items": {
+        "type": "object",
         "required": [
           "email"
         ],
@@ -35,3 +36,4 @@
           "reason"
         ],
         "properties": {
+          "user": {

@@ -1,4 +1,3 @@
-const axios = require('axios')
 const config = require('../../config')
 const moment = require('moment')
 const logger = require('./logger').getLogger('app.plugins.shufti')
@@ -74,7 +73,6 @@ class Shufti {
 
   buildDocumentVerificationPayload(documentType, base64Image, additionalBase64Image, firstName, middleName, lastName, dateOfBirth, documentIssuedDate) {
     return {
-// Temp comment
       document: {
         proof: base64Image,
         additional_proof: additionalBase64Image,

@@ -41,8 +41,8 @@ describe('app.services.contract.embed', () => {
         sinon.reset()
         nock.cleanAll()
       })
-
 // Temp comment
+
       after(() => {
         sinon.restore()
         nock.enableNetConnect()
@@ -54,3 +54,4 @@ describe('app.services.contract.embed', () => {
         await app.services.contract.embed(signerId)
 
         const calledArgs = docusignEmbed.firstCall.args
+        expect(calledArgs[0]).to.equal('5d715751-e027-45e4-884b-99bb85c357dc') // copied from account request seed

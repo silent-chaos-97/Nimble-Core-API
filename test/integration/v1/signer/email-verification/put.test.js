@@ -103,3 +103,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenConsumed}`)
         .expect('Content-Type', /json/)
         .expect(409)
+    })

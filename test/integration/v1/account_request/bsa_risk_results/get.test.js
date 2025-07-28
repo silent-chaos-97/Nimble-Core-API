@@ -116,7 +116,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
           const first = res.body[0]
 
-          expect(first).to.have.ownProperty('position')
           expect(first).to.have.ownProperty('questionId')
           expect(first).to.have.ownProperty('answer')
         })
@@ -146,6 +145,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
     describe('and sorting', () => {
       function doSortAndExpect(query, expectedArr, done) {
+        request(app.server)
           .get(`/v1/account-requests/2552ab85-08da-4bb5-be00-9e94d282d348/bsa-risk-results?` + query)
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)

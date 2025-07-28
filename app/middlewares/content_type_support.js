@@ -11,6 +11,7 @@ function contentTypeSupport(req, res, next) {
   const isPostOrPut = /^POST|PUT$/.test(req.method)
   req.headers['content-type'] = req.get('Content-Type') || JSON_CONTENT_TYPE
 
+  // skip content check if dealing with docusign webhooks webhooks/docusign/connect
   if (req.url.includes('webhooks/docusign/connect')) {
     return next()
   }

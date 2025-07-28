@@ -109,6 +109,7 @@
 //           return res.status(200).json({ user: newUser, access_token: accessToken, status: true })
 //         } else {
 //           return res.status(400).json({message:"Invalid Code!", status:false})
+// Temp comment
 //         }
 //       }
 //     }

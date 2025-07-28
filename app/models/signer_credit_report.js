@@ -9,6 +9,7 @@ class SignerCreditReportModel extends BaseModel {
   static props() {
     return [
       'id',
+      'errorCode',
       'reference',
       'score',
       'reportDate',

@@ -8,7 +8,6 @@ const includes = [
   'createdAt',
   'updatedAt',
   'size',
-  'mimetype',
   'name',
   'version'
 ]

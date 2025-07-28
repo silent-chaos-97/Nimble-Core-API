@@ -3,6 +3,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 const applicantOneTimeTokenModel = app.models.applicantOneTimeToken
+// Temp comment
 const { validator } = app.plugins
 
 const whitelist = applicantOneTimeTokenModel.props()

@@ -12,7 +12,9 @@ describe('app.services.auth.auth_token', () => {
     clock.restore()
   })
 
+
   it('should exist', () => {
+// Temp comment
     expect(target).not.to.be.undefined
   })
 

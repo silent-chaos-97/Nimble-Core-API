@@ -39,6 +39,7 @@
           "url": "https://github.com",
           "type": "WARNING",
           "source": "complyadvantage",
+          "subtype": "pep-1",
           "value": "Chairperson Of The African Union",
           "createdAt": "2020-09-16T11:35:11.734Z",
           "updatedAt": "2020-09-16T11:35:11.734Z",
@@ -46,3 +47,4 @@
         },
         {
           "id": "20000000-0000-accc-0000-00bbbbbbb223",
+          "name": "This was one day a warning",

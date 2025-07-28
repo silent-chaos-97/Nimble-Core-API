@@ -49,3 +49,4 @@ module.exports = {
       selected_type: 1,
       full_address: 1,
       address_document: 1,
+      name: 1,

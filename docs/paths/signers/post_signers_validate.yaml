@@ -57,3 +57,4 @@
               type: object
               properties:
                 <signerId>:
+                  type: object

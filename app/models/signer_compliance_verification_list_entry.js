@@ -19,6 +19,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'subtype',
       'countryCodes',
       'createdAt',
+      'updatedAt',
     ]
   }
 
@@ -33,3 +34,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
         value: Joi.string().required(),
         source: Joi.string().optional().allow(null).allow(''),
         date: Joi.string().optional().allow(null).allow(''),
+        deletedDate: Joi.string().optional().allow(null).allow(''),

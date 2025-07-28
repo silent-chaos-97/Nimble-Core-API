@@ -51,6 +51,7 @@ async function checkJWTrequestToken(req, res, next) {
     return next(new UnauthorizedTokenError('Invalid token: ' + err.message))
   }
 
+  next()
 }
 
 async function checkRoles(roles, req, res, next) {
@@ -103,4 +104,72 @@ async function checkApiKey(req, res, next) {
   } catch (err) {
     return next(new UnauthorizedError())
   }
+}
+
+function checkScopeToken(scopes, req, res, next) {
+  try {
+    const token = getQueryOrHeaderToken(req.query, req.headers)
+    const payload = app.plugins.jwt.decode(token)
+
+    if (payload.userId) { // if this is not a scoped token, and is in fact a backoffice allaround token, we should skip this auth strategy
+      return next(new UnauthorizedTokenError())
+    }
+
+    // the target of the requests can be either params.id or any ID in the post body that matches the `score + Id`
+    // we build an array with possible matches, then see if they exists on the body
+    const bodyScopeIds = scopes
+      .map(str => _.singularize(_.camelCase(str)) + 'Id') // identify every key
+      .map(key => _.get(req, `body.${key}`, null)) // see if it exists in the current req.body
+
+    const targetId = [_.get(req, 'params.id', null)] // route ID takes precedence
+      .concat(bodyScopeIds) // concat body.somethingId as possibilities
+      .find(key => key !== null) // get first not null
+
+    if (targetId === null) { // if we cant identify a targetID, this token is void
+      return next(new UnauthorizedTokenError())
+    }
+
+    // if the id present on the url is not a GUID we should return Unauthorized and skip the rest of the authentication
+    const { error } = Joi.object({ id: Joi.string().uuid() }).validate({ id: targetId })
+    if (error) {
+      return next(new UnauthorizedTokenError())
+    }
+
+    // flatMap all the allowed scopes against token scopes
+    // we want to check if the token scores are included in the allowed scopes INCLUDING sub resource scopres
+    // this will help us check tokens with [signer.something] and [signers] against the allowed scope [signers]
+    const scopeChecks = _.flatMap(scopes, allowedScope => {
+      return payload.scopes.map(payloadScope => {
+        return (allowedScope === payloadScope) // eihter we check for signer.something === signer.something
+          || (allowedScope.split(".").shift() === payloadScope) // or signer[.something] === signer
+      })
+    })
+
+    // if all of the checks above return false, we fail the token
+    if (scopeChecks.filter(r => r === true).length === 0) {
+      return next(new ForbiddenError())
+    }
+
+    // here we will draw a flat map with all resouces the token will have access too
+    // this will allow tokens with signer#1234 to access endpoints with [singer.something] in the scope
+    // by spliting by "." and using the first half
+    const ids = _.flatMap(scopes, allowedScope => {
+      const splitedScope = allowedScope.split(".")
+      if (splitedScope.length === 1) {
+        return allowedScope
+      } else {
+        return [splitedScope[0], allowedScope]
+      }
+    }).map(s => `${s}#${targetId}`)
+
+    // if the token does not have a resouce that matches the array above, we fail it
+    if (_.intersection(payload.resources, ids).length == 0) {
+      return next(new ForbiddenError())
+    }
+
+  } catch (err) {
+    return next(new UnauthorizedTokenError())
+  }
+
+  req.checkedScopeToken = true
   next()

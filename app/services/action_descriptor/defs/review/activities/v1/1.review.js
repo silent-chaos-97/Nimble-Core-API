@@ -3,7 +3,6 @@ const Task = app.models.task
 const _ = require('lodash')
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
-const { derefUsers } = require('../../../../commons/users')
 
 const logger = app.logger.getLogger('action.review.1')
 
@@ -28,3 +27,4 @@ async function activity(context) {
   return {
     tasks,
     _defer: tasks
+  }

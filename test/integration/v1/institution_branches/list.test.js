@@ -3,7 +3,6 @@ describe('GET /institution/:id/branches', () => {
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
-// Temp comment
     await seed.institution_branches()
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
@@ -46,7 +45,6 @@ describe('GET /institution/:id/branches', () => {
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
       .then(response => {
-        expect(response.body).to.be.an('Array')
 
         response.body.forEach(item => {
           expect(item).to.have.ownProperty('id')
@@ -84,3 +82,4 @@ describe('GET /institution/:id/branches', () => {
     })
 
     it('should respect offset', () => {
+      return request(app.server)

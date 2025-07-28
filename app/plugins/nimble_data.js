@@ -22,6 +22,7 @@ async function write(method, path, data) {
     const res = await axios.request({method, url, data, headers})
     log.info({ op: method, phase: 'completed', url, status: res.status })
     return res.data
+  } catch(err) {
     log.error({err, msg: err.message, url, response: _.get(err, 'response.data')})
     return Promise.reject(err)
   }
