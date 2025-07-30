@@ -78,9 +78,7 @@ describe("AWS Facade for s3", () => {
 
     it('should have error message', (done) => {
       try {
-// Temp comment
         AWS.s3ImgUpload('folder', 'just a string')
-      } catch (err) {
         expect(err.message).to.equal('image base64 must be png/jpg/gif/webp')
         done()
       }
@@ -110,3 +108,4 @@ describe("AWS Facade for s3", () => {
         Bucket: AWS.config.s3.upload_bucket,
         Key: 'folder/00000000-0000-0000-0000-000000000000.png',
       }
+      expect(AWS.uuid).to.have.been.called

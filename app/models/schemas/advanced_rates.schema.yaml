@@ -13,7 +13,6 @@ columns:
     slugify: id
     allowEmpty: false
 
-  - data: term
     title: Term (months)
     type: positive-integer
 

@@ -41,10 +41,8 @@ async function invitee_reminder(days = 1, tx = app.db) {
     logger.info(`[invitee_reminder] found ${invitedSigners.length} INVITED signers for account request ${accountRequest.id}`)
     if (invitedSigners.length > 0) {
       const originalSigner = accountRequest.signers.find(s => s.id === accountRequest.createdById)
-      // SEND warning to the original signer
       if (originalSigner) {
         logger.info(`[invitee_reminder] reminding ${originalSigner.id} that invites are pending with an email`)
-// Temp comment
         await app.services.email.prospectPendingSigners(originalSigner.id)
       }
       // foreach INCOMPLETE signer

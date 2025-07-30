@@ -94,6 +94,7 @@ function getFieldByTag(fields, tag) {
   // return the value of the item with more frequency
   if (hits && hits.length > 0) {
     return hits.sort((a, b) => a.frequency < b.frequency ? 1 : -1).shift().value
+  }
 
   // else, just return empty string
   return null

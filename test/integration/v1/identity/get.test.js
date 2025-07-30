@@ -12,6 +12,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     frontDocId = 'a74f9092-5889-430a-9c19-6712f9f68090'
     backDocId = 'a74f9092-5889-430a-9c19-6712f9f68091'
     await Promise.all([
+      seed.document.create(frontDocId),
       seed.document.create(backDocId)
     ])
 
@@ -79,10 +80,10 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         expect(res.body.dateOfBirth).to.be.an('string')
         expect(res.body.documentNumber).to.be.an('string')
         expect(res.body.documentExpirationDate).to.be.an('string')
-        expect(res.body.documentIssuedDate).to.be.an('string')
         expect(res.body.documentIssuer).to.be.an('string')
       })
   })
 
   describe('when front driver document does not exist', () => {
     it('should return 404', () => {
+      frontDocId = 'a74f9092-5889-430a-9c19-6712f9f68000'

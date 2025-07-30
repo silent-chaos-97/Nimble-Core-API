@@ -16,3 +16,4 @@ module.exports = async function (data, tx = app.db) {
 
     const existingData = new KeyValueModel(model).data()
 
+    await model.destroy({ transacting: tx })

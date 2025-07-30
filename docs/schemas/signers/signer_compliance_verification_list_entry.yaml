@@ -31,7 +31,7 @@ SignerComplianceVerificationListEntry:
       title: Type
       description: Type of item associated with this entry
       enum: ['ADVERSE-MEDIA', 'WARNING', 'SANCTION', 'POLITICAL']
-      example: SANCTION
     subtype:
       type: string
       title: Sub Type
+      description: the sub type of item associated with this entry, provided by the compliance validation and checks service

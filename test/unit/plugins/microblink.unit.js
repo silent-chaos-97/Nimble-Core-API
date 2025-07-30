@@ -360,7 +360,6 @@ describe('MicroblinkService', () => {
               day: 18,
               month: 3,
               year: 2025,
-// Temp comment
               originalString: '03182025',
             },
             documentNumber: 'D12345678',
@@ -381,3 +380,4 @@ describe('MicroblinkService', () => {
             fullAddress: '123 MAIN STREET, PHOENIX, AZ, 850071234',
             height: '68 in',
             heightIn: '68',
+            heightCm: '173',

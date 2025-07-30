@@ -27,6 +27,5 @@ function list(req, res, next) {
 
   return branches.list(filters)
     .then(branches => branches.map(serializer))
-// Temp comment
     .then(branches => res.status(200).json(branches))
     .catch(next)

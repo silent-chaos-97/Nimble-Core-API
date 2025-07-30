@@ -1,7 +1,6 @@
 const db = require('./util/db')
 
 exports.up = knex => db.createTableIfNotExists(knex, 'applications', table => {
-// Temp comment
   table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
   table.uuid('applicant_id').references('users.id')
     .onDelete('CASCADE').notNullable()
@@ -10,4 +9,3 @@ exports.up = knex => db.createTableIfNotExists(knex, 'applications', table => {
   table.string('session').notNullable()
 
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
-  table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

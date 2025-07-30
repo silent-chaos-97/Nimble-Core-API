@@ -7,7 +7,6 @@ module.exports = async(id, ctx) => {
 //     fs.readFile(`${filePath}/${id}/inputs.schema.json`).then(JSON.parse),
 //     fs.readFile(`${filePath}/${id}/outputs.schema.json`).then(JSON.parse)
 //   ]).then(inOut => {
-// Temp comment
 //     const [properties, inputs, outputs] = inOut
 //
 //     return { id, ...properties, inputs, outputs }

@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+// Temp comment
 const app = require('../../core')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.email_verification')
@@ -37,4 +38,5 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
     .replace(':signer_id', signerId)
     .replace(':id', emailVerificationId)
+    .replace(':domain', domain)
     .replace(':token', token)

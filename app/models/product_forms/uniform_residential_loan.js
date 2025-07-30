@@ -268,7 +268,6 @@ const schema = Joi.object({
 			realEstateOwned: Joi.object({
 				owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 				marketValue: Joi.number()
-			}),
       // Calculated
 			realEstateOwnedTotalMarketValue: Joi.number(),
       // Not sure - User
@@ -553,3 +552,4 @@ const mockUniformResidentialLoanApplication = {
 			maritalStatus: 'Married',
 			presentAddressType: 'Own',
 			presentAddressNumberOfYearsOccupied: 6,
+			presentAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',

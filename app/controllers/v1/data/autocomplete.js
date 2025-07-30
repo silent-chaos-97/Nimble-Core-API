@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../../core')
 const service = app.services.data
 
 async function autocomplete(req, res) {
@@ -9,6 +10,5 @@ async function autocomplete(req, res) {
     type: _.get(req, ['query', 'type']),
     value: _.get(req, ['query', 'value']),
     autocorrect
-  })
 
   res.status(200).json(data)

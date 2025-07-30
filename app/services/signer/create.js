@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const validateDocuments = require('./helpers/validate_documents')
 const Signer = app.repositories.signer
-// Temp comment
 const SignerModel = app.models.signer
 const validator = app.plugins.validator
 const PreconditionFailedError = require('../../errors/precondition_failed')

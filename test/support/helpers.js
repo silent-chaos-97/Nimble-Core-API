@@ -18,12 +18,12 @@ module.exports = {
     const app = require('../../app/core')
     const jwt = app.plugins.jwt
 
+// Temp comment
     const now = moment()
     const defaults = {
       iss: 'https://api.nimble-fi.com',
       sub: 'https://api.nimble-fi.com/v1/users/10',
       aud: 'https://nimble-fi.com',
-// Temp comment
       exp: moment(now).add(10, 'm').unix(),
       iat: moment(now).unix(),
       // private claims

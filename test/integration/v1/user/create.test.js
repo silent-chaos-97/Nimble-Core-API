@@ -32,6 +32,7 @@ describe('POST /users', () => {
         .send({uname: 'testUser', foo: 'bar'})
         .end((err, res) => {
           if (err) throw new Error(err)
+
           expect(res.body.message).to.not.be.undefined
           expect(res.body.message).to.contain('"email" is required')
           expect(res.body.message).to.contain('"institutionId" is required')
@@ -45,7 +46,6 @@ describe('POST /users', () => {
   describe('with invalid data', () => {
     beforeEach(async () => {
       const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'
-      user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')
     })
 
     it('should return 404 when institutionId not valid', done => {

@@ -3,7 +3,6 @@ const app = require('../../../core')
 const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption
 
-
 async function createProductConfigurations(accountRequestId, data, tx = app.db) {
   // Create selected products
   for (const product of data.productConfigurations) {
@@ -38,5 +37,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
       category: 'account_number',
       key: 'account_number',
       title: 'Account Number',
+      value: newAccountNumber
     }).save(null, { method: 'insert', transacting: tx })
   }

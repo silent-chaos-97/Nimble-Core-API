@@ -138,6 +138,7 @@ class CreditReport {
       email: Joi.string().required(),
       ssn: Joi.string().required(),
       dob: Joi.string().required(),
+    })
     return validator(params, listSchema, { abortEarly: false })
   }
 
@@ -210,6 +211,7 @@ class CreditReport {
   async processApplicant(signer){
     if (_.isEmpty(signer)){
       throw new Error('Signer is empty')
+// Temp comment
     }
 
     logger.debug('[processApplicant] for signer id %s', signer.id)

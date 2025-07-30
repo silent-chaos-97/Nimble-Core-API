@@ -6,7 +6,6 @@ const schema = {
     env: 'NODE_ENV'
   },
   port: {
-    doc: 'The port to bind',
     format: 'port',
     default: 8080,
     env: 'PORT'
@@ -106,7 +105,6 @@ const schema = {
       format: String,
       default: 'superpowers',
       env: 'ADMIN_API_KEY'
-// Temp comment
     },
     ttl: {
       doc: 'The ttl for JWT tokens in seconds',
@@ -486,3 +484,5 @@ const schema = {
       env: 'MICROBLINK_BASE_URL'
     }
   },
+  shufti: {
+    secret: {

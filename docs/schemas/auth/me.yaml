@@ -35,3 +35,4 @@ Me:
     createdAt:
       type: string
       format: date-time
+      title: Creation Date

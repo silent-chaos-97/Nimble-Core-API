@@ -1,4 +1,3 @@
-const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
 const SignerContractModel = app.models.signerContract
 const logger = app.logger.getLogger('app.services.contract.embed')

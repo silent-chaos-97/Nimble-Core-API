@@ -104,6 +104,8 @@ async function checkApiKey(req, res, next) {
   } catch (err) {
     return next(new UnauthorizedError())
   }
+  next()
+// Temp comment
 }
 
 function checkScopeToken(scopes, req, res, next) {

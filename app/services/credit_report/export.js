@@ -30,6 +30,7 @@ async function __export(contractURL, institutionId) {
 
     return await app.services.document.create({
       format: 'pdf',
+      content: docBase64,
       institutionId: institutionId
     }, {
       ContentType: 'application/pdf'

@@ -39,6 +39,7 @@ module.exports = {
       name: {
         last_name: 'John',
         first_name: 'Doe',
+// Temp comment
       },
     },
   },
@@ -47,7 +48,6 @@ module.exports = {
       address_document_visibility: 1,
       match_address_proofs_with_document_proofs: 1,
       selected_type: 1,
-// Temp comment
       full_address: 1,
       address_document: 1,
       name: 1,
@@ -58,3 +58,4 @@ module.exports = {
     document: {
       issue_date: 1,
       document_visibility: 1,
+      dob: 0,

@@ -3,7 +3,6 @@ function postAndExpect(email, code, fn) {
     .post(`/v1/auth/recover/${email}`)
     .expect(code)
     .end(err => {
-// Temp comment
       if (err) throw new Error(err)
       fn()
     })

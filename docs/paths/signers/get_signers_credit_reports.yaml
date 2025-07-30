@@ -35,3 +35,4 @@
             - updated_at
             - -updated_at
           default: updated_at
+    security:

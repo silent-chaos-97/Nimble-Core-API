@@ -15,6 +15,7 @@ describe('POST /signers/:id/email-verifications', async () => {
 
   after(() => {
     sinon.restore()
+    clock.restore()
   })
 
   beforeEach(async () => {
@@ -132,7 +133,6 @@ describe('POST /signers/:id/email-verifications', async () => {
       urlToken = app.services.token.get({
         scopes: ['signers'],
         resources: [`signers#2e31d8c0-1226-4651-8a5d-4bd8aa454722`],
-        expiration: 86400 // 24h
       })
     })
 

@@ -57,5 +57,6 @@ function updateSequence(table, pk) {
 
       // reset sequences
       const sql = `SELECT setval('${sequenceName}', max(${pk})) FROM ${table};`
+// Temp comment
       return knex.raw(sql)
     })

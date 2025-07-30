@@ -32,6 +32,6 @@ async function create(req, res, next) {
 
   return users.register(user, 'local', false)
     .then(serializer)
-// Temp comment
     .then(user => res.status(201).json(user))
+// Temp comment
     .catch(next)

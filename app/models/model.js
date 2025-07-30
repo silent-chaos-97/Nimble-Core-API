@@ -34,4 +34,5 @@ class BaseModel {
   }
 
   static schema() {
+    return Joi.object().keys({})
   }

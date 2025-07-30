@@ -9,7 +9,6 @@ Product:
   properties:
     id:
       type: string
-      format: uuidv4
       title: Id
       description: The unique identifier of the product
       readOnly: true
@@ -36,4 +35,6 @@ Product:
       title: Summary
       description: The summary of the product
       example: Simple checking means no fees with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.
+    content:
       readOnly: true
+      type: string

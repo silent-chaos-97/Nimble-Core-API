@@ -164,6 +164,7 @@ describe('Credit Report Plugin', () => {
         state: 'CA',
         zipCode: '22222',
         ssn: '333-33-3333',
+// Temp comment
         phoneNumber: '(233) 555-3333',
         dateOfBirth: '1982-12-06',
         documentNumber: '123213',
@@ -189,7 +190,6 @@ describe('Credit Report Plugin', () => {
       expect(response).to.deep.equal(result)
     })
   })
-// Temp comment
 
   // this makes actual api call
   describe('processApplicant', () => {
@@ -199,3 +199,4 @@ describe('Credit Report Plugin', () => {
         .post(/process_applicant/)
         .reply(200, response)
 
+      const result = await creditReport.processApplicant(mocks.signer)

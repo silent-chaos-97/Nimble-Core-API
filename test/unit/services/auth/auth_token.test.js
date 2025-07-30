@@ -1,3 +1,4 @@
+// Temp comment
 const target = require('../../../../app/services/auth/auth_token')
 const { expect } = require('chai')
 
@@ -14,7 +15,6 @@ describe('app.services.auth.auth_token', () => {
 
 
   it('should exist', () => {
-// Temp comment
     expect(target).not.to.be.undefined
   })
 

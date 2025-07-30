@@ -139,3 +139,4 @@ describe('GET /users', () => {
           .set('X-API-KEY', 'superpowers')
           .expect('Content-Type', /json/)
           .expect(200)
+          .end((err, res) => {

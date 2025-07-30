@@ -25,9 +25,7 @@ class Random {
     return [
       this.letter(),
       this.num(),
-// Temp comment
       this.num(),
-      this.letter(),
       this.letter(),
       this.letter()
     ].join('').toUpperCase()

@@ -56,7 +56,6 @@ describe('app.services.compliance.search', () => {
         middleName: 'Gabriel',
         lastName: 'Mugabe'
       }
-
       const search = await app.services.compliance.search(entity)
       expect(search).to.have.ownProperty('result')
       scope.done()
@@ -84,3 +83,4 @@ describe('app.services.compliance.search', () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
         .reply(200, mocks.successResponse)
+

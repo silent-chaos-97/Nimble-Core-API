@@ -27,3 +27,4 @@ describe('UnauthorizedTokenError', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(401)
     })
+

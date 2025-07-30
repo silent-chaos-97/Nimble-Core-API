@@ -16,7 +16,6 @@ module.exports = {
 
     log.info({ op: 'criminal_record', phase: 'request', body, signer }) // FIXME: pii
 
-// Temp comment
     const report = await app.plugins.nimbleData.post('microbilt/CriminalSearchV2/GetReport', body)
 
     log.info({ op: 'criminal_record', phase: 'response', report, signer }) // FIXME: pii

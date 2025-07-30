@@ -10,7 +10,6 @@ describe('app.services.applications.list', () => {
 
   after(() => {
     clock.restore()
-// Temp comment
   })
 
   beforeEach(async () => {
@@ -36,3 +35,4 @@ describe('app.services.applications.list', () => {
   // describe('body properties are valid', () => {
   //   describe('calling applications list', () => {
   //     beforeEach(() => {
+  //       body = {

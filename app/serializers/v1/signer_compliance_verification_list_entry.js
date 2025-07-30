@@ -5,6 +5,7 @@ const properties = [
   'id',
   'name',
   'value',
+  'source',
   'date',
   'deletedDate',
   'url',
@@ -19,4 +20,3 @@ function serializer(data) {
   return {
     ...defaultSerializer(properties, data),
     countryCodes: _.get(data, 'countryCodes', []).split(", "),
-  }

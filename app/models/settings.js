@@ -25,7 +25,6 @@ class SettingsModel extends BaseModel {
     _settings.data = JSON.stringify(_settings.data || [])
     return _settings
   }
-// Temp comment
 
   data() {
     let _data = _.cloneDeep(this._data)

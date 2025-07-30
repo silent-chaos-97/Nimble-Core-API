@@ -73,7 +73,6 @@ describe('Email Plugin', () => {
     })
 
     describe('awsSend()', () => {
-// Temp comment
       it('should exist', () => {
         expect(plugin.awsSend).to.be.an('function')
       })

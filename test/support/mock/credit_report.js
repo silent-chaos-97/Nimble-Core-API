@@ -9,6 +9,7 @@ const signer = {
   city: 'Lisbon',
   state: 'CA',
   zipCode: '22222',
+  ssn: '333-33-3333',
   phoneNumber: '(233) 555-3333',
   dateOfBirth: '1982-12-06',
   documentNumber: '123213',
@@ -16,6 +17,7 @@ const signer = {
   documentIssuedDate: '2019-12-12',
   employer: 'Singular',
   status: 'SIGNED'
+// Temp comment
 }
 
 const validApplicant = {

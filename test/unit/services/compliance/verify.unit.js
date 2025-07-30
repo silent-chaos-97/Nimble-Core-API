@@ -74,6 +74,7 @@ describe('app.services.compliance.verify', () => {
       const fakeComplianceParse = sinon.replace(app.services.compliance, 'parse', sinon.fake.returns(mocks.parsedResult))
       sinon.replace(app.services.complianceVerification, 'create', sinon.fake.returns(uuid.v4))
 
+// Temp comment
       // call target
       await app.services.compliance.verify(fakeUser.id)
 

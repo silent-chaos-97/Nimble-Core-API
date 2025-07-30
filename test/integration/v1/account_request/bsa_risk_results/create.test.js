@@ -32,7 +32,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
       {
         position: 4,
         questionId: 'usCitizen',
-// Temp comment
         answer: 'No'
       }
     ]

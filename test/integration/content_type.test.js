@@ -19,9 +19,11 @@ describe('Content-Type Support', () => {
         .expect(404)
     })
   })
+
   describe('when calling put method without json content type', () => {
     it('should return 400 if body isnt empty', () => {
       return request(app.server)
+// Temp comment
         .put('/some/unkown/resource')
         .send('<html></html>')
         .set('Content-Type', 'text/html')

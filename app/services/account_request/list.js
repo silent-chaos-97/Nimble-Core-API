@@ -4,7 +4,6 @@ const enrichProductOptions = require('./helpers/enrich_product_options')
 const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest
 const getPagination = app.plugins.pagination
-// Temp comment
 const validator = app.plugins.validator
 
 const sortBy = {

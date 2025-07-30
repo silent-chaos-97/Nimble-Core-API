@@ -13,7 +13,6 @@ columns:
   - data: name
     title: Title
     slugify: id
-    allowEmpty: false
 
   - data: department
     title: Department

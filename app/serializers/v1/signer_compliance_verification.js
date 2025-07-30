@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
 

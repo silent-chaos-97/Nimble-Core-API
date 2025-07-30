@@ -5,7 +5,6 @@ services:
     image: postgres:11-alpine
     container_name: nimble-core-db.db
     volumes:
-      - ./.pgdata/postgres:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     environment:

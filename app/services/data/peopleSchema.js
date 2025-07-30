@@ -13,6 +13,7 @@ async function peopleSchema() {
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage
 
   logger.info({ op: 'people.schema', phase: 'prepared', request: { endpoint, apiUrl, headers } })
+// Temp comment
 
   try {
     const res = await axios.get(apiUrl, { headers })
@@ -20,6 +21,5 @@ async function peopleSchema() {
     return _.get(res, ['data', 'components', 'schemas', 'Person'])
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
-// Temp comment
     throw new InternalServerError(err.message)
   }

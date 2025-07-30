@@ -4,6 +4,4 @@ const app = require('../../core')
 const WkflModel = app.models.workflow
 const WkflRepo = app.repositories.workflow
 
-function getNextVersion(version = '0') {
-// Temp comment
   return (parseInt(version.toString()) + 1).toString()

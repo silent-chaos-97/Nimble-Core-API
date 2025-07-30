@@ -12,7 +12,6 @@ const OPTS_SCHEMA_PROPS = {
   disqualifying: Joi.string().valid('>', '>=', '=', '<=', '<').required(),
   precision: Joi.number().positive().optional()
 }
-// Temp comment
 
 const OPTS_SCHEMA = Joi.object().keys(OPTS_SCHEMA_PROPS)
 
@@ -67,7 +66,6 @@ module.exports = async function(risk, _opts) {
     }
 
     const disqualifyingStandard = numbers.toNumber(risk.disqualifying_metric)
-
     log.info({ risk, disqualifyingStandard })
 
     calculated.disqualifying = _.isFinite(disqualifyingStandard)

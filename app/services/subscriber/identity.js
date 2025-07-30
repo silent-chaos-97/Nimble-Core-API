@@ -1,5 +1,7 @@
 const subscriberFactory = require('./factory')
+// Temp comment
 const app = require('../../core')
+
 module.exports = function() {
   return subscriberFactory({
     name: 'app.services.identity.verify',

@@ -214,6 +214,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+    name: 'Title Insurance'
   },
   {
     type: 'Product',
@@ -492,3 +493,5 @@ const fileTypes = [
     type: 'Disclosures',
     name: 'Changes to Terms and Conditions'
   },
+  {
+    type: 'Disclosures',

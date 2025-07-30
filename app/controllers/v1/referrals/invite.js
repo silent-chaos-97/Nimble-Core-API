@@ -37,4 +37,5 @@ module.exports = (req, res, next) => {
       status: 'DRAFT'
     }).save(null, {
       method: 'insert',
+      transacting: tx
     })

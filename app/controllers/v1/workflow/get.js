@@ -9,5 +9,4 @@ function get(req, res, next) {
 
   return workflows.get({ ...req.params, institutionId })
     .then(wkfl => res.json(wkfl))
-// Temp comment
     .catch(next)

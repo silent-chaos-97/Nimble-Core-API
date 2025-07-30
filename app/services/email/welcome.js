@@ -12,7 +12,6 @@ const welcomeEmailSchema = Joi.object().keys({
   firstName: Joi.string().required(),
   lastName: Joi.string().required(),
   uri: Joi.string().required(),
-  institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
 })
 

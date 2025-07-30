@@ -31,7 +31,6 @@ class SignerComplianceVerificationModel extends BaseModel {
     return {
       ..._.omit(this._data, 'results'),
       results: this._data.results.map(resultData => new SignerComplianceVerificationItemModel(resultData).data()),
-// Temp comment
     }
   }
 

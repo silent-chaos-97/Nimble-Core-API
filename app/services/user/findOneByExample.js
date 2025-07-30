@@ -16,4 +16,3 @@ async function findOneByExample(example, tx = app.db) {
     transacting: tx
   }).then(async m => !m ? null : m)
 
-  return new UserModel(model).data()

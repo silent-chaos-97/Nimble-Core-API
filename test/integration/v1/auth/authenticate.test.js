@@ -8,6 +8,7 @@ describe('Auth', () => {
           .get('/v1/me')
           .expect('Content-Type', /json/)
           .expect(401)
+          .end(done)
       })
 
       it('should not allow invalid tokens requests', done => {
@@ -159,3 +160,4 @@ describe('Auth', () => {
         })
 
         it('show increment failed login attempts', async () => {
+          return request(app.server)

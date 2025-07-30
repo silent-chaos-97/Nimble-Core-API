@@ -37,7 +37,6 @@ class AnalysisModel extends BaseModel {
   }
 
   static statuses() {
-    return { ...Statuses }
   }
 
   static privateProps() {
@@ -81,3 +80,4 @@ class AnalysisModel extends BaseModel {
     const FileModel = app.models.file
     const UserModel = app.models.user
 
+    return {

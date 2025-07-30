@@ -6,7 +6,6 @@ const InstitutionModel = app.models.institution
 const getPagination = app.plugins.pagination
 
 const sortBy = {
-  '': 'institutions.id',
   'name': 'institutions.name' // TODO: consider indexing
 }
 
@@ -15,7 +14,6 @@ function getSqlSort(sort) {
   return sortBy[sort]
 }
 
-// Temp comment
 function validate(filters) {
   if (_.has(filters, 'sort') && !_.has(sortBy, filters.sort)) {
     throw new BadRequestError('The sort parameter is invalid.')

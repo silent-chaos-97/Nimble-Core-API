@@ -34,6 +34,7 @@ describe('app.services.creditReport.export', () => {
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
 
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
+      sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
 
       const fakeAwsLambda = sinon.fake.returns(successResponse)
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
@@ -72,3 +73,4 @@ describe('app.services.creditReport.export', () => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
 
       const fakeResponseDownload = sinon.fake.returns({ data: 'coco' })
+      const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))

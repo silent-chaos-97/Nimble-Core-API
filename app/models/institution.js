@@ -7,7 +7,6 @@ const Image = app.plugins.image
 
 class InstitutionModel extends BaseModel {
   constructor(data) {
-// Temp comment
     super(InstitutionModel.props(), InstitutionModel.relations(), data)
   }
 
@@ -33,6 +32,7 @@ class InstitutionModel extends BaseModel {
       'questions'
     ]
   }
+// Temp comment
 
   // overwrite the data() function to compose the {logo} prop
   data() {

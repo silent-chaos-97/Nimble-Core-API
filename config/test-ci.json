@@ -17,6 +17,7 @@
   "shufti": {
     "secret": "singular-shufti-secret",
     "clientId": "client-id-test",
+    "baseUrl": "http://shufti.test.com",
     "webhook": "http://localhost:8080/api/v1/webhooks/shufti/identity-verification"
   },
   "docusign": {
@@ -28,7 +29,6 @@
     "basePath": "https://demo.docusign.net/restapi"
   },
   "auth": {
-    "adminApiKey": "superpowers",
     "ttl": 28800,
     "secret": "94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA",
     "maxFailedLoginAttempts": 3

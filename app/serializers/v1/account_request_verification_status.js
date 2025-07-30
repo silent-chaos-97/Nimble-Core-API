@@ -2,11 +2,11 @@ const defaultSerializer = require('../serializer')
 
 const properties = [
   'verificationStatusFace',
+  'verificationStatusDocument',
   'verificationStatusAddress',
   'verificationStatusSanctions',
   'verificationStatusMedia',
   'verificationStatusPoliticalExposure',
-]
 
 function serializer(data) {
   const format = defaultSerializer(properties, data)

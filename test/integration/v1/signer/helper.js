@@ -41,7 +41,6 @@ async function withMicroblink(mock, assertOnError, bodyFn) {
   } catch(e) {
     assertOnError(e)
   }
-  finally {
     scope.done()
   }
 }
@@ -74,6 +73,7 @@ async function withDocusign(mockResponse, bodyFn) {
 
 async function withInvalidDocusign(bodyFn) {
   nock(`https://${config.get('docusign').oauthPath}`)
+    .post('/oauth/token')
     .reply(401, {error: 'Invalid'})
 
   try {

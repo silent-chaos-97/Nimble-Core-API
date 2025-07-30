@@ -22,7 +22,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
   after(() => {
     clock.restore()
     sinon.restore()
-  })
 
   describe('service method', () => {
     it('should exist', () => {
@@ -103,3 +102,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       })
 
       it('should SEND reminders when running 168 hours after', async () => {
+        const now = moment(baseDate).add(hours, 'hour').toDate()

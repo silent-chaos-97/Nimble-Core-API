@@ -21,4 +21,5 @@ module.exports = {
 
     if (noHit) return { status: SignerCheck.statuses().invalid, meta: { status: 'NOHIT', report } }
 
+    const score = _.get(report, 'Subject.0.Score.Value', 0)
 

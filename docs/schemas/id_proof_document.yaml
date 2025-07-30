@@ -43,3 +43,4 @@ IdProofDocument:
       writeOnly: true
       type: string
       format: uuidv4
+      title: Front Document Id

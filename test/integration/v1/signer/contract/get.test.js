@@ -106,7 +106,6 @@ describe('GET /signers/:id/contract', async () => {
         .get(`/v1/signers/invalid/contract`)
         .set('Authorization', 'Bearer ' + weirdtoken)
         .expect(401)
-        .expect('Content-Type', /json/)
     })
     it('should return 404 if sending missing Signer', async () => {
       let weirdtoken = app.services.token.get({

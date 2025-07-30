@@ -118,6 +118,7 @@ const publicMetadata = {
     type: 'string',
     order: 4,
     score: {
+      no: 1
     },
     default: 'no',
     subtype: 'enum',

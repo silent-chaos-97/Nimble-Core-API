@@ -69,7 +69,6 @@ async function check(signerId, tx = app.db) {
             log.error({ err: ex, reason: `ErrorRunningCheckOnError[${checker.id}] | Signer[${signer.id}]`})
             _err = ex
           }
-        }
       }
 
       return Promise.resolve(_checked && _checked.status ? _checked : {

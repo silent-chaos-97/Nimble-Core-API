@@ -2,6 +2,7 @@ const _ = require('lodash')
 
 describe('PUT /account_requests/:id', async () => {
   const accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
+  let clock, accountRequest
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
@@ -40,6 +41,7 @@ describe('PUT /account_requests/:id', async () => {
   describe('Token', () => {
     function put(
       payload,
+// Temp comment
       accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
     ) {
       const token = app.services.token.get({

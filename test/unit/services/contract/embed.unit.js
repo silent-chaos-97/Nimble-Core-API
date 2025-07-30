@@ -41,7 +41,6 @@ describe('app.services.contract.embed', () => {
         sinon.reset()
         nock.cleanAll()
       })
-// Temp comment
 
       after(() => {
         sinon.restore()

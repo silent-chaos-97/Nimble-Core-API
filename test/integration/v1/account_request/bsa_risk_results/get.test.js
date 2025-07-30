@@ -19,7 +19,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
-    await seed.document.create()
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.signer.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.bsaRiskResult.create()
@@ -116,6 +115,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
           const first = res.body[0]
 
+          expect(first).to.have.ownProperty('position')
           expect(first).to.have.ownProperty('questionId')
           expect(first).to.have.ownProperty('answer')
         })

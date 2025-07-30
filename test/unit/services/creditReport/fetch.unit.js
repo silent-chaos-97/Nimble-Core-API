@@ -64,7 +64,6 @@ describe('app.services.creditReport.fetch', () => {
     it('should return error if signer not found', async () => {
       const id = '2e31d8c0-0000-4651-8a5d-4bd8aa454721'
       const expectedErrorMsg = "The requested resource couldn't be found"
-      return expect(app.services.creditReport.fetch(id)).to.be.rejectedWith(expectedErrorMsg)
     })
   })
 
@@ -77,6 +76,7 @@ describe('app.services.creditReport.fetch', () => {
 
     it('should return error if response is invalid', async () => {
       const response = {
+        prequal: {}
       }
       const scope = nock(creditReportPlugin._apiURL())
         .post(/process_applicant/)

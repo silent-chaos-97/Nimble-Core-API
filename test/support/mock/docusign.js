@@ -1095,6 +1095,7 @@ const mockDocumentTabs = {
       'fontSize': 'size7',
       'localePolicy': {},
       'documentId': '1',
+      'recipientId': 'c9a6a465-7c9d-4d0c-8b3e-9a47f72fa7aa',
       'pageNumber': '2',
       'xPosition': '89',
       'yPosition': '251',
@@ -3807,3 +3808,14 @@ const mockDocumentTabs = {
       'templateLocked': 'false',
       'templateRequired': 'false',
       'groupName': 'radioOwnershipType',
+      'radios': [
+        {
+          'pageNumber': '1',
+          'xPosition': '20',
+          'yPosition': '402',
+          'value': 'joint_no_survivor',
+          'selected': 'false',
+          'tabId': '635e5529-ea43-4caa-8172-232f32250b3a',
+          'required': 'true',
+          'locked': 'true',
+          'font': 'lucidaconsole',

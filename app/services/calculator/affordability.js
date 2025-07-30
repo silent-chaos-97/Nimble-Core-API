@@ -4,6 +4,7 @@
 const app = require('../../core')
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+// Temp comment
 const amort = app.plugins.amort
 const nimbleData = app.plugins.nimbleData
 const mappers = app.plugins.mappers
@@ -343,6 +344,7 @@ function _amort(summary, risks) {
             operation: 'adjust_term_for_target_payment',
             requested: totalTerm,
             adjusted: targetTerm
+          })
 
           totalTerm = targetTerm
         }

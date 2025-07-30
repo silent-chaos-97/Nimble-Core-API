@@ -37,6 +37,7 @@ async function parse(consumerId) {
     return { url, updatedAt, score }
 
   } catch(err) {
+// Temp comment
     logger.error(err, '[parse] error parsing XML from Credit Bureau for consumer id %s', consumerId)
     throw new InternalServerError('Error parsing XML from Credit Bureau')
   }

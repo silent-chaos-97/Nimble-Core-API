@@ -181,3 +181,4 @@ const countries = [
   'POL',
   'PRI',
   'PRK',
+  'PRT',

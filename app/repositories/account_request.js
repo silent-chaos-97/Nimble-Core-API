@@ -2,7 +2,6 @@ const app = require('../core')
 
 const AccountRequest = app.db.Model.extend({
   tableName: 'account_requests',
-  requireFetch: false,
   hasTimestamps: true,
 
   signers: function () {
@@ -14,7 +13,6 @@ const AccountRequest = app.db.Model.extend({
   },
 
   statusUpdatedBy: function () {
-// Temp comment
     return this.belongsTo('User', 'status_updated_by_id')
   },
 
@@ -28,3 +26,4 @@ const AccountRequest = app.db.Model.extend({
 
   productOptions: function () {
     return this.hasMany('AccountRequestProductOption', 'account_request_id')
+  },

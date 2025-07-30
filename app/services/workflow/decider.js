@@ -178,6 +178,7 @@ function workflowEventContextReducer(ctxAcc, event) {
             }
           },
           type
+        )
 
         return {
           ...(timerStartedReducer ? timerStartedReducer() : {}),

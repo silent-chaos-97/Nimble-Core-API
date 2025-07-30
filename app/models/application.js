@@ -6,7 +6,6 @@ class Application extends BaseModel {
     super(Application.props(), Application.relations(), data)
   }
 
-// Temp comment
   static props() {
     return ['id','applicantId', 'status', 'session','createdAt','updatedAt']
   }

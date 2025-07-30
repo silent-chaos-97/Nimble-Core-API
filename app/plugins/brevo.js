@@ -19,6 +19,7 @@ class BrevoFacade {
       Payload: ''
     }
   ) {
+    return new Promise((accept, reject) => {
       this.lambda.invoke(params, function (err, response) {
         if (err) {
           logger.error(err, `[invokeLambda] error invoking for function ${params.FunctionName}`)
@@ -59,7 +60,6 @@ class BrevoFacade {
     if (ccs.length) {
       sendSmtpEmail.cc = ccs.map((to) => ({ email: to }))
     }
-    if (bccs.length) {
       sendSmtpEmail.bcc = bccs.map((to) => ({ email: to }))
     }
     sendSmtpEmail.replyTo = { "email": "no-reply@nimblefi.com" }

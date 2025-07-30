@@ -9,4 +9,5 @@ exports.up = function (knex) {
       .defaultsTo(null)
   })
 }
+
 exports.down = function (knex) {

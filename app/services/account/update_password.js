@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const bcrypt = require('bcrypt')
@@ -23,7 +24,6 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
   return data
-// Temp comment
 }
 
 function throwError() {

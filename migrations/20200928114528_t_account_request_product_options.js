@@ -16,3 +16,4 @@ exports.up = function (knex) {
     table.index('product_id')
   })
 }
+

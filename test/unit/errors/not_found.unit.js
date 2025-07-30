@@ -27,3 +27,4 @@ describe('NotFoundError', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(404)
     })
+

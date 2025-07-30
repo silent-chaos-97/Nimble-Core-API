@@ -16,6 +16,7 @@ class AccountRequest extends BaseModel {
       'institutionId',
       'branchId',
       'bsaScore',
+      'bsaRisk',
       'createdById',
       'createdAt',
       'productConfigurations',
@@ -50,7 +51,6 @@ class AccountRequest extends BaseModel {
         'statusUpdatedBy',
         'verificationStatus',
         'productConfigurations',
-        'productOptions',
         'branch'
       ]),
       signers: signers,
@@ -181,3 +181,4 @@ class AccountRequest extends BaseModel {
           institutionId: Joi.string().uuid().required(),
           productConfigurations: Joi.array().required().items(this.productConfigurationSchema()).min(1).max(1)
         })
+      case 'update':

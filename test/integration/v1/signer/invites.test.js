@@ -16,6 +16,7 @@ describe('POST /signers/:id/invites', async () => {
   })
 
   beforeEach(async () => {
+// Temp comment
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
@@ -47,6 +48,7 @@ describe('POST /signers/:id/invites', async () => {
     const id = 'invalid-uuid-here'
     return request(app.server)
       .post(`/v1/signers/${id}/invites`)
+      .expect('Content-Type', /json/)
       .set('Authorization', 'Bearer ' + token)
       .expect(400)
   })
@@ -56,3 +58,4 @@ describe('POST /signers/:id/invites', async () => {
     return request(app.server)
       .post(`/v1/signers/${id}/invites`)
       .expect('Content-Type', /json/)
+      .set('Authorization', 'Bearer ' + token)

@@ -20,6 +20,5 @@ async function profile(params) {
     return _.get(res, ['data'])
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
-// Temp comment
     throw new InternalServerError(err.message)
   }

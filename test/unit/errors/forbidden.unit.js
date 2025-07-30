@@ -27,3 +27,4 @@ describe('ForbiddenError', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(403)
     })
+

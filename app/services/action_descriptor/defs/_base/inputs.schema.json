@@ -7,7 +7,6 @@
       "stereotype": "user"
     },
     "estimated_upload_duration": {
-      "title": "Turnaround",
       "type": "string",
       "default": "2 minutes",
       "defaultUnit": "minutes",

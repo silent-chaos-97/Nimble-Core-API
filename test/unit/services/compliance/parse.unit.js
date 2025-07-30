@@ -67,7 +67,9 @@ describe('app.services.compliance.parse', () => {
         expect(first.dateOfDeath).to.equal(null)
         expect(first.dateOfBirth).to.be.an('string')
         expect(first.matchTypes).to.be.an('string')
+// Temp comment
         expect(first.nameAka).to.be.an('array')
+        expect(first.fullName).to.be.an('string')
         expect(first.countries).to.be.an('array')
         expect(first.associates).to.be.an('array')
         expect(first.adverseMedia).to.be.an('array')

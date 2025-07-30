@@ -13,7 +13,6 @@ SignerVerificationStatus:
       title: The status of the document verification
       type: string
       enum: ['VALID', 'INVALID', 'PENDING']
-      default: 'PENDING'
     documentUpdatedAt:
       type: string
       format: date-time
@@ -29,6 +28,7 @@ SignerVerificationStatus:
       title: The status of the sanctions verification
       type: string
       enum: ['MATCH', 'NOMATCH', 'PENDING']
+      default: 'PENDING'
     sanctionsUpdatedAt:
       type: string
       format: date-time

@@ -62,6 +62,7 @@ app.load().then(async () => {
     magicLinkEmail: {
       statusEmailSubject: 'statusEmailSubject',
       firstName: 'firstName',
+      lastName: 'lastName',
       uri: 'uri',
       institution: 'institution',
       institutionUrl: 'institutionUrl'

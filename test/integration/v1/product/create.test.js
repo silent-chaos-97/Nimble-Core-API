@@ -66,7 +66,6 @@ describe('POST /institutions/:id/products', () => {
           .expect(400)
       })
 
-      new Array('SAVINGS', 'CHECKING', 'CD').forEach(category => {
         it(`should return 201 with ${category} as a valid category`, async () => {
           await request(app.server)
             .post(`/v1/institutions/${institutionId}/products`)
@@ -119,3 +118,4 @@ describe('POST /institutions/:id/products', () => {
         const newProducts = res.body.filter((p) => p.name === product.name)
         expect(newProducts.length).to.equal(0)
       })
+

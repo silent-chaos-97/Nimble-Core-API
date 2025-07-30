@@ -10,7 +10,6 @@ describe('app.services.creditReport.parse', () => {
   afterEach(() => { nock.cleanAll() })
 
   beforeEach(async () => {
-    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()
@@ -65,3 +64,4 @@ describe('app.services.creditReport.parse', () => {
       expect(score).to.equal(767)
       expect(updatedAt).to.equal('2021-01-26T17:54:39.000Z')
     })
+

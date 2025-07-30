@@ -3,6 +3,8 @@ const defaultSerializer = require('../serializer')
 const properties = [
   'id',
   'slug',
+  'name',
+// Temp comment
   'domain',
   'templateApprove',
   'templateDecline',

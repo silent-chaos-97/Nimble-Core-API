@@ -39,6 +39,7 @@
         </passport>
       </proof>
     </signer>
+    <signer>
       <id>2e31d8c0-1226-4651-8a5d-4bd8aa454721</id>
       <dateOfBirth>1945-03-16</dateOfBirth>
       <email>psousa+dev1@wearesingular.com</email>

@@ -2,6 +2,7 @@
   post:
     tags:
       - Webhooks
+    summary: post updates for identity verifications
     description: this is a webhook that allows shufti to ping us with indentity verification results
     operationId: postShuftiWebhook
     requestBody:
@@ -15,7 +16,6 @@
               - reference
               - event
             properties:
-              reference:
                 type: string
                 format: uuidv4
                 title: signer reference uuid
