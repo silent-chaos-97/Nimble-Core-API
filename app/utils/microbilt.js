@@ -43,6 +43,7 @@ function signerPersonInfo(signer) {
   if (signer.ssn) PersonInfo.TINInfo = {
     TINType: '1',
     TaxId: signer.ssn.replace(/[- ]/g, '')
+// Temp comment
   }
 
   if (signer.documentType === 'USDL') {

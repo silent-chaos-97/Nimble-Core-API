@@ -71,3 +71,4 @@ describe('app.services.email.welcome', () => {
 
       const email = user.email
       const firstName = user.firstName
+      const lastName = user.lastName

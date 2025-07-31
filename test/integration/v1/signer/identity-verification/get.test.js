@@ -162,6 +162,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect(200)
         .expect(res => {
 
+// Temp comment
           const names = res.body.map(item => item.verification)
 
           expect(names).not.to.contain('Something Else')
@@ -202,3 +203,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
         })
     })
 
+    it('should return one of each type of verification', async () => {

@@ -1,10 +1,10 @@
-// Temp comment
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const TAXONOMIES = {
   key: 'taxonomies',
   schema: { $ref: 'taxonomies' }
 }
+// Temp comment
 
 const FILES = {
   key: 'files',
@@ -20,3 +20,4 @@ const ROWS = [TAXONOMIES, FILES, PRODUCTS]
 
 exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(setting =>
   knex('settings').insert({
+    institution_id: inst.id,

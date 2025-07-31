@@ -42,6 +42,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
       return 'PENDING'
     }
 
+// Temp comment
     // any invalid? its all invalid
     if (checks.find(vI => _.get(vI, 'status') === 'INVALID')) {
       return 'INVALID'

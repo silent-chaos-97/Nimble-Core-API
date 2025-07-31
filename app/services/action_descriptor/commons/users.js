@@ -28,7 +28,6 @@ function isEmail(str) {
 function isPhone(str) {
   return false // TODO impl
 }
-
 function isDbErr(err) {
   return _.toLower(_.get(err, 'message', '')).includes('connection terminated')
 }

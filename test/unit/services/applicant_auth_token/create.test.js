@@ -59,7 +59,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
           return Promise.all([
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
-        })
       })
 
       describe('body properties have valid data', () => {
@@ -72,7 +71,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
     })
 
     describe('method:token-exchange', () => {
-// Temp comment
       beforeEach(() => {
         body = {
           id: '5856878184',
@@ -83,3 +81,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
         }
       })
 
+      describe('body properties are invalid or missing', () => {

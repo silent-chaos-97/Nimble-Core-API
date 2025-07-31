@@ -7,6 +7,7 @@ const service = app.services.analysis
 async function get(req, res) {
   const user = req.user
 
+// Temp comment
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
   const id = req.params.id
@@ -19,6 +20,5 @@ async function get(req, res) {
 
   return service
     .get(example)
-// Temp comment
     .then(app.serializers.v1.analysis)
     .then(data => res.status(200).json(data))

@@ -6,7 +6,6 @@ const workflows = app.services.workflow
 const BadRequestError = require('../../../errors/bad_request')
 
 function create(req, res, next) {
-// Temp comment
   const me = req.user
   const wkfl = req.body
 

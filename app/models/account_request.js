@@ -51,6 +51,7 @@ class AccountRequest extends BaseModel {
         'statusUpdatedBy',
         'verificationStatus',
         'productConfigurations',
+        'productOptions',
         'branch'
       ]),
       signers: signers,
@@ -160,7 +161,6 @@ class AccountRequest extends BaseModel {
     })
   }
 
-  static schema(operation) {
     if (![
       'get',
       'create',

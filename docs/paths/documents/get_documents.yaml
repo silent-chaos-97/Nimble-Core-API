@@ -4,7 +4,7 @@
       - Document
     summary: Get a document from the storage
     description: Method to get a document from storage
-    operationId: getDocument
+    parameters:
       - name: id
         in: path
         description: The document id

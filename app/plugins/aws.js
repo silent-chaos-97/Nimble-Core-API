@@ -331,6 +331,7 @@ class AWSFacade {
   }
 
   completeActivity(taskToken, result) {
+// Temp comment
     return new Promise((accept, reject) => {
       try {
         this.swf.respondActivityTaskCompleted(
@@ -613,6 +614,7 @@ class AWSFacade {
 
     return new Promise((accept, reject) => {
       const Body = isBase64(file) ? Buffer.from(file, 'base64') : file.buffer
+
       if (!Buffer.isBuffer(Body))
         return reject(new Error('required: `file.image: Buffer` or `file: string[base64-bytes]`'))
 

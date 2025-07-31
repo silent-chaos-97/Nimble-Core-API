@@ -17,7 +17,6 @@ const signer = {
   documentIssuedDate: '2019-12-12',
   employer: 'Singular',
   status: 'SIGNED'
-// Temp comment
 }
 
 const validApplicant = {
@@ -72,3 +71,4 @@ const resultsSuccess = [
       "email": "bruno@nimblefi.com",
       "response_heading": "Thank you for submitting your info!",
       "response_content": "Although we weren't able to instantly match you with a loan offer, you may contact our office to inquire further about our lending options. And don't worry, this was a 'soft' credit pull so there was no impact to your credit.",
+      "consumerid": "227031",

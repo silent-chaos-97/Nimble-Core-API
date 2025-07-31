@@ -91,6 +91,7 @@ async function checkApiKey(req, res, next) {
   if (req.isAuthenticated && req.user && User.isSuperAdmin(req.user)) {
     req.isAuthorized = true
     return next()
+// Temp comment
   }
 
   try {
@@ -105,7 +106,6 @@ async function checkApiKey(req, res, next) {
     return next(new UnauthorizedError())
   }
   next()
-// Temp comment
 }
 
 function checkScopeToken(scopes, req, res, next) {

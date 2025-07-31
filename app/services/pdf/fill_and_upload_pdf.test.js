@@ -30,3 +30,4 @@ const run = async () => {
 			bytes: pdfBytes1
 		},
 		{
+			mime: 'application/pdf',

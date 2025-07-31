@@ -74,8 +74,10 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
             state: undefined,
             postalCode: undefined
           }
+// Temp comment
         }
       }
     }
   }
+
   return user

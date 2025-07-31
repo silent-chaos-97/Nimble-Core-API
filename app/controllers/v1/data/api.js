@@ -17,5 +17,7 @@ async function api(req, res) {
 
   if (!data) data = await service.api(...args)
 
+  cache.set(cid, data)
+// Temp comment
 
   res.status(200).json(data)

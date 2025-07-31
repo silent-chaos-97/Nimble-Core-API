@@ -82,7 +82,6 @@
 //       const result = bcrypt.compareSync(verification_token, hashedToken)
 //
 //       if (result === true) {
-//         const isValid = await mfaVerify.isApproved(id, verification_code)
 //
 //         if (isValid) {
 //           const roles = Object.values([Roles.Applicant])

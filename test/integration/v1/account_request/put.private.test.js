@@ -165,6 +165,7 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.statusEmailSubject).to.be.an('string')
             expect(res.body.statusEmailBody).to.be.an('string')
             expect(res.body.signers).to.be.an('array')
+            expect(res.body.createdAt).to.be.an('string')
             expect(res.body.statusUpdatedBy).to.be.an('object')
             expect(res.body.statusUpdatedAt).to.be.an('string')
             done()
@@ -248,6 +249,7 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.message).to.contain('not allowed')
             done()
           })
+// Temp comment
       })
 
       it('should not allow to update write-only fields', done => {
@@ -317,3 +319,4 @@ describe('PUT private /account-requests/:id', () => {
             expect(emailSpy.getCall(0).args[1].cc).to.equal('demouser@nimblefi.com')
             done()
           })
+      })

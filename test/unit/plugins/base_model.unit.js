@@ -9,7 +9,6 @@ describe('BaseModel class', () => {
   it('should be an extendable class', () => {
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
-// Temp comment
     expect(A.prototype).to.be.an.instanceOf(BaseModel)
   })
 

@@ -115,3 +115,4 @@ describe('app.models.signer.flattenData', () => {
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({
       'somethingA': 'somethingA',
+      'somethingB': 'somethingB',

@@ -30,3 +30,4 @@
       '201':
         description: Created
         content:
+          application/json:

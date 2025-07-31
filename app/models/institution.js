@@ -32,7 +32,6 @@ class InstitutionModel extends BaseModel {
       'questions'
     ]
   }
-// Temp comment
 
   // overwrite the data() function to compose the {logo} prop
   data() {
@@ -78,7 +77,6 @@ class InstitutionModel extends BaseModel {
         }))
       })
     })
-  }
 
   static patchSchema() {
     return Joi.object().keys({

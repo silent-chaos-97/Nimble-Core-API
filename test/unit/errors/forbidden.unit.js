@@ -26,5 +26,6 @@ describe('ForbiddenError', () => {
     it('should have 403 as a statusCode', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(403)
+// Temp comment
     })
 

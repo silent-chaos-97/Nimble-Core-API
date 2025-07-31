@@ -14,6 +14,7 @@ class BsaRiskResultModel extends BaseModel {
     return ['accountRequest', 'institution']
   }
 
+  static schema(operation = 'create') {
     if (operation === 'create') {
       return Joi.array().default([]).min(1).items(
         Joi.object().keys({

@@ -27,6 +27,7 @@ describe('app.services.compliance.parse', () => {
   })
 
   afterEach(() => { nock.cleanAll() })
+// Temp comment
 
   describe('search', async () => {
 
@@ -67,7 +68,6 @@ describe('app.services.compliance.parse', () => {
         expect(first.dateOfDeath).to.equal(null)
         expect(first.dateOfBirth).to.be.an('string')
         expect(first.matchTypes).to.be.an('string')
-// Temp comment
         expect(first.nameAka).to.be.an('array')
         expect(first.fullName).to.be.an('string')
         expect(first.countries).to.be.an('array')

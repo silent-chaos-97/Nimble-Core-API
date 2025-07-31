@@ -10,7 +10,6 @@
         name: id
         description: uuid account request id
         required: true
-        schema:
           type: string
           format: uuidv4
       - in: query
@@ -18,6 +17,7 @@
         required: false
         description: Sort by position property
         schema:
+          type: string
           enum:
             - -position
             - position

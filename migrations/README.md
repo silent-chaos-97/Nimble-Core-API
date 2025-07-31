@@ -16,6 +16,7 @@ To create and drop of objects:
 Example:
 
     knex migrate:make create_t_users
+
 When altering objects mention the changes when not too many other wise use generic alter.
 
     alter_<object_abbreviation>_<object_name>_<modifier>_<names>

@@ -30,3 +30,4 @@ columns:
   
   - data: advanced_rates
     title: Advanced Rates
+    formOnly: true

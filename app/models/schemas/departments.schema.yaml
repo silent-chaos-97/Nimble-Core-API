@@ -28,6 +28,7 @@ columns:
       - daily 
       - weekdays
       - weekends
+      - weekly on monday
       - weekly on tuesday
       - weekly on wednesday
       - weekly on thursday
@@ -59,3 +60,4 @@ columns:
       - monthly on the 23rd
       - monthly on the 24th
       - monthly on the 25th
+      - monthly on the 26th

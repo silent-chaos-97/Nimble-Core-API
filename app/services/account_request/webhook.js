@@ -30,6 +30,7 @@ function patchSigner(signer, accountRequestId, status, tx = app.db) {
     id: signer.id,
     contractDocumentSignerStatus: status.toUpperCase(),
     contractDocumentSignerStatusUpdatedAt: new Date()
+  }
 
   if (status.toUpperCase() === 'COMPLETED') {
     updatedData.status = 'SIGNED'

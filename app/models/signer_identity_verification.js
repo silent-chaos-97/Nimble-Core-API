@@ -4,6 +4,7 @@ const BaseModel = require('./model')
 class SignerIdentityVerification extends BaseModel {
 
   constructor(data) {
+    super(SignerIdentityVerification.props(), SignerIdentityVerification.relations(), data)
   }
 
   static props() {
@@ -24,4 +25,3 @@ class SignerIdentityVerification extends BaseModel {
   static schema(operation = 'create') {
     if (operation === 'create') {
       return Joi.object().keys({
-        signerId: Joi.string().uuid().required(),

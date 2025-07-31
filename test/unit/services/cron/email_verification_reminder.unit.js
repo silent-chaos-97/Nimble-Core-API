@@ -22,6 +22,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
   after(() => {
     clock.restore()
     sinon.restore()
+  })
 
   describe('service method', () => {
     it('should exist', () => {

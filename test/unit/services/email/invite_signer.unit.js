@@ -82,3 +82,4 @@ describe('app.services.email.inviteSigner', () => {
         accountType: product.name,
         email: invitedSigner.email,
         inviteeRole: invitedSigner.role.toLowerCase(),
+        institution: institution.name,

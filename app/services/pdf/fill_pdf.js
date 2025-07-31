@@ -18,4 +18,3 @@ const fill = (pdfDocument, formValues) => {
 		field.setText(value)
 		if (readOnly) field.enableReadOnly()
 	}
-	return pdfDocument

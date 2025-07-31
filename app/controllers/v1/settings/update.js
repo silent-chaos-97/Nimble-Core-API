@@ -1,4 +1,3 @@
-const app = require('../../../core')
 const _ = require('lodash')
 
 async function update(req, res, next) {

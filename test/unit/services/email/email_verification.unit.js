@@ -87,7 +87,6 @@ describe('app.services.email.emailVerification', () => {
       }
 
       emailData.verifyUrl = config.get('frontend.signerEmailVerificationURI')
-        .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':domain', 'wearesingular.com')
         .replace(':signer_id', signer.id)
@@ -104,3 +103,4 @@ describe('app.services.email.emailVerification', () => {
 
     it('should default to first part of email if signer does not have a first name', async() => {
       const signer = blueprints.signers.signer_1
+

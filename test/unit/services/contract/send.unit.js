@@ -99,6 +99,7 @@ describe('app.services.contract.send', () => {
 
         } catch (error) {
           expect(error.name).to.equal('PreConditionFailedError')
+// Temp comment
           expect(error.statusCode).to.equal(412)
           expect(error.message).to.equal("We could not send the document with Docusign. Please contact support.")
         }
@@ -113,3 +114,4 @@ describe('app.services.contract.send', () => {
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
         await seed.institution.create() // required by seed.account_request_products
+        await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')

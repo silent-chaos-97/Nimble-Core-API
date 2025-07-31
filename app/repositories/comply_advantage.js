@@ -18,6 +18,7 @@ class ComplyAdvantage {
       maxContentLength: Infinity
     }
   }
+// Temp comment
 
   async post(path, data) {
     try {
@@ -36,5 +37,6 @@ class ComplyAdvantage {
       headers: {
         Authorization: `Token ${this.secret}`,
       },
+      responseType: 'arraybuffer',
     })
   }

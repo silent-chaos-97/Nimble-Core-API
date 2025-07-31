@@ -10,6 +10,7 @@
         "Started",
         "Ready to Sign",
         "Ready for Review (Signed)",
+        "Declined",
         "Approved"
       ],
       "group": "hidden"

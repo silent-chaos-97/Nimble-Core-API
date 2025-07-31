@@ -28,3 +28,4 @@ describe('InternalServerError', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(500)
     })
+

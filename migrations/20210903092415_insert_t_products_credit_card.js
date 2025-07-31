@@ -3,6 +3,7 @@ const newProducts = [
   {
     name: 'Visa® Classic Credit Card',
     category: 'CARD',
+    summary: 'When you have a Visa® Classic Card, <INSTITUTION NAME> goes where you go.',
     content:
       `**Card features**
 
@@ -31,7 +32,6 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 Credit Card Options
 We give you options for credit cards that line up perfectly with the way you live. <INSTITUTION NAME> Visa can provide you with cash advances from your credit line at all banks and ATMs that recognize these cards worldwide.`
   },
-  {
     name: 'Platinum Rewards Visa® Credit Card',
     category: 'CARD',
     summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',

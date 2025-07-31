@@ -4,7 +4,6 @@ const Settings = app.repositories.settings
 const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.get')
 
-// Temp comment
 const fileTypes = require('./fileTypes')
 
 async function get(params, transacting = app.db) {
@@ -13,6 +12,7 @@ async function get(params, transacting = app.db) {
 
   switch (getBy.key) {
     case 'files':
+// Temp comment
       // model = fileTypes
       // break
     default: {

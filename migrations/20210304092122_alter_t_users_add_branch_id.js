@@ -6,4 +6,6 @@ exports.up = function (knex) {
       .onDelete('CASCADE')
       .defaultsTo(null)
   })
+}
 
+exports.down = function (knex) {

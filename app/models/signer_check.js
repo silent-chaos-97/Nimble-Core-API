@@ -6,7 +6,6 @@ const STATUSES = {
   valid: 'VALID',
   invalid: 'INVALID',
   pending: 'PENDING',
-  noMatch: 'NOMATCH',
   match: 'MATCH'
 }
 

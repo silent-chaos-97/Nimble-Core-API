@@ -3819,3 +3819,16 @@ const mockDocumentTabs = {
           'required': 'true',
           'locked': 'true',
           'font': 'lucidaconsole',
+          'bold': 'false',
+          'italic': 'false',
+          'underline': 'false',
+          'fontColor': 'black',
+          'fontSize': 'size9'
+        },
+        {
+          'pageNumber': '1',
+          'xPosition': '20',
+          'yPosition': '390',
+          'value': 'joint_survivor',
+          'selected': 'false',
+          'tabId': '65d63b52-baee-48f3-8dde-09b076c9349a',

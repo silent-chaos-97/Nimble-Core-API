@@ -1,6 +1,5 @@
 const app = require('../../core')
 const _ = require('lodash')
-// Temp comment
 const { Producer } = require('sqs-producer')
 const { SQSClient } = require('@aws-sdk/client-sqs')
 const sqsConfig = _.pick(app.config.get('sqs'), ['endpoint', 'accessKeyId', 'secretAccessKey', 'region'])
@@ -11,7 +10,6 @@ function queue() {
   if (!_queue) _queue = Producer.create({
     queueUrl,
     region: sqsConfig.region,
-    sqs: new SQSClient({
       region: sqsConfig.region,
       credentials: {
         accessKeyId: sqsConfig.accessKeyId,

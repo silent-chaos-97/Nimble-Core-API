@@ -59,7 +59,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .expect(401)
     })
 
-    it('should return 404 with random verification id', async () => {
       const signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454721"
       const verificationId = uuid.v4()
 
@@ -104,3 +103,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .expect('Content-Type', /json/)
         .expect(409)
     })
+

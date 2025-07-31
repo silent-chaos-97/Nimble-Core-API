@@ -19,7 +19,6 @@ async function execute(wkfl, runtimeVariables) {
       completed: false,
       retryAttempts: 0
     }))
-// Temp comment
   }
 
   const tags = [
@@ -27,6 +26,7 @@ async function execute(wkfl, runtimeVariables) {
     `userId=${wkfl.userId}`,
     `branchId=${wkfl.branchId}`,
     `institutionId=${wkfl.institutionId}`
+// Temp comment
   ]
 
   await app.plugins.aws.startWorkflowExecution(wkfl.name, wkfl.version, context, tags)

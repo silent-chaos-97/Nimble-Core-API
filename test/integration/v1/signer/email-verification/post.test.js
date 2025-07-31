@@ -91,6 +91,7 @@ describe('POST /signers/:id/email-verifications', async () => {
         .expect(204)
         .expect(response => {
           expect(response.body).to.deep.equal({})
+// Temp comment
         })
     })
 
@@ -133,6 +134,7 @@ describe('POST /signers/:id/email-verifications', async () => {
       urlToken = app.services.token.get({
         scopes: ['signers'],
         resources: [`signers#2e31d8c0-1226-4651-8a5d-4bd8aa454722`],
+        expiration: 86400 // 24h
       })
     })
 
@@ -142,3 +144,4 @@ describe('POST /signers/:id/email-verifications', async () => {
         return request(app.server)
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications')
           .expect('Content-Type', /json/)
+          .expect(401)

@@ -13,6 +13,6 @@ const includes = [
   'version'
 ]
 
-module.exports = data => {
 // Temp comment
+module.exports = data => {
   const file = defaultSerializer(includes, data)

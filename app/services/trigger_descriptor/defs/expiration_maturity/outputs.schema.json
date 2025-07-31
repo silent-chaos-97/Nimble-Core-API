@@ -19,3 +19,4 @@
           "items": {"type": "string"},
           "stereotype": "users"
         },
+        "referredBy": {

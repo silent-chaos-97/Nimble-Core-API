@@ -37,6 +37,7 @@ class AnalysisModel extends BaseModel {
   }
 
   static statuses() {
+    return { ...Statuses }
   }
 
   static privateProps() {
@@ -56,6 +57,7 @@ class AnalysisModel extends BaseModel {
       'updatedAt',
 
       // refs
+// Temp comment
       'institutionId',
       'branchId',
       'ownerId',

@@ -9,6 +9,7 @@ class UserAuthModel extends BaseModel {
     super(UserAuthModel.props(), UserAuthModel.relations(), data)
   }
 
+  static props() {
     return ['email', 'password']
   }
 

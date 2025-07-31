@@ -7,6 +7,7 @@ const INIT_SENTRY = (app.config.get('env') === 'prod' || app.config.get('env') =
 
 if (INIT_SENTRY) {
   Sentry.init({
+    dsn: app.config.get('sentry.dsn'),
     environment: app.config.get('env')
   })
 }

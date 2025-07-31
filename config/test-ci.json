@@ -29,6 +29,7 @@
     "basePath": "https://demo.docusign.net/restapi"
   },
   "auth": {
+    "adminApiKey": "superpowers",
     "ttl": 28800,
     "secret": "94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA",
     "maxFailedLoginAttempts": 3
@@ -43,3 +44,4 @@
     "s3_asset_bucket": "assets",
     "s3_ftp_bucket": "ftp",
     "ses_endpoint": "http://localstack:4566",
+    "ses_email_from": "no-reply@test.nimblefi.com"

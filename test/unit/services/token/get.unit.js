@@ -78,6 +78,7 @@ describe('app.services.token.get', () => {
       expect(actual).to.have.deep.property('userId', null)
     })
 
+// Temp comment
     it('should apply the default scopes', () => {
       const token = target(_.omit(options, 'scopes'))
       const actual = decode(token)

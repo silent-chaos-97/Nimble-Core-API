@@ -3,6 +3,7 @@ const app = require('../../../core')
 const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption
 
+
 async function createProductConfigurations(accountRequestId, data, tx = app.db) {
   // Create selected products
   for (const product of data.productConfigurations) {

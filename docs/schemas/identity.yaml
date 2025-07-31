@@ -1,5 +1,4 @@
 Identity:
-  type: object
   properties:
     firstName:
       type: string
@@ -45,6 +44,7 @@ Identity:
       example: 17101-0000
     dateOfBirth:
       type: string
+      format: date
       title: dateOfBirth
       description: Individual date of birth
       nullable: true

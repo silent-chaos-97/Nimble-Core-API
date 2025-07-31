@@ -10,10 +10,10 @@ async function patch(req, res) {
   const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) throw new BadRequestError('WorkflowBodyRequired')
-
   if (patch.id && patch.id !== id) throw new BadRequestError('PathIdBodyIdMismatch')
 
   patch.id = id
+
   const wkfl = await workflows.get(id)
   if (!wkfl) throw new NotFoundError(`workflow[${id}]`)
 

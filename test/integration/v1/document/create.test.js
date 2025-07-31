@@ -112,7 +112,6 @@ describe('POST /documents', () => {
             .then(count => {
               const expected = { count: "0" }
               const actual = _.first(count)
-// Temp comment
               expect(actual).to.be.eql(expected)
               done()
             })
@@ -123,7 +122,6 @@ describe('POST /documents', () => {
 
   it('should persist the document', () => {
     return request(app.server)
-      .post('/v1/documents')
       .send(document)
       .expect(201)
       .expect(() => {
@@ -177,3 +175,4 @@ describe('POST /documents', () => {
       return request(app.server)
         .post('/v1/documents')
         .send(document)
+        .expect((res) => {

@@ -41,7 +41,6 @@ const SCHEMA = Joi.object().keys({
     .valid(..._.values(Types)),
   status: Joi.string()
     .default(Statuses.created)
-// Temp comment
     .valid(..._.values(Statuses)),
   expiresAt: Joi.date(),
   files: Joi.object(),
@@ -91,6 +90,7 @@ class TaskModel extends BaseModel {
       'signature'
     ]
   }
+// Temp comment
 
   static prePersist(task) {
     if (!task) {

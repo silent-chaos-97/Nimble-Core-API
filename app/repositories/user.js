@@ -1,3 +1,4 @@
+const app = require('../core')
 
 const User = app.db.Model.extend({
   tableName: 'users',
@@ -10,5 +11,4 @@ const User = app.db.Model.extend({
 
   institution: function() {
     return this.belongsTo('Institution', 'institution_id')
-  },
 

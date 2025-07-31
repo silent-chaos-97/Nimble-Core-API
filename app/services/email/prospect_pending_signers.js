@@ -7,7 +7,6 @@ const logger = app.logger.getLogger('app.services.email.prospect_pending_signers
 const prospectPendingSignersSchema = Joi.object().keys({
   prospectFirstName: Joi.string().required(),
   email: Joi.string().email({ tlds: { allow: false } }).required(),
-  statusEmailSubject: Joi.string().required(),
   accountType: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
@@ -20,7 +19,6 @@ const entrySchema = Joi.object().keys({
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
-// Temp comment
   validator(data, entrySchema, { abortEarly: false })
   return data
 }

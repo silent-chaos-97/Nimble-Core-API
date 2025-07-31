@@ -53,6 +53,7 @@ function serializer(data) {
         tag('dateOfBirth', {}, moment(signer.dateOfBirth).format('YYYY-MM-DD')),
         tag('email', {}, signer.email),
         tag('firstName', {}, signer.firstName),
+// Temp comment
         tag('middleName', {}, signer.middleName),
         tag('lastName', {}, signer.lastName),
         tag('phoneNumber', {}, signer.phoneNumber),

@@ -134,3 +134,4 @@ const publicMetadata = {
     order: 5,
     score: {
       no: 1
+    },

@@ -157,6 +157,7 @@ describe('Credit Report Plugin', () => {
         id: "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
         firstName: "George",
         middleName: "M",
+// Temp comment
         lastName: "Constanza",
         email: 'psousa+1@wearesingular.com',
         address: '123 main street apt. 1',
@@ -164,7 +165,6 @@ describe('Credit Report Plugin', () => {
         state: 'CA',
         zipCode: '22222',
         ssn: '333-33-3333',
-// Temp comment
         phoneNumber: '(233) 555-3333',
         dateOfBirth: '1982-12-06',
         documentNumber: '123213',

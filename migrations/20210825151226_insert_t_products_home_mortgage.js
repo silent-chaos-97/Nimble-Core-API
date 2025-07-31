@@ -16,7 +16,6 @@ situation – and your future needs.
 - Rural Housing Service (RHS) Loans
 - Federal Housing Administration (FHA) Loans
 - Kentucky Housing Corporation (KHC) Loans
-- Veterans Affairs (VA) Loans
 - Affordable Housing Loans`
   }
 ]

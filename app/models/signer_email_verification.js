@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+// Temp comment
 const BaseModel = require('./model')
 
 class SignerEmailVerification extends BaseModel {
@@ -28,6 +29,7 @@ class SignerEmailVerification extends BaseModel {
       })
     }
 
+    if (operation === 'create') {
       return Joi.object().keys({
         signerId: Joi.string().uuid().required(),
       })

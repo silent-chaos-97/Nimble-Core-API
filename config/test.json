@@ -1,5 +1,4 @@
 {
-  "port": "8090",
   "protocol": "http",
   "logLevel": 99,
   "database": {
@@ -49,3 +48,4 @@
     "ses_endpoint": "http://localhost:4566",
     "ses_email_from": "no-reply@test.nimblefi.com"
   },
+  "sns": {

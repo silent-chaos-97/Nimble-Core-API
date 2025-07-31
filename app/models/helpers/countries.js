@@ -182,3 +182,4 @@ const countries = [
   'PRI',
   'PRK',
   'PRT',
+  'PRY',

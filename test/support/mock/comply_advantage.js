@@ -3530,3 +3530,14 @@ const parsedResult = [
       {
         "name": "Active End Date",
         "value": "2017-11-21",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Active Start Date",
+        "value": "1997-06-02",
+        "source": "ComplyAdvantage PEP Data",

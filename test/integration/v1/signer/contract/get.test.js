@@ -80,7 +80,6 @@ describe('GET /signers/:id/contract', async () => {
     it('should return 401 when the token is invalid', async () => {
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
-        .set('Authorization', 'Bearer ' + 'AAAAA')
         .expect(401)
         .expect('Content-Type', /json/)
     })
@@ -106,6 +105,7 @@ describe('GET /signers/:id/contract', async () => {
         .get(`/v1/signers/invalid/contract`)
         .set('Authorization', 'Bearer ' + weirdtoken)
         .expect(401)
+        .expect('Content-Type', /json/)
     })
     it('should return 404 if sending missing Signer', async () => {
       let weirdtoken = app.services.token.get({
@@ -133,3 +133,4 @@ describe('GET /signers/:id/contract', async () => {
         .expect('Content-Type', /json/)
     })
 
+    it('should call the docusign embed() service', async () => {

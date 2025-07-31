@@ -131,7 +131,6 @@ describe('Docusign', () => {
         try {
           await docusign.sendEnvelopeWithMultipleDocuments(args)
         } catch (error) {
-// Temp comment
           expect(error.message).to.equal("Cannot send envelope without options.")
           expect(error).to.be.an.instanceof(Error)
         }
@@ -831,3 +830,6 @@ describe('Docusign', () => {
       })
     })
 
+
+    describe('_buildAccountSavingsSignersList', () => {
+      const templateTabs = {

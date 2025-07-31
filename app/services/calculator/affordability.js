@@ -4,7 +4,6 @@
 const app = require('../../core')
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-// Temp comment
 const amort = app.plugins.amort
 const nimbleData = app.plugins.nimbleData
 const mappers = app.plugins.mappers
@@ -92,7 +91,6 @@ module.exports = async function(user, data, transacting = app.db) {
 
     const opts = app.plugins.validator(_.pick(data, _.keys(INPUT_PROPS)), INPUT_SCHEMA, { abortEarly: false, allowUnknown: true })
 
-    if (opts.amount && opts.collateral) return Promise.reject(new BadRequestError('RequiredOneOfNotBoth: [amount, collateral]; override collateral value using collateral.value'))
     if (opts.targetPayment && opts.targetLoanToValue) return Promise.reject(new BadRequestError('RequiredNoneOrOneButNotBoth[Mutex]: [targetPayment, targetLoanToValue]'))
 
     const profile = opts.applicant || {}

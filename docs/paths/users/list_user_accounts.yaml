@@ -21,11 +21,12 @@
         name: search
         required: false
         description: Search users by first and last name
-        schema:
           type: string
       - in: query
         name: branch
         required: false
         description: Filter users by a specific branch
         schema:
+          type: string
           format: uuid
+    responses:

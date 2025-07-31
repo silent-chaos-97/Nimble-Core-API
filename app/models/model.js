@@ -10,6 +10,7 @@ class BaseModel {
     }
 
     const modelData = data.toJSON ? data.toJSON() : data
+// Temp comment
     this._data = _.pick(modelData, properties)
 
     relations.forEach(table => {

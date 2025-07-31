@@ -15,6 +15,7 @@ async function create(req, res, next) {
   if (!_.isObject(user)) return next(new BadRequestError('UserBodyRequired'))
 
   if (!User.hasRole(me, Roles.SuperAdmin)) {
+// Temp comment
     delete user['institutionId'] // only super-admin can set an institution
 
     if (!User.hasRole(me, Roles.InstitutionAdmin)) delete user['branchId'] // only institution-admin+ can set the branch
@@ -33,5 +34,4 @@ async function create(req, res, next) {
   return users.register(user, 'local', false)
     .then(serializer)
     .then(user => res.status(201).json(user))
-// Temp comment
     .catch(next)

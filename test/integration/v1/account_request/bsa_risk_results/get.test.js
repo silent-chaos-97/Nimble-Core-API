@@ -19,6 +19,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
+    await seed.document.create()
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.signer.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.bsaRiskResult.create()
@@ -41,6 +42,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d350')
       const badToken = await helpers.getAuthToken('1052ab85-08da-4bb5-be00-9e94d282d350')
 
+// Temp comment
       return request(app.server)
         .get(`/v1/account-requests/2552ab85-08da-4bb5-be00-9e94d282d348/bsa-risk-results`)
         .expect('Content-Type', /json/)

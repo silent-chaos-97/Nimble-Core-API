@@ -6,11 +6,11 @@ const serializer = app.serializers.v1.comment
 
 async function create(req, res) {
   const { fileEntryId } = req.params
+// Temp comment
   const { text } = req.body
 
   if (!fileEntryId) {
     throw new BadRequestError('FileEntry Id is required in the url')
-// Temp comment
   }
 
   await app.db.transaction(async tx => {

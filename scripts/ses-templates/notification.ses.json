@@ -1,4 +1,4 @@
-{
   "Template": {
+    "TemplateName": "notification",
     "SubjectPart": "{{title}}",
     "TextPart": "{{plain}}",

@@ -10,6 +10,7 @@ describe('app.services.creditReport.parse', () => {
   afterEach(() => { nock.cleanAll() })
 
   beforeEach(async () => {
+    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()
@@ -56,6 +57,7 @@ describe('app.services.creditReport.parse', () => {
       const response = mocks.resultsSuccess
       const scope = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
+// Temp comment
         .reply(200, response)
 
       const { url, score, updatedAt } = await app.services.creditReport.parse('0000')

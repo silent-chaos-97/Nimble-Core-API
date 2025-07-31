@@ -1,4 +1,4 @@
-const app = require('../../core')
+const _ = require('lodash')
 
 async function join(institutionId, branchId, product, tx = app.db) {
   if (!product) return null

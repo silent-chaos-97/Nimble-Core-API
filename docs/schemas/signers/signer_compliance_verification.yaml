@@ -22,7 +22,6 @@ SignerComplianceVerification:
       type: object
       properties:
         search_term:
-          type: string
         limit:
           type: number
     reference:

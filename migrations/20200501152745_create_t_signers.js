@@ -17,7 +17,6 @@ exports.up = function(knex) {
     table.string('middle_name')
     table.string('last_name')
     table.string('address')
-    table.string('city')
     table.string('state')
     table.string('zip_code')
     table.date('date_of_birth')

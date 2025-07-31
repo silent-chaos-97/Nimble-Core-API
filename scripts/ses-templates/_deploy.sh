@@ -8,3 +8,4 @@ for tmpl in ${TMPLS}; do
   TMP=$(mktemp)
   FILE=$(cat "${tmpl}.ses.json")
   echo "${FILE//\$ASSETS_HOST/${ASSETS_HOST}}" > ${TMP}
+  echo "creating email template ${tmpl}"

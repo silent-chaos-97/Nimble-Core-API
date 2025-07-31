@@ -10,7 +10,6 @@
     parameters:
       - name: id
         in: path
-        description: Signer id
         required: true
         schema:
           type: string
@@ -18,6 +17,7 @@
     responses:
       '200':
         description: Signer Contract information
+        content:
           application/json:
             schema:
               $ref: '#/components/schemas/SignerContract'

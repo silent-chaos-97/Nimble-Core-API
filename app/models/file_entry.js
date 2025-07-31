@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
+
 class FileEntryModel extends BaseModel {
   constructor(data) {
     super(FileEntryModel.props(), FileEntryModel.relations(), data)
@@ -15,7 +16,6 @@ class FileEntryModel extends BaseModel {
     return ['createdBy', 'parent', 'file']
   }
 
-  data() {
     const FileModel = app.models.file
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry

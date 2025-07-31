@@ -37,6 +37,7 @@ describe('app.services.creditReport.fetch', () => {
 
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
+// Temp comment
       const fakeAwsLambda = sinon.fake.returns(successResponse)
 
 
@@ -64,6 +65,7 @@ describe('app.services.creditReport.fetch', () => {
     it('should return error if signer not found', async () => {
       const id = '2e31d8c0-0000-4651-8a5d-4bd8aa454721'
       const expectedErrorMsg = "The requested resource couldn't be found"
+      return expect(app.services.creditReport.fetch(id)).to.be.rejectedWith(expectedErrorMsg)
     })
   })
 
@@ -144,3 +146,4 @@ describe('app.services.creditReport.fetch', () => {
         .reply(200, mocks.resultsNoScore)
 
       // fake s3 calls
+      const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })

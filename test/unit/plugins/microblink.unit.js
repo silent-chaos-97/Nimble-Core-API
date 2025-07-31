@@ -154,7 +154,6 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('documentIssuedDate', null)
     })
 
-
     it('should split dates correctly', async () => {
       const response = {
         data: {
@@ -381,3 +380,4 @@ describe('MicroblinkService', () => {
             height: '68 in',
             heightIn: '68',
             heightCm: '173',
+            customerMiddleName: 'JOHN',

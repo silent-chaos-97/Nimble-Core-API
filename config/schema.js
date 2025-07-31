@@ -6,6 +6,7 @@ const schema = {
     env: 'NODE_ENV'
   },
   port: {
+    doc: 'The port to bind',
     format: 'port',
     default: 8080,
     env: 'PORT'
@@ -486,3 +487,4 @@ const schema = {
   },
   shufti: {
     secret: {
+      doc: 'shufti secret ',

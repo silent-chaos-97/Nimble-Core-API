@@ -5,6 +5,7 @@ const THRESHOLDS = [
   { op: '>=', val: 5, risk: 'High' },
   { op: '>', val: 2, risk: 'Moderate' },
   { op: '=', val: 2, risk: 'Two' },
+  { op: '=', val: 1, risk: 'Low' },
   { op: '<=', val: 0, risk: 'Very Low' },
   { risk: '?' }
 ]
@@ -54,3 +55,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
     // schema
     expect(target).to.have.ownProperty('score')
     expect(target).to.have.ownProperty('risk')
+    // type

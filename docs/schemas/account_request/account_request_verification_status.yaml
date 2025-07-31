@@ -1,6 +1,5 @@
 AccountRequestVerificationStatus:
   type: object
-  properties:
     faceStatus:
       title: The status of the face verification
       type: string
@@ -14,6 +13,7 @@ AccountRequestVerificationStatus:
     addressStatus:
       title: The status of the address verification
       type: string
+      enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     sanctionsStatus:
       title: The status of the sanctions verification

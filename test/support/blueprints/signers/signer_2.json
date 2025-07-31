@@ -36,6 +36,7 @@
   "consentAccountOpening": true,
   "consentPrivacyPolicy": true,
   "consentCommunication": false,
+  "checkSanction": null,
   "sanctionVerifiedAt": null,
   "checkPoliticalExposure": null,
   "politicalExposureVerifiedAt": null,

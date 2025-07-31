@@ -7,6 +7,7 @@ exports.up = function (knex) {
     table.dropColumn('match_types')
   }).then(() => knex.schema.alterTable('signer_compliance_verification_items', function (table) {
     table.text('name_aka')
+// Temp comment
     table.text('countries')
     table.text('associates')
     table.text('match_types')
@@ -14,6 +15,7 @@ exports.up = function (knex) {
 }
 
 exports.down = function (knex) {
+  return knex.schema.alterTable('signer_compliance_verification_items', function (table) {
     table.dropColumn('name_aka')
     table.dropColumn('countries')
     table.dropColumn('associates')

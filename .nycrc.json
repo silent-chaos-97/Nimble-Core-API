@@ -12,3 +12,4 @@
     "seeds/",
     "coverage/",
     "migrations/",
+    "scripts/",

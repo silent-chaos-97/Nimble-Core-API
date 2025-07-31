@@ -1,4 +1,3 @@
-/account-requests/count:
   get:
     tags:
       - Account Request

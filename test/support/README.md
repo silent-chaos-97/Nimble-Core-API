@@ -19,6 +19,7 @@ to add an entry in the list of flush commands if needed, example:
  DELETE FROM signer_credit_reports CASCADE;
 ```
 
+## Running in development
 
 If you want to run these seeds in your local database,
 you must add the seed name to the list in /seeds/dev.js and

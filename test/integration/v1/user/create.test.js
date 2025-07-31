@@ -46,6 +46,7 @@ describe('POST /users', () => {
   describe('with invalid data', () => {
     beforeEach(async () => {
       const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'
+      user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')
     })
 
     it('should return 404 when institutionId not valid', done => {
@@ -196,3 +197,4 @@ describe('POST /users', () => {
           expect(res.body.email).to.be.equal(user.email)
           done()
         })
+    })

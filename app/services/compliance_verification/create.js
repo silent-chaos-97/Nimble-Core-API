@@ -77,7 +77,6 @@ async function create(payload, tx = app.db) {
       'SANCTION': 'verificationStatusSanctions',
       'ADVERSE-MEDIA': 'verificationStatusMedia',
       'POLITICAL': 'verificationStatusPoliticalExposure',
-    }
 
     // Save signer status
     for (const findBy in SignerChecks) {
