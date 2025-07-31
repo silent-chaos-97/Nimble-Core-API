@@ -17,3 +17,4 @@ class DocumentModel extends BaseModel {
     }
 
     return Joi.object().keys({
+      institutionId: Joi.string().uuid().required(),

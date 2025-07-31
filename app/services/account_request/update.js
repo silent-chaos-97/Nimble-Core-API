@@ -39,7 +39,6 @@ async function emitAccountRequestEvent(id, type, body = null) {
   const promises = [app.services.eventStream.publish('topicEvent', { id, type: type.toUpperCase(), body })]
 
   if (type === EVENT_TYPE_APPROVED) {
-    promises.push(app.services.eventStream.publish('topicAccountRequest', { id, type, body }))
   }
 
   return Promise.all(promises)

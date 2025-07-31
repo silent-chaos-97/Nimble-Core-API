@@ -17,7 +17,6 @@ function signerPersonInfo(signer) {
       Addr1: signer.address,
       City: signer.city,
       StateProv: signer.state,
-      PostalCode: signer.zipCode,
       Country: 'USA'
     }
   })
@@ -43,7 +42,6 @@ function signerPersonInfo(signer) {
   if (signer.ssn) PersonInfo.TINInfo = {
     TINType: '1',
     TaxId: signer.ssn.replace(/[- ]/g, '')
-// Temp comment
   }
 
   if (signer.documentType === 'USDL') {

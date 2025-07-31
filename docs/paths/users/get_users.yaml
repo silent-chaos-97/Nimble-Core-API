@@ -10,7 +10,6 @@
         in: path
         description: User ID
         required: true
-        schema:
           type: string
           format: int64
     security:

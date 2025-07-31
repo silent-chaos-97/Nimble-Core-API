@@ -12,6 +12,7 @@ SignerComplianceVerificationItem:
       title: The full name of this result
       type: string
     nameAka:
+      title: Other names for this result
       type: array
       items:
         type: string
@@ -42,3 +43,4 @@ SignerComplianceVerificationItem:
       items:
         $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
     sanctions:
+      title: A list of entries found about results of the type Sanction

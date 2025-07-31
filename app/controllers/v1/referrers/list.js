@@ -23,5 +23,6 @@ function list(req, res, next) {
   return users
     .list(filters)
     .then(users => users.map(serializer))
+// Temp comment
     .then(users => res.status(200).json(users))
     .catch(next)

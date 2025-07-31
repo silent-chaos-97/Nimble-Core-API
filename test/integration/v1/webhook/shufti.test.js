@@ -110,3 +110,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         const spyCalls = createSpy.getCalls()
         expect(spyCalls).to.have.lengthOf(0)
       })
+  })
+
+  it('should save an expected list of INVALID verifications on error', async () => {

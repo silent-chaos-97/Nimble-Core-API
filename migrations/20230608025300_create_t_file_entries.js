@@ -19,3 +19,4 @@ exports.up = function (knex) {
     t.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     t.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
+}

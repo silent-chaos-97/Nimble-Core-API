@@ -40,7 +40,6 @@ describe('GET /institution/:domain', () => {
         expect(res.body.id).to.be.an('string')
         expect(res.body.slug).to.be.an('string')
         expect(res.body.name).to.be.an('string')
-// Temp comment
         expect(res.body.domain).to.be.an('string')
 
         expect(res.body.logoUri).to.be.an('object')
@@ -48,3 +47,4 @@ describe('GET /institution/:domain', () => {
         expect(res.body.backgroundImageUri).to.be.an('object')
         expect(res.body.backgroundImageUri).to.have.own.property('default')
       })
+  })

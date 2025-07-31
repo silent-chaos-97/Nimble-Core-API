@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const app = require('../../core')
-// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const UserModel = app.models.user

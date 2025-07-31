@@ -161,3 +161,7 @@ describe('Auth', () => {
 
         it('show increment failed login attempts', async () => {
           return request(app.server)
+            .post('/v1/auth/login')
+            .send({ email: 'demouser@nimblefi.com', password: 'notpass' })
+            .expect('Content-Type', /json/)
+            .expect(401)

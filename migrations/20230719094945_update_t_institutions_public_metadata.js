@@ -135,3 +135,6 @@ const publicMetadata = {
     score: {
       no: 1
     },
+    default: 'no',
+    subtype: 'enum',
+    required: true,

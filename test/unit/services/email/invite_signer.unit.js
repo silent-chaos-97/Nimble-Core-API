@@ -83,3 +83,4 @@ describe('app.services.email.inviteSigner', () => {
         email: invitedSigner.email,
         inviteeRole: invitedSigner.role.toLowerCase(),
         institution: institution.name,
+        institutionUrl: institution.domain,

@@ -13,7 +13,6 @@
           schema:
             $ref: '#/components/schemas/UserAuth'
       description: User auth object to be created
-      required: true
     responses:
       '201':
         description: OK

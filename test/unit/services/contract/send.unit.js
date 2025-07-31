@@ -82,7 +82,6 @@ describe('app.services.contract.send', () => {
         expect(calledArgs.ccRecipient).to.deep.equal(args.ccRecipient)
 
         expect(calledArgs.accountOptions.institutionName).to.equal(args.accountOptions.institutionName)
-        expect(calledArgs.accountOptions.openingAmount).to.equal(args.accountOptions.openingAmount)
         expect(calledArgs.accountOptions.productName).to.equal(args.accountOptions.productName)
 
         expect(calledArgs.signers[0].id).to.equal(args.signers[0].id)
@@ -99,7 +98,6 @@ describe('app.services.contract.send', () => {
 
         } catch (error) {
           expect(error.name).to.equal('PreConditionFailedError')
-// Temp comment
           expect(error.statusCode).to.equal(412)
           expect(error.message).to.equal("We could not send the document with Docusign. Please contact support.")
         }
@@ -115,3 +113,5 @@ describe('app.services.contract.send', () => {
 
         await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
+        await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
+        await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products

@@ -1,11 +1,9 @@
 const getPdfFormFields = () => {
 	const fieldsForPDF = {
-		// type of mortgage and terms of loan
 		amount: '500000',
 		borrower: 'Bob Smith',
 		borrowerDOB: '1980-01-20',
 		borrowerAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
-// Temp comment
 		borrowerEmployerName: 'ACME',
 		borrowerEmployerAddress: '300 Main St, Boston, MA 02111-1307',
 		// borrowerSelfEmployed: fields.borrowerSelfEmployed, // checkbox

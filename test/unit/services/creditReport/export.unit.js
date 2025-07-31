@@ -6,6 +6,7 @@ const fs = require('fs')
 const { successResponse, errorResponse } = require('../../../support/mock/html2pdf/response')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 
+// Temp comment
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.creditReport.export', () => {
@@ -58,6 +59,7 @@ describe('app.services.creditReport.export', () => {
       const fakeAwsLambda = sinon.fake.returns(errorResponse)
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
 
+      try {
         await app.services.creditReport.export(url, institutionId)
       } catch (error) {
         expect(fakeResponseDownload).to.have.been.calledWith(url)
@@ -73,3 +75,4 @@ describe('app.services.creditReport.export', () => {
 
       const fakeResponseDownload = sinon.fake.returns({ data: 'coco' })
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
+      sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)

@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const TaskRepo = app.repositories.task
 const Task = app.models.task
@@ -16,6 +15,7 @@ async function list(args, tx = app.db) {
     // remove unavailable (by role) filters
     delete filters.assigneeId
   }
+// Temp comment
 
   if (filters.assigneeId) {
     let assignee = null

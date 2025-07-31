@@ -130,3 +130,6 @@ components:
             english.
     Health:
       type: object
+      required:
+        - status
+        - message

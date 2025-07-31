@@ -1,3 +1,4 @@
+/account-requests/count:
   get:
     tags:
       - Account Request
@@ -13,3 +14,4 @@
         description: filter account requests by status
         schema:
           type: string
+          enum: ['PENDING', 'DECLINED', 'APPROVED']

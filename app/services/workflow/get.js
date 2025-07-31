@@ -10,7 +10,6 @@ async function get(criteria, tx = app.db) {
   logger.info({ get: filter })
 
   app.plugins.validator(filter, WkflModel.schema('get'), { abortEarly: false })
-
   const wkfl = await Wkfl.forge(filter).fetch({
     withRelated: ['user', 'branch', 'institution'],
     transacting: tx

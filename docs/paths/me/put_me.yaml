@@ -31,3 +31,4 @@
       - bearer: []
     responses:
       '200':
+        description: OK

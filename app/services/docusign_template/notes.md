@@ -125,3 +125,6 @@ References:
 
 After we create a envelope, we need to take the envelopeId and call new docusign.RecipientViewRequest()
 
+It will return a url like this: https://demo.docusign.net/Signing/MTRedeem/v1/fe36d81e-1e10-48b9-ac55-d6962c2c02f6?slt=eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkI
+
+The url has a short time to live and can be opened only once.

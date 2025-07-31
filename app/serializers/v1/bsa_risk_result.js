@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const defaultSerializer = require('../serializer')
-
 const properties = ['position', 'questionId', 'answer', 'context']
 
 function serializer(data = {}) {
@@ -12,4 +11,5 @@ function serializer(data = {}) {
   marshalled.score = _.get(marshalled, `context.score.${marshalled.answer}`)
 
   delete marshalled.context
+
   return marshalled

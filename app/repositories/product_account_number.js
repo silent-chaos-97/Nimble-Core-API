@@ -6,7 +6,6 @@ const ProductAccountNumber = app.db.Model.extend({
   hasTimestamps: true,
 
   institution: function () {
-// Temp comment
     return this.belongsTo('Institution', 'institution_id')
   },
 

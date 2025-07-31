@@ -1,4 +1,5 @@
 const AWS = require('aws-sdk')
+const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.event_stream.publish')
 

@@ -37,3 +37,4 @@ class ProductModel extends BaseModel {
     if (operation === 'create') {
       return Joi.object().keys({
         institutionId: Joi.string().uuid().required(),
+        name: Joi.string().required(),

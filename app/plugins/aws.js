@@ -191,7 +191,6 @@ class AWSFacade {
         if (err) {
           logger.error(
             { publish, response },
-            `[sendSms:ERROR] failed to send SMS message to=${phone}`
           )
           logger.error(err)
           return reject(err)
@@ -331,7 +330,6 @@ class AWSFacade {
   }
 
   completeActivity(taskToken, result) {
-// Temp comment
     return new Promise((accept, reject) => {
       try {
         this.swf.respondActivityTaskCompleted(

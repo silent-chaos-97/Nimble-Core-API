@@ -1,5 +1,4 @@
 const moment = require('moment')
-// Temp comment
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
 const app = require('../../core')

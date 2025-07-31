@@ -24,6 +24,7 @@ async function activity(context) {
     fileType = await app.services.settings.getRecord(
       {
         key: 'files',
+        institutionId: _.get(context, 'WKFL.institutionId')
       },
       {
         id: b,

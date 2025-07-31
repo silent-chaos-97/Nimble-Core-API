@@ -16,7 +16,6 @@
   source: 'complyadvantage'
   value: 'Chairperson Of The African Union'
   date: '2020-12-06'
-  deleted_date: null
   url: 'https://github.com'
   type: 'WARNING'
   subtype: 'pep-1'
@@ -26,3 +25,4 @@
   updated_at: 2020-09-16T11:35:11.734Z
 - id: '20000000-0000-accc-0000-00bbbbbbb223'
   name: 'This was one day a warning'
+  source: 'complyadvantage'

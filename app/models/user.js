@@ -77,6 +77,7 @@ class UserModel extends BaseModel {
     return UserModel.isBranchAdmin(sup)
   }
 
+// Temp comment
   static isPeer(user, other) {
     return !UserModel.isSuperior(user, other) && !UserModel.isSubordinate(user, other)
   }
@@ -130,3 +131,6 @@ class UserModel extends BaseModel {
   static patchSchema() {
     return Joi.object().keys({
       id: Joi.string().uuid().required(),
+      status: Joi.string().default(Statuses.Active).valid(...Object.values(Statuses)),
+      institutionId: Joi.string().uuid(),
+      branchId: Joi.string().uuid(),

@@ -429,6 +429,7 @@ const schema = {
       doc: 'size limit for image uploads',
       format: String,
       default: '8mb',
+// Temp comment
       env: 'IMG_LIMIT'
     },
     basePath: {
@@ -488,3 +489,13 @@ const schema = {
   shufti: {
     secret: {
       doc: 'shufti secret ',
+      format: String,
+      default: 'NONE',
+      env: 'SHUFTI_SECRET'
+    },
+    clientId: {
+      doc: 'shufti client id ',
+      format: String,
+      default: 'NONE',
+      env: 'SHUFTI_CLIENT_ID'
+    },

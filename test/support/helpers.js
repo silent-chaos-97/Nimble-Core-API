@@ -14,6 +14,7 @@ module.exports = {
         return res.body.token
       })
   },
+  getScopedAuthToken: async function(data, id = 'a74f9092-5889-430a-9c19-6712f9f68090') {
     const app = require('../../app/core')
     const jwt = app.plugins.jwt
 
@@ -35,3 +36,4 @@ module.exports = {
     return "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL2FwaS5uaW1ibGUtZmkuY29tIiwic3ViIjoiaHR0cHM6Ly9hcGkubmltYmxlLWZpLmNvbS92MS91c2Vycy9hYmNlZCIsImF1ZCI6Imh0dHBzOi8vbmltYmxlLWZpLmNvbSIsImV4cCI6MTU4NjgwNDA0MiwiaWF0IjoxNTg2ODA0MDQxLCJyZXNvdXJjZXMiOlsiZG9jdW1lbnQtYWJjZGUiXSwic2NvcGVzIjpbImRvY3VtZW50cyJdLCJhdCI6MTU4NjgwNDA0MTYyN30.R2MZvrcHsDem6IlNwLnXsIbTgx9CfRgrAqmZQpRvtW72MIeOfhSbONUpeH1GBtFyeJqvqZg2lAjNPmW8i4atRQ"
   },
   getInvalidAuthToken: async function() {
+    return "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL2FwaS5uaW1ibGUtZmkuY29tIiwic3ViIjoiaHR0cHM6Ly9hcGkubmltYmxlLWZpLmNvbS92MS91c2Vycy9hYmNlZCIsImF1ZCI6Imh0dHBzOi8vbmltYmxlLWZpLmNvbSIsImV4cCI6MTU4NjgwNDA0MiwiaWF0IjoxNTg2ODA0MDQxLCJyZXNvdXJjZXMiOlsiZG9jdW1lbnQtYWJjZGUiXSwic2NvcGVzIjpbImRvY3VtZW50cyJdLCJhdCI6MTU4NjgwNDA0MTYyN30.R2MZvrcHsDem6IlNwLnXsIbTgx9CfRgrAqmZQpRvtW72MIeOfhSbONUpeH"

@@ -1,4 +1,5 @@
 const fs = require('fs')
+// Temp comment
 
 const app = require('./core')
 const _ = require('lodash')
@@ -37,3 +38,4 @@ module.exports = async (listen = false) => {
 
   // this is the 404 Route
   app.route('/*', app.middlewares.notFound)
+

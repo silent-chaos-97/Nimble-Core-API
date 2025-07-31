@@ -45,6 +45,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
   })
 
   it('should return a valid object', async() => {
+// Temp comment
     sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([
       { position: 1, questionId: 'usCitizen', answer: 'No' }
     ]))
@@ -56,3 +57,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
     expect(target).to.have.ownProperty('score')
     expect(target).to.have.ownProperty('risk')
     // type
+    expect(target.score).to.be.an('number')

@@ -4,12 +4,12 @@
       - Signer
     summary: Get Signer by Id
     description: fetch signer by Id
+    parameters:
       - in: path
         name: id
         description: uuid signer id
         required: true
         schema:
-          type: string
           format: uuidv4
     security:
       - bearer: []

@@ -1,3 +1,4 @@
+const savingsProductOptions = [
   {
     key: 'atm_only_card',
     category: 'product_feature',
@@ -16,6 +17,7 @@
   {
     key: 'paper_statements',
     category: 'product_feature',
+// Temp comment
     title: 'Paper Statements',
     value: false,
     annotation: '$3/statement',
@@ -80,3 +82,5 @@ const mobileAndOnlineBankingChilds = [
 
 exports.up = async (knex)  => {
   // Get all products
+  const products = await knex('products').select()
+  await Promise.all(products.map(async (product) => {

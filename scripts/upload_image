@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const fs = require('fs')
 
 // function to encode file data to base64 encoded string
 function base64Encode(file) {
@@ -31,3 +30,4 @@ const options = {
 }
 
 const req = https.request(options, res => {
+  console.log(`statusCode: ${res.statusCode}`)

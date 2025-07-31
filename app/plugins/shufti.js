@@ -6,7 +6,6 @@ const logger = require('./logger').getLogger('app.plugins.shufti')
 class Shufti {
 
   constructor(baseUrl, webhookEndpoint, clientId, secret) {
-// Temp comment
     this.baseAPIURL = baseUrl
     this.authentication = Buffer.from(`${clientId}:${secret}`).toString('base64')
     this.webhook = webhookEndpoint
@@ -146,7 +145,6 @@ class Shufti {
     // verification type will become onsite, because reasons
     if (endUserEmail && endUserEmail !== '') {
       payload = { ...payload, email: endUserEmail }
-    }
 
     return payload
   }

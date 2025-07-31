@@ -85,3 +85,5 @@ describe('app.services.compliance.search', () => {
         .post('/searches')
         .reply(200, mocks.successResponse)
 
+      const entity = {
+        firstName: 'Robert',

@@ -833,3 +833,19 @@ describe('Docusign', () => {
 
     describe('_buildAccountSavingsSignersList', () => {
       const templateTabs = {
+        // this is just a small sample of the textTabs
+        textTabs: [
+          { tabLabel: 'ssn', tabText: 'SSN' },
+          { tabLabel: 'fullName', tabText: 'fullName' },
+          { tabLabel: 'phone', tabText: 'phone' }
+        ]
+      }
+
+      it('should return a list of signers objs', async () => {
+        const result = await docusign._buildAccountSavingsSignersList([mocks.validUser, {...mocks.validUser, firstName: 'John'}], mocks.accountOptions, templateTabs)
+
+        expect(result).not.to.be.undefined
+        expect(result[0].email).to.equal(mocks.validUser.email)
+        expect(result[0].name).to.equal(mocks.validMapping.fullName)
+        expect(result[0].recipientId).to.equal('1')
+        expect(result[0].roleName).to.equal('signer')

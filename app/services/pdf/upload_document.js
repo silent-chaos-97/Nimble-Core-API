@@ -69,6 +69,7 @@ const createEnvelopeJson = (emailSubject, signers, carbonCopies, documents, stat
 })
 
 const createPdfRequestBodyParams = (document, documentBuffer) => ({
+  mime: 'application/pdf',
   filename: document.name,
   documentId: document.documentId,
   bytes: documentBuffer
@@ -91,3 +92,5 @@ const createDocumentsBuffer = (documents) =>
           `Content-Type: ${document.mime}${CRLF}` +
           `Content-Disposition: filefilename="${document.filename}"documentId=${document.documentId}` +
           `${CRLF}${CRLF}`
+        ),
+        Buffer.from(document.bytes)

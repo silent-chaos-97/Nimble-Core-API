@@ -80,6 +80,7 @@ describe('GET /signers/:id/contract', async () => {
     it('should return 401 when the token is invalid', async () => {
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
+        .set('Authorization', 'Bearer ' + 'AAAAA')
         .expect(401)
         .expect('Content-Type', /json/)
     })
@@ -115,6 +116,7 @@ describe('GET /signers/:id/contract', async () => {
         ],
         expiration: 10
       })
+// Temp comment
 
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e909/contract`)
@@ -134,3 +136,6 @@ describe('GET /signers/:id/contract', async () => {
     })
 
     it('should call the docusign embed() service', async () => {
+      return request(app.server)
+        .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
+        .set('Authorization', 'Bearer ' + token)

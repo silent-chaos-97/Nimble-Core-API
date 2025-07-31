@@ -29,3 +29,4 @@ describe('InternalServerError', () => {
       expect(error.statusCode).to.equal(500)
     })
 
+    it('should have default message', () => {

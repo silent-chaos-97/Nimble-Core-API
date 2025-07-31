@@ -85,6 +85,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "wireTransfersInternational": {
         "order": 7,
         "text": "Do you anticipate 1 or more international wire transfers per month\\?",
+        "type": "string",
         "subtype": "enum",
         "enum": ["yes", "no"],
         "score": {"yes": 2},
@@ -97,8 +98,9 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "type": "string",
         "subtype": "enum",
         "enum": ["yes", "no"],
-        "score": {"yes": 2},
         "required": true,
         "default": ""
       },
       "anotherBank": {
+        "order": 9,
+        "text": "Will you maintain a checking account at another bank\\?",

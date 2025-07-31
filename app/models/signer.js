@@ -231,3 +231,8 @@ class Signer extends BaseModel {
           verificationStatusAddress: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
           verificationStatusAddressUpdatedAt: Joi.date().optional(),
           verificationStatusSanctions: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
+          verificationStatusSanctionsUpdatedAt: Joi.date().optional(),
+          verificationStatusMedia: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
+          verificationStatusMediaUpdatedAt: Joi.date().optional(),
+          verificationStatusPoliticalExposure: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
+          verificationStatusPoliticalExposureUpdatedAt: Joi.date().optional(),

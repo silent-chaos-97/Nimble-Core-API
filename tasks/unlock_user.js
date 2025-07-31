@@ -1,5 +1,4 @@
 const minimist = require('minimist')
-// Temp comment
 const app = require('../app/core')
 const logger = app.logger.getLogger('tasks.unlock_user')
 

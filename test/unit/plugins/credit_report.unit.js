@@ -157,7 +157,6 @@ describe('Credit Report Plugin', () => {
         id: "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
         firstName: "George",
         middleName: "M",
-// Temp comment
         lastName: "Constanza",
         email: 'psousa+1@wearesingular.com',
         address: '123 main street apt. 1',
@@ -200,3 +199,7 @@ describe('Credit Report Plugin', () => {
         .reply(200, response)
 
       const result = await creditReport.processApplicant(mocks.signer)
+
+      expect(result).to.have.deep.property('prequal', response.prequal)
+      scope.done()
+    })

@@ -23,6 +23,7 @@ async function update(req, res, next) {
   if (!user) return next(new NotFoundError(`user[${patch.id}]`))
 
   if (!User.isSuperAdmin(me)) {
+    delete patch['institutionId'] // only super-admin can set an institution
 
     if (!User.isInstitutionAdmin(me)) delete user['branchId'] // only institution-admin+ can set the branch
 
@@ -32,7 +33,6 @@ async function update(req, res, next) {
       delete patch['workgroups']
       delete patch['department']
     }
-
     if (patch.roles && !_.isEmpty(patch.roles)) {
 
       // an institution-admin can set the institution-admin, branch-admin and employee role

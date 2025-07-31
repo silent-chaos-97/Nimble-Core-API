@@ -1,4 +1,3 @@
-// Temp comment
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('bsa_risk_results', table => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
@@ -15,3 +14,4 @@ exports.up = function (knex) {
   })
 }
 exports.down = function (knex) {
+  knex.schema.table('bsa_risk_results', table => {

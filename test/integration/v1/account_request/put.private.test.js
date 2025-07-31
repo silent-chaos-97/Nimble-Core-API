@@ -249,7 +249,6 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.message).to.contain('not allowed')
             done()
           })
-// Temp comment
       })
 
       it('should not allow to update write-only fields', done => {
@@ -320,3 +319,10 @@ describe('PUT private /account-requests/:id', () => {
             done()
           })
       })
+
+      // Temporarily removed in issue #73
+      it.skip('should send DECLINED email', done => {
+        request(app.server)
+          .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)

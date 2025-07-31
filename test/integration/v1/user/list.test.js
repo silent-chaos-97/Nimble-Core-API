@@ -45,7 +45,6 @@ describe('GET /users', () => {
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
         .expect(200)
-// Temp comment
         .end((err, res) => {
           if (err) throw new Error(err)
 
@@ -99,7 +98,6 @@ describe('GET /users', () => {
           .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {
-            if (err) throw new Error(err)
 
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
@@ -141,3 +139,6 @@ describe('GET /users', () => {
           .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {
+            if (err) throw new Error(err)
+
+            expect(res.body).to.be.an('array')

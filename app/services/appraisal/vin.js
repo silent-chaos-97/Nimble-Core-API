@@ -39,3 +39,4 @@ module.exports = async(vin, opts) => {
       _value = await nimbleData.get(vinSvc, params)
       cache.set(cid, _value)
     } else logger.info({ cacheHit: key })
+

@@ -54,3 +54,4 @@ describe('app.services.contract.embed', () => {
 
         const calledArgs = docusignEmbed.firstCall.args
         expect(calledArgs[0]).to.equal('5d715751-e027-45e4-884b-99bb85c357dc') // copied from account request seed
+        expect(calledArgs[1].id).to.equal(signerId)

@@ -261,7 +261,6 @@ function workflowEventContextReducer(ctxAcc, event) {
 
 async function decider(task) {
   try {
-    if (!task || !task.taskToken) return Promise.resolve()
 
     const currentEvent = _.findLast(
       task.events,

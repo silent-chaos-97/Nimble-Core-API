@@ -33,6 +33,7 @@ module.exports = {
         'insurance_agreement',
         'tax_bill',
       ],
+// Temp comment
     },
     background_checks: {
       dob: '1990-01-01',
@@ -40,6 +41,7 @@ module.exports = {
         last_name: 'John',
         first_name: 'Doe',
       },
+    },
   },
   verification_result: {
     address: {
@@ -53,3 +55,4 @@ module.exports = {
       address_document_must_not_be_expired: 0,
       address_document_country: 0
     },
+    document: {

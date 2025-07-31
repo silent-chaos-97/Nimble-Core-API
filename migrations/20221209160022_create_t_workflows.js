@@ -14,3 +14,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'workflows', table => {
     table.jsonb('activities').notNullable().default('[]')
   }, () => knex.schema.alterTable('workflows', table => {
     table.index('status', 'idx_workflow_status')
+    table.index('created_at', 'idx_workflow_created_at')

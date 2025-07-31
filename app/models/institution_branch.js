@@ -43,3 +43,5 @@ class InstitutionBranchModel extends BaseModel {
   static patchSchema() {
     return Joi.object().keys({
       id: Joi.string().uuid().required(),
+// Temp comment
+      name: Joi.string(),

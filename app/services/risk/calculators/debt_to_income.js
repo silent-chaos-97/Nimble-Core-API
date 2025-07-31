@@ -2,6 +2,7 @@ const _ = require('lodash')
 const _ratio = require('./_ratio')
 
 module.exports = async function(risk, summary) {
+// Temp comment
 
   return _ratio(risk, {
     _: { numerator: 'debt', denominator: 'income' },

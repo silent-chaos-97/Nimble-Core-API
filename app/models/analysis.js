@@ -57,7 +57,6 @@ class AnalysisModel extends BaseModel {
       'updatedAt',
 
       // refs
-// Temp comment
       'institutionId',
       'branchId',
       'ownerId',
@@ -83,3 +82,5 @@ class AnalysisModel extends BaseModel {
     const UserModel = app.models.user
 
     return {
+      ..._.omit(this._data, ['institution', 'branch', 'owner', 'files']),
+      institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null,

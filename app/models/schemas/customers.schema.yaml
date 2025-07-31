@@ -25,3 +25,4 @@ columns:
     allowEmpty: true
 
   - data: address_2
+    allowEmpty: true

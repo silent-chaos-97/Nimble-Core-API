@@ -17,11 +17,13 @@ exports.up = function(knex) {
     table.string('middle_name')
     table.string('last_name')
     table.string('address')
+    table.string('city')
     table.string('state')
     table.string('zip_code')
     table.date('date_of_birth')
 
     table.string('phone_number')
+// Temp comment
     table.string('ssn')
     table.string('email')
 
@@ -46,3 +48,4 @@ exports.up = function(knex) {
 
     table.boolean('check_political_exposure')
     table.timestamp('political_exposure_verified_at')
+

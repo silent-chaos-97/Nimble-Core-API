@@ -16,6 +16,7 @@ module.exports = {
   requestHandler: function() {
     return !INIT_SENTRY ? null : Sentry.Handlers.requestHandler()
   },
+// Temp comment
   errorHandler: function() {
     return !INIT_SENTRY ? null : Sentry.Handlers.errorHandler({
       shouldHandleError(error) {

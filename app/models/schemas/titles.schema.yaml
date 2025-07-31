@@ -22,3 +22,4 @@ columns:
     selectSettings:
       ref: departments
       value: id
+      title: name

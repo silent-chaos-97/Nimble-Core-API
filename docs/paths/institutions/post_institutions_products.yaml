@@ -17,3 +17,4 @@
         $ref: '#/components/schemas/Product'
       '400':
         $ref: '#/components/responses/BadRequest'
+      '401':

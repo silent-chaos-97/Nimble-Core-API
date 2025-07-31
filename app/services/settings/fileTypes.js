@@ -147,6 +147,7 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Statement of Account'
+  },
   {
     type: 'Product',
     name: 'Control Agreement'
@@ -495,3 +496,13 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Governing Law'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Account information'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Eligibility Requirements'
+  },
+  {

@@ -1,4 +1,5 @@
 Identity:
+  type: object
   properties:
     firstName:
       type: string
@@ -49,3 +50,4 @@ Identity:
       description: Individual date of birth
       nullable: true
       example: 1990-3-18
+    documentNumber:

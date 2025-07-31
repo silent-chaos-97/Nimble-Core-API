@@ -18,10 +18,12 @@ describe('NotFoundError', () => {
   })
 
   describe('when instanced', () => {
+    it('should have correct name', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('NotFoundError')
     })
 
+// Temp comment
     it('should have 404 as a statusCode', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(404)

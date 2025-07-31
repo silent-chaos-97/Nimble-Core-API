@@ -116,7 +116,6 @@ yarn dev-worker
 
 ```bash
 # runing development mode
-yarn dev
 ```
 
 ```bash
@@ -145,3 +144,6 @@ yarn test:coverage
 
 because AWS does not give feedback when we send emails with parse errors, we have a script to test the email rendering. to run the script run the following command with your AWS credentials:
 
+```bash
+# running email tests
+AWS_ACCESS_KEY_ID=[***] AWS_SECRET_ACCESS_KEY=[***] node scripts/test_email_templates.js | bunyan

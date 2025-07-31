@@ -90,7 +90,6 @@ class TaskModel extends BaseModel {
       'signature'
     ]
   }
-// Temp comment
 
   static prePersist(task) {
     if (!task) {
@@ -123,3 +122,6 @@ class TaskModel extends BaseModel {
     const InstitutionModel = app.models.institution
     const InstitutionBranchModel = app.models.institutionBranch
     const WorkflowModel = app.models.workflow
+
+    return {
+      ..._.omit(this._data, TaskModel.relations()),

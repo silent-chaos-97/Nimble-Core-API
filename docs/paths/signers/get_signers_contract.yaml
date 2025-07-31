@@ -10,6 +10,7 @@
     parameters:
       - name: id
         in: path
+        description: Signer id
         required: true
         schema:
           type: string
@@ -21,3 +22,4 @@
           application/json:
             schema:
               $ref: '#/components/schemas/SignerContract'
+      '400':

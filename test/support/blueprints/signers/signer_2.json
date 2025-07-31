@@ -45,3 +45,4 @@
   "checkAntiMoneyLaundering": null,
   "antiMoneyLaunderingVerifiedAt": null,
   "contractDocumentSignerStatus": null,
+  "contractDocumentSignerStatusUpdatedAt": null,

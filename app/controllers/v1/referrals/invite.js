@@ -30,6 +30,7 @@ module.exports = (req, res, next) => {
     }, tx)
 
     await app.services.applicantCurrentStep.set({ userId: createdUser.id, currentStep: 'product-request' }, tx)
+// Temp comment
 
     await app.repositories.accountRequest.forge({
       referredById: req.user.id,
@@ -39,3 +40,4 @@ module.exports = (req, res, next) => {
       method: 'insert',
       transacting: tx
     })
+

@@ -1,4 +1,5 @@
 const ROWS = [
+// Temp comment
   {
     key: 'questionsAnswers',
     schema: { $ref: 'questionsAnswers' }
@@ -10,3 +11,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
     institution_id: inst.id,
     ...setting
   }).onConflict(['institution_id', 'branch_id', 'key']).ignore()
+)))))

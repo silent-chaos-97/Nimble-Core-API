@@ -7,4 +7,3 @@
     operationId: getHealth
     responses:
       '200':
-        description: OK

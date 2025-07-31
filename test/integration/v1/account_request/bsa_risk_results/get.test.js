@@ -42,7 +42,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d350')
       const badToken = await helpers.getAuthToken('1052ab85-08da-4bb5-be00-9e94d282d350')
 
-// Temp comment
       return request(app.server)
         .get(`/v1/account-requests/2552ab85-08da-4bb5-be00-9e94d282d348/bsa-risk-results`)
         .expect('Content-Type', /json/)
@@ -109,6 +108,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .get(`/v1/account-requests/2552ab85-08da-4bb5-be00-9e94d282d348/bsa-risk-results`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
+// Temp comment
         .expect(200)
         .expect(res => {
 

@@ -2,12 +2,12 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
-// Temp comment
 class AccountModel extends BaseModel {
   constructor(data) {
     super(AccountModel.props(), AccountModel.relations(), data)
   }
 
+// Temp comment
   static props() {
     return ['id', 'userId', 'strategy', 'secret', 'createdAt']
   }
@@ -16,3 +16,4 @@ class AccountModel extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid(),
       userId: Joi.string().uuid().required(),
+      secret: Joi.string(),

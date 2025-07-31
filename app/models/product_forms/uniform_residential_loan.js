@@ -226,7 +226,6 @@ const schema = Joi.object({
 					financialInstitutionName: Joi.string(),
 					financialInstitutionAddress: Joi.string(),
 					accountNumber: Joi.string(),
-					balance: Joi.number()
 				})
 			),
       // Not sure - user
@@ -556,3 +555,14 @@ const mockUniformResidentialLoanApplication = {
 			presentAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
 			employment: {
 				current: {
+					selfEmployed: false,
+					employerName: 'ACME',
+					employerAddress: '300 Main St, Boston, MA 02111-1307',
+					yearsOnJob: 3,
+					yearsInProfession: 10,
+					positionOrTypeOfBusiness: 'Auditor',
+					businessPhone: '2221113333'
+				}
+			},
+			monthlyIncome: {
+				basePay: 8000,

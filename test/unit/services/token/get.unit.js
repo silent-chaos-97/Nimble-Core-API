@@ -78,7 +78,6 @@ describe('app.services.token.get', () => {
       expect(actual).to.have.deep.property('userId', null)
     })
 
-// Temp comment
     it('should apply the default scopes', () => {
       const token = target(_.omit(options, 'scopes'))
       const actual = decode(token)
@@ -95,7 +94,6 @@ describe('app.services.token.get', () => {
       const token = target(_.omit(options, 'expiration'))
       const actual = decode(token)
       expect(actual).to.have.deep.property('exp', 900)
-    })
   })
 
   it('should return a token', () => {
@@ -118,3 +116,6 @@ describe('app.services.token.get', () => {
     const token = target(options)
     const actual = decode(token)
     expect(actual).to.have.property('sub', 'http://localhost:8080/v1/users/123')
+  })
+
+  it('should include public claim audience in token', () => {

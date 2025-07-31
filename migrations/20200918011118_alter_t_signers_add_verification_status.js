@@ -46,3 +46,4 @@ exports.up = function (knex) {
     table.timestamp('verification_status_political_exposure_updated_at')
       .notNullable()
       .defaultTo(knex.fn.now())
+  })

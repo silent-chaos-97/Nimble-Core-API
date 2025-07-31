@@ -4,6 +4,7 @@ const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
+// Temp comment
 describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
@@ -27,7 +28,6 @@ describe('app.services.compliance.parse', () => {
   })
 
   afterEach(() => { nock.cleanAll() })
-// Temp comment
 
   describe('search', async () => {
 
@@ -82,3 +82,5 @@ describe('app.services.compliance.parse', () => {
         const target = await app.services.compliance.parse(searchResult)
         const first = _.first(target)
 
+
+        expect(first.associates).to.have.lengthOf(13)

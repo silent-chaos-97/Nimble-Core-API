@@ -29,7 +29,6 @@ ProductOption:
       example: Example
       oneOf:
         - type: string
-        - type: integer
         - type: boolean
     lead:
       type: string
@@ -38,3 +37,4 @@ ProductOption:
       readOnly: true
       nullable: true
       example: Used for standard loans, credit cards, and line-of-credit accounts
+    annotation:

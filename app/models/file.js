@@ -14,6 +14,7 @@ class FileModel extends BaseModel {
         'createdById',
         'createdByRole',
         'createdAt',
+        'updatedAt',
         'analysisId',
 
         // location
@@ -49,3 +50,4 @@ class FileModel extends BaseModel {
   }
 
   static schema(op) {
+    return {

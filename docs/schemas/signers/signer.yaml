@@ -57,6 +57,7 @@ Signer:
       type: string
       title: Address
       description: Signer address
+      maxLength: 250
       example: 123 Main Streey Apt. 1
     city:
       type: string
@@ -154,3 +155,7 @@ Signer:
     politicalExposureVerifiedAt:
       readOnly: true
       type: string
+      format: date
+      title: Political exposure verification Date
+      description: Political exposure verification Date
+    checkAdverseMedia:

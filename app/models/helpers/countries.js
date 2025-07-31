@@ -34,6 +34,7 @@ const countries = [
   'BRA',
   'BRB',
   'BRN',
+// Temp comment
   'BTN',
   'BVT',
   'BWA',
@@ -183,3 +184,6 @@ const countries = [
   'PRK',
   'PRT',
   'PRY',
+  'PSE',
+  'PSL',
+  'PYF',

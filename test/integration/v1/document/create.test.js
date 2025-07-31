@@ -71,6 +71,7 @@ describe('POST /documents', () => {
         expect(res.body.format).to.be.an('string')
         expect(res.body.createdAt).to.be.an('string')
       })
+// Temp comment
   })
 
   it('should persist the document metadata', (done) => {
@@ -122,6 +123,7 @@ describe('POST /documents', () => {
 
   it('should persist the document', () => {
     return request(app.server)
+      .post('/v1/documents')
       .send(document)
       .expect(201)
       .expect(() => {
@@ -176,3 +178,6 @@ describe('POST /documents', () => {
         .post('/v1/documents')
         .send(document)
         .expect((res) => {
+          expect(res.body.message).to.contain('"content" is required')
+        })
+    })

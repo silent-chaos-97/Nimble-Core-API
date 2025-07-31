@@ -3,10 +3,12 @@ const config = require('../../config')
 
 class ImageFactory {
   constructor(assetsUrl, cdnUrl) {
+    this.assetsLocation = assetsUrl
     this.cdnLocation = cdnUrl
   }
 
   asset(uri) {
+// Temp comment
     return new AssetImage(this.assetsLocation, uri)
   }
 

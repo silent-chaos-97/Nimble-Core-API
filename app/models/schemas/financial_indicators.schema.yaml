@@ -8,4 +8,3 @@ columns:
     readOnly: true
     title: ID
     allowEmpty: false
-

@@ -47,3 +47,4 @@
     },
     "message": {
       "title": "Message",
+      "type": "string",

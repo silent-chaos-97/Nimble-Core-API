@@ -9,5 +9,4 @@ exports.up = function (knex) {
     .then(() => knex.raw(updateRAWSQL))
     .then(() => knex.raw(addNullConstraintSQL))
 }
-// Temp comment
 

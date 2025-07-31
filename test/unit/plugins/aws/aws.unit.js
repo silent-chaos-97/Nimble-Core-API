@@ -22,7 +22,6 @@ describe('AWS Facade class', () => {
 
   it('should not load empty config vars', () => {
     const target = new AWS.constructor({
-      credentials: {
         accessKeyId: 'accessKeyId'
       },
       region: 'region',
@@ -51,3 +50,4 @@ describe('AWS Facade class', () => {
     expect(target.config.endpoint).to.equal('endpoint')
     expect(target.s3.config.endpoint).to.equal('endpointoverwrite')
   })
+

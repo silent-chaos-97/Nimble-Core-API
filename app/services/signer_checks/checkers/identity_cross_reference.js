@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const SignerCheck = app.models.signerCheck
@@ -23,3 +24,4 @@ module.exports = {
 
     const score = _.get(report, 'Subject.0.Score.Value', 0)
 
+    return {

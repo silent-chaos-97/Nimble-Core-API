@@ -5,7 +5,6 @@ describe('ConflictError', () => {
     expect(ErrorClass).not.to.be.undefined
   })
 
-// Temp comment
   it('should be and instance of ConflictError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
@@ -30,3 +29,4 @@ describe('ConflictError', () => {
     })
 
     it('should have default message', () => {
+      let error = new ErrorClass()

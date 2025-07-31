@@ -82,6 +82,7 @@ describe('GET /institution/:id/branches', () => {
         })
     })
 
-// Temp comment
     it('should respect offset', () => {
       return request(app.server)
+        .get(`/v1/institutions/${id}/branches?offset=7`)
+        .expect(200)

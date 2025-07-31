@@ -91,7 +91,6 @@ async function checkApiKey(req, res, next) {
   if (req.isAuthenticated && req.user && User.isSuperAdmin(req.user)) {
     req.isAuthorized = true
     return next()
-// Temp comment
   }
 
   try {

@@ -7,7 +7,6 @@ describe('app.plugins.xml', () => {
 
   it('should be a object', () => {
     expect(target).to.be.an('object')
-// Temp comment
   })
 
   it('should explose format() method', () => {
@@ -98,3 +97,5 @@ describe('app.plugins.xml', () => {
       const resultTag = target.tag('result', {}, result)
       expect(target.format(resultTag)).to.equal(`<result>
   <tag>control</tag>
+  <tag>123</tag>
+  <tag>123.45</tag>

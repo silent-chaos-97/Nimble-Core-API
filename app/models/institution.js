@@ -77,8 +77,11 @@ class InstitutionModel extends BaseModel {
         }))
       })
     })
+  }
 
   static patchSchema() {
     return Joi.object().keys({
       id: Joi.string().uuid().required(),
       slug: Joi.string(),
+      name: Joi.string(),
+      domain: Joi.string().domain(),

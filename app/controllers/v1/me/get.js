@@ -8,4 +8,3 @@ function me(req, res, next) {
     .then(data => {
       return serializer(data, true)})
     .then(data => res.json(data))
-    .catch(next)

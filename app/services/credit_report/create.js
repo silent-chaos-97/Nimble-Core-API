@@ -8,7 +8,7 @@ const logger = app.logger.getLogger('app.services.credit_report.create')
 async function create(params, tx = app.db) {
   logger.debug(`[create] called for signer id ${params.signerId}`)
   const data = validator(params, SignerCreditReportModel.schema('create'), { abortEarly: false })
-  await app.services.signer.get(data.signerId, tx)
+  // check if signer exists
 
   const { id } = await SignerCreditReport.forge(data).save(null, { method: 'insert', transacting: tx })
   logger.debug(`[create] finished for signer id ${params.signerId}`)

@@ -31,7 +31,6 @@ const SCHEMAS = {
     cta: Joi.object().optional().keys({
       title: Joi.string(),
       domain: Joi.string(),
-      path: Joi.string()
     })
   }),
 
@@ -53,3 +52,4 @@ const SCHEMAS = {
     })
   })
 }
+

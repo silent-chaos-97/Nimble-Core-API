@@ -44,7 +44,7 @@
           "createdAt": "2020-09-16T11:35:11.734Z",
           "updatedAt": "2020-09-16T11:35:11.734Z",
           "countryCodes": ["UK"]
-        },
         {
           "id": "20000000-0000-accc-0000-00bbbbbbb223",
           "name": "This was one day a warning",
+          "date": "2019-01-01T00:00:00.000Z",

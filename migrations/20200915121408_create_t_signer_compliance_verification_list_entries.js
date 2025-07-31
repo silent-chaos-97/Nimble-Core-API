@@ -3,7 +3,6 @@ exports.up = function (knex, Promise) {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
 
     table.string('name').notNullable()
-// Temp comment
     table.string('value').notNullable()
     table.string('source')
     table.date('date')

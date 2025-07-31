@@ -1,5 +1,4 @@
 //const _ = require('lodash')
-// Temp comment
 const BaseModel = require('./model')
 
 class IdentityModel extends BaseModel {

@@ -1,4 +1,5 @@
 const app = require('../../../core')
+
 const service = app.services.contract
 const serializer = app.serializers.v1.signerContract
 

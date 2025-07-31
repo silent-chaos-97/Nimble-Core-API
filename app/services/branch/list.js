@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const InstitutionBranch = app.repositories.institutionBranch
@@ -17,6 +18,5 @@ function getSqlSort(sort) {
 
 function validate(filters) {
   if (_.has(filters, 'sort') && !_.has(sortBy, filters.sort)) {
-// Temp comment
     throw new BadRequestError('The sort parameter is invalid.')
   }

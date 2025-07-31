@@ -70,3 +70,5 @@ describe('app.services.email.prospectPendingSigners', () => {
 
     it('should call send with correct data', async () => {
       const emailData = {
+        accountType: "Simple Checking",
+        email: blueprints.signers.signer_1.email,

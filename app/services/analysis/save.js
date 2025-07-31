@@ -15,7 +15,6 @@ function validate(analysis) {
   return data
 }
 
-async function save(analysis, opts, tx = app.db) {
   opts = opts || {}
   const data = validate(analysis)
   let id = data.id

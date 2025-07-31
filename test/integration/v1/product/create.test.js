@@ -17,6 +17,7 @@ describe('POST /institutions/:id/products', () => {
       .expect('Content-Type', /json/)
       .expect(401)
   })
+
   describe('when validating entities', () => {
     it('should return 400', () => {
       return request(app.server)
@@ -27,6 +28,7 @@ describe('POST /institutions/:id/products', () => {
         .expect(400)
     })
 
+// Temp comment
     it('should return error details', () => {
       return request(app.server)
         .post(`/v1/institutions/${institutionId}/products`)
@@ -119,3 +121,6 @@ describe('POST /institutions/:id/products', () => {
         expect(newProducts.length).to.equal(0)
       })
 
+    // Create the product
+    await request(app.server)
+      .post(`/v1/institutions/${institutionId}/products`)

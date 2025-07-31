@@ -1,4 +1,3 @@
-const uuid = require('uuid')
 
 describe('GET /signers/:id/compliance-verification', async () => {
   let clock, token
@@ -79,3 +78,5 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(404)
+    })
+  })

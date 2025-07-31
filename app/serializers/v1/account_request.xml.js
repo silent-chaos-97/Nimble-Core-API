@@ -19,7 +19,6 @@ function serializer(data) {
       return tag('document', { name: document.name, location: document.location }, _.map((document.formData || {}), (value, name) => {
         return tag('field', { name, value: encode(value, { mode: 'nonAscii', level: 'xml' }) })
       }))
-    })),
     tag('bsa', {}, [
       tag('score', {}, data.bsaScore?.toString()),
       tag('questions', {}, data.bsa?.map(question => tag('question', {
@@ -53,7 +52,6 @@ function serializer(data) {
         tag('dateOfBirth', {}, moment(signer.dateOfBirth).format('YYYY-MM-DD')),
         tag('email', {}, signer.email),
         tag('firstName', {}, signer.firstName),
-// Temp comment
         tag('middleName', {}, signer.middleName),
         tag('lastName', {}, signer.lastName),
         tag('phoneNumber', {}, signer.phoneNumber),

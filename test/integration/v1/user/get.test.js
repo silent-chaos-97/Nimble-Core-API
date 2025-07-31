@@ -79,3 +79,5 @@ describe('GET /users/:id', () => {
           done()
         })
     })
+
+    it('should return target user data', done => {

@@ -122,6 +122,7 @@ class AccountRequest extends BaseModel {
           }
         }, {})
       }
+// Temp comment
     }, {})
 
     const acountVerificationStatus = Object.keys(counter).reduce((acountStatus, key) => {
@@ -161,6 +162,7 @@ class AccountRequest extends BaseModel {
     })
   }
 
+  static schema(operation) {
     if (![
       'get',
       'create',
@@ -182,3 +184,7 @@ class AccountRequest extends BaseModel {
           productConfigurations: Joi.array().required().items(this.productConfigurationSchema()).min(1).max(1)
         })
       case 'update':
+        return Joi.object().keys({
+          id: Joi.string().uuid().required(),
+          createdById: Joi.string().uuid(),
+          status: Joi.string().valid(...AccountRequest.status()),

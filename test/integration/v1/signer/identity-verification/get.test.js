@@ -162,7 +162,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect(200)
         .expect(res => {
 
-// Temp comment
           const names = res.body.map(item => item.verification)
 
           expect(names).not.to.contain('Something Else')
@@ -204,3 +203,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
     })
 
     it('should return one of each type of verification', async () => {
+
+      await seed.signersIdentityVerification.create({
+        id: '00000000-0000-0000-0000-000000000013',
+        signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722',

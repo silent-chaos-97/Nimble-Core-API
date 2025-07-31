@@ -15,6 +15,7 @@ AccountRequest:
       description: The unique identifier of the Institution
       writeOnly: true
       example: 2552ab85-08da-4bb5-be00-9e94d282d311
+    status:
       type: string
       title: Status
       readOnly: true
@@ -84,3 +85,5 @@ AccountRequest:
         - readOnly: true
         - description: A object that contains contract information
     verificationStatus:
+      allOf:
+        - $ref: '#/components/schemas/AccountRequestVerificationStatus'

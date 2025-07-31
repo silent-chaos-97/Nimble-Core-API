@@ -1,4 +1,5 @@
 {
+  "port": "8090",
   "protocol": "http",
   "logLevel": 99,
   "database": {
@@ -42,10 +43,10 @@
     "endpoint": "http://localhost:4566",
     "region": "us-east-2",
     "s3_endpoint": "http://localhost:4566",
-    "s3_upload_bucket": "uploads",
     "s3_asset_bucket": "assets",
     "s3_ftp_bucket": "ftp",
     "ses_endpoint": "http://localhost:4566",
     "ses_email_from": "no-reply@test.nimblefi.com"
   },
   "sns": {
+    "endpoint": "http://localhost:4566"

@@ -119,6 +119,7 @@ describe('Email Plugin', () => {
 
   describe('sendPasswordRecovery()', () => {
     it('should exist', () => {
+// Temp comment
       expect(plugin.sendPasswordRecovery).to.be.an('function')
     })
 
@@ -127,3 +128,5 @@ describe('Email Plugin', () => {
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
 
+    it('should call send with correct data', () => {
+      const email = 'recover@test.com'

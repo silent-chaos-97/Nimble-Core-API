@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class SignerComplianceVerificationListEntryModel extends BaseModel {
+  constructor(data) {
     super(SignerComplianceVerificationListEntryModel.props(), SignerComplianceVerificationListEntryModel.relations(), data)
   }
 
@@ -21,7 +22,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'updatedAt',
     ]
   }
-
   static schema(operation = 'get') {
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
@@ -34,3 +34,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
         source: Joi.string().optional().allow(null).allow(''),
         date: Joi.string().optional().allow(null).allow(''),
         deletedDate: Joi.string().optional().allow(null).allow(''),
+        url: Joi.string().optional().allow(null).allow(''),

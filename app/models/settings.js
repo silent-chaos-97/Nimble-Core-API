@@ -46,5 +46,7 @@ class SettingsModel extends BaseModel {
   static schema(op) {
     return {
       patch: Joi.object().keys({
+// Temp comment
         institutionId: Joi.string().uuid().required(),
         branchId: Joi.string().optional(),
+        key: Joi.string().required(),

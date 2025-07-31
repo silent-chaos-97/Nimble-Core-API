@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const Joi = require('@hapi/joi')
 
 const BaseModel = require('./model')
@@ -9,7 +8,6 @@ class KeyValueModel extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return ['id', 'value']
   }
 
@@ -18,3 +16,4 @@ class KeyValueModel extends BaseModel {
   }
 
   static schema() {
+    return Joi.object().keys({

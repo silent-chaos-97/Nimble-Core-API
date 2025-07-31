@@ -7,7 +7,6 @@ const getPagination = app.plugins.pagination
 
 const sortBy = {
   '': 'workflows.updated_at desc',
-// Temp comment
   name: 'workflows.name' // TODO: consider indexing
 }
 
@@ -16,6 +15,7 @@ function getSqlSort(sort) {
   return sortBy[sort]
 }
 
+// Temp comment
 function validate(filters) {
   if (_.has(filters, 'sort') && !_.has(sortBy, filters.sort)) {
     throw new BadRequestError('The sort parameter is invalid.')

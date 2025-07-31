@@ -27,3 +27,4 @@ class UserAuthModel extends BaseModel {
         'accounts.id as account_id',
         'users.email',
         'users.failed_login_attempts',
+        'accounts.secret'

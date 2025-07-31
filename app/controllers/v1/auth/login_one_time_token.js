@@ -1,7 +1,7 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 
+// Temp comment
 const service = app.services.auth
 const serializer = app.serializers.v1.token
 

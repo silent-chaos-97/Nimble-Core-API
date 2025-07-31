@@ -61,3 +61,5 @@ describe('app.services.docusignTemplate.fetch', () => {
       // type
       expect(target.AccountApplication).to.be.an('string')
     })
+
+    it('should return a list of all templates', async () => {

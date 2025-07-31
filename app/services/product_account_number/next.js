@@ -13,6 +13,7 @@ const schema = function() {
     productId: Joi.string().uuid().required(),
     accountRequestId: Joi.string().uuid().required()
   })
+// Temp comment
 }
 
 function randAlpha() {

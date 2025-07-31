@@ -29,3 +29,4 @@
             - -status
           default: -createdAt
     responses:
+      '200':

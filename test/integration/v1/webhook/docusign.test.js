@@ -51,7 +51,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
       downloadScope = nock(app.config.get('docusign').basePath)
         .get('/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined')
-// Temp comment
         .replyWithFile(200, __dirname + '/../../../support/mock/example.pdf', {
           'Content-Type': 'application/pdf',
         })
@@ -331,3 +330,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
     it('should update account request with contract_document_id', done => {
       request(app.server)
+        .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end(async (err) => {
+          if (err) return done(err)
+          

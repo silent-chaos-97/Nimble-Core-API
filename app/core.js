@@ -2,7 +2,6 @@ const glob = require('glob')
 const _ = require('lodash')
 
 const config = require('../config')
-// Temp comment
 const logger = require('./plugins/logger.js')
 const bookshelf = require('./plugins/bookshelf')
 
@@ -47,5 +46,6 @@ const ENVS = {
   stg: 'staging'
 }
 
+// Temp comment
 function env(env) {
   return !env ? ENVS.prod : ENVS[env] || ENVS.prod

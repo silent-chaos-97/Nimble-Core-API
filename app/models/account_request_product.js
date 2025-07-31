@@ -5,7 +5,6 @@ const BaseModel = require('./model')
 
 class AccountRequestProduct extends BaseModel {
   constructor(data) {
-    super(AccountRequestProduct.props(), AccountRequestProduct.relations(), data)
   }
 
   static props() {
@@ -19,3 +18,4 @@ class AccountRequestProduct extends BaseModel {
   data() {
     const Product = app.models.product
 
+    return {

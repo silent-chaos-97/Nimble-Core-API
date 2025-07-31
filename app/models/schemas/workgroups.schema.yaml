@@ -21,7 +21,9 @@ columns:
       ref: products
       value: category
       title: category
+
   - data: meeting_frequency
 
   - data: meeting_time
     type: time
+    timeFormat: h:mm a

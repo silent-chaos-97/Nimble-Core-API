@@ -37,3 +37,4 @@ SignerCreditReport:
       readOnly: true
     createdAt:
       title: When was the query created
+      type: string

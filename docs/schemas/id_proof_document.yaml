@@ -5,7 +5,6 @@ IdProofDocument:
     - number
     - expirationDate
     - issuedDate
-    - issuer
     - frontDocumentId
     - backDocumentId
   properties:
@@ -44,3 +43,4 @@ IdProofDocument:
       type: string
       format: uuidv4
       title: Front Document Id
+      description: Document id associated with front of the id proof document

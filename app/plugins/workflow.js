@@ -13,4 +13,5 @@ function getActivityPath(descriptorId, version, step) {
   return `${vDir}/${step}.${descriptorId}.js`
 }
 
+function getActivityHandler(action, version, step) {
   return require(getActivityPath(action, version, step))

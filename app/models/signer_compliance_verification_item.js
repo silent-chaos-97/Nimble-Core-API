@@ -5,7 +5,6 @@ const _ = require('lodash')
 
 class SignerComplianceVerificationItemModel extends BaseModel {
   constructor(data) {
-    super(SignerComplianceVerificationItemModel.props(), SignerComplianceVerificationItemModel.relations(), data)
   }
 
   static props() {
@@ -15,6 +14,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'nameAka',
       'dateOfBirth',
       'dateOfDeath',
+      'countries',
       'associates',
       'matchTypes',
       'createdAt',
@@ -44,3 +44,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
 
     if (operation === 'create') {
       return Joi.object().keys({
+        fullName: Joi.string().required(),

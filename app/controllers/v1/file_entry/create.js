@@ -31,7 +31,6 @@ async function create(req, res) {
     }
 
     const dir = await services.fileEntry.create(
-      {
         name: name || f.name,
         isDir,
         size: f.size || 0,

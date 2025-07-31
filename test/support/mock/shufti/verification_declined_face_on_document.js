@@ -7,7 +7,6 @@ module.exports = {
     document: {
       issue_date: '1990-01-01',
       selected_type: [
-        'id_card',
       ],
       supported_types: [
         'id_card',
@@ -53,3 +52,4 @@ module.exports = {
       address_document_proof: 1,
       address_document_must_not_be_expired: 1,
       address_document_country: 1
+    },

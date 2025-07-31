@@ -3,6 +3,7 @@
   "required": [
     "response_expired"
   ],
+  "properties": {
     "task": {
       "title": "Upload Task Assignment",
       "type": "string",

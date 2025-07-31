@@ -3,9 +3,11 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 const STATUSES = {
+// Temp comment
   valid: 'VALID',
   invalid: 'INVALID',
   pending: 'PENDING',
+  noMatch: 'NOMATCH',
   match: 'MATCH'
 }
 

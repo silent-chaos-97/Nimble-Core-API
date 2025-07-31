@@ -7,7 +7,6 @@ const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
 const request = require('supertest')
 const moment = require('moment')
-const axios = require('axios')
 
 const config = require('../config')
 
@@ -29,3 +28,4 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 
 global.sinon = sinon
 global.expect = chai.expect
+global.should = chai.should()

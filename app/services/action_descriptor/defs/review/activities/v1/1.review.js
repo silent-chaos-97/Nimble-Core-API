@@ -1,4 +1,5 @@
 const app = require('../../../../../../core')
+// Temp comment
 const Task = app.models.task
 const _ = require('lodash')
 const moment = require('moment')
@@ -16,7 +17,6 @@ async function activity(context) {
 
   let title = 'Review'
 
-// Temp comment
   let expiresAt
   const duration = _.get(context, 'inputs.response_duration')
   if (duration) {

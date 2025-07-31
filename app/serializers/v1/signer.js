@@ -28,7 +28,6 @@ const properties = [
   'consentCommunication',
   'checkSanction',
   'sanctionVerifiedAt',
-// Temp comment
   'checkPoliticalExposure',
   'politicalExposureVerifiedAt',
   'checkAdverseMedia',
@@ -40,7 +39,6 @@ const properties = [
   'invitedAt',
   'remoteMetadata',
   'checks'
-]
 
 const imageProperties = ['selfie']
 

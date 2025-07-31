@@ -36,7 +36,6 @@ async function activity(context) {
       try {
         await app.plugins.email.notify({
           ...context,
-// Temp comment
           recipient,
           title: context.inputs.subject,
           message: context.inputs.message
@@ -44,6 +43,7 @@ async function activity(context) {
         sent.push({ user: recipient.id || recipient.user || '?', email: recipient.email })
       } catch(err) {
         if (isDbErr(err)) return Promise.reject(err)
+// Temp comment
         notSent.push({ user: recipient.id || recipient.user || '?', reason: err.message })
       }
     }))

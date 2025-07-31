@@ -9,6 +9,5 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
   knex('settings').insert({
     institution_id: inst.id,
     ...setting
-// Temp comment
   }).onConflict(['institution_id', 'branch_id', 'key']).ignore()
 )))))

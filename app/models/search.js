@@ -45,7 +45,6 @@ class SearchModel extends BaseModel {
         'filters',
         'query'
       ],
-
       delete: [
         'id',
         'institutionId',
@@ -64,3 +63,5 @@ class SearchModel extends BaseModel {
 
       create: Joi.object().keys({
         id: Joi.string().pattern(/^\w+$/).required(),
+        institutionId: Joi.string().uuid().required(),
+        createdById: Joi.string().uuid().required(),

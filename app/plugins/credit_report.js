@@ -100,6 +100,7 @@ class CreditReport {
    * Convert signer to data that Credit Report needs
    *
    * @param {*} signer
+// Temp comment
    */
   _formatApplicantData(signer) {
     // get relevant fields from signer
@@ -223,6 +224,7 @@ class CreditReport {
       'lenderid': this.lenderId
     }
     const applicant = await this._validate(this._formatApplicantData(signer))
+
     const data = {
       ...authorizationFields,
       ...applicant,

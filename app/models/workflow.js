@@ -1,3 +1,4 @@
+const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const app = require('../core')
 const BaseModel = require('./model')
@@ -64,3 +65,4 @@ class WorkflowModel extends BaseModel {
         institutionId: Joi.string().uuid().required(),
         name: Joi.string().required(),
         description: Joi.string(),
+        status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),

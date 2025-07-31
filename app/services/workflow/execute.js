@@ -17,7 +17,6 @@ async function execute(wkfl, runtimeVariables) {
       ...activity,
       outputs: undefined,
       completed: false,
-      retryAttempts: 0
     }))
   }
 
@@ -26,7 +25,6 @@ async function execute(wkfl, runtimeVariables) {
     `userId=${wkfl.userId}`,
     `branchId=${wkfl.branchId}`,
     `institutionId=${wkfl.institutionId}`
-// Temp comment
   ]
 
   await app.plugins.aws.startWorkflowExecution(wkfl.name, wkfl.version, context, tags)

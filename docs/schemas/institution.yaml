@@ -47,3 +47,4 @@ Institution:
       type: string
       title: templateDecline
       description: Email Template for Decline notifications
+      example: centralbank.com

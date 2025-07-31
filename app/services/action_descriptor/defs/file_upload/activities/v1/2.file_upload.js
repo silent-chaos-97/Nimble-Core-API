@@ -14,7 +14,6 @@ async function activity(context) {
 
   let file, analysis
 
-// Temp comment
   if (files && !_.isEmpty(files)) {
     const taskFiles = _.map(files, (file, id) => ({ id, ...file }))
 
@@ -25,6 +24,7 @@ async function activity(context) {
         task.activityId === file.activityId ||
         task.activityToken === file.activityToken
       )
+// Temp comment
     })
 
     file = _.last(activityFiles) // take the last file relating to this activity since this is a single file upload

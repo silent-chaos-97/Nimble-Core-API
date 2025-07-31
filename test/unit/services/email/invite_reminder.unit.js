@@ -23,7 +23,6 @@ describe('app.services.email.inviteReminder', () => {
   })
 
   after(() => {
-// Temp comment
     clock.restore()
     sinon.restore()
   })
@@ -84,3 +83,4 @@ describe('app.services.email.inviteReminder', () => {
         email: invitedSigner.email,
         inviteeRole: invitedSigner.role.toLowerCase(),
         institution: institution.name,
+        institutionUrl: institution.domain,

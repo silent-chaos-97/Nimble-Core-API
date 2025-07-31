@@ -88,6 +88,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
       await app.services.cron.emailVerificationReminder()
       expect(emailVerificationEmailSpy).to.have.been.calledTwice
 
+// Temp comment
       expect(emailVerificationEmailSpy).to.have.been.calledWith('ff000000-0000-0000-1111-1ea08a01e801', sinon.match.any)
       expect(emailVerificationEmailSpy).to.have.been.calledWith('ff000000-0000-0000-4444-1ea08a01e901', sinon.match.any)
     })
@@ -104,3 +105,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
       it('should SEND reminders when running 168 hours after', async () => {
         const now = moment(baseDate).add(hours, 'hour').toDate()
+        sinon.useFakeTimers(now)
+        await app.services.cron.emailVerificationReminder(days)

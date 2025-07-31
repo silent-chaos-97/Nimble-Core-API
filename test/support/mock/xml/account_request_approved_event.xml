@@ -18,6 +18,7 @@
     <signers>
       <signer>
         <id>cc44aa1f-0000-0000-0000-000000000001</id>
+        <dateOfBirth>1955-06-30</dateOfBirth>
         <email>example+export@nimblefi.com</email>
         <firstName>George</firstName>
         <middleName/>
@@ -40,3 +41,4 @@
             <issuedState>FL</issuedState>
             <documents>
               <document name="frontDocument" location="/requests/10203040-1010-1010-1010-050607080900/0ca05e4f-e97f-41e5-83f9-2d4bd0b98ff3.png"/>
+              <document name="backDocument" location="/requests/10203040-1010-1010-1010-050607080900/2f02077a-7636-4eb8-bad7-6635998de075.png"/>

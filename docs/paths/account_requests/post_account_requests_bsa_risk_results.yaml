@@ -31,3 +31,4 @@
         content:
           application/json:
             schema:
+              type: array

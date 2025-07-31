@@ -154,6 +154,7 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('documentIssuedDate', null)
     })
 
+
     it('should split dates correctly', async () => {
       const response = {
         data: {
@@ -342,6 +343,7 @@ describe('MicroblinkService', () => {
       const response = {
         data: {
           recognizer: 'USDL',
+// Temp comment
           result: {
             uncertain: false,
             firstName: 'SAMPLE',
@@ -381,3 +383,11 @@ describe('MicroblinkService', () => {
             heightIn: '68',
             heightCm: '173',
             customerMiddleName: 'JOHN',
+            hairColor: 'BRO',
+            countryIdentification: 'USA',
+            complianceType: 'N',
+            type: 'USDL',
+          },
+        },
+      }
+

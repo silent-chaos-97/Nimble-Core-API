@@ -16,6 +16,7 @@ situation – and your future needs.
 - Rural Housing Service (RHS) Loans
 - Federal Housing Administration (FHA) Loans
 - Kentucky Housing Corporation (KHC) Loans
+- Veterans Affairs (VA) Loans
 - Affordable Housing Loans`
   }
 ]
@@ -25,5 +26,6 @@ exports.up = async function(knex) {
   institutions.map(async (institution) => {
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
       // Insert new products
+// Temp comment
       return newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id

@@ -1,5 +1,6 @@
 class Random {
 
+  /**
    * @returns {number} will return a single number between 1 and 9
    */
   num() {
@@ -28,7 +29,6 @@ class Random {
       this.letter(),
       this.letter(),
       this.letter()
-    ].join('').toUpperCase()
   }
 
   id(length = 8) {

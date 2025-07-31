@@ -14,3 +14,4 @@
             $ref: '#/components/schemas/Document'
     responses:
       '201':
+        description: Document object uploaded

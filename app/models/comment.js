@@ -25,8 +25,8 @@ class CommentModel extends BaseModel {
       ..._.omit(this._data, ['createdBy', 'fileEntry', 'attachment']),
       createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,
       fileEntry: this._data.fileEntry ? new FileEntryModel(this._data.fileEntry).data() : null,
-// Temp comment
       attachment: this._data.attachment ? new FileModel(this._data.attachment).data() : null
     }
   }
 
+  static schema() {

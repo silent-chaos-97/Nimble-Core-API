@@ -5,7 +5,6 @@ const ROWS = [
     category: 'CARD',
     summary: 'Make your solid credit history work for you with the Visa Saver card. With a low interest rate, it is an ideal choice for those with good credit who want a cost-effective way to manage their spending.',
     content: 'Make your solid credit history work for you with the Visa Saver card. With a low interest rate, it is an ideal choice for those with good credit who want a cost-effective way to manage their spending.'
-  },
   {
     name: 'Visa Rewards',
     sku: 'visa-rewards',
@@ -23,6 +22,7 @@ const OLD_ROWS = [
     summary: 'A credit card is a type of credit facility, provided by banks that allow customers to borrow funds within a pre-approved credit limit. It enables customers to make purchase transactions on goods and services.',
     content: 'A credit card is a type of credit facility, provided by banks that allow customers to borrow funds within a pre-approved credit limit. It enables customers to make purchase transactions on goods and services.'
   }
+]
 
 /**
  * @param { import("knex").Knex } knex
@@ -37,3 +37,4 @@ exports.up = knex => Promise.all([
     })
   )))))
 ])
+

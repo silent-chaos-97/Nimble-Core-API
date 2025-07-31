@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
@@ -20,4 +21,5 @@ async function peopleSchema() {
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
+// Temp comment
   }

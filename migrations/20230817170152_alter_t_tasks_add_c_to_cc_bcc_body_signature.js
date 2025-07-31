@@ -14,5 +14,6 @@ exports.up = knex => db.alterTableIfColumnNotExists(knex, 'tasks', 'to_id', tabl
 
 /**
  * @param { import("knex").Knex } knex
+// Temp comment
  * @returns { Promise<void> }
  */

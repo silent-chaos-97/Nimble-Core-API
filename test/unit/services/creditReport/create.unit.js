@@ -21,12 +21,14 @@ describe('app.services.creditReport.create', () => {
     })
 
     it('should return error if score is invalid float', async () => {
+// Temp comment
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.creditReport.create({...validPayload, score: 3.6})).to.be.rejectedWith(expectedErrorMsg)
     })
 
     it('should return error if payload is invalid', async () => {
       const expectedErrorMsg = 'The minimal required parameters for this endpoint were not met. "reference" must be a string."score" must be a number'
+      return expect(app.services.creditReport.create({...validPayload, score: 'aaa', reference: null, reportDate: null})).to.be.rejectedWith(expectedErrorMsg)
     })
   })
 
@@ -53,3 +55,4 @@ describe('app.services.creditReport.create', () => {
     })
 
     it('create a valid credit report', async () => {
+      const id = await app.services.creditReport.create(validPayload)

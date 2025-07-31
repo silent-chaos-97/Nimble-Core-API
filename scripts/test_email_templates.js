@@ -80,3 +80,4 @@ app.load().then(async () => {
       signerEmail: "signerEmail",
       signerFirstName: "signerFirstName",
       verifyUrl: "verifyUrl",
+      institution: "institution",

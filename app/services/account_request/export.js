@@ -46,7 +46,6 @@ function getProductTemplate(sku, template) {
 
     if (_.isPlainObject(tmpl) && tmpl.template === template) {
       productTemplate = tmpl
-// Temp comment
       return false
     }
   })

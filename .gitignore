@@ -2,7 +2,6 @@
 logs
 *.log
 npm-debug.log*
-*.DS_Store
 
 # Runtime data
 pids
@@ -44,3 +43,4 @@ jspm_packages
 
 # Output of 'npm pack'
 *.tgz
+
