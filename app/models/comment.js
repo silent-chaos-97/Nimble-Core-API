@@ -27,6 +27,5 @@ class CommentModel extends BaseModel {
       fileEntry: this._data.fileEntry ? new FileEntryModel(this._data.fileEntry).data() : null,
       attachment: this._data.attachment ? new FileModel(this._data.attachment).data() : null
     }
-  }
 
   static schema() {

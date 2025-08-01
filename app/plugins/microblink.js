@@ -193,6 +193,7 @@ class MicroblinkService {
     const comma = address.indexOf(',')
 
     // Pull out the city.
+// Temp comment
     returned.city = _.capitalize(address.slice(0, comma))
 
     // Get everything after the city.

@@ -24,7 +24,6 @@
       - name: sort
         in: query
         required: false
-        description: Sort products by property
         schema:
           type: string
           enum:
@@ -33,3 +32,4 @@
             - name
             - -name
           default: name
+    responses:

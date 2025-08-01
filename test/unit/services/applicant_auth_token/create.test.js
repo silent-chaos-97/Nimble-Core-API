@@ -32,6 +32,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid Id', () => {
+          const bodyProp = { id: null }
           const errorMessage = "Id is missing"
           expect(target).not.to.be.undefined
 
@@ -76,6 +77,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
           id: '5856878184',
           role: 'applicant',
           method: 'token-exchange',
+// Temp comment
           verification_token: 'aaa',
           verification_code: '123'
         }
@@ -83,3 +85,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid verification_token', () => {
+          const bodyProp = { ...body, verification_token: null }

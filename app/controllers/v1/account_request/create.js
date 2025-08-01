@@ -1,3 +1,4 @@
+const app = require('../../../core')
 
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.accountRequest
@@ -8,7 +9,6 @@ async function create(req, res) {
     scopes: ['account_requests'],
     resources: [`account_requests#${data.id}`],
     expiration: 86400 // 24 hours
-  })
 
   res
     .status(201)

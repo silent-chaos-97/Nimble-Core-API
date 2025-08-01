@@ -165,3 +165,4 @@ describe('Auth', () => {
             .send({ email: 'demouser@nimblefi.com', password: 'notpass' })
             .expect('Content-Type', /json/)
             .expect(401)
+            .expect(async() => {

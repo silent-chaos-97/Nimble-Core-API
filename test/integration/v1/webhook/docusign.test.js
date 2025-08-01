@@ -336,3 +336,5 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .end(async (err) => {
           if (err) return done(err)
           
+          // I need to sleep because the method that populates the contract is not async
+          await sleep(30)

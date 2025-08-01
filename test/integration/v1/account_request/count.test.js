@@ -72,3 +72,4 @@ describe('GET /account-requests/count', () => {
           expect(expected).to.deep.equal({ count: 4 })
           done()
         })
+    })

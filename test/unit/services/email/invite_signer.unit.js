@@ -10,7 +10,6 @@ describe('app.services.email.inviteSigner', () => {
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
-  before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
@@ -84,3 +83,4 @@ describe('app.services.email.inviteSigner', () => {
         inviteeRole: invitedSigner.role.toLowerCase(),
         institution: institution.name,
         institutionUrl: institution.domain,
+        statusEmailSubject: `${invitedBy.firstName} has invited you to join ${institution.name}`,

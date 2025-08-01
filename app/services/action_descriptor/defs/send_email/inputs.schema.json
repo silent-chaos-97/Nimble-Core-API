@@ -9,7 +9,6 @@
     "recipients": {
       "title": "Recipients",
       "type": "string",
-      "stereotype": "users"
     },
     "subject": {
       "title": "Subject",

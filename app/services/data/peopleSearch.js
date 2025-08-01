@@ -5,7 +5,6 @@ const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.people.search')
 
-// Temp comment
 async function peopleSearch(query) {
   logger.info({ op: 'people.search', phase: 'started', query })
 
@@ -15,7 +14,6 @@ async function peopleSearch(query) {
   const endpoint = app.config.get('nimbleData.apiEndpoint')
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'people/search'
   const headers = { 'x-api-key': reqApiKey ? reqApiKey : app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage
-
   logger.info({ op: 'people.search', phase: 'prepared', request: { endpoint, apiUrl, headers, data: query } })
 
   try {

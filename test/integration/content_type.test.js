@@ -25,7 +25,6 @@ describe('Content-Type Support', () => {
       return request(app.server)
         .put('/some/unkown/resource')
         .send('<html></html>')
-        .set('Content-Type', 'text/html')
         .set('Authorization', 'Bearer ' + helpers.token)
         .expect('Content-Type', /json/)
         .expect(400)

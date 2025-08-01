@@ -104,5 +104,5 @@ describe('GET /me', () => {
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
         .expect((res) => {
-// Temp comment
           expect(res.body.accounts).to.have.lengthOf(1)
+          res.body.accounts.forEach(strategy => {

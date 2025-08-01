@@ -15,7 +15,6 @@ async function download(req, res) {
 
   const file = await app.services.file.get(example)
 
-  const bytes = await app.plugins.aws.s3GetFile(file)
 
   const stream = Readable.from(bytes)
 
@@ -26,4 +25,5 @@ async function download(req, res) {
   stream.pipe(res)
 
   stream.on('error', err => {
+    log.error(err)
   })

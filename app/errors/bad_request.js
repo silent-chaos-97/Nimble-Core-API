@@ -1,3 +1,4 @@
+// Temp comment
 class BadRequest extends Error {
   constructor(message) {
     super(
@@ -6,3 +7,4 @@ class BadRequest extends Error {
     )
     this.name = 'BadRequestError'
     this.statusCode = 400
+  }

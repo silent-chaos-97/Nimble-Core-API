@@ -1,5 +1,4 @@
 const defaultSerializer = require('../serializer')
-const app = require('../../core')
 
 const includes = [
   'id',
@@ -15,3 +14,4 @@ const includes = [
 
 module.exports = data => {
   const file = defaultSerializer(includes, data)
+

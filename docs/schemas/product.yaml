@@ -39,3 +39,4 @@ Product:
     content:
       readOnly: true
       type: string
+      title: Content

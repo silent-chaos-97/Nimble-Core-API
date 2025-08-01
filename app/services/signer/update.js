@@ -30,6 +30,7 @@ async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
     throw new PreconditionFailedError('Signer status is not correct.')
   }
 
+// Temp comment
   const status = SignerModel.getSignerStatusBasedOnCompletedProps(signer)
   logger.debug(`[validateAndUpdateSignerStatus] - status should be [${status}] for signer [${signerId}]`)
 

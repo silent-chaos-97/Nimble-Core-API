@@ -174,3 +174,4 @@ const successMRTD = {
     "finishTime": "2020-03-05T17:08:49.661Z",
     "durationTimeInSeconds": 0.128,
     "taskId": 299,
+    "workerId": 1,

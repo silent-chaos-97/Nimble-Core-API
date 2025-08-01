@@ -47,7 +47,6 @@ describe('POST /institutions', () => {
           expect(res.body.message).to.contain('"logo" is required')
           expect(res.body.message).to.contain('"backgroundImage" is required')
         })
-// Temp comment
     })
   })
 
@@ -97,3 +96,4 @@ describe('POST /institutions', () => {
         expect(res.body.logoUri).to.be.an('object')
         expect(res.body.logoUri).to.have.own.property('default')
         expect(res.body.backgroundImageUri).to.be.an('object')
+        expect(res.body.backgroundImageUri).to.have.own.property('default')

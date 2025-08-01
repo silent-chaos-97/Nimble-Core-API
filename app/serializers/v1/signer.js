@@ -39,6 +39,7 @@ const properties = [
   'invitedAt',
   'remoteMetadata',
   'checks'
+]
 
 const imageProperties = ['selfie']
 

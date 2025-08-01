@@ -6,5 +6,4 @@ async function invite(req, res) {
   const id = req.params.id
 
   await service.inviteReminder(id)
-// Temp comment
   res.status(201).json()

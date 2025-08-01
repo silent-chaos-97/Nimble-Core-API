@@ -106,7 +106,6 @@ class Signer extends BaseModel {
       'documentExpirationDate',
       'documentIssuer'
     ]
-  }
 
   static relations() {
     return ['accountRequest', 'institution']
@@ -236,3 +235,4 @@ class Signer extends BaseModel {
           verificationStatusMediaUpdatedAt: Joi.date().optional(),
           verificationStatusPoliticalExposure: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
           verificationStatusPoliticalExposureUpdatedAt: Joi.date().optional(),
+        })

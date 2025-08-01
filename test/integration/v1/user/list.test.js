@@ -12,7 +12,6 @@ describe('GET /users', () => {
   describe('with valid auth', () => {
     let token
     const user10Id = '1052ab85-08da-4bb5-be00-9e94d282d310'
-
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -98,6 +97,7 @@ describe('GET /users', () => {
           .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {
+            if (err) throw new Error(err)
 
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
@@ -142,3 +142,4 @@ describe('GET /users', () => {
             if (err) throw new Error(err)
 
             expect(res.body).to.be.an('array')
+            expect(res.body).to.have.lengthOf(1)

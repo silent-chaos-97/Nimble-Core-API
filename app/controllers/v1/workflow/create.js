@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 
 const Wkfl = app.models.workflow
 const workflows = app.services.workflow
@@ -11,7 +10,6 @@ function create(req, res, next) {
   const wkfl = req.body
 
   if (!_.isObject(wkfl)) throw new BadRequestError('WorkflowBodyRequired')
-
   wkfl.userId = me.id
   wkfl.branchId = _.get(me, ['branch', 'id'], me.branchId)
   wkfl.institutionId = _.get(me, ['institution', 'id'], me.institutionId)

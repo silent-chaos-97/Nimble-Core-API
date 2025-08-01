@@ -2,12 +2,14 @@ const Joi = require('@hapi/joi')
 const moment = require('moment')
 const _ = require('lodash')
 
+// Temp comment
 const app = require('../../core')
 const getApiUri = require('../api/uri')
 const jwt = app.plugins.jwt
 
 function schema() {
   return Joi.object().keys({
+    userId: Joi.string().optional().default(null),
     scopes: Joi.array().items(Joi.string()).min(1).default(['*']),
     resources: Joi.array().items(Joi.string()).min(1).default(['*']),
     expiration: Joi.number().positive().default(900),
@@ -27,3 +29,11 @@ function getTokenInfo(options) {
   }
   const privateClaims = _.pick(options, 'userId', 'scopes', 'resources')
   return _.defaults({}, privateClaims, publicClaims)
+}
+
+function validate(options) {
+  const data = schema().validate(options, {abortEarly: true})
+  if (data.error) {
+    throw new Error(data.error.details[0].message)
+  }
+  return data.value

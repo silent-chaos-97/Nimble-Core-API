@@ -4,7 +4,6 @@ const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
-// Temp comment
 describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
@@ -79,6 +78,7 @@ describe('app.services.compliance.parse', () => {
       })
 
       it('object should have an expected result schema', async () => {
+// Temp comment
         const target = await app.services.compliance.parse(searchResult)
         const first = _.first(target)
 

@@ -6,7 +6,6 @@ const complyAdvantage = require('../../../support/mock/comply_advantage')
 const config = require('../../../../config')
 const _ = require('lodash')
 
-// Temp comment
 async function insert(table, data) {
   const row = await knex(table).returning('*').insert(data)
   return _.first(row)
@@ -117,6 +116,45 @@ async function signerById(id) {
       'signers.check_adverse_media as signer_check_adverse_media',
       'signers.adverse_media_verified_at as signer_adverse_media_verified_at',
       'signers.check_anti_money_laundering as signer_check_anti_money_laundering',
-      'signers.anti_money_laundering_verified_at as signer_anti_money_laundering_verified_at',
       'account_requests.status as account_request_status')
     .first()
+}
+
+async function mockExternalServices(mockData, bodyFn) {
+  const sleep = (ms)  => new Promise(resolve => setTimeout(resolve, ms))
+
+  const defaultMockData = {
+    microblink: {status: 200,
+      response: mircroblinkResponse.successResponse,
+      endpoint: '/recognize/execute' },
+    shufti: {status: 200,
+      response: shuftiResponse.acceptedResponse,
+      endpoint: '/api/', async: true},
+    complyAdvantage: {status: 200,
+      response: complyAdvantage.successResponse,
+      endpoint: '/searches', async: true }
+  }
+
+  if (typeof mockData === 'function') {
+    bodyFn = mockData
+    mockData = {}
+  }
+
+  mockData = _.merge(_.cloneDeep(defaultMockData), mockData)
+  const services = Object.keys(mockData)
+  const scopes = services.map(service => {
+    const scope = nock(config.get(service).baseUrl)
+      .post(mockData[service].endpoint)
+      .reply(mockData[service].status, mockData[service].response)
+
+    return {async:mockData[service].async, scope: scope }
+  })
+
+  await bodyFn()
+
+  scopes.map(async service => {
+    if (service.async) {
+     await sleep(50)
+    }
+    service.scope.done()
+  })

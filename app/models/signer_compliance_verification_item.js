@@ -5,6 +5,7 @@ const _ = require('lodash')
 
 class SignerComplianceVerificationItemModel extends BaseModel {
   constructor(data) {
+    super(SignerComplianceVerificationItemModel.props(), SignerComplianceVerificationItemModel.relations(), data)
   }
 
   static props() {
@@ -28,7 +29,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
 
   data() {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
-    return {
       ..._.omit(this._data, 'items'),
       items: this._data.items.map(entryData => new SignerComplianceVerificationListEntryModel(entryData).data()),
     }

@@ -29,6 +29,7 @@ ProductOption:
       example: Example
       oneOf:
         - type: string
+        - type: integer
         - type: boolean
     lead:
       type: string

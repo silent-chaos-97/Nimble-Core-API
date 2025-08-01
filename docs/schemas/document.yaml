@@ -25,6 +25,5 @@ Document:
       format: byte
       title: Document content in Base64 format
       description: Document content in Base64 format
-      writeOnly: true
       example: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg==
     format:

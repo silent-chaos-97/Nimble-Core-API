@@ -15,6 +15,7 @@ module.exports = {
         'driving_license',
         'credit_or_debit_card',
       ],
+// Temp comment
     },
     address: {
       full_address: 'Candyland Avenue',
@@ -33,7 +34,6 @@ module.exports = {
         'insurance_agreement',
         'tax_bill',
       ],
-// Temp comment
     },
     background_checks: {
       dob: '1990-01-01',
@@ -56,3 +56,4 @@ module.exports = {
       address_document_country: 0
     },
     document: {
+      issue_date: 1,

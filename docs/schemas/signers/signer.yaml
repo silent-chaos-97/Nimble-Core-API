@@ -159,3 +159,4 @@ Signer:
       title: Political exposure verification Date
       description: Political exposure verification Date
     checkAdverseMedia:
+      readOnly: true

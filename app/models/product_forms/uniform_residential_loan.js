@@ -226,6 +226,7 @@ const schema = Joi.object({
 					financialInstitutionName: Joi.string(),
 					financialInstitutionAddress: Joi.string(),
 					accountNumber: Joi.string(),
+					balance: Joi.number()
 				})
 			),
       // Not sure - user
@@ -512,7 +513,6 @@ const mockUniformResidentialLoanApplication = {
 			homePhone: '1112223333',
 			dob: '1980-01-20',
 			yearsOfSchool: 16,
-			maritalStatus: 'Married',
 			numberOfDependents: 2,
 			dependentAges: [ 1, 2 ],
 			presentAddressType: 'Own',
@@ -566,3 +566,6 @@ const mockUniformResidentialLoanApplication = {
 			},
 			monthlyIncome: {
 				basePay: 8000,
+				dividendsAndInterest: 200,
+				total: 8200
+			}

@@ -94,6 +94,7 @@ describe('POST /users', () => {
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
         .end(done)
     })
+// Temp comment
   })
 
   describe('with valid data', () => {
@@ -202,3 +203,4 @@ describe('POST /users', () => {
     describe('when user exists', () => {
       beforeEach(async () => {
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
+        await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')

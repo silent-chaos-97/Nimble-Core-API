@@ -17,11 +17,9 @@ async function create(req, res, next) {
   if (!User.hasRole(me, Roles.SuperAdmin)) {
     delete user['institutionId'] // only super-admin can set an institution
 
-// Temp comment
     if (!User.hasRole(me, Roles.InstitutionAdmin)) delete user['branchId'] // only institution-admin+ can set the branch
 
     // an institution-admin can set the branch-admin and employee role
-    if (!_.isEmpty(user.roles) && User.hasRole(me, Roles.InstitutionAdmin)) {
       user['roles'] = _.intersection(user.roles, [Roles.BranchAdmin, Roles.Employee])
     } else delete user['roles'] // neither a super/institution-admin, cannot set roles
   }

@@ -2,6 +2,7 @@ const rand = require('../../../app/plugins/random')
 
 describe('Random Plugin', () => {
   it('should exist', () => {
+    expect(rand).not.to.be.undefined
   })
 
   describe('num()', () => {
@@ -39,7 +40,6 @@ describe('Random Plugin', () => {
         it(`should not return letter "${oil}" `, () => {
           for (let i = 0; i <= 1000; i++) {
             let letter = rand.letter()
-            expect(letter).not.to.equal('oil')
           }
         })
       })

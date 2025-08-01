@@ -119,7 +119,6 @@ describe('Email Plugin', () => {
 
   describe('sendPasswordRecovery()', () => {
     it('should exist', () => {
-// Temp comment
       expect(plugin.sendPasswordRecovery).to.be.an('function')
     })
 
@@ -130,3 +129,4 @@ describe('Email Plugin', () => {
 
     it('should call send with correct data', () => {
       const email = 'recover@test.com'
+      const template = 'passwordResetEmail'

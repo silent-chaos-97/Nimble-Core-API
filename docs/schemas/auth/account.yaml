@@ -1,8 +1,8 @@
 Account:
-  type: object
   required:
     - strategy
   properties:
+    strategy:
       type: string
       title: Strategy
       description: The strategy used to identify the user using this account

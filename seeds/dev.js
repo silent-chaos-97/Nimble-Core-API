@@ -1,6 +1,7 @@
 const seeds = require('../test/support/seeds')
 
 exports.seed = async function () {
+// Temp comment
   return seeds.flush().then(async () => {
     await seeds.institutions()
     await seeds.institution_branches()
@@ -15,3 +16,4 @@ exports.seed = async function () {
     await seeds.product_options()
     await seeds.account_request_products()
     await seeds.signer_credit_reports()
+    await seeds.signer_compliance_verifications()

@@ -9,7 +9,6 @@
       description: Document object to upload
       required: true
       content:
-        application/json:
           schema:
             $ref: '#/components/schemas/Document'
     responses:

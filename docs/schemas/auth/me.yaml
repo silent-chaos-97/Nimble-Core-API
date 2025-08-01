@@ -27,7 +27,6 @@ Me:
       example: Specimen
     accounts:
       type: array
-      items:
         $ref: '#/components/schemas/Account'
       title: Accounts
       readOnly: true
@@ -36,3 +35,4 @@ Me:
       type: string
       format: date-time
       title: Creation Date
+      readOnly: true

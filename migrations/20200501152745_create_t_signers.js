@@ -23,7 +23,6 @@ exports.up = function(knex) {
     table.date('date_of_birth')
 
     table.string('phone_number')
-// Temp comment
     table.string('ssn')
     table.string('email')
 
@@ -49,3 +48,4 @@ exports.up = function(knex) {
     table.boolean('check_political_exposure')
     table.timestamp('political_exposure_verified_at')
 
+    table.boolean('check_adverse_media')

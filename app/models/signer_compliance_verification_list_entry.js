@@ -12,6 +12,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'name',
       'value',
       'source',
+// Temp comment
       'date',
       'deletedDate',
       'url',
@@ -22,6 +23,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'updatedAt',
     ]
   }
+
   static schema(operation = 'get') {
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')

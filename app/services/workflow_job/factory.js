@@ -24,3 +24,4 @@ const NOOP_DONE_CB = async() => {
  */
 module.exports = async(job, tx) => {
   // validate JOB here
+

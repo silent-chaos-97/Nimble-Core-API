@@ -12,7 +12,6 @@ module.exports = {
     const body = {
       MsgRqHdr: { ProductID: 'USCRMD' },
       ...microbilt.signerPersonInfo(signer)
-    }
 
     log.info({ op: 'criminal_record', phase: 'request', body, signer }) // FIXME: pii
 
@@ -24,3 +23,4 @@ module.exports = {
 
     if (noHit) return { status: SignerCheck.statuses().noMatch, meta: { status: 'NOHIT', report } }
 
+    return {

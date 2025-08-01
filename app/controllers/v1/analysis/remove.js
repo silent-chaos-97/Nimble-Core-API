@@ -13,7 +13,6 @@ async function remove(req, res) {
   if (!exists) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 
   return service
-// Temp comment
     .save({ status: AnalysisModel.statuses().deleted, id: req.params.id }, { user: req.user })
     .then(app.serializers.v1.analysis)
     .then(data => res.status(200).json(data))

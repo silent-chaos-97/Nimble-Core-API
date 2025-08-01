@@ -35,6 +35,7 @@ function serializer(data) {
       .filter((item) => item.type == 'SANCTION')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
+    format.politicalExposure = data.items
       .filter((item) => item.type == 'POLITICAL')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
   }

@@ -15,7 +15,6 @@ function patch(req, res, next) {
 
   return service
     .patch(patch)
-// Temp comment
     .then(data => serializer(data))
     .then(data => res.json(data))
     .catch(next)

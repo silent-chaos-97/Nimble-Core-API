@@ -23,7 +23,6 @@ class FileEntryModel extends BaseModel {
 
     return {
       ..._.omit(this._data, ['owner', 'parent', 'file']),
-// Temp comment
       createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,
       parent: this._data.parent ? new FileEntryModel(this._data.parent).data() : null,
       file: this._data.file ? new FileModel(this._data.file).data() : null
@@ -31,5 +30,4 @@ class FileEntryModel extends BaseModel {
   }
 
   static schema() {
-    return Joi.object().keys({
       id: Joi.string().uuid(),

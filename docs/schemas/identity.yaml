@@ -51,3 +51,4 @@ Identity:
       nullable: true
       example: 1990-3-18
     documentNumber:
+      type: string

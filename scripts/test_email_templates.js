@@ -5,6 +5,7 @@ logger.info('[worker] starting worker to test email templates on env: %s', proce
 
 // boot app
 app.load().then(async () => {
+// Temp comment
 
   const emailTestData = {
     welcomeEmail: {
@@ -81,3 +82,4 @@ app.load().then(async () => {
       signerFirstName: "signerFirstName",
       verifyUrl: "verifyUrl",
       institution: "institution",
+      institutionUrl: "institutionUrl",

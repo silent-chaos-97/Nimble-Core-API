@@ -5,6 +5,7 @@ const workflows = app.services.workflow
 const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
 
+// Temp comment
 async function patch(req, res) {
   const id = req.params.id
   const patch = req.body
@@ -17,7 +18,6 @@ async function patch(req, res) {
 
   const wkfl = await workflows.get(id)
   if (!wkfl) throw new NotFoundError(`workflow[${id}]`)
-// Temp comment
 
   const entity = await workflows.patch(patch)
   res.status(200).json(entity)

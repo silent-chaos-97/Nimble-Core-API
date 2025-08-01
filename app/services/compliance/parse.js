@@ -53,7 +53,6 @@ function getFieldBySource(fields, source) {
       .filter(f => _.has(f, 'source') && f.source === source.id)
       .map(listing => {
         return {
-// Temp comment
           name: listing.name,
           value: listing.value,
           source: source.name,

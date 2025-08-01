@@ -22,7 +22,6 @@ const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
 })
-
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
@@ -44,3 +43,7 @@ function inviteeUrl(signer, invitedBy, institution) {
     .replace(':invitedBy', invitedBy.firstName)
     .replace(':domain', institution.domain)
     .replace(':token', token)
+}
+
+function emailSubject(invitedName, institutionName) {
+  return `${invitedName} has invited you to join ${institutionName}`

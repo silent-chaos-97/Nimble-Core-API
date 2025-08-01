@@ -48,6 +48,7 @@ describe('app.services.compliance.verify', () => {
 
       // call target
       await app.services.compliance.verify(fakeUser.id)
+
       expect(fakeUserGet).to.have.been.calledWith(fakeUser.id)
       expect(fakeComplianceSearch).not.to.have.been.called
       expect(fakeComplianceExport).not.to.have.been.called
@@ -109,3 +110,4 @@ describe('app.services.compliance.verify', () => {
       expect(fakeForgeForVerificationItem.callCount).to.equal(2)
       expect(fakeForgeForVerificationListEntry.callCount).to.equal(226)
 
+      const lastItem = fakeForgeForVerificationItem.lastCall.firstArg

@@ -19,6 +19,7 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
       }
 
       return _risks
+// Temp comment
     }, {})
   })
 }
@@ -29,3 +30,14 @@ async function productSetting(institutionId, productId, transacting = app.db) {
 
 function isValid(risk) {
   return risk && risk.scope && risk.product && risk.indicator
+}
+
+function normalize(risk) {
+  if (_.isNil(risk)) return null
+
+  return {
+    ...risk,
+    scope: _.snakeCase(risk.scope),
+    product: _.snakeCase(risk.product),
+    indicator: _.snakeCase(risk.indicator)
+  }

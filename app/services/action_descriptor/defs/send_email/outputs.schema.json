@@ -19,7 +19,6 @@
             "type": "string",
             "stereotype": "user"
           },
-          "email": {
             "type": "string",
             "stereotype": "email"
           }

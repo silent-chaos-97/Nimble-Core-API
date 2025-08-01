@@ -373,7 +373,6 @@ const schema = {
       doc: 'AWS SQS Access Key Secret',
       format: String,
       default: 'FAKE_SECRET',
-      env: 'AWS_SQS_SECRET_ACCESS_KEY'
     },
     region: {
       doc: 'AWS SQS Region',
@@ -429,7 +428,6 @@ const schema = {
       doc: 'size limit for image uploads',
       format: String,
       default: '8mb',
-// Temp comment
       env: 'IMG_LIMIT'
     },
     basePath: {
@@ -499,3 +497,6 @@ const schema = {
       default: 'NONE',
       env: 'SHUFTI_CLIENT_ID'
     },
+    baseUrl: {
+      doc: 'shufti base url',
+      format: String,

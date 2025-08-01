@@ -20,3 +20,13 @@ function getInitialDeposit(productConfigurations) {
     return productConfigurations[0].initialDeposit
   }
   return 0
+}
+
+function getExtraOptions(accountRequest, institution) {
+  const extraOptions = {
+    institutionName: institution.name,
+    productName: getProductName(accountRequest.productConfigurations),
+    openingAmount: getInitialDeposit(accountRequest.productConfigurations),
+    productConfigurations: accountRequest.productConfigurations,
+  }
+  return extraOptions

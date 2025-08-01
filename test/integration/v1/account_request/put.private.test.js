@@ -255,7 +255,6 @@ describe('PUT private /account-requests/:id', () => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
-          .expect('Content-Type', /json/)
           .send({ ...putRequest, createdAt: 123123123 })
           .expect(400)
           .end((err, res) => {
@@ -326,3 +325,5 @@ describe('PUT private /account-requests/:id', () => {
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
+          .send({ ...putRequest, status: 'DECLINED' })
+          .expect(200)

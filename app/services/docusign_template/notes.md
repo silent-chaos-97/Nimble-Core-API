@@ -60,7 +60,6 @@ URL:
 https://account.docusign.com/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=CLIENTID&redirect_uri=https%3A%2F%2Fapi.app.nimblefi.com%2Fv1%2Fhealth
 
 Notes:
-
 - the scope must be the same as the ones used by the jwt request.
 - if you don't do this you will get a error_consent when authenticating.
 - if you login to docusign -> user profile -> connected apps then you can see which apps the user gave authorization
@@ -128,3 +127,4 @@ After we create a envelope, we need to take the envelopeId and call new docusign
 It will return a url like this: https://demo.docusign.net/Signing/MTRedeem/v1/fe36d81e-1e10-48b9-ac55-d6962c2c02f6?slt=eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkI
 
 The url has a short time to live and can be opened only once.
+A recipient can sign the document and when he closes the docusign window we will get a callback reporting the state of the signature (see below).

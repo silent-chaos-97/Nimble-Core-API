@@ -46,6 +46,6 @@ const ENVS = {
   stg: 'staging'
 }
 
-// Temp comment
 function env(env) {
+// Temp comment
   return !env ? ENVS.prod : ENVS[env] || ENVS.prod

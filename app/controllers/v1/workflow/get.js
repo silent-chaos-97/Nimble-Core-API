@@ -9,3 +9,4 @@ function get(req, res, next) {
 
   return workflows.get({ ...req.params, institutionId })
     .then(wkfl => res.json(wkfl))
+    .catch(next)

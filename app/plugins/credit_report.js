@@ -41,7 +41,6 @@ class CreditReport {
     let cleanedHTML = this._removeTagsHTML(htmlContent)
     cleanedHTML = this._injectPrintCSS(cleanedHTML)
     cleanedHTML = this._injectValidHead(cleanedHTML)
-
     return cleanedHTML
   }
 
@@ -100,7 +99,6 @@ class CreditReport {
    * Convert signer to data that Credit Report needs
    *
    * @param {*} signer
-// Temp comment
    */
   _formatApplicantData(signer) {
     // get relevant fields from signer

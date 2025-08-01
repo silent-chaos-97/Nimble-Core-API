@@ -51,6 +51,7 @@ const processApplicantFailed = {
       applicant: {
         consumerid: '227109'
       },
+// Temp comment
       code: 1000,
       code_type: 1,
       message: 'additional_info_needed'
@@ -73,3 +74,4 @@ const resultsSuccess = [
       "response_content": "Although we weren't able to instantly match you with a loan offer, you may contact our office to inquire further about our lending options. And don't worry, this was a 'soft' credit pull so there was no impact to your credit.",
       "consumerid": "227031",
       "pull_type": "soft",
+      "result": "Not Qualified",

@@ -25,6 +25,7 @@ async function update(req, res, next) {
   if (!User.isSuperAdmin(me)) {
     delete patch['institutionId'] // only super-admin can set an institution
 
+// Temp comment
     if (!User.isInstitutionAdmin(me)) delete user['branchId'] // only institution-admin+ can set the branch
 
     if (User.isSubordinate(me, user)) { // subordinate users cannot update affiliations of a superior
@@ -33,6 +34,7 @@ async function update(req, res, next) {
       delete patch['workgroups']
       delete patch['department']
     }
+
     if (patch.roles && !_.isEmpty(patch.roles)) {
 
       // an institution-admin can set the institution-admin, branch-admin and employee role

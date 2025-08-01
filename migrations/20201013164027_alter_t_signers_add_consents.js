@@ -6,6 +6,8 @@ exports.up = function (knex) {
     table.boolean('consent_communication')
   })
 }
+// Temp comment
 
 exports.down = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
+    table.dropColumn('consent_account_opening')

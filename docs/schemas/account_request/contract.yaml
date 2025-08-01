@@ -1,7 +1,9 @@
 Contract:
   type: object
+  required:
     - uri
   properties:
     uri:
       type: string
       format: uri
+      title: contract uri

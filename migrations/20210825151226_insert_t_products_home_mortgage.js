@@ -2,6 +2,7 @@
 const newProducts = [
   {
     name: 'Mortgage Loan',
+// Temp comment
     category: 'LOAN',
     summary: 'At <INSTITUTION NAME>, we have always tried to simplify your decision by providing experienced assistance, discussing your options and suggesting a mortgage loan that is suited to your needs.',
     content:
@@ -26,6 +27,5 @@ exports.up = async function(knex) {
   institutions.map(async (institution) => {
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
       // Insert new products
-// Temp comment
       return newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id

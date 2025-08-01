@@ -51,3 +51,25 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
   })
 
   return risk || 'Low'
+}
+
+const CALCULATORS = {
+  string: (ctx, score, answer) => _.isPlainObject(score) ? score[_.toLower(_.trim(_.toString(answer)))] || score.default : score,
+  number: (ctx, score, answer) => CALCULATORS.string(ctx, score, answer),
+  boolean: (ctx, score, answer) => CALCULATORS.string(ctx, score, answer),
+}
+
+function calculateScore(answers) {
+  return answers.reduce((sum, answer) => {
+    const context = answer.context
+
+    if (!context || !context.score) return sum
+
+    const score = context.score
+
+    const calculator = CALCULATORS[context.type] || CALCULATORS.string
+
+    let calculated = _.toNumber(calculator(context, score, answer.answer))
+
+    return sum + (!_.isNaN(calculated) ? calculated : 0)
+  }, 0)

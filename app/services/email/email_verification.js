@@ -23,7 +23,6 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
-}
 
 function verificationUrl(signerId, emailVerificationId, domain) {
   const token = app.services.token.get({
@@ -39,3 +38,7 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     .replace(':id', emailVerificationId)
     .replace(':domain', domain)
     .replace(':token', token)
+}
+
+function emailSubject() {
+  return `Confirm your email address`

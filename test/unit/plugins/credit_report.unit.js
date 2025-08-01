@@ -203,3 +203,5 @@ describe('Credit Report Plugin', () => {
       expect(result).to.have.deep.property('prequal', response.prequal)
       scope.done()
     })
+
+    it('should return error when signer is null', async () => {

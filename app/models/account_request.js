@@ -106,7 +106,6 @@ class AccountRequest extends BaseModel {
       verificationStatusPoliticalExposure: ['NOMATCH', 'MATCH']
     }
 
-    // if we dont have signers, default to PENDING
     if (_.isEmpty(signers)) {
       return Object.keys(KEYMAP).reduce((o, k) => ({ ...o, [k]: 'PENDING' }), {})
     }
@@ -122,7 +121,6 @@ class AccountRequest extends BaseModel {
           }
         }, {})
       }
-// Temp comment
     }, {})
 
     const acountVerificationStatus = Object.keys(counter).reduce((acountStatus, key) => {
@@ -188,3 +186,4 @@ class AccountRequest extends BaseModel {
           id: Joi.string().uuid().required(),
           createdById: Joi.string().uuid(),
           status: Joi.string().valid(...AccountRequest.status()),
+          bsaRisk: Joi.string().valid('High', 'Moderate', 'Low'),

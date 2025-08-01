@@ -1,5 +1,6 @@
 const getPdfFormFields = () => {
 	const fieldsForPDF = {
+		// type of mortgage and terms of loan
 		amount: '500000',
 		borrower: 'Bob Smith',
 		borrowerDOB: '1980-01-20',

@@ -1,6 +1,7 @@
 {
   "statements": 1,
   "branches": 1,
+  "functions": 1,
   "lines": 1,
   "reporter": [ "text", "cobertura", "html" ],
   "all": true,
@@ -10,5 +11,4 @@
   "exclude": [
     "seeds/",
     "coverage/",
-    "migrations/",
     "scripts/",

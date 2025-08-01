@@ -1,5 +1,4 @@
 /health:
-  get:
     tags:
       - Health
     summary: Status method
@@ -7,3 +6,4 @@
     operationId: getHealth
     responses:
       '200':
+        description: OK

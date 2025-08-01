@@ -390,7 +390,6 @@ function _amort(summary, risks) {
 
           summary.cashDown.value = cashDown
 
-          summary.loan.reasons.push({
             metricId: 'loan',
             metric: 'target_payment',
             operation: 'adjust_loan_for_additional_cash_down_via_target_payment',
@@ -659,3 +658,7 @@ async function enrichAssets(institutionId, product, assets, isCollateral, profil
   acc.monthlyDebtObligation = -(_.sumBy(assets, 'monthlyDebtObligation'))
 
   return acc
+}
+
+async function enrichCollateral(institutionId, product, asset, profile = null) {
+  return enrichAssets(institutionId, product, asset, false, profile)

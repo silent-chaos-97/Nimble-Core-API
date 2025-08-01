@@ -24,7 +24,6 @@ async function activity(context) {
         task.activityId === file.activityId ||
         task.activityToken === file.activityToken
       )
-// Temp comment
     })
 
     file = _.last(activityFiles) // take the last file relating to this activity since this is a single file upload

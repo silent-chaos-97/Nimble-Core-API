@@ -1,7 +1,6 @@
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const config = require('../../../../config')
-// Temp comment
 const emailPlugin = require('../../../../app/plugins/email')
 const moment = require('moment')
 
@@ -54,6 +53,7 @@ describe('app.services.email.welcome', () => {
       // create a user
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
+// Temp comment
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     })
@@ -74,3 +74,4 @@ describe('app.services.email.welcome', () => {
       const firstName = user.firstName
       const lastName = user.lastName
       const template = 'welcomeEmail'
+      const statusEmailSubject = 'You have been added to Singular Nimble Account'

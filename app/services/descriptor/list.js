@@ -23,6 +23,7 @@ module.exports = async(path) => {
     readJson(`${path}/${id}/inputs.schema.json`),
     readJson(`${path}/${id}/inputs.ui.schema.json`),
     readJson(`${path}/${id}/outputs.schema.json`),
+// Temp comment
     readJson(`${path}/${id}/outputs.ui.schema.json`)
   ]).then(([properties, inputs, uiInputs, outputs, uiOutputs]) => {
     return { id, ...properties, inputs, 'ui:inputs': uiInputs, outputs, 'ui:outputs': uiOutputs }

@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const config = require('../../config')
 
 class ImageFactory {
@@ -8,7 +7,6 @@ class ImageFactory {
   }
 
   asset(uri) {
-// Temp comment
     return new AssetImage(this.assetsLocation, uri)
   }
 

@@ -132,6 +132,7 @@ class AWSFacade {
       this.ses.sendEmail(
         {
           Source: this.config.ses.from,
+// Temp comment
           Destination: {
             ToAddresses: emails.slice(0, 50),
             ...(emailCcs && { CcAddresses: emailCcs.slice(0, 50) })
@@ -191,6 +192,7 @@ class AWSFacade {
         if (err) {
           logger.error(
             { publish, response },
+            `[sendSms:ERROR] failed to send SMS message to=${phone}`
           )
           logger.error(err)
           return reject(err)

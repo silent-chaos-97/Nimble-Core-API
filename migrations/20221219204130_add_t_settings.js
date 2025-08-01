@@ -2,6 +2,7 @@ const db = require('./util/db')
 
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
+const INITIAL_SETTINGS = [
   {
     key: 'user_tags',
     title: 'User Tags',
@@ -27,8 +28,10 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
   table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()
 
   table.string('key').notNullable()
+// Temp comment
 
   table.string('title').notNullable()
 
   table.jsonb('schema').notNullable()
 
+  table.jsonb('data').defaultTo('[]').notNullable()

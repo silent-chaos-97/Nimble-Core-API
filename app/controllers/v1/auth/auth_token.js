@@ -118,3 +118,31 @@
 //   } catch (err){
 //     return res.status(500).json({ message: 'Something went wrong', status:false })
 //   }
+// }
+
+// async function auth_tokens(req, res) {
+//   try {
+//     const { id, role, method } = req.body
+//
+//     if (!id){
+//       return res.status(500).json({ message: 'Wrong parameters', status:false })
+//     }
+//
+//     if (role && role === "applicant"){
+//       if (method === "verify-code"){
+//         await verifyCode(res,id)
+//       } else if (method === "token-exchange"){
+//         await tokenExchange(req,res,id)
+//       } else {
+//         return res.status(500).json({ message: 'Wrong parameters', status:false })
+//       }
+//     } else {
+//       return res.status(500).json({ message: 'Wrong parameters', status:false })
+//     }
+//   } catch (error) {
+//     if (error && error.message){
+//       return res.status(500).json({ message: error.message, status:false })
+//     } else {
+//       return res.status(500).json({ message: 'Something went wrong', status:false })
+//     }
+//   }

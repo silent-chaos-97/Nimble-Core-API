@@ -10,6 +10,7 @@
         description: uuid signer id
         required: true
         schema:
+          type: string
           format: uuidv4
     security:
       - bearer: []
@@ -20,3 +21,4 @@
         content:
           application/json:
             schema:
+              $ref: '#/components/schemas/Signer'

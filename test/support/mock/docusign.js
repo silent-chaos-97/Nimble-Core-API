@@ -3908,3 +3908,26 @@ const mockDocumentTabs = {
           'yPosition': '522',
           'value': 'Radio3',
           'selected': 'false',
+          'tabId': '5ed6d030-8fe4-4e3d-afc4-086be80fd644',
+          'required': 'false',
+          'locked': 'false',
+          'font': 'lucidaconsole',
+          'bold': 'false',
+          'italic': 'false',
+          'underline': 'false',
+          'fontColor': 'black',
+          'fontSize': 'size9'
+        }
+      ],
+      'shared': 'false',
+      'requireInitialOnSharedChange': 'false',
+      'requireAll': 'false',
+      'tabType': 'radiogroup'
+    }
+  ],
+  'listTabs': [
+    {
+      'listItems': [
+        {
+          'text': '1',
+          'value': '1',

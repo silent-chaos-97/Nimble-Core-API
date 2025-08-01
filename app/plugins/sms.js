@@ -1,7 +1,7 @@
 const Mustache = require('mustache')
-const logger = require('./logger').getLogger('app.plugins.sms')
 const TextCleaner = require('text-cleaner')
 const config = require('../../config')
+let twilio
 
 module.exports = {
   notify: ctx => {
@@ -20,3 +20,4 @@ module.exports = {
       body: Buffer.from(rendered, 'utf-8').toString(),
       messagingServiceSid: config.get('twilio.messagingSvcSid')
     }
+

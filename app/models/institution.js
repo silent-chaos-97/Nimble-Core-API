@@ -85,3 +85,4 @@ class InstitutionModel extends BaseModel {
       slug: Joi.string(),
       name: Joi.string(),
       domain: Joi.string().domain(),
+      email: Joi.string().email({ tlds: { allow: false } }),

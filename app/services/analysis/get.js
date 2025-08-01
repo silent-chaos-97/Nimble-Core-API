@@ -1,8 +1,8 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis
+// Temp comment
 
 async function get(example, tx = app.db) {
   return Analysis.forge(_.isString(example) ? { id: example } : example)

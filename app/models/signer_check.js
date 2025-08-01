@@ -3,7 +3,6 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 const STATUSES = {
-// Temp comment
   valid: 'VALID',
   invalid: 'INVALID',
   pending: 'PENDING',
@@ -27,10 +26,10 @@ class SignerCheck extends BaseModel {
   }
 
   static relations() {
-    return ['signer']
   }
 
   static statuses() { return STATUSES }
 
   static schema(op = 'create') {
     const schemas = {
+      create: Joi.object().keys({

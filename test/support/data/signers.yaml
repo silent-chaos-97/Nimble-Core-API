@@ -225,7 +225,6 @@
   status: 'PENDING'
   first_name: 'James'
   last_name: 'Dean'
-  email: 'ccc+dev2@wearesingular.com'
   contract_document_signer_status: 'SENT'
   contract_document_signer_status_updated_at: 2018-02-16T12:32:03.341Z
   verification_status_face: 'PENDING'
@@ -287,3 +286,4 @@
   consent: true
   consent_account_opening: false
   consent_privacy_policy: false
+  consent_communication: false

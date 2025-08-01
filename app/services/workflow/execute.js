@@ -14,9 +14,9 @@ async function execute(wkfl, runtimeVariables) {
       outputs: runtimeVariables
     },
     activities: activities.map(activity => ({
-      ...activity,
       outputs: undefined,
       completed: false,
+      retryAttempts: 0
     }))
   }
 

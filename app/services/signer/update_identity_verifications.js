@@ -37,7 +37,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     // filter per check inside each key
     let checks = verificationGroups[key].map(check => payload.verificationItems.find(vI => _.get(vI, 'verification') === check))
 
-    // any pending? its all pending
     if (checks.find(vI => _.get(vI, 'status') === 'PENDING')) {
       return 'PENDING'
     }

@@ -13,3 +13,4 @@ BsaRiskResult:
     answer:
       type: string
       title: Answer
+      description: The answer for this result

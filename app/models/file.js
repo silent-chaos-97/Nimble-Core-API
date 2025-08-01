@@ -41,7 +41,6 @@ class FileModel extends BaseModel {
 
         'mimetype',
         'size',
-        'acl',
 
         'name',
         'version'

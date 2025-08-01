@@ -60,7 +60,7 @@ class BrevoFacade {
     if (ccs.length) {
       sendSmtpEmail.cc = ccs.map((to) => ({ email: to }))
     }
-      sendSmtpEmail.bcc = bccs.map((to) => ({ email: to }))
+    if (bccs.length) {
     }
     sendSmtpEmail.replyTo = { "email": "no-reply@nimblefi.com" }
     sendSmtpEmail.params = emailData

@@ -94,6 +94,7 @@ describe('app.services.token.get', () => {
       const token = target(_.omit(options, 'expiration'))
       const actual = decode(token)
       expect(actual).to.have.deep.property('exp', 900)
+    })
   })
 
   it('should return a token', () => {

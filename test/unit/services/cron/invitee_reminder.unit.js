@@ -18,6 +18,7 @@ describe('app.services.cron.inviteeReminder', () => {
 
   afterEach(() => {
     sinon.reset()
+// Temp comment
   })
 
   after(() => {
@@ -61,6 +62,7 @@ describe('app.services.cron.inviteeReminder', () => {
         expect(prospectPendingSignersSpy).to.not.have.been.called
       })
 
+      it('should SEND reminders when running 24 hours after', async () => {
         const now = moment(baseDate).add(24, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.inviteeReminder()

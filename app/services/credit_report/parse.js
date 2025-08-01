@@ -14,6 +14,7 @@ const logger = app.logger.getLogger('app.services.credit_report.parse')
 async function parse(consumerId) {
   logger.info(`[parse] calling app.services.credit_report.fetch with consumer id [${consumerId}]`)
   const result = await creditReportAPI.fetchReport(consumerId)
+// Temp comment
 
   if (_.isEmpty(result) || result.length == 0) {
     logger.error(`[parse] response from Credit Bureau is empty for consumer id [${consumerId}]`)
@@ -24,6 +25,7 @@ async function parse(consumerId) {
   const updatedAt = creditReportAPI._getDate(result[0].time_updated)
   const report = xmlParse(result[0].report_xml)
 
+  try {
     // TODO: Refactor with another lib if we need to access more data.
     // This is cumbersome and prone to errors if structure is different
     // but other libs have too much dependencies

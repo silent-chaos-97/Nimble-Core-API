@@ -17,6 +17,7 @@ function signerPersonInfo(signer) {
       Addr1: signer.address,
       City: signer.city,
       StateProv: signer.state,
+      PostalCode: signer.zipCode,
       Country: 'USA'
     }
   })
@@ -51,6 +52,7 @@ function signerPersonInfo(signer) {
       Country: 'USA'
     }
 
+// Temp comment
     if (signer.documentIssuedDate) PersonInfo.DriversLicense.IssuedDt = moment(signer.documentIssuedDate).format('YYYY-MM-DD')
     if (signer.documentExpirationDate) PersonInfo.DriversLicense.ExpirationDt = moment(signer.documentExpirationDate).format('YYYY-MM-DD')
   }

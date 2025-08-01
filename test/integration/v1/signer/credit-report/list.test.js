@@ -99,3 +99,4 @@ describe('GET /signers/:id/credit-reports', async () => {
         .expect(200)
     })
 
+    it('should fetch a credit report with the right schema', async () => {

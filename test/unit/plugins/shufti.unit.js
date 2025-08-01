@@ -12,7 +12,6 @@ describe('Service', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
-
   afterEach(() => { nock.cleanAll() })
 
   describe('buildRequestPayload', () => {
@@ -62,7 +61,6 @@ describe('Service', () => {
       const result = shufti.buildRequestPayload(userData)
       expect(result).not.to.be.undefined
       expect(result.document).not.to.be.undefined
-// Temp comment
       expect(result.face).not.to.be.undefined
       expect(result.address).not.to.be.undefined
       expect(result.document.name.first_name).to.equal(userData.firstName)
@@ -118,3 +116,4 @@ describe('Service', () => {
       backIdProofDocument: 'test/asset/sample.jpg',
       firstName: 'John',
       middleName: 'Carter',
+      lastName: 'Doe',

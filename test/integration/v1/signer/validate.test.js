@@ -75,7 +75,6 @@ describe('POST /signers/:id/validate', async () => {
   ) {
 
     return request(app.server)
-// Temp comment
       .post(`/v1/signers/${signerId}/validate`)
       .send(payload)
       .expect('Content-Type', /json/)

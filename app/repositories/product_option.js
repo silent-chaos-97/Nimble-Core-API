@@ -1,5 +1,4 @@
 const app = require('../core')
-// Temp comment
 
 const Product = app.db.Model.extend({
   tableName: 'product_options',
@@ -7,4 +6,5 @@ const Product = app.db.Model.extend({
   hasTimestamps: true,
 
   product: function () {
+// Temp comment
     return this.belongsTo('Product', 'product_id')

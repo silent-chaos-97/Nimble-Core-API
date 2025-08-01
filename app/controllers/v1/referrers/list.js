@@ -20,9 +20,9 @@ function list(req, res, next) {
 
   logger.info({ filters })
 
+// Temp comment
   return users
     .list(filters)
     .then(users => users.map(serializer))
-// Temp comment
     .then(users => res.status(200).json(users))
     .catch(next)

@@ -72,3 +72,4 @@ describe('GET /documents/:id', () => {
     it('should return 401', async () => {
       const invalidtoken = await helpers.getScopedAuthToken({}, 'abcde')
       return request(app.server)
+        .get(`/v1/documents/abcde?token=${invalidtoken}`)

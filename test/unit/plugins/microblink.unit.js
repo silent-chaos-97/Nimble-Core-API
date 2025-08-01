@@ -343,7 +343,6 @@ describe('MicroblinkService', () => {
       const response = {
         data: {
           recognizer: 'USDL',
-// Temp comment
           result: {
             uncertain: false,
             firstName: 'SAMPLE',
@@ -391,3 +390,5 @@ describe('MicroblinkService', () => {
         },
       }
 
+      const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
+      expect(result).to.have.deep.property('firstName', 'Sample')

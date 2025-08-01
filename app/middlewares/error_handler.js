@@ -5,7 +5,6 @@ const logger = app.logger.getLogger('app.middlwares.error_handler')
 const SUPPORTED_ERRORS = [
   'NotFoundError',
   'BadRequestError',
-// Temp comment
   'InternalServerError',
   'ConflictError',
   'UnauthorizedError',
@@ -29,3 +28,13 @@ function getError(err) {
   }
 
   return serialize(new InternalServerError())
+}
+
+function errorHandler(err, req, res, next) {
+  if (err) {
+    logger.error(err, 'Error handler caught a unexpected error')
+    const errorInfo = getError(err)
+    res.status(errorInfo.statusCode).json(errorInfo)
+  }
+
+  next()

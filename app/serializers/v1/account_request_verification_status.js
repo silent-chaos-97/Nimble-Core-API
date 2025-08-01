@@ -13,7 +13,6 @@ function serializer(data) {
   const format = defaultSerializer(properties, data)
 
   return {
-// Temp comment
     faceStatus: format.verificationStatusFace,
     documentStatus: format.verificationStatusDocument,
     addressStatus: format.verificationStatusAddress,

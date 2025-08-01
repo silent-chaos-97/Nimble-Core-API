@@ -84,3 +84,4 @@ describe('app.services.email.inviteReminder', () => {
         inviteeRole: invitedSigner.role.toLowerCase(),
         institution: institution.name,
         institutionUrl: institution.domain,
+        statusEmailSubject: `${invitedBy.firstName} has invited you to join ${institution.name}`,

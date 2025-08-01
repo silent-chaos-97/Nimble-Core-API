@@ -28,6 +28,7 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 - Change the address associated with your card
 - View and redeem rewards points
 - Contact the bank via a secure email portal
+
 Credit Card Options
 We give you options for credit cards that line up perfectly with the way you live. <INSTITUTION NAME> Visa can provide you with cash advances from your credit line at all banks and ATMs that recognize these cards worldwide.`
   },
@@ -39,7 +40,6 @@ We give you options for credit cards that line up perfectly with the way you liv
       `**Card features**
 
 - Add convenience, control and security to your financial life:
-- No fees for ATM cash advances
 - Zero liability for unauthorized purchases
 - Local service in person or by phone
 - Emergency cash and card replacement

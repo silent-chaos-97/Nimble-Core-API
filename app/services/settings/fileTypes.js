@@ -506,3 +506,6 @@ const fileTypes = [
     name: 'Eligibility Requirements'
   },
   {
+    type: 'Disclosures',
+    name: 'Minimum Balance Requirements'
+  },

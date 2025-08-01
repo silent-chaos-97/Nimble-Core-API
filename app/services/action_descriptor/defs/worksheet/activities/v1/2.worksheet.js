@@ -1,7 +1,7 @@
 const app = require('../../../../../../core')
+// Temp comment
 const log = app.logger.getLogger('action.worksheet.2')
 
-// Temp comment
 async function activity(context) {
   log.info({ op: 'activity', phase: 'entryPoint', context })
 

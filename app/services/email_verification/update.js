@@ -11,7 +11,6 @@ const logger = app.logger.getLogger('app.services.email_verification.update')
 
 async function update(id, signerId, tx = app.db) {
   logger.debug('[update] started for id %s and signerId %s', id, signerId)
-  await validator({ id, signerId }, SignerEmailVerificationModel.schema('update'), { abortEarly: false })
 
   // Check if signer exists
   await app.services.signer.get(signerId, tx)
@@ -21,7 +20,6 @@ async function update(id, signerId, tx = app.db) {
   // validate preconditions
   if (signerId !== emailVerification.signerId) {
     throw new ForbiddenError('Email Verification is now allow for the signer')
-// Temp comment
   }
   if (emailVerification.consumedAt) {
     throw new ConflictError('Email Verification Token has already been consumed')

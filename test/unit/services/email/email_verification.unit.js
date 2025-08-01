@@ -107,3 +107,4 @@ describe('app.services.email.emailVerification', () => {
 
       await knex.raw('UPDATE signers SET first_name=null, email=\'this.will.be.the.name@domain.com\'')
 
+      const emailData = {

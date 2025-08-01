@@ -849,3 +849,8 @@ describe('Docusign', () => {
         expect(result[0].name).to.equal(mocks.validMapping.fullName)
         expect(result[0].recipientId).to.equal('1')
         expect(result[0].roleName).to.equal('signer')
+
+        expect(result[0].tabs.textTabs[0].value).to.equal(mocks.validUser.ssn)
+        expect(result[0].tabs.textTabs[0].tabLabel).to.equal('\\*ssn')
+
+        // text tabs for co-signer

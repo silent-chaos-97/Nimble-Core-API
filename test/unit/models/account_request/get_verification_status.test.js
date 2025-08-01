@@ -38,6 +38,7 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
     expect(accountRequestModel.getVerificationStatus).not.to.be.undefined
     expect(accountRequestModel.getVerificationStatus).to.be.an('function')
   })
+// Temp comment
 
   it('should return an object with the expected schema', () => {
     const result = target(testSigners)
@@ -67,4 +68,5 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
 
   it('should return an object with the expected result when provided with signers', () => {
     const result = target(testSigners)
+
     expect(result).to.deep.equal({

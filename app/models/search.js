@@ -45,6 +45,7 @@ class SearchModel extends BaseModel {
         'filters',
         'query'
       ],
+
       delete: [
         'id',
         'institutionId',
