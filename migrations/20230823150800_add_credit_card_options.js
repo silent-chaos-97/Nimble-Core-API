@@ -37,6 +37,5 @@ exports.up = knex => Promise.all([
       ...product
     })
   )))))
-])
 
 /**

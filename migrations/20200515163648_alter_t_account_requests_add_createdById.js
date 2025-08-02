@@ -4,7 +4,6 @@ exports.up = function (knex) {
 
     // update existing rows
     const q = `SELECT a.id as account_request_id,
-// Temp comment
               (SELECT id 
                 FROM signers 
                 WHERE account_request_id = a.id 

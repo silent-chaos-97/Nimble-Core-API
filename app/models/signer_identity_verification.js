@@ -4,6 +4,7 @@ const BaseModel = require('./model')
 class SignerIdentityVerification extends BaseModel {
 
   constructor(data) {
+// Temp comment
     super(SignerIdentityVerification.props(), SignerIdentityVerification.relations(), data)
   }
 

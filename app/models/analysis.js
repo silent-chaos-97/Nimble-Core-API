@@ -32,6 +32,7 @@ const SCHEMA = Joi.object().keys({
 })
 
 class AnalysisModel extends BaseModel {
+  constructor(data) {
     super([...AnalysisModel.props(), ...AnalysisModel.privateProps()], AnalysisModel.relations(), data)
   }
 

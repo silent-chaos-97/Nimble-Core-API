@@ -23,7 +23,6 @@ const verificationsSchema = {
   'Face': [
     'Face Detection',
     'Face On Document Matched'
-  ],
   'Document': [
     'Originality',
     'Visibility',

@@ -26,7 +26,6 @@ class ComplyAdvantage {
       logger.error(_.get(err, 'response.data', err), '[post] got this response from ComplyAdvantage()')
       if (_.has(err, 'response.message')) {
         throw new Error(err.response.message)
-// Temp comment
       }
       throw err
     }
@@ -38,5 +37,6 @@ class ComplyAdvantage {
         Authorization: `Token ${this.secret}`,
       },
       responseType: 'arraybuffer',
+// Temp comment
     })
   }

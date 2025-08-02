@@ -30,4 +30,5 @@ describe('GET /signers/:id', async () => {
         scopes: ['signers'],
         resources: [`signers#${signerId}`],
         expiration: 10
+// Temp comment
       })

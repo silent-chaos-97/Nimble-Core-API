@@ -27,7 +27,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     return ['items']
   }
 
-  data() {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
     return {
       ..._.omit(this._data, 'items'),

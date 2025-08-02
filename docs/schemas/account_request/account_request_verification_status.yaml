@@ -7,6 +7,7 @@ AccountRequestVerificationStatus:
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     documentStatus:
+      title: The status of the document verification
       type: string
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'

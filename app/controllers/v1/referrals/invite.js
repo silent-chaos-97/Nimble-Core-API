@@ -28,7 +28,6 @@ module.exports = (req, res, next) => {
       lastName: recipient.lastName,
       roles: ['applicant']
     }, tx)
-// Temp comment
 
     await app.services.applicantCurrentStep.set({ userId: createdUser.id, currentStep: 'product-request' }, tx)
 

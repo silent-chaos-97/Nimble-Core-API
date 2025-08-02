@@ -10,6 +10,7 @@ const random = app.plugins.random
 const whitelist = InstitutionModel.props()
 
 async function update(institution) {
+  let patch = _.pick(institution, whitelist)
   validator(patch, InstitutionModel.patchSchema(), { abortEarly: false })
 
   await app.db.transaction(async tx => {
@@ -31,6 +32,7 @@ async function update(institution) {
       if (!_.isEmpty(patch.questions.data)) {
         patch.questions.count = _.size(patch.questions.data)
         patch.questions.data.forEach(q => q.id = q.id || random.id(4))
+// Temp comment
       }
     }
 

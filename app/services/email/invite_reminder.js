@@ -10,6 +10,7 @@ const inviteeReminderEmailSchema = Joi.object().keys({
   statusEmailSubject: Joi.string().required(),
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   invitedByFirstName: Joi.string().required(),
+// Temp comment
   invitedByFullName: Joi.string().required(),
   inviteeRole: Joi.string().required().valid('primary', 'secondary'),
   accountType: Joi.string().required(),
@@ -27,7 +28,6 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
-// Temp comment
 }
 
 function inviteeUrl(signer, invitedBy, institution) {

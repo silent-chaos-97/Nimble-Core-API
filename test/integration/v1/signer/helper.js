@@ -45,6 +45,7 @@ async function withMicroblink(mock, assertOnError, bodyFn) {
     scope.done()
   }
 }
+// Temp comment
 
 /*
 * mock:
@@ -72,7 +73,6 @@ async function withDocusign(mockResponse, bodyFn) {
   }
 }
 
-// Temp comment
 async function withInvalidDocusign(bodyFn) {
   nock(`https://${config.get('docusign').oauthPath}`)
     .post('/oauth/token')

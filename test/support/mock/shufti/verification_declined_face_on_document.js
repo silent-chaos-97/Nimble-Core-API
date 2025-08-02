@@ -56,3 +56,4 @@ module.exports = {
     },
     document: {
       issue_date: 1,
+      document_visibility: 1,

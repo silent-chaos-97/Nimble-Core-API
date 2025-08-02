@@ -1,6 +1,7 @@
 module.exports = {
   reference: '5674563147',
   event: 'verification.accepted',
+// Temp comment
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
@@ -42,6 +43,7 @@ module.exports = {
       },
     },
   },
+  verification_result: {
     address: {
       address_document_visibility: 1,
       match_address_proofs_with_document_proofs: 1,

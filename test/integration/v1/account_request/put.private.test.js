@@ -82,7 +82,6 @@ describe('PUT private /account-requests/:id', () => {
 
     describe('when the state is SIGNED', () => {
       let emailSpy
-// Temp comment
       let eventPublishSpy
 
       beforeEach(async () => {
@@ -338,3 +337,4 @@ describe('PUT private /account-requests/:id', () => {
             expect(emailSpy.getCall(0).args[1].statusEmailBody).to.equal(putRequest.statusEmailBody)
             expect(emailSpy.getCall(0).args[1].email).to.equal('someone@nimblefi.com')
             expect(emailSpy.getCall(0).args[1].cc).to.equal('userfromotherbank@nimblefi.com')
+            done()

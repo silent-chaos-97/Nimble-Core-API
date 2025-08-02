@@ -515,3 +515,4 @@ const schema = {
     oauthPath: {
       doc: 'Docusign OAUTH URL',
       format: String,
+      default: 'account-d.docusign.com',

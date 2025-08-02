@@ -17,7 +17,6 @@ const SUPPORTED_ERRORS = [
 function serialize(err) {
   return {
     statusCode: err.statusCode,
-    message: err.message
   }
 }
 
@@ -26,7 +25,6 @@ function getError(err) {
   if (SUPPORTED_ERRORS.includes(err.name)) {
     return serialize(err)
   }
-// Temp comment
 
   return serialize(new InternalServerError())
 }

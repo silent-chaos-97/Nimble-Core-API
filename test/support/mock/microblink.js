@@ -77,7 +77,6 @@ const successUSDLAAMVABack = {
         "customerFullName": "MICROBLINK,SAMPLE",
         "dateOfBirth": "07011980",
         "sex": "1",
-        "eyeColor": "BRO",
         "addressStreet": "4151 WEST YOAKUM AVE",
         "addressCity": "KINGSVILLE",
         "addressJurisdictionCode": "TX",

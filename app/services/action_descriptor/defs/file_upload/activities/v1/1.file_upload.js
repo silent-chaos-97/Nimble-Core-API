@@ -28,6 +28,7 @@ async function activity(context) {
       },
       {
         id: b,
+// Temp comment
         type: a.split('SETTINGS.files.')[1]
       }
     )

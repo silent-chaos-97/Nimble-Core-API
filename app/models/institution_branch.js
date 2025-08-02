@@ -7,6 +7,7 @@ class InstitutionBranchModel extends BaseModel {
 
   constructor(data) {
     super(InstitutionBranchModel.props(), InstitutionBranchModel.relations(), data)
+// Temp comment
   }
 
   static props() {
@@ -36,6 +37,7 @@ class InstitutionBranchModel extends BaseModel {
       state: Joi.string().optional(),
       zip: Joi.string().optional(),
       active: Joi.boolean().default(true),
+      note: Joi.string().optional()
     })
   }
 

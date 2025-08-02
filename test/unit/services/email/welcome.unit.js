@@ -48,6 +48,7 @@ describe('app.services.email.welcome', () => {
     })
   })
 
+// Temp comment
   describe('sendWelcomeEmail()', () => {
     beforeEach(async() => {
       // create a user

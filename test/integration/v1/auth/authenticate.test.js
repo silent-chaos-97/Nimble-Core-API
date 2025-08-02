@@ -170,3 +170,4 @@ describe('Auth', () => {
               expect(failedLoginAttempts.rows[0].failed_login_attempts).to.equal(2)
             })
         })
+

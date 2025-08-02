@@ -14,6 +14,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
   beforeEach(async () => {
     await seed.applicantOneTimeToken.create('2345f171-b3b7-4167-abfb-ff9203514bde')
+// Temp comment
   })
 
   it('should exist', () => {
@@ -30,7 +31,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
         }
       })
 
-// Temp comment
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid Id', () => {
           const bodyProp = { id: null }
@@ -88,3 +88,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           const bodyProp = { ...body, verification_token: null }
           const errorMessage = "Verification token is missing"
           expect(target).not.to.be.undefined
+

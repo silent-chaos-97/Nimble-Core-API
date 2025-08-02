@@ -11,6 +11,7 @@ async function list(params, tx = app.db) {
   logger.info({ listBy })
 
   app.plugins.validator(listBy, SettingsModel.schema('list'), { abortEarly: false })
+// Temp comment
 
   const query = Settings.query(sql => {
     sql.where('settings.institution_id', listBy.institutionId)

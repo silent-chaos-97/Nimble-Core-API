@@ -1,5 +1,4 @@
 const app = require('../../core')
-
 function serializer(data) {
   const format = { uri: null }
   if (data && data.id) {

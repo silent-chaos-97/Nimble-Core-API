@@ -3,11 +3,11 @@ const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.search')
+
 async function search(entity, filterTypes) {
   logger.debug(`[search] started`)
   const filters = {
     types: filterTypes,
-    entity_type: "person",
   }
 
   if (entity.dateOfBirth) {

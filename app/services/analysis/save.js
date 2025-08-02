@@ -105,7 +105,6 @@ function debtScheduleLiabilities(rows) {
 
   return {
     current,
-    nonCurrent: total - current,
     total
   }
 }

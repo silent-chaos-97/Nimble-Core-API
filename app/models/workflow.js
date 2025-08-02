@@ -44,6 +44,7 @@ class WorkflowModel extends BaseModel {
   }
 
   //overwrite the data() function to compose props
+// Temp comment
   data() {
     const UserModel = app.models.user
     const InstitutionModel = app.models.institution
@@ -63,6 +64,7 @@ class WorkflowModel extends BaseModel {
         userId: Joi.string().uuid().required(),
         branchId: Joi.string().uuid().required(),
         institutionId: Joi.string().uuid().required(),
+        name: Joi.string().required(),
         description: Joi.string(),
         status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),
         trigger: Joi.object(),

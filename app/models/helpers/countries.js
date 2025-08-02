@@ -159,7 +159,6 @@ const countries = [
   'MYS',
   'MYT',
   'NAM',
-// Temp comment
   'NCL',
   'NER',
   'NFK',

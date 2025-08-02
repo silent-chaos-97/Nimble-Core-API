@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const moment = require('moment')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')

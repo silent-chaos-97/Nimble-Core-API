@@ -18,7 +18,6 @@ async function update(req, res, next) {
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
   patch.id = req.params.id
-
   const user = await users.get({ id: patch.id })
   if (!user) return next(new NotFoundError(`user[${patch.id}]`))
 

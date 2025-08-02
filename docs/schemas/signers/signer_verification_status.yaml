@@ -18,13 +18,13 @@ SignerVerificationStatus:
       type: string
       format: date-time
     addressStatus:
+      title: The status of the address verification
       type: string
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     addressUpdatedAt:
       type: string
       format: date-time
-    sanctionsStatus:
       title: The status of the sanctions verification
       type: string
       enum: ['MATCH', 'NOMATCH', 'PENDING']

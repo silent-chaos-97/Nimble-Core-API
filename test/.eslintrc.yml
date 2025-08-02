@@ -12,4 +12,3 @@ globals:
   expect: true
   should: true
   seed: true
-  blueprints: true

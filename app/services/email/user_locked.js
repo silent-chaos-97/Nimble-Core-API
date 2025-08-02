@@ -12,6 +12,7 @@ const userLockedEmailSchema = Joi.object().keys({
   emailSubject: Joi.string().required(),
   cc: Joi.string().required(),
 })
+// Temp comment
 
 const whitelist = ['userId']
 const entrySchema = Joi.object().keys({
@@ -25,5 +26,4 @@ async function validate(params) {
 }
 
 function emailSubject() {
-// Temp comment
   return `Your account has been locked`

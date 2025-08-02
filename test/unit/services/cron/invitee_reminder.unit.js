@@ -34,6 +34,7 @@ describe('app.services.cron.inviteeReminder', () => {
       expect(app.services.cron.inviteeReminder).to.be.an('Function')
     })
   })
+
   describe('running the service', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')

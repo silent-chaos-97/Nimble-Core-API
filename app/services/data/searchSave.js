@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../core')
 const validator = app.plugins.validator
 const Search = app.repositories.search

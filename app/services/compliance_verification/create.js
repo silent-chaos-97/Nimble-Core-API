@@ -52,7 +52,6 @@ async function create(payload, tx = app.db) {
           signerComplianceVerificationId: newVerification.id
         }, 'items'))
         .save(null, {
-          method: 'insert',
           transacting: tx
         })
 

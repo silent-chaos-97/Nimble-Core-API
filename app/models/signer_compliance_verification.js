@@ -40,6 +40,7 @@ class SignerComplianceVerificationModel extends BaseModel {
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
+
     if (operation === 'create') {
       return Joi.object().keys({
         signerId: Joi.string().uuid().required(),

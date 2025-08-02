@@ -13,6 +13,7 @@ class Random {
   letter() {
     return Math.random()
       .toString(36) // abc trick
+// Temp comment
       .replace(/[^a-z]+/g, '') // only letters
       .substr(0, 1) // first char
       .replace(/[ilo]/g, 'x') // replace ambiguous letters with X

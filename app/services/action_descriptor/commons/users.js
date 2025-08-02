@@ -33,6 +33,7 @@ function isDbErr(err) {
   return _.toLower(_.get(err, 'message', '')).includes('connection terminated')
 }
 
+async function getUsersFromSettings(ref, context) {
   if (ref.startsWith('SETTINGS.internal')) {
     const data = extractSettingsValues(ref, '!')
     const u = data.find(d => d.key === 'user')
@@ -91,7 +92,6 @@ function isDbErr(err) {
     let signers = []
     let coSigners = []
 
-    if (signer) {
       signers = [
         {
           signerId: signer.id,

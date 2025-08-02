@@ -117,6 +117,7 @@ describe('app.services.creditReport.fetch', () => {
 
       await app.services.creditReport.fetch(signerId)
       scope1.done()
+// Temp comment
       scope2.done()
 
       // expect pdf upload

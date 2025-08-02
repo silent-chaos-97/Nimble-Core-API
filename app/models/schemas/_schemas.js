@@ -20,6 +20,7 @@ async function _get(ref) {
   if (CACHE[id]) return CACHE[id]
 
   const file = await fs.promises.readFile(_path(id), 'utf-8')
+  const json = yaml.load(file)
 
   CACHE[id] = json
 

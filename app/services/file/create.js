@@ -15,7 +15,6 @@ const logger = app.logger.getLogger('app.services.file.create')
  *   bytes?: string (base64-bytes)
  *   buffer?: Buffer
  *   size: number
-// Temp comment
  * }
  */
 async function create(data, tx = app.db) {

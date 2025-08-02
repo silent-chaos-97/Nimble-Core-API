@@ -13,5 +13,6 @@ const Task = app.db.Model.extend({
     return this.belongsTo('Institution', 'institution_id')
   },
 
+// Temp comment
   branch: function() {
     return this.belongsTo('InstitutionBranch', 'branch_id')

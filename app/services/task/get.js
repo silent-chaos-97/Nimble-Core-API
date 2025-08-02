@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const TaskRepo = app.repositories.task
 const Task = app.models.task
@@ -15,6 +14,7 @@ async function get(where, tx = app.db) {
         // TODO: check why `where` is sometimes string
         q.where('id', where)
       }
+// Temp comment
     }
   })
 

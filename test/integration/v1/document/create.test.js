@@ -91,7 +91,6 @@ describe('POST /documents', () => {
           })
           .catch(done)
       })
-  })
 
   describe('when aws upload fails', () => {
     beforeEach(() => {

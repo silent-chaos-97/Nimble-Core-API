@@ -65,6 +65,7 @@ const schema = Joi.object({
 		originalCost: Joi.number(),
     // Not sure - Attom
 		amountExistingLiens: Joi.number(),
+    // User
 		purposeOfRefinance: Joi.string(),
     // User
 		improvementsType: Joi.string().valid('made', 'to be made'),
@@ -565,7 +566,6 @@ const mockUniformResidentialLoanApplication = {
 				}
 			},
 			monthlyIncome: {
-				basePay: 8000,
 				dividendsAndInterest: 200,
 				total: 8200
 			}
@@ -585,3 +585,4 @@ const mockUniformResidentialLoanApplication = {
 			total: 2805
 		}
 	},
+	assetsAndLiabilities: {

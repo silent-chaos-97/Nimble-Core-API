@@ -10,7 +10,6 @@ describe('app.services.token.get', () => {
   })
 
   after(() => {
-    clock.restore()
   })
 
   beforeEach(() => {

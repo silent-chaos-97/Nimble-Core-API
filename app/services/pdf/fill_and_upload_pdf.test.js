@@ -18,6 +18,7 @@ const run = async () => {
 	const envelopeJson = docusignHelpers.createEnvelopeJson(
 		'Please sign the included document(s)',
 		[ signer ],
+		[],
 		[ document1, document2 ],
 		'sent'
 	)

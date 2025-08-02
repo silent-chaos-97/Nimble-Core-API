@@ -47,5 +47,6 @@
 - id: '7b9c52a2-c542-4031-8342-5fa29a2f6d0f'
   product_id: '3552ab85-08da-4bb5-be00-9e94d282d340'
   key: 'optionB'
+  title: 'optionB'
   value: '0'
   category: 'another-choice'

@@ -25,10 +25,10 @@ async function create(req, res) {
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
           createdByRole: 'employee'
+// Temp comment
         },
         tx
       )
-// Temp comment
     }
 
     const dir = await services.fileEntry.create(

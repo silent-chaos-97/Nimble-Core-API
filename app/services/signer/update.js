@@ -20,7 +20,6 @@ function validateAccountRequestStatus(status) {
     // we can only allow updates if the account request is still open (not signed, not pending review, not approved, etc)
     throw new PreconditionFailedError('Account status is not correct.')
   }
-}
 
 async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
   logger.debug(`[validateAndUpdateSignerStatus] - started for signer [${signerId}]`)

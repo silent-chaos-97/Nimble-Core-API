@@ -92,7 +92,6 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
-// Temp comment
         .end(done)
     })
   })
@@ -177,6 +176,7 @@ describe('POST /users', () => {
             .first()
             .then(row => {
               expect(row).to.exist
+// Temp comment
               done()
             })
         })
@@ -210,3 +210,4 @@ describe('POST /users', () => {
         return request(app.server)
           .post('/v1/users')
           .set('X-API-KEY', 'superpowers')
+          .send(user)

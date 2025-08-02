@@ -16,6 +16,7 @@
     "response_duration": {
       "title": "Deadline",
       "type": "string",
+      "default": "7 days",
       "defaultUnit": "days",
       "stereotype": "duration"
     },

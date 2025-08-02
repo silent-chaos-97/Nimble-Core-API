@@ -46,7 +46,6 @@ function interpolateInput(input, state) {
     } else if (isArray(value) || isObject(value)) {
       return interpolateInput(value, state)
     }
-
     return value
   })
 }

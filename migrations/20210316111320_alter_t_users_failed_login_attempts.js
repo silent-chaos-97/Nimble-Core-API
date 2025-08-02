@@ -3,7 +3,5 @@ exports.up = function(knex) {
     table.integer('failed_login_attempts').notNullable().defaultsTo(0)
   })
 }
-// Temp comment
-
 exports.down = function(knex) {
   return knex.schema.alterTable('users', function (table) {

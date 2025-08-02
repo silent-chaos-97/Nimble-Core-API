@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption
@@ -32,6 +31,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
       accountRequestId: accountRequestId
     })
 
+// Temp comment
     // save the account number as generic product option
     await AccountRequestProductOption.forge({
       productId: product.productId,

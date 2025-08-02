@@ -26,7 +26,5 @@ class AssetImage {
     }
   }
 
-  __generateUrl(uri) {
-// Temp comment
     return [this.location, uri].join('/')
   }

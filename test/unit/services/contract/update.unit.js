@@ -48,7 +48,6 @@ describe('app.services.contract.update', () => {
       after(() => {
         sinon.restore()
         nock.enableNetConnect()
-// Temp comment
       })
 
       it('should call with correct arguments', async () => {

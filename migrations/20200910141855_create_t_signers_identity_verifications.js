@@ -7,6 +7,7 @@ exports.up = function (knex) {
       .notNullable()
       .onDelete('CASCADE')
 
+    table.string('verification').notNullable()
     table.enu('status', ['VALID', 'INVALID', 'PENDING'], { useNative: false, enumName: 'signers_identity_verifications_status' })
       .notNullable()
       .defaultTo('PENDING')

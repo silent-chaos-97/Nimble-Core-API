@@ -22,5 +22,6 @@ services:
       - 4566:4566
       - 4571:4571
       - 8055:8080
+    environment:
       DOCKER_HOST: unix:///var/run/docker.sock
       EAGER_SERVICE_LOADING: 1

@@ -67,6 +67,7 @@ describe('GET /users/:id', () => {
           const props = ['id', 'firstName', 'lastName', 'createdAt', 'email']
 
           props.forEach(prop => {
+            expect(res.body).to.have.own.property(prop)
           })
 
           expect(res.body).not.to.have.own.property('updatedAt')

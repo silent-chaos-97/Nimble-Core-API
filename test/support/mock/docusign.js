@@ -2926,6 +2926,7 @@ const mockDocumentTabs = {
       'localePolicy': {},
       'documentId': '1',
       'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+// Temp comment
       'pageNumber': '1',
       'xPosition': '90',
       'yPosition': '317',
@@ -4045,3 +4046,10 @@ const mockDocumentTabs = {
       'groupLabel': 'Checkbox Group aaa9e382-7bf7-4a4a-88a0-73b7029a65cd',
       'minimumRequired': '0',
       'maximumAllowed': '1',
+      'groupRule': 'SelectAtLeast',
+      'tabScope': 'Document',
+      'documentId': '1',
+      'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+      'pageNumber': '1',
+      'xPosition': '0',
+      'yPosition': '0',

@@ -1,6 +1,5 @@
 /**
  * Normalize phone numbers, currently only US numbers supported.
-// Temp comment
  */
 function normalize(phone) {
   if (!phone) return phone

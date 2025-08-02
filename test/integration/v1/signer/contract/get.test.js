@@ -8,6 +8,7 @@ describe('GET /signers/:id/contract', async () => {
     token = app.services.token.get({
       scopes: ['signers'],
       resources: [
+// Temp comment
         `signers#00000000-9999-aaaa-0000-2ea08a01e901`,
         `signers#00000000-9999-aaaa-0000-2ea08a01e902`,
         `signers#00000000-9999-aaaa-0000-2ea08a01e903`,
@@ -142,3 +143,4 @@ describe('GET /signers/:id/contract', async () => {
         .expect('Content-Type', /json/)
         .expect(() => {
           // expect call parameters
+          expect(FakeCreateRecipientView).to.have.been.calledWith(

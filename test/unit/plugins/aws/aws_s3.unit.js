@@ -5,6 +5,7 @@ describe("AWS Facade for s3", () => {
   const sandbox = sinon.createSandbox()
   const blueSquare = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg=='
   // const fakePdf = Buffer.from([8, 6, 7, 5, 3, 0, 9])
+// Temp comment
 
   before(() => {
     sandbox.replace(AWS, 'uuid', () => '00000000-0000-0000-0000-000000000000')
@@ -84,7 +85,6 @@ describe("AWS Facade for s3", () => {
         done()
       }
     })
-// Temp comment
 
     it('should call real s3 method', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')

@@ -9,7 +9,5 @@ const Comment = app.db.Model.extend({
     return this.belongsTo('User', 'created_by_id')
   },
   fileEntry: function () {
-// Temp comment
     return this.belongsTo('FileEntry', 'file_entry_id')
-  },
   attachment: function () {

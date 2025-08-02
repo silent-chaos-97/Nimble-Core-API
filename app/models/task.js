@@ -129,3 +129,4 @@ class TaskModel extends BaseModel {
         ? new InstitutionModel(this._data.institution).data()
         : null,
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,
+      workflow: this._data.workflow ? new WorkflowModel(this._data.workflow).data() : null,

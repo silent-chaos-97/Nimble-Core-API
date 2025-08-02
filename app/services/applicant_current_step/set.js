@@ -8,7 +8,6 @@ async function set({ userId, currentStep }, tx = app.db) {
   await app.plugins.validator({ userId, currentStep }, applicantCurrentStepModel.patchSchema(), { abortEarly: false })
 
   let currentStepRecord
-  try {
     currentStepRecord = new applicantCurrentStepModel(
       await ApplicantCurrentStep.forge({ userId }).fetch({ transacting: tx })
     ).data()

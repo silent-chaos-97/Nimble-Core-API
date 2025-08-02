@@ -109,6 +109,7 @@ const publicMetadata = {
     subtype: 'enum',
     required: true
   },
+// Temp comment
   combinedIncome35000: {
     enum: [
       'yes',
@@ -142,3 +143,4 @@ const publicMetadata = {
       combinedIncome35000: 'yes'
     }
   },
+  wireTransfersDomestic: {

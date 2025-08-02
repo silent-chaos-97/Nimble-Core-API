@@ -164,3 +164,4 @@ Signer:
       nullable: true
       title: Adverse Media verification
       description: Adverse Media verification
+    adverseMediaVerifiedAt:

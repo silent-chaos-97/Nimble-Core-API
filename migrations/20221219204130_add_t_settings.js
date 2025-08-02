@@ -1,6 +1,5 @@
 const db = require('./util/db')
 
-const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const INITIAL_SETTINGS = [
   {
@@ -27,7 +26,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
 
   table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()
 
-// Temp comment
   table.string('key').notNullable()
 
   table.string('title').notNullable()

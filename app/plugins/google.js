@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const sheets = require('@googleapis/sheets')
 

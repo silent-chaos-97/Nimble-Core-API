@@ -7,6 +7,7 @@ module.exports = {
     document: {
       issue_date: '1990-01-01',
       selected_type: [
+// Temp comment
         'id_card',
       ],
       supported_types: [
@@ -23,7 +24,6 @@ module.exports = {
       ],
       supported_types: [
         'utility_bill',
-// Temp comment
         'driving_license',
         'bank_statement',
         'envelope',
@@ -58,3 +58,4 @@ module.exports = {
     document: {
       issue_date: 1,
       document_visibility: 0,
+      dob: 0,

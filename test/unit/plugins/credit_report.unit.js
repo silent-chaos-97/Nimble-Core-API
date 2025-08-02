@@ -186,6 +186,7 @@ describe('Credit Report Plugin', () => {
       }
 
       const response = await creditReport._formatApplicantData(signer)
+      expect(response).to.deep.equal(result)
     })
   })
 

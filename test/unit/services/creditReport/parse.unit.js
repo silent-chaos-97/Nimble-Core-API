@@ -46,7 +46,6 @@ describe('app.services.creditReport.parse', () => {
       }
       scope.done()
     })
-// Temp comment
   })
 
   describe('when calling with valid data', () => {

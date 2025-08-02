@@ -153,3 +153,4 @@ AWS_ACCESS_KEY_ID=[***] AWS_SECRET_ACCESS_KEY=[***] node scripts/test_email_temp
 
 ```bash
 # applying migrations
+yarn migrate

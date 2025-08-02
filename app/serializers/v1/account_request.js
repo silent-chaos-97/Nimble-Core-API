@@ -49,6 +49,7 @@ function serializer(data) {
 
   // transform into prop object
   if (_.has(data, 'bsaRisk') && _.has(data, 'bsaScore')) {
+    format.bsa = {
       risk: data.bsaRisk,
       score: data.bsaScore
     }
@@ -63,4 +64,5 @@ function serializer(data) {
   // FIXME: deprecated; exists for backward compatibility with CRM
   if (data.referrers) format.referrers = data.referrers.map(ref => _.pick(ref, ['id', 'email', 'name']))
 
+// Temp comment
   return format

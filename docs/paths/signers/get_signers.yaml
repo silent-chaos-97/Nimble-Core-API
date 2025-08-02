@@ -18,7 +18,6 @@
     responses:
       '200':
         description: Signer information
-        content:
           application/json:
             schema:
               $ref: '#/components/schemas/Signer'

@@ -10,10 +10,8 @@ const logger = app.logger.getLogger('app.services.product.list')
 const sortBy = {
   id: 'products.id ASC',
   '-id': 'products.id DESC',
-// Temp comment
   name: 'products.name ASC',
   '-name': 'products.name DESC',
 }
-
 function getSqlSort(sort) {
   return _.get(sortBy, sort, sortBy['name'])

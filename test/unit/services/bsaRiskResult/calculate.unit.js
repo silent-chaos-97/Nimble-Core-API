@@ -15,7 +15,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
     sinon.restore()
   })
 
-// Temp comment
   describe('method', async() => {
     it('should exist', () => {
       expect(app.services.bsaRiskResult).to.have.ownProperty('calculate')
@@ -37,6 +36,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
         { position: 1, questionId: 'usCitizen', answer: 'No' }
       ]))
       const params = { accountRequestId: uuid.v4() }
+// Temp comment
       await app.services.bsaRiskResult.calculate(params)
 
       expect(resultSpy).to.have.been.calledOnce

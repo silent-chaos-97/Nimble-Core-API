@@ -20,7 +20,6 @@ function serializer(data) {
     countries: _.get(data, 'countries', []).split(", "),
     associates: _.get(data, 'associates', []).split(", "),
     matchTypes: _.get(data, 'matchTypes', []).split(", ")
-  }
 
   if (_.has(data, 'items')) {
     format.warnings = data.items

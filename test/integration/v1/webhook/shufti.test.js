@@ -18,7 +18,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   })
 
   beforeEach(async () => {
-    sinon.reset()
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
@@ -116,3 +115,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     return request(app.server)
       .post('/v1/webhooks/shufti/identity-verification')
       .send({ event: 'request.invalid', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', verification_result: mock.verificationAccepted.verification_result })
+      .expect('Content-Type', /json/)

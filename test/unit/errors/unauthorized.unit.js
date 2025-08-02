@@ -28,3 +28,4 @@ describe('UnauthorizedError', () => {
       expect(error.statusCode).to.equal(401)
     })
 
+    it('should have default message', () => {

@@ -118,6 +118,7 @@ describe('GET /users', () => {
           })
       })
 
+// Temp comment
       it('should limit acording to :limit', done => {
         request(app.server)
           .get(`/v1/users?limit=1`)

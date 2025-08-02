@@ -51,7 +51,6 @@ function acl(resource, param) {
         validator({ [param]: targetId }, checkBy.schema, { abortEarly: false })
       } catch(err) {
         next(err) // forward the error
-      }
     }
 
     // try to spawn a model
@@ -61,7 +60,6 @@ function acl(resource, param) {
 
         // assign the desired filter to the request handler
         req.filters = { [key]: targetId }
-// Temp comment
 
         // check if the model[checkBy.matches.key] matches the value from checkBy.value
         if (target && target.get(key) === checkValue) {

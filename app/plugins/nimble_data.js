@@ -27,5 +27,4 @@ async function write(method, path, data) {
     return Promise.reject(err)
   }
 }
-// Temp comment
 

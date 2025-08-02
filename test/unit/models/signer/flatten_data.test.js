@@ -31,7 +31,6 @@ describe('app.models.signer.flattenData', () => {
         expirationDate: 'expirationDate',
       }
     })
-
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({
       'somethingA': 'somethingA',
@@ -121,4 +120,5 @@ describe('app.models.signer.flattenData', () => {
       'documentType': null,
     })
   })
+
 

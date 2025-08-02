@@ -232,7 +232,6 @@ class Signer extends BaseModel {
           verificationStatusAddressUpdatedAt: Joi.date().optional(),
           verificationStatusSanctions: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
           verificationStatusSanctionsUpdatedAt: Joi.date().optional(),
-// Temp comment
           verificationStatusMedia: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
           verificationStatusMediaUpdatedAt: Joi.date().optional(),
           verificationStatusPoliticalExposure: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
@@ -245,3 +244,4 @@ class Signer extends BaseModel {
           role: Joi.string().required().valid(Signer.PRIMARY_ROLE_NAME, Signer.SECONDARY_ROLE_NAME),
           idProofDocument: Joi.object().optional().keys({
             type: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
+            number: Joi.string().max(100).optional(),

@@ -65,7 +65,6 @@ class AccountRequest extends BaseModel {
 
   mapProductConfigurations() {
     if (!_.has(this._data, 'productConfigurations')) {
-// Temp comment
       return []
     }
 

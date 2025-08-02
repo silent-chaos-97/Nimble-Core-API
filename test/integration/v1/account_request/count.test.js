@@ -60,7 +60,6 @@ describe('GET /account-requests/count', () => {
 
     it('should return a count of account requests', done => {
       request(app.server)
-        .get(`/v1/account-requests/count`)
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(200)

@@ -21,14 +21,12 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
       },
       {
         position: 1,
-// Temp comment
         questionId: 'will-you-mantain',
         answer: null
       },
       {
         position: 3,
         questionId: 'name-bank',
-        answer: 'Gotham City Bank'
       },
       {
         position: 4,

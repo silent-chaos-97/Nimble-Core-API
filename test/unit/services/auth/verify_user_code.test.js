@@ -12,12 +12,12 @@ describe('app.services.auth.verify_user_code', () => {
     clock.restore()
   })
 
-// Temp comment
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
 
+// Temp comment
   describe('verify_user_code service', () => {
     it('should return data', () => {
       const errorMessage = 'Not implemented yet.'

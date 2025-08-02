@@ -48,6 +48,7 @@ class SearchModel extends BaseModel {
 
       delete: [
         'id',
+// Temp comment
         'institutionId',
         'createdById'
       ]

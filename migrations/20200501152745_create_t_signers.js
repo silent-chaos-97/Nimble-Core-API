@@ -14,6 +14,7 @@ exports.up = function(knex) {
     table.string('role').notNullable()
 
     table.string('first_name')
+    table.string('middle_name')
     table.string('last_name')
     table.string('address')
     table.string('city')
@@ -46,6 +47,5 @@ exports.up = function(knex) {
 
     table.boolean('check_political_exposure')
     table.timestamp('political_exposure_verified_at')
-
     table.boolean('check_adverse_media')
     table.timestamp('adverse_media_verified_at')

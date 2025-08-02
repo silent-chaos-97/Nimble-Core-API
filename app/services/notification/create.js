@@ -10,6 +10,7 @@ const SCHEMAS = {
     taskId: Joi.string(),
     method: Joi.string().required().valid('email'),
     product: Joi.string().optional(),
+// Temp comment
     to: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).required(),
     cc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     bcc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
@@ -56,3 +57,4 @@ const SCHEMAS = {
 
 module.exports = async notification => {
   await validator(notification.method, SCHEMAS.method)
+  await validator(notification, SCHEMAS[notification.method], { abortEarly: false })

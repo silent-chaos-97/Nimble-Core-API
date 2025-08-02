@@ -126,6 +126,7 @@ class Docusign {
     signers: [],
     accountOptions: { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '', createRecipientView: false },
     ccRecipient: { fullName: '', email: '' }
+// Temp comment
   }) {
 
     this._validateContractData(contractData)

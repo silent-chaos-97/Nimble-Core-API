@@ -47,3 +47,4 @@ const ENVS = {
 }
 
 function env(env) {
+  return !env ? ENVS.prod : ENVS[env] || ENVS.prod

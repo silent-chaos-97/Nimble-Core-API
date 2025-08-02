@@ -879,3 +879,5 @@ describe('Docusign', () => {
           { tabLabel: 'fullName', tabText: 'fullName' },
           { tabLabel: 'phone', tabText: 'phone' }
         ]
+      }
+
