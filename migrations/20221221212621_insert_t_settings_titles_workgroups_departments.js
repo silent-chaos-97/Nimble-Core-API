@@ -9,6 +9,7 @@ const TITLE = {
 const WORKGROUPS = {
   key: 'workgroups',
   title: 'Workgroups',
+  schema: { $ref: 'workgroups' }
 }
 
 const DEPARTMENT = {

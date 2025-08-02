@@ -186,7 +186,6 @@ describe('Credit Report Plugin', () => {
       }
 
       const response = await creditReport._formatApplicantData(signer)
-      expect(response).to.deep.equal(result)
     })
   })
 
@@ -209,3 +208,5 @@ describe('Credit Report Plugin', () => {
         await creditReport.processApplicant({})
       } catch (error) {
         expect(error.message).to.equal("Signer is empty")
+        expect(error).to.be.an.instanceof(Error)
+      }

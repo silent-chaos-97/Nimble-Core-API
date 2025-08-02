@@ -25,7 +25,6 @@ exports.up = async function(knex) {
   const institutions = await knex('institutions').select()
   institutions.map(async (institution) => {
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
-      // Insert new products
       return newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id
         newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)

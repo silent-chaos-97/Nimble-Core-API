@@ -37,3 +37,4 @@
           default: updated_at
     security:
       - bearer: []
+    responses:

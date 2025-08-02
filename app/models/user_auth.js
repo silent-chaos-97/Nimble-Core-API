@@ -9,6 +9,7 @@ class UserAuthModel extends BaseModel {
     super(UserAuthModel.props(), UserAuthModel.relations(), data)
   }
 
+  static props() {
     return ['email', 'password']
   }
 
@@ -27,3 +28,4 @@ class UserAuthModel extends BaseModel {
         'users.email',
         'users.failed_login_attempts',
         'accounts.secret'
+      ])

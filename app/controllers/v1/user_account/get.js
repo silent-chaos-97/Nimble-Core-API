@@ -9,7 +9,6 @@ const serializer = app.serializers.v1.userAccount
 const logger = app.logger.getLogger('app.controllers.v1.user_account.get')
 
 function get(req, res, next) {
-// Temp comment
   const user = req.user
   if (!user) return next(new UnauthorizedError('UserRequired'))
 
@@ -26,6 +25,7 @@ function get(req, res, next) {
   const example = {
     id,
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : user.branchId,
+// Temp comment
     institutionId: isSuperAdmin ? null : user.institutionId
   }
 

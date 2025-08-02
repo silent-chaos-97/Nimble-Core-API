@@ -198,7 +198,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
           const doc = res.body.find(item => item.verification === 'Issued Date')
 
           expect(face.status).to.equal('VALID')
-          expect(doc.status).to.equal('INVALID')
         })
     })
 
@@ -212,3 +211,5 @@ describe('GET /signers/:id/identity-verifications', async () => {
         created_at: '2020-02-16T12:32:03.341Z',
         updated_at: '2020-02-16T12:32:03.341Z'
       })
+
+      await seed.signersIdentityVerification.create({

@@ -188,7 +188,6 @@
   document_number: '123123124'
   document_expiration_date: 2022-02-16
   document_issued_date: 2000-02-16
-  document_issuer: 'FL'
 
 - id: 'ef3c30f8-fb32-4d1f-9fd9-211637ab1110'
   account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d347'
@@ -294,3 +293,6 @@
   status: 'INVITED'
   role: 'SECONDARY'
   email: 'some.three@nimblefi.com'
+  email_verified: true
+  email_verified_at: 2018-02-16T11:32:03.341Z
+  consent: true

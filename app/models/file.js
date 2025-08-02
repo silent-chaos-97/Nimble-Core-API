@@ -52,3 +52,4 @@ class FileModel extends BaseModel {
   static schema(op) {
     return {
       create: Joi.object().keys({
+        id: Joi.string().uuid(),

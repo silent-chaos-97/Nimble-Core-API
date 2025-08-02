@@ -89,7 +89,6 @@ describe('app.services.compliance.verify', () => {
       expect(fakeComplianceSearch).to.have.been.calledWith(payload, filters)
       expect(fakeComplianceExport).to.have.been.calledWith(123)
       expect(fakeComplianceParse).to.have.been.calledWith({ search: {}, result: { id: 123 }, hits: [] })
-// Temp comment
 
     })
 
@@ -114,3 +113,4 @@ describe('app.services.compliance.verify', () => {
       const lastItem = fakeForgeForVerificationItem.lastCall.firstArg
       const lastEntry = fakeForgeForVerificationListEntry.lastCall.firstArg
 
+      expect(lastItem.signerComplianceVerificationId).to.equal('fake-signerComplianceVerificationId')

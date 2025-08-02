@@ -34,3 +34,4 @@
             - -name
           default: name
     responses:
+      '200':

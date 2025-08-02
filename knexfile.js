@@ -5,6 +5,7 @@ const knexConfig = {
   client: 'pg',
   debug: dbConfig.debug,
   connection: dbConfig.uri,
+// Temp comment
   pool: {
     min: 1,
     max: 10,

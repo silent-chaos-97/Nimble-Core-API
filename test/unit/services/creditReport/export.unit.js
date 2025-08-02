@@ -77,3 +77,4 @@ describe('app.services.creditReport.export', () => {
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
 
+      try {

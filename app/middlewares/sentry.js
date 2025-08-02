@@ -13,6 +13,7 @@ if (INIT_SENTRY) {
 }
 
 module.exports = {
+  requestHandler: function() {
     return !INIT_SENTRY ? null : Sentry.Handlers.requestHandler()
   },
   errorHandler: function() {

@@ -21,11 +21,13 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
   // semantically: institutions have settings and branches can override them
   table
     .uuid('institution_id')
+    .references('institutions.id')
     .onDelete('CASCADE')
     .notNullable()
 
   table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()
 
+// Temp comment
   table.string('key').notNullable()
 
   table.string('title').notNullable()
@@ -33,3 +35,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
   table.jsonb('schema').notNullable()
 
   table.jsonb('data').defaultTo('[]').notNullable()
+

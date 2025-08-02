@@ -60,7 +60,6 @@
       "frontIdProofDocumentUri": "/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/a74f9092-5889-430a-9c19-6712f9f68090.png",
       "createdAt": "2020-11-17T19:03:45.903Z",
       "invitedAt": "2018-02-16T11:32:03.341Z",
-      "verificationStatusFace": "VALID",
       "verificationStatusFaceUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusDocument": "VALID",
       "verificationStatusDocumentUpdatedAt": "2018-03-16T11:32:03.341Z",
@@ -158,6 +157,7 @@
       "productId": "3552ab85-08da-4bb5-be00-9e94d282d310",
       "initialDeposit": 250000099,
       "createdAt": "2019-03-16T12:34:11.341Z",
+      "product": {
         "id": "3552ab85-08da-4bb5-be00-9e94d282d310",
         "name": "Simple Checking",
         "category": "CHECKING",
@@ -168,3 +168,4 @@
         "institutionId": "2552ab85-08da-4bb5-be00-9e94d282d311",
         "options": [
           {
+            "category": "account_number",

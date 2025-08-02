@@ -13,7 +13,6 @@ class CommentModel extends BaseModel {
   }
 
   static relations() {
-    return ['createdBy', 'fileEntry', 'attachment']
   }
 
   data() {

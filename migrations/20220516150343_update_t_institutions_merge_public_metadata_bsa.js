@@ -44,6 +44,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "hearAbout": {
         "order": 3,
         "text": "How did you hear about Central Bank\\?",
+        "type": "string",
         "subtype": "text",
         "dependsOn": {"milesAway": "no"},
         "required": true,
@@ -106,3 +107,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "text": "Will you maintain a checking account at another bank\\?",
         "type": "string",
         "subtype": "enum",
+        "enum": ["yes", "no"],

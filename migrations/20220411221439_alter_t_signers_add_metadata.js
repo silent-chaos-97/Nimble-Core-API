@@ -1,6 +1,6 @@
-// Temp comment
 exports.up = function(knex) {
   return knex.schema.alterTable('signers', table => table.jsonb('remote_metadata').default('{}'))
 }
+// Temp comment
 
 exports.down = function(knex) {

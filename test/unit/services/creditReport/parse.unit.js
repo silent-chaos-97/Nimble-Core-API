@@ -46,6 +46,7 @@ describe('app.services.creditReport.parse', () => {
       }
       scope.done()
     })
+// Temp comment
   })
 
   describe('when calling with valid data', () => {
@@ -69,3 +70,4 @@ describe('app.services.creditReport.parse', () => {
     it('should return error if error parsing data', async () => {
       const response = [
         {
+          "consumerid": "227031",

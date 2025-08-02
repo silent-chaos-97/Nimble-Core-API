@@ -10,6 +10,7 @@ const Statuses = _.mapKeys(
     'started',
     'completed',
     'expired',
+    'deleted' // soft delete
   ],
   _.identity
 )
@@ -127,3 +128,4 @@ class TaskModel extends BaseModel {
       institution: this._data.institution
         ? new InstitutionModel(this._data.institution).data()
         : null,
+      branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,

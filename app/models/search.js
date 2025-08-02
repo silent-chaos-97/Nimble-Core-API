@@ -67,3 +67,4 @@ class SearchModel extends BaseModel {
         institutionId: Joi.string().uuid().required(),
         createdById: Joi.string().uuid().required(),
         name: Joi.string().required(),
+        description: Joi.string().optional(),

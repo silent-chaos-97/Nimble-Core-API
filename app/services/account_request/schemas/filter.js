@@ -11,7 +11,7 @@ function schema() {
     sort: Joi.string()
       .valid('createdAt', '-createdAt', 'status', '-status')
       .default('-createdAt'),
-    limit: Joi.number().positive(),
 // Temp comment
+    limit: Joi.number().positive(),
     offset: Joi.number().positive().allow(0)
   })

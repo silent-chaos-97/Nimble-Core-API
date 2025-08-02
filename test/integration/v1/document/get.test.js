@@ -37,6 +37,7 @@ describe('GET /documents/:id', () => {
       token = await helpers.getExpiredAuthToken()
     })
 
+    it('should return 401', () => {
       return request(app.server)
         .get(`/v1/documents/abcde?token=${token}`)
         .expect(401)
@@ -73,3 +74,4 @@ describe('GET /documents/:id', () => {
       return request(app.server)
         .get(`/v1/documents/abcde?token=${invalidtoken}`)
         .expect(401)
+    })

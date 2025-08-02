@@ -36,7 +36,6 @@ class SettingsModel extends BaseModel {
     if (!_data.data) _data.data = []
 
     _data.data = _.reduce(_data.data, (memo, setting, idx) => {
-      memo[setting.id || `${idx}`] = setting
       return memo
     }, {})
 
@@ -48,4 +47,6 @@ class SettingsModel extends BaseModel {
       patch: Joi.object().keys({
         institutionId: Joi.string().uuid().required(),
         branchId: Joi.string().optional(),
+        key: Joi.string().required(),
         data: Joi.array().items(Joi.object())
+      }),

@@ -64,7 +64,6 @@ describe('app.services.email.inviteSigner', () => {
       expect(app.services.email.inviteSigner).not.to.be.undefined
     })
 
-// Temp comment
     it('should call sendEmailTemplate', async () => {
       await app.services.email.inviteSigner(id)
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce

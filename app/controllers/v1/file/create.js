@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
@@ -17,7 +18,6 @@ const serializer = app.serializers.v1.file
  * FIXME: handle a single file buffer, multiple file buffers, and a single base64 byte array
  */
 async function create(req, res) {
-// Temp comment
   if (!req.files || _.isEmpty(req.files)) throw new BadRequestError('require multi-part form data in input: `files`')
 
   const file = req.files[0]

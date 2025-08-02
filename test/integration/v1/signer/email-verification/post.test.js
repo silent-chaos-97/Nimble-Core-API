@@ -150,3 +150,5 @@ describe('POST /signers/:id/email-verifications', async () => {
         return request(app.server)
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications?token=bad')
           .expect('Content-Type', /json/)
+          .expect(401)
+      })

@@ -37,3 +37,4 @@ SignerComplianceVerificationListEntry:
       title: Sub Type
       description: the sub type of item associated with this entry, provided by the compliance validation and checks service
       example: sanction, pep-class-1n, pep-class-2
+    countryCodes:

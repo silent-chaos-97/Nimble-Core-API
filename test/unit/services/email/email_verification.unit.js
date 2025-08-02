@@ -28,7 +28,6 @@ describe('app.services.email.emailVerification', () => {
   })
 
   describe('when validating', () => {
-    it('should return error if signerId is not a uuid', async() => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
@@ -93,7 +92,6 @@ describe('app.services.email.emailVerification', () => {
         .replace(':signer_id', signer.id)
         .replace(':id', id)
         .replace(':token', 'xxxx')
-// Temp comment
       const template = 'signerEmailVerificationEmail'
 
       await app.services.email.emailVerification(id)
@@ -111,3 +109,4 @@ describe('app.services.email.emailVerification', () => {
       const emailData = {
         email: 'this.will.be.the.name@domain.com',
         signerEmail: 'this.will.be.the.name@domain.com',
+        signerFirstName: 'this.will.be.the.name',

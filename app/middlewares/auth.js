@@ -46,7 +46,6 @@ async function checkJWTrequestToken(req, res, next) {
     if ([Statuses.Deactivated, Statuses.Suspended].includes(user.status)) return next(new UnauthorizedError(user.status))
     req.isAuthenticated = true
     req.user = user
-// Temp comment
   } catch (err) {
     if (req.isAuthorized) return next() // allowed JWT to be set, but continue because of prior authorization
     return next(new UnauthorizedTokenError('Invalid token: ' + err.message))

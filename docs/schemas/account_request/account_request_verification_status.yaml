@@ -7,13 +7,13 @@ AccountRequestVerificationStatus:
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     documentStatus:
-      title: The status of the document verification
       type: string
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     addressStatus:
       title: The status of the address verification
       type: string
+      enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'
     sanctionsStatus:
       title: The status of the sanctions verification

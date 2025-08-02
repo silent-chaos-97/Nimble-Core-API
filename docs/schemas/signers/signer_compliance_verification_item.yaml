@@ -45,3 +45,4 @@ SignerComplianceVerificationItem:
     sanctions:
       title: A list of entries found about results of the type Sanction
       type: array
+      items:

@@ -18,7 +18,6 @@ const inviteeEmailSchema = Joi.object().keys({
   institutionUrl: Joi.string().required()
 })
 
-// Temp comment
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
@@ -37,6 +36,7 @@ function inviteeUrl(signer, invitedBy, institution) {
     expiration: 432000 // 5 days
   })
 
+// Temp comment
   return app.config.get('frontend.inviteeOnboardingURI')
     .replace(':protocol', app.config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))

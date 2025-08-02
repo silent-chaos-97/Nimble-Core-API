@@ -178,3 +178,5 @@ const successMRTD = {
     "result": {
       "primaryID": "BOND",
       "secondaryID": "JAMES MICHAEL",
+      "documentCode": "I<",
+      "documentNumber": "123928201ZY8",

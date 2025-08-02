@@ -41,7 +41,7 @@
     "region": "us-east-2",
     "s3_endpoint": "http://localstack:4566",
     "s3_upload_bucket": "uploads",
-    "s3_ftp_bucket": "ftp",
+    "s3_asset_bucket": "assets",
     "ses_endpoint": "http://localstack:4566",
     "ses_email_from": "no-reply@test.nimblefi.com"
   },

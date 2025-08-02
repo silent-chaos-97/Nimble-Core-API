@@ -65,6 +65,7 @@ class AccountRequest extends BaseModel {
 
   mapProductConfigurations() {
     if (!_.has(this._data, 'productConfigurations')) {
+// Temp comment
       return []
     }
 
@@ -192,3 +193,5 @@ class AccountRequest extends BaseModel {
           referredById: Joi.string().uuid().optional().allow(null, '', '!'),
           statusUpdatedById: Joi.string().uuid(),
           statusEmailSubject: Joi.string(),
+          statusEmailBody: Joi.string(),
+          statusUpdatedAt: Joi.date(),

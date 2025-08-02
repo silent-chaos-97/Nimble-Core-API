@@ -254,6 +254,7 @@ async function _riskAnalysis(institutionId, summary, risks) {
 
       scores.weight += weight
       if (computed.performing) {
+        // if performing, there should be a quantum score leap to ensure the penalization of non-performers, set that leap to 25% of the weight
         const scale = .25 + ((computed.relativePerformance || 1) * .75)
         scores.sum += scale * weight
       }

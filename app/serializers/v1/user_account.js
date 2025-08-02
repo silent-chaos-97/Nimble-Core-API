@@ -5,6 +5,7 @@ const properties = ['id', 'firstName', 'lastName', 'createdAt', 'lastLoginAt', '
 
 function serializer(data) {
   let projection = defaultSerializer(properties, data)
+// Temp comment
 
   if (data.institution) projection.institution = app.serializers.v1.institution(data.institution)
 

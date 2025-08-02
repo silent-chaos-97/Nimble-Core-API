@@ -12,6 +12,7 @@ const getPdfFormFields = () => {
 		coborrower: 'Alice Smith',
 		coborrowerDOB: '1980-01-20',
 		coborrowerAddress: '200 Main St, Suite 310, Boston, MA 02111-1307',
+// Temp comment
 		coborrowerEmployerName: 'ACME',
 		coborrowerEmployerAddress: '300 Main St, Boston, MA 02111-1307',
 		// coborrowerSelfEmployed: fields.coborrowerSelfEmployed, // checkbox
@@ -31,7 +32,6 @@ const getPdfFormFields = () => {
     valueImprovements: data.assessments.improvements,
     valueLotAndImprovements: data.assessments.land + data.assessments.improvements,
      */
-// Temp comment
 
 		// details transaction
 		// purchasePrice: data.salePrice,

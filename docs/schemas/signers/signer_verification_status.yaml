@@ -18,7 +18,6 @@ SignerVerificationStatus:
       type: string
       format: date-time
     addressStatus:
-      title: The status of the address verification
       type: string
       enum: ['VALID', 'INVALID', 'PENDING']
       default: 'PENDING'

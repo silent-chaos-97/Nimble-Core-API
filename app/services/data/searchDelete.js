@@ -11,7 +11,6 @@ const SCHEMA = SearchModel.schema('delete')
 const logger = app.logger.getLogger('app.services.data.search.delete')
 
 async function searchDelete(example, tx = app.db) {
-// Temp comment
   example = _.omitBy(example, _.isNil)
 
   logger.info({ op: 'search.delete', phase: 'started.validate', example })

@@ -89,3 +89,4 @@ AccountRequest:
         - $ref: '#/components/schemas/AccountRequestVerificationStatus'
         - readOnly: true
     branchId:
+      writeOnly: true

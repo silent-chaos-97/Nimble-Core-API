@@ -22,6 +22,7 @@ tags:
   - name: Prospect
     description: Everything related to prospects
   - name: Institution
+    description: Everything related to institution
   - name: Signer
     description: Everything related to signers
   - name: Account Request
@@ -91,7 +92,6 @@ components:
             Bearer xxxxxx.yyyyyyy.zzzzzz
       type: apiKey
       name: Authorization
-      in: header
     token:
       description: >
         For accessing the API a valid JWT token must be passed.
@@ -136,3 +136,4 @@ components:
         status:
           type: string
           title: API current status
+          description: >

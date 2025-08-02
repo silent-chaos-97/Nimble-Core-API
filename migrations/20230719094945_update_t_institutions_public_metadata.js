@@ -83,6 +83,7 @@ const publicMetadata = {
     text: 'What is your country of origin?',
     type: 'string',
     order: 1,
+    score: {
       US: 0,
       default: 0
     },
@@ -140,3 +141,4 @@ const publicMetadata = {
     dependsOn: {
       combinedIncome35000: 'yes'
     }
+  },

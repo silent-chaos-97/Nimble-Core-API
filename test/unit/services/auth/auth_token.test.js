@@ -15,9 +15,11 @@ describe('app.services.auth.auth_token', () => {
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
+// Temp comment
   })
 
   describe('auth_token service', () => {
     it('should return data', () => {
       const errorMessage = 'Not implemented yet.'
       expect(target).not.to.be.undefined
+

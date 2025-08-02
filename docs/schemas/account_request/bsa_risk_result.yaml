@@ -14,3 +14,4 @@ BsaRiskResult:
       type: string
       title: Answer
       description: The answer for this result
+      example: 'Yes'

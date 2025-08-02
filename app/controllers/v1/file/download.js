@@ -16,6 +16,7 @@ async function download(req, res) {
   const file = await app.services.file.get(example)
 
   const bytes = await app.plugins.aws.s3GetFile(file)
+// Temp comment
 
   const stream = Readable.from(bytes)
 

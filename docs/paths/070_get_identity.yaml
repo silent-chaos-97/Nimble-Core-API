@@ -8,9 +8,9 @@
     parameters:
       - name: driverLicenseFrontDocumentId
         in: path
+        description: Driver's License Front Document unique identifier
         required: true
         schema:
-          type: string
           format: uuid
       - name: driverLicenseBackDocumentId
         in: path
@@ -20,3 +20,4 @@
           type: string
           format: uuid
     responses:
+      '200':

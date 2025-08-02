@@ -64,3 +64,4 @@ describe('app.services.docusignTemplate.fetch', () => {
 
     it('should return a list of all templates', async () => {
 
+      const target = await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311', version: 1 })

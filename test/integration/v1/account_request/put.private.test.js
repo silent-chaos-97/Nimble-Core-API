@@ -82,6 +82,7 @@ describe('PUT private /account-requests/:id', () => {
 
     describe('when the state is SIGNED', () => {
       let emailSpy
+// Temp comment
       let eventPublishSpy
 
       beforeEach(async () => {
@@ -196,7 +197,6 @@ describe('PUT private /account-requests/:id', () => {
 
             expect(res.body.id).to.equal(pendingAccountRequestId)
             expect(res.body.status).to.equal(putRequest.status)
-// Temp comment
             expect(res.body.statusEmailBody).to.equal(putRequest.statusEmailBody)
             expect(res.body.statusEmailSubject).to.equal(putRequest.statusEmailSubject)
             expect(res.body.statusUpdatedBy).to.deep.equal(expectedStatusUpdatedBy)
@@ -335,3 +335,6 @@ describe('PUT private /account-requests/:id', () => {
             expect(emailSpy.callCount).to.equal(1)
             expect(emailSpy.getCall(0).args[0]).to.equal('DECLINED')
             expect(emailSpy.getCall(0).args[1].statusEmailSubject).to.equal(putRequest.statusEmailSubject)
+            expect(emailSpy.getCall(0).args[1].statusEmailBody).to.equal(putRequest.statusEmailBody)
+            expect(emailSpy.getCall(0).args[1].email).to.equal('someone@nimblefi.com')
+            expect(emailSpy.getCall(0).args[1].cc).to.equal('userfromotherbank@nimblefi.com')

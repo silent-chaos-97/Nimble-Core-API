@@ -871,3 +871,11 @@ describe('Docusign', () => {
       })
     })
 
+    describe('_buildMainSigner', () => {
+      const templateTabs = {
+        // this is just a small sample of the textTabs
+        textTabs: [
+          { tabLabel: 'ssn', tabText: 'SSN' },
+          { tabLabel: 'fullName', tabText: 'fullName' },
+          { tabLabel: 'phone', tabText: 'phone' }
+        ]

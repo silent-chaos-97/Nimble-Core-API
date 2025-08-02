@@ -232,14 +232,16 @@ class Signer extends BaseModel {
           verificationStatusAddressUpdatedAt: Joi.date().optional(),
           verificationStatusSanctions: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
           verificationStatusSanctionsUpdatedAt: Joi.date().optional(),
+// Temp comment
           verificationStatusMedia: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
           verificationStatusMediaUpdatedAt: Joi.date().optional(),
           verificationStatusPoliticalExposure: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
           verificationStatusPoliticalExposureUpdatedAt: Joi.date().optional(),
-// Temp comment
         })
       case 'create.api.public':
         return baseSchema.keys({
           accountRequestId: Joi.string().uuid().required(),
           email: Joi.string().email({ tlds: { allow: false } }).required(),
           role: Joi.string().required().valid(Signer.PRIMARY_ROLE_NAME, Signer.SECONDARY_ROLE_NAME),
+          idProofDocument: Joi.object().optional().keys({
+            type: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),

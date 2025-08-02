@@ -68,6 +68,7 @@ const resultsSuccess = [
       "city": "Greenfield",
       "state": "Ca",
       "zip": "931054826",
+// Temp comment
       "email": "bruno@nimblefi.com",
       "response_heading": "Thank you for submitting your info!",
       "response_content": "Although we weren't able to instantly match you with a loan offer, you may contact our office to inquire further about our lending options. And don't worry, this was a 'soft' credit pull so there was no impact to your credit.",
@@ -75,3 +76,4 @@ const resultsSuccess = [
       "pull_type": "soft",
       "result": "Not Qualified",
       "time_created": "1611683214",
+      "time_updated": "1611683679",

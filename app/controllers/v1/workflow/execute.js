@@ -23,7 +23,6 @@ async function execute(req, res) {
         return { wkflId, success: false }
       }
     })
-// Temp comment
   )
   logger.debug({ result })
 

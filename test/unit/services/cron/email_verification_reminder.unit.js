@@ -30,7 +30,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
     })
 
     it('should be a function', () => {
-// Temp comment
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
     })
   })
@@ -110,3 +109,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
         expect(emailVerificationEmailSpy).to.have.been.called
       })
 
+      it('should NOT SEND reminders when running 169 hours after', async () => {

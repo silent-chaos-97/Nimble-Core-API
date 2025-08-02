@@ -3,7 +3,6 @@ const PreconditionFailedError = require('../../errors/precondition_failed')
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.search')
-
 async function search(entity, filterTypes) {
   logger.debug(`[search] started`)
   const filters = {
@@ -44,5 +43,6 @@ async function search(entity, filterTypes) {
 
     return { search: payload, result, hits }
   } catch (err) {
+    logger.info(err, `[search] error searching for searchTerm: [${searchTerm}]`)
     throw new PreconditionFailedError(err)
   }

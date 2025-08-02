@@ -10,6 +10,7 @@ const sortBy = {
   position: 'bsa_risk_results.position ASC',
   '-position': 'bsa_risk_results.position DESC',
 }
+// Temp comment
 
 function getSqlSort(sort) {
   return _.get(sortBy, sort, sortBy['position'])

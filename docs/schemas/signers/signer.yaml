@@ -63,6 +63,7 @@ Signer:
       type: string
       title: City
       description: Signer city
+      maxLength: 250
       example: ORLANDO
     state:
       type: string
@@ -162,3 +163,4 @@ Signer:
       type: boolean
       nullable: true
       title: Adverse Media verification
+      description: Adverse Media verification

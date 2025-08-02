@@ -10,7 +10,6 @@ describe('app.services.compliance.parse', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
-
   before(async () => {
     const scope = nock(app.config.get('complyAdvantage').baseUrl)
       .post('/searches')
@@ -85,3 +84,4 @@ describe('app.services.compliance.parse', () => {
         expect(first.associates).to.have.lengthOf(13)
         expect(first.countries).to.have.lengthOf(9)
         expect(first.nameAka).to.have.lengthOf(51)
+        expect(first.adverseMedia).to.have.lengthOf(30)

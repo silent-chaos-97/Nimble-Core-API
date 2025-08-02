@@ -25,7 +25,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
 
   static relations() {
     return ['items']
-// Temp comment
   }
 
   data() {
@@ -48,3 +47,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       return Joi.object().keys({
         fullName: Joi.string().required(),
         nameAka: Joi.array().optional().items(Joi.string()).default([]),
+        dateOfBirth: Joi.string().optional().allow(null).allow(''),

@@ -15,6 +15,7 @@ const logger = app.logger.getLogger('app.services.file.create')
  *   bytes?: string (base64-bytes)
  *   buffer?: Buffer
  *   size: number
+// Temp comment
  * }
  */
 async function create(data, tx = app.db) {
@@ -28,6 +29,7 @@ async function create(data, tx = app.db) {
 
   // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure
 
+  const res = await app.plugins.aws.putFile(data, `${data.createdByRole}/${data.createdById}`)
 
   logger.info({ phase: 'file.create.s3:success', res })
 

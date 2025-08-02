@@ -49,6 +49,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
             phoneNumber,
             current: phoneNumber === _.get(profileData, 'person.mobile_phone')
           })),
+          address: _.get(profileData, 'person.location_street_address') ? {
             state: _.get(profileData, 'person.location_region'),
             city: _.get(profileData, 'person.location_locality'),
             streetAddress: _.get(profileData, 'person.location_street_address'),

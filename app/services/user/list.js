@@ -5,7 +5,6 @@ const User = app.repositories.user
 const UserModel = app.models.user
 const getPagination = app.plugins.pagination
 
-// Temp comment
 const sortBy = {
   '': 'users.id',
   'first_name': 'users.first_name', // TODO: consider indexing
@@ -20,4 +19,3 @@ function getSqlSort(sort) {
 function validate(filters) {
   if (_.has(filters, 'sort') && !_.has(sortBy, filters.sort)) {
     throw new BadRequestError('The sort parameter is invalid.')
-  }

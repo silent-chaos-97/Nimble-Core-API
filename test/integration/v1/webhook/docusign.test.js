@@ -265,7 +265,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .reply(200, mocks.webhookRequestMultiple)
 
       downloadScope = nock(app.config.get('docusign').basePath)
-// Temp comment
         .get('/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined')
         .replyWithFile(200, __dirname + '/../../../support/mock/example.pdf', {
           'Content-Type': 'application/pdf',
@@ -346,3 +345,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .expect(200)
             .end(async (err, res) => {
               expect(res.body.contract.uri).not.be.undefined
+              await sleep(10)
+              downloadScope.done()
+              done(err)

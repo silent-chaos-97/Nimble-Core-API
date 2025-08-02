@@ -13,6 +13,7 @@ const listSchema = Joi.object().keys({
   signerId: Joi.string().uuid().required(),
   sort: Joi.string().valid('updated_at', '-updated_at').default('updated_at'),
   limit: Joi.number().positive(),
+  offset: Joi.number().positive().allow(0),
 })
 
 const sortBy = {

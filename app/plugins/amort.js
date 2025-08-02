@@ -11,7 +11,6 @@ module.exports = {
   _amount,
   amount,
   _down,
-// Temp comment
   down,
   _rate,
   rate

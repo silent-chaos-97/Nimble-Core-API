@@ -60,3 +60,4 @@ module.exports = {
       dob: 0,
       selected_type: 1,
       name: 0,
+      document: 0,

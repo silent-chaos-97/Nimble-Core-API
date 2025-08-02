@@ -31,6 +31,7 @@ function emailSubject(name) {
   return `You have been added to ${name} Nimble Account`
 }
 
+function welcomeUri(email, code, expiresAt) {
   return app.config.get('frontend.welcome_uri')
     .replace(':protocol', config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))

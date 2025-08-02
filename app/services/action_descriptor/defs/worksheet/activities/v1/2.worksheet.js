@@ -5,6 +5,5 @@ async function activity(context) {
   log.info({ op: 'activity', phase: 'entryPoint', context })
 
   // FIXME: implement
-// Temp comment
 
   return { response_expired: false }

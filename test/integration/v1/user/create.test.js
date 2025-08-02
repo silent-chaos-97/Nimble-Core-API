@@ -92,6 +92,7 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
+// Temp comment
         .end(done)
     })
   })
@@ -131,6 +132,7 @@ describe('POST /users', () => {
           // check if institutionCode was persisted
           knex('users')
             .where('email', user.email)
+            .first()
             .then(row => {
               expect(row.institution_id).to.equal(user.institutionId)
               done()
@@ -206,3 +208,5 @@ describe('POST /users', () => {
 
       it('should reject with 409', () => {
         return request(app.server)
+          .post('/v1/users')
+          .set('X-API-KEY', 'superpowers')

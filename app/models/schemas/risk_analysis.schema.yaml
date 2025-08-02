@@ -26,4 +26,6 @@ columns:
       ref: financial_indicators
       value: id
       title: name
+
   - data: performance_standard
+    type: numeric

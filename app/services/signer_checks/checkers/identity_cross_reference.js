@@ -24,3 +24,4 @@ module.exports = {
     const score = _.get(report, 'Subject.0.Score.Value', 0)
 
     return {
+      status: score >= 700 ? SignerCheck.statuses().valid : SignerCheck.statuses().invalid,

@@ -112,3 +112,4 @@
     "html-entities": "^2.4.0",
     "is-base64": "^1.1.0",
     "js-yaml": "^4.1.0",
+    "jwt-simple": "^0.5.6",

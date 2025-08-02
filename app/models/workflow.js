@@ -63,8 +63,8 @@ class WorkflowModel extends BaseModel {
         userId: Joi.string().uuid().required(),
         branchId: Joi.string().uuid().required(),
         institutionId: Joi.string().uuid().required(),
-        name: Joi.string().required(),
         description: Joi.string(),
         status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),
         trigger: Joi.object(),
         activities: Joi.array().items(Joi.object()).required()
+      }),

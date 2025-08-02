@@ -11,6 +11,7 @@ const properties = [
   'associates',
   'matchTypes'
 ]
+
 function serializer(data) {
 
   const format = {

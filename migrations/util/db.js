@@ -24,7 +24,6 @@ function alterTableIfColumnNotExists(knex, tableName, columnName, ifNotExistsAlt
 function alterTableIfColumnExists(knex, tableName, columnName, ifExistsAlterTable) {
   return ifColumnExists(knex, tableName, columnName, _knex => _knex.schema.alterTable(tableName, ifExistsAlterTable))
 }
-
 function whenTable(knex, tableName, ifExists, ifNotExists) {
   return knex.schema.hasTable(tableName)
     .then(hasTable => hasTable

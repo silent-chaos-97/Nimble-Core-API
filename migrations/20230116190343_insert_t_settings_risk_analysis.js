@@ -9,7 +9,6 @@ const ROWS = [
   },
   {
     key: 'risk_analysis',
-// Temp comment
     schema: { $ref: 'risk_analysis' }
   }]
 

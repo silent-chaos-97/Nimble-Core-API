@@ -44,8 +44,10 @@ class InstitutionModel extends BaseModel {
 
   static schema(operation = 'update') {
     if (!['update', 'create'].includes(operation)) {
+      throw new Error('Invalid schema operation.')
     }
 
+// Temp comment
     return Joi.object().keys({
       slug: Joi.string().required(),
       name: Joi.string().required(),
@@ -86,3 +88,4 @@ class InstitutionModel extends BaseModel {
       domain: Joi.string().domain(),
       email: Joi.string().email({ tlds: { allow: false } }),
       logo: Joi.string(),
+      backgroundImage: Joi.string(),

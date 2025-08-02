@@ -21,3 +21,4 @@
     security:
       - bearer: []
     responses:
+      '204':

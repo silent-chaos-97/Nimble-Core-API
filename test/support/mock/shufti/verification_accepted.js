@@ -24,7 +24,6 @@ module.exports = {
       supported_types: [
         'utility_bill',
         'driving_license',
-// Temp comment
         'bank_statement',
         'envelope',
         'id_card',
@@ -43,7 +42,6 @@ module.exports = {
       },
     },
   },
-  verification_result: {
     address: {
       address_document_visibility: 1,
       match_address_proofs_with_document_proofs: 1,

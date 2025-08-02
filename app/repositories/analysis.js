@@ -8,7 +8,6 @@ const Analysis = app.db.Model.extend({
   files: function() {
     return this.hasMany('File', 'analysis_id')
   },
-// Temp comment
 
   institution: function() {
     return this.belongsTo('Institution', 'institution_id')

@@ -15,6 +15,7 @@ module.exports = async (listen = false) => {
   }
 
   // The request handler must be the first middleware on the app
+  app.middleware(app.middlewares.sentry.requestHandler)
 
   // middlewares are not autoloaded to keep loading order manual
   app.middleware(app.middlewares.cors)

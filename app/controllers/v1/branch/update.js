@@ -28,7 +28,6 @@ async function update(req, res, next) {
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
-// Temp comment
 
   if (!isSuperAdmin && branch.institutionId !== me.institutionId) return next(new UnauthorizedError('InstitutionInvalid'))
 

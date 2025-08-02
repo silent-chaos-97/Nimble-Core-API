@@ -27,3 +27,4 @@
       - bearer: []
       - bearer: ['account_requests']
     responses:
+      '200':

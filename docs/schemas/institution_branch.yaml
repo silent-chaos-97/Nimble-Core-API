@@ -13,3 +13,4 @@ InstitutionBranch:
       type: string
       title: Name
       description: The institution branch name
+      example: Central Bank on sesame street

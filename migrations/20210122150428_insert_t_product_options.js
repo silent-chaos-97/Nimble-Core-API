@@ -85,3 +85,4 @@ exports.up = async (knex)  => {
   await Promise.all(products.map(async (product) => {
     if (product.category === 'SAVINGS') {
       // Insert savings options
+      await Promise.all(savingsProductOptions.map(async (savingOption) => {

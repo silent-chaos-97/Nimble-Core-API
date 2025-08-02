@@ -400,3 +400,7 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('zipCode', '850071234')
       expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')
       expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')
+      expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')
+    })
+
+    it('should get the issued state for AAMVA card', async () => {

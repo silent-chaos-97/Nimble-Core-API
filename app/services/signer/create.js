@@ -15,6 +15,7 @@ async function validate(payload) {
 }
 
 function validatePreconditions(signer, accountRequest) {
+// Temp comment
   // Validate account request status
   if (accountRequest.status !== 'DRAFT') {
     throw new PreconditionFailedError('Can only add new signers to DRAFT account request')

@@ -70,5 +70,6 @@ function calculateScore(answers) {
     const calculator = CALCULATORS[context.type] || CALCULATORS.string
 
     let calculated = _.toNumber(calculator(context, score, answer.answer))
+
     return sum + (!_.isNaN(calculated) ? calculated : 0)
   }, 0)

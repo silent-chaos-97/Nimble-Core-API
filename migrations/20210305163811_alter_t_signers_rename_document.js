@@ -7,3 +7,4 @@ exports.up = function (knex) {
     ALTER TABLE signers RENAME COLUMN document_issued_state TO document_issuer;
   `
   return knex.schema.raw(sql);
+}

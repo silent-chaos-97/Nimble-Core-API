@@ -42,6 +42,7 @@ Source:
 This is very important because we need the api user to give consent to use the integration key.
 
 How can we do this?
+
 > In sandbox. You can use the DocuSign Admin panel to directly grant consent to applications owned by your organization (applications whose Integration Keys are owned by your org) on behalf of all of your users.
 > To directly grant consent to an internal application:
 
@@ -130,3 +131,4 @@ The url has a short time to live and can be opened only once.
 A recipient can sign the document and when he closes the docusign window we will get a callback reporting the state of the signature (see below).
 
 
+When the clientUserId property is present and its value is not null no email is sent to the recipient (only the envelope complete email gets sent once signing is done, but that is configurable). Basically the only thing you have to remember with embedding is that you set the clientUserId property for your recipients at the time they are added to the envelope, then when you are request a URL token you need to reference the same email, name, and clientUserId combination.

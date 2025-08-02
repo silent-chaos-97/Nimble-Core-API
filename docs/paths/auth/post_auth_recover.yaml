@@ -12,4 +12,5 @@
         schema:
           type: string
           format: email
+    responses:
       '204':

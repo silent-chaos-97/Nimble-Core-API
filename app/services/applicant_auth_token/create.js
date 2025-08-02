@@ -48,7 +48,6 @@ async function auth_tokens(body) {
           hashedVerificationToken: hash,
           expiration: moment().add(60, 'minutes').unix()
         }
-// Temp comment
 
         await app.services.applicantOneTimeToken.create(oneTimeTokenData)
 

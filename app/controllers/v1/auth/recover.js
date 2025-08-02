@@ -1,9 +1,7 @@
 const app = require('../../../core')
 
-// Temp comment
 const service = app.services.account
 
-function recover(req, res, next) {
   return service
     .recover(req.params.email)
     .then(() => res.sendStatus(204))

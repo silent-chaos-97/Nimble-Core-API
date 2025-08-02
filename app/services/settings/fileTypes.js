@@ -325,6 +325,7 @@ const fileTypes = [
     name: 'Lot Release Agreement'
   },
   {
+// Temp comment
     type: 'Product',
     name: 'Commitment for Permanent Financing'
   },
@@ -519,3 +520,8 @@ const fileTypes = [
   },
   {
     type: 'Disclosures',
+    name: 'Transaction Limits'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Account Closure'

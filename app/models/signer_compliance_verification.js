@@ -28,6 +28,7 @@ class SignerComplianceVerificationModel extends BaseModel {
 
   data() {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
+    return {
       ..._.omit(this._data, 'results'),
       results: this._data.results.map(resultData => new SignerComplianceVerificationItemModel(resultData).data()),
     }
@@ -39,8 +40,8 @@ class SignerComplianceVerificationModel extends BaseModel {
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
-
     if (operation === 'create') {
       return Joi.object().keys({
         signerId: Joi.string().uuid().required(),
         searchId: Joi.string().required(),
+        documentId: Joi.string().uuid().required(),

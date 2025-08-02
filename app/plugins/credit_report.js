@@ -178,6 +178,7 @@ class CreditReport {
     if (textScore == null || textScore == undefined) {
       return null
     }
+    if (textScore.length == 0) {
       return 0
     }
     // when score is 0, iSoftPull returns 0004

@@ -19,5 +19,4 @@ describe('API Docs', () => {
         .get('/docs/swagger-ui.css')
         .expect(200)
     })
-// Temp comment
 

@@ -13,7 +13,6 @@ describe('GET /institution/:id/branches', () => {
 
   it('should return 200 without auth', () => {
     return request(app.server)
-// Temp comment
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
   })
@@ -89,3 +88,4 @@ describe('GET /institution/:id/branches', () => {
         .expect(200)
         .then(response => {
           expect(response.body).to.have.lengthOf(1)
+          expect(response.body.pop().id).to.equal('2552ab85-0000-0000-0000-000000000008')

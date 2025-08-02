@@ -32,7 +32,6 @@ const SCHEMA = Joi.object().keys({
 })
 
 class AnalysisModel extends BaseModel {
-  constructor(data) {
     super([...AnalysisModel.props(), ...AnalysisModel.privateProps()], AnalysisModel.relations(), data)
   }
 
@@ -86,3 +85,4 @@ class AnalysisModel extends BaseModel {
       institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null,
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,
       owner: this._data.owner ? new UserModel(this._data.owner).data() : null,
+      files: this._data.files ? _.map(this._data.files, file => new FileModel(file).data()) : []

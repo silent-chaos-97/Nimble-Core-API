@@ -22,7 +22,6 @@ Me:
       example: Sample
     lastName:
       type: string
-      title: Last Name
       description: The last name of the user
       example: Specimen
     accounts:
@@ -37,3 +36,4 @@ Me:
       format: date-time
       title: Creation Date
       readOnly: true
+      description: The date and time the user record entered the system

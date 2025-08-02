@@ -21,3 +21,4 @@ describe('app.services.auth.send_verify_code', () => {
     it('should return data', () => {
       const errorMessage = 'Not implemented yet.'
       expect(target).not.to.be.undefined
+

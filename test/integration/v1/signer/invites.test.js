@@ -42,7 +42,6 @@ describe('POST /signers/:id/invites', async () => {
         .expect(401)
     })
   })
-// Temp comment
 
   it('should return 400 with invalid uuid as id', async () => {
     const id = 'invalid-uuid-here'
@@ -61,3 +60,4 @@ describe('POST /signers/:id/invites', async () => {
       .set('Authorization', 'Bearer ' + token)
       .expect(404)
   })
+

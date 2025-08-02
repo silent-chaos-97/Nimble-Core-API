@@ -1806,7 +1806,6 @@ const successResponse = {
               },
               {
                 "name": "Other Information",
-                "source": "malta-financial-services-authority-mfsa-national-sanctions",
                 "value": "President; born 21.2.1924"
               },
               {
@@ -3702,3 +3701,39 @@ const parsedResult = [
         "url": "https://www.infobae.com/america/mundo/2020/03/30/el-pais-que-teme-morir-de-hambre-antes-que-de-coronavirus-cuando-comience-la-cuarentena/?outputType=amp-type",
         "countryCodes": [],
         "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Former Botswana President Mogae blasts Zimbabwean tyrant Robert Mugabe | ZimDaily",
+        "value": "But on his Harare visit last month he stunned onlookers when he warmly shared the stage with the Zimbabwean leader while expanding his business empire. The former president of Botswana has once again set tongues wagging, this time accusing Mugabe of violating the rights of gays and lesbians. Speaking in an interview in New York with a United Nations online publication, Africa Renewal, Mogae emphasised the need for reformed mindsets.",
+        "date": "2020-03-21T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.zimdaily.com/?p=42787",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "From Zimbabwe, With Faith – The Forward",
+        "value": "\"They call us maJuda, which means the Jews,\" he said. The Lemba have also escaped the wrath of Zimbabwe's authoritarian ruler, President Robert G. Mugabe, who is accused of using political violence to stay in power during a 32-year reign. Mugabe is himself a Roman Catholic, which also puts him in a small minority among Zimbabwe's mostly Anglican, Methodist and Pentacostal churchgoers",
+        "date": "2019-11-24T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://forward.com/opinion/171453/from-zimbabwe-with-faith/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Kent farmer appeals to Nelson Mandela",
+        "value": "The brother of a farmer murdered in Zimbabwe has appealed for Nelson Mandela to intervene to prevent further bloodshed in the country's deepening crisis. Paul Dunn, who farms 1,500 acres at Ash, called on the former South African president and ANC leader to condemn Robert Mugabe's murderous regime and help end the killings. Mr Dunn has campaigned for peace in Zimbabwe since his brother, Alan, was murdered by Mugabe's war veterans on his farm near Harare eight years ago.",
+        "date": "2020-03-26T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.kentonline.co.uk/kent/news/kent-farmer-appeals-to-nelson-ma-a40038/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Lobengula MP blames the mushrooming of Vuzu parties to absentee parents | The Insider",
+        "value": "I particularly want to thank His Excellency, the President and Commander-In-Chief of the Zimbabwe Defence Forces, Cde. R. G Mugabe, who is also the First Secretary of the revolutionary party ZANU PF, for making it possible for me to be in this House today. I am humbled by the magnitude of the confidence and responsibility placed upon me by my revolutionary party ZANU PF and the people of Lobengula Constituency.",
+        "date": "2019-07-19T00:00:00Z",

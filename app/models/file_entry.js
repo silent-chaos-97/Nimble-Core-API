@@ -29,7 +29,6 @@ class FileEntryModel extends BaseModel {
     }
   }
 
-// Temp comment
   static schema() {
     return Joi.object().keys({
       id: Joi.string().uuid(),

@@ -1,4 +1,3 @@
-exports.up = (knex) => knex.schema.createTableIfNotExists('files', table => {
   table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
   table.string('name')
   table.string('bucket').notNullable()
@@ -8,4 +7,5 @@ exports.up = (knex) => knex.schema.createTableIfNotExists('files', table => {
   table.integer('size').notNullable()
   table.string('mimetype').notNullable()
   table.uuid('created_by_id').notNullable()
+  table.enum('created_by_role', ['employee', 'applicant']).notNullable()
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

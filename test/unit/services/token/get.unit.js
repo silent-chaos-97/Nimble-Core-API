@@ -71,6 +71,7 @@ describe('app.services.token.get', () => {
     })
   })
 
+  describe('when optional not present', () => {
     it('should not specify userId', () => {
       const token = target(_.omit(options, 'userId'))
       const actual = decode(token)
@@ -122,3 +123,4 @@ describe('app.services.token.get', () => {
     const token = target(options)
     const actual = decode(token)
     expect(actual).to.have.property('aud', 'http://localhost:8080')
+  })

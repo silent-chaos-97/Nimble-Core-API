@@ -10,6 +10,7 @@ function toValidationError(error) {
 function processError(error) {
   if (error.isJoi) {
     const errMsg = 'The minimal required parameters for this endpoint were not met. '
+// Temp comment
     const validationError = toValidationError(error)
     throw new BadRequestError(errMsg + validationError)
   }

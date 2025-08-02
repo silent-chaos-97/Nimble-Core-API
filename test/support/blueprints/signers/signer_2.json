@@ -8,7 +8,6 @@
   "address": "1381 Atlantic Ave, Brooklyn",
   "city": "New York",
   "state": "NY",
-  "zipCode": "NY11216",
   "phoneNumber": "+1718-953-8465",
   "ssn": "111-22-3333",
   "email": "john.mf.mcclane@wearesingular.com",
@@ -47,3 +46,4 @@
   "contractDocumentSignerStatus": null,
   "contractDocumentSignerStatusUpdatedAt": null,
   "invitedAt": "2021-04-08T18:52:21.425Z",
+  "verificationStatus": {

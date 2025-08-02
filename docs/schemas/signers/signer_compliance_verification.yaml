@@ -35,3 +35,4 @@ SignerComplianceVerification:
       type: string
       format: date-time
     updatedAt:
+      title: When was the result last updated

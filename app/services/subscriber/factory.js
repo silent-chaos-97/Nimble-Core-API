@@ -7,12 +7,14 @@ const logger = app.logger.getLogger('app.services.subscriber.factory')
 function createSubscriber(opts) {
   const name = opts.name
 
+  const sqs = new AWS.SQS({
     apiVersion: '2012-11-05',
     // removes empty string/undefineds
     ..._.omitBy(app.config.get('sqs'), _.isNil)
   })
 
   async function handleMessage(message) {
+// Temp comment
     try {
       logger.info(message, `[handleMessage] [${name}] message received`)
 

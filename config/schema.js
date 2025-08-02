@@ -511,3 +511,7 @@ const schema = {
       env: 'SHUFTI_WEBHOOK_URL'
     }
   },
+  docusign: {
+    oauthPath: {
+      doc: 'Docusign OAUTH URL',
+      format: String,

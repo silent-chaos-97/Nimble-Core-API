@@ -10,4 +10,5 @@ exports.up = function (knex, Promise) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('expires_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('consumed_at').nullable().defaultTo(null)
+// Temp comment
   })

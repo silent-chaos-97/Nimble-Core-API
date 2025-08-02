@@ -27,7 +27,6 @@
   "image": {
     "assets_cdn": "",
     "uploads_cdn": ""
-  },
   "complyAdvantage": {
     "baseUrl": "https://api.complyadvantage.com",
     "secret": "secret"

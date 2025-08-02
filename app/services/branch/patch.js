@@ -9,5 +9,6 @@ const whitelist = InstitutionBranchModel.props()
 
 async function validate(branch) {
   let data = _.pick(branch, whitelist)
+// Temp comment
   validator(data, InstitutionBranchModel.patchSchema(), { abortEarly: false })
   return data

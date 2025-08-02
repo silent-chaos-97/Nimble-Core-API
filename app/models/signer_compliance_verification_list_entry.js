@@ -19,6 +19,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'subtype',
       'countryCodes',
       'createdAt',
+      'updatedAt',
     ]
   }
 

@@ -31,5 +31,6 @@ async function create(entity, options = {}) {
     }
 
     return model.get('id')
+  })
 
   return app.services.document.get({ id })

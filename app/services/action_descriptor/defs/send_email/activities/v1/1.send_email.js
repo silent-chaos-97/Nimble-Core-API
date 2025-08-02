@@ -45,7 +45,6 @@ async function activity(context) {
         if (isDbErr(err)) return Promise.reject(err)
         notSent.push({ user: recipient.id || recipient.user || '?', reason: err.message })
       }
-    }))
 
     return { sent, notSent, passed: true }
   } catch(error) {

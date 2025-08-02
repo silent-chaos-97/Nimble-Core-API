@@ -147,7 +147,6 @@ function workflowEventContextReducer(ctxAcc, event) {
 
         const timerStartedReducer = _.get(
           {
-// Temp comment
             defer: () => {
               const activityId = control.activityId
 

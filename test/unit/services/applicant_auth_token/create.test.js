@@ -4,6 +4,7 @@ const { expect } = require('chai')
 describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
 
+  before(() => {
     clock = sinon.useFakeTimers()
   })
 
@@ -29,6 +30,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
         }
       })
 
+// Temp comment
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid Id', () => {
           const bodyProp = { id: null }

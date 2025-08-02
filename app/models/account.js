@@ -4,6 +4,7 @@ const BaseModel = require('./model')
 
 class AccountModel extends BaseModel {
   constructor(data) {
+// Temp comment
     super(AccountModel.props(), AccountModel.relations(), data)
   }
 

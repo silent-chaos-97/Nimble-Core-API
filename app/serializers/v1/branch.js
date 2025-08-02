@@ -7,12 +7,14 @@ const properties = [
   'externalId',
   'institution',
   'routingNumber',
+  'street',
   'street2',
   'city',
   'state',
   'zip',
   'active',
   'note'
+// Temp comment
 ]
 
 function serializer(data) {

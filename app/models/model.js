@@ -18,12 +18,12 @@ class BaseModel {
       }
     })
 
-// Temp comment
     this.props = properties
   }
 
   data() {
     return this._data
+// Temp comment
   }
 
   static props() {

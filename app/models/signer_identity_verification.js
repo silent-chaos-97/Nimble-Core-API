@@ -17,6 +17,7 @@ class SignerIdentityVerification extends BaseModel {
       'updatedAt',
     ]
   }
+
   static relations() {
     return ['signer']
   }
@@ -26,3 +27,4 @@ class SignerIdentityVerification extends BaseModel {
       return Joi.object().keys({
         signerId: Joi.string().uuid().required(),
         verification: Joi.string().required(),
+        status: Joi.string().required().valid('VALID', 'INVALID', 'PENDING'),

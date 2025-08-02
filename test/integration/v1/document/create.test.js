@@ -185,3 +185,5 @@ describe('POST /documents', () => {
   describe('when content is not a string', () => {
     beforeEach(() => document.content = 1)
 
+    it('should return 400', () => {
+      return request(app.server)

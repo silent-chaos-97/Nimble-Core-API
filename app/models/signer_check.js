@@ -5,7 +5,6 @@ const BaseModel = require('./model')
 const STATUSES = {
   valid: 'VALID',
   invalid: 'INVALID',
-  pending: 'PENDING',
   noMatch: 'NOMATCH',
   match: 'MATCH'
 }
@@ -34,3 +33,4 @@ class SignerCheck extends BaseModel {
   static schema(op = 'create') {
     const schemas = {
       create: Joi.object().keys({
+        signerId: Joi.string().uuid().required(),

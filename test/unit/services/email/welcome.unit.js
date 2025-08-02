@@ -75,3 +75,4 @@ describe('app.services.email.welcome', () => {
       const template = 'welcomeEmail'
       const statusEmailSubject = 'You have been added to Singular Nimble Account'
       const code = 'XXXXX'
+      const institution = 'Singular'

@@ -10,10 +10,10 @@ exports.up = function(knex, Promise) {
     table.boolean('active').default(true)
     table.string('note').nullable()
   })
-};
 
 exports.down = function(knex, Promise) {
   return knex.schema.alterTable('institution_branches', table => {
+    table.dropColumn('routing_number')
     table.dropColumn('street')
     table.dropColumn('street_2')
     table.dropColumn('city')

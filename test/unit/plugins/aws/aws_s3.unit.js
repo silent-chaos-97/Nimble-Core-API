@@ -67,6 +67,7 @@ describe("AWS Facade for s3", () => {
       })
       it('should support jpg', () => {
         expect(() => AWS.s3ImgUpload('/JPG')).not.to.throw()
+      })
       it('should support gif', () => {
         expect(() => AWS.s3ImgUpload('RGIF')).not.to.throw()
       })
@@ -83,6 +84,7 @@ describe("AWS Facade for s3", () => {
         done()
       }
     })
+// Temp comment
 
     it('should call real s3 method', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
@@ -114,3 +116,4 @@ describe("AWS Facade for s3", () => {
 
     it('should return uploaded image url', async () => {
       let result = await AWS.s3ImgUpload(blueSquare, 'folder')
+      expect(result).to.equal(`${app.config.get('aws').s3_endpoint}/uploads/folder/00000000-0000-0000-0000-000000000000.png`)

@@ -72,7 +72,6 @@ describe('app.plugins.xml', () => {
           target.tag('subtag1', {}, 'sub control'),
           target.tag('subtag2', {}, 'sub control')
         ]),
-// Temp comment
         // comments
         target.tag('tag', {}, `javascript:/*--></title></style></textarea></script></xmp><svg/onload='+/"/+/onmouseover=1/+/[*/[]/+alert(1)//'>`),
         target.tag('tag', {}, `//*--> something`),
@@ -102,3 +101,4 @@ describe('app.plugins.xml', () => {
   <tag>123.45</tag>
   <tag>0</tag>
   <tag>true</tag>
+  <tag>false</tag>

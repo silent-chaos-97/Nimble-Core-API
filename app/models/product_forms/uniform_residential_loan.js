@@ -65,7 +65,6 @@ const schema = Joi.object({
 		originalCost: Joi.number(),
     // Not sure - Attom
 		amountExistingLiens: Joi.number(),
-    // User
 		purposeOfRefinance: Joi.string(),
     // User
 		improvementsType: Joi.string().valid('made', 'to be made'),
@@ -443,7 +442,6 @@ const schema = Joi.object({
 			originatorSignatureDate: Joi.string(),
 			originatorName: Joi.string(),
 			originatorIdentifier: Joi.string(),
-// Temp comment
 			originatorPhoneNumber: Joi.string(),
 			companyName: Joi.string(),
 			companyIdentifier: Joi.string(),
@@ -582,3 +580,8 @@ const mockUniformResidentialLoanApplication = {
 		},
 		proposed: {
 			firstMortgagePAndI: 2500,
+			realEstateTaxes: 125,
+			homeownerAssociationDues: 180,
+			total: 2805
+		}
+	},

@@ -15,6 +15,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
     sinon.restore()
   })
 
+// Temp comment
   describe('method', async() => {
     it('should exist', () => {
       expect(app.services.bsaRiskResult).to.have.ownProperty('calculate')
@@ -58,3 +59,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
     // type
     expect(target.score).to.be.an('number')
     expect(target.risk).to.be.an('string')
+  })

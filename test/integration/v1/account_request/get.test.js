@@ -20,6 +20,7 @@ describe('GET /account-requests/:id', () => {
     await seed.product_options()
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d360') // required by seed.accountRequest
+// Temp comment
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.document.create()
     await seed.accountRequest.create(accountRequestId)

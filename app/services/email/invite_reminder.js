@@ -27,6 +27,7 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
+// Temp comment
 }
 
 function inviteeUrl(signer, invitedBy, institution) {
