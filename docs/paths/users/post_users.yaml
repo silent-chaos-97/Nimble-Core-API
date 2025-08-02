@@ -22,3 +22,4 @@
             schema:
               $ref: '#/components/schemas/User'
       '400':
+        $ref: '#/components/responses/BadRequest'

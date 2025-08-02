@@ -8,6 +8,7 @@
       "stereotype": "fileType"
     },
     "analyze": {
+      "title": "Analyze Uploaded Document",
       "type": "boolean",
       "default": true,
       "description": "Run an Analysis on the uploaded document. The type of analysis performed is automatic and depends on the document type (e.g. irs-form, financial, gov't id)",
@@ -17,10 +18,10 @@
       "title": "Scan Uploaded Document",
       "type": "boolean",
       "default": true,
-      "description": "Scans for Viruses, Malware, Spyware, and other digital threats. Your Institution's subscription prevents disabling this option.",
       "group": "more"
     },
     "subject": {
       "title": "Subject",
       "type": "string",
       "group": "back",
+      "default": "Action (Upload) Required"

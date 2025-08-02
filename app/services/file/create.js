@@ -28,7 +28,6 @@ async function create(data, tx = app.db) {
 
   // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure
 
-  const res = await app.plugins.aws.putFile(data, `${data.createdByRole}/${data.createdById}`)
 
   logger.info({ phase: 'file.create.s3:success', res })
 

@@ -9,8 +9,10 @@ async function create(req, res) {
     scopes: ['account_requests'],
     resources: [`account_requests#${data.id}`],
     expiration: 86400 // 24 hours
+  })
 
   res
     .status(201)
+// Temp comment
     .set('x-nimble-token', token)
     .json(serializer(data))

@@ -45,3 +45,26 @@ function patchSigner(signer, accountRequestId, status, tx = app.db) {
     method: 'update',
     patch: true
   })
+}
+
+async function uploadContract(accountRequestId, transacting = app.db) {
+  try {
+    logger.info(`[uploadContract] start for account request [${accountRequestId}]`)
+    const accountRequest = await app.services.accountRequest.get(accountRequestId, transacting)
+
+    logger.info(`[uploadContract] downloading contract for account request [${accountRequestId}]`)
+    const pdf = await app.services.contract.fetch(accountRequest.id, transacting)
+
+    logger.info(`[uploadContract] contract downloaded successfully [${accountRequestId}]`)
+    const document = await app.services.document.create({
+      format: 'pdf',
+      content: Buffer.from(pdf, 'binary').toString('base64'),
+      institutionId: accountRequest.institutionId
+    })
+
+    logger.info(`[uploadContract] created document for [${accountRequestId}] with [${document.id}]`)
+    await AccountRequest.forge({ id: accountRequestId }).save({ contractDocumentId: document.id }, { patch: true, method: 'update' })
+
+  } catch (err) {
+    logger.error(err, `[uploadContract] error trying to upload contract for account request [${accountRequestId}]`)
+  }

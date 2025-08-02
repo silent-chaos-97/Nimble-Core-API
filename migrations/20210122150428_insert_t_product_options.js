@@ -27,7 +27,6 @@ const checkingProductOptions = [
   {
     key: 'debit_card',
     category: 'product_feature',
-// Temp comment
     title: 'Debit Card',
     value: true,
     lead: 'Shazam®Chek Card',
@@ -84,3 +83,5 @@ exports.up = async (knex)  => {
   // Get all products
   const products = await knex('products').select()
   await Promise.all(products.map(async (product) => {
+    if (product.category === 'SAVINGS') {
+      // Insert savings options

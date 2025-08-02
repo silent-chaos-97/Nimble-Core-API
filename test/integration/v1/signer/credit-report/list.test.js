@@ -100,3 +100,5 @@ describe('GET /signers/:id/credit-reports', async () => {
     })
 
     it('should fetch a credit report with the right schema', async () => {
+      return request(app.server)
+        .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/credit-reports`)

@@ -373,6 +373,7 @@ const schema = {
       doc: 'AWS SQS Access Key Secret',
       format: String,
       default: 'FAKE_SECRET',
+      env: 'AWS_SQS_SECRET_ACCESS_KEY'
     },
     region: {
       doc: 'AWS SQS Region',
@@ -500,3 +501,13 @@ const schema = {
     baseUrl: {
       doc: 'shufti base url',
       format: String,
+      default: 'https://shuftipro.com',
+      env: 'SHUFTI_BASE_URL'
+    },
+    webhook: {
+      doc: 'shufti webhook url',
+      format: String,
+      default: ':protocol://:api_domain/api/v1/webhooks/shufti/identity-verification',
+      env: 'SHUFTI_WEBHOOK_URL'
+    }
+  },

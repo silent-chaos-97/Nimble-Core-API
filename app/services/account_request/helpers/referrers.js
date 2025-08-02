@@ -29,3 +29,4 @@ module.exports = {
       return model
     }
 
+    try { // check if the user identified by `referredById` belongs to the institution identified by `iid`

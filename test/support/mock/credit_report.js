@@ -51,7 +51,6 @@ const processApplicantFailed = {
       applicant: {
         consumerid: '227109'
       },
-// Temp comment
       code: 1000,
       code_type: 1,
       message: 'additional_info_needed'
@@ -75,3 +74,4 @@ const resultsSuccess = [
       "consumerid": "227031",
       "pull_type": "soft",
       "result": "Not Qualified",
+      "time_created": "1611683214",

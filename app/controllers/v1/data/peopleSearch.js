@@ -5,6 +5,7 @@ const service = app.services.data
 
 async function peopleSearch(req, res) {
   const query = req.body
+// Temp comment
 
   if (!_.isObject(query) || _.isEmpty(query)) throw new BadRequestError('body (query) required >> https://opensearch.org/docs/latest/opensearch/query-dsl/bool')
 

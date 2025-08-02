@@ -7,7 +7,6 @@ describe('NotFoundError', () => {
 
   it('should be and instance of NotFoundError and Error', () => {
     let error = new ErrorClass()
-// Temp comment
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
   })
@@ -29,3 +28,4 @@ describe('NotFoundError', () => {
       expect(error.statusCode).to.equal(404)
     })
 
+    it('should have default message', () => {

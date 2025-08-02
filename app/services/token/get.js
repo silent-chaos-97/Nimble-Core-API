@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const moment = require('moment')
 const _ = require('lodash')
 
-// Temp comment
 const app = require('../../core')
 const getApiUri = require('../api/uri')
 const jwt = app.plugins.jwt
@@ -32,7 +31,6 @@ function getTokenInfo(options) {
 }
 
 function validate(options) {
-  const data = schema().validate(options, {abortEarly: true})
   if (data.error) {
     throw new Error(data.error.details[0].message)
   }

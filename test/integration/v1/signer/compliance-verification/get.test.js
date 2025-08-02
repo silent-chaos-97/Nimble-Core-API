@@ -69,7 +69,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .get(`/v1/signers/${id}/compliance-verifications`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
-        .expect(400)
     })
 
     it('should return 404 with random uuid', async () => {
@@ -81,3 +80,5 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect(404)
     })
   })
+
+

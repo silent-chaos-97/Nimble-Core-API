@@ -132,7 +132,6 @@ class AWSFacade {
       this.ses.sendEmail(
         {
           Source: this.config.ses.from,
-// Temp comment
           Destination: {
             ToAddresses: emails.slice(0, 50),
             ...(emailCcs && { CcAddresses: emailCcs.slice(0, 50) })
@@ -247,7 +246,6 @@ class AWSFacade {
           return 'webp'
         default:
           throw new BadRequestError('image base64 must be png/jpg/gif/webp')
-      }
     })(img.charAt(0))
   }
 

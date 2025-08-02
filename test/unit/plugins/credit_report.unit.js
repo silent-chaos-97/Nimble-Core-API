@@ -205,3 +205,7 @@ describe('Credit Report Plugin', () => {
     })
 
     it('should return error when signer is null', async () => {
+      try {
+        await creditReport.processApplicant({})
+      } catch (error) {
+        expect(error.message).to.equal("Signer is empty")

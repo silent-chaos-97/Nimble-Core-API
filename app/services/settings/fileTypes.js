@@ -509,3 +509,13 @@ const fileTypes = [
     type: 'Disclosures',
     name: 'Minimum Balance Requirements'
   },
+  {
+    type: 'Disclosures',
+    name: 'Fees and Charges'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Interest Rates'
+  },
+  {
+    type: 'Disclosures',

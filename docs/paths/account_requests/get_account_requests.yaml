@@ -2,7 +2,6 @@
   get:
     tags:
       - Account Request
-    summary: Get an account request
     description: Method to get an account request
     operationId: getAccountRequest
     parameters:
@@ -20,3 +19,4 @@
         description: OK
         content:
           application/json:
+            schema:

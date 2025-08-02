@@ -3,7 +3,6 @@ const fs = require('fs')
 const path = require('path')
 
 
-// Temp comment
 describe('app.serializers.accountRequestXml', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
@@ -23,3 +22,4 @@ describe('app.serializers.accountRequestXml', () => {
     // note: please edit this file with a editor that doesn't add a newline at the end or you will get an error with this test
     const mockAccountRequestXml = fs.readFileSync(path.resolve(__dirname, '../../support/mock/xml/account_request.xml')).toString()
     expect(result).to.equal(mockAccountRequestXml)
+  })

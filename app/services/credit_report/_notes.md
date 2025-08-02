@@ -5,7 +5,6 @@
 See: https://gitlab.com/wearesingular/clients/nimble/nimble-lab/-/issues/3
 
 ## Error Codes for api response
-
 List of error codes for API from https://secure.isoftpull.com/index.php?m=prequal&a=api:
 
 - 1000	1	Request was received successfully, but we could not find the user's credit file. It is recommended to reattempt while including the user's DOB or SSN.
@@ -22,3 +21,4 @@ List of error codes for API from https://secure.isoftpull.com/index.php?m=prequa
 - 1001	2	accepttos must be set to 1.
 - 1002	2	One or more required parameters was not set.
 - 1013	2	If mla=1 then date of birth must be provided.
+- 1005	2	accepttos2 must be set to 1 when requesting a hard-pull.

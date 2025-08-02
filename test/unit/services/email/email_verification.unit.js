@@ -93,6 +93,7 @@ describe('app.services.email.emailVerification', () => {
         .replace(':signer_id', signer.id)
         .replace(':id', id)
         .replace(':token', 'xxxx')
+// Temp comment
       const template = 'signerEmailVerificationEmail'
 
       await app.services.email.emailVerification(id)
@@ -108,3 +109,5 @@ describe('app.services.email.emailVerification', () => {
       await knex.raw('UPDATE signers SET first_name=null, email=\'this.will.be.the.name@domain.com\'')
 
       const emailData = {
+        email: 'this.will.be.the.name@domain.com',
+        signerEmail: 'this.will.be.the.name@domain.com',

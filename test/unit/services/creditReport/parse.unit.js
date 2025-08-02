@@ -68,3 +68,4 @@ describe('app.services.creditReport.parse', () => {
 
     it('should return error if error parsing data', async () => {
       const response = [
+        {

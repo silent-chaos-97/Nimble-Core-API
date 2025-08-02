@@ -1,6 +1,7 @@
 const app = require('./app/core')
 const logger = app.logger.getLogger('subscribers')
 
+const SUBSCRIBERS = ['events', 'compliance', 'identity', 'exporter']
 
 app
   .load()
@@ -12,3 +13,4 @@ app
       logger.info(`[load] Subscriber[${subscriber}] started`)
     })
     logger.info(`[load] Subscribers started: ${SUBSCRIBERS}`)
+  })

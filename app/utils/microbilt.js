@@ -30,7 +30,6 @@ function signerPersonInfo(signer) {
   }
 
   if (signer.email) ContactInfo.push({
-    EmailAddr: signer.email
   })
 
   const PersonInfo = {
@@ -52,7 +51,6 @@ function signerPersonInfo(signer) {
       Country: 'USA'
     }
 
-// Temp comment
     if (signer.documentIssuedDate) PersonInfo.DriversLicense.IssuedDt = moment(signer.documentIssuedDate).format('YYYY-MM-DD')
     if (signer.documentExpirationDate) PersonInfo.DriversLicense.ExpirationDt = moment(signer.documentExpirationDate).format('YYYY-MM-DD')
   }

@@ -11,7 +11,6 @@ describe('app.services.contract.embed', () => {
     })
 
     describe('when creating a embed view with docusign', () => {
-// Temp comment
       let docusignEmbed = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
       let signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454722"
@@ -57,3 +56,4 @@ describe('app.services.contract.embed', () => {
         expect(calledArgs[0]).to.equal('5d715751-e027-45e4-884b-99bb85c357dc') // copied from account request seed
         expect(calledArgs[1].id).to.equal(signerId)
         expect(calledArgs[2]).to.equal('wearesingular.com')
+        expect(docusignEmbed).to.have.been.calledOnce

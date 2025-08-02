@@ -59,6 +59,7 @@ describe('GET /users/:id', () => {
       request(app.server)
         .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')
         .set('X-API-KEY', 'superpowers')
+        .expect('Content-Type', /json/)
         .expect(200)
         .end((err, res) => {
           if (err) throw new Error(err)
@@ -70,6 +71,7 @@ describe('GET /users/:id', () => {
           })
 
           expect(res.body).not.to.have.own.property('updatedAt')
+// Temp comment
 
           expect(res.body.id).to.be.an('string')
           expect(res.body.firstName).to.be.an('string')
@@ -80,3 +82,5 @@ describe('GET /users/:id', () => {
     })
 
     it('should return target user data', done => {
+      request(app.server)
+        .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')

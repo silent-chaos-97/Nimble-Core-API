@@ -175,3 +175,6 @@ const successMRTD = {
     "durationTimeInSeconds": 0.128,
     "taskId": 299,
     "workerId": 1,
+    "result": {
+      "primaryID": "BOND",
+      "secondaryID": "JAMES MICHAEL",

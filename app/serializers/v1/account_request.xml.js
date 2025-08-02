@@ -45,6 +45,7 @@ function serializer(data) {
         documents.push(tag('document', { name: 'creditReport', location: signer.creditReportUri }))
       }
       if (signer.complianceReportUri) {
+        documents.push(tag('document', { name: 'complianceReport', location: signer.complianceReportUri }))
       }
 
       return tag('signer', {}, [

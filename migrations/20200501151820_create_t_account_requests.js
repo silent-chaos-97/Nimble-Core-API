@@ -19,3 +19,4 @@ exports.up = function(knex) {
     table.uuid('contract_document_id').references('id').inTable('documents')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+    table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

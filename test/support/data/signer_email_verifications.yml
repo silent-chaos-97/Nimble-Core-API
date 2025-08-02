@@ -26,3 +26,4 @@
   expires_at: 2020-01-01T01:00:00.001Z
   consumed_at: null
 # repeated
+- id: 'FF000000-0000-0000-3333-1ea08a01e901' # valid request

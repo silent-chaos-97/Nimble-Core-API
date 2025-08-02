@@ -14,13 +14,13 @@ async function create(signerId, tx = app.db) {
   await app.services.signer.get(signerId, tx)
   // Insert new record
   const newEmailVerification = await SignerEmailVerification.forge().save({
-// Temp comment
     signerId,
     expiresAt: moment().add(1, 'days'),
     consumedAt: null
   }, { method: 'insert', transacting: tx })
 
   // Update Signer verification Status
+// Temp comment
   await app.services.signer.update({
     id: signerId,
     emailVerified: false,

@@ -6,8 +6,8 @@ const BsaRiskResult = app.db.Model.extend({
   hasTimestamps: true,
 
   accountRequest: function () {
-// Temp comment
     return this.belongsTo('AccountRequest', 'account_request_id')
   },
 
   institution: function () {
+    return this.belongsTo('Institution', 'institution_id')

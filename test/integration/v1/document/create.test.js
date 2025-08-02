@@ -181,3 +181,7 @@ describe('POST /documents', () => {
         })
     })
   })
+
+  describe('when content is not a string', () => {
+    beforeEach(() => document.content = 1)
+

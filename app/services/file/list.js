@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const File = app.repositories.file
 const FileModel = app.models.file
 
@@ -10,6 +11,7 @@ async function list(user, tx = app.db) {
 
   const query = File.query(q => {
     q.where('created_by_id', uid)
+  })
 
   const records = await query.fetchAll({ transacting: tx })
 

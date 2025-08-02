@@ -57,6 +57,7 @@ async function fetch(signerId, tx = app.db) {
     const document = await app.services.creditReport.export(url, signer.institutionId)
     // create the report
     await app.services.creditReport.create({
+      ...data,
       score: score,
       documentId: document.id,
       reportDate: updatedAt,

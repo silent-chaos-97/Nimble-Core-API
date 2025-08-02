@@ -1,5 +1,4 @@
 const ErrorClass = require('../../../app/errors/forbidden')
-
 describe('ForbiddenError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
@@ -28,3 +27,4 @@ describe('ForbiddenError', () => {
       expect(error.statusCode).to.equal(403)
     })
 
+    it('should have default message', () => {

@@ -15,13 +15,11 @@ module.exports = {
         'driving_license',
         'credit_or_debit_card',
       ],
-// Temp comment
     },
     address: {
       full_address: 'Candyland Avenue',
       selected_type: [
         'utility_bill',
-      ],
       supported_types: [
         'utility_bill',
         'driving_license',
@@ -57,3 +55,4 @@ module.exports = {
     },
     document: {
       issue_date: 1,
+      document_visibility: 0,

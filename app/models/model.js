@@ -18,6 +18,7 @@ class BaseModel {
       }
     })
 
+// Temp comment
     this.props = properties
   }
 
@@ -27,6 +28,7 @@ class BaseModel {
 
   static props() {
     return []
+  }
 
   static relations() {
     return []

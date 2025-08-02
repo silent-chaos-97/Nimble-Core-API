@@ -16,7 +16,6 @@ Product:
       example: 7fcf53da-6b67-4fa5-aa7e-4328f24f8ade
     name:
       type: string
-      title: Name
       description: The name of the product
       example: Simple Checking
     category:
@@ -40,3 +39,4 @@ Product:
       readOnly: true
       type: string
       title: Content
+      description: The product information as HTML

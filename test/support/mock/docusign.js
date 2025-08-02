@@ -3195,7 +3195,6 @@ const mockDocumentTabs = {
       'pageNumber': '1',
       'xPosition': '90',
       'yPosition': '341',
-      'width': '73',
       'height': '12',
       'tabId': 'e8fc5474-11f0-47b3-a69f-3526e017f111',
       'templateLocked': 'false',
@@ -3931,3 +3930,79 @@ const mockDocumentTabs = {
         {
           'text': '1',
           'value': '1',
+          'selected': 'true'
+        },
+        {
+          'text': '2',
+          'value': '2',
+          'selected': 'false'
+        },
+        {
+          'text': '3',
+          'value': '3',
+          'selected': 'false'
+        },
+        {
+          'text': '4',
+          'value': '4',
+          'selected': 'false'
+        },
+        {
+          'text': '5',
+          'value': '5',
+          'selected': 'false'
+        },
+        {
+          'text': '6',
+          'value': '6',
+          'selected': 'false'
+        }
+      ],
+      'value': '1',
+      'listSelectedValue': '1',
+      'shared': 'false',
+      'required': 'false',
+      'locked': 'false',
+      'requireAll': 'false',
+      'tabLabel': 'Dropdown 83b464ac-bd8e-4952-a156-15c86b230ae1',
+      'font': 'lucidaconsole',
+      'bold': 'false',
+      'italic': 'false',
+      'underline': 'false',
+      'fontColor': 'black',
+      'fontSize': 'size7',
+      'localePolicy': {},
+      'documentId': '1',
+      'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+      'pageNumber': '2',
+      'xPosition': '508',
+      'yPosition': '353',
+      'width': '24',
+      'height': '0',
+      'tabId': 'e1d48497-f734-431a-b16b-9bc2f1c46763',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'list'
+    }
+  ],
+  'tabGroups': [
+    {
+      'groupLabel': 'Checkbox Group 5579945d-3834-4b42-b924-43f7154cfe3f',
+      'minimumRequired': '0',
+      'maximumAllowed': '1',
+      'groupRule': 'SelectAtLeast',
+      'tabScope': 'Document',
+      'documentId': '1',
+      'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
+      'pageNumber': '1',
+      'xPosition': '0',
+      'yPosition': '0',
+      'width': '0',
+      'height': '0',
+      'tabId': '784b843c-6d75-4c97-962b-4db25b9704b6',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'tabgroup'
+    },
+    {
+      'groupLabel': 'Checkbox Group aa78751c-ba33-430b-9733-ce098542ef07',

@@ -6,6 +6,7 @@ const logger = app.logger.getLogger('app.services.institution_branch.get')
 
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
+// Temp comment
 async function get(id, tx = app.db) {
   logger.debug(`[get] started for id [${id}]`)
   app.plugins.validator({ id }, schema, { abortEarly: false })

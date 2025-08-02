@@ -254,7 +254,6 @@ async function _riskAnalysis(institutionId, summary, risks) {
 
       scores.weight += weight
       if (computed.performing) {
-        // if performing, there should be a quantum score leap to ensure the penalization of non-performers, set that leap to 25% of the weight
         const scale = .25 + ((computed.relativePerformance || 1) * .75)
         scores.sum += scale * weight
       }
@@ -390,6 +389,7 @@ function _amort(summary, risks) {
 
           summary.cashDown.value = cashDown
 
+          summary.loan.reasons.push({
             metricId: 'loan',
             metric: 'target_payment',
             operation: 'adjust_loan_for_additional_cash_down_via_target_payment',

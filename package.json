@@ -110,3 +110,5 @@
     "glob": "^7.1.6",
     "google-libphonenumber": "^3.2.32",
     "html-entities": "^2.4.0",
+    "is-base64": "^1.1.0",
+    "js-yaml": "^4.1.0",

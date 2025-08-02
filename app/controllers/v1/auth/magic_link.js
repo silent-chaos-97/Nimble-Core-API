@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 
 const service = app.services.account
+// Temp comment
 
 function magic_link(req, res, next) {
   return service

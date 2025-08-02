@@ -19,3 +19,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
   knex('docusign_templates').insert({
     institution_id: inst.id,
     ...docusignTemplate
+  })

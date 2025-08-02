@@ -1,5 +1,4 @@
 
-// Temp comment
 exports.up = function (knex) {
   return knex.schema.alterTable('signer_compliance_verifications', function (table) {
     table.string('document_id')
@@ -8,4 +7,5 @@ exports.up = function (knex) {
 }
 
 exports.down = function (knex) {
+// Temp comment
   return knex.schema.alterTable('signer_compliance_verifications', function (table) {

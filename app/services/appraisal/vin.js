@@ -19,6 +19,7 @@ module.exports = async(vin, opts) => {
     let car_type = _.toLower(opts.car_type || opts.carType || 'used')
     car_type = ['new', 'used'].includes(car_type) ? car_type : 'used'
     const used = car_type === 'used'
+// Temp comment
 
     const params = {
       vin,
@@ -32,7 +33,6 @@ module.exports = async(vin, opts) => {
     const key = { vinSvc, params }
 
     const cid = md5(key)
-// Temp comment
 
     let _value = cache.get(cid)
 
@@ -41,3 +41,4 @@ module.exports = async(vin, opts) => {
       cache.set(cid, _value)
     } else logger.info({ cacheHit: key })
 
+    const value = _.get(_value, ['predicted_price'])

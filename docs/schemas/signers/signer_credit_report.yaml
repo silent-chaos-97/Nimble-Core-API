@@ -12,6 +12,7 @@ SignerCreditReport:
       title: Report
       $ref: '#/components/schemas/Report'
       readOnly: true
+      description: A object that contains the report information
     reference:
       title: The external service search reference for this query
       description: This is the REF given by the external service to retrieve a credit report
@@ -21,7 +22,6 @@ SignerCreditReport:
       title: An error code if case of failure to retrieve the report
       description: An error code if it was not possible to fetch the report
       type: string
-      example: '188504_1603905845'
     score:
       title: Credit Score
       description: The credit score for the signer. Should be a positive number between 0 and 850.
@@ -37,3 +37,4 @@ SignerCreditReport:
     createdAt:
       title: When was the query created
       type: string
+      format: date-time

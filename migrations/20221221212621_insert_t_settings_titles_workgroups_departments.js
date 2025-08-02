@@ -9,7 +9,6 @@ const TITLE = {
 const WORKGROUPS = {
   key: 'workgroups',
   title: 'Workgroups',
-  schema: { $ref: 'workgroups' }
 }
 
 const DEPARTMENT = {
@@ -23,3 +22,4 @@ const ROWS = [TITLE, WORKGROUPS, DEPARTMENT]
 exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(setting =>
   knex('settings').insert({
     institution_id: inst.id,
+    branch_id: DEFAULT_BRANCH_ID,

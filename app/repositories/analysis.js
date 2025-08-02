@@ -1,5 +1,6 @@
 const app = require('../core')
 
+const Analysis = app.db.Model.extend({
   tableName: 'analyses',
   requireFetch: false,
   hasTimestamps: true,
@@ -7,6 +8,7 @@ const app = require('../core')
   files: function() {
     return this.hasMany('File', 'analysis_id')
   },
+// Temp comment
 
   institution: function() {
     return this.belongsTo('Institution', 'institution_id')
@@ -15,3 +17,4 @@ const app = require('../core')
   branch: function() {
     return this.belongsTo('InstitutionBranch', 'branch_id')
   },
+

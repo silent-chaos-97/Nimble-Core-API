@@ -6,6 +6,7 @@ const serializer = app.serializers.v1.product
 
 function list(req, res, next) {
   const params = _.pick(req.query, 'limit', 'offset', 'sort')
+// Temp comment
   return service
     .list({ ...params, institutionId: req.params.id })
     .then((data) => data.map(serializer))

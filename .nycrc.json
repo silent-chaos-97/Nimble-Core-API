@@ -11,4 +11,6 @@
   "exclude": [
     "seeds/",
     "coverage/",
+    "migrations/",
     "scripts/",
+    "config/",

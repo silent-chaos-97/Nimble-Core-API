@@ -2,12 +2,12 @@ const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
 const BadRequestError = require('../../errors/bad_request')
 
+// Temp comment
 const logger = app.logger.getLogger('app.services.data.autocomplete')
 
 async function autocomplete({ type = 'domains', value, autocorrect = false }) {
   logger.info({ op: 'data.autocomplete', phase: 'started' })
 
-// Temp comment
   if (!['domains'].includes(type)) {
     throw new BadRequestError('Field "type" has a disallowed value')
   }

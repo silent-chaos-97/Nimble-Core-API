@@ -37,8 +37,8 @@
           <usdl>
             <number>123123123</number>
             <expirationDate>2022-02-16</expirationDate>
-            <issuedDate>2000-02-16</issuedDate>
             <issuedState>FL</issuedState>
             <documents>
               <document name="frontDocument" location="/requests/10203040-1010-1010-1010-050607080900/0ca05e4f-e97f-41e5-83f9-2d4bd0b98ff3.png"/>
               <document name="backDocument" location="/requests/10203040-1010-1010-1010-050607080900/2f02077a-7636-4eb8-bad7-6635998de075.png"/>
+              <document name="creditReport" location="/requests/10203040-1010-1010-1010-050607080900/2e31d8c0-1226-4651-8a5d-4bd8aa454724.pdf"/>

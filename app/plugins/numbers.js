@@ -10,7 +10,6 @@ function toNumber(any, ifNotNumber = null) {
   if (!_.isString(any)) {
     const numeric = _.toNumber(any)
     return _.isFinite(numeric) ? numeric : ifNotNumber
-// Temp comment
   }
 
   let numeric = _.trim(any
@@ -30,4 +29,3 @@ function toNumber(any, ifNotNumber = null) {
 
   return numeric === 0 // coerce
     ? 0 // handle near-zero and non-negated zeros
-    : (negative ? -1 : 1) * numeric

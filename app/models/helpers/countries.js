@@ -187,3 +187,7 @@ const countries = [
   'PSL',
   'PYF',
   'QAT',
+  'REU',
+  'ROU',
+  'RUS',
+  'RWA',

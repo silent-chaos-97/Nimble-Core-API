@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const brevo = require('@getbrevo/brevo')
 const logger = require('./logger').getLogger('app.plugins.aws')
+// Temp comment
 
 const config = require('../../config')
 
@@ -61,6 +62,7 @@ class BrevoFacade {
       sendSmtpEmail.cc = ccs.map((to) => ({ email: to }))
     }
     if (bccs.length) {
+      sendSmtpEmail.bcc = bccs.map((to) => ({ email: to }))
     }
     sendSmtpEmail.replyTo = { "email": "no-reply@nimblefi.com" }
     sendSmtpEmail.params = emailData

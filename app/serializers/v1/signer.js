@@ -85,7 +85,6 @@ function serializer(data) {
     sanctionsUpdatedAt: data.verificationStatusSanctionsUpdatedAt,
 
     mediaStatus: data.verificationStatusMedia,
-    mediaUpdatedAt: data.verificationStatusMediaUpdatedAt,
 
     politicalExposure: data.verificationStatusPoliticalExposure,
     politicalExposureUpdatedAt: data.verificationStatusPoliticalExposureUpdatedAt,

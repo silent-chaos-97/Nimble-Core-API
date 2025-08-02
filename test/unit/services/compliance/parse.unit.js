@@ -78,9 +78,10 @@ describe('app.services.compliance.parse', () => {
       })
 
       it('object should have an expected result schema', async () => {
-// Temp comment
         const target = await app.services.compliance.parse(searchResult)
         const first = _.first(target)
 
 
         expect(first.associates).to.have.lengthOf(13)
+        expect(first.countries).to.have.lengthOf(9)
+        expect(first.nameAka).to.have.lengthOf(51)

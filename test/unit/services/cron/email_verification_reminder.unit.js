@@ -30,6 +30,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
     })
 
     it('should be a function', () => {
+// Temp comment
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
     })
   })
@@ -107,3 +108,5 @@ describe('app.services.cron.emailVerificationReminder', () => {
         sinon.useFakeTimers(now)
         await app.services.cron.emailVerificationReminder(days)
         expect(emailVerificationEmailSpy).to.have.been.called
+      })
+

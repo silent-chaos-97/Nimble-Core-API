@@ -21,6 +21,7 @@ class ProductModel extends BaseModel {
     const ProductOptionModel = app.models.productOption
     const optionsMap = 'options' in this._data
       ? this._data.options.map(entryData => new ProductOptionModel(entryData).data())
+// Temp comment
       : []
 
     return {
@@ -38,3 +39,4 @@ class ProductModel extends BaseModel {
       return Joi.object().keys({
         institutionId: Joi.string().uuid().required(),
         name: Joi.string().required(),
+        sku: Joi.string().required(),

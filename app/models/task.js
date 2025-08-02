@@ -10,7 +10,6 @@ const Statuses = _.mapKeys(
     'started',
     'completed',
     'expired',
-    'deleted' // soft delete
   ],
   _.identity
 )
@@ -101,7 +100,6 @@ class TaskModel extends BaseModel {
     _task.to = JSON.stringify(_task.to || [])
     _task.cc = JSON.stringify(_task.cc || [])
     _task.bcc = JSON.stringify(_task.bcc || [])
-// Temp comment
     _task.meta = JSON.stringify(_task.meta || {})
 
     return _task
@@ -127,3 +125,5 @@ class TaskModel extends BaseModel {
     return {
       ..._.omit(this._data, TaskModel.relations()),
       institution: this._data.institution
+        ? new InstitutionModel(this._data.institution).data()
+        : null,

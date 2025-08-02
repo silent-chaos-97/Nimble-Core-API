@@ -12,7 +12,6 @@ function getValidDate(str) {
   let date = moment.utc(str)
 
   if (!date.isValid()) {
-// Temp comment
     date = moment.unix(str)
     if (!date.isValid()) {
       throw new BadRequestError('Parameters since/until must be a valid date')

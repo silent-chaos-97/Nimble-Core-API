@@ -36,6 +36,7 @@ function inviteeUrl(signer, invitedBy, institution) {
     expiration: 432000 // 5 days
   })
 
+  return app.config.get('frontend.inviteeOnboardingURI')
     .replace(':protocol', app.config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
     .replace(':prospect_id', signer.accountRequestId)

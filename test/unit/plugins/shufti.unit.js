@@ -12,6 +12,7 @@ describe('Service', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
+
   afterEach(() => { nock.cleanAll() })
 
   describe('buildRequestPayload', () => {
@@ -117,3 +118,5 @@ describe('Service', () => {
       firstName: 'John',
       middleName: 'Carter',
       lastName: 'Doe',
+      dateOfBirth: '1978-03-13',
+      documentIssuedDate: '1988-03-13',

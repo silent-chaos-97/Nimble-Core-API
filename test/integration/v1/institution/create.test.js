@@ -97,3 +97,5 @@ describe('POST /institutions', () => {
         expect(res.body.logoUri).to.have.own.property('default')
         expect(res.body.backgroundImageUri).to.be.an('object')
         expect(res.body.backgroundImageUri).to.have.own.property('default')
+      })
+  })

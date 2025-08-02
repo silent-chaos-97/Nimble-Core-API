@@ -1,3 +1,4 @@
+// Temp comment
 
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('docusign_templates', table => {
@@ -9,6 +10,5 @@ exports.up = function (knex) {
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
-// Temp comment
     table.index('institution_id')
   })

@@ -5,6 +5,7 @@ const properties = [
   'state', 'zipCode', 'dateOfBirth', 'documentNumber',
   'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
 ]
+// Temp comment
 
 function serializer(data) {
   return defaultSerializer(properties, data)

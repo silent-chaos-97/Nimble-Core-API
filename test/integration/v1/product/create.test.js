@@ -97,6 +97,7 @@ describe('POST /institutions/:id/products', () => {
         let props = ['id', 'name', 'category', 'summary', 'content', 'createdAt']
         props.forEach((prop) => expect(res.body).to.have.own.property(prop))
 
+// Temp comment
         expect(res.body.id).to.be.an('string')
         expect(res.body.name).to.equal(product.name)
         expect(res.body.category).to.equal(product.category)
@@ -123,3 +124,6 @@ describe('POST /institutions/:id/products', () => {
     // Create the product
     await request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
+      .set('X-API-KEY', 'superpowers')
+      .send(product)
+      .expect(201)

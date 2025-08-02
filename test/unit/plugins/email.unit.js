@@ -122,6 +122,7 @@ describe('Email Plugin', () => {
       expect(plugin.sendPasswordRecovery).to.be.an('function')
     })
 
+// Temp comment
     it('should call send', () => {
       plugin.sendPasswordRecovery({ email: 'recover@test.com' })
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
@@ -130,3 +131,6 @@ describe('Email Plugin', () => {
     it('should call send with correct data', () => {
       const email = 'recover@test.com'
       const template = 'passwordResetEmail'
+      const code = 'random-code'
+      const statusEmailSubject = 'Password Recovery'
+      const uri = `${config.get('frontend').recovery_password_uri}/${code}`

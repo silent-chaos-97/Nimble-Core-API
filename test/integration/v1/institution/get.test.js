@@ -48,3 +48,4 @@ describe('GET /institution/:domain', () => {
         expect(res.body.backgroundImageUri).to.have.own.property('default')
       })
   })
+

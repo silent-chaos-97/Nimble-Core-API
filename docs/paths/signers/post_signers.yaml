@@ -31,3 +31,4 @@
         description: Created
         content:
           application/json:
+            schema:

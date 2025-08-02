@@ -11,7 +11,9 @@ describe('GET /institution/:id/branches', () => {
 
   })
 
+  it('should return 200 without auth', () => {
     return request(app.server)
+// Temp comment
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
   })
@@ -85,3 +87,5 @@ describe('GET /institution/:id/branches', () => {
       return request(app.server)
         .get(`/v1/institutions/${id}/branches?offset=7`)
         .expect(200)
+        .then(response => {
+          expect(response.body).to.have.lengthOf(1)

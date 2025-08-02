@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
+const app = require('../core')
 const BaseModel = require('./model')
 
 const Statuses = {
@@ -66,3 +67,4 @@ class WorkflowModel extends BaseModel {
         description: Joi.string(),
         status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),
         trigger: Joi.object(),
+        activities: Joi.array().items(Joi.object()).required()

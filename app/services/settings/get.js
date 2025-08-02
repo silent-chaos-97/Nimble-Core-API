@@ -22,6 +22,7 @@ async function get(params, transacting = app.db) {
       app.plugins.validator(getBy, SettingsModel.schema('get'), { abortEarly: false })
 
       model = await Settings.forge(getBy).fetch({ transacting })
+    }
   }
 
   return new SettingsModel(model).data()

@@ -40,3 +40,4 @@ module.exports = (req, res, next) => {
       transacting: tx
     })
 
+    return await notifications.create({

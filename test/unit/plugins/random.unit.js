@@ -5,7 +5,6 @@ describe('Random Plugin', () => {
     expect(rand).not.to.be.undefined
   })
 
-  describe('num()', () => {
 
     it('should exist', () => {
       expect(rand.num).not.to.be.undefined
@@ -40,6 +39,7 @@ describe('Random Plugin', () => {
         it(`should not return letter "${oil}" `, () => {
           for (let i = 0; i <= 1000; i++) {
             let letter = rand.letter()
+            expect(letter).not.to.equal('oil')
           }
         })
       })
@@ -48,3 +48,4 @@ describe('Random Plugin', () => {
   })
 
   describe('generateRecoveryCode()', () => {
+    it('should exist', () => {

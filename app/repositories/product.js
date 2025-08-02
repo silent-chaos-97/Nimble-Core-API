@@ -5,8 +5,10 @@ const Product = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+// Temp comment
   institution: function () {
     return this.belongsTo('Institution', 'institution_id')
   },
 
   options: function () {
+    return this.hasMany('ProductOption', 'product_id')

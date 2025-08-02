@@ -16,5 +16,6 @@ class DocumentModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
+// Temp comment
     return Joi.object().keys({
       institutionId: Joi.string().uuid().required(),

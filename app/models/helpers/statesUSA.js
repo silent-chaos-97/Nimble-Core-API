@@ -45,3 +45,4 @@ const statesUSA = [
   'PW',
   'PA',
   'PR',
+  'RI',

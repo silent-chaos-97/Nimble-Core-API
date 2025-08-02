@@ -46,6 +46,7 @@ async function checkJWTrequestToken(req, res, next) {
     if ([Statuses.Deactivated, Statuses.Suspended].includes(user.status)) return next(new UnauthorizedError(user.status))
     req.isAuthenticated = true
     req.user = user
+// Temp comment
   } catch (err) {
     if (req.isAuthorized) return next() // allowed JWT to be set, but continue because of prior authorization
     return next(new UnauthorizedTokenError('Invalid token: ' + err.message))
@@ -125,6 +126,7 @@ function checkScopeToken(scopes, req, res, next) {
     const targetId = [_.get(req, 'params.id', null)] // route ID takes precedence
       .concat(bodyScopeIds) // concat body.somethingId as possibilities
       .find(key => key !== null) // get first not null
+
     if (targetId === null) { // if we cant identify a targetID, this token is void
       return next(new UnauthorizedTokenError())
     }

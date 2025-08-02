@@ -1,3 +1,4 @@
+/account-requests:
   get:
     tags:
       - Account Request
@@ -29,3 +30,4 @@
           default: -createdAt
     responses:
       '200':
+        description: OK

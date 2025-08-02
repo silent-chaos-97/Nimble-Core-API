@@ -1,5 +1,4 @@
 {
-  "properties": {
     "applicants": {
       "properties": {
         "all": {
@@ -20,3 +19,4 @@
           "stereotype": "users"
         },
         "referredBy": {
+          "title": "Referred By",

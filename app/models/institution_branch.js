@@ -15,6 +15,7 @@ class InstitutionBranchModel extends BaseModel {
 
   static relations() {
     return ['institution']
+  }
 
   data() {
     const institution = this._data.institution
@@ -43,3 +44,4 @@ class InstitutionBranchModel extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid().required(),
       name: Joi.string(),
+      externalId: Joi.string(),

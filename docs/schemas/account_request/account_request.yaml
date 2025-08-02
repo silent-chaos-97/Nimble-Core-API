@@ -87,3 +87,5 @@ AccountRequest:
     verificationStatus:
       allOf:
         - $ref: '#/components/schemas/AccountRequestVerificationStatus'
+        - readOnly: true
+    branchId:

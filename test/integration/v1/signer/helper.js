@@ -116,6 +116,7 @@ async function signerById(id) {
       'signers.check_adverse_media as signer_check_adverse_media',
       'signers.adverse_media_verified_at as signer_adverse_media_verified_at',
       'signers.check_anti_money_laundering as signer_check_anti_money_laundering',
+      'signers.anti_money_laundering_verified_at as signer_anti_money_laundering_verified_at',
       'account_requests.status as account_request_status')
     .first()
 }

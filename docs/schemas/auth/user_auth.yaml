@@ -16,3 +16,4 @@ UserAuth:
       description: The first name of the user
     lastName:
       type: string
+      title: Last Name

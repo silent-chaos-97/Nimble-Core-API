@@ -32,3 +32,4 @@ class SignerCreditReportModel extends BaseModel {
         score: Joi.number().positive().allow(0).default(null).allow(null),
         reportDate: Joi.date().optional().allow(null),
         documentId: Joi.string().uuid().optional().allow(null),
+        signerId: Joi.string().uuid().required(),

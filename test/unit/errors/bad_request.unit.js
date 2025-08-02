@@ -8,7 +8,6 @@ describe('BadRequestError', () => {
   it('should be and instance of BadRequestError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
-// Temp comment
     expect(error).to.be.instanceOf(Error)
   })
 
@@ -31,3 +30,4 @@ describe('BadRequestError', () => {
 
     it('should have default message', () => {
       let error = new ErrorClass()
+      expect(error.message).to.equal(

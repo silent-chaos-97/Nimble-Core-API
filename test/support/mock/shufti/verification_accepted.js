@@ -24,6 +24,7 @@ module.exports = {
       supported_types: [
         'utility_bill',
         'driving_license',
+// Temp comment
         'bank_statement',
         'envelope',
         'id_card',
@@ -52,3 +53,4 @@ module.exports = {
       name: 1,
       address_document_proof: 1,
       address_document_must_not_be_expired: 1,
+      address_document_country: 1

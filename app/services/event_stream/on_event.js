@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const random = app.plugins.random
 const log = app.logger.getLogger('eventStream.onEvent')
 
@@ -18,5 +19,5 @@ module.exports = async(event) => {
   }
 
   if (!handler) return Promise.reject({ op: 'onEvent', code: 'HandlerNotFound', _logId, type, event })
-// Temp comment
 
+  log.info({ code: 'HandlerFound', op: 'onEvent', _logId, type, event })

@@ -145,3 +145,6 @@ columns:
       'RIFSPPNAAD60_N.B': Commercial Paper / Nonfinancial / 60-Day
       'RIFSPPNAAD90_N.B': Commercial Paper / Nonfinancial / 90-Day
       'RIFSPPFAAD30_N.B': Commercial Paper / Financial / 30-Day
+      'RIFSPPFAAD60_N.B': Commercial Paper / Financial / 60-Day
+      'RIFSPPFAAD90_N.B': Commercial Paper / Financial / 90-Day
+      'RIFSGFSW04_N.B': Treasury Bills / Secondary Market / 4-week

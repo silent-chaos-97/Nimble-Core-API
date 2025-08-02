@@ -42,7 +42,6 @@ Source:
 This is very important because we need the api user to give consent to use the integration key.
 
 How can we do this?
-
 > In sandbox. You can use the DocuSign Admin panel to directly grant consent to applications owned by your organization (applications whose Integration Keys are owned by your org) on behalf of all of your users.
 > To directly grant consent to an internal application:
 
@@ -60,6 +59,7 @@ URL:
 https://account.docusign.com/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=CLIENTID&redirect_uri=https%3A%2F%2Fapi.app.nimblefi.com%2Fv1%2Fhealth
 
 Notes:
+
 - the scope must be the same as the ones used by the jwt request.
 - if you don't do this you will get a error_consent when authenticating.
 - if you login to docusign -> user profile -> connected apps then you can see which apps the user gave authorization
@@ -128,3 +128,5 @@ It will return a url like this: https://demo.docusign.net/Signing/MTRedeem/v1/fe
 
 The url has a short time to live and can be opened only once.
 A recipient can sign the document and when he closes the docusign window we will get a callback reporting the state of the signature (see below).
+
+

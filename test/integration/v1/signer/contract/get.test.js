@@ -116,7 +116,6 @@ describe('GET /signers/:id/contract', async () => {
         ],
         expiration: 10
       })
-
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e909/contract`)
         .set('Authorization', 'Bearer ' + weirdtoken)
@@ -138,3 +137,6 @@ describe('GET /signers/:id/contract', async () => {
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
         .set('Authorization', 'Bearer ' + token)
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .expect(() => {

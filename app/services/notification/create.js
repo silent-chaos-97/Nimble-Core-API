@@ -31,7 +31,6 @@ const SCHEMAS = {
     cta: Joi.object().optional().keys({
       title: Joi.string(),
       domain: Joi.string(),
-      path: Joi.string()
     })
   }),
 
@@ -54,5 +53,5 @@ const SCHEMAS = {
   })
 }
 
-// Temp comment
 module.exports = async notification => {
+  await validator(notification.method, SCHEMAS.method)

@@ -9,6 +9,7 @@ columns:
     type: key-value-setting
     selectSettings:
       ref: products
+      value: id
       title: name
 
   - data: scope
@@ -25,5 +26,4 @@ columns:
       ref: financial_indicators
       value: id
       title: name
-
   - data: performance_standard

@@ -65,7 +65,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
     ]
     return request(app.server)
-// Temp comment
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
       .expect(res => {
         props.forEach(prop => {
@@ -91,3 +90,5 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       frontDocId = 'a74f9092-5889-430a-9c19-6712f9f68000'
       return request(app.server)
         .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
+        .expect(404)
+    })

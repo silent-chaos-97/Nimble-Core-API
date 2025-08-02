@@ -107,7 +107,6 @@ describe('app.services.creditReport.fetch', () => {
         .reply(200, mocks.resultsSuccess)
 
       // fake s3 calls
-      const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       const fakeAwsLambda = sinon.fake.returns(successResponse)
 
@@ -150,3 +149,6 @@ describe('app.services.creditReport.fetch', () => {
       const fakeAwsLambda = sinon.fake.returns(successResponse)
 
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
+      sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
+      sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
+

@@ -28,7 +28,6 @@ exports.up = function(knex) {
 
     table.string('step').notNullable()
 
-    table.string('document_number')
     table.timestamp('document_issued_date')
     table.timestamp('document_expiration_date')
 
@@ -49,3 +48,4 @@ exports.up = function(knex) {
     table.timestamp('political_exposure_verified_at')
 
     table.boolean('check_adverse_media')
+    table.timestamp('adverse_media_verified_at')

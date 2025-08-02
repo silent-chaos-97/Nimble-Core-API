@@ -20,7 +20,6 @@ const PERFORMANCE_CALC = {
   '>=': (ratio, performanceStandard) => ratio >= performanceStandard,
   '<=': (ratio, performanceStandard) => ratio <= performanceStandard,
   '<': (ratio, performanceStandard) => ratio < performanceStandard
-}
 
 module.exports = async function(risk, _opts) {
   log.info({ _opts, risk })

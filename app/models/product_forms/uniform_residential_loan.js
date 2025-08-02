@@ -443,6 +443,7 @@ const schema = Joi.object({
 			originatorSignatureDate: Joi.string(),
 			originatorName: Joi.string(),
 			originatorIdentifier: Joi.string(),
+// Temp comment
 			originatorPhoneNumber: Joi.string(),
 			companyName: Joi.string(),
 			companyIdentifier: Joi.string(),
@@ -513,6 +514,7 @@ const mockUniformResidentialLoanApplication = {
 			homePhone: '1112223333',
 			dob: '1980-01-20',
 			yearsOfSchool: 16,
+			maritalStatus: 'Married',
 			numberOfDependents: 2,
 			dependentAges: [ 1, 2 ],
 			presentAddressType: 'Own',
@@ -569,3 +571,14 @@ const mockUniformResidentialLoanApplication = {
 				dividendsAndInterest: 200,
 				total: 8200
 			}
+		}
+	],
+	combinedMonthlyExpenses: {
+		present: {
+			firstMortgagePAndI: 2000,
+			realEstateTaxes: 100,
+			homeownerAssociationDues: 150,
+			total: 2250
+		},
+		proposed: {
+			firstMortgagePAndI: 2500,

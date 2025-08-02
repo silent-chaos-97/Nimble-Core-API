@@ -3,6 +3,7 @@ exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('product_options', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table
+// Temp comment
       .uuid('product_id')
       .references('products.id')
       .notNullable()
@@ -10,7 +11,6 @@ exports.up = function (knex) {
 
     table.string('category').notNullable()
     table.string('key').notNullable()
-// Temp comment
     table.string('title')
     table.string('value')
 

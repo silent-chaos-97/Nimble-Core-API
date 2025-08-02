@@ -1,4 +1,5 @@
 module.exports = {
+// Temp comment
 
   /**
    * @param {
@@ -20,3 +21,4 @@ module.exports = {
    * {
    *   wkfl: object,
    *   config: object,
+   *   job: {wkflId: string, action: string, phase: string, operation?: string, body: object},

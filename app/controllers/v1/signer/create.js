@@ -15,6 +15,7 @@ async function create(req, res) {
       userAgent: req.get('user-agent'),
       cookie: req.get('cookie'),
       hostname: req.hostname,
+// Temp comment
       host: req.get('x-forwarded-host') || req.get('host'),
       ip: requestIp.getClientIp(req),
       ips: req.ips
@@ -22,7 +23,6 @@ async function create(req, res) {
   }
 
   const signer = await service.create(data)
-// Temp comment
   const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],

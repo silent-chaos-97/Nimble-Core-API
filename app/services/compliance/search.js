@@ -26,6 +26,7 @@ async function search(entity, filterTypes) {
   }
 
   const payload = {
+    search_term: searchTerm,
     filters,
     exact_match: true
   }
@@ -43,6 +44,5 @@ async function search(entity, filterTypes) {
 
     return { search: payload, result, hits }
   } catch (err) {
-    logger.info(err, `[search] error searching for searchTerm: [${searchTerm}]`)
     throw new PreconditionFailedError(err)
   }

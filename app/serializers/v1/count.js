@@ -3,5 +3,5 @@ const _ = require('lodash')
 const properties = ['count']
 
 function serializer(data) {
-  //convert everything to int
+  let obj = _.pick(data, properties)
   return _.mapValues(obj, _.toInteger)

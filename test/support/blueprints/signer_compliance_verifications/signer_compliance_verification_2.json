@@ -8,6 +8,7 @@
     {
       "id": "1e31d8c0-1226-4651-8a5d-4bd8aa454721",
       "fullName": "George Something Contanza",
+      "nameAka": ["Georgie", "Dofus", "Constanza"],
       "dateOfBirth": "1982-09-16",
       "dateOfDeath": "2020-09-16",
       "countries": ["Portugal", "United States", "United Kingdom"],
@@ -48,3 +49,4 @@
           "id": "20000000-0000-accc-0000-00bbbbbbb223",
           "name": "This was one day a warning",
           "date": "2019-01-01T00:00:00.000Z",
+          "deletedDate": "2020-01-01T00:00:00.000Z",

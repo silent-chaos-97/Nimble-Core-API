@@ -14,6 +14,7 @@ function count(req, res, next) {
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
+  if (!me.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const filters = _.merge(_.pick(req.query, 'search', 'branch'), {

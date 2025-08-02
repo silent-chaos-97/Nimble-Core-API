@@ -12,7 +12,6 @@ module.exports = {
       supported_types: [
         'id_card',
         'passport',
-        'driving_license',
         'credit_or_debit_card',
       ],
     },
@@ -55,3 +54,4 @@ module.exports = {
       address_document_country: 0
     },
     document: {
+      issue_date: 1,

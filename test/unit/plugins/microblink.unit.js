@@ -392,3 +392,11 @@ describe('MicroblinkService', () => {
 
       const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
       expect(result).to.have.deep.property('firstName', 'Sample')
+      expect(result).to.have.deep.property('middleName', 'John')
+      expect(result).to.have.deep.property('lastName', 'Specimen')
+      expect(result).to.have.deep.property('address', '123 main street')
+      expect(result).to.have.deep.property('city', 'Phoenix')
+      expect(result).to.have.deep.property('state', 'AZ')
+      expect(result).to.have.deep.property('zipCode', '850071234')
+      expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')
+      expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')

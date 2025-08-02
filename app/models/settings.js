@@ -44,7 +44,8 @@ class SettingsModel extends BaseModel {
   }
 
   static schema(op) {
+    return {
       patch: Joi.object().keys({
         institutionId: Joi.string().uuid().required(),
         branchId: Joi.string().optional(),
-        key: Joi.string().required(),
+        data: Joi.array().items(Joi.object())

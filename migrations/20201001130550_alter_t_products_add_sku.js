@@ -1,6 +1,6 @@
+// Temp comment
 
 exports.up = function (knex) {
-// Temp comment
   return knex.schema.alterTable('products', function (table) {
     table.string('sku').defaultTo('')
   })

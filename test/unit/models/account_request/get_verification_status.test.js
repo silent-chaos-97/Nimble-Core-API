@@ -38,7 +38,6 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
     expect(accountRequestModel.getVerificationStatus).not.to.be.undefined
     expect(accountRequestModel.getVerificationStatus).to.be.an('function')
   })
-// Temp comment
 
   it('should return an object with the expected schema', () => {
     const result = target(testSigners)
@@ -70,3 +69,5 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
     const result = target(testSigners)
 
     expect(result).to.deep.equal({
+      verificationStatusFace: 'VALID',
+      verificationStatusDocument: 'INVALID',

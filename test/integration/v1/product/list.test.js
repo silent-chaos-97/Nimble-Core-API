@@ -132,3 +132,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
       return request(app.server)
         .get(`/v1/institutions/${testInstitution1}/products?limit=1`)
         .expect('Content-Type', /json/)
+        .expect((res) => {
+          expect(res.body).to.be.an('array')

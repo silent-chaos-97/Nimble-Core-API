@@ -12,6 +12,7 @@ describe('GET /users', () => {
   describe('with valid auth', () => {
     let token
     const user10Id = '1052ab85-08da-4bb5-be00-9e94d282d310'
+
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -143,3 +144,5 @@ describe('GET /users', () => {
 
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
+            expect(res.body[0].id).to.equal(blueprints.user.get(user20Id).id)
+            done()

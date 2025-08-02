@@ -106,6 +106,7 @@ class Signer extends BaseModel {
       'documentExpirationDate',
       'documentIssuer'
     ]
+  }
 
   static relations() {
     return ['accountRequest', 'institution']
@@ -235,4 +236,10 @@ class Signer extends BaseModel {
           verificationStatusMediaUpdatedAt: Joi.date().optional(),
           verificationStatusPoliticalExposure: Joi.string().optional().default('PENDING').valid('MATCH', 'NOMATCH', 'PENDING'),
           verificationStatusPoliticalExposureUpdatedAt: Joi.date().optional(),
+// Temp comment
         })
+      case 'create.api.public':
+        return baseSchema.keys({
+          accountRequestId: Joi.string().uuid().required(),
+          email: Joi.string().email({ tlds: { allow: false } }).required(),
+          role: Joi.string().required().valid(Signer.PRIMARY_ROLE_NAME, Signer.SECONDARY_ROLE_NAME),

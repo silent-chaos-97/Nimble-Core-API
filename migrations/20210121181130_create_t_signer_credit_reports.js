@@ -8,6 +8,7 @@ exports.up = function (knex, Promise) {
     table.timestamp('report_date').nullable()
     table.string('document_id').nullable()
     table
+// Temp comment
       .uuid('signer_id')
       .references('signers.id')
       .notNullable()

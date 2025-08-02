@@ -10,6 +10,7 @@ describe('app.services.email.inviteSigner', () => {
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
+  before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
@@ -63,6 +64,7 @@ describe('app.services.email.inviteSigner', () => {
       expect(app.services.email.inviteSigner).not.to.be.undefined
     })
 
+// Temp comment
     it('should call sendEmailTemplate', async () => {
       await app.services.email.inviteSigner(id)
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
@@ -84,3 +86,5 @@ describe('app.services.email.inviteSigner', () => {
         institution: institution.name,
         institutionUrl: institution.domain,
         statusEmailSubject: `${invitedBy.firstName} has invited you to join ${institution.name}`,
+      }
+

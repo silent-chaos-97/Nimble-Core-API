@@ -19,3 +19,4 @@
       "title": "Account Status",
       "type": "string",
       "enum": [
+        "New Customer",

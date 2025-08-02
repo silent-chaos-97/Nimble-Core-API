@@ -31,3 +31,4 @@ exports.up = async (knex)  => {
   await Promise.all(institutions.map(async (institution) => {
     // Insert institution branches
     await Promise.all(institutionBranches.map(async (institutionBranch) => {
+      institutionBranch.institution_id = institution.id,

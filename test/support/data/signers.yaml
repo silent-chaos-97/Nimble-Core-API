@@ -225,6 +225,7 @@
   status: 'PENDING'
   first_name: 'James'
   last_name: 'Dean'
+  email: 'ccc+dev2@wearesingular.com'
   contract_document_signer_status: 'SENT'
   contract_document_signer_status_updated_at: 2018-02-16T12:32:03.341Z
   verification_status_face: 'PENDING'
@@ -287,3 +288,9 @@
   consent_account_opening: false
   consent_privacy_policy: false
   consent_communication: false
+- id: 'ffffffff-0000-473e-a5cb-1ea08a01e901'
+  account_request_id: '00000000-0000-AAAA-AAAA-000000000111'
+  institution_id: '2552ab85-08da-4bb5-be00-9e94d282d312'
+  status: 'INVITED'
+  role: 'SECONDARY'
+  email: 'some.three@nimblefi.com'

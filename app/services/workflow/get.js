@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const Wkfl = app.repositories.workflow
-const logger = app.logger.getLogger('app.services.workflow.get')
+const WkflModel = app.models.workflow
 
 async function get(criteria, tx = app.db) {
   const filter = _.isString(criteria) ? { id: criteria } : criteria

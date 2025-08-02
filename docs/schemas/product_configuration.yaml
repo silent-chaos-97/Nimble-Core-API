@@ -23,3 +23,4 @@ ProductConfiguration:
     product:
       allOf:
         - $ref: '#/components/schemas/Product'
+        - title: Product

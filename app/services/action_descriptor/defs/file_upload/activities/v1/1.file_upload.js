@@ -62,6 +62,7 @@ async function activity(context) {
       turnaround: _.get(context, 'inputs.estimated_upload_duration'),
       deadline: duration,
       remindPeriod: _.get(context, 'inputs.remind_period'),
+      terminateAfter: _.get(context, 'inputs.terminate_after'),
       fileType: _.get(fileType, 'name')
     }
   })

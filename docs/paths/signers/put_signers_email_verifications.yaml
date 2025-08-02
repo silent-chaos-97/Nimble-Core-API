@@ -25,4 +25,4 @@
       '204':
         description: OK
       '400':
-        $ref: '#/components/responses/BadRequest'
+      '401':

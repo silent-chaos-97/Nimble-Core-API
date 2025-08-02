@@ -16,6 +16,7 @@ SignerComplianceVerification:
       $ref: '#/components/schemas/Contract'
       readOnly: true
       description: A object that contains the report information
+    searchObject:
       title: The search payload used on this compliance query
       description: This contains a json payload used to perform this search on the external service
       type: object

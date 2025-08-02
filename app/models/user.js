@@ -131,7 +131,32 @@ class UserModel extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid().required(),
       status: Joi.string().default(Statuses.Active).valid(...Object.values(Statuses)),
-// Temp comment
       institutionId: Joi.string().uuid(),
       branchId: Joi.string().uuid(),
       email: Joi.string().email({ tlds: { allow: false } }),
+      firstName: Joi.string(),
+      lastName: Joi.string(),
+      roles: Joi.array().default([Roles.Employee]).items(Joi.string().valid(...Object.values(Roles))),
+      titles: Joi.array().items(Joi.string()),
+      workgroups: Joi.array().items(Joi.string()),
+      department: Joi.string().allow(null),
+      phone: Joi.string().length(10).pattern(/^\d+$/)
+    })
+  }
+
+  static schema() {
+    return Joi.object().keys({
+      status: Joi.string().default(Statuses.Active).valid(...Object.values(Statuses)),
+      institutionId: Joi.string().uuid().required(),
+      branchId: Joi.string().uuid(),
+      email: Joi.string().email({ tlds: { allow: false } }),
+      password: Joi.string().min(6).max(160),
+      firstName: Joi.string(),
+      lastName: Joi.string(),
+      roles: Joi.array().default([Roles.Employee]).items(Joi.string().valid(...Object.values(Roles))),
+      titles: Joi.array().items(Joi.string()),
+      workgroups: Joi.array().items(Joi.string()),
+      department: Joi.string().allow(null),
+      phone: Joi.string().length(10).pattern(/^\d+$/)
+    })
+  }

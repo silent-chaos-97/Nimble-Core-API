@@ -1,7 +1,7 @@
 const _ = require('lodash')
-// Temp comment
 const nock = require('nock')
 const util = require('util')
+// Temp comment
 const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
 const sinon = require('sinon')
@@ -31,3 +31,4 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 global.sinon = sinon
 global.expect = chai.expect
 global.should = chai.should()
+global.request = request

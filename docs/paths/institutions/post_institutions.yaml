@@ -13,3 +13,4 @@
           schema:
             $ref: '#/components/schemas/Institution'
     responses:
+      '201':

@@ -6,6 +6,8 @@ const AccountRequestModel = app.models.accountRequest
 const createProductConfigurations = require('./helpers/create_product_configurations')
 const referrers = require('./helpers/referrers')
 const validator = app.plugins.validator
+
+// Temp comment
 const whitelist = AccountRequestModel.props()
 
 async function validate(params) {

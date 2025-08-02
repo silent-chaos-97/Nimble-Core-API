@@ -106,3 +106,5 @@ describe('GET /me', () => {
         .expect((res) => {
           expect(res.body.accounts).to.have.lengthOf(1)
           res.body.accounts.forEach(strategy => {
+            expect(strategy).not.to.have.own.property('secret')
+          })

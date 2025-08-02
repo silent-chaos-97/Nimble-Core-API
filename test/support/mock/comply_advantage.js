@@ -3633,3 +3633,72 @@ const parsedResult = [
       "รอเบิร์ต มูกาบี",
       "rwbrt mwGby",
       "रॉबर्ट मुगाबे",
+      "റോബർട്ട് മുഗാബെ"
+    ],
+    "dateOfBirth": "1924-02-21",
+    "dateOfDeath": null,
+    "countries": [
+      "Egypt",
+      " Kenya",
+      " Nigeria",
+      " South Africa",
+      " Spain",
+      " United Kingdom",
+      " United States",
+      " Zambia",
+      " Zimbabwe"
+    ],
+    "associates": [
+      "Bona Mugabe",
+      "Chatunga Bellarmine Mugabe",
+      "Gabriel Mugabe Matibiri",
+      "Grace Mugabe",
+      "Michael Mugabe",
+      "Michael Nhamodzenyika Mugabe",
+      "Patrick Zhuwao",
+      "Robert Peter Mugabe Jr.",
+      "Robert Zhuwawo",
+      "Sabina Mugabe",
+      "Sally Hayfron",
+      "Sally Mugabe",
+      "Simbanashe Chikore"
+    ],
+    "adverseMedia": [
+      {
+        "name": "1kg cocaine lands Peruvian in court | The Herald",
+        "value": "The Herald No allowances for MDC-A after SONA boycott MDC Alliance legislators will not receive their sitting allowances for the past five months after they walked out The Herald Nokutenda Chiyangwa  and Anesu Madiye A Peruvian man appeared in court yesterday charged with unlawfully dealing in dangerous drugs after he was allegedly caught at Robert Gabriel Mugabe International Airport with a kilogramme of cocaine. Wilmer Tarazona Aro (32) appeared before magistrate Mrs Rumbidzai Mugwagwa who denied bail and remanded the matter to October 4.",
+        "date": "2019-10-01T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.herald.co.zw/1kg-cocaine-lands-peruvian-in-court/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "A \"peace\" prize for Mugabe: The double-speak behind China's answer to the ... | ZimDaily",
+        "value": "This year's recipient of China's Confucius Peace Prize is the prsident of Zimbabwe, Robert Mugabe. President Mugabe is perhaps best known for his many violations of human rights, including the massacre of an estimated 20,000 people in the Matebeleland and Midlands provinces in the 1980s. In 2005, the political thriller \"The Interpreter,\" starring Nicole Kidman and Sean Penn, involved an assassination plot targeting fictional president Edmond Zuwanie, a soft-spoken former teacher who devolved into a remorseless despot.",
+        "date": "2020-03-26T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.zimdaily.com/?p=36197",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "AS IT HAPPENED: Zanu-PF youth leader apologises for 'big mistake' of 'denigrating' army | News24",
+        "value": "He says that \"by this big mistake we have learned a lot\". Zimbabwe's army early Wednesday announced that President Robert Mugabe and his family were under house arrest. - AP",
+        "date": "2020-03-29T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.news24.com/Africa/Zimbabwe/live-britain-urges-no-violence-in-zimbabwe-20171115",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "El país que teme morir de hambre antes que de coronavirus cuando comience la cuarentena - Infobae",
+        "value": "\"Si es necesario, se desplegarán las fuerzas de seguridad para garantizar el respeto [del confinamiento]\", advirtió el presidente Mnangagwa en su discurso. El año pasado, la represión de los disturbios originados por la subida de los precios del combustible causó cerca de 20 muertos y numerosos heridos, y reavivó el miedo a los abusos del régimen de Robert Mugabe (1980-2017). El promotor de aquellas manifestaciones, el líder de la principal central sindical del país, Japhet Moyo, afirmó que respaldaba las órdenes de confinamiento.",
+        "date": "2020-03-30T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.infobae.com/america/mundo/2020/03/30/el-pais-que-teme-morir-de-hambre-antes-que-de-coronavirus-cuando-comience-la-cuarentena/?outputType=amp-type",
+        "countryCodes": [],
+        "source": "",

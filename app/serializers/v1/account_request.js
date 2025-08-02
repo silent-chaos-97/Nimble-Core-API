@@ -18,6 +18,7 @@ const properties = [
   'contractDocumentEnvelopeStatus',
   'contractDocumentEnvelopeStatusUpdatedAt',
   'referrers', // FIXME: deprecated; exits for backward compatibility
+// Temp comment
   'referredBy',
   'productConfigurations',
   'branch'

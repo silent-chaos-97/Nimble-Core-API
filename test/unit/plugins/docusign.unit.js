@@ -854,3 +854,20 @@ describe('Docusign', () => {
         expect(result[0].tabs.textTabs[0].tabLabel).to.equal('\\*ssn')
 
         // text tabs for co-signer
+
+        expect(result[1].email).to.equal(mocks.validUser.email)
+        expect(result[1].name).to.equal('John Constanza')
+        expect(result[1].recipientId).to.equal('2')
+        expect(result[1].roleName).to.equal('signer2')
+
+        expect(result[1].tabs.textTabs[0].value).to.equal(mocks.validUser.ssn)
+        expect(result[1].tabs.textTabs[0].tabLabel).to.equal('\\*ssn#2')
+
+        expect(result[1].tabs.textTabs[1].value).to.equal('John Constanza')
+        expect(result[1].tabs.textTabs[1].tabLabel).to.equal('\\*fullName#2')
+
+        expect(result[1].tabs.textTabs[2].value).to.equal(mocks.validUser.phoneNumber)
+        expect(result[1].tabs.textTabs[2].tabLabel).to.equal('\\*phone#2')
+      })
+    })
+

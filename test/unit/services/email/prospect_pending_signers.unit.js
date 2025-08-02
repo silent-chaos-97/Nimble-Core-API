@@ -72,3 +72,5 @@ describe('app.services.email.prospectPendingSigners', () => {
       const emailData = {
         accountType: "Simple Checking",
         email: blueprints.signers.signer_1.email,
+        prospectFirstName: blueprints.signers.signer_1.firstName,
+        statusEmailSubject: 'We just want to let you know that your account is pending',

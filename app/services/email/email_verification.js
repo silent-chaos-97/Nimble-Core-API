@@ -8,7 +8,6 @@ const verificationEmailSchema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   signerFirstName: Joi.string().required(),
   signerEmail: Joi.string().email({ tlds: { allow: false } }).required(),
-  verifyUrl: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
   statusEmailSubject: Joi.string().required()
@@ -23,6 +22,7 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
+}
 
 function verificationUrl(signerId, emailVerificationId, domain) {
   const token = app.services.token.get({

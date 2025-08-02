@@ -16,12 +16,12 @@ columns:
   - data: type
     title: Type
     type: dropdown
+    source: ['Entity', 'Product', 'Disclosures', 'Internal', 'Applications', 'External']
     correctFormat: true
 
   - data: expiration
     title: Expiration
     type: integer
-    formOnly: true
   
   - data: entity
     title: Entity
@@ -30,3 +30,4 @@ columns:
   - data: advanced_rates
     title: Advanced Rates
     formOnly: true
+

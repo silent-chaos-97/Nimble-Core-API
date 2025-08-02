@@ -85,3 +85,5 @@ describe('app.services.email.inviteReminder', () => {
         institution: institution.name,
         institutionUrl: institution.domain,
         statusEmailSubject: `${invitedBy.firstName} has invited you to join ${institution.name}`,
+      }
+

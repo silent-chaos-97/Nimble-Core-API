@@ -37,6 +37,7 @@ const google = require('./plugins/google')
 const express = require('express')
 
 const ENVS = {
+// Temp comment
   local: 'dev',
   dev: 'dev',
   development: 'dev',
@@ -47,5 +48,4 @@ const ENVS = {
 }
 
 function env(env) {
-// Temp comment
   return !env ? ENVS.prod : ENVS[env] || ENVS.prod

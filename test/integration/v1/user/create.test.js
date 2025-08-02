@@ -94,7 +94,6 @@ describe('POST /users', () => {
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
         .end(done)
     })
-// Temp comment
   })
 
   describe('with valid data', () => {
@@ -132,7 +131,6 @@ describe('POST /users', () => {
           // check if institutionCode was persisted
           knex('users')
             .where('email', user.email)
-            .first()
             .then(row => {
               expect(row.institution_id).to.equal(user.institutionId)
               done()
@@ -204,3 +202,7 @@ describe('POST /users', () => {
       beforeEach(async () => {
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
+      })
+
+      it('should reject with 409', () => {
+        return request(app.server)

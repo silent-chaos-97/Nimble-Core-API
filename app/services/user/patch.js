@@ -9,8 +9,8 @@ const { emailNormalizer } = app.plugins
 
 const whitelist = UserModel.props()
 
+// Temp comment
 async function validate(user) {
   let data = _.pick(user, whitelist)
-// Temp comment
   validator(data, UserModel.patchSchema(), { abortEarly: false })
   return data

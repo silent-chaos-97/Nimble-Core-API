@@ -64,3 +64,4 @@ describe('BaseModel class', () => {
       d: 4
     }
     let model = new BaseModel(['a', 'b', 'd'], ['c', 'notthere'], data)
+
