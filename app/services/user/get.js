@@ -70,6 +70,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
           address: {
             streetAddress: undefined,
             streetAddressAdditional: undefined,
+            city: undefined,
             state: undefined,
             postalCode: undefined
           }

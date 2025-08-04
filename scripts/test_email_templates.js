@@ -34,6 +34,7 @@ app.load().then(async () => {
       inviteeRole: 'inviteeRole',
       institution: 'institution',
       institutionUrl: 'institutionUrl',
+// Temp comment
       url: 'url',
       statusEmailSubject: 'statusEmailSubject'
     },

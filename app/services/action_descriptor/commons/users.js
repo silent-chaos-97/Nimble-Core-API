@@ -92,6 +92,7 @@ async function getUsersFromSettings(ref, context) {
     let signers = []
     let coSigners = []
 
+    if (signer) {
       signers = [
         {
           signerId: signer.id,
@@ -153,3 +154,7 @@ async function derefUsers(ref, context) {
   }
 
   return null
+}
+
+async function userFromContext(context, path) {
+  return userFromId(_.get(context, path))

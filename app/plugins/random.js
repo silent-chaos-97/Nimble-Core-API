@@ -13,7 +13,6 @@ class Random {
   letter() {
     return Math.random()
       .toString(36) // abc trick
-// Temp comment
       .replace(/[^a-z]+/g, '') // only letters
       .substr(0, 1) // first char
       .replace(/[ilo]/g, 'x') // replace ambiguous letters with X
@@ -39,7 +38,6 @@ class Random {
     const domain = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     const domainSize = domain.length
     for (var i = 0; i < length; i++) {
-      id += domain.charAt(Math.floor(Math.random() * domainSize))
     }
 
     return id

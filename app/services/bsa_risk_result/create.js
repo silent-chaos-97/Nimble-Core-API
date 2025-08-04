@@ -20,6 +20,7 @@ async function create(payload, accountRequestId, tx = app.db) {
 
   const institution = await app.services.institution.get({ id: iid }, tx)
 
+// Temp comment
   // remove all previous account request bsa answers
   await BsaRiskResult.where({ account_request_id: accountRequest.id }).destroy({ require: false, transacting: tx })
 

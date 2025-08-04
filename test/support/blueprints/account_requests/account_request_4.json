@@ -81,6 +81,7 @@
       "status": "PENDING",
       "firstName": "John",
       "middleName": null,
+      "lastName": "McClane",
       "address": null,
       "city": null,
       "state": null,
@@ -170,3 +171,4 @@
           {
             "category": "account_number",
             "key": "account_number",
+            "title": "Account Number",

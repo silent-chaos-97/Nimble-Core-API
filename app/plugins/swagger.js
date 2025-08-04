@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const swaggerUi = require('swagger-ui-express')
 const glob = require('glob')
 const YAML = require('yamljs')
@@ -36,4 +37,5 @@ function buildSwaggerDocument() {
   loadAndMergeFromPath(spec, 'paths')
   loadAndMergeFromPath(spec, 'schemas', 'components')
 
+// Temp comment
   return spec

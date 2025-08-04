@@ -17,6 +17,7 @@ const SUPPORTED_ERRORS = [
 function serialize(err) {
   return {
     statusCode: err.statusCode,
+    message: err.message
   }
 }
 

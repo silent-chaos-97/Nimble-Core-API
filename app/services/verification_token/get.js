@@ -1,4 +1,3 @@
-const moment = require('moment')
 const _ = require('lodash')
 const jwtSimple = require('jwt-simple')
 const config = require('../../../config')
@@ -20,6 +19,7 @@ function getTokenInfo(options) {
   const publicClaims = {
     iss: getApiUri(),
     sub: getApiUri(`/v1/phones/${options.id}`),
+    aud: getApiUri(),
     exp: moment(now).add(options.expiration, 's').unix(),
     iat: moment(now).unix()
   }

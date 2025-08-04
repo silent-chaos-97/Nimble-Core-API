@@ -39,3 +39,4 @@ SignerCreditReport:
       title: When was the query created
       type: string
       format: date-time
+      readOnly: true

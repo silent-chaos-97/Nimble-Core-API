@@ -18,7 +18,6 @@ const institutionBranches = [
   { name: 'Ankeny', external_id: '71' },
   { name: 'Mills Civic', external_id: '73' },
   { name: 'Urbandale - 100th', external_id: '74' },
-  { name: 'Drake', external_id: '75' },
   { name: 'Waukee', external_id: '78' },
   { name: 'Urbandale - 86th', external_id: '80' },
   { name: 'Ingersoll', external_id: '81' },
@@ -32,3 +31,4 @@ exports.up = async (knex)  => {
     // Insert institution branches
     await Promise.all(institutionBranches.map(async (institutionBranch) => {
       institutionBranch.institution_id = institution.id,
+      await knex('institution_branches').insert(Object.assign({}, institutionBranch))

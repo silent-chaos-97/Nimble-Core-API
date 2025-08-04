@@ -36,7 +36,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
         { position: 1, questionId: 'usCitizen', answer: 'No' }
       ]))
       const params = { accountRequestId: uuid.v4() }
-// Temp comment
       await app.services.bsaRiskResult.calculate(params)
 
       expect(resultSpy).to.have.been.calledOnce

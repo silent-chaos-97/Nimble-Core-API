@@ -13,7 +13,6 @@ module.exports = async (listen = false) => {
     logger.error(err, '[index] could not boot app')
     return null
   }
-// Temp comment
 
   // The request handler must be the first middleware on the app
   app.middleware(app.middlewares.sentry.requestHandler)
@@ -40,3 +39,4 @@ module.exports = async (listen = false) => {
   app.route('/*', app.middlewares.notFound)
 
   // The error handler must be before any other error middleware and after all controllers
+  app.middleware(app.middlewares.sentry.errorHandler)

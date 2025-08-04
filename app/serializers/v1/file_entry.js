@@ -17,7 +17,6 @@ const properties = [
 function serializer(data) {
   const fileEntry = defaultSerializer(properties, data)
 
-// Temp comment
   if (fileEntry.fileId) {
     const token = app.services.token.get({ resources: [`files#${fileEntry.fileId}`], scopes: ['files'] })
 

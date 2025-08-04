@@ -1,8 +1,8 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
+// Temp comment
 
 const BaseModel = require('./model')
-// Temp comment
 
 class KeyValueModel extends BaseModel {
   constructor(data) {
@@ -19,3 +19,4 @@ class KeyValueModel extends BaseModel {
 
   static schema() {
     return Joi.object().keys({
+      id: Joi.string().required(),

@@ -1,4 +1,3 @@
-// Temp comment
 describe('GET /me', () => {
   describe('with invalid auth', () => {
     it('should return 401 if no auth', () => {
@@ -110,3 +109,4 @@ describe('GET /me', () => {
             expect(strategy).not.to.have.own.property('secret')
           })
         })
+    })

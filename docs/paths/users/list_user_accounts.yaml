@@ -32,3 +32,4 @@
           format: uuid
     responses:
       '200':
+        description: OK

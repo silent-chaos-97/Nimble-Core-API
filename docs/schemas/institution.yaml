@@ -50,3 +50,4 @@ Institution:
       example: centralbank.com
     logoUri:
       $ref: '#/components/schemas/Image'
+    backgroundImageUri:

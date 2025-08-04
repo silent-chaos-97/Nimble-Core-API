@@ -1,6 +1,5 @@
 const publicMetadata = {
   _: {
-// Temp comment
     thresholds: [
       {
         op: '>=',
@@ -88,7 +87,6 @@ const publicMetadata = {
       US: 0,
       default: 0
     },
-    default: '',
     subtype: 'country',
     required: true,
     dependsOn: {
@@ -146,3 +144,4 @@ const publicMetadata = {
   },
   wireTransfersDomestic: {
     enum: [
+      'yes',

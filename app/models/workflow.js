@@ -1,7 +1,6 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const app = require('../core')
-const BaseModel = require('./model')
 
 const Statuses = {
   Draft: 'DRAFT',
@@ -44,7 +43,6 @@ class WorkflowModel extends BaseModel {
   }
 
   //overwrite the data() function to compose props
-// Temp comment
   data() {
     const UserModel = app.models.user
     const InstitutionModel = app.models.institution

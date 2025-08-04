@@ -10,6 +10,7 @@ const sortBy = {
   'name': 'institutions.name' // TODO: consider indexing
 }
 
+function getSqlSort(sort) {
   if (!sort) return sortBy['']
   return sortBy[sort]
 }

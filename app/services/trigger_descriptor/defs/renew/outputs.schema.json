@@ -1,6 +1,5 @@
 {
   "properties": {
-    "applicants": {
       "properties": {
         "all": {
           "title": "All Applicants",
@@ -10,6 +9,7 @@
         },
         "primary": {
           "title": "Primary Applicant",
+          "type": "string",
           "stereotype": "user"
         },
         "secondary": {

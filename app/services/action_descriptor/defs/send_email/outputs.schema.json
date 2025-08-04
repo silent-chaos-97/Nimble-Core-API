@@ -39,3 +39,4 @@
           "user": {
             "type": "string",
             "stereotype": "user"
+          },

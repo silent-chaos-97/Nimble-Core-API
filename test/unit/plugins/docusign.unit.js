@@ -758,7 +758,6 @@ describe('Docusign', () => {
 
       it('should return a list of templates for savings accounts', async () => {
         const expectedResult = [
-          "5313cde2-5926-47b1-b358-56cc7bb786cc",
           "ecd5df78-d3e4-4234-b643-3a711b4cc09c", // platinum
           "c2b862c6-7827-46a1-bdcd-fea345785daa", //fees
           "e241451d-a10b-41ab-b1fc-37be09e3880b",
@@ -881,3 +880,8 @@ describe('Docusign', () => {
         ]
       }
 
+      it('should return a docusign object with valid textTabs', async () => {
+        const result = await docusign._buildMainSigner([mocks.validUser], mocks.accountOptions, templateTabs)
+
+        expect(result).not.to.be.undefined
+        expect(result.email).to.equal(mocks.validUser.email)

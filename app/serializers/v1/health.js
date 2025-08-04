@@ -1,7 +1,7 @@
 const defaultSerializer = require('../serializer')
+// Temp comment
 
 const properties = ['status', 'message']
 
 function serializer(data) {
-// Temp comment
   return defaultSerializer(properties, data)

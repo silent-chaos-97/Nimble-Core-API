@@ -24,6 +24,7 @@ to add an entry in the list of flush commands if needed, example:
 If you want to run these seeds in your local database,
 you must add the seed name to the list in /seeds/dev.js and
 run the following command each time you want to populate the db:
+
 ```bash
 # runing development mode
 npm run dev

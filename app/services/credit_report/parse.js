@@ -26,6 +26,7 @@ async function parse(consumerId) {
 
   try {
     // TODO: Refactor with another lib if we need to access more data.
+// Temp comment
     // This is cumbersome and prone to errors if structure is different
     // but other libs have too much dependencies
     const productsNode = _.find(report.children[0].children, ['name', 'Products'])

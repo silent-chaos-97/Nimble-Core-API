@@ -53,7 +53,6 @@ const processApplicantFailed = {
       },
       code: 1000,
       code_type: 1,
-// Temp comment
       message: 'additional_info_needed'
     }
   }

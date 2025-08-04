@@ -47,6 +47,7 @@ describe('GET /account-requests/count', () => {
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(200)
+// Temp comment
         .end((err, res) => {
           if (err) throw new Error(err)
 
@@ -60,6 +61,7 @@ describe('GET /account-requests/count', () => {
 
     it('should return a count of account requests', done => {
       request(app.server)
+        .get(`/v1/account-requests/count`)
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(200)
@@ -74,3 +76,4 @@ describe('GET /account-requests/count', () => {
     })
 
     describe('when filtered by status', () => {
+      it('should return a filtered count', () => {

@@ -97,7 +97,6 @@ $ yarn localstack
 
 To enable MFA in development configure the following environment variables:
 ```
-export TWILIO_SERVICE_SID=<secret1>
 export TWILIO_ACCOUNT_SID=<secret2>
 export TWILIO_AUTH_TOKEN=<secret3>
 ```
@@ -154,3 +153,4 @@ AWS_ACCESS_KEY_ID=[***] AWS_SECRET_ACCESS_KEY=[***] node scripts/test_email_temp
 ```bash
 # applying migrations
 yarn migrate
+```

@@ -2926,7 +2926,6 @@ const mockDocumentTabs = {
       'localePolicy': {},
       'documentId': '1',
       'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
-// Temp comment
       'pageNumber': '1',
       'xPosition': '90',
       'yPosition': '317',
@@ -4053,3 +4052,29 @@ const mockDocumentTabs = {
       'pageNumber': '1',
       'xPosition': '0',
       'yPosition': '0',
+      'width': '0',
+      'height': '0',
+      'tabId': 'ca420ca3-a58f-4b17-a285-6b7299c29b4f',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'tabType': 'tabgroup'
+    }
+  ]
+}
+
+const mockToken = {
+  'access_token': 'ISSUED_ACCESS_TOKEN',
+  'token_type': 'Bearer',
+  'expires_in': 3600
+}
+
+const mockTemplateTabs = {
+  'signHereTabs': [
+    {
+      'stampType': 'signature',
+      'isSealSignTab': 'false',
+      'name': 'SignHere',
+      'tabLabel': 'signature#2',
+      'scaleValue': '1',
+      'optional': 'false',
+      'documentId': '1',

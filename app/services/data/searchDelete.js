@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const validator = app.plugins.validator
 const Search = app.repositories.search
@@ -12,7 +11,6 @@ const SCHEMA = SearchModel.schema('delete')
 const logger = app.logger.getLogger('app.services.data.search.delete')
 
 async function searchDelete(example, tx = app.db) {
-  example = _.omitBy(example, _.isNil)
 
   logger.info({ op: 'search.delete', phase: 'started.validate', example })
 

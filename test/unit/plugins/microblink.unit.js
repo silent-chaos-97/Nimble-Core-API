@@ -405,3 +405,5 @@ describe('MicroblinkService', () => {
 
     it('should get the issued state for AAMVA card', async () => {
       const result = service.getBasicUserDataFromMicroblinkResponse(mocks.successUSDLAAMVABack.data.result)
+
+      expect(result).to.have.deep.property('firstName', 'Sample')

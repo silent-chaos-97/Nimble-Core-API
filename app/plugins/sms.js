@@ -22,3 +22,4 @@ module.exports = {
       messagingServiceSid: config.get('twilio.messagingSvcSid')
     }
 
+    logger.info({ message }, '[sms:notify:message]')

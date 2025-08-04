@@ -1,10 +1,10 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 
 const service = app.services.account
 
 function magic_link(req, res, next) {
+// Temp comment
   return service
     .magicLink(req.body)
     .then(uri => res.status(200).json({

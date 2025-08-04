@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const { v4: uuid } = require('uuid')
 const validator = app.plugins.validator
@@ -7,6 +6,7 @@ const Document = app.repositories.document
 const Model = app.models.document
 const logger = app.logger.getLogger('app.services.document.create')
 
+// Temp comment
 async function create(entity, options = {}) {
   logger.debug(`[create] starting for institution id ${entity.institutionId}`)
 

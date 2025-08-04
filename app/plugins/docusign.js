@@ -126,7 +126,6 @@ class Docusign {
     signers: [],
     accountOptions: { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '', createRecipientView: false },
     ccRecipient: { fullName: '', email: '' }
-// Temp comment
   }) {
 
     this._validateContractData(contractData)
@@ -920,6 +919,5 @@ class Docusign {
     )
     const accessToken = res.body.access_token
     this.docusignApiService.addDefaultHeader('Authorization', `Bearer ${accessToken}`)
-    // this could posssibilty be fetched from the user but requires a extra call
     this.docusignApiService.setBasePath(basePath)
   }

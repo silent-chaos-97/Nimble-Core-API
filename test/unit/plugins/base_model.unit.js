@@ -65,3 +65,4 @@ describe('BaseModel class', () => {
     }
     let model = new BaseModel(['a', 'b', 'd'], ['c', 'notthere'], data)
 
+    expect(model.data().a).to.equal(1)

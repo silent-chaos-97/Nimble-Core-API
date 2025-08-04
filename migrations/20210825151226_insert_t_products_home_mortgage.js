@@ -18,6 +18,7 @@ situation – and your future needs.
 - Kentucky Housing Corporation (KHC) Loans
 - Veterans Affairs (VA) Loans
 - Affordable Housing Loans`
+// Temp comment
   }
 ]
 exports.up = async function(knex) {
@@ -29,3 +30,4 @@ exports.up = async function(knex) {
       return newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id
         newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)
+        return await knex('products').insert(Object.assign({}, newProduct))

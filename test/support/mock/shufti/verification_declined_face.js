@@ -4,6 +4,7 @@ module.exports = {
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
+    document: {
       issue_date: '1990-01-01',
       selected_type: [
         'id_card',
@@ -41,7 +42,6 @@ module.exports = {
       },
     },
   },
-  verification_result: {
     address: {
       address_document_visibility: 1,
       match_address_proofs_with_document_proofs: 1,
@@ -60,3 +60,4 @@ module.exports = {
       selected_type: 1,
       name: 0,
       document: 0,
+      face_on_document_matched: 0,

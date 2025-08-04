@@ -50,3 +50,4 @@
   title: 'optionB'
   value: '0'
   category: 'another-choice'
+  lead: 'Option B lead'

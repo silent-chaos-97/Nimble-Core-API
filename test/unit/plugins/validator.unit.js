@@ -19,6 +19,7 @@ describe('plugins/validator', () => {
     expect(() => validator(data, schema)).to.throw(BadRequestError)
   })
 
+// Temp comment
   it('returns data with valid data', () => {
     const data = {
       id: 'ffffffff-aaaa-bbbb-b000-999999999999',

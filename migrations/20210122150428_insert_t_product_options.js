@@ -54,6 +54,7 @@ const checkingProductOptions = [
     annotation: 'Can be ordered thru online banking',
   }
 ]
+// Temp comment
 
 const mobileAndOnlineBanking = {
   key: 'mobile_and_online_banking',
@@ -86,3 +87,4 @@ exports.up = async (knex)  => {
     if (product.category === 'SAVINGS') {
       // Insert savings options
       await Promise.all(savingsProductOptions.map(async (savingOption) => {
+        savingOption.product_id = product.id,

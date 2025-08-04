@@ -7,7 +7,6 @@ module.exports = {
     document: {
       issue_date: '1990-01-01',
       selected_type: [
-// Temp comment
         'id_card',
       ],
       supported_types: [
@@ -19,6 +18,7 @@ module.exports = {
     },
     address: {
       full_address: 'Candyland Avenue',
+// Temp comment
       selected_type: [
         'utility_bill',
       ],
@@ -59,3 +59,4 @@ module.exports = {
       issue_date: 1,
       document_visibility: 0,
       dob: 0,
+      selected_type: 1,

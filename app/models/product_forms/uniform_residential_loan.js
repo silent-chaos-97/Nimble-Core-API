@@ -566,6 +566,7 @@ const mockUniformResidentialLoanApplication = {
 				}
 			},
 			monthlyIncome: {
+				basePay: 8000,
 				dividendsAndInterest: 200,
 				total: 8200
 			}
@@ -586,3 +587,7 @@ const mockUniformResidentialLoanApplication = {
 		}
 	},
 	assetsAndLiabilities: {
+		completedJointly: true,
+		assets: {
+			cashDepositTowardPurchaseHeldBy: 'Titles And Escrow LLC',
+			cashDepositAmount: 100000,

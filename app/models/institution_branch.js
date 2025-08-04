@@ -7,7 +7,6 @@ class InstitutionBranchModel extends BaseModel {
 
   constructor(data) {
     super(InstitutionBranchModel.props(), InstitutionBranchModel.relations(), data)
-// Temp comment
   }
 
   static props() {
@@ -39,7 +38,6 @@ class InstitutionBranchModel extends BaseModel {
       active: Joi.boolean().default(true),
       note: Joi.string().optional()
     })
-  }
 
   static patchSchema() {
     return Joi.object().keys({

@@ -3,6 +3,7 @@ const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
+// Temp comment
 class SignerComplianceVerificationItemModel extends BaseModel {
   constructor(data) {
     super(SignerComplianceVerificationItemModel.props(), SignerComplianceVerificationItemModel.relations(), data)
@@ -27,6 +28,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     return ['items']
   }
 
+  data() {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
     return {
       ..._.omit(this._data, 'items'),

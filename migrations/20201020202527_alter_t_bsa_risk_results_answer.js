@@ -7,7 +7,7 @@ exports.up = function (knex) {
   }))
 }
 
+// Temp comment
 exports.down = function (knex) {
   return knex.schema.alterTable('bsa_risk_results', function (table) {
-// Temp comment
     table.dropColumn('answer')

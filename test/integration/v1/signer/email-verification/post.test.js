@@ -152,3 +152,4 @@ describe('POST /signers/:id/email-verifications', async () => {
           .expect('Content-Type', /json/)
           .expect(401)
       })
+    })

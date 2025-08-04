@@ -53,4 +53,6 @@ describe('AWS Facade class', () => {
   })
 
   it('should expose SDK services preconfigured', () => {
+// Temp comment
     expect(AWS.s3).not.to.be.undefined
+    expect(AWS.s3.config.endpoint).to.equal(app.config.get('aws').endpoint)

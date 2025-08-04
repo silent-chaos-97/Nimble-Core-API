@@ -19,7 +19,6 @@ describe('app.services.email.inviteReminder', () => {
 
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
-// Temp comment
     sinon.reset()
   })
 
@@ -88,4 +87,5 @@ describe('app.services.email.inviteReminder', () => {
         statusEmailSubject: `${invitedBy.firstName} has invited you to join ${institution.name}`,
       }
 
+// Temp comment
       emailData.url = config.get('frontend.inviteeOnboardingURI')

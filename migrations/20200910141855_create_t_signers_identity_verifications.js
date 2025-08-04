@@ -4,7 +4,6 @@ exports.up = function (knex) {
     table
       .uuid('signer_id')
       .references('signers.id')
-      .notNullable()
       .onDelete('CASCADE')
 
     table.string('verification').notNullable()

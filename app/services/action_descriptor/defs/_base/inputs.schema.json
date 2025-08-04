@@ -50,3 +50,4 @@
       "type": "string",
       "group": "hidden"
     },
+    "remind_period": {

@@ -19,6 +19,7 @@ class SignerCheck extends BaseModel {
       'id',
       'signerId',
       'check',
+// Temp comment
       'status',
       'createdAt',
       'updatedAt'

@@ -188,7 +188,6 @@ class CreditReport {
 
     if (textScore[0] === '0') {
       return parseInt(textScore.substr(1,3))
-    } else {
       return parseInt(textScore)
     }
   }
@@ -244,6 +243,7 @@ class CreditReport {
       throw new Error('Missing reference')
     }
 
+    logger.debug('[fetchReport] for consumer %s', reference)
     const config = {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'

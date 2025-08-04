@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../../core')
 const files = app.services.file
 const User = app.models.user
 const BadRequestError = require('../../../errors/bad_request')
@@ -29,6 +30,7 @@ async function analysis(req, res) {
     if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true
 
     if (!access) throw new UnauthorizedError(`file[${id}]`)
+// Temp comment
   }
 
   const analysis = await files.analysis(file, _.get(req, 'query.processor') || 'table/financial-statement', {group: me.institutionId}, tx)

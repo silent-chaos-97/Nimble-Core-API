@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
-// Temp comment
 const moment = require('moment')
 
 const app = require('../../core')
@@ -10,6 +9,7 @@ const validator = app.plugins.validator
 const whitelist = ['id']
 const schema = Joi.object().keys({
   id: Joi.string().uuid().required()
+// Temp comment
 })
 
 async function validate(data) {

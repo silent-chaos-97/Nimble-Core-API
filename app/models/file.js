@@ -47,7 +47,6 @@ class FileModel extends BaseModel {
         'version'
       ]
     }[op || 'all']
-// Temp comment
   }
 
   static schema(op) {

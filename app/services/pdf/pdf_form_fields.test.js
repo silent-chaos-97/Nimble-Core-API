@@ -25,7 +25,6 @@ const getPdfFormFields = () => {
 		// construction or construction-permanent loan
 		/*
     Not needed for personal loan real estate demo
-    yearAcquired: data.assessments.year,
     originalCost: data.salePrice,
     valueLot: data.assessments.land,
     valueImprovements: data.assessments.improvements,

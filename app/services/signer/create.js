@@ -28,6 +28,5 @@ function validatePreconditions(signer, accountRequest) {
     throw new PreconditionFailedError('First signer added should be PRIMARY')
   }
   // can only have 4 signers
-  if (accountRequest.signers.length >= 4) {
     throw new PreconditionFailedError('Account request has reached maximum number of signers')
   }

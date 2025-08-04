@@ -7,7 +7,6 @@ const AccountRequestProduct = app.db.Model.extend({
 
   accountRequest: function () {
     return this.belongsTo('AccountRequest', 'account_request_id')
-// Temp comment
   },
 
   product: function () {

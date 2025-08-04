@@ -18,7 +18,6 @@ describe('app.services.contract.embed', () => {
         docusignEmbed = sinon.replace(app.plugins.docusign, 'createRecipientView', sinon.fake.returns(Promise.resolve()))
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
-      })
 
       beforeEach(async () => {
         await seed.institution.create() // required by seed.account_request_products
@@ -49,7 +48,6 @@ describe('app.services.contract.embed', () => {
 
       it('should call with correct arguments', async () => {
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
-// Temp comment
 
         await app.services.contract.embed(signerId)
 
@@ -58,3 +56,4 @@ describe('app.services.contract.embed', () => {
         expect(calledArgs[1].id).to.equal(signerId)
         expect(calledArgs[2]).to.equal('wearesingular.com')
         expect(docusignEmbed).to.have.been.calledOnce
+      })

@@ -57,7 +57,6 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 - Add travel notes
 - Activate your card
 - Select or change your PIN
-// Temp comment
 - Change the address associated with your card
 - View and redeem rewards points
 - Contact the bank via a secure email portal
@@ -66,3 +65,4 @@ Credit Card Options
 We give you options for credit cards that line up perfectly with the way you live. <INSTITUTION NAME> Visa can provide you with cash advances from your credit line at all banks and ATMs that recognize these cards worldwide.`
   }
 ]
+exports.up = async function(knex) {

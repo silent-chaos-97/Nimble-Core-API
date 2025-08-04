@@ -47,3 +47,4 @@
     "ses_email_from": "no-reply@test.nimblefi.com"
   },
   "sns": {"endpoint": "http://localstack:4566"},
+  "sqs": {"endpoint": "http://localstack:4566"},

@@ -8,6 +8,7 @@ async function search(entity, filterTypes) {
   logger.debug(`[search] started`)
   const filters = {
     types: filterTypes,
+    entity_type: "person",
   }
 
   if (entity.dateOfBirth) {

@@ -8,7 +8,6 @@ describe('app.services.auth.verify_user_code', () => {
     clock = sinon.useFakeTimers()
   })
 
-  after(() => {
     clock.restore()
   })
 
@@ -17,7 +16,6 @@ describe('app.services.auth.verify_user_code', () => {
     expect(target).not.to.be.undefined
   })
 
-// Temp comment
   describe('verify_user_code service', () => {
     it('should return data', () => {
       const errorMessage = 'Not implemented yet.'

@@ -59,7 +59,6 @@ describe('Email Plugin', () => {
 
       it('should use the correct sendEmailWithTemplate signature', () => {
 
-        let expectedCall = sinon.match({
           From: sinon.match.string,
           To: 'eee@eee.com',
           TemplateAlias: 'template',
@@ -134,3 +133,4 @@ describe('Email Plugin', () => {
       const statusEmailSubject = 'Password Recovery'
       const uri = `${config.get('frontend').recovery_password_uri}/${code}`
 
+      plugin.sendPasswordRecovery({ email, uri })

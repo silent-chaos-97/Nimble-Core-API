@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 
 const validator = app.plugins.validator
+// Temp comment
 const AccountRequestModel = app.models.accountRequest
 const AccountRequest = app.repositories.accountRequest
 const Signer = app.repositories.signer
@@ -60,6 +61,7 @@ async function uploadContract(accountRequestId, transacting = app.db) {
       format: 'pdf',
       content: Buffer.from(pdf, 'binary').toString('base64'),
       institutionId: accountRequest.institutionId
+    })
 
     logger.info(`[uploadContract] created document for [${accountRequestId}] with [${document.id}]`)
     await AccountRequest.forge({ id: accountRequestId }).save({ contractDocumentId: document.id }, { patch: true, method: 'update' })

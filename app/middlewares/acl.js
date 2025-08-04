@@ -28,7 +28,6 @@ const RESOURCES = {
 }
 
 function acl(resource, param) {
-
   // generate acl middleware
   return function(req, res, next) {
     const targetId = _.get(req.params, param, '') // the ID we are targeting
@@ -51,6 +50,7 @@ function acl(resource, param) {
         validator({ [param]: targetId }, checkBy.schema, { abortEarly: false })
       } catch(err) {
         next(err) // forward the error
+      }
     }
 
     // try to spawn a model

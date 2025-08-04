@@ -1,4 +1,3 @@
-const ROWS = [
   {
     key: 'customers',
     schema: { $ref: 'customers' }
@@ -11,3 +10,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
     ...setting
   }).onConflict(['institution_id', 'branch_id', 'key']).ignore()
 )))))
+

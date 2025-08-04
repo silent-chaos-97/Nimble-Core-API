@@ -19,11 +19,11 @@ async function save(req, res) {
   }
 
   return prepare(body, existing, user)
-    .then(entity => tasks.save(entity, { user, ...req.query }))
     .then(data => res.status(existing ? 200 : 201).json(data))
 }
 
 async function checkAssigner(assignerId, user) {
   if (!assignerId) return null
+
   // TODO: check that owner is assignable by user
   return user.id

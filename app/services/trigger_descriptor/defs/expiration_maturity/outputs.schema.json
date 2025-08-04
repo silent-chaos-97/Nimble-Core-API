@@ -21,3 +21,4 @@
         },
         "referredBy": {
           "title": "Referred By",
+          "type": "string",

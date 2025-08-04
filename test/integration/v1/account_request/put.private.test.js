@@ -338,3 +338,5 @@ describe('PUT private /account-requests/:id', () => {
             expect(emailSpy.getCall(0).args[1].email).to.equal('someone@nimblefi.com')
             expect(emailSpy.getCall(0).args[1].cc).to.equal('userfromotherbank@nimblefi.com')
             done()
+          })
+      })

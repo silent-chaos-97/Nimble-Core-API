@@ -6,6 +6,7 @@ order: 0
 columns:
   - data: id
     title: ID
+    readOnly: true
     allowEmpty: false
   
   - data: name
@@ -31,3 +32,6 @@ columns:
     title: Advanced Rates
     formOnly: true
 
+  - data: products
+    title: Products
+    formOnly: true

@@ -28,6 +28,7 @@ describe('app.services.creditReport.export', () => {
     it('should create a document with a valid PDF', async () => {
       const url = 'http://wearesingular.com/404.html'
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
+
       const html = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
@@ -77,3 +78,4 @@ describe('app.services.creditReport.export', () => {
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
 
       try {
+        await app.services.creditReport.export(url, institutionId)

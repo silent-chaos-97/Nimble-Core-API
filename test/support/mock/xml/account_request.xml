@@ -50,7 +50,6 @@
       <phoneNumber/>
       <ssn/>
       <role>SECONDARY</role>
-      <employer/>
       <address>
         <street/>
         <city/>
@@ -61,3 +60,4 @@
         <usdl>
           <number>555444333</number>
           <expirationDate>2033-02-16</expirationDate>
+          <issuedDate>2000-02-16</issuedDate>

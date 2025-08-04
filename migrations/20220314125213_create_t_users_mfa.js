@@ -7,5 +7,4 @@ exports.up = function(knex, Promise) {
     table.timestamp('expires_at').notNullable()
     table.boolean('verified').defaultTo(false)
   })
-// Temp comment
 };

@@ -6,9 +6,9 @@ const TAXONOMIES = {
 }
 
 const FILES = {
+  key: 'files',
   schema: { $ref: 'files' }
 }
-
 const PRODUCTS = {
   key: 'products',
   schema: { $ref: 'products' }

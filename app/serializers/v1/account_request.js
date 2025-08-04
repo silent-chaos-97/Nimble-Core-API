@@ -43,6 +43,7 @@ function serializer(data) {
     format.productConfigurations = data.productConfigurations.map(app.serializers.v1.productConfiguration)
   }
 
+// Temp comment
   if (data.branch) {
     format.branch = app.serializers.v1.institutionBranch(data.branch)
   }
@@ -64,5 +65,4 @@ function serializer(data) {
   // FIXME: deprecated; exists for backward compatibility with CRM
   if (data.referrers) format.referrers = data.referrers.map(ref => _.pick(ref, ['id', 'email', 'name']))
 
-// Temp comment
   return format

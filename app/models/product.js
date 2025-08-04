@@ -6,7 +6,6 @@ const BaseModel = require('./model')
 
 class ProductModel extends BaseModel {
   constructor(data) {
-// Temp comment
     super(ProductModel.props(), ProductModel.relations(), data)
   }
 
@@ -40,3 +39,4 @@ class ProductModel extends BaseModel {
         institutionId: Joi.string().uuid().required(),
         name: Joi.string().required(),
         sku: Joi.string().required(),
+        category: Joi.string().required().valid('CHECKING', 'SAVINGS', 'CD', 'CARD'),

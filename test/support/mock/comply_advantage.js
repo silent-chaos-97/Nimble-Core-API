@@ -2967,6 +2967,7 @@ const parsedResult = [
         "countryCodes": [],
         "date": "2003-03-10T00:00:00Z",
         "deletedDate": null,
+// Temp comment
         "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
       },
       {
@@ -3745,3 +3746,26 @@ const parsedResult = [
         "subtype": "adverse-media"
       },
       {
+        "name": "Man charged with insulting Mugabe | ZimDaily",
+        "value": "Mwaya is just the latest of dozens of officials charged under the law. One was arrested for labelling Mugabe a dictator who ruled by the sword and another was jailed for calling him thick-headed. Mugabe has been in power since independence from Britain in 1980.",
+        "date": "2020-03-21T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.zimdaily.com/?p=35328",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Mpofu under fire over Nkomo - The Standard",
+        "value": "The late former president Robert Mugabe claimed huge amounts of arms had been uncovered on farms owned by Zapu for use to ostensibly overthrow his government to justify the deployment of the Fifth Brigade. After the \"discovery\" of the weapons, Mugabe fired Nkomo, Josiah Chinamano and Joseph Msika (all late), Transport minister and Natural Resources minister respectively, from government on charges of plotting to overthrow his government, culminating in the Gukurahundi massacres which led to the killing of thousands of civilians. However, despite all the persecution and suffering at the hands of government, Nkomo returned home from exile in Britain and subsequently signed the Unity Accord with Mugabe in 1987.",
+        "date": "2020-03-22T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.thestandard.co.zw/2020/03/22/mpofu-fire-nkomo/amp/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Mugabe The Legacy - Bulawayo24 News",
+        "value": "During this period he gained several further degrees from the University of London a Masters in Economics, a Bachelor of Administration, and two Law degrees. While imprisoned, Mugabe learned that his first born son Nhamodzenyika, had died of encephalitis at the age of three. Mugabe was grief-stricken and requested a leave of absence to visit his wife Sally (née Hayfron) in Ghana, but the Prison Warden refused to allow him to bury and mourn for his son.",
+        "date": "2019-09-18T00:00:00Z",

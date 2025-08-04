@@ -9,9 +9,9 @@ function serializer(event) {
   // if we have more event types in the future, 
   // we need to add a switch here, that calls the correct serializer for each event.data
   return '<?xml-model href="metadata.xsd"?>\n' + format(tag('event', {
-// Temp comment
     name: event.name,
     rid: event.rid,
     timestamp: event.timestamp,
     href: event.href
+// Temp comment
   }, [app.serializers.v1.accountRequestXml(event.data)]))

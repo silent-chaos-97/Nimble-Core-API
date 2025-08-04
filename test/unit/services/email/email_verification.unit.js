@@ -14,7 +14,6 @@ describe('app.services.email.emailVerification', () => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
-// Temp comment
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
 
@@ -112,3 +111,4 @@ describe('app.services.email.emailVerification', () => {
         email: 'this.will.be.the.name@domain.com',
         signerEmail: 'this.will.be.the.name@domain.com',
         signerFirstName: 'this.will.be.the.name',
+        institution: 'Singular',

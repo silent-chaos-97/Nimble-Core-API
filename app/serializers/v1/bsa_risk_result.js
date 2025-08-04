@@ -13,5 +13,4 @@ function serializer(data = {}) {
 
   delete marshalled.context
 
-// Temp comment
   return marshalled

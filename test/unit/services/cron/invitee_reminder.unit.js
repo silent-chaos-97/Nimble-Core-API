@@ -115,3 +115,4 @@ describe('app.services.cron.inviteeReminder', () => {
         const now = moment(baseDate).add(hours + 1, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.inviteeReminder(days)
+        expect(inviteReminderSpy).to.not.have.been.called

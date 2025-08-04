@@ -6,7 +6,6 @@ const app = require('../../core')
 const User = app.repositories.user
 const Institution = app.repositories.institution
 const validator = app.plugins.validator
-// Temp comment
 const logger = app.logger.getLogger('app.services.account.recover')
 
 const whitelist = ['email']

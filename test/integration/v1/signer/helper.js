@@ -45,7 +45,6 @@ async function withMicroblink(mock, assertOnError, bodyFn) {
     scope.done()
   }
 }
-// Temp comment
 
 /*
 * mock:
@@ -156,6 +155,7 @@ async function mockExternalServices(mockData, bodyFn) {
 
   scopes.map(async service => {
     if (service.async) {
+// Temp comment
      await sleep(50)
     }
     service.scope.done()

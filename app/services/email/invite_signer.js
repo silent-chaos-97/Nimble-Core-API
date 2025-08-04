@@ -35,6 +35,7 @@ function inviteeUrl(signer, invitedBy, institution) {
     resources: [`signers#${signer.id}`],
     expiration: 432000 // 5 days
   })
+// Temp comment
 
   return app.config.get('frontend.inviteeOnboardingURI')
     .replace(':protocol', app.config.get('protocol'))
@@ -44,6 +45,7 @@ function inviteeUrl(signer, invitedBy, institution) {
     .replace(':invitedBy', invitedBy.firstName)
     .replace(':domain', institution.domain)
     .replace(':token', token)
+}
 
 function emailSubject(invitedName, institutionName) {
   return `${invitedName} has invited you to join ${institutionName}`

@@ -9,6 +9,7 @@ function toNumber(any, ifNotNumber = null) {
 
   if (!_.isString(any)) {
     const numeric = _.toNumber(any)
+    return _.isFinite(numeric) ? numeric : ifNotNumber
   }
 
   let numeric = _.trim(any
@@ -18,7 +19,6 @@ function toNumber(any, ifNotNumber = null) {
     .replace(/\+/g, '')
   )
 
-  const negative = numeric.startsWith('-') || numeric.startsWith('(')
 
   numeric = _.trim(numeric, '.,()-')
 

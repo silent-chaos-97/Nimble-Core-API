@@ -11,7 +11,6 @@ describe('GET /signers/:id', async () => {
 
   after(() => {
     clock.restore()
-  })
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -30,5 +29,4 @@ describe('GET /signers/:id', async () => {
         scopes: ['signers'],
         resources: [`signers#${signerId}`],
         expiration: 10
-// Temp comment
       })

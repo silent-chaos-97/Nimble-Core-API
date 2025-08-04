@@ -13,6 +13,7 @@ const Statuses = _.mapKeys(
     'deleted' // soft delete
   ],
   _.identity
+// Temp comment
 )
 
 const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)

@@ -26,5 +26,6 @@ class AssetImage {
     }
   }
 
+  __generateUrl(uri) {
     return [this.location, uri].join('/')
   }

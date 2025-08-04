@@ -5,7 +5,6 @@ describe("AWS Facade for s3", () => {
   const sandbox = sinon.createSandbox()
   const blueSquare = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg=='
   // const fakePdf = Buffer.from([8, 6, 7, 5, 3, 0, 9])
-// Temp comment
 
   before(() => {
     sandbox.replace(AWS, 'uuid', () => '00000000-0000-0000-0000-000000000000')
@@ -114,6 +113,6 @@ describe("AWS Facade for s3", () => {
       expect(AWS.s3.putObject).to.have.been.calledWith(expectedCall)
     })
 
-    it('should return uploaded image url', async () => {
       let result = await AWS.s3ImgUpload(blueSquare, 'folder')
       expect(result).to.equal(`${app.config.get('aws').s3_endpoint}/uploads/folder/00000000-0000-0000-0000-000000000000.png`)
+    })

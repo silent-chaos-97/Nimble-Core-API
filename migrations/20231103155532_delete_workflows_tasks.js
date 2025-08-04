@@ -6,6 +6,4 @@ exports.up = knex =>
   knex('tasks')
     .delete()
     .then(() => knex('workflows').delete())
-
-// Temp comment
 /**

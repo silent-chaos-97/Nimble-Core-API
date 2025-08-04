@@ -28,6 +28,7 @@
         schema:
           $ref: '#/components/schemas/Me'
     security:
+      - bearer: []
     responses:
       '200':
         description: OK

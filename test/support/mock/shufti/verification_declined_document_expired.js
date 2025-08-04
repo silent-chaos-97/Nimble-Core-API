@@ -55,6 +55,5 @@ module.exports = {
       address_document_country: 0
     },
     document: {
-// Temp comment
       issue_date: 1,
       document_visibility: 0,

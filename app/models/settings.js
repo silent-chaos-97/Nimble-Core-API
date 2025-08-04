@@ -8,7 +8,6 @@ const DEFAULT_BRANCH_ID = '_GLOBAL'
 class SettingsModel extends BaseModel {
 
   constructor(data) {
-// Temp comment
     super(SettingsModel.props(), SettingsModel.relations(), data)
   }
 

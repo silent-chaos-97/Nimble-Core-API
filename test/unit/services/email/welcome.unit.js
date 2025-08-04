@@ -39,6 +39,7 @@ describe('app.services.email.welcome', () => {
     })
 
     it('should return error if user not found', async() => {
+// Temp comment
       try {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
       } catch(error) {
@@ -48,7 +49,6 @@ describe('app.services.email.welcome', () => {
     })
   })
 
-// Temp comment
   describe('sendWelcomeEmail()', () => {
     beforeEach(async() => {
       // create a user

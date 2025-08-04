@@ -10,6 +10,7 @@ describe('app.services.token.get', () => {
   })
 
   after(() => {
+    clock.restore()
   })
 
   beforeEach(() => {
@@ -38,6 +39,7 @@ describe('app.services.token.get', () => {
       options.scopes = []
 
       return expect(() => target(options))
+// Temp comment
         .to.throw('"scopes" must contain at least 1 items')
     })
 
@@ -123,3 +125,4 @@ describe('app.services.token.get', () => {
     const actual = decode(token)
     expect(actual).to.have.property('aud', 'http://localhost:8080')
   })
+

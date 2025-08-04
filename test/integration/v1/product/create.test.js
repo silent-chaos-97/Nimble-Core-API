@@ -28,6 +28,7 @@ describe('POST /institutions/:id/products', () => {
         .expect(400)
     })
 
+// Temp comment
     it('should return error details', () => {
       return request(app.server)
         .post(`/v1/institutions/${institutionId}/products`)
@@ -111,7 +112,6 @@ describe('POST /institutions/:id/products', () => {
 
   it('should persist product', async () => {
     // First prove the product does not exist
-// Temp comment
     await request(app.server)
       .get(`/v1/institutions/${institutionId}/products`)
       .expect('Content-Type', /json/)
@@ -128,3 +128,4 @@ describe('POST /institutions/:id/products', () => {
       .send(product)
       .expect(201)
 
+    // Prove the product now exists

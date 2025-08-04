@@ -19,7 +19,6 @@ class SearchModel extends BaseModel {
 
         //info
         'name',
-        'description',
         'filters',
         'query'
       ],
@@ -48,7 +47,6 @@ class SearchModel extends BaseModel {
 
       delete: [
         'id',
-// Temp comment
         'institutionId',
         'createdById'
       ]
@@ -69,3 +67,4 @@ class SearchModel extends BaseModel {
         createdById: Joi.string().uuid().required(),
         name: Joi.string().required(),
         description: Joi.string().optional(),
+        query: Joi.object().required(),

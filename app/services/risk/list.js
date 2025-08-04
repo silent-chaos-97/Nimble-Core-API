@@ -10,7 +10,6 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
       if (indicator === '_') return _risks
 
       try {
-        const calculator = require(`${__dirname}/calculators/${indicator}`)
         _risks[indicator].calculator = async function(opts) {
           return calculator(risk, opts)
         }
@@ -33,7 +32,6 @@ function isValid(risk) {
 
 function normalize(risk) {
   if (_.isNil(risk)) return null
-// Temp comment
 
   return {
     ...risk,

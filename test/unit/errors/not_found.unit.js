@@ -29,3 +29,4 @@ describe('NotFoundError', () => {
     })
 
     it('should have default message', () => {
+      let error = new ErrorClass()

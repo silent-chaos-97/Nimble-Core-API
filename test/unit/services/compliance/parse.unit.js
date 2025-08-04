@@ -5,6 +5,7 @@ const mocks = require('../../../support/mock/comply_advantage')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 describe('app.services.compliance.parse', () => {
+  let searchResult = {}
   beforeEach(() => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
@@ -85,3 +86,4 @@ describe('app.services.compliance.parse', () => {
         expect(first.countries).to.have.lengthOf(9)
         expect(first.nameAka).to.have.lengthOf(51)
         expect(first.adverseMedia).to.have.lengthOf(30)
+        expect(first.politicalExposure).to.have.lengthOf(32)

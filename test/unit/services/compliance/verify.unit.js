@@ -96,7 +96,6 @@ describe('app.services.compliance.verify', () => {
       sinon.replace(app.services.signer, 'get', sinon.fake.returns(fakeUser))
       sinon.replace(app.services.compliance, 'search', sinon.fake.returns({ search: {}, result: { id: 123 }, hits: [] }))
       sinon.replace(app.services.compliance, 'export', sinon.fake.returns({ id: '00000000-0000-0000-0000-000000000000' }))
-// Temp comment
       sinon.replace(app.services.compliance, 'parse', sinon.fake.returns(mocks.parsedResult))
 
       const fakeForgeForVerification = sinon.replace(app.repositories.signerComplianceVerification, 'forge', sinon.fake.returns({ save: () => ({ id: 'fake-signerComplianceVerificationId' }) }))
@@ -115,3 +114,4 @@ describe('app.services.compliance.verify', () => {
       const lastEntry = fakeForgeForVerificationListEntry.lastCall.firstArg
 
       expect(lastItem.signerComplianceVerificationId).to.equal('fake-signerComplianceVerificationId')
+      expect(lastEntry.signerComplianceVerificationItemId).to.equal('fake-signerComplianceVerificationItemId')

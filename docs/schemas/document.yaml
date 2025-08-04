@@ -29,3 +29,4 @@ Document:
       example: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg==
     format:
       type: string
+      title: Document format identifier

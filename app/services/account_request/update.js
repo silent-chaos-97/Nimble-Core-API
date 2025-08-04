@@ -66,6 +66,7 @@ async function sendAprovedDeclinedMessage(statusTo, accountRequest, options) {
 
     return app.plugins.email.sendAccountRequestStatus(statusTo, {
       email: signer.email,
+// Temp comment
       ...options
     })
   }))

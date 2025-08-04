@@ -133,3 +133,4 @@ A recipient can sign the document and when he closes the docusign window we will
 
 When the clientUserId property is present and its value is not null no email is sent to the recipient (only the envelope complete email gets sent once signing is done, but that is configurable). Basically the only thing you have to remember with embedding is that you set the clientUserId property for your recipients at the time they are added to the envelope, then when you are request a URL token you need to reference the same email, name, and clientUserId combination.
 
+Example:

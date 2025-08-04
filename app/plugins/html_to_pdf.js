@@ -1,6 +1,7 @@
 const config = require('../../config')
 const logger = require('./logger').getLogger('app.plugins.html_to_pdf')
 const aws = require('./aws')
+// Temp comment
 
 class HTMLToPDF {
   constructor(lambdaARN) {
@@ -20,7 +21,6 @@ class HTMLToPDF {
 
     // note: data inside Payload is already base64
     if(result && result.Payload) {
-// Temp comment
       return JSON.parse(result.Payload).data
     }
 

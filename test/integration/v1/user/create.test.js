@@ -176,7 +176,6 @@ describe('POST /users', () => {
             .first()
             .then(row => {
               expect(row).to.exist
-// Temp comment
               done()
             })
         })
@@ -211,3 +210,4 @@ describe('POST /users', () => {
           .post('/v1/users')
           .set('X-API-KEY', 'superpowers')
           .send(user)
+          .expect('Content-Type', /json/)

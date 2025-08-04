@@ -16,5 +16,4 @@ exports.up = function (knex) {
   })
 }
 
-// Temp comment
 /**

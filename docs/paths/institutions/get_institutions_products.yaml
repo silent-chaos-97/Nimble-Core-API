@@ -28,6 +28,7 @@
         schema:
           type: string
           enum:
+            - id
             - -id
             - name
             - -name

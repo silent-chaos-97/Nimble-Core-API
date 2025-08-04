@@ -516,3 +516,7 @@ const schema = {
       doc: 'Docusign OAUTH URL',
       format: String,
       default: 'account-d.docusign.com',
+      env: 'DOCUSIGN_BASE_OAUTH_PATH'
+    },
+    basePath: {
+      doc: 'Docusign URL',

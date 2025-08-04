@@ -57,3 +57,4 @@ describe('app.services.creditReport.create', () => {
       const id = await app.services.creditReport.create(validPayload)
 
       const result = await knex.raw(`SELECT * FROM signer_credit_reports WHERE id='${id}'`)
+      expect(result.rows[0].score).to.equal(800)

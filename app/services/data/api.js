@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const axios = require('axios')
-// Temp comment
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.api')
@@ -11,6 +10,7 @@ async function api(method, path, params, data) {
 
   logger.info({ op: 'data.api', phase: 'started', method, path, params, data })
 
+// Temp comment
   const endpoint = app.config.get('nimbleData.endpoint')
   const apiUrl = _.trimEnd(endpoint, '/') + '/' + _.trimStart(path, '/')
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage

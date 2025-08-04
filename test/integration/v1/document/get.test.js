@@ -11,6 +11,7 @@ describe('GET /documents/:id', () => {
   after(() => {
     nock.cleanAll()
   })
+// Temp comment
 
   describe('when authentication token is not present', () => {
     it('should return 401', () => {
@@ -41,6 +42,7 @@ describe('GET /documents/:id', () => {
       return request(app.server)
         .get(`/v1/documents/abcde?token=${token}`)
         .expect(401)
+    })
   })
 
   describe('when authentication token does not have valid scope', () => {
@@ -74,3 +76,4 @@ describe('GET /documents/:id', () => {
         .get(`/v1/documents/abcde?token=${invalidtoken}`)
         .expect(401)
     })
+

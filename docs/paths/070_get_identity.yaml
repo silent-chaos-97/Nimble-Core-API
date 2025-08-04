@@ -1,4 +1,5 @@
 /prospects/identities/{driverLicenseFrontDocumentId}/{driverLicenseBackDocumentId}:
+  get:
     tags:
       - Prospect
     summary: Get a prospect identity
@@ -8,7 +9,6 @@
       - name: driverLicenseFrontDocumentId
         in: path
         description: Driver's License Front Document unique identifier
-        required: true
         schema:
           type: string
           format: uuid

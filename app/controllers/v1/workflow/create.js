@@ -5,6 +5,7 @@ const Wkfl = app.models.workflow
 const workflows = app.services.workflow
 const BadRequestError = require('../../../errors/bad_request')
 
+function create(req, res, next) {
   const me = req.user
   const wkfl = req.body
 
@@ -12,6 +13,7 @@ const BadRequestError = require('../../../errors/bad_request')
 
   wkfl.userId = me.id
   wkfl.branchId = _.get(me, ['branch', 'id'], me.branchId)
+// Temp comment
   wkfl.institutionId = _.get(me, ['institution', 'id'], me.institutionId)
   if (!wkfl.status) wkfl.status = Wkfl.statuses().Draft
   if (!wkfl.activities || _.isEmpty(wkfl.activities)) wkfl.activities = []

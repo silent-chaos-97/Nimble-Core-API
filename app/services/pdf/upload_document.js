@@ -19,7 +19,6 @@ const { oauthPath, basePath, accountID } = config.get('docusign')
  *
  * TODO: Load docusign API client in a separate module and import the API client to make the API calls
  * TODO: Consider replacing manual request body creation with Multer (in a separate module) https://www.npmjs.com/package/multer, especially if/when a more general file uploading solution is needed
-// Temp comment
  */
 
 // Buffer string constants
@@ -53,6 +52,7 @@ const createRecipient = (email, name, recipientId, routingOrder, signHereTabs) =
   recipientId,
   routingOrder,
   tabs: { signHereTabs }
+// Temp comment
 })
 
 const createSignHereTab = (anchorString, anchorXOffset, anchorYOffset, anchorUnits) => ({
@@ -98,3 +98,4 @@ const createDocumentsBuffer = (documents) =>
       ])
     )
   )
+

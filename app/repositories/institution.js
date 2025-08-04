@@ -8,6 +8,7 @@ const Institution = app.db.Model.extend({
   users: function () {
     return this.hasMany('User', 'institution_id')
   },
+
   account_requests: function () {
     return this.hasMany('AccountRequest', 'institution_id')
   },
@@ -15,4 +16,3 @@ const Institution = app.db.Model.extend({
   signers: function () {
     return this.hasMany('Signer', 'institution_id')
   },
-

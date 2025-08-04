@@ -15,7 +15,6 @@ const DEFAULT_WKFL_ID = '_WKFL'
  * @param expiresAt
  * @param version
  * @param meta: {[props: string]: any}
- */
 function wkflTask({
   context,
   assignee,

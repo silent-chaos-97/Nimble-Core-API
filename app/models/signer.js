@@ -245,3 +245,4 @@ class Signer extends BaseModel {
           idProofDocument: Joi.object().optional().keys({
             type: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
             number: Joi.string().max(100).optional(),
+            issuedDate: Joi.string().optional(),

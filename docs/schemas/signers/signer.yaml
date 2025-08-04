@@ -165,3 +165,4 @@ Signer:
       title: Adverse Media verification
       description: Adverse Media verification
     adverseMediaVerifiedAt:
+      readOnly: true

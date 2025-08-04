@@ -27,7 +27,6 @@ Identity:
       example: 123 Main Streey Apt. 1
     city:
       type: string
-      title: City
       description: Individual city
       nullable: true
       example: ORLANDO
@@ -53,3 +52,4 @@ Identity:
     documentNumber:
       type: string
       title: Document Number
+      description: Document Number

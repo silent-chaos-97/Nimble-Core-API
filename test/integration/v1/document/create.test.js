@@ -91,6 +91,7 @@ describe('POST /documents', () => {
           })
           .catch(done)
       })
+  })
 
   describe('when aws upload fails', () => {
     beforeEach(() => {
@@ -186,3 +187,4 @@ describe('POST /documents', () => {
 
     it('should return 400', () => {
       return request(app.server)
+        .post('/v1/documents')

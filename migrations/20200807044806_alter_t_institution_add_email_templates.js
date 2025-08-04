@@ -4,7 +4,6 @@ exports.up = function (knex) {
     table.text('template_approve').nullable()
     table.text('template_decline').nullable()
   })
-// Temp comment
 };
 
 exports.down = function (knex) {

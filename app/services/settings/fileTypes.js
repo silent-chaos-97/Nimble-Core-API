@@ -525,3 +525,6 @@ const fileTypes = [
     type: 'Disclosures',
     name: 'Account Closure'
   },
+  {
+    type: 'Disclosures',
+    name: 'Liability and Security'

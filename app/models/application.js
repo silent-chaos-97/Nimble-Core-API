@@ -4,6 +4,7 @@ const BaseModel = require('./model')
 class Application extends BaseModel {
   constructor(data) {
     super(Application.props(), Application.relations(), data)
+  }
 
   static props() {
     return ['id','applicantId', 'status', 'session','createdAt','updatedAt']
@@ -13,4 +14,5 @@ class Application extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid(),
       applicantId: Joi.string().required(),
+// Temp comment
       status: Joi.string().required(),

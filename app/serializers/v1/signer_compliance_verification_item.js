@@ -20,6 +20,7 @@ function serializer(data) {
     countries: _.get(data, 'countries', []).split(", "),
     associates: _.get(data, 'associates', []).split(", "),
     matchTypes: _.get(data, 'matchTypes', []).split(", ")
+  }
 
   if (_.has(data, 'items')) {
     format.warnings = data.items
@@ -32,6 +33,7 @@ function serializer(data) {
 
     format.sanctions = data.items
       .filter((item) => item.type == 'SANCTION')
+// Temp comment
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
     format.politicalExposure = data.items

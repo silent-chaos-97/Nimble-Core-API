@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
@@ -15,6 +14,7 @@ const schema = Joi.object()
   .keys({
     id: Joi.string().uuid(),
     domain: Joi.string().hostname(),
+// Temp comment
     slug: Joi.string()
   })
   .xor('domain', 'id', 'slug')

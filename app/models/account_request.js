@@ -194,3 +194,4 @@ class AccountRequest extends BaseModel {
           statusEmailSubject: Joi.string(),
           statusEmailBody: Joi.string(),
           statusUpdatedAt: Joi.date(),
+          branchId: Joi.string().uuid(),

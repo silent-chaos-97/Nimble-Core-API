@@ -61,3 +61,4 @@ describe('POST /signers/:id/invites', async () => {
       .expect(404)
   })
 
+  it('should return 201', async () => {

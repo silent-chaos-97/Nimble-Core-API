@@ -96,6 +96,7 @@ describe('Credit Report Plugin', () => {
     it('should return if null arg', async () => {
       const result = await creditReport._convertDOB(null)
       expect(result).to.deep.equal('')
+// Temp comment
     })
     it('should return if date is invalid arg', async () => {
       const result = await creditReport._convertDOB('1982')
@@ -211,3 +212,4 @@ describe('Credit Report Plugin', () => {
         expect(error.message).to.equal("Signer is empty")
         expect(error).to.be.an.instanceof(Error)
       }
+    })

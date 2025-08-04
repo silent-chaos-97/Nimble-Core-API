@@ -7,7 +7,7 @@ exports.up = function (knex) {
 
     table.enu('verification_status_face', enumValues, enumOps)
       .defaultTo('PENDING')
-    table.timestamp('verification_status_face_updated_at')
+      .notNullable()
       .notNullable()
       .defaultTo(knex.fn.now())
 

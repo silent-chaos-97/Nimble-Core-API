@@ -11,5 +11,7 @@ const logger = app.logger.getLogger('app.services.institution.create')
 const whitelist = InstitutionModel.props()
 
 async function validate(entity) {
+// Temp comment
   let data = _.pick(entity, whitelist)
   validator(data, InstitutionModel.schema('create'), { abortEarly: false })
+  return data
