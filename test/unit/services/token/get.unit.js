@@ -39,7 +39,6 @@ describe('app.services.token.get', () => {
       options.scopes = []
 
       return expect(() => target(options))
-// Temp comment
         .to.throw('"scopes" must contain at least 1 items')
     })
 
@@ -126,3 +125,4 @@ describe('app.services.token.get', () => {
     expect(actual).to.have.property('aud', 'http://localhost:8080')
   })
 
+  it('should include public claim expiration in token', () => {

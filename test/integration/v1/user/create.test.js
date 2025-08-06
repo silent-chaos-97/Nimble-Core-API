@@ -210,4 +210,5 @@ describe('POST /users', () => {
           .post('/v1/users')
           .set('X-API-KEY', 'superpowers')
           .send(user)
-          .expect('Content-Type', /json/)
+          .expect(409)
+      })

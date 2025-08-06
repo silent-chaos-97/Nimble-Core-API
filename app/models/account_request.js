@@ -28,7 +28,6 @@ class AccountRequest extends BaseModel {
       'statusEmailBody',
       'contractDocumentId',
       'contractDocumentEnvelopeId',
-      'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
       'contractDocumentEnvelopeStatusUpdatedAt'
     ]
@@ -195,3 +194,6 @@ class AccountRequest extends BaseModel {
           statusEmailBody: Joi.string(),
           statusUpdatedAt: Joi.date(),
           branchId: Joi.string().uuid(),
+          productConfigurations: Joi.array().items(this.productConfigurationSchema()).min(1).max(1)
+        })
+      case 'patch':

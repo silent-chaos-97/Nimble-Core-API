@@ -54,7 +54,6 @@ const checkingProductOptions = [
     annotation: 'Can be ordered thru online banking',
   }
 ]
-// Temp comment
 
 const mobileAndOnlineBanking = {
   key: 'mobile_and_online_banking',
@@ -65,7 +64,6 @@ const mobileAndOnlineBanking = {
 }
 const mobileAndOnlineBankingChilds = [
   {
-    key: 'bill_pay',
     category: 'product_feature',
     title: 'Bill Pay',
     value: true,
@@ -88,3 +86,4 @@ exports.up = async (knex)  => {
       // Insert savings options
       await Promise.all(savingsProductOptions.map(async (savingOption) => {
         savingOption.product_id = product.id,
+        await knex('product_options').insert(Object.assign({}, savingOption))

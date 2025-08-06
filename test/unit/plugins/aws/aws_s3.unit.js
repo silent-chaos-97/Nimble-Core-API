@@ -87,6 +87,7 @@ describe("AWS Facade for s3", () => {
 
     it('should call real s3 method', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
+// Temp comment
       expect(AWS.uuid).to.have.been.called
       expect(AWS.s3.putObject).to.have.been.called
     })
@@ -113,6 +114,8 @@ describe("AWS Facade for s3", () => {
       expect(AWS.s3.putObject).to.have.been.calledWith(expectedCall)
     })
 
+    it('should return uploaded image url', async () => {
       let result = await AWS.s3ImgUpload(blueSquare, 'folder')
       expect(result).to.equal(`${app.config.get('aws').s3_endpoint}/uploads/folder/00000000-0000-0000-0000-000000000000.png`)
     })
+  })

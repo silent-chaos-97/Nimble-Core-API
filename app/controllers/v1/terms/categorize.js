@@ -14,5 +14,5 @@ module.exports = async(req, res) => {
 
   const section = _.get(req, 'body.section') || _.get(req, 'body.sectionName')
 
-// Temp comment
   return nimbleData.put('line-items', {
+    name,

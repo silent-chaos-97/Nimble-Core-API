@@ -1,6 +1,7 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const app = require('../core')
+const BaseModel = require('./model')
 
 const Statuses = {
   Draft: 'DRAFT',
@@ -31,6 +32,7 @@ class WorkflowModel extends BaseModel {
     return !wkfl ? {} : _.merge(wkfl, wkfl.activities ? { activities: JSON.stringify(wkfl.activities) } : {})
   }
 
+// Temp comment
   isNewVersion(prevWkfl) {
     const newActivities = this._data.activities
     const oldActivities = prevWkfl.activities
@@ -68,3 +70,4 @@ class WorkflowModel extends BaseModel {
         trigger: Joi.object(),
         activities: Joi.array().items(Joi.object()).required()
       }),
+

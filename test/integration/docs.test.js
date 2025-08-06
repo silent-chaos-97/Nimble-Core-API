@@ -14,7 +14,6 @@ describe('API Docs', () => {
   })
 
   describe('GET /docs/*', () => {
-    it('should return 200', () => {
       return request(app.server)
         .get('/docs/swagger-ui.css')
         .expect(200)

@@ -3,7 +3,6 @@ exports.up = function(knex) {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.uuid('institution_id').references('institutions.id')
       .notNullable().onDelete('CASCADE')
-// Temp comment
     table.uuid('account_request_id').references('account_requests.id')
       .notNullable().onDelete('CASCADE')
 

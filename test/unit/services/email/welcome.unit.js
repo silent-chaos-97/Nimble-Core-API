@@ -8,6 +8,7 @@ describe('app.services.email.welcome', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
+// Temp comment
   let clock = null
 
   before(() => {
@@ -39,7 +40,6 @@ describe('app.services.email.welcome', () => {
     })
 
     it('should return error if user not found', async() => {
-// Temp comment
       try {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
       } catch(error) {
@@ -77,3 +77,4 @@ describe('app.services.email.welcome', () => {
       const statusEmailSubject = 'You have been added to Singular Nimble Account'
       const code = 'XXXXX'
       const institution = 'Singular'
+      const institutionUrl = 'wearesingular.com'

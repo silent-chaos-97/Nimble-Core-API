@@ -44,3 +44,4 @@ describe("ImageFactory class", () => {
       expect(ImageFactory.cdn).to.be.an("Function")
     })
 
+    it("should return image object", () => {

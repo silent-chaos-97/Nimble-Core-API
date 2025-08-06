@@ -17,7 +17,6 @@ const DEFAULT_THRESHOLDS = [
   { risk: 'Low' }
 ]
 
-// Temp comment
 const OP_PREDICATES = {
   '>=': (score, val) => score >= val,
   '>': (score, val) => score > val,

@@ -42,7 +42,6 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Operating Agreement'
-  },
   {
     type: 'Entity',
     name: 'Borrowing Resolution'
@@ -528,3 +527,9 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Liability and Security'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Dispute Resolution'
+  },
+  {

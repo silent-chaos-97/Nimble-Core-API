@@ -6,6 +6,7 @@
   "createdAt": "2018-02-16T12:32:03.341Z",
   "accounts": [
     {
+      "strategy": "local",
       "createdAt": "2018-02-16T12:32:03.341Z"
     }
   ],
@@ -30,3 +31,4 @@
     "agreements": {},
     "questions": {}
   },
+  "branchId": "2552ab85-0000-0000-0000-000000000001",

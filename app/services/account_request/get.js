@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const enrichProductOptions = require('./helpers/enrich_product_options')
 const SignerCheck = app.models.signerCheck
 const SignerCheckRepo = app.repositories.signerCheck

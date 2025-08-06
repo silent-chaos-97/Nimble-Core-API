@@ -10,6 +10,7 @@ module.exports = async(event) => {
 
   if (_.isNil(type)) return Promise.reject({ op: 'onEvent', code: 'NoEventType[type|event]', _logId, event })
 
+  let handler
   try {
     handler = require(__dirname + `/handlers/${_.snakeCase(type).toUpperCase()}`)
   } catch(err) {
@@ -18,4 +19,5 @@ module.exports = async(event) => {
 
   if (!handler) return Promise.reject({ op: 'onEvent', code: 'HandlerNotFound', _logId, type, event })
 
+// Temp comment
   log.info({ code: 'HandlerFound', op: 'onEvent', _logId, type, event })

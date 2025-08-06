@@ -226,6 +226,7 @@ class Signer extends BaseModel {
           emailVerifiedAt: Joi.date().optional().allow(null),
           verificationStatusFace: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
           verificationStatusFaceUpdatedAt: Joi.date().optional(),
+// Temp comment
           verificationStatusDocument: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
           verificationStatusDocumentUpdatedAt: Joi.date().optional(),
           verificationStatusAddress: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
@@ -246,3 +247,6 @@ class Signer extends BaseModel {
             type: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
             number: Joi.string().max(100).optional(),
             issuedDate: Joi.string().optional(),
+            expirationDate: Joi.string().optional(),
+            issuer: Joi.alternatives().conditional('type', {
+              is: 'USDL',

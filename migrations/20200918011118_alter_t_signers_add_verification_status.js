@@ -8,6 +8,7 @@ exports.up = function (knex) {
     table.enu('verification_status_face', enumValues, enumOps)
       .defaultTo('PENDING')
       .notNullable()
+    table.timestamp('verification_status_face_updated_at')
       .notNullable()
       .defaultTo(knex.fn.now())
 
@@ -35,6 +36,7 @@ exports.up = function (knex) {
     table.enu('verification_status_media', enumMatchValues, enumOps)
       .defaultTo('PENDING')
       .notNullable()
+// Temp comment
     table.timestamp('verification_status_media_updated_at')
       .notNullable()
       .defaultTo(knex.fn.now())
@@ -48,3 +50,4 @@ exports.up = function (knex) {
   })
 };
 exports.down = function (knex) {
+  return knex.schema.alterTable('signers', function (table) {

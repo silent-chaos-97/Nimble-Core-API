@@ -155,3 +155,5 @@ describe('app.services.creditReport.fetch', () => {
 
       await app.services.creditReport.fetch(signerId)
       scope1.done()
+      scope2.done()
+

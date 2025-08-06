@@ -1,5 +1,5 @@
+{
   "type": "object",
-  "required": ["document"],
   "properties": {
     "fileType": {
       "title": "Document",
@@ -25,3 +25,4 @@
       "type": "string",
       "group": "back",
       "default": "Action (Upload) Required"
+    },

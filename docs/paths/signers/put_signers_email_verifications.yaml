@@ -12,7 +12,6 @@
         schema:
           type: string
           format: uuidv4
-      - in: path
         name: verificationId
         description: signer email verification id
         required: true
@@ -27,3 +26,4 @@
       '400':
         $ref: '#/components/responses/BadRequest'
       '401':
+        $ref: '#/components/responses/Unauthorized'

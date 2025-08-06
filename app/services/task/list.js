@@ -32,6 +32,7 @@ async function list(args, tx = app.db) {
 
   const query = TaskRepo.query(async sql => {
     if (!User.isInstitutionAdmin(user)) sql.where('assignee', '@>', `[{"id": "${user.id}"}]`)
+    else if (filters.assigneeId) sql.where('assignee', '@>', `[{"id": "${filters.assigneeId}"}]`)
     else if (filters.email) sql.where('assignee', '@>', `[{"email": "${filters.email}"}]`)
 
     sql.where('institution_id', user.institutionId)
@@ -40,7 +41,6 @@ async function list(args, tx = app.db) {
     sql.orderBy('expires_at', 'DESC')
     sql.orderBy('updated_at', 'DESC')
   })
-
   const withRelated = _.get(args, 'withRelated', [])
 
   const results = await query.fetchAll({ withRelated, transacting: tx })

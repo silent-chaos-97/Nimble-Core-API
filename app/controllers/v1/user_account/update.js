@@ -5,6 +5,7 @@ const User = app.models.user
 const Roles = User.roles()
 const users = app.services.user
 const serializer = app.serializers.v1.userAccount
+const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
 const logger = app.logger.getLogger('app.user_account.update')
 
@@ -27,7 +28,6 @@ async function update(req, res, next) {
     if (!User.isInstitutionAdmin(me)) delete user['branchId'] // only institution-admin+ can set the branch
 
     if (User.isSubordinate(me, user)) { // subordinate users cannot update affiliations of a superior
-      delete patch['roles']
       delete patch['titles']
       delete patch['workgroups']
       delete patch['department']

@@ -2,7 +2,6 @@ const app = require('../../core')
 
 function serializer(event) {
   const tag = app.plugins.xml.tag
-  const format = app.plugins.xml.format
 
 
   // we only have one case: event.name=account_request_approved
@@ -13,5 +12,4 @@ function serializer(event) {
     rid: event.rid,
     timestamp: event.timestamp,
     href: event.href
-// Temp comment
   }, [app.serializers.v1.accountRequestXml(event.data)]))

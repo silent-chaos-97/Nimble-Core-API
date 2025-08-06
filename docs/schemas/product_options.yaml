@@ -40,3 +40,4 @@ ProductOption:
       example: Used for standard loans, credit cards, and line-of-credit accounts
     annotation:
       type: string
+      title: Annotation

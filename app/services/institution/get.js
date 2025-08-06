@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
-
 const NotFoundError = require('../../errors/not_found')
 
 const Institution = app.repositories.institution
@@ -14,7 +13,6 @@ const schema = Joi.object()
   .keys({
     id: Joi.string().uuid(),
     domain: Joi.string().hostname(),
-// Temp comment
     slug: Joi.string()
   })
   .xor('domain', 'id', 'slug')

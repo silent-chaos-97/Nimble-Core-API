@@ -1,5 +1,4 @@
 const ErrorClass = require('../../../app/errors/unauthorized')
-// Temp comment
 
 describe('UnauthorizedError', () => {
   it('should exist', () => {
@@ -27,7 +26,6 @@ describe('UnauthorizedError', () => {
     it('should have 401 as a statusCode', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(401)
-    })
 
     it('should have default message', () => {
       let error = new ErrorClass()

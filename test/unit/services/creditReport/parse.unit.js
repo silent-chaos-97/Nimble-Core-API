@@ -11,7 +11,6 @@ describe('app.services.creditReport.parse', () => {
 
   beforeEach(async () => {
     nock.disableNetConnect()
-    nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
 
     await seed.institution.create()
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -70,3 +69,4 @@ describe('app.services.creditReport.parse', () => {
       const response = [
         {
           "consumerid": "227031",
+          "report_url": "https://secure.prequalsolutions.com/preq/api/viewReport.php?id=227031&t=1611685783&sc=0466566d0d4e99ea9886593ccd6ef1b4e6227e40214e240c901c1d519a70a2ee",

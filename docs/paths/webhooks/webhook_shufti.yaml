@@ -27,3 +27,4 @@
                 description: Shufti verification event status
               verification_result:
                 type: object
+                title: shufti verification result

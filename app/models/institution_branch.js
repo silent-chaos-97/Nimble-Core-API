@@ -38,9 +38,11 @@ class InstitutionBranchModel extends BaseModel {
       active: Joi.boolean().default(true),
       note: Joi.string().optional()
     })
+  }
 
   static patchSchema() {
     return Joi.object().keys({
       id: Joi.string().uuid().required(),
       name: Joi.string(),
       externalId: Joi.string(),
+      routingNumber: Joi.string(),

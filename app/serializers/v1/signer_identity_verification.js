@@ -1,3 +1,5 @@
+// Temp comment
+const defaultSerializer = require('../serializer')
 
 const properties = ['verification', 'category', 'date', 'status']
 

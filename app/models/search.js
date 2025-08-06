@@ -4,7 +4,6 @@ const _ = require('lodash')
 
 class SearchModel extends BaseModel {
   constructor(data) {
-    super(SearchModel.props(['all']), SearchModel.relations(), data)
   }
 
   static props(op) {
@@ -19,6 +18,7 @@ class SearchModel extends BaseModel {
 
         //info
         'name',
+        'description',
         'filters',
         'query'
       ],

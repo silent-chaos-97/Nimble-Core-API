@@ -19,7 +19,6 @@ describe('Content-Type Support', () => {
         .expect(404)
     })
   })
-
   describe('when calling put method without json content type', () => {
     it('should return 400 if body isnt empty', () => {
       return request(app.server)
@@ -31,3 +30,4 @@ describe('Content-Type Support', () => {
         .expect(400)
     })
 
+    it('should return 404 if body is empty', () => {

@@ -7,7 +7,6 @@ const includes = [
   'createdByRole',
   'createdAt',
   'updatedAt',
-  'size',
   'mimetype',
   'name',
   'version'

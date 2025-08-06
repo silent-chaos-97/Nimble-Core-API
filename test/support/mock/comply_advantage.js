@@ -2967,7 +2967,6 @@ const parsedResult = [
         "countryCodes": [],
         "date": "2003-03-10T00:00:00Z",
         "deletedDate": null,
-// Temp comment
         "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
       },
       {
@@ -3769,3 +3768,47 @@ const parsedResult = [
         "name": "Mugabe The Legacy - Bulawayo24 News",
         "value": "During this period he gained several further degrees from the University of London a Masters in Economics, a Bachelor of Administration, and two Law degrees. While imprisoned, Mugabe learned that his first born son Nhamodzenyika, had died of encephalitis at the age of three. Mugabe was grief-stricken and requested a leave of absence to visit his wife Sally (née Hayfron) in Ghana, but the Prison Warden refused to allow him to bury and mourn for his son.",
         "date": "2019-09-18T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-170850.html",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Mugabe is dead, but old men still run southern Africa",
+        "value": "Mugabe is dead, but old men still run southern Africa FBI still actively working cold case on Calder Road killer Pretoria mall evacuated after bomb threat Australian High Court to consider Cardinal's appeal Mugabe is dead, but old men still run southern Africa The death of Robert Gabriel Mugabe (95) saw another of the first-generation leaders of newly independent southern African states leave the world stage. Southern Africa was the last region on the continent to obtain majority rule.",
+        "date": "2019-09-17T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.bignewsnetwork.com/news/262444041/mugabe-is-dead-but-old-men-still-run-southern-africa",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Mugabe still the boss at 89 | ZimDaily",
+        "value": "whose founder president Kwame Nkrumah profoundly influenced him. As a member of various nationalist parties that were banned by the white-minority government, Mugabe was detained with other nationalist leaders in 1964 and spent the next 10 years in prison camps or jail. He used his incarceration to gain three degrees through correspondence courses, but the years in prison left their mark.",
+        "date": "2019-12-18T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.zimdaily.com/?p=13016",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Mugabe will answer to God, says Mukonori – The Zimbabwe Mail",
+        "value": "The Zimbabwe Mail Mugabe will answer to God, says Mukonori Mukonori (FM), who was Mugabe 's confidante since the days of the liberation struggle, told Blessed Mhlanga (BM) in an interview that he was in constant touch with Mugabe before his death on Friday at a Singapore hospital. The cause of the 95-year-old 's death has not been revealed, but President Emmerson Mnangagwa last month said Mugabe had been detained at the hospital since April. Mukonori spoke about Mugabe 's legacy and disclosed that he once tried to persuade the veteran ruler to apologise for the Gukurahundi atrocities.",
+        "date": "2019-09-17T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.thezimbabwemail.com/religion/mugabe-will-answer-to-god-says-mukonori/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "No difference between Grace Mugabe & Judas Iscariot - Bulawayo24 News",
+        "value": "The war veterans/soldiers had to use a coup in order to push Grace Mugabe away. If Grace Mugabe was a genuine/supporting wife, she should have allowed R.G Mugabe to retire from politics long back but because of her love of planes and money, R.G Mugabe had to be subjected to a long period of political prison. On 11/09/2018, I wrote a piece condemning ZANU PF government for abusing taxpayers' money by chartering a plane for Grace Mugabe from Singapore.",
+        "date": "2018-09-11T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-144993.html",
+        "countryCodes": [],
+        "source": "",

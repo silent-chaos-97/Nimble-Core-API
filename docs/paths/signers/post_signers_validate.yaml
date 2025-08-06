@@ -62,3 +62,4 @@
                   title: the ID of the signer that has duplicated values
                   properties:
                     ssn:
+                      type: object

@@ -36,6 +36,7 @@ AccountRequest:
       properties:
         risk:
           type: string
+          title: BSA Risk evaluation, null if not evaluated
           enum: ['High', 'Moderate', 'Low', null]
           example: Low
         score:
@@ -90,3 +91,4 @@ AccountRequest:
     branchId:
       writeOnly: true
       type: string
+      format: uuidv4

@@ -33,7 +33,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
     it('should try to fetch a list of bsaRiskResults', async() => {
       const resultSpy = sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([
-        { position: 1, questionId: 'usCitizen', answer: 'No' }
       ]))
       const params = { accountRequestId: uuid.v4() }
       await app.services.bsaRiskResult.calculate(params)
@@ -59,3 +58,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
     expect(target.score).to.be.an('number')
     expect(target.risk).to.be.an('string')
   })
+

@@ -146,7 +146,6 @@ class Shufti {
     if (endUserEmail && endUserEmail !== '') {
       payload = { ...payload, email: endUserEmail }
     }
-// Temp comment
 
     return payload
   }

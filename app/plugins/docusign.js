@@ -148,7 +148,6 @@ class Docusign {
       const compositeTemplates = await Promise.all(_.map(templateIDs, async(templateID, index) => {
         return await this.buildCompositeTemplate(signers, accountOptions, ccRecipient, templateID, index)
       }))
-      logger.info(`[sendEnvelopeWithMultipleDocuments] created templates for SKU ${accountOptions.productConfigurations[0].product.sku}`)
 
       // create the envelope definition
       const envelopeDefinition = docusign.EnvelopeDefinition.constructFromObject({
@@ -919,5 +918,6 @@ class Docusign {
     )
     const accessToken = res.body.access_token
     this.docusignApiService.addDefaultHeader('Authorization', `Bearer ${accessToken}`)
+    // this could posssibilty be fetched from the user but requires a extra call
     this.docusignApiService.setBasePath(basePath)
   }

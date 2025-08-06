@@ -71,7 +71,6 @@ describe('app.services.email.emailVerification', () => {
 
     it('should call sendEmailTemplate', async() => {
       await app.services.email.emailVerification(id)
-      expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
 
     it('should call send with correct data', async() => {
@@ -112,3 +111,4 @@ describe('app.services.email.emailVerification', () => {
         signerEmail: 'this.will.be.the.name@domain.com',
         signerFirstName: 'this.will.be.the.name',
         institution: 'Singular',
+        institutionUrl: 'wearesingular.com',

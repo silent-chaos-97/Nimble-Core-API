@@ -8,7 +8,6 @@ async function searchDelete(req, res) {
 
   if (!id) throw new BadRequestError('id required')
 
-// Temp comment
   const data = { ...req.body, id, createdById: req.user.id }
 
   try {

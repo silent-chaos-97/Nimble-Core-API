@@ -23,7 +23,6 @@ function getApiKey(headers) {
   }
 
   throw new UnauthorizedError()
-}
 
 function getQueryOrHeaderToken(params, headers) {
   if (_.has(params, 'token')) {
@@ -81,6 +80,7 @@ async function checkMemberships(memberships, req, res, next) {
 
   if (memberships.branch) {
     if (req.user.branchId !== req.params[memberships.branch]) return next(new UnauthorizedTokenError('Unauthorized:Branch'))
+    atLeastOne = true
   }
 
   next(atLeastOne ? undefined : new UnauthorizedTokenError('Unauthorized:0'))

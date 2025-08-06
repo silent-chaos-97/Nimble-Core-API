@@ -1,4 +1,3 @@
-{
   "required": ["assignee"],
   "properties": {
     "assignee": {

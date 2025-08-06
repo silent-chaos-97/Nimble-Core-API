@@ -44,7 +44,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET disclosures = '{
       },
       {
         "name": "Minimum Age",
-        "text": "<p>We do not allow persons under the age of eighteen (18) to use NimbleFi. By using NimbleFi, you represent and warrant that you are eighteen (18) years of age or over.</p>"
       },
       {
         "name": "Disclaimer of Warranties",
@@ -57,7 +56,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET disclosures = '{
       {
         "name": "Indemnification",
         "text": "<p> You agree to indemnify, defend and hold harmless us and our affiliates, employees, agents, representatives third-party service providers, and business partners for any and all claims, demands, actions, liability, fines, penalties and expenses that may arise from any of your acts through the use of NimbleFi. Such acts may include but are not limited to providing content to or communicating with us or our affiliates, unauthorized use of material obtained through NimbleFi, engaging in a prohibited activity, or any other action that breaches these Terms. </p>"
-// Temp comment
       },
       {
         "name": "Copyright Complaints",
@@ -66,3 +64,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET disclosures = '{
       {
         "name": "MANDATORY ARBITRATION AGREEMENT AND CLASS ACTION AND JURY TRIAL WAIVER (“Arbitration Agreement”).",
         "text": "<p> You hereby agree that either you or we may require any dispute, claim, or cause of action (“Claim”) between you and us or any third parties arising out of use of NimbleFi and any other actions with us (whether based in contract, tort, statute, fraud, misrepresentation, or any other legal theory) to be arbitrated on an individual (non-class) basis. However, both parties retain the right to seek relief in a small claims court (or a state court equivalent) for a Claim within the scope of its jurisdiction so long as the small claims action does not seek to certify a class, combine the claims of multiple persons, recover damages in excess of the limit for a small claim under applicable state law or is not transferred, removed, or appealed from small claims court to any different court. Additionally, if you are a resident of California, you retain the right to obtain public injunctive relief from any court with proper jurisdiction. </p>"
+      },

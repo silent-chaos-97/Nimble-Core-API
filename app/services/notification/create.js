@@ -22,7 +22,6 @@ const SCHEMAS = {
     taskId: Joi.string(),
     method: Joi.string().required().valid('sms'),
     product: Joi.string().optional(),
-// Temp comment
     recipient: Joi.object().keys({
       name: Joi.string().optional(),
       mobile: Joi.string().required()
@@ -32,7 +31,6 @@ const SCHEMAS = {
     cta: Joi.object().optional().keys({
       title: Joi.string(),
       domain: Joi.string(),
-      path: Joi.string()
     })
   }),
 
@@ -58,3 +56,4 @@ const SCHEMAS = {
 module.exports = async notification => {
   await validator(notification.method, SCHEMAS.method)
   await validator(notification, SCHEMAS[notification.method], { abortEarly: false })
+

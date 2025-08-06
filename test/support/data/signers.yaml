@@ -37,6 +37,7 @@
   document_issued_date: 2000-02-16
   document_issuer: 'FL'
   city: 'Lisbon'
+  address: '123 main street apt. 1'
   state: 'CA'
   zip_code: '22222'
   ssn: '333-33-3333'
@@ -298,3 +299,7 @@
   consent: true
   status: 'PENDING'
   consent_account_opening: true
+  consent_privacy_policy: true
+  consent_communication: true
+- id: '00000000-9999-aaaa-0000-2ea08a01e902'
+  account_request_id: '00000000-0000-AAAA-AAAA-000000000333'

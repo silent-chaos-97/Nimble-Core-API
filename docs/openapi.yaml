@@ -139,3 +139,5 @@ components:
           title: API current status
           description: >
             A human readable string that represents a the API status. The
+            application have the following status:  * `ok`  - The API is running
+            without any known problems.

@@ -7,6 +7,7 @@ class SignerEmailVerification extends BaseModel {
     super(SignerEmailVerification.props(), SignerEmailVerification.relations(), data)
   }
 
+// Temp comment
   static props() {
     return [
       'id',
@@ -22,6 +23,7 @@ class SignerEmailVerification extends BaseModel {
   }
 
   static schema(operation = 'create') {
+    if (operation === 'get') {
       return Joi.object().keys({
         id: Joi.string().uuid().required(),
       })

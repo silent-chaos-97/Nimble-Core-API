@@ -32,6 +32,7 @@ describe('POST /institutions', () => {
         .send({})
         .expect('Content-Type', /json/)
         .expect(400)
+    })
 
     it('should return error details', () => {
       return request(app.server)
@@ -100,3 +101,4 @@ describe('POST /institutions', () => {
   })
 
   it('should persist institution', (done) => {
+    request(app.server)

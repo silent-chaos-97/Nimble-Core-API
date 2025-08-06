@@ -24,7 +24,9 @@ class UserAuthModel extends BaseModel {
     return User.query(q => {
       q.select([
         'users.id as user_id',
+        'accounts.id as account_id',
         'users.email',
+// Temp comment
         'users.failed_login_attempts',
         'accounts.secret'
       ])

@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const nimbleData = app.plugins.nimbleData
 const md5 = app.plugins.codec.md5
 const normalize = app.plugins.mappers.mapDeep
@@ -43,3 +42,4 @@ module.exports = async(vin, opts) => {
 
     const value = _.get(_value, ['predicted_price'])
     const low = _.get(_value, ['price_range', 'lower_bound'])
+    const high = _.get(_value, ['price_range', 'upper_bound'])

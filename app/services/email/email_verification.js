@@ -40,6 +40,5 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     .replace(':domain', domain)
     .replace(':token', token)
 }
-
 function emailSubject() {
   return `Confirm your email address`

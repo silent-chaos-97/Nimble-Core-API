@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
-// Temp comment
 const service = app.services.analysis
 
 async function list(req, res) {

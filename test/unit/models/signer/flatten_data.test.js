@@ -123,3 +123,5 @@ describe('app.models.signer.flattenData', () => {
   })
 
 
+  it('should ignore if present but empty', () => {
+    const result = target({

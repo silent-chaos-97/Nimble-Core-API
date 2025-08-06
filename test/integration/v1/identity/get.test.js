@@ -7,7 +7,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
   before(() => {
     nock.enable()
   })
-// Temp comment
 
   beforeEach(async () => {
     frontDocId = 'a74f9092-5889-430a-9c19-6712f9f68090'
@@ -95,3 +94,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     })
   })
 
+  describe('when back driver document does not exist', () => {

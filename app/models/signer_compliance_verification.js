@@ -46,3 +46,4 @@ class SignerComplianceVerificationModel extends BaseModel {
         signerId: Joi.string().uuid().required(),
         searchId: Joi.string().required(),
         documentId: Joi.string().uuid().required(),
+        status: Joi.string().required(),

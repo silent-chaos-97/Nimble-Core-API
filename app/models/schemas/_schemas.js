@@ -14,7 +14,6 @@ function _path(filename) {
   return __dirname + `/${filename}`
 }
 
-async function _get(ref) {
   const id = _id(ref)
 
   if (CACHE[id]) return CACHE[id]

@@ -13,11 +13,11 @@ const Statuses = _.mapKeys(
     'deleted' // soft delete
   ],
   _.identity
-// Temp comment
 )
 
 const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
 
+// Temp comment
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
 
@@ -131,3 +131,5 @@ class TaskModel extends BaseModel {
         : null,
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,
       workflow: this._data.workflow ? new WorkflowModel(this._data.workflow).data() : null,
+      activity:
+        this._data.workflow && this._data.activityId

@@ -38,6 +38,7 @@ async function generateMFACacheToken(email, oneTimeToken) {
     email: email,
     token: oneTimeToken,
     expiresAt: moment().add(24 * 7, 'hours')
+// Temp comment
   }).save(null, { method: 'insert' })
 
   return id

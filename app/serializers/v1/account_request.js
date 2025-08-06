@@ -43,7 +43,6 @@ function serializer(data) {
     format.productConfigurations = data.productConfigurations.map(app.serializers.v1.productConfiguration)
   }
 
-// Temp comment
   if (data.branch) {
     format.branch = app.serializers.v1.institutionBranch(data.branch)
   }

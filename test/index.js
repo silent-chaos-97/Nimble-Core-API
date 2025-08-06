@@ -24,10 +24,10 @@ const knex = Bookshelf.knex
 chai.config.includeStack = true
 chai.use(chaiAsPromised)
 chai.use(sinonChai)
-
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 global.sinon = sinon
 global.expect = chai.expect
 global.should = chai.should()
 global.request = request
+global.helpers = helpers

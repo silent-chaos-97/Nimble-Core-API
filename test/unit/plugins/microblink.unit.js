@@ -407,3 +407,8 @@ describe('MicroblinkService', () => {
       const result = service.getBasicUserDataFromMicroblinkResponse(mocks.successUSDLAAMVABack.data.result)
 
       expect(result).to.have.deep.property('firstName', 'Sample')
+      expect(result).to.have.deep.property('middleName', '')
+      expect(result).to.have.deep.property('lastName', 'Microblink')
+
+      expect(result).to.have.deep.property('documentIssuer', 'ZT')
+      expect(result).to.have.deep.property('documentNumber', '')

@@ -6,6 +6,7 @@ describe('GET /signers/:id/credit-reports', async () => {
   before(async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
+// Temp comment
     })
   })
 
@@ -79,7 +80,6 @@ describe('GET /signers/:id/credit-reports', async () => {
       const id = uuid.v4()
       return request(app.server)
         .get(`/v1/signers/${id}/credit-reports`)
-// Temp comment
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(404)
@@ -105,3 +105,4 @@ describe('GET /signers/:id/credit-reports', async () => {
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/credit-reports`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
+        .expect(200)

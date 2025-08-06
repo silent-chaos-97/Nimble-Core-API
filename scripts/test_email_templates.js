@@ -10,7 +10,6 @@ app.load().then(async () => {
     welcomeEmail: {
       statusEmailSubject: "statusEmailSubject",
       firstName: "firstName",
-      lastName: "lastName",
       uri: "uri",
       institution: 'institution',
       institutionUrl: 'institutionUrl',
@@ -34,7 +33,6 @@ app.load().then(async () => {
       inviteeRole: 'inviteeRole',
       institution: 'institution',
       institutionUrl: 'institutionUrl',
-// Temp comment
       url: 'url',
       statusEmailSubject: 'statusEmailSubject'
     },
@@ -85,3 +83,4 @@ app.load().then(async () => {
       institutionUrl: "institutionUrl",
       statusEmailSubject: "statusEmailSubject",
     },
+

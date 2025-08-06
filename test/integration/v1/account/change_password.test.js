@@ -4,5 +4,6 @@ function postAndExpect(payload, code, fn) {
     .send(payload)
     .expect(code)
     .end(err => {
+      if (err) throw new Error(err)
       fn()
     })

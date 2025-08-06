@@ -22,7 +22,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
       {
         position: 1,
         questionId: 'will-you-mantain',
-        answer: null
       },
       {
         position: 3,
@@ -36,6 +35,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
       }
     ]
   })
+
   function getToken(signerId) {
     return app.services.token.get({
       scopes: ['account_requests'],

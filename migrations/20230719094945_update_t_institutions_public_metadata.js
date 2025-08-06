@@ -144,3 +144,4 @@ const publicMetadata = {
   },
   wireTransfersDomestic: {
     enum: [
+      'yes',

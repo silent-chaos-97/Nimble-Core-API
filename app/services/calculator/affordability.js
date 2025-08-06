@@ -504,7 +504,6 @@ function _loan(product, targetLtv = null, cost, equityDown, cashDown) {
   if (ltv < minLtv) adjustment = loan - (cost * minLtv)
 
   const value = loan - adjustment
-
   const _minLoan = cost - equityDown
   const _minLtv = _minLoan / cost
   const _minCashDown = _.ceil(_minLtv <= maxLtv ? 0 : _minLoan - (cost * maxLtv))

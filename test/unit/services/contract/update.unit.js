@@ -16,6 +16,7 @@ describe('app.services.contract.update', () => {
     describe('when passing information to docusign', () => {
       let docusignSend = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
+
       before(() => {
         docusignSend = sinon.replace(app.plugins.docusign, 'updateEnvelopeRecipients', sinon.fake.returns(Promise.resolve()))
         nock.disableNetConnect()
@@ -105,3 +106,4 @@ describe('app.services.contract.update', () => {
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
+        await seed.docusignTemplate.create()

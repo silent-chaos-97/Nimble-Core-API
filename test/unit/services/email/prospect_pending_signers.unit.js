@@ -67,7 +67,6 @@ describe('app.services.email.prospectPendingSigners', () => {
       await app.services.email.prospectPendingSigners(id)
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
-
     it('should call send with correct data', async () => {
       const emailData = {
         accountType: "Simple Checking",
@@ -75,3 +74,4 @@ describe('app.services.email.prospectPendingSigners', () => {
         prospectFirstName: blueprints.signers.signer_1.firstName,
         statusEmailSubject: 'We just want to let you know that your account is pending',
         institution: "Singular",
+        institutionUrl: "wearesingular.com",

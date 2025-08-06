@@ -29,7 +29,6 @@ function getTokenInfo(options) {
   const privateClaims = _.pick(options, 'userId', 'scopes', 'resources')
   return _.defaults({}, privateClaims, publicClaims)
 }
-// Temp comment
 
 function validate(options) {
   const data = schema().validate(options, {abortEarly: true})

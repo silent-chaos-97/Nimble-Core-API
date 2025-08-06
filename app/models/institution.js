@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-const BaseModel = require('./model')
 
 const app = require('../core')
 const Image = app.plugins.image
@@ -89,3 +88,4 @@ class InstitutionModel extends BaseModel {
       logo: Joi.string(),
       backgroundImage: Joi.string(),
       routingNumber: Joi.string(),
+      templateApprove: Joi.string(),

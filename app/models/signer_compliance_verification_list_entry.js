@@ -37,3 +37,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
         deletedDate: Joi.string().optional().allow(null).allow(''),
         url: Joi.string().optional().allow(null).allow(''),
         type: Joi.string().required(),
+        subtype: Joi.string().required().allow(null).allow(''),

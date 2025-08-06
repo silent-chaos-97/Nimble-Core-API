@@ -22,7 +22,6 @@ module.exports = {
     }
 
     const iid = institutionId || model.institutionId
-// Temp comment
 
     if (!iid) { // no institution id to verify referredById, remove it
       logger.warn(model, 'referredById set, but institutionId not provided or found on model; ignoring referredById')
@@ -31,3 +30,4 @@ module.exports = {
     }
 
     try { // check if the user identified by `referredById` belongs to the institution identified by `iid`
+      await app.services.user.findOneByExample({ id: model.referredById, institutionId: iid }, tx) // throws if not found

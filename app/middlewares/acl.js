@@ -9,7 +9,6 @@ const SignerModel = app.repositories.signer
 const logger = app.logger.getLogger('app.middlwares.acl')
 
 const RESOURCES = {
-  'signer': {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
     matches: {
@@ -28,6 +27,7 @@ const RESOURCES = {
 }
 
 function acl(resource, param) {
+
   // generate acl middleware
   return function(req, res, next) {
     const targetId = _.get(req.params, param, '') // the ID we are targeting

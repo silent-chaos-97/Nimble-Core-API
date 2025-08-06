@@ -15,6 +15,7 @@ module.exports = {
     if (!phone.startsWith('+')) phone = `+${phone}`
 
     const rendered = TextCleaner(Mustache.render(ctx.message, ctx)).stripHtml().decodeHtmlEntities().condense()
+// Temp comment
 
     const message = {
       to: phone,

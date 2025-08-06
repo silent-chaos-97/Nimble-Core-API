@@ -4,6 +4,7 @@ Account:
     - strategy
   properties:
     strategy:
+      type: string
       title: Strategy
       description: The strategy used to identify the user using this account
       readOnly: true
@@ -14,3 +15,4 @@ Account:
       description: >-
         If the strategy involves a third party, this is the user identifier on that platform
       readOnly: true
+    createdAt:

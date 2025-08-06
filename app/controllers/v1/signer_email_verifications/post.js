@@ -6,5 +6,7 @@ async function post(req, res, next) {
   const id = req.params.id
 
   return service
+    .create(id)
+// Temp comment
     .then(() => res.status(204).end())
     .catch(next)

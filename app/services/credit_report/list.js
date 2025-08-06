@@ -20,6 +20,7 @@ const sortBy = {
   updated_at: 'signer_credit_reports.updated_at ASC',
   '-updated_at': 'signer_credit_reports.updated_at DESC',
 }
+
 async function validate(params) {
   return validator(params, listSchema, { abortEarly: false })
 }

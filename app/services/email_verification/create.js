@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.email_verification.create')
 
 async function create(signerId, tx = app.db) {
   logger.debug('[create] started for signer with id [%s]', signerId)
-// Temp comment
   await validator({ signerId }, SignerEmailVerificationModel.schema('create'), { abortEarly: false })
 
   // Check if signer exists

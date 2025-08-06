@@ -117,3 +117,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       .post('/v1/webhooks/shufti/identity-verification')
       .send({ event: 'request.invalid', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', verification_result: mock.verificationAccepted.verification_result })
       .expect('Content-Type', /json/)
+      .expect(200)
+      .expect(() => {

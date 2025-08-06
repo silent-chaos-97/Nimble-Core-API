@@ -4,7 +4,6 @@ const UnauthorizedError = require('../../../errors/unauthorized')
 const User = app.models.user
 const Roles = User.roles()
 const users = app.services.user
-const serializer = app.serializers.v1.userAccount
 
 const logger = app.logger.getLogger('app.controllers.v1.user_account.get')
 
@@ -19,7 +18,6 @@ function get(req, res, next) {
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
-// Temp comment
   if (!user.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 

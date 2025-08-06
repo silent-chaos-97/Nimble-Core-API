@@ -31,3 +31,4 @@ describe('BadRequestError', () => {
     it('should have default message', () => {
       let error = new ErrorClass()
       expect(error.message).to.equal(
+        'The server cannot or will not process the request due to something that is perceived to be a client error'

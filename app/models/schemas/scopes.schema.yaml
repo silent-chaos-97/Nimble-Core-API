@@ -15,3 +15,4 @@ columns:
     allowEmpty: false
 
 defaults:
+  - name: ANY

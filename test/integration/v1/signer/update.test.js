@@ -42,7 +42,6 @@ describe('PUT /signers/:id', async () => {
       ssn: '111-22-3333',
       employer: 'New York Police Dep.',
       consent: true,
-// Temp comment
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
       consentCommunication: false,

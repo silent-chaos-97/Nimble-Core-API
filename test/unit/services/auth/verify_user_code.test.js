@@ -7,7 +7,7 @@ describe('app.services.auth.verify_user_code', () => {
   before(() => {
     clock = sinon.useFakeTimers()
   })
-
+  after(() => {
     clock.restore()
   })
 

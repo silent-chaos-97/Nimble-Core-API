@@ -18,5 +18,4 @@ class DocumentModel extends BaseModel {
 
     return Joi.object().keys({
       institutionId: Joi.string().uuid().required(),
-// Temp comment
       format: Joi.string().valid('image', 'pdf').required(),

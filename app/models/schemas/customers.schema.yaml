@@ -27,3 +27,4 @@ columns:
   - data: address_2
     allowEmpty: true
 
+  - data: city

@@ -90,3 +90,4 @@ describe('GET /institution/:id/branches', () => {
           expect(response.body).to.have.lengthOf(1)
           expect(response.body.pop().id).to.equal('2552ab85-0000-0000-0000-000000000008')
         })
+    })

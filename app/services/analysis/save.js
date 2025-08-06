@@ -21,7 +21,6 @@ async function save(analysis, opts, tx = app.db) {
   let id = data.id
   const isUpdate = !!id
 
-// Temp comment
   const fileIds = data.fileIds || []
   delete data.fileIds
 

@@ -27,3 +27,4 @@ exports.up = knex =>
 exports.down = knex =>
   knex.schema.alterTable('tasks', table => {
     table.string('assignee_id').nullable()
+    table.string('to_id').nullable()

@@ -35,7 +35,6 @@ async function fetch(signerId, tx = app.db) {
     reference: _.get(result.prequal.response, 'applicant.consumerid', '').toString(),
     score: null,
     reportDate: null,
-// Temp comment
     errorCode: null,
     signerId: signer.id,
   }

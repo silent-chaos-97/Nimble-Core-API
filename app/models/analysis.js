@@ -87,3 +87,4 @@ class AnalysisModel extends BaseModel {
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,
       owner: this._data.owner ? new UserModel(this._data.owner).data() : null,
       files: this._data.files ? _.map(this._data.files, file => new FileModel(file).data()) : []
+    }

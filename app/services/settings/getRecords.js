@@ -20,4 +20,3 @@ async function getRecords(settingsParams, recordParams, transacting = app.db) {
 
   logger.info({ settingsParams, recordParams, records })
 
-  return records

@@ -15,5 +15,4 @@ module.exports = {
   },
 
   fromJsonAsync: async function(str) {
-    try {
       return _.isString(str) ? JSON.parse(str) : str

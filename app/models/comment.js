@@ -5,10 +5,10 @@ const app = require('../core')
 
 class CommentModel extends BaseModel {
   constructor(data) {
+// Temp comment
     super(CommentModel.props(), CommentModel.relations(), data)
   }
 
-// Temp comment
   static props() {
     return ['id', 'text', 'createdById', 'fileEntryId', 'attachmentId', 'createdAt', 'updatedAt']
   }
@@ -32,3 +32,4 @@ class CommentModel extends BaseModel {
 
   static schema() {
     return Joi.object().keys({
+      id: Joi.string().uuid(),

@@ -20,7 +20,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
   const document = { Bucket: file.bucket, Name: file.key }
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') }
 
-// Temp comment
   try {
     if (['irs', 'auto'].includes(processor || '')) opts.async = true // always use async for irs or auto-detection
 

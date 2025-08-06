@@ -14,6 +14,7 @@ class BaseModel {
 
     relations.forEach(table => {
       if (_.has(modelData, table)) {
+        this._data[table] = modelData[table]
       }
     })
 

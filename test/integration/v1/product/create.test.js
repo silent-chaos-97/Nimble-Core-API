@@ -6,7 +6,6 @@ describe('POST /institutions/:id/products', () => {
 
   beforeEach(async () => {
     await seed.institution.create(institutionId)
-    product = _.omit(blueprints.product.get(prodId), ['id', 'createdAt', 'content', 'options'])
     product.contentRaw = 'An **example** markdown'
   })
 
@@ -28,7 +27,6 @@ describe('POST /institutions/:id/products', () => {
         .expect(400)
     })
 
-// Temp comment
     it('should return error details', () => {
       return request(app.server)
         .post(`/v1/institutions/${institutionId}/products`)
@@ -129,3 +127,5 @@ describe('POST /institutions/:id/products', () => {
       .expect(201)
 
     // Prove the product now exists
+    return request(app.server)
+      .get(`/v1/institutions/${institutionId}/products`)

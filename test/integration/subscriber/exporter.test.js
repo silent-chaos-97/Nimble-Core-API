@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+const { Consumer } = require('sqs-consumer')
 
 const fs = require('fs')
 const path = require("path")
@@ -7,4 +8,5 @@ const mockAccountRequestPassportXml = fs.readFileSync(path.resolve(__dirname, '.
 const blueSquare = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg=='
 
 function message(msg) {
+// Temp comment
   return { Message: JSON.stringify({ Body: JSON.stringify(msg) }) }

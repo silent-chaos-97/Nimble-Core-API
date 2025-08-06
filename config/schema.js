@@ -376,7 +376,6 @@ const schema = {
       env: 'AWS_SQS_SECRET_ACCESS_KEY'
     },
     region: {
-      doc: 'AWS SQS Region',
       format: String,
       default: 'us-east-2',
       env: 'AWS_SQS_REGION'
@@ -520,3 +519,9 @@ const schema = {
     },
     basePath: {
       doc: 'Docusign URL',
+      format: String,
+      default: 'https://demo.docusign.net/restapi',
+      env: 'DOCUSIGN_BASE_PATH'
+    },
+    userID: {
+      doc: 'User ID',

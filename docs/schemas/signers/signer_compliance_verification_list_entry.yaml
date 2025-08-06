@@ -3,7 +3,6 @@ SignerComplianceVerificationListEntry:
   properties:
     id:
       type: string
-      format: uuidv4
       title: uuid
       readOnly: true
       description: Result Item Identifier
@@ -38,3 +37,4 @@ SignerComplianceVerificationListEntry:
       description: the sub type of item associated with this entry, provided by the compliance validation and checks service
       example: sanction, pep-class-1n, pep-class-2
     countryCodes:
+      title: What is the source country code associated with this entry

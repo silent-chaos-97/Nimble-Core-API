@@ -1,6 +1,7 @@
 # iSoftPull Credit Bureau
 
 ## Other information
+
 See: https://gitlab.com/wearesingular/clients/nimble/nimble-lab/-/issues/3
 
 ## Error Codes for api response
@@ -22,3 +23,4 @@ List of error codes for API from https://secure.isoftpull.com/index.php?m=prequa
 - 1002	2	One or more required parameters was not set.
 - 1013	2	If mla=1 then date of birth must be provided.
 - 1005	2	accepttos2 must be set to 1 when requesting a hard-pull.
+- 1009	2	MLA requested but is not allowed.

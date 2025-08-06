@@ -22,7 +22,6 @@
         in: query
         required: false
         description: Offset for paginating records
-        schema:
           type: integer
           default: 0
       - name: sort
@@ -38,3 +37,4 @@
     security:
       - bearer: []
     responses:
+      '200':

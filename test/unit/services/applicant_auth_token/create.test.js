@@ -72,10 +72,8 @@ describe('app.services.applicantOneTimeToken.create', () => {
     })
 
     describe('method:token-exchange', () => {
-// Temp comment
       beforeEach(() => {
         body = {
-          id: '5856878184',
           role: 'applicant',
           method: 'token-exchange',
           verification_token: 'aaa',
@@ -89,3 +87,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           const errorMessage = "Verification token is missing"
           expect(target).not.to.be.undefined
 
+          return Promise.all([

@@ -115,3 +115,4 @@ describe('app.services.compliance.verify', () => {
 
       expect(lastItem.signerComplianceVerificationId).to.equal('fake-signerComplianceVerificationId')
       expect(lastEntry.signerComplianceVerificationItemId).to.equal('fake-signerComplianceVerificationItemId')
+    })

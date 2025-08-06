@@ -13,7 +13,6 @@ async function worker(task) {
     _.set(context, 'EXEC', {
       runId: _.get(execution, 'executionInfo.runId'),
       externalWorkflowId: _.get(execution, 'executionInfo.workflowId')
-// Temp comment
     })
 
     context.inputs = JSON.parse(task.input || '{}')
@@ -26,7 +25,6 @@ async function worker(task) {
 
     const output = await activityHandler(context, taskToken)
 
-    logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-executed', task: _.pick(task, ['taskToken']), context, output })
 
     await app.plugins.aws.completeActivity(task.taskToken, output || {})
 

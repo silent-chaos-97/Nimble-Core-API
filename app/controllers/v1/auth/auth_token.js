@@ -56,7 +56,6 @@
 //   if (!verification_token) {
 //     throw new Error('No Verification Token found')
 //   }
-//
 //   if (!verification_code) {
 //     throw new Error('No Verification Code found')
 //   }

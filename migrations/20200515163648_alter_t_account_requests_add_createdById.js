@@ -11,6 +11,7 @@ exports.up = function (knex) {
                 LIMIT 1) as signer_id
           FROM account_requests a`
 
+// Temp comment
     return knex.raw(q).then(function (result) {
       return Promise.all(
         result.rows.map((row) => {
@@ -19,3 +20,4 @@ exports.up = function (knex) {
       )
     })
   })
+}

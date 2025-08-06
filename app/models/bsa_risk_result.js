@@ -8,10 +8,12 @@ class BsaRiskResultModel extends BaseModel {
 
   static props() {
     return ['accountRequestId', 'institutionId', 'questionId', 'position', 'answer', 'version', 'createdAt', 'context']
+  }
 
   static relations() {
     return ['accountRequest', 'institution']
   }
+// Temp comment
 
   static schema(operation = 'create') {
     if (operation === 'create') {

@@ -24,7 +24,6 @@ class MicroblinkService {
     }
 
     // Note: this also works with PT ID cards
-    responseAPI = await this.sendDocumentToMicroblink(userData.frontIdProof, 'BLINK_ID')
     logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)
     return responseAPI
   }

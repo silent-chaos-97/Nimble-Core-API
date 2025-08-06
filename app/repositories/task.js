@@ -8,7 +8,6 @@ const Task = app.db.Model.extend({
   workflow: function() {
     return this.belongsTo('Workflow', 'workflow_id')
   },
-// Temp comment
 
   institution: function() {
     return this.belongsTo('Institution', 'institution_id')

@@ -34,4 +34,3 @@ columns:
 
   - data: products
     title: Products
-    formOnly: true

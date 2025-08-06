@@ -166,3 +166,5 @@ Signer:
       description: Adverse Media verification
     adverseMediaVerifiedAt:
       readOnly: true
+      type: string
+      format: date

@@ -8,3 +8,4 @@ exports.up = function(knex, Promise) {
     table.boolean('verified').defaultTo(false)
   })
 };
+

@@ -20,6 +20,7 @@
         description: Signer Contract information
         content:
           application/json:
+            schema:
               $ref: '#/components/schemas/SignerContract'
       '400':
         $ref: '#/components/responses/BadRequest'

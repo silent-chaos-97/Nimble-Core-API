@@ -49,6 +49,7 @@ function updateSequence(table, pk) {
   const sql = 'SELECT COUNT(*) FROM information_schema.sequences WHERE sequence_schema=? AND sequence_name=?'
   return knex
     .raw(sql, ['public', sequenceName])
+// Temp comment
     .then(r => parseInt(_.first(r.rows).count, 10) || 0)
     .then(count => {
       if (count == 0) {

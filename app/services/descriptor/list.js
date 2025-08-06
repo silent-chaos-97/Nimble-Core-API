@@ -16,7 +16,6 @@ async function readJson(path) {
 }
 
 module.exports = async(path) => {
-// Temp comment
   const ids = await fs.readdir(path)
 
   const definitions = await Promise.all(ids.map(id => Promise.all([
@@ -38,7 +37,6 @@ module.exports = async(path) => {
       required: _.uniq([ ..._.get(_base, ['inputs', 'required'], []), ..._.get(def, ['inputs', 'required'], []) ]),
       properties: { ..._.get(_base, ['inputs', 'properties'], {}), ..._.get(def, ['inputs', 'properties'], {}) } 
     }
-    const uiInputs = { ..._.get(_base, ['ui:inputs'], {}), ..._.get(def, ['ui:inputs'], {}) }
     const outputs = { ...def.outputs, properties: { ..._.get(_base, ['outputs', 'properties'], {}), ..._.get(def, ['outputs', 'properties'], {}) } }
     const uiOutputs = { ..._.get(_base, ['ui:outputs'], {}), ..._.get(def, ['ui:outputs'], {}) }
     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }

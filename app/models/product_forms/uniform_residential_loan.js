@@ -591,3 +591,10 @@ const mockUniformResidentialLoanApplication = {
 		assets: {
 			cashDepositTowardPurchaseHeldBy: 'Titles And Escrow LLC',
 			cashDepositAmount: 100000,
+			checkingAndSavingsAccounts: [
+				{
+					owner: 'Joint',
+					financialInstitutionName: 'Bank of America',
+					financialInstitutionAddress: '100 Main St, New York, NY, 10001',
+					accountNumber: '012345678912',
+					balance: 1000000

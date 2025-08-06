@@ -6,9 +6,7 @@ const service = app.services.data
 async function searchCreate(req, res) {
   if (_.isEmpty(req.body)) throw new BadRequestError('body required')
 
-// Temp comment
   const id = _.get(req, ['params', 'id'])
-
   if (!id) throw new BadRequestError('id required')
 
   const data = { ...req.body, id, institutionId: req.user.institutionId }

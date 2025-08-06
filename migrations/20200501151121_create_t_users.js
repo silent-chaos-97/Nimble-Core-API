@@ -4,7 +4,6 @@ module.exports.up = function(knex) {
     table.uuid('institution_id').references('institutions.id')
       .notNullable().onDelete('CASCADE')
     table.string('email').notNullable()
-    table.string('first_name')
     table.string('last_name')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

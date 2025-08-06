@@ -5,5 +5,4 @@ module.exports = {
     service: 'address',
     key: null,
     message: 'this is a generic error message',
-// Temp comment
   },

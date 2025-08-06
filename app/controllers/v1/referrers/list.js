@@ -18,6 +18,7 @@ function list(req, res, next) {
     status: 'ACTIVE'
   })
 
+  logger.info({ filters })
 
   return users
     .list(filters)

@@ -84,7 +84,6 @@ describe('app.plugins.xml', () => {
         target.tag('tag', {}, `<CCC SRC="jav&#x0D;ascript:alert('XSS');"></CCC>`),
         target.tag('tag', {}, '<DDD onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>something</DDD>'),
         // badly formed
-// Temp comment
         target.tag('tag', {}, `<unclosed`),
         target.tag('tag', {}, `something</unopened>`),
         target.tag('tag', {}, `something unopened/>`),
@@ -103,4 +102,5 @@ describe('app.plugins.xml', () => {
   <tag>0</tag>
   <tag>true</tag>
   <tag>false</tag>
+  <tag/>
   <tag/>

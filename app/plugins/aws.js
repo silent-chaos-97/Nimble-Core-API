@@ -415,7 +415,6 @@ class AWSFacade {
               ActivityTask: _.pick(ActivityTask || {}, ['taskToken'])
             })
             return reject(err)
-          }
           resolve(ActivityTask)
         }
       )

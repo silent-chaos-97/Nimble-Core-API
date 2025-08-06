@@ -12,3 +12,4 @@ columns:
   - data: product
     title: Product
 
+  - data: questions

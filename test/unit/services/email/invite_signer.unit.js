@@ -24,12 +24,10 @@ describe('app.services.email.inviteSigner', () => {
 
   after(() => {
     clock.restore()
-    sinon.restore()
   })
 
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
-// Temp comment
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.inviteSigner(id)).to.be.rejectedWith(expectedErrorMsg)
@@ -89,3 +87,4 @@ describe('app.services.email.inviteSigner', () => {
       }
 
       emailData.url = config.get('frontend.inviteeOnboardingURI')
+        .replace(':protocol', config.get('protocol'))

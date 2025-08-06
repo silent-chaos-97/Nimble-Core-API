@@ -758,6 +758,7 @@ describe('Docusign', () => {
 
       it('should return a list of templates for savings accounts', async () => {
         const expectedResult = [
+          "5313cde2-5926-47b1-b358-56cc7bb786cc",
           "ecd5df78-d3e4-4234-b643-3a711b4cc09c", // platinum
           "c2b862c6-7827-46a1-bdcd-fea345785daa", //fees
           "e241451d-a10b-41ab-b1fc-37be09e3880b",
@@ -885,3 +886,14 @@ describe('Docusign', () => {
 
         expect(result).not.to.be.undefined
         expect(result.email).to.equal(mocks.validUser.email)
+        expect(result.name).to.equal(mocks.validMapping.fullName)
+        expect(result.recipientId).to.equal('1')
+        expect(result.roleName).to.equal('signer')
+        expect(result.clientUserId).to.equal(mocks.validUser.id)
+
+        expect(result.tabs.textTabs.length).to.equal(3)
+
+        expect(result.tabs.textTabs[0].value).to.equal(mocks.validUser.ssn)
+        expect(result.tabs.textTabs[0].tabLabel).to.equal('\\*ssn')
+
+        expect(result.tabs.textTabs[1].value).to.equal(mocks.validMapping.fullName)

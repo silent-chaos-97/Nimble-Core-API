@@ -50,6 +50,7 @@
       <phoneNumber/>
       <ssn/>
       <role>SECONDARY</role>
+      <employer/>
       <address>
         <street/>
         <city/>

@@ -11,6 +11,7 @@ function decode(token) {
 }
 
 
+// https://tools.ietf.org/html/rfc7519#section-4.1
 const now = moment()
 const data = {
   userId: process.env["USER_ID"] || '1',

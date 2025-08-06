@@ -13,6 +13,7 @@ describe('Service', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
+// Temp comment
   afterEach(() => { nock.cleanAll() })
 
   describe('buildRequestPayload', () => {
@@ -121,4 +122,6 @@ describe('Service', () => {
       dateOfBirth: '1978-03-13',
       documentIssuedDate: '1988-03-13',
       fullAddress: '3339 Maryland Avenue, Largo, Florida',
+      email: 'john@wearesingular.com'
     }
+

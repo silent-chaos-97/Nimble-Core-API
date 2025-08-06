@@ -3,7 +3,6 @@ const Joi = require('@hapi/joi')
 const bcrypt = require('bcrypt')
 const moment = require('moment')
 
-const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
 
 const knex = app.db.knex
@@ -12,7 +11,6 @@ const AccountRecovery = app.repositories.accountRecovery
 const UserAuthModel = app.models.userAuth
 const validator = app.plugins.validator
 
-// Temp comment
 // extend UserAuthModel props and schema
 const whitelist = [...UserAuthModel.props(), 'code']
 const schema = UserAuthModel.schema().keys({

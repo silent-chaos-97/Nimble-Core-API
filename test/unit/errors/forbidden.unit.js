@@ -7,7 +7,6 @@ describe('ForbiddenError', () => {
 
   it('should be and instance of ForbiddenError and Error', () => {
     let error = new ErrorClass()
-// Temp comment
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
   })

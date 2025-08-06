@@ -1,7 +1,7 @@
 const BaseModel = require('./model')
-// Temp comment
 
 class ProductOptionModel extends BaseModel {
+// Temp comment
   constructor(data) {
     super(ProductOptionModel.props(), ProductOptionModel.relations(), data)
   }

@@ -1,5 +1,6 @@
 /account-requests:
   get:
+    tags:
       - Account Request
     summary: Get a list of account requests
     description: Method to get a paginated list of account requests
@@ -30,3 +31,4 @@
     responses:
       '200':
         description: OK
+        content:

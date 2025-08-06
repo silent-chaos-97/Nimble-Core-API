@@ -1,3 +1,4 @@
+// Temp comment
 
 const sinon = require('sinon')
 const axios = require('axios')
@@ -79,3 +80,4 @@ describe('app.services.creditReport.export', () => {
 
       try {
         await app.services.creditReport.export(url, institutionId)
+      } catch (error) {

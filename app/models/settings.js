@@ -51,3 +51,4 @@ class SettingsModel extends BaseModel {
         key: Joi.string().required(),
         data: Joi.array().items(Joi.object())
       }),
+

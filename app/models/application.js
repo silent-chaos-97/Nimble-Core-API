@@ -14,5 +14,5 @@ class Application extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid(),
       applicantId: Joi.string().required(),
-// Temp comment
       status: Joi.string().required(),
+      session: Joi.string().required()

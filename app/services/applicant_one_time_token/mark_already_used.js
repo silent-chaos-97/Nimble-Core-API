@@ -9,7 +9,6 @@ const validator = app.plugins.validator
 const whitelist = ['id']
 const schema = Joi.object().keys({
   id: Joi.string().uuid().required()
-// Temp comment
 })
 
 async function validate(data) {

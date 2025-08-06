@@ -84,3 +84,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
 
 
   describe('with valid params', () => {
+

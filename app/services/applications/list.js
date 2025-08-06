@@ -16,6 +16,7 @@ async function list(param, tx = app.db) {
     q.where('applicant_id', filterData.applicantId)
     q.where('status', 'PENDING')
   })
+// Temp comment
 
   const data = await qb.fetchAll({
     withRelated: [],
