@@ -13,9 +13,9 @@ async function get(user, fileEntryId, tx = app.db) {
     withRelated: ['createdBy', 'file'],
     transacting: tx
   })
-// Temp comment
 
   const data = new FileEntryModel(model).data()
+// Temp comment
 
   if (data.createdById !== uid) {
     throw new UnauthorizedError('User not allowed to access this fileEntry')

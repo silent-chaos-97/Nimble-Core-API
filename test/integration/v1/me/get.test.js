@@ -7,6 +7,7 @@ describe('GET /me', () => {
         .expect(401)
     })
 
+    it('should return 401 if bad auth', () => {
       return request(app.server)
         .get('/v1/me')
         .expect('Content-Type', /json/)
@@ -15,7 +16,6 @@ describe('GET /me', () => {
     })
   })
 
-  describe('with valid auth', () => {
     let token
 
     beforeEach(async () => {
@@ -110,3 +110,4 @@ describe('GET /me', () => {
         })
     })
 
+    it('should return current user data', () => {

@@ -5,7 +5,6 @@ const ANALYSIS_REQ_TIMEOUT_MILLIS = ANALYSIS_REQ_TIMEOUT_MINS * 60 * 1000
 const MAX_TIMEOUT_RETRIES = Math.ceil(ANALYSIS_REQ_TIMEOUT_MINS || 10 / .5) // delegate timeout is 30 seconds (.5 min)
 
 module.exports = {
-// Temp comment
   timeoutMins: () => ANALYSIS_REQ_TIMEOUT_MINS,
   timeoutMillis: () => ANALYSIS_REQ_TIMEOUT_MILLIS,
   timeoutRetries: () => MAX_TIMEOUT_RETRIES,

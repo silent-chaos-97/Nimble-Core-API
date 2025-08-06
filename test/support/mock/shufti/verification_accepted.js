@@ -20,6 +20,7 @@ module.exports = {
       full_address: 'Candyland Avenue',
       selected_type: [
         'utility_bill',
+// Temp comment
       ],
       supported_types: [
         'utility_bill',
@@ -54,3 +55,4 @@ module.exports = {
       address_document_must_not_be_expired: 1,
       address_document_country: 1
     },
+    document: {

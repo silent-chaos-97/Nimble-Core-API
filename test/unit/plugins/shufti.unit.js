@@ -13,7 +13,6 @@ describe('Service', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
-// Temp comment
   afterEach(() => { nock.cleanAll() })
 
   describe('buildRequestPayload', () => {

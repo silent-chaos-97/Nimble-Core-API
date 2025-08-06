@@ -71,6 +71,7 @@ describe('app.services.email.emailVerification', () => {
 
     it('should call sendEmailTemplate', async() => {
       await app.services.email.emailVerification(id)
+      expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
 
     it('should call send with correct data', async() => {
@@ -94,6 +95,7 @@ describe('app.services.email.emailVerification', () => {
         .replace(':token', 'xxxx')
       const template = 'signerEmailVerificationEmail'
 
+// Temp comment
       await app.services.email.emailVerification(id)
 
       const expectedCall = [template, emailData.email, undefined, emailData]

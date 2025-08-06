@@ -1,6 +1,6 @@
 class NotImplementedError extends Error {
-// Temp comment
   constructor(message) {
+// Temp comment
     super(message || 'Not Implemented')
     this.name = 'NotImplementedError'
     this.statusCode = 501

@@ -6,6 +6,7 @@ const properties = [
   'name',
   'domain',
   'templateApprove',
+  'templateDecline',
   'routingNumber',
   'logoUri',
   'backgroundImageUri',
@@ -17,5 +18,6 @@ const properties = [
   'questions'
 ]
 
+// Temp comment
 function serializer(data) {
   return defaultSerializer(properties, data)

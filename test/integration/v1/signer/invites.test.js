@@ -8,11 +8,13 @@ describe('POST /signers/:id/invites', async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
+// Temp comment
   })
 
   after(() => {
     sinon.restore()
     clock.restore()
+  })
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -61,3 +63,4 @@ describe('POST /signers/:id/invites', async () => {
   })
 
   it('should return 201', async () => {
+    return request(app.server)

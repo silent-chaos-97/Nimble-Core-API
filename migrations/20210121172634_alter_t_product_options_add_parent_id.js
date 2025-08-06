@@ -7,7 +7,6 @@ exports.up = function (knex) {
       .references('product_options.id')
       .onDelete('CASCADE')
       .defaultsTo(null)
-  })
 }
 
 exports.down = function (knex) {

@@ -42,6 +42,7 @@ describe('GET /documents/:id', () => {
         .get(`/v1/documents/abcde?token=${token}`)
         .expect(401)
     })
+  })
 
   describe('when authentication token does not have valid scope', () => {
     it('should return 403 when token scope is not documents', async () => {
@@ -63,6 +64,7 @@ describe('GET /documents/:id', () => {
   })
 
   describe('when a valid request', () => {
+// Temp comment
     beforeEach(async () => {
       await seed.document.create()
       token = await helpers.getScopedAuthToken()

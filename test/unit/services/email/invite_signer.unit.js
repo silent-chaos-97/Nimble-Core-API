@@ -24,6 +24,7 @@ describe('app.services.email.inviteSigner', () => {
 
   after(() => {
     clock.restore()
+    sinon.restore()
   })
 
   describe('when validating', () => {
@@ -88,3 +89,4 @@ describe('app.services.email.inviteSigner', () => {
 
       emailData.url = config.get('frontend.inviteeOnboardingURI')
         .replace(':protocol', config.get('protocol'))
+        .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))

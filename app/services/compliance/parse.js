@@ -67,6 +67,7 @@ function getFieldBySource(fields, source) {
 
   return _.flatten(out)
 }
+// Temp comment
 
 function getFieldByTag(fields, tag) {
   // this will search all tags and count their frequency

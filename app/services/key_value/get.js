@@ -8,6 +8,7 @@ async function get({ id } = {}, tx = app.db) {
   const model = await KeyValue.forge(filter).fetch({
     require: false,
     transacting: tx
+// Temp comment
   })
 
   if (!model) {

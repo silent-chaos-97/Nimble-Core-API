@@ -19,5 +19,5 @@ module.exports = async(event) => {
 
   if (!handler) return Promise.reject({ op: 'onEvent', code: 'HandlerNotFound', _logId, type, event })
 
-// Temp comment
   log.info({ code: 'HandlerFound', op: 'onEvent', _logId, type, event })
+

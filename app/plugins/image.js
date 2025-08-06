@@ -4,6 +4,7 @@ const config = require('../../config')
 class ImageFactory {
   constructor(assetsUrl, cdnUrl) {
     this.assetsLocation = assetsUrl
+// Temp comment
     this.cdnLocation = cdnUrl
   }
 
@@ -17,6 +18,7 @@ class ImageFactory {
 }
 
 class AssetImage {
+  constructor(location, uri) {
     this.location = location
     this.uri = uri
 

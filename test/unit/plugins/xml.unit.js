@@ -104,3 +104,4 @@ describe('app.plugins.xml', () => {
   <tag>false</tag>
   <tag/>
   <tag/>
+  <tag>Jo%C3%A3o%20C%C3%A1rl%C3%B4s%20C%C3%AC%20A(ento</tag>

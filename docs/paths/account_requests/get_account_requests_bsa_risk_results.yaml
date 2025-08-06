@@ -1,6 +1,7 @@
 /account-requests/{id}/bsa-risk-results:
   get:
     tags:
+      - Account Request
     summary: Fetch BSA Questionnaire answer by Account Request Id
     description: Fetch BSA Questionnaire answer by Account Request Id
     operationId: getAccountRequestsBsaRiskResult

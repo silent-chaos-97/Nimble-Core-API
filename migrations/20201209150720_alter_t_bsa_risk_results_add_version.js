@@ -7,6 +7,7 @@ exports.up = function (knex) {
     table.string('version')
   })
     .then(() => knex.raw(updateRAWSQL))
+    .then(() => knex.raw(addNullConstraintSQL))
 }
 
 exports.down = function (knex) {

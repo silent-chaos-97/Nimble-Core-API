@@ -247,7 +247,6 @@ describe('PUT private /account-requests/:id', () => {
             if (err) return done(err)
 
             expect(res.body.message).to.contain('not allowed')
-            done()
           })
       })
 
@@ -288,6 +287,7 @@ describe('PUT private /account-requests/:id', () => {
           .expect('Content-Type', /json/)
           .send({ ...putRequest, status: 'APPROVED' })
           .expect(200)
+          .end((err) => {
             if (err) return done(err)
 
             expect(eventPublishSpy).to.have.been.calledOnce
@@ -343,3 +343,4 @@ describe('PUT private /account-requests/:id', () => {
       it('should use breaklines in emails', done => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
+          .set('Authorization', 'Bearer ' + token)

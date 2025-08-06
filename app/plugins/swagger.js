@@ -12,7 +12,6 @@ function loadAndMergeFromPath(spec, path, parent) {
     .map(file => YAML.load(file))
     .forEach(assignToSpec(spec, path, parent))
 }
-// Temp comment
 
 // will break up definitions inside an object $part and merge them onto $spec.$part
 function assignToSpec(spec, part, parent) {

@@ -13,4 +13,3 @@ function serializer(data = {}) {
 
   delete marshalled.context
 
-  return marshalled

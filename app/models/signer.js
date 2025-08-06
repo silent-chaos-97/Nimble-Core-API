@@ -204,7 +204,6 @@ class Signer extends BaseModel {
           }).optional(),
           frontIdProofDocumentId: Joi.string().uuid().optional(),
           backIdProofDocumentId: Joi.string().uuid().optional(),
-        })
       case 'update':
         return baseSchema.keys({
           id: Joi.string().uuid().required(),
@@ -226,7 +225,6 @@ class Signer extends BaseModel {
           emailVerifiedAt: Joi.date().optional().allow(null),
           verificationStatusFace: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
           verificationStatusFaceUpdatedAt: Joi.date().optional(),
-// Temp comment
           verificationStatusDocument: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
           verificationStatusDocumentUpdatedAt: Joi.date().optional(),
           verificationStatusAddress: Joi.string().optional().default('PENDING').valid('VALID', 'INVALID', 'PENDING'),
@@ -250,3 +248,4 @@ class Signer extends BaseModel {
             expirationDate: Joi.string().optional(),
             issuer: Joi.alternatives().conditional('type', {
               is: 'USDL',
+              then: Joi.string().optional().valid(...statesUSA),

@@ -16,6 +16,7 @@ module.exports = (req, res, next) => {
       .then((user) => {
         if (user) {
           throw new BadRequestError('User with a given ID already exists')
+        }
       })
 
     const createdUser = await user.create({
@@ -32,7 +33,6 @@ module.exports = (req, res, next) => {
 
     await app.repositories.accountRequest.forge({
       referredById: req.user.id,
-      institutionId: req.user.institutionId,
       status: 'DRAFT'
     }).save(null, {
       method: 'insert',

@@ -412,3 +412,4 @@ describe('MicroblinkService', () => {
 
       expect(result).to.have.deep.property('documentIssuer', 'ZT')
       expect(result).to.have.deep.property('documentNumber', '')
+      expect(result).to.have.deep.property('documentExpirationDate', '2020-07-01')

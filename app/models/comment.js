@@ -5,7 +5,6 @@ const app = require('../core')
 
 class CommentModel extends BaseModel {
   constructor(data) {
-// Temp comment
     super(CommentModel.props(), CommentModel.relations(), data)
   }
 

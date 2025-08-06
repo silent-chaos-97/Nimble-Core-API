@@ -1,4 +1,3 @@
-/institutions/{id}/products:
   get:
     tags:
       - Institution
@@ -35,3 +34,4 @@
           default: name
     responses:
       '200':
+        description: OK

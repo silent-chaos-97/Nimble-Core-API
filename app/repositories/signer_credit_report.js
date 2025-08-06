@@ -8,4 +8,3 @@ const SignerCreditReport = app.db.Model.extend({
   signer: function () {
     return this.belongsTo('Signer', 'signer_id')
   },
-

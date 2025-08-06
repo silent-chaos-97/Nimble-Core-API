@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
+// Temp comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.email_verification')
 
@@ -40,5 +41,6 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     .replace(':domain', domain)
     .replace(':token', token)
 }
+
 function emailSubject() {
   return `Confirm your email address`

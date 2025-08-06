@@ -4,6 +4,7 @@ const _ = require('lodash')
 
 class SearchModel extends BaseModel {
   constructor(data) {
+    super(SearchModel.props(['all']), SearchModel.relations(), data)
   }
 
   static props(op) {
@@ -68,3 +69,4 @@ class SearchModel extends BaseModel {
         name: Joi.string().required(),
         description: Joi.string().optional(),
         query: Joi.object().required(),
+        filters: Joi.array().items(Joi.object()).required()

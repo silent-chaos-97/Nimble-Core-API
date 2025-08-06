@@ -7,12 +7,10 @@ const Roles = User.roles()
 const branches = app.services.branch
 const serializer = app.serializers.v1.branch
 
-// Temp comment
 const logger = app.logger.getLogger('app.controllers.v1.institition_branch.list')
 
 function list(req, res, next) {
   const me = req.user
-  if (!me) return next(new UnauthorizedError('UserRequired'))
 
   const hasRole = role => User.hasRole(me, role)
 

@@ -108,6 +108,7 @@ describe('GET /account-requests', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .expect(200)
+          .expect(res => {
             expect(res.body[0].productConfigurations).to.be.an('array')
             const [product] = res.body[0].productConfigurations
             const expectedOptions = [

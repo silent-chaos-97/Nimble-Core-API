@@ -35,3 +35,4 @@
             schema:
               $ref: '#/components/schemas/AccountRequest'
       '400':
+        $ref: '#/components/responses/BadRequest'

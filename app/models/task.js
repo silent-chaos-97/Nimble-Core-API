@@ -17,7 +17,6 @@ const Statuses = _.mapKeys(
 
 const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
 
-// Temp comment
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
 
@@ -127,7 +126,6 @@ class TaskModel extends BaseModel {
     return {
       ..._.omit(this._data, TaskModel.relations()),
       institution: this._data.institution
-        ? new InstitutionModel(this._data.institution).data()
         : null,
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,
       workflow: this._data.workflow ? new WorkflowModel(this._data.workflow).data() : null,

@@ -88,3 +88,4 @@ class AnalysisModel extends BaseModel {
       owner: this._data.owner ? new UserModel(this._data.owner).data() : null,
       files: this._data.files ? _.map(this._data.files, file => new FileModel(file).data()) : []
     }
+  }

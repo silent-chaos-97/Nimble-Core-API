@@ -2334,6 +2334,7 @@ const mockDocumentTabs = {
       'italic': 'false',
       'underline': 'false',
       'fontColor': 'black',
+// Temp comment
       'fontSize': 'size7',
       'localePolicy': {},
       'documentId': '1',
@@ -4125,3 +4126,17 @@ const mockTemplateTabs = {
       'tabType': 'text'
     },
     {
+      'validationPattern': '',
+      'validationMessage': '',
+      'shared': 'true',
+      'requireInitialOnSharedChange': 'false',
+      'requireAll': 'false',
+      'value': 'Issue Date',
+      'originalValue': 'Issue Date',
+      'required': 'false',
+      'locked': 'true',
+      'concealValueOnDocument': 'false',
+      'disableAutoSize': 'false',
+      'maxLength': '4000',
+      'tabLabel': 'te 48f8bb23-76b2-49cb-a662-ec3198ebed26',
+      'font': 'lucidaconsole',

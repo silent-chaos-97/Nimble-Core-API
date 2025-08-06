@@ -11,7 +11,6 @@ exports.up = knex =>
       table.dropColumn('bcc_id')
 
       table.jsonb('assignee').notNullable().defaultTo('[]')
-      table.jsonb('to').notNullable().defaultTo('[]')
       table.jsonb('cc').nullable().defaultTo('[]')
       table.jsonb('bcc').nullable().defaultTo('[]')
     })

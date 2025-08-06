@@ -3,6 +3,7 @@ describe('app.services.docusignTemplate.fetch', () => {
   describe('method', async () => {
     it('should exist', () => {
       expect(app.services.docusignTemplate).to.have.ownProperty('fetch')
+      expect(app.services.docusignTemplate.fetch).to.be.an('Function')
     })
 
     it('should complain if caled without params', async () => {
@@ -65,3 +66,4 @@ describe('app.services.docusignTemplate.fetch', () => {
 
       const target = await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311', version: 1 })
 
+      const expectation = {

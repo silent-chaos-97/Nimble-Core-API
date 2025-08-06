@@ -19,7 +19,6 @@ async function fetch(signerId, tx = app.db) {
     logger.info(`[fetch] aborting because signer [${signer.id}] is ${signer.status}`)
     return Promise.resolve()
   }
-
   // first we need to send data to Credit Bureau and get a consumerId for the report
   const result = await creditReportAPI.processApplicant(signer)
 

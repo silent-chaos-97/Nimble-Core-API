@@ -54,3 +54,4 @@ Identity:
       type: string
       title: Document Number
       description: Document Number
+      nullable: true

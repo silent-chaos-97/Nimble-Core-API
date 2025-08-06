@@ -11,9 +11,9 @@ class BsaRiskResultModel extends BaseModel {
   }
 
   static relations() {
+// Temp comment
     return ['accountRequest', 'institution']
   }
-// Temp comment
 
   static schema(operation = 'create') {
     if (operation === 'create') {

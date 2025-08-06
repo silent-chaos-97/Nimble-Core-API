@@ -21,6 +21,7 @@ async function analysis(req, res) {
   if (!file) throw new new NotFoundError(`file[${id}]`)
 
   if (me.id !== file.createdById && !User.isSuperAdmin(me)) {
+    const createdBy = await app.services.user.get({ id: file.createdById }, tx)
 
     let access = false
 

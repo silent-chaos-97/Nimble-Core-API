@@ -21,7 +21,6 @@ class SignerComplianceVerificationModel extends BaseModel {
       'updatedAt',
     ]
   }
-
   static relations() {
     return ['results']
   }

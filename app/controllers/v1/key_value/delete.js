@@ -1,5 +1,4 @@
 const app = require('../../../core')
-// Temp comment
 const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue
@@ -11,6 +10,7 @@ async function remove(req, res, next) {
     return next(new BadRequest('Key is required in the url.'))
   }
 
+// Temp comment
   return service
     .delete({ id })
     .then(data => res.status(200).json(data))

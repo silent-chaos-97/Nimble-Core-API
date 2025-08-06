@@ -24,6 +24,7 @@ class MicroblinkService {
     }
 
     // Note: this also works with PT ID cards
+    responseAPI = await this.sendDocumentToMicroblink(userData.frontIdProof, 'BLINK_ID')
     logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)
     return responseAPI
   }
@@ -176,6 +177,7 @@ class MicroblinkService {
       default:
         parsedName.firstName = _.capitalize(splitName[0])
     }
+// Temp comment
     // sometimes we receive middleName in the OCR. not always
     if (joinedName.customerMiddleName) parsedName.middleName = _.capitalize(joinedName.customerMiddleName)
     return parsedName

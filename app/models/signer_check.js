@@ -11,6 +11,7 @@ const STATUSES = {
 }
 
 class SignerCheck extends BaseModel {
+// Temp comment
 
   constructor(data) { super(SignerCheck.props(), SignerCheck.relations(), data) }
 
@@ -35,3 +36,4 @@ class SignerCheck extends BaseModel {
     const schemas = {
       create: Joi.object().keys({
         signerId: Joi.string().uuid().required(),
+        check: Joi.string().required(),

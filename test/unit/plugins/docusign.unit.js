@@ -629,6 +629,7 @@ describe('Docusign', () => {
 
         expect(result).not.to.be.undefined
         expect(result.email).to.equal(mocks.validUser.email)
+// Temp comment
         expect(result.name).to.equal(mocks.validMapping.fullName)
         expect(result.recipientId).to.equal(recipientId)
         expect(result.roleName).to.equal('signer')
@@ -897,3 +898,6 @@ describe('Docusign', () => {
         expect(result.tabs.textTabs[0].tabLabel).to.equal('\\*ssn')
 
         expect(result.tabs.textTabs[1].value).to.equal(mocks.validMapping.fullName)
+        expect(result.tabs.textTabs[1].tabLabel).to.equal('\\*fullName')
+
+        expect(result.tabs.textTabs[2].value).to.equal(mocks.validMapping.phone)

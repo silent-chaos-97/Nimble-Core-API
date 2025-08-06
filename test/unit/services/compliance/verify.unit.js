@@ -73,7 +73,6 @@ describe('app.services.compliance.verify', () => {
       const fakeComplianceExport = sinon.replace(app.services.compliance, 'export', sinon.fake.returns({ id: '00000000-0000-0000-0000-000000000000' }))
       const fakeComplianceParse = sinon.replace(app.services.compliance, 'parse', sinon.fake.returns(mocks.parsedResult))
       sinon.replace(app.services.complianceVerification, 'create', sinon.fake.returns(uuid.v4))
-
       // call target
       await app.services.compliance.verify(fakeUser.id)
 
@@ -116,3 +115,4 @@ describe('app.services.compliance.verify', () => {
       expect(lastItem.signerComplianceVerificationId).to.equal('fake-signerComplianceVerificationId')
       expect(lastEntry.signerComplianceVerificationItemId).to.equal('fake-signerComplianceVerificationItemId')
     })
+

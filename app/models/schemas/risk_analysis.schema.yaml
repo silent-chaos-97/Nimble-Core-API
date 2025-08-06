@@ -13,6 +13,7 @@ columns:
       title: name
 
   - data: scope
+    title: Account Type
     type: key-value-setting
     selectSettings:
       ref: scopes
@@ -23,7 +24,6 @@ columns:
     type: key-value-setting
     selectSettings:
       ref: financial_indicators
-      value: id
       title: name
 
   - data: performance_standard

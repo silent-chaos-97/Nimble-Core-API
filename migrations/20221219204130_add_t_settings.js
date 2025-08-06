@@ -19,6 +19,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
 
   // PK: an institution + setting, or institution + branch + setting constitute the primary key
   // semantically: institutions have settings and branches can override them
+  table
     .uuid('institution_id')
     .references('institutions.id')
     .onDelete('CASCADE')
@@ -34,3 +35,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
 
   table.jsonb('data').defaultTo('[]').notNullable()
 
+  table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

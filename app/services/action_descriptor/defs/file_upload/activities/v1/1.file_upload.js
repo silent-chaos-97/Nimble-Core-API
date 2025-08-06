@@ -12,7 +12,6 @@ async function activity(context) {
   log.info({ op: 'activity', phase: 'entryPoint', context })
 
   const assignee = await derefUsers('inputs.assignee', context)
-  const to = await derefUsers('inputs.to', context)
   const cc = (await derefUsers('inputs.cc', context)) || []
   const bcc = (await derefUsers('inputs.bcc', context)) || []
 

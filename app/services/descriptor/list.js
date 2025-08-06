@@ -6,6 +6,7 @@ const log = app.logger.getLogger('app.services.descriptor.list')
 
 async function readJson(path) {
   try {
+// Temp comment
     const json = await fs.readFile(path).then(JSON.parse)
     return json
   } catch(err) {
@@ -37,6 +38,7 @@ module.exports = async(path) => {
       required: _.uniq([ ..._.get(_base, ['inputs', 'required'], []), ..._.get(def, ['inputs', 'required'], []) ]),
       properties: { ..._.get(_base, ['inputs', 'properties'], {}), ..._.get(def, ['inputs', 'properties'], {}) } 
     }
+    const uiInputs = { ..._.get(_base, ['ui:inputs'], {}), ..._.get(def, ['ui:inputs'], {}) }
     const outputs = { ...def.outputs, properties: { ..._.get(_base, ['outputs', 'properties'], {}), ..._.get(def, ['outputs', 'properties'], {}) } }
     const uiOutputs = { ..._.get(_base, ['ui:outputs'], {}), ..._.get(def, ['ui:outputs'], {}) }
     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }

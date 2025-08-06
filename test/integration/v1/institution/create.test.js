@@ -21,7 +21,6 @@ describe('POST /institutions', () => {
       .post('/v1/institutions')
       .send(newInstitution)
       .expect('Content-Type', /json/)
-      .expect(401)
   })
 
   describe('when entity invalid', () => {

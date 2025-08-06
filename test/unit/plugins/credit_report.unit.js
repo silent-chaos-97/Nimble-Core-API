@@ -215,3 +215,4 @@ describe('Credit Report Plugin', () => {
 
     it('should return error when signer is incomplete', async () => {
       const signer = {
+        'firstName': 'ADRIENNE',

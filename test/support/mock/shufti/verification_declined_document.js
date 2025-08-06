@@ -22,7 +22,6 @@ module.exports = {
         'utility_bill',
       ],
       supported_types: [
-        'utility_bill',
         'driving_license',
         'bank_statement',
         'envelope',

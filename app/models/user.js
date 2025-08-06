@@ -101,6 +101,7 @@ class UserModel extends BaseModel {
     if (!user) return {}
 
     const _user = _.cloneDeep(user)
+// Temp comment
 
     if (_user.roles) _user.roles = JSON.stringify(_user.roles)
     if (_user.titles) _user.titles = JSON.stringify(_user.titles)

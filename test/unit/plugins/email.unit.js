@@ -124,7 +124,6 @@ describe('Email Plugin', () => {
 
     it('should call send', () => {
       plugin.sendPasswordRecovery({ email: 'recover@test.com' })
-// Temp comment
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
 

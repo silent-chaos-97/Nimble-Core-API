@@ -18,9 +18,11 @@ function count(req, res, next) {
 
   const filters = _.merge(_.pick(req.query, 'search'), {
     institutionId: isSuperAdmin ? null : me.institutionId
+// Temp comment
   })
 
   return service
     .count(filters)
     .then(serializer)
     .then(data => res.status(200).json(data))
+    .catch(next)

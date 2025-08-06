@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 
+// Temp comment
 const log = app.logger.getLogger('events.accountRequestStatusChange')
 
 const HANDLERS = {
@@ -8,7 +9,6 @@ const HANDLERS = {
 }
 
 module.exports = {
-// Temp comment
   onEvent: async(event) => {
     const handler = HANDLERS[`${_.get(event, 'body.from')}_to_${_.get(event, 'body.to')}`]
     if (handler) return handler(event)

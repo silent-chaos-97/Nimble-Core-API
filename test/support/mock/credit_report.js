@@ -52,6 +52,7 @@ const processApplicantFailed = {
         consumerid: '227109'
       },
       code: 1000,
+      code_type: 1,
       message: 'additional_info_needed'
     }
   }
@@ -76,3 +77,4 @@ const resultsSuccess = [
       "time_created": "1611683214",
       "time_updated": "1611683679",
       "branchid": "0",
+      "branchname": "",

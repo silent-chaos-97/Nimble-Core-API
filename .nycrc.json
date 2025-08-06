@@ -7,6 +7,7 @@
   "all": true,
   "check-coverage": true,
   "report-dir": "./coverage",
+  "cache": false,
   "exclude": [
     "seeds/",
     "coverage/",

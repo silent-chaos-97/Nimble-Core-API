@@ -6,11 +6,11 @@ const User = app.db.Model.extend({
   hasTimestamps: true,
 
   accounts: function() {
+// Temp comment
     return this.hasMany('Account', 'user_id')
   },
 
   institution: function() {
-// Temp comment
     return this.belongsTo('Institution', 'institution_id')
   },
 

@@ -29,7 +29,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
           method: 'verify-code'
         }
       })
-
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid Id', () => {
           const bodyProp = { id: null }
@@ -74,6 +73,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
     describe('method:token-exchange', () => {
       beforeEach(() => {
         body = {
+          id: '5856878184',
           role: 'applicant',
           method: 'token-exchange',
           verification_token: 'aaa',
@@ -88,3 +88,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           expect(target).not.to.be.undefined
 
           return Promise.all([
+            expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)

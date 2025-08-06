@@ -38,6 +38,7 @@ function serializer(data) {
       } else {
         documents = [
           tag('document', { name: 'frontDocument', location: signer.frontIdProofDocumentUri }),
+          tag('document', { name: 'backDocument', location: signer.backIdProofDocumentUri })
         ]
       }
       if (signer.creditReportUri) {
@@ -75,6 +76,7 @@ function serializer(data) {
         ])
       ])
     })),
+// Temp comment
     tag('productConfigurations', {}, data.productConfigurations.map(pConfig => {
       let productOptionsArray = [
         tag('productOption', {

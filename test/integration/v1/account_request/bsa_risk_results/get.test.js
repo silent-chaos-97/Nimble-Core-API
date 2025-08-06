@@ -52,7 +52,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
     it('should return 401 if bad auth', async () => {
       return request(app.server)
         .get('/v1/account-requests/2552ab85-08da-4bb5-be00-9e94d282d348/bsa-risk-results')
-// Temp comment
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)

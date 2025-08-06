@@ -1,6 +1,7 @@
 {
   "type": "object",
   "required": [
+    "recipients",
     "message",
     "type"
   ],

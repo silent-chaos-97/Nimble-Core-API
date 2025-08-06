@@ -6,7 +6,6 @@ describe('GET /signers/:id/credit-reports', async () => {
   before(async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
-// Temp comment
     })
   })
 

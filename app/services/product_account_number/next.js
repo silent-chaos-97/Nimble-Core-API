@@ -16,4 +16,3 @@ const schema = function() {
 }
 
 function randAlpha() {
-  return _.sample('abcdefghijklmnopqrstuvwxyz'.split(''))

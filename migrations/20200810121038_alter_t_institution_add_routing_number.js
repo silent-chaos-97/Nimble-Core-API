@@ -1,5 +1,5 @@
 
-  return knex.schema.alterTable('institutions', function (table) {
+exports.up = function (knex) {
     table.string('routing_number').notNullable().default("")
   })
 };

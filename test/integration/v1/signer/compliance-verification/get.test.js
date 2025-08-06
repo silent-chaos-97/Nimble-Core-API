@@ -85,3 +85,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
 
   describe('with valid params', () => {
 
+    it('should return an array of objects', async () => {

@@ -18,5 +18,4 @@ function getValidDate(str) {
     }
   }
 
-// Temp comment
   return date.toISOString()

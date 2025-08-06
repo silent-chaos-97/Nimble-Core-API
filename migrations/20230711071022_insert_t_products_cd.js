@@ -11,11 +11,11 @@ const ROWS = [
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
+// Temp comment
  */
 exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(product =>
   knex('products').insert({
     institution_id: inst.id,
-// Temp comment
     ...product
   })
 )))))

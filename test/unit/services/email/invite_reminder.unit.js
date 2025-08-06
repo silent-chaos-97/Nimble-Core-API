@@ -72,6 +72,7 @@ describe('app.services.email.inviteReminder', () => {
     it('should call send with correct data', async () => {
       const invitedSigner = blueprints.signers.signer_1
       const institution = blueprints.institutions.institution_1
+      const invitedBy = blueprints.signers.signer_1
       const product = blueprints.products.product_10
 
       const emailData = {
@@ -88,3 +89,4 @@ describe('app.services.email.inviteReminder', () => {
 
       emailData.url = config.get('frontend.inviteeOnboardingURI')
         .replace(':protocol', config.get('protocol'))
+        .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))

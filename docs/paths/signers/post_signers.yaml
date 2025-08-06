@@ -10,7 +10,6 @@
       description: Signer information
       required: true
       content:
-        application/json:
           schema:
             allOf:
               - $ref: '#/components/schemas/Signer'

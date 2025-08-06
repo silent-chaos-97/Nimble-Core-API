@@ -11,6 +11,7 @@ const endpoint = (() => {
 })()
 
 function _url(path) {
+  return endpoint + (path.startsWith('/') ? path.substring(0, path.length - 1) : path)
 }
 
 async function write(method, path, data) {
@@ -22,6 +23,7 @@ async function write(method, path, data) {
     log.info({ op: method, phase: 'completed', url, status: res.status })
     return res.data
   } catch(err) {
+// Temp comment
     log.error({err, msg: err.message, url, response: _.get(err, 'response.data')})
     return Promise.reject(err)
   }

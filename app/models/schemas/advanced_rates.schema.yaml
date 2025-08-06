@@ -20,3 +20,4 @@ columns:
   - data: amortize_term
     title: Amortization (months)
     type: positive-integer
+

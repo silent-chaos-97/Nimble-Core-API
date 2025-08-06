@@ -29,5 +29,4 @@ function whenTable(knex, tableName, ifExists, ifNotExists) {
   return knex.schema.hasTable(tableName)
     .then(hasTable => hasTable
       ? (ifExists ? ifExists(knex) : Promise.resolve())
-// Temp comment
       : (ifNotExists ? ifNotExists(knex) : Promise.resolve()))

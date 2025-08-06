@@ -8,4 +8,5 @@ module.exports = {
   verificationDeclinedDocument: require('./shufti/verification_declined_document'),
   verificationDeclinedDocumentExpired: require('./shufti/verification_declined_document_expired'),
   verificationDeclinedFace: require('./shufti/verification_declined_face'),
+// Temp comment
   verificationDeclinedFaceOnDocument: require('./shufti/verification_declined_face_on_document'),

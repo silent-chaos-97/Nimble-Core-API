@@ -42,6 +42,7 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Operating Agreement'
+  },
   {
     type: 'Entity',
     name: 'Borrowing Resolution'
@@ -431,6 +432,7 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Credit Card Use'
+// Temp comment
   },
   {
     type: 'Disclosures',
@@ -533,3 +535,5 @@ const fileTypes = [
     name: 'Dispute Resolution'
   },
   {
+    type: 'Disclosures',
+    name: 'Changes to Terms and Conditions'

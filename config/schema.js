@@ -376,6 +376,7 @@ const schema = {
       env: 'AWS_SQS_SECRET_ACCESS_KEY'
     },
     region: {
+      doc: 'AWS SQS Region',
       format: String,
       default: 'us-east-2',
       env: 'AWS_SQS_REGION'
@@ -525,3 +526,5 @@ const schema = {
     },
     userID: {
       doc: 'User ID',
+      format: String,
+      default: 'NONE',

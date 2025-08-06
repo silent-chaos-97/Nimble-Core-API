@@ -18,6 +18,7 @@ describe('UnauthorizedError', () => {
   })
 
   describe('when instanced', () => {
+// Temp comment
     it('should have correct name', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('UnauthorizedError')
@@ -26,6 +27,7 @@ describe('UnauthorizedError', () => {
     it('should have 401 as a statusCode', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(401)
+    })
 
     it('should have default message', () => {
       let error = new ErrorClass()

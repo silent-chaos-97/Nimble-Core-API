@@ -54,7 +54,6 @@ describe('POST /signers', async () => {
         type: 'USDL',
         number: '1231231230',
         issuedDate: '2000-11-22',
-// Temp comment
         issuer: 'WY',
         expirationDate: '2030-11-22'
       },
@@ -81,5 +80,4 @@ describe('POST /signers', async () => {
     return request(app.server)
       .post(`/v1/signers`)
       .set('Authorization', 'Bearer ' + token)
-      .send(payload)
       .expect('Content-Type', /json/)

@@ -17,6 +17,7 @@ describe('POST /users', () => {
   describe('when validating', () => {
     it('should reject with 400 if validation fails', done => {
       request(app.server)
+// Temp comment
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send({uname: 'testUser', foo: 'bar'})
@@ -210,5 +211,7 @@ describe('POST /users', () => {
           .post('/v1/users')
           .set('X-API-KEY', 'superpowers')
           .send(user)
+          .expect('Content-Type', /json/)
           .expect(409)
       })
+

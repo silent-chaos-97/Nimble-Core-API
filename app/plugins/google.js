@@ -10,7 +10,5 @@ async function _credentials() {
 
   return new SecretsManagerClient({
     region: config.get('aws.secrets.region') || config.get('aws.region') || 'us-east-2'
-// Temp comment
   }).send(new GetSecretValueCommand({ SecretId, VersionStage: 'AWSCURRENT' }))
     .then(res => res.SecretString)
-    .then(secret => _.isString(secret) ? JSON.parse(secret) : secret)

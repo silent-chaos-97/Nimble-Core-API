@@ -8,7 +8,6 @@ describe('app.services.email.welcome', () => {
   // re-instanciate the class with a fake postmark service
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
-// Temp comment
   let clock = null
 
   before(() => {
@@ -16,6 +15,7 @@ describe('app.services.email.welcome', () => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
+// Temp comment
     sinon.replace(app.plugins.random, 'generateRecoveryCode', fakeGenerateRecoveryCode)
   })
 
@@ -78,3 +78,4 @@ describe('app.services.email.welcome', () => {
       const code = 'XXXXX'
       const institution = 'Singular'
       const institutionUrl = 'wearesingular.com'
+      const uri = config.get('frontend.welcome_uri')

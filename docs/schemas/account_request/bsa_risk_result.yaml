@@ -5,6 +5,7 @@ BsaRiskResult:
     - position
     - questionId
   properties:
+    questionId:
       type: string
       title: Question Slug
       description: The question identifier

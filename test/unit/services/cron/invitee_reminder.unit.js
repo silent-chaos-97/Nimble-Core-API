@@ -7,7 +7,6 @@ describe('app.services.cron.inviteeReminder', () => {
   let inviteReminderSpy, prospectPendingSignersSpy = null
 
   before(() => {
-    inviteReminderSpy = sinon.spy(app.services.email, 'inviteReminder')
     prospectPendingSignersSpy = sinon.spy(app.services.email, 'prospectPendingSigners')
   })
 
@@ -69,6 +68,7 @@ describe('app.services.cron.inviteeReminder', () => {
         expect(prospectPendingSignersSpy).to.have.been.called
       })
 
+      it('should NOT SEND reminders when running 25 hours after', async () => {
         const now = moment(baseDate).add(25, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.inviteeReminder()

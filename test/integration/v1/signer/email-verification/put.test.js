@@ -43,7 +43,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     it('should return 400 with invalid uuid as id', async () => {
       const signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454721"
       const verificationId = 'invalid-uuid-here'
-
       return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
         .expect('Content-Type', /json/)

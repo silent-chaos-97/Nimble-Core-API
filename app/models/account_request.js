@@ -9,7 +9,6 @@ class AccountRequest extends BaseModel {
     super(AccountRequest.props(), AccountRequest.relations(), data)
   }
 
-  static props() {
     return [
       'id',
       'status',
@@ -28,6 +27,7 @@ class AccountRequest extends BaseModel {
       'statusEmailBody',
       'contractDocumentId',
       'contractDocumentEnvelopeId',
+      'contractDocumentCreatedAt',
       'contractDocumentEnvelopeStatus',
       'contractDocumentEnvelopeStatusUpdatedAt'
     ]

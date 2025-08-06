@@ -157,3 +157,4 @@ describe('app.services.creditReport.fetch', () => {
       scope1.done()
       scope2.done()
 
+      // expect pdf upload

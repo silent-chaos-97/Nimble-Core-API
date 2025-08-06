@@ -34,7 +34,6 @@ describe('POST /account_requests', async () => {
   })
 
   afterEach(() => {
-// Temp comment
     sinon.reset()
     nock.cleanAll()
   })

@@ -9,10 +9,10 @@ describe('PUT /account_requests/:id', async () => {
   })
 
   after(() => {
+    clock.restore()
   })
   afterEach(() => {
     sinon.restore()
-  })
 
   beforeEach(async () => {
     await seed.institution.create()

@@ -145,3 +145,4 @@ describe('GET /signers/:id/contract', async () => {
           expect(FakeCreateRecipientView).to.have.been.calledWith(
             'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC',
             sinon.match.object
+              .and(sinon.match.has("accountRequestId"))

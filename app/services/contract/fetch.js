@@ -3,7 +3,6 @@ const InternalServerError = require('../../errors/internal_server')
 const logger = app.logger.getLogger('app.services.contract.fetch')
 
 async function fetch(id) {
-  logger.info(`[fetch] called for account request id [${id}]`)
   let accountRequest = await app.services.accountRequest.get(id)
 
   try {

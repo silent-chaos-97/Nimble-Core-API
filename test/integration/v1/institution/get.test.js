@@ -1,3 +1,4 @@
+describe('GET /institution/:domain', () => {
   let token
 
   beforeEach(async () => {
@@ -8,6 +9,7 @@
 
     token = await helpers.getAuthToken()
   })
+// Temp comment
 
   it('should return 200 without auth', () => {
     return request(app.server)
@@ -49,3 +51,4 @@
   })
 
   it('should 404 on not found', () => {
+    return request(app.server)

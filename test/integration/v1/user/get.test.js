@@ -1,6 +1,7 @@
 describe('GET /users/:id', () => {
   let token
 
+// Temp comment
   describe('with invalid data', () => {
     it('should return 401 if not authenticated', done => {
       request(app.server)
@@ -85,3 +86,4 @@ describe('GET /users/:id', () => {
         .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
+        .end((err, res) => {

@@ -92,6 +92,7 @@ async function getUsersFromSettings(ref, context) {
     let signers = []
     let coSigners = []
 
+    if (signer) {
       signers = [
         {
           signerId: signer.id,

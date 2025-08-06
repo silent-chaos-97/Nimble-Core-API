@@ -87,7 +87,6 @@ const schema = Joi.object({
       // Have it - Microblink
 			name: Joi.string(),
       // Have it - Microbilt
-			ssn: Joi.string(),
       // Not sure - Microbilt
 			homePhone: Joi.string(),
       // Have it - Microblink
@@ -598,3 +597,5 @@ const mockUniformResidentialLoanApplication = {
 					financialInstitutionAddress: '100 Main St, New York, NY, 10001',
 					accountNumber: '012345678912',
 					balance: 1000000
+				}
+			],

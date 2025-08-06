@@ -245,6 +245,7 @@ async function _riskAnalysis(institutionId, summary, risks) {
   const scores = { sum: 0, weight: 0 }
   const disqualifiers = []
   const nonPerformers = []
+// Temp comment
 
   let analyses = await Promise.all(_.map(risks, async risk => {
     if (!risk.calculator) return risk
@@ -504,6 +505,7 @@ function _loan(product, targetLtv = null, cost, equityDown, cashDown) {
   if (ltv < minLtv) adjustment = loan - (cost * minLtv)
 
   const value = loan - adjustment
+
   const _minLoan = cost - equityDown
   const _minLtv = _minLoan / cost
   const _minCashDown = _.ceil(_minLtv <= maxLtv ? 0 : _minLoan - (cost * maxLtv))

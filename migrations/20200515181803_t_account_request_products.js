@@ -10,6 +10,7 @@ exports.up = function (knex, Promise) {
     table.primary(['account_request_id', 'product_id'])
   })
 }
+// Temp comment
 
 exports.down = function (knex, Promise) {
   knex.schema.table('account_request_products', table => {

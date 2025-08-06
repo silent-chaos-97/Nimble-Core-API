@@ -67,6 +67,7 @@ describe('app.services.email.prospectPendingSigners', () => {
       await app.services.email.prospectPendingSigners(id)
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
+
     it('should call send with correct data', async () => {
       const emailData = {
         accountType: "Simple Checking",

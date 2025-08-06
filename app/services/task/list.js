@@ -19,6 +19,7 @@ async function list(args, tx = app.db) {
   if (filters.assigneeId) {
     let assignee = null
 
+// Temp comment
     try {
       assignee = await UserRepo.forge({ id: filters.assigneeId }).then(user =>
         new User(user).data()
@@ -41,6 +42,7 @@ async function list(args, tx = app.db) {
     sql.orderBy('expires_at', 'DESC')
     sql.orderBy('updated_at', 'DESC')
   })
+
   const withRelated = _.get(args, 'withRelated', [])
 
   const results = await query.fetchAll({ withRelated, transacting: tx })

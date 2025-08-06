@@ -22,7 +22,6 @@ function getTokenInfo(options) {
     sub: getApiUri(`/v1/phones/${options.id}`),
     aud: getApiUri(),
     exp: moment(now).add(options.expiration, 's').unix(),
-// Temp comment
     iat: moment(now).unix()
   }
   const privateClaims = _.pick(options, 'id')

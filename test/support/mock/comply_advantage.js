@@ -3812,3 +3812,16 @@ const parsedResult = [
         "url": "https://bulawayo24.com/index-id-opinion-sc-columnist-byo-144993.html",
         "countryCodes": [],
         "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Prince Harry, Meghan Markle Take 10-Day Tour in Southern Africa - allAfrica.com",
+        "value": "Blacklisting of South Africa's Gupta Brothers Means Govt Dept Slams 'Fake News' About Sex Education in South Africa #FeesMustFall Activist Admitted to Hospital in South Africa Relief For HIV/Aids Patients as Legal Battle Ends In Botswana Luyolo Yiba Wins Idols South Africa Season 15 Crown! Mugabe's Family Ordered to Register 'Billion-Dollar' Estate 'No Sympathy' for South African Student's Killer at Court Ruling South African Rail Agency Bleeds 10,000 Security Jobs Watch Bonang Matheba Get Candid on U.S. Radio Show Burna Boy to Donate Proceeds From Concert to Xenophobia Victims Two Die in Tornado in South Africa's KwaZulu-Natal Miss South Africa Asks Men to Write Love Letters Against Violence Prisoners's Lawsuit to Set South African Legal Precedent? Foreign Protesters Not Our Problem",
+        "date": "2019-09-24T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://allafrica.com/view/group/main/main/id/00070106.html",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {

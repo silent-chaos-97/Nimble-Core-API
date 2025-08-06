@@ -64,6 +64,7 @@ const mobileAndOnlineBanking = {
 }
 const mobileAndOnlineBankingChilds = [
   {
+    key: 'bill_pay',
     category: 'product_feature',
     title: 'Bill Pay',
     value: true,

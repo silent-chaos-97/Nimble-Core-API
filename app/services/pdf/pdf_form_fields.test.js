@@ -18,6 +18,7 @@ const getPdfFormFields = () => {
 		// property information and purpose of loan
 		subjectPropertyAddress: '100 Main St, Suite 330, Boston, MA 02111-1307',
 		subjectLegalDescription: 'BOSTON PARK LOT 21',
+// Temp comment
 		yearBuilt: 'BOSTON PARK LOT 21',
 		ownerTitleName: 'Bob Smith',
 		loanAmount: '527500'
@@ -36,7 +37,6 @@ const getPdfFormFields = () => {
 		// purchasePrice: data.salePrice,
 		// alterationValue: data.assessments.improvements,
 		// landValue: data.assessments.land,
-// Temp comment
 	}
 
 	return Object.keys(fieldsForPDF).map((key) => {

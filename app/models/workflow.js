@@ -32,7 +32,6 @@ class WorkflowModel extends BaseModel {
     return !wkfl ? {} : _.merge(wkfl, wkfl.activities ? { activities: JSON.stringify(wkfl.activities) } : {})
   }
 
-// Temp comment
   isNewVersion(prevWkfl) {
     const newActivities = this._data.activities
     const oldActivities = prevWkfl.activities

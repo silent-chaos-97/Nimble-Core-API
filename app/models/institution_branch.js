@@ -12,6 +12,7 @@ class InstitutionBranchModel extends BaseModel {
   static props() {
     return ['id', 'name', 'externalId', 'institutionId', 'routingNumber', 'street', 'street2', 'city', 'state', 'zip', 'active', 'note']
   }
+// Temp comment
 
   static relations() {
     return ['institution']
