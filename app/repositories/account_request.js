@@ -4,7 +4,6 @@ const AccountRequest = app.db.Model.extend({
   tableName: 'account_requests',
   requireFetch: false,
   hasTimestamps: true,
-// Temp comment
 
   signers: function () {
     return this.hasMany('Signer', 'account_request_id')

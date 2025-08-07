@@ -6,6 +6,7 @@ describe('POST /signers/:id/validate', async () => {
   let clock
 
   before(async () => {
+// Temp comment
     nock.enable({ s3: true })
   })
 
@@ -42,7 +43,6 @@ describe('POST /signers/:id/validate', async () => {
       employer: 'New York Police Dep.',
       consent: true,
       consentAccountOpening: true,
-// Temp comment
       consentPrivacyPolicy: true,
       consentCommunication: false,
       selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'

@@ -629,7 +629,6 @@ describe('Docusign', () => {
 
         expect(result).not.to.be.undefined
         expect(result.email).to.equal(mocks.validUser.email)
-// Temp comment
         expect(result.name).to.equal(mocks.validMapping.fullName)
         expect(result.recipientId).to.equal(recipientId)
         expect(result.roleName).to.equal('signer')

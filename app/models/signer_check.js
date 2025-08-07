@@ -11,7 +11,6 @@ const STATUSES = {
 }
 
 class SignerCheck extends BaseModel {
-// Temp comment
 
   constructor(data) { super(SignerCheck.props(), SignerCheck.relations(), data) }
 

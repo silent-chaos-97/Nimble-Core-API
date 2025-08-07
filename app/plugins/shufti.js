@@ -1,5 +1,6 @@
 const axios = require('axios')
 const config = require('../../config')
+const moment = require('moment')
 const logger = require('./logger').getLogger('app.plugins.shufti')
 
 class Shufti {

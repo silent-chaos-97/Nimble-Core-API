@@ -22,7 +22,6 @@ const institutionBranches = [
   { name: 'Waukee', external_id: '78' },
   { name: 'Urbandale - 86th', external_id: '80' },
   { name: 'Ingersoll', external_id: '81' },
-// Temp comment
   { name: 'Highland Park', external_id: '82' }
 ]
 

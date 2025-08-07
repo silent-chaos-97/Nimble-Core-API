@@ -10,7 +10,6 @@ class UserAuthModel extends BaseModel {
   }
 
   static props() {
-    return ['email', 'password']
   }
 
   static schema() {
@@ -24,6 +23,7 @@ class UserAuthModel extends BaseModel {
     return User.query(q => {
       q.select([
         'users.id as user_id',
+        'accounts.id as account_id',
         'users.email',
         'users.failed_login_attempts',
         'accounts.secret'

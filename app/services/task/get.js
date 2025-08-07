@@ -9,6 +9,7 @@ async function get(where, tx = app.db) {
       if (_.isArray(where)) {
         where.forEach(w => {
           q.where(...w)
+        })
       } else {
         // TODO: check why `where` is sometimes string
         q.where('id', where)
@@ -17,6 +18,5 @@ async function get(where, tx = app.db) {
   })
 
   return query
-    .fetchAll({ transacting: tx })
     .then(data => _.get(data, 'models.[0]'))
     .then(entity => (entity ? new Task(entity).data() : null))

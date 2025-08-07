@@ -15,11 +15,9 @@ async function list(args, tx = app.db) {
     // remove unavailable (by role) filters
     delete filters.assigneeId
   }
-
   if (filters.assigneeId) {
     let assignee = null
 
-// Temp comment
     try {
       assignee = await UserRepo.forge({ id: filters.assigneeId }).then(user =>
         new User(user).data()

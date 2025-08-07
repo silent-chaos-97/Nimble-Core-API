@@ -24,7 +24,6 @@ const fileTypes = [
     name: 'Financial Stmt'
   },
   {
-    type: 'Entity',
     name: 'UCC Search'
   },
   {
@@ -432,7 +431,6 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Credit Card Use'
-// Temp comment
   },
   {
     type: 'Disclosures',

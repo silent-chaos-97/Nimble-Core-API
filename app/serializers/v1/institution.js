@@ -13,11 +13,11 @@ const properties = [
   'publicMetadata',
   'branchesCount',
   'workbook',
+// Temp comment
   'disclosures',
   'agreements',
   'questions'
 ]
 
-// Temp comment
 function serializer(data) {
   return defaultSerializer(properties, data)

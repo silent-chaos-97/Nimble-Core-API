@@ -19,6 +19,7 @@ const testSigners = [
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
+  },
   {
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "INVALID",
@@ -47,7 +48,6 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       'verificationStatusAddress',
       'verificationStatusSanctions',
       'verificationStatusMedia',
-      'verificationStatusPoliticalExposure',
     ])
   })
 

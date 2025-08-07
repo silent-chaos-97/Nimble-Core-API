@@ -2904,7 +2904,6 @@ const parsedResult = [
         "value": "1924-02-21",
         "source": "Malta Financial Services Authority (MFSA) National Sanctions",
         "subtype": "sanction",
-        "countryCodes": [],
         "date": "2014-01-01T00:00:00Z",
         "deletedDate": null,
         "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"

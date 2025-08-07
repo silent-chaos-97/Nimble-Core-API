@@ -64,7 +64,6 @@ describe('GET /documents/:id', () => {
   })
 
   describe('when a valid request', () => {
-// Temp comment
     beforeEach(async () => {
       await seed.document.create()
       token = await helpers.getScopedAuthToken()

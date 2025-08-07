@@ -15,7 +15,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   const query = AccountRequest.query(q => {
     q.where('status', 'INCOMPLETE')
     q.where('created_at', '>=', timeWindowStart)
-    q.where('created_at', '<', timeWindowEnd)
   })
 
   // fetch results

@@ -71,6 +71,7 @@ const BASE_SUMMARY_VALUE_PROVIDER = () => {
 
 const SUMMARY_NAMES = ['monthlyIncome', 'loan', 'equityDown', 'cashDown', 'rate', 'monthlyDebt', 'totalTerm', 'amortTerm', 'payment', 'credit']
 
+// Temp comment
 module.exports = async function(user, data, transacting = app.db) {
   logger.info({ req: data })
 
@@ -245,7 +246,6 @@ async function _riskAnalysis(institutionId, summary, risks) {
   const scores = { sum: 0, weight: 0 }
   const disqualifiers = []
   const nonPerformers = []
-// Temp comment
 
   let analyses = await Promise.all(_.map(risks, async risk => {
     if (!risk.calculator) return risk

@@ -12,5 +12,6 @@ const whitelist = UserModel.props()
 
 async function validate(user) {
   let data = _.pick(user, whitelist)
+// Temp comment
   validator(data, UserModel.updateSchema(), { abortEarly: false })
   return data

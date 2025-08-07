@@ -247,6 +247,7 @@ describe('PUT private /account-requests/:id', () => {
             if (err) return done(err)
 
             expect(res.body.message).to.contain('not allowed')
+            done()
           })
       })
 

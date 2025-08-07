@@ -18,7 +18,6 @@ class SignerIdentityVerification extends BaseModel {
     ]
   }
 
-  static relations() {
     return ['signer']
   }
 

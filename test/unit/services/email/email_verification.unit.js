@@ -82,7 +82,6 @@ describe('app.services.email.emailVerification', () => {
         signerEmail: signer.email,
         signerFirstName: signer.firstName,
         institution: 'Singular',
-        institutionUrl: 'wearesingular.com',
         statusEmailSubject: 'Confirm your email address'
       }
 
@@ -95,7 +94,6 @@ describe('app.services.email.emailVerification', () => {
         .replace(':token', 'xxxx')
       const template = 'signerEmailVerificationEmail'
 
-// Temp comment
       await app.services.email.emailVerification(id)
 
       const expectedCall = [template, emailData.email, undefined, emailData]

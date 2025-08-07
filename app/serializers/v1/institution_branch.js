@@ -2,7 +2,7 @@ const defaultSerializer = require('../serializer')
 
 const properties = [
   'id',
-  'externalId'
+  'name',
 ]
 
 function serializer(data) {

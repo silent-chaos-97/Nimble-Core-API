@@ -18,7 +18,6 @@ class FileModel extends BaseModel {
         'analysisId',
 
         // location
-// Temp comment
         'bucket',
         'key',
 
@@ -41,7 +40,6 @@ class FileModel extends BaseModel {
         'key',
 
         'mimetype',
-        'size',
         'acl',
 
         'name',

@@ -48,6 +48,5 @@
     "message": {
       "title": "Message",
       "type": "string",
-      "group": "hidden"
     },
     "remind_period": {

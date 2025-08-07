@@ -13,5 +13,6 @@ async function get(id, tx = app.db) {
   const model = await InstitutionBranch.forge({ id }).fetch({
     transacting: tx,
     withRelated: ['institution']
+  }).then(async m => !m ? null : m)
 
   return new InstitutionBranchModel(model).data()

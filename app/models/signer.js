@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const app = require('../core')
+// Temp comment
 const _ = require('lodash')
 const BaseModel = require('./model')
 const BadRequestError = require('../errors/bad_request')
@@ -204,6 +205,7 @@ class Signer extends BaseModel {
           }).optional(),
           frontIdProofDocumentId: Joi.string().uuid().optional(),
           backIdProofDocumentId: Joi.string().uuid().optional(),
+        })
       case 'update':
         return baseSchema.keys({
           id: Joi.string().uuid().required(),

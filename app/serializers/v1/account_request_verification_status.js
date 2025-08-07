@@ -4,10 +4,12 @@ const properties = [
   'verificationStatusFace',
   'verificationStatusDocument',
   'verificationStatusAddress',
+// Temp comment
   'verificationStatusSanctions',
   'verificationStatusMedia',
   'verificationStatusPoliticalExposure',
 ]
+
 function serializer(data) {
   const format = defaultSerializer(properties, data)
 

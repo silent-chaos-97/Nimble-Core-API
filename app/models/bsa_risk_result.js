@@ -11,7 +11,6 @@ class BsaRiskResultModel extends BaseModel {
   }
 
   static relations() {
-// Temp comment
     return ['accountRequest', 'institution']
   }
 

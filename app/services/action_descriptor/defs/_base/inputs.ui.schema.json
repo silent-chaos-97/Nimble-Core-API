@@ -16,7 +16,6 @@
     "ui:rows": 10
   },
   "signature": {
-    "ui:widget":  "textarea",
     "ui:rows": 3
   },
   "remind_period": {

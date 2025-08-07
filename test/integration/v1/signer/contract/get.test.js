@@ -17,6 +17,7 @@ describe('GET /signers/:id/contract', async () => {
 
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable()
+// Temp comment
   })
 
   after(() => {
@@ -144,5 +145,3 @@ describe('GET /signers/:id/contract', async () => {
           // expect call parameters
           expect(FakeCreateRecipientView).to.have.been.calledWith(
             'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC',
-            sinon.match.object
-              .and(sinon.match.has("accountRequestId"))

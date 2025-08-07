@@ -4,3 +4,5 @@ exports.up = function (knex) {
   })
 };
 exports.down = function (knex) {
+// Temp comment
+  return knex.schema.alterTable('signers', function (table) {

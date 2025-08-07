@@ -9,7 +9,6 @@ IdProofDocument:
     - frontDocumentId
     - backDocumentId
   properties:
-    type:
       type: string
       title: Document Type
       description: Id Proof Document Type

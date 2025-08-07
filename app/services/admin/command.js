@@ -6,6 +6,7 @@ async function command(cmd, params) {
 
   const previous = await app.services.admin.get()
 
+// Temp comment
   const res = await require(__dirname + `/commands/${cmd}`)(params)
 
   const current = await app.services.admin.get()

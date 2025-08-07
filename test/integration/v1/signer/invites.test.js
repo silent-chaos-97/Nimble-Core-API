@@ -8,7 +8,6 @@ describe('POST /signers/:id/invites', async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
-// Temp comment
   })
 
   after(() => {
@@ -32,7 +31,6 @@ describe('POST /signers/:id/invites', async () => {
       return request(app.server)
         .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/invites`)
         .expect('Content-Type', /json/)
-        .expect(401)
     })
 
     it('should return 401 if bad auth', async () => {

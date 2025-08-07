@@ -123,7 +123,6 @@
       "state": null,
       "zipCode": null,
       "employer": null,
-      "idProofDocument": {
         "backIdProof": {
           "default": null
         },

@@ -40,6 +40,7 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
 
 1. Launch LocalStack and Posgres
    `yarn docker-start`
+
 1. Seed LocalStack (dependent on aws-cli) - only required for out-of-band and worker components
    `yarn localstack`
 
@@ -115,7 +116,6 @@ yarn dev-worker
 
 ```bash
 # runing development mode
-yarn dev
 ```
 
 ```bash

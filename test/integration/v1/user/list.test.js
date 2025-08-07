@@ -27,7 +27,6 @@ describe('GET /users', () => {
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(401)
-        .end(done)
     })
 
     it('should return 200', done => {

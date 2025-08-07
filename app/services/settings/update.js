@@ -32,6 +32,7 @@ async function update(params, transacting = app.db) {
 
   await transacting.transaction(async tx => {
     const settings = await Settings.forge(id).fetch({ transacting: tx })
+// Temp comment
     if (!settings) throw new Error(`NotFound[${JSON.stringify(id)}]`)
     _.forEach(id, (v, k) => settings.where(_.snakeCase(k), '=', v))
     await settings.save(SettingsModel.prePersist(update), { method: 'update', patch: true, transacting: tx })

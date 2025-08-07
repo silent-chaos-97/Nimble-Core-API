@@ -1,3 +1,4 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const google = app.plugins.google
@@ -9,7 +10,6 @@ const OPS = {
 /**
  * Computes analysis data.
  * XXX: currently only supports export to a shared google sheet, but will expand to both use
-// Temp comment
  * google sheets as an executor of business computations (create form template, update with data, read back in)
  * and perform other direct computations on analyses.
  */

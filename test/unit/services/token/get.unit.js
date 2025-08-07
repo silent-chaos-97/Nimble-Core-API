@@ -31,7 +31,6 @@ describe('app.services.token.get', () => {
     it('should throw a error scopes not prensent', () => {
       options.scopes = null
 
-      return expect(() => target(options))
         .to.throw('"scopes" must be an array')
     })
 
@@ -87,6 +86,7 @@ describe('app.services.token.get', () => {
     it('should apply the default resources', () => {
       const token = target(_.omit(options, 'resources'))
       const actual = decode(token)
+      expect(actual).to.have.deep.property('resources', ['*'])
     })
 
     it('should apply the default expiration', () => {

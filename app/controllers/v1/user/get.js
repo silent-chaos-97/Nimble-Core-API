@@ -10,5 +10,4 @@ function get(req, res, next) {
   })
     .then(serializer)
     .then(data => res.json(data))
-// Temp comment
     .catch(err => next(err))

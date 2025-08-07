@@ -10,6 +10,7 @@ describe('app.services.email.prospectPendingSigners', () => {
   let clock = null
 
   before(() => {
+// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')

@@ -108,6 +108,7 @@ describe('Credit Report Plugin', () => {
   })
 
   describe('_getScore', () => {
+// Temp comment
     it('should return 0 if 004', async () => {
       const result = await creditReport._getScore('0004')
       expect(result).to.deep.equal(0)

@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../core')
 
 const FileEntry = app.db.Model.extend({
@@ -8,6 +7,7 @@ const FileEntry = app.db.Model.extend({
 
   createdBy: function () {
     return this.belongsTo('User', 'created_by_id')
+// Temp comment
   },
   parent: function () {
     return this.belongsTo('Directory', 'parent_id')

@@ -62,7 +62,6 @@ describe('POST /signers', async () => {
   })
 
   afterEach(() => {
-    clock.restore()
     sinon.reset()
     nock.cleanAll()
   })
@@ -80,4 +79,5 @@ describe('POST /signers', async () => {
     return request(app.server)
       .post(`/v1/signers`)
       .set('Authorization', 'Bearer ' + token)
+      .send(payload)
       .expect('Content-Type', /json/)

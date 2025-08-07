@@ -38,7 +38,6 @@ function signerPersonInfo(signer) {
     ContactInfo
   }
 
-// Temp comment
   if (signer.dateOfBirth) PersonInfo.BirthDt = moment(signer.dateOfBirth).format('YYYY-MM-DD')
 
   if (signer.ssn) PersonInfo.TINInfo = {

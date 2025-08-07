@@ -19,6 +19,7 @@ class BrevoFacade {
       Payload: ''
     }
   ) {
+// Temp comment
     return new Promise((accept, reject) => {
       this.lambda.invoke(params, function (err, response) {
         if (err) {

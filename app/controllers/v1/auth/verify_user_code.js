@@ -3,7 +3,6 @@ const app = require("../../../core")
 const service = app.services.auth
 
 // async function verify_user_code(req, res) {
-// Temp comment
 //     try {
 //         const {id, verificationCode}=req.body
 //         await service.verifyUserCode(id, verificationCode)
@@ -15,7 +14,6 @@ const service = app.services.auth
 //
 //                 } else {
 //                   res.status(400).json({message:"Invalid Code!", status:false})
-//                 }
 //             }).catch((err) => {
 //             // eslint-disable-next-line no-console
 //               console.log("Error:", err)

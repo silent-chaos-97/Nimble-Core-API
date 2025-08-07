@@ -7,10 +7,8 @@ exports.up = function (knex, Promise) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
     table.index('account_request_id')
-    table.primary(['account_request_id', 'product_id'])
   })
 }
-// Temp comment
 
 exports.down = function (knex, Promise) {
   knex.schema.table('account_request_products', table => {

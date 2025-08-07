@@ -1,6 +1,7 @@
 {
   "id": "1052ab85-08da-4bb5-be00-9e94d282d320",
   "email": "adminuser@nimblefi.com",
+  "firstName": "Admin",
   "lastName": "User",
   "createdAt": "2018-02-16T12:32:03.341Z",
   "accounts": [

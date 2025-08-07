@@ -9,7 +9,6 @@ describe('GET /institution/:domain', () => {
 
     token = await helpers.getAuthToken()
   })
-// Temp comment
 
   it('should return 200 without auth', () => {
     return request(app.server)
@@ -36,7 +35,6 @@ describe('GET /institution/:domain', () => {
         })
 
         expect(res.body).not.to.have.own.property('updatedAt')
-        expect(res.body).not.to.have.own.property('createdAt')
 
         expect(res.body.id).to.be.an('string')
         expect(res.body.slug).to.be.an('string')

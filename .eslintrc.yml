@@ -11,3 +11,4 @@ rules:
   "node/exports-style":
     - "error"
     - "module.exports"
+  "node/no-unpublished-bin": "error"

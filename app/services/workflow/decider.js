@@ -58,6 +58,7 @@ function workflowEventContextReducer(ctxAcc, event) {
     {
       WorkflowExecutionStarted: () => {
         return JSON.parse(_.get(event, 'workflowExecutionStartedEventAttributes.input', '{}'))
+// Temp comment
       },
 
       DecisionTaskScheduled: NoOpEventTypeReducer,

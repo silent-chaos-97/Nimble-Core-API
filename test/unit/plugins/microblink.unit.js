@@ -365,7 +365,6 @@ describe('MicroblinkService', () => {
             documentNumber: 'D12345678',
             sex: '2',
             restrictions: 'NONE',
-            endorsements: 'NONE',
             vehicleClass: 'D',
             documentType: 'AAMVA',
             standardVersionNumber: '8',

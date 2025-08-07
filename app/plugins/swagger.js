@@ -35,6 +35,5 @@ function buildSwaggerDocument() {
 
   // load individual yaml files and merge them with the spec under the same path
   loadAndMergeFromPath(spec, 'paths')
-  loadAndMergeFromPath(spec, 'schemas', 'components')
 
   return spec

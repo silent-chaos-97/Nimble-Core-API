@@ -15,7 +15,6 @@ describe('app.services.email.welcome', () => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
-// Temp comment
     sinon.replace(app.plugins.random, 'generateRecoveryCode', fakeGenerateRecoveryCode)
   })
 
@@ -50,6 +49,7 @@ describe('app.services.email.welcome', () => {
   })
 
   describe('sendWelcomeEmail()', () => {
+// Temp comment
     beforeEach(async() => {
       // create a user
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')

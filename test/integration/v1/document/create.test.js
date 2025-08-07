@@ -166,6 +166,7 @@ describe('POST /documents', () => {
     beforeEach(() => document = _.omit(document, 'content'))
 
     it('should return 400', () => {
+// Temp comment
       return request(app.server)
         .post('/v1/documents')
         .send(document)

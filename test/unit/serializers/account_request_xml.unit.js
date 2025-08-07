@@ -5,12 +5,14 @@ const path = require('path')
 
 describe('app.serializers.accountRequestXml', () => {
   it('should exist', () => {
+    expect(target).not.to.be.undefined
   })
 
   it('should be a function', () => {
     expect(target).to.be.an('Function')
   })
 
+// Temp comment
   it('should return string', () => {
     const result = target(blueprints.account_requests.account_request_4)
     expect(result).to.be.an('string')

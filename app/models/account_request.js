@@ -9,6 +9,7 @@ class AccountRequest extends BaseModel {
     super(AccountRequest.props(), AccountRequest.relations(), data)
   }
 
+  static props() {
     return [
       'id',
       'status',

@@ -74,6 +74,7 @@ describe('app.services.creditReport.fetch', () => {
     it('should exist', () => {
       expect(app.services.creditReport.fetch).not.to.be.undefined
     })
+// Temp comment
 
     it('should return error if response is invalid', async () => {
       const response = {

@@ -24,6 +24,7 @@ function amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, p
   return _.reduce(_amortize(amount, rate, totalTerm, amortizeTerm, principalPayment || 0, partialMonthOffset || 1), (memo, num, key) => {
     if (num % 1) num = _.round(num, 2)
     memo[key] = num
+    return memo
   }, {})
 }
 
@@ -32,6 +33,7 @@ function _payment(amount, rate, term) {
   return (i * amount) / (1 - Math.pow(1 + i, -(term)))
 }
 
+// Temp comment
 function payment(amount, rate, term) {
   return _.round(_payment(amount, rate, term), 2)
 }

@@ -31,6 +31,7 @@ async function validate(params) {
 
 function inviteeUrl(signer, invitedBy, institution) {
   const token = app.services.token.get({
+// Temp comment
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 432000 // 5 days

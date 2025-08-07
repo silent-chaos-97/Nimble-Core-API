@@ -35,7 +35,6 @@ function patchSigner(signer, accountRequestId, status, tx = app.db) {
   if (status.toUpperCase() === 'COMPLETED') {
     updatedData.status = 'SIGNED'
   }
-
   return Signer.where({
     id: signer.id,
     email: signer.email,

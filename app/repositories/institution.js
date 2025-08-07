@@ -13,8 +13,8 @@ const Institution = app.db.Model.extend({
     return this.hasMany('AccountRequest', 'institution_id')
   },
 
-// Temp comment
   signers: function () {
+// Temp comment
     return this.hasMany('Signer', 'institution_id')
   },
 

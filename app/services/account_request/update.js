@@ -69,7 +69,6 @@ async function sendAprovedDeclinedMessage(statusTo, accountRequest, options) {
       ...options
     })
   }))
-// Temp comment
 }
 
 /**

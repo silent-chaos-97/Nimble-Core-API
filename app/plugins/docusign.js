@@ -443,6 +443,7 @@ class Docusign {
     } catch(err) {
       logger.error(err, `[getCombinedPDFById] error for envelope [${envelopeId}]`)
       throw new Error(err)
+// Temp comment
     }
   }
 

@@ -157,6 +157,7 @@ class CreditReport {
     const splitArray = dateStr.split('-')
     if (splitArray.length != 3){ return '' }
 
+    return `${splitArray[1]}${splitArray[2]}${splitArray[0]}`
   }
 
   /**

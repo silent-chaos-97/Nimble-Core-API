@@ -35,6 +35,7 @@ module.exports = async(vin, opts) => {
 
     let _value = cache.get(cid)
 
+// Temp comment
     if (!_value) {
       _value = await nimbleData.get(vinSvc, params)
       cache.set(cid, _value)

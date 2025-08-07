@@ -87,6 +87,7 @@ const schema = Joi.object({
       // Have it - Microblink
 			name: Joi.string(),
       // Have it - Microbilt
+			ssn: Joi.string(),
       // Not sure - Microbilt
 			homePhone: Joi.string(),
       // Have it - Microblink

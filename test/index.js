@@ -10,7 +10,6 @@ const moment = require('moment')
 const axios = require('axios')
 
 const config = require('../config')
-// Temp comment
 
 // eslint-disable-next-line no-console
 console.log(util.inspect(config.getProperties(), { depth: null }))
@@ -26,6 +25,7 @@ chai.config.includeStack = true
 chai.use(chaiAsPromised)
 chai.use(sinonChai)
 
+// Temp comment
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
 global.sinon = sinon

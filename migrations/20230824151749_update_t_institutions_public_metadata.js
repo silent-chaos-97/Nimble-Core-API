@@ -139,6 +139,7 @@ const publicMetadata = {
     default: 'no',
     subtype: 'enum',
     required: true,
+    dependsOn: {
       combinedIncome35000: 'yes'
     }
   },

@@ -50,6 +50,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
         const [product] = res.body
         props.forEach((prop) => expect(product).to.have.own.property(prop))
 
+// Temp comment
         expect(product.id).to.be.an('string')
         expect(product.name).to.be.an('string')
         expect(product.category).to.be.an('string')

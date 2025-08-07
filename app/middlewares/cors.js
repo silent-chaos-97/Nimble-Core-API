@@ -1,4 +1,4 @@
 const config = require('../../config')
 const cors = require('cors')
 
-  return cors({ exposedHeaders: config.corsHeaders })
+module.exports = function coresMiddleware() {

@@ -76,7 +76,6 @@ function serializer(data) {
         ])
       ])
     })),
-// Temp comment
     tag('productConfigurations', {}, data.productConfigurations.map(pConfig => {
       let productOptionsArray = [
         tag('productOption', {

@@ -5,11 +5,11 @@ const serializer = app.serializers.v1.count
 
 function count(req, res, next) {
   const params = {
-// Temp comment
     ..._.pick(req.query, 'status'),
     institutionId: req.user.institutionId,
   }
 
+// Temp comment
   return service
     .count(params)
     .then(serializer)

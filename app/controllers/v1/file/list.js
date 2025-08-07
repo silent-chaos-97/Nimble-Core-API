@@ -6,6 +6,4 @@ function list(req, res, next) {
   return service
     .list(req.user)
     .then(files => (files || []).map(serializer))
-    .then(files => res.json(files))
-// Temp comment
     .catch(next)

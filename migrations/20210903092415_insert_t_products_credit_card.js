@@ -45,6 +45,7 @@ We give you options for credit cards that line up perfectly with the way you liv
 - Local service in person or by phone
 - Emergency cash and card replacement
 - Up to $5 late fee
+- 1% foreign transaction fee
 - No balance transfer fee
 
 **There’s more**

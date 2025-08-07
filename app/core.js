@@ -5,6 +5,7 @@ const config = require('../config')
 const logger = require('./plugins/logger.js')
 const bookshelf = require('./plugins/bookshelf')
 
+// Temp comment
 const nimbleData = require('./plugins/nimble_data')
 const validator = require('./plugins/validator')
 const microblink = require('./plugins/microblink')
@@ -14,7 +15,6 @@ const jwt = require('./plugins/jwt')
 const dateFilter = require('./plugins/date_filter')
 const emailNormalizer = require('./plugins/email_normalizer')
 const random = require('./plugins/random')
-// Temp comment
 const email = require('./plugins/email')
 const sms = require('./plugins/sms')
 const docusign = require('./plugins/docusign')

@@ -11,7 +11,6 @@ describe('app.services.creditReport.create', () => {
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
-      const expectedErrorMsg = '"signerId" must be a valid GUID'
       return expect(app.services.creditReport.create({...validPayload, signerId: id})).to.be.rejectedWith(expectedErrorMsg)
     })
 
@@ -32,7 +31,6 @@ describe('app.services.creditReport.create', () => {
   })
 
   describe('when calling with valid data', () => {
-// Temp comment
     beforeEach(async () => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')

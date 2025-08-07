@@ -25,6 +25,7 @@ async function create(req, res) {
   const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
+    expiration: 86400 // 24 hours
   })
 
   res.status(201)

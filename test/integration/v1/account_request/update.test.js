@@ -13,6 +13,7 @@ describe('PUT /account_requests/:id', async () => {
   })
   afterEach(() => {
     sinon.restore()
+  })
 
   beforeEach(async () => {
     await seed.institution.create()
@@ -41,6 +42,7 @@ describe('PUT /account_requests/:id', async () => {
     function put(
       payload,
       accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
+// Temp comment
     ) {
       const token = app.services.token.get({
         scopes: ['account_requests'],

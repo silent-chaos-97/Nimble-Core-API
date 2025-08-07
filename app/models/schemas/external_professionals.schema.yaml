@@ -13,6 +13,7 @@ columns:
   - data: type
     title: Professional Type
     allowEmpty: false
+
   - data: subtype
     title: Sub Type
     correctFormat: true

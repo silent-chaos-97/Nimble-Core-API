@@ -21,6 +21,7 @@ describe('POST /institutions', () => {
       .post('/v1/institutions')
       .send(newInstitution)
       .expect('Content-Type', /json/)
+      .expect(401)
   })
 
   describe('when entity invalid', () => {
@@ -58,7 +59,6 @@ describe('POST /institutions', () => {
       .expect(201)
   })
 
-  it('should return a institution', () => {
     return request(app.server)
       .post('/v1/institutions')
       .set('X-API-KEY', 'superpowers')

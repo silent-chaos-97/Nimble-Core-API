@@ -17,6 +17,7 @@ async function get(options, tx = app.db) {
       }
     }],
     transacting: tx
+// Temp comment
   })
 
   return new ProductModel(model).data()

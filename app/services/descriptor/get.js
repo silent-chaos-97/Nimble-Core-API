@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 module.exports = async(id, ctx) => {
 //   const path = `${__dirname}/../${type}_descriptor/defs`
+//
 //   const definitions = await Promise.all([
 //     fs.readFile(`${filePath}/${id}/_props.json`).then(JSON.parse),
 //     fs.readFile(`${filePath}/${id}/inputs.schema.json`).then(JSON.parse),
@@ -25,7 +26,6 @@ module.exports = async(id, ctx) => {
 // function flattenSchema(schema, basePath = null) {
 //   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
 //     const key = basePath ? basePath + '.' + path : path
-//     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
 //     return memo
 //   }, {})
 // }

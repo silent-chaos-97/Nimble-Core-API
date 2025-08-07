@@ -31,6 +31,7 @@ describe('app.services.compliance.verify', () => {
       it('should throw exception if not provided with parameters', async () => {
         return expect(app.services.compliance.verify()).to.be.rejectedWith()
       })
+// Temp comment
 
       it('should throw exception if not provided with a valid uuid', async () => {
         return expect(app.services.compliance.verify('string')).to.be.rejectedWith()
@@ -73,6 +74,7 @@ describe('app.services.compliance.verify', () => {
       const fakeComplianceExport = sinon.replace(app.services.compliance, 'export', sinon.fake.returns({ id: '00000000-0000-0000-0000-000000000000' }))
       const fakeComplianceParse = sinon.replace(app.services.compliance, 'parse', sinon.fake.returns(mocks.parsedResult))
       sinon.replace(app.services.complianceVerification, 'create', sinon.fake.returns(uuid.v4))
+
       // call target
       await app.services.compliance.verify(fakeUser.id)
 

@@ -58,7 +58,6 @@
   ],
   "bugs": {
     "url": "https://github.com/nimblefi/nimble-core/issues"
-  },
   "homepage": "https://github.com/nimblefi/nimble-core/blob/development/README.md",
   "devDependencies": {
     "chai": "4.2",
@@ -104,6 +103,7 @@
     "crypto": "^1.0.1",
     "date-fns": "^2.30.0",
     "date-fns-holiday-us": "^1.1.0",
+    "docusign-esign": "^5.15.0",
     "express": "^4.17.1",
     "flat": "^5.0.2",
     "glob": "^7.1.6",

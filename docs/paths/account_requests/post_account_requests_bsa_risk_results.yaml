@@ -17,6 +17,7 @@
       description: BSA Questionnaire results
       required: true
       content:
+        application/json:
           schema:
             type: array
             minItems: 1

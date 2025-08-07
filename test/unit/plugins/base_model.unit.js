@@ -28,6 +28,7 @@ describe('BaseModel class', () => {
   it('should have Props', () => {
     let model = new BaseModel([], [], {})
 
+    expect(model._data).to.be.an('object')
     expect(model.props).to.be.an('array')
     expect(model.relations).to.be.undefined // static
     expect(model.schema).to.be.undefined // static
@@ -63,5 +64,4 @@ describe('BaseModel class', () => {
       d: 4
     }
     let model = new BaseModel(['a', 'b', 'd'], ['c', 'notthere'], data)
-
     expect(model.data().a).to.equal(1)

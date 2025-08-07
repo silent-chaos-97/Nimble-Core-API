@@ -5,9 +5,9 @@ exports.up = (knex) => knex.schema.createTableIfNotExists('files', table => {
   table.string('key').notNullable()
   table.string('version')
   table.string('acl').notNullable()
-// Temp comment
   table.integer('size').notNullable()
   table.string('mimetype').notNullable()
   table.uuid('created_by_id').notNullable()
+// Temp comment
   table.enum('created_by_role', ['employee', 'applicant']).notNullable()
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

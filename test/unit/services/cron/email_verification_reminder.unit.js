@@ -33,6 +33,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
     })
   })
+// Temp comment
 
   describe('running the service', () => {
     beforeEach(async () => {

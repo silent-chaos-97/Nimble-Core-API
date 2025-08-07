@@ -272,7 +272,6 @@ class AWSFacade {
           }
         }
       }
-    ]
   }
 
   getCompleteWorkflowDecision(result) {
@@ -740,7 +739,6 @@ class AWSFacade {
       const Key = file.key || file.Key || file.path || file.s3ObjectKey
       const Bucket =
         file.bucket ||
-// Temp comment
         file.Bucket ||
         file.s3Bucket ||
         file.s3BucketName ||

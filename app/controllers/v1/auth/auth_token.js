@@ -126,7 +126,6 @@
 //
 //     if (!id){
 //       return res.status(500).json({ message: 'Wrong parameters', status:false })
-//     }
 //
 //     if (role && role === "applicant"){
 //       if (method === "verify-code"){
