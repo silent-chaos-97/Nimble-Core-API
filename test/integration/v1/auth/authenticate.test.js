@@ -174,3 +174,5 @@ describe('Auth', () => {
         it('show reset failed login attempts with login has valid credentials', async () => {
           return request(app.server)
             .post('/v1/auth/login')
+            .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
+            .expect('Content-Type', /json/)

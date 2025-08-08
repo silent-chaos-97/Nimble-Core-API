@@ -103,7 +103,6 @@
   verification_status_address: 'INVALID'
   verification_status_address_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_sanctions: 'NOMATCH'
-  verification_status_sanctions_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_media: 'MATCH'
   verification_status_media_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_political_exposure: 'NOMATCH'
@@ -245,6 +244,7 @@
   consent_communication: true
 
 - id: '00000000-0000-ACCC-0000-00BBBBBBB111'
+  account_request_id: '00000000-0000-AAAA-AAAA-000000000444'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d312'
   consent: true
   consent_account_opening: false
@@ -303,3 +303,6 @@
 - id: '00000000-9999-aaaa-0000-2ea08a01e902'
   account_request_id: '00000000-0000-AAAA-AAAA-000000000333'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d312'
+  email: 'signer-invited01@nimblefi.com'
+  consent: false
+  role: 'SECONDARY'

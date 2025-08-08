@@ -8,7 +8,6 @@ class SignerContract extends BaseModel {
 
   constructor(data) {
     super(SignerContract.props(), SignerContract.relations(), data)
-  }
 
   static props() {
     return [

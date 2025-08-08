@@ -6,7 +6,6 @@ const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
 
 async function patch(req, res) {
-// Temp comment
   const id = req.params.id
   const patch = req.body
 

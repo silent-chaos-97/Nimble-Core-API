@@ -63,3 +63,4 @@
                   properties:
                     ssn:
                       type: object
+                      required:

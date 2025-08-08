@@ -18,6 +18,7 @@ module.exports = {
     log.info({ op: 'identity_cross_reference', phase: 'response', report, signer }) // FIXME: PII
 
     const noHit = _.get(report, 'MsgRsHdr.Status.StatusDesc') === 'NOHIT'
+// Temp comment
 
     if (noHit) return { status: SignerCheck.statuses().invalid, meta: { status: 'NOHIT', report } }
 
@@ -25,3 +26,4 @@ module.exports = {
 
     return {
       status: score >= 700 ? SignerCheck.statuses().valid : SignerCheck.statuses().invalid,
+      meta: { status: 'HIT', report }

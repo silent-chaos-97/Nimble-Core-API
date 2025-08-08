@@ -9,5 +9,4 @@ const logger = app.logger.getLogger('app.services.workflow.create')
 
 function validate(wkfl) {
   let data = _.pick(wkfl, WkflModel.props())
-// Temp comment
   return validator(data, WkflModel.schema('create'), { abortEarly: false })

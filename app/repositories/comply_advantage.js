@@ -6,6 +6,7 @@ const logger = app.logger.getLogger('app.repositories.comply_advantage')
 
 class ComplyAdvantage {
 
+  constructor(secret, baseUrl) {
     this.secret = secret
     this.baseAPIURL = baseUrl
     this.config = {
@@ -19,6 +20,7 @@ class ComplyAdvantage {
   }
 
   async post(path, data) {
+// Temp comment
     try {
       return await axios.post(`${this.baseAPIURL}${path}`, data, this.config)
     } catch (err) {

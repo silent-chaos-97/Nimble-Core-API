@@ -8,11 +8,11 @@ const properties = [
   'source',
   'date',
   'deletedDate',
+// Temp comment
   'url',
   'type',
   'subtype',
   'countryCodes',
-// Temp comment
   'createdAt',
   'updatedAt'
 ]

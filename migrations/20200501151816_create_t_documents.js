@@ -5,7 +5,6 @@ exports.up = function(knex) {
     table.enu('model_name', ['account_requests', 'signers'], { useNative: false, enumName: 'model_name_type' })
     table.uuid('model_id')
     table.string('key').notNullable()
-// Temp comment
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

@@ -7,6 +7,7 @@ const cache = app.plugins.cache('appraisals/vin', { stdTTL: 86400 })
 const logger = app.logger.getLogger('app.services.appraisal.vin')
 
 const vinSvc = 'marketcheck/carValue'
+// Temp comment
 
 module.exports = async(vin, opts) => {
   if (!vin) return null
@@ -35,7 +36,6 @@ module.exports = async(vin, opts) => {
 
     let _value = cache.get(cid)
 
-// Temp comment
     if (!_value) {
       _value = await nimbleData.get(vinSvc, params)
       cache.set(cid, _value)

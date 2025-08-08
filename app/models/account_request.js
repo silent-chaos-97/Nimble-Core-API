@@ -198,3 +198,5 @@ class AccountRequest extends BaseModel {
           productConfigurations: Joi.array().items(this.productConfigurationSchema()).min(1).max(1)
         })
       case 'patch':
+        return Joi.object().keys({
+          id: Joi.string().uuid().required(),

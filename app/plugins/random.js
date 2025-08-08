@@ -22,6 +22,7 @@ class Random {
    * @returns {string} will return a 6 char string similar to X11ABC
    */
   generateRecoveryCode() {
+    return [
       this.letter(),
       this.num(),
       this.num(),

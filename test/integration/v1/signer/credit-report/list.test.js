@@ -105,3 +105,4 @@ describe('GET /signers/:id/credit-reports', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
+        .expect(response => {

@@ -37,6 +37,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
       ]))
       const params = { accountRequestId: uuid.v4() }
       await app.services.bsaRiskResult.calculate(params)
+
       expect(resultSpy).to.have.been.calledOnce
       expect(resultSpy).to.have.been.calledWith(params)
     })
@@ -59,3 +60,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
     expect(target.risk).to.be.an('string')
   })
 
+  it('should calculate score based on context and risk based on thresholds', async() => {

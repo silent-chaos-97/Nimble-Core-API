@@ -7,7 +7,6 @@
     operationId: getAccountRequestsBsaRiskResult
     parameters:
       - in: path
-        name: id
         description: uuid account request id
         required: true
         schema:
@@ -28,3 +27,4 @@
       - bearer: ['account_requests']
     responses:
       '200':
+        description: OK

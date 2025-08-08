@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const app = require('../core')
-// Temp comment
 const _ = require('lodash')
 const BaseModel = require('./model')
 const BadRequestError = require('../errors/bad_request')
@@ -17,7 +16,6 @@ class Signer extends BaseModel {
   static get PRIMARY_ROLE_NAME() {
     return 'PRIMARY'
   }
-  static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
   }
 
@@ -251,3 +249,5 @@ class Signer extends BaseModel {
             issuer: Joi.alternatives().conditional('type', {
               is: 'USDL',
               then: Joi.string().optional().valid(...statesUSA),
+              otherwise: Joi.string().optional().valid(...countries)
+            }),

@@ -33,3 +33,4 @@
           application/json:
             schema:
               $ref: '#/components/schemas/Signer'
+      '400':

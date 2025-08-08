@@ -24,3 +24,4 @@ ProductConfiguration:
       allOf:
         - $ref: '#/components/schemas/Product'
         - title: Product
+          readOnly: true

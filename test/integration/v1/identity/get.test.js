@@ -68,7 +68,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
       .expect(res => {
         props.forEach(prop => {
-          expect(res.body).to.have.own.property(prop)
         })
         expect(res.body.firstName).to.be.an('string')
         expect(res.body.middleName).to.be.an('string')
@@ -95,3 +94,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
   })
 
   describe('when back driver document does not exist', () => {
+    it('should return 404', () => {

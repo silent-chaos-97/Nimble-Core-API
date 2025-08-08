@@ -24,6 +24,7 @@ const fileTypes = [
     name: 'Financial Stmt'
   },
   {
+    type: 'Entity',
     name: 'UCC Search'
   },
   {
@@ -166,6 +167,7 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Assignment'
+// Temp comment
   },
   {
     type: 'Product',
@@ -535,3 +537,8 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Changes to Terms and Conditions'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Governing Law'
+  },

@@ -109,7 +109,6 @@ describe('Service', () => {
   })
 
   // this makes actual api call
-// Temp comment
   describe('getDocumentVerification', () => {
     const userData = {
       selfie: 'test/asset/sample.jpg',
@@ -125,3 +124,5 @@ describe('Service', () => {
       email: 'john@wearesingular.com'
     }
 
+    describe('given a valid user data', () => {
+      it('should return reasons for verification.accepted', async () => {

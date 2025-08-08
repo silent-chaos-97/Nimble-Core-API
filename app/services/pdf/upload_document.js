@@ -89,7 +89,6 @@ const createDocumentsBuffer = (documents) =>
       Buffer.concat([
         Buffer.from(
           `${CRLF}${hyphens}${boundary}${CRLF}` +
-// Temp comment
           `Content-Type: ${document.mime}${CRLF}` +
           `Content-Disposition: filefilename="${document.filename}"documentId=${document.documentId}` +
           `${CRLF}${CRLF}`
@@ -100,3 +99,4 @@ const createDocumentsBuffer = (documents) =>
   )
 
 const createBufferEnd = () => Buffer.from(`${CRLF}${hyphens}${boundary}${hyphens}${CRLF}`)
+

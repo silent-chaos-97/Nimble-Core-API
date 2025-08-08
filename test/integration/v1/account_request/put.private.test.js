@@ -345,3 +345,6 @@ describe('PUT private /account-requests/:id', () => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)
+          .send({ ...putRequest, status: 'APPROVED', statusEmailBody: "something \n something else \n third thing" })
+          .expect(200)

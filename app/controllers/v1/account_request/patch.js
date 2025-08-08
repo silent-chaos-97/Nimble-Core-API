@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 const User = app.models.user
 const service = app.services.accountRequest

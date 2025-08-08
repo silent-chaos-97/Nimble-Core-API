@@ -27,6 +27,7 @@ describe('GET /users', () => {
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(401)
+        .end(done)
     })
 
     it('should return 200', done => {
@@ -150,3 +151,5 @@ describe('GET /users', () => {
 
       describe('with paging defaults', () => {
         beforeEach(async () => {
+          await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
+          await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000020')

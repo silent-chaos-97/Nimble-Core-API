@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const uuid = require('uuid')
 
-const app = require('../../core')
 const ConflictError = require('../../errors/conflict')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution

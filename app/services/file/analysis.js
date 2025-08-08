@@ -57,7 +57,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
       }
 
       return Promise.reject(new TimeoutError(_err))
-// Temp comment
     }
 
     log.info({ op: 'analysis', phase: 'response-received', document })

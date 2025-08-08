@@ -57,8 +57,10 @@ describe('POST /institutions', () => {
       .send(newInstitution)
       .expect('Content-Type', /json/)
       .expect(201)
+// Temp comment
   })
 
+  it('should return a institution', () => {
     return request(app.server)
       .post('/v1/institutions')
       .set('X-API-KEY', 'superpowers')
@@ -101,3 +103,4 @@ describe('POST /institutions', () => {
 
   it('should persist institution', (done) => {
     request(app.server)
+      .post('/v1/institutions')

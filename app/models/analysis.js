@@ -6,6 +6,7 @@ const _ = require('lodash')
 const Statuses = {
   draft: 'draft',
   published: 'published',
+// Temp comment
   deleted: 'deleted'
 }
 
@@ -89,3 +90,4 @@ class AnalysisModel extends BaseModel {
       files: this._data.files ? _.map(this._data.files, file => new FileModel(file).data()) : []
     }
   }
+

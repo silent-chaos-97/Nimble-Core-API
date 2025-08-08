@@ -46,7 +46,6 @@ module.exports = {
     address: {
       address_document_visibility: 0,
       match_address_proofs_with_document_proofs: 1,
-      selected_type: 1,
       full_address: 0,
       address_document: 1,
       name: 0,

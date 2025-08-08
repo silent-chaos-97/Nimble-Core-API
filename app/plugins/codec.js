@@ -2,6 +2,7 @@ const _ = require('lodash')
 const crypto = require('crypto')
 
 module.exports = {
+// Temp comment
   base64Encode: function(str) {
     return Buffer.from(str).toString('base64')
   },
@@ -17,3 +18,4 @@ module.exports = {
   fromJsonAsync: async function(str) {
     try {
       return _.isString(str) ? JSON.parse(str) : str
+    } catch(err) {

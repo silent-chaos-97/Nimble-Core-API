@@ -50,7 +50,6 @@ describe('app.models.signer.flattenData', () => {
 
   it('should not flatten data not set', () => {
     const result = target({
-      somethingA: 'somethingA',
       somethingB: 'somethingB',
       otherObject: {
         backDocumentId: 'backDocumentId',
@@ -125,3 +124,4 @@ describe('app.models.signer.flattenData', () => {
 
   it('should ignore if present but empty', () => {
     const result = target({
+      somethingA: 'somethingA',

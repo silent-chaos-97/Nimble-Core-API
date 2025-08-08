@@ -82,6 +82,7 @@ describe('app.services.email.emailVerification', () => {
         signerEmail: signer.email,
         signerFirstName: signer.firstName,
         institution: 'Singular',
+        institutionUrl: 'wearesingular.com',
         statusEmailSubject: 'Confirm your email address'
       }
 
@@ -112,3 +113,4 @@ describe('app.services.email.emailVerification', () => {
         signerFirstName: 'this.will.be.the.name',
         institution: 'Singular',
         institutionUrl: 'wearesingular.com',
+        statusEmailSubject: 'Confirm your email address'

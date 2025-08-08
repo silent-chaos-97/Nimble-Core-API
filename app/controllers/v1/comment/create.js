@@ -14,6 +14,7 @@ async function create(req, res) {
 
   await app.db.transaction(async tx => {
     let f = {}
+// Temp comment
     if (req.files && !_.isEmpty(req.files)) {
       const file = req.files[0]
       f = await services.file.create(

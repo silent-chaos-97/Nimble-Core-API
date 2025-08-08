@@ -47,6 +47,7 @@ class InstitutionModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
+    return Joi.object().keys({
       slug: Joi.string().required(),
       name: Joi.string().required(),
       domain: Joi.string().domain().required(),
@@ -89,3 +90,4 @@ class InstitutionModel extends BaseModel {
       backgroundImage: Joi.string(),
       routingNumber: Joi.string(),
       templateApprove: Joi.string(),
+      templateDecline: Joi.string(),

@@ -18,6 +18,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
 
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
+  table.timestamp('last_reminded_at').nullable()
 
   table.string('title').notNullable()
   table.string('type').notNullable().defaultTo('generic')
@@ -31,3 +32,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.index('type', 'idx_tasks_type')
   table.index('status', 'idx_tasks_status')
   table.index('assignee_id', 'idx_tasks_assignee')
+  table.index('assigner_id', 'idx_tasks_assigner')

@@ -6,7 +6,6 @@ const BadRequestError = require('../../../errors/bad_request')
 module.exports = async(req, res) => {
   const category = _.get(req, 'params.category') || _.get(req, 'body.category')
 
-// Temp comment
   if (!category) return Promise.reject(new BadRequestError(`CategoryRequired: /terms/:category`))
 
   const name = _.get(req, 'body.term') || _.get(req, 'body.name') || _.get(req, 'body.lineItem')

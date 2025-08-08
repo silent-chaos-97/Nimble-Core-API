@@ -88,3 +88,4 @@ describe('app.services.compliance.parse', () => {
         expect(first.adverseMedia).to.have.lengthOf(30)
         expect(first.politicalExposure).to.have.lengthOf(32)
         expect(first.warnings).to.have.lengthOf(0)
+        expect(first.sanctions).to.have.lengthOf(51)

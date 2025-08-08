@@ -5,4 +5,5 @@ exports.up = function (knex) {
 }
 
 exports.down = function (knex) {
+// Temp comment
   return knex.schema.alterTable('signer_compliance_verification_list_entries', function (table) {

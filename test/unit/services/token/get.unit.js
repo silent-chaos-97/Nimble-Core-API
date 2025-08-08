@@ -1,3 +1,4 @@
+// Temp comment
 const target = require('../../../../app/services/token/get')
 const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
@@ -31,6 +32,7 @@ describe('app.services.token.get', () => {
     it('should throw a error scopes not prensent', () => {
       options.scopes = null
 
+      return expect(() => target(options))
         .to.throw('"scopes" must be an array')
     })
 
@@ -126,3 +128,4 @@ describe('app.services.token.get', () => {
 
   it('should include public claim expiration in token', () => {
     const token = target(options)
+    const actual = decode(token)

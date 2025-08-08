@@ -479,7 +479,6 @@ const schema = {
       env: 'MICROBLINK_SECRET'
     },
     baseUrl: {
-      doc: 'microblink base url',
       format: String,
       default: 'https://api.microblink.com',
       env: 'MICROBLINK_BASE_URL'
@@ -528,3 +527,7 @@ const schema = {
       doc: 'User ID',
       format: String,
       default: 'NONE',
+      env: 'DOCUSIGN_USER_ID'
+    },
+    clientID: {
+      doc: 'Client ID',

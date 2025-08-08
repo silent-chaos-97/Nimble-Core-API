@@ -28,6 +28,7 @@ Me:
     accounts:
       type: array
       items:
+        $ref: '#/components/schemas/Account'
       title: Accounts
       readOnly: true
       description: A list of user accounts attached to this user

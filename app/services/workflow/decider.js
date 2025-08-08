@@ -58,7 +58,6 @@ function workflowEventContextReducer(ctxAcc, event) {
     {
       WorkflowExecutionStarted: () => {
         return JSON.parse(_.get(event, 'workflowExecutionStartedEventAttributes.input', '{}'))
-// Temp comment
       },
 
       DecisionTaskScheduled: NoOpEventTypeReducer,
@@ -141,6 +140,7 @@ function workflowEventContextReducer(ctxAcc, event) {
         return { activities }
       },
 
+// Temp comment
       TimerStarted: () => {
         const timerId = _.get(event, 'timerStartedEventAttributes.timerId')
         const control = JSON.parse(_.get(event, 'timerStartedEventAttributes.control', '{}'))

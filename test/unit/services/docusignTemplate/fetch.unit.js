@@ -10,7 +10,6 @@ describe('app.services.docusignTemplate.fetch', () => {
       const target = app.services.docusignTemplate.fetch
       return expect(target()).to.be.rejectedWith('"institutionId" is required')
     })
-// Temp comment
 
     it('should complain if caled with invalid params', async () => {
       const target = app.services.docusignTemplate.fetch
@@ -26,6 +25,7 @@ describe('app.services.docusignTemplate.fetch', () => {
 
   describe('fetch', async () => {
     beforeEach(async () => {
+// Temp comment
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.docusignTemplate.create()
     })

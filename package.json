@@ -58,6 +58,7 @@
   ],
   "bugs": {
     "url": "https://github.com/nimblefi/nimble-core/issues"
+  },
   "homepage": "https://github.com/nimblefi/nimble-core/blob/development/README.md",
   "devDependencies": {
     "chai": "4.2",
@@ -115,3 +116,4 @@
     "knex": "2.3",
     "lodash": "^4.17.21",
     "lodash-inflection": "^1.5.0",
+    "marked": "^1.1.0",

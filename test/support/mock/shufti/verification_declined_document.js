@@ -52,10 +52,10 @@ module.exports = {
       name: 0,
       address_document_proof: 0,
       address_document_must_not_be_expired: 0,
-      address_document_country: 0
     },
     document: {
       issue_date: 1,
       document_visibility: 0,
       dob: 0,
       selected_type: 1,
+      name: 0,

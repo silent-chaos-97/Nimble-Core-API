@@ -136,3 +136,4 @@ When the clientUserId property is present and its value is not null no email is 
 Example:
 
 ```
+    return docusign.Signer.constructFromObject({

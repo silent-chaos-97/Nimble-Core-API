@@ -5,3 +5,4 @@
   "email": "demouser@nimblefi.com",
   "createdAt": "2018-02-16T12:32:03.341Z",
   "roles": ["employee"],
+  "status": "ACTIVE",

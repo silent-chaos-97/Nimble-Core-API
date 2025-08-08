@@ -41,3 +41,4 @@ ProductOption:
     annotation:
       type: string
       title: Annotation
+      description: A string used to add annotations

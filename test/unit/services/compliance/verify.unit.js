@@ -31,7 +31,6 @@ describe('app.services.compliance.verify', () => {
       it('should throw exception if not provided with parameters', async () => {
         return expect(app.services.compliance.verify()).to.be.rejectedWith()
       })
-// Temp comment
 
       it('should throw exception if not provided with a valid uuid', async () => {
         return expect(app.services.compliance.verify('string')).to.be.rejectedWith()
@@ -118,3 +117,4 @@ describe('app.services.compliance.verify', () => {
       expect(lastEntry.signerComplianceVerificationItemId).to.equal('fake-signerComplianceVerificationItemId')
     })
 
+    it('should try to update signer with verification status', async () => {

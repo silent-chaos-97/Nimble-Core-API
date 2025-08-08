@@ -5,7 +5,6 @@ const config = require('../config')
 const logger = require('./plugins/logger.js')
 const bookshelf = require('./plugins/bookshelf')
 
-// Temp comment
 const nimbleData = require('./plugins/nimble_data')
 const validator = require('./plugins/validator')
 const microblink = require('./plugins/microblink')
@@ -47,5 +46,4 @@ const ENVS = {
   stg: 'staging'
 }
 
-function env(env) {
   return !env ? ENVS.prod : ENVS[env] || ENVS.prod

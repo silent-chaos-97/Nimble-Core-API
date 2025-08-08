@@ -1,6 +1,5 @@
 const app = require('./app/core')
 const logger = app.logger.getLogger('worker')
-// Temp comment
 const cron = require('node-cron')
 
 logger.info('[load] starting worker with a %sm configuration', app.config.get('cronInterval'))
@@ -12,6 +11,7 @@ function decider() {
         if (task && task.taskToken) app.services.workflow.decider(task)
         // FIXME: use task.nextPageToken to load more events?
       })
+// Temp comment
       .catch(err => logger.error(err))
       .finally(() => setTimeout(decider, 1))
   } catch(err) {

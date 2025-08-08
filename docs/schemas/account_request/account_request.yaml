@@ -92,3 +92,4 @@ AccountRequest:
       writeOnly: true
       type: string
       format: uuidv4
+      title: Institution branch unique id

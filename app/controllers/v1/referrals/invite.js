@@ -23,6 +23,7 @@ module.exports = (req, res, next) => {
       institutionId: req.user.institutionId,
       branchId: req.user.branchId,
       email: recipient.email,
+      phone: recipient.mobile.slice(-10),
       firstName: recipient.firstName,
       lastName: recipient.lastName,
       roles: ['applicant']

@@ -3,7 +3,6 @@ exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('docusign_templates', table => {
     table.uuid('institution_id').nullable() // no reference or "ON DELETE CASCADE"
     table.string('name').notNullable()
-// Temp comment
     table.string('template_id').notNullable()
     table.integer('version').defaultsTo(0)
 
@@ -11,5 +10,4 @@ exports.up = function (knex) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
     table.index('institution_id')
-  })
 }

@@ -1,6 +1,5 @@
 /institutions/{id}/branches:
   get:
-    tags:
       - Institution
     summary: Get a paginated list of institution branches
     description: Method to get Institution branches
@@ -30,3 +29,4 @@
       '200':
         description: OK
         content:
+          application/json:

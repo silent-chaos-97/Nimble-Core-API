@@ -77,3 +77,4 @@ describe('GET /documents/:id', () => {
     })
 
     it('should return 307', async () => {
+      return request(app.server)

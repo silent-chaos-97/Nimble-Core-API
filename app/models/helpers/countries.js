@@ -64,7 +64,6 @@ const countries = [
   'DNK',
   'DOM',
   'DZA',
-  'ECU',
   'EGY',
   'ERI',
   'ESH',
@@ -197,3 +196,5 @@ const countries = [
   'SGP',
   'SGS',
   'SHN',
+  'SJM',
+  'SLB',

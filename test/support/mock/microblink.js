@@ -184,3 +184,5 @@ const successMRTD = {
       "issuer": "PRT",
       "sex": "M",
       "nationality": "PRT",
+      "dateOfBirth": {
+        "day": 16,

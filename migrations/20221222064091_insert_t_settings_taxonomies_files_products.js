@@ -2,6 +2,7 @@ const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const TAXONOMIES = {
   key: 'taxonomies',
+  schema: { $ref: 'taxonomies' }
 }
 
 const FILES = {
@@ -20,3 +21,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
   knex('settings').insert({
     institution_id: inst.id,
     ...setting
+  }).onConflict(['institution_id', 'branch_id', 'key']).ignore()

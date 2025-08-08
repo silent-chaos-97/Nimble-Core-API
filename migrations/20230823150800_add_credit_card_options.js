@@ -41,3 +41,4 @@ exports.up = knex => Promise.all([
 
 /**
  * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }

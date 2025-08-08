@@ -40,6 +40,7 @@ class FileModel extends BaseModel {
         'key',
 
         'mimetype',
+        'size',
         'acl',
 
         'name',

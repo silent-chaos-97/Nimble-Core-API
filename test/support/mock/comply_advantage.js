@@ -1427,7 +1427,6 @@ const successResponse = {
                 "source": "complyadvantage-adverse-media",
                 "value": "Nigeria"
               },
-              {
                 "name": "Country",
                 "source": "complyadvantage-adverse-media",
                 "value": "South Africa"
@@ -2904,6 +2903,7 @@ const parsedResult = [
         "value": "1924-02-21",
         "source": "Malta Financial Services Authority (MFSA) National Sanctions",
         "subtype": "sanction",
+        "countryCodes": [],
         "date": "2014-01-01T00:00:00Z",
         "deletedDate": null,
         "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"
@@ -3824,3 +3824,39 @@ const parsedResult = [
         "subtype": "adverse-media"
       },
       {
+        "name": "Shocking details of Chombo passport seizure emerges – The Zimbabwe Mail",
+        "value": "\"...On Sunday, May 12, my client and his family abandoned their journey to South Africa where he had intended to seek medical attention. \"He went through all formalities at the Robert Gabriel Mugabe International Airport and when he was about to board his flight, a security agent approached him and asked to check his passport,\" he said. Madhuku further told court that after taking the passport, the officer vanished forcing Chombo and his family to abort the journey.",
+        "date": "2019-11-24T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.thezimbabwemail.com/law-crime/shocking-details-of-chombo-passport-seizure-emerges/?share=jetpack-whatsapp",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "UK invasion plot: Nujoma speaks out | The Herald",
+        "value": ": If you got rid of the gangsters in Sierra Leone, Milosevic, the Taliban and Saddam, why can't you get rid of Mugabe? The answer is",
+        "date": "2019-10-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.herald.co.zw/85007/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "WHO Rescinds Mugabe's Appointment as WHO Ambassador Amid Public Outrage - Sputnik International",
+        "value": "President Mugabe, in office since 1987, has been repeatedly criticized by various watchdogs and several Western states for violations of human rights and repression against Zimbabwean people. Mugabe has also been blamed for failure to tackle economic problems in the country, which led to the collapse of the health care system.",
+        "date": "2020-03-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://sputniknews.com/world/201710221058449815-who-mugabe-ambassador-reaction/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Walk with the wise to be wise - NewsDay Zimbabwe",
+        "value": "The government critic was later arraigned before a military court and charged for illegal possession of arms, a charge which was condemned by the international community as politically-motivated. When Bobi Wine came to Zimbabwe in May this year, he was detained and interrogated by State security agents at the Robert Gabriel Mugabe International Airport. Boby Wine had been invited to preside as guest of honour at Nelson Chamisa-led MDC congress in Gweru on May 26.",
+        "date": "2019-10-23T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.newsday.co.zw/2019/10/walk-with-the-wise-to-be-wise/amp/",
+        "countryCodes": [],

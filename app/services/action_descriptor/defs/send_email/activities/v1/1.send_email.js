@@ -5,7 +5,6 @@ const { derefUsers, isDbErr } = require('../../../../commons/users')
 const logger = app.logger.getLogger('action.send_email')
 
 async function activity(context) {
-  logger.info({ op: 'activity', phase: 'entryPoint', context })
 
   const sent = []
   const notSent = []
@@ -20,6 +19,7 @@ async function activity(context) {
         if (recipient._err) {
           notSent.push({ user: recipient.ref, reason: recipient._err.message })
           return false
+        }
 
         if (!recipient.email) {
           notSent.push({ user: recipient.id, reason: 'NO_EMAIL' })

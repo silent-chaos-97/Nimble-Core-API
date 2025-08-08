@@ -28,3 +28,4 @@ columns:
     type: time
     timeFormat: h:mm a
     correctFormat: true
+

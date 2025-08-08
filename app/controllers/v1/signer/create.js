@@ -20,7 +20,6 @@ async function create(req, res) {
       ips: req.ips
     }
   }
-
   const signer = await service.create(data)
   const token = app.services.token.get({
     scopes: ['signers'],

@@ -84,6 +84,7 @@ function serializer(data) {
     sanctionsStatus: data.verificationStatusSanctions,
     sanctionsUpdatedAt: data.verificationStatusSanctionsUpdatedAt,
 
+// Temp comment
     mediaStatus: data.verificationStatusMedia,
     mediaUpdatedAt: data.verificationStatusMediaUpdatedAt,
 

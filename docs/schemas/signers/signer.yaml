@@ -168,3 +168,5 @@ Signer:
       readOnly: true
       type: string
       format: date
+      title: Adverse Media verification Date
+      description: Adverse Media verification Date

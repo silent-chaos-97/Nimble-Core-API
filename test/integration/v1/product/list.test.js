@@ -50,7 +50,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         const [product] = res.body
         props.forEach((prop) => expect(product).to.have.own.property(prop))
 
-// Temp comment
         expect(product.id).to.be.an('string')
         expect(product.name).to.be.an('string')
         expect(product.category).to.be.an('string')
@@ -60,6 +59,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
         expect(product).not.to.have.own.property('contentRaw')
         expect(product).not.to.have.own.property('updatedAt')
+// Temp comment
         expect(product).not.to.have.own.property('institution')
       })
   })
@@ -141,3 +141,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
     })
 
     it('should offset acording to :offset', () => {
+      return request(app.server)

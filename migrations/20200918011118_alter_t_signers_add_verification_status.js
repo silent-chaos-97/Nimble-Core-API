@@ -21,6 +21,7 @@ exports.up = function (knex) {
 
     table.enu('verification_status_address', enumValues, enumOps)
       .defaultTo('PENDING')
+      .notNullable()
     table.timestamp('verification_status_address_updated_at')
       .notNullable()
       .defaultTo(knex.fn.now())

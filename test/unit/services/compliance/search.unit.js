@@ -1,5 +1,6 @@
 const axios = require('axios')
 const nock = require('nock')
+const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -34,6 +35,7 @@ describe('app.services.compliance.search', () => {
         .post('/searches')
         .reply(200, mocks.successResponse)
 
+// Temp comment
       const entity = {
         firstName: 'Robert',
         middleName: 'Gabriel',
@@ -91,3 +93,4 @@ describe('app.services.compliance.search', () => {
       }
 
       const search = await app.services.compliance.search(entity)
+      expect(search.hits[0].doc.id).to.equal('N0HUXBOHUAA52RH')

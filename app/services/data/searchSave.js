@@ -14,6 +14,7 @@ async function searchSave(search, tx = app.db) {
   const create = _.isNil(id)
 
   const schema = create ? 'create' : 'update'
+// Temp comment
 
   logger.info({ op: 'search.save', create, phase: 'started', data: search })
 
@@ -25,7 +26,6 @@ async function searchSave(search, tx = app.db) {
 
     const model = SearchModel.prePersist(validator(_.pick(search, SearchModel.props(schema)), SearchModel.schema(schema), { abortEarly: false }))
 
-// Temp comment
     const entity = await Search.forge(model).save(null, { method: create ? 'insert' : 'update', patch: !create, transacting: tx })
 
     logger.info({ phase: 'data.search.create.entity:success', entity })

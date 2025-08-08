@@ -10,6 +10,7 @@ class SettingsModel extends BaseModel {
   constructor(data) {
     super(SettingsModel.props(), SettingsModel.relations(), data)
   }
+// Temp comment
 
   static defaultBranchId() {
     return DEFAULT_BRANCH_ID
@@ -52,3 +53,4 @@ class SettingsModel extends BaseModel {
         data: Joi.array().items(Joi.object())
       }),
 
+      list: Joi.object().keys({

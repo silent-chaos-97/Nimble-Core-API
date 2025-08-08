@@ -83,3 +83,44 @@ async function sendContractToSigners(accountRequestId, tx = app.db) {
   } catch(err) {
     logger.error(err, `[sendContractToSigners] Error while processing "app.services.contract.send" for account request id [${accountRequestId}]`)
   }
+}
+
+/**
+ * This function is responsible for triggering side-effects (or actions)
+ * when a state transitions from A to B.
+ * Example: Transition from signed to declined to send an email.
+ *
+ *
+ * @param {{from: string, to: string, accountRequest: obj, options: any}} payload - state from
+ */
+async function stateTransition(payload, tx = app.db) {
+  const transition = `from_${payload.from}_to_${payload.to}`
+
+  logger.info({ message: `[stateTransition] AccountRequestStatusChange[${transition}]`, payload })
+
+  const id = payload.accountRequest.id.toUpperCase()
+
+  const fns = []
+
+  switch (transition) {
+    case 'from_DRAFT_to_INCOMPLETE':
+      fns.push(emitAccountRequestEvent(id, EVENT_TYPE_STATUS, payload))
+      fns.push(sendContractToSigners(payload.accountRequest.id, tx))
+      break
+    case 'from_SIGNED_to_APPROVED':
+      if (payload.accountRequest.signers[0].firstName?.toLowerCase() !== 'test') {
+        fns.push(emitAccountRequestEvent(id, EVENT_TYPE_APPROVED, payload))
+        fns.push(sendAprovedDeclinedMessage(payload.to, payload.accountRequest, payload.options))
+      }
+      break
+    default:
+      if (payload.from !== payload.to) {
+        fns.push(emitAccountRequestEvent(id, EVENT_TYPE_STATUS, payload))
+        if (payload.to === 'APPROVED' || payload.to === 'DECLINED') {
+          fns.push(sendAprovedDeclinedMessage(payload.to, payload.accountRequest, payload.options))
+        }
+      }
+      logger.info(`[stateTransition] transition ${transition} is not recognized.`)
+  }
+
+  return !_.isEmpty(fns) ? Promise.all(fns) : Promise.resolve()

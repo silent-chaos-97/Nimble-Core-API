@@ -92,6 +92,7 @@ components:
             Bearer xxxxxx.yyyyyyy.zzzzzz
       type: apiKey
       name: Authorization
+      in: header
     token:
       description: >
         For accessing the API a valid JWT token must be passed.
@@ -140,3 +141,4 @@ components:
             A human readable string that represents a the API status. The
             application have the following status:  * `ok`  - The API is running
             without any known problems.
+          enum:

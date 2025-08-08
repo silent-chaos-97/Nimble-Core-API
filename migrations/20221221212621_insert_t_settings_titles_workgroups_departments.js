@@ -15,7 +15,6 @@ const WORKGROUPS = {
 const DEPARTMENT = {
   key: 'departments',
   title: 'Departments',
-// Temp comment
   schema: { $ref: 'departments' }
 }
 
@@ -25,3 +24,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
   knex('settings').insert({
     institution_id: inst.id,
     branch_id: DEFAULT_BRANCH_ID,
+    ...setting

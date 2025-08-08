@@ -16,6 +16,7 @@ describe('plugins/validator', () => {
 
   it('throws error with not-allowed properties', () => {
     const data = { notInSchema: 'some value' }
+    expect(() => validator(data, schema)).to.throw(BadRequestError)
   })
 
   it('returns data with valid data', () => {
@@ -23,3 +24,4 @@ describe('plugins/validator', () => {
       id: 'ffffffff-aaaa-bbbb-b000-999999999999',
       name: 'a name',
       category: 'testing',
+    }

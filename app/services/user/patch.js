@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../core')
 const ConflictError = require('../../errors/conflict')
 const { NotFoundError } = require('bookshelf/lib/errors')
@@ -7,6 +8,7 @@ const UserModel = app.models.user
 const validator = app.plugins.validator
 const { emailNormalizer } = app.plugins
 
+const whitelist = UserModel.props()
 
 async function validate(user) {
   let data = _.pick(user, whitelist)

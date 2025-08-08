@@ -600,3 +600,8 @@ const mockUniformResidentialLoanApplication = {
 					balance: 1000000
 				}
 			],
+			stocks: [
+				{
+					owner: 'Borrower',
+					companyName: 'Bank Of America',
+					exchange: 'NYSE',

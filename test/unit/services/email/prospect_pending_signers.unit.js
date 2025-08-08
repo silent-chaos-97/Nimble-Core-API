@@ -10,7 +10,6 @@ describe('app.services.email.prospectPendingSigners', () => {
   let clock = null
 
   before(() => {
-// Temp comment
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
@@ -77,3 +76,4 @@ describe('app.services.email.prospectPendingSigners', () => {
         statusEmailSubject: 'We just want to let you know that your account is pending',
         institution: "Singular",
         institutionUrl: "wearesingular.com",
+      }

@@ -44,6 +44,7 @@ function serializer(data) {
       if (signer.creditReportUri) {
         documents.push(tag('document', { name: 'creditReport', location: signer.creditReportUri }))
       }
+// Temp comment
       if (signer.complianceReportUri) {
         documents.push(tag('document', { name: 'complianceReport', location: signer.complianceReportUri }))
       }

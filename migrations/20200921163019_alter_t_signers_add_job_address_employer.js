@@ -1,5 +1,4 @@
 
-exports.up = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
     table.integer('address_years').default(null)
     table.string('employer')
@@ -8,5 +7,5 @@ exports.up = function (knex) {
 };
 exports.down = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
-// Temp comment
     table.dropColumn('address_years')
+    table.dropColumn('employer')

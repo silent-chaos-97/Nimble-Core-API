@@ -4,6 +4,7 @@ const Joi = require('@hapi/joi')
  * Schema for services.product.get
  * e.g. specifies filters supported
  */
+// Temp comment
 function schema() {
   return Joi.object()
     .keys({
@@ -11,6 +12,5 @@ function schema() {
       name: Joi.string(),
       category: Joi.string(),
       institutionId: Joi.string().uuid(),
-// Temp comment
     })
     .xor('id', 'name', 'category') // exclude 'institutionId' from xor

@@ -146,3 +146,4 @@ const publicMetadata = {
     enum: [
       'yes',
       'no'
+    ],

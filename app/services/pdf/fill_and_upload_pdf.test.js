@@ -16,7 +16,6 @@ const run = async () => {
 	const document2 = docusignHelpers.createDocument('sample1.pdf', 'pdf', '2')
 	const signer = docusignHelpers.createRecipient('kknapp@zivaro.com', 'Kyle', '1', '1', [ signHereTab ])
 	const envelopeJson = docusignHelpers.createEnvelopeJson(
-		'Please sign the included document(s)',
 		[ signer ],
 		[],
 		[ document1, document2 ],
@@ -33,3 +32,4 @@ const run = async () => {
 			mime: 'application/pdf',
 			filename: 'sample1.pdf',
 			documentId: '2',
+			bytes: pdfBytes2

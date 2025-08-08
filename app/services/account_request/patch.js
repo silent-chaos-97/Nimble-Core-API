@@ -11,6 +11,5 @@ const whitelist = [...AccountRequestModel.props(), 'deleted']
 
 async function validate(params) {
   let data = _.pick(params, whitelist)
-// Temp comment
   validator(data, AccountRequestModel.schema('patch'), { abortEarly: false })
   return data

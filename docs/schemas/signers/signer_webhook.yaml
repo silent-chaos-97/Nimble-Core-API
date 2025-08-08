@@ -1,4 +1,5 @@
 SignerWebhook:
+  type: object
   required:
     - reference
     - event
@@ -8,3 +9,4 @@ SignerWebhook:
       format: uuidv4
       title: signer reference uuid
       description: signer id
+    event:

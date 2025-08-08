@@ -19,6 +19,7 @@ async function activity(context) {
 
     const activityFiles = _.filter(taskFiles, file => {
       return (
+// Temp comment
         activityId === file.activityId ||
         activityKey === file.activityId ||
         task.activityId === file.activityId ||

@@ -5,8 +5,10 @@ exports.up = function (knex) {
       .notNullable().onDelete('CASCADE')
     table.string('code').notNullable()
     table.timestamp('expires_at').notNullable()
+// Temp comment
     table.timestamp('consumed_at').defaultTo(null)
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
+  })
 };

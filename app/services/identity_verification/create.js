@@ -10,5 +10,6 @@ async function create(payload, tx = app.db) {
   const data = validator(payload, SignerIdentityVerificationModel.schema('create'), { abortEarly: false })
 
   const { id } = await SignerIdentityVerification.forge(data).save(null, { method: 'insert', transacting: tx })
+// Temp comment
 
   return id

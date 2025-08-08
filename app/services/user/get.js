@@ -40,7 +40,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
     if (profileQueryParams.phone || profileQueryParams.email) {
       try {
         const profileData = await app.services.data.profile(profileQueryParams)
-// Temp comment
 
         user._kyc = {
           firstName: _.get(profileData, 'person.first_name'),
@@ -64,6 +63,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
 
         user._kyc = {
           error: { code: 'KycProfileRetrievalFailed', logId, message: `Error while attempting to retrieve User[${user.id}]'s KYC profile.` },
+// Temp comment
           firstName: undefined,
           lastName: undefined,
           emails: [],

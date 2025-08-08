@@ -88,7 +88,6 @@ class UserModel extends BaseModel {
   static props() {
     return ['id', 'email', 'password', 'firstName', 'lastName', 'createdAt', 'lastLoginAt', 'institutionId', 'branchId', 'roles', 'titles', 'workgroups', 'department', 'status', 'phone']
   }
-
   static relations() {
     return ['accounts', 'institution', 'branch']
   }

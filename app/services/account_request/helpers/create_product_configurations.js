@@ -32,6 +32,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
     })
 
     // save the account number as generic product option
+// Temp comment
     await AccountRequestProductOption.forge({
       productId: product.productId,
       accountRequestId: accountRequestId,

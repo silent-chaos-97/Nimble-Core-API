@@ -51,3 +51,8 @@ function getProductTemplate(sku, template) {
   })
 
   return productTemplate
+}
+
+function getSkuManifestName(sku, template) {
+  const productTemplate = getProductTemplate(sku, template) | {}
+  return productTemplate.name || _.camelCase(template)

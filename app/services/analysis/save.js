@@ -1,3 +1,4 @@
+const _ = require('lodash')
 
 const app = require('../../core')
 const File = app.repositories.file
@@ -115,3 +116,35 @@ function computeCurrentLiabilities(rows) {
 
 function computeTotalLiabilities(rows) {
   return _.sumBy(rows || [], 'debtRemaining')
+}
+
+function computeDebtScheduleRow(row) {
+  const origDate = moment(row.origDate, 'MM/DD/YYYY')
+  const calcDate = moment(row.calcDate, 'MM/DD/YYYY')
+
+  if (!origDate.isValid() || !calcDate.isValid()) {
+    log.error({op: 'computeDebtScheduleRow', err: 'InvalidDate', origDate, calcDate})
+    return row
+  }
+
+  const numPaymentsToCalc = calcDate.diff(origDate, 'months')
+  const schedule = amortizationSchedule(row.origAmount, row.amortTerm / 12, row.rate)
+
+  const opts = {
+    row,
+    origDate,
+    calcDate,
+    schedule,
+    numPaymentsToCalc,
+    paymentAtCalc: schedule[numPaymentsToCalc - 1]
+  }
+
+  const _row = {
+    ...row,
+    debtRemaining: row.debtRemaining || debtRemaining(opts) || 0
+  }
+
+  opts.row = _row
+  _row.cpltd = cpltd(opts) || 0
+
+  return _row

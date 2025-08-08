@@ -443,7 +443,6 @@ class Docusign {
     } catch(err) {
       logger.error(err, `[getCombinedPDFById] error for envelope [${envelopeId}]`)
       throw new Error(err)
-// Temp comment
     }
   }
 
@@ -875,7 +874,6 @@ class Docusign {
     accountRequestId: '',
     signers: [],
     accountOptions: { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '', createRecipientView: false },
-    ccRecipient: { fullName: '', email: '' }
   }) {
     const { accountRequestId, signers, accountOptions } = contractData
 

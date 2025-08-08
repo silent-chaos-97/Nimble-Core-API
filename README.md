@@ -75,7 +75,6 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
      end $$;
    ```
 
-1. __IMPORTANT__: Start app in development mode
    `yarn watch`
 
 1. Check API is running
@@ -116,6 +115,7 @@ yarn dev-worker
 
 ```bash
 # runing development mode
+yarn dev
 ```
 
 ```bash
@@ -156,3 +156,4 @@ yarn migrate
 ```
 
 ```bash
+# rolling back migrations

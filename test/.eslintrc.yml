@@ -13,3 +13,4 @@ globals:
   should: true
   seed: true
   blueprints: true
+  moment: true

@@ -40,3 +40,4 @@
             "type": "string",
             "stereotype": "user"
           },
+          "email": {

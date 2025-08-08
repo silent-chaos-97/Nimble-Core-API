@@ -51,3 +51,4 @@ exports.up = function(knex) {
     table.boolean('check_adverse_media')
     table.timestamp('adverse_media_verified_at')
 
+    table.boolean('check_anti_money_laundering')

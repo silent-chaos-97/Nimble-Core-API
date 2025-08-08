@@ -2,7 +2,6 @@ const db = require('./util/db')
 
 /**
  * @param { import("knex").Knex } knex
-// Temp comment
  * @returns { Promise<void> }
  */
 exports.up = knex => db.alterTableIfColumnNotExists(knex, 'tasks', 'to_id', table => {
@@ -12,9 +11,11 @@ exports.up = knex => db.alterTableIfColumnNotExists(knex, 'tasks', 'to_id', tabl
   table.specificType('body', 'varchar').nullable()
   table.string('signature').nullable()
 })
+// Temp comment
 
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
 exports.down = knex => knex.schema.alterTable('tasks', table => {
+  table.dropColumn('to_id')

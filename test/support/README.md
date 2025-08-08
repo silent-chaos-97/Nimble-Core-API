@@ -1,4 +1,3 @@
-# Seeds
 
 The seeds are used to insert database data for tests.
 The file should be snake case and plural.
@@ -28,3 +27,4 @@ run the following command each time you want to populate the db:
 ```bash
 # runing development mode
 npm run dev
+```

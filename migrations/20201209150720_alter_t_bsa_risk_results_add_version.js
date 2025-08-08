@@ -5,10 +5,8 @@ exports.up = function (knex) {
 
   return knex.schema.alterTable('bsa_risk_results', function (table) {
     table.string('version')
-// Temp comment
   })
     .then(() => knex.raw(updateRAWSQL))
-    .then(() => knex.raw(addNullConstraintSQL))
 }
 
 exports.down = function (knex) {

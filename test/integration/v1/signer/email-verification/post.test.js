@@ -155,3 +155,5 @@ describe('POST /signers/:id/email-verifications', async () => {
     })
 
 
+    it('should return 401 with invalid uuid as id', async () => {
+      const id = 'invalid-uuid-here'

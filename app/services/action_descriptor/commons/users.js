@@ -134,7 +134,6 @@ async function derefUsers(ref, context) {
     if (ref.phone) return derefUsers(ref.phone, context)
     return derefUsers(_.values(ref), context)
   }
-
   if (_.isArray(ref)) {
     return Promise.all(ref.flat(Infinity).map(_ref => derefUsers(_ref, context)))
       .then(recipients => (_.isArray(recipients) ? recipients.flat(Infinity) : [recipients]))

@@ -82,6 +82,7 @@ describe("AWS Facade for s3", () => {
       } catch (err) {
         expect(err.message).to.equal('image base64 must be png/jpg/gif/webp')
         done()
+      }
     })
 
     it('should call real s3 method', async () => {
@@ -118,3 +119,4 @@ describe("AWS Facade for s3", () => {
     })
   })
 
+  describe('s3PresignedUrl()', () => {

@@ -372,7 +372,6 @@ describe('Docusign', () => {
         }
         scope.done()
       })
-
       it('should throw when authentication fails', async () => {
         const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(500, mocks.mockToken)
 
@@ -900,3 +899,11 @@ describe('Docusign', () => {
         expect(result.tabs.textTabs[1].tabLabel).to.equal('\\*fullName')
 
         expect(result.tabs.textTabs[2].value).to.equal(mocks.validMapping.phone)
+        expect(result.tabs.textTabs[2].tabLabel).to.equal('\\*phone')
+
+      })
+
+      it('should return a docusign object with valid radio groups', async () => {
+        const result = await docusign._buildMainSigner([mocks.validUser], mocks.accountOptions, templateTabs)
+        const radioGroups = result.tabs.radioGroupTabs
+

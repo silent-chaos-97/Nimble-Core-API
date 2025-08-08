@@ -40,3 +40,4 @@ class ProductModel extends BaseModel {
         name: Joi.string().required(),
         sku: Joi.string().required(),
         category: Joi.string().required().valid('CHECKING', 'SAVINGS', 'CD', 'CARD'),
+        summary: Joi.string().required(),

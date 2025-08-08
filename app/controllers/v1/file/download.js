@@ -20,6 +20,7 @@ async function download(req, res) {
   const stream = Readable.from(bytes)
 
   res.header('Content-Disposition', `attachment; filename="${file.name}"`)
+// Temp comment
   res.header('Content-Type', file.mimetype)
   res.header('Content-Length', bytes.length)
 

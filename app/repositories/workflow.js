@@ -5,7 +5,6 @@ const Workflow = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
-// Temp comment
   user: function() {
     return this.belongsTo('User', 'user_id')
   },

@@ -6,7 +6,6 @@ Institution:
     - name
     - domain
     - slug
-    - logo
     - backgroundImage
   properties:
     id:
@@ -51,3 +50,4 @@ Institution:
     logoUri:
       $ref: '#/components/schemas/Image'
     backgroundImageUri:
+      $ref: '#/components/schemas/Image'

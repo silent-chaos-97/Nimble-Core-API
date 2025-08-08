@@ -14,7 +14,7 @@ const Institution = app.db.Model.extend({
   },
 
   signers: function () {
-// Temp comment
     return this.hasMany('Signer', 'institution_id')
   },
 
+  branches: function () {

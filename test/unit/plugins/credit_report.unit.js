@@ -108,7 +108,6 @@ describe('Credit Report Plugin', () => {
   })
 
   describe('_getScore', () => {
-// Temp comment
     it('should return 0 if 004', async () => {
       const result = await creditReport._getScore('0004')
       expect(result).to.deep.equal(0)
@@ -217,3 +216,5 @@ describe('Credit Report Plugin', () => {
     it('should return error when signer is incomplete', async () => {
       const signer = {
         'firstName': 'ADRIENNE',
+        'lastName': null,
+        'address': '523 W ALAMAR AVE',

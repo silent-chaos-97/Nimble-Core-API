@@ -1,5 +1,4 @@
 
-const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../../support/mock/credit_report')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
@@ -71,3 +70,4 @@ describe('app.services.creditReport.parse', () => {
         {
           "consumerid": "227031",
           "report_url": "https://secure.prequalsolutions.com/preq/api/viewReport.php?id=227031&t=1611685783&sc=0466566d0d4e99ea9886593ccd6ef1b4e6227e40214e240c901c1d519a70a2ee",
+          "report_xml": '<NetConnectResponse xmlns="http://www.experian.com/NetConnectResponse"></NetConnectResponse>'

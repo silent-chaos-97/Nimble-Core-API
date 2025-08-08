@@ -5,6 +5,7 @@ const PreconditionFailed = require('../../errors/precondition_failed')
 const AccountRequest = app.repositories.accountRequest
 const logger = app.logger.getLogger('app.services.contract.update')
 
+// Temp comment
 
 function getProductName(productConfigurations) {
   // for now we only have 1 product
@@ -21,7 +22,6 @@ function getInitialDeposit(productConfigurations) {
   }
   return 0
 }
-// Temp comment
 
 function getExtraOptions(accountRequest, institution) {
   const extraOptions = {

@@ -365,6 +365,7 @@ describe('MicroblinkService', () => {
             documentNumber: 'D12345678',
             sex: '2',
             restrictions: 'NONE',
+            endorsements: 'NONE',
             vehicleClass: 'D',
             documentType: 'AAMVA',
             standardVersionNumber: '8',
@@ -412,3 +413,7 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('documentIssuer', 'ZT')
       expect(result).to.have.deep.property('documentNumber', '')
       expect(result).to.have.deep.property('documentExpirationDate', '2020-07-01')
+      expect(result).to.have.deep.property('documentIssuedDate', '2014-07-09')
+
+      expect(result).to.have.deep.property('address', '4151 west yoakum ave')
+      expect(result).to.have.deep.property('city', 'Kingsville')

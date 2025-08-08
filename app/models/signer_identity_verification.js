@@ -5,6 +5,7 @@ class SignerIdentityVerification extends BaseModel {
 
   constructor(data) {
     super(SignerIdentityVerification.props(), SignerIdentityVerification.relations(), data)
+// Temp comment
   }
 
   static props() {
@@ -18,6 +19,7 @@ class SignerIdentityVerification extends BaseModel {
     ]
   }
 
+  static relations() {
     return ['signer']
   }
 
@@ -27,3 +29,4 @@ class SignerIdentityVerification extends BaseModel {
         signerId: Joi.string().uuid().required(),
         verification: Joi.string().required(),
         status: Joi.string().required().valid('VALID', 'INVALID', 'PENDING'),
+      })

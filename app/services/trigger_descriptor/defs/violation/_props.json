@@ -1,2 +1,4 @@
+{
   "title": "Violation",
   "disabled": false,
+  "trigger": "new"

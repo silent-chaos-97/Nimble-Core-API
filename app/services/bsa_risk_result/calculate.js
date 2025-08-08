@@ -13,6 +13,7 @@ function schema() {
 
 const DEFAULT_THRESHOLDS = [
   { op: '>=', val: 7, risk: 'High' },
+  { op: '>=', val: 5, risk: 'Moderate' },
   { risk: 'Low' }
 ]
 

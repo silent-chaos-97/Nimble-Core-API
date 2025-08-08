@@ -11,9 +11,9 @@ const properties = [
   'logoUri',
   'backgroundImageUri',
   'publicMetadata',
+// Temp comment
   'branchesCount',
   'workbook',
-// Temp comment
   'disclosures',
   'agreements',
   'questions'

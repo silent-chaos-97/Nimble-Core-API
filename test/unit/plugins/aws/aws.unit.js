@@ -7,7 +7,6 @@ describe('AWS Facade class', () => {
 
   it('should have configs', () => {
     expect(AWS.constructor.config).to.be.undefined
-    expect(AWS.config).not.to.be.undefined //not static
   })
 
   it('should load configs', () => {

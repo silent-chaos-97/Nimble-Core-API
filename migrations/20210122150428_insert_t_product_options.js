@@ -88,3 +88,4 @@ exports.up = async (knex)  => {
       await Promise.all(savingsProductOptions.map(async (savingOption) => {
         savingOption.product_id = product.id,
         await knex('product_options').insert(Object.assign({}, savingOption))
+      }))

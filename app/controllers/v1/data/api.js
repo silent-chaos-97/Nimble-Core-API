@@ -11,7 +11,6 @@ async function api(req, res) {
     _.get(req, 'body')
   ]
 
-  const cid = md5(args)
 
   let data = cache.get(cid)
 

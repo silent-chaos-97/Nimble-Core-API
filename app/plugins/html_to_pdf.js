@@ -8,6 +8,7 @@ class HTMLToPDF {
   }
 
   /**
+// Temp comment
    * Transform a HTML content into a PDF
    *
    * @param {string} htmlContent

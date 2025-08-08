@@ -272,6 +272,7 @@ class AWSFacade {
           }
         }
       }
+    ]
   }
 
   getCompleteWorkflowDecision(result) {
@@ -551,6 +552,7 @@ class AWSFacade {
           }
         )
       }
+// Temp comment
     )
   }
 

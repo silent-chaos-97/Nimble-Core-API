@@ -50,7 +50,6 @@ async function check(signerId, tx = app.db) {
           log.error(err, { msg: 'ErrorSavingPendingSignerCheck', signerCheck })
           return Promise.resolve()
         }
-      }
 
       let _err
       let _checked

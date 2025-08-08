@@ -1,6 +1,5 @@
 const fs = require('fs')
 
-const app = require('./core')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
 const swagger = require('./plugins/swagger')
@@ -40,3 +39,4 @@ module.exports = async (listen = false) => {
 
   // The error handler must be before any other error middleware and after all controllers
   app.middleware(app.middlewares.sentry.errorHandler)
+  // load the normal error handler

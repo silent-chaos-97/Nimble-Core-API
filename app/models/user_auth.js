@@ -10,6 +10,7 @@ class UserAuthModel extends BaseModel {
   }
 
   static props() {
+    return ['email', 'password']
   }
 
   static schema() {
@@ -28,3 +29,4 @@ class UserAuthModel extends BaseModel {
         'users.failed_login_attempts',
         'accounts.secret'
       ])
+        .innerJoin('accounts', 'accounts.user_id', '=', 'users.id')

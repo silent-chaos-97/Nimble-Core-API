@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../core')
 const { v4: uuid } = require('uuid')
 const validator = app.plugins.validator
@@ -10,7 +9,6 @@ async function create(entity, options = {}) {
   logger.debug(`[create] starting for institution id ${entity.institutionId}`)
 
   entity = validator(entity, Model.schema('create'), { abortEarly: false })
-// Temp comment
 
   const id = await app.db.transaction(async tx => {
     const newId = uuid()

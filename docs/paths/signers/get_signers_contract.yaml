@@ -15,7 +15,6 @@
         schema:
           type: string
           format: uuidv4
-    responses:
       '200':
         description: Signer Contract information
         content:
@@ -24,3 +23,4 @@
               $ref: '#/components/schemas/SignerContract'
       '400':
         $ref: '#/components/responses/BadRequest'
+      '401':

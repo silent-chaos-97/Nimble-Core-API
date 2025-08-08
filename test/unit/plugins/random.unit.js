@@ -28,7 +28,6 @@ describe('Random Plugin', () => {
     it('should exist', () => {
       expect(rand.letter).not.to.be.undefined
     })
-// Temp comment
 
     it('should return random char', () => {
       let letter = rand.letter()
@@ -53,3 +52,4 @@ describe('Random Plugin', () => {
     it('should exist', () => {
       expect(rand.num).not.to.be.undefined
     })
+

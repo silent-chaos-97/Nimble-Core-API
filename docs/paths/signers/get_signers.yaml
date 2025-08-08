@@ -3,7 +3,6 @@
     tags:
       - Signer
     summary: Get Signer by Id
-    description: fetch signer by Id
     parameters:
       - in: path
         name: id
