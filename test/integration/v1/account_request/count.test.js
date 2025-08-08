@@ -78,3 +78,4 @@ describe('GET /account-requests/count', () => {
       it('should return a filtered count', () => {
         return request(app.server)
           .get('/v1/account-requests/count?status=APPROVED')
+          .set('Authorization', 'Bearer ' + token)

@@ -30,3 +30,4 @@ Document:
     format:
       type: string
       title: Document format identifier
+      enum: ['image', 'pdf']

@@ -34,6 +34,7 @@ describe('Email Plugin', () => {
   })
 
   describe('Instance', () => {
+
     describe('send()', () => {
       it('should exist', () => {
         expect(plugin.send).to.be.an('function')
@@ -137,3 +138,6 @@ describe('Email Plugin', () => {
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(template, email, undefined, sinon.match({ uri, statusEmailSubject }))
     })
   })
+
+  describe('sendAccountRequestStatus()', () => {
+    it('should exist', () => {

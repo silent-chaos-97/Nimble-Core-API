@@ -3,6 +3,7 @@ const _ = require('lodash')
 const moment = require('moment')
 
 const app = require('../../core')
+const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 const validator = app.plugins.validator
 
 const whitelist = ['id']

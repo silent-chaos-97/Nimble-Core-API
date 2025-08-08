@@ -88,9 +88,11 @@ class UserModel extends BaseModel {
   static props() {
     return ['id', 'email', 'password', 'firstName', 'lastName', 'createdAt', 'lastLoginAt', 'institutionId', 'branchId', 'roles', 'titles', 'workgroups', 'department', 'status', 'phone']
   }
+
   static relations() {
     return ['accounts', 'institution', 'branch']
   }
+// Temp comment
 
   hasRole(role) {
     return UserModel.hasRole(role)
@@ -159,3 +161,4 @@ class UserModel extends BaseModel {
       phone: Joi.string().length(10).pattern(/^\d+$/)
     })
   }
+

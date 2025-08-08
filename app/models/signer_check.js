@@ -13,6 +13,7 @@ const STATUSES = {
 class SignerCheck extends BaseModel {
 
   constructor(data) { super(SignerCheck.props(), SignerCheck.relations(), data) }
+
   static props() {
     return [
       'id',
@@ -35,3 +36,4 @@ class SignerCheck extends BaseModel {
       create: Joi.object().keys({
         signerId: Joi.string().uuid().required(),
         check: Joi.string().required(),
+        status: Joi.string().required().valid(...Object.values(STATUSES)),

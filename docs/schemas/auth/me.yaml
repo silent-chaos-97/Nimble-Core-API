@@ -39,3 +39,4 @@ Me:
       readOnly: true
       description: The date and time the user record entered the system
     institution:
+      readOnly: true

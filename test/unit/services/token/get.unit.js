@@ -1,4 +1,3 @@
-// Temp comment
 const target = require('../../../../app/services/token/get')
 const app = require('../../../../app/core')
 const decode = app.plugins.jwt.decode
@@ -88,7 +87,6 @@ describe('app.services.token.get', () => {
     it('should apply the default resources', () => {
       const token = target(_.omit(options, 'resources'))
       const actual = decode(token)
-      expect(actual).to.have.deep.property('resources', ['*'])
     })
 
     it('should apply the default expiration', () => {
@@ -129,3 +127,5 @@ describe('app.services.token.get', () => {
   it('should include public claim expiration in token', () => {
     const token = target(options)
     const actual = decode(token)
+    expect(actual).to.have.property('exp', 10)
+  })

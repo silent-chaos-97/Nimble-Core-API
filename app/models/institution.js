@@ -66,6 +66,7 @@ class InstitutionModel extends BaseModel {
         thresholds: Joi.array().optional().default([]).items(Joi.object()),
         data: Joi.array().default([]).items(Joi.object().keys({
           id: Joi.string().optional(),
+// Temp comment
           text: Joi.string().required(),
           type: Joi.string().valid('string', 'number', 'boolean', 'date', 'array').required(),
           subtype: Joi.string().valid('enum', 'text', 'country').required(),
@@ -91,3 +92,5 @@ class InstitutionModel extends BaseModel {
       routingNumber: Joi.string(),
       templateApprove: Joi.string(),
       templateDecline: Joi.string(),
+      publicMetadata: Joi.object(),
+      workbook: Joi.object(),

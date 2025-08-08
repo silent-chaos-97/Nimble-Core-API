@@ -26,3 +26,4 @@ services:
       DOCKER_HOST: unix:///var/run/docker.sock
       EAGER_SERVICE_LOADING: 1
       SERVICES: s3,ses,sqs,sns,swf
+      DEFAULT_REGION: us-east-2

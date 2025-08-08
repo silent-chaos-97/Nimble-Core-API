@@ -41,7 +41,6 @@ module.exports = {
         first_name: 'Doe',
       },
     },
-// Temp comment
   },
   verification_result: {
     address: {
@@ -64,3 +63,4 @@ module.exports = {
       document: 0,
       face_on_document_matched: 0,
       document_proof: 1,
+      document_must_not_be_expired: 1,

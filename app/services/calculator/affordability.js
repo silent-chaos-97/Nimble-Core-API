@@ -72,7 +72,6 @@ const BASE_SUMMARY_VALUE_PROVIDER = () => {
 const SUMMARY_NAMES = ['monthlyIncome', 'loan', 'equityDown', 'cashDown', 'rate', 'monthlyDebt', 'totalTerm', 'amortTerm', 'payment', 'credit']
 
 module.exports = async function(user, data, transacting = app.db) {
-  logger.info({ req: data })
 
   try {
     let summary = _.reduce(SUMMARY_NAMES, (_summary, name) => {
@@ -663,3 +662,27 @@ async function enrichAssets(institutionId, product, assets, isCollateral, profil
 
 async function enrichCollateral(institutionId, product, asset, profile = null) {
   return enrichAssets(institutionId, product, asset, false, profile)
+}
+
+async function enrichAsset(institutionId, product, asset, isCollateral, profile = null) {
+  if (!asset) return null
+
+  const type = _.snakeCase(asset.type)
+
+  const enricher = {
+    vehicle: _vin,
+    cash: _cash
+  }[type]
+
+  if (!enricher) return null // FIXME: use valuation factory
+
+  return Promise.all([
+    enricher(asset, profile || {}),
+    app.services.settings.getRecord({ key: 'advanced_rates', institutionId }, { id: asset.type })
+  ]).then(([enriched, advancedRate]) => {
+    return {
+      ...asset,
+      ...enriched,
+      advancedRate
+    }
+  })

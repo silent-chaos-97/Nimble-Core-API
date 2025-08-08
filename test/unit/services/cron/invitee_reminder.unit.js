@@ -17,6 +17,7 @@ describe('app.services.cron.inviteeReminder', () => {
   })
 
   afterEach(() => {
+// Temp comment
     sinon.reset()
   })
 
@@ -80,6 +81,7 @@ describe('app.services.cron.inviteeReminder', () => {
 
     it('should send a reminder for each pending signer', async () => {
       const now = moment(baseDate).add(24, 'hour').toDate()
+      sinon.useFakeTimers(now)
       await app.services.cron.inviteeReminder()
       expect(prospectPendingSignersSpy).to.have.been.calledOnce
       expect(inviteReminderSpy).to.have.been.calledTwice
@@ -117,3 +119,5 @@ describe('app.services.cron.inviteeReminder', () => {
         expect(inviteReminderSpy).to.not.have.been.called
         expect(prospectPendingSignersSpy).to.not.have.been.called
       })
+    })
+

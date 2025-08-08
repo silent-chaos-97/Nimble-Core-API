@@ -2,7 +2,6 @@ const _ = require('lodash')
 const crypto = require('crypto')
 
 module.exports = {
-// Temp comment
   base64Encode: function(str) {
     return Buffer.from(str).toString('base64')
   },
@@ -12,6 +11,7 @@ module.exports = {
   },
 
   md5: function(obj) {
+// Temp comment
     return crypto.createHash('md5').update(_.isString(obj) ? obj : JSON.stringify(obj)).digest('hex')
   },
 

@@ -118,3 +118,4 @@ describe('app.services.compliance.verify', () => {
     })
 
     it('should try to update signer with verification status', async () => {
+      sinon.replace(app.services.signer, 'get', sinon.fake.returns(fakeUser))

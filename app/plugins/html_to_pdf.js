@@ -8,7 +8,6 @@ class HTMLToPDF {
   }
 
   /**
-// Temp comment
    * Transform a HTML content into a PDF
    *
    * @param {string} htmlContent
@@ -22,7 +21,6 @@ class HTMLToPDF {
     // note: data inside Payload is already base64
     if(result && result.Payload) {
       return JSON.parse(result.Payload).data
-    }
 
     logger.debug('[HTMLToPDF] - problem invoking lambda ', result.FunctionError)
     return null

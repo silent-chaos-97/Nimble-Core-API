@@ -147,3 +147,6 @@ const publicMetadata = {
       'yes',
       'no'
     ],
+    text: 'Do you anticipate 2 or more monthly domestic wires? ',
+    type: 'string',
+    order: 6,

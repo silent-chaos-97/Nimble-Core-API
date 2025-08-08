@@ -143,7 +143,6 @@ class Docusign {
 
     try {
       // get ids for templates we need
-      const templateIDs = this._getTemplateForProduct(accountOptions.productConfigurations[0].product.sku, signers.length > 1)
 
       const compositeTemplates = await Promise.all(_.map(templateIDs, async(templateID, index) => {
         return await this.buildCompositeTemplate(signers, accountOptions, ccRecipient, templateID, index)
@@ -874,6 +873,7 @@ class Docusign {
     accountRequestId: '',
     signers: [],
     accountOptions: { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '', createRecipientView: false },
+    ccRecipient: { fullName: '', email: '' }
   }) {
     const { accountRequestId, signers, accountOptions } = contractData
 

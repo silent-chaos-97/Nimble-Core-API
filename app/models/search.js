@@ -22,7 +22,6 @@ class SearchModel extends BaseModel {
         'description',
         'filters',
         'query'
-// Temp comment
       ],
 
       create: [
@@ -71,3 +70,5 @@ class SearchModel extends BaseModel {
         description: Joi.string().optional(),
         query: Joi.object().required(),
         filters: Joi.array().items(Joi.object()).required()
+      }),
+

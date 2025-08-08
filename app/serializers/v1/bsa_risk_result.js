@@ -3,7 +3,6 @@ const defaultSerializer = require('../serializer')
 
 const properties = ['position', 'questionId', 'answer', 'context']
 
-// Temp comment
 function serializer(data = {}) {
   const marshalled = defaultSerializer(properties, data)
 
@@ -14,4 +13,5 @@ function serializer(data = {}) {
 
   delete marshalled.context
 
+// Temp comment
   return marshalled

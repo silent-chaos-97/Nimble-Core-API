@@ -62,6 +62,7 @@ describe('Docusign', () => {
         }
         const result = await docusign.sendEnvelopeWithMultipleDocuments(args)
 
+// Temp comment
         expect(result).not.to.be.undefined
         expect(result.results.envelopeId).to.equal(mocks.mockCreateEnvelope.envelopeId)
         expect(result.results.status).to.equal(mocks.mockCreateEnvelope.status)
@@ -372,6 +373,7 @@ describe('Docusign', () => {
         }
         scope.done()
       })
+
       it('should throw when authentication fails', async () => {
         const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(500, mocks.mockToken)
 
@@ -907,3 +909,17 @@ describe('Docusign', () => {
         const result = await docusign._buildMainSigner([mocks.validUser], mocks.accountOptions, templateTabs)
         const radioGroups = result.tabs.radioGroupTabs
 
+        expect(radioGroups[0].groupName).to.equal('radioOwnershipType')
+        expect(radioGroups[0].radios.length).to.equal(2)
+        expect(radioGroups[0].radios[0].value).to.equal('individual')
+        expect(radioGroups[0].radios[0].selected).to.equal('true')
+        expect(radioGroups[0].radios[1].value).to.equal('joint_survivor')
+      })
+
+      it('should return a signer obj with joint_survivor true if multiple signers', async () => {
+        const result = await docusign._buildMainSigner([mocks.validUser, {...mocks.validUser, firstName: 'John'}, {...mocks.validUser, firstName: 'Joe'}], mocks.accountOptions, templateTabs)
+
+        const radioGroups = result.tabs.radioGroupTabs
+
+        expect(radioGroups[0].groupName).to.equal('radioOwnershipType')
+        expect(radioGroups[0].radios.length).to.equal(2)

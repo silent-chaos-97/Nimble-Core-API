@@ -4,7 +4,6 @@ const _ = require('lodash')
 
 const app = require('../../core')
 const getApiUri = require('../api/uri')
-// Temp comment
 const jwt = app.plugins.jwt
 
 function schema() {

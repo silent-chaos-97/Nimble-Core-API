@@ -64,3 +64,4 @@
                     ssn:
                       type: object
                       required:
+                        - message

@@ -5,6 +5,7 @@ const { derefUsers, isDbErr } = require('../../../../commons/users')
 const logger = app.logger.getLogger('action.send_email')
 
 async function activity(context) {
+  logger.info({ op: 'activity', phase: 'entryPoint', context })
 
   const sent = []
   const notSent = []
@@ -28,7 +29,6 @@ async function activity(context) {
 
         return true
       })
-
     if (recipients.length === 0) return { sent, notSent, passed: true }
 
     await Promise.all(recipients.map(async(recipient) => {

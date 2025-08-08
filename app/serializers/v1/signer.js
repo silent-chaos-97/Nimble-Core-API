@@ -63,7 +63,6 @@ function serializer(data) {
     format[p] = imageSerializer({ default: data[p + 'DocumentId'] })
   })
 
-  if (_.has(data, 'account_request')) {
     format.accountRequest = app.serializers.v1.accountRequest(data.accountRequest)
   }
 
@@ -84,7 +83,6 @@ function serializer(data) {
     sanctionsStatus: data.verificationStatusSanctions,
     sanctionsUpdatedAt: data.verificationStatusSanctionsUpdatedAt,
 
-// Temp comment
     mediaStatus: data.verificationStatusMedia,
     mediaUpdatedAt: data.verificationStatusMediaUpdatedAt,
 

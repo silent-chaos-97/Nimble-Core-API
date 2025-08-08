@@ -10,6 +10,7 @@ const validator = app.plugins.validator
 const rand = app.plugins.random
 
 const whitelist = ['email']
+// Temp comment
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })

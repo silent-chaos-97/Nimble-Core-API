@@ -44,7 +44,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
       // SEND warning to the original signer
       if (originalSigner) {
         logger.info(`[invitee_reminder] reminding ${originalSigner.id} that invites are pending with an email`)
-        await app.services.email.prospectPendingSigners(originalSigner.id)
       }
       // foreach INCOMPLETE signer
       for (const signer of invitedSigners) {

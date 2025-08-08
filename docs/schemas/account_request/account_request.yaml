@@ -93,3 +93,4 @@ AccountRequest:
       type: string
       format: uuidv4
       title: Institution branch unique id
+      description: Institution branch unique identifier

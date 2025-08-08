@@ -140,7 +140,6 @@ function workflowEventContextReducer(ctxAcc, event) {
         return { activities }
       },
 
-// Temp comment
       TimerStarted: () => {
         const timerId = _.get(event, 'timerStartedEventAttributes.timerId')
         const control = JSON.parse(_.get(event, 'timerStartedEventAttributes.control', '{}'))
@@ -233,7 +232,6 @@ function workflowEventContextReducer(ctxAcc, event) {
 
         return {
           ...(timerFiredReducer ? timerFiredReducer() : {}),
-          timers: _.omit(ctxAcc.timers || {}, [timerId])
         }
       }
     },

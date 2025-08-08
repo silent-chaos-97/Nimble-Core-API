@@ -41,7 +41,6 @@ class Shufti {
   _buildError(status, event, error) {
     return { isShufti: true, response: { status, event, statusText: error.message } }
   }
-
   buildRequestPayload(userData, signerId) {
     const payload = this.getPayload(userData.email, signerId)
 

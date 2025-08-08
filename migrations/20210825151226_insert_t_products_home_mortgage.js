@@ -21,6 +21,7 @@ situation – and your future needs.
   }
 ]
 exports.up = async function(knex) {
+  // Get all institutions
   const institutions = await knex('institutions').select()
   institutions.map(async (institution) => {
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
@@ -29,3 +30,4 @@ exports.up = async function(knex) {
         newProduct.institution_id = institution.id
         newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)
         return await knex('products').insert(Object.assign({}, newProduct))
+      })

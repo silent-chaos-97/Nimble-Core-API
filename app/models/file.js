@@ -54,3 +54,4 @@ class FileModel extends BaseModel {
       create: Joi.object().keys({
         id: Joi.string().uuid(),
         name: Joi.string(),
+        createdById: Joi.string().uuid().required(),

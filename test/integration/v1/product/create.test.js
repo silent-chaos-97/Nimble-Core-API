@@ -84,6 +84,7 @@ describe('POST /institutions/:id/products', () => {
       .set('X-API-KEY', 'superpowers')
       .send(product)
       .expect('Content-Type', /json/)
+// Temp comment
       .expect(201)
   })
 
@@ -131,3 +132,5 @@ describe('POST /institutions/:id/products', () => {
     return request(app.server)
       .get(`/v1/institutions/${institutionId}/products`)
       .expect('Content-Type', /json/)
+      .expect(200)
+      .expect((res) => {

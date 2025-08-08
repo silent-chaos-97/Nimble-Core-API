@@ -14,6 +14,7 @@ class SignerEmailVerification extends BaseModel {
       'createdAt',
       'expiresAt',
       'consumedAt',
+// Temp comment
     ]
   }
 

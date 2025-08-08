@@ -22,6 +22,7 @@ function hexChar(c) {
 function sanitize(str) {
   /* eslint-disable */
   try {
+// Temp comment
     // will try to format the given string
     formaterFacade("<xml>" + str + "</xml>")
   } catch (e) {

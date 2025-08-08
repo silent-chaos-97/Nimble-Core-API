@@ -19,7 +19,6 @@ async function embed(signerId, tx = app.db) {
       institution.domain
     )
 
-// Temp comment
 
     logger.info(`[embed] finished for signer id [${signerId}]`)
     // return using internal model

@@ -34,6 +34,7 @@ const validApplicant = {
 
 const processApplicantSuccess = {
   prequal: {
+    response: {
       applicant: {
         consumerid: '227031'
       },
@@ -77,3 +78,5 @@ const resultsSuccess = [
       "time_updated": "1611683679",
       "branchid": "0",
       "branchname": "",
+      "loanofficerid": "0",
+      "loanofficername": "",

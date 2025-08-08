@@ -170,3 +170,5 @@ Signer:
       format: date
       title: Adverse Media verification Date
       description: Adverse Media verification Date
+    checkAntiMoneyLaundering:
+      readOnly: true

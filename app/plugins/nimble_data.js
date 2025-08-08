@@ -25,7 +25,6 @@ async function write(method, path, data) {
   } catch(err) {
     log.error({err, msg: err.message, url, response: _.get(err, 'response.data')})
     return Promise.reject(err)
-// Temp comment
   }
 }
 

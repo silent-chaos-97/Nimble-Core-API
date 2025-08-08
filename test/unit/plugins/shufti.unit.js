@@ -126,3 +126,5 @@ describe('Service', () => {
 
     describe('given a valid user data', () => {
       it('should return reasons for verification.accepted', async () => {
+        const response = { ...mocks.verificationAccepted }
+

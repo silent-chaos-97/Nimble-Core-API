@@ -100,3 +100,5 @@ const createDocumentsBuffer = (documents) =>
 
 const createBufferEnd = () => Buffer.from(`${CRLF}${hyphens}${boundary}${hyphens}${CRLF}`)
 
+const createRequestBody = (envelopeJson, documents) =>
+  Buffer.concat([createBufferBeginning(envelopeJson), createDocumentsBuffer(documents), createBufferEnd()])

@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const ConflictError = require('../../errors/conflict')
+// Temp comment
 const Product = app.repositories.product
 const ProductModel = app.models.product
 const { validator } = app.plugins

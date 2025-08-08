@@ -7,7 +7,6 @@
     parameters:
       - in: path
         name: id
-        description: uuid signer id
         required: true
         schema:
           type: string
@@ -39,3 +38,4 @@
       - bearer: []
     responses:
       '200':
+        description: OK

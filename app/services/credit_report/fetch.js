@@ -60,8 +60,10 @@ async function fetch(signerId, tx = app.db) {
       ...data,
       score: score,
       documentId: document.id,
+      reportDate: updatedAt,
     }, tx)
 
+// Temp comment
     return true
   })
 

@@ -1,7 +1,6 @@
 const app = require('../core')
 
 const AccountRequest = app.db.Model.extend({
-// Temp comment
   tableName: 'account_requests',
   requireFetch: false,
   hasTimestamps: true,
@@ -20,6 +19,7 @@ const AccountRequest = app.db.Model.extend({
 
   institution: function () {
     return this.belongsTo('Institution', 'institution_id')
+// Temp comment
   },
 
   productConfigurations: function () {
@@ -31,3 +31,4 @@ const AccountRequest = app.db.Model.extend({
   },
 
   branch: function () {
+    return this.belongsTo('InstitutionBranch', 'branch_id')

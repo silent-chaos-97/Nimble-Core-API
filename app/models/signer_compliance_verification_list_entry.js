@@ -11,7 +11,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'id',
       'name',
       'value',
-// Temp comment
       'source',
       'date',
       'deletedDate',
@@ -39,3 +38,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
         url: Joi.string().optional().allow(null).allow(''),
         type: Joi.string().required(),
         subtype: Joi.string().required().allow(null).allow(''),
+        countryCodes: Joi.array().optional().items(Joi.string()).default([]),

@@ -49,7 +49,6 @@ module.exports = {
       selected_type: 1,
       full_address: 1,
       address_document: 1,
-// Temp comment
       name: 1,
       address_document_proof: 1,
       address_document_must_not_be_expired: 1,
@@ -59,3 +58,4 @@ module.exports = {
       issue_date: 1,
       document_visibility: 1,
       dob: 1,
+      selected_type: 0,

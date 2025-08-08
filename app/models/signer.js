@@ -16,6 +16,7 @@ class Signer extends BaseModel {
   static get PRIMARY_ROLE_NAME() {
     return 'PRIMARY'
   }
+  static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
   }
 
@@ -86,7 +87,6 @@ class Signer extends BaseModel {
   }
 
   static completeStatusProps() {
-    return [
       'firstName',
       'middleName',
       'lastName',
@@ -251,3 +251,7 @@ class Signer extends BaseModel {
               then: Joi.string().optional().valid(...statesUSA),
               otherwise: Joi.string().optional().valid(...countries)
             }),
+            frontDocumentId: Joi.string().uuid().optional(),
+            backDocumentId: Joi.string().uuid().optional(),
+          }),
+        })

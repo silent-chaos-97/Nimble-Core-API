@@ -39,3 +39,4 @@ SignerComplianceVerificationListEntry:
       example: sanction, pep-class-1n, pep-class-2
     countryCodes:
       title: What is the source country code associated with this entry
+      type: array

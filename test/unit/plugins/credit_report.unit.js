@@ -184,7 +184,6 @@ describe('Credit Report Plugin', () => {
         'ssn': '333333333',
         'dob': '12061982'
       }
-
       const response = await creditReport._formatApplicantData(signer)
       expect(response).to.deep.equal(result)
     })
@@ -218,3 +217,6 @@ describe('Credit Report Plugin', () => {
         'firstName': 'ADRIENNE',
         'lastName': null,
         'address': '523 W ALAMAR AVE',
+        'city': 'GREENFIELD',
+        'dateOfBirth': '1945-01-01',
+        'ssn': '333-33-3333'

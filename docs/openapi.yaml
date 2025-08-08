@@ -95,7 +95,6 @@ components:
       in: header
     token:
       description: >
-        For accessing the API a valid JWT token must be passed.
       type: apiKey
       name: token
       in: query
@@ -142,3 +141,6 @@ components:
             application have the following status:  * `ok`  - The API is running
             without any known problems.
           enum:
+            - ok
+          example: ok
+        message:

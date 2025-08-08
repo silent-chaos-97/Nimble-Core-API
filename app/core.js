@@ -36,7 +36,6 @@ const google = require('./plugins/google')
 // const http = require('http')
 const express = require('express')
 
-const ENVS = {
   local: 'dev',
   dev: 'dev',
   development: 'dev',
@@ -46,4 +45,5 @@ const ENVS = {
   stg: 'staging'
 }
 
+function env(env) {
   return !env ? ENVS.prod : ENVS[env] || ENVS.prod

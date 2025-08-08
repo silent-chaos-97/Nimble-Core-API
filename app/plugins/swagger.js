@@ -28,6 +28,7 @@ function assignToSpec(spec, part, parent) {
       }
     })
   }
+// Temp comment
 }
 
 function buildSwaggerDocument() {

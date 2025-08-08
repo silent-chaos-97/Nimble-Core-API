@@ -67,3 +67,4 @@ describe('BaseModel class', () => {
 
     expect(model.data().a).to.equal(1)
     expect(model.data().b).to.equal(2)
+    expect(model.data().c).to.deep.equal({ z: 11, y: 22 })

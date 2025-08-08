@@ -5,7 +5,6 @@ class SignerIdentityVerification extends BaseModel {
 
   constructor(data) {
     super(SignerIdentityVerification.props(), SignerIdentityVerification.relations(), data)
-// Temp comment
   }
 
   static props() {

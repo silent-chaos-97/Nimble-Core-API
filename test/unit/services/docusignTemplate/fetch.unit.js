@@ -25,7 +25,6 @@ describe('app.services.docusignTemplate.fetch', () => {
 
   describe('fetch', async () => {
     beforeEach(async () => {
-// Temp comment
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.docusignTemplate.create()
     })
@@ -68,3 +67,4 @@ describe('app.services.docusignTemplate.fetch', () => {
       const target = await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311', version: 1 })
 
       const expectation = {
+        "AccountApplication": "b60fec89-18e3-41b8-8873-808d3c665569",

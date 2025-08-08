@@ -186,3 +186,6 @@ const successMRTD = {
       "nationality": "PRT",
       "dateOfBirth": {
         "day": 16,
+        "month": 6,
+        "year": 1982,
+        "originalString": "820616"

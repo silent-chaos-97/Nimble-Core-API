@@ -21,6 +21,7 @@ const savingsProductOptions = [
     value: false,
     annotation: '$3/statement',
   }
+// Temp comment
 ]
 
 const checkingProductOptions = [
@@ -89,3 +90,4 @@ exports.up = async (knex)  => {
         savingOption.product_id = product.id,
         await knex('product_options').insert(Object.assign({}, savingOption))
       }))
+    } else if (product.category === 'CHECKING') {

@@ -1427,6 +1427,7 @@ const successResponse = {
                 "source": "complyadvantage-adverse-media",
                 "value": "Nigeria"
               },
+              {
                 "name": "Country",
                 "source": "complyadvantage-adverse-media",
                 "value": "South Africa"
@@ -3859,4 +3860,63 @@ const parsedResult = [
         "date": "2019-10-23T00:00:00Z",
         "deletedDate": null,
         "url": "https://www.newsday.co.zw/2019/10/walk-with-the-wise-to-be-wise/amp/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Zimbabwe proclaims former President Mugabe (1924-2019) a national hero | Pambazuka News",
+        "value": "Both Mugabe and Sally were arrested. Mugabe spent a decade imprisoned between the years of 1964-1974. After his release, he travelled to Mozambique in 1975 after the neighbouring country's independence from Portuguese colonialism.",
+        "date": "2019-10-08T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.pambazuka.org/node/100387",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Zimbabwe ruling party ZANU-PF begins Robert Mugabe impeachment | The West Australian",
+        "value": "The move came after Mugabe called his cabinet for a meeting at his State House offices despite the parliamentary plan, which could result in Mugabe being kicked out in days. In the draft motion, the party accused Mugabe of being a \"source of instability\", flouting the rule of law and presiding over an \"unprecedented economic tailspin\" in the past 15 years. It also said he had abused his constitutional mandate to favour his unpopular wife Grace, 52, whose tilt at power triggered the backlash from the army that brought tanks onto the streets of the capital last week.",
+        "date": "2020-03-17T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://thewest.com.au/news/africa/zimbabwe-ruling-party-zanu-pf-begins-robert-mugabe-impeachment-ng-b88666171z.amp",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Zimbabwe will use fingerprint ID technology for its 2018 general elections – The Zimbabwe Mail",
+        "value": "The announcement and appointment of Ipsidy come a few months after ex-President Robert G. Mugabe resigned as president in Zimbabwe after several decades in the position. Mugabe had previously been accused of manipulating elections  to stay on as president. Ipsidy has its headquarters in New York and has operating subsidiaries in Colombia and in South Africa.",
+        "date": "2019-03-06T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.thezimbabwemail.com/technology-science/zimbabwe-will-use-fingerprint-id-technology-for-its-2018-general-elections/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Zimbabwe's president, opponent both confident of win after close vote",
+        "value": "The Zimbabwe Electoral Commission will announce official results within five days of the election although the outcome should be known well before then. The winner faces the task of putting Zimbabwe back on track after 37 years under Mugabe which were tainted by corruption, mismanagement and diplomatic isolation that caused a crisis in a country that once had one of Africa's most promising economies. \"The information from our representatives on the ground is extremely positive!\"",
+        "date": "2020-03-24T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://thefinancialexpress.com.bd/world/africa/zimbabwes-president-opponent-both-confident-of-win-after-close-vote-1533025719",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Новости: ВЛАСТЬ, Зимбабве, все за все время, 1 страница | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+        "date": "2018-09-18T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/archive/tag/all/vlast/zimbabve/page1/",
+        "countryCodes": [],
+        "source": "",
+      },
+      {
+        "name": "Новости: ВЛАСТЬ, Перевороты, видео за все время, 1 страница | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+        "date": "2018-07-24T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/archive/tag/video/vlast/perevoroty-putchi/page1/",
         "countryCodes": [],

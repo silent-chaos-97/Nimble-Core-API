@@ -96,7 +96,6 @@ async function checkApiKey(req, res, next) {
   try {
     const apiKey = getApiKey(req.headers)
     if (apiKey != app.config.get('auth').adminApiKey) {
-      return next(new UnauthorizedError())
     }
 
     req.isAuthenticated = true

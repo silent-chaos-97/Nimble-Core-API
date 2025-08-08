@@ -59,3 +59,4 @@ describe('app.services.contract.embed', () => {
         expect(docusignEmbed).to.have.been.calledOnce
       })
 
+      it('should throw error if cannot find signer', async () => {

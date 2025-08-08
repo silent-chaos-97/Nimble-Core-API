@@ -8,5 +8,4 @@ var conf = convict(schema)
 var env = conf.get('env')
 if (['local', 'test', 'test-ci'].includes(env))
   conf.loadFile('./config/' + (process.env.CI ? 'test-ci' : env) + '.json')
-
 // Perform validation

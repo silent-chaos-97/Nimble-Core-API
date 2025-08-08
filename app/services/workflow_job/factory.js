@@ -15,11 +15,11 @@ const NOOP_DONE_CB = async() => {
  * }
  * } job
  * @param {Transaction} tx
-// Temp comment
  * @return {
  * Promise<{
  *   handler: ({wkfl: object, config: object, job: Job}) => Promise<Job | void>,
  *   onDone: ({wkfl: object, config: object, job: Job, next: Job}) => void
+// Temp comment
  * }>
  * }
  */
@@ -27,3 +27,4 @@ module.exports = async(job, tx) => {
   // validate JOB here
 
   return Promise.all([
+    wkfls.get({ id: job.wkflId }, tx), // wkfl

@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
@@ -23,7 +22,6 @@ async function api(method, path, params, data) {
       post: () => axios.post(apiUrl, data, { headers })
     }[method]()
 
-    logger.info({ op: 'data.api', phase: 'completed', res: _.get(res, ['data'], res) })
     return res.data
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)

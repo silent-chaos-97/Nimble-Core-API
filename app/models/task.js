@@ -110,6 +110,7 @@ class TaskModel extends BaseModel {
     return { ...Types }
   }
 
+  static statuses() {
     return { ...Statuses }
   }
 
@@ -133,3 +134,5 @@ class TaskModel extends BaseModel {
         this._data.workflow && this._data.activityId
           ? _.find(
               _.get(this, '_data.workflow.activities', []),
+              act => this._data.activityId.id === act.id
+            )

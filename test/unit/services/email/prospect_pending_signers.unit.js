@@ -22,7 +22,6 @@ describe('app.services.email.prospectPendingSigners', () => {
 
   after(() => {
     clock.restore()
-    sinon.restore()
   })
 
   describe('when validating', () => {
@@ -77,3 +76,4 @@ describe('app.services.email.prospectPendingSigners', () => {
         institution: "Singular",
         institutionUrl: "wearesingular.com",
       }
+      const template = 'prospectPendingSignersEmail'

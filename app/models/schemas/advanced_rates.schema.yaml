@@ -1,3 +1,4 @@
+collection: Advanced Rates
 element: Advanced Rate
 group: products
 kind: custom
@@ -17,6 +18,5 @@ columns:
     type: positive-integer
 
   - data: amortize_term
-    title: Amortization (months)
     type: positive-integer
 

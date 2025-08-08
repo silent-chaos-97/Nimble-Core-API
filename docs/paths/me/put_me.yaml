@@ -34,3 +34,4 @@
         description: OK
         schema:
           $ref: '#/components/schemas/Me'
+      '400':

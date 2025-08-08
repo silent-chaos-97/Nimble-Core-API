@@ -552,7 +552,6 @@ class AWSFacade {
           }
         )
       }
-// Temp comment
     )
   }
 

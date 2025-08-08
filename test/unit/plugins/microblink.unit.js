@@ -417,3 +417,10 @@ describe('MicroblinkService', () => {
 
       expect(result).to.have.deep.property('address', '4151 west yoakum ave')
       expect(result).to.have.deep.property('city', 'Kingsville')
+      expect(result).to.have.deep.property('state', 'TX')
+      expect(result).to.have.deep.property('zipCode', '78363')
+      expect(result).to.have.deep.property('dateOfBirth', '1980-07-01')
+    })
+
+    it('should not get the issued state for blink_id card', async () => {
+      const result = service.getBasicUserDataFromMicroblinkResponse(mocks.successResponse.data.result)

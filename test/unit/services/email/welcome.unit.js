@@ -36,6 +36,7 @@ describe('app.services.email.welcome', () => {
         expect(error.name).to.equal('BadRequestError')
         expect(error.statusCode).to.equal(400)
       }
+    })
 
     it('should return error if user not found', async() => {
       try {
@@ -77,3 +78,5 @@ describe('app.services.email.welcome', () => {
       const institution = 'Singular'
       const institutionUrl = 'wearesingular.com'
       const uri = config.get('frontend.welcome_uri')
+        .replace(':protocol', config.get('protocol'))
+        .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))

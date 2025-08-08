@@ -114,3 +114,5 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .expect(403)
     })
 
+  })
+

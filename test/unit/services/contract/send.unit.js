@@ -57,7 +57,6 @@ describe('app.services.contract.send', () => {
       })
 
       afterEach(() => {
-        sinon.reset()
         nock.cleanAll()
       })
 
@@ -83,6 +82,7 @@ describe('app.services.contract.send', () => {
 
         expect(calledArgs.accountOptions.institutionName).to.equal(args.accountOptions.institutionName)
         expect(calledArgs.accountOptions.openingAmount).to.equal(args.accountOptions.openingAmount)
+        expect(calledArgs.accountOptions.productName).to.equal(args.accountOptions.productName)
 
         expect(calledArgs.signers[0].id).to.equal(args.signers[0].id)
         expect(calledArgs.signers[1].id).to.equal(args.signers[1].id)
@@ -123,3 +123,5 @@ describe('app.services.contract.send', () => {
         await seed.account_request_products() // insert all
         await seed.account_request_product_options() // insert all
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
+        await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
+        await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)

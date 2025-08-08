@@ -10,3 +10,4 @@
       "stereotype": "task"
     },
     "response_expired": {
+      "type": "boolean"

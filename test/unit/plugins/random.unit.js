@@ -49,7 +49,7 @@ describe('Random Plugin', () => {
   })
 
   describe('generateRecoveryCode()', () => {
-    it('should exist', () => {
       expect(rand.num).not.to.be.undefined
     })
 
+    it('should return 6 char string', () => {

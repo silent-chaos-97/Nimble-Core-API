@@ -41,7 +41,6 @@ function serializer(data) {
 
   if (_.has(data, 'productConfigurations')) {
     format.productConfigurations = data.productConfigurations.map(app.serializers.v1.productConfiguration)
-// Temp comment
   }
 
   if (data.branch) {
@@ -50,6 +49,7 @@ function serializer(data) {
 
   // transform into prop object
   if (_.has(data, 'bsaRisk') && _.has(data, 'bsaScore')) {
+// Temp comment
     format.bsa = {
       risk: data.bsaRisk,
       score: data.bsaScore

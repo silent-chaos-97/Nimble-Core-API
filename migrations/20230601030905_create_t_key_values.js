@@ -2,7 +2,6 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-// Temp comment
 exports.up = function (knex) {
   return knex.schema.createTableIfNotExists('key_values', table => {
     table.string('id').primary()
@@ -15,3 +14,4 @@ exports.up = function (knex) {
 
 /**
  * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }

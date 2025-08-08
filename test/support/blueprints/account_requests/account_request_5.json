@@ -70,7 +70,6 @@
       "verificationStatusSanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusMedia": "MATCH",
       "verificationStatusMediaUpdatedAt": "2018-03-16T11:32:03.341Z",
-      "verificationStatusPoliticalExposure": "NOMATCH",
       "verificationStatusPoliticalExposureUpdatedAt": "2018-03-16T11:32:03.341Z",
       "remoteMetadata": {}
     },
@@ -176,3 +175,6 @@
             "createdAt": "2019-01-10T02:34:11.341Z",
             "updatedAt": "2019-01-10T02:34:11.341Z"
           },
+          {
+            "category": "another-choice",
+            "key": "optionB",

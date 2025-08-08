@@ -1,6 +1,5 @@
 const publicMetadata = {
   _: {
-    thresholds: [
       {
         op: '>=',
         val: 7,
@@ -150,3 +149,5 @@ const publicMetadata = {
     ],
     text: 'Do you anticipate 2 or more monthly domestic wires? ',
     type: 'string',
+    order: 6,
+    score: {

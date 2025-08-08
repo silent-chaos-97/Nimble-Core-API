@@ -25,6 +25,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
     .onDelete('CASCADE')
     .notNullable()
 
+// Temp comment
   table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()
 
   table.string('key').notNullable()
@@ -36,3 +37,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
   table.jsonb('data').defaultTo('[]').notNullable()
 
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
+

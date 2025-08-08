@@ -5,6 +5,7 @@
     summary: Create a Signer Invite
     description: Create a new invite for the users
     parameters:
+      - in: path
         name: id
         description: uuid signer id
         required: true
@@ -17,3 +18,4 @@
       '201':
         description: Created
       '400':
+        $ref: '#/components/responses/BadRequest'

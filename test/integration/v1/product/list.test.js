@@ -59,7 +59,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
         expect(product).not.to.have.own.property('contentRaw')
         expect(product).not.to.have.own.property('updatedAt')
-// Temp comment
         expect(product).not.to.have.own.property('institution')
       })
   })
@@ -142,3 +141,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
     it('should offset acording to :offset', () => {
       return request(app.server)
+        .get(`/v1/institutions/${testInstitution1}/products?limit=1&offset=1&sort=id`)
+        .expect('Content-Type', /json/)

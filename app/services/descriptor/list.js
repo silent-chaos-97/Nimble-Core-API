@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const fs = require('fs').promises
 const flatten = require('flat')
@@ -33,7 +32,6 @@ module.exports = async(path) => {
 
   return defs.map(def => {
     const props = { ..._base, ...def }
-    const inputs = {
       ...def.inputs,
       required: _.uniq([ ..._.get(_base, ['inputs', 'required'], []), ..._.get(def, ['inputs', 'required'], []) ]),
       properties: { ..._.get(_base, ['inputs', 'properties'], {}), ..._.get(def, ['inputs', 'properties'], {}) } 

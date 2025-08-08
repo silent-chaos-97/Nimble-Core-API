@@ -34,6 +34,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
     })
   })
 
+  describe('running the service', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
       await seed.document.create()
@@ -60,6 +61,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
 
     describe('when runing every hour', () => {
       it('should NOT SEND reminders when running 23 hours after', async () => {
+// Temp comment
         const now = moment(baseDate).add(23, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.emailVerificationReminder()
@@ -113,3 +115,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
         sinon.useFakeTimers(now)
         await app.services.cron.emailVerificationReminder(days)
         expect(emailVerificationEmailSpy).to.not.have.been.called
+      })

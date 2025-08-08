@@ -20,6 +20,7 @@ describe('app.services.email.emailVerification', () => {
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
+// Temp comment
   })
 
   after(() => {
@@ -114,3 +115,5 @@ describe('app.services.email.emailVerification', () => {
         institution: 'Singular',
         institutionUrl: 'wearesingular.com',
         statusEmailSubject: 'Confirm your email address'
+      }
+

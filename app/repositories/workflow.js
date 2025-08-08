@@ -14,3 +14,4 @@ const Workflow = app.db.Model.extend({
   },
 
   branch: function () {
+    return this.belongsTo('InstitutionBranch', 'branch_id')

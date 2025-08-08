@@ -16,7 +16,6 @@ const ROWS = [
  * @returns { Promise<void> }
  */
 exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(docusignTemplate =>
-  knex('docusign_templates').insert({
     institution_id: inst.id,
     ...docusignTemplate
   })

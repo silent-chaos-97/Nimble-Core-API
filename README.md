@@ -32,7 +32,6 @@ endpoint: [https://api-staging.nimblefi.com/](https://api-staging.nimblefi.com/v
 
 endpoint: [https://api.nimblefi.com/](https://api.nimblefi.com/v1/health)
 
-## Local Development
 
 ### Option 1 – Local Node + Docker for Postgres and LocalStack
 
@@ -75,6 +74,7 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
      end $$;
    ```
 
+1. __IMPORTANT__: Start app in development mode
    `yarn watch`
 
 1. Check API is running
@@ -157,3 +157,6 @@ yarn migrate
 
 ```bash
 # rolling back migrations
+yarn rollback
+```
+

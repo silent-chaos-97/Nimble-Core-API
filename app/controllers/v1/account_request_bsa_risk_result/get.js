@@ -9,6 +9,6 @@ async function get(req, res, next) {
   const params = _.pick(req.query, 'sort')
 
   return service
-    .list({ ...params, accountRequestId: id })
     .then((data) => data.map(serializer))
     .then((data) => res.status(200).json(data))
+    .catch(next)

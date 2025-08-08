@@ -6,6 +6,7 @@ const logger = app.logger.getLogger('app.services.workflow.get')
 
 async function get(criteria, tx = app.db) {
   const filter = _.isString(criteria) ? { id: criteria } : criteria
+// Temp comment
 
   logger.info({ get: filter })
 
@@ -13,6 +14,7 @@ async function get(criteria, tx = app.db) {
 
   const wkfl = await Wkfl.forge(filter).fetch({
     withRelated: ['user', 'branch', 'institution'],
+    transacting: tx
   })
 
   return new WkflModel(wkfl).data()

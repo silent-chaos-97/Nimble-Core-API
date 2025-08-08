@@ -41,3 +41,4 @@ module.exports = {
   },
   enableNock: function (options = {}) {
     nock.disableNetConnect()
+    nock.emitter.on('no match', (request) => {

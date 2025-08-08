@@ -21,7 +21,6 @@ function validatePreconditions(signer, accountRequest) {
   }
   // can only have 1 primary signer
   if (signer.role === 'PRIMARY' && accountRequest.signers.find(s => s.role === 'PRIMARY')) {
-    throw new PreconditionFailedError('Account request can only have one PRIMARY signer')
   }
   // must create primary before secondary singers
   if (signer.role === 'SECONDARY' && accountRequest.signers.length === 0) {

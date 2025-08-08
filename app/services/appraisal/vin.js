@@ -7,7 +7,6 @@ const cache = app.plugins.cache('appraisals/vin', { stdTTL: 86400 })
 const logger = app.logger.getLogger('app.services.appraisal.vin')
 
 const vinSvc = 'marketcheck/carValue'
-// Temp comment
 
 module.exports = async(vin, opts) => {
   if (!vin) return null
@@ -44,3 +43,4 @@ module.exports = async(vin, opts) => {
     const value = _.get(_value, ['predicted_price'])
     const low = _.get(_value, ['price_range', 'lower_bound'])
     const high = _.get(_value, ['price_range', 'upper_bound'])
+

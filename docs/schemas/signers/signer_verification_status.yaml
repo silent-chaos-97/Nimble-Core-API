@@ -42,3 +42,4 @@ SignerVerificationStatus:
       type: string
       format: date-time
     politicalExposureStatus:
+      title: The status of the political exposure verification

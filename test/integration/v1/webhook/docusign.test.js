@@ -20,6 +20,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
+      await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
       await seed.accountRequest.create(accountRequestId)
@@ -358,3 +359,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .expect(200)
         .end((err) => {
           if (err) return done(err)
+
+          request(app.server)
+            .get(`/v1/account-requests/${accountRequestId}`)
+            .set('Authorization', 'Bearer ' + token)
+            .expect(200)
+            .end(async (err, res) => {

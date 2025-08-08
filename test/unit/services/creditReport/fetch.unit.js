@@ -131,7 +131,6 @@ describe('app.services.creditReport.fetch', () => {
       expect(result.rows[0].error_code).to.equal(null)
       expect(result.rows[0].signer_id).to.equal(signerId)
     })
-// Temp comment
 
     it('should create a valid credit report of score 0', async () => {
       const reportURL = 'https://secure.prequalsolutions.com/preq/api/viewReport.php?id=188278&t=1603885023&sc=896410fd9450d10c1547559fad90d69d320393793af4be6ef3052557949b0a84'
@@ -160,3 +159,6 @@ describe('app.services.creditReport.fetch', () => {
 
       // expect pdf upload
       expect(fakeResponseDownload).to.have.been.calledWith(reportURL)
+      expect(fakeAwsS3uploadFn).to.have.been.calledOnce
+      expect(fakeAwsLambda).to.have.been.calledOnce
+

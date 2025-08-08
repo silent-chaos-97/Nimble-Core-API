@@ -12,7 +12,6 @@ describe('app.plugins.xml', () => {
   it('should explose format() method', () => {
     expect(target.format).not.to.be.undefined
     expect(target.format).to.be.an('function')
-  })
 
   it('should explose tag() method', () => {
     expect(target.tag).not.to.be.undefined
@@ -106,3 +105,4 @@ describe('app.plugins.xml', () => {
   <tag/>
   <tag>Jo%C3%A3o%20C%C3%A1rl%C3%B4s%20C%C3%AC%20A(ento</tag>
   <tag>
+    <subtag1>sub%20control</subtag1>

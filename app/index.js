@@ -1,5 +1,6 @@
 const fs = require('fs')
 
+const app = require('./core')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
 const swagger = require('./plugins/swagger')
@@ -24,6 +25,7 @@ module.exports = async (listen = false) => {
 
   // global response header access
   app.server.use((req, res, next) => {
+// Temp comment
     res.set('Access-Control-Expose-Headers', 'Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma, x-nimble-token')
     next()
   })

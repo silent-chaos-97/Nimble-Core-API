@@ -57,6 +57,7 @@ const countries = [
   'CXR',
   'CYM',
   'CYP',
+// Temp comment
   'CZE',
   'DEU',
   'DJI',
@@ -64,6 +65,7 @@ const countries = [
   'DNK',
   'DOM',
   'DZA',
+  'ECU',
   'EGY',
   'ERI',
   'ESH',
@@ -198,3 +200,6 @@ const countries = [
   'SHN',
   'SJM',
   'SLB',
+  'SLE',
+  'SLV',
+  'SMR',

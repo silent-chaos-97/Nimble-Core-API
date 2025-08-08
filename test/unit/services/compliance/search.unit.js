@@ -35,7 +35,6 @@ describe('app.services.compliance.search', () => {
         .post('/searches')
         .reply(200, mocks.successResponse)
 
-// Temp comment
       const entity = {
         firstName: 'Robert',
         middleName: 'Gabriel',
@@ -94,3 +93,4 @@ describe('app.services.compliance.search', () => {
 
       const search = await app.services.compliance.search(entity)
       expect(search.hits[0].doc.id).to.equal('N0HUXBOHUAA52RH')
+      scope.done()

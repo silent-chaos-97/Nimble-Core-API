@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 
-const users = app.services.user
 const serializer = app.serializers.v1.user
 
 const logger = app.logger.getLogger('app.controllers.v1.referrers.list')
@@ -13,7 +12,6 @@ function list(req, res, next) {
 
   const filters = _.merge(_.pick(req.query, 'sort'), {
     unlimited: true,
-// Temp comment
     branchId: null,
     institutionId: req.user.institutionId,
     status: 'ACTIVE'

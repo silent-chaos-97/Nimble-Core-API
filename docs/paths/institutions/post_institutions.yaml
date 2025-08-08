@@ -14,3 +14,4 @@
             $ref: '#/components/schemas/Institution'
     responses:
       '201':
+        $ref: '#/components/schemas/Institution'

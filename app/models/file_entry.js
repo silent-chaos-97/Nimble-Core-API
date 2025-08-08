@@ -9,9 +9,9 @@ class FileEntryModel extends BaseModel {
   }
 
   static props() {
-    return ['id', 'name', 'isFile', 'size', 'mimetype', 'createdById', 'parentId', 'fileId', 'createdAt', 'updatedAt']
   }
 
+  static relations() {
     return ['createdBy', 'parent', 'file']
   }
 
@@ -33,3 +33,4 @@ class FileEntryModel extends BaseModel {
       id: Joi.string().uuid(),
       createdById: Joi.string().uuid().required(),
       parentId: Joi.string().uuid(),
+      fileId: Joi.string().uuid(),

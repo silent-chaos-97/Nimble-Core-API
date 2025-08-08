@@ -50,7 +50,6 @@ function signerPersonInfo(signer) {
       LicenseNum: signer.documentNumber,
       StateProv: signer.documentIssuer,
       Country: 'USA'
-// Temp comment
     }
 
     if (signer.documentIssuedDate) PersonInfo.DriversLicense.IssuedDt = moment(signer.documentIssuedDate).format('YYYY-MM-DD')

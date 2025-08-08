@@ -4,6 +4,7 @@ describe('UnauthorizedTokenError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })
+
   it('should be and instance of UnauthorizedTokenError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
@@ -29,3 +30,4 @@ describe('UnauthorizedTokenError', () => {
 
     it('should have default message', () => {
       let error = new ErrorClass()
+      expect(error.message).to.equal('No authorization token was found!')

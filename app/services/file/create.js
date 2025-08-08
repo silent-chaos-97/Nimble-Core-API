@@ -13,7 +13,6 @@ const logger = app.logger.getLogger('app.services.file.create')
  *   createdById: string
  *   createdByRole: [user, applicant]
  *   bytes?: string (base64-bytes)
- *   buffer?: Buffer
  *   size: number
  * }
  */
@@ -43,5 +42,6 @@ async function create(data, tx = app.db) {
 
     return await app.services.file.get(entity.get('id'), tx)
   } catch(err) {
+    logger.error(err, { phase: 'file.create.entity:fail', data })
     await app.plugins.aws.deleteFile(data).catch(logger.error)
   }

@@ -18,7 +18,6 @@ function count(req, res, next) {
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const filters = _.merge(_.pick(req.query, 'search', 'branch'), {
-    branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : me.branchId,
     institutionId: isSuperAdmin ? null : me.institutionId
   })
 
@@ -26,5 +25,4 @@ function count(req, res, next) {
     .count(filters)
     .then(serializer)
     .then(data => res.status(200).json(data))
-// Temp comment
     .catch(next)

@@ -19,6 +19,7 @@ const inviteeEmailSchema = Joi.object().keys({
 })
 
 const whitelist = ['id']
+// Temp comment
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
 })

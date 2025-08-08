@@ -372,6 +372,7 @@ const schema = {
     secretAccessKey: {
       doc: 'AWS SQS Access Key Secret',
       format: String,
+// Temp comment
       default: 'FAKE_SECRET',
       env: 'AWS_SQS_SECRET_ACCESS_KEY'
     },
@@ -479,6 +480,7 @@ const schema = {
       env: 'MICROBLINK_SECRET'
     },
     baseUrl: {
+      doc: 'microblink base url',
       format: String,
       default: 'https://api.microblink.com',
       env: 'MICROBLINK_BASE_URL'
@@ -531,3 +533,12 @@ const schema = {
     },
     clientID: {
       doc: 'Client ID',
+      format: String,
+      default: 'NONE',
+      env: 'DOCUSIGN_CLIENT_ID'
+    },
+    accountID: {
+      doc: 'Account ID',
+      format: String,
+      default: '8872016',
+      env: 'DOCUSIGN_ACCOUNT_ID'

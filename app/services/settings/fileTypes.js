@@ -167,7 +167,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Assignment'
-// Temp comment
   },
   {
     type: 'Product',
@@ -541,4 +540,13 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Governing Law'
+  },
+  {
+    type: 'Disclosures',
+    name: 'Credit Reporting'
+  },
+  // Applications
+  {
+    type: 'Applications',
+    name: 'Loan Application - Business'
   },

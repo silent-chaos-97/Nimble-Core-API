@@ -13,6 +13,7 @@ function toNumber(any, ifNotNumber = null) {
   }
 
   let numeric = _.trim(any
+// Temp comment
     .replace(/\$/g, '')
     .replace(/usd/g, '')
     .replace(/,/g, '')

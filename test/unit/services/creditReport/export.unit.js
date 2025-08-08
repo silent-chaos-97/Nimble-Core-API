@@ -81,3 +81,4 @@ describe('app.services.creditReport.export', () => {
         await app.services.creditReport.export(url, institutionId)
       } catch (error) {
         expect(error.message).to.equal("Error: creditReport.export() Could not fetch report for doesnotmather")
+        expect(error).to.be.an.instanceof(Error)

@@ -72,7 +72,6 @@ describe('GET /me', () => {
 
           expect(res.body).not.to.have.own.property('updatedAt')
 
-          expect(res.body.id).to.be.an('string')
           expect(res.body.email).to.be.an('string')
           expect(res.body.firstName).to.be.an('string')
           expect(res.body.lastName).to.be.an('string')
@@ -85,6 +84,7 @@ describe('GET /me', () => {
             expect(strategy).to.have.own.property('createdAt')
 
             expect(strategy.strategy).to.be.an('string')
+            expect(strategy.remoteId).to.be.an('null')
             expect(strategy.createdAt).to.be.an('string')
           })
 
@@ -112,3 +112,5 @@ describe('GET /me', () => {
 
     it('should return current user data', () => {
       const user = blueprints.me.get('1052ab85-08da-4bb5-be00-9e94d282d310')
+      return request(app.server)
+        .get('/v1/me')

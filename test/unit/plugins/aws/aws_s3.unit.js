@@ -120,3 +120,5 @@ describe("AWS Facade for s3", () => {
   })
 
   describe('s3PresignedUrl()', () => {
+    it('should exist', () => {
+      expect(AWS.s3PresignedUrl).not.to.be.undefined

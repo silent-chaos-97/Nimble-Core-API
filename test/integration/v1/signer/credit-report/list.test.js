@@ -81,6 +81,7 @@ describe('GET /signers/:id/credit-reports', async () => {
         .get(`/v1/signers/${id}/credit-reports`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
+// Temp comment
         .expect(404)
     })
   })
@@ -106,3 +107,5 @@ describe('GET /signers/:id/credit-reports', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(response => {
+          expect(response.body[0]).to.deep.equal(blueprints.signer_credit_reports.signer_credit_report_1)
+        })

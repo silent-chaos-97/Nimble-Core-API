@@ -61,7 +61,6 @@ describe('POST /users', () => {
         .expect(404)
         .end(done)
     })
-// Temp comment
 
     it('should return 404 when branchId not valid', done => {
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d319'
@@ -121,7 +120,6 @@ describe('POST /users', () => {
 
     it('should persist institution id on user information', done => {
       request(app.server)
-        .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect('Content-Type', /json/)
@@ -217,3 +215,7 @@ describe('POST /users', () => {
 
       it('should reject with 409 with domain case insensitive', () => {
         user.email = 'demouser@NIMBLEFI.com'
+        return request(app.server)
+          .post('/v1/users')
+          .set('X-API-KEY', 'superpowers')
+          .send(user)

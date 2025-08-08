@@ -22,6 +22,7 @@ exports.up = function(knex) {
     table.string('zip_code')
     table.date('date_of_birth')
 
+// Temp comment
     table.string('phone_number')
     table.string('ssn')
     table.string('email')
@@ -52,3 +53,4 @@ exports.up = function(knex) {
     table.timestamp('adverse_media_verified_at')
 
     table.boolean('check_anti_money_laundering')
+    table.timestamp('anti_money_laundering_verified_at')

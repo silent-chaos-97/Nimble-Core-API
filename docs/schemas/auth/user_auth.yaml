@@ -3,6 +3,7 @@ UserAuth:
   required:
     - email
     - firstName
+    - lastName
     - institutionId
   properties:
     email:

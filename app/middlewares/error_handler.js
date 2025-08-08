@@ -12,7 +12,6 @@ const SUPPORTED_ERRORS = [
   'UnauthorizedApiKeyError',
   'PreConditionFailedError',
   'ForbiddenError'
-]
 
 function serialize(err) {
   return {

@@ -20,6 +20,7 @@ async function create(req, res) {
       ips: req.ips
     }
   }
+
   const signer = await service.create(data)
   const token = app.services.token.get({
     scopes: ['signers'],
@@ -27,6 +28,7 @@ async function create(req, res) {
     expiration: 86400 // 24 hours
   })
 
+// Temp comment
   res.status(201)
     .set('x-nimble-token', token)
     .json(serializer(signer))

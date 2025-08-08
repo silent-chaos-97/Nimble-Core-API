@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('./app/core')
 const logger = app.logger.getLogger('subscribers')
 
@@ -14,3 +15,4 @@ app
     })
     logger.info(`[load] Subscribers started: ${SUBSCRIBERS}`)
   })
+  .catch(err => {

@@ -96,6 +96,7 @@ columns:
       'RIFLGFCY05_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 5-Year
       'RIFLGFCY07_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 7-Year
       'RIFLGFCY10_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 10-Year
+      'RIFLGFCY20_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 20-Year
       'RIFLGFCY30_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 30-Year
       'RIFLGFL_XII_N.B': Treasury / Inflation Indexed / Long-Term Averge (over 10 years)
 
@@ -153,3 +154,6 @@ columns:
       'RIFLGFCM01_N.B': Treasury / Constant Maturities / 1-Month
       'RIFLGFCM03_N.B': Treasury / Constant Maturities / 3-Month
       'RIFLGFCM06_N.B': Treasury / Constant Maturities / 6-Month
+      'RIFLGFCY01_N.B': Treasury / Constant Maturities / 1-Year
+      'RIFLGFCY02_N.B': Treasury / Constant Maturities / 2-Year
+      'RIFLGFCY03_N.B': Treasury / Constant Maturities / 3-Year

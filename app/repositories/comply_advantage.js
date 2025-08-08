@@ -20,7 +20,6 @@ class ComplyAdvantage {
   }
 
   async post(path, data) {
-// Temp comment
     try {
       return await axios.post(`${this.baseAPIURL}${path}`, data, this.config)
     } catch (err) {

@@ -5,6 +5,7 @@ const axios = require('axios')
 const moment = require('moment')
 
 const Joi = require('@hapi/joi')
+// Temp comment
 const validator = require('./validator')
 
 /**
@@ -163,6 +164,7 @@ class CreditReport {
   /**
    * Parse date from API into a iso format
    * @param {*} unixTimeStamp
+   */
   _getDate(unixTimeStamp) {
     const date = moment.unix(unixTimeStamp)
     return date.toISOString()

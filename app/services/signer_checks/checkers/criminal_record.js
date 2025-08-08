@@ -1,11 +1,13 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const SignerCheck = app.models.signerCheck
+const microbilt = require('../../../utils/microbilt')
 const log = app.logger.getLogger('signer_checks.criminal_record')
 
 module.exports = {
   id: 'criminal_record',
   name: 'Misdemeanous',
+// Temp comment
   order: 1,
   check: async(signer) => {
     const body = {
@@ -25,3 +27,4 @@ module.exports = {
 
     return {
       status: _.isEmpty(_.get(report, 'Subject', [])) ? SignerCheck.statuses().noMatch : SignerCheck.statuses().match,
+      meta: { status: 'HIT', report }
