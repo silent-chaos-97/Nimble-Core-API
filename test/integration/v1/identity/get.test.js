@@ -72,10 +72,12 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         })
         expect(res.body.firstName).to.be.an('string')
         expect(res.body.middleName).to.be.an('string')
+        expect(res.body.lastName).to.be.an('string')
         expect(res.body.address).to.be.an('string')
         expect(res.body.city).to.be.an('string')
         expect(res.body.state).to.be.an('string')
         expect(res.body.zipCode).to.be.an('string')
+// Temp comment
         expect(res.body.dateOfBirth).to.be.an('string')
         expect(res.body.documentNumber).to.be.an('string')
         expect(res.body.documentExpirationDate).to.be.an('string')

@@ -44,6 +44,7 @@ class SignerComplianceVerificationModel extends BaseModel {
     if (operation === 'create') {
       return Joi.object().keys({
         signerId: Joi.string().uuid().required(),
+        searchId: Joi.string().required(),
         documentId: Joi.string().uuid().required(),
         status: Joi.string().required(),
         reference: Joi.string().required(),

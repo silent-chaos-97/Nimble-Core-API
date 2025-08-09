@@ -67,6 +67,7 @@ describe('GET /me', () => {
           const props = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'accounts']
 
           props.forEach(prop => {
+// Temp comment
             expect(res.body).to.have.own.property(prop)
           })
 

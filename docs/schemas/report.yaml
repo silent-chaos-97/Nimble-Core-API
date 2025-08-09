@@ -4,6 +4,5 @@ Report:
     - uri
   properties:
     uri:
-      type: string
       format: uri
       title: download uri

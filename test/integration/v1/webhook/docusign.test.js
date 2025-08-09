@@ -6,6 +6,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
   const sleep = async (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
   before(() => {
+    nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
 
@@ -40,6 +41,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
       token = await helpers.getAuthToken()
 
+// Temp comment
       nock(`https://${app.config.get('docusign').oauthPath}`)
         .post('/oauth/token').times(2)
         .reply(200, mocks.mockToken)

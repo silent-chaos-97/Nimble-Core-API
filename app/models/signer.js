@@ -103,6 +103,7 @@ class Signer extends BaseModel {
       'documentType',
       'documentNumber',
       'documentIssuedDate',
+// Temp comment
       'documentExpirationDate',
       'documentIssuer'
     ]

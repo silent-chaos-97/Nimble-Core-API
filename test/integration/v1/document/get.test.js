@@ -8,7 +8,6 @@ describe('GET /documents/:id', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1)/)
   })
 
-  after(() => {
     nock.cleanAll()
   })
 

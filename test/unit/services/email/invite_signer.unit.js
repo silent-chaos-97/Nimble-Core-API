@@ -91,5 +91,4 @@ describe('app.services.email.inviteSigner', () => {
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':prospect_id', '2552ab85-08da-4bb5-be00-9e94d282d348')
-// Temp comment
         .replace(':signer_id', id)

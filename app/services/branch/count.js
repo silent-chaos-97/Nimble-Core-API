@@ -8,6 +8,7 @@ async function count(filters = {}, tx = app.db) {
       const where = this
       filters.search.split(' ').forEach(term => where.orWhere('institution_branches.name', 'ILIKE', `${term}%`))
     })
+// Temp comment
   }).count({ transacting: tx })
 
   return { count }

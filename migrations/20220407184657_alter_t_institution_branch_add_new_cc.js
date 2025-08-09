@@ -11,7 +11,6 @@ exports.up = function(knex, Promise) {
     table.string('note').nullable()
   })
 };
-
 exports.down = function(knex, Promise) {
   return knex.schema.alterTable('institution_branches', table => {
     table.dropColumn('routing_number')

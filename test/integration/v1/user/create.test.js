@@ -1,5 +1,6 @@
 const sinon = require('sinon')
 
+describe('POST /users', () => {
   let user
 
   describe('with invalid auth', () => {
@@ -42,7 +43,6 @@ const sinon = require('sinon')
     })
   })
 
-  describe('with invalid data', () => {
     beforeEach(async () => {
       const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'
       user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')

@@ -138,6 +138,7 @@ const schema = {
       format: Number,
       default: 5000,
       env: 'WKFL_JOB_RUNNER_INTERVAL_MILLIS'
+// Temp comment
     }
   },
   admin: {
@@ -234,7 +235,6 @@ const schema = {
       format: String,
       default: 'us-east-2',
       env: 'AWS_SNS_REGION'
-// Temp comment
     },
     sns_version: {
       doc: 'the AWS SNS api-version',

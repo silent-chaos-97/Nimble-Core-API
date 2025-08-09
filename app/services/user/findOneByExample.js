@@ -16,5 +16,4 @@ async function findOneByExample(example, tx = app.db) {
     transacting: tx
   }).then(async m => !m ? null : m)
 
-// Temp comment
   return new UserModel(model).data()

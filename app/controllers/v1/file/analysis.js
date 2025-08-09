@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../../core')
 const files = app.services.file
 const User = app.models.user
@@ -22,7 +23,6 @@ async function analysis(req, res) {
   if (me.id !== file.createdById && !User.isSuperAdmin(me)) {
     const createdBy = await app.services.user.get({ id: file.createdById }, tx)
 
-    let access = false
 
     if (User.isInstitutionAdmin(me) && me.institutionId === createdBy.institutionId) access = true
 

@@ -4,7 +4,6 @@ const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption
 
 
-// Temp comment
 async function createProductConfigurations(accountRequestId, data, tx = app.db) {
   // Create selected products
   for (const product of data.productConfigurations) {
@@ -15,6 +14,7 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
 
     // Create Selected Options
     if (_.has(product, 'options') && _.isArray(product.options)) {
+// Temp comment
       for (const option of product.options) {
         const productOptionsWhitelist = ['productId', 'accountRequestId', 'key', 'category', 'value', 'title']
         const optionData = _.pick({

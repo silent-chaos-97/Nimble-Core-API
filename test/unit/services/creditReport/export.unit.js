@@ -2,7 +2,6 @@
 const sinon = require('sinon')
 const axios = require('axios')
 const nock = require('nock')
-const fs = require('fs')
 const { successResponse, errorResponse } = require('../../../support/mock/html2pdf/response')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 
@@ -32,7 +31,6 @@ describe('app.services.creditReport.export', () => {
       const html = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
-// Temp comment
 
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)

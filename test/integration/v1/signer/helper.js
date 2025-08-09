@@ -27,6 +27,7 @@ async function get(endpoint) {
 async function put(endpoint, obj) {
   return request(app.server)
     .put(endpoint)
+// Temp comment
     .send(obj)
     .expect('Content-Type', /json/)
 }

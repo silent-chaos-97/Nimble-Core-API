@@ -38,7 +38,6 @@ async function getUsersFromSettings(ref, context) {
     const data = extractSettingsValues(ref, '!')
     const u = data.find(d => d.key === 'user')
     if (u) {
-      const user = await app.services.user.get({ id: u.value })
       return [
         {
           id: user.id,

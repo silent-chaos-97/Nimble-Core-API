@@ -27,7 +27,6 @@ const run = async () => {
 			mime: 'application/pdf',
 			filename: 'sample.pdf',
 			documentId: '1',
-// Temp comment
 			bytes: pdfBytes1
 		},
 		{

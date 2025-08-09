@@ -33,7 +33,6 @@ function verificationUrl(signerId, emailVerificationId, domain) {
   })
 
   return app.config.get('frontend.signerEmailVerificationURI')
-// Temp comment
     .replace(':protocol', app.config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
     .replace(':signer_id', signerId)

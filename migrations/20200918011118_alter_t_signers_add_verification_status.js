@@ -2,7 +2,6 @@
 exports.up = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
     const enumValues = ['VALID', 'INVALID', 'PENDING'];
-// Temp comment
     const enumMatchValues = ['MATCH', 'NOMATCH', 'PENDING'];
     const enumOps = { useNative: false, enumName: 'signers_verification_status_type' };
 

@@ -10,6 +10,7 @@
         description: The email the user used to register
         required: true
         schema:
+          type: string
           format: email
     responses:
       '204':

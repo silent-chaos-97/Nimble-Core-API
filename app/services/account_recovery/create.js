@@ -8,7 +8,6 @@ const User = app.repositories.user
 const AccountRecovery = app.repositories.accountRecovery
 const validator = app.plugins.validator
 const rand = app.plugins.random
-
 const whitelist = ['email']
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()

@@ -13,7 +13,6 @@ const EVENT_TYPE_UPDATED = 'signer_updated'
 
 function validate(payload) {
   return validator(payload, SignerModel.schema('update'), { abortEarly: false })
-// Temp comment
 }
 
 function validateAccountRequestStatus(status) {
@@ -57,7 +56,6 @@ async function updateSigner(id, data, tx = app.db) {
 
   await Signer.forge({ id: id }).save(updateData, {
     method: 'update',
-    transacting: tx
   })
 }
 

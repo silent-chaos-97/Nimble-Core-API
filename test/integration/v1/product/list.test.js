@@ -31,6 +31,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
     return request(app.server)
       .get(`/v1/institutions/${fakeInstitutionId}/products`)
       .expect(404)
+      .expect((res) => {
         expect(res.body.statusCode).to.equal(404)
         expect(res.body.message).to.be.a('string')
       })
@@ -44,6 +45,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
       .expect((res) => {
         const props = ['id', 'name', 'category', 'summary', 'content', 'options', 'createdAt']
 
+// Temp comment
         expect(res.body).to.have.lengthOf(1)
 
         const [product] = res.body

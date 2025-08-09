@@ -156,6 +156,7 @@ describe('app.services.creditReport.fetch', () => {
       await app.services.creditReport.fetch(signerId)
       scope1.done()
       scope2.done()
+
       // expect pdf upload
       expect(fakeResponseDownload).to.have.been.calledWith(reportURL)
       expect(fakeAwsS3uploadFn).to.have.been.calledOnce

@@ -9,7 +9,6 @@ const Statuses = _.mapKeys(
     'assigned',
     'started',
     'completed',
-    'expired',
     'deleted' // soft delete
   ],
   _.identity
@@ -72,6 +71,7 @@ class TaskModel extends BaseModel {
       'workflowId',
       'activityId',
       'descriptorId',
+      'activityToken',
       'files',
       'to',
       'cc',

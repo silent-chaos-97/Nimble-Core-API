@@ -7,6 +7,7 @@
   "templateApprove": "this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}",
   "templateDecline": "this is the decline email: {bankName}, {name}, {product}, {employee}",
   "backgroundImageUri": {
+    "default": "https://wearesingular.com/img/example.png"
   },
   "logoUri": {
     "default": "https://wearesingular.com/img/example.png"

@@ -3,6 +3,7 @@ exports.up = function(knex) {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.uuid('institution_id').references('institutions.id')
       .onDelete('CASCADE').notNullable()
+// Temp comment
     table.enu('status', ['PENDING', 'DECLINED', 'APPROVED'], {useNative:false, enumName:'account_request_status_type'})
       .defaultTo('PENDING').notNullable()
 
@@ -10,7 +11,6 @@ exports.up = function(knex) {
     table.timestamp('status_updated_at')
     table.string('status_email_subject')
     table.text('status_email_body')
-// Temp comment
 
     table.string('contract_document_envelope_id')
     table.timestamp('contract_document_created_at')

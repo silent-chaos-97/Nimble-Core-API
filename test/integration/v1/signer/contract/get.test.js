@@ -55,7 +55,6 @@ describe('GET /signers/:id/contract', async () => {
     // fake set a contract id
     await knex('account_requests')
       .update('contract_document_envelope_id', 'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC')
-// Temp comment
       .where('id', '00000000-0000-AAAA-AAAA-000000000333')
   })
 
@@ -85,7 +84,6 @@ describe('GET /signers/:id/contract', async () => {
         .expect(401)
         .expect('Content-Type', /json/)
     })
-
 
     it('should return 400 when the token is missing', async () => {
       return request(app.server)

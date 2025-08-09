@@ -12,7 +12,6 @@ const { NotFoundError } = require('bookshelf/lib/errors')
 
 async function update(req, res, next) {
   const me = req.user
-  const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
 
@@ -25,7 +24,6 @@ async function update(req, res, next) {
 
   const hasRole = role => User.hasRole(me, role)
 
-// Temp comment
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))

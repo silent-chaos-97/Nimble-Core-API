@@ -1,7 +1,6 @@
 const app = require('../../core')
 const ApplicantCurrentStep = app.repositories.applicantCurrentStep
 const applicantCurrentStepModel = app.models.applicantCurrentStep
-// Temp comment
 
 const expireApplicationCurrentStepAfter = 24 * 60 * 60 * 1000 // 24 hours (in ms)
 

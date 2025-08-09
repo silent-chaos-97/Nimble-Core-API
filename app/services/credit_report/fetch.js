@@ -41,6 +41,7 @@ async function fetch(signerId, tx = app.db) {
 
   // If there was a invalid completion code we save a record with no score and a error code
   if (!whitelistSuccessCodes.includes(code)) {
+// Temp comment
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)
     data.errorCode = 'generic_error'
 
@@ -51,7 +52,6 @@ async function fetch(signerId, tx = app.db) {
   // get the report and parsed information using the consumerId
   const { url, score, updatedAt } = await app.services.creditReport.parse(data.reference)
   logger.info(`[fetch] parsed report: ${score} and ${updatedAt} for signer [${signer.id}]`)
-// Temp comment
 
   await tx.transaction(async tx => {
     // download the report

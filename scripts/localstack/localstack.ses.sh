@@ -9,7 +9,6 @@ done
 TMPLS="template passwordResetEmail AccountRequestApproved AccountRequestDeclined inviteeSignupEmail inviteeSignupReminderEmail magicLinkEmail prospectPendingSignersEmail signerEmailVerificationEmail userLockedEmail welcomeEmail notification"
 ASSETS_HOST=${ASSETS_HOST:-"https://${ASSETS_CDN:-cdn.nimblefi.com}"}
 
-for tmpl in ${TMPLS}; do
   TMP=$(mktemp)
   FILE=$(cat "${SCRIPTS_DIR:-..}/ses-templates/${tmpl}.ses.json")
   echo "${FILE//\$ASSETS_HOST/${ASSETS_HOST}}" > ${TMP}

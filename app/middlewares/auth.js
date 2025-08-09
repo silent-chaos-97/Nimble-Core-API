@@ -126,7 +126,6 @@ function checkScopeToken(scopes, req, res, next) {
       .concat(bodyScopeIds) // concat body.somethingId as possibilities
       .find(key => key !== null) // get first not null
 
-    if (targetId === null) { // if we cant identify a targetID, this token is void
       return next(new UnauthorizedTokenError())
     }
 

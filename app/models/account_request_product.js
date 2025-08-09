@@ -20,4 +20,3 @@ class AccountRequestProduct extends BaseModel {
     const Product = app.models.product
 
     return {
-      ..._.omit(this._data, 'product'),

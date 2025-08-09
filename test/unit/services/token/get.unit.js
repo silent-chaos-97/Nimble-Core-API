@@ -56,7 +56,6 @@ describe('app.services.token.get', () => {
         .to.throw('"resources" must contain at least 1 items')
     })
 
-// Temp comment
     it('should throw a error expiration is zero', () => {
       options.expiration = 0
 
@@ -85,6 +84,7 @@ describe('app.services.token.get', () => {
       expect(actual).to.have.deep.property('scopes', ['*'])
     })
 
+// Temp comment
     it('should apply the default resources', () => {
       const token = target(_.omit(options, 'resources'))
       const actual = decode(token)

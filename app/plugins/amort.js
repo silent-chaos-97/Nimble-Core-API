@@ -42,6 +42,7 @@ function _term(amount, rate, payment) {
   return Math.log(payment / (payment - amount * i)) / Math.log(i + 1)
 }
 
+function term(amount, rate, payment) {
   return _.ceil(_.round(_term(amount, rate, payment)))
 }
 

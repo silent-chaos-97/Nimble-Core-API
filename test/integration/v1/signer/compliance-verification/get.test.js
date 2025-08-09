@@ -87,3 +87,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
 
     it('should return an array of objects', async () => {
       return request(app.server)
+        .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/compliance-verifications`)

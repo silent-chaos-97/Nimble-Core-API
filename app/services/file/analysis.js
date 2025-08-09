@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const axios = require('axios')
-// Temp comment
 const TimeoutError = require('../../errors/timeout')
 const NotFoundError = require('../../errors/not_found')
 const InternalServerError = require('../../errors/internal_server')

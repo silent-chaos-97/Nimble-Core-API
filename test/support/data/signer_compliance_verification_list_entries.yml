@@ -27,4 +27,4 @@
 - id: '20000000-0000-accc-0000-00bbbbbbb223'
   name: 'This was one day a warning'
   source: 'complyadvantage'
-  date: '2019-01-01'
+  value: 'Something fishy'

@@ -21,6 +21,5 @@ User:
       description: The last name of the user
       example: Specimen
     email:
-      type: string
       title: Email
       description: The email of the user

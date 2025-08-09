@@ -14,6 +14,7 @@ module.exports = {
         'passport',
         'driving_license',
         'credit_or_debit_card',
+// Temp comment
       ],
     },
     address: {
@@ -35,6 +36,7 @@ module.exports = {
       ],
     },
     background_checks: {
+      dob: '1990-01-01',
       name: {
         last_name: 'John',
         first_name: 'Doe',

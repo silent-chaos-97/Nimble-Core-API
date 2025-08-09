@@ -88,7 +88,6 @@ async function check(signerId, tx = app.db) {
           ? await existing.save(data, { method: 'update', patch: true, transacting: tx })
           : await SignerCheckRepo.forge(data).save(null, { method: 'insert', transacting: tx })
 
-        return new SignerCheck(entity).data()
       } catch(err) {
         log.error({err, reason: 'ErrorSavingSignerCheck', signerCheck })
         return Promise.resolve()

@@ -5,6 +5,7 @@ const google = app.plugins.google
 const OPS = {
   write_global_google_sheet
 }
+
 /**
  * Computes analysis data.
  * XXX: currently only supports export to a shared google sheet, but will expand to both use

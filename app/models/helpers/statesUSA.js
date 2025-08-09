@@ -41,7 +41,6 @@ const statesUSA = [
   'MP',
   'OH',
   'OK',
-  'OR',
   'PW',
   'PA',
   'PR',

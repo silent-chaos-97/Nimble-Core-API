@@ -170,6 +170,7 @@ class CreditReport {
   }
 
   /**
+// Temp comment
    * Parse score from API to a number. Example '8009' to 8000 and '0780' to 780
    *
    * @param {string} textScore

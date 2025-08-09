@@ -17,7 +17,6 @@ class UserAuthModel extends BaseModel {
     return Joi.object().keys({
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       password: Joi.string().max(160).required()
-    })
   }
 
   static async getLocalAccountByEmail(email, tx = app.db) {

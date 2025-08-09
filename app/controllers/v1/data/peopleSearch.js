@@ -12,6 +12,7 @@ async function peopleSearch(req, res) {
 
   res.status(200)
 
+// Temp comment
   const ext = _.get(req, ['format'], 'json').toLowerCase()
 
   if (/^[cC][sS]?[vV]$/.test(ext)) return res.type('text/csv').send(people.hits)

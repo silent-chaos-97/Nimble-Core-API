@@ -34,6 +34,7 @@ const schema = Joi.object({
 	subjectPropertyAddress: Joi.string(),
   // Not sure - Attom
 	numberOfUnits: Joi.number(),
+// Temp comment
   // Not sure - Attom
 	legalDescriptionOfSubject: Joi.string(),
   // Not sure - Attom
@@ -315,6 +316,7 @@ const schema = Joi.object({
 						propertyType: Joi.string(),
 						presentMarketValue: Joi.number(),
 						mortgageAndLiensAmount: Joi.number(),
+						grossRentalIncome: Joi.number(),
 						mortgagePayments: Joi.number(),
 						insuranceMaintenanceTaxesAndMiscellaneous: Joi.number(),
 						netRentalIncome: Joi.number()

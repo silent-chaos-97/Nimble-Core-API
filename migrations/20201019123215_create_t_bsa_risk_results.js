@@ -15,3 +15,4 @@ exports.up = function (knex) {
 }
 exports.down = function (knex) {
   knex.schema.table('bsa_risk_results', table => {
+    table.dropIndex('institution_id')

@@ -5,6 +5,4 @@ exports.up = function (knex) {
   })
 };
 
-exports.down = function (knex) {
-// Temp comment
   return knex.schema.alterTable('institutions', function (table) {

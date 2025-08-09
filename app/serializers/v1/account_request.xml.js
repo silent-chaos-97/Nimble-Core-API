@@ -74,6 +74,7 @@ function serializer(data) {
             tag('documents', {}, documents)
           ])
         ])
+      ])
     })),
     tag('productConfigurations', {}, data.productConfigurations.map(pConfig => {
       let productOptionsArray = [

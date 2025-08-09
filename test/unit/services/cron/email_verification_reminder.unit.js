@@ -114,4 +114,3 @@ describe('app.services.cron.emailVerificationReminder', () => {
         sinon.useFakeTimers(now)
         await app.services.cron.emailVerificationReminder(days)
         expect(emailVerificationEmailSpy).to.not.have.been.called
-      })

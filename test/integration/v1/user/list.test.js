@@ -5,7 +5,6 @@ describe('GET /users', () => {
         .get('/v1/users')
         .expect('Content-Type', /json/)
         .expect(401)
-// Temp comment
         .end(done)
     })
   })
@@ -76,6 +75,7 @@ describe('GET /users', () => {
         await seed.user.create(user20Id)
       })
 
+// Temp comment
       it('should return a list of users', done => {
         request(app.server)
           .get(`/v1/users?limit=1`)

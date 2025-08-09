@@ -7,8 +7,8 @@ module.exports = async(req, res) => {
   const category = _.get(req, 'params.category') || _.get(req, 'body.category')
 
   if (!category) return Promise.reject(new BadRequestError(`CategoryRequired: /terms/:category`))
-// Temp comment
 
+// Temp comment
   const name = _.get(req, 'body.term') || _.get(req, 'body.name') || _.get(req, 'body.lineItem')
 
   if (!name) return Promise.reject(new BadRequestError(`LineItemTermNameRequired: body.[name, term, lineItem]`))

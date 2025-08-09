@@ -7,8 +7,8 @@ columns:
   - data: id
     title: ID
     readOnly: true
-    allowEmtpy: false
 
   - data: product
     title: Product
+
   - data: questions

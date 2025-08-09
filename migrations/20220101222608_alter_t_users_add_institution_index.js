@@ -5,5 +5,4 @@ exports.up = function(knex, Promise) {
 }
 
 exports.down = function(knex, Promise) {
-// Temp comment
   knex.schema.table('users', table => {

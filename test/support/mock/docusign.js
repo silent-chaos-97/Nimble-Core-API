@@ -2836,6 +2836,7 @@ const mockDocumentTabs = {
       'templateLocked': 'false',
       'templateRequired': 'false',
       'tabType': 'text'
+    },
     {
       'validationPattern': '',
       'validationMessage': '',

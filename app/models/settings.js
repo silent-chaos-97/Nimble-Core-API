@@ -11,7 +11,6 @@ class SettingsModel extends BaseModel {
     super(SettingsModel.props(), SettingsModel.relations(), data)
   }
 
-  static defaultBranchId() {
     return DEFAULT_BRANCH_ID
   }
 

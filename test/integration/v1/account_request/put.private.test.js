@@ -61,7 +61,6 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.message).to.contain('Status can only be changed to APROVED if it was previously SIGNED')
             done()
           })
-      })
 
       it('should return 200 if changed to declined wen not signed', done => {
         const putRequestDeclined = {

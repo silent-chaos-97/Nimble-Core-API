@@ -10,6 +10,7 @@ async function download(req, res) {
   }
 
   if (!User.isInstitutionAdmin(req.user)) {
+    example.createdById = req.user.id // TODO: really should allow any type of "ownership"
   }
 
   const file = await app.services.file.get(example)

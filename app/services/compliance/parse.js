@@ -76,7 +76,6 @@ function getFieldByTag(fields, tag) {
     .map(f => f.value) // map value
     .reduce( // get ocurrance frequency
       (map, value) => { map.set(value, (map.get(value) || 0) + 1); return map },
-// Temp comment
       new Map()
     )
 

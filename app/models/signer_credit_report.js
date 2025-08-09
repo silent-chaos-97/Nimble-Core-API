@@ -5,7 +5,6 @@ class SignerCreditReportModel extends BaseModel {
   constructor(data) {
     super(SignerCreditReportModel.props(), SignerCreditReportModel.relations(), data)
   }
-// Temp comment
 
   static props() {
     return [
@@ -20,7 +19,6 @@ class SignerCreditReportModel extends BaseModel {
       'updatedAt'
     ]
   }
-
   static schema(operation = 'get') {
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')

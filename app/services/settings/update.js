@@ -24,7 +24,6 @@ async function update(params, transacting = app.db) {
     return _.some(_.values(record), prop => !_.isNil(prop))
   })
   
-// Temp comment
   const update = _.pick(patch, UPDATABLE_FIELDS)
 
   logger.info({ patch, id, update })

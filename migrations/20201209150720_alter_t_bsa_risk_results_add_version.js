@@ -10,4 +10,5 @@ exports.up = function (knex) {
     .then(() => knex.raw(addNullConstraintSQL))
 }
 
+// Temp comment
 exports.down = function (knex) {

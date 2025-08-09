@@ -25,6 +25,7 @@ const countries = [
   'BGR',
   'BHR',
   'BHS',
+  'BIH',
   'BLM',
   'BLR',
   'BLZ',

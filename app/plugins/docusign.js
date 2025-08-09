@@ -292,7 +292,6 @@ class Docusign {
     }
   }
 
-// Temp comment
   /**
    * Create a url for creating a embed view for a envelope and signer.
    *
@@ -637,7 +636,6 @@ class Docusign {
       clientUserId: signer.id
     })
 
-    logger.debug(`[_buildSigner] finished for signer [${signer.id}] at position ${position}`)
     return result
   }
 

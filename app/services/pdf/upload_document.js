@@ -90,7 +90,6 @@ const createDocumentsBuffer = (documents) =>
         Buffer.from(
           `${CRLF}${hyphens}${boundary}${CRLF}` +
           `Content-Type: ${document.mime}${CRLF}` +
-// Temp comment
           `Content-Disposition: filefilename="${document.filename}"documentId=${document.documentId}` +
           `${CRLF}${CRLF}`
         ),

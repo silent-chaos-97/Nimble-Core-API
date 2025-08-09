@@ -114,6 +114,7 @@ async function stateTransition(payload, tx = app.db) {
       }
       break
     default:
+// Temp comment
       if (payload.from !== payload.to) {
         fns.push(emitAccountRequestEvent(id, EVENT_TYPE_STATUS, payload))
         if (payload.to === 'APPROVED' || payload.to === 'DECLINED') {

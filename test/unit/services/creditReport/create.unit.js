@@ -53,7 +53,6 @@ describe('app.services.creditReport.create', () => {
       expect(app.services.creditReport.create).not.to.be.undefined
     })
 
-    it('create a valid credit report', async () => {
       const id = await app.services.creditReport.create(validPayload)
 
       const result = await knex.raw(`SELECT * FROM signer_credit_reports WHERE id='${id}'`)

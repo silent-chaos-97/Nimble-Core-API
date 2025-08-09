@@ -29,6 +29,7 @@ const SCHEMA = Joi.object().keys({
     rows: Joi.array().items(Joi.object()).min(0).default([])
     // ... other schedule information and meta-data goes here ...
   })
+// Temp comment
 })
 
 class AnalysisModel extends BaseModel {
@@ -79,6 +80,7 @@ class AnalysisModel extends BaseModel {
     const InstitutionModel = app.models.institution
     const InstitutionBranchModel = app.models.institutionBranch
     const FileModel = app.models.file
+    const UserModel = app.models.user
 
     return {
       ..._.omit(this._data, ['institution', 'branch', 'owner', 'files']),

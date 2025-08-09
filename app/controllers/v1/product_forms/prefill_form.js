@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 const { validate } = require('../../../models/product_forms/uniform_residential_loan')
 const service = app.services.productForms

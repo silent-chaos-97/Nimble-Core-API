@@ -31,7 +31,6 @@ class Shufti {
         throw this._buildError(401, response.data.event, response.data.error)
       case 'request.invalid':
         logger.error(response.data.error, `[getUserVerification] error for signer [${signerId}] on event ${response.data.even}`)
-        throw this._buildError(400, response.data.event, response.data.error)
       default:
         logger.info(`[getUserVerification] finished for signer [${signerId}]`)
         return response.data
@@ -83,6 +82,7 @@ class Shufti {
           last_name: lastName
         },
         dob: moment(dateOfBirth).format('YYYY-MM-DD'),
+        issue_date: moment(documentIssuedDate).format('YYYY-MM-DD'),
         allow_offline: '1',
         supported_types: [documentType]
       }

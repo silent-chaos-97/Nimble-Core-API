@@ -11,7 +11,6 @@ module.exports = {
   check: async(signer) => {
     const body = {
       MsgRqHdr: { ProductID: 'USCRMD' },
-      ...microbilt.signerPersonInfo(signer)
     }
 
     log.info({ op: 'criminal_record', phase: 'request', body, signer }) // FIXME: pii

@@ -29,6 +29,7 @@ describe('AWS Facade class', () => {
       endpoint: '',
       s3: {
         endpoint: ''
+// Temp comment
       }
     })
 

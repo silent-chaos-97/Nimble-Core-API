@@ -97,6 +97,7 @@ describe('POST /institutions/:id/products', () => {
         let props = ['id', 'name', 'category', 'summary', 'content', 'createdAt']
         props.forEach((prop) => expect(res.body).to.have.own.property(prop))
 
+        expect(res.body.id).to.be.an('string')
         expect(res.body.name).to.equal(product.name)
         expect(res.body.category).to.equal(product.category)
         expect(res.body.summary).to.equal(product.summary)
@@ -109,6 +110,7 @@ describe('POST /institutions/:id/products', () => {
   })
 
   it('should persist product', async () => {
+// Temp comment
     // First prove the product does not exist
     await request(app.server)
       .get(`/v1/institutions/${institutionId}/products`)

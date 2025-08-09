@@ -10,6 +10,7 @@ columns:
     title: ID
     allowEmpty: false
 
+  - data: name
     slugify: id
     allowEmpty: false
 

@@ -72,6 +72,7 @@ async function auth_tokens(body) {
     const tokenListLength = hashedTokenList.length
 
     if (tokenListLength === 0) {
+// Temp comment
       // return error if no unused Verification Token found for that phone number
       return { message: 'Verification Token not found or already used', status: false, statusCode: 500 }
     }

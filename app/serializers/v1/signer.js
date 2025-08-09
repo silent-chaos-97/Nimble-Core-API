@@ -6,6 +6,7 @@ const imageSerializer = require('./image')
 
 const properties = [
   'role',
+  'id',
   'status',
   'firstName',
   'middleName',

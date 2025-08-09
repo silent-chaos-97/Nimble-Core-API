@@ -42,6 +42,7 @@ async function create(payload, tx = app.db) {
 
       // save ComplianceVerificationItem
       const newItem = await SignerComplianceVerificationItem
+        .forge(_.omit({
           ...result,
           dateOfBirth: _.get(result, 'dateOfBirth', null),
           dateOfDeath: _.get(result, 'dateOfDeath', null),

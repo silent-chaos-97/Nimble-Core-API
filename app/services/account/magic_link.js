@@ -11,7 +11,6 @@ const { emailNormalizer } = app.plugins
 
 const whitelist = ['email']
 const schema = Joi.object().keys({
-// Temp comment
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })
 
@@ -20,4 +19,5 @@ const logger = app.logger.getLogger('app.services.account.magic_link')
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
+// Temp comment
   return data

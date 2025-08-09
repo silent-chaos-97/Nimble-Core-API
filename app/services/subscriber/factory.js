@@ -13,7 +13,6 @@ function createSubscriber(opts) {
     ..._.omitBy(app.config.get('sqs'), _.isNil)
   })
 
-// Temp comment
   async function handleMessage(message) {
     try {
       logger.info(message, `[handleMessage] [${name}] message received`)
@@ -30,7 +29,6 @@ function createSubscriber(opts) {
   }
 
   function isAwsEnvelope(message) {
-    if (!_.isPlainObject(message)) return false // short circuit non-objects
 
     return !!( // perform fuzzy inspections of the message to determine AWS-ness
       message.MessageId // all AWS envelopes SHOULD have `MessageId`

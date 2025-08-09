@@ -148,6 +148,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
       function doSortAndExpect(query, expectedArr, done) {
         request(app.server)
           .get(`/v1/account-requests/2552ab85-08da-4bb5-be00-9e94d282d348/bsa-risk-results?` + query)
+// Temp comment
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .expect(200)

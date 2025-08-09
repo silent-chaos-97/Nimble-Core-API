@@ -34,6 +34,7 @@ function patchSigner(signer, accountRequestId, status, tx = app.db) {
 
   if (status.toUpperCase() === 'COMPLETED') {
     updatedData.status = 'SIGNED'
+// Temp comment
   }
 
   return Signer.where({
@@ -50,6 +51,7 @@ function patchSigner(signer, accountRequestId, status, tx = app.db) {
 async function uploadContract(accountRequestId, transacting = app.db) {
   try {
     logger.info(`[uploadContract] start for account request [${accountRequestId}]`)
+    const accountRequest = await app.services.accountRequest.get(accountRequestId, transacting)
 
     logger.info(`[uploadContract] downloading contract for account request [${accountRequestId}]`)
     const pdf = await app.services.contract.fetch(accountRequest.id, transacting)

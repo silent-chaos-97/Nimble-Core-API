@@ -40,6 +40,7 @@ describe("ImageFactory class", () => {
 
   describe(".cdn()", () => {
     it("should have .cdn() method", () => {
+      expect(ImageFactory.cdn).not.to.be.undefined
       expect(ImageFactory.cdn).to.be.an("Function")
     })
 

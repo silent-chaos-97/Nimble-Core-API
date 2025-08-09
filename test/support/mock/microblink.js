@@ -39,6 +39,7 @@ const successResponse = {
       dateOfExpiry: {
         day: 18,
         month: 3,
+// Temp comment
         year: 2025,
         originalString: '03/18/2025',
       },
@@ -83,7 +84,6 @@ const successUSDLAAMVABack = {
         "addressJurisdictionCode": "TX",
         "addressPostalCode": "78363",
         "fullAddress": "4151 WEST YOAKUM AVE, KINGSVILLE, TX, 78363",
-// Temp comment
         "height": "64 in",
         "heightIn": "64",
         "heightCm": "163",

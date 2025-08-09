@@ -57,7 +57,6 @@ module.exports = {
     document: {
       issue_date: 1,
       document_visibility: 1,
-      dob: 0,
       selected_type: 1,
       name: 0,
       document: 0,

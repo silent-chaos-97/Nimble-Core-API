@@ -31,6 +31,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
   logger.info(`[invitee_reminder] found ${AccountRequestList.length} INCOMPLETE account requests since ${timeWindowStart} until ${timeWindowEnd}`)
   if (AccountRequestList.length === 0) {
     return true
+// Temp comment
   }
 
 

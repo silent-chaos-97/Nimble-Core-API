@@ -44,6 +44,7 @@ describe('PUT /signers/:id', async () => {
       consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
+// Temp comment
       consentCommunication: false,
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
@@ -59,6 +60,7 @@ describe('PUT /signers/:id', async () => {
 
     FakeUpdateEnvelopeRecipients = sinon.replace(app.plugins.docusign, 'updateEnvelopeRecipients', sinon.fake.returns(Promise.resolve()))
 
+    // fake set a contract id
     await knex('account_requests')
       .update('contract_document_envelope_id', 'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC')
       .where('id', '00000000-0000-AAAA-AAAA-000000000333')
