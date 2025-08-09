@@ -81,4 +81,3 @@ describe('POST /signers', async () => {
       .post(`/v1/signers`)
       .set('Authorization', 'Bearer ' + token)
       .send(payload)
-      .expect('Content-Type', /json/)

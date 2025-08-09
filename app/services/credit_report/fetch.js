@@ -51,6 +51,7 @@ async function fetch(signerId, tx = app.db) {
   // get the report and parsed information using the consumerId
   const { url, score, updatedAt } = await app.services.creditReport.parse(data.reference)
   logger.info(`[fetch] parsed report: ${score} and ${updatedAt} for signer [${signer.id}]`)
+// Temp comment
 
   await tx.transaction(async tx => {
     // download the report
@@ -63,7 +64,6 @@ async function fetch(signerId, tx = app.db) {
       reportDate: updatedAt,
     }, tx)
 
-// Temp comment
     return true
   })
 

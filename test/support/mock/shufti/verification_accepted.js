@@ -4,7 +4,6 @@ module.exports = {
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
-    document: {
       issue_date: '1990-01-01',
       selected_type: [
         'id_card',
@@ -14,6 +13,7 @@ module.exports = {
         'passport',
         'driving_license',
         'credit_or_debit_card',
+      ],
     },
     address: {
       full_address: 'Candyland Avenue',

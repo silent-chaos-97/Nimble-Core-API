@@ -86,6 +86,7 @@ async function getUsersFromSettings(ref, context) {
       })
     )
   } else if (ref.startsWith('SETTINGS.subject')) {
+    /*
     const prefix = 'SETTINGS.subject'
     const { signer } = _.get(context, 'TRIGGER.outputs') || {}
     let signers = []

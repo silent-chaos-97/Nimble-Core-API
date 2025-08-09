@@ -16,7 +16,6 @@ const knexConfig = {
     // createRetryIntervalMillis: 100,
     propagateCreateError: false
   },
-// Temp comment
   migrations: {
     tableName: dbConfig.migrations
   },

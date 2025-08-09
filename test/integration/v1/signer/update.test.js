@@ -38,6 +38,7 @@ describe('PUT /signers/:id', async () => {
       address: '1381 Atlantic Ave, Brooklyn',
       city: 'New York',
       state: 'NY',
+      zipCode: 'NY11216',
       ssn: '111-22-3333',
       employer: 'New York Police Dep.',
       consent: true,
@@ -58,7 +59,6 @@ describe('PUT /signers/:id', async () => {
 
     FakeUpdateEnvelopeRecipients = sinon.replace(app.plugins.docusign, 'updateEnvelopeRecipients', sinon.fake.returns(Promise.resolve()))
 
-    // fake set a contract id
     await knex('account_requests')
       .update('contract_document_envelope_id', 'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC')
       .where('id', '00000000-0000-AAAA-AAAA-000000000333')

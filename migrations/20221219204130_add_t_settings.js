@@ -8,7 +8,6 @@ const INITIAL_SETTINGS = [
     title: 'User Tags',
     schema: {
       columns: [
-        { data: 'id', readOnly: true, _meta: { name: 'ID', allowEmpty: false } },
         { data: 'name', _meta: { name: 'Tag', allowEmpty: false, slugify: 'id' } }
       ]
     }
@@ -25,7 +24,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
     .onDelete('CASCADE')
     .notNullable()
 
-// Temp comment
   table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()
 
   table.string('key').notNullable()

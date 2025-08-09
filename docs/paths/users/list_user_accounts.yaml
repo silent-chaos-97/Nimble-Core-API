@@ -26,7 +26,6 @@
       - in: query
         name: branch
         required: false
-        description: Filter users by a specific branch
         schema:
           type: string
           format: uuid

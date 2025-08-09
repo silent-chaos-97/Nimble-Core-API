@@ -79,7 +79,6 @@ class AnalysisModel extends BaseModel {
     const InstitutionModel = app.models.institution
     const InstitutionBranchModel = app.models.institutionBranch
     const FileModel = app.models.file
-    const UserModel = app.models.user
 
     return {
       ..._.omit(this._data, ['institution', 'branch', 'owner', 'files']),

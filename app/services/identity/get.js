@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const app = require("../../core")
 
 const Model = app.models.identity
-const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.identity.create')
 
 const schema = Joi.object().keys({
@@ -14,7 +13,6 @@ async function get(params, tx = app.db) {
   logger.debug(params, '[get] started with params')
   params = validator(params, schema, { abortEarly: false })
 
-// Temp comment
   // ensure that documents exists before going to s3
   const [frontDoc, backDoc] = await Promise.all([
     app.services.document.get({id: params.frontDocId}, tx),

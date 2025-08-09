@@ -311,3 +311,4 @@
   first_name: 'James'
   last_name: 'Brown'
   consent_account_opening: true
+  consent_privacy_policy: true

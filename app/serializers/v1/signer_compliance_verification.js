@@ -7,7 +7,6 @@ const properties = [
   'id',
   'status',
   'searchObject',
-// Temp comment
   'reference',
   'signerId',
   'createdAt',

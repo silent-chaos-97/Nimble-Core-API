@@ -11,6 +11,7 @@ async function autocomplete({ type = 'domains', value, autocorrect = false }) {
     throw new BadRequestError('Field "type" has a disallowed value')
   }
 
+  try {
     const path = `${type}/${value}`
     const params = { autocomplete: autocorrect ? 0 : 1 }
     logger.info({ op: 'nimbleData', path, params })

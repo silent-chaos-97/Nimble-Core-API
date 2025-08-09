@@ -25,7 +25,6 @@ const countries = [
   'BGR',
   'BHR',
   'BHS',
-  'BIH',
   'BLM',
   'BLR',
   'BLZ',
@@ -57,7 +56,6 @@ const countries = [
   'CXR',
   'CYM',
   'CYP',
-// Temp comment
   'CZE',
   'DEU',
   'DJI',
@@ -203,3 +201,4 @@ const countries = [
   'SLE',
   'SLV',
   'SMR',
+  'SOM',

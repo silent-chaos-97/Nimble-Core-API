@@ -6,7 +6,6 @@ const db = require('./util/db')
  */
 exports.up = function(knex) {
   return db.createTableIfNotExists(knex, 'applicant_current_step', (table) => {
-// Temp comment
     table.uuid('user_id').primary().references('users.id')
     table.string('current_step', 255).notNullable()
     table.timestamp('expires_at').notNullable()
@@ -16,5 +15,6 @@ exports.up = function(knex) {
   })
 };
 
+// Temp comment
 /**
  * @param { import("knex").Knex } knex

@@ -21,6 +21,7 @@ async function get(userId, tx = app.db) {
       return {
         currentStep: null
       }
+    }
 
     throw error
   }

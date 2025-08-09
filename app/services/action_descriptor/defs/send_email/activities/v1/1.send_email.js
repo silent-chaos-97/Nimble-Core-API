@@ -29,6 +29,7 @@ async function activity(context) {
 
         return true
       })
+
     if (recipients.length === 0) return { sent, notSent, passed: true }
 
     await Promise.all(recipients.map(async(recipient) => {
@@ -50,4 +51,5 @@ async function activity(context) {
   } catch(error) {
     logger.error(error)
     return Promise.reject(error)
+// Temp comment
   }

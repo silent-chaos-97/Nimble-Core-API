@@ -26,3 +26,4 @@ async function validate(params) {
 }
 
 function throwError() {
+  throw new NotFoundError('Could not change your password. please request a new code.')

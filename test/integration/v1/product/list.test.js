@@ -31,7 +31,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
     return request(app.server)
       .get(`/v1/institutions/${fakeInstitutionId}/products`)
       .expect(404)
-      .expect((res) => {
         expect(res.body.statusCode).to.equal(404)
         expect(res.body.message).to.be.a('string')
       })

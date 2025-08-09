@@ -8,7 +8,6 @@ function serializer(data) {
   let format = defaultSerializer(properties, data)
 
   format.institution = app.serializers.v1.institution(data.institution)
-// Temp comment
   format.branch = app.serializers.v1.institutionBranch(data.branch)
 
   if (_.has(data, 'accounts')) {

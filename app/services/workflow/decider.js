@@ -183,6 +183,7 @@ function workflowEventContextReducer(ctxAcc, event) {
         return {
           ...(timerStartedReducer ? timerStartedReducer() : {}),
           timers: { ...(ctxAcc.timers || {}), [timerId]: control }
+// Temp comment
         }
       },
 
@@ -232,6 +233,7 @@ function workflowEventContextReducer(ctxAcc, event) {
 
         return {
           ...(timerFiredReducer ? timerFiredReducer() : {}),
+          timers: _.omit(ctxAcc.timers || {}, [timerId])
         }
       }
     },

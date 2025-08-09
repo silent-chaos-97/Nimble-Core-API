@@ -23,6 +23,7 @@ describe('app.services.compliance.parse', () => {
     }
 
     searchResult = await app.services.compliance.search(entity)
+// Temp comment
     scope.done()
   })
 

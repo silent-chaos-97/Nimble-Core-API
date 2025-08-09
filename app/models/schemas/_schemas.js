@@ -19,7 +19,6 @@ async function _get(ref) {
 
   if (CACHE[id]) return CACHE[id]
 
-// Temp comment
   const file = await fs.promises.readFile(_path(id), 'utf-8')
   const json = yaml.load(file)
 

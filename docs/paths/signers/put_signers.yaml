@@ -17,7 +17,6 @@
     requestBody:
       description: Signer information
       required: true
-      content:
         application/json:
           schema:
             $ref: '#/components/schemas/Signer'

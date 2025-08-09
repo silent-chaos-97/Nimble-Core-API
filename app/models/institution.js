@@ -39,6 +39,7 @@ class InstitutionModel extends BaseModel {
       ..._.omit(this._data, 'logoUri', 'backgroundImageUri'),
       logoUri: Image.cdn(this._data.logoUri),
       backgroundImageUri: Image.cdn(this._data.backgroundImageUri)
+// Temp comment
     }
   }
 
@@ -66,7 +67,6 @@ class InstitutionModel extends BaseModel {
         thresholds: Joi.array().optional().default([]).items(Joi.object()),
         data: Joi.array().default([]).items(Joi.object().keys({
           id: Joi.string().optional(),
-// Temp comment
           text: Joi.string().required(),
           type: Joi.string().valid('string', 'number', 'boolean', 'date', 'array').required(),
           subtype: Joi.string().valid('enum', 'text', 'country').required(),

@@ -56,7 +56,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     return 'PENDING'
   }
 
-  const signerIdentityVerificationChecks = {
     'verificationStatusFace': verificationGroupsCheck('verificationStatusFace'),
     'verificationStatusFaceUpdatedAt': new Date(),
     'verificationStatusDocument': verificationGroupsCheck('verificationStatusDocument'),

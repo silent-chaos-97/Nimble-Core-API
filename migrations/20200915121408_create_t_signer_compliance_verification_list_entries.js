@@ -10,7 +10,6 @@ exports.up = function (knex, Promise) {
     table.enu('type', ['ADVERSE-MEDIA', 'WARNING', 'SANCTION', 'POLITICAL'], {useNative:false, enumName:'item_type'})
       .defaultTo('ADVERSE-MEDIA').notNullable()
 
-    table.string('country_codes')
 
     table
       .uuid('signer_compliance_verification_item_id')

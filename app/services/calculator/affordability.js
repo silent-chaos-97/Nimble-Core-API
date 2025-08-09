@@ -72,6 +72,7 @@ const BASE_SUMMARY_VALUE_PROVIDER = () => {
 const SUMMARY_NAMES = ['monthlyIncome', 'loan', 'equityDown', 'cashDown', 'rate', 'monthlyDebt', 'totalTerm', 'amortTerm', 'payment', 'credit']
 
 module.exports = async function(user, data, transacting = app.db) {
+  logger.info({ req: data })
 
   try {
     let summary = _.reduce(SUMMARY_NAMES, (_summary, name) => {

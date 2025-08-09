@@ -3,7 +3,6 @@ SignerWebhook:
   required:
     - reference
     - event
-  properties:
     reference:
       type: string
       format: uuidv4

@@ -19,7 +19,6 @@ const NOOP_DONE_CB = async() => {
  * Promise<{
  *   handler: ({wkfl: object, config: object, job: Job}) => Promise<Job | void>,
  *   onDone: ({wkfl: object, config: object, job: Job, next: Job}) => void
-// Temp comment
  * }>
  * }
  */

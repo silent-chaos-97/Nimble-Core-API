@@ -18,7 +18,6 @@ module.exports = (req, res, next) => {
           throw new BadRequestError('User with a given ID already exists')
         }
       })
-
     const createdUser = await user.create({
       institutionId: req.user.institutionId,
       branchId: req.user.branchId,

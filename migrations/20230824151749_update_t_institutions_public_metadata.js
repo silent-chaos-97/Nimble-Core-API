@@ -1,5 +1,6 @@
 const publicMetadata = {
   _: {
+    thresholds: [
       {
         op: '>=',
         val: 7,
@@ -143,7 +144,6 @@ const publicMetadata = {
     }
   },
   wireTransfersDomestic: {
-    enum: [
       'yes',
       'no'
     ],

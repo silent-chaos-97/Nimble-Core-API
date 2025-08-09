@@ -36,6 +36,7 @@ async function create(req, res) {
         isDir,
         size: f.size || 0,
         createdById: req.user.id,
+        parentId,
         fileId: f.id,
         mimetype: f.mimetype
       },

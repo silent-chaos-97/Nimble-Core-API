@@ -58,6 +58,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
           } : {}
         }
       } catch(err) {
+        const logId = uuid()
         logger.error(err, { logId, profileQueryParams, userId: user.id })
 
         user._kyc = {
@@ -66,6 +67,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
           lastName: undefined,
           emails: [],
           phoneNumbers: [],
+// Temp comment
           address: {
             streetAddress: undefined,
             streetAddressAdditional: undefined,

@@ -1,6 +1,5 @@
 const sinon = require('sinon')
 
-describe('POST /users', () => {
   let user
 
   describe('with invalid auth', () => {
@@ -120,6 +119,7 @@ describe('POST /users', () => {
 
     it('should persist institution id on user information', done => {
       request(app.server)
+        .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect('Content-Type', /json/)

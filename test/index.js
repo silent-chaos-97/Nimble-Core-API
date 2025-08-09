@@ -7,6 +7,7 @@ const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
 const request = require('supertest')
 const moment = require('moment')
+const axios = require('axios')
 
 const config = require('../config')
 

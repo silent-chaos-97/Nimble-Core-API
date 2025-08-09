@@ -18,6 +18,7 @@ const schema = Joi.object({
   agencyCaseNumber: Joi.string(),
 	// User input
   lenderCaseNumber: Joi.string(),
+	// Have it - Attom
   amount: Joi.number(),
   // Need it - Business Logic / Admin Panel
 	interestRate: Joi.number(),
@@ -314,7 +315,6 @@ const schema = Joi.object({
 						propertyType: Joi.string(),
 						presentMarketValue: Joi.number(),
 						mortgageAndLiensAmount: Joi.number(),
-						grossRentalIncome: Joi.number(),
 						mortgagePayments: Joi.number(),
 						insuranceMaintenanceTaxesAndMiscellaneous: Joi.number(),
 						netRentalIncome: Joi.number()
@@ -613,3 +613,4 @@ const mockUniformResidentialLoanApplication = {
 					owner: 'Co-Borrower',
 					companyName: 'Bank Of America',
 					exchange: 'NYSE',
+					tickerSymbol: 'BAC',

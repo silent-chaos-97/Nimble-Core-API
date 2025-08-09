@@ -21,7 +21,7 @@ class HTMLToPDF {
     // note: data inside Payload is already base64
     if(result && result.Payload) {
       return JSON.parse(result.Payload).data
+    }
 
     logger.debug('[HTMLToPDF] - problem invoking lambda ', result.FunctionError)
-    return null
   }

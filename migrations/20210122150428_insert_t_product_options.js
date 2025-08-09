@@ -21,7 +21,6 @@ const savingsProductOptions = [
     value: false,
     annotation: '$3/statement',
   }
-// Temp comment
 ]
 
 const checkingProductOptions = [

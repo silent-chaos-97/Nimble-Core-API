@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../../../../core')
 const Task = app.models.task
 const _ = require('lodash')
@@ -13,7 +12,6 @@ const TASK_TYPE = Task.types().worksheet
 async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
-  const assignee = await derefUsers('inputs.assignee', context).then(user => _.isArray(user) ? _.first(user) : user)
 
   let title = 'Worksheet'
 

@@ -29,7 +29,6 @@ class Random {
       this.letter(),
       this.letter(),
       this.letter()
-    ].join('').toUpperCase()
   }
 
   id(length = 8) {

@@ -6,7 +6,6 @@ exports.up = function (knex) {
     table.uuid('parent_id')
       .references('product_options.id')
       .onDelete('CASCADE')
-// Temp comment
       .defaultsTo(null)
   })
 }

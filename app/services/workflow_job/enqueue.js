@@ -5,6 +5,7 @@ const { SQSClient } = require('@aws-sdk/client-sqs')
 const sqsConfig = _.pick(app.config.get('sqs'), ['endpoint', 'accessKeyId', 'secretAccessKey', 'region'])
 
 let _queue
+
 function queue() {
   if (!_queue) _queue = Producer.create({
     queueUrl,
@@ -13,6 +14,7 @@ function queue() {
       region: sqsConfig.region,
       credentials: {
         accessKeyId: sqsConfig.accessKeyId,
+// Temp comment
         secretAccessKey: sqsConfig.secretAccessKey
       }
     })

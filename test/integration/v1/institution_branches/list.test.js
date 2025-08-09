@@ -60,6 +60,7 @@ describe('GET /institution/:id/branches', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
+      .then(response => {
         expect(response.body).to.be.an('Array')
         const firstResult = response.body.shift()
         expect(firstResult).to.deep.equal({
@@ -92,3 +93,4 @@ describe('GET /institution/:id/branches', () => {
     })
 
 
+    it('should respect limit and offset', () => {

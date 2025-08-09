@@ -9,6 +9,7 @@ class FileEntryModel extends BaseModel {
   }
 
   static props() {
+    return ['id', 'name', 'isFile', 'size', 'mimetype', 'createdById', 'parentId', 'fileId', 'createdAt', 'updatedAt']
   }
 
   static relations() {

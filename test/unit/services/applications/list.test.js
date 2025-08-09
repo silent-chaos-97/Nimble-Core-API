@@ -33,6 +33,7 @@ describe('app.services.applications.list', () => {
   })
 
   // describe('body properties are valid', () => {
+  //   describe('calling applications list', () => {
   //     beforeEach(() => {
   //       body = {
   //         applicantId: '1052ab85-08da-4bb5-be00-9e94d282d310'

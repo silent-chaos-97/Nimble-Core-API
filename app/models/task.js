@@ -72,7 +72,6 @@ class TaskModel extends BaseModel {
       'workflowId',
       'activityId',
       'descriptorId',
-      'activityToken',
       'files',
       'to',
       'cc',

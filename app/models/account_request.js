@@ -174,7 +174,6 @@ class AccountRequest extends BaseModel {
     ].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
-
     switch (operation) {
       case 'create':
         return Joi.object().keys({

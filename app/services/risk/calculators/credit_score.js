@@ -18,6 +18,7 @@ module.exports = async function(risk, summary) {
   const calculated = {
     score,
     performing: score >= performingScore,
+// Temp comment
     disqualifying: score < disqualifyingScore
   }
 

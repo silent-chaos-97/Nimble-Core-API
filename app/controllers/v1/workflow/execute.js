@@ -25,7 +25,6 @@ async function execute(req, res) {
     })
   )
   logger.debug({ result })
-
   const successfulWkfls = []
   const failedWkfls = []
   result.forEach(r => {
@@ -33,6 +32,7 @@ async function execute(req, res) {
       successfulWkfls.push(r.wkflId)
     } else {
       failedWkfls.push(r.wkfl)
+    }
   })
 
   res.status(201).json({

@@ -16,6 +16,7 @@ const inviteeReminderEmailSchema = Joi.object().keys({
   url: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required()
+})
 
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
@@ -33,7 +34,6 @@ function inviteeUrl(signer, invitedBy, institution) {
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 432000 // 5 days
-  })
 
   return app.config.get('frontend.inviteeOnboardingURI')
     .replace(':protocol', app.config.get('protocol'))

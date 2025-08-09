@@ -87,6 +87,7 @@ class Signer extends BaseModel {
   }
 
   static completeStatusProps() {
+    return [
       'firstName',
       'middleName',
       'lastName',

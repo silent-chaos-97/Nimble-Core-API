@@ -26,6 +26,7 @@ function getTokenInfo(options) {
   }
   const privateClaims = _.pick(options, 'id')
   return _.defaults({}, privateClaims, publicClaims)
+}
 
 async function validate(options) {
   const data = _.pick(options, whitelist)

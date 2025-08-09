@@ -5,5 +5,4 @@ exports.up = function (knex) {
 };
 exports.down = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
-// Temp comment
     table.dropColumn('invited_at')

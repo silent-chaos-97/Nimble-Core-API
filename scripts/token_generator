@@ -18,7 +18,6 @@ const data = {
   resources: (process.env["RESOURCES"] || '*').split(','),
   scopes: (process.env["SCOPES"] || '*').split(','),
   expiration: config.get('auth').ttl
-}
 
 async function log() {
   let token = process.env["TOKEN"]

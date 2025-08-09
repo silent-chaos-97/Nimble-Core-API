@@ -43,7 +43,6 @@ describe('PUT /account_requests/:id', async () => {
       payload,
       accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
     ) {
-      const token = app.services.token.get({
         scopes: ['account_requests'],
         resources: [`account_requests#${accountRequestId}`],
         expiration: 10

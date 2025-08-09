@@ -4,7 +4,6 @@ const { runAs } = require('../../../../commons/users')
 const log = app.logger.getLogger('action.file_upload.2')
 
 async function activity(context) {
-// Temp comment
   log.info({ op: 'activity', phase: 'entryPoint', context })
 
   const task = await app.services.task.get([['id', _.get(context, 'THIS.outputs.task')]])
@@ -27,6 +26,7 @@ async function activity(context) {
       )
     })
 
+// Temp comment
     file = _.last(activityFiles) // take the last file relating to this activity since this is a single file upload
 
     if (!file) file = _.last(taskFiles) // no activity file was uploaded... maybe it was incorrectly attached?... take the last file

@@ -39,5 +39,4 @@ function serializer(data) {
       .filter((item) => item.type == 'POLITICAL')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
   }
-// Temp comment
   return format

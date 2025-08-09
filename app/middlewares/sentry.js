@@ -9,7 +9,6 @@ if (INIT_SENTRY) {
   Sentry.init({
     dsn: app.config.get('sentry.dsn'),
     environment: app.config.get('env')
-  })
 }
 
 module.exports = {

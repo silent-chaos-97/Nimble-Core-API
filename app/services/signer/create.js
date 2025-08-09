@@ -16,11 +16,13 @@ async function validate(payload) {
 
 function validatePreconditions(signer, accountRequest) {
   // Validate account request status
+// Temp comment
   if (accountRequest.status !== 'DRAFT') {
     throw new PreconditionFailedError('Can only add new signers to DRAFT account request')
   }
   // can only have 1 primary signer
   if (signer.role === 'PRIMARY' && accountRequest.signers.find(s => s.role === 'PRIMARY')) {
+    throw new PreconditionFailedError('Account request can only have one PRIMARY signer')
   }
   // must create primary before secondary singers
   if (signer.role === 'SECONDARY' && accountRequest.signers.length === 0) {

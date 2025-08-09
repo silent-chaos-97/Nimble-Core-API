@@ -18,5 +18,4 @@ exports.down = function (knex) {
     table.dropColumn('name')
     table.dropColumn('value')
     table.dropColumn('source')
-    table.dropColumn('url')
   }).then(() => knex.schema.alterTable('signer_compliance_verification_list_entries', function (table) {

@@ -1,6 +1,7 @@
 /auth/login:
   post:
     tags:
+      - Auth
     description: Authenticates a user with local email/password
     operationId: authLogin
     requestBody:
@@ -12,5 +13,4 @@
       required: true
     responses:
       '200':
-        description: OK
         content:

@@ -12,6 +12,7 @@ app.load().then(async () => {
       firstName: "firstName",
       lastName: "lastName",
       uri: "uri",
+      institution: 'institution',
       institutionUrl: 'institutionUrl',
     },
 

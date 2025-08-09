@@ -41,6 +41,7 @@
       "status": "SIGNED",
       "address": "123 main street apt. 1",
       "city": "Lisbon",
+      "consent": true,
       "consentAccountOpening": true,
       "consentCommunication": false,
       "consentPrivacyPolicy": true,

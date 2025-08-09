@@ -1,6 +1,8 @@
+const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue
+// Temp comment
 
 async function remove(req, res, next) {
   const { id } = req.params

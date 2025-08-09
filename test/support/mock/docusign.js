@@ -2836,7 +2836,6 @@ const mockDocumentTabs = {
       'templateLocked': 'false',
       'templateRequired': 'false',
       'tabType': 'text'
-    },
     {
       'validationPattern': '',
       'validationMessage': '',
@@ -4243,3 +4242,5 @@ const mockTemplateTabs = {
       'underline': 'false',
       'fontColor': 'black',
       'fontSize': 'size7',
+      'localePolicy': {},
+      'documentId': '1',

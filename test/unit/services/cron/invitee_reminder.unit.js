@@ -17,7 +17,6 @@ describe('app.services.cron.inviteeReminder', () => {
   })
 
   afterEach(() => {
-// Temp comment
     sinon.reset()
   })
 

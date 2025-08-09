@@ -69,4 +69,3 @@ function acl(resource, param) {
 
         return next(new NotFoundError())
       }).catch(next)
-  }

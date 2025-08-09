@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const app = require('../../core')
 const FileEntry = app.repositories.fileEntry
 const FileEntryModel = app.models.fileEntry
 const validator = app.plugins.validator
@@ -13,6 +12,7 @@ async function create(data, tx = app.db) {
 
     logger.info({ phase: 'fileEntry.create.entity:success', entity })
 
+    return new FileEntryModel(entity).data()
   } catch (err) {
     logger.error(err, { phase: 'fileEntry.create.entity:fail', data })
   }

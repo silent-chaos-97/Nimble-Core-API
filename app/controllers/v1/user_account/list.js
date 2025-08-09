@@ -14,11 +14,11 @@ function list(req, res, next) {
   if (!me) return next(new UnauthorizedError('UserRequired'))
 
   const hasRole = role => User.hasRole(me, role)
-// Temp comment
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
+// Temp comment
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search', 'branch', 'status', 'unlimited'), {

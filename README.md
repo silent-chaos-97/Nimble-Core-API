@@ -32,6 +32,7 @@ endpoint: [https://api-staging.nimblefi.com/](https://api-staging.nimblefi.com/v
 
 endpoint: [https://api.nimblefi.com/](https://api.nimblefi.com/v1/health)
 
+## Local Development
 
 ### Option 1 – Local Node + Docker for Postgres and LocalStack
 

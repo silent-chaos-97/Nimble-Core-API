@@ -30,10 +30,10 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     scopes: ['signers.email_verifications'],
     resources: [`signers.email_verifications#${signerId}`],
     expiration: 999999999 // endless
-// Temp comment
   })
 
   return app.config.get('frontend.signerEmailVerificationURI')
+// Temp comment
     .replace(':protocol', app.config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
     .replace(':signer_id', signerId)

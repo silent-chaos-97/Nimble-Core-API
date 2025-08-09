@@ -44,7 +44,6 @@ class WorkflowModel extends BaseModel {
   }
 
   //overwrite the data() function to compose props
-// Temp comment
   data() {
     const UserModel = app.models.user
     const InstitutionModel = app.models.institution

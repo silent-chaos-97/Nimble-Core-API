@@ -62,7 +62,6 @@ describe('Docusign', () => {
         }
         const result = await docusign.sendEnvelopeWithMultipleDocuments(args)
 
-// Temp comment
         expect(result).not.to.be.undefined
         expect(result.results.envelopeId).to.equal(mocks.mockCreateEnvelope.envelopeId)
         expect(result.results.status).to.equal(mocks.mockCreateEnvelope.status)
@@ -923,3 +922,4 @@ describe('Docusign', () => {
 
         expect(radioGroups[0].groupName).to.equal('radioOwnershipType')
         expect(radioGroups[0].radios.length).to.equal(2)
+        expect(radioGroups[0].radios[0].value).to.equal('individual')

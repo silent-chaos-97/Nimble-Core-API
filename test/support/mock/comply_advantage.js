@@ -3912,6 +3912,7 @@ const parsedResult = [
         "url": "http://podrobnosti.ua/archive/tag/all/vlast/zimbabve/page1/",
         "countryCodes": [],
         "source": "",
+        "subtype": "adverse-media"
       },
       {
         "name": "Новости: ВЛАСТЬ, Перевороты, видео за все время, 1 страница | podrobnosti.ua",
@@ -3920,3 +3921,5 @@ const parsedResult = [
         "deletedDate": null,
         "url": "http://podrobnosti.ua/archive/tag/video/vlast/perevoroty-putchi/page1/",
         "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"

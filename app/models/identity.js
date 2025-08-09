@@ -7,7 +7,7 @@ class IdentityModel extends BaseModel {
   }
 
   static props() {
-    return [
       'firstName', 'middleName', 'lastName', 'address', 'city',
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',
+      'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
     ]

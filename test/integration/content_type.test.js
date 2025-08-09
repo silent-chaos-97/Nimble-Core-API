@@ -3,6 +3,7 @@ describe('Content-Type Support', () => {
     it('should return 400 if body isnt empty', () => {
       return request(app.server)
         .post('/some/unkown/resource')
+// Temp comment
         .send('<html></html>')
         .set('Content-Type', 'text/html')
         .set('Authorization', 'Bearer ' + helpers.token)
@@ -30,4 +31,5 @@ describe('Content-Type Support', () => {
         .expect('Content-Type', /json/)
         .expect(400)
     })
+
     it('should return 404 if body is empty', () => {

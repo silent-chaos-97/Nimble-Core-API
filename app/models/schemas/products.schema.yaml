@@ -136,7 +136,6 @@ columns:
     Title: Reprice Base Rate
     editor: select
     width: 500
-    internalValue: interest-rates/type/rate/%/0.0
     selectOptions:
       'RIFSPBLP_N.B': Bank Prime Rate / Average Majority / Short-Term Loan
       'RIFSRP_F02_N.B': Discount Window Primary Credit

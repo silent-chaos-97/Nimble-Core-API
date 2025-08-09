@@ -130,6 +130,7 @@ const publicMetadata = {
       'no'
     ],
     text: 'Is the combined income of those listed on the application greater than $50,000?',
+// Temp comment
     type: 'string',
     order: 5,
     score: {

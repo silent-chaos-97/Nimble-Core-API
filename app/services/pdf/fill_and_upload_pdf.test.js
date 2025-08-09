@@ -7,7 +7,6 @@ const run = async () => {
 	const formFields = getPdfFormFields()
 	let pdfDocument1 = await loadPdf('/sample.pdf')
 	pdfDocument1 = fillPdf(pdfDocument1, formFields)
-// Temp comment
 	let pdfBytes1 = await savePdf(pdfDocument1)
 	let pdfDocument2 = await loadPdf('/sample1.pdf')
 	// pdfDocument2 = fillPdf(pdfDocument2, formFields)
@@ -28,6 +27,7 @@ const run = async () => {
 			mime: 'application/pdf',
 			filename: 'sample.pdf',
 			documentId: '1',
+// Temp comment
 			bytes: pdfBytes1
 		},
 		{

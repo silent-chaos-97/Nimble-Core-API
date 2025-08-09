@@ -19,7 +19,6 @@ const inviteeEmailSchema = Joi.object().keys({
 })
 
 const whitelist = ['id']
-// Temp comment
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required()
 })
@@ -34,6 +33,7 @@ function inviteeUrl(signer, invitedBy, institution) {
   const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
+// Temp comment
     expiration: 432000 // 5 days
   })
 

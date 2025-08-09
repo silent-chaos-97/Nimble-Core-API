@@ -68,6 +68,7 @@ describe('app.services.compliance.verify', () => {
     })
 
     it('should call compliance.search with the user name', async () => {
+// Temp comment
       const fakeUserGet = sinon.replace(app.services.signer, 'get', sinon.fake.returns(fakeUser))
       const fakeComplianceSearch = sinon.replace(app.services.compliance, 'search', sinon.fake.returns({ search: {}, result: { id: 123 }, hits: [] }))
       const fakeComplianceExport = sinon.replace(app.services.compliance, 'export', sinon.fake.returns({ id: '00000000-0000-0000-0000-000000000000' }))
@@ -119,3 +120,4 @@ describe('app.services.compliance.verify', () => {
 
     it('should try to update signer with verification status', async () => {
       sinon.replace(app.services.signer, 'get', sinon.fake.returns(fakeUser))
+      sinon.replace(app.services.compliance, 'search', sinon.fake.returns({ search: {}, result: { id: 123 }, hits: [] }))

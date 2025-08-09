@@ -18,7 +18,6 @@ class ImageFactory {
 
 class AssetImage {
   constructor(location, uri) {
-    this.location = location
     this.uri = uri
 
     return {
@@ -27,4 +26,5 @@ class AssetImage {
   }
 
   __generateUrl(uri) {
+    return [this.location, uri].join('/')
   }

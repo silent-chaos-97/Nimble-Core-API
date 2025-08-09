@@ -3,7 +3,6 @@ const app = require('../../core')
 const random = app.plugins.random
 const log = app.logger.getLogger('eventStream.onEvent')
 
-// Temp comment
 module.exports = async(event) => {
   const _logId = random.id()
 

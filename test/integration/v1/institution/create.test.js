@@ -100,6 +100,7 @@ describe('POST /institutions', () => {
       })
   })
 
+  it('should persist institution', (done) => {
     request(app.server)
       .post('/v1/institutions')
       .set('X-API-KEY', 'superpowers')

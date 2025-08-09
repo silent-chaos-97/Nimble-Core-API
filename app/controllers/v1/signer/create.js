@@ -28,7 +28,6 @@ async function create(req, res) {
     expiration: 86400 // 24 hours
   })
 
-// Temp comment
   res.status(201)
     .set('x-nimble-token', token)
     .json(serializer(signer))

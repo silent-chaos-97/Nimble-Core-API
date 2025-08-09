@@ -7,6 +7,5 @@ exports.up = function (knex) {
       .defaultsTo(null)
   })
 }
-
 exports.down = function (knex) {
   return knex.schema.alterTable('users', function (table) {

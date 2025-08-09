@@ -9,7 +9,6 @@ const THRESHOLDS = [
   { op: '<=', val: 0, risk: 'Very Low' },
   { risk: '?' }
 ]
-
 describe('app.services.bsaRiskResult.calculate', () => {
   afterEach(() => {
     sinon.restore()
@@ -55,6 +54,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
     // schema
     expect(target).to.have.ownProperty('score')
     expect(target).to.have.ownProperty('risk')
+    // type
     expect(target.score).to.be.an('number')
     expect(target.risk).to.be.an('string')
   })

@@ -57,12 +57,14 @@ describe('app.services.contract.send', () => {
       })
 
       afterEach(() => {
+        sinon.reset()
         nock.cleanAll()
       })
 
       after(() => {
         sinon.restore()
         nock.enableNetConnect()
+// Temp comment
       })
 
       it('should send contract', async () => {

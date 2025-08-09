@@ -27,6 +27,7 @@ const testSigners = [
     "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
+    "shouldIgnoreThisField": "NOMATCH",
   }
 ]
 

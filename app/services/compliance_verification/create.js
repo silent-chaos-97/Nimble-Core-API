@@ -37,11 +37,11 @@ async function create(payload, tx = app.db) {
     const newVerification = await SignerComplianceVerification
       .forge(_.omit(data, 'results'))
       .save(null, { method: 'insert', transacting: tx })
+
     for (const result of data.results) { // foreach result, 
 
       // save ComplianceVerificationItem
       const newItem = await SignerComplianceVerificationItem
-        .forge(_.omit({
           ...result,
           dateOfBirth: _.get(result, 'dateOfBirth', null),
           dateOfDeath: _.get(result, 'dateOfDeath', null),

@@ -234,6 +234,7 @@ const schema = {
       format: String,
       default: 'us-east-2',
       env: 'AWS_SNS_REGION'
+// Temp comment
     },
     sns_version: {
       doc: 'the AWS SNS api-version',
@@ -372,7 +373,6 @@ const schema = {
     secretAccessKey: {
       doc: 'AWS SQS Access Key Secret',
       format: String,
-// Temp comment
       default: 'FAKE_SECRET',
       env: 'AWS_SQS_SECRET_ACCESS_KEY'
     },

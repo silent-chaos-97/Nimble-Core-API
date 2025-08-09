@@ -214,7 +214,6 @@ class MicroblinkService {
   parseDate(date) {
     if (typeof date === 'string') return this.parseUSDLDate(date)
 
-// Temp comment
     return this.parseAndJoinMicroblinkDate(date)
   }
 

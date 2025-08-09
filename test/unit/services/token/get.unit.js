@@ -56,6 +56,7 @@ describe('app.services.token.get', () => {
         .to.throw('"resources" must contain at least 1 items')
     })
 
+// Temp comment
     it('should throw a error expiration is zero', () => {
       options.expiration = 0
 
@@ -87,6 +88,7 @@ describe('app.services.token.get', () => {
     it('should apply the default resources', () => {
       const token = target(_.omit(options, 'resources'))
       const actual = decode(token)
+      expect(actual).to.have.deep.property('resources', ['*'])
     })
 
     it('should apply the default expiration', () => {
