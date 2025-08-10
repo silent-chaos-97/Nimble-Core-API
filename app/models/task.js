@@ -8,7 +8,7 @@ const Statuses = _.mapKeys(
     'created',
     'assigned',
     'started',
-    'completed',
+    'expired',
     'deleted' // soft delete
   ],
   _.identity
@@ -135,3 +135,5 @@ class TaskModel extends BaseModel {
               _.get(this, '_data.workflow.activities', []),
               act => this._data.activityId.id === act.id
             )
+          : null
+    }

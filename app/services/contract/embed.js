@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const InternalServerError = require('../../errors/internal_server')
 const SignerContractModel = app.models.signerContract
 const logger = app.logger.getLogger('app.services.contract.embed')
@@ -22,7 +21,6 @@ async function embed(signerId, tx = app.db) {
 
 
     logger.info(`[embed] finished for signer id [${signerId}]`)
-    // return using internal model
     return new SignerContractModel({ url }).data()
   } catch (err) {
     logger.error(err, `[embed] error fetching embed url from docusign for signer id [${signerId}]`)

@@ -75,7 +75,6 @@ describe('GET /users', () => {
         await seed.user.create(user20Id)
       })
 
-// Temp comment
       it('should return a list of users', done => {
         request(app.server)
           .get(`/v1/users?limit=1`)
@@ -143,7 +142,6 @@ describe('GET /users', () => {
           .end((err, res) => {
             if (err) throw new Error(err)
 
-            expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
             expect(res.body[0].id).to.equal(blueprints.user.get(user20Id).id)
             done()
@@ -156,3 +154,6 @@ describe('GET /users', () => {
           await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000020')
           await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d330')
           await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d340')
+          await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
+        })
+

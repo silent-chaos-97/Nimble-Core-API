@@ -68,3 +68,4 @@ describe('app.services.docusignTemplate.fetch', () => {
 
       const expectation = {
         "AccountApplication": "b60fec89-18e3-41b8-8873-808d3c665569",
+        "FundsAvail": "05db6673-5bb1-421f-be65-c71580bc28a9",

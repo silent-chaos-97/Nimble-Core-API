@@ -48,3 +48,4 @@ class SignerComplianceVerificationModel extends BaseModel {
         documentId: Joi.string().uuid().required(),
         status: Joi.string().required(),
         reference: Joi.string().required(),
+        searchObject: Joi.any(),

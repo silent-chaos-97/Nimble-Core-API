@@ -73,3 +73,4 @@ describe('app.services.creditReport.parse', () => {
           "report_url": "https://secure.prequalsolutions.com/preq/api/viewReport.php?id=227031&t=1611685783&sc=0466566d0d4e99ea9886593ccd6ef1b4e6227e40214e240c901c1d519a70a2ee",
           "report_xml": '<NetConnectResponse xmlns="http://www.experian.com/NetConnectResponse"></NetConnectResponse>'
         }
+      ]

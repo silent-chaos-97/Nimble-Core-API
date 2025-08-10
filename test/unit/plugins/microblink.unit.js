@@ -424,3 +424,9 @@ describe('MicroblinkService', () => {
 
     it('should not get the issued state for blink_id card', async () => {
       const result = service.getBasicUserDataFromMicroblinkResponse(mocks.successResponse.data.result)
+
+      expect(result).to.have.deep.property('firstName', 'Sample')
+      expect(result).to.have.deep.property('middleName', '')
+      expect(result).to.have.deep.property('lastName', 'Specimen')
+
+      expect(result).to.have.deep.property('documentIssuer', '')

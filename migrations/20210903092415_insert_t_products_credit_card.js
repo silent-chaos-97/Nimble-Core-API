@@ -68,3 +68,4 @@ We give you options for credit cards that line up perfectly with the way you liv
 exports.up = async function(knex) {
   // Get all institutions
   const institutions = await knex('institutions').select()
+  institutions.map(async (institution) => {

@@ -29,7 +29,6 @@ describe('AWS Facade class', () => {
       endpoint: '',
       s3: {
         endpoint: ''
-// Temp comment
       }
     })
 
@@ -46,6 +45,7 @@ describe('AWS Facade class', () => {
     const target = new AWS.constructor({
       endpoint: 'endpoint',
       s3: {
+// Temp comment
         endpoint: 'endpointoverwrite'
       }
     })
@@ -58,3 +58,4 @@ describe('AWS Facade class', () => {
     expect(AWS.s3.config.endpoint).to.equal(app.config.get('aws').endpoint)
   })
 
+  describe('S3 Facade', () => {

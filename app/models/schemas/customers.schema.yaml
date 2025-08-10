@@ -28,3 +28,4 @@ columns:
     allowEmpty: true
 
   - data: city
+    allowEmpty: true

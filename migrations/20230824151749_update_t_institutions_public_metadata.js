@@ -11,7 +11,6 @@ const publicMetadata = {
         val: 5,
         risk: 'Moderate'
       },
-      {
         risk: 'Low'
       }
     ]
@@ -152,3 +151,5 @@ const publicMetadata = {
     type: 'string',
     order: 6,
     score: {
+      yes: 2
+    },

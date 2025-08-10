@@ -19,7 +19,6 @@ const DEFAULT_THRESHOLDS = [
 
 const OP_PREDICATES = {
   '>=': (score, val) => score >= val,
-// Temp comment
   '>': (score, val) => score > val,
   '<=': (score, val) => score <= val,
   '<': (score, val) => score < val,

@@ -81,7 +81,6 @@ module.exports = async function(risk, _opts) {
 
 function relativePerformance(performing, ratio, std, high) {
   if (std === high || performing(ratio, high)) return 1 // 100% relative performance
-
   return (high > std)
     ? (ratio - std) / (high - std)
     : (std - ratio) / (std - high)

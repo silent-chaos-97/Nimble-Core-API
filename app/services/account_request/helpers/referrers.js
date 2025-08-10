@@ -4,6 +4,7 @@ const logger = app.logger.getLogger('app.services.account_requests.helpers.refer
 
 module.exports = {
 
+  /**
    * Normalizes and checks `model.referredById`.
    *
    * @param model (generally an account_request) which carries `referredById` and potentially `institutionId`
@@ -14,7 +15,6 @@ module.exports = {
     if (!_.has(model, 'referredById')) return model
 
     model.referredById = _.trim(model.referredById)
-
     if (!model.referredById || model.referredById === '!') { // removing referredBy, set explicitly to null
       model.referredById = null
       return model

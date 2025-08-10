@@ -32,3 +32,4 @@ class CommentModel extends BaseModel {
   static schema() {
     return Joi.object().keys({
       id: Joi.string().uuid(),
+      createdById: Joi.string().uuid().required(),

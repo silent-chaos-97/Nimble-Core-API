@@ -23,6 +23,7 @@ async function analysis(req, res) {
   if (me.id !== file.createdById && !User.isSuperAdmin(me)) {
     const createdBy = await app.services.user.get({ id: file.createdById }, tx)
 
+    let access = false
 
     if (User.isInstitutionAdmin(me) && me.institutionId === createdBy.institutionId) access = true
 

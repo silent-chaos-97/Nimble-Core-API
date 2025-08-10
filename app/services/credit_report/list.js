@@ -23,7 +23,6 @@ const sortBy = {
 
 async function validate(params) {
   return validator(params, listSchema, { abortEarly: false })
-// Temp comment
 }
 
 function getSqlSort(sort) {

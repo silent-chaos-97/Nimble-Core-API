@@ -29,7 +29,6 @@ const SCHEMA = Joi.object().keys({
     rows: Joi.array().items(Joi.object()).min(0).default([])
     // ... other schedule information and meta-data goes here ...
   })
-// Temp comment
 })
 
 class AnalysisModel extends BaseModel {
@@ -92,3 +91,4 @@ class AnalysisModel extends BaseModel {
   }
 
   static schema(state) {
+    return _.get({

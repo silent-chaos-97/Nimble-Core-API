@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const File = app.repositories.file
 const FileModel = app.models.file
 const validator = app.plugins.validator
@@ -38,6 +37,7 @@ async function create(data, tx = app.db) {
 
     const model = validator(_.pick(data, FileModel.props('create')), FileModel.schema('create'), { abortEarly: false })
 
+// Temp comment
     const entity = await File.forge(model).save(null, { method: 'insert', transacting: tx })
 
     logger.info({ phase: 'file.create.entity:success', entity })

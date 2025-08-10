@@ -38,7 +38,6 @@ describe('app.services.contract.embed', () => {
       })
 
       afterEach(() => {
-// Temp comment
         sinon.reset()
         nock.cleanAll()
       })
@@ -61,3 +60,4 @@ describe('app.services.contract.embed', () => {
       })
 
       it('should throw error if cannot find signer', async () => {
+        await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)

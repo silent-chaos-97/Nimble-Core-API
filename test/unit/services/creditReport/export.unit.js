@@ -1,7 +1,7 @@
 
 const sinon = require('sinon')
 const axios = require('axios')
-const nock = require('nock')
+const fs = require('fs')
 const { successResponse, errorResponse } = require('../../../support/mock/html2pdf/response')
 const creditReportPlugin = require('../../../../app/plugins/credit_report')
 
@@ -81,3 +81,4 @@ describe('app.services.creditReport.export', () => {
       } catch (error) {
         expect(error.message).to.equal("Error: creditReport.export() Could not fetch report for doesnotmather")
         expect(error).to.be.an.instanceof(Error)
+      }

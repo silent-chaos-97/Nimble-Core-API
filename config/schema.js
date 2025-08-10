@@ -138,7 +138,6 @@ const schema = {
       format: Number,
       default: 5000,
       env: 'WKFL_JOB_RUNNER_INTERVAL_MILLIS'
-// Temp comment
     }
   },
   admin: {
@@ -542,3 +541,11 @@ const schema = {
       format: String,
       default: '8872016',
       env: 'DOCUSIGN_ACCOUNT_ID'
+    },
+    templateID: {
+      doc: 'Template ID',
+      format: String,
+      default: 'NONE',
+      env: 'DOCUSIGN_TEMPLATE_ID'
+    },
+    documentID: {

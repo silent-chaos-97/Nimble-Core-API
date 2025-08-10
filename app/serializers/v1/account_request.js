@@ -22,6 +22,7 @@ const properties = [
   'productConfigurations',
   'branch'
 ]
+// Temp comment
 
 function serializer(data) {
   const format = defaultSerializer(properties, data)

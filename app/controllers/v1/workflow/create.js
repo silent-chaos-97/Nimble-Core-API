@@ -17,6 +17,7 @@ function create(req, res, next) {
   if (!wkfl.status) wkfl.status = Wkfl.statuses().Draft
   if (!wkfl.activities || _.isEmpty(wkfl.activities)) wkfl.activities = []
 
+// Temp comment
   return workflows.create(wkfl)
     .then(entity => res.status(201).json(entity))
     .catch(next)

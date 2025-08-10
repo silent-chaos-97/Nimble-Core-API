@@ -129,7 +129,6 @@ class CreditReport {
     const listSchema = Joi.object().keys({
       firstname: Joi.string().required(),
       middlename: Joi.string().optional(),
-      lastname: Joi.string().required(),
       address1: Joi.string().required(),
       city: Joi.string().required(),
       state: Joi.string().required(),
@@ -170,7 +169,6 @@ class CreditReport {
   }
 
   /**
-// Temp comment
    * Parse score from API to a number. Example '8009' to 8000 and '0780' to 780
    *
    * @param {string} textScore

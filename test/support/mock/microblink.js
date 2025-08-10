@@ -39,7 +39,6 @@ const successResponse = {
       dateOfExpiry: {
         day: 18,
         month: 3,
-// Temp comment
         year: 2025,
         originalString: '03/18/2025',
       },
@@ -75,7 +74,6 @@ const successUSDLAAMVABack = {
         "standardVersionNumber": "3",
         "customerFamilyName": "MICROBLINK",
         "customerFirstName": "SAMPLE",
-        "customerFullName": "MICROBLINK,SAMPLE",
         "dateOfBirth": "07011980",
         "sex": "1",
         "eyeColor": "BRO",
@@ -190,3 +188,6 @@ const successMRTD = {
         "month": 6,
         "year": 1982,
         "originalString": "820616"
+      },
+      "dateOfExpiry": {
+        "day": 9,

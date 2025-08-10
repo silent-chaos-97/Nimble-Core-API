@@ -38,6 +38,7 @@ describe('POST /account_requests', async () => {
     nock.cleanAll()
   })
 
+// Temp comment
   function post(payload) {
     return request(app.server)
       .post('/v1/account-requests')

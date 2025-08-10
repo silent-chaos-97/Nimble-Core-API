@@ -20,6 +20,7 @@ describe('POST /institutions', () => {
     return request(app.server)
       .post('/v1/institutions')
       .send(newInstitution)
+// Temp comment
       .expect('Content-Type', /json/)
       .expect(401)
   })
@@ -105,3 +106,5 @@ describe('POST /institutions', () => {
       .post('/v1/institutions')
       .set('X-API-KEY', 'superpowers')
       .send(newInstitution)
+      .expect('Content-Type', /json/)
+      .end((err) => {

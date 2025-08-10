@@ -161,3 +161,5 @@ yarn migrate
 yarn rollback
 ```
 
+```bash
+# creating a migration

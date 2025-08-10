@@ -71,6 +71,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
 
 
   it('should save an expected list of verifications on success', async () => {
+// Temp comment
     return request(app.server)
       .post('/v1/webhooks/shufti/identity-verification')
       .send({ event: 'verification.accepted', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', verification_result: mock.verificationAccepted.verification_result })
@@ -122,3 +123,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         const spyCalls = createSpy.getCalls().map(c => c.args[0])
         const status = spyCalls.map(c => c.status)
         const expectedStatus = new Array(11).fill('INVALID')
+        expect(spyCalls).to.have.lengthOf(11)
+        expect(status).to.deep.equal(expectedStatus)

@@ -8,7 +8,6 @@ class BrevoFacade {
   constructor(BrevoFacadeConfig) {
     this.defaultClient = brevo.ApiClient.instance
 
-    this.apiKey = this.defaultClient.authentications['api-key']
     this.apiKey.apiKey = BrevoFacadeConfig.credentials.brevoKey
     this.apiInstance = new brevo.TransactionalEmailsApi()
   }

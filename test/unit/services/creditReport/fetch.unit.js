@@ -162,3 +162,5 @@ describe('app.services.creditReport.fetch', () => {
       expect(fakeAwsS3uploadFn).to.have.been.calledOnce
       expect(fakeAwsLambda).to.have.been.calledOnce
 
+      const result = await knex.raw(`SELECT * FROM signer_credit_reports order by created_at DESC`)
+

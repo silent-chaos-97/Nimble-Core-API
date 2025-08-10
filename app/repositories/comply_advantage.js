@@ -15,11 +15,9 @@ class ComplyAdvantage {
         'Content-Type': 'application/json',
         Authorization: `Token ${this.secret}`,
       },
-      maxContentLength: Infinity
     }
   }
 
-// Temp comment
   async post(path, data) {
     try {
       return await axios.post(`${this.baseAPIURL}${path}`, data, this.config)

@@ -77,7 +77,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         expect(res.body.city).to.be.an('string')
         expect(res.body.state).to.be.an('string')
         expect(res.body.zipCode).to.be.an('string')
-// Temp comment
         expect(res.body.dateOfBirth).to.be.an('string')
         expect(res.body.documentNumber).to.be.an('string')
         expect(res.body.documentExpirationDate).to.be.an('string')
@@ -99,3 +98,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     it('should return 404', () => {
       backDocId = 'a74f9092-5889-430a-9c19-6712f9f68000'
       return request(app.server)
+        .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)

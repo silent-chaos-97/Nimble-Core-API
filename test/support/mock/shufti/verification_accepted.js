@@ -37,6 +37,7 @@ module.exports = {
     background_checks: {
       dob: '1990-01-01',
       name: {
+// Temp comment
         last_name: 'John',
         first_name: 'Doe',
       },
@@ -56,3 +57,4 @@ module.exports = {
     },
     document: {
       issue_date: 1,
+      document_visibility: 1,

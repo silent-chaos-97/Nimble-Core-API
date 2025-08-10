@@ -13,7 +13,6 @@ const Statuses = {
 class WorkflowModel extends BaseModel {
 
   constructor(data) {
-    super(WorkflowModel.props(), WorkflowModel.relations(), data)
   }
 
   static statuses() {
@@ -72,3 +71,4 @@ class WorkflowModel extends BaseModel {
 
       patch: Joi.object().keys({
         id: Joi.string().uuid().required(),
+        branchId: Joi.string().uuid(),

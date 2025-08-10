@@ -1,6 +1,5 @@
 const _ = require('lodash')
 
-const app = require('../../core')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const validator = app.plugins.validator
@@ -27,6 +26,7 @@ async function update(institution) {
       count: _.size(patch.disclosures.data),
       data: patch.disclosures.data
     }
+
     if (patch.questions) { // merge questions
       if (!_.isEmpty(patch.questions.data)) {
         patch.questions.count = _.size(patch.questions.data)

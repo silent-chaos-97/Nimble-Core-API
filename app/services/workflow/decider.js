@@ -125,7 +125,6 @@ function workflowEventContextReducer(ctxAcc, event) {
             ? { ...activity, activityId: uuid(), retryAttempts: activity.retryAttempts + 1 }
             : activity
         )
-
         return { activities }
       },
 

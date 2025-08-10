@@ -51,3 +51,4 @@ exports.up = function (knex) {
 exports.down = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
     table.dropColumn('verification_status_face')
+    table.dropColumn('verification_status_face_updated_at')

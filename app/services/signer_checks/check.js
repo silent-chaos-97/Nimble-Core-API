@@ -58,7 +58,6 @@ async function check(signerId, tx = app.db) {
 
       try {
         _checked = await checker.check(signer).then(SignerCheck => ({ ...SignerCheck, signerId: signer.id, check: checker.id }))
-      } catch(err) {
         log.error({err, response: _.get(err, 'response.data', 'n/a'), reason: `ErrorRunningCheck[${checker.id}] | Signer[${signer.id}]`})
         _err = err
 
@@ -88,6 +87,7 @@ async function check(signerId, tx = app.db) {
           ? await existing.save(data, { method: 'update', patch: true, transacting: tx })
           : await SignerCheckRepo.forge(data).save(null, { method: 'insert', transacting: tx })
 
+        return new SignerCheck(entity).data()
       } catch(err) {
         log.error({err, reason: 'ErrorSavingSignerCheck', signerCheck })
         return Promise.resolve()

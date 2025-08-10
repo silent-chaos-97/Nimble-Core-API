@@ -203,3 +203,6 @@ const countries = [
   'SLV',
   'SMR',
   'SOM',
+  'SPM',
+  'SRB',
+  'STP',

@@ -32,7 +32,6 @@ class ProductModel extends BaseModel {
   static categorizeOptions(options = []) {
     return _.groupBy(options, (o) => o.category)
   }
-
   static schema(operation = 'update') {
     if (operation === 'create') {
       return Joi.object().keys({
@@ -41,3 +40,4 @@ class ProductModel extends BaseModel {
         sku: Joi.string().required(),
         category: Joi.string().required().valid('CHECKING', 'SAVINGS', 'CD', 'CARD'),
         summary: Joi.string().required(),
+        contentRaw: Joi.string().required(),

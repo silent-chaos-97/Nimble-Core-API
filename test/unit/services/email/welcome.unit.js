@@ -9,7 +9,6 @@ describe('app.services.email.welcome', () => {
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
-
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
@@ -80,3 +79,4 @@ describe('app.services.email.welcome', () => {
       const uri = config.get('frontend.welcome_uri')
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
+        .replace(':email', email)

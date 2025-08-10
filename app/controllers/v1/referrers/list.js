@@ -15,6 +15,7 @@ function list(req, res, next) {
     unlimited: true,
     branchId: null,
     institutionId: req.user.institutionId,
+    status: 'ACTIVE'
   })
 
   logger.info({ filters })

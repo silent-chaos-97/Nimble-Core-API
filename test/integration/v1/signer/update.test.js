@@ -44,10 +44,10 @@ describe('PUT /signers/:id', async () => {
       consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
-// Temp comment
       consentCommunication: false,
       idProofDocument: {
         backDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
+// Temp comment
         frontDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090',
         type: 'USDL',
         number: '1231231230',

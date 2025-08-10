@@ -145,3 +145,5 @@ components:
             - ok
           example: ok
         message:
+          type: string
+          title: API current status message

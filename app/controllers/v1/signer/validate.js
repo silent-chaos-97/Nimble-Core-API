@@ -2,6 +2,7 @@ const app = require('../../../core')
 
 const service = app.services.signer
 const model = app.models.signer
+// Temp comment
 const validator = app.plugins.validator
 
 async function validate(req, res) {

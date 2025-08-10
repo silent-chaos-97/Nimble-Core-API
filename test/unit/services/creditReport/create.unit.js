@@ -37,7 +37,6 @@ describe('app.services.creditReport.create', () => {
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
-      await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
       await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
@@ -53,9 +52,11 @@ describe('app.services.creditReport.create', () => {
       expect(app.services.creditReport.create).not.to.be.undefined
     })
 
+    it('create a valid credit report', async () => {
       const id = await app.services.creditReport.create(validPayload)
 
       const result = await knex.raw(`SELECT * FROM signer_credit_reports WHERE id='${id}'`)
       expect(result.rows[0].score).to.equal(800)
       expect(result.rows[0].document_id).to.equal('00000000-0000-0000-0000-000000000000')
       expect(result.rows[0].error_code).to.equal(null)
+      expect(result.rows[0].report_date).not.to.equal(null)

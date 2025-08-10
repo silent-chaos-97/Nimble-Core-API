@@ -2,7 +2,6 @@ const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../support/mock/shufti')
 const shufti = require('../../../app/plugins/shufti')
-
 const config = require('../../../config')
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
@@ -12,6 +11,7 @@ describe('Service', () => {
     nock.disableNetConnect()
     nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
   })
+
   afterEach(() => { nock.cleanAll() })
 
   describe('buildRequestPayload', () => {
@@ -127,3 +127,5 @@ describe('Service', () => {
       it('should return reasons for verification.accepted', async () => {
         const response = { ...mocks.verificationAccepted }
 
+        const scope = nock(config.get('shufti').baseUrl)
+          .post('/api/')

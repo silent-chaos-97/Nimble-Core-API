@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+const { Consumer } = require('sqs-consumer')
 
 const fs = require('fs')
 const path = require("path")

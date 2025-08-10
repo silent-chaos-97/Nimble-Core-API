@@ -67,3 +67,5 @@ columns:
       - monthly on the 30th
       - monthly on the last day
 
+  - data: time_zone
+    type: dropdown

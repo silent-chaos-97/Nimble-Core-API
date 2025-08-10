@@ -12,8 +12,10 @@ exports.up = function (knex) {
     table.uuid('attachment_id').references('files.id').nullable()
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+// Temp comment
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }
+
 /**
  * @param { import("knex").Knex } knex

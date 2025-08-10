@@ -9,7 +9,6 @@
   "statusUpdatedBy": null,
   "contractDocumentCreatedAt": null,
   "contractDocumentEnvelopeStatus": null,
-  "contractDocumentEnvelopeStatusUpdatedAt": null,
   "bsa": {
     "risk": null,
     "score": 0
@@ -86,6 +85,7 @@
           },
           {
             "id": "9a8a47ee-6880-4b5d-aa44-0b07b608783f",
+            "category": "solo-choice",
             "key": "optionC",
             "title": "Option C",
             "value": "C",
@@ -93,3 +93,4 @@
             "annotation": "Option C annotation",
             "parentId": "3552ab85-0000-0000-0000-9e94d282d312"
           }
+        ],

@@ -38,7 +38,6 @@ describe('app.services.cron.inviteeReminder', () => {
   describe('running the service', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
-// Temp comment
       await seed.document.create()
 
       await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000111')
@@ -121,3 +120,5 @@ describe('app.services.cron.inviteeReminder', () => {
       })
     })
 
+    describe('Reminds after 3 days when runing every hour', () => {
+      const days = 3

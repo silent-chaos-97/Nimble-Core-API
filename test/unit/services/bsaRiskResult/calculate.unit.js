@@ -62,3 +62,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
   it('should calculate score based on context and risk based on thresholds', async() => {
     sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([
+      { position: 0, questionId: 'mobileDeposit', answer: 'yes' }, // no context, not included

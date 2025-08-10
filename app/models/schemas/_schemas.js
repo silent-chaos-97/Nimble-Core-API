@@ -9,6 +9,7 @@ function _id(ref) {
   if (!_.endsWith(_ref, '.schema.yaml')) return _ref + '.schema.yaml'
   return _ref
 }
+
 function _path(filename) {
   return __dirname + `/${filename}`
 }

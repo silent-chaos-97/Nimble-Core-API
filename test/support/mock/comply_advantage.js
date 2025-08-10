@@ -1151,6 +1151,7 @@ const successResponse = {
                   "name_exact"
                 ],
                 "robert": [
+// Temp comment
                   "name_exact"
                 ]
               },
@@ -3923,3 +3924,61 @@ const parsedResult = [
         "countryCodes": [],
         "source": "",
         "subtype": "adverse-media"
+      },
+      {
+        "name": "Новости: ВЛАСТЬ, Перевороты, все за все время, 1 страница | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+        "date": "2019-02-07T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/archive/tag/all/vlast/perevoroty-putchi/page1/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Новости: Все разделы, Перевороты, все за все время, 2 страница | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+        "date": "2019-02-05T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/archive/tag/all/all/perevoroty-putchi/page2/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Новости: Перевороты, все за все время | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные Первая смена власти за 37 лет. В Зимбабве переворот.",
+        "date": "2018-11-09T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/tag/perevoroty-putchi/",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      },
+      {
+        "name": "Переворот в Зимбабве: Роберта Мугабе арестовали военные | podrobnosti.ua",
+        "value": ": Роберта Мугабе арестовали военные |",
+        "date": "2018-11-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://podrobnosti.ua/2210894-perevorot-v-zimbabve-roberta-mugabe-arestovali-voennye.html",
+        "countryCodes": [],
+        "source": "",
+        "subtype": "adverse-media"
+      }
+    ],
+    "warnings": [
+
+    ],
+    "sanctions": [
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "Belgium Consolidated List of the National and European Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2019-02-19T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://finance.belgium.be/en/treasury/financial-sanctions"
+      },
+      {
+        "name": "Function",

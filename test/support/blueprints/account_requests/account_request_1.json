@@ -89,7 +89,6 @@
         "faceStatus": "VALID",
         "faceUpdatedAt": "2018-03-16T11:32:03.341Z",
         "documentStatus": "VALID",
-        "documentUpdatedAt": "2018-03-16T11:32:03.341Z",
         "addressStatus": "INVALID",
         "addressUpdatedAt": "2018-03-16T11:32:03.341Z",
         "sanctionsStatus": "NOMATCH",
@@ -171,6 +170,7 @@
   "productConfigurations": [
     {
       "initialDeposit": 250000099,
+      "productId": "3552ab85-08da-4bb5-be00-9e94d282d310",
       "createdAt": "2019-03-16T12:34:11.341Z",
       "product": {
         "id": "3552ab85-08da-4bb5-be00-9e94d282d310",
@@ -182,3 +182,6 @@
             "id": null,
             "category": "account_number",
             "key": "account_number",
+            "title": "Account Number",
+            "value": "001",
+            "lead": null,

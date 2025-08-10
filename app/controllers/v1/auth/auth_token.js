@@ -140,7 +140,6 @@
 //       return res.status(500).json({ message: 'Wrong parameters', status:false })
 //     }
 //   } catch (error) {
-// Temp comment
 //     if (error && error.message){
 //       return res.status(500).json({ message: error.message, status:false })
 //     } else {

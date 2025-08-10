@@ -264,7 +264,6 @@ class AWSFacade {
         decisionType: 'ScheduleActivityTask',
         scheduleActivityTaskDecisionAttributes: {
           taskList: { name: DEFAULT_TASK_LIST },
-          activityId: nextActivity.id, // FIXME: could this have a collision with other executions, maybe use a different task list with the run's id
           input: _.isString(input) ? input : JSON.stringify(input),
           activityType: {
             name: nextActivity.name,

@@ -10,5 +10,6 @@ const Comment = app.db.Model.extend({
   },
   fileEntry: function () {
     return this.belongsTo('FileEntry', 'file_entry_id')
+  },
   attachment: function () {
     return this.belongsTo('File', 'attachment_id')

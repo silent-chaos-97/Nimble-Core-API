@@ -55,3 +55,12 @@ class FileModel extends BaseModel {
         id: Joi.string().uuid(),
         name: Joi.string(),
         createdById: Joi.string().uuid().required(),
+        createdByRole: Joi.string().valid('employee', 'applicant').required(),
+        analysisId: Joi.string().uuid(),
+        bucket: Joi.string().required(),
+        key: Joi.string().required(),
+        acl: Joi.string().required(),
+        size: Joi.number().integer().positive().required(),
+        mimetype: Joi.string().required(),
+        version: Joi.string()
+      })

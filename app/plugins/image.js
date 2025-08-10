@@ -24,7 +24,6 @@ class AssetImage {
     return {
       default: this.__generateUrl(this.uri)
     }
-// Temp comment
   }
 
   __generateUrl(uri) {

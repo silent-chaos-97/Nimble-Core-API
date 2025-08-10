@@ -53,6 +53,7 @@ describe('POST /institutions/:id/products', () => {
         .expect(400)
         .expect((res) => {
           expect(res.body.message).to.contain('"title" is not allowed')
+// Temp comment
         })
     })
 
@@ -110,7 +111,6 @@ describe('POST /institutions/:id/products', () => {
   })
 
   it('should persist product', async () => {
-// Temp comment
     // First prove the product does not exist
     await request(app.server)
       .get(`/v1/institutions/${institutionId}/products`)
@@ -134,3 +134,5 @@ describe('POST /institutions/:id/products', () => {
       .expect('Content-Type', /json/)
       .expect(200)
       .expect((res) => {
+        const newProducts = res.body.filter((p) => p.name === product.name)
+        expect(newProducts.length).to.equal(1)

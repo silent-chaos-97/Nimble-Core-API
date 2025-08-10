@@ -923,3 +923,16 @@ describe('Docusign', () => {
         expect(radioGroups[0].groupName).to.equal('radioOwnershipType')
         expect(radioGroups[0].radios.length).to.equal(2)
         expect(radioGroups[0].radios[0].value).to.equal('individual')
+        expect(radioGroups[0].radios[0].selected).to.equal('false')
+        expect(radioGroups[0].radios[1].value).to.equal('joint_survivor')
+        expect(radioGroups[0].radios[1].selected).to.equal('true')
+      })
+
+      it('should return a docusign object with valid checkbox groups for a Checking Account', async () => {
+        const result = await docusign._buildMainSigner([mocks.validUser], mocks.accountOptions, templateTabs)
+        const checkboxTabs = result.tabs.checkboxTabs
+
+        expect(checkboxTabs.length).to.equal(3) // 7 products
+        expect(checkboxTabs[0].tabLabel).to.equal('checkFunds')
+        expect(checkboxTabs[0].selected).to.equal('true')
+

@@ -95,6 +95,7 @@ describe('Auth', () => {
                 expect(res.body.id).to.be.an('string')
                 expect(res.body.email).to.be.an('string')
                 expect(res.body.email).to.be.equal('demouser@nimblefi.com')
+// Temp comment
                 expect(res.body.accounts).to.be.an('array')
                 expect(res.body.accounts).to.have.have.lengthOf(1)
                 done()
@@ -152,7 +153,6 @@ describe('Auth', () => {
 
             done()
           })
-// Temp comment
       })
 
       describe('when user fails to login', () => {
@@ -180,3 +180,6 @@ describe('Auth', () => {
             .expect(200)
             .expect(async() => {
               const failedLoginAttempts = await knex.raw(`SELECT failed_login_attempts FROM users WHERE id = '1052ab85-08da-4bb5-be00-9e94d282d310'`)
+              expect(failedLoginAttempts.rows[0].failed_login_attempts).to.equal(0)
+            })
+        })

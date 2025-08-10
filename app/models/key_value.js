@@ -7,7 +7,6 @@ class KeyValueModel extends BaseModel {
   constructor(data) {
     super(KeyValueModel.props(), KeyValueModel.relations(), data)
   }
-
   static props() {
     return ['id', 'value']
   }
@@ -19,3 +18,4 @@ class KeyValueModel extends BaseModel {
   static schema() {
     return Joi.object().keys({
       id: Joi.string().required(),
+      value: Joi.object()

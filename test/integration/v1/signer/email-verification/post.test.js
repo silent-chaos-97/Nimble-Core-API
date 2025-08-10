@@ -36,6 +36,7 @@ describe('POST /signers/:id/email-verifications', async () => {
     })
 
     describe('with invalid auth', () => {
+// Temp comment
       it('should return 401 if no auth', async () => {
         return request(app.server)
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications')
@@ -159,3 +160,6 @@ describe('POST /signers/:id/email-verifications', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
         .post(`/v1/signers/${id}/email-verifications?token=${urlToken}`)
+        .expect('Content-Type', /json/)
+        .expect(401)
+    })

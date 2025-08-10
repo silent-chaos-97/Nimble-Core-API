@@ -6,7 +6,6 @@ exports.up = function (knex) {
       .references('signers.id')
       .notNullable()
       .onDelete('CASCADE')
-
     table.string('verification').notNullable()
     table.enu('status', ['VALID', 'INVALID', 'PENDING'], { useNative: false, enumName: 'signers_identity_verifications_status' })
       .notNullable()
@@ -15,3 +14,4 @@ exports.up = function (knex) {
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
+}

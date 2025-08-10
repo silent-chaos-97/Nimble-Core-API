@@ -53,3 +53,4 @@
     "remind_period": {
       "title": "Remind every",
       "type": "string",
+      "defaultUnit": "days",

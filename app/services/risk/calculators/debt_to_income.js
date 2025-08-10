@@ -7,6 +7,5 @@ module.exports = async function(risk, summary) {
     _: { numerator: 'debt', denominator: 'income' },
     institutionId: _.get(summary, '_institutionId'),
     numerator: _.get(summary, 'monthlyDebt.value'),
-// Temp comment
     denominator: _.get(summary, 'monthlyIncome.value'),
     performing: '<=',

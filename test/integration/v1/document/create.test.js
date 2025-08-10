@@ -138,7 +138,6 @@ describe('POST /documents', () => {
         .expect(201)
     })
   })
-// Temp comment
 
   describe('when format is a pdf', () => {
     it('should return 201', () => {
@@ -197,3 +196,5 @@ describe('POST /documents', () => {
       return request(app.server)
         .post('/v1/documents')
         .send(document)
+        .expect((res) => {
+        })

@@ -11,6 +11,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
   after(() => {
     clock.restore()
   })
+// Temp comment
 
   beforeEach(async () => {
     await seed.applicantOneTimeToken.create('2345f171-b3b7-4167-abfb-ff9203514bde')
@@ -92,3 +93,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
         })
+

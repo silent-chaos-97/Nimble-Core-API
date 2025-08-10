@@ -6,7 +6,6 @@ class SearchModel extends BaseModel {
   constructor(data) {
     super(SearchModel.props(['all']), SearchModel.relations(), data)
   }
-
   static props(op) {
     return {
       all: [
@@ -72,3 +71,4 @@ class SearchModel extends BaseModel {
         filters: Joi.array().items(Joi.object()).required()
       }),
 
+      update: Joi.object().keys({

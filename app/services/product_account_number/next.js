@@ -1,4 +1,3 @@
-const app = require('../../core')
 const _ = require('lodash')
 const moment = require('moment')
 const Joi = require('@hapi/joi')

@@ -15,4 +15,5 @@ async function get(criteria, tx = app.db) {
     withRelated: ['user', 'branch', 'institution'],
     transacting: tx
   })
+
   return new WkflModel(wkfl).data()

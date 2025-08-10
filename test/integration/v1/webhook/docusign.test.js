@@ -41,13 +41,11 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
       token = await helpers.getAuthToken()
 
-// Temp comment
       nock(`https://${app.config.get('docusign').oauthPath}`)
         .post('/oauth/token').times(2)
         .reply(200, mocks.mockToken)
 
       nock(app.config.get('docusign').basePath)
-        .get(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc?include=recipients`)
         .reply(200, mocks.webhookRequest)
 
       downloadScope = nock(app.config.get('docusign').basePath)
@@ -366,3 +364,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
             .end(async (err, res) => {
+              if (err) return done(err)
+              
+              expect(res.body.status).to.equal('SIGNED')
+              await sleep(30)
+              downloadScope.done()
+              done()

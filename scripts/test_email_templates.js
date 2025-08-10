@@ -13,6 +13,7 @@ app.load().then(async () => {
       lastName: "lastName",
       uri: "uri",
       institution: 'institution',
+      institutionUrl: 'institutionUrl',
     },
 
     AccountRequestApproved: {
@@ -67,7 +68,6 @@ app.load().then(async () => {
       institutionUrl: 'institutionUrl'
     },
 
-    prospectPendingSignersEmail: {
       prospectFirstName: 'prospectFirstName',
       accountType: 'accountType',
       statusEmailSubject: 'statusEmailSubject',
@@ -86,3 +86,5 @@ app.load().then(async () => {
 
   }
 
+  for (const emailTemplate in emailTestData) {
+    logger.info(`[load] testing template ${emailTemplate} with data ${JSON.stringify(emailTestData[emailTemplate])}`)

@@ -1,7 +1,9 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
+// Temp comment
 class SignerComplianceVerificationListEntryModel extends BaseModel {
+  constructor(data) {
     super(SignerComplianceVerificationListEntryModel.props(), SignerComplianceVerificationListEntryModel.relations(), data)
   }
 
@@ -38,3 +40,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
         type: Joi.string().required(),
         subtype: Joi.string().required().allow(null).allow(''),
         countryCodes: Joi.array().optional().items(Joi.string()).default([]),
+      })

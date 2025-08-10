@@ -636,6 +636,7 @@ class Docusign {
       clientUserId: signer.id
     })
 
+    logger.debug(`[_buildSigner] finished for signer [${signer.id}] at position ${position}`)
     return result
   }
 

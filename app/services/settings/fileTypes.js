@@ -111,7 +111,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Final Search'
-  },
   {
     type: 'Product',
     name: 'Collateral Matches Approval'
@@ -549,4 +548,12 @@ const fileTypes = [
   {
     type: 'Applications',
     name: 'Loan Application - Business'
+  },
+  {
+    type: 'Applications',
+    name: 'Loan Application - Individual'
+  },
+  {
+    type: 'Applications',
+    name: 'Loan Application - Guarantor - Business'
   },

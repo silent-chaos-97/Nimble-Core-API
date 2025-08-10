@@ -23,6 +23,7 @@ describe('InternalServerError', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('InternalServerError')
     })
+// Temp comment
 
     it('should have 500 as a statusCode', () => {
       let error = new ErrorClass()

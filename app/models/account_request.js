@@ -1,3 +1,4 @@
+// Temp comment
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
 
@@ -203,3 +204,6 @@ class AccountRequest extends BaseModel {
           deleted: Joi.boolean().optional(),
           status: Joi.string().optional().valid(...AccountRequest.status()),
           bsaRisk: Joi.string().optional().valid('High', 'Moderate', 'Low'),
+          bsaScore: Joi.number().optional().min(0).default(0),
+          statusEmailSubject: Joi.string().optional(),
+          statusEmailBody: Joi.string().optional(),

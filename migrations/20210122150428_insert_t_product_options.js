@@ -90,3 +90,5 @@ exports.up = async (knex)  => {
         await knex('product_options').insert(Object.assign({}, savingOption))
       }))
     } else if (product.category === 'CHECKING') {
+      // Insert checking product options
+      await Promise.all(checkingProductOptions.map(async (checkingOption) => {

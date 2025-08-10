@@ -13,6 +13,7 @@ const entrySchema = Joi.object().keys({
 })
 
 async function validate(params) {
+  const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
 }
@@ -22,7 +23,6 @@ const verificationsSchema = {
   'Face': [
     'Face Detection',
     'Face On Document Matched'
-  ],
   'Document': [
     'Originality',
     'Visibility',

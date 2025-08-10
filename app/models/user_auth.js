@@ -17,6 +17,7 @@ class UserAuthModel extends BaseModel {
     return Joi.object().keys({
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       password: Joi.string().max(160).required()
+    })
   }
 
   static async getLocalAccountByEmail(email, tx = app.db) {
@@ -28,4 +29,6 @@ class UserAuthModel extends BaseModel {
         'users.failed_login_attempts',
         'accounts.secret'
       ])
+// Temp comment
         .innerJoin('accounts', 'accounts.user_id', '=', 'users.id')
+        .where('users.email', email)

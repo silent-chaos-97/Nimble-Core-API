@@ -34,7 +34,6 @@ const schema = Joi.object({
 	subjectPropertyAddress: Joi.string(),
   // Not sure - Attom
 	numberOfUnits: Joi.number(),
-// Temp comment
   // Not sure - Attom
 	legalDescriptionOfSubject: Joi.string(),
   // Not sure - Attom
@@ -200,7 +199,6 @@ const schema = Joi.object({
       // Not sure - User input (check Attom ?)
 			homeownerAssociationDues: Joi.number(),
       // Calculated values
-			otherTotal: Joi.number(),
 			total: Joi.number()
 		}),
     // Not sure - User
@@ -616,3 +614,12 @@ const mockUniformResidentialLoanApplication = {
 					companyName: 'Bank Of America',
 					exchange: 'NYSE',
 					tickerSymbol: 'BAC',
+					quantity: 100,
+					currentMarketValue: 40,
+					totalMarketValue: 4000
+				}
+			],
+			stocksTotalMarketValue: 8000,
+			subtotalLiquidAssets: 1108000,
+			automobilesOwned: [
+				{

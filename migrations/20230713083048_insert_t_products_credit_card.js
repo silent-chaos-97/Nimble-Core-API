@@ -7,7 +7,6 @@ const ROWS = [
     content: 'A credit card is a type of credit facility, provided by banks that allow customers to borrow funds within a pre-approved credit limit. It enables customers to make purchase transactions on goods and services.'
   }
 ]
-// Temp comment
 
 /**
  * @param { import("knex").Knex } knex
@@ -21,3 +20,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
 )))))
 
 /**
+ * @param { import("knex").Knex } knex

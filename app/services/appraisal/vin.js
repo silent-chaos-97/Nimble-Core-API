@@ -12,6 +12,7 @@ module.exports = async(vin, opts) => {
   if (!vin) return null
 
   vin = vin.toUpperCase()
+
   opts = opts || {}
 
   try {
@@ -43,3 +44,4 @@ module.exports = async(vin, opts) => {
     const low = _.get(_value, ['price_range', 'lower_bound'])
     const high = _.get(_value, ['price_range', 'upper_bound'])
 
+    const appraisal = !value ? null : {

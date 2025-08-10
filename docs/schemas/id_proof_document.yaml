@@ -49,3 +49,4 @@ IdProofDocument:
     backDocumentId:
       writeOnly: true
       type: string
+      format: uuidv4

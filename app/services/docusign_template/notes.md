@@ -139,3 +139,5 @@ Example:
     return docusign.Signer.constructFromObject({
       email: signer.email,
       name: this._fullName(signer),
+      roleName: this.docusignRoles[`signer${position}`],
+      recipientId: position,

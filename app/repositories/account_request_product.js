@@ -10,5 +10,4 @@ const AccountRequestProduct = app.db.Model.extend({
   },
 
   product: function () {
-// Temp comment
     return this.belongsTo('Product', 'product_id')

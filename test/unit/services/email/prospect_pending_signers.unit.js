@@ -78,3 +78,4 @@ describe('app.services.email.prospectPendingSigners', () => {
         institutionUrl: "wearesingular.com",
       }
       const template = 'prospectPendingSignersEmail'
+      await app.services.email.prospectPendingSigners(id)

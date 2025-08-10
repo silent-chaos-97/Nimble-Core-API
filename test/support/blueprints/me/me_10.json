@@ -3,6 +3,7 @@
   "email": "demouser@nimblefi.com",
   "firstName": "Test",
   "lastName": "User",
+  "createdAt": "2018-02-16T12:32:03.341Z",
   "phone": null,
   "accounts": [
     {
@@ -33,3 +34,4 @@
     "questions": {}
   },
   "branchId": "2552ab85-0000-0000-0000-000000000001",
+  "branch": {

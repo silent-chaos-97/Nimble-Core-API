@@ -26,7 +26,6 @@ function assignToSpec(spec, part, parent) {
       } else {
         section[key] = obj[key]
       }
-    })
   }
 }
 

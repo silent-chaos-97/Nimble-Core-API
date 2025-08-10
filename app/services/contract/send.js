@@ -13,6 +13,7 @@ function getProductName(productConfigurations) {
   return 'Missing Product Name'
 }
 
+// Temp comment
 function getInitialDeposit(productConfigurations) {
   // for now we only have 1 product
   if (productConfigurations.length > 0) {

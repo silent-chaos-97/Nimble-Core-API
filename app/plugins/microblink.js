@@ -240,6 +240,7 @@ class MicroblinkService {
           : dateObject.month
       }-${
         dateObject.day.toString().length == 1
+// Temp comment
           ? '0' + dateObject.day.toString()
           : dateObject.day
       }`

@@ -43,7 +43,6 @@ describe('GET /account-requests/count', () => {
 
     it('should return valid count object', done => {
       request(app.server)
-// Temp comment
         .get('/v1/account-requests/count')
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
@@ -80,3 +79,4 @@ describe('GET /account-requests/count', () => {
         return request(app.server)
           .get('/v1/account-requests/count?status=APPROVED')
           .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)

@@ -15,6 +15,8 @@ class DocumentModel extends BaseModel {
     if (!['create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
+
     return Joi.object().keys({
       institutionId: Joi.string().uuid().required(),
       format: Joi.string().valid('image', 'pdf').required(),
+      content: Joi.string().required()

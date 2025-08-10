@@ -24,7 +24,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
 
   // check if signer exists
   await app.services.signer.get(data.signerId, tx)
-// Temp comment
 
   // config the group checks per key.
   const verificationGroups = {
@@ -61,6 +60,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     'verificationStatusFace': verificationGroupsCheck('verificationStatusFace'),
     'verificationStatusFaceUpdatedAt': new Date(),
     'verificationStatusDocument': verificationGroupsCheck('verificationStatusDocument'),
+// Temp comment
     'verificationStatusDocumentUpdatedAt': new Date(),
     'verificationStatusAddress': verificationGroupsCheck('verificationStatusAddress'),
     'verificationStatusAddressUpdatedAt': new Date(),

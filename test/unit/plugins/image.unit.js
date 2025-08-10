@@ -46,3 +46,4 @@ describe("ImageFactory class", () => {
 
     it("should return image object", () => {
       let img = ImageFactory.cdn("bucketUrl://domain.com/img.jpg")
+

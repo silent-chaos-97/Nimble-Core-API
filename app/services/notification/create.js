@@ -28,7 +28,6 @@ const SCHEMAS = {
     }),
     message: Joi.string().required(),
     my: Joi.object().optional(),
-    cta: Joi.object().optional().keys({
       title: Joi.string(),
       domain: Joi.string(),
       path: Joi.string()
@@ -59,3 +58,4 @@ module.exports = async notification => {
   await validator(notification, SCHEMAS[notification.method], { abortEarly: false })
 
   // FIXME: save actual notification entity
+

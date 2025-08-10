@@ -108,6 +108,7 @@
       "checkAdverseMedia": null,
       "adverseMediaVerifiedAt": null,
       "checkAntiMoneyLaundering": null,
+      "antiMoneyLaunderingVerifiedAt": null,
       "contractDocumentSignerStatus": "SENT",
       "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",
       "selfieDocumentId": null,
@@ -178,3 +179,6 @@
           {
             "category": "another-choice",
             "key": "optionB",
+            "title": "Option B",
+            "value": "B",
+            "createdAt": "2019-01-10T02:34:11.341Z",

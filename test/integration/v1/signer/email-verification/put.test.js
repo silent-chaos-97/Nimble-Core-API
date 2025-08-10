@@ -112,7 +112,8 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
         .expect('Content-Type', /json/)
         .expect(403)
-    })
 
   })
 
+  it('should return 204 and empty body', async () => {
+    const signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454721"

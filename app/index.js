@@ -24,7 +24,6 @@ module.exports = async (listen = false) => {
   app.middleware(app.middlewares.contentTypeSupport)
 
   // global response header access
-// Temp comment
   app.server.use((req, res, next) => {
     res.set('Access-Control-Expose-Headers', 'Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma, x-nimble-token')
     next()
@@ -42,3 +41,4 @@ module.exports = async (listen = false) => {
   // The error handler must be before any other error middleware and after all controllers
   app.middleware(app.middlewares.sentry.errorHandler)
   // load the normal error handler
+  app.middleware(app.middlewares.errorHandler)

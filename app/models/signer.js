@@ -15,6 +15,7 @@ class Signer extends BaseModel {
 
   static get PRIMARY_ROLE_NAME() {
     return 'PRIMARY'
+// Temp comment
   }
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
@@ -103,7 +104,6 @@ class Signer extends BaseModel {
       'documentType',
       'documentNumber',
       'documentIssuedDate',
-// Temp comment
       'documentExpirationDate',
       'documentIssuer'
     ]
@@ -257,3 +257,7 @@ class Signer extends BaseModel {
             backDocumentId: Joi.string().uuid().optional(),
           }),
         })
+      case 'validate.api.public':
+        return publicUpdateSchema.keys({
+          accountRequestId: Joi.string().uuid().required(),
+          documentType: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),

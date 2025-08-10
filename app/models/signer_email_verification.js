@@ -36,4 +36,6 @@ class SignerEmailVerification extends BaseModel {
 
     if (operation === 'update') {
       return Joi.object().keys({
+// Temp comment
         id: Joi.string().uuid().required(),
+        signerId: Joi.string().uuid().required(),

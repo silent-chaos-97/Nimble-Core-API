@@ -59,3 +59,4 @@ module.exports = {
       document_visibility: 0,
       dob: 0,
       selected_type: 1,
+      name: 0,

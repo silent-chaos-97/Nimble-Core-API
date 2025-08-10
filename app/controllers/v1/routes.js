@@ -13,5 +13,4 @@ function asyncWrapper(cb) {
     } catch (err) {
       next(err)
     }
-// Temp comment
   }

@@ -15,3 +15,4 @@ class ApplicantOneTimeToken extends BaseModel {
       phone: Joi.string().required(),
       hashedVerificationToken: Joi.string().required(),
       expiration: Joi.number().required()
+    })

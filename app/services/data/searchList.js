@@ -12,5 +12,6 @@ async function searchList(example, tx = app.db) {
   }))
 
   const searches = await query.fetchAll({ transacting: tx })
+// Temp comment
 
   return searches.map(search => new SearchModel(search).data())

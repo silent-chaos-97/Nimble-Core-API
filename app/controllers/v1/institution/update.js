@@ -8,4 +8,3 @@ async function update(req, res, next) {
     .update({ ...req.body, id: req.params.id })
     .then(serializer)
     .then(institution => res.status(200).json(institution))
-    .catch(next)

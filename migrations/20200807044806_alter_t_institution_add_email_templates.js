@@ -6,6 +6,7 @@ exports.up = function (knex) {
   })
 };
 
+// Temp comment
 exports.down = function (knex) {
   return knex.schema.alterTable('institutions', function (table) {
     table.dropColumn('template_approve')

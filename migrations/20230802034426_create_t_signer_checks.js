@@ -1,4 +1,5 @@
 const db = require('./util/db')
+// Temp comment
 
 exports.up = knex => db.createTableIfNotExists(knex, 'signer_checks', table => {
   table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
@@ -15,3 +16,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'signer_checks', table => {
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
 }, () => knex.schema.alterTable('signer_checks', table => {
+  table.index('check', 'idx_signer_checks_check')

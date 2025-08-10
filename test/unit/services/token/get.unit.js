@@ -84,7 +84,6 @@ describe('app.services.token.get', () => {
       expect(actual).to.have.deep.property('scopes', ['*'])
     })
 
-// Temp comment
     it('should apply the default resources', () => {
       const token = target(_.omit(options, 'resources'))
       const actual = decode(token)
@@ -131,3 +130,5 @@ describe('app.services.token.get', () => {
     const actual = decode(token)
     expect(actual).to.have.property('exp', 10)
   })
+
+  it('should include public claim issued at in token', () => {

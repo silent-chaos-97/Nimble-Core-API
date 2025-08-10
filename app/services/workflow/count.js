@@ -1,4 +1,5 @@
 const app = require('../../core')
+const Wkfl = app.repositories.workflow
 
 async function count(filters = {}, tx = app.db) {
   const count = await Wkfl.query(sql => {
@@ -12,5 +13,4 @@ async function count(filters = {}, tx = app.db) {
       filters.search.split(' ').forEach(term => where.orWhere('workflows.name', 'ILIKE', `${term}%`))
     })
   }).count({ transacting: tx })
-
   return { count }

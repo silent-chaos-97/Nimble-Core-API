@@ -12,6 +12,7 @@ columns:
   - data: name
     slugify: id
     title: Name
+
   - data: type
     title: Type
     type: dropdown
@@ -34,3 +35,4 @@ columns:
   - data: products
     title: Products
     formOnly: true
+

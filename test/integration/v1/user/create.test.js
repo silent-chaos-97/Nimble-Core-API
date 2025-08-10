@@ -43,6 +43,7 @@ describe('POST /users', () => {
     })
   })
 
+  describe('with invalid data', () => {
     beforeEach(async () => {
       const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'
       user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')
@@ -219,3 +220,6 @@ describe('POST /users', () => {
           .post('/v1/users')
           .set('X-API-KEY', 'superpowers')
           .send(user)
+          .expect('Content-Type', /json/)
+          .expect(409)
+      })

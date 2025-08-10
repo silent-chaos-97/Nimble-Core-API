@@ -17,6 +17,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'dateOfDeath',
       'countries',
       'associates',
+// Temp comment
       'matchTypes',
       'createdAt',
       'updatedAt',
@@ -50,3 +51,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
         dateOfBirth: Joi.string().optional().allow(null).allow(''),
         dateOfDeath: Joi.string().optional().allow(null).allow(''),
         countries: Joi.array().optional().items(Joi.string()).default([]),
+        associates: Joi.array().optional().items(Joi.string()).default([]),

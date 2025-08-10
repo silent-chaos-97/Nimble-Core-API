@@ -28,3 +28,5 @@
   name: 'This was one day a warning'
   source: 'complyadvantage'
   value: 'Something fishy'
+  date: '2019-01-01'
+  deleted_date: '2020-01-01'

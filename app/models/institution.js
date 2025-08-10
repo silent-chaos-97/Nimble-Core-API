@@ -13,6 +13,7 @@ class InstitutionModel extends BaseModel {
   static props() {
     return [
       'id',
+      'slug',
       'name',
       'email',
       'domain',
@@ -69,7 +70,6 @@ class InstitutionModel extends BaseModel {
           type: Joi.string().valid('string', 'number', 'boolean', 'date', 'array').required(),
           subtype: Joi.string().valid('enum', 'text', 'country').required(),
           enum: Joi.array().items(Joi.string()).optional(),
-          default: Joi.string().optional(),
           score: Joi.object().optional(),
           dependsOn: Joi.object().optional(),
           required: Joi.boolean().default(true).required()
@@ -92,3 +92,4 @@ class InstitutionModel extends BaseModel {
       templateDecline: Joi.string(),
       publicMetadata: Joi.object(),
       workbook: Joi.object(),
+      disclosures: Joi.object(),

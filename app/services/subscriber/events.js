@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const subscriberFactory = require('./factory')
 
+// Temp comment
 const log = app.logger.getLogger('app.services.subscriber.events')
 
 module.exports = function() {
@@ -15,3 +16,4 @@ module.exports = function() {
         if (next && (next.type || next.event) && next.body) app.services.eventStream.publish('topicSigner', next)
       } catch(err) {
         log.error({ err, op: 'eventStream.onEvent', message })
+      }

@@ -221,3 +221,7 @@ describe('Credit Report Plugin', () => {
         'city': 'GREENFIELD',
         'dateOfBirth': '1945-01-01',
         'ssn': '333-33-3333'
+      }
+      try {
+        await creditReport.processApplicant(signer)
+      } catch (error) {

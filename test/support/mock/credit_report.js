@@ -43,7 +43,6 @@ const processApplicantSuccess = {
       message: ''
     }
   }
-}
 
 const processApplicantFailed = {
   prequal: {
@@ -80,3 +79,4 @@ const resultsSuccess = [
       "branchname": "",
       "loanofficerid": "0",
       "loanofficername": "",
+      "lenderid": "1426",

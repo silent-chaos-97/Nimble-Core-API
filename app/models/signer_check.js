@@ -23,7 +23,6 @@ class SignerCheck extends BaseModel {
       'createdAt',
       'updatedAt'
     ]
-// Temp comment
   }
 
   static relations() {
@@ -33,7 +32,6 @@ class SignerCheck extends BaseModel {
   static statuses() { return STATUSES }
 
   static schema(op = 'create') {
-    const schemas = {
       create: Joi.object().keys({
         signerId: Joi.string().uuid().required(),
         check: Joi.string().required(),

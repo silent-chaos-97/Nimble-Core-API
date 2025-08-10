@@ -48,3 +48,4 @@ SignerComplianceVerificationItem:
       items:
         $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
     politicalExposure:
+      title: A list of entries found about results of the type Political

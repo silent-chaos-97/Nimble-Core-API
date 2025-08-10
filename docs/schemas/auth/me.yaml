@@ -27,6 +27,7 @@ Me:
       example: Specimen
     accounts:
       type: array
+      items:
         $ref: '#/components/schemas/Account'
       title: Accounts
       readOnly: true

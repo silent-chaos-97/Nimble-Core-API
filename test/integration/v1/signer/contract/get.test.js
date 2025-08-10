@@ -85,6 +85,7 @@ describe('GET /signers/:id/contract', async () => {
         .expect('Content-Type', /json/)
     })
 
+
     it('should return 400 when the token is missing', async () => {
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
@@ -147,3 +148,6 @@ describe('GET /signers/:id/contract', async () => {
               .and(sinon.match.has("accountRequestId"))
               .and(sinon.match.has("id")),
             'testbank.wearesingular.com'
+          )
+
+          const expectedSignerId = FakeCreateRecipientView.firstCall.args[1].id

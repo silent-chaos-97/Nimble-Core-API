@@ -48,6 +48,7 @@ describe('app.services.email.emailVerification', () => {
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
+      await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
       await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
       await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
@@ -77,7 +78,6 @@ describe('app.services.email.emailVerification', () => {
       const signer = blueprints.signers.signer_1
 
       const emailData = {
-        email: signer.email,
         signerEmail: signer.email,
         signerFirstName: signer.firstName,
         institution: 'Singular',
@@ -115,3 +115,5 @@ describe('app.services.email.emailVerification', () => {
         statusEmailSubject: 'Confirm your email address'
       }
 
+      emailData.verifyUrl = config.get('frontend.signerEmailVerificationURI')
+        .replace(':protocol', config.get('protocol'))

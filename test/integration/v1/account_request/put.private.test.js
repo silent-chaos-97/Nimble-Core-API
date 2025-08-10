@@ -61,6 +61,7 @@ describe('PUT private /account-requests/:id', () => {
             expect(res.body.message).to.contain('Status can only be changed to APROVED if it was previously SIGNED')
             done()
           })
+      })
 
       it('should return 200 if changed to declined wen not signed', done => {
         const putRequestDeclined = {
@@ -353,3 +354,8 @@ describe('PUT private /account-requests/:id', () => {
             expect(emailSpy.callCount).to.equal(1)
             expect(emailSpy.getCall(0).args[0]).to.equal('APPROVED')
             expect(emailSpy.getCall(0).args[1].statusEmailSubject).to.equal(putRequest.statusEmailSubject)
+            expect(emailSpy.getCall(0).args[1].statusEmailBody).to.equal("something <br/> something else <br/> third thing")
+            expect(emailSpy.getCall(0).args[1].email).to.equal('someone@nimblefi.com')
+            expect(emailSpy.getCall(0).args[1].cc).to.equal('demouser@nimblefi.com')
+            done()
+          })

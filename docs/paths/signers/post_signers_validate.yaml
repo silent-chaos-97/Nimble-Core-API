@@ -52,7 +52,6 @@
       '409':
         description: Duplicate values identified
         content:
-          application/json:
             schema:
               type: object
               properties:
@@ -65,3 +64,4 @@
                       type: object
                       required:
                         - message
+                      properties:

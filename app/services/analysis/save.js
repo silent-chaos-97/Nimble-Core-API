@@ -45,7 +45,6 @@ async function save(analysis, opts, tx = app.db) {
     // async run analyses for each file: TODO: consider running as a job
     const analysesJob = Promise.all(_.map(files, async file => {
       log.info({ op: 'analysis', file })
-
       let analysis
 
       try {

@@ -172,3 +172,6 @@ Signer:
       description: Adverse Media verification Date
     checkAntiMoneyLaundering:
       readOnly: true
+      type: boolean
+      nullable: true
+      title: Anti-Money Laundering verification

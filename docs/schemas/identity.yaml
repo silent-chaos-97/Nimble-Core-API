@@ -52,7 +52,7 @@ Identity:
       example: 1990-3-18
     documentNumber:
       type: string
-      title: Document Number
       description: Document Number
       nullable: true
       example: S123-456-78-123-0
+    documentExpirationDate:

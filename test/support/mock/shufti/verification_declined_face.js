@@ -1,7 +1,6 @@
 module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
-  email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
     document: {
@@ -57,9 +56,11 @@ module.exports = {
     document: {
       issue_date: 1,
       document_visibility: 1,
+      dob: 0,
       selected_type: 1,
       name: 0,
       document: 0,
       face_on_document_matched: 0,
       document_proof: 1,
       document_must_not_be_expired: 1,
+      document_country: 1

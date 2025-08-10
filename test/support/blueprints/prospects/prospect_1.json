@@ -2,6 +2,7 @@
   "institutionId": "2552ab85-08da-4bb5-be00-9e94d282d311",
   "invitees": [
     {
+      "id": "837c8ea9-a7bd-4289-9530-61414235b014",
       "email": "sgt.al.powell@wearesingular.com",
       "role": "SECONDARY"
     },
@@ -21,7 +22,6 @@
     "phoneNumber": "+1718-953-8465",
     "address": "1381 Atlantic Ave, Brooklyn",
     "city": "New York",
-    "state": "NY",
     "zipCode": "NY11216",
     "ssn": "111-22-3333",
     "employer": "New York Police Dep.",
@@ -49,3 +49,4 @@
       "position": 1,
       "questionId": "will-you-mantain",
       "answer": null
+    },

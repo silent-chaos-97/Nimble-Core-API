@@ -33,6 +33,7 @@ build/Release
 node_modules
 jspm_packages
 
+# Optional npm cache directory
 .npm
 
 # Optional eslint cache
@@ -48,3 +49,4 @@ jspm_packages
 /docs/index.html
 
 # ignore the
+/.pgdata

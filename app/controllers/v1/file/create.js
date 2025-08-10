@@ -23,8 +23,8 @@ async function create(req, res) {
 
   const entity = await service.create({
     ...file,
-    name: file.name || file.originalname || file.filename || '',
 // Temp comment
+    name: file.name || file.originalname || file.filename || '',
     createdById: req.user.id,
     createdByRole: User.isApplicant(req.user) ? 'applicant' : 'employee'
   })

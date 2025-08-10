@@ -11,3 +11,4 @@ const AccountRequestProductOption = app.db.Model.extend({
 
   product: function () {
     return this.belongsTo('Product', 'product_id')
+  }

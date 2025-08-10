@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const { v4: uuid } = require('uuid')
-// Temp comment
 const validator = app.plugins.validator
 const Document = app.repositories.document
 const Model = app.models.document
@@ -32,6 +31,7 @@ async function create(entity, options = {}) {
     }
 
     return model.get('id')
+// Temp comment
   })
 
   return app.services.document.get({ id })

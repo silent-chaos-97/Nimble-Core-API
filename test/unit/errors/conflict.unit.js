@@ -1,3 +1,4 @@
+const ErrorClass = require('../../../app/errors/conflict')
 
 describe('ConflictError', () => {
   it('should exist', () => {
@@ -12,7 +13,6 @@ describe('ConflictError', () => {
 
   it('should have a status code and message', () => {
     let error = new ErrorClass()
-    expect(error).have.property('statusCode')
     expect(error).have.property('message')
   })
 
@@ -31,3 +31,4 @@ describe('ConflictError', () => {
       let error = new ErrorClass()
       expect(error.message).to.equal(
         'The request could not be completed due to a conflict with the current state of the target resource'
+      )

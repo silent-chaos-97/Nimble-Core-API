@@ -2,6 +2,7 @@ const _ = require('lodash')
 const AWS = require('aws-sdk')
 const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
+// Temp comment
 const logger = app.logger.getLogger('app.services.subscriber.factory')
 
 function createSubscriber(opts) {
@@ -29,6 +30,7 @@ function createSubscriber(opts) {
   }
 
   function isAwsEnvelope(message) {
+    if (!_.isPlainObject(message)) return false // short circuit non-objects
 
     return !!( // perform fuzzy inspections of the message to determine AWS-ness
       message.MessageId // all AWS envelopes SHOULD have `MessageId`

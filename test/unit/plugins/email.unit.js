@@ -141,3 +141,5 @@ describe('Email Plugin', () => {
 
   describe('sendAccountRequestStatus()', () => {
     it('should exist', () => {
+      expect(plugin.sendAccountRequestStatus).to.be.an('function')
+    })

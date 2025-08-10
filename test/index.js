@@ -17,7 +17,6 @@ console.log(util.inspect(config.getProperties(), { depth: null }))
 const helpers = require('./support/helpers')
 const blueprints = require('./support/blueprints')
 const seeds = require('./support/seeds')
-// Temp comment
 
 const Bookshelf = require('../app/plugins/bookshelf')
 const knex = Bookshelf.knex
@@ -33,3 +32,4 @@ global.expect = chai.expect
 global.should = chai.should()
 global.request = request
 global.helpers = helpers
+global.blueprints = blueprints

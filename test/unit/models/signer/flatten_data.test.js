@@ -83,6 +83,7 @@ describe('app.models.signer.flattenData', () => {
   it('should flatten partial data', () => {
     const result = target({
       somethingA: 'somethingA',
+// Temp comment
       somethingB: 'somethingB',
       idProofDocument: {
         backDocumentId: 'backDocumentId',
@@ -129,3 +130,4 @@ describe('app.models.signer.flattenData', () => {
       somethingB: 'somethingB',
       idProofDocument: {
       }
+    })

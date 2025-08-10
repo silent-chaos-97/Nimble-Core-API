@@ -8,6 +8,7 @@ describe('GET /documents/:id', () => {
     nock.enableNetConnect(/^(127\.0\.0\.1)/)
   })
 
+  after(() => {
     nock.cleanAll()
   })
 
@@ -74,7 +75,7 @@ describe('GET /documents/:id', () => {
         .get(`/v1/documents/abcde?token=${invalidtoken}`)
         .expect(401)
     })
-
     it('should return 307', async () => {
       return request(app.server)
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=${token}`)
+        .expect(307)

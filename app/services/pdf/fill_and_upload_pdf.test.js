@@ -34,3 +34,4 @@ const run = async () => {
 			filename: 'sample1.pdf',
 			documentId: '2',
 			bytes: pdfBytes2
+		}

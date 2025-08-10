@@ -31,13 +31,13 @@ class Shufti {
         throw this._buildError(401, response.data.event, response.data.error)
       case 'request.invalid':
         logger.error(response.data.error, `[getUserVerification] error for signer [${signerId}] on event ${response.data.even}`)
+        throw this._buildError(400, response.data.event, response.data.error)
       default:
         logger.info(`[getUserVerification] finished for signer [${signerId}]`)
         return response.data
     }
   }
 
-  _buildError(status, event, error) {
     return { isShufti: true, response: { status, event, statusText: error.message } }
   }
 

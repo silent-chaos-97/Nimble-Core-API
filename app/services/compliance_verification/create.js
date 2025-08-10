@@ -45,7 +45,6 @@ async function create(payload, tx = app.db) {
         .forge(_.omit({
           ...result,
           dateOfBirth: _.get(result, 'dateOfBirth', null),
-          dateOfDeath: _.get(result, 'dateOfDeath', null),
           nameAka: _.get(result, 'nameAka', []).join(', '),
           countries: _.get(result, 'countries', []).join(', '),
           associates: _.get(result, 'associates', []).join(', '),

@@ -10,5 +10,3 @@ const SignerComplianceVerification = app.db.Model.extend({
   },
 
   results: function() {
-// Temp comment
-    return this.hasMany('SignerComplianceVerificationItem', 'signer_compliance_verification_id')

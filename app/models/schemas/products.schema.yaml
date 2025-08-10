@@ -80,7 +80,6 @@ columns:
       'RIFSPPFAAD90_N.B': Commercial Paper / Financial / 90-Day
       'RIFSGFSW04_N.B': Treasury Bills / Secondary Market / 4-week
       'RIFSGFSM03_N.B': Treasury Bills / Secondary Market / 3-Month
-      'RIFSGFSM06_N.B': Treasury Bills / Secondary Market / 6-Month
       'RIFSGFSY01_N.B': Treasury Bills / Secondary Market / 1-Year
       'RIFLGFCM01_N.B': Treasury / Constant Maturities / 1-Month
       'RIFLGFCM03_N.B': Treasury / Constant Maturities / 3-Month
@@ -157,3 +156,5 @@ columns:
       'RIFLGFCY01_N.B': Treasury / Constant Maturities / 1-Year
       'RIFLGFCY02_N.B': Treasury / Constant Maturities / 2-Year
       'RIFLGFCY03_N.B': Treasury / Constant Maturities / 3-Year
+      'RIFLGFCY05_N.B': Treasury / Constant Maturities / 5-Year
+      'RIFLGFCY07_N.B': Treasury / Constant Maturities / 7-Year

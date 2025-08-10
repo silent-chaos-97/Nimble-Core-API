@@ -24,6 +24,7 @@ function list(req, res, next) {
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : me.branchId,
     institutionId: isSuperAdmin ? null : me.institutionId
   })
+
   logger.info({ filters })
 
   return users.list(filters)

@@ -11,6 +11,7 @@ module.exports = {
   check: async(signer) => {
     const body = {
       MsgRqHdr: { ProductID: 'USCRMD' },
+      ...microbilt.signerPersonInfo(signer)
     }
 
     log.info({ op: 'criminal_record', phase: 'request', body, signer }) // FIXME: pii
@@ -25,4 +26,5 @@ module.exports = {
 
     return {
       status: _.isEmpty(_.get(report, 'Subject', [])) ? SignerCheck.statuses().noMatch : SignerCheck.statuses().match,
+// Temp comment
       meta: { status: 'HIT', report }

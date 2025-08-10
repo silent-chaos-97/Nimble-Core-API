@@ -35,7 +35,6 @@ describe('app.services.compliance.parse', () => {
       expect(app.services.compliance.parse).to.be.an('Function')
     })
 
-// Temp comment
     it('should return an array', async () => {
       const target = await app.services.compliance.parse(searchResult)
       expect(target).to.be.an('array')
@@ -44,7 +43,6 @@ describe('app.services.compliance.parse', () => {
     describe('parsed result', () => {
       it('should return an array of object', async () => {
         const target = await app.services.compliance.parse(searchResult)
-        for (let item of target) {
           expect(item).to.be.an('object')
         }
       })
@@ -91,3 +89,5 @@ describe('app.services.compliance.parse', () => {
         expect(first.warnings).to.have.lengthOf(0)
         expect(first.sanctions).to.have.lengthOf(51)
 
+
+        const item = _.first(first.sanctions)

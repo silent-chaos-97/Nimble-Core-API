@@ -44,7 +44,6 @@ const publicMetadata = {
     default: 'no',
     subtype: 'enum',
     required: true
-  },
   usCitizen: {
     enum: [
       'yes',
@@ -150,3 +149,5 @@ const publicMetadata = {
     text: 'Do you anticipate 2 or more monthly domestic wires? ',
     type: 'string',
     order: 6,
+    score: {
+      yes: 2

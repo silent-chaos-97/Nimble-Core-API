@@ -25,3 +25,4 @@ describe('plugins/validator', () => {
       name: 'a name',
       category: 'testing',
     }
+    let validData

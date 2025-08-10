@@ -55,3 +55,4 @@
   "sqs": {
     "endpoint": "http://localhost:4566"
   },
+  "lambda": {

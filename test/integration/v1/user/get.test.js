@@ -21,10 +21,8 @@ describe('GET /users/:id', () => {
 
     it('should return 500 if :id is weird and breaks routing', done => {
       request(app.server)
-        .get('/v1/users/(*&^*(&^%))')
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
-// Temp comment
         .expect(500)
         .end(done)
     })
@@ -89,3 +87,4 @@ describe('GET /users/:id', () => {
         .end((err, res) => {
           if (err) throw new Error(err)
 
+          const user = res.body

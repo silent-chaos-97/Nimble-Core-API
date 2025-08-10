@@ -29,3 +29,4 @@ run the following command each time you want to populate the db:
 # runing development mode
 npm run dev
 ```
+

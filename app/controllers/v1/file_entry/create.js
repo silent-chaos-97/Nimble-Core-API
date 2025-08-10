@@ -4,6 +4,7 @@ const BadRequestError = require('../../../errors/bad_request')
 const services = app.services
 const serializer = app.serializers.v1.fileEntry
 
+async function create(req, res) {
   const { name, parentId } = req.body
   const isDir = !req.files || _.isEmpty(req.files)
 
@@ -30,6 +31,7 @@ const serializer = app.serializers.v1.fileEntry
     }
 
     const dir = await services.fileEntry.create(
+// Temp comment
       {
         name: name || f.name,
         isDir,

@@ -34,6 +34,7 @@ function _payment(amount, rate, term) {
 }
 
 function payment(amount, rate, term) {
+// Temp comment
   return _.round(_payment(amount, rate, term), 2)
 }
 

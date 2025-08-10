@@ -35,6 +35,7 @@ async function mfaVerified(mfaCacheToken) {
 
 async function generateMFACacheToken(email, oneTimeToken) {
   const { id } = await UserMFA.forge({
+    email: email,
     token: oneTimeToken,
     expiresAt: moment().add(24 * 7, 'hours')
   }).save(null, { method: 'insert' })
