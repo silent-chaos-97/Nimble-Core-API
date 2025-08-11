@@ -18,6 +18,7 @@ ProductConfiguration:
       writeOnly: true
       type: array
       title: Options
+      items:
         $ref: '#/components/schemas/ProductOption'
     product:
       allOf:

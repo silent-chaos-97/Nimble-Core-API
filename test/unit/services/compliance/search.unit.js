@@ -44,7 +44,6 @@ describe('app.services.compliance.search', () => {
       const search = await app.services.compliance.search(entity)
       expect(search).to.have.ownProperty('search')
       scope.done()
-    })
 
     it('should return search result', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)

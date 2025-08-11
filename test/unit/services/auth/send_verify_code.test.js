@@ -14,7 +14,6 @@ describe('app.services.auth.send_verify_code', () => {
 
 
   it('should exist', () => {
-// Temp comment
     expect(target).not.to.be.undefined
   })
 
@@ -22,5 +21,6 @@ describe('app.services.auth.send_verify_code', () => {
     it('should return data', () => {
       const errorMessage = 'Not implemented yet.'
       expect(target).not.to.be.undefined
+// Temp comment
 
       return Promise.all([

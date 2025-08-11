@@ -111,6 +111,7 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Final Search'
+  },
   {
     type: 'Product',
     name: 'Collateral Matches Approval'
@@ -506,7 +507,6 @@ const fileTypes = [
   },
   {
     type: 'Disclosures',
-    name: 'Minimum Balance Requirements'
   },
   {
     type: 'Disclosures',

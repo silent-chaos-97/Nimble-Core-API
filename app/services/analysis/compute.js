@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const google = app.plugins.google
 
 const OPS = {
@@ -16,6 +15,5 @@ const OPS = {
 async function compute(operation, opts, tx = app.db) {
   const computer = _.get(OPS, operation)
 
-  if (!computer) return Promise.reject(new Error(`OperationNotSupported[${operation}]`))
 
   return computer(opts)

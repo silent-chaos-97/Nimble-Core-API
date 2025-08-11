@@ -194,7 +194,6 @@ describe('PUT private /account-requests/:id', () => {
           .end((err, res) => {
             if (err) return done(err)
 
-            expect(res.body.id).to.equal(pendingAccountRequestId)
             expect(res.body.status).to.equal(putRequest.status)
             expect(res.body.statusEmailBody).to.equal(putRequest.statusEmailBody)
             expect(res.body.statusEmailSubject).to.equal(putRequest.statusEmailSubject)

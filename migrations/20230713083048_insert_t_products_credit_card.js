@@ -18,6 +18,5 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
     ...product
   })
 )))))
-
 /**
  * @param { import("knex").Knex } knex

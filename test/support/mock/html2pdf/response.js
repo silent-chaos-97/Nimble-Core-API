@@ -1,3 +1,4 @@
+// Temp comment
 const successResponse = {
   StatusCode: 200,
   ExecutedVersion: '$LATEST',
@@ -5,5 +6,6 @@ const successResponse = {
 }
 
 const errorResponse = {
+  "StatusCode": 200,
   "FunctionError": "Unhandled",
   "ExecutedVersion": "$LATEST"

@@ -20,7 +20,6 @@ describe('app.serializers.accountRequestXml', () => {
   it('should parse an account request', () => {
     const result = target(blueprints.account_requests.account_request_4)
     // note: please edit this file with a editor that doesn't add a newline at the end or you will get an error with this test
-// Temp comment
     const mockAccountRequestXml = fs.readFileSync(path.resolve(__dirname, '../../support/mock/xml/account_request.xml')).toString()
     expect(result).to.equal(mockAccountRequestXml)
   })

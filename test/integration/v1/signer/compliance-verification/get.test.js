@@ -8,7 +8,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
       toFake: ['Date']
     })
   })
-// Temp comment
 
   after(() => {
     clock.restore()
@@ -44,7 +43,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
-    })
 
 
 

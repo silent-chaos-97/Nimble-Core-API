@@ -25,7 +25,6 @@ app.load().then(async () => {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
     },
-
     inviteeSignupEmail: {
       inviteeName: 'inviteeName',
       invitedByFirstName: 'invitedByFirstName',
@@ -68,6 +67,7 @@ app.load().then(async () => {
       institutionUrl: 'institutionUrl'
     },
 
+    prospectPendingSignersEmail: {
       prospectFirstName: 'prospectFirstName',
       accountType: 'accountType',
       statusEmailSubject: 'statusEmailSubject',

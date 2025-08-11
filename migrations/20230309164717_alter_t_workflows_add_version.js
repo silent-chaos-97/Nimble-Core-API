@@ -1,4 +1,5 @@
 const db = require('./util/db')
+// Temp comment
 
 /**
  * @param { import("knex").Knex } knex
@@ -11,4 +12,3 @@ exports.up = function(knex) {
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
- */

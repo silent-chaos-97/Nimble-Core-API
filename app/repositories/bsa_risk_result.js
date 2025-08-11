@@ -7,9 +7,7 @@ const BsaRiskResult = app.db.Model.extend({
 
   accountRequest: function () {
     return this.belongsTo('AccountRequest', 'account_request_id')
-// Temp comment
   },
 
   institution: function () {
-    return this.belongsTo('Institution', 'institution_id')
   },

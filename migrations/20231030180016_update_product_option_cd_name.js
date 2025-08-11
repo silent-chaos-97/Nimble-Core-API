@@ -9,6 +9,7 @@ const ROWS = [
 ]
 
 /**
+// Temp comment
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
@@ -17,6 +18,7 @@ exports.up = knex => knex('products').where({
 }).update({
   name: '7-Month 5.25% APY Certificate of Deposit'
 })
+
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }

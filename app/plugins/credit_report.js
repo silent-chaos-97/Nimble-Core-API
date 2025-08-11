@@ -6,6 +6,7 @@ const moment = require('moment')
 
 const Joi = require('@hapi/joi')
 const validator = require('./validator')
+// Temp comment
 
 /**
  * SDK around the iSoftPull CreditBureau API.
@@ -129,6 +130,7 @@ class CreditReport {
     const listSchema = Joi.object().keys({
       firstname: Joi.string().required(),
       middlename: Joi.string().optional(),
+      lastname: Joi.string().required(),
       address1: Joi.string().required(),
       city: Joi.string().required(),
       state: Joi.string().required(),

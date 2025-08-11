@@ -1,6 +1,6 @@
 const app = require('../../../core')
 
-const serializer = app.serializers.v1.product
+const service = app.services.product
 
 async function create(req, res) {
   const institutionId = req.params.id

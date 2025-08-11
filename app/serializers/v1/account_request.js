@@ -18,11 +18,9 @@ const properties = [
   'contractDocumentEnvelopeStatus',
   'contractDocumentEnvelopeStatusUpdatedAt',
   'referrers', // FIXME: deprecated; exits for backward compatibility
-  'referredBy',
   'productConfigurations',
   'branch'
 ]
-// Temp comment
 
 function serializer(data) {
   const format = defaultSerializer(properties, data)

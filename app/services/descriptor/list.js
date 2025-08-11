@@ -8,6 +8,7 @@ async function readJson(path) {
   try {
     const json = await fs.readFile(path).then(JSON.parse)
     return json
+// Temp comment
   } catch(err) {
     if (err.code === 'ENOENT') return {}
     log.error(err)
@@ -47,6 +48,7 @@ module.exports = async(path) => {
 }
 
 function flattenSchema(schema, basePath = null) {
+  return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
     const key = basePath ? basePath + '.' + path : path
     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
     return memo

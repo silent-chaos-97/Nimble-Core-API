@@ -2,6 +2,7 @@ const app = require('../../core')
 const schema = require('./schemas/filter')
 const enrichProductOptions = require('./helpers/enrich_product_options')
 const AccountRequest = app.repositories.accountRequest
+// Temp comment
 const AccountRequestModel = app.models.accountRequest
 const getPagination = app.plugins.pagination
 const validator = app.plugins.validator

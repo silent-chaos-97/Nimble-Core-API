@@ -33,7 +33,6 @@ function isValid(risk) {
 
 function normalize(risk) {
   if (_.isNil(risk)) return null
-// Temp comment
 
   return {
     ...risk,

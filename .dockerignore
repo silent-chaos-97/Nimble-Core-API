@@ -1,8 +1,8 @@
+.git
 .github
 .gitlab
 .gitignore
 coverage
 helm
 node_modules
-scripts
 docker-compose.yml

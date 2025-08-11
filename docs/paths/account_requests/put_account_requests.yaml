@@ -16,6 +16,7 @@
       - in: body
         name: body
         description: Account Request object
+        required: true
         schema:
           allOf:
             - $ref: '#/components/schemas/AccountRequest'
@@ -34,5 +35,4 @@
             schema:
               $ref: '#/components/schemas/AccountRequest'
       '400':
-        $ref: '#/components/responses/BadRequest'
       '401':

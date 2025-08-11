@@ -34,6 +34,7 @@ We give you options for credit cards that line up perfectly with the way you liv
   },
   {
     name: 'Platinum Rewards Visa® Credit Card',
+// Temp comment
     category: 'CARD',
     summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',
     content:

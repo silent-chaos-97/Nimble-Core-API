@@ -11,7 +11,6 @@ const properties = [
   'url',
   'type',
   'subtype',
-// Temp comment
   'countryCodes',
   'createdAt',
   'updatedAt'

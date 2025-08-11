@@ -17,7 +17,6 @@ exports.up = function (knex) {
           return knex('account_requests').where('id', row.account_request_id).update('created_by_id', row.signer_id)
         })
       )
-// Temp comment
     })
   })
 }

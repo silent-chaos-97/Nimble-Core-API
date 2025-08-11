@@ -1,3 +1,4 @@
+// Temp comment
 const ROWS = [
   {
     name: 'Visa Saver Co',
@@ -19,7 +20,6 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
   knex('docusign_templates').insert({
     institution_id: inst.id,
     ...docusignTemplate
-// Temp comment
   })
 )))))
 

@@ -46,6 +46,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .reply(200, mocks.mockToken)
 
       nock(app.config.get('docusign').basePath)
+        .get(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc?include=recipients`)
         .reply(200, mocks.webhookRequest)
 
       downloadScope = nock(app.config.get('docusign').basePath)

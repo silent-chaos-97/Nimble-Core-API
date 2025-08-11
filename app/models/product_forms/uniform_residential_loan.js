@@ -199,6 +199,7 @@ const schema = Joi.object({
       // Not sure - User input (check Attom ?)
 			homeownerAssociationDues: Joi.number(),
       // Calculated values
+			otherTotal: Joi.number(),
 			total: Joi.number()
 		}),
     // Not sure - User

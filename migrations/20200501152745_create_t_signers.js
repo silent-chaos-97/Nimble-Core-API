@@ -9,6 +9,7 @@ exports.up = function(knex) {
     table.string('identity_verification_status')
     table.boolean('identity_verified')
 
+    table.boolean('consent').notNullable()
 
     table.string('role').notNullable()
 
@@ -32,7 +33,6 @@ exports.up = function(knex) {
     table.timestamp('document_expiration_date')
 
     table.jsonb('identity_verification_result').default(null)
-
     table.string('front_drivers_license_uri')
     table.string('back_drivers_license_uri')
     table.string('selfie_uri')

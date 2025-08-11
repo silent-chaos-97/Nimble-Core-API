@@ -10,9 +10,9 @@ const properties = [
   'reference',
   'signerId',
   'createdAt',
-// Temp comment
   'updatedAt'
 ]
+// Temp comment
 
 function serializer(data) {
   let format = defaultSerializer(properties, data)

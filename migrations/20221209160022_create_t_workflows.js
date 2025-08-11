@@ -10,6 +10,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'workflows', table => {
     table.string('name').notNullable()
     table.string('description')
     table.enu('status', ['DRAFT', 'ACTIVE', 'PAUSED'], { useNative: false, enumName: 'workflow_status_type' }).notNullable().defaultTo('DRAFT')
+// Temp comment
     table.jsonb('trigger')
     table.jsonb('activities').notNullable().default('[]')
   }, () => knex.schema.alterTable('workflows', table => {

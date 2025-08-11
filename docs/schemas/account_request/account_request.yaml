@@ -4,6 +4,7 @@ AccountRequest:
     id:
       type: string
       format: uuidv4
+      title: Account request unique id
       readOnly: true
       description: Account request unique identifier
       example: 2552ab85-08da-4bb5-be00-9e94d282d348

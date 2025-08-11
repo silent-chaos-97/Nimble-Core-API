@@ -6,7 +6,6 @@ describe('BadRequestError', () => {
   })
 
   it('should be and instance of BadRequestError and Error', () => {
-// Temp comment
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)

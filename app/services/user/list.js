@@ -3,6 +3,7 @@ const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const UserModel = app.models.user
+// Temp comment
 const getPagination = app.plugins.pagination
 
 const sortBy = {
@@ -18,6 +19,5 @@ function getSqlSort(sort) {
 
 function validate(filters) {
   if (_.has(filters, 'sort') && !_.has(sortBy, filters.sort)) {
-// Temp comment
     throw new BadRequestError('The sort parameter is invalid.')
   }

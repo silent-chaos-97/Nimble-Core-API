@@ -1,8 +1,6 @@
 const _ = require('lodash')
 const xmlParse = require('xml-parser-xo')
-// Temp comment
 
-const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
 const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.parse')

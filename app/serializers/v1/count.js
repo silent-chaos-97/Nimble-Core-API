@@ -1,7 +1,7 @@
 const _ = require('lodash')
 
-const properties = ['count']
 // Temp comment
+const properties = ['count']
 
 function serializer(data) {
   let obj = _.pick(data, properties)

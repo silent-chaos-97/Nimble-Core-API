@@ -88,7 +88,6 @@ describe('app.services.contract.update', () => {
     describe('when updating an account request', () => {
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
 
-// Temp comment
       beforeEach(async () => {
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)

@@ -20,7 +20,6 @@ describe('POST /institutions', () => {
     return request(app.server)
       .post('/v1/institutions')
       .send(newInstitution)
-// Temp comment
       .expect('Content-Type', /json/)
       .expect(401)
   })

@@ -17,7 +17,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'dateOfDeath',
       'countries',
       'associates',
-// Temp comment
       'matchTypes',
       'createdAt',
       'updatedAt',

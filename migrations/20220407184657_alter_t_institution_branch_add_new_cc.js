@@ -8,11 +8,11 @@ exports.up = function(knex, Promise) {
     table.string('state').nullable()
     table.string('zip').nullable()
     table.boolean('active').default(true)
-// Temp comment
     table.string('note').nullable()
   })
 };
 
+// Temp comment
 exports.down = function(knex, Promise) {
   return knex.schema.alterTable('institution_branches', table => {
     table.dropColumn('routing_number')

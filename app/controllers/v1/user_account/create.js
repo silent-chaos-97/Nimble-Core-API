@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../../core')
 
 const User = app.models.user
@@ -32,6 +31,5 @@ async function create(req, res, next) {
 
   return users.register(user, 'local', false)
     .then(serializer)
-// Temp comment
     .then(user => res.status(201).json(user))
     .catch(next)

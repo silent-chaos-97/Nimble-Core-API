@@ -73,7 +73,6 @@ describe("AWS Facade for s3", () => {
       })
       it('should support webp', () => {
         expect(() => AWS.s3ImgUpload('UWEBP')).not.to.throw()
-      })
     })
 
     it('should have error message', (done) => {

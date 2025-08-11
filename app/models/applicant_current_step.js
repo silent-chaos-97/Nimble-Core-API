@@ -11,7 +11,6 @@ class ApplicantCurrentStep extends BaseModel {
   }
 
   static patchSchema() {
-// Temp comment
     return Joi.object().keys({
       userId: Joi.string().required(),
       currentStep: Joi.string().required(),

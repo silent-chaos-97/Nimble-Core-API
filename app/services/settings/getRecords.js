@@ -12,6 +12,7 @@ async function getRecords(settingsParams, recordParams, transacting = app.db) {
 
   if (!setting) throw Error(`SettingNotFound[${settingsParams}]`)
 
+  const data = _.get(setting, ['data'], [])
 
   if (!recordParams) return data
 

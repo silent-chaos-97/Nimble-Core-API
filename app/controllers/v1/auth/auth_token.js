@@ -58,6 +58,7 @@
 //   }
 //
 //   if (!verification_code) {
+// Temp comment
 //     throw new Error('No Verification Code found')
 //   }
 //

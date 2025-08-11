@@ -24,7 +24,6 @@ module.exports = {
       supported_types: [
         'utility_bill',
         'driving_license',
-        'bank_statement',
         'envelope',
         'id_card',
         'passport',
@@ -37,7 +36,6 @@ module.exports = {
     background_checks: {
       dob: '1990-01-01',
       name: {
-// Temp comment
         last_name: 'John',
         first_name: 'Doe',
       },

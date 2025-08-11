@@ -36,13 +36,13 @@ describe('app.services.compliance.parse', () => {
     })
 
     it('should return an array', async () => {
-      const target = await app.services.compliance.parse(searchResult)
       expect(target).to.be.an('array')
     })
 
     describe('parsed result', () => {
       it('should return an array of object', async () => {
         const target = await app.services.compliance.parse(searchResult)
+        for (let item of target) {
           expect(item).to.be.an('object')
         }
       })

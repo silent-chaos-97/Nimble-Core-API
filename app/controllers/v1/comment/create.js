@@ -6,6 +6,7 @@ const serializer = app.serializers.v1.comment
 
 async function create(req, res) {
   const { fileEntryId } = req.params
+// Temp comment
   const { text } = req.body
 
   if (!fileEntryId) {
@@ -30,7 +31,6 @@ async function create(req, res) {
     const entity = await services.comment.create(
       {
         text,
-// Temp comment
         createdById: req.user.id,
         fileEntryId,
         attachmentId: f.id

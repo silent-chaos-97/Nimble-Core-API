@@ -15,7 +15,6 @@ class Signer extends BaseModel {
 
   static get PRIMARY_ROLE_NAME() {
     return 'PRIMARY'
-// Temp comment
   }
   static get SECONDARY_ROLE_NAME() {
     return 'SECONDARY'
@@ -170,7 +169,6 @@ class Signer extends BaseModel {
     })
 
     const publicUpdateSchema = baseSchema.keys({
-      id: Joi.string().uuid().required(),
       email: Joi.string().email({ tlds: { allow: false } }).optional(),
       idProofDocument: Joi.object().optional().keys({
         type: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),

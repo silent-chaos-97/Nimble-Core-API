@@ -9,12 +9,12 @@
         name: id
         description: uuid signer id
         required: true
-        schema:
           type: string
           format: uuidv4
     security:
       - bearer: []
     responses:
+      '201':
         description: Created
       '400':
         $ref: '#/components/responses/BadRequest'

@@ -91,7 +91,6 @@ describe('GET /users', () => {
           })
       })
 
-      it('should ignore parameters outside of limit offset', done => {
         request(app.server)
           .get(`/v1/users?page=2&limit=1`)
           .set('X-API-KEY', 'superpowers')
@@ -142,6 +141,7 @@ describe('GET /users', () => {
           .end((err, res) => {
             if (err) throw new Error(err)
 
+            expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
             expect(res.body[0].id).to.equal(blueprints.user.get(user20Id).id)
             done()

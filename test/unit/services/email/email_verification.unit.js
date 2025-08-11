@@ -78,6 +78,7 @@ describe('app.services.email.emailVerification', () => {
       const signer = blueprints.signers.signer_1
 
       const emailData = {
+        email: signer.email,
         signerEmail: signer.email,
         signerFirstName: signer.firstName,
         institution: 'Singular',

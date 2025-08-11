@@ -427,7 +427,6 @@ function _amort(summary, risks) {
         metric: 'loan_minimum',
         operation: 'adjust_loan_for_loan_minimum',
         adjusted: loanMin,
-        requested: summary.loan.value
       })
 
       summary.loan.value = loanMin

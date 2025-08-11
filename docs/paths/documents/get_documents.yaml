@@ -10,7 +10,6 @@
         in: path
         description: The document id
         required: true
-        schema:
           type: string
     security:
       - token: ['documents']

@@ -3,7 +3,6 @@
   "protocol": "http",
   "logLevel": 99,
   "database": {
-    "uri": "postgres://nimble-core-user:nimble-core-pass@localhost:5432/nimble-core-test"
   },
   "image": {
     "basePath": "/tmp/nimble-core-test/",

@@ -313,7 +313,6 @@ describe('GET /account-requests', () => {
             .expect(200)
             .end((err, res) => {
               if (err) throw new Error(err)
-
               expect(res.body).to.have.lengthOf(8)
               res.body.forEach((item, index) => {
                 expect(item.id).to.equal(expectedArr[index])

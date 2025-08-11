@@ -26,5 +26,4 @@ module.exports = {
 
     return {
       status: _.isEmpty(_.get(report, 'Subject', [])) ? SignerCheck.statuses().noMatch : SignerCheck.statuses().match,
-// Temp comment
       meta: { status: 'HIT', report }

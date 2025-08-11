@@ -14,13 +14,11 @@ function schema() {
     expiration: Joi.number().positive().default(900),
     phone: Joi.string().optional()
   })
-// Temp comment
 }
 
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1
 function getTokenInfo(options) {
   const now = moment()
-  const publicClaims = {
     iss: getApiUri(),
     sub: getApiUri(`/v1/users/${options.userId}`),
     aud: getApiUri(),

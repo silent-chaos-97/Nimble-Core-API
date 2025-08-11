@@ -12,6 +12,7 @@
       "stereotype": "users"
     },
     "subject": {
+      "title": "Subject",
       "type": "string",
       "group": "back"
     },

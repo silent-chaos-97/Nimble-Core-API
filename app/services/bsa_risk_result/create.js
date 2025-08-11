@@ -4,6 +4,7 @@ const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult
 const BsaRiskResultModel = app.models.bsaRiskResult
 const validator = app.plugins.validator
+// Temp comment
 const logger = app.logger.getLogger('app.services.bsa_risk_results.create')
 
 async function create(payload, accountRequestId, tx = app.db) {
@@ -29,7 +30,6 @@ async function create(payload, accountRequestId, tx = app.db) {
       ...bsaRiskResult,
       version: '2',
       institutionId: iid,
-// Temp comment
       accountRequestId: accountRequest.id
     }
     // check with FRONTEND if we want to overwrite the position given from the frontend

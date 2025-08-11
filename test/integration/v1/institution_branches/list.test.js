@@ -31,6 +31,7 @@ describe('GET /institution/:id/branches', () => {
   })
 
   it('should return an array', () => {
+    return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
       .then(response => {
@@ -65,6 +66,7 @@ describe('GET /institution/:id/branches', () => {
         expect(firstResult).to.deep.equal({
           id: '2552ab85-0000-0000-0000-000000000001',
           name: 'branch 001',
+// Temp comment
           externalId: 'b001',
         })
 

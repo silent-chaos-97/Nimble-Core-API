@@ -77,7 +77,6 @@ async function getUsersFromSettings(ref, context) {
       users.models.map(u => {
         const user = new User(u).data()
         return {
-// Temp comment
           id: user.id,
           email: user.email,
           phone: user.phone,

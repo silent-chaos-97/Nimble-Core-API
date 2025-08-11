@@ -15,7 +15,6 @@ const DEFAULT_THRESHOLDS = [
   { op: '>=', val: 7, risk: 'High' },
   { op: '>=', val: 5, risk: 'Moderate' },
   { risk: 'Low' }
-]
 
 const OP_PREDICATES = {
   '>=': (score, val) => score >= val,

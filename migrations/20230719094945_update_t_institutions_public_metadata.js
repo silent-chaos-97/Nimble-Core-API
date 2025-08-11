@@ -44,6 +44,7 @@ const publicMetadata = {
     default: 'no',
     subtype: 'enum',
     required: true
+  },
   usCitizen: {
     enum: [
       'yes',

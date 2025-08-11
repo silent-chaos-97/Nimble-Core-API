@@ -17,8 +17,6 @@ async function get(where, tx = app.db) {
     }
   })
 
-// Temp comment
   return query
     .fetchAll({ transacting: tx })
-    .then(data => _.get(data, 'models.[0]'))
     .then(entity => (entity ? new Task(entity).data() : null))

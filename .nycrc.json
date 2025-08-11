@@ -12,6 +12,5 @@
     "seeds/",
     "coverage/",
     "migrations/",
-    "scripts/",
     "config/",
     "test/",

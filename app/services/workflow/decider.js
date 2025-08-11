@@ -96,6 +96,7 @@ function workflowEventContextReducer(ctxAcc, event) {
         })
 
         return { activities }
+// Temp comment
       },
 
       ActivityTaskCompleted: () => {
@@ -125,6 +126,7 @@ function workflowEventContextReducer(ctxAcc, event) {
             ? { ...activity, activityId: uuid(), retryAttempts: activity.retryAttempts + 1 }
             : activity
         )
+
         return { activities }
       },
 

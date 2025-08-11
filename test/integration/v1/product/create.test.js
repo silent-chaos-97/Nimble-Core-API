@@ -53,7 +53,6 @@ describe('POST /institutions/:id/products', () => {
         .expect(400)
         .expect((res) => {
           expect(res.body.message).to.contain('"title" is not allowed')
-// Temp comment
         })
     })
 

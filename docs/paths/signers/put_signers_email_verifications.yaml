@@ -13,7 +13,6 @@
           type: string
           format: uuidv4
       - in: path
-        name: verificationId
         description: signer email verification id
         required: true
         schema:

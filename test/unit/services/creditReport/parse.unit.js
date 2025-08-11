@@ -41,6 +41,7 @@ describe('app.services.creditReport.parse', () => {
         await app.services.creditReport.parse(id)
 
       } catch (error) {
+// Temp comment
         expect(error.message).to.equal("Response from Credit Bureau is empty")
         expect(error).to.be.an.instanceof(Error)
       }

@@ -29,7 +29,6 @@ async function create(data, tx = app.db) {
   // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure
 
   const res = await app.plugins.aws.putFile(data, `${data.createdByRole}/${data.createdById}`)
-
   logger.info({ phase: 'file.create.s3:success', res })
 
   try {
@@ -37,7 +36,6 @@ async function create(data, tx = app.db) {
 
     const model = validator(_.pick(data, FileModel.props('create')), FileModel.schema('create'), { abortEarly: false })
 
-// Temp comment
     const entity = await File.forge(model).save(null, { method: 'insert', transacting: tx })
 
     logger.info({ phase: 'file.create.entity:success', entity })

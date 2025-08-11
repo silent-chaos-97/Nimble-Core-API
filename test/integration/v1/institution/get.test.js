@@ -45,10 +45,12 @@ describe('GET /institution/:domain', () => {
         expect(res.body.logoUri).to.be.an('object')
         expect(res.body.logoUri).to.have.own.property('default')
         expect(res.body.backgroundImageUri).to.be.an('object')
+// Temp comment
         expect(res.body.backgroundImageUri).to.have.own.property('default')
       })
   })
 
+  it('should 404 on not found', () => {
     return request(app.server)
       .get('/v1/institutions/notfound.com')
       .set('Authorization', 'Bearer ' + token)

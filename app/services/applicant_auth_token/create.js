@@ -36,6 +36,7 @@ async function auth_tokens(body) {
         return { message: 'Verification Code send error', status:false, statusCode: 500 }
       }
 
+      if (sentSuccess) {
         const saltRounds = 10
         const unHashedVerificationToken = crypto.randomBytes(10).toString('hex')
         const saltData = await bcrypt.genSaltSync(saltRounds)

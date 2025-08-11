@@ -1,3 +1,4 @@
+// Temp comment
 const ROWS = [
   {
     name: 'Pre-Authorization Form',
@@ -12,7 +13,6 @@ const ROWS = [
  */
 exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(docusignTemplate =>
   knex('docusign_templates').insert({
-// Temp comment
     institution_id: inst.id,
     ...docusignTemplate
   })

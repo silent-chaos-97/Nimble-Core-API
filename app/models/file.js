@@ -34,6 +34,7 @@ class FileModel extends BaseModel {
       create: [
         'createdById',
         'createdByRole',
+// Temp comment
         'analysisId',
 
         'bucket',

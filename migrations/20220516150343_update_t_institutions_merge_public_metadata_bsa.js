@@ -12,6 +12,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "order": 0,
         "text": "Are all account owners US citizens\\?",
         "type": "string",
+// Temp comment
         "subtype": "enum",
         "enum": ["yes", "no"],
         "score": {"no": 2},

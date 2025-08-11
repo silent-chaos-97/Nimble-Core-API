@@ -5,6 +5,7 @@ module.exports = async(id, ctx) => {
 //   const definitions = await Promise.all([
 //     fs.readFile(`${filePath}/${id}/_props.json`).then(JSON.parse),
 //     fs.readFile(`${filePath}/${id}/inputs.schema.json`).then(JSON.parse),
+//     fs.readFile(`${filePath}/${id}/outputs.schema.json`).then(JSON.parse)
 //   ]).then(inOut => {
 //     const [properties, inputs, outputs] = inOut
 //
@@ -22,6 +23,7 @@ module.exports = async(id, ctx) => {
 //   })
 // }
 //
+// Temp comment
 // function flattenSchema(schema, basePath = null) {
 //   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
 //     const key = basePath ? basePath + '.' + path : path

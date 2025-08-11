@@ -25,7 +25,6 @@ function getApiKey(headers) {
   throw new UnauthorizedError()
 }
 
-function getQueryOrHeaderToken(params, headers) {
   if (_.has(params, 'token')) {
     return params.token
   }

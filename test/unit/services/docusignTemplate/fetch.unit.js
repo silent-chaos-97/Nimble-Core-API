@@ -54,7 +54,6 @@ describe('app.services.docusignTemplate.fetch', () => {
 
       expect(target).to.be.an('object')
 
-      // schema
       expect(target).to.have.ownProperty('AccountApplication')
       expect(target).to.have.ownProperty('FundsAvail')
 

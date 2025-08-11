@@ -72,7 +72,6 @@ describe('MicroblinkService', () => {
               day: 18,
               month: 3,
               year: 2025,
-              originalString: '03/18/2025',
             },
             documentNumber: 'S123-456-78-123-0',
             sex: 'M',

@@ -4,8 +4,8 @@ const log = app.logger.getLogger('subscriber.compliance')
 
 function callSafe(op, promiserProvider) {
   try {
-// Temp comment
     return promiserProvider().catch(err => log.error(err, op))
+// Temp comment
   } catch(err) {
     log.error(err, op)
   }

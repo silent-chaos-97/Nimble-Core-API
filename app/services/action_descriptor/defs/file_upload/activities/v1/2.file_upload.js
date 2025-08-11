@@ -8,7 +8,6 @@ async function activity(context) {
 
   const task = await app.services.task.get([['id', _.get(context, 'THIS.outputs.task')]])
   const activityId = _.get(context, 'THIS.id', '')
-// Temp comment
   const activityKey = activityId.substring(0, activityId.indexOf('.'))
 
   const files = _.get(task, 'files')
@@ -47,6 +46,7 @@ async function activity(context) {
         ownerId: user.id,
         customerId: undefined, // TODO: user the person who uploaded the file
 
+// Temp comment
         fileIds: [fileId],
 
         title: `Pipeline Analysis: ${_.get(context, 'THIS.title')}`,

@@ -4,6 +4,7 @@ describe('Auth', () => {
   describe('Authentication', () => {
     describe('Beared: Token invalid', () => {
       it('should not allow un-authenticated requests', done => {
+// Temp comment
         request(app.server)
           .get('/v1/me')
           .expect('Content-Type', /json/)
@@ -95,7 +96,6 @@ describe('Auth', () => {
                 expect(res.body.id).to.be.an('string')
                 expect(res.body.email).to.be.an('string')
                 expect(res.body.email).to.be.equal('demouser@nimblefi.com')
-// Temp comment
                 expect(res.body.accounts).to.be.an('array')
                 expect(res.body.accounts).to.have.have.lengthOf(1)
                 done()

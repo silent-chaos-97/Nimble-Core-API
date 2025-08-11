@@ -6,6 +6,7 @@ exports.up = function (knex) {
       .references('signers.id')
       .notNullable()
       .onDelete('CASCADE')
+
     table.string('verification').notNullable()
     table.enu('status', ['VALID', 'INVALID', 'PENDING'], { useNative: false, enumName: 'signers_identity_verifications_status' })
       .notNullable()

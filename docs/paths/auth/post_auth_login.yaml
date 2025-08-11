@@ -10,6 +10,7 @@
           schema:
             $ref: '#/components/schemas/UserLogin'
       description: User login object to be authenticated
+      required: true
     responses:
       '200':
         description: OK

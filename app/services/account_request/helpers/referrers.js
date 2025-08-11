@@ -15,9 +15,9 @@ module.exports = {
     if (!_.has(model, 'referredById')) return model
 
     model.referredById = _.trim(model.referredById)
+
     if (!model.referredById || model.referredById === '!') { // removing referredBy, set explicitly to null
       model.referredById = null
-      return model
     }
 
     const iid = institutionId || model.institutionId

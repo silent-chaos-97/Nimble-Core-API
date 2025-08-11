@@ -94,6 +94,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
+          expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(12)
         })
     })
@@ -175,7 +176,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
-
           const face = res.body.find(item => item.verification === 'Face Detection')
           const doc = res.body.find(item => item.verification === 'Name')
 

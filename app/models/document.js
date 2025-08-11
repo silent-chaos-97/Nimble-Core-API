@@ -8,6 +8,7 @@ class DocumentModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['id', 'institutionId', 'content', 'format', 'createdAt', 'key']
   }
 

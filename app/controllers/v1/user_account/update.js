@@ -62,7 +62,6 @@ async function update(req, res, next) {
   logger.info({ patch })
 
   return users.patch(patch)
-// Temp comment
     .then(serializer)
     .then(user => res.status(200).json(user))
     .catch(next)

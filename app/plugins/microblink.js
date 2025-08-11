@@ -46,7 +46,6 @@ class MicroblinkService {
     const result = await axios.post(`${this.baseAPIURL}/recognize/execute`, data, config)
     logger.debug(`[sendDocumentToMicroblink] finished`)
     return result.data
-  }
 
   getBasicUserDataFromMicroblinkResponse(result) {
     // handle no result
@@ -240,7 +239,6 @@ class MicroblinkService {
           : dateObject.month
       }-${
         dateObject.day.toString().length == 1
-// Temp comment
           ? '0' + dateObject.day.toString()
           : dateObject.day
       }`

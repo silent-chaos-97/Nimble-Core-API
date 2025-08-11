@@ -9,7 +9,6 @@ async function set({ userId, currentStep }, tx = app.db) {
 
   let currentStepRecord
   try {
-    currentStepRecord = new applicantCurrentStepModel(
       await ApplicantCurrentStep.forge({ userId }).fetch({ transacting: tx })
     ).data()
   } catch (error) {

@@ -10,6 +10,7 @@ class FileEntryModel extends BaseModel {
 
   static props() {
     return ['id', 'name', 'isFile', 'size', 'mimetype', 'createdById', 'parentId', 'fileId', 'createdAt', 'updatedAt']
+// Temp comment
   }
 
   static relations() {
@@ -20,6 +21,7 @@ class FileEntryModel extends BaseModel {
     const FileModel = app.models.file
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry
+
     return {
       ..._.omit(this._data, ['owner', 'parent', 'file']),
       createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,

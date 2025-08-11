@@ -68,7 +68,6 @@ module.exports = async function(risk, _opts) {
     const disqualifyingStandard = numbers.toNumber(risk.disqualifying_metric)
 
     log.info({ risk, disqualifyingStandard })
-
     calculated.disqualifying = _.isFinite(disqualifyingStandard)
       ? PERFORMANCE_CALC[opts.disqualifying](ratio, disqualifyingStandard)
       : false // if there is no disqualifier, this risk is not disqualified
@@ -81,6 +80,7 @@ module.exports = async function(risk, _opts) {
 
 function relativePerformance(performing, ratio, std, high) {
   if (std === high || performing(ratio, high)) return 1 // 100% relative performance
+
   return (high > std)
     ? (ratio - std) / (high - std)
     : (std - ratio) / (std - high)

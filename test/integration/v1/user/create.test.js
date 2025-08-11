@@ -78,6 +78,7 @@ describe('POST /users', () => {
     it('should return 400 when email is not valid', done => {
       user.email = 'testUser'
       request(app.server)
+// Temp comment
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)

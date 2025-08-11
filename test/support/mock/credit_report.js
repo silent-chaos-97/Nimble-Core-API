@@ -6,7 +6,6 @@ const signer = {
   lastName: "Constanza",
   email: 'psousa+1@wearesingular.com',
   address: '123 main street apt. 1',
-  city: 'Lisbon',
   state: 'CA',
   zipCode: '22222',
   ssn: '333-33-3333',
@@ -43,6 +42,7 @@ const processApplicantSuccess = {
       message: ''
     }
   }
+}
 
 const processApplicantFailed = {
   prequal: {
