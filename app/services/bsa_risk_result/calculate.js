@@ -15,6 +15,7 @@ const DEFAULT_THRESHOLDS = [
   { op: '>=', val: 7, risk: 'High' },
   { op: '>=', val: 5, risk: 'Moderate' },
   { risk: 'Low' }
+]
 
 const OP_PREDICATES = {
   '>=': (score, val) => score >= val,
@@ -67,7 +68,6 @@ function calculateScore(answers) {
     const score = context.score
 
     const calculator = CALCULATORS[context.type] || CALCULATORS.string
-
     let calculated = _.toNumber(calculator(context, score, answer.answer))
 
     return sum + (!_.isNaN(calculated) ? calculated : 0)

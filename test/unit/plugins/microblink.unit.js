@@ -72,6 +72,7 @@ describe('MicroblinkService', () => {
               day: 18,
               month: 3,
               year: 2025,
+              originalString: '03/18/2025',
             },
             documentNumber: 'S123-456-78-123-0',
             sex: 'M',
@@ -429,3 +430,11 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('lastName', 'Specimen')
 
       expect(result).to.have.deep.property('documentIssuer', '')
+      expect(result).to.have.deep.property('documentNumber', 'S123-456-78-123-0')
+      expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')
+      expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')
+
+      expect(result).to.have.deep.property('address', '123 main street apt. 1')
+      expect(result).to.have.deep.property('city', 'Orlando')
+      expect(result).to.have.deep.property('state', 'FL')
+      expect(result).to.have.deep.property('zipCode', '17101-0000')

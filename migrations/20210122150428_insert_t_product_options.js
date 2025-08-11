@@ -7,7 +7,6 @@ const savingsProductOptions = [
     annotation: 'Free',
   },
   {
-    key: 'e_statements',
     category: 'product_feature',
     title: 'E-Statements',
     value: true,
@@ -92,3 +91,4 @@ exports.up = async (knex)  => {
     } else if (product.category === 'CHECKING') {
       // Insert checking product options
       await Promise.all(checkingProductOptions.map(async (checkingOption) => {
+        checkingOption.product_id = product.id,

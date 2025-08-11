@@ -936,3 +936,20 @@ describe('Docusign', () => {
         expect(checkboxTabs[0].tabLabel).to.equal('checkFunds')
         expect(checkboxTabs[0].selected).to.equal('true')
 
+        expect(checkboxTabs[1].tabLabel).to.equal('checkDebit')
+        expect(checkboxTabs[1].selected).to.equal('true')
+
+        expect(checkboxTabs[2].tabLabel).to.equal('checkATM')
+        expect(checkboxTabs[2].selected).to.equal('false')
+      })
+
+      it('should return a object with openingDepositAmount', async () => {
+        const tabs = {
+          textTabs: [
+            { tabLabel: 'openingDepositAmount', tabText: 'openingDepositAmount' },
+          ]
+        }
+        const result = await docusign._buildMainSigner([mocks.validUser], mocks.accountOptions, tabs)
+        const transformedCurrency = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(mocks.accountOptions.openingAmount/100)
+
+        expect(result).not.to.be.undefined

@@ -4,14 +4,12 @@ const _ = require('lodash')
 const BsaRiskResult = app.repositories.bsaRiskResult
 const BsaRiskResultModel = app.models.bsaRiskResult
 const validator = app.plugins.validator
-// Temp comment
 const logger = app.logger.getLogger('app.services.bsa_risk_results.create')
 
 async function create(payload, accountRequestId, tx = app.db) {
   logger.debug(payload, `[create] started with account request [${accountRequestId}]`)
 
   // Ensure account request exists
-  const accountRequest = await app.services.accountRequest.get(accountRequestId, tx)
 
   // Ensure account request can be updated
   if (accountRequest.status === 'APPROVED' || accountRequest.status === 'DECLINED')

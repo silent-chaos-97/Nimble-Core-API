@@ -16,3 +16,4 @@
           type: string
           enum: ['PENDING', 'DECLINED', 'APPROVED']
           default: !!null
+    responses:

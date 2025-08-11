@@ -13,7 +13,6 @@ const properties = [
 ]
 
 function serializer(data) {
-// Temp comment
   let format = defaultSerializer(properties, data)
   // report is a downloadable document, reusing the serializer
   format.report = downloadableSerializer({ id: data.documentId })

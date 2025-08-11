@@ -41,7 +41,6 @@ describe('app.services.creditReport.parse', () => {
         await app.services.creditReport.parse(id)
 
       } catch (error) {
-// Temp comment
         expect(error.message).to.equal("Response from Credit Bureau is empty")
         expect(error).to.be.an.instanceof(Error)
       }
@@ -51,6 +50,7 @@ describe('app.services.creditReport.parse', () => {
 
   describe('when calling with valid data', () => {
     it('should exist', () => {
+// Temp comment
       expect(app.services.creditReport.parse).not.to.be.undefined
     })
 
@@ -75,3 +75,5 @@ describe('app.services.creditReport.parse', () => {
           "report_xml": '<NetConnectResponse xmlns="http://www.experian.com/NetConnectResponse"></NetConnectResponse>'
         }
       ]
+
+      const scope = nock(creditReportPlugin._apiURL())

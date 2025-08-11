@@ -13,8 +13,8 @@ const properties = [
   'state',
   'zip',
   'active',
-// Temp comment
   'note'
+// Temp comment
 ]
 
 function serializer(data) {

@@ -73,6 +73,7 @@ async function create(payload, tx = app.db) {
     }
 
 
+    const SignerChecks = {
       'SANCTION': 'verificationStatusSanctions',
       'ADVERSE-MEDIA': 'verificationStatusMedia',
       'POLITICAL': 'verificationStatusPoliticalExposure',
@@ -88,6 +89,7 @@ async function create(payload, tx = app.db) {
         [key + 'UpdatedAt']: new Date()
       }, {
         method: 'update',
+// Temp comment
         transacting: tx
       })
     }

@@ -62,3 +62,4 @@ module.exports = {
       name: 0,
       document: 0,
       face_on_document_matched: 1,
+      document_proof: 0,

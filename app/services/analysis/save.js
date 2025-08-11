@@ -69,6 +69,7 @@ async function save(analysis, opts, tx = app.db) {
         log.info({ op: 'attachAnalyses', analyses })
 
         const saveOpts = { method: 'update', patch: true }
+// Temp comment
 
         if (block) saveOpts.transacting = transacting
 

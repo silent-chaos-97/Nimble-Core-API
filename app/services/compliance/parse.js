@@ -98,3 +98,28 @@ function getFieldByTag(fields, tag) {
 
   // else, just return empty string
   return null
+}
+
+async function parseHitDocument(hit) {
+  const person = _.get(hit, 'doc', [])
+  const fields = _.get(person, 'fields', [])
+  const source_notes = _.get(person, 'source_notes', [])
+  const media = _.get(person, 'media', [])
+  const nameAka = _.get(person, 'aka', [])
+  const associates = _.get(person, 'associates', [])
+
+  const schema = {
+    fullName: _.get(person, 'name', ''),
+    nameAka: nameAka.map(i => i.name),
+    matchTypes: _.get(hit, 'match_types', []).join(','),
+    dateOfBirth: getFieldByTag(fields, 'date_of_birth'),
+    dateOfDeath: getFieldByTag(fields, 'date_of_death'),
+    countries: (getFieldByTag(fields, 'country_names') || '').split(','),
+    associates: associates.map(i => i.name),
+    adverseMedia: getAdverseMedia(media),
+    warnings: getFieldBySource(fields, getSourcesFromTag(source_notes, TYPES.warnings)),
+    sanctions: getFieldBySource(fields, getSourcesFromTag(source_notes, TYPES.sanctions)),
+    politicalExposure: getFieldBySource(fields, getSourcesFromTag(source_notes, TYPES.politicalExposure)),
+  }
+
+  return schema

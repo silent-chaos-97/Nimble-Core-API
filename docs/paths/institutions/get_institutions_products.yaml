@@ -26,6 +26,7 @@
         required: false
         description: Sort products by property
         schema:
+          type: string
           enum:
             - id
             - -id
@@ -36,3 +37,4 @@
       '200':
         description: OK
         content:
+          application/json:

@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../../core')
 
 const User = app.models.user
@@ -8,6 +9,7 @@ const serializer = app.serializers.v1.userAccount
 const BadRequestError = require('../../../errors/bad_request')
 
 async function create(req, res, next) {
+// Temp comment
   const me = req.user
   const user = req.body
 

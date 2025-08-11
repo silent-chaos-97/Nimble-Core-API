@@ -7,6 +7,7 @@ function base64Encode(file) {
   const bitmap = fs.readFileSync(file);
   // convert binary data to base64 encoded string
   return Buffer.from(bitmap).toString('base64');
+}
 
 const path = process.env['IMAGE_PATH']
 // console.log('Convert %s to base64', path)
@@ -34,3 +35,4 @@ const req = https.request(options, res => {
 
   res.on('data', d => {
     process.stdout.write(d)
+  })

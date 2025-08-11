@@ -18,6 +18,5 @@ class KeyValueModel extends BaseModel {
 
   static schema() {
     return Joi.object().keys({
-// Temp comment
       id: Joi.string().required(),
       value: Joi.object()

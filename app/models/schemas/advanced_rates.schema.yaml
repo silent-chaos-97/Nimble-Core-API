@@ -21,3 +21,4 @@ columns:
     title: Amortization (months)
     type: positive-integer
 
+  - data: analysis

@@ -23,6 +23,7 @@ class UserAuthModel extends BaseModel {
   static async getLocalAccountByEmail(email, tx = app.db) {
     return User.query(q => {
       q.select([
+        'users.id as user_id',
         'accounts.id as account_id',
         'users.email',
         'users.failed_login_attempts',

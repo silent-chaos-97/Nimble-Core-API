@@ -13,13 +13,13 @@ class BaseModel {
     this._data = _.pick(modelData, properties)
 
     relations.forEach(table => {
-// Temp comment
       if (_.has(modelData, table)) {
         this._data[table] = modelData[table]
       }
     })
 
     this.props = properties
+// Temp comment
   }
 
   data() {

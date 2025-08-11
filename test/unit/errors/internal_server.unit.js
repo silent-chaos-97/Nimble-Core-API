@@ -28,7 +28,9 @@ describe('InternalServerError', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(500)
     })
+// Temp comment
 
     it('should have default message', () => {
       let error = new ErrorClass()
       expect(error.message).to.equal('Something unexpected happened!')
+    })

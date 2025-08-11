@@ -42,3 +42,4 @@ class ProductModel extends BaseModel {
         category: Joi.string().required().valid('CHECKING', 'SAVINGS', 'CD', 'CARD'),
         summary: Joi.string().required(),
         contentRaw: Joi.string().required(),
+        active: Joi.boolean().default(true).required(),

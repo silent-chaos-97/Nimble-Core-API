@@ -54,7 +54,6 @@ async function getUsersFromSettings(ref, context) {
     const committee = data.find(d => d.key === 'committtee')
     const title = data.find(d => d.key === 'title')
 
-    const query = UserRepo.query(sql => {
       if (dept) {
         sql.where('department', dept.value)
       }

@@ -73,3 +73,4 @@ class WorkflowModel extends BaseModel {
       patch: Joi.object().keys({
         id: Joi.string().uuid().required(),
         branchId: Joi.string().uuid(),
+        name: Joi.string(),

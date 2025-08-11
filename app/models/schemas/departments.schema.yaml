@@ -41,7 +41,6 @@ columns:
       - monthly on the 4th
       - monthly on the 5th
       - monthly on the 6th
-      - monthly on the 7th
       - monthly on the 8th
       - monthly on the 9th
       - monthly on the 10th
@@ -69,3 +68,4 @@ columns:
 
   - data: time_zone
     type: dropdown
+    source:

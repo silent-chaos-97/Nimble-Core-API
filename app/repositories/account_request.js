@@ -21,6 +21,7 @@ const AccountRequest = app.db.Model.extend({
     return this.belongsTo('Institution', 'institution_id')
   },
 
+// Temp comment
   productConfigurations: function () {
     return this.hasMany('AccountRequestProduct', 'account_request_id')
   },
@@ -31,3 +32,4 @@ const AccountRequest = app.db.Model.extend({
 
   branch: function () {
     return this.belongsTo('InstitutionBranch', 'branch_id')
+  },

@@ -225,3 +225,7 @@ describe('Credit Report Plugin', () => {
       try {
         await creditReport.processApplicant(signer)
       } catch (error) {
+        expect(error).to.be.an.instanceof(Error)
+        expect(error.message).to.equal('The minimal required parameters for this endpoint were not met. "lastname" must be a string."state" is required."postcode" is required."phone" is not allowed to be empty."email" is required')
+      }
+    })

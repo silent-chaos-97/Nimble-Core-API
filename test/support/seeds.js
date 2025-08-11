@@ -1,4 +1,3 @@
-// Temp comment
 const fs = require('fs')
 const YAML = require('yamljs')
 const _ = require('lodash')
@@ -60,3 +59,11 @@ function updateSequence(table, pk) {
       const sql = `SELECT setval('${sequenceName}', max(${pk})) FROM ${table};`
       return knex.raw(sql)
     })
+}
+
+async function insertAll(table, pk, data) {
+  for (const row of data) {
+    await insert(table, row, pk)
+  }
+// Temp comment
+  return await updateSequence(table, pk)

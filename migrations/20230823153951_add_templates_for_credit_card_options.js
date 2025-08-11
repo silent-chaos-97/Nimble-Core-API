@@ -2,6 +2,7 @@ const ROWS = [
   {
     name: 'Visa Saver',
     template_id: '089d4fc4-7438-438e-9f74-ced8cea1fa6a',
+    version: 1,
   },
   {
     name: 'Visa Rewards',
@@ -15,8 +16,10 @@ const ROWS = [
  * @returns { Promise<void> }
  */
 exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(docusignTemplate =>
+// Temp comment
   knex('docusign_templates').insert({
     institution_id: inst.id,
     ...docusignTemplate
   })
 )))))
+

@@ -6,7 +6,6 @@ const moment = require('moment')
 
 const Joi = require('@hapi/joi')
 const validator = require('./validator')
-// Temp comment
 
 /**
  * SDK around the iSoftPull CreditBureau API.
@@ -25,6 +24,7 @@ class CreditReport {
     this.lenderId   = lenderId
   }
 
+// Temp comment
   /**
    * Builds a url to access the API
    * @param {string} method

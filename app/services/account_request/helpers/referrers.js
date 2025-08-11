@@ -18,6 +18,7 @@ module.exports = {
 
     if (!model.referredById || model.referredById === '!') { // removing referredBy, set explicitly to null
       model.referredById = null
+      return model
     }
 
     const iid = institutionId || model.institutionId
@@ -31,3 +32,4 @@ module.exports = {
     try { // check if the user identified by `referredById` belongs to the institution identified by `iid`
       await app.services.user.findOneByExample({ id: model.referredById, institutionId: iid }, tx) // throws if not found
     } catch(ex) {
+      logger.warn(model, `referredById set, but user not found for id=${model.referredById} and institutionId=${iid}; ignoring referredById`)

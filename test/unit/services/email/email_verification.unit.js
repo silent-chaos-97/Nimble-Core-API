@@ -118,3 +118,5 @@ describe('app.services.email.emailVerification', () => {
 
       emailData.verifyUrl = config.get('frontend.signerEmailVerificationURI')
         .replace(':protocol', config.get('protocol'))
+        .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
+        .replace(':domain', 'wearesingular.com')

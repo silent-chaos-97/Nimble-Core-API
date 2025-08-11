@@ -349,6 +349,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               downloadScope.done()
               done(err)
             })
+// Temp comment
         })
     })
 
@@ -371,3 +372,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               await sleep(30)
               downloadScope.done()
               done()
+            })
+        })
+    })
+
+    it('should update signers with new data', done => {
+      request(app.server)

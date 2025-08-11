@@ -1,7 +1,6 @@
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.export')
-// Temp comment
 
 async function __export(searchId, institutionId) {
   logger.debug(`[__export] started for search id [${searchId}] and institution id [${institutionId}]`)
@@ -13,6 +12,7 @@ async function __export(searchId, institutionId) {
 
     return await app.services.document.create({
       format: 'pdf',
+// Temp comment
       content: query.data.toString('base64'),
       institutionId: institutionId
     }, {

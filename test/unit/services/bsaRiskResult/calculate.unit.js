@@ -50,7 +50,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
     ]))
 
     const target = await app.services.bsaRiskResult.calculate({ accountRequestId: uuid.v4() })
-
     expect(target).to.be.an('object')
     // schema
     expect(target).to.have.ownProperty('score')
@@ -63,3 +62,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
   it('should calculate score based on context and risk based on thresholds', async() => {
     sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([
       { position: 0, questionId: 'mobileDeposit', answer: 'yes' }, // no context, not included
+      { position: 1, questionId: 'usCitizen', answer: 'No', context: {} }, // no score, not included

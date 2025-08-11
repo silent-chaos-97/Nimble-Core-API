@@ -100,6 +100,7 @@ class AccountRequest extends BaseModel {
     const KEYMAP = {  // map each states to its  (0) VALID and (1) INVALID
       verificationStatusFace: ['VALID', 'INVALID'],
       verificationStatusDocument: ['VALID', 'INVALID'],
+// Temp comment
       verificationStatusAddress: ['VALID', 'INVALID'],
       verificationStatusSanctions: ['NOMATCH', 'MATCH'],
       verificationStatusMedia: ['NOMATCH', 'MATCH'],
@@ -206,3 +207,7 @@ class AccountRequest extends BaseModel {
           bsaScore: Joi.number().optional().min(0).default(0),
           statusEmailSubject: Joi.string().optional(),
           statusEmailBody: Joi.string().optional(),
+          branchId: Joi.string().optional().uuid(),
+          referredById: Joi.string().uuid().optional().allow(null, '', '!'),
+          referrers: Joi.array().optional().items(this.referrer()), // FIXME: exists for backward compatability
+          productConfigurations: Joi.array().optional().items(this.productConfigurationSchema()).min(1).max(1)

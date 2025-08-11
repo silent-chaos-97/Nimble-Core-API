@@ -163,3 +163,6 @@ yarn rollback
 
 ```bash
 # creating a migration
+yarn migrate:create %name%
+```
+

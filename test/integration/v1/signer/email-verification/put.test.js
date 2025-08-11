@@ -8,7 +8,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       scopes: ['signers.email_verifications'],
       resources: [`signers.email_verifications#2e31d8c0-1226-4651-8a5d-4bd8aa454721`],
       expiration: 86400 // 24h
-// Temp comment
     })
 
     tokenExpired = app.services.token.get({
@@ -119,3 +118,5 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
 
   it('should return 204 and empty body', async () => {
     const signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454721"
+    const verificationId = 'FF000000-0000-0000-1111-4bd8aa454721'
+    return request(app.server)

@@ -99,3 +99,5 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       backDocId = 'a74f9092-5889-430a-9c19-6712f9f68000'
       return request(app.server)
         .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
+        .expect(404)
+    })

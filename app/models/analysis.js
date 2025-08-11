@@ -1,3 +1,4 @@
+const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
@@ -33,7 +34,6 @@ const SCHEMA = Joi.object().keys({
 class AnalysisModel extends BaseModel {
   constructor(data) {
     super([...AnalysisModel.props(), ...AnalysisModel.privateProps()], AnalysisModel.relations(), data)
-  }
 
   static statuses() {
     return { ...Statuses }
@@ -91,3 +91,5 @@ class AnalysisModel extends BaseModel {
 
   static schema(state) {
     return _.get({
+      update: Joi.object().keys({
+        id: Joi.string().uuid().required(),

@@ -22,5 +22,4 @@ const service = app.services.auth
 //             })
 //     } catch (error) {
 //         // console.log("error in send verify controller", error)
-//         throw new InternalServerError(error.message)
 //     }

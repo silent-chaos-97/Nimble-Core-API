@@ -7,3 +7,4 @@ Contract:
       type: string
       format: uri
       title: contract uri
+      readOnly: true

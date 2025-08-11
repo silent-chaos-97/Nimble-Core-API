@@ -9,7 +9,6 @@ const logger = app.logger.getLogger('app.plugins.swagger')
 function loadAndMergeFromPath(spec, path, parent) {
   glob
     .sync(`${__dirname}/../../docs/${path}/**/*.yaml`)
-    .map(file => YAML.load(file))
     .forEach(assignToSpec(spec, path, parent))
 }
 
@@ -33,7 +32,6 @@ function assignToSpec(spec, part, parent) {
 function buildSwaggerDocument() {
   const spec = YAML.load(__dirname + '/../../docs/openapi.yaml')
 
-// Temp comment
   // load individual yaml files and merge them with the spec under the same path
   loadAndMergeFromPath(spec, 'paths')
   loadAndMergeFromPath(spec, 'schemas', 'components')

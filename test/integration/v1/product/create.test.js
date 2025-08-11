@@ -123,7 +123,6 @@ describe('POST /institutions/:id/products', () => {
     // Create the product
     await request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
-      .set('X-API-KEY', 'superpowers')
       .send(product)
       .expect(201)
 
@@ -135,3 +134,6 @@ describe('POST /institutions/:id/products', () => {
       .expect((res) => {
         const newProducts = res.body.filter((p) => p.name === product.name)
         expect(newProducts.length).to.equal(1)
+      })
+  })
+

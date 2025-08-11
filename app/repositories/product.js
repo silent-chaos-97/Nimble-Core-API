@@ -1,6 +1,5 @@
 const app = require('../core')
 
-// Temp comment
 const Product = app.db.Model.extend({
   tableName: 'products',
   requireFetch: false,
@@ -9,6 +8,7 @@ const Product = app.db.Model.extend({
   institution: function () {
     return this.belongsTo('Institution', 'institution_id')
   },
+// Temp comment
 
   options: function () {
     return this.hasMany('ProductOption', 'product_id')

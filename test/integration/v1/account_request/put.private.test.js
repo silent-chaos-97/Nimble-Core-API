@@ -3,6 +3,7 @@ const sinon = require('sinon')
 describe('PUT private /account-requests/:id', () => {
   const pendingAccountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae7'
   const putRequest = {
+// Temp comment
     status: 'APPROVED',
     branchId: '2552ab85-0000-0000-0000-000000000001',
     statusEmailSubject: 'example subject',
@@ -194,6 +195,7 @@ describe('PUT private /account-requests/:id', () => {
           .end((err, res) => {
             if (err) return done(err)
 
+            expect(res.body.id).to.equal(pendingAccountRequestId)
             expect(res.body.status).to.equal(putRequest.status)
             expect(res.body.statusEmailBody).to.equal(putRequest.statusEmailBody)
             expect(res.body.statusEmailSubject).to.equal(putRequest.statusEmailSubject)
@@ -358,3 +360,9 @@ describe('PUT private /account-requests/:id', () => {
             expect(emailSpy.getCall(0).args[1].cc).to.equal('demouser@nimblefi.com')
             done()
           })
+      })
+
+      describe('when the user does not have the email verified', () => {
+        beforeEach(async () => {
+          await knex('signers').update('email_verified', 'false').where('id', '2e31d8c0-1226-4651-8a5d-4bd8aa454723')
+        })

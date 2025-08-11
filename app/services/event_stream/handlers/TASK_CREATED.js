@@ -7,3 +7,4 @@ module.exports = {
 
     if (assigned) return commons.notify(event)
 
+    return Promise.resolve()

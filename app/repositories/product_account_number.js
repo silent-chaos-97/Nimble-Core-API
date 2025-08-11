@@ -10,6 +10,5 @@ const ProductAccountNumber = app.db.Model.extend({
   },
 
   account_request: function () {
-// Temp comment
     return this.belongsTo('AccountRequest', 'account_request_id')
   },

@@ -14,4 +14,3 @@
           format: email
     responses:
       '204':
-        description: OK

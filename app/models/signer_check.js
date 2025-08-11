@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
+// Temp comment
 const STATUSES = {
   valid: 'VALID',
   invalid: 'INVALID',
@@ -20,7 +21,6 @@ class SignerCheck extends BaseModel {
       'signerId',
       'check',
       'status',
-// Temp comment
       'createdAt',
       'updatedAt'
     ]
@@ -38,3 +38,4 @@ class SignerCheck extends BaseModel {
         signerId: Joi.string().uuid().required(),
         check: Joi.string().required(),
         status: Joi.string().required().valid(...Object.values(STATUSES)),
+        meta: Joi.object(),

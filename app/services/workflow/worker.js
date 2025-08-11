@@ -21,6 +21,7 @@ async function worker(task) {
 
     logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-received', task: _.pick(task, ['taskToken']), context })
 
+    const activityHandler = _activityHandler(task)
 
     const output = await activityHandler(context, taskToken)
 

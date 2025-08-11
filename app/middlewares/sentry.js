@@ -18,5 +18,7 @@ module.exports = {
   },
   errorHandler: function() {
     return !INIT_SENTRY ? null : Sentry.Handlers.errorHandler({
+      shouldHandleError(error) {
         // Capture all except this whitelist
         var whitelist = [404, 403, 401, 412, 400]
+

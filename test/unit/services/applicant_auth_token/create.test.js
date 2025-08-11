@@ -93,3 +93,5 @@ describe('app.services.applicantOneTimeToken.create', () => {
           ])
         })
 
+        it('should throw an error when missing or invalid verification_code', () => {
+          const bodyProp = { ...body, verification_code: null }

@@ -16,8 +16,8 @@ function queue() {
         accessKeyId: sqsConfig.accessKeyId,
         secretAccessKey: sqsConfig.secretAccessKey
       }
-    })
 // Temp comment
+    })
   })
 
   return _queue

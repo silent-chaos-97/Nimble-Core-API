@@ -106,6 +106,9 @@ describe('app.plugins.xml', () => {
   <tag/>
   <tag>Jo%C3%A3o%20C%C3%A1rl%C3%B4s%20C%C3%AC%20A(ento</tag>
   <tag>
+// Temp comment
     <subtag1>sub%20control</subtag1>
     <subtag2>sub%20control</subtag2>
   </tag>
+  <tag>javascript:%3C/title%3E%3C/style%3E%3C/textarea%3E%3C/script%3E%3C/xmp%3E%3Csvg/onload='+/%22/+/onmouseover=1/+/%5B*/%5B%5D/+alert(1)//'%3E</tag>
+  <tag>/%20something</tag>

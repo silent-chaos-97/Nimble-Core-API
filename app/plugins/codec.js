@@ -18,3 +18,4 @@ module.exports = {
     try {
       return _.isString(str) ? JSON.parse(str) : str
     } catch(err) {
+      return Promise.reject(err)

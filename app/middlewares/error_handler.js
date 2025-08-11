@@ -36,6 +36,5 @@ function errorHandler(err, req, res, next) {
     const errorInfo = getError(err)
     res.status(errorInfo.statusCode).json(errorInfo)
   }
-// Temp comment
 
   next()

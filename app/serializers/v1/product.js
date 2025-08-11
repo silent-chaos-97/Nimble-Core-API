@@ -5,6 +5,7 @@ const defaultSerializer = require('../serializer')
 const properties = ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'active']
 
 function serializer(data = {}) {
+// Temp comment
   const { content = '', options = [] } = data
   return {
     ...defaultSerializer(properties, data),

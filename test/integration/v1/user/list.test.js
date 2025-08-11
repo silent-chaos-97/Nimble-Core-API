@@ -91,6 +91,7 @@ describe('GET /users', () => {
           })
       })
 
+      it('should ignore parameters outside of limit offset', done => {
         request(app.server)
           .get(`/v1/users?page=2&limit=1`)
           .set('X-API-KEY', 'superpowers')
@@ -143,6 +144,7 @@ describe('GET /users', () => {
 
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
+// Temp comment
             expect(res.body[0].id).to.equal(blueprints.user.get(user20Id).id)
             done()
           })
@@ -157,3 +159,5 @@ describe('GET /users', () => {
           await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
         })
 
+        it('should default limit if not set', done => {
+          request(app.server)

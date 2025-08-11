@@ -18,6 +18,7 @@ describe('NotFoundError', () => {
   })
 
   describe('when instanced', () => {
+    it('should have correct name', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('NotFoundError')
     })
@@ -30,3 +31,4 @@ describe('NotFoundError', () => {
     it('should have default message', () => {
       let error = new ErrorClass()
       expect(error.message).to.equal("The requested resource couldn't be found")
+    })

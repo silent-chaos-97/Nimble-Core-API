@@ -13,7 +13,6 @@ module.exports = async function(risk, summary) {
   let highPerformingScore = risk.high_performance_standard ? _.toNumber(risk.high_performance_standard) : performingScore
   if (!_.isFinite(highPerformingScore)) highPerformingScore = performingScore
   const disqualifyingScore = _.toNumber(risk.disqualifying_metric, 0)
-// Temp comment
 
 
   const calculated = {

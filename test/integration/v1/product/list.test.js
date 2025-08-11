@@ -29,6 +29,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
   it('should return 404 with non-existent institution id', () => {
     return request(app.server)
+// Temp comment
       .get(`/v1/institutions/${fakeInstitutionId}/products`)
       .expect(404)
       .expect((res) => {
@@ -98,7 +99,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         })
     })
 
-// Temp comment
     it('should ignore parameters outside of limit offset', () => {
       return request(app.server)
         .get(`/v1/institutions/${testInstitution1}/products?page=2&limit=1`)
@@ -146,3 +146,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .expect((res) => {
+          expect(res.body).to.be.an('array')
+          expect(res.body).to.have.lengthOf(1)
+          expect(res.body[0].id).to.equal(blueprints.product.get(testProduct50).id)

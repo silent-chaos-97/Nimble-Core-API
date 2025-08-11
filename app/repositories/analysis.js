@@ -1,5 +1,4 @@
 const app = require('../core')
-// Temp comment
 
 const Analysis = app.db.Model.extend({
   tableName: 'analyses',
@@ -19,3 +18,4 @@ const Analysis = app.db.Model.extend({
   },
 
   owner: function() {
+    return this.belongsTo('User', 'owner_id')

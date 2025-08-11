@@ -5,6 +5,7 @@ const logger = app.logger.getLogger('app.services.contract.embed')
 
 async function embed(signerId, tx = app.db) {
   logger.info(`[embed] called for signer id [${signerId}]`)
+
   // fetch required data
   const signer = await app.services.signer.get(signerId, tx)
   const accountRequest = await app.services.accountRequest.get(signer.accountRequestId, tx)

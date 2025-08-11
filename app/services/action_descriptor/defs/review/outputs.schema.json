@@ -16,3 +16,4 @@
         "properties": {
           "user": {"type": "string", "stereotype": "user"},
           "response": {"type": "string", "stereotype": "enum", "enum": ["approve", "deny"]}
+        }

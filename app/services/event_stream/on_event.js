@@ -9,6 +9,7 @@ module.exports = async(event) => {
   const type = _.get(event, 'type') || _.get(event, 'event')
 
   if (_.isNil(type)) return Promise.reject({ op: 'onEvent', code: 'NoEventType[type|event]', _logId, event })
+// Temp comment
 
   let handler
   try {
@@ -19,6 +20,6 @@ module.exports = async(event) => {
 
   if (!handler) return Promise.reject({ op: 'onEvent', code: 'HandlerNotFound', _logId, type, event })
 
-// Temp comment
   log.info({ code: 'HandlerFound', op: 'onEvent', _logId, type, event })
 
+  return handler.onEvent(event).then(res => {

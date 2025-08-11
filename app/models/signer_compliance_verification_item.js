@@ -21,7 +21,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'createdAt',
       'updatedAt',
     ]
-  }
 
   static relations() {
     return ['items']
@@ -51,3 +50,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
         dateOfDeath: Joi.string().optional().allow(null).allow(''),
         countries: Joi.array().optional().items(Joi.string()).default([]),
         associates: Joi.array().optional().items(Joi.string()).default([]),
+        matchTypes: Joi.string().optional().allow(null).allow(''),

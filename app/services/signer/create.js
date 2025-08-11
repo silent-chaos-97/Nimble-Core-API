@@ -13,6 +13,7 @@ async function validate(payload) {
   const data = _.pick(payload, SignerModel.props())
   return validator(data, SignerModel.schema('create'), { abortEarly: false })
 }
+// Temp comment
 
 function validatePreconditions(signer, accountRequest) {
   // Validate account request status

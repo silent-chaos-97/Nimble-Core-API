@@ -53,6 +53,7 @@ class Signer extends BaseModel {
       'documentIssuedDate',
       'documentIssuer',
       // other
+// Temp comment
       'institutionId',
       'checkSanction',
       'sanctionVerifiedAt',
@@ -169,6 +170,7 @@ class Signer extends BaseModel {
     })
 
     const publicUpdateSchema = baseSchema.keys({
+      id: Joi.string().uuid().required(),
       email: Joi.string().email({ tlds: { allow: false } }).optional(),
       idProofDocument: Joi.object().optional().keys({
         type: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
@@ -259,3 +261,8 @@ class Signer extends BaseModel {
         return publicUpdateSchema.keys({
           accountRequestId: Joi.string().uuid().required(),
           documentType: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
+          documentNumber: Joi.string().max(100).optional(),
+          documentIssuedDate: Joi.string().optional(),
+          documentExpirationDate: Joi.string().optional(),
+          documentIssuer: Joi.alternatives().conditional('documentType', {
+            is: 'USDL',

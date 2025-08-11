@@ -1,4 +1,3 @@
-const fs = require('fs')
 
 const app = require('./core')
 const _ = require('lodash')
@@ -42,3 +41,4 @@ module.exports = async (listen = false) => {
   app.middleware(app.middlewares.sentry.errorHandler)
   // load the normal error handler
   app.middleware(app.middlewares.errorHandler)
+

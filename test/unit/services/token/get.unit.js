@@ -11,7 +11,6 @@ describe('app.services.token.get', () => {
 
   after(() => {
     clock.restore()
-  })
 
   beforeEach(() => {
     options = {
@@ -132,3 +131,5 @@ describe('app.services.token.get', () => {
   })
 
   it('should include public claim issued at in token', () => {
+    const token = target(options)
+    const actual = decode(token)

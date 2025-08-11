@@ -22,3 +22,4 @@ columns:
   
   - data: email
     title: Professional Email Address
+    slugify: id

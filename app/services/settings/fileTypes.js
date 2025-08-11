@@ -507,6 +507,7 @@ const fileTypes = [
   },
   {
     type: 'Disclosures',
+    name: 'Minimum Balance Requirements'
   },
   {
     type: 'Disclosures',
@@ -557,3 +558,13 @@ const fileTypes = [
     type: 'Applications',
     name: 'Loan Application - Guarantor - Business'
   },
+  {
+    type: 'Applications',
+    name: 'Loan Application - Guarantor - Individual'
+  },
+  {
+    type: 'Applications',
+    name: 'Loan Application - Modification - Business'
+  },
+  {
+    type: 'Applications',

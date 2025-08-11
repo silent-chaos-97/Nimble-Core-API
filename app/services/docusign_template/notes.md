@@ -128,7 +128,6 @@ After we create a envelope, we need to take the envelopeId and call new docusign
 It will return a url like this: https://demo.docusign.net/Signing/MTRedeem/v1/fe36d81e-1e10-48b9-ac55-d6962c2c02f6?slt=eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkI
 
 The url has a short time to live and can be opened only once.
-A recipient can sign the document and when he closes the docusign window we will get a callback reporting the state of the signature (see below).
 
 
 When the clientUserId property is present and its value is not null no email is sent to the recipient (only the envelope complete email gets sent once signing is done, but that is configurable). Basically the only thing you have to remember with embedding is that you set the clientUserId property for your recipients at the time they are added to the envelope, then when you are request a URL token you need to reference the same email, name, and clientUserId combination.
@@ -141,3 +140,6 @@ Example:
       name: this._fullName(signer),
       roleName: this.docusignRoles[`signer${position}`],
       recipientId: position,
+      clientUserId: "coco"+position.toString()
+    })
+```

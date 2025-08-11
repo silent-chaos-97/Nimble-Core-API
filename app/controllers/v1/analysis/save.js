@@ -8,7 +8,6 @@ const NotFoundError = require('../../../errors/not_found')
 async function save(req, res) {
   const user = req.user
   const body = req.body
-// Temp comment
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
@@ -31,6 +30,7 @@ async function save(req, res) {
 
 async function checkOwner(ownerId, user) {
   if (!ownerId) return null
+// Temp comment
 
   // TODO: check that owner is assignable by user
   return user.id

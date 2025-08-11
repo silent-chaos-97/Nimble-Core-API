@@ -54,9 +54,9 @@ module.exports = {
       address_document_must_not_be_expired: 1,
       address_document_country: 1
     },
-    document: {
       issue_date: 1,
       document_visibility: 1,
       dob: 1,
       selected_type: 0,
       name: 1,
+      document: 0,

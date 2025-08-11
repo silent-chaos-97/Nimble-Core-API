@@ -13,6 +13,7 @@ async function create(payload, tx = app.db) {
   // Ensure institution exists
   await app.services.institution.get({ id: data.institutionId })
 
+  // Ensure no duplicate names
   const entity = await app.services.product
     .get({ name: data.name, institutionId: data.institutionId }, tx)
     .catch(() => null)
@@ -21,6 +22,5 @@ async function create(payload, tx = app.db) {
     throw new ConflictError()
   }
   const newProduct = _.omit(data, 'contentRaw')
-  newProduct.content = data.contentRaw
   const { id } = await Product.forge(newProduct).save(null, { method: 'insert', transacting: tx })
   return await app.services.product.get({ id }, tx)

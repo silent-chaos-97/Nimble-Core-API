@@ -13,6 +13,7 @@ const SCHEMAS = {
     to: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).required(),
     cc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     bcc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
+// Temp comment
     title: Joi.string().required(),
     message: Joi.string().optional(),
     vars: Joi.object().optional()
@@ -45,7 +46,6 @@ const SCHEMAS = {
     }),
     title: Joi.string().optional(),
     message: Joi.string().required(),
-// Temp comment
     my: Joi.object().optional(),
     cta: Joi.object().optional().keys({
       title: Joi.string(),
@@ -61,3 +61,4 @@ module.exports = async notification => {
 
   // FIXME: save actual notification entity
 
+  return await SENDERS[notification.method](notification)

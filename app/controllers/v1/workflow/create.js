@@ -13,7 +13,6 @@ function create(req, res, next) {
 
   wkfl.userId = me.id
   wkfl.branchId = _.get(me, ['branch', 'id'], me.branchId)
-  wkfl.institutionId = _.get(me, ['institution', 'id'], me.institutionId)
   if (!wkfl.status) wkfl.status = Wkfl.statuses().Draft
   if (!wkfl.activities || _.isEmpty(wkfl.activities)) wkfl.activities = []
 

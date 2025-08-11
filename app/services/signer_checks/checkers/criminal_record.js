@@ -27,3 +27,4 @@ module.exports = {
     return {
       status: _.isEmpty(_.get(report, 'Subject', [])) ? SignerCheck.statuses().noMatch : SignerCheck.statuses().match,
       meta: { status: 'HIT', report }
+    }

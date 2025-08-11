@@ -33,3 +33,4 @@ global.should = chai.should()
 global.request = request
 global.helpers = helpers
 global.blueprints = blueprints
+global.seed = seeds

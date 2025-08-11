@@ -28,7 +28,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
-    if (operation === 'create') {
       return Joi.object().keys({
         name: Joi.string().required(),
         value: Joi.string().required(),

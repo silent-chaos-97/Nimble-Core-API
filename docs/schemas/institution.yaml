@@ -30,7 +30,6 @@ Institution:
       type: string
       title: Slug
       description: The institution email to CC approvals
-      example: someone@central-bank.com
     domain:
       type: string
       title: Domain
@@ -54,3 +53,4 @@ Institution:
       $ref: '#/components/schemas/Image'
     logo:
       type: string
+      format: byte

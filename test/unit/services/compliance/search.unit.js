@@ -44,13 +44,13 @@ describe('app.services.compliance.search', () => {
       const search = await app.services.compliance.search(entity)
       expect(search).to.have.ownProperty('search')
       scope.done()
+    })
 
     it('should return search result', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
         .reply(200, mocks.successResponse)
 
-      const entity = {
         firstName: 'Robert',
         middleName: 'Gabriel',
         lastName: 'Mugabe'
@@ -95,3 +95,4 @@ describe('app.services.compliance.search', () => {
       scope.done()
     })
 
+    it('should throws exception once bad request happen', async () => {

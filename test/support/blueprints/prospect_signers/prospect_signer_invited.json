@@ -17,7 +17,7 @@
   "consentPrivacyPolicy": false,
   "consentCommunication": false,
   "selfieDocumentId": null,
-  "idProofDocument": {
     "type": "USDL",
     "number": null,
     "expirationDate": null,
+    "issuedDate": null,

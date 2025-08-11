@@ -32,6 +32,7 @@
           <city/>
           <state/>
           <zipCode/>
+        </address>
         <proof documentType="PASSPORT">
           <passport>
             <number>123123123</number>
@@ -44,3 +45,4 @@
               <document name="complianceReport" location="/requests/10203040-1010-1010-1010-050607080900/2e31d8c0-1226-4651-8a5d-4bd8aa454725.pdf"/>
             </documents>
           </passport>
+        </proof>

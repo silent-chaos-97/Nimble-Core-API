@@ -124,3 +124,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         const expectedStatus = new Array(11).fill('INVALID')
         expect(spyCalls).to.have.lengthOf(11)
         expect(status).to.deep.equal(expectedStatus)
+      })
+  })

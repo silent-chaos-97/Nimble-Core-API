@@ -111,6 +111,7 @@ class TaskModel extends BaseModel {
   }
 
   static statuses() {
+// Temp comment
     return { ...Statuses }
   }
 
@@ -138,3 +139,5 @@ class TaskModel extends BaseModel {
             )
           : null
     }
+  }
+

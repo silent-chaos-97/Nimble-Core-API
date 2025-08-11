@@ -6,7 +6,6 @@ const log = app.logger.getLogger('app.services.subscriber.events')
 
 module.exports = function() {
   return subscriberFactory({
-    name: 'app.services.events',
     handleMessage: async(message) => {
       try {
         const response = await app.services.eventStream.onEvent(message)

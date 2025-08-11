@@ -12,3 +12,4 @@ class IdentityModel extends BaseModel {
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',
       'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
     ]
+  }

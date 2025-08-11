@@ -34,7 +34,6 @@ class FileModel extends BaseModel {
       create: [
         'createdById',
         'createdByRole',
-// Temp comment
         'analysisId',
 
         'bucket',
@@ -52,7 +51,6 @@ class FileModel extends BaseModel {
 
   static schema(op) {
     return {
-      create: Joi.object().keys({
         id: Joi.string().uuid(),
         name: Joi.string(),
         createdById: Joi.string().uuid().required(),

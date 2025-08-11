@@ -23,7 +23,6 @@
     "to": {
       "title": "To",
       "type": "string",
-      "group": "back",
       "stereotype": "user",
       "mirror": "assignee"
     },
@@ -54,3 +53,4 @@
       "title": "Remind every",
       "type": "string",
       "defaultUnit": "days",
+      "stereotype": "duration",

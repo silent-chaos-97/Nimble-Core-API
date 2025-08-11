@@ -57,7 +57,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
     })
   })
 
-
   it('should return 400 with invalid uuid as id', async () => {
     const id = 'invalid-uuid-here'
     return request(app.server)
@@ -176,6 +175,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
+
           const face = res.body.find(item => item.verification === 'Face Detection')
           const doc = res.body.find(item => item.verification === 'Name')
 
@@ -227,3 +227,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(res => {
+          const face = res.body.filter(item => item.verification === 'Face Detection')
+          const doc = res.body.filter(item => item.verification === 'Issued Date')
+
+          expect(res.body).to.have.lengthOf(12)

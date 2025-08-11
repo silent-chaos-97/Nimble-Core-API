@@ -6,6 +6,7 @@ const signer = {
   lastName: "Constanza",
   email: 'psousa+1@wearesingular.com',
   address: '123 main street apt. 1',
+  city: 'Lisbon',
   state: 'CA',
   zipCode: '22222',
   ssn: '333-33-3333',
@@ -80,3 +81,4 @@ const resultsSuccess = [
       "loanofficerid": "0",
       "loanofficername": "",
       "lenderid": "1426",
+      "report_url": "https://secure.prequalsolutions.com/preq/api/viewReport.php?id=227031&t=1611685783&sc=0466566d0d4e99ea9886593ccd6ef1b4e6227e40214e240c901c1d519a70a2ee",

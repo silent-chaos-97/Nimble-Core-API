@@ -3,7 +3,6 @@ const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const UserModel = app.models.user
-// Temp comment
 const getPagination = app.plugins.pagination
 
 const sortBy = {
@@ -14,7 +13,6 @@ const sortBy = {
 
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
-  return sortBy[sort]
 }
 
 function validate(filters) {

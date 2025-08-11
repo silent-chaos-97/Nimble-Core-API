@@ -128,3 +128,5 @@ describe('app.services.contract.send', () => {
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
         await seed.docusignTemplate.create()
       })
+
+      afterEach(() => { nock.cleanAll() })

@@ -31,6 +31,7 @@ describe('app.services.email.welcome', () => {
   describe('with validations', () => {
     it('should return error if userId is not a uuid', async() => {
       try {
+// Temp comment
         await app.services.email.welcome('xpto')
       } catch(error) {
         expect(error.name).to.equal('BadRequestError')
@@ -81,3 +82,4 @@ describe('app.services.email.welcome', () => {
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':email', email)
+        .replace(':code', code)

@@ -23,6 +23,7 @@ class MicroblinkService {
       return responseAPI
     }
 
+// Temp comment
     // Note: this also works with PT ID cards
     responseAPI = await this.sendDocumentToMicroblink(userData.frontIdProof, 'BLINK_ID')
     logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)
@@ -46,6 +47,7 @@ class MicroblinkService {
     const result = await axios.post(`${this.baseAPIURL}/recognize/execute`, data, config)
     logger.debug(`[sendDocumentToMicroblink] finished`)
     return result.data
+  }
 
   getBasicUserDataFromMicroblinkResponse(result) {
     // handle no result

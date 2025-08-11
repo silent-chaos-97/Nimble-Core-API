@@ -32,8 +32,10 @@ class SignerEmailVerification extends BaseModel {
       return Joi.object().keys({
         signerId: Joi.string().uuid().required(),
       })
+    }
 
     if (operation === 'update') {
       return Joi.object().keys({
         id: Joi.string().uuid().required(),
         signerId: Joi.string().uuid().required(),
+      })

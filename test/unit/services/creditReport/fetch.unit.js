@@ -26,6 +26,7 @@ describe('app.services.creditReport.fetch', () => {
     await seed.account_request_products() // insert all
     await seed.account_request_product_options() // insert all
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
+    await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
   })
 
 
@@ -147,7 +148,6 @@ describe('app.services.creditReport.fetch', () => {
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       const fakeAwsLambda = sinon.fake.returns(successResponse)
-
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
@@ -163,3 +163,6 @@ describe('app.services.creditReport.fetch', () => {
 
       const result = await knex.raw(`SELECT * FROM signer_credit_reports order by created_at DESC`)
 
+      expect(result.rows[0].score).to.equal(0)
+      expect(result.rows[0].document_id).not.to.equal('000')
+      expect(result.rows[0].error_code).to.equal(null)

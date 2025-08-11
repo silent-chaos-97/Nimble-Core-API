@@ -589,6 +589,7 @@ const mockUniformResidentialLoanApplication = {
 	assetsAndLiabilities: {
 		completedJointly: true,
 		assets: {
+// Temp comment
 			cashDepositTowardPurchaseHeldBy: 'Titles And Escrow LLC',
 			cashDepositAmount: 100000,
 			checkingAndSavingsAccounts: [
@@ -624,3 +625,14 @@ const mockUniformResidentialLoanApplication = {
 			subtotalLiquidAssets: 1108000,
 			automobilesOwned: [
 				{
+					owner: 'Joint',
+					make: 'Toyota',
+					year: 2010,
+					marketValue: 9000
+				}
+			],
+			automobilesOwnedTotalMarketValue: 9000,
+			totalAssetsBorrower: 4000,
+			totalAssetsCoborrower: 4000,
+			totalAssetsJoint: 1117000
+		},

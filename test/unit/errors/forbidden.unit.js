@@ -16,6 +16,7 @@ describe('ForbiddenError', () => {
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
   })
+// Temp comment
 
   describe('when instanced', () => {
     it('should have correct name', () => {
@@ -31,3 +32,4 @@ describe('ForbiddenError', () => {
     it('should have default message', () => {
       let error = new ErrorClass()
       expect(error.message).to.equal('The server understood the request but refuses to authorize it.')
+    })

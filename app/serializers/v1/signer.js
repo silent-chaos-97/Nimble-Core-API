@@ -41,6 +41,7 @@ const properties = [
   'checks'
 ]
 
+const imageProperties = ['selfie']
 
 
 function serializer(data) {

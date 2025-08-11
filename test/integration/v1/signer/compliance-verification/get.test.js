@@ -43,6 +43,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
+    })
 
 
 
@@ -88,3 +89,5 @@ describe('GET /signers/:id/compliance-verification', async () => {
       return request(app.server)
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/compliance-verifications`)
         .expect('Content-Type', /json/)
+        .set('Authorization', 'Bearer ' + token)
+        .expect(200)

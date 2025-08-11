@@ -25,7 +25,6 @@ describe('app.services.email.inviteReminder', () => {
   after(() => {
     clock.restore()
     sinon.restore()
-  })
 
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {
@@ -44,6 +43,7 @@ describe('app.services.email.inviteReminder', () => {
   describe('when calling with valid data', () => {
     beforeEach(async () => {
       await seed.institution.create()
+      await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
@@ -92,3 +92,5 @@ describe('app.services.email.inviteReminder', () => {
         .replace(':prospect_id', '2552ab85-08da-4bb5-be00-9e94d282d348')
         .replace(':signer_id', id)
         .replace(':invitedBy', invitedBy.firstName)
+        .replace(':token', 'xxxx')
+        .replace(':domain', institution.domain)

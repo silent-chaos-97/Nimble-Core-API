@@ -20,7 +20,6 @@ columns:
       value: id
       title: name
 
-  - data: indicator
     type: key-value-setting
     selectSettings:
       ref: financial_indicators

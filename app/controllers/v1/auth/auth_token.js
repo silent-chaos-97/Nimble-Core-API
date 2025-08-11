@@ -58,9 +58,7 @@
 //   }
 //
 //   if (!verification_code) {
-// Temp comment
 //     throw new Error('No Verification Code found')
-//   }
 //
 //   try {
 //     const hashedTokenList = await oneTimeTokenService.getUnused(id)

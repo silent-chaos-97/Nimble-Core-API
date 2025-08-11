@@ -143,3 +143,5 @@ describe('Email Plugin', () => {
     it('should exist', () => {
       expect(plugin.sendAccountRequestStatus).to.be.an('function')
     })
+
+    describe('sending approved', () => {

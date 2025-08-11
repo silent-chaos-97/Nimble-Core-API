@@ -6,6 +6,7 @@ const properties = [
   'name',
   'domain',
   'templateApprove',
+  'templateDecline',
   'routingNumber',
   'logoUri',
   'backgroundImageUri',

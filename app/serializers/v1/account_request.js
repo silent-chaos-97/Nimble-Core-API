@@ -10,7 +10,6 @@ const properties = [
   'branchId',
   'signers',
   'createdAt',
-  'statusUpdatedBy',
   'statusUpdatedAt',
   'statusEmailSubject',
   'statusEmailBody',
@@ -18,6 +17,7 @@ const properties = [
   'contractDocumentEnvelopeStatus',
   'contractDocumentEnvelopeStatusUpdatedAt',
   'referrers', // FIXME: deprecated; exits for backward compatibility
+  'referredBy',
   'productConfigurations',
   'branch'
 ]

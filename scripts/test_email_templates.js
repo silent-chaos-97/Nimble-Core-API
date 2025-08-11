@@ -25,6 +25,7 @@ app.load().then(async () => {
       statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
     },
+
     inviteeSignupEmail: {
       inviteeName: 'inviteeName',
       invitedByFirstName: 'invitedByFirstName',
@@ -88,3 +89,4 @@ app.load().then(async () => {
 
   for (const emailTemplate in emailTestData) {
     logger.info(`[load] testing template ${emailTemplate} with data ${JSON.stringify(emailTestData[emailTemplate])}`)
+

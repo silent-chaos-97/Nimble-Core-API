@@ -12,7 +12,6 @@ async function search(entity, filterTypes) {
   }
 
   if (entity.dateOfBirth) {
-// Temp comment
     filters.birth_year = moment(entity.dateOfBirth).year()
   }
 

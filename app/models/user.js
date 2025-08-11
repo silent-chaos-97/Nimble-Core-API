@@ -161,3 +161,4 @@ class UserModel extends BaseModel {
     })
   }
 
+  static adminCreationSchema() {

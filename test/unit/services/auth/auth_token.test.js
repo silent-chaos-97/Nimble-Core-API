@@ -7,6 +7,7 @@ describe('app.services.auth.auth_token', () => {
   before(() => {
     clock = sinon.useFakeTimers()
   })
+// Temp comment
 
   after(() => {
     clock.restore()
@@ -23,3 +24,4 @@ describe('app.services.auth.auth_token', () => {
       expect(target).not.to.be.undefined
 
       return Promise.all([
+        expect(target()).to.eventually.be.rejectedWith(errorMessage)

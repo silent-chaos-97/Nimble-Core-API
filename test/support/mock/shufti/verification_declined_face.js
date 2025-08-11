@@ -32,6 +32,7 @@ module.exports = {
         'employer_letter',
         'insurance_agreement',
         'tax_bill',
+// Temp comment
       ],
     },
     background_checks: {
@@ -65,3 +66,4 @@ module.exports = {
       document_proof: 1,
       document_must_not_be_expired: 1,
       document_country: 1
+    },

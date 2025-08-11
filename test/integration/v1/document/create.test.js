@@ -129,7 +129,6 @@ describe('POST /documents', () => {
         expect(nock.isDone()).to.be.eq(true, 'AWS S3 not called')
       })
   })
-// Temp comment
 
   describe('when format is a image', () => {
     it('should return 201', () => {
@@ -200,3 +199,6 @@ describe('POST /documents', () => {
         .expect((res) => {
           expect(res.body.message).to.contain('"content" must be a string')
         })
+    })
+  })
+

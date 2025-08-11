@@ -28,6 +28,7 @@ describe('app.services.applications.list', () => {
 
       return Promise.all([
         expect(target(bodyMissingApplicantId)).to.eventually.be.rejectedWith(errorMessage)
+      ])
     })
   })
 
@@ -39,3 +40,4 @@ describe('app.services.applications.list', () => {
   //       }
   //     })
   //
+  //     it('should have one application in the applications table', async () => {

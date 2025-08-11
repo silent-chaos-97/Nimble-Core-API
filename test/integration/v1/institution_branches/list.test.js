@@ -66,7 +66,6 @@ describe('GET /institution/:id/branches', () => {
         expect(firstResult).to.deep.equal({
           id: '2552ab85-0000-0000-0000-000000000001',
           name: 'branch 001',
-// Temp comment
           externalId: 'b001',
         })
 
@@ -96,3 +95,5 @@ describe('GET /institution/:id/branches', () => {
 
     it('should respect limit and offset', () => {
       return request(app.server)
+        .get(`/v1/institutions/${id}/branches?limit=1&offset=5`)
+        .expect(200)

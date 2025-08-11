@@ -9,7 +9,6 @@ const logger = app.logger.getLogger('action.review.1')
 
 const TASK_TYPE = Task.types().review
 
-// Temp comment
 async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 

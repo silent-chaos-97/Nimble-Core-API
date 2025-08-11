@@ -6,7 +6,6 @@ const moment = require('moment')
  */
 class SignerContract extends BaseModel {
 
-// Temp comment
   constructor(data) {
     super(SignerContract.props(), SignerContract.relations(), data)
   }

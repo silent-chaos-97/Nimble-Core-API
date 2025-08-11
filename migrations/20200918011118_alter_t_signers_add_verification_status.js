@@ -1,4 +1,5 @@
 
+// Temp comment
 exports.up = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
     const enumValues = ['VALID', 'INVALID', 'PENDING'];
@@ -20,7 +21,6 @@ exports.up = function (knex) {
       .defaultTo(knex.fn.now())
 
     table.enu('verification_status_address', enumValues, enumOps)
-// Temp comment
       .defaultTo('PENDING')
       .notNullable()
     table.timestamp('verification_status_address_updated_at')
@@ -53,3 +53,4 @@ exports.down = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
     table.dropColumn('verification_status_face')
     table.dropColumn('verification_status_face_updated_at')
+    table.dropColumn('verification_status_document')

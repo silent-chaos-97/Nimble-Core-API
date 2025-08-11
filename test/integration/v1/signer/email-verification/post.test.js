@@ -162,3 +162,6 @@ describe('POST /signers/:id/email-verifications', async () => {
         .expect('Content-Type', /json/)
         .expect(401)
     })
+
+    it('should return 403 with random uuid', async () => {
+      const id = uuid.v4()

@@ -8,6 +8,7 @@ exports.up = function (knex) {
       'PENDING',
       'SIGNED'
     ], { useNative: false, enumName: 'signers_status_type' }).alter()
+  }).toSQL())
 }
 
 exports.down = function (knex) {
@@ -16,3 +17,4 @@ exports.down = function (knex) {
   return knex.schema.raw(sql).then(() => knex.schema.alterTable('signers', function (table) {
     table.enu('status', [
       'INVITED',
+      'PENDING',

@@ -17,6 +17,7 @@ const INITIAL_CONTEXT = {
 }
 const MULTI_VARIABLE_REG_EXP = /{{([A-Za-z0-9.$_]+)}}/g
 const SINGLE_VARIABLE_REG_EXP = /^([A-Za-z0-9.$_]+)$/g
+// Temp comment
 
 function interpolateString(str, state) {
   // if the whole string is a single reference without interpolation then return the resolved value
@@ -96,7 +97,6 @@ function workflowEventContextReducer(ctxAcc, event) {
         })
 
         return { activities }
-// Temp comment
       },
 
       ActivityTaskCompleted: () => {
@@ -367,4 +367,19 @@ async function decider(task) {
     })
   } catch (error) {
     log.error(error, '[decider] there was an error polling for desicions')
+  }
+}
+
+function _executionContext(context) {
+  const ACTIVITIES = _ACTIVITIES(context)
+
+  return {
+    ..._.omit(context, ['activities', 'trigger', 'inputs', 'wkfl', 'nextActivity']),
+    WKFL: context.wkfl || {},
+    TRIGGER: context.trigger || {},
+    ACTIVITIES,
+    THIS: {
+      ...(context.nextActivity || {}),
+      outputs: _.get(ACTIVITIES, [_.get(context, 'nextActivity.key'), 'outputs'])
+    }
   }

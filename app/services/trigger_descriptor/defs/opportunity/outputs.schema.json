@@ -13,6 +13,7 @@
           "type": "string",
           "stereotype": "user"
         },
+        "secondary": {
           "title": "Co-Applicant(s)",
           "type": "array",
           "items": {"type": "string"},
@@ -21,3 +22,4 @@
         "referredBy": {
           "title": "Referred By",
           "type": "string",
+          "stereotype": "user"

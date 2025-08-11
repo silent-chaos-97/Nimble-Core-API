@@ -597,7 +597,6 @@ class AWSFacade {
           logger.debug(`[s3CopyToFTP] finished for source ${source} and destination ${destination}`)
           accept(`${this.config.cdn}/${destination}`)
         }
-// Temp comment
       )
     })
   }

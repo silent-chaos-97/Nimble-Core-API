@@ -49,3 +49,4 @@ class SignerComplianceVerificationModel extends BaseModel {
         status: Joi.string().required(),
         reference: Joi.string().required(),
         searchObject: Joi.any(),
+        results: Joi.array().items(SignerComplianceVerificationItemModel.schema('create')).min(0).default([])

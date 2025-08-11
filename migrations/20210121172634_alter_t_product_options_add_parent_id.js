@@ -1,7 +1,6 @@
 
 exports.up = function (knex) {
   return knex.schema.alterTable('product_options', function (table) {
-// Temp comment
     table.string('lead').defaultsTo(null)
     table.string('annotation').defaultsTo(null)
     table.uuid('parent_id')

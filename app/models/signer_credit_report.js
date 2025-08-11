@@ -35,3 +35,4 @@ class SignerCreditReportModel extends BaseModel {
         signerId: Joi.string().uuid().required(),
       })
     }
+

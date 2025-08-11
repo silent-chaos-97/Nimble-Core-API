@@ -8,6 +8,7 @@ class BsaRiskResultModel extends BaseModel {
 
   static props() {
     return ['accountRequestId', 'institutionId', 'questionId', 'position', 'answer', 'version', 'createdAt', 'context']
+  }
 
   static relations() {
     return ['accountRequest', 'institution']
@@ -22,3 +23,4 @@ class BsaRiskResultModel extends BaseModel {
           answer: Joi.string().required().allow(null),
         })
       )
+    }

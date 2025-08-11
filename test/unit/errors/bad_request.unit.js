@@ -15,7 +15,6 @@ describe('BadRequestError', () => {
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
-  })
 
   describe('when instanced', () => {
     it('should have correct name', () => {
@@ -33,3 +32,4 @@ describe('BadRequestError', () => {
       expect(error.message).to.equal(
         'The server cannot or will not process the request due to something that is perceived to be a client error'
       )
+    })

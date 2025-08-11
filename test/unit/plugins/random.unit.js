@@ -54,3 +54,4 @@ describe('Random Plugin', () => {
     })
 
     it('should return 6 char string', () => {
+      let code = rand.generateRecoveryCode()

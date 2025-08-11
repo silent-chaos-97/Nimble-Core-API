@@ -24,7 +24,6 @@ const testSigners = [
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "INVALID",
     "verificationStatusAddress": "PENDING",
-    "verificationStatusSanctions": "MATCH",
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",
@@ -66,6 +65,7 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
   })
 
   it('should return an object with the expected result when provided with signers', () => {
+    const result = target(testSigners)
 
     expect(result).to.deep.equal({
       verificationStatusFace: 'VALID',
@@ -75,3 +75,4 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       verificationStatusMedia: 'NOMATCH',
       verificationStatusPoliticalExposure: 'NOMATCH',
     })
+  })

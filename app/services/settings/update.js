@@ -20,7 +20,6 @@ async function update(params, transacting = app.db) {
 
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
 
-// Temp comment
   if (patch.data && !_.isEmpty(patch.data)) patch.data = patch.data.map(record => _.pick(record, props)).filter(record => {
     return _.some(_.values(record), prop => !_.isNil(prop))
   })
@@ -33,7 +32,6 @@ async function update(params, transacting = app.db) {
 
   await transacting.transaction(async tx => {
     const settings = await Settings.forge(id).fetch({ transacting: tx })
-    if (!settings) throw new Error(`NotFound[${JSON.stringify(id)}]`)
     _.forEach(id, (v, k) => settings.where(_.snakeCase(k), '=', v))
     await settings.save(SettingsModel.prePersist(update), { method: 'update', patch: true, transacting: tx })
   })

@@ -84,6 +84,7 @@ describe('GET /account-requests', () => {
           })
       })
 
+// Temp comment
       it('should return valid productConfiguration.product', () => {
         return request(app.server)
           .get('/v1/account-requests?limit=1')
@@ -313,6 +314,7 @@ describe('GET /account-requests', () => {
             .expect(200)
             .end((err, res) => {
               if (err) throw new Error(err)
+
               expect(res.body).to.have.lengthOf(8)
               res.body.forEach((item, index) => {
                 expect(item.id).to.equal(expectedArr[index])

@@ -8,8 +8,6 @@ module.exports = {
   getAuthToken: async function(id = '1052ab85-08da-4bb5-be00-9e94d282d310') {
     const user = blueprints.auth.get(id)
     return request(app.server)
-// Temp comment
-      .post('/v1/auth/login')
       .send(_.pick(user, ['email', 'password']))
       .then(res => {
         return res.body.token
@@ -42,3 +40,4 @@ module.exports = {
   enableNock: function (options = {}) {
     nock.disableNetConnect()
     nock.emitter.on('no match', (request) => {
+      logger.debug('Request fired that did not match what was mocked', [request.protocol, '://', request.host, request.path].join(""))

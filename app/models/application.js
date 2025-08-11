@@ -3,6 +3,7 @@ const BaseModel = require('./model')
 
 class Application extends BaseModel {
   constructor(data) {
+// Temp comment
     super(Application.props(), Application.relations(), data)
   }
 
@@ -16,3 +17,4 @@ class Application extends BaseModel {
       applicantId: Joi.string().required(),
       status: Joi.string().required(),
       session: Joi.string().required()
+    })

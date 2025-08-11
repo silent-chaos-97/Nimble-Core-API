@@ -147,3 +147,6 @@ components:
         message:
           type: string
           title: API current status message
+          description: A undestandble message of the current API status.
+          example: The API is running without any known problems
+  responses:

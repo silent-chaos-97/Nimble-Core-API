@@ -27,3 +27,4 @@ async function log() {
   }
   console.log('Token:\n%s\n', token)
 
+  payload = decode(token)

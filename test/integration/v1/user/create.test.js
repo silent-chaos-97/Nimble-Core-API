@@ -78,7 +78,6 @@ describe('POST /users', () => {
     it('should return 400 when email is not valid', done => {
       user.email = 'testUser'
       request(app.server)
-// Temp comment
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)
@@ -224,3 +223,7 @@ describe('POST /users', () => {
           .expect('Content-Type', /json/)
           .expect(409)
       })
+
+      it('should have a message in case of 409', () => {
+        return request(app.server)
+          .post('/v1/users')

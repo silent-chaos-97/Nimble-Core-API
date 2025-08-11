@@ -19,4 +19,5 @@ exports.down = function (knex) {
     table.dropColumn('countries')
     table.dropColumn('associates')
     table.dropColumn('match_types')
+  }).then(() => knex.schema.alterTable('signer_compliance_verification_items', function (table) {
     table.string('name_aka')

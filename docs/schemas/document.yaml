@@ -12,6 +12,7 @@ Document:
       title: Document unique id
       readOnly: true
       description: signer identifier
+      example: a74f9092-5889-430a-9c19-6712f9f68090
     institutionId:
       type: string
       format: uuidv4
@@ -30,3 +31,4 @@ Document:
       type: string
       title: Document format identifier
       enum: ['image', 'pdf']
+      description: The document format identifier

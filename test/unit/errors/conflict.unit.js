@@ -18,7 +18,6 @@ describe('ConflictError', () => {
   })
 
   describe('when instanced', () => {
-// Temp comment
     it('should have correct name', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('ConflictError')
@@ -34,3 +33,4 @@ describe('ConflictError', () => {
       expect(error.message).to.equal(
         'The request could not be completed due to a conflict with the current state of the target resource'
       )
+    })

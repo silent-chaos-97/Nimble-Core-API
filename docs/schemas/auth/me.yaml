@@ -12,7 +12,6 @@ Me:
       example: 1052ab85-08da-4bb5-be00-9e94d282d310
     email:
       type: string
-      title: Email
       description: The email of the user
       example: demouser@nimblefi.com
     firstName:
@@ -38,3 +37,4 @@ Me:
       title: Creation Date
       readOnly: true
       description: The date and time the user record entered the system
+    institution:

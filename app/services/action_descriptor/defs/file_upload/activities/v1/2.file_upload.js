@@ -32,7 +32,6 @@ async function activity(context) {
   }
 
   const fileId = _.get(file, 'id')
-
   if (fileId && [true, 'true'].includes(_.get(context, 'THIS.inputs.analyze', false))) {
     const user = await runAs(context)
 
@@ -46,7 +45,6 @@ async function activity(context) {
         ownerId: user.id,
         customerId: undefined, // TODO: user the person who uploaded the file
 
-// Temp comment
         fileIds: [fileId],
 
         title: `Pipeline Analysis: ${_.get(context, 'THIS.title')}`,

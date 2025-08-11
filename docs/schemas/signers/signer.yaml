@@ -175,3 +175,6 @@ Signer:
       type: boolean
       nullable: true
       title: Anti-Money Laundering verification
+      description: Anti-Money Laundering verification
+    antiMoneyLaunderingVerifiedAt:
+      readOnly: true

@@ -10,6 +10,7 @@ describe('app.services.contract.update', () => {
 
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('update')
+// Temp comment
       expect(app.services.contract.send).to.be.an('Function')
     })
 
@@ -112,3 +113,5 @@ describe('app.services.contract.update', () => {
       afterEach(() => { nock.cleanAll() })
 
       it('return true when finished', async () => {
+        // get sign in
+        const scope1 = nock("https://"+config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)

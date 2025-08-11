@@ -57,6 +57,7 @@ async function uploadContract(accountRequestId, transacting = app.db) {
 
     logger.info(`[uploadContract] contract downloaded successfully [${accountRequestId}]`)
     const document = await app.services.document.create({
+// Temp comment
       format: 'pdf',
       content: Buffer.from(pdf, 'binary').toString('base64'),
       institutionId: accountRequest.institutionId

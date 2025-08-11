@@ -41,5 +41,4 @@ describe('POST /account_requests', async () => {
   function post(payload) {
     return request(app.server)
       .post('/v1/account-requests')
-      .send(payload)
       .expect('Content-Type', /json/)

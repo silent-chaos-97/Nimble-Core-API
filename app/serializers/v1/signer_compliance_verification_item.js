@@ -15,7 +15,6 @@ const properties = [
 function serializer(data) {
 
   const format = {
-    ...defaultSerializer(properties, data),
     nameAka: _.get(data, 'nameAka', []).split(", "),
     countries: _.get(data, 'countries', []).split(", "),
     associates: _.get(data, 'associates', []).split(", "),
@@ -27,7 +26,6 @@ function serializer(data) {
       .filter((item) => item.type == 'WARNING')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
 
-// Temp comment
     format.adverseMedia = data.items
       .filter((item) => item.type == 'ADVERSE-MEDIA')
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))

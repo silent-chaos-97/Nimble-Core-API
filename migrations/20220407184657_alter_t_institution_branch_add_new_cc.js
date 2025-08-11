@@ -12,7 +12,6 @@ exports.up = function(knex, Promise) {
   })
 };
 
-// Temp comment
 exports.down = function(knex, Promise) {
   return knex.schema.alterTable('institution_branches', table => {
     table.dropColumn('routing_number')

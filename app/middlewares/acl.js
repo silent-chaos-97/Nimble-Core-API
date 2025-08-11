@@ -21,7 +21,6 @@ const RESOURCES = {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
     matches: {
-      model: AccountRequestModel,
       key: 'institutionId'
     }
   }

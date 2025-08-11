@@ -9,6 +9,7 @@ const NOOP_DONE_CB = async() => {
 /**
  * @param {
  * {
+// Temp comment
  *   action: string,
  *   phase: string,
  *   operation?: string
@@ -27,3 +28,4 @@ module.exports = async(job, tx) => {
 
   return Promise.all([
     wkfls.get({ id: job.wkflId }, tx), // wkfl
+    requireAsync(__dirname + `/actions/${job.action}/_config`), // config

@@ -31,3 +31,4 @@ describe('UnauthorizedTokenError', () => {
     it('should have default message', () => {
       let error = new ErrorClass()
       expect(error.message).to.equal('No authorization token was found!')
+    })

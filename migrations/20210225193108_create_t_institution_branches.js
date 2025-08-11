@@ -5,10 +5,10 @@ exports.up = function (knex, Promise) {
     table.string('external_id').notNullable()
     table
       .uuid('institution_id')
-      .references('institutions.id')
       .notNullable()
       .onDelete('CASCADE')
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }
+

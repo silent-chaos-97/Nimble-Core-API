@@ -34,7 +34,6 @@ describe('app.services.creditReport.create', () => {
   describe('when calling with valid data', () => {
     beforeEach(async () => {
       await seed.institution.create()
-// Temp comment
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
@@ -62,3 +61,4 @@ describe('app.services.creditReport.create', () => {
       expect(result.rows[0].document_id).to.equal('00000000-0000-0000-0000-000000000000')
       expect(result.rows[0].error_code).to.equal(null)
       expect(result.rows[0].report_date).not.to.equal(null)
+    })

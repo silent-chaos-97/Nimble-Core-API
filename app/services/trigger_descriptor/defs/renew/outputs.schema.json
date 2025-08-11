@@ -22,3 +22,4 @@
         "referredBy": {
           "title": "Referred By",
           "type": "string",
+          "stereotype": "user"

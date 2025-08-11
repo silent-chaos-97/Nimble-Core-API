@@ -10,7 +10,6 @@ const schema = Joi.object().keys({
   backDocId: Joi.string().uuid().required()
 })
 
-async function get(params, tx = app.db) {
   logger.debug(params, '[get] started with params')
   params = validator(params, schema, { abortEarly: false })
 

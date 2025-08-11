@@ -11,7 +11,6 @@ const sortBy = {
   id: 'products.id ASC',
   '-id': 'products.id DESC',
   name: 'products.name ASC',
-  '-name': 'products.name DESC',
 }
 
 function getSqlSort(sort) {

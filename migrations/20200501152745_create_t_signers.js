@@ -15,7 +15,6 @@ exports.up = function(knex) {
 
     table.string('first_name')
     table.string('middle_name')
-    table.string('last_name')
     table.string('address')
     table.string('city')
     table.string('state')
@@ -33,6 +32,7 @@ exports.up = function(knex) {
     table.timestamp('document_expiration_date')
 
     table.jsonb('identity_verification_result').default(null)
+
     table.string('front_drivers_license_uri')
     table.string('back_drivers_license_uri')
     table.string('selfie_uri')
@@ -53,3 +53,4 @@ exports.up = function(knex) {
     table.boolean('check_anti_money_laundering')
     table.timestamp('anti_money_laundering_verified_at')
 
+    table.string('contract_document_signer_status')

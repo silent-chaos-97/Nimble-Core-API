@@ -5,7 +5,7 @@ describe('PUT /me', () => {
   function doRequestAndExpect(obj, code, fn) {
     request(app.server)
       .put('/v1/me')
-      .set('Authorization', 'Bearer ' + token)
+      .send(obj)
       .expect('Content-Type', /json/)
       .expect(code)
       .end(fn)

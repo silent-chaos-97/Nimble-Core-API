@@ -89,3 +89,5 @@ describe('GET /users/:id', () => {
           if (err) throw new Error(err)
 
           const user = res.body
+          const expected = blueprints.user.get('1052ab85-08da-4bb5-be00-9e94d282d310')
+

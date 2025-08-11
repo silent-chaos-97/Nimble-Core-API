@@ -27,3 +27,4 @@ resource "aws_security_group" "vpc" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  egress {

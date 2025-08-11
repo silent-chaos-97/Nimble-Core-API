@@ -1,5 +1,4 @@
 module.exports = {
-
   /**
    * @param {
    * {
@@ -22,3 +21,4 @@ module.exports = {
    *   config: object,
    *   job: {wkflId: string, action: string, phase: string, operation?: string, body: object},
    *   next: {wkflId: string, action: string, phase: string, operation?: string, body: object}
+   * }

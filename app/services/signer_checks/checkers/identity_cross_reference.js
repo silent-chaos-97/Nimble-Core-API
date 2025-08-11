@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../../core')
 const SignerCheck = app.models.signerCheck
 const microbilt = require('../../../utils/microbilt')
-const log = app.logger.getLogger('signer_checks.identity_cross_reference')
 
 module.exports = {
   id: 'identity_cross_reference',
@@ -10,7 +9,6 @@ module.exports = {
   order: 1,
   check: async(signer) => {
     const body = microbilt.signerPersonInfo(signer)
-// Temp comment
 
     log.info({ op: 'identity_cross_reference', phase: 'request', body, signer }) // FIXME: PII
 
@@ -27,3 +25,4 @@ module.exports = {
     return {
       status: score >= 700 ? SignerCheck.statuses().valid : SignerCheck.statuses().invalid,
       meta: { status: 'HIT', report }
+    }

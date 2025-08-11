@@ -49,7 +49,6 @@ describe('GET /signers/:id/contract', async () => {
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e902')
     // invited status and secondary
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
-    // invited status and primary role
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')
 
     // fake set a contract id
@@ -151,3 +150,6 @@ describe('GET /signers/:id/contract', async () => {
           )
 
           const expectedSignerId = FakeCreateRecipientView.firstCall.args[1].id
+          const expectedAccountRequestId = FakeCreateRecipientView.firstCall.args[1].accountRequestId
+
+          // expect correct IDs

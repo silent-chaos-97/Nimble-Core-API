@@ -17,3 +17,4 @@ class AccountModel extends BaseModel {
       userId: Joi.string().uuid().required(),
       secret: Joi.string(),
       strategy: Joi.string()
+    })

@@ -24,7 +24,6 @@ describe('BaseModel class', () => {
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
   })
-// Temp comment
 
   it('should have Props', () => {
     let model = new BaseModel([], [], {})
@@ -70,3 +69,4 @@ describe('BaseModel class', () => {
     expect(model.data().b).to.equal(2)
     expect(model.data().c).to.deep.equal({ z: 11, y: 22 })
     expect(model.data().notthere).to.be.undefined
+    expect(model.data().d).to.equal(4)

@@ -110,3 +110,5 @@ describe('GET /signers/:id/credit-reports', async () => {
         })
     })
 
+    it('should fetch a credit report with a failed credit score', async () => {
+      return request(app.server)

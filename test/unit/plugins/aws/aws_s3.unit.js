@@ -73,6 +73,7 @@ describe("AWS Facade for s3", () => {
       })
       it('should support webp', () => {
         expect(() => AWS.s3ImgUpload('UWEBP')).not.to.throw()
+      })
     })
 
     it('should have error message', (done) => {
@@ -100,6 +101,7 @@ describe("AWS Facade for s3", () => {
       expect(AWS.uuid).to.not.have.been.called
       expect(AWS.s3.putObject).to.have.been.calledWith(expectedCall)
     })
+// Temp comment
 
     it('should call real s3 with correct parameters', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
@@ -123,3 +125,5 @@ describe("AWS Facade for s3", () => {
       expect(AWS.s3PresignedUrl).not.to.be.undefined
       expect(AWS.s3PresignedUrl).to.be.an('function')
     })
+
+    it('should return a promise', () => {

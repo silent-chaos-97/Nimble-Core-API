@@ -159,3 +159,8 @@ async function mockExternalServices(mockData, bodyFn) {
     }
     service.scope.done()
   })
+}
+
+function disableNet() {
+  nock.disableNetConnect()
+  nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)

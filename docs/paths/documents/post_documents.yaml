@@ -16,3 +16,4 @@
       '201':
         description: Document object uploaded
         content:
+          application/json:

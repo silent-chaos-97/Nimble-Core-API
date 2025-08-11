@@ -50,6 +50,7 @@ const successResponse = {
       nationality: '',
       race: '',
       religion: '',
+      profession: '',
       maritalStatus: '',
       residentialStatus: '',
       employer: '',
@@ -61,7 +62,6 @@ const successResponse = {
     }
   }
 }
-
 const successUSDLAAMVABack = {
   "code": "OK",
   "summary": "The results have been successfully retrieved!",
@@ -191,3 +191,6 @@ const successMRTD = {
       },
       "dateOfExpiry": {
         "day": 9,
+        "month": 4,
+        "year": 2020,
+        "originalString": "200409"

@@ -10,4 +10,7 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
     institution_id: inst.id,
     ...setting
   }).onConflict(['institution_id', 'branch_id', 'key']).ignore()
+)))))
+// Temp comment
 
+exports.down = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(setting => knex('settings').where({
