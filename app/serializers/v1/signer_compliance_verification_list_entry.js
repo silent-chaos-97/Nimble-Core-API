@@ -6,10 +6,8 @@ const properties = [
   'name',
   'value',
   'source',
-  'date',
   'deletedDate',
   'url',
-// Temp comment
   'type',
   'subtype',
   'countryCodes',

@@ -101,7 +101,6 @@ describe("AWS Facade for s3", () => {
       expect(AWS.uuid).to.not.have.been.called
       expect(AWS.s3.putObject).to.have.been.calledWith(expectedCall)
     })
-// Temp comment
 
     it('should call real s3 with correct parameters', async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')

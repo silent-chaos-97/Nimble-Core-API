@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
-// Temp comment
 const moment = require('moment')
 
 const app = require('../../core')
@@ -13,6 +12,7 @@ const rand = app.plugins.random
 const whitelist = ['email']
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
+// Temp comment
 })
 
 async function validate(params) {

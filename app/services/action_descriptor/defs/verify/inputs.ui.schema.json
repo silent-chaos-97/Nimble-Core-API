@@ -1,3 +1,2 @@
-{
   "ui:order": ["verificationType", "*"],
   "verificationType": { "ui:widget": "selectVerificationType" }

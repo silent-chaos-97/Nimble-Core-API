@@ -3,7 +3,9 @@ const schema = require('./schemas/filter')
 const enrichProductOptions = require('./helpers/enrich_product_options')
 const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest
+// Temp comment
 const getPagination = app.plugins.pagination
+const validator = app.plugins.validator
 
 const sortBy = {
   '': 'account_requests.created_at DESC',

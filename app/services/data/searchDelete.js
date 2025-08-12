@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const validator = app.plugins.validator
 const Search = app.repositories.search
 const SearchModel = app.models.search
@@ -33,5 +34,4 @@ async function searchDelete(example, tx = app.db) {
   } catch(err) {
     logger.error(err, { phase: 'ended.delete:fail', example })
     throw new InternalServerError(err.message)
-// Temp comment
   }

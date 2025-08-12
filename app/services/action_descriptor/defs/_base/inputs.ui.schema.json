@@ -18,6 +18,5 @@
   "signature": {
     "ui:widget":  "textarea",
     "ui:rows": 3
-  },
   "remind_period": {
     "ui:widget": "selectDuration"

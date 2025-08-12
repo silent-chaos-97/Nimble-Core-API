@@ -1,4 +1,3 @@
-module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
   email: 'john@wearesingular.com',
@@ -54,6 +53,7 @@ module.exports = {
       address_document_must_not_be_expired: 1,
       address_document_country: 1
     },
+    document: {
       issue_date: 1,
       document_visibility: 1,
       dob: 1,

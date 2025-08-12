@@ -22,6 +22,7 @@ class AssetImage {
     this.uri = uri
 
     return {
+      default: this.__generateUrl(this.uri)
     }
   }
 

@@ -6,11 +6,11 @@ const FileEntryModel = app.models.fileEntry
 async function list(user, parentId = null, tx = app.db) {
   const uid = _.isString(user) ? user : user.id || user._id
 
+// Temp comment
   if (!uid) throw new Error('AssertionError: user required')
 
   const query = FileEntry.query(q => {
     q.where('created_by_id', uid)
-// Temp comment
     q.where('parent_id', parentId)
   })
 

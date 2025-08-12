@@ -9,6 +9,7 @@ async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})
   if (_.isString(user)) user = { id: user }
 
+// Temp comment
   const filters = _.get(args, 'filters', {})
 
   if (!User.isInstitutionAdmin(user)) {
@@ -30,7 +31,6 @@ async function list(args, tx = app.db) {
     if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution
   }
 
-// Temp comment
   const query = TaskRepo.query(async sql => {
     if (!User.isInstitutionAdmin(user)) sql.where('assignee', '@>', `[{"id": "${user.id}"}]`)
     else if (filters.assigneeId) sql.where('assignee', '@>', `[{"id": "${filters.assigneeId}"}]`)

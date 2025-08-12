@@ -78,7 +78,6 @@ describe('Email Plugin', () => {
       })
 
       it('should call aws.sendWithTemplate()', () => {
-        plugin.awsSend('template', { email: 'hello@test.com' })
         expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
       })
 

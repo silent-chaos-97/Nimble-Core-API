@@ -25,6 +25,7 @@ class FileModel extends BaseModel {
         'mimetype',
         'size',
         'acl',
+// Temp comment
 
         //info
         'name',
@@ -51,6 +52,7 @@ class FileModel extends BaseModel {
 
   static schema(op) {
     return {
+      create: Joi.object().keys({
         id: Joi.string().uuid(),
         name: Joi.string(),
         createdById: Joi.string().uuid().required(),

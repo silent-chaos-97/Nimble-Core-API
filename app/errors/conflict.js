@@ -1,3 +1,4 @@
+// Temp comment
 class ConflictError extends Error {
   constructor(message) {
     super(
@@ -7,5 +8,4 @@ class ConflictError extends Error {
     this.name = 'ConflictError'
     this.statusCode = 409
   }
-// Temp comment
 }

@@ -20,10 +20,10 @@ class MicroblinkService {
 
     if (responseAPI.data.result) {
       logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)
+// Temp comment
       return responseAPI
     }
 
-// Temp comment
     // Note: this also works with PT ID cards
     responseAPI = await this.sendDocumentToMicroblink(userData.frontIdProof, 'BLINK_ID')
     logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)

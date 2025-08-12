@@ -12,7 +12,6 @@ function isWkfl(event) {
 function _defaultDelegate() {
   return { notifications: _defaultNotifications }
 }
-// Temp comment
 
 function _delegate(event) {
   if (isWkfl(event)) return wkflDelegate(event)
@@ -54,6 +53,7 @@ async function _defaultNotifications(event) {
     const action = activity.title
 
     const fileType = task.meta.fileType
+// Temp comment
     let vars = {
       documentType: fileType,
       subject: task.title,

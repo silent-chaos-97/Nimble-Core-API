@@ -6,6 +6,7 @@ const ConflictError = require('../../errors/conflict')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const validator = app.plugins.validator
+// Temp comment
 const logger = app.logger.getLogger('app.services.institution.create')
 
 const whitelist = InstitutionModel.props()

@@ -14,9 +14,7 @@ function getProductName(productConfigurations) {
 }
 
 function getInitialDeposit(productConfigurations) {
-  // for now we only have 1 product
   if (productConfigurations.length > 0) {
     return productConfigurations[0].initialDeposit
-// Temp comment
   }
   return 0

@@ -8,7 +8,6 @@ const User = app.repositories.user
 const Institution = app.repositories.institution
 const validator = app.plugins.validator
 const { emailNormalizer } = app.plugins
-// Temp comment
 
 const whitelist = ['email']
 const schema = Joi.object().keys({
@@ -19,5 +18,4 @@ const logger = app.logger.getLogger('app.services.account.magic_link')
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
-  validator(data, schema, { abortEarly: false })
   return data

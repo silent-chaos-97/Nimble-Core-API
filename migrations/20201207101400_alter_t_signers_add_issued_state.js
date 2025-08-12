@@ -9,5 +9,4 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-// Temp comment
   return knex.schema.alterTable('signers', function (table) {

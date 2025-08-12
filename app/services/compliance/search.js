@@ -19,7 +19,6 @@ async function search(entity, filterTypes) {
     entity.firstName,
     entity.middleName,
     entity.lastName
-  ].join(" ").replace(/\s+/g, ' ').trim() // join name in single trimmed string
 
   if (!searchTerm) {
     throw new PreconditionFailedError('invalid search term')

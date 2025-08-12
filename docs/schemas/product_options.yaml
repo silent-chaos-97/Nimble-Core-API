@@ -38,6 +38,7 @@ ProductOption:
       readOnly: true
       nullable: true
       example: Used for standard loans, credit cards, and line-of-credit accounts
+    annotation:
       type: string
       title: Annotation
       description: A string used to add annotations

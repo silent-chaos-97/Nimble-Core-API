@@ -7,6 +7,7 @@ const savingsProductOptions = [
     annotation: 'Free',
   },
   {
+    key: 'e_statements',
     category: 'product_feature',
     title: 'E-Statements',
     value: true,
@@ -74,7 +75,6 @@ const mobileAndOnlineBankingChilds = [
     category: 'product_feature',
     title: 'Mobile Deposits',
     value: true,
-    annotation: 'Free',
   }
 ]
 

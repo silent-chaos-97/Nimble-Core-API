@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const bcrypt = require('bcrypt')
 const uuid = require('uuid')
-
 const app = require('../../core')
 const User = app.repositories.user
 const UserModel = app.models.user
@@ -12,4 +11,5 @@ const { validator, emailNormalizer } = app.plugins
 
 const whitelist = UserModel.props()
 
+async function validate(data) {
   return validator(_.pick(data, whitelist), UserModel.adminCreationSchema(), { abortEarly: false })

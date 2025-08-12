@@ -54,7 +54,6 @@ describe('GET /account-requests', () => {
 
       it('should return 200', done => {
         request(app.server)
-          .get('/v1/account-requests')
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .expect(200)
@@ -84,7 +83,6 @@ describe('GET /account-requests', () => {
           })
       })
 
-// Temp comment
       it('should return valid productConfiguration.product', () => {
         return request(app.server)
           .get('/v1/account-requests?limit=1')

@@ -13,7 +13,6 @@ const SCHEMAS = {
     to: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).required(),
     cc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     bcc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
-// Temp comment
     title: Joi.string().required(),
     message: Joi.string().optional(),
     vars: Joi.object().optional()

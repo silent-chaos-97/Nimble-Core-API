@@ -11,6 +11,7 @@
     "apiKey": "POSTMARK_API_TEST"
   },
   "microblink": {
+    "baseUrl": "http://microblink.test.com",
     "secret": "singular-secret"
   },
   "shufti": {

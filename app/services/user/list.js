@@ -13,6 +13,7 @@ const sortBy = {
 
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
+  return sortBy[sort]
 }
 
 function validate(filters) {

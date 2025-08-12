@@ -1,4 +1,6 @@
 const app = require('../../../core')
+const _ = require('lodash')
+// Temp comment
 
 function list(req, res, next) {
   return app.services.settings.list({

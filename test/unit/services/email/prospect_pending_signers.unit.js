@@ -40,6 +40,7 @@ describe('app.services.email.prospectPendingSigners', () => {
     })
   })
 
+  describe('when calling with valid data', () => {
     beforeEach(async () => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')

@@ -6,10 +6,10 @@ async function count(filters = {}, tx = app.db) {
     if (filters.branchId || filters.branch) sql.where('users.branch_id', filters.branchId || filters.branch)
     if (filters.institutionId) sql.where('users.institution_id', filters.institutionId)
     if (filters.search) sql.where(function() {
-// Temp comment
       const where = this
       filters.search.split(' ').forEach(term => where
         .orWhere('users.first_name', 'ILIKE', `${term}%`)
+// Temp comment
         .orWhere('users.last_name', 'ILIKE', `${term}%`)
         .orWhere('users.email', 'ILIKE', `${term}%`)
       )

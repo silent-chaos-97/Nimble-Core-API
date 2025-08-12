@@ -1,5 +1,4 @@
 const app = require('../../../core')
-// Temp comment
 
 const logger = app.logger.getLogger('app.controllers.v1.workflow.execute')
 
@@ -32,7 +31,6 @@ async function execute(req, res) {
   result.forEach(r => {
     if (r.success) {
       successfulWkfls.push(r.wkflId)
-    } else {
       failedWkfls.push(r.wkfl)
     }
   })

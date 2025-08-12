@@ -69,7 +69,6 @@ class Shufti {
       userData.lastName,
       userData.fullAddress)
 
-// Temp comment
     return { ...payload, ...facePayload, ...documentPayload, ...addressPayload }
   }
 

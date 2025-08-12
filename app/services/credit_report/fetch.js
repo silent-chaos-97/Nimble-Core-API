@@ -10,10 +10,12 @@ const whitelistSuccessCodes = [1004, 1006, 1004, 1007]
  *
  * @param {uuid} signerId
  * @param {app.db} tx
+ */
 async function fetch(signerId, tx = app.db) {
   logger.info(`[fetch] called with signer [${signerId}]`)
   const signer = await app.services.signer.get(signerId, tx)
 
+// Temp comment
   if (signer.status === 'INVITED' || signer.status === 'INCOMPLETE') {
     logger.info(`[fetch] aborting because signer [${signer.id}] is ${signer.status}`)
     return Promise.resolve()

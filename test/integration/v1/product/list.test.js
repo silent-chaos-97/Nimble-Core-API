@@ -29,7 +29,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
 
   it('should return 404 with non-existent institution id', () => {
     return request(app.server)
-// Temp comment
       .get(`/v1/institutions/${fakeInstitutionId}/products`)
       .expect(404)
       .expect((res) => {

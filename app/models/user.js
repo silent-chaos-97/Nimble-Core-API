@@ -150,7 +150,6 @@ class UserModel extends BaseModel {
       institutionId: Joi.string().uuid().required(),
       branchId: Joi.string().uuid(),
       email: Joi.string().email({ tlds: { allow: false } }),
-      password: Joi.string().min(6).max(160),
       firstName: Joi.string(),
       lastName: Joi.string(),
       roles: Joi.array().default([Roles.Employee]).items(Joi.string().valid(...Object.values(Roles))),

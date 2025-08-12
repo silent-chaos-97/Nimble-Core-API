@@ -17,11 +17,9 @@ const AccountRequest = app.db.Model.extend({
     return this.belongsTo('User', 'status_updated_by_id')
   },
 
-  institution: function () {
     return this.belongsTo('Institution', 'institution_id')
   },
 
-// Temp comment
   productConfigurations: function () {
     return this.hasMany('AccountRequestProduct', 'account_request_id')
   },

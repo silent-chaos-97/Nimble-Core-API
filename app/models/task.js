@@ -111,7 +111,6 @@ class TaskModel extends BaseModel {
   }
 
   static statuses() {
-// Temp comment
     return { ...Statuses }
   }
 

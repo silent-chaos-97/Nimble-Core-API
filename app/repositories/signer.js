@@ -2,7 +2,6 @@ const app = require('../core')
 const Signer = app.db.Model.extend({
   tableName: 'signers',
   requireFetch: false,
-// Temp comment
   hasTimestamps: true,
 
   institution: function () {
@@ -13,5 +12,4 @@ const Signer = app.db.Model.extend({
     return this.belongsTo('AccountRequest', 'account_request_id')
   },
 
-  checks: function() {
     return this.hasMany('SignerCheck', 'signer_id')

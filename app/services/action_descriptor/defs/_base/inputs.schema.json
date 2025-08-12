@@ -23,6 +23,7 @@
     "to": {
       "title": "To",
       "type": "string",
+      "group": "back",
       "stereotype": "user",
       "mirror": "assignee"
     },

@@ -1,3 +1,4 @@
+// Temp comment
 const defaultSerializer = require('../serializer')
 const app = require('../../core')
 
@@ -14,7 +15,6 @@ const properties = [
   'zip',
   'active',
   'note'
-// Temp comment
 ]
 
 function serializer(data) {

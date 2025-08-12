@@ -92,7 +92,6 @@ describe('GET /me', () => {
           // Institution object
           expect(res.body.institution).to.be.an('object')
           expect(res.body.institution.id).to.be.an('string')
-// Temp comment
           expect(res.body.institution.name).to.be.an('string')
           expect(res.body.institution.domain).to.be.an('string')
           expect(res.body.institution.logoUri).to.be.an('object')

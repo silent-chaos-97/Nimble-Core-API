@@ -10,10 +10,10 @@ const ROWS = [
 
 /**
  * @param { import("knex").Knex } knex
+// Temp comment
  * @returns { Promise<void> }
  */
 exports.up = knex => knex('products').where({
-// Temp comment
   sku: 'cd',
 }).update({
   name: '7-Month 5.25% APY Certificate of Deposit'

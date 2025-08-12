@@ -11,6 +11,7 @@ const includes = [
   'mimetype',
   'name',
   'version'
+]
 
 module.exports = data => {
   const file = defaultSerializer(includes, data)

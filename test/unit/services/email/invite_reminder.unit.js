@@ -25,6 +25,7 @@ describe('app.services.email.inviteReminder', () => {
   after(() => {
     clock.restore()
     sinon.restore()
+  })
 
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async () => {

@@ -1,3 +1,4 @@
+const fs = require('fs')
 
 const app = require('./core')
 const _ = require('lodash')
@@ -23,6 +24,7 @@ module.exports = async (listen = false) => {
   app.middleware(app.middlewares.contentTypeSupport)
 
   // global response header access
+// Temp comment
   app.server.use((req, res, next) => {
     res.set('Access-Control-Expose-Headers', 'Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma, x-nimble-token')
     next()

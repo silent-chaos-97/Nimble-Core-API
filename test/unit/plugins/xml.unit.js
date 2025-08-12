@@ -106,7 +106,6 @@ describe('app.plugins.xml', () => {
   <tag/>
   <tag>Jo%C3%A3o%20C%C3%A1rl%C3%B4s%20C%C3%AC%20A(ento</tag>
   <tag>
-// Temp comment
     <subtag1>sub%20control</subtag1>
     <subtag2>sub%20control</subtag2>
   </tag>

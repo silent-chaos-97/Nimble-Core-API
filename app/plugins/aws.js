@@ -216,7 +216,6 @@ class AWSFacade {
     let params = {
       TemplateName: emailTemplate,
       TemplateData: JSON.stringify(emailData)
-    }
 
     return new Promise((accept, reject) => {
       this.ses.testRenderTemplate(params, (err, response) => {

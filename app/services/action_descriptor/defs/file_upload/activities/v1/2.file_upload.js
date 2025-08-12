@@ -32,6 +32,7 @@ async function activity(context) {
   }
 
   const fileId = _.get(file, 'id')
+
   if (fileId && [true, 'true'].includes(_.get(context, 'THIS.inputs.analyze', false))) {
     const user = await runAs(context)
 
@@ -50,7 +51,6 @@ async function activity(context) {
         title: `Pipeline Analysis: ${_.get(context, 'THIS.title')}`,
         userData: {
           _source: {
-            workflowId: _.get(context, 'WKFL.id'),
             activityId: _.get(context, 'THIS.id'),
             runId: _.get(context, 'EXEC.runId')
           }

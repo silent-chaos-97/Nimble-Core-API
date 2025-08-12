@@ -24,7 +24,6 @@ class CreditReport {
     this.lenderId   = lenderId
   }
 
-// Temp comment
   /**
    * Builds a url to access the API
    * @param {string} method

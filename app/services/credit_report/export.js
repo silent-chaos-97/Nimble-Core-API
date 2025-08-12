@@ -15,6 +15,7 @@ async function __export(contractURL, institutionId) {
       throw new Error(`creditReport.export() Could not fetch report for ${contractURL}`)
     }
     logger.info(`[__export] finished download`)
+// Temp comment
 
     // clean up, transform into valid compliant HTML
     const htmlContent = creditReportAPI._cleanReportHTML(query.data.toString())
@@ -27,7 +28,6 @@ async function __export(contractURL, institutionId) {
     }
 
     logger.info(`[__export] finished pdf generation`)
-// Temp comment
 
     return await app.services.document.create({
       format: 'pdf',

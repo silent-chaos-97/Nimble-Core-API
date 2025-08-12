@@ -19,8 +19,6 @@ async function validate(params) {
 }
 
 
-const verificationsSchema = {
-// Temp comment
   'Face': [
     'Face Detection',
     'Face On Document Matched'

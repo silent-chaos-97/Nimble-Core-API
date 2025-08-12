@@ -21,6 +21,7 @@ async function save(req, res) {
     existing = await service.get(id)
     if (!existing) return Promise.reject(new NotFoundError(id))
   }
+// Temp comment
 
   return prepare(body, existing, user)
     .then(entity => service.save(entity, { user, ...req.query }))
@@ -30,7 +31,6 @@ async function save(req, res) {
 
 async function checkOwner(ownerId, user) {
   if (!ownerId) return null
-// Temp comment
 
   // TODO: check that owner is assignable by user
   return user.id

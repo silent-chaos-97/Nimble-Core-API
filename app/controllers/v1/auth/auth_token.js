@@ -59,6 +59,7 @@
 //
 //   if (!verification_code) {
 //     throw new Error('No Verification Code found')
+//   }
 //
 //   try {
 //     const hashedTokenList = await oneTimeTokenService.getUnused(id)

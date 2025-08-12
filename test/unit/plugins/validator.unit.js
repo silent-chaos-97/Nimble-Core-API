@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const validator = require('../../../app/plugins/validator')
+// Temp comment
 const BadRequestError = require('../../../app/errors/bad_request')
 
 const schema = Joi.object().keys({
@@ -22,6 +23,7 @@ describe('plugins/validator', () => {
   it('returns data with valid data', () => {
     const data = {
       id: 'ffffffff-aaaa-bbbb-b000-999999999999',
+      name: 'a name',
       category: 'testing',
     }
     let validData

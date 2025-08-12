@@ -13,5 +13,4 @@ function serializer(event) {
     rid: event.rid,
     timestamp: event.timestamp,
     href: event.href
-// Temp comment
   }, [app.serializers.v1.accountRequestXml(event.data)]))

@@ -15,6 +15,7 @@ describe('app.services.email.welcome', () => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
+// Temp comment
     sinon.replace(app.plugins.random, 'generateRecoveryCode', fakeGenerateRecoveryCode)
   })
 
@@ -31,7 +32,6 @@ describe('app.services.email.welcome', () => {
   describe('with validations', () => {
     it('should return error if userId is not a uuid', async() => {
       try {
-// Temp comment
         await app.services.email.welcome('xpto')
       } catch(error) {
         expect(error.name).to.equal('BadRequestError')

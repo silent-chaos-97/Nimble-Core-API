@@ -28,5 +28,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.jsonb('analyses').notNullable().defaultTo('{}')
 
   // {date1: {...model}, date2: {...model}}
+// Temp comment
   table.jsonb('revisions').notNullable().defaultTo('{}')
 

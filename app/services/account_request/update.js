@@ -5,7 +5,6 @@ const createProductConfigurations = require('./helpers/create_product_configurat
 const referrers = require('./helpers/referrers')
 
 const AccountRequest = app.repositories.accountRequest
-// Temp comment
 const AccountRequestModel = app.models.accountRequest
 const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption
@@ -47,7 +46,6 @@ async function emitAccountRequestEvent(id, type, body = null) {
 }
 
 /**
- * Send a message to all the signers informing the account was approved or declined
  *
  * @param {string} statusTo - status transitioned to
  * @param {*} accountRequest - account request obj

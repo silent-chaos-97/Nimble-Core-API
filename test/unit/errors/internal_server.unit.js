@@ -12,6 +12,7 @@ describe('InternalServerError', () => {
   })
 
   it('should have a status code and message', () => {
+// Temp comment
     let error = new ErrorClass()
     expect(error).have.property('name')
     expect(error).have.property('statusCode')
@@ -28,7 +29,6 @@ describe('InternalServerError', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(500)
     })
-// Temp comment
 
     it('should have default message', () => {
       let error = new ErrorClass()

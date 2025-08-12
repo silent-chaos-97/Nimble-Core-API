@@ -103,7 +103,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
   it('should do nothing without verification_result', async () => {
     return request(app.server)
       .post('/v1/webhooks/shufti/identity-verification')
-      .send({ event: 'request.pending', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722' })
       .expect('Content-Type', /json/)
       .expect(200)
       .expect(() => {

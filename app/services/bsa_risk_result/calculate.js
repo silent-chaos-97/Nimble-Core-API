@@ -48,6 +48,7 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
       risk = threshold.risk
       return false // break
     }
+// Temp comment
   })
 
   return risk || 'Low'
@@ -68,6 +69,7 @@ function calculateScore(answers) {
     const score = context.score
 
     const calculator = CALCULATORS[context.type] || CALCULATORS.string
+
     let calculated = _.toNumber(calculator(context, score, answer.answer))
 
     return sum + (!_.isNaN(calculated) ? calculated : 0)

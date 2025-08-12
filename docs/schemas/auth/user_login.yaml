@@ -10,4 +10,5 @@ UserLogin:
       description: The email of the user
       example: demouser@nimblefi.com
     password:
+      type: string
       title: Password

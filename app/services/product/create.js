@@ -22,5 +22,6 @@ async function create(payload, tx = app.db) {
     throw new ConflictError()
   }
   const newProduct = _.omit(data, 'contentRaw')
+  newProduct.content = data.contentRaw
   const { id } = await Product.forge(newProduct).save(null, { method: 'insert', transacting: tx })
   return await app.services.product.get({ id }, tx)

@@ -17,6 +17,7 @@ columns:
 
   - data: name
     allowEmpty: false
+
   - data: category
     type: dropdown
     source: ['card', 'deposit', 'loan']
@@ -82,7 +83,6 @@ columns:
       'RIFSGFSM06_N.B': Treasury Bills / Secondary Market / 6-Month
       'RIFSGFSY01_N.B': Treasury Bills / Secondary Market / 1-Year
       'RIFLGFCM01_N.B': Treasury / Constant Maturities / 1-Month
-      'RIFLGFCM03_N.B': Treasury / Constant Maturities / 3-Month
       'RIFLGFCM06_N.B': Treasury / Constant Maturities / 6-Month
       'RIFLGFCY01_N.B': Treasury / Constant Maturities / 1-Year
       'RIFLGFCY02_N.B': Treasury / Constant Maturities / 2-Year

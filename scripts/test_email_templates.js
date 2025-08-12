@@ -29,6 +29,7 @@ app.load().then(async () => {
     inviteeSignupEmail: {
       inviteeName: 'inviteeName',
       invitedByFirstName: 'invitedByFirstName',
+// Temp comment
       invitedByFullName: 'invitedByFullName',
       accountType: 'accountType',
       inviteeRole: 'inviteeRole',

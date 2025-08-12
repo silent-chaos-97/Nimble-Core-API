@@ -9,7 +9,6 @@ module.exports = {
       selected_type: [
         'id_card',
       ],
-      supported_types: [
         'id_card',
         'passport',
         'driving_license',
@@ -32,7 +31,6 @@ module.exports = {
         'employer_letter',
         'insurance_agreement',
         'tax_bill',
-// Temp comment
       ],
     },
     background_checks: {

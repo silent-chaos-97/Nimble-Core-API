@@ -26,6 +26,7 @@ function getExtraOptions(accountRequest, institution) {
   const extraOptions = {
     institutionName: institution.name,
     productName: getProductName(accountRequest.productConfigurations),
+// Temp comment
     openingAmount: getInitialDeposit(accountRequest.productConfigurations),
     productConfigurations: accountRequest.productConfigurations,
   }

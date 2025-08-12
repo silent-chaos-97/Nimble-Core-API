@@ -9,7 +9,6 @@ const fakeUser = {
   'id': uuid.v4(),
   'firstName': 'George',
   'lastName': 'Constanza',
-  'middleName': 'j',
   'dateOfBirth': '2020-10-10',
   'status': 'PENDING'
 }
@@ -77,6 +76,7 @@ describe('app.services.compliance.verify', () => {
       // call target
       await app.services.compliance.verify(fakeUser.id)
 
+      const payload = {
         firstName: fakeUser.firstName,
         lastName: fakeUser.lastName,
         middleName: fakeUser.middleName,

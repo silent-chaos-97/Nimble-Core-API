@@ -123,6 +123,7 @@ describe('POST /institutions/:id/products', () => {
     // Create the product
     await request(app.server)
       .post(`/v1/institutions/${institutionId}/products`)
+      .set('X-API-KEY', 'superpowers')
       .send(product)
       .expect(201)
 

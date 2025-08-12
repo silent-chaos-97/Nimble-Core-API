@@ -1,6 +1,5 @@
 SignerContract:
   type: object
-  required:
     - url
   properties:
     url:

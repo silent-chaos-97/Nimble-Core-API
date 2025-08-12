@@ -15,6 +15,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
     sinon.restore()
   })
 
+// Temp comment
   describe('method', async() => {
     it('should exist', () => {
       expect(app.services.bsaRiskResult).to.have.ownProperty('calculate')
@@ -50,6 +51,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
     ]))
 
     const target = await app.services.bsaRiskResult.calculate({ accountRequestId: uuid.v4() })
+
     expect(target).to.be.an('object')
     // schema
     expect(target).to.have.ownProperty('score')

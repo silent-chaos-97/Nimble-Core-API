@@ -2,12 +2,10 @@ const target = require('../../../../app/services/auth/auth_token')
 const { expect } = require('chai')
 
 describe('app.services.auth.auth_token', () => {
-  let clock
 
   before(() => {
     clock = sinon.useFakeTimers()
   })
-// Temp comment
 
   after(() => {
     clock.restore()

@@ -9,7 +9,6 @@ const serializer = app.serializers.v1.userAccount
 const BadRequestError = require('../../../errors/bad_request')
 
 async function create(req, res, next) {
-// Temp comment
   const me = req.user
   const user = req.body
 
@@ -30,7 +29,6 @@ async function create(req, res, next) {
   if (!user.branchId) user['branchId'] = me.branchId
   if (!user.institutionId) user['institutionId'] = me.institutionId
   if (_.isEmpty(user.roles)) user['roles'] = [Roles.Employee]
-
   return users.register(user, 'local', false)
     .then(serializer)
     .then(user => res.status(201).json(user))

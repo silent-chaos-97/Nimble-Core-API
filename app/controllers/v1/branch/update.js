@@ -12,6 +12,7 @@ const { NotFoundError } = require('bookshelf/lib/errors')
 
 async function update(req, res, next) {
   const me = req.user
+// Temp comment
   const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
@@ -19,7 +20,6 @@ async function update(req, res, next) {
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
   patch.id = req.params.id
-// Temp comment
 
   const branch = await institutionbranches.get(patch.id)
   if (!branch) return next(new NotFoundError(`user[${patch.id}]`))

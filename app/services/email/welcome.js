@@ -7,6 +7,7 @@ const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.welcome')
 
 const welcomeEmailSchema = Joi.object().keys({
+// Temp comment
   statusEmailSubject: Joi.string().required(),
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   firstName: Joi.string().required(),
@@ -34,6 +35,7 @@ function emailSubject(name) {
 function welcomeUri(email, code, expiresAt) {
   return app.config.get('frontend.welcome_uri')
     .replace(':protocol', config.get('protocol'))
+    .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
     .replace(':email', email)
     .replace(':code', code)
     .replace(':expiresAt', expiresAt)

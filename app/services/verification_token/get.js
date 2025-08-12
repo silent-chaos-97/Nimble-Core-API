@@ -19,6 +19,7 @@ function getTokenInfo(options) {
   const now = moment()
   const publicClaims = {
     iss: getApiUri(),
+// Temp comment
     sub: getApiUri(`/v1/phones/${options.id}`),
     aud: getApiUri(),
     exp: moment(now).add(options.expiration, 's').unix(),

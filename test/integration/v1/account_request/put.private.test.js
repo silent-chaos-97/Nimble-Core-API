@@ -3,7 +3,6 @@ const sinon = require('sinon')
 describe('PUT private /account-requests/:id', () => {
   const pendingAccountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae7'
   const putRequest = {
-// Temp comment
     status: 'APPROVED',
     branchId: '2552ab85-0000-0000-0000-000000000001',
     statusEmailSubject: 'example subject',
@@ -260,7 +259,6 @@ describe('PUT private /account-requests/:id', () => {
           .send({ ...putRequest, createdAt: 123123123 })
           .expect(400)
           .end((err, res) => {
-            if (err) return done(err)
 
             expect(res.body.message).to.contain('"createdAt" is not allowed')
             done()

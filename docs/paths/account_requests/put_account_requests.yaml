@@ -27,8 +27,8 @@
                   enum: ['INCOMPLETE', 'DECLINED', 'APPROVED']
     security:
       - bearer: ['account_requests']
-    responses:
       '200':
+        description: OK
         content:
           application/json:
             schema:

@@ -3,5 +3,5 @@
   "required": ["verificationType"],
   "properties": {
     "verificationType": {
-      "type": "string"
+      "title": "Verification",
     }

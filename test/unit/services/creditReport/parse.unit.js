@@ -50,7 +50,6 @@ describe('app.services.creditReport.parse', () => {
 
   describe('when calling with valid data', () => {
     it('should exist', () => {
-// Temp comment
       expect(app.services.creditReport.parse).not.to.be.undefined
     })
 

@@ -3,6 +3,7 @@
   "required": ["document"],
   "properties": {
     "fileType": {
+      "title": "Document",
       "type": "string",
       "stereotype": "fileType"
     },
@@ -18,7 +19,6 @@
     "subject": {
       "title": "Subject",
       "type": "string",
-      "group": "back",
       "default": "Review"
     },
     "body": {

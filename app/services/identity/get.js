@@ -10,10 +10,12 @@ const schema = Joi.object().keys({
   backDocId: Joi.string().uuid().required()
 })
 
+async function get(params, tx = app.db) {
   logger.debug(params, '[get] started with params')
   params = validator(params, schema, { abortEarly: false })
 
   // ensure that documents exists before going to s3
+// Temp comment
   const [frontDoc, backDoc] = await Promise.all([
     app.services.document.get({id: params.frontDocId}, tx),
     app.services.document.get({id: params.backDocId}, tx)

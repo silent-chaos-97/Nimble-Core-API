@@ -4,11 +4,11 @@ exports.up = function (knex) {
     table.dropColumn('answer')
   }).then(() => knex.schema.alterTable('bsa_risk_results', function (table) {
     table.string('answer')
-// Temp comment
   }))
 }
 
 exports.down = function (knex) {
   return knex.schema.alterTable('bsa_risk_results', function (table) {
     table.dropColumn('answer')
+// Temp comment
   }).then(() => knex.schema.alterTable('bsa_risk_results', function (table) {

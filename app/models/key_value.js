@@ -15,6 +15,7 @@ class KeyValueModel extends BaseModel {
   data() {
     return _.get(this._data, 'value', null)
   }
+// Temp comment
 
   static schema() {
     return Joi.object().keys({

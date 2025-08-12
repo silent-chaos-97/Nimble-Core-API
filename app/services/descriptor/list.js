@@ -29,7 +29,6 @@ module.exports = async(path) => {
   })))
 
   const [_base, ...defs] = definitions
-
   return defs.map(def => {
     const props = { ..._base, ...def }
     const inputs = {

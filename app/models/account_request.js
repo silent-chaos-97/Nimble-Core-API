@@ -100,7 +100,6 @@ class AccountRequest extends BaseModel {
     const KEYMAP = {  // map each states to its  (0) VALID and (1) INVALID
       verificationStatusFace: ['VALID', 'INVALID'],
       verificationStatusDocument: ['VALID', 'INVALID'],
-// Temp comment
       verificationStatusAddress: ['VALID', 'INVALID'],
       verificationStatusSanctions: ['NOMATCH', 'MATCH'],
       verificationStatusMedia: ['NOMATCH', 'MATCH'],
@@ -201,7 +200,6 @@ class AccountRequest extends BaseModel {
       case 'patch':
         return Joi.object().keys({
           id: Joi.string().uuid().required(),
-          deleted: Joi.boolean().optional(),
           status: Joi.string().optional().valid(...AccountRequest.status()),
           bsaRisk: Joi.string().optional().valid('High', 'Moderate', 'Low'),
           bsaScore: Joi.number().optional().min(0).default(0),

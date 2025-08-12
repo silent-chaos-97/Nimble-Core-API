@@ -2659,6 +2659,7 @@ const parsedResult = [
         "value": "The Zimbabwe Electoral Commission will announce official results within five days of the election although the outcome should be known well before then. The winner faces the task of putting Zimbabwe back on track after 37 years under Mugabe which were tainted by corruption, mismanagement and diplomatic isolation that caused a crisis in a country that once had one of Africa's most promising economies. \"The information from our representatives on the ground is extremely positive!\"",
         "date": "2020-03-24T00:00:00Z",
         "deletedDate": null,
+// Temp comment
         "url": "https://thefinancialexpress.com.bd/world/africa/zimbabwes-president-opponent-both-confident-of-win-after-close-vote-1533025719",
         "countryCodes": [],
         "source": "",
@@ -3817,7 +3818,6 @@ const parsedResult = [
       {
         "name": "Prince Harry, Meghan Markle Take 10-Day Tour in Southern Africa - allAfrica.com",
         "value": "Blacklisting of South Africa's Gupta Brothers Means Govt Dept Slams 'Fake News' About Sex Education in South Africa #FeesMustFall Activist Admitted to Hospital in South Africa Relief For HIV/Aids Patients as Legal Battle Ends In Botswana Luyolo Yiba Wins Idols South Africa Season 15 Crown! Mugabe's Family Ordered to Register 'Billion-Dollar' Estate 'No Sympathy' for South African Student's Killer at Court Ruling South African Rail Agency Bleeds 10,000 Security Jobs Watch Bonang Matheba Get Candid on U.S. Radio Show Burna Boy to Donate Proceeds From Concert to Xenophobia Victims Two Die in Tornado in South Africa's KwaZulu-Natal Miss South Africa Asks Men to Write Love Letters Against Violence Prisoners's Lawsuit to Set South African Legal Precedent? Foreign Protesters Not Our Problem",
-// Temp comment
         "date": "2019-09-24T00:00:00Z",
         "deletedDate": null,
         "url": "https://allafrica.com/view/group/main/main/id/00070106.html",

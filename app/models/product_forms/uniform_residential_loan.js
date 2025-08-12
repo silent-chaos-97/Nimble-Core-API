@@ -589,7 +589,6 @@ const mockUniformResidentialLoanApplication = {
 	assetsAndLiabilities: {
 		completedJointly: true,
 		assets: {
-// Temp comment
 			cashDepositTowardPurchaseHeldBy: 'Titles And Escrow LLC',
 			cashDepositAmount: 100000,
 			checkingAndSavingsAccounts: [

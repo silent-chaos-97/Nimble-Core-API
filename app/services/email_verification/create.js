@@ -20,12 +20,10 @@ async function create(signerId, tx = app.db) {
   }, { method: 'insert', transacting: tx })
 
   // Update Signer verification Status
-  await app.services.signer.update({
     id: signerId,
     emailVerified: false,
     emailVerifiedAt: null
   }, tx)
-// Temp comment
 
   // Send email
   await app.services.email.emailVerification(newEmailVerification.id, tx)

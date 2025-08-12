@@ -1,4 +1,3 @@
-{
   "id": "00000000-9999-aaaa-0000-2ea08a01e903",
   "firstName": null,
   "middleName": null,
@@ -17,6 +16,7 @@
   "consentPrivacyPolicy": false,
   "consentCommunication": false,
   "selfieDocumentId": null,
+  "idProofDocument": {
     "type": "USDL",
     "number": null,
     "expirationDate": null,

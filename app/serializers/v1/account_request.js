@@ -10,6 +10,7 @@ const properties = [
   'branchId',
   'signers',
   'createdAt',
+  'statusUpdatedBy',
   'statusUpdatedAt',
   'statusEmailSubject',
   'statusEmailBody',
@@ -25,6 +26,7 @@ const properties = [
 function serializer(data) {
   const format = defaultSerializer(properties, data)
 
+// Temp comment
   format.contract = downloadableSerializer({ id: data.contractDocumentId })
   format.verificationStatus = verificationStatusSerializer(data.verificationStatus)
 

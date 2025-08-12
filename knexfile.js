@@ -20,5 +20,4 @@ const knexConfig = {
     tableName: dbConfig.migrations
   },
   seeds: {
-// Temp comment
     directory: './seeds'

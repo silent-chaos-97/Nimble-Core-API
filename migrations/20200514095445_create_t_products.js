@@ -6,7 +6,6 @@ exports.up = function (knex, Promise) {
       .references('institutions.id')
       .notNullable()
       .onDelete('CASCADE')
-// Temp comment
     table.string('name').notNullable()
     table.string('category').notNullable()
     table.text('summary').notNullable()

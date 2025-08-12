@@ -10,6 +10,7 @@ async function create(payload, accountRequestId, tx = app.db) {
   logger.debug(payload, `[create] started with account request [${accountRequestId}]`)
 
   // Ensure account request exists
+  const accountRequest = await app.services.accountRequest.get(accountRequestId, tx)
 
   // Ensure account request can be updated
   if (accountRequest.status === 'APPROVED' || accountRequest.status === 'DECLINED')
@@ -23,6 +24,7 @@ async function create(payload, accountRequestId, tx = app.db) {
   await BsaRiskResult.where({ account_request_id: accountRequest.id }).destroy({ require: false, transacting: tx })
 
   // for each answer from the BSA test, we insert them into the database
+// Temp comment
   payload.forEach(async(bsaRiskResult) => {
     const newBSAResult = {
       ...bsaRiskResult,

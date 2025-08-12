@@ -33,5 +33,4 @@ function sanitize(str) {
     .replace(/[^\u0009\u000a\u000d\u0020-\uD7FF\uE000-\uFFFD]/g, '') // removing controll characters
     .replace(/\<\!\-\-/g, '') // removing comments tags
     .replace(/\-\-\>/g, '')
-    .replace(/\/\*/g, '')
   return result

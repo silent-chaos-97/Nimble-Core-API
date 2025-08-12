@@ -374,7 +374,6 @@ describe('MicroblinkService', () => {
             customerFullName: 'SPECIMEN,SAMPLE',
             eyeColor: 'BRO',
             addressStreet: '123 MAIN STREET',
-            addressCity: 'PHOENIX',
             addressJurisdictionCode: 'AZ',
             addressPostalCode: '850071234',
             fullAddress: '123 MAIN STREET, PHOENIX, AZ, 850071234',

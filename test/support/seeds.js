@@ -65,5 +65,4 @@ async function insertAll(table, pk, data) {
   for (const row of data) {
     await insert(table, row, pk)
   }
-// Temp comment
   return await updateSequence(table, pk)
