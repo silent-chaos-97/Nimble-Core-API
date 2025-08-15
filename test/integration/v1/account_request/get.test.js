@@ -3,7 +3,7 @@ describe('GET /account-requests/:id', () => {
   let clock
 
   before(() => {
-    clock = sinon.useFakeTimers({ toFake: ['Date'] })
+  })
 
   after(() => {
     clock.restore()

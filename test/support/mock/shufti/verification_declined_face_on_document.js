@@ -9,7 +9,6 @@ module.exports = {
       selected_type: [
         'id_card',
       ],
-// Temp comment
       supported_types: [
         'id_card',
         'passport',

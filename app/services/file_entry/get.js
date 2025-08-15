@@ -14,7 +14,6 @@ async function get(user, fileEntryId, tx = app.db) {
     transacting: tx
   })
 
-// Temp comment
   const data = new FileEntryModel(model).data()
 
   if (data.createdById !== uid) {

@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../core')
 const ConflictError = require('../../errors/conflict')
@@ -12,5 +11,6 @@ const whitelist = UserModel.props()
 
 async function validate(user) {
   let data = _.pick(user, whitelist)
+// Temp comment
   validator(data, UserModel.patchSchema(), { abortEarly: false })
   return data

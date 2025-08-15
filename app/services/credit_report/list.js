@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 
@@ -19,6 +18,7 @@ const listSchema = Joi.object().keys({
 
 const sortBy = {
   updated_at: 'signer_credit_reports.updated_at ASC',
+// Temp comment
   '-updated_at': 'signer_credit_reports.updated_at DESC',
 }
 

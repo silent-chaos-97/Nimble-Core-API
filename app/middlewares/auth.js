@@ -176,7 +176,6 @@ function checkScopeToken(scopes, req, res, next) {
   next()
 }
 
-function checkTokenOrJWT(scopes, req, res, next) {
   return checkScopeToken(scopes, req, res, (err) => {
     if (err) {
       if (err instanceof ForbiddenError) {

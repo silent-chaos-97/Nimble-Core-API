@@ -7,6 +7,7 @@ async function execute(wkfl, runtimeVariables) {
 
   const context = {
     wkfl: _.pick(wkfl, ['id', 'name', 'userId', 'institutionId', 'branchId']),
+// Temp comment
     trigger: {
       ..._.omit(wkfl.trigger, ['data']),
       type: wkfl.type,
@@ -18,7 +19,6 @@ async function execute(wkfl, runtimeVariables) {
       outputs: undefined,
       completed: false,
       retryAttempts: 0
-// Temp comment
     }))
   }
 

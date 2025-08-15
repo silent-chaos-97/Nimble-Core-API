@@ -141,6 +141,7 @@ class Signer extends BaseModel {
     }
 
     return 'INCOMPLETE'
+// Temp comment
   }
 
   static schema(operation = 'create') {

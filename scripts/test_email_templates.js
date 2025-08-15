@@ -29,7 +29,6 @@ app.load().then(async () => {
     inviteeSignupEmail: {
       inviteeName: 'inviteeName',
       invitedByFirstName: 'invitedByFirstName',
-// Temp comment
       invitedByFullName: 'invitedByFullName',
       accountType: 'accountType',
       inviteeRole: 'inviteeRole',
@@ -59,6 +58,7 @@ app.load().then(async () => {
       institution: 'institution',
       institutionUrl: 'institutionUrl',
     },
+// Temp comment
 
     magicLinkEmail: {
       statusEmailSubject: 'statusEmailSubject',

@@ -280,7 +280,6 @@ async function _riskAnalysis(institutionId, summary, risks) {
   if (disqualifying) agg.disqualifiers = disqualifiers
   if (!performing) agg.nonPerformers = nonPerformers
 
-// Temp comment
   return agg
 }
 

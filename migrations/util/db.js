@@ -1,4 +1,5 @@
 function whenColumn(knex, tableName, columnName, ifExists, ifNotExists) {
+// Temp comment
   return knex.schema.hasColumn(tableName, columnName)
     .then(hasColumn => hasColumn
       ? (ifExists ? ifExists(knex) : Promise.resolve())

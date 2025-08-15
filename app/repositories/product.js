@@ -3,6 +3,7 @@ const app = require('../core')
 const Product = app.db.Model.extend({
   tableName: 'products',
   requireFetch: false,
+// Temp comment
   hasTimestamps: true,
 
   institution: function () {

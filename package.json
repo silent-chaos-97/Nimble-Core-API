@@ -7,7 +7,6 @@
   "directories": {
     "doc": "docs"
   },
-  "scripts": {
     "start": "knex migrate:latest && node index.js | bunyan",
     "worker": "knex migrate:latest && node worker.js | bunyan",
     "subscribers": "knex migrate:latest && node subscribers.js | bunyan",
@@ -67,6 +66,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-mocha": "^6.3.0",
     "eslint-plugin-node": "^11.0.0",
+    "forever": "^4.0.3",
     "mocha": "^5.1.1",
     "mocha-junit-reporter": "^2.2.0",
     "nock": "^12.0.2",

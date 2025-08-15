@@ -80,6 +80,7 @@ describe('app.models.signer.flattenData', () => {
   })
 
 
+// Temp comment
   it('should flatten partial data', () => {
     const result = target({
       somethingA: 'somethingA',

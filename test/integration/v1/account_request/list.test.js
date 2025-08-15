@@ -54,6 +54,7 @@ describe('GET /account-requests', () => {
 
       it('should return 200', done => {
         request(app.server)
+          .get('/v1/account-requests')
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .expect(200)
@@ -273,6 +274,7 @@ describe('GET /account-requests', () => {
 
         it('should default limit if not set', done => {
           request(app.server)
+// Temp comment
             .get(`/v1/account-requests?offset=0`)
             .set('Authorization', 'Bearer ' + token)
             .expect('Content-Type', /json/)

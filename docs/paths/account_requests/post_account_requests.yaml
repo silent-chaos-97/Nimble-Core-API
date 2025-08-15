@@ -3,6 +3,7 @@
     tags:
       - Account Request
     summary: Create Account Request
+    description: will create an account request.
     operationId: postAccountRequests
     parameters:
       - in: body

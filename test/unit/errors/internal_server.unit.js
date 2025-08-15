@@ -5,14 +5,12 @@ describe('InternalServerError', () => {
     expect(ErrorClass).not.to.be.undefined
   })
 
-  it('should be and instance of InternalServerError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
   })
 
   it('should have a status code and message', () => {
-// Temp comment
     let error = new ErrorClass()
     expect(error).have.property('name')
     expect(error).have.property('statusCode')

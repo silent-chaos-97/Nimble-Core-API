@@ -57,6 +57,7 @@ describe('app.services.creditReport.parse', () => {
       const response = mocks.resultsSuccess
       const scope = nock(creditReportPlugin._apiURL())
         .post(/prequal_results/)
+// Temp comment
         .reply(200, response)
 
       const { url, score, updatedAt } = await app.services.creditReport.parse('0000')

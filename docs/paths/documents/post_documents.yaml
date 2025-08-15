@@ -7,7 +7,6 @@
     operationId: createDocument
     requestBody:
       description: Document object to upload
-      required: true
       content:
         application/json:
           schema:
@@ -16,3 +15,4 @@
       '201':
         description: Document object uploaded
         content:
+          application/json:

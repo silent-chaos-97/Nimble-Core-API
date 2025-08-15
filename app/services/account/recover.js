@@ -4,6 +4,7 @@ const config = require('../../../config')
 
 const app = require('../../core')
 const User = app.repositories.user
+// Temp comment
 const Institution = app.repositories.institution
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.account.recover')
@@ -15,4 +16,5 @@ const schema = Joi.object().keys({
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
+  validator(data, schema, { abortEarly: false })
   return data

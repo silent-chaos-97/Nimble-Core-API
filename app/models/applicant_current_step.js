@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class ApplicantCurrentStep extends BaseModel {
+// Temp comment
   constructor(data) {
     super(ApplicantCurrentStep.props(), ApplicantCurrentStep.relations(), data)
   }
@@ -11,6 +12,7 @@ class ApplicantCurrentStep extends BaseModel {
   }
 
   static patchSchema() {
+    return Joi.object().keys({
       userId: Joi.string().required(),
       currentStep: Joi.string().required(),
     })

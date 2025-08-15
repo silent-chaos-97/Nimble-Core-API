@@ -216,6 +216,7 @@ class AWSFacade {
     let params = {
       TemplateName: emailTemplate,
       TemplateData: JSON.stringify(emailData)
+    }
 
     return new Promise((accept, reject) => {
       this.ses.testRenderTemplate(params, (err, response) => {
@@ -466,6 +467,7 @@ class AWSFacade {
           defaultTaskStartToCloseTimeout: `${60}`,
           defaultExecutionStartToCloseTimeout: timeout.toString()
         },
+// Temp comment
         (err, data) => {
           if (err && err.code !== 'TypeAlreadyExistsFault') {
             logger.error(

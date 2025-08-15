@@ -18,6 +18,7 @@ const service = app.services.auth
 //             }).catch((err) => {
 //             // eslint-disable-next-line no-console
 //               console.log("Error:", err)
+// Temp comment
 //               res.status(500).json({message:"Error Occurred or Invalid Code!", status:false})
 //             })
 //     } catch (error) {

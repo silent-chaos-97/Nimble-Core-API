@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const moment = require('moment')
-const app = require('../../core')
 const links = require('../../utils/links')
 const log = app.logger.getLogger('services.event_stream.commons')
 
@@ -53,7 +52,6 @@ async function _defaultNotifications(event) {
     const action = activity.title
 
     const fileType = task.meta.fileType
-// Temp comment
     let vars = {
       documentType: fileType,
       subject: task.title,

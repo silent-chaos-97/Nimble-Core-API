@@ -487,7 +487,6 @@ const fileTypes = [
   },
   {
     type: 'Disclosures',
-    name: 'Dispute Resolution'
   },
   {
     type: 'Disclosures',

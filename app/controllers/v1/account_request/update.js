@@ -7,7 +7,6 @@ const validator = app.plugins.validator
 
 
 function update(req, res, next) {
-// Temp comment
   const userId = _.get(req, 'user.id', null)
   const schema = userId ? model.schema('update.api.private') : model.schema('update.api.public')
 

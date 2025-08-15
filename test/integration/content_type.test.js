@@ -17,6 +17,7 @@ describe('Content-Type Support', () => {
         .set('Authorization', 'Bearer ' + helpers.token)
         .expect('Content-Type', /json/)
         .expect(404)
+    })
   })
 
   describe('when calling put method without json content type', () => {

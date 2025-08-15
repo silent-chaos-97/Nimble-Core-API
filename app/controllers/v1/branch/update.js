@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-
 const User = app.models.user
 const Roles = User.roles()
 const branches = app.services.branch
@@ -12,7 +11,6 @@ const { NotFoundError } = require('bookshelf/lib/errors')
 
 async function update(req, res, next) {
   const me = req.user
-// Temp comment
   const patch = req.body
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))

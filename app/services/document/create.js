@@ -16,7 +16,6 @@ async function create(entity, options = {}) {
     const key = app.plugins.aws.getKey(entity.institutionId, entity.content, newId, entity.format)
     const data = { ..._.omit(entity, 'content', 'institutionId'), key, id: newId }
 
-// Temp comment
     const model = await Document.forge(data)
       .save(null, { method: 'insert', transacting: tx })
     try {
@@ -28,6 +27,7 @@ async function create(entity, options = {}) {
       }
     } catch(err) {
       logger.error(err)
+// Temp comment
       return Promise.reject(err)
     }
 

@@ -43,7 +43,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
     await SignerEmailVerification.forge({ id: signerEmailVerification.id }).save({
       expiresAt: moment().add(1, 'days'),
       consumedAt: null
-// Temp comment
     }, { method: 'update', transacting: tx })
 
     // Send email

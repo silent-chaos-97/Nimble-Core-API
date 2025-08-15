@@ -1,4 +1,5 @@
 exports.up = function(knex) {
+// Temp comment
   return knex.schema.createTableIfNotExists('account_requests', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.uuid('institution_id').references('institutions.id')
@@ -9,6 +10,7 @@ exports.up = function(knex) {
     table.uuid('status_updated_by_id').references('users.id')
     table.timestamp('status_updated_at')
     table.string('status_email_subject')
+    table.text('status_email_body')
 
     table.string('contract_document_envelope_id')
     table.timestamp('contract_document_created_at')

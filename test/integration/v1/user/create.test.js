@@ -13,6 +13,7 @@ describe('POST /users', () => {
         .end(done)
     })
   })
+
   describe('when validating', () => {
     it('should reject with 400 if validation fails', done => {
       request(app.server)
@@ -140,6 +141,7 @@ describe('POST /users', () => {
 
     it('should persist institution branch id on user information', done => {
       request(app.server)
+// Temp comment
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
         .send(user)

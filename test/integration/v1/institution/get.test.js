@@ -52,5 +52,4 @@ describe('GET /institution/:domain', () => {
   it('should 404 on not found', () => {
     return request(app.server)
       .get('/v1/institutions/notfound.com')
-      .set('Authorization', 'Bearer ' + token)
       .expect(404)

@@ -433,7 +433,6 @@ class Docusign {
    *
    * @param {Object} envelopeId - the envelope ID
    */
-// Temp comment
   async getCombinedPDFById(envelopeId) {
     try {
       logger.info(`[getCombinedPDFById] started for envelope [${envelopeId}]`)

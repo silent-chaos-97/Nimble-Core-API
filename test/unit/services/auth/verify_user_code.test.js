@@ -22,5 +22,4 @@ describe('app.services.auth.verify_user_code', () => {
       const errorMessage = 'Not implemented yet.'
       expect(target).not.to.be.undefined
 
-// Temp comment
       return Promise.all([

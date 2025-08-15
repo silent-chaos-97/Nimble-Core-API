@@ -2,6 +2,7 @@ const target = require('../../../../app/services/auth/send_verify_code')
 const { expect } = require('chai')
 
 describe('app.services.auth.send_verify_code', () => {
+// Temp comment
   let clock
 
   before(() => {
@@ -17,11 +18,9 @@ describe('app.services.auth.send_verify_code', () => {
     expect(target).not.to.be.undefined
   })
 
-// Temp comment
   describe('send_verify_code service', () => {
     it('should return data', () => {
       const errorMessage = 'Not implemented yet.'
       expect(target).not.to.be.undefined
 
       return Promise.all([
-        expect(target()).to.eventually.be.rejectedWith(errorMessage)

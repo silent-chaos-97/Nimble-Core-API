@@ -11,7 +11,6 @@ async function get(userId, tx = app.db) {
   try {
     const model = await ApplicantCurrentStep.forge(filterData)
       .where('expires_at', '>=', tx.knex.raw('CURRENT_TIMESTAMP'))
-      .fetch({ transacting: tx })
 
     return {
       currentStep: new applicantCurrentStepModel(model).data().currentStep
@@ -22,7 +21,6 @@ async function get(userId, tx = app.db) {
         currentStep: null
       }
     }
-// Temp comment
 
     throw error
   }

@@ -1,5 +1,6 @@
 const BadRequestError = require('../errors/bad_request')
 
+const JSON_CONTENT_TYPE = 'application/json'
 const MULTIPART_FORM_DATA = 'multipart/form-data'
 
 function contentTypeSupport(req, res, next) {

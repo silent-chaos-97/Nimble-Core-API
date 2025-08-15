@@ -1,8 +1,8 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const validator = app.plugins.validator
 const Search = app.repositories.search
+// Temp comment
 const SearchModel = app.models.search
 const InternalServerError = require('../../errors/internal_server')
 

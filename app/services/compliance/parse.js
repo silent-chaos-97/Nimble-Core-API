@@ -83,7 +83,6 @@ function getFieldByTag(fields, tag) {
     return null // abort in case of not found
   }
 
-  // break down the search result back into an array 
   // can't use `Object.fromEntries` yet:  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries
   // we care how many times does a value show up, the more times it shows the more relevant
   const hits = []

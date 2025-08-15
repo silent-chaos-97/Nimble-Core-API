@@ -1,7 +1,6 @@
 //const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
-// Temp comment
 
 class AccountModel extends BaseModel {
   constructor(data) {
@@ -17,5 +16,4 @@ class AccountModel extends BaseModel {
       id: Joi.string().uuid(),
       userId: Joi.string().uuid().required(),
       secret: Joi.string(),
-      strategy: Joi.string()
     })

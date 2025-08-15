@@ -1,3 +1,4 @@
+const app = require('../../core')
 const validator = app.plugins.validator
 
 const SignerCreditReport = app.repositories.signerCreditReport

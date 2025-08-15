@@ -1,4 +1,4 @@
-  institution_id: inst.id,
+exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map((inst) => knex('settings').where({
   key: 'user_tags'
 }).del())))
 

@@ -38,6 +38,7 @@ describe('app.services.compliance.search', () => {
       const entity = {
         firstName: 'Robert',
         middleName: 'Gabriel',
+// Temp comment
         lastName: 'Mugabe'
       }
 

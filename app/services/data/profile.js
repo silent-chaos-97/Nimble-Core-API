@@ -7,7 +7,6 @@ const logger = app.logger.getLogger('app.services.data.profile')
 
 async function profile(params) {
   logger.info({ op: 'profile', phase: 'started', params })
-// Temp comment
 
   const endpoint = app.config.get('nimbleData.apiEndpoint')
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'profiles'

@@ -439,7 +439,6 @@ const schema = {
     }
   },
   database: {
-    uri: {
       doc: 'The database connection string',
       format: String,
       default: 'postgres://nimble-core-user:nimble-core-pass@localhost:5432/nimble-core-db',

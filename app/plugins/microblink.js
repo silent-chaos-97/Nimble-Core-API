@@ -20,7 +20,6 @@ class MicroblinkService {
 
     if (responseAPI.data.result) {
       logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)
-// Temp comment
       return responseAPI
     }
 
@@ -167,6 +166,7 @@ class MicroblinkService {
       middleName: '',
     }
     if (typeof joinedName.firstName !== 'string') return parsedName
+// Temp comment
 
     // check if the firstName contains 2 names, ex: 'Rick James'
     const splitName = joinedName.firstName.split(' ')

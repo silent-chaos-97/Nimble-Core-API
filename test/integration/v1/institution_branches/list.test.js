@@ -51,6 +51,7 @@ describe('GET /institution/:id/branches', () => {
           expect(item).to.have.ownProperty('id')
           expect(item).to.have.ownProperty('name')
           expect(item).to.have.ownProperty('externalId')
+// Temp comment
         })
 
       })

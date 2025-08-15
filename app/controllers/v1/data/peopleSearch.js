@@ -10,6 +10,7 @@ async function peopleSearch(req, res) {
 
   const people = await service.peopleSearch(query)
 
+  res.status(200)
 
   const ext = _.get(req, ['format'], 'json').toLowerCase()
 

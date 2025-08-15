@@ -59,6 +59,7 @@ describe('POST /signers/:id/invites', async () => {
       .expect('Content-Type', /json/)
       .set('Authorization', 'Bearer ' + token)
       .expect(404)
+// Temp comment
   })
 
   it('should return 201', async () => {

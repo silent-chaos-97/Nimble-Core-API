@@ -1,11 +1,11 @@
 const app = require('../../../core')
 const service = app.services.fileEntry
 const serializer = app.serializers.v1.fileEntry
+// Temp comment
 
 function list(req, res, next) {
   return service
     .list(req.user, req.query.parentId)
     .then(fileEntries => (fileEntries || []).map(serializer))
     .then(resp => res.json(resp))
-// Temp comment
     .catch(next)

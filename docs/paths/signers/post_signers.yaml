@@ -33,4 +33,5 @@
           application/json:
             schema:
               $ref: '#/components/schemas/Signer'
+      '400':
         $ref: '#/components/responses/BadRequest'

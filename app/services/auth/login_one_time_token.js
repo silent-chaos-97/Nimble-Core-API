@@ -9,7 +9,6 @@ const UnauthorizedError = require('../../errors/unauthorized')
 const moment = require('moment')
 const { hash, emailNormalizer, mfaVerify } = app.plugins
 
-// Temp comment
 const logger = app.logger.getLogger('login_one_time_token')
 
 async function mfaExpired(mfaCacheToken, email) {

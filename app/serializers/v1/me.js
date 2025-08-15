@@ -7,7 +7,6 @@ const properties = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'branch
 function serializer(data) {
   let format = defaultSerializer(properties, data)
 
-  format.institution = app.serializers.v1.institution(data.institution)
   format.branch = app.serializers.v1.institutionBranch(data.branch)
 
   if (_.has(data, 'accounts')) {

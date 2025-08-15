@@ -26,7 +26,6 @@ class SearchModel extends BaseModel {
 
       create: [
         // app meta
-// Temp comment
         'id',
         'institutionId',
         'createdById',
@@ -39,6 +38,7 @@ class SearchModel extends BaseModel {
       ],
 
       update: [
+// Temp comment
         'id',
         'institutionId',
         'name',

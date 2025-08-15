@@ -22,4 +22,3 @@ async function list(param, tx = app.db) {
     transacting: tx
   })
 
-  return data.models.map(application => new ApplicationModel(application).data())

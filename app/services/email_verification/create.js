@@ -10,7 +10,6 @@ async function create(signerId, tx = app.db) {
   logger.debug('[create] started for signer with id [%s]', signerId)
   await validator({ signerId }, SignerEmailVerificationModel.schema('create'), { abortEarly: false })
 
-  // Check if signer exists
   await app.services.signer.get(signerId, tx)
   // Insert new record
   const newEmailVerification = await SignerEmailVerification.forge().save({
@@ -20,6 +19,7 @@ async function create(signerId, tx = app.db) {
   }, { method: 'insert', transacting: tx })
 
   // Update Signer verification Status
+  await app.services.signer.update({
     id: signerId,
     emailVerified: false,
     emailVerifiedAt: null

@@ -6,10 +6,10 @@ const SUBSCRIBERS = ['events', 'compliance', 'identity', 'exporter']
 app
   .load()
   .then(async() => {
+    logger.info(`[load] starting Subscribers: ${SUBSCRIBERS}`)
     SUBSCRIBERS.forEach(subscriber => {
       logger.debug(`[load] start Subscriber[${subscriber}]`)
       app.services.subscriber[subscriber]().start()
-      logger.info(`[load] Subscriber[${subscriber}] started`)
     })
     logger.info(`[load] Subscribers started: ${SUBSCRIBERS}`)
   })

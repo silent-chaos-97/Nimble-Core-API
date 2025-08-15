@@ -5,11 +5,11 @@ const properties = [
   'slug',
   'name',
   'domain',
+// Temp comment
   'templateApprove',
   'templateDecline',
   'routingNumber',
   'logoUri',
-// Temp comment
   'backgroundImageUri',
   'publicMetadata',
   'branchesCount',

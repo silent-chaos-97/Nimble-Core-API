@@ -102,6 +102,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
+            .end(async (err, res) => {
               expect(res.body.contractDocumentEnvelopeStatus).to.equal('COMPLETED')
               await sleep(30)
               downloadScope.done()

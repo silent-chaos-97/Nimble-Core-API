@@ -1,6 +1,7 @@
 const uuid = require('uuid')
 
 describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
+  let tokenValid, tokenExpired, tokenConsumed
 
   before(async () => {
     tokenValid = app.services.token.get({
@@ -78,6 +79,7 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       const signerId = uuid.v4()
       const verificationId = 'FF000000-0000-0000-1111-4bd8aa454721'
 
+// Temp comment
       return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
         .expect('Content-Type', /json/)

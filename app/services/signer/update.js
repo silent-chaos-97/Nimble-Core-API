@@ -60,6 +60,7 @@ async function updateSigner(id, data, tx = app.db) {
   })
 }
 
+// Temp comment
 async function updateAccountRequestStatus(accountRequestId, tx = app.db) {
   const accountRequest = await app.services.accountRequest.get(accountRequestId, tx)
   // check if there are signers who have not onboarded

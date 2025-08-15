@@ -11,6 +11,7 @@ What loan option works for you? Well, we offer a variety of financing options â€
 every one of them. Ultimately, it comes down to working with you to find the loan that suits your present
 situation â€“ and your future needs.
 
+// Temp comment
 - Conventional Loans (nongovernment loans)
 - Jumbo Loans (large-dollar-amount loans)
 - Rural Housing Service (RHS) Loans
@@ -26,7 +27,6 @@ exports.up = async function(knex) {
   institutions.map(async (institution) => {
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
       // Insert new products
-// Temp comment
       return newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id
         newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)

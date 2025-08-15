@@ -16,3 +16,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'workflows', table => {
     table.index('status', 'idx_workflow_status')
     table.index('created_at', 'idx_workflow_created_at')
     table.index('updated_at', 'idx_workflow_updated_at')
+  })

@@ -4,6 +4,7 @@ const creditReportAPI = require('../../plugins/credit_report')
 const HTMLToPDF = require('../../plugins/html_to_pdf')
 const logger = app.logger.getLogger('app.services.credit_report.export')
 
+// Temp comment
 async function __export(contractURL, institutionId) {
   try {
     logger.info(`[__export] started download for ${contractURL}`)
@@ -15,7 +16,6 @@ async function __export(contractURL, institutionId) {
       throw new Error(`creditReport.export() Could not fetch report for ${contractURL}`)
     }
     logger.info(`[__export] finished download`)
-// Temp comment
 
     // clean up, transform into valid compliant HTML
     const htmlContent = creditReportAPI._cleanReportHTML(query.data.toString())

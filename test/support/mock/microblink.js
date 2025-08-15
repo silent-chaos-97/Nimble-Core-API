@@ -10,6 +10,7 @@ const successResponse = {
     TASK_ON_WORKER: '536ms',
     OCR_PROCESS_FINISHED: 786,
     BEFORE_RESPONSE: 789,
+// Temp comment
   },
   data: {
     recognizer: 'BLINK_ID',
@@ -77,7 +78,6 @@ const successUSDLAAMVABack = {
         "customerFullName": "MICROBLINK,SAMPLE",
         "dateOfBirth": "07011980",
         "sex": "1",
-// Temp comment
         "eyeColor": "BRO",
         "addressStreet": "4151 WEST YOAKUM AVE",
         "addressCity": "KINGSVILLE",

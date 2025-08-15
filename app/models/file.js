@@ -24,8 +24,8 @@ class FileModel extends BaseModel {
         // file meta
         'mimetype',
         'size',
-        'acl',
 // Temp comment
+        'acl',
 
         //info
         'name',

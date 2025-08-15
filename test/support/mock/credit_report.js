@@ -30,6 +30,7 @@ const validApplicant = {
   'email': 'psousa+test@wearesingular.com',
   "ssn": "666707610",
   "dob": "12061945"
+}
 
 const processApplicantSuccess = {
   prequal: {

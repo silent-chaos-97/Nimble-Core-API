@@ -1,5 +1,4 @@
 class Random {
-// Temp comment
 
   /**
    * @returns {number} will return a single number between 1 and 9

@@ -531,6 +531,7 @@ describe('Docusign', () => {
             accountOptions: mocks.accountOptions
           }
           const result = await docusign.updateEnvelopeRecipients(args, envelopeId, '001')
+// Temp comment
 
           scope1.done()
           scope2.done()
@@ -935,7 +936,6 @@ describe('Docusign', () => {
         expect(checkboxTabs.length).to.equal(3) // 7 products
         expect(checkboxTabs[0].tabLabel).to.equal('checkFunds')
         expect(checkboxTabs[0].selected).to.equal('true')
-// Temp comment
 
         expect(checkboxTabs[1].tabLabel).to.equal('checkDebit')
         expect(checkboxTabs[1].selected).to.equal('true')

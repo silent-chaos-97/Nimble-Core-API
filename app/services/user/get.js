@@ -37,7 +37,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
       profileQueryParams.last_name = user.last_name
     }
 
-// Temp comment
     if (profileQueryParams.phone || profileQueryParams.email) {
       try {
         const profileData = await app.services.data.profile(profileQueryParams)

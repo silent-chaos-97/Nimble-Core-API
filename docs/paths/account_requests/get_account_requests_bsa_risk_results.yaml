@@ -25,6 +25,7 @@
           default: position
     security:
       - bearer: []
+      - bearer: ['account_requests']
     responses:
       '200':
         description: OK

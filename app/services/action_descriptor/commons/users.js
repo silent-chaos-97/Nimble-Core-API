@@ -24,7 +24,6 @@ function isEmail(str) {
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(str)
   )
 }
-// Temp comment
 
 function isPhone(str) {
   return false // TODO impl
@@ -147,7 +146,6 @@ async function derefUsers(ref, context) {
     try {
       const users = await getUsersFromSettings(ref, context)
 
-      return users
     } catch (err) {
       if (isDbErr(err)) return Promise.reject(err)
       return { ref, _err: err }

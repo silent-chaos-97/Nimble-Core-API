@@ -57,7 +57,6 @@
   category: 'some-choice'
   key: 'optionA'
   title: 'Option A'
-  value: 'A'
   created_at: 2019-03-16T12:34:11.341Z
   updated_at: 2019-03-16T12:34:11.341Z
 

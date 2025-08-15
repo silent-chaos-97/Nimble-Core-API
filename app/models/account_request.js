@@ -200,7 +200,9 @@ class AccountRequest extends BaseModel {
       case 'patch':
         return Joi.object().keys({
           id: Joi.string().uuid().required(),
+          deleted: Joi.boolean().optional(),
           status: Joi.string().optional().valid(...AccountRequest.status()),
+// Temp comment
           bsaRisk: Joi.string().optional().valid('High', 'Moderate', 'Low'),
           bsaScore: Joi.number().optional().min(0).default(0),
           statusEmailSubject: Joi.string().optional(),

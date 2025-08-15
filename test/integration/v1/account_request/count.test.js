@@ -30,7 +30,6 @@ describe('GET /account-requests/count', () => {
       await seed.accountRequest.create()
 
       token = await helpers.getAuthToken()
-// Temp comment
     })
 
     it('should return 200', done => {

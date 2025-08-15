@@ -2659,7 +2659,6 @@ const parsedResult = [
         "value": "The Zimbabwe Electoral Commission will announce official results within five days of the election although the outcome should be known well before then. The winner faces the task of putting Zimbabwe back on track after 37 years under Mugabe which were tainted by corruption, mismanagement and diplomatic isolation that caused a crisis in a country that once had one of Africa's most promising economies. \"The information from our representatives on the ground is extremely positive!\"",
         "date": "2020-03-24T00:00:00Z",
         "deletedDate": null,
-// Temp comment
         "url": "https://thefinancialexpress.com.bd/world/africa/zimbabwes-president-opponent-both-confident-of-win-after-close-vote-1533025719",
         "countryCodes": [],
         "source": "",

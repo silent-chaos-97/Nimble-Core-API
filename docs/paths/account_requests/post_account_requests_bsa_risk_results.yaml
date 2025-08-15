@@ -1,6 +1,7 @@
 /account-requests/{id}/bsa-risk-results:
   post:
     tags:
+      - Account Request
     summary: Upsert the BSA Questionnaire results by account request Id
     description: Upsert the BSA Questionnaire results by account request Id
     operationId: postAccountRequestsBsaRiskResult
@@ -21,7 +22,6 @@
             type: array
             minItems: 1
             items:
-              $ref: '#/components/schemas/BsaRiskResult'
     security:
       - bearer: ['account_requests']
     responses:

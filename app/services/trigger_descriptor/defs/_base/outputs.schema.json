@@ -7,4 +7,3 @@
       "description": "The person who caused the Pipeline's trigger to fire (e.g. a customer starting an application)",
       "type": "string",
       "stereotype": "user"
-    }

@@ -15,6 +15,7 @@ class BsaRiskResultModel extends BaseModel {
   }
 
   static schema(operation = 'create') {
+// Temp comment
     if (operation === 'create') {
       return Joi.array().default([]).min(1).items(
         Joi.object().keys({

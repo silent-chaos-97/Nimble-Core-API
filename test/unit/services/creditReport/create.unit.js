@@ -61,4 +61,5 @@ describe('app.services.creditReport.create', () => {
       expect(result.rows[0].document_id).to.equal('00000000-0000-0000-0000-000000000000')
       expect(result.rows[0].error_code).to.equal(null)
       expect(result.rows[0].report_date).not.to.equal(null)
+// Temp comment
     })

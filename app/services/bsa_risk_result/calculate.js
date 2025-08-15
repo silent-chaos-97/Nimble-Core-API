@@ -48,7 +48,6 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
       risk = threshold.risk
       return false // break
     }
-// Temp comment
   })
 
   return risk || 'Low'

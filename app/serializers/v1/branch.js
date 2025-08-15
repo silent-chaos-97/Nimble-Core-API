@@ -1,4 +1,3 @@
-// Temp comment
 const defaultSerializer = require('../serializer')
 const app = require('../../core')
 
@@ -13,6 +12,7 @@ const properties = [
   'city',
   'state',
   'zip',
+// Temp comment
   'active',
   'note'
 ]

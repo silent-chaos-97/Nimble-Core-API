@@ -30,7 +30,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
     })
 
     it('should be a function', () => {
-// Temp comment
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
     })
   })
@@ -84,7 +83,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
     })
 
     it('should send a reminder for unverified signers', async () => {
-      const now = moment(baseDate).add(24, 'hour').toDate()
       sinon.useFakeTimers(now)
       await app.services.cron.emailVerificationReminder()
       expect(emailVerificationEmailSpy).to.have.been.calledTwice

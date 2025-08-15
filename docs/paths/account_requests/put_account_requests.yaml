@@ -8,7 +8,6 @@
     parameters:
       - name: id
         in: path
-        description: Account request ID
         required: true
         schema:
           type: string
@@ -27,6 +26,7 @@
                   enum: ['INCOMPLETE', 'DECLINED', 'APPROVED']
     security:
       - bearer: ['account_requests']
+    responses:
       '200':
         description: OK
         content:

@@ -13,7 +13,6 @@ const formaterFacade = (xml) => format(xml, {
   lineSeparator: '\n'
 })
 
-function hexChar(c) {
   // converts special chars into its hexed escape sequence
   const hex = c.codePointAt(0).toString(16)
   return "0000".substring(0, 4 - hex.length) + hex
@@ -33,4 +32,5 @@ function sanitize(str) {
     .replace(/[^\u0009\u000a\u000d\u0020-\uD7FF\uE000-\uFFFD]/g, '') // removing controll characters
     .replace(/\<\!\-\-/g, '') // removing comments tags
     .replace(/\-\-\>/g, '')
+    .replace(/\/\*/g, '')
   return result

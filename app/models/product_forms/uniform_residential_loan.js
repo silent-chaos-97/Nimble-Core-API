@@ -431,7 +431,6 @@ const schema = Joi.object({
 		})
 	),
 	acknowledgmentAndAgreement: Joi.object({
-		signatures: Joi.array().items(
 			Joi.object({
 				signer: Joi.string().valid('Borrower', 'Co-Borrower'),
 				signature: Joi.string().dataUri(),

@@ -46,6 +46,7 @@ async function emitAccountRequestEvent(id, type, body = null) {
 }
 
 /**
+ * Send a message to all the signers informing the account was approved or declined
  *
  * @param {string} statusTo - status transitioned to
  * @param {*} accountRequest - account request obj
@@ -118,7 +119,6 @@ async function stateTransition(payload, tx = app.db) {
         if (payload.to === 'APPROVED' || payload.to === 'DECLINED') {
           fns.push(sendAprovedDeclinedMessage(payload.to, payload.accountRequest, payload.options))
         }
-      }
       logger.info(`[stateTransition] transition ${transition} is not recognized.`)
   }
 

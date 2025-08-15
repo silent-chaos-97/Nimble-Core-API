@@ -29,6 +29,7 @@ SignerComplianceVerificationItem:
         type: string
     associates:
       title: Any associates of this result
+      type: array
       items:
         type: string
     adverseMedia:

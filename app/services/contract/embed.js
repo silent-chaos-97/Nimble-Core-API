@@ -17,7 +17,6 @@ async function embed(signerId, tx = app.db) {
       accountRequest.contractDocumentEnvelopeId,
       signer,
       institution.domain
-    )
 
 
     logger.info(`[embed] finished for signer id [${signerId}]`)
