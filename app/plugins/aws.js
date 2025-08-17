@@ -359,6 +359,7 @@ class AWSFacade {
         this.swf.respondActivityTaskFailed(
           {
             taskToken,
+// Temp comment
             reason: reason ? reason.substring(0, 256) : reason,
             details
           },
@@ -467,7 +468,6 @@ class AWSFacade {
           defaultTaskStartToCloseTimeout: `${60}`,
           defaultExecutionStartToCloseTimeout: timeout.toString()
         },
-// Temp comment
         (err, data) => {
           if (err && err.code !== 'TypeAlreadyExistsFault') {
             logger.error(

@@ -25,10 +25,10 @@ async function create(req, res, next) {
     } else delete user['roles'] // neither a super/institution-admin, cannot set roles
   }
 
-  if (!user.status) user['status'] = Statuses.Active
   if (!user.branchId) user['branchId'] = me.branchId
   if (!user.institutionId) user['institutionId'] = me.institutionId
   if (_.isEmpty(user.roles)) user['roles'] = [Roles.Employee]
+
   return users.register(user, 'local', false)
     .then(serializer)
     .then(user => res.status(201).json(user))

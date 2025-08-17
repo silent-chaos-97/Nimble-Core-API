@@ -272,7 +272,6 @@ async function decider(task) {
 
     const executionContext = _executionContext(context, task)
 
-    log.info({
       op: 'decider',
       phase: 'wkfl-decision-task-received',
       task: _.pick(task, ['taskToken']),

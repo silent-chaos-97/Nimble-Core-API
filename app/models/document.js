@@ -4,9 +4,9 @@ const BaseModel = require('./model')
 
 class DocumentModel extends BaseModel {
   constructor(data) {
+    super(DocumentModel.props(), DocumentModel.relations(), data)
   }
 
-  static props() {
     return ['id', 'institutionId', 'content', 'format', 'createdAt', 'key']
   }
 

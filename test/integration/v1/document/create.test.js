@@ -12,7 +12,6 @@ describe('POST /documents', () => {
     document = {
       format: 'image',
       institutionId: '016099fd-dcce-49ac-87db-b54d5426242e',
-      content: 'isomebase64'
     }
 
     aws = config.get('aws')
@@ -22,6 +21,7 @@ describe('POST /documents', () => {
   })
 
   afterEach(() => {
+    nock.cleanAll()
   })
 
   after(() => {
@@ -201,3 +201,4 @@ describe('POST /documents', () => {
     })
   })
 
+  describe('when format not present', () => {

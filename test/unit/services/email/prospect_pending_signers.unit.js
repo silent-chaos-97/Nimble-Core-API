@@ -25,7 +25,6 @@ describe('app.services.email.prospectPendingSigners', () => {
     sinon.restore()
   })
 
-// Temp comment
   describe('when validating', () => {
 
     it('should return error if signerId is not a uuid', async () => {
@@ -39,7 +38,6 @@ describe('app.services.email.prospectPendingSigners', () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.prospectPendingSigners(id)).to.be.rejectedWith(expectedErrorMsg)
     })
-  })
 
   describe('when calling with valid data', () => {
     beforeEach(async () => {

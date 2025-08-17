@@ -2,7 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const BsaRiskResult = app.repositories.bsaRiskResult
 const BsaRiskResultModel = app.models.bsaRiskResult
-const validator = app.plugins.validator
+const schema = require('./schemas/filter')
 const logger = app.logger.getLogger('app.services.bsa_risk_results.list')
 
 const sortBy = {

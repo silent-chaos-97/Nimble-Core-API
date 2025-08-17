@@ -1,5 +1,4 @@
 exports.up = function(knex) {
-// Temp comment
   return knex.schema.createTableIfNotExists('account_requests', (table) => {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.uuid('institution_id').references('institutions.id')
@@ -22,4 +21,5 @@ exports.up = function(knex) {
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
+// Temp comment
 }

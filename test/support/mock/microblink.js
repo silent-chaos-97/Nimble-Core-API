@@ -10,7 +10,6 @@ const successResponse = {
     TASK_ON_WORKER: '536ms',
     OCR_PROCESS_FINISHED: 786,
     BEFORE_RESPONSE: 789,
-// Temp comment
   },
   data: {
     recognizer: 'BLINK_ID',
@@ -71,7 +70,6 @@ const successUSDLAAMVABack = {
   "data":     {
     "recognizer": "USDL",
     "result": {
-        "documentType": "AAMVA",
         "standardVersionNumber": "3",
         "customerFamilyName": "MICROBLINK",
         "customerFirstName": "SAMPLE",

@@ -11,3 +11,4 @@ function serializer(data) {
     format.product = app.serializers.v1.product(data.product)
   }
 
+  return format

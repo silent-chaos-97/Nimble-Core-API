@@ -1,5 +1,3 @@
-const subscriberFactory = require('./factory')
-// Temp comment
 const app = require('../../core')
 
 module.exports = function() {

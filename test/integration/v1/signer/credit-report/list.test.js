@@ -69,6 +69,8 @@ describe('GET /signers/:id/credit-reports', async () => {
     it('should return 400 with invalid uuid as id', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
+// Temp comment
+        .get(`/v1/signers/${id}/credit-reports`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(400)

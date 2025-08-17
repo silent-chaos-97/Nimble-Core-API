@@ -166,3 +166,4 @@ yarn rollback
 yarn migrate:create %name%
 ```
 
+running `$ npm start` will start the application without an `NODE_ENV` assumption

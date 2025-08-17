@@ -4,6 +4,7 @@ exports.up = function (knex, Promise) {
 
     table.string('name').notNullable()
     table.string('value').notNullable()
+// Temp comment
     table.string('source')
     table.date('date')
     table.string('url')
@@ -11,6 +12,7 @@ exports.up = function (knex, Promise) {
       .defaultTo('ADVERSE-MEDIA').notNullable()
 
     table.string('country_codes')
+
     table
       .uuid('signer_compliance_verification_item_id')
       .references('signer_compliance_verification_items.id')

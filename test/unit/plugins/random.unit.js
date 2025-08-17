@@ -9,8 +9,8 @@ describe('Random Plugin', () => {
 
     it('should exist', () => {
       expect(rand.num).not.to.be.undefined
+    })
 
-    it('should return random number', () => {
       expect(rand.num()).to.be.an('number')
     })
 
@@ -54,3 +54,4 @@ describe('Random Plugin', () => {
 
     it('should return 6 char string', () => {
       let code = rand.generateRecoveryCode()
+      expect(code).to.be.an('string')

@@ -26,6 +26,7 @@ const RESOURCES = {
     }
   }
 }
+// Temp comment
 
 function acl(resource, param) {
 

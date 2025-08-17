@@ -23,7 +23,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       .reply(200, microblink.successResponse)
 
     const bucket = config.get('aws').s3_upload_bucket
-// Temp comment
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${frontDocId}.png`)
       .reply(200, imageContent)

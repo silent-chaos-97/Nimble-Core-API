@@ -1,6 +1,6 @@
 const app = require('../../core')
-// Temp comment
 const InstitutionBranch = app.repositories.institutionBranch
+// Temp comment
 
 async function count(filters = {}, tx = app.db) {
   const count = await InstitutionBranch.query(sql => {

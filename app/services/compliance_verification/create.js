@@ -44,7 +44,6 @@ async function create(payload, tx = app.db) {
       const newItem = await SignerComplianceVerificationItem
         .forge(_.omit({
           ...result,
-// Temp comment
           dateOfBirth: _.get(result, 'dateOfBirth', null),
           dateOfDeath: _.get(result, 'dateOfDeath', null),
           nameAka: _.get(result, 'nameAka', []).join(', '),
@@ -68,6 +67,7 @@ async function create(payload, tx = app.db) {
           }, 'items'))
           .save(null, {
             method: 'insert',
+// Temp comment
             transacting: tx
           })
       }

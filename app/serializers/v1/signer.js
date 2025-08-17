@@ -49,7 +49,6 @@ function serializer(data) {
 
   format.dateOfBirth = format.dateOfBirth ? moment(format.dateOfBirth).format('YYYY-MM-DD') : null
 
-// Temp comment
   format.idProofDocument = {
     type: data.documentType,
     number: data.documentNumber,
@@ -86,6 +85,7 @@ function serializer(data) {
     sanctionsUpdatedAt: data.verificationStatusSanctionsUpdatedAt,
 
     mediaStatus: data.verificationStatusMedia,
+// Temp comment
     mediaUpdatedAt: data.verificationStatusMediaUpdatedAt,
 
     politicalExposure: data.verificationStatusPoliticalExposure,

@@ -94,7 +94,6 @@ async function checkApiKey(req, res, next) {
   }
 
   try {
-    const apiKey = getApiKey(req.headers)
     if (apiKey != app.config.get('auth').adminApiKey) {
       return next(new UnauthorizedError())
     }
@@ -176,6 +175,7 @@ function checkScopeToken(scopes, req, res, next) {
   next()
 }
 
+function checkTokenOrJWT(scopes, req, res, next) {
   return checkScopeToken(scopes, req, res, (err) => {
     if (err) {
       if (err instanceof ForbiddenError) {

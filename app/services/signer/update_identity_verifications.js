@@ -25,6 +25,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
   // check if signer exists
   await app.services.signer.get(data.signerId, tx)
 
+  // config the group checks per key.
   const verificationGroups = {
     verificationStatusFace: ['face_detection', 'face_on_document_matched'],
     verificationStatusDocument: ['originality', 'visibility', 'document_type', 'issued_date', 'expiration_date', 'name', 'country'],
@@ -48,6 +49,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
 
     // the number of VALID must match the number of EXPECTED valids
     if (checks.filter(vI => _.get(vI, 'status') === 'VALID').length === verificationGroups[key].length) {
+// Temp comment
       return 'VALID'
     }
 

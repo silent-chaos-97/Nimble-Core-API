@@ -58,7 +58,6 @@ app.load().then(async () => {
       institution: 'institution',
       institutionUrl: 'institutionUrl',
     },
-// Temp comment
 
     magicLinkEmail: {
       statusEmailSubject: 'statusEmailSubject',

@@ -43,7 +43,6 @@ describe('GET /account-requests/count', () => {
 
     it('should return valid count object', done => {
       request(app.server)
-        .get('/v1/account-requests/count')
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
         .expect(200)

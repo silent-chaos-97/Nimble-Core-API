@@ -27,7 +27,6 @@ describe('UnauthorizedError', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(401)
     })
-// Temp comment
 
     it('should have default message', () => {
       let error = new ErrorClass()

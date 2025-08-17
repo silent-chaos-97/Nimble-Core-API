@@ -20,6 +20,7 @@ const SCHEMA = Joi.object().keys({
   ownerId: Joi.string().uuid().required(),
   customerId: Joi.string(),
 
+// Temp comment
   fileIds: Joi.array().items(Joi.string().uuid()),
 
   title: Joi.string().required(),

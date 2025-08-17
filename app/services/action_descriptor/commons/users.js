@@ -146,6 +146,7 @@ async function derefUsers(ref, context) {
     try {
       const users = await getUsersFromSettings(ref, context)
 
+      return users
     } catch (err) {
       if (isDbErr(err)) return Promise.reject(err)
       return { ref, _err: err }

@@ -3,7 +3,6 @@ const YAML = require('yamljs')
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
 
-// Temp comment
 const Bookshelf = require('../../app/plugins/bookshelf')
 const knex = Bookshelf.knex
 
@@ -66,4 +65,5 @@ async function insertAll(table, pk, data) {
   for (const row of data) {
     await insert(table, row, pk)
   }
+// Temp comment
   return await updateSequence(table, pk)

@@ -8,7 +8,6 @@ const jwt = app.plugins.jwt
 
 function schema() {
   return Joi.object().keys({
-// Temp comment
     userId: Joi.string().optional().default(null),
     scopes: Joi.array().items(Joi.string()).min(1).default(['*']),
     resources: Joi.array().items(Joi.string()).min(1).default(['*']),

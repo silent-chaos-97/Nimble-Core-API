@@ -5,7 +5,6 @@ const FileEntryModel = app.models.fileEntry
 
 async function list(user, parentId = null, tx = app.db) {
   const uid = _.isString(user) ? user : user.id || user._id
-// Temp comment
 
   if (!uid) throw new Error('AssertionError: user required')
 
@@ -13,6 +12,7 @@ async function list(user, parentId = null, tx = app.db) {
     q.where('created_by_id', uid)
     q.where('parent_id', parentId)
   })
+// Temp comment
 
   const data = await query.fetchAll({ withRelated: ['createdBy', 'file'], transacting: tx })
 

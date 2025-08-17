@@ -16,4 +16,3 @@ Account:
         If the strategy involves a third party, this is the user identifier on that platform
       readOnly: true
     createdAt:
-      type: string

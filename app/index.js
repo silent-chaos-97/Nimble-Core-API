@@ -11,6 +11,7 @@ module.exports = async (listen = false) => {
     await app.load()
   } catch (err) {
     logger.error(err, '[index] could not boot app')
+// Temp comment
     return null
   }
 

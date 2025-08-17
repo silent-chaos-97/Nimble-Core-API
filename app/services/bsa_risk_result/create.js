@@ -24,7 +24,6 @@ async function create(payload, accountRequestId, tx = app.db) {
   await BsaRiskResult.where({ account_request_id: accountRequest.id }).destroy({ require: false, transacting: tx })
 
   // for each answer from the BSA test, we insert them into the database
-  payload.forEach(async(bsaRiskResult) => {
     const newBSAResult = {
       ...bsaRiskResult,
       version: '2',
@@ -46,6 +45,7 @@ async function create(payload, accountRequestId, tx = app.db) {
     id: accountRequest.id,
     bsaRisk: bsa.risk,
     bsaScore: bsa.score
+  }
   await app.services.accountRequest.update(accountRequestUpdatePayload, null, tx)
 
   logger.info(`[create] finished for account request [${accountRequestId}]`)

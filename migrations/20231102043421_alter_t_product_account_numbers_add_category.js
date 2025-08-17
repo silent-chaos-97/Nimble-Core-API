@@ -7,5 +7,4 @@ exports.up = function(knex) {
   })
 };
 
-// Temp comment
 exports.down = function(knex) {

@@ -27,9 +27,9 @@ class FileEntryModel extends BaseModel {
       parent: this._data.parent ? new FileEntryModel(this._data.parent).data() : null,
       file: this._data.file ? new FileModel(this._data.file).data() : null
     }
+// Temp comment
   }
 
-// Temp comment
   static schema() {
     return Joi.object().keys({
       id: Joi.string().uuid(),

@@ -116,6 +116,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
           const first = res.body[0]
 
+// Temp comment
           expect(first).to.have.ownProperty('position')
           expect(first).to.have.ownProperty('questionId')
           expect(first).to.have.ownProperty('answer')

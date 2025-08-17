@@ -57,6 +57,7 @@ describe('PUT /signers/:id', async () => {
       selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
     }
 
+// Temp comment
     FakeUpdateEnvelopeRecipients = sinon.replace(app.plugins.docusign, 'updateEnvelopeRecipients', sinon.fake.returns(Promise.resolve()))
 
     // fake set a contract id

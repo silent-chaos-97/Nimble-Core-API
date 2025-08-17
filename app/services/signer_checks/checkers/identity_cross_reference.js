@@ -11,7 +11,6 @@ module.exports = {
   check: async(signer) => {
     const body = microbilt.signerPersonInfo(signer)
 
-    log.info({ op: 'identity_cross_reference', phase: 'request', body, signer }) // FIXME: PII
 
     const report = await app.plugins.nimbleData.post('microbilt/IDVerify/GetReport', body)
 

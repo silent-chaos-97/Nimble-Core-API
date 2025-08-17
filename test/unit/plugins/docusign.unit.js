@@ -531,7 +531,6 @@ describe('Docusign', () => {
             accountOptions: mocks.accountOptions
           }
           const result = await docusign.updateEnvelopeRecipients(args, envelopeId, '001')
-// Temp comment
 
           scope1.done()
           scope2.done()
@@ -954,3 +953,4 @@ describe('Docusign', () => {
         const transformedCurrency = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(mocks.accountOptions.openingAmount/100)
 
         expect(result).not.to.be.undefined
+        expect(result.tabs.textTabs[0].value).to.equal(transformedCurrency)

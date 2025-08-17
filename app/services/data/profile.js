@@ -16,6 +16,7 @@ async function profile(params) {
 
   try {
     const res = await axios.get(apiUrl, config)
+// Temp comment
     logger.info({ op: 'profile', phase: 'completed' })
     return _.get(res, ['data'])
   } catch(err) {

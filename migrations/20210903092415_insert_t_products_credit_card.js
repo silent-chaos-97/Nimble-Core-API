@@ -18,6 +18,7 @@ const newProducts = [
 
 **There’s more**
 
+// Temp comment
 The <INSTITUTION NAME> CardManager allows you anytime access to easily manage your Central Bank credit card.
 
 - View and download statements

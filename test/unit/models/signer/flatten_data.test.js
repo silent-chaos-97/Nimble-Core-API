@@ -70,7 +70,6 @@ describe('app.models.signer.flattenData', () => {
       'otherObject': {
         'backDocumentId': 'backDocumentId',
         'frontDocumentId': 'frontDocumentId',
-        'type': 'type',
         'number': 'number',
         'issuedDate': 'issuedDate',
         'issuer': 'issuer',
@@ -80,7 +79,6 @@ describe('app.models.signer.flattenData', () => {
   })
 
 
-// Temp comment
   it('should flatten partial data', () => {
     const result = target({
       somethingA: 'somethingA',

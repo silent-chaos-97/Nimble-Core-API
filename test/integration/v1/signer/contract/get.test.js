@@ -20,7 +20,6 @@ describe('GET /signers/:id/contract', async () => {
   })
 
   after(() => {
-// Temp comment
     sinon.restore()
     clock.restore()
     nock.enableNetConnect()

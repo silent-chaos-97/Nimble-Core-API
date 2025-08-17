@@ -14,7 +14,6 @@ async function execute(req, res) {
 
         if (wkfl) {
           await app.services.workflow.execute(wkfl, vars)
-
           return { wkflId, success: true }
         } else {
           return { wkflId, success: false }

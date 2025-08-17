@@ -39,6 +39,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
     // filter by INVITED signers
     const invitedSigners = accountRequest.signers.filter(signer => signer.status === 'INVITED')
     logger.info(`[invitee_reminder] found ${invitedSigners.length} INVITED signers for account request ${accountRequest.id}`)
+    if (invitedSigners.length > 0) {
       const originalSigner = accountRequest.signers.find(s => s.id === accountRequest.createdById)
       // SEND warning to the original signer
       if (originalSigner) {

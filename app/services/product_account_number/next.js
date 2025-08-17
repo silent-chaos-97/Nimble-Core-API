@@ -4,6 +4,7 @@ const moment = require('moment')
 const Joi = require('@hapi/joi')
 const ProductAccountNumber = app.repositories.productAccountNumber
 const InternalServerError = require('../../errors/internal_server')
+const ConflictError = require('../../errors/conflict')
 const { validator } = app.plugins
 const logger = app.logger.getLogger('app.services.product_account_number.next')
 
@@ -13,6 +14,5 @@ const schema = function() {
     accountRequestId: Joi.string().uuid().required()
   })
 }
-
 function randAlpha() {
   return _.sample('abcdefghijklmnopqrstuvwxyz'.split(''))

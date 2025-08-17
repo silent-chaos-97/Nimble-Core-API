@@ -7,7 +7,6 @@ class AccountModel extends BaseModel {
     super(AccountModel.props(), AccountModel.relations(), data)
   }
 
-  static props() {
     return ['id', 'userId', 'strategy', 'secret', 'createdAt']
   }
 
@@ -16,4 +15,5 @@ class AccountModel extends BaseModel {
       id: Joi.string().uuid(),
       userId: Joi.string().uuid().required(),
       secret: Joi.string(),
+      strategy: Joi.string()
     })

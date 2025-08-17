@@ -3,6 +3,7 @@ const _ = require('lodash')
 const { runAs } = require('../../../../commons/users')
 const log = app.logger.getLogger('action.file_upload.2')
 
+// Temp comment
 async function activity(context) {
   log.info({ op: 'activity', phase: 'entryPoint', context })
 
@@ -26,7 +27,6 @@ async function activity(context) {
       )
     })
 
-// Temp comment
     file = _.last(activityFiles) // take the last file relating to this activity since this is a single file upload
 
     if (!file) file = _.last(taskFiles) // no activity file was uploaded... maybe it was incorrectly attached?... take the last file

@@ -1,5 +1,4 @@
 const config = require('../../config')
-// Temp comment
 const bodyParser = require('body-parser')
 
 module.exports = function bodyParserMiddleware() {

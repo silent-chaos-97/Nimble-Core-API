@@ -56,5 +56,4 @@ Identity:
       description: Document Number
       nullable: true
       example: S123-456-78-123-0
-    documentExpirationDate:
       type: string

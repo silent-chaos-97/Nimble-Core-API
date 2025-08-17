@@ -35,6 +35,7 @@ describe('app.services.token.get', () => {
         .to.throw('"scopes" must be an array')
     })
 
+    it('should throw a error scopes are empty', () => {
       options.scopes = []
 
       return expect(() => target(options))
@@ -77,7 +78,6 @@ describe('app.services.token.get', () => {
       expect(actual).to.have.deep.property('userId', null)
     })
 
-    it('should apply the default scopes', () => {
       const token = target(_.omit(options, 'scopes'))
       const actual = decode(token)
       expect(actual).to.have.deep.property('scopes', ['*'])
@@ -133,3 +133,4 @@ describe('app.services.token.get', () => {
   it('should include public claim issued at in token', () => {
     const token = target(options)
     const actual = decode(token)
+    expect(actual).to.have.property('iat', 0)

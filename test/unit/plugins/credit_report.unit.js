@@ -143,7 +143,6 @@ describe('Credit Report Plugin', () => {
         'city': 'GREENFIELD',
         'state': 'CA',
         'zipCode': '931054826',
-        'ssn': '666-70-7610',
         'phoneNumber': '(233) 555-3333',
         'dateOfBirth': '1945-12-06',
         'email': 'psousa+test@wearesingular.com'

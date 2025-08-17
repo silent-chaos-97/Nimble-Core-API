@@ -15,6 +15,7 @@ async function post(endpoint, obj) {
   return request(app.server)
     .post(endpoint)
     .send(obj)
+    .expect('Content-Type', /json/)
 }
 
 async function get(endpoint) {
@@ -154,7 +155,6 @@ async function mockExternalServices(mockData, bodyFn) {
 
   scopes.map(async service => {
     if (service.async) {
-     await sleep(50)
     }
     service.scope.done()
   })

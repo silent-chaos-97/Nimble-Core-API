@@ -38,7 +38,6 @@ describe('app.services.compliance.search', () => {
       const entity = {
         firstName: 'Robert',
         middleName: 'Gabriel',
-// Temp comment
         lastName: 'Mugabe'
       }
 
@@ -98,3 +97,4 @@ describe('app.services.compliance.search', () => {
     })
 
     it('should throws exception once bad request happen', async () => {
+      const scope = nock(app.config.get('complyAdvantage').baseUrl)

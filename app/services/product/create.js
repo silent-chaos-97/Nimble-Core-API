@@ -14,8 +14,10 @@ async function create(payload, tx = app.db) {
   await app.services.institution.get({ id: data.institutionId })
 
   // Ensure no duplicate names
+  const entity = await app.services.product
     .get({ name: data.name, institutionId: data.institutionId }, tx)
     .catch(() => null)
+// Temp comment
   if (entity) {
     logger.info(payload, '[create] error creating products - duplicate names')
     throw new ConflictError()

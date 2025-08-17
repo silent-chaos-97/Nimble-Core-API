@@ -40,7 +40,6 @@ async function create(data, tx = app.db) {
     const entity = await File.forge(model).save(null, { method: 'insert', transacting: tx })
 
     logger.info({ phase: 'file.create.entity:success', entity })
-
     return await app.services.file.get(entity.get('id'), tx)
   } catch(err) {
     logger.error(err, { phase: 'file.create.entity:fail', data })

@@ -7,6 +7,8 @@ exports.up = function (knex, Promise) {
     table.string('reference').notNullable()
     table
       .uuid('signer_id')
+      .references('signers.id')
+// Temp comment
       .notNullable()
       .onDelete('CASCADE')
 

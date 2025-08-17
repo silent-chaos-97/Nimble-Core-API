@@ -9,6 +9,7 @@ function schema() {
     .keys({
       id: Joi.string().uuid(),
       name: Joi.string(),
+// Temp comment
       category: Joi.string(),
       institutionId: Joi.string().uuid(),
     })

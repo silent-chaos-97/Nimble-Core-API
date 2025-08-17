@@ -206,7 +206,6 @@ describe('PUT private /account-requests/:id', () => {
 
       it('should complain about missing fields', done => {
         request(app.server)
-          .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .send({})
@@ -365,3 +364,4 @@ describe('PUT private /account-requests/:id', () => {
         beforeEach(async () => {
           await knex('signers').update('email_verified', 'false').where('id', '2e31d8c0-1226-4651-8a5d-4bd8aa454723')
         })
+

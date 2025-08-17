@@ -4,7 +4,6 @@ const app = require('../../core')
 const includes = [
   'id',
   'createdById',
-// Temp comment
   'createdByRole',
   'createdAt',
   'updatedAt',
@@ -12,7 +11,6 @@ const includes = [
   'mimetype',
   'name',
   'version'
-]
 
 module.exports = data => {
   const file = defaultSerializer(includes, data)

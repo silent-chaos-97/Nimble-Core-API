@@ -7,6 +7,7 @@ function list(req, res, next) {
   const { fileEntryId } = req.params
 
   if (!fileEntryId) {
+    throw new BadRequest('FileEntry Id is required in the url')
   }
 
   return service

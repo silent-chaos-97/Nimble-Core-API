@@ -70,7 +70,6 @@ describe("AWS Facade for s3", () => {
       })
       it('should support gif', () => {
         expect(() => AWS.s3ImgUpload('RGIF')).not.to.throw()
-      })
       it('should support webp', () => {
         expect(() => AWS.s3ImgUpload('UWEBP')).not.to.throw()
       })

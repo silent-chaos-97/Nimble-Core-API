@@ -17,6 +17,7 @@
           enum:
             - -id
           default: -id
+      - in: query
         name: search
         required: false
         description: Search users by first and last name

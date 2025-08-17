@@ -7,7 +7,6 @@ let twilio
 module.exports = {
   notify: ctx => {
     logger.info(ctx, '[sms:notify]')
-// Temp comment
 
     // coerce phone
     let phone = ctx.recipient.mobile || ''
@@ -20,6 +19,7 @@ module.exports = {
     const message = {
       to: phone,
       body: Buffer.from(rendered, 'utf-8').toString(),
+// Temp comment
       messagingServiceSid: config.get('twilio.messagingSvcSid')
     }
 

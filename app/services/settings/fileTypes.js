@@ -197,7 +197,6 @@ const fileTypes = [
     name: 'Appraisal'
   },
   {
-    type: 'Product',
     name: 'Appraisal Reviewed'
   },
   {
@@ -487,6 +486,7 @@ const fileTypes = [
   },
   {
     type: 'Disclosures',
+    name: 'Dispute Resolution'
   },
   {
     type: 'Disclosures',

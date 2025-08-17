@@ -23,7 +23,6 @@ const AccountRequest = app.db.Model.extend({
 
   productConfigurations: function () {
     return this.hasMany('AccountRequestProduct', 'account_request_id')
-// Temp comment
   },
 
   productOptions: function () {

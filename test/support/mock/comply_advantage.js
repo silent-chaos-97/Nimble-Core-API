@@ -386,7 +386,6 @@ const successResponse = {
                 "name": "Countries",
                 "tag": "country_names",
                 "value": "Egypt, Kenya, Nigeria, South Africa, Spain, United Kingdom, United States, Zambia, Zimbabwe"
-              },
               {
                 "name": "Date of Birth",
                 "source": "complyadvantage-adverse-media",
@@ -4050,3 +4049,7 @@ const parsedResult = [
         "url": "https://www.dfat.gov.au/international-relations/security/sanctions/Pages/consolidated-list.aspx"
       },
       {
+        "name": "Other Information",
+        "value": "Former President",
+        "source": "DFAT Australia Consolidated Sanctions List",
+        "subtype": "sanction",

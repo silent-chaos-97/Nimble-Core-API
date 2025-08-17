@@ -21,5 +21,4 @@ exports.up = function (knex) {
   })
 }
 
-/**
  * @param { import("knex").Knex } knex

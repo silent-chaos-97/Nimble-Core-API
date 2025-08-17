@@ -40,7 +40,6 @@ SignerComplianceVerificationItem:
     warnings:
       title: A list of entries found about results of the type Warning
       type: array
-      items:
         $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
     sanctions:
       title: A list of entries found about results of the type Sanction

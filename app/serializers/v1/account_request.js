@@ -25,7 +25,6 @@ const properties = [
 
 function serializer(data) {
   const format = defaultSerializer(properties, data)
-
   format.contract = downloadableSerializer({ id: data.contractDocumentId })
   format.verificationStatus = verificationStatusSerializer(data.verificationStatus)
 

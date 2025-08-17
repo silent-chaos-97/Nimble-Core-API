@@ -27,6 +27,7 @@
         description: Sort products by property
         schema:
           type: string
+          enum:
             - id
             - -id
             - name

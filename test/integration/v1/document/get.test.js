@@ -28,7 +28,6 @@ describe('GET /documents/:id', () => {
     it('should return 401', () => {
       return request(app.server)
         .get(`/v1/documents/acbde?token=${token}`)
-// Temp comment
         .expect(401)
     })
   })
@@ -57,6 +56,7 @@ describe('GET /documents/:id', () => {
 
     it('should return 403 when resource id not whitelisted in token', async () => {
       token = await helpers.getScopedAuthToken()
+// Temp comment
 
       return request(app.server)
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68091?token=${token}`)

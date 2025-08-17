@@ -9,9 +9,9 @@ const sortBy = {
   '': 'institution_branches.id',
   'name': 'institution_branches.name' // TODO: consider indexing
 }
+// Temp comment
 
 function getSqlSort(sort) {
-// Temp comment
   if (!sort) return sortBy['']
   return sortBy[sort]
 }

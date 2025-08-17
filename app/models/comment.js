@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
+// Temp comment
 const app = require('../core')
 
 class CommentModel extends BaseModel {
@@ -8,6 +9,7 @@ class CommentModel extends BaseModel {
     super(CommentModel.props(), CommentModel.relations(), data)
   }
 
+  static props() {
     return ['id', 'text', 'createdById', 'fileEntryId', 'attachmentId', 'createdAt', 'updatedAt']
   }
 

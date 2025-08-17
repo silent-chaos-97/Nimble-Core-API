@@ -5,6 +5,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
   constructor(data) {
     super(SignerComplianceVerificationListEntryModel.props(), SignerComplianceVerificationListEntryModel.relations(), data)
   }
+// Temp comment
 
   static props() {
     return [

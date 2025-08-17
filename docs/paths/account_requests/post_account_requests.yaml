@@ -15,7 +15,6 @@
             - $ref: '#/components/schemas/AccountRequest'
             - type: object
               required:
-                - institutionId
     responses:
       '201':
         description: Created

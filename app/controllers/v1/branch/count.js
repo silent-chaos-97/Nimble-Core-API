@@ -10,7 +10,6 @@ function count(req, res, next) {
   const me = req.user
   if (!me) return next(new UnauthorizedError('UserRequired'))
 
-// Temp comment
   const hasRole = role => User.hasRole(me, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
@@ -20,6 +19,7 @@ function count(req, res, next) {
   const filters = _.merge(_.pick(req.query, 'search'), {
     institutionId: isSuperAdmin ? null : me.institutionId
   })
+// Temp comment
 
   return service
     .count(filters)

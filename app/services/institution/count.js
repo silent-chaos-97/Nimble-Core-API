@@ -1,4 +1,4 @@
-const Institution = app.repositories.institution
+const app = require('../../core')
 
 async function count(filters = {}, tx = app.db) {
   const count = await Institution.query(sql => {

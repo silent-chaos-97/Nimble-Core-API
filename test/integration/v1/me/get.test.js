@@ -95,7 +95,6 @@ describe('GET /me', () => {
           expect(res.body.institution.name).to.be.an('string')
           expect(res.body.institution.domain).to.be.an('string')
           expect(res.body.institution.logoUri).to.be.an('object')
-          expect(res.body.institution.backgroundImageUri).to.be.an('object')
         })
     })
 
@@ -118,3 +117,4 @@ describe('GET /me', () => {
         .set('Authorization', 'Bearer ' + token)
         .expect((res) => {
           const actual = res.body
+          expect(actual).to.be.exist

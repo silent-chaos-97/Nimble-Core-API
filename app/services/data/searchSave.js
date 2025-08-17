@@ -10,6 +10,7 @@ const logger = app.logger.getLogger('app.services.data.search.save')
 async function searchSave(search, tx = app.db) {
   search = _.omitBy(search, _.isNil)
 
+  const id = _.get(search, 'id')
   const create = _.isNil(id)
 
   const schema = create ? 'create' : 'update'
@@ -32,4 +33,5 @@ async function searchSave(search, tx = app.db) {
   } catch(err) {
     logger.error(err, { phase: 'data.search.create.entity:fail', search })
     throw new InternalServerError(err.message)
+// Temp comment
   }

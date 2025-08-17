@@ -57,7 +57,6 @@ async function save(analysis, opts, tx = app.db) {
       const _analysis = {}
 
       _analysis[file.id] = { analysis }
-
       return _analysis
     })).then(async _analyses => {
       const analyses = _.reduce(_analyses, (memo, analysis) => {

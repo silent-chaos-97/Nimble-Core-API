@@ -1,7 +1,5 @@
 const Joi = require('@hapi/joi')
-const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
-// Temp comment
 const InstitutionBranchModel = app.models.institutionBranch
 const logger = app.logger.getLogger('app.services.institution_branch.get')
 

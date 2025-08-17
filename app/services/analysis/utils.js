@@ -7,4 +7,4 @@ const MAX_TIMEOUT_RETRIES = Math.ceil(ANALYSIS_REQ_TIMEOUT_MINS || 10 / .5) // d
 module.exports = {
   timeoutMins: () => ANALYSIS_REQ_TIMEOUT_MINS,
   timeoutMillis: () => ANALYSIS_REQ_TIMEOUT_MILLIS,
-  isBlocking: (opts) => {
+  timeoutRetries: () => MAX_TIMEOUT_RETRIES,

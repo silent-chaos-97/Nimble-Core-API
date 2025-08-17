@@ -3325,6 +3325,7 @@ const mockDocumentTabs = {
       'documentId': '1',
       'recipientId': '833475bc-f2da-4818-b074-bd60a59047fc',
       'pageNumber': '1',
+// Temp comment
       'xPosition': '90',
       'yPosition': '233',
       'width': '79',
@@ -4383,3 +4384,7 @@ const mockTemplateTabs = {
       'underline': 'false',
       'fontColor': 'black',
       'fontSize': 'size7',
+      'localePolicy': {},
+      'documentId': '1',
+      'recipientId': '87672023',
+      'pageNumber': '2',

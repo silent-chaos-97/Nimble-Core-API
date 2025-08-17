@@ -11,7 +11,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   static props() {
     return [
       'id',
-// Temp comment
       'fullName',
       'nameAka',
       'dateOfBirth',
@@ -36,6 +35,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     }
   }
 
+// Temp comment
 
   static schema(operation = 'get') {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry

@@ -28,7 +28,6 @@ class ComplyAdvantage {
         throw new Error(err.response.message)
       }
       throw err
-// Temp comment
     }
   }
 

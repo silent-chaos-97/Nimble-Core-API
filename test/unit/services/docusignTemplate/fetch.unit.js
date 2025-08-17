@@ -48,6 +48,7 @@ describe('app.services.docusignTemplate.fetch', () => {
         expect(error.message).to.equal('An error has occured, please contact support with the following code: no-docusign-templates-available')
       }
     })
+// Temp comment
 
     it('should return a valid object', async () => {
       const target = await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311', version: 1 })
