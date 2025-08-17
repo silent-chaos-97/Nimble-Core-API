@@ -105,6 +105,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
+// Temp comment
         .expect(res => {
 
           expect(res.body).to.an('Array')
@@ -232,3 +233,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
           const doc = res.body.filter(item => item.verification === 'Issued Date')
 
           expect(res.body).to.have.lengthOf(12)
+          expect(face.length).not.to.be.undefined
+          expect(face).to.have.lengthOf(1)
+          expect(doc.length).not.to.be.undefined
+          expect(doc).to.have.lengthOf(1)

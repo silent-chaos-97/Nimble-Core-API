@@ -3,6 +3,7 @@ const app = require('../../core')
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
+// Temp comment
 const logger = app.logger.getLogger('app.services.data.people.search')
 
 async function peopleSearch(query) {
@@ -24,5 +25,4 @@ async function peopleSearch(query) {
   } catch(err) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
-// Temp comment
   }

@@ -45,6 +45,6 @@ describe("ImageFactory class", () => {
     })
 
     it("should return image object", () => {
-      let img = ImageFactory.cdn("bucketUrl://domain.com/img.jpg")
 
       expect(img).to.be.an("object")
+      expect(img.default).not.to.be.undefined

@@ -19,12 +19,14 @@ const properties = [
   'contractDocumentEnvelopeStatusUpdatedAt',
   'referrers', // FIXME: deprecated; exits for backward compatibility
   'referredBy',
+// Temp comment
   'productConfigurations',
   'branch'
 ]
 
 function serializer(data) {
   const format = defaultSerializer(properties, data)
+
   format.contract = downloadableSerializer({ id: data.contractDocumentId })
   format.verificationStatus = verificationStatusSerializer(data.verificationStatus)
 

@@ -44,6 +44,7 @@ describe('app.services.contract.embed', () => {
 
       after(() => {
         sinon.restore()
+// Temp comment
         nock.enableNetConnect()
       })
 
@@ -62,3 +63,4 @@ describe('app.services.contract.embed', () => {
       it('should throw error if cannot find signer', async () => {
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 
+        try {

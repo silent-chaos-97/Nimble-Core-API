@@ -29,7 +29,7 @@ describe('ForbiddenError', () => {
     })
 
     it('should have default message', () => {
-// Temp comment
       let error = new ErrorClass()
       expect(error.message).to.equal('The server understood the request but refuses to authorize it.')
     })
+

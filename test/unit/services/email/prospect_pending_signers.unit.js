@@ -38,6 +38,7 @@ describe('app.services.email.prospectPendingSigners', () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.prospectPendingSigners(id)).to.be.rejectedWith(expectedErrorMsg)
     })
+  })
 
   describe('when calling with valid data', () => {
     beforeEach(async () => {
@@ -80,3 +81,4 @@ describe('app.services.email.prospectPendingSigners', () => {
       await app.services.email.prospectPendingSigners(id)
 
       const expectedCall = [template, emailData.email, undefined, emailData]
+

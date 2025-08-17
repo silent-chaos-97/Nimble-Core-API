@@ -75,7 +75,6 @@ const countries = [
   'FJI',
   'FLK',
   'FRA',
-  'FRO',
   'FSM',
   'GAB',
   'GBR',
@@ -113,7 +112,6 @@ const countries = [
   'ITA',
   'JAM',
   'JEY',
-// Temp comment
   'JOR',
   'JPN',
   'KAZ',
@@ -210,3 +208,7 @@ const countries = [
   'SUR',
   'SVK',
   'SVN',
+  'SWE',
+  'SWZ',
+  'SYC',
+  'SYR',

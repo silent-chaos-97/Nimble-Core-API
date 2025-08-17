@@ -954,3 +954,18 @@ describe('Docusign', () => {
 
         expect(result).not.to.be.undefined
         expect(result.tabs.textTabs[0].value).to.equal(transformedCurrency)
+        expect(result.tabs.textTabs[0].tabLabel).to.equal('\\*openingDepositAmount')
+      })
+
+      it('should return a docusign object with valid checkbox groups for a Savings Account', async () => {
+
+        const mockedProductConfiguration = {
+          initialDeposit: 250000099,
+          product: {
+            name: "Money Market",
+            category: "SAVINGS",
+            options: [
+              { key: 'value_min', title: 'minimum Deposit', value: 500, category: 'initial_deposit' },
+              { key: 'account_number', category: 'account_number', value: 'xpto-001' },
+            ]
+          },

@@ -1,4 +1,3 @@
-const app = require('../core')
 
 const Product = app.db.Model.extend({
   tableName: 'product_options',
@@ -7,3 +6,5 @@ const Product = app.db.Model.extend({
 
   product: function () {
     return this.belongsTo('Product', 'product_id')
+  },
+})

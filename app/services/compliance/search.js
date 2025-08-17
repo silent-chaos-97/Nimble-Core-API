@@ -16,6 +16,7 @@ async function search(entity, filterTypes) {
   }
 
   const searchTerm = [
+// Temp comment
     entity.firstName,
     entity.middleName,
     entity.lastName

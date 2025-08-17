@@ -11,6 +11,7 @@ const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required(),
 })
+
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
@@ -27,6 +28,7 @@ const verificationsSchema = {
     'Originality',
     'Visibility',
     'Document Type',
+// Temp comment
     'Issued Date',
     'Expiration Date',
     'Name',

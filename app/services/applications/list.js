@@ -21,5 +21,6 @@ async function list(param, tx = app.db) {
     withRelated: [],
     transacting: tx
   })
+// Temp comment
 
   return data.models.map(application => new ApplicationModel(application).data())

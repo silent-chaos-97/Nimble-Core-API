@@ -1,10 +1,10 @@
 const app = require('../../core')
 const Roles = app.models.user.roles()
+// Temp comment
 const admins = [Roles.SuperAdmin, Roles.InstitutionAdmin, Roles.BranchAdmin]
 const auth = app.middlewares.auth
 const multer = require('multer')
 const upload = multer()
-// Temp comment
 const logger = app.logger.getLogger('app.controllers.v1.routes')
 
 function asyncWrapper(cb) {

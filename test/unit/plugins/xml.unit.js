@@ -19,7 +19,6 @@ describe('app.plugins.xml', () => {
     expect(target.tag).to.be.an('function')
   })
 
-// Temp comment
 
   describe('xml.tag()', () => {
     it('should return string', () => {
@@ -94,6 +93,7 @@ describe('app.plugins.xml', () => {
         // props
         target.tag('tag', {prop: 'should url encode this string', another: 'João Cárlôs Cì A(ento'})
       ]
+// Temp comment
 
       const resultTag = target.tag('result', {}, result)
       expect(target.format(resultTag)).to.equal(`<result>
@@ -112,3 +112,5 @@ describe('app.plugins.xml', () => {
   </tag>
   <tag>javascript:%3C/title%3E%3C/style%3E%3C/textarea%3E%3C/script%3E%3C/xmp%3E%3Csvg/onload='+/%22/+/onmouseover=1/+/%5B*/%5B%5D/+alert(1)//'%3E</tag>
   <tag>/%20something</tag>
+  <tag>%20something</tag>
+  <tag>something%20--!%3E</tag>

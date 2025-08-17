@@ -8,3 +8,4 @@ exports.up = (knex) => knex.schema.createTableIfNotExists('searches', table => {
   table.uuid('created_by_id').notNullable()
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
+})

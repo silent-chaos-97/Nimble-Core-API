@@ -25,3 +25,4 @@ List of error codes for API from https://secure.isoftpull.com/index.php?m=prequa
 - 1005	2	accepttos2 must be set to 1 when requesting a hard-pull.
 - 1009	2	MLA requested but is not allowed.
 - 1010	2	Hard-Pull requested but is not allowed.
+- 1018	2	The provided lenderid does not belong to this account.

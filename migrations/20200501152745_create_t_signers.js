@@ -37,6 +37,7 @@ exports.up = function(knex) {
     table.string('front_drivers_license_uri')
     table.string('back_drivers_license_uri')
     table.string('selfie_uri')
+
     table.uuid('selfie_document_id').references('id').inTable('documents')
     table.uuid('front_drivers_license_document_id').references('id').inTable('documents')
     table.uuid('back_drivers_license_document_id').references('id').inTable('documents')
@@ -54,3 +55,4 @@ exports.up = function(knex) {
     table.timestamp('anti_money_laundering_verified_at')
 
     table.string('contract_document_signer_status')
+    table.timestamp('contract_document_signer_status_updated_at')

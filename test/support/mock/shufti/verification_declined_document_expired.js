@@ -3,7 +3,6 @@ module.exports = {
   event: 'verification.declined',
   email: 'john@wearesingular.com',
   country: 'US',
-// Temp comment
   verification_data: {
     document: {
       issue_date: '1990-01-01',
@@ -31,6 +30,7 @@ module.exports = {
         'passport',
         'rent_agreement',
         'employer_letter',
+// Temp comment
         'insurance_agreement',
         'tax_bill',
       ],
@@ -62,3 +62,4 @@ module.exports = {
       selected_type: 1,
       name: 0,
       document: 1,
+      face_on_document_matched: 1,

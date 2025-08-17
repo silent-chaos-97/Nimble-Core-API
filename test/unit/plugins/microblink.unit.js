@@ -409,7 +409,6 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('firstName', 'Sample')
       expect(result).to.have.deep.property('middleName', '')
       expect(result).to.have.deep.property('lastName', 'Microblink')
-
       expect(result).to.have.deep.property('documentIssuer', 'ZT')
       expect(result).to.have.deep.property('documentNumber', '')
       expect(result).to.have.deep.property('documentExpirationDate', '2020-07-01')
@@ -438,3 +437,10 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('city', 'Orlando')
       expect(result).to.have.deep.property('state', 'FL')
       expect(result).to.have.deep.property('zipCode', '17101-0000')
+      expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')
+    })
+  })
+
+  describe('given a invalid data', () => {
+    beforeEach(() => {
+      nock.disableNetConnect()

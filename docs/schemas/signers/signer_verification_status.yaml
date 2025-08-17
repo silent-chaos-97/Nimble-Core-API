@@ -30,9 +30,9 @@ SignerVerificationStatus:
       type: string
       enum: ['MATCH', 'NOMATCH', 'PENDING']
       default: 'PENDING'
+    sanctionsUpdatedAt:
       type: string
       format: date-time
-    mediaStatus:
       title: The status of the adverse media verification
       type: string
       enum: ['MATCH', 'NOMATCH', 'PENDING']
@@ -42,3 +42,4 @@ SignerVerificationStatus:
       format: date-time
     politicalExposureStatus:
       title: The status of the political exposure verification
+      type: string

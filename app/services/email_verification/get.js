@@ -4,7 +4,6 @@ const validator = app.plugins.validator
 const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.email_verification.get')
-// Temp comment
 
 async function get(id, tx = app.db) {
   logger.debug('[get] started for id %s', id)
@@ -12,6 +11,7 @@ async function get(id, tx = app.db) {
 
   const emailVerification = await SignerEmailVerification.forge({ id }).fetch({
     withRelated: ['signer'],
+// Temp comment
     transacting: tx
   })
 

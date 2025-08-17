@@ -292,7 +292,6 @@ const schema = Joi.object({
 					make: Joi.string(),
 					year: Joi.number(),
           // Microbilt - Vehicle Pricing - Seems pretty inaccurate from my initial assessment
-					marketValue: Joi.number()
 				})
 			),
 			automobilesOwnedTotalMarketValue: Joi.number(),
@@ -635,3 +634,14 @@ const mockUniformResidentialLoanApplication = {
 			totalAssetsCoborrower: 4000,
 			totalAssetsJoint: 1117000
 		},
+		liabilities: {
+			liabilities: [
+				{
+					owner: 'Joint',
+					companyName: 'Bank Of America',
+					companyAddress: '100 Main St, New York, NY, 10001',
+					accountNumber: '012345678912',
+					monthlyPayment: 10000,
+					monthsLeftToPay: 1,
+					unpaidBalance: 10000
+				}

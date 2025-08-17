@@ -11,7 +11,6 @@ module.exports = async (listen = false) => {
     await app.load()
   } catch (err) {
     logger.error(err, '[index] could not boot app')
-// Temp comment
     return null
   }
 
@@ -39,8 +38,8 @@ module.exports = async (listen = false) => {
   // this is the 404 Route
   app.route('/*', app.middlewares.notFound)
 
-  // The error handler must be before any other error middleware and after all controllers
   app.middleware(app.middlewares.sentry.errorHandler)
   // load the normal error handler
   app.middleware(app.middlewares.errorHandler)
 
+  // create upload dir

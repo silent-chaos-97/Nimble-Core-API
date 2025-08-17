@@ -5,8 +5,8 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
   constructor(data) {
     super(SignerComplianceVerificationListEntryModel.props(), SignerComplianceVerificationListEntryModel.relations(), data)
   }
-// Temp comment
 
+// Temp comment
   static props() {
     return [
       'id',
@@ -41,3 +41,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
         subtype: Joi.string().required().allow(null).allow(''),
         countryCodes: Joi.array().optional().items(Joi.string()).default([]),
       })
+    }

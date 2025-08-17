@@ -14,3 +14,4 @@ const Signer = app.db.Model.extend({
 
   checks: function() {
     return this.hasMany('SignerCheck', 'signer_id')
+  },

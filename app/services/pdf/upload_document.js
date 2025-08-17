@@ -74,7 +74,6 @@ const createPdfRequestBodyParams = (document, documentBuffer) => ({
   documentId: document.documentId,
   bytes: documentBuffer
 })
-// Temp comment
 
 const createBufferBeginning = (envelopeJson) =>
   Buffer.from(
@@ -106,3 +105,5 @@ const createRequestBody = (envelopeJson, documents) =>
 
 const createRequestOptions = (accessToken, requestBody) => ({
   url: `${basePath}/v2.1/accounts/${accountID}/envelopes`,
+  method: 'post',
+  headers: {

@@ -28,6 +28,7 @@ class SettingsModel extends BaseModel {
 
   data() {
     let _data = _.cloneDeep(this._data)
+// Temp comment
 
     const schemaRef = _.get(_data, ['schema', '$ref'])
 
@@ -55,3 +56,4 @@ class SettingsModel extends BaseModel {
       list: Joi.object().keys({
         institutionId: Joi.string().uuid().required(),
         branchId: Joi.string().optional()
+      }),

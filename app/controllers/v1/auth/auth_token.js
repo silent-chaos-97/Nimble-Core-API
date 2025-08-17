@@ -75,7 +75,6 @@
 //       const tokenExpiration = parseInt(item.attributes.expiration)
 //       const timeNowUnix = moment().unix()
 //
-//       if (tokenExpiration < timeNowUnix){
 //         res.status(500).json({ message: 'Verification Token expired', status:false })
 //       }
 //

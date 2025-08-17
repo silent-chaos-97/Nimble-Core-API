@@ -23,7 +23,6 @@ async function __export(contractURL, institutionId) {
     const docBase64 = await HTMLToPDF.transform(htmlContent)
 
     if (!docBase64) {
-      throw new Error(`[__export] could not transform pdf ${contractURL}`)
     }
 
     logger.info(`[__export] finished pdf generation`)

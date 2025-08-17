@@ -150,3 +150,5 @@ components:
           description: A undestandble message of the current API status.
           example: The API is running without any known problems
   responses:
+    Count:
+      description: OK

@@ -5,6 +5,7 @@
       "title": "Assignee(s)",
       "type": "string",
       "stereotype": "user"
+    },
     "estimated_upload_duration": {
       "title": "Turnaround",
       "type": "string",
@@ -54,3 +55,4 @@
       "type": "string",
       "defaultUnit": "days",
       "stereotype": "duration",
+      "group": "back"

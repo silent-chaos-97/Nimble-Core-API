@@ -71,7 +71,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           done()
         })
     })
-
     it('should return 400 if account request does not exist', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
@@ -378,3 +377,9 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     it('should update signers with new data', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end((err) => {
+          if (err) return done(err)
+
+          request(app.server)

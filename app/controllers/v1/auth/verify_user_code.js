@@ -5,11 +5,11 @@ const service = app.services.auth
 // async function verify_user_code(req, res) {
 //     try {
 //         const {id, verificationCode}=req.body
+//         await service.verifyUserCode(id, verificationCode)
 //             .then(result => {
 //                 if (result){
 //                   res.status(200).json({token: result.token, status:true})
 //
-//                   // Todo: Save one-time token (result.token) to DB here
 //
 //                 } else {
 //                   res.status(400).json({message:"Invalid Code!", status:false})

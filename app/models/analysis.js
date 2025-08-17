@@ -20,7 +20,6 @@ const SCHEMA = Joi.object().keys({
   ownerId: Joi.string().uuid().required(),
   customerId: Joi.string(),
 
-// Temp comment
   fileIds: Joi.array().items(Joi.string().uuid()),
 
   title: Joi.string().required(),
@@ -95,3 +94,5 @@ class AnalysisModel extends BaseModel {
     return _.get({
       update: Joi.object().keys({
         id: Joi.string().uuid().required(),
+        updatedById: Joi.string().uuid().required(),
+

@@ -15,7 +15,6 @@ class FileEntryModel extends BaseModel {
   static relations() {
     return ['createdBy', 'parent', 'file']
   }
-
   data() {
     const FileModel = app.models.file
     const UserModel = app.models.user
@@ -27,7 +26,6 @@ class FileEntryModel extends BaseModel {
       parent: this._data.parent ? new FileEntryModel(this._data.parent).data() : null,
       file: this._data.file ? new FileModel(this._data.file).data() : null
     }
-// Temp comment
   }
 
   static schema() {
@@ -37,3 +35,4 @@ class FileEntryModel extends BaseModel {
       parentId: Joi.string().uuid(),
       fileId: Joi.string().uuid(),
       name: Joi.string(),
+      isDir: Joi.boolean(),

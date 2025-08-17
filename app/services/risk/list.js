@@ -5,6 +5,7 @@ const logger = app.logger.getLogger('app.services.risk.list')
 module.exports = async function(institutionId, productId, transacting = app.db) {
   return riskSettings(institutionId, productId, transacting).then(risks => {
     return _.reduce(risks, (_risks, risk, indicator) => {
+      _risks[indicator] = risk
 
       if (indicator === '_') return _risks
 
@@ -25,7 +26,6 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
 async function productSetting(institutionId, productId, transacting = app.db) {
   return app.services.settings.getRecord({ key: 'products', institutionId }, { id: productId }, transacting)
 }
-
 function isValid(risk) {
   return risk && risk.scope && risk.product && risk.indicator
 }

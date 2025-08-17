@@ -70,6 +70,7 @@ describe('app.models.signer.flattenData', () => {
       'otherObject': {
         'backDocumentId': 'backDocumentId',
         'frontDocumentId': 'frontDocumentId',
+        'type': 'type',
         'number': 'number',
         'issuedDate': 'issuedDate',
         'issuer': 'issuer',
@@ -132,3 +133,5 @@ describe('app.models.signer.flattenData', () => {
 
     expect(result).to.be.an('object')
     expect(result).to.deep.equal({
+      'somethingA': 'somethingA',
+      'somethingB': 'somethingB',

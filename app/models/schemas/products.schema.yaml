@@ -162,3 +162,6 @@ columns:
       'RIFLGFCY10_N.B': Treasury / Constant Maturities / 10-Year
       'RIFLGFCY20_N.B': Treasury / Constant Maturities / 20-Year
       'RIFLGFCY30_N.B': Treasury / Constant Maturities / 30-Year
+      'RIFLGFCY05_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 5-Year
+      'RIFLGFCY07_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 7-Year
+      'RIFLGFCY10_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 10-Year

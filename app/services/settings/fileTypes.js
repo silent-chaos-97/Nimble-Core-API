@@ -197,6 +197,7 @@ const fileTypes = [
     name: 'Appraisal'
   },
   {
+    type: 'Product',
     name: 'Appraisal Reviewed'
   },
   {
@@ -567,3 +568,13 @@ const fileTypes = [
   },
   {
     type: 'Applications',
+    name: 'Loan Application - Modification - Individual'
+  },
+  {
+    type: 'Applications',
+    name: 'Loan Application - Renewal - Business'
+  },
+  {
+    type: 'Applications',
+    name: 'Loan Application - Renewal - Individual'
+  },

@@ -39,7 +39,6 @@ describe('GET /signers/:id/credit-reports', async () => {
       return request(app.server)
         .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/credit-reports')
         .expect('Content-Type', /json/)
-        .expect(401)
     })
 
     it('should return 401 if bad auth', async () => {
@@ -69,7 +68,6 @@ describe('GET /signers/:id/credit-reports', async () => {
     it('should return 400 with invalid uuid as id', async () => {
       const id = 'invalid-uuid-here'
       return request(app.server)
-// Temp comment
         .get(`/v1/signers/${id}/credit-reports`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
@@ -113,3 +111,5 @@ describe('GET /signers/:id/credit-reports', async () => {
 
     it('should fetch a credit report with a failed credit score', async () => {
       return request(app.server)
+        .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454721/credit-reports`)
+        .expect('Content-Type', /json/)

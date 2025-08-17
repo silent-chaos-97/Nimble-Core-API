@@ -21,6 +21,7 @@ module.exports = {
       selected_type: [
         'utility_bill',
       ],
+      supported_types: [
         'utility_bill',
         'driving_license',
         'bank_statement',
@@ -59,4 +60,4 @@ module.exports = {
       dob: 1,
       selected_type: 0,
       name: 1,
-      document: 0,
+      face_on_document_matched: 1,

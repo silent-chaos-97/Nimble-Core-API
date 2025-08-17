@@ -22,6 +22,7 @@ async function embed(signerId, tx = app.db) {
 
     logger.info(`[embed] finished for signer id [${signerId}]`)
     // return using internal model
+    return new SignerContractModel({ url }).data()
   } catch (err) {
     logger.error(err, `[embed] error fetching embed url from docusign for signer id [${signerId}]`)
     throw new InternalServerError('Could not embed url from docusign')

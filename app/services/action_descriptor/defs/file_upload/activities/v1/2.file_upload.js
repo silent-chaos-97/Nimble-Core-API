@@ -3,7 +3,6 @@ const _ = require('lodash')
 const { runAs } = require('../../../../commons/users')
 const log = app.logger.getLogger('action.file_upload.2')
 
-// Temp comment
 async function activity(context) {
   log.info({ op: 'activity', phase: 'entryPoint', context })
 

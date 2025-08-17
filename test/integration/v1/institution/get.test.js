@@ -54,3 +54,4 @@ describe('GET /institution/:domain', () => {
       .get('/v1/institutions/notfound.com')
       .set('Authorization', 'Bearer ' + token)
       .expect(404)
+  })

@@ -66,3 +66,5 @@ module.exports = {
       document_must_not_be_expired: 1,
       document_country: 1
     },
+    face: 0
+  },

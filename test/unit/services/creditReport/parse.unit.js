@@ -62,7 +62,7 @@ describe('app.services.creditReport.parse', () => {
       const { url, score, updatedAt } = await app.services.creditReport.parse('0000')
       scope.done()
       expect(url).to.equal('https://secure.prequalsolutions.com/preq/api/viewReport.php?id=227031&t=1611685783&sc=0466566d0d4e99ea9886593ccd6ef1b4e6227e40214e240c901c1d519a70a2ee')
-      expect(updatedAt).to.equal('2021-01-26T17:54:39.000Z')
+      expect(score).to.equal(767)
     })
 
     it('should return error if error parsing data', async () => {
@@ -75,3 +75,4 @@ describe('app.services.creditReport.parse', () => {
       ]
 
       const scope = nock(creditReportPlugin._apiURL())
+        .post(/prequal_results/)

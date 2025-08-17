@@ -19,7 +19,6 @@ const SCHEMAS = {
   }),
 
   sms: Joi.object().keys({
-    taskId: Joi.string(),
     method: Joi.string().required().valid('sms'),
     product: Joi.string().optional(),
     recipient: Joi.object().keys({
@@ -61,3 +60,4 @@ module.exports = async notification => {
   // FIXME: save actual notification entity
 
   return await SENDERS[notification.method](notification)
+}

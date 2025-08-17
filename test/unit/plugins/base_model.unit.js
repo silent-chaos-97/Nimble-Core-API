@@ -70,3 +70,4 @@ describe('BaseModel class', () => {
     expect(model.data().c).to.deep.equal({ z: 11, y: 22 })
     expect(model.data().notthere).to.be.undefined
     expect(model.data().d).to.equal(4)
+  })

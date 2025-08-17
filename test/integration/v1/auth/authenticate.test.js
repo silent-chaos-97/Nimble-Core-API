@@ -83,6 +83,7 @@ describe('Auth', () => {
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
           .expect(200)
+// Temp comment
           .end((err, res) => {
             if (err) throw new Error(err)
 
@@ -185,3 +186,6 @@ describe('Auth', () => {
 
         describe('when MAX_FAILED_LOGIN_ATTEMPTS is reached', () => {
           let emailSpy
+
+          beforeEach(async () => {
+            emailSpy = sinon.spy(app.services.email, 'userLocked')

@@ -32,3 +32,4 @@ describe('UnauthorizedError', () => {
       let error = new ErrorClass()
       expect(error.message).to.equal('No authorization!')
     })
+

@@ -8,3 +8,4 @@ module.exports = async function(risk, summary) {
     numerator: _.get(summary, 'loan.value'),
     denominator: _.get(summary, 'collateral.value'),
     performing: '<=',
+    disqualifying: '>'

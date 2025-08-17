@@ -30,3 +30,4 @@ columns:
     correctFormat: true
 
   - data: meeting_timezone
+    type: dropdown

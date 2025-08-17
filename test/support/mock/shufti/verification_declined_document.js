@@ -43,6 +43,7 @@ module.exports = {
     },
   },
   verification_result: {
+    address: {
       address_document_visibility: 0,
       match_address_proofs_with_document_proofs: 1,
       selected_type: 1,
@@ -62,3 +63,4 @@ module.exports = {
       document: 0,
       face_on_document_matched: 1,
       document_proof: 0,
+      document_must_not_be_expired: 0,

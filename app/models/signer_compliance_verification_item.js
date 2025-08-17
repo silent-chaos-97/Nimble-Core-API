@@ -35,7 +35,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     }
   }
 
-// Temp comment
 
   static schema(operation = 'get') {
     const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
@@ -53,3 +52,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
         countries: Joi.array().optional().items(Joi.string()).default([]),
         associates: Joi.array().optional().items(Joi.string()).default([]),
         matchTypes: Joi.string().optional().allow(null).allow(''),
+        items: Joi.array().items(SignerComplianceVerificationListEntryModel.schema('create'))

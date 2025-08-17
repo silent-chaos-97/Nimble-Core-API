@@ -82,7 +82,6 @@ function serializer(data) {
           category: 'product_config', key: 'initial_deposit', value: pConfig.initialDeposit
         })
       ]
-// Temp comment
 
       pConfig.product.options.map(poConfig => {
         let category = poConfig.category

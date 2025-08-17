@@ -18,12 +18,12 @@ class ImageFactory {
 
 class AssetImage {
   constructor(location, uri) {
-// Temp comment
     this.location = location
     this.uri = uri
 
     return {
       default: this.__generateUrl(this.uri)
+// Temp comment
     }
   }
 

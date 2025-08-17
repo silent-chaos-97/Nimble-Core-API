@@ -11,7 +11,6 @@ const STATUSES = {
 }
 
 class SignerCheck extends BaseModel {
-// Temp comment
 
   constructor(data) { super(SignerCheck.props(), SignerCheck.relations(), data) }
 
@@ -39,3 +38,4 @@ class SignerCheck extends BaseModel {
         check: Joi.string().required(),
         status: Joi.string().required().valid(...Object.values(STATUSES)),
         meta: Joi.object(),
+      })

@@ -3,7 +3,6 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
 const User = app.repositories.user
-// Temp comment
 
 class UserAuthModel extends BaseModel {
   constructor(data) {
@@ -32,3 +31,4 @@ class UserAuthModel extends BaseModel {
       ])
         .innerJoin('accounts', 'accounts.user_id', '=', 'users.id')
         .where('users.email', email)
+        .where('accounts.strategy', '=', 'local')

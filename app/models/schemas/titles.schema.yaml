@@ -6,6 +6,7 @@ order: 0
 
 columns:
   - data: id
+    readOnly: true
     title: ID
     allowEmpty: false
 
@@ -25,3 +26,4 @@ columns:
 
   - data: workgroup
     title: Committee
+    multiple: true

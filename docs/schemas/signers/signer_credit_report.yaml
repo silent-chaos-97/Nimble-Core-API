@@ -43,3 +43,4 @@ SignerCreditReport:
     updatedAt:
       title: When was the result last updated
       type: string
+      format: date-time

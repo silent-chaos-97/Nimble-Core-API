@@ -27,9 +27,9 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
     if (user.phone) {
       profileQueryParams.phone = user.phone
     }
-// Temp comment
     if (user.email && !user.email.includes('placeholder-email-id-for')) {
       profileQueryParams.email = user.email
+// Temp comment
     }
     if (user.first_name) {
       profileQueryParams.first_name = user.first_name

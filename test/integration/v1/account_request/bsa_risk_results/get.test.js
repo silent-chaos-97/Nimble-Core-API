@@ -116,7 +116,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
 
           const first = res.body[0]
 
-// Temp comment
           expect(first).to.have.ownProperty('position')
           expect(first).to.have.ownProperty('questionId')
           expect(first).to.have.ownProperty('answer')
@@ -131,6 +130,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .expect(200)
         .expect(res => {
 
+// Temp comment
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(3)
 

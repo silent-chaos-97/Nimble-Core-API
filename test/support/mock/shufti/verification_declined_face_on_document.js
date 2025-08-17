@@ -14,6 +14,7 @@ module.exports = {
         'passport',
         'driving_license',
         'credit_or_debit_card',
+// Temp comment
       ],
     },
     address: {
@@ -61,3 +62,4 @@ module.exports = {
       selected_type: 1,
       name: 1,
       document: 1,
+      face_on_document_matched: 0,

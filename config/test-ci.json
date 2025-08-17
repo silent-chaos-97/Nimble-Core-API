@@ -12,7 +12,6 @@
   },
   "microblink": {
     "baseUrl": "http://microblink.test.com",
-    "secret": "singular-secret"
   },
   "shufti": {
     "secret": "singular-shufti-secret",
@@ -51,3 +50,4 @@
   "lambda": {
     "pdfTransformARN": "local-htmltopdf"
   },
+  "complyAdvantage": {

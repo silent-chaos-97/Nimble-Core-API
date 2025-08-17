@@ -33,3 +33,4 @@ describe('InternalServerError', () => {
       let error = new ErrorClass()
       expect(error.message).to.equal('Something unexpected happened!')
     })
+

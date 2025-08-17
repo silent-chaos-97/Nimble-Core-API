@@ -19,7 +19,6 @@
       "key": "option_1",
       "title": "another value",
       "category": "example_options",
-      "value": "1",
       "lead": null,
       "annotation": null,
       "parentId": null
@@ -41,3 +40,4 @@
       "category": "single_option",
       "value": "0",
       "lead": "Some lead",
+      "annotation": "Some annotation",

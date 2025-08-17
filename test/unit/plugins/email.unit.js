@@ -89,6 +89,7 @@ describe('Email Plugin', () => {
       })
 
       it('should complain if missing template', () => {
+// Temp comment
         expect(() => {
           plugin.awsSend(null, {})
         }).to.throw()
@@ -145,3 +146,6 @@ describe('Email Plugin', () => {
     })
 
     describe('sending approved', () => {
+      it('should call AccountRequestApproved', () => {
+        plugin.sendAccountRequestStatus('APPROVED', { email: 'welcome@test.com' })
+        expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce

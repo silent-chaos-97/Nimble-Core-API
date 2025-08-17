@@ -11,9 +11,11 @@ describe('API Docs', () => {
         .get('/docs/')
         .expect('Content-Type', /html/)
     })
+  })
 
   describe('GET /docs/*', () => {
     it('should return 200', () => {
+// Temp comment
       return request(app.server)
         .get('/docs/swagger-ui.css')
         .expect(200)

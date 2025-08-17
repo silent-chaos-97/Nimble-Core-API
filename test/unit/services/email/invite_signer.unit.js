@@ -69,6 +69,7 @@ describe('app.services.email.inviteSigner', () => {
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
 
+    it('should call send with correct data', async () => {
       const invitedSigner = blueprints.signers.signer_1
       const institution = blueprints.institutions.institution_1
       const invitedBy = blueprints.signers.signer_1
@@ -94,3 +95,5 @@ describe('app.services.email.inviteSigner', () => {
         .replace(':invitedBy', invitedBy.firstName)
         .replace(':token', 'xxxx')
         .replace(':domain', institution.domain)
+
+      const template = 'inviteeSignupEmail'

@@ -39,6 +39,7 @@ class UserModel extends BaseModel {
   static isInstitutionAdmin(user) {
     return this.isSuperAdmin(user) || this.hasRole(user, Roles.InstitutionAdmin)
   }
+// Temp comment
 
   static isBranchAdmin(user) {
     return this.isInstitutionAdmin(user) || this.hasRole(user, Roles.BranchAdmin)
@@ -162,3 +163,5 @@ class UserModel extends BaseModel {
   }
 
   static adminCreationSchema() {
+    return Joi.object().keys({
+      status: Joi.string().default(Statuses.Active).valid(...Object.values(Statuses)),

@@ -31,3 +31,4 @@ columns:
     type: numeric
 
   - data: high_performance_standard
+    type: numeric

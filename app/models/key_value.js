@@ -20,3 +20,4 @@ class KeyValueModel extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().required(),
       value: Joi.object()
+    })

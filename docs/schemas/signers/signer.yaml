@@ -178,3 +178,6 @@ Signer:
       description: Anti-Money Laundering verification
     antiMoneyLaunderingVerifiedAt:
       readOnly: true
+      type: string
+      format: date
+      title: Anti-Money Laundering verification Date

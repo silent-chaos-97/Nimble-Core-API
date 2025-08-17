@@ -7,11 +7,13 @@ class AccountModel extends BaseModel {
     super(AccountModel.props(), AccountModel.relations(), data)
   }
 
+  static props() {
     return ['id', 'userId', 'strategy', 'secret', 'createdAt']
   }
 
   static schema() {
     return Joi.object().keys({
+// Temp comment
       id: Joi.string().uuid(),
       userId: Joi.string().uuid().required(),
       secret: Joi.string(),

@@ -12,6 +12,7 @@ describe('POST /documents', () => {
     document = {
       format: 'image',
       institutionId: '016099fd-dcce-49ac-87db-b54d5426242e',
+      content: 'isomebase64'
     }
 
     aws = config.get('aws')
@@ -25,6 +26,7 @@ describe('POST /documents', () => {
   })
 
   after(() => {
+// Temp comment
     clock.restore()
     nock.enableNetConnect()
   })
@@ -202,3 +204,6 @@ describe('POST /documents', () => {
   })
 
   describe('when format not present', () => {
+    beforeEach(() => document = _.omit(document, 'format'))
+
+    it('should return 400', () => {

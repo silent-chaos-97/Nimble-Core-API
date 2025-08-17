@@ -9,6 +9,7 @@ const properties = [
   'mimetype',
   'parentId',
   'createdById',
+  'fileId',
   'createdAt',
   'updatedAt'
 ]

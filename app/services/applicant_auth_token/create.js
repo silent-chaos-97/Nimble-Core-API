@@ -17,7 +17,6 @@ async function auth_tokens(body) {
   const { id, role, method } = body
 
   if (!id){
-    return { message: 'Id is missing', status:false, statusCode: 400 }
   }
 
   if (!role){

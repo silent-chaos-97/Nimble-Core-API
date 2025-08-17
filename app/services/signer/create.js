@@ -8,6 +8,7 @@ const PreconditionFailedError = require('../../errors/precondition_failed')
 const logger = new app.logger.getLogger('app.services.signer.create')
 
 const EVENT_TYPE_CREATED = 'signer_created'
+
 async function validate(payload) {
   const data = _.pick(payload, SignerModel.props())
   return validator(data, SignerModel.schema('create'), { abortEarly: false })
@@ -16,6 +17,7 @@ async function validate(payload) {
 function validatePreconditions(signer, accountRequest) {
   // Validate account request status
   if (accountRequest.status !== 'DRAFT') {
+// Temp comment
     throw new PreconditionFailedError('Can only add new signers to DRAFT account request')
   }
   // can only have 1 primary signer

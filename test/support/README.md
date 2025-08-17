@@ -30,3 +30,4 @@ run the following command each time you want to populate the db:
 npm run dev
 ```
 
+# Blueprints

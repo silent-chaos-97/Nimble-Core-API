@@ -13,3 +13,4 @@ columns:
     title: Product
 
   - data: questions
+    title: Questions

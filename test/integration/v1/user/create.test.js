@@ -227,3 +227,7 @@ describe('POST /users', () => {
       it('should have a message in case of 409', () => {
         return request(app.server)
           .post('/v1/users')
+          .set('X-API-KEY', 'superpowers')
+          .send(user)
+          .expect(res => {
+            expect(res.body.message).to.not.be.undefined

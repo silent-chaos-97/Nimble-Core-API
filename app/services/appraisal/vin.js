@@ -45,3 +45,4 @@ module.exports = async(vin, opts) => {
     const high = _.get(_value, ['price_range', 'upper_bound'])
 
     const appraisal = !value ? null : {
+      value: value ? _.toNumber(value) : null,

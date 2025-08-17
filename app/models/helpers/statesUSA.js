@@ -17,6 +17,7 @@ const statesUSA = [
   'ID',
   'IL',
   'IN',
+  'IA',
   'KS',
   'KY',
   'LA',
@@ -49,3 +50,4 @@ const statesUSA = [
   'SD',
   'TN',
   'TX',
+  'UT',

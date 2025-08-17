@@ -4,4 +4,3 @@ class UnauthorizedTokenError extends Error {
     this.name = 'UnauthorizedTokenError'
     this.statusCode = 401
   }
-}

@@ -55,5 +55,7 @@ module.exports = {
       address_document_country: 1
     },
     document: {
+      issue_date: 1,
       document_visibility: 1,
       dob: 1,
+      selected_type: 1,

@@ -95,3 +95,5 @@ describe('app.services.email.inviteReminder', () => {
         .replace(':invitedBy', invitedBy.firstName)
         .replace(':token', 'xxxx')
         .replace(':domain', institution.domain)
+
+      const template = 'inviteeSignupReminderEmail'

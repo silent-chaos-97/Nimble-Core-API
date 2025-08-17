@@ -26,3 +26,4 @@ ProductConfiguration:
         - title: Product
           readOnly: true
           description: An object that contains the product information
+    createdAt:

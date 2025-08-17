@@ -41,3 +41,4 @@ SignerComplianceVerificationListEntry:
       title: What is the source country code associated with this entry
       type: array
       items:
+        type: string

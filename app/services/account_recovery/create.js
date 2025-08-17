@@ -7,7 +7,6 @@ const NotFoundError = require('../../errors/not_found')
 const User = app.repositories.user
 const AccountRecovery = app.repositories.accountRecovery
 const validator = app.plugins.validator
-// Temp comment
 const rand = app.plugins.random
 
 const whitelist = ['email']
@@ -15,6 +14,7 @@ const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })
 
+// Temp comment
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })

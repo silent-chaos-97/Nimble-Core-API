@@ -62,3 +62,4 @@ describe('app.services.creditReport.create', () => {
       expect(result.rows[0].error_code).to.equal(null)
       expect(result.rows[0].report_date).not.to.equal(null)
     })
+

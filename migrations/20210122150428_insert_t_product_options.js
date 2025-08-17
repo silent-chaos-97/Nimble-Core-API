@@ -10,7 +10,6 @@ const savingsProductOptions = [
     key: 'e_statements',
     category: 'product_feature',
     title: 'E-Statements',
-    value: true,
     lead: 'Get your bank statements directly on your email',
     annotation: 'Free',
   },
@@ -93,3 +92,5 @@ exports.up = async (knex)  => {
       // Insert checking product options
       await Promise.all(checkingProductOptions.map(async (checkingOption) => {
         checkingOption.product_id = product.id,
+        await knex('product_options').insert(Object.assign({}, checkingOption))
+      }))

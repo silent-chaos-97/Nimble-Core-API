@@ -25,3 +25,4 @@ AccountRequestVerificationStatus:
       title: The status of the adverse media verification
       type: string
       enum: ['MATCH', 'NOMATCH', 'PENDING']
+      default: 'PENDING'

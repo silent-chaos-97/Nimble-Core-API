@@ -14,3 +14,4 @@ exports.up = function (knex, Promise) {
 exports.down = function (knex, Promise) {
   knex.schema.table('account_request_products', table => {
     table.dropIndex('account_request_id')
+    table.dropPrimary(['account_request_id', 'product_id'])

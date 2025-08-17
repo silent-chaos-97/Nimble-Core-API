@@ -15,6 +15,7 @@ Me:
       title: Email
       description: The email of the user
       example: demouser@nimblefi.com
+    firstName:
       type: string
       title: First Name
       description: The first name of the user
@@ -39,3 +40,4 @@ Me:
       description: The date and time the user record entered the system
     institution:
       readOnly: true
+      allOf:

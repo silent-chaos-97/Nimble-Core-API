@@ -6,11 +6,11 @@ const includes = [
   'createdById',
   'createdByRole',
   'createdAt',
-  'updatedAt',
   'size',
   'mimetype',
   'name',
   'version'
+]
 
 module.exports = data => {
   const file = defaultSerializer(includes, data)

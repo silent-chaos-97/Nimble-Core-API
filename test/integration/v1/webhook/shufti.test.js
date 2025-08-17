@@ -126,3 +126,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         expect(status).to.deep.equal(expectedStatus)
       })
   })
+
+  it('should trigger an update on the signer', async () => {

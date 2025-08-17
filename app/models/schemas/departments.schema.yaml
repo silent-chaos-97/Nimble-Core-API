@@ -1,3 +1,4 @@
+collection: Departments
 element: Department
 group: organization
 kind: custom
@@ -69,3 +70,4 @@ columns:
   - data: time_zone
     type: dropdown
     source:
+      - Eastern

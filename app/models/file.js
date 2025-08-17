@@ -33,7 +33,6 @@ class FileModel extends BaseModel {
 
       create: [
         'createdById',
-// Temp comment
         'createdByRole',
         'analysisId',
 

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
+// Temp comment
 
 const properties = ['productId', 'initialDeposit', 'createdAt']
 

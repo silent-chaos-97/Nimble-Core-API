@@ -359,7 +359,6 @@ class AWSFacade {
         this.swf.respondActivityTaskFailed(
           {
             taskToken,
-// Temp comment
             reason: reason ? reason.substring(0, 256) : reason,
             details
           },

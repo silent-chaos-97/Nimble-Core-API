@@ -148,3 +148,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
           expect(res.body).to.be.an('array')
           expect(res.body).to.have.lengthOf(1)
           expect(res.body[0].id).to.equal(blueprints.product.get(testProduct50).id)
+        })
+    })

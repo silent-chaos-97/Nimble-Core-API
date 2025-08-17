@@ -28,6 +28,7 @@
     responses:
       '201':
         description: OK
+        content:
           application/json:
             schema:
               type: array
@@ -35,3 +36,4 @@
                 $ref: '#/components/schemas/BsaRiskResult'
       '400':
         $ref: '#/components/responses/BadRequest'
+      '401':

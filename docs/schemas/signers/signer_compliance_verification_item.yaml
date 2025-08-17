@@ -3,7 +3,6 @@ SignerComplianceVerificationItem:
   properties:
     id:
       type: string
-      format: uuidv4
       title: uuid
       readOnly: true
       description: Result Identifier
@@ -40,6 +39,7 @@ SignerComplianceVerificationItem:
     warnings:
       title: A list of entries found about results of the type Warning
       type: array
+      items:
         $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
     sanctions:
       title: A list of entries found about results of the type Sanction

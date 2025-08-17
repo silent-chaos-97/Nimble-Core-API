@@ -386,6 +386,7 @@ const successResponse = {
                 "name": "Countries",
                 "tag": "country_names",
                 "value": "Egypt, Kenya, Nigeria, South Africa, Spain, United Kingdom, United States, Zambia, Zimbabwe"
+              },
               {
                 "name": "Date of Birth",
                 "source": "complyadvantage-adverse-media",
@@ -4053,3 +4054,69 @@ const parsedResult = [
         "value": "Former President",
         "source": "DFAT Australia Consolidated Sanctions List",
         "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2012-03-02T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.dfat.gov.au/international-relations/security/sanctions/Pages/consolidated-list.aspx"
+      },
+      {
+        "name": "Program",
+        "value": "Autonomous (Zimbabwe)",
+        "source": "DFAT Australia Consolidated Sanctions List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2012-03-02T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.dfat.gov.au/international-relations/security/sanctions/Pages/consolidated-list.aspx"
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "EU External Action Service - Consolidated list of Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2005-06-16T00:00:00Z",
+        "deletedDate": "2020-02-25T00:00:00Z",
+        "url": "https://eeas.europa.eu/headquarters/headquarters-homepage_en/8442/Consolidated%20list%20of%20sanctions"
+      },
+      {
+        "name": "Passport",
+        "value": "AD001095",
+        "source": "EU External Action Service - Consolidated list of Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2005-06-16T00:00:00Z",
+        "deletedDate": "2020-02-25T00:00:00Z",
+        "url": "https://eeas.europa.eu/headquarters/headquarters-homepage_en/8442/Consolidated%20list%20of%20sanctions"
+      },
+      {
+        "name": "Role",
+        "value": "Former President",
+        "source": "EU External Action Service - Consolidated list of Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2005-06-16T00:00:00Z",
+        "deletedDate": "2020-02-25T00:00:00Z",
+        "url": "https://eeas.europa.eu/headquarters/headquarters-homepage_en/8442/Consolidated%20list%20of%20sanctions"
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "UK HM Treasury Office of Financial Sanctions Implementation Consolidated List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2002-02-21T00:00:00Z",
+        "deletedDate": "2020-02-19T00:00:00Z",
+        "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
+      },
+      {
+        "name": "Passport",
+        "value": "AD001095",
+        "source": "UK HM Treasury Office of Financial Sanctions Implementation Consolidated List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2002-02-21T00:00:00Z",
+        "deletedDate": "2020-02-19T00:00:00Z",
+        "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
+      },
+      {

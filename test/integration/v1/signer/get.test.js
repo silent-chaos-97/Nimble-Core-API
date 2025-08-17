@@ -7,12 +7,12 @@ describe('GET /signers/:id', async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
-// Temp comment
   })
 
   after(() => {
     clock.restore()
   })
+// Temp comment
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')

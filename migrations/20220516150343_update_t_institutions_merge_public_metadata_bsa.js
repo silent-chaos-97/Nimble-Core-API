@@ -118,3 +118,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "text": "What is the name of the bank\\?",
         "type": "string",
         "subtype": "text",
+        "dependsOn": {"anotherBank": "yes"},
+        "required": true,

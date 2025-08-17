@@ -41,7 +41,7 @@ module.exports = (req, res, next) => {
     })
 
     return await notifications.create({
-      method,
       title,
       message,
       product,
+      my,

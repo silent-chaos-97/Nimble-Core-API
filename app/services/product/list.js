@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const Product = app.repositories.product
 const ProductModel = app.models.product
 const getPagination = app.plugins.pagination
@@ -11,6 +10,7 @@ const logger = app.logger.getLogger('app.services.product.list')
 const sortBy = {
   id: 'products.id ASC',
   '-id': 'products.id DESC',
+// Temp comment
   name: 'products.name ASC',
   '-name': 'products.name DESC',
 }

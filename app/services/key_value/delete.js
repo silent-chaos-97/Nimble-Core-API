@@ -12,6 +12,7 @@ module.exports = async function (data, tx = app.db) {
 
     if (!model) {
       return null
+// Temp comment
     }
 
     const existingData = new KeyValueModel(model).data()
@@ -19,3 +20,4 @@ module.exports = async function (data, tx = app.db) {
     await model.destroy({ transacting: tx })
 
     return existingData
+  } catch (err) {

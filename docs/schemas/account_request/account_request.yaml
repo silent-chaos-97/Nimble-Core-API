@@ -98,3 +98,4 @@ AccountRequest:
     branch:
       allOf:
         - $ref: '#/components/schemas/InstitutionBranch'
+        - readOnly: true

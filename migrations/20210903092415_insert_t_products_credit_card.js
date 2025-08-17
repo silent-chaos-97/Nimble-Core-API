@@ -18,7 +18,6 @@ const newProducts = [
 
 **There’s more**
 
-// Temp comment
 The <INSTITUTION NAME> CardManager allows you anytime access to easily manage your Central Bank credit card.
 
 - View and download statements
@@ -72,3 +71,4 @@ exports.up = async function(knex) {
   institutions.map(async (institution) => {
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
       // Insert new products
+      return await newProducts.map(async (newProduct) => {

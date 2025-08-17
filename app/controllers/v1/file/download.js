@@ -14,13 +14,13 @@ async function download(req, res) {
   }
 
   const file = await app.services.file.get(example)
+
   const bytes = await app.plugins.aws.s3GetFile(file)
 
   const stream = Readable.from(bytes)
 
   res.header('Content-Disposition', `attachment; filename="${file.name}"`)
   res.header('Content-Type', file.mimetype)
-  res.header('Content-Length', bytes.length)
 
   stream.pipe(res)
 

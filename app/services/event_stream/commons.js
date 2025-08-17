@@ -37,6 +37,7 @@ async function _defaultNotifications(event) {
       log.error({
         op: 'taskCreatedNotification',
         phase: 'FAIL',
+        code: 'AssigneeNotFound',
         assignee: task.assignee
       })
       return []

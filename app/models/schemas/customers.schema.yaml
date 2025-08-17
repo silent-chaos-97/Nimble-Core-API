@@ -3,6 +3,7 @@ element: Customer
 group: organization
 order: 0
 
+columns:
   - data: id
     readOnly: true
     title: ID
@@ -22,9 +23,9 @@ order: 0
 
   - data: address
     allowEmpty: true
-
   - data: address_2
     allowEmpty: true
 
   - data: city
     allowEmpty: true
+

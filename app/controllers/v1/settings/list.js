@@ -1,5 +1,4 @@
 const app = require('../../../core')
-const _ = require('lodash')
 
 function list(req, res, next) {
   return app.services.settings.list({

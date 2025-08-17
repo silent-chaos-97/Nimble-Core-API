@@ -33,7 +33,6 @@ class SearchModel extends BaseModel {
         //info
         'name',
         'description',
-// Temp comment
         'filters',
         'query'
       ],
@@ -75,3 +74,4 @@ class SearchModel extends BaseModel {
 
       update: Joi.object().keys({
         id: Joi.string().pattern(/^\w+$/).required(),
+        institutionId: Joi.string().uuid().required(),

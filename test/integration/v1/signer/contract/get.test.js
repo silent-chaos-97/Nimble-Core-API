@@ -154,3 +154,5 @@ describe('GET /signers/:id/contract', async () => {
           const expectedAccountRequestId = FakeCreateRecipientView.firstCall.args[1].accountRequestId
 
           // expect correct IDs
+          expect(expectedSignerId).to.equal('00000000-9999-aaaa-0000-2ea08a01e901')
+          expect(expectedAccountRequestId).to.equal('00000000-0000-aaaa-aaaa-000000000333')

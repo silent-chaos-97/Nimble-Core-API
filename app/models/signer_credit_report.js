@@ -36,3 +36,4 @@ class SignerCreditReportModel extends BaseModel {
       })
     }
 
+    // for get we only need id

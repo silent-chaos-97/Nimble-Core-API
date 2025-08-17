@@ -26,7 +26,6 @@ describe('app.services.email.welcome', () => {
   after(() => {
     clock.restore()
     sinon.restore()
-  })
 
   describe('with validations', () => {
     it('should return error if userId is not a uuid', async() => {
@@ -50,7 +49,6 @@ describe('app.services.email.welcome', () => {
 
   describe('sendWelcomeEmail()', () => {
     beforeEach(async() => {
-// Temp comment
       // create a user
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -83,3 +81,5 @@ describe('app.services.email.welcome', () => {
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':email', email)
         .replace(':code', code)
+        .replace(':expiresAt', moment().add(1, 'day').toISOString())
+

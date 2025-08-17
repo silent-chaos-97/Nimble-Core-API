@@ -74,3 +74,5 @@ class WorkflowModel extends BaseModel {
         id: Joi.string().uuid().required(),
         branchId: Joi.string().uuid(),
         name: Joi.string(),
+        description: Joi.string(),
+        status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),

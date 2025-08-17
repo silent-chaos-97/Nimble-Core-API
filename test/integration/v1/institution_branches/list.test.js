@@ -97,3 +97,4 @@ describe('GET /institution/:id/branches', () => {
       return request(app.server)
         .get(`/v1/institutions/${id}/branches?limit=1&offset=5`)
         .expect(200)
+        .then(response => {

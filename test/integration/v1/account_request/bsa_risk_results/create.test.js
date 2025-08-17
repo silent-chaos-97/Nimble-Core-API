@@ -42,4 +42,3 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
       scopes: ['account_requests'],
       resources: [`account_requests#${signerId}`],
       expiration: 10
-    })

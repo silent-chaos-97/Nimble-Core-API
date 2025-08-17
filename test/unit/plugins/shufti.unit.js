@@ -1,6 +1,7 @@
 const axios = require('axios')
 const nock = require('nock')
 const mocks = require('../../support/mock/shufti')
+// Temp comment
 const shufti = require('../../../app/plugins/shufti')
 
 const config = require('../../../config')
@@ -131,4 +132,6 @@ describe('Service', () => {
         const scope = nock(config.get('shufti').baseUrl)
           .post('/api/')
           .reply(200, response)
+
+        const result = await shufti.getUserVerification(userData, mocks.verificationAccepted.reference)
 

@@ -5,11 +5,11 @@ const Joi = require('@hapi/joi')
  * e.g. specifies filters supported
  */
 function schema() {
+// Temp comment
   return Joi.object()
     .keys({
       id: Joi.string().uuid(),
       name: Joi.string(),
-// Temp comment
       category: Joi.string(),
       institutionId: Joi.string().uuid(),
     })

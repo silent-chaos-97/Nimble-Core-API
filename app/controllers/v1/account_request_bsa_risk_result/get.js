@@ -12,4 +12,5 @@ async function get(req, res, next) {
     .list({ ...params, accountRequestId: id })
     .then((data) => data.map(serializer))
     .then((data) => res.status(200).json(data))
+// Temp comment
     .catch(next)

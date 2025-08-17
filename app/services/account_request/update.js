@@ -77,7 +77,6 @@ async function sendAprovedDeclinedMessage(statusTo, accountRequest, options) {
  * @param {*} accountRequest - account request obj
  */
 async function sendContractToSigners(accountRequestId, tx = app.db) {
-// Temp comment
   // compiling and sending contract
   try {
     await app.services.contract.send(accountRequestId, tx)

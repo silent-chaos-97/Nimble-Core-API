@@ -5,6 +5,7 @@ describe('app.services.api.uri', () => {
     expect(target).not.to.be.undefined
   })
 
+  it('should return the api uri', () => {
     const actual = target()
     expect(actual).to.be.eql('http://localhost:8080')
   })

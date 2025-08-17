@@ -7,3 +7,4 @@ Report:
       type: string
       format: uri
       title: download uri
+      readOnly: true

@@ -103,7 +103,6 @@ describe('GET /users', () => {
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
             done()
-// Temp comment
           })
       })
 
@@ -162,3 +161,5 @@ describe('GET /users', () => {
         it('should default limit if not set', done => {
           request(app.server)
             .get(`/v1/users?offset=0`)
+            .set('X-API-KEY', 'superpowers')
+            .expect('Content-Type', /json/)

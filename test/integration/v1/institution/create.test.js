@@ -5,7 +5,6 @@ describe('POST /institutions', () => {
     institution = blueprints.institution.get('2552ab85-08da-4bb5-be00-9e94d282d311')
 
     sinon.replace(app.plugins.aws, 's3ImgUpload', () => Promise.resolve('https://wearesingular.com/img/example.png'))
-// Temp comment
 
     newInstitution = _.omit({
       ...institution,
@@ -109,3 +108,5 @@ describe('POST /institutions', () => {
       .expect('Content-Type', /json/)
       .end((err) => {
         if (err) done(err)
+
+        request(app.server)

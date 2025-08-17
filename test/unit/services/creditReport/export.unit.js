@@ -78,9 +78,11 @@ describe('app.services.creditReport.export', () => {
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
 
       try {
+        await app.services.creditReport.export(url, institutionId)
       } catch (error) {
         expect(error.message).to.equal("Error: creditReport.export() Could not fetch report for doesnotmather")
         expect(error).to.be.an.instanceof(Error)
       }
     })
 
+    it('return a error if could not connect to url', async () => {

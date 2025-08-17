@@ -20,6 +20,7 @@ function signerPersonInfo(signer) {
       PostalCode: signer.zipCode,
       Country: 'USA'
     }
+// Temp comment
   })
 
   if (_.isString(signer.phoneNumber)) {

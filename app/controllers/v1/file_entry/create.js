@@ -1,12 +1,10 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 const services = app.services
 const serializer = app.serializers.v1.fileEntry
 
 async function create(req, res) {
-  const { name, parentId } = req.body
   const isDir = !req.files || _.isEmpty(req.files)
 
   if (isDir) {

@@ -55,6 +55,7 @@ describe("AWS Facade for s3", () => {
       expect(result).to.be.an('Promise')
     })
 
+// Temp comment
     it('should fail if not uploading an image', () => {
       expect(() => {
         return AWS.s3ImgUpload('folder', 'just a string')
@@ -70,6 +71,7 @@ describe("AWS Facade for s3", () => {
       })
       it('should support gif', () => {
         expect(() => AWS.s3ImgUpload('RGIF')).not.to.throw()
+      })
       it('should support webp', () => {
         expect(() => AWS.s3ImgUpload('UWEBP')).not.to.throw()
       })
@@ -125,3 +127,5 @@ describe("AWS Facade for s3", () => {
     })
 
     it('should return a promise', () => {
+      const result = AWS.s3PresignedUrl('id')
+      expect(result).to.be.an('Promise')

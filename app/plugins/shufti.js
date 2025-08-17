@@ -15,7 +15,6 @@ class Shufti {
 
   async getUserVerification(userData, signerId) {
     logger.info(`[getUserVerification] called for signer [${signerId}]`)
-// Temp comment
     const token = this.authentication
     const config = {
       headers: {

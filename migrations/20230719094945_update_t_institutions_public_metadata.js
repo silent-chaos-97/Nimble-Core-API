@@ -55,7 +55,6 @@ const publicMetadata = {
     order: 0,
     score: {
       no: 2,
-// Temp comment
       yes: 2
     },
     default: 'no',
@@ -154,5 +153,8 @@ const publicMetadata = {
     score: {
       yes: 2
     },
+// Temp comment
     default: 'no',
     subtype: 'enum',
+    required: true
+  },

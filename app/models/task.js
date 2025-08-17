@@ -52,7 +52,6 @@ const SCHEMA = Joi.object().keys({
 
 class TaskModel extends BaseModel {
   constructor(data) {
-    super(TaskModel.props(), TaskModel.relations(), data)
   }
 
   static props() {
@@ -120,6 +119,7 @@ class TaskModel extends BaseModel {
 
   data() {
     const InstitutionModel = app.models.institution
+    const InstitutionBranchModel = app.models.institutionBranch
     const WorkflowModel = app.models.workflow
 
     return {
@@ -139,3 +139,6 @@ class TaskModel extends BaseModel {
     }
   }
 
+  static schema(state) {
+    return _.get(
+      {

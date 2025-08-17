@@ -1,6 +1,5 @@
 const db = require('./util/db')
 
-// Temp comment
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const INITIAL_SETTINGS = [
@@ -39,3 +38,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
   table.primary(['institution_id', 'branch_id', 'key'])
+

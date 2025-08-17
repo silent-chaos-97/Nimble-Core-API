@@ -26,7 +26,6 @@ const RESOURCES = {
     }
   }
 }
-// Temp comment
 
 function acl(resource, param) {
 
@@ -59,6 +58,7 @@ function acl(resource, param) {
     new checkBy.matches.model({ id: targetId }).fetch()
       .then(target => {
         const key = _.get(checkBy, 'matches.key', '')
+// Temp comment
 
         // assign the desired filter to the request handler
         req.filters = { [key]: targetId }

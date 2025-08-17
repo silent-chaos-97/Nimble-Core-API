@@ -4,7 +4,6 @@ const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
-describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
     nock.disableNetConnect()
@@ -93,3 +92,5 @@ describe('app.services.compliance.parse', () => {
 
         const item = _.first(first.sanctions)
 
+        expect(item).to.have.ownProperty('name')
+        expect(item).to.have.ownProperty('url')
