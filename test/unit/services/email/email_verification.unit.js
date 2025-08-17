@@ -122,3 +122,4 @@ describe('app.services.email.emailVerification', () => {
         .replace(':domain', 'wearesingular.com')
         .replace(':signer_id', signer.id)
         .replace(':id', id)
+        .replace(':token', 'xxxx')

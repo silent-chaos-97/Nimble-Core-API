@@ -33,6 +33,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
       expect(app.services.cron.emailVerificationReminder).to.be.an('Function')
     })
   })
+
   describe('running the service', () => {
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
@@ -65,7 +66,6 @@ describe('app.services.cron.emailVerificationReminder', () => {
         await app.services.cron.emailVerificationReminder()
         expect(emailVerificationEmailSpy).to.not.have.been.called
       })
-
       it('should SEND reminders when running 24 hours after', async () => {
         const now = moment(baseDate).add(24, 'hour').toDate()
         sinon.useFakeTimers(now)
@@ -120,3 +120,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       const days = 3
       const hours = days * 24
       it('should NOT SEND reminders when running 71 hours after', async () => {
+        const now = moment(baseDate).add(hours - 1, 'hour').toDate()

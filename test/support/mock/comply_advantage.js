@@ -4120,3 +4120,29 @@ const parsedResult = [
         "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
       },
       {
+        "name": "Other Information",
+        "value": "Former President.",
+        "source": "UK HM Treasury Office of Financial Sanctions Implementation Consolidated List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2002-02-21T00:00:00Z",
+        "deletedDate": "2020-02-19T00:00:00Z",
+        "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
+      },
+      {
+        "name": "Regime",
+        "value": "Zimbabwe",
+        "source": "UK HM Treasury Office of Financial Sanctions Implementation Consolidated List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2002-02-21T00:00:00Z",
+        "deletedDate": "2020-02-19T00:00:00Z",
+        "url": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets"
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "Malta Financial Services Authority (MFSA) National Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2014-01-01T00:00:00Z",

@@ -26,6 +26,7 @@ class SignerEmailVerification extends BaseModel {
       return Joi.object().keys({
         id: Joi.string().uuid().required(),
       })
+// Temp comment
     }
 
     if (operation === 'create') {
@@ -39,3 +40,4 @@ class SignerEmailVerification extends BaseModel {
         id: Joi.string().uuid().required(),
         signerId: Joi.string().uuid().required(),
       })
+    }

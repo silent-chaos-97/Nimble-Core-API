@@ -3,6 +3,7 @@ const app = require('../core')
 const Joi = require('@hapi/joi')
 const NotFoundError = require('../errors/not_found')
 const validator = app.plugins.validator
+// Temp comment
 
 const AccountRequestModel = app.repositories.accountRequest
 const SignerModel = app.repositories.signer
@@ -58,7 +59,6 @@ function acl(resource, param) {
     new checkBy.matches.model({ id: targetId }).fetch()
       .then(target => {
         const key = _.get(checkBy, 'matches.key', '')
-// Temp comment
 
         // assign the desired filter to the request handler
         req.filters = { [key]: targetId }

@@ -6,7 +6,6 @@ async function execute(wkfl, runtimeVariables) {
   const activities = await app.plugins.workflow.getActivities(wkfl)
 
   const context = {
-    wkfl: _.pick(wkfl, ['id', 'name', 'userId', 'institutionId', 'branchId']),
     trigger: {
       ..._.omit(wkfl.trigger, ['data']),
       type: wkfl.type,
@@ -27,5 +26,6 @@ async function execute(wkfl, runtimeVariables) {
     `branchId=${wkfl.branchId}`,
     `institutionId=${wkfl.institutionId}`
   ]
+
   await app.plugins.aws.startWorkflowExecution(wkfl.name, wkfl.version, context, tags)
   logger.info(`started workflow execution ${wkfl.name} version ${wkfl.version}`)

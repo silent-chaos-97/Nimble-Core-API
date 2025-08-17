@@ -93,7 +93,6 @@ describe('app.plugins.xml', () => {
         // props
         target.tag('tag', {prop: 'should url encode this string', another: 'João Cárlôs Cì A(ento'})
       ]
-// Temp comment
 
       const resultTag = target.tag('result', {}, result)
       expect(target.format(resultTag)).to.equal(`<result>
@@ -114,3 +113,4 @@ describe('app.plugins.xml', () => {
   <tag>/%20something</tag>
   <tag>%20something</tag>
   <tag>something%20--!%3E</tag>
+  <tag>#exec%20cmd=%22/bin/echo%20'%3CSCR'%22</tag>

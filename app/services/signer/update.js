@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const validateDocuments = require('./helpers/validate_documents')
 const validateService = require('./validate')
 const Signer = app.repositories.signer
@@ -30,7 +29,6 @@ async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
   if (signer.status === 'SIGNED') { // status is SIGNER, we cant allow further changes on this signer personal data
     throw new PreconditionFailedError('Signer status is not correct.')
   }
-
   const status = SignerModel.getSignerStatusBasedOnCompletedProps(signer)
   logger.debug(`[validateAndUpdateSignerStatus] - status should be [${status}] for signer [${signerId}]`)
 
@@ -75,3 +73,16 @@ async function updateAccountRequestStatus(accountRequestId, tx = app.db) {
 
   // update status to pending if all signers onboarded
   return app.services.accountRequest.update({ id: accountRequest.id, status: 'PENDING' }, null, tx)
+}
+
+// TODO: move to global Model object as helper
+function intentsToModify(before, after, params = []) {
+  if (params.find((param) => _.has(after, param))) {
+    for (let item of params) {
+      if (_.get(after, item, null) !== _.get(before, item, null)) {
+        return true
+      }
+    }
+  }
+
+  return false

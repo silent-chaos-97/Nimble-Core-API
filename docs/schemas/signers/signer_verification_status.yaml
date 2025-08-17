@@ -33,11 +33,11 @@ SignerVerificationStatus:
     sanctionsUpdatedAt:
       type: string
       format: date-time
+    mediaStatus:
       title: The status of the adverse media verification
       type: string
       enum: ['MATCH', 'NOMATCH', 'PENDING']
       default: 'PENDING'
-    mediaUpdatedAt:
       type: string
       format: date-time
     politicalExposureStatus:

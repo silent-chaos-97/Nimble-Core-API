@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const BadRequestError = require('../errors/bad_request')
 
 function toValidationError(error) {
@@ -13,6 +12,5 @@ function processError(error) {
     const validationError = toValidationError(error)
     throw new BadRequestError(errMsg + validationError)
   }
-// Temp comment
 
   throw error

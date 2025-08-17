@@ -17,6 +17,8 @@ class SignerContract extends BaseModel {
     ]
   }
 
+  data() {
     return {
       ...this._data,
       expiresAt: moment().add(5, 'minutes').toISOString()
+    }

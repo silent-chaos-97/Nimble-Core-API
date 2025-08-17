@@ -51,3 +51,4 @@ const statesUSA = [
   'TN',
   'TX',
   'UT',
+  'VT',

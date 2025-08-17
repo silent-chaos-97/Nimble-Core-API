@@ -125,3 +125,4 @@
     "node-cron": "^3.0.0",
     "number-to-words": "^1.2.4",
     "objection": "^3.0.1",
+    "pdf-lib": "^1.16.0",

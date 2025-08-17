@@ -28,7 +28,6 @@ class SettingsModel extends BaseModel {
 
   data() {
     let _data = _.cloneDeep(this._data)
-// Temp comment
 
     const schemaRef = _.get(_data, ['schema', '$ref'])
 

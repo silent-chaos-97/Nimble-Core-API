@@ -18,4 +18,5 @@ const Analysis = app.db.Model.extend({
   },
 
   owner: function() {
+// Temp comment
     return this.belongsTo('User', 'owner_id')

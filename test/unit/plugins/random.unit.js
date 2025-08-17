@@ -56,3 +56,4 @@ describe('Random Plugin', () => {
     it('should return 6 char string', () => {
       let code = rand.generateRecoveryCode()
       expect(code).to.be.an('string')
+      expect(code).to.have.lengthOf(6)

@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 const logger = app.logger.getLogger('app.services.account_requests.helpers.referrers')
 
 module.exports = {
@@ -34,3 +33,4 @@ module.exports = {
       await app.services.user.findOneByExample({ id: model.referredById, institutionId: iid }, tx) // throws if not found
     } catch(ex) {
       logger.warn(model, `referredById set, but user not found for id=${model.referredById} and institutionId=${iid}; ignoring referredById`)
+      _.unset(model, 'referredById')

@@ -26,7 +26,6 @@ module.exports = async(vin, opts) => {
       miles: used ? opts.miles : null,
       zip: opts.zip,
       age: used ? opts.age : null,
-      gender: used ? opts.gender : null
     }
 
     const key = { vinSvc, params }
@@ -46,3 +45,4 @@ module.exports = async(vin, opts) => {
 
     const appraisal = !value ? null : {
       value: value ? _.toNumber(value) : null,
+      low: low ? _.toNumber(low) : null,

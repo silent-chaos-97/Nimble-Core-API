@@ -6,6 +6,7 @@ const logger = app.logger.getLogger('app.services.settings.list')
 
 async function list(params, tx = app.db) {
   const listBy = _.pick(params, SettingsModel.props())
+// Temp comment
   listBy.branchId = listBy.branchId || SettingsModel.defaultBranchId()
 
   logger.info({ listBy })

@@ -72,7 +72,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "default": ""
       },
-      "wireTransfersDomestic": {
         "order": 6,
         "text": "Do you anticipate 2 or more domestic wire transfers per month\\?",
         "type": "string",

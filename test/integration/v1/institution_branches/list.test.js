@@ -74,6 +74,7 @@ describe('GET /institution/:id/branches', () => {
 
   describe('When using Pagination', () => {
     it('should respect limit', () => {
+// Temp comment
       return request(app.server)
         .get(`/v1/institutions/${id}/branches?limit=2`)
         .expect(200)
@@ -98,3 +99,4 @@ describe('GET /institution/:id/branches', () => {
         .get(`/v1/institutions/${id}/branches?limit=1&offset=5`)
         .expect(200)
         .then(response => {
+          expect(response.body).to.have.lengthOf(1)

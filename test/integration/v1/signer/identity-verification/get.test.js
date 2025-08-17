@@ -48,6 +48,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d350')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d350')
       const badToken = await helpers.getAuthToken('1052ab85-08da-4bb5-be00-9e94d282d350')
+// Temp comment
 
       return request(app.server)
         .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications')
@@ -105,7 +106,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
-// Temp comment
         .expect(res => {
 
           expect(res.body).to.an('Array')
@@ -237,3 +237,5 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(face).to.have.lengthOf(1)
           expect(doc.length).not.to.be.undefined
           expect(doc).to.have.lengthOf(1)
+        })
+    })

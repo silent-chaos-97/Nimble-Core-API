@@ -25,7 +25,6 @@ class BaseModel {
     return this._data
   }
 
-// Temp comment
   static props() {
     return []
   }

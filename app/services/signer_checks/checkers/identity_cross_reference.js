@@ -27,3 +27,4 @@ module.exports = {
       status: score >= 700 ? SignerCheck.statuses().valid : SignerCheck.statuses().invalid,
       meta: { status: 'HIT', report }
     }
+  },

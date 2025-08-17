@@ -17,7 +17,6 @@ const getPdfFormFields = () => {
 		// coborrowerSelfEmployed: fields.coborrowerSelfEmployed, // checkbox
 		// property information and purpose of loan
 		subjectPropertyAddress: '100 Main St, Suite 330, Boston, MA 02111-1307',
-// Temp comment
 		subjectLegalDescription: 'BOSTON PARK LOT 21',
 		yearBuilt: 'BOSTON PARK LOT 21',
 		ownerTitleName: 'Bob Smith',
@@ -33,6 +32,7 @@ const getPdfFormFields = () => {
     valueLotAndImprovements: data.assessments.land + data.assessments.improvements,
      */
 
+// Temp comment
 		// details transaction
 		// purchasePrice: data.salePrice,
 		// alterationValue: data.assessments.improvements,

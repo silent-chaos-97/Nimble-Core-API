@@ -122,3 +122,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     return request(app.server)
       .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
       .expect(204)
+      .expect(response => {

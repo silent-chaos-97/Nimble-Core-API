@@ -101,7 +101,6 @@ class AccountRequest extends BaseModel {
       verificationStatusFace: ['VALID', 'INVALID'],
       verificationStatusDocument: ['VALID', 'INVALID'],
       verificationStatusAddress: ['VALID', 'INVALID'],
-      verificationStatusSanctions: ['NOMATCH', 'MATCH'],
       verificationStatusMedia: ['NOMATCH', 'MATCH'],
       verificationStatusPoliticalExposure: ['NOMATCH', 'MATCH']
     }
@@ -214,3 +213,4 @@ class AccountRequest extends BaseModel {
       case 'update.api.public':
         return Joi.object().keys({
           id: Joi.string().uuid().required(),
+          status: Joi.string().optional().valid('INCOMPLETE'),

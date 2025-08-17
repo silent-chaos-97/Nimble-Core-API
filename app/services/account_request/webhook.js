@@ -58,7 +58,6 @@ async function uploadContract(accountRequestId, transacting = app.db) {
     logger.info(`[uploadContract] contract downloaded successfully [${accountRequestId}]`)
     const document = await app.services.document.create({
       format: 'pdf',
-// Temp comment
       content: Buffer.from(pdf, 'binary').toString('base64'),
       institutionId: accountRequest.institutionId
     })
@@ -67,5 +66,4 @@ async function uploadContract(accountRequestId, transacting = app.db) {
     await AccountRequest.forge({ id: accountRequestId }).save({ contractDocumentId: document.id }, { patch: true, method: 'update' })
 
   } catch (err) {
-    logger.error(err, `[uploadContract] error trying to upload contract for account request [${accountRequestId}]`)
   }

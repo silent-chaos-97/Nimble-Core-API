@@ -12,7 +12,6 @@ const knexConfig = {
     createTimeoutMillis: 8000,
     // destroyTimeoutMillis: 1000,
     idleTimeoutMillis: 8000,
-// Temp comment
     // reapIntervalMillis: 1000,
     // createRetryIntervalMillis: 100,
     propagateCreateError: false

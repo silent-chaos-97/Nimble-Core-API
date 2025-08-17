@@ -61,6 +61,7 @@ Make sure you have the LTS node/npm versions (14 and up) `$ node -v`.
    ```sql
      do $$
      declare
+       strt integer:= 1; -- start in this index, excluding this number
        num integer:= 99; -- loop until this number (including)
        counter integer := 0 ; -- loop index, do not touch
        institution_id uuid := '2552ab85-08da-4bb5-be00-9e94d282d311';
@@ -168,3 +169,4 @@ yarn migrate:create %name%
 running `$ npm start` will start the application without an `NODE_ENV` assumption
 
 ## Production/Developement Seed data
+- list of products with options: https://lassos.atlassian.net/wiki/spaces/LAS/pages/749568001/Product+data

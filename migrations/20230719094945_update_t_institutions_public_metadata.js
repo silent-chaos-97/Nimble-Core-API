@@ -94,7 +94,6 @@ const publicMetadata = {
       usCitizen: 'yes'
     }
   },
-  cashTransactions: {
     enum: [
       'yes',
       'no'
@@ -153,8 +152,8 @@ const publicMetadata = {
     score: {
       yes: 2
     },
-// Temp comment
     default: 'no',
     subtype: 'enum',
     required: true
   },
+  wireTransfersInternational: {

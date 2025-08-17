@@ -46,6 +46,7 @@ async function getUsersFromSettings(ref, context) {
           phone: user.phone,
           firstName: user.firstName,
           lastName: user.lastName
+// Temp comment
         }
       ]
     }

@@ -232,3 +232,5 @@ describe('Credit Report Plugin', () => {
   })
 
   describe('fetchReport', () => {
+    it('should return valid response', async () => {
+      const response = mocks.resultsSuccess

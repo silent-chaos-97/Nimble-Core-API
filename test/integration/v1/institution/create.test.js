@@ -90,6 +90,7 @@ describe('POST /institutions', () => {
 
         expect(res.body.id).to.be.an('string')
         expect(res.body.slug).to.be.an('string')
+// Temp comment
         expect(res.body.name).to.be.an('string')
         expect(res.body.domain).to.be.an('string')
 
@@ -110,3 +111,4 @@ describe('POST /institutions', () => {
         if (err) done(err)
 
         request(app.server)
+          .get('/v1/institutions/' + institution.domain)

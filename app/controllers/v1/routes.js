@@ -1,6 +1,5 @@
 const app = require('../../core')
 const Roles = app.models.user.roles()
-// Temp comment
 const admins = [Roles.SuperAdmin, Roles.InstitutionAdmin, Roles.BranchAdmin]
 const auth = app.middlewares.auth
 const multer = require('multer')
@@ -12,6 +11,7 @@ function asyncWrapper(cb) {
     try {
       cb(req, res, next).catch(next)
     } catch (err) {
+// Temp comment
       next(err)
     }
   }

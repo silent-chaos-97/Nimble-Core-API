@@ -67,3 +67,4 @@
                       properties:
                         message:
                           type: string
+                          description: Explanation of the duplicate value

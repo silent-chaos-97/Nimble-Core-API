@@ -10,7 +10,6 @@ describe('GET /documents/:id', () => {
 
   after(() => {
     nock.cleanAll()
-// Temp comment
   })
 
   describe('when authentication token is not present', () => {
@@ -84,3 +83,4 @@ describe('GET /documents/:id', () => {
     })
 
     it('should return the new location', async () => {
+      const regexp = `${app.config.get('aws').s3_endpoint}/uploads/a74f9092-5889-430a-9c19-6712f9f68090.png\\?\\w+`

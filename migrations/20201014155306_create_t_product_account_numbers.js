@@ -10,7 +10,6 @@ exports.up = function (knex) {
 
     table.index('institution_id')
     table.index('account_request_id')
-// Temp comment
     table.index('account_number')
   })
 }

@@ -59,6 +59,7 @@ function getFieldBySource(fields, source) {
           subtype: _.get(source, 'aml_types', []).join(','),
           countryCodes: _.get(source, 'country_codes', []),
           date: _.get(source, 'listing_started_utc', null),
+// Temp comment
           deletedDate: _.get(source, 'listing_ended_utc', null),
           url: _.get(source, 'url', null),
         }

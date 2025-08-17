@@ -150,3 +150,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
           expect(res.body[0].id).to.equal(blueprints.product.get(testProduct50).id)
         })
     })
+

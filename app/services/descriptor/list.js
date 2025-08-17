@@ -45,7 +45,6 @@ module.exports = async(path) => {
     return { ...props, inputs, 'ui:inputs': uiInputs, outputs, 'ui:outputs': uiOutputs, context }
   })
 }
-
 function flattenSchema(schema, basePath = null) {
   return _.reduce(flatten(unwrapJsonSchema(schema)), (memo, type, path) => {
     const key = basePath ? basePath + '.' + path : path

@@ -95,6 +95,7 @@ async function signerById(id) {
       'signers.first_name as signer_first_name',
       'signers.address as signer_address',
       'signers.middle_name as signer_middle_name',
+      'signers.last_name as signer_last_name',
       'signers.city as signer_city',
       'signers.date_of_birth as signer_date_of_birth',
       'signers.state as signer_state',

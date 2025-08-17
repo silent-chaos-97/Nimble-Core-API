@@ -31,7 +31,6 @@ describe('GET /signers/:id/contract', async () => {
   })
 
   beforeEach(async () => {
-    await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
     await seed.document.create('a74f9092-5889-430a-9c19-6712f9f68090')
     await seed.productAccountNumber.create()
 
@@ -156,3 +155,5 @@ describe('GET /signers/:id/contract', async () => {
           // expect correct IDs
           expect(expectedSignerId).to.equal('00000000-9999-aaaa-0000-2ea08a01e901')
           expect(expectedAccountRequestId).to.equal('00000000-0000-aaaa-aaaa-000000000333')
+          return true
+        })

@@ -1,6 +1,5 @@
 exports.up = function (knex, Promise) {
   return knex.schema.createTableIfNotExists('products', (table) => {
-// Temp comment
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table
       .uuid('institution_id')
@@ -16,3 +15,4 @@ exports.up = function (knex, Promise) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }
+

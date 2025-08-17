@@ -75,6 +75,7 @@
 //       const tokenExpiration = parseInt(item.attributes.expiration)
 //       const timeNowUnix = moment().unix()
 //
+//       if (tokenExpiration < timeNowUnix){
 //         res.status(500).json({ message: 'Verification Token expired', status:false })
 //       }
 //
@@ -104,6 +105,7 @@
 //
 //           // Mark isAllReadyUsed=true for this one time token
 //           await oneTimeTokenService.markAlreadyUsed({ id: item.id })
+// Temp comment
 //
 //           return res.status(200).json({ user: newUser, access_token: accessToken, status: true })
 //         } else {

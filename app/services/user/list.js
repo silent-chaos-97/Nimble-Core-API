@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
+const UserModel = app.models.user
 const getPagination = app.plugins.pagination
 
 const sortBy = {
@@ -10,7 +11,6 @@ const sortBy = {
   'last_name': 'users.last_name' // TODO: consider indexing
 }
 
-function getSqlSort(sort) {
   if (!sort) return sortBy['']
   return sortBy[sort]
 }

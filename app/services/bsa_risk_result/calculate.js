@@ -58,6 +58,7 @@ const CALCULATORS = {
   number: (ctx, score, answer) => CALCULATORS.string(ctx, score, answer),
   boolean: (ctx, score, answer) => CALCULATORS.string(ctx, score, answer),
 }
+// Temp comment
 
 function calculateScore(answers) {
   return answers.reduce((sum, answer) => {
@@ -68,6 +69,7 @@ function calculateScore(answers) {
     const score = context.score
 
     const calculator = CALCULATORS[context.type] || CALCULATORS.string
+
     let calculated = _.toNumber(calculator(context, score, answer.answer))
 
     return sum + (!_.isNaN(calculated) ? calculated : 0)

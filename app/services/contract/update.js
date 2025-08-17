@@ -28,4 +28,5 @@ function getExtraOptions(accountRequest, institution) {
     productName: getProductName(accountRequest.productConfigurations),
     openingAmount: getInitialDeposit(accountRequest.productConfigurations),
     productConfigurations: accountRequest.productConfigurations,
+  }
   return extraOptions

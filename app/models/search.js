@@ -29,7 +29,6 @@ class SearchModel extends BaseModel {
         'id',
         'institutionId',
         'createdById',
-
         //info
         'name',
         'description',
@@ -75,3 +74,4 @@ class SearchModel extends BaseModel {
       update: Joi.object().keys({
         id: Joi.string().pattern(/^\w+$/).required(),
         institutionId: Joi.string().uuid().required(),
+        name: Joi.string().optional(),

@@ -26,7 +26,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${frontDocId}.png`)
       .reply(200, imageContent)
-// Temp comment
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${backDocId}.png`)
       .reply(200, imageContent)

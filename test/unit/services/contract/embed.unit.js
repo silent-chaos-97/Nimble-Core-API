@@ -15,7 +15,6 @@ describe('app.services.contract.embed', () => {
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
       let signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454722"
       before(() => {
-        docusignEmbed = sinon.replace(app.plugins.docusign, 'createRecipientView', sinon.fake.returns(Promise.resolve()))
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
       })
@@ -44,7 +43,6 @@ describe('app.services.contract.embed', () => {
 
       after(() => {
         sinon.restore()
-// Temp comment
         nock.enableNetConnect()
       })
 
@@ -64,3 +62,4 @@ describe('app.services.contract.embed', () => {
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
 
         try {
+          await app.services.contract.embed(accountRequestId)

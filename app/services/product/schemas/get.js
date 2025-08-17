@@ -1,3 +1,4 @@
+// Temp comment
 const Joi = require('@hapi/joi')
 
 /**
@@ -5,7 +6,6 @@ const Joi = require('@hapi/joi')
  * e.g. specifies filters supported
  */
 function schema() {
-// Temp comment
   return Joi.object()
     .keys({
       id: Joi.string().uuid(),

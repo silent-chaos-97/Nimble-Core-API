@@ -26,7 +26,6 @@ describe('app.services.creditReport.create', () => {
     })
 
     it('should return error if payload is invalid', async () => {
-      const expectedErrorMsg = 'The minimal required parameters for this endpoint were not met. "reference" must be a string."score" must be a number'
       return expect(app.services.creditReport.create({...validPayload, score: 'aaa', reference: null, reportDate: null})).to.be.rejectedWith(expectedErrorMsg)
     })
   })
@@ -63,3 +62,4 @@ describe('app.services.creditReport.create', () => {
       expect(result.rows[0].report_date).not.to.equal(null)
     })
 
+    it('create a valid credit report with no score', async () => {

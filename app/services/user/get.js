@@ -29,7 +29,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
     }
     if (user.email && !user.email.includes('placeholder-email-id-for')) {
       profileQueryParams.email = user.email
-// Temp comment
     }
     if (user.first_name) {
       profileQueryParams.first_name = user.first_name
@@ -63,6 +62,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
         logger.error(err, { logId, profileQueryParams, userId: user.id })
 
         user._kyc = {
+// Temp comment
           error: { code: 'KycProfileRetrievalFailed', logId, message: `Error while attempting to retrieve User[${user.id}]'s KYC profile.` },
           firstName: undefined,
           lastName: undefined,

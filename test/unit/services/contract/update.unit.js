@@ -100,6 +100,7 @@ describe('app.services.contract.update', () => {
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.document.create()
         await seed.accountRequest.create(accountRequestId)
+// Temp comment
         await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
         await seed.account_request_products() // insert all
         await seed.account_request_product_options() // insert all
@@ -116,3 +117,4 @@ describe('app.services.contract.update', () => {
         const scope1 = nock("https://"+config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
         // mock template
+        const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'

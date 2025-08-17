@@ -107,3 +107,4 @@ const createRequestOptions = (accessToken, requestBody) => ({
   url: `${basePath}/v2.1/accounts/${accountID}/envelopes`,
   method: 'post',
   headers: {
+    Accept: 'application/json',

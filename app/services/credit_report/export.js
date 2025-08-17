@@ -14,7 +14,6 @@ async function __export(contractURL, institutionId) {
     if (!(query.data instanceof Buffer)) {
       throw new Error(`creditReport.export() Could not fetch report for ${contractURL}`)
     }
-    logger.info(`[__export] finished download`)
 
     // clean up, transform into valid compliant HTML
     const htmlContent = creditReportAPI._cleanReportHTML(query.data.toString())
@@ -23,6 +22,7 @@ async function __export(contractURL, institutionId) {
     const docBase64 = await HTMLToPDF.transform(htmlContent)
 
     if (!docBase64) {
+      throw new Error(`[__export] could not transform pdf ${contractURL}`)
     }
 
     logger.info(`[__export] finished pdf generation`)

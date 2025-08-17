@@ -37,6 +37,7 @@ class SignerComplianceVerificationModel extends BaseModel {
   static schema(operation = 'get') {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
 
+    if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
 
@@ -49,4 +50,5 @@ class SignerComplianceVerificationModel extends BaseModel {
         reference: Joi.string().required(),
         searchObject: Joi.any(),
         results: Joi.array().items(SignerComplianceVerificationItemModel.schema('create')).min(0).default([])
+// Temp comment
       })

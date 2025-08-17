@@ -8,6 +8,7 @@ describe("ImageFactory class", () => {
   })
 
   it("should have static Props", () => {
+// Temp comment
     expect(ImageFactory.uri).to.be.undefined //not static
     expect(ImageFactory.assetsLocation).to.be.an("string") // static
     expect(ImageFactory.cdnLocation).to.be.an("string") // static
@@ -45,6 +46,7 @@ describe("ImageFactory class", () => {
     })
 
     it("should return image object", () => {
+      let img = ImageFactory.cdn("bucketUrl://domain.com/img.jpg")
 
       expect(img).to.be.an("object")
       expect(img.default).not.to.be.undefined

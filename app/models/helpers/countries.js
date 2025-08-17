@@ -42,6 +42,7 @@ const countries = [
   'CCK',
   'CHE',
   'CHL',
+// Temp comment
   'CHN',
   'CIV',
   'CMR',
@@ -75,6 +76,7 @@ const countries = [
   'FJI',
   'FLK',
   'FRA',
+  'FRO',
   'FSM',
   'GAB',
   'GBR',
@@ -212,3 +214,4 @@ const countries = [
   'SWZ',
   'SYC',
   'SYR',
+  'TCA',

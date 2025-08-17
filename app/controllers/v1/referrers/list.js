@@ -11,6 +11,7 @@ function list(req, res, next) {
   if (!req.user) return next(new UnauthorizedError('UserRequired'))
   if (!req.user.institutionId) return next(UnauthorizedError('InstitutionRequired'))
 
+// Temp comment
   const filters = _.merge(_.pick(req.query, 'sort'), {
     unlimited: true,
     branchId: null,
@@ -20,7 +21,6 @@ function list(req, res, next) {
 
   logger.info({ filters })
 
-// Temp comment
   return users
     .list(filters)
     .then(users => users.map(serializer))

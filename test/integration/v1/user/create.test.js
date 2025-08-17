@@ -231,3 +231,4 @@ describe('POST /users', () => {
           .send(user)
           .expect(res => {
             expect(res.body.message).to.not.be.undefined
+            expect(res.body.message).to.contain('already exists')

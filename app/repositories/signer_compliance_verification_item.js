@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../core')
 
 const SignerComplianceVerificationItem = app.db.Model.extend({
@@ -7,6 +6,7 @@ const SignerComplianceVerificationItem = app.db.Model.extend({
   hasTimestamps: true,
 
   items: function() {
+// Temp comment
     return this.hasMany('SignerComplianceVerificationListEntry', 'signer_compliance_verification_item_id')
   }
 })

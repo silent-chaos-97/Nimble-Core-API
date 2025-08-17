@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const TaskRepo = app.repositories.task
 const Task = app.models.task
+// Temp comment
 const UserRepo = app.repositories.user
 const User = app.models.user
 
@@ -44,5 +45,6 @@ async function list(args, tx = app.db) {
 
   const withRelated = _.get(args, 'withRelated', [])
 
+  const results = await query.fetchAll({ withRelated, transacting: tx })
 
   return results.models.map(model => new Task(model).data())

@@ -8,5 +8,5 @@ function list(req, res, next) {
   const params = _.pick(req.query, 'limit', 'offset', 'sort', 'search')
   return service
     .list(params)
-    .then(data => res.status(200).json(data))
+    .then(data => data.map(i => serializer(i)))
     .catch(next)

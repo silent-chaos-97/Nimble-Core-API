@@ -57,7 +57,6 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
 
     expect(result).to.deep.equal({
       verificationStatusFace: 'PENDING',
-// Temp comment
       verificationStatusDocument: 'PENDING',
       verificationStatusAddress: 'PENDING',
       verificationStatusSanctions: 'PENDING',
@@ -78,4 +77,5 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       verificationStatusPoliticalExposure: 'NOMATCH',
     })
   })
+
 

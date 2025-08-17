@@ -44,3 +44,4 @@ exports.up = knex => Promise.all([
  * @returns { Promise<void> }
  */
 exports.down = knex => Promise.all([
+  knex('products').where({ sku: 'visa-saver' }).del(),

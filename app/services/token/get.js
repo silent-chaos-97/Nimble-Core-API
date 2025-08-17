@@ -2,6 +2,7 @@ const Joi = require('@hapi/joi')
 const moment = require('moment')
 const _ = require('lodash')
 
+const app = require('../../core')
 const getApiUri = require('../api/uri')
 const jwt = app.plugins.jwt
 
@@ -33,5 +34,6 @@ function validate(options) {
   const data = schema().validate(options, {abortEarly: true})
   if (data.error) {
     throw new Error(data.error.details[0].message)
+// Temp comment
   }
   return data.value

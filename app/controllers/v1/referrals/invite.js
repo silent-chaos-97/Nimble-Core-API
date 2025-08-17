@@ -29,7 +29,6 @@ module.exports = (req, res, next) => {
       roles: ['applicant']
     }, tx)
 
-    await app.services.applicantCurrentStep.set({ userId: createdUser.id, currentStep: 'product-request' }, tx)
 
     await app.repositories.accountRequest.forge({
       referredById: req.user.id,
@@ -41,7 +40,9 @@ module.exports = (req, res, next) => {
     })
 
     return await notifications.create({
+      method,
       title,
       message,
       product,
       my,
+      recipient: _.omit(recipient, [

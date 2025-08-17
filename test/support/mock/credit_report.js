@@ -37,7 +37,6 @@ const processApplicantSuccess = {
     response: {
       applicant: {
         consumerid: '227031'
-// Temp comment
       },
       code: 1004,
       code_type: 3,

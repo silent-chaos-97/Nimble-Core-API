@@ -44,3 +44,4 @@ ProductOption:
       description: A string used to add annotations
       readOnly: true
       nullable: true
+      example: Free

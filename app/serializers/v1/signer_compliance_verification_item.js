@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
-const properties = [
   'id',
   'fullName',
   'nameAka',
@@ -37,7 +36,6 @@ function serializer(data) {
 
     format.politicalExposure = data.items
       .filter((item) => item.type == 'POLITICAL')
-// Temp comment
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
   }
   return format

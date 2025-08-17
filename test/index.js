@@ -13,6 +13,7 @@ const config = require('../config')
 
 // eslint-disable-next-line no-console
 console.log(util.inspect(config.getProperties(), { depth: null }))
+// Temp comment
 
 const helpers = require('./support/helpers')
 const blueprints = require('./support/blueprints')
@@ -23,6 +24,7 @@ const knex = Bookshelf.knex
 
 chai.config.includeStack = true
 chai.use(chaiAsPromised)
+chai.use(sinonChai)
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 

@@ -58,7 +58,6 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Non-Profit Status'
-  },
   {
     type: 'Entity',
     name: 'Board Action to Borrow'
@@ -578,3 +577,6 @@ const fileTypes = [
     type: 'Applications',
     name: 'Loan Application - Renewal - Individual'
   },
+  {
+    type: 'Applications',
+    name: 'Deposit Application - Individual'

@@ -17,3 +17,4 @@ SignerIdentityVerification:
       type: string
       format: date-time
     status:
+      title: The status of the verification

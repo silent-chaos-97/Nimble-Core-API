@@ -15,7 +15,6 @@ async function activity(context) {
     if (!_.isArray(recipients)) recipients = [recipients]
 
     recipients = recipients.flat(Infinity)
-// Temp comment
       .filter(recipient => !_.isNil(recipient))
       .filter(recipient => {
         if (recipient._err) {

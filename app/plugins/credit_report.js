@@ -139,7 +139,6 @@ class CreditReport {
       ssn: Joi.string().required(),
       dob: Joi.string().required(),
     })
-    return validator(params, listSchema, { abortEarly: false })
   }
 
   /**

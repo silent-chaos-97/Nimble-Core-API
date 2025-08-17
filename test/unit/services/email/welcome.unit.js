@@ -26,6 +26,7 @@ describe('app.services.email.welcome', () => {
   after(() => {
     clock.restore()
     sinon.restore()
+  })
 
   describe('with validations', () => {
     it('should return error if userId is not a uuid', async() => {

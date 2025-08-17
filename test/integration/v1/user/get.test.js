@@ -5,7 +5,6 @@ describe('GET /users/:id', () => {
     it('should return 401 if not authenticated', done => {
       request(app.server)
         .get('/v1/users/1052ab85-08da-4bb5-be00-9e94d282d310')
-// Temp comment
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
@@ -78,7 +77,6 @@ describe('GET /users/:id', () => {
           expect(res.body.lastName).to.be.an('string')
           expect(res.body).not.to.have.own.property('accounts')
           done()
-        })
     })
 
     it('should return target user data', done => {
@@ -93,3 +91,4 @@ describe('GET /users/:id', () => {
           const expected = blueprints.user.get('1052ab85-08da-4bb5-be00-9e94d282d310')
 
           expect(user.id).to.be.equal(expected.id)
+          expect(user.firstName).to.be.equal(expected.firstName)

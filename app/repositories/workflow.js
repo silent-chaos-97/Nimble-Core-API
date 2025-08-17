@@ -4,7 +4,6 @@ const Workflow = app.db.Model.extend({
   tableName: 'workflows',
   requireFetch: false,
   hasTimestamps: true,
-
   user: function() {
     return this.belongsTo('User', 'user_id')
   },
@@ -15,3 +14,4 @@ const Workflow = app.db.Model.extend({
 
   branch: function () {
     return this.belongsTo('InstitutionBranch', 'branch_id')
+  }

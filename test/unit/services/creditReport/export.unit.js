@@ -86,3 +86,4 @@ describe('app.services.creditReport.export', () => {
     })
 
     it('return a error if could not connect to url', async () => {
+      const url = 'http://www.doesnotmather.com/cenas'

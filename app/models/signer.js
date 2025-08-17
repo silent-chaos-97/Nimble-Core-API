@@ -269,3 +269,5 @@ class Signer extends BaseModel {
             otherwise: Joi.string().optional().valid(...countries)
           }).optional(),
           frontIdProofDocumentId: Joi.string().uuid().optional(),
+          backIdProofDocumentId: Joi.string().uuid().optional(),
+

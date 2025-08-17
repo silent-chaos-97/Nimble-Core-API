@@ -16,6 +16,5 @@
   },
   {
     "position": 4,
-    "questionId": "usCitizen",
     "answer": "No",
     "type": "string",

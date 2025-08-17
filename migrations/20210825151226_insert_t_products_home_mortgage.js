@@ -19,6 +19,7 @@ situation – and your future needs.
 - Veterans Affairs (VA) Loans
 - Affordable Housing Loans`
   }
+]
 exports.up = async function(knex) {
   // Get all institutions
   const institutions = await knex('institutions').select()

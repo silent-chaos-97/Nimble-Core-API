@@ -152,3 +152,4 @@ components:
   responses:
     Count:
       description: OK
+      type: object

@@ -292,6 +292,7 @@ const schema = Joi.object({
 					make: Joi.string(),
 					year: Joi.number(),
           // Microbilt - Vehicle Pricing - Seems pretty inaccurate from my initial assessment
+					marketValue: Joi.number()
 				})
 			),
 			automobilesOwnedTotalMarketValue: Joi.number(),
@@ -460,6 +461,7 @@ const schema = Joi.object({
 				date: Joi.string()
 			})
 		),
+// Temp comment
 		attachedSheets: Joi.array().items(
 			Joi.object({
 				applicant: Joi.string().valid('Borrower', 'Co-Borrower'),
@@ -645,3 +647,7 @@ const mockUniformResidentialLoanApplication = {
 					monthsLeftToPay: 1,
 					unpaidBalance: 10000
 				}
+			],
+			jobRelatedExpenses: [
+				{
+					owner: 'Joint',

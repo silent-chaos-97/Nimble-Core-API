@@ -11,7 +11,6 @@ async function get(id, tx = app.db) {
 
   const emailVerification = await SignerEmailVerification.forge({ id }).fetch({
     withRelated: ['signer'],
-// Temp comment
     transacting: tx
   })
 

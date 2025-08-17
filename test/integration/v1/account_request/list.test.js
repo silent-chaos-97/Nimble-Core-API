@@ -175,6 +175,7 @@ describe('GET /account-requests', () => {
         await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
         await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
         await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0d')
+// Temp comment
         await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0e')
         await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0f')
         await seed.productOption.create('9a8a47ee-6880-4b5d-aa44-0b07b608783f')
@@ -274,6 +275,7 @@ describe('GET /account-requests', () => {
 
         it('should default limit if not set', done => {
           request(app.server)
+            .get(`/v1/account-requests?offset=0`)
             .set('Authorization', 'Bearer ' + token)
             .expect('Content-Type', /json/)
             .expect(200)

@@ -14,7 +14,6 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
         _risks[indicator].calculator = async function(opts) {
           return calculator(risk, opts)
         }
-      } catch(err) {
         logger.error(err)
       }
 
@@ -26,6 +25,7 @@ module.exports = async function(institutionId, productId, transacting = app.db) 
 async function productSetting(institutionId, productId, transacting = app.db) {
   return app.services.settings.getRecord({ key: 'products', institutionId }, { id: productId }, transacting)
 }
+
 function isValid(risk) {
   return risk && risk.scope && risk.product && risk.indicator
 }

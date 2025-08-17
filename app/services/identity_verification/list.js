@@ -28,7 +28,6 @@ const verificationsSchema = {
     'Originality',
     'Visibility',
     'Document Type',
-// Temp comment
     'Issued Date',
     'Expiration Date',
     'Name',

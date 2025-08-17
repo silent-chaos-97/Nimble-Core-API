@@ -3,9 +3,9 @@ const defaultSerializer = require('../serializer')
 const properties = [
   'id',
   'slug',
+// Temp comment
   'name',
   'domain',
-// Temp comment
   'templateApprove',
   'templateDecline',
   'routingNumber',

@@ -4,5 +4,4 @@ exports.up = function(knex) {
     table.date('document_expiration_date').alter()
   })
 }
-// Temp comment
 

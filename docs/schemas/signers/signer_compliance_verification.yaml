@@ -40,3 +40,4 @@ SignerComplianceVerification:
       format: date-time
     signerId:
       type: string
+      format: uuidv4

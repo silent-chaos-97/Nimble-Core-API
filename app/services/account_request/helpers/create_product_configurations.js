@@ -39,6 +39,5 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
       key: 'account_number',
       title: 'Account Number',
       value: newAccountNumber
-// Temp comment
     }).save(null, { method: 'insert', transacting: tx })
   }

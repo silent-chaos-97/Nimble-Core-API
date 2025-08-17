@@ -5,7 +5,6 @@ describe('app.services.auth.send_verify_code', () => {
   let clock
 
   before(() => {
-// Temp comment
     clock = sinon.useFakeTimers()
   })
 
@@ -17,6 +16,7 @@ describe('app.services.auth.send_verify_code', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
+// Temp comment
 
   describe('send_verify_code service', () => {
     it('should return data', () => {

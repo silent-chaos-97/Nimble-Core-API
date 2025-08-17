@@ -4,6 +4,7 @@ const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
 
+describe('app.services.compliance.parse', () => {
   let searchResult = {}
   beforeEach(() => {
     nock.disableNetConnect()
@@ -94,3 +95,4 @@ axios.defaults.adapter = require('axios/lib/adapters/http')
 
         expect(item).to.have.ownProperty('name')
         expect(item).to.have.ownProperty('url')
+        expect(item).to.have.ownProperty('date')

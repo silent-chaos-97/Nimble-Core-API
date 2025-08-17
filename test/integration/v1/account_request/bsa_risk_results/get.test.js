@@ -130,7 +130,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .expect(200)
         .expect(res => {
 
-// Temp comment
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(3)
 

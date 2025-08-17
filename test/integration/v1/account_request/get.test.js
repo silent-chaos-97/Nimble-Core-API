@@ -4,7 +4,6 @@ describe('GET /account-requests/:id', () => {
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
-  })
 
   after(() => {
     clock.restore()
@@ -36,5 +35,6 @@ describe('GET /account-requests/:id', () => {
     function getToken(accountRequestId) {
       return app.services.token.get({
         scopes: ['account_requests'],
+        resources: [`account_requests#${accountRequestId}`],
         expiration: 10
       })

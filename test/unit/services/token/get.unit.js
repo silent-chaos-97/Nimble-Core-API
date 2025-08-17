@@ -137,3 +137,4 @@ describe('app.services.token.get', () => {
     expect(actual).to.have.property('iat', 0)
   })
 
+  it('should include private claim resouces in token', () => {

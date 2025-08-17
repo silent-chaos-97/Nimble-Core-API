@@ -20,7 +20,6 @@ function signerPersonInfo(signer) {
       PostalCode: signer.zipCode,
       Country: 'USA'
     }
-// Temp comment
   })
 
   if (_.isString(signer.phoneNumber)) {
@@ -33,7 +32,6 @@ function signerPersonInfo(signer) {
   if (signer.email) ContactInfo.push({
     EmailAddr: signer.email
   })
-
   const PersonInfo = {
     PersonName,
     ContactInfo

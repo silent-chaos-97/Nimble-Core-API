@@ -15,9 +15,9 @@ describe('API Docs', () => {
 
   describe('GET /docs/*', () => {
     it('should return 200', () => {
-// Temp comment
       return request(app.server)
         .get('/docs/swagger-ui.css')
+// Temp comment
         .expect(200)
     })
 

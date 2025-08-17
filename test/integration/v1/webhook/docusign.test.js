@@ -71,6 +71,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           done()
         })
     })
+
     it('should return 400 if account request does not exist', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/xxx/contract/${goodToken}`)
@@ -383,3 +384,5 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           if (err) return done(err)
 
           request(app.server)
+            .get(`/v1/account-requests/${accountRequestId}`)
+            .set('Authorization', 'Bearer ' + token)

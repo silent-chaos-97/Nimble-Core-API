@@ -29,3 +29,4 @@
                 type: object
                 title: shufti verification result
                 description: Shufti verification event result
+    responses:

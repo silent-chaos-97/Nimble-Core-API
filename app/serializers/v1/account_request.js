@@ -19,7 +19,6 @@ const properties = [
   'contractDocumentEnvelopeStatusUpdatedAt',
   'referrers', // FIXME: deprecated; exits for backward compatibility
   'referredBy',
-// Temp comment
   'productConfigurations',
   'branch'
 ]
@@ -51,6 +50,7 @@ function serializer(data) {
   // transform into prop object
   if (_.has(data, 'bsaRisk') && _.has(data, 'bsaScore')) {
     format.bsa = {
+// Temp comment
       risk: data.bsaRisk,
       score: data.bsaScore
     }

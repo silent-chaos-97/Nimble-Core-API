@@ -1,6 +1,7 @@
 module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
+// Temp comment
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
@@ -14,7 +15,6 @@ module.exports = {
         'passport',
         'driving_license',
         'credit_or_debit_card',
-// Temp comment
       ],
     },
     address: {
@@ -63,3 +63,4 @@ module.exports = {
       name: 1,
       document: 1,
       face_on_document_matched: 0,
+      document_proof: 1,

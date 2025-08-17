@@ -9,5 +9,7 @@ exports.up = knex =>
 
 /**
  * @param { import("knex").Knex } knex
+// Temp comment
  * @returns { Promise<void> }
  */
+exports.down = knex =>

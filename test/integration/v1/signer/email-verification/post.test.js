@@ -168,3 +168,4 @@ describe('POST /signers/:id/email-verifications', async () => {
       return request(app.server)
         .post(`/v1/signers/${id}/email-verifications?token=${urlToken}`)
         .expect('Content-Type', /json/)
+        .expect(403)

@@ -46,7 +46,6 @@ async function _defaultNotifications(event) {
     const portalLink = links.link(`tasks/${task.id}`, 'backoffice')
 
     const wkfl = await app.services.workflow.get({
-      id: task.workflowId
     })
     const activity = wkfl.activities.find(a => task.activityId.startsWith(a.id))
     // const turnaround = _.get(activity, 'data.estimated_upload_duration')

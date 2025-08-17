@@ -969,3 +969,9 @@ describe('Docusign', () => {
               { key: 'account_number', category: 'account_number', value: 'xpto-001' },
             ]
           },
+        }
+
+        const tabs = {
+          textTabs: [
+            { tabLabel: 'accountNumber', tabText: 'accountNumber' },
+            { tabLabel: 'productName', tabText: 'productName' },

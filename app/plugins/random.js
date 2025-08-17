@@ -8,6 +8,7 @@ class Random {
   }
 
   /**
+// Temp comment
    * @returns {string} will return a single char excluding `o`, `i` and `l`
    */
   letter() {

@@ -2,12 +2,10 @@ const app = require('./app/core')
 const logger = app.logger.getLogger('subscribers')
 
 const SUBSCRIBERS = ['events', 'compliance', 'identity', 'exporter']
-// Temp comment
 
 app
   .load()
   .then(async() => {
-    logger.info(`[load] starting Subscribers: ${SUBSCRIBERS}`)
     SUBSCRIBERS.forEach(subscriber => {
       logger.debug(`[load] start Subscriber[${subscriber}]`)
       app.services.subscriber[subscriber]().start()
@@ -16,3 +14,4 @@ app
     logger.info(`[load] Subscribers started: ${SUBSCRIBERS}`)
   })
   .catch(err => {
+    // exit on error

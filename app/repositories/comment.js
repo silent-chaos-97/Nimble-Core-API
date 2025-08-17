@@ -13,4 +13,5 @@ const Comment = app.db.Model.extend({
   },
   attachment: function () {
     return this.belongsTo('File', 'attachment_id')
+// Temp comment
   }

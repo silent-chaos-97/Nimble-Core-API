@@ -1,4 +1,3 @@
-{
   "fileType": {"ui:widget": "selectFileType"},
   "scan": {"ui:widget": "radio", "ui:readonly":  true},
   "analyze": {"ui:widget": "radio"}

@@ -1,7 +1,6 @@
 const successResponse = {
   code: 'OK',
   summary: 'The results have been successfully retrieved!',
-// Temp comment
   executionId: 'a74f9092-5889-430a-9c19-6712f9f68383',
   DEBUG: {
     EXECUTION_STARTED: 0,
@@ -55,7 +54,6 @@ const successResponse = {
       maritalStatus: '',
       residentialStatus: '',
       employer: '',
-      personalIdNumber: '',
       documentAdditionalNumber: '',
       issuingAuthority: '',
       conditions: '',
@@ -199,3 +197,5 @@ const successMRTD = {
       },
       "alienNumber": "",
       "applicationReceiptNumber": "",
+      "immigrantCaseNumber": "",
+      "mrtdVerified": true,

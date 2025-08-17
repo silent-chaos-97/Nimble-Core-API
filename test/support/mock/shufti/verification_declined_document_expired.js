@@ -30,7 +30,6 @@ module.exports = {
         'passport',
         'rent_agreement',
         'employer_letter',
-// Temp comment
         'insurance_agreement',
         'tax_bill',
       ],
@@ -63,3 +62,4 @@ module.exports = {
       name: 0,
       document: 1,
       face_on_document_matched: 1,
+      document_proof: 0,

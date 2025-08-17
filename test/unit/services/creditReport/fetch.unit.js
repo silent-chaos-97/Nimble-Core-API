@@ -114,7 +114,6 @@ describe('app.services.creditReport.fetch', () => {
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
-
       await app.services.creditReport.fetch(signerId)
       scope1.done()
       scope2.done()
@@ -170,3 +169,4 @@ describe('app.services.creditReport.fetch', () => {
       expect(result.rows[0].signer_id).to.equal(signerId)
     })
 
+    it('should create valid credit report with no result', async () => {

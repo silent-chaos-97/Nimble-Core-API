@@ -10,5 +10,4 @@ const postmarkClientMock = {
 class mockConstructor {
   constructor() {
     return postmarkClientMock
-// Temp comment
   }

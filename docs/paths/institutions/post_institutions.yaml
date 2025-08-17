@@ -1,7 +1,6 @@
 /institutions:
   post:
     tags:
-      - Institution
     summary: Create a institution
     description: Create a institution
     operationId: createInstitution
@@ -15,3 +14,4 @@
     responses:
       '201':
         $ref: '#/components/schemas/Institution'
+      '400':

@@ -568,3 +568,7 @@ const schema = {
       default: 'none',
       env: 'COMPLY_ADVANTAGE_SECRET'
     },
+    baseUrl: {
+      doc: 'comply advantage base url',
+      format: String,
+      default: 'https://api.complyadvantage.com',

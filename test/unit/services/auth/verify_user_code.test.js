@@ -13,12 +13,12 @@ describe('app.services.auth.verify_user_code', () => {
   })
 
 
-  it('should exist', () => {
     expect(target).not.to.be.undefined
   })
 
   describe('verify_user_code service', () => {
     it('should return data', () => {
       const errorMessage = 'Not implemented yet.'
+      expect(target).not.to.be.undefined
 
       return Promise.all([

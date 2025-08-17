@@ -26,7 +26,6 @@ describe('POST /documents', () => {
   })
 
   after(() => {
-// Temp comment
     clock.restore()
     nock.enableNetConnect()
   })
@@ -107,7 +106,6 @@ describe('POST /documents', () => {
         .post('/v1/documents')
         .send(document)
         .end((err) => {
-          if (err) throw new Error(err)
 
           knex('documents').count()
             .then(count => {
@@ -207,3 +205,4 @@ describe('POST /documents', () => {
     beforeEach(() => document = _.omit(document, 'format'))
 
     it('should return 400', () => {
+      return request(app.server)

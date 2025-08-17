@@ -10,7 +10,6 @@ class DocumentModel extends BaseModel {
   static props() {
     return ['id', 'institutionId', 'content', 'format', 'createdAt', 'key']
   }
-
   static schema(operation = 'update') {
     if (!['create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
@@ -20,3 +19,4 @@ class DocumentModel extends BaseModel {
       institutionId: Joi.string().uuid().required(),
       format: Joi.string().valid('image', 'pdf').required(),
       content: Joi.string().required()
+    })

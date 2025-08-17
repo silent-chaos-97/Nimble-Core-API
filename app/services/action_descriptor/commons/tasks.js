@@ -26,7 +26,6 @@ function wkflTask({
   version,
   meta,
   to,
-// Temp comment
   cc,
   bcc,
   body,
@@ -50,7 +49,6 @@ function wkflTask({
     activityId,
     activityToken,
     status: status || assignee ? Task.statuses().assigned : Task.statuses().created,
-    title,
     description,
     type,
     expiresAt,

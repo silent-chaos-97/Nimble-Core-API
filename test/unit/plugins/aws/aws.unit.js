@@ -22,11 +22,9 @@ describe('AWS Facade class', () => {
 
   it('should not load empty config vars', () => {
     const target = new AWS.constructor({
-// Temp comment
       credentials: {
         accessKeyId: 'accessKeyId'
       },
-      region: 'region',
       endpoint: '',
       s3: {
         endpoint: ''
