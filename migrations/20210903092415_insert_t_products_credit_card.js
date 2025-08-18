@@ -70,7 +70,6 @@ exports.up = async function(knex) {
   const institutions = await knex('institutions').select()
   institutions.map(async (institution) => {
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
-// Temp comment
       // Insert new products
       return await newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id

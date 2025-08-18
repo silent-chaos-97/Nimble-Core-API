@@ -40,7 +40,6 @@ const properties = [
   'remoteMetadata',
   'checks'
 ]
-
 const imageProperties = ['selfie']
 
 

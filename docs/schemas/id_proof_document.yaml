@@ -11,7 +11,6 @@ IdProofDocument:
   properties:
     type:
       type: string
-      title: Document Type
       description: Id Proof Document Type
       enum: ['USDL', 'USID', 'USLR', 'PASSPORT']
       example: USDL

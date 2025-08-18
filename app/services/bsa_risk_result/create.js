@@ -43,6 +43,7 @@ async function create(payload, accountRequestId, tx = app.db) {
   )
 
   const accountRequestUpdatePayload = {
+    id: accountRequest.id,
     bsaRisk: bsa.risk,
     bsaScore: bsa.score
   }

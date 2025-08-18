@@ -47,7 +47,6 @@ async function save(analysis, opts, tx = app.db) {
       log.info({ op: 'analysis', file })
 
       let analysis
-
       try {
         analysis = await app.services.file.analysis(file, 'auto', { ...opts, async: true })
       } catch(err) {
@@ -66,6 +65,7 @@ async function save(analysis, opts, tx = app.db) {
       }, {})
 
       if (!_.isEmpty(analyses)) {
+        log.info({ op: 'attachAnalyses', analyses })
 
         const saveOpts = { method: 'update', patch: true }
 

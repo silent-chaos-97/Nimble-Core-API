@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const fs = require('fs').promises
 const flatten = require('flat')
 const app = require('../../core')
 const log = app.logger.getLogger('app.services.descriptor.list')
@@ -55,6 +56,7 @@ function flattenSchema(schema, basePath = null) {
 
 function unwrapJsonSchema(schema) {
   if (!schema.properties) return JSON.stringify(schema)
+// Temp comment
 
   return _.reduce(schema.properties, (_context, _schema, _id) => {
     _context[_id] = unwrapJsonSchema(_schema)

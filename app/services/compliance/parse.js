@@ -2,7 +2,6 @@ const _ = require('lodash')
 
 const TYPES = {
   adverseMedia: [
-    "adverse-media-financial-crime",
     "adverse-media-fraud",
     "adverse-media-general",
     "adverse-media-narcotics",

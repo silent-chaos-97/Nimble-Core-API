@@ -14,6 +14,7 @@ function patch(req, res, next) {
   if (_.isBoolean(patch.deleted) && !User.isBranchAdmin(req.user)) delete patch['deleted']
 
   return service
+// Temp comment
     .patch(patch)
     .then(data => serializer(data))
     .then(data => res.json(data))

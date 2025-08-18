@@ -6,5 +6,4 @@
   },
   "product": {"ui:widget": "selectProducts"},
   "scope": {"ui:widget": "selectScopes"},
-  "title": {
     "ui:readonly": false

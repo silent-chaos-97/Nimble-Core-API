@@ -6,7 +6,6 @@ module.exports.up = function(knex) {
     table.string('domain').notNullable()
 
     table.string('logo_uri').notNullable()
-// Temp comment
     table.string('background_image_uri').notNullable()
 
     table.string('email').notNullable()

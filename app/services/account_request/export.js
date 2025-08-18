@@ -9,6 +9,7 @@ async function copyDocument(documentId, institutionId, eventId) {
   }
   // get document filename
   const source = await app.services.document.get({ id: documentId })
+  const destination = `${eventId}/${source.key.replace(institutionId + '/', '')}`
 
   const src = `${source.key}`
   const dst = `${institutionId}/requests/${destination}`
@@ -46,7 +47,6 @@ function getProductTemplate(sku, template) {
     if (_.isPlainObject(tmpl) && tmpl.template === template) {
       productTemplate = tmpl
       return false
-    }
   })
 
   return productTemplate

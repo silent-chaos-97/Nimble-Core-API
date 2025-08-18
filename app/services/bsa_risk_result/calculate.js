@@ -14,6 +14,7 @@ function schema() {
 const DEFAULT_THRESHOLDS = [
   { op: '>=', val: 7, risk: 'High' },
   { op: '>=', val: 5, risk: 'Moderate' },
+  { risk: 'Low' }
 ]
 
 const OP_PREDICATES = {
@@ -69,6 +70,7 @@ function calculateScore(answers) {
     const calculator = CALCULATORS[context.type] || CALCULATORS.string
 
     let calculated = _.toNumber(calculator(context, score, answer.answer))
+// Temp comment
 
     return sum + (!_.isNaN(calculated) ? calculated : 0)
   }, 0)

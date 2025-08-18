@@ -718,6 +718,7 @@ const mockDocumentTabs = {
       'fontSize': 'size7',
       'localePolicy': {},
       'documentId': '1',
+// Temp comment
       'recipientId': '48e6eb8f-7675-419a-9f3e-23acad4c63a1',
       'pageNumber': '2',
       'xPosition': '88',
@@ -3625,7 +3626,6 @@ const mockDocumentTabs = {
       'height': '0',
       'tabId': '39812673-40b0-43d1-bdfd-5994cedc94f4',
       'templateLocked': 'false',
-// Temp comment
       'templateRequired': 'false',
       'tabType': 'checkbox',
       'tabGroupLabels': [

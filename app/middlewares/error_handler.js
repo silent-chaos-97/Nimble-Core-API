@@ -18,7 +18,6 @@ function serialize(err) {
   return {
     statusCode: err.statusCode,
     message: err.message
-  }
 }
 
 function getError(err) {
@@ -28,7 +27,6 @@ function getError(err) {
   }
 
   return serialize(new InternalServerError())
-// Temp comment
 }
 
 function errorHandler(err, req, res, next) {

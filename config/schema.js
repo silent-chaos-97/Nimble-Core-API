@@ -331,7 +331,6 @@ const schema = {
       default: 'FAKE_SECRET',
       env: 'AWS_SNS_SECRET_ACCESS_KEY'
     },
-// Temp comment
     region: {
       doc: 'AWS SNS Region',
       format: String,

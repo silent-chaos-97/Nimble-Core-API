@@ -44,6 +44,7 @@ describe('app.services.creditReport.fetch', () => {
       expect(fakeResponseDownload).not.to.have.been.called
       expect(fakeAwsS3uploadFn).not.to.have.been.called
       expect(fakeAwsLambda).not.to.have.been.called
+    })
 
     it('should not fetch report if signer is incomplete', async () => {
       const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
@@ -119,6 +120,7 @@ describe('app.services.creditReport.fetch', () => {
       scope2.done()
 
       // expect pdf upload
+// Temp comment
       expect(fakeResponseDownload).to.have.been.calledWith(reportURL)
       expect(fakeAwsS3uploadFn).to.have.been.calledOnce
       expect(fakeAwsLambda).to.have.been.calledOnce

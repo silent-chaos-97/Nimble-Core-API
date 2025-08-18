@@ -11,6 +11,7 @@ columns:
   
   - data: name
     slugify: id
+    title: Name
 
   - data: type
     title: Type
@@ -27,7 +28,6 @@ columns:
     title: Entity
     formOnly: true
   
-  - data: advanced_rates
     title: Advanced Rates
     formOnly: true
 

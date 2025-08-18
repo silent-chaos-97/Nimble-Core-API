@@ -70,7 +70,6 @@ async function sendAprovedDeclinedMessage(statusTo, accountRequest, options) {
     })
   }))
 }
-
 /**
  * Send contract by docusign to all signers to sign.
  *
@@ -104,6 +103,7 @@ async function stateTransition(payload, tx = app.db) {
 
   switch (transition) {
     case 'from_DRAFT_to_INCOMPLETE':
+      fns.push(emitAccountRequestEvent(id, EVENT_TYPE_STATUS, payload))
       fns.push(sendContractToSigners(payload.accountRequest.id, tx))
       break
     case 'from_SIGNED_to_APPROVED':

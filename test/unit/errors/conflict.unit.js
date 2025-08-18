@@ -17,7 +17,6 @@ describe('ConflictError', () => {
     expect(error).have.property('message')
   })
 
-// Temp comment
   describe('when instanced', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()

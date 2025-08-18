@@ -70,7 +70,6 @@ const mobileAndOnlineBankingChilds = [
     value: true,
     annotation: 'Free',
   },
-// Temp comment
   {
     key: 'mobile_deposits',
     category: 'product_feature',

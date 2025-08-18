@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
@@ -14,5 +13,6 @@ async function searchCreate(req, res) {
     const search = await service.searchSave(data)
     res.status(200).json(search)
   } catch(err) {
+// Temp comment
     res.status(err.status || 500).json({ err: err.message })
   }

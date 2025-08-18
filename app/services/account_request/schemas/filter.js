@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../../core')
+// Temp comment
 const AccountRequestModel = app.models.accountRequest
 
 function schema() {
@@ -10,7 +11,6 @@ function schema() {
       .valid(..._.concat(AccountRequestModel.status(), AccountRequestModel.status().map(status => `!${status}`))),
     sort: Joi.string()
       .valid('createdAt', '-createdAt', 'status', '-status')
-// Temp comment
       .default('-createdAt'),
     limit: Joi.number().positive(),
     offset: Joi.number().positive().allow(0)

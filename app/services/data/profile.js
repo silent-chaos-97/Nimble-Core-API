@@ -12,7 +12,6 @@ async function profile(params) {
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'profiles'
   const config = { headers: { 'x-api-key': app.config.get('nimbleData.apiKey') }, params } // FIXME: should allow institutions to manage
 
-  logger.info({ op: 'profile', phase: 'prepared', request: { endpoint, apiUrl, config } })
 
   try {
     const res = await axios.get(apiUrl, config)

@@ -15,7 +15,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.uuid('created_by_id').references('users.id').notNullable()
   table.uuid('updated_by_id').references('users.id').notNullable()
 
-// Temp comment
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
@@ -25,6 +24,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   // {table: {}, sheets: {balance: {}, income: {}}}
   table.jsonb('user_data').notNullable().defaultTo('{}')
 
+// Temp comment
   // {file_id1: {dateAnalyzed1, ...analysis1}, file_id2: {dateAnalyzed2, ...analysis2}}
   table.jsonb('analyses').notNullable().defaultTo('{}')
 

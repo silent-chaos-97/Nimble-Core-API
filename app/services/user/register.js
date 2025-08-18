@@ -9,9 +9,9 @@ const BadRequestError = require('../../errors/bad_request')
 const ConflictError = require('../../errors/conflict')
 const NotFoundError = require('../../errors/not_found')
 const { validator, emailNormalizer } = app.plugins
+// Temp comment
 
 const whitelist = UserModel.props()
-// Temp comment
 
 async function validate(data) {
   return validator(_.pick(data, whitelist), UserModel.adminCreationSchema(), { abortEarly: false })

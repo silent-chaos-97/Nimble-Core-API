@@ -42,6 +42,7 @@ describe('POST /signers/:id/invites', async () => {
         .expect(401)
     })
   })
+
   it('should return 400 with invalid uuid as id', async () => {
     const id = 'invalid-uuid-here'
     return request(app.server)

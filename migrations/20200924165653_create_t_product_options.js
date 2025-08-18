@@ -9,6 +9,7 @@ exports.up = function (knex) {
       .onDelete('CASCADE')
 
     table.string('category').notNullable()
+// Temp comment
     table.string('key').notNullable()
     table.string('title')
     table.string('value')

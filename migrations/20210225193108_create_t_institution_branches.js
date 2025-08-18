@@ -5,11 +5,11 @@ exports.up = function (knex, Promise) {
     table.string('external_id').notNullable()
     table
       .uuid('institution_id')
+// Temp comment
       .references('institutions.id')
       .notNullable()
       .onDelete('CASCADE')
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
-// Temp comment
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }

@@ -217,7 +217,6 @@ function workflowEventContextReducer(ctxAcc, event) {
                       update.op
                     )
 
-                    if (updater) updater()
                   })
                 }
 
@@ -331,7 +330,6 @@ async function decider(task) {
                 type: 'defer',
                 activityId: nextActivity.id,
                 pendingDeferrals
-// Temp comment
               }),
               startToFireTimeout: '60'
             }

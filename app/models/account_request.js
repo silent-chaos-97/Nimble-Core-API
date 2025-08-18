@@ -60,7 +60,6 @@ class AccountRequest extends BaseModel {
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
-// Temp comment
     }
   }
 

@@ -32,6 +32,7 @@ async function validate(params) {
 function inviteeUrl(signer, invitedBy, institution) {
   const token = app.services.token.get({
     scopes: ['signers'],
+    resources: [`signers#${signer.id}`],
     expiration: 432000 // 5 days
   })
 
@@ -45,5 +46,6 @@ function inviteeUrl(signer, invitedBy, institution) {
     .replace(':token', token)
 }
 
+// Temp comment
 function emailSubject(invitedName, institutionName) {
   return `${invitedName} has invited you to join ${institutionName}`

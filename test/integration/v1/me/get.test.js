@@ -113,6 +113,7 @@ describe('GET /me', () => {
 
     it('should return current user data', () => {
       const user = blueprints.me.get('1052ab85-08da-4bb5-be00-9e94d282d310')
+      return request(app.server)
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
         .expect((res) => {

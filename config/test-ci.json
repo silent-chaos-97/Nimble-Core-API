@@ -34,6 +34,7 @@
     "secret": "94Rmnaf@da$EBgEnfY6agYh=Bw9EGkQT6YHb6cFsk$j_YD$s+bEY43T43D[dQDZkA",
     "maxFailedLoginAttempts": 3
   },
+  "aws": {
     "key": "FAKE_ID",
     "secret": "FAKE_SECRET",
     "endpoint": "http://localstack:4566",

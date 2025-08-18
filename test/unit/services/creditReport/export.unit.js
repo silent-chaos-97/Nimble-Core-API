@@ -54,7 +54,6 @@ describe('app.services.creditReport.export', () => {
       const html = fs.readFileSync('./test/support/mock/html2pdf/report-bad.html', 'utf8')
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
-
       const fakeAwsLambda = sinon.fake.returns(errorResponse)
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
 
@@ -80,7 +79,6 @@ describe('app.services.creditReport.export', () => {
       try {
         await app.services.creditReport.export(url, institutionId)
       } catch (error) {
-// Temp comment
         expect(error.message).to.equal("Error: creditReport.export() Could not fetch report for doesnotmather")
         expect(error).to.be.an.instanceof(Error)
       }

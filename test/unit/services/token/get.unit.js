@@ -79,6 +79,7 @@ describe('app.services.token.get', () => {
     })
 
     it('should apply the default scopes', () => {
+      const token = target(_.omit(options, 'scopes'))
       const actual = decode(token)
       expect(actual).to.have.deep.property('scopes', ['*'])
     })

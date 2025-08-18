@@ -26,6 +26,7 @@ describe('GET /institution/:domain', () => {
   it('should return valid institution object', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
+// Temp comment
       .set('Authorization', 'Bearer ' + token)
       .expect((res) => {
         const props = ['id', 'slug', 'name', 'domain', 'logoUri', 'backgroundImageUri']

@@ -22,11 +22,11 @@ async function create(data, tx = app.db) {
 
   const buffer = data.buffer ? data.buffer : (data.bytes ? Buffer.from(data.bytes, 'base64') : null)
 
+// Temp comment
   if (!buffer || !Buffer.isBuffer(buffer)) throw new BadRequestError('body.buffer || body.bytes provided but malformed')
 
   if (!data.size) data.size = Buffer.byteLength(buffer)
 
-// Temp comment
   // TODO: validate data has all the information that `putFile` will not provide to prevent post s3 failure
 
   const res = await app.plugins.aws.putFile(data, `${data.createdByRole}/${data.createdById}`)

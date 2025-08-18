@@ -3,7 +3,6 @@ const sheets = require('@googleapis/sheets')
 
 const { SecretsManagerClient, GetSecretValueCommand } = require('@aws-sdk/client-secrets-manager')
 
-// Temp comment
 const config = require('../../config')
 
 async function _credentials() {

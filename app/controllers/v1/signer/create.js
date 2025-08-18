@@ -6,6 +6,7 @@ const serializer = app.serializers.v1.signer
 const model = app.models.signer
 const validator = app.plugins.validator
 
+async function create(req, res) {
   const schema = model.schema('create.api.public')
   const payload = validator(req.body, schema, { abortEarly: false })
   const data = {
@@ -22,7 +23,6 @@ const validator = app.plugins.validator
 
   const signer = await service.create(data)
   const token = app.services.token.get({
-    scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 86400 // 24 hours
   })

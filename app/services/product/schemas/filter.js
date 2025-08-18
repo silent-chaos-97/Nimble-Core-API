@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 
-// Temp comment
 function schema() {
   return Joi.object().keys({
     institutionId: Joi.string().uuid(),

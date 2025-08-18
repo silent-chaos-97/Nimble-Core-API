@@ -1,5 +1,4 @@
 /webhooks/shufti/identity-verification:
-  post:
     tags:
       - Webhooks
     summary: post updates for identity verifications

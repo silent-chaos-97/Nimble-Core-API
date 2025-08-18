@@ -11,7 +11,6 @@ const whitelistSuccessCodes = [1004, 1006, 1004, 1007]
  * @param {uuid} signerId
  * @param {app.db} tx
  */
-async function fetch(signerId, tx = app.db) {
   logger.info(`[fetch] called with signer [${signerId}]`)
   const signer = await app.services.signer.get(signerId, tx)
 
@@ -40,6 +39,7 @@ async function fetch(signerId, tx = app.db) {
   }
 
   // If there was a invalid completion code we save a record with no score and a error code
+  if (!whitelistSuccessCodes.includes(code)) {
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)
     data.errorCode = 'generic_error'
 

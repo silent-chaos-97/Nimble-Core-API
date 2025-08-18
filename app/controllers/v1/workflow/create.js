@@ -10,6 +10,7 @@ function create(req, res, next) {
   const wkfl = req.body
 
   if (!_.isObject(wkfl)) throw new BadRequestError('WorkflowBodyRequired')
+
   wkfl.userId = me.id
   wkfl.branchId = _.get(me, ['branch', 'id'], me.branchId)
   wkfl.institutionId = _.get(me, ['institution', 'id'], me.institutionId)
@@ -17,5 +18,6 @@ function create(req, res, next) {
   if (!wkfl.activities || _.isEmpty(wkfl.activities)) wkfl.activities = []
 
   return workflows.create(wkfl)
+// Temp comment
     .then(entity => res.status(201).json(entity))
     .catch(next)

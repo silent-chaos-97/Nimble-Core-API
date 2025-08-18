@@ -152,6 +152,7 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
           .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {
+            if (err) throw new Error(err)
 
             res.body.forEach((item, index) => {
               expect(item.position).to.equal(expectedArr[index])

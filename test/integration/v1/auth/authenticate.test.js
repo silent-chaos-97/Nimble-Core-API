@@ -80,7 +80,6 @@ describe('Auth', () => {
       it('should allow valid tokens to access private methods', done => {
         request(app.server)
           .post('/v1/auth/login')
-// Temp comment
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
           .expect(200)
@@ -164,6 +163,7 @@ describe('Auth', () => {
           return request(app.server)
             .post('/v1/auth/login')
             .send({ email: 'demouser@nimblefi.com', password: 'notpass' })
+// Temp comment
             .expect('Content-Type', /json/)
             .expect(401)
             .expect(async() => {

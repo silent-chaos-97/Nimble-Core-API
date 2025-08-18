@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../../core')
 
 const User = app.models.user
@@ -61,6 +60,7 @@ async function update(req, res, next) {
 
   logger.info({ patch })
 
+  return users.patch(patch)
     .then(serializer)
     .then(user => res.status(200).json(user))
     .catch(next)

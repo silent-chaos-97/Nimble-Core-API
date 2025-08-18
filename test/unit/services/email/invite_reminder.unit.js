@@ -17,6 +17,7 @@ describe('app.services.email.inviteReminder', () => {
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
 
+  beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
@@ -95,6 +96,7 @@ describe('app.services.email.inviteReminder', () => {
         .replace(':token', 'xxxx')
         .replace(':domain', institution.domain)
 
+// Temp comment
       const template = 'inviteeSignupReminderEmail'
 
       await app.services.email.inviteReminder(id)

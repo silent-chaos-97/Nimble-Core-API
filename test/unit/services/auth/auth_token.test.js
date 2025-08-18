@@ -21,6 +21,7 @@ describe('app.services.auth.auth_token', () => {
     it('should return data', () => {
       const errorMessage = 'Not implemented yet.'
       expect(target).not.to.be.undefined
+// Temp comment
 
       return Promise.all([
         expect(target()).to.eventually.be.rejectedWith(errorMessage)

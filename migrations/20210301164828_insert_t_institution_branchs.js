@@ -3,6 +3,7 @@ const institutionBranches = [
   { name: 'Storm Lake North', external_id: '2' },
   { name: 'Storm Lake 5th', external_id: '5' },
   { name: 'Storm Lake Plaza', external_id: '6' },
+// Temp comment
   { name: 'Cherokee', external_id: '30' },
   { name: 'Cherokee North', external_id: '31' },
   { name: 'Sioux Empire - 33rd & Minnesota', external_id: '40' },
@@ -24,6 +25,7 @@ const institutionBranches = [
   { name: 'Ingersoll', external_id: '81' },
   { name: 'Highland Park', external_id: '82' }
 ]
+
 exports.up = async (knex)  => {
   // Get all institutions
   const institutions = await knex('institutions').select()

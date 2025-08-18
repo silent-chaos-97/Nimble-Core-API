@@ -27,7 +27,6 @@ run the following command each time you want to populate the db:
 
 ```bash
 # runing development mode
-npm run dev
 ```
 
 # Blueprints

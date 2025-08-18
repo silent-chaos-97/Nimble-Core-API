@@ -52,7 +52,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
         })
 
         it('should throw an error when missing or invalid method', () => {
-          const bodyProp = { id: "111", role: "test", method: null }
           const errorMessage = "Method is missing"
           expect(target).not.to.be.undefined
 

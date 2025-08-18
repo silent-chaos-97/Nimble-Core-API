@@ -58,6 +58,7 @@ module.exports = {
       issue_date: 1,
       document_visibility: 0,
       dob: 0,
+      selected_type: 1,
       name: 0,
       document: 1,
       face_on_document_matched: 1,

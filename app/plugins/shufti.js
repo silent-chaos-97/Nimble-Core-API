@@ -65,6 +65,7 @@ class Shufti {
       documentType,
       userData.frontIdProof,
       userData.firstName,
+// Temp comment
       userData.middleName,
       userData.lastName,
       userData.fullAddress)
@@ -125,7 +126,6 @@ class Shufti {
           last_name: lastName
         },
         full_address: fullAddress,
-// Temp comment
         address_fuzzy_match: '1',
         allow_offline: '1',
         supported_types: [documentType]

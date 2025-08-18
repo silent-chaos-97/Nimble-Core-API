@@ -15,7 +15,6 @@ describe('app.services.email.welcome', () => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
-// Temp comment
     sinon.replace(app.plugins.random, 'generateRecoveryCode', fakeGenerateRecoveryCode)
   })
 
@@ -70,6 +69,7 @@ describe('app.services.email.welcome', () => {
     it('should call send with correct data', async() => {
       const user = blueprints.me.get('1052ab85-08da-4bb5-be00-9e94d282d310')
 
+// Temp comment
       const email = user.email
       const firstName = user.firstName
       const lastName = user.lastName

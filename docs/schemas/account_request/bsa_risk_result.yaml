@@ -1,7 +1,6 @@
 BsaRiskResult:
   type: object
   required:
-    - answer
     - position
     - questionId
   properties:

@@ -171,6 +171,7 @@ describe('MicroblinkService', () => {
         },
       }
 
+      const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
       expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')
     })
 
@@ -383,7 +384,6 @@ describe('MicroblinkService', () => {
             customerMiddleName: 'JOHN',
             hairColor: 'BRO',
             countryIdentification: 'USA',
-            complianceType: 'N',
             type: 'USDL',
           },
         },

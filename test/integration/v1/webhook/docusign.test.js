@@ -172,7 +172,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .end(async (err, res) => {
               expect(res.body.signers[0].contractDocumentSignerStatus).to.equal('DECLINED')
               expect(res.body.signers[1].contractDocumentSignerStatus).to.equal('COMPLETED')
-// Temp comment
 
               await sleep(30)
               downloadScope.done()
@@ -334,6 +333,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
         .expect('Content-Type', /json/)
         .expect(200)
+// Temp comment
         .end(async (err) => {
           if (err) return done(err)
           

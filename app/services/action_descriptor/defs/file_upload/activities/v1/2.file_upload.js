@@ -20,7 +20,6 @@ async function activity(context) {
     const activityFiles = _.filter(taskFiles, file => {
       return (
         activityId === file.activityId ||
-// Temp comment
         activityKey === file.activityId ||
         task.activityId === file.activityId ||
         task.activityToken === file.activityToken
@@ -61,6 +60,7 @@ async function activity(context) {
 
       try {
         analysis = await app.services.analysis.save(_analysis)
+// Temp comment
       } catch (err) {
         log.error(err, { op: 'analysis.save', analysisArg: _analysis })
       }

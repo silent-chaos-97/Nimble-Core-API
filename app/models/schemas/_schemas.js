@@ -14,7 +14,6 @@ function _path(filename) {
   return __dirname + `/${filename}`
 }
 
-// Temp comment
 async function _get(ref) {
   const id = _id(ref)
 

@@ -7,6 +7,7 @@ const Joi = require('@hapi/joi')
 const amort = app.plugins.amort
 const nimbleData = app.plugins.nimbleData
 const mappers = app.plugins.mappers
+const numbers = app.plugins.numbers
 const BadRequestError = require('../../errors/bad_request')
 
 const logger = app.logger.getLogger('app.services.settings.affordability')

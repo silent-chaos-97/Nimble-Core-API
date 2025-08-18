@@ -47,7 +47,6 @@ describe('app.services.email.inviteSigner', () => {
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
-      await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
       await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
@@ -71,6 +70,7 @@ describe('app.services.email.inviteSigner', () => {
 
     it('should call send with correct data', async () => {
       const invitedSigner = blueprints.signers.signer_1
+      const institution = blueprints.institutions.institution_1
       const invitedBy = blueprints.signers.signer_1
       const product = blueprints.products.product_10
 

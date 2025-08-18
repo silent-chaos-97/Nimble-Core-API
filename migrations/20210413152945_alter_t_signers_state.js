@@ -10,6 +10,7 @@ exports.up = function (knex) {
     ], { useNative: false, enumName: 'signers_status_type' }).alter()
   }).toSQL())
 }
+
 exports.down = function (knex) {
   const sql = 'ALTER TABLE signers DROP CONSTRAINT signers_status_check;'
 

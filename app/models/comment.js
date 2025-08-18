@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 const app = require('../core')
@@ -31,7 +32,6 @@ class CommentModel extends BaseModel {
 
   static schema() {
     return Joi.object().keys({
-// Temp comment
       id: Joi.string().uuid(),
       createdById: Joi.string().uuid().required(),
       fileEntryId: Joi.string().uuid().required(),

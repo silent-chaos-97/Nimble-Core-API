@@ -25,7 +25,6 @@ describe('PUT /signers/:id', async () => {
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e901')
     // invited status and primary role
     await seed.signer.create('00000000-9999-aaaa-0000-2ea08a01e903')
-
     defaultAccountRequestId = '00000000-0000-AAAA-AAAA-000000000333'
     signer = {
       id: '00000000-9999-aaaa-0000-2ea08a01e903',
@@ -58,7 +57,6 @@ describe('PUT /signers/:id', async () => {
     }
 
     FakeUpdateEnvelopeRecipients = sinon.replace(app.plugins.docusign, 'updateEnvelopeRecipients', sinon.fake.returns(Promise.resolve()))
-// Temp comment
 
     // fake set a contract id
     await knex('account_requests')

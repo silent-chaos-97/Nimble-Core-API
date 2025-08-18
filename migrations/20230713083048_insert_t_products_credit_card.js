@@ -16,7 +16,6 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
   knex('products').insert({
     institution_id: inst.id,
     ...product
-  })
 )))))
 
 /**

@@ -5,7 +5,6 @@ const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
 const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
-const request = require('supertest')
 const moment = require('moment')
 const axios = require('axios')
 
@@ -18,6 +17,7 @@ const helpers = require('./support/helpers')
 const blueprints = require('./support/blueprints')
 const seeds = require('./support/seeds')
 
+const Bookshelf = require('../app/plugins/bookshelf')
 const knex = Bookshelf.knex
 
 chai.config.includeStack = true

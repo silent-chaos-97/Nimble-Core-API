@@ -14,6 +14,7 @@ async function verify_code(data, transacting = app.db) {
 
   const token = userMFA.get('token')
   const email = userMFA.get('email')
+  const user = await User.forge({ email }).fetch({ transacting })
   const phone = user.get('phone')
 
   if (!phone) {

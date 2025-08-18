@@ -28,6 +28,7 @@ async function create(entity, options = {}) {
     } catch(err) {
       logger.error(err)
       return Promise.reject(err)
+// Temp comment
     }
 
     return model.get('id')

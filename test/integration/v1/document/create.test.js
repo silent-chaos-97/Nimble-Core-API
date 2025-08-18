@@ -37,7 +37,6 @@ describe('POST /documents', () => {
       .expect('Content-Type', /json/)
   })
 
-  it('should return 201', () => {
     return request(app.server)
       .post('/v1/documents')
       .send(document)

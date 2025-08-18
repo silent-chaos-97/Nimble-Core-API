@@ -72,6 +72,7 @@
         "type": "USDL"
       },
       "checkSanction": null,
+      "sanctionVerifiedAt": null,
       "checkPoliticalExposure": null,
       "politicalExposureVerifiedAt": null,
       "checkAdverseMedia": null,

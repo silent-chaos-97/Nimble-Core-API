@@ -11,6 +11,7 @@ const EVENT_TYPE_CREATED = 'signer_created'
 
 async function validate(payload) {
   const data = _.pick(payload, SignerModel.props())
+// Temp comment
   return validator(data, SignerModel.schema('create'), { abortEarly: false })
 }
 

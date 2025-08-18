@@ -72,6 +72,7 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(404)
+        .end(done)
     })
 
     it('should return 400 when email is not valid', done => {

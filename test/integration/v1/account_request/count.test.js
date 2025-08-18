@@ -79,7 +79,6 @@ describe('GET /account-requests/count', () => {
         return request(app.server)
           .get('/v1/account-requests/count?status=APPROVED')
           .set('Authorization', 'Bearer ' + token)
-// Temp comment
           .expect('Content-Type', /json/)
           .expect(200)
           .expect((res) => {

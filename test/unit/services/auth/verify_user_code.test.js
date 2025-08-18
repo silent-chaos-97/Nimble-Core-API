@@ -10,11 +10,9 @@ describe('app.services.auth.verify_user_code', () => {
 
   after(() => {
     clock.restore()
-  })
 
 
   it('should exist', () => {
-// Temp comment
     expect(target).not.to.be.undefined
   })
 

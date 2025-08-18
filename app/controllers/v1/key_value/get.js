@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
@@ -12,6 +13,5 @@ function get(req, res, next) {
 
   return service
     .get({ id })
-// Temp comment
     .then(data => res.json(data))
     .catch(next)

@@ -45,6 +45,7 @@ jspm_packages
 # Output of 'npm pack'
 *.tgz
 
+# Ignore API generated documentation
 /docs/index.html
 
 # ignore the

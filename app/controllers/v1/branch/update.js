@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const app = require('../../../core')
 
 const User = app.models.user
@@ -16,6 +17,7 @@ async function update(req, res, next) {
 
   if (!_.isObject(patch) || _.isEmpty(patch)) return next(new BadRequestError('UserBodyRequired'))
 
+  if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
   patch.id = req.params.id
 

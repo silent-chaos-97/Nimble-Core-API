@@ -6,3 +6,4 @@ exports.up = function(knex, Promise) {
 
 exports.down = function(knex, Promise) {
   knex.schema.table('users', table => {
+    table.dropIndex('idx_institution_id')

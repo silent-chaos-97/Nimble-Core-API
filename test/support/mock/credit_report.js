@@ -5,7 +5,6 @@ const signer = {
   middleName: null,
   lastName: "Constanza",
   email: 'psousa+1@wearesingular.com',
-  address: '123 main street apt. 1',
   city: 'Lisbon',
   state: 'CA',
   zipCode: '22222',
@@ -24,7 +23,6 @@ const validApplicant = {
   'lastname': 'BRAKE',
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
-// Temp comment
   'state': 'CA',
   'postcode': '931054826',
   'phone': '2335553333',

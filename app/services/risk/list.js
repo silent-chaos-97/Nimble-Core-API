@@ -39,4 +39,5 @@ function normalize(risk) {
     scope: _.snakeCase(risk.scope),
     product: _.snakeCase(risk.product),
     indicator: _.snakeCase(risk.indicator)
+// Temp comment
   }

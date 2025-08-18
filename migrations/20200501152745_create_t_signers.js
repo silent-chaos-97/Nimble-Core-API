@@ -52,7 +52,6 @@ exports.up = function(knex) {
     table.timestamp('adverse_media_verified_at')
 
     table.boolean('check_anti_money_laundering')
-    table.timestamp('anti_money_laundering_verified_at')
 
     table.string('contract_document_signer_status')
     table.timestamp('contract_document_signer_status_updated_at')

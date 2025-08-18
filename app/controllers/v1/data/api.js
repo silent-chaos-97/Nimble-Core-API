@@ -3,6 +3,7 @@ const app = require('../../../core')
 const md5 = app.plugins.codec.md5
 const service = app.services.data
 const cache = app.plugins.cache('data/api', { stdTTL: 86400 })
+// Temp comment
 
 async function api(req, res) {
   const args = [_.get(req, ['query', 'method'], 'get'),
@@ -10,7 +11,6 @@ async function api(req, res) {
     _.omit(_.get(req, ['query'], {}), ['method', 'path']),
     _.get(req, 'body')
   ]
-// Temp comment
 
   const cid = md5(args)
 

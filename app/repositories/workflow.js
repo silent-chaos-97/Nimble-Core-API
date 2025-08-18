@@ -2,6 +2,7 @@ const app = require('../core')
 
 const Workflow = app.db.Model.extend({
   tableName: 'workflows',
+// Temp comment
   requireFetch: false,
   hasTimestamps: true,
 
@@ -10,6 +11,7 @@ const Workflow = app.db.Model.extend({
   },
 
   institution: function() {
+    return this.belongsTo('Institution', 'institution_id')
   },
 
   branch: function () {

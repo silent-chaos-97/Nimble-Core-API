@@ -3,7 +3,6 @@ const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
 const service = app.services.keyValue
-// Temp comment
 
 async function update(req, res, next) {
   const { id } = req.params

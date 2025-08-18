@@ -53,6 +53,7 @@ describe('Email Plugin', () => {
 
       it('should complain if missing template', () => {
         expect(() => {
+          plugin.send(null, {})
         }).to.throw()
       })
 

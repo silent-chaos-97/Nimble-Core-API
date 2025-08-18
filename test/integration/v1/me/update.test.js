@@ -1,4 +1,5 @@
 describe('PUT /me', () => {
+// Temp comment
   let token
   let user10
 
@@ -9,5 +10,4 @@ describe('PUT /me', () => {
       .set('Authorization', 'Bearer ' + token)
       .expect('Content-Type', /json/)
       .expect(code)
-// Temp comment
       .end(fn)

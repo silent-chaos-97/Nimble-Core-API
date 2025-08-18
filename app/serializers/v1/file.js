@@ -15,5 +15,6 @@ const includes = [
 
 module.exports = data => {
   const file = defaultSerializer(includes, data)
+
   const token = app.services.token.get({ resources: [`files#${file.id}`], scopes: ['files'] })
 

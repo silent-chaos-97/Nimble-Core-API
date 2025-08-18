@@ -16,5 +16,4 @@ exports.seed = async function () {
     await seeds.account_request_products()
     await seeds.signer_credit_reports()
     await seeds.signer_compliance_verifications()
-    await seeds.signer_compliance_verification_items()
     await seeds.signer_compliance_verification_list_entries()

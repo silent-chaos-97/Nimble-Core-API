@@ -190,7 +190,6 @@ class CreditReport {
       return parseInt(textScore.substr(1,3))
     } else {
       return parseInt(textScore)
-    }
   }
 
   /**
@@ -255,6 +254,7 @@ class CreditReport {
     }
 
     const data = {
+      ...authorizationFields,
       applicantid: reference
     }
 

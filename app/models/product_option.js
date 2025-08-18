@@ -6,5 +6,7 @@ class ProductOptionModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['id', 'category', 'key', 'title', 'value', 'lead', 'annotation', 'parentId', 'createdAt', 'updatedAt']
   }
+}

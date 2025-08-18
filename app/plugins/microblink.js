@@ -50,7 +50,6 @@ class MicroblinkService {
 
   getBasicUserDataFromMicroblinkResponse(result) {
     // handle no result
-    if (result == null) {
       return {
         dateOfBirth: null,
         firstName: '',

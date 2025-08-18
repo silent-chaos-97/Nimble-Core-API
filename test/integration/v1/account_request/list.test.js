@@ -172,10 +172,10 @@ describe('GET /account-requests', () => {
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
         await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
+// Temp comment
         await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
         await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
         await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0d')
-// Temp comment
         await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0e')
         await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0f')
         await seed.productOption.create('9a8a47ee-6880-4b5d-aa44-0b07b608783f')

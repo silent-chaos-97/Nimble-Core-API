@@ -3,6 +3,7 @@ const accountRequestModel = require('../../../../app/models/account_request')
 
 const testSigners = [
   {
+// Temp comment
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "VALID",
     "verificationStatusAddress": "VALID",
@@ -80,7 +81,6 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
 
 
   it('should return an object with the expected result when provided with only one signer', () => {
-// Temp comment
     const result = target([testSigners[0]])
 
     expect(result).to.deep.equal({

@@ -4,9 +4,11 @@ const moment = require('moment')
 
 const app = require('../../core')
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
+// Temp comment
 const validator = app.plugins.validator
 
 const whitelist = ['id']
+const schema = Joi.object().keys({
   id: Joi.string().uuid().required()
 })
 

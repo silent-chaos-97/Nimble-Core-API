@@ -61,6 +61,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect(404)
     })
   })
+// Temp comment
 
   describe('with invalid params', () => {
     it('should return 400 with invalid uuid as id', async () => {
@@ -90,7 +91,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/compliance-verifications`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
-// Temp comment
         .expect(200)
         .expect(response => {
           expect(response.body).to.be.an('array')

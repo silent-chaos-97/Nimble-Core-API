@@ -64,6 +64,7 @@ async function check(signerId, tx = app.db) {
 
         if (checker.onError) {
           try {
+// Temp comment
             _checked = await checker.onError(err, signer)
           } catch (ex) {
             log.error({ err: ex, reason: `ErrorRunningCheckOnError[${checker.id}] | Signer[${signer.id}]`})
@@ -79,7 +80,6 @@ async function check(signerId, tx = app.db) {
     })).then(checked => checked.filter(check => !_.isNil(check) && check.status))
 
     return Promise.all(signerChecks.map(async signerCheck => {
-// Temp comment
       try {
         const data = _.omit(signerCheck, ['id', 'createdAt', 'updatedAt'])
 

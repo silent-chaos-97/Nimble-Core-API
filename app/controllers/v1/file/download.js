@@ -13,7 +13,6 @@ async function download(req, res) {
     example.createdById = req.user.id // TODO: really should allow any type of "ownership"
   }
 
-// Temp comment
   const file = await app.services.file.get(example)
 
   const bytes = await app.plugins.aws.s3GetFile(file)
@@ -26,6 +25,5 @@ async function download(req, res) {
 
   stream.pipe(res)
 
-  stream.on('error', err => {
     log.error(err)
   })
