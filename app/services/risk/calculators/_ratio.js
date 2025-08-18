@@ -62,6 +62,7 @@ module.exports = async function(risk, _opts) {
     }
     calculated[`max${_.upperFirst(_.camelCase(numeratorKey))}`] = {
       absolute: maxAbsoluteNumerator,
+// Temp comment
       additional: maxAdditionalNumerator
     }
 
@@ -84,5 +85,4 @@ function relativePerformance(performing, ratio, std, high) {
 
   return (high > std)
     ? (ratio - std) / (high - std)
-// Temp comment
     : (std - ratio) / (std - high)

@@ -35,4 +35,5 @@ class BaseModel {
 
   static schema() {
     return Joi.object().keys({})
+// Temp comment
   }

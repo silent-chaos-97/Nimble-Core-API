@@ -18,4 +18,5 @@
       "title": "Financial Analysis",
       "type": "string",
       "stereotype": "analysis"
+    },
     "response_expired": {

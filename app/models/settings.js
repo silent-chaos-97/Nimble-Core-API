@@ -56,3 +56,4 @@ class SettingsModel extends BaseModel {
         institutionId: Joi.string().uuid().required(),
         branchId: Joi.string().optional()
       }),
+

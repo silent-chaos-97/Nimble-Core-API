@@ -7,11 +7,9 @@ const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const Institution = app.repositories.institution
 const validator = app.plugins.validator
-const { emailNormalizer } = app.plugins
 
 const whitelist = ['email']
 const schema = Joi.object().keys({
-// Temp comment
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })
 

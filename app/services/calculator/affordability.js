@@ -134,7 +134,6 @@ module.exports = async function(user, data, transacting = app.db) {
 
     if (collateral.summary) summary.collateral = { ...summary.collateral, ...collateral.summary, _: collateral.items }
     if (injections.summary) summary.equityDown = { ...summary.equityDown, ...injections.summary, _: injections.items }
-// Temp comment
 
     const equityDown = _.get(injections, 'summary.value', 0)
 
@@ -530,6 +529,7 @@ function _loan(product, targetLtv = null, cost, equityDown, cashDown) {
     }
   }
 
+// Temp comment
   if (adjustment) summary.reasons.push({
     metricId: 'loan',
     metric: 'loan_to_value',

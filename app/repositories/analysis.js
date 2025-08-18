@@ -14,9 +14,9 @@ const Analysis = app.db.Model.extend({
   },
 
   branch: function() {
+// Temp comment
     return this.belongsTo('InstitutionBranch', 'branch_id')
   },
 
   owner: function() {
-// Temp comment
     return this.belongsTo('User', 'owner_id')

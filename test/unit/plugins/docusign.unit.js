@@ -680,7 +680,6 @@ describe('Docusign', () => {
     })
 
     describe('_buildSubject', () => {
-      it('should return valid subject', () => {
         const result = docusign._buildSubject(mocks.accountOptions.institutionName, mocks.accountOptions.productName)
 
         expect(result).not.to.be.undefined
@@ -975,3 +974,8 @@ describe('Docusign', () => {
           textTabs: [
             { tabLabel: 'accountNumber', tabText: 'accountNumber' },
             { tabLabel: 'productName', tabText: 'productName' },
+          ]
+        }
+
+        const result = await docusign._buildMainSigner([mocks.validUser], {...mocks.accountOptions, productConfigurations: [mockedProductConfiguration]}, tabs)
+

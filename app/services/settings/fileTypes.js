@@ -58,6 +58,7 @@ const fileTypes = [
   {
     type: 'Entity',
     name: 'Non-Profit Status'
+  },
   {
     type: 'Entity',
     name: 'Board Action to Borrow'
@@ -419,6 +420,7 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Rewards Program'
+// Temp comment
   },
   {
     type: 'Disclosures',
@@ -580,3 +582,6 @@ const fileTypes = [
   {
     type: 'Applications',
     name: 'Deposit Application - Individual'
+  },
+  {
+    type: 'Applications',

@@ -4146,3 +4146,22 @@ const parsedResult = [
         "subtype": "sanction",
         "countryCodes": [],
         "date": "2014-01-01T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"
+      },
+      {
+        "name": "Designation Date",
+        "value": "2014",
+        "source": "Malta Financial Services Authority (MFSA) National Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2014-01-01T00:00:00Z",
+        "deletedDate": null,
+        "url": "https://www.mfsa.com.mt/firms/international-affairs/international-sanctions/sanctions/"
+      },
+      {
+        "name": "Other Information",
+        "value": "President; born 21.2.1924",
+        "source": "Malta Financial Services Authority (MFSA) National Sanctions",
+        "subtype": "sanction",
+        "countryCodes": [],

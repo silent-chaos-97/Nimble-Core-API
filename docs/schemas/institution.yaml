@@ -33,7 +33,6 @@ Institution:
       example: someone@central-bank.com
     domain:
       type: string
-      title: Domain
       description: The institution domain
     routingNumber:
       type: string

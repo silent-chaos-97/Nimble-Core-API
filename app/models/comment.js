@@ -12,7 +12,6 @@ class CommentModel extends BaseModel {
     return ['id', 'text', 'createdById', 'fileEntryId', 'attachmentId', 'createdAt', 'updatedAt']
   }
 
-// Temp comment
   static relations() {
     return ['createdBy', 'fileEntry', 'attachment']
   }
@@ -35,3 +34,4 @@ class CommentModel extends BaseModel {
       id: Joi.string().uuid(),
       createdById: Joi.string().uuid().required(),
       fileEntryId: Joi.string().uuid().required(),
+      attachmentId: Joi.string().uuid(),

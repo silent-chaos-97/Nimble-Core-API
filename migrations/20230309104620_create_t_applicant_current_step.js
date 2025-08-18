@@ -5,6 +5,7 @@ const db = require('./util/db')
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
+  return db.createTableIfNotExists(knex, 'applicant_current_step', (table) => {
     table.uuid('user_id').primary().references('users.id')
     table.string('current_step', 255).notNullable()
     table.timestamp('expires_at').notNullable()
@@ -16,4 +17,3 @@ exports.up = function(knex) {
 
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<void> }

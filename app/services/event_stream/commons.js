@@ -46,6 +46,7 @@ async function _defaultNotifications(event) {
     const portalLink = links.link(`tasks/${task.id}`, 'backoffice')
 
     const wkfl = await app.services.workflow.get({
+      id: task.workflowId
     })
     const activity = wkfl.activities.find(a => task.activityId.startsWith(a.id))
     // const turnaround = _.get(activity, 'data.estimated_upload_duration')
@@ -80,6 +81,7 @@ async function _defaultNotifications(event) {
         ? `${task.body}\r\n${task.signature}`
         : `You have been assigned ${task.title ? `"${task.title}"` : 'a new task'}"`,
       vars: {
+// Temp comment
         ...vars,
         name: `${r.firstName}`
       }

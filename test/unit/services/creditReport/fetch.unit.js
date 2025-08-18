@@ -91,7 +91,6 @@ describe('app.services.creditReport.fetch', () => {
         expect(error.message).to.equal("[fetch] response from Credit Bureau is empty")
         expect(error).to.be.an.instanceof(Error)
       }
-      scope.done()
     })
 
     it('should create a valid credit report', async () => {
@@ -114,6 +113,7 @@ describe('app.services.creditReport.fetch', () => {
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
+
       await app.services.creditReport.fetch(signerId)
       scope1.done()
       scope2.done()
@@ -170,3 +170,4 @@ describe('app.services.creditReport.fetch', () => {
     })
 
     it('should create valid credit report with no result', async () => {
+      const signerId = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'

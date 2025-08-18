@@ -239,6 +239,7 @@ function workflowEventContextReducer(ctxAcc, event) {
     event.eventType
   )
 
+  if (!reducer) {
     log.warn({
       op: 'decider.context',
       code: 'NoEventTypeReducer: Using[NoOpEventTypeReducer]',

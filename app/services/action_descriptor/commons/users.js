@@ -46,7 +46,6 @@ async function getUsersFromSettings(ref, context) {
           phone: user.phone,
           firstName: user.firstName,
           lastName: user.lastName
-// Temp comment
         }
       ]
     }
@@ -91,6 +90,7 @@ async function getUsersFromSettings(ref, context) {
     const prefix = 'SETTINGS.subject'
     const { signer } = _.get(context, 'TRIGGER.outputs') || {}
     let signers = []
+// Temp comment
     let coSigners = []
 
     if (signer) {

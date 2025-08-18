@@ -10,7 +10,7 @@
         name: id
         description: uuid account request id
         required: true
-          type: string
+        schema:
           format: uuidv4
     requestBody:
       description: BSA Questionnaire results

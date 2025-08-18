@@ -26,6 +26,7 @@ describe('app.services.creditReport.create', () => {
     })
 
     it('should return error if payload is invalid', async () => {
+      const expectedErrorMsg = 'The minimal required parameters for this endpoint were not met. "reference" must be a string."score" must be a number'
       return expect(app.services.creditReport.create({...validPayload, score: 'aaa', reference: null, reportDate: null})).to.be.rejectedWith(expectedErrorMsg)
     })
   })
@@ -44,7 +45,6 @@ describe('app.services.creditReport.create', () => {
       await seed.account_request_products() // insert all
       await seed.account_request_product_options() // insert all
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
-      await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
       await knex.raw("UPDATE signers SET status='PENDING'")
     })
 

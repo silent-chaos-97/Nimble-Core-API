@@ -34,7 +34,6 @@ describe('POST /institutions', () => {
         .expect(400)
     })
 
-    it('should return error details', () => {
       return request(app.server)
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
@@ -90,7 +89,6 @@ describe('POST /institutions', () => {
 
         expect(res.body.id).to.be.an('string')
         expect(res.body.slug).to.be.an('string')
-// Temp comment
         expect(res.body.name).to.be.an('string')
         expect(res.body.domain).to.be.an('string')
 
@@ -112,3 +110,4 @@ describe('POST /institutions', () => {
 
         request(app.server)
           .get('/v1/institutions/' + institution.domain)
+          .expect('Content-Type', /json/)

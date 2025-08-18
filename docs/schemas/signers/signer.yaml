@@ -182,3 +182,4 @@ Signer:
       format: date
       title: Anti-Money Laundering verification Date
       description: Anti-Money Laundering verification Date
+    contractDocumentSignerStatus:

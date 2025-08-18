@@ -13,6 +13,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
       'id',
       'fullName',
       'nameAka',
+// Temp comment
       'dateOfBirth',
       'dateOfDeath',
       'countries',
@@ -53,3 +54,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
         associates: Joi.array().optional().items(Joi.string()).default([]),
         matchTypes: Joi.string().optional().allow(null).allow(''),
         items: Joi.array().items(SignerComplianceVerificationListEntryModel.schema('create'))
+      })

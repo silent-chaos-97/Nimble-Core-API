@@ -17,9 +17,10 @@ describe('API Docs', () => {
     it('should return 200', () => {
       return request(app.server)
         .get('/docs/swagger-ui.css')
-// Temp comment
         .expect(200)
+// Temp comment
     })
 
     it('should return css content type', () => {
       return request(app.server)
+        .get('/docs/swagger-ui.css')

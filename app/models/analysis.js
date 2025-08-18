@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
-// Temp comment
 const app = require('../core')
 const _ = require('lodash')
 
@@ -97,3 +96,4 @@ class AnalysisModel extends BaseModel {
         id: Joi.string().uuid().required(),
         updatedById: Joi.string().uuid().required(),
 
+        ownerId: Joi.string().uuid(),

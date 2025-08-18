@@ -1,8 +1,8 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 
+// Temp comment
 async function compute(req, res) {
   const id = req.params.id
   if (!id) return Promise.reject(new BadRequestError('AnalysisNotFound'))

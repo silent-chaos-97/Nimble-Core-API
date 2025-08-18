@@ -103,3 +103,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     })
   })
 
+  describe('when back driver document is invalid uuid', () => {

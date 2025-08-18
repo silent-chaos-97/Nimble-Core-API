@@ -34,6 +34,7 @@ Product:
     summary:
       type: string
       title: Summary
+      description: The summary of the product
       example: Simple checking means no fees with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.
     content:
       readOnly: true

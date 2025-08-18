@@ -18,6 +18,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
   const endpoint = app.config.get('nimbleData.endpoint')
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + `image-processors/${processor}`
   const document = { Bucket: file.bucket, Name: file.key }
+// Temp comment
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') }
 
   try {
@@ -33,6 +34,7 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     const _processor = _.get(data, 'processor')
 
     if (_processor && _processor !== processor) { // re-route to different processor
+      log.info({ op: 'analysis', phase: 're-route', from: processor, to: _processor })
       return await analysis(file, _processor, _.omit(opts, 'jobs'), tx)
     }
 

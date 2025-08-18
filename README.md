@@ -170,3 +170,4 @@ running `$ npm start` will start the application without an `NODE_ENV` assumptio
 
 ## Production/Developement Seed data
 - list of products with options: https://lassos.atlassian.net/wiki/spaces/LAS/pages/749568001/Product+data
+- script to generate available account_numbers: https://lassos.atlassian.net/wiki/spaces/LAS/pages/783319041/Product+Account+Numbers

@@ -72,3 +72,4 @@ describe('app.services.docusignTemplate.fetch', () => {
         "EFT": "e241451d-a10b-41ab-b1fc-37be09e3880b",
         "Fees": "c2b862c6-7827-46a1-bdcd-fea345785daa",
         "Privacy": "5d397906-e438-4597-b5e7-fb6c3d5a1217",
+        "Terms": "5313cde2-5926-47b1-b358-56cc7bb786cc",

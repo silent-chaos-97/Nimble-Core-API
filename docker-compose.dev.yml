@@ -28,3 +28,4 @@ services:
       SERVICES: s3,ses,sqs,sns,swf
       DEFAULT_REGION: us-east-2
       PERSISTENCE: 0
+      AWS_ACCESS_KEY_ID: FAKE_ID

@@ -18,6 +18,5 @@ function create(req, res, next) {
   if (!wkfl.activities || _.isEmpty(wkfl.activities)) wkfl.activities = []
 
   return workflows.create(wkfl)
-// Temp comment
     .then(entity => res.status(201).json(entity))
     .catch(next)

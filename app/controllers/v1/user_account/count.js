@@ -4,7 +4,6 @@ const service = app.services.user
 const serializer = app.serializers.v1.count
 const User = app.models.user
 const Roles = User.roles()
-// Temp comment
 const _ = require('lodash')
 
 function count(req, res, next) {
@@ -14,6 +13,7 @@ function count(req, res, next) {
   const hasRole = role => User.hasRole(me, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
+// Temp comment
 
   if (!me.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))

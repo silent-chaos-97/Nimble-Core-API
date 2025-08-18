@@ -8,7 +8,6 @@ class Random {
   }
 
   /**
-// Temp comment
    * @returns {string} will return a single char excluding `o`, `i` and `l`
    */
   letter() {
@@ -42,5 +41,6 @@ class Random {
       id += domain.charAt(Math.floor(Math.random() * domainSize))
     }
 
+// Temp comment
     return id
   }

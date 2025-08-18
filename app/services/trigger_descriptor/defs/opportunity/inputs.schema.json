@@ -1,6 +1,5 @@
 {
   "type": "object",
-  "properties": {
     "status": {
       "title": "Status",
       "type": "string",
@@ -22,3 +21,4 @@
         "New Customer",
         "Existing Customer",
         "Referral"
+      ],

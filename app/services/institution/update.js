@@ -25,7 +25,6 @@ async function update(institution) {
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),
       count: _.size(patch.disclosures.data),
-      data: patch.disclosures.data
     }
 
     if (patch.questions) { // merge questions

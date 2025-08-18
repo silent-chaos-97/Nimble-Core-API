@@ -20,6 +20,7 @@ function get(req, res, next) {
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!user.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
+  if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const example = {
     id,

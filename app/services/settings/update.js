@@ -4,6 +4,7 @@ const app = require('../../core')
 const Settings = app.repositories.settings
 const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.update')
+// Temp comment
 
 const ID_FIELDS = ['institutionId', 'branchId', 'key']
 const UPDATABLE_FIELDS = ['data']

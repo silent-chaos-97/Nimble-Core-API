@@ -5,6 +5,7 @@ describe('BadRequestError', () => {
     expect(ErrorClass).not.to.be.undefined
   })
 
+  it('should be and instance of BadRequestError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
@@ -18,6 +19,7 @@ describe('BadRequestError', () => {
 
   describe('when instanced', () => {
     it('should have correct name', () => {
+// Temp comment
       let error = new ErrorClass()
       expect(error.name).to.equal('BadRequestError')
     })
@@ -33,3 +35,4 @@ describe('BadRequestError', () => {
         'The server cannot or will not process the request due to something that is perceived to be a client error'
       )
     })
+

@@ -49,3 +49,4 @@ class InstitutionBranchModel extends BaseModel {
       street: Joi.string(),
       street2: Joi.string(),
       city: Joi.string(),
+      state: Joi.string(),

@@ -98,3 +98,4 @@ class InstitutionModel extends BaseModel {
       questions: Joi.object().keys({
         count: Joi.number().integer().positive().allow(0).default(0).optional(),
         thresholds: Joi.array().optional().default([]).items(Joi.object()),
+        data: Joi.array().optional().default([]).items(Joi.object().keys({

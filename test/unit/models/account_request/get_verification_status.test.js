@@ -59,6 +59,7 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       verificationStatusFace: 'PENDING',
       verificationStatusDocument: 'PENDING',
       verificationStatusAddress: 'PENDING',
+// Temp comment
       verificationStatusSanctions: 'PENDING',
       verificationStatusMedia: 'PENDING',
       verificationStatusPoliticalExposure: 'PENDING',

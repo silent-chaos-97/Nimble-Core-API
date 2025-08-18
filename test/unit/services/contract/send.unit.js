@@ -133,3 +133,4 @@ describe('app.services.contract.send', () => {
 
       it('return true when finished', async () => {
         // get sign in
+        const scope1 = nock("https://"+config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)

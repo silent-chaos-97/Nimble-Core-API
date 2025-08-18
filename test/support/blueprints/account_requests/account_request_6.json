@@ -187,7 +187,6 @@
       "verificationStatusMedia": "NOMATCH",
       "verificationStatusMediaUpdatedAt": "2018-02-16T12:11:03.341Z",
       "verificationStatusPoliticalExposure": "MATCH",
-      "verificationStatusPoliticalExposureUpdatedAt": "2018-02-16T12:11:03.341Z",
       "remoteMetadata": {}
     }
   ],
@@ -239,3 +238,4 @@
             "key": "optionB",
             "title": "Option B",
             "value": "B",
+            "createdAt": "2019-01-10T02:34:11.341Z",

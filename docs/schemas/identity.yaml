@@ -29,6 +29,7 @@ Identity:
       type: string
       title: City
       description: Individual city
+      nullable: true
       example: ORLANDO
     state:
       type: string
@@ -58,3 +59,4 @@ Identity:
     documentExpirationDate:
       type: string
       format: date
+      title: Document Expiration Date

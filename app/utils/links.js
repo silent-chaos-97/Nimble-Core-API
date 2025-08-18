@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 
 const config = require('../../config')
 
@@ -12,7 +11,6 @@ const config = require('../../config')
  * @returns {string}
  * @private
  */
-function _link(path, domain, params, otp = false) {
   if (domain && domain.endsWith('_domain')) domain = domain.substring(0, domain.indexOf('_domain'))
 
   const domainConfigKey = !domain || ['api', 'self', 'core'].includes(domain) ? 'domain' : `frontend.${domain}_domain`

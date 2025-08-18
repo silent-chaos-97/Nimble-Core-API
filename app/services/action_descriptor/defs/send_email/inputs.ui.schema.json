@@ -3,4 +3,5 @@
     "ui:widget": "selectUsers"
   },
   "message": {
+    "ui:widget": "textarea",
     "ui:rows": 20

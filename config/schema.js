@@ -129,7 +129,6 @@ const schema = {
       doc: 'The max number of failed login attempts',
       format: Number,
       default: 5,
-      env: 'MAX_FAILED_LOGIN_ATTEMPTS'
     }
   },
   wkfl: {
@@ -572,3 +571,6 @@ const schema = {
       doc: 'comply advantage base url',
       format: String,
       default: 'https://api.complyadvantage.com',
+      env: 'COMPLY_ADVANTAGE_BASE_URL'
+    }
+  },

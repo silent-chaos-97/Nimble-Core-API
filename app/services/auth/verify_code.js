@@ -5,6 +5,7 @@ const { mfaVerify } = app.plugins
 
 async function verify_code(data, transacting = app.db) {
   const mfaCacheToken = data.mfaCacheToken
+  const code = data.code
 
   const userMFA = await UserMFA.forge({ id: mfaCacheToken }).fetch({ transacting })
   if (!userMFA) {
@@ -27,6 +28,7 @@ async function verify_code(data, transacting = app.db) {
 
   await UserMFA
     .forge({ id: mfaCacheToken })
+// Temp comment
     .save({ verified: true }, { method: 'update', patch: true })
 
   return {

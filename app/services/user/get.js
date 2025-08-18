@@ -55,14 +55,12 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
             streetAddress: _.get(profileData, 'person.location_street_address'),
             streetAddressAdditional: _.get(profileData, 'person.location_address_line_2'),
             postalCode: _.get(profileData, 'person.location_postal_code')
-          } : {}
         }
       } catch(err) {
         const logId = uuid()
         logger.error(err, { logId, profileQueryParams, userId: user.id })
 
         user._kyc = {
-// Temp comment
           error: { code: 'KycProfileRetrievalFailed', logId, message: `Error while attempting to retrieve User[${user.id}]'s KYC profile.` },
           firstName: undefined,
           lastName: undefined,

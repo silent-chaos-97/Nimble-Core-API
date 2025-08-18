@@ -16,3 +16,4 @@ describe('Email Normalise Plugin', () => {
   })
 
   it('should return a email normalised with several @', () => {
+    const actual = target('prnjanuar@io@wearesingular.com')

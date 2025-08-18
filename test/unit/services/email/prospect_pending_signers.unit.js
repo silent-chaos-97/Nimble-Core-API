@@ -22,6 +22,7 @@ describe('app.services.email.prospectPendingSigners', () => {
 
   after(() => {
     clock.restore()
+    sinon.restore()
   })
 
   describe('when validating', () => {

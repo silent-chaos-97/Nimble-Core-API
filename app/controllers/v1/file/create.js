@@ -12,6 +12,7 @@ const serializer = app.serializers.v1.file
  *   createdById: string
  *   bytes?: string (base64-bytes)
  *   buffer?: Buffer
+ * }
  *
  * FIXME: handle a single file buffer, multiple file buffers, and a single base64 byte array
  */
@@ -30,7 +31,6 @@ async function create(req, res) {
   res.status(201)
 
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()
-
   if (/^[tT][eE]?[xX][tT]$/.test(ext)) return res.type('text/plain').send(entity.id)
 
   res.json(serializer(entity))

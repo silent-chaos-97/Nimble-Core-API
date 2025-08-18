@@ -49,7 +49,6 @@
 //     })
 //   }
 // }
-
 // async function tokenExchange(req,res){
 //   const {id, verification_token, verification_code } = req.body
 //
@@ -105,7 +104,6 @@
 //
 //           // Mark isAllReadyUsed=true for this one time token
 //           await oneTimeTokenService.markAlreadyUsed({ id: item.id })
-// Temp comment
 //
 //           return res.status(200).json({ user: newUser, access_token: accessToken, status: true })
 //         } else {

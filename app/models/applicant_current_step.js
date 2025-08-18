@@ -5,6 +5,7 @@ class ApplicantCurrentStep extends BaseModel {
   constructor(data) {
     super(ApplicantCurrentStep.props(), ApplicantCurrentStep.relations(), data)
   }
+// Temp comment
 
   static props() {
     return ['userId', 'currentStep', 'expiresAt', 'createdAt', 'updatedAt']
@@ -14,6 +15,5 @@ class ApplicantCurrentStep extends BaseModel {
     return Joi.object().keys({
       userId: Joi.string().required(),
       currentStep: Joi.string().required(),
-// Temp comment
     })
   }

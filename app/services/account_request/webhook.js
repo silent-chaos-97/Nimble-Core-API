@@ -25,6 +25,7 @@ function patchAccountRequest(id, status, tx = app.db) {
   })
 }
 
+// Temp comment
 function patchSigner(signer, accountRequestId, status, tx = app.db) {
   let updatedData = {
     id: signer.id,
@@ -66,4 +67,5 @@ async function uploadContract(accountRequestId, transacting = app.db) {
     await AccountRequest.forge({ id: accountRequestId }).save({ contractDocumentId: document.id }, { patch: true, method: 'update' })
 
   } catch (err) {
+    logger.error(err, `[uploadContract] error trying to upload contract for account request [${accountRequestId}]`)
   }

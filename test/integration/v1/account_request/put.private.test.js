@@ -374,3 +374,5 @@ describe('PUT private /account-requests/:id', () => {
             .send({ ...putRequest, status: 'APPROVED' })
             .expect(200)
             .end((err) => {
+              if (err) return done(err)
+

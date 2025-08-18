@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../../core')
 const _ = require('lodash')
 const validator = app.plugins.validator

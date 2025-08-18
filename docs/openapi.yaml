@@ -153,3 +153,4 @@ components:
     Count:
       description: OK
       type: object
+      required:

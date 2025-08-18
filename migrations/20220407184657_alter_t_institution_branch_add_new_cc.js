@@ -17,6 +17,7 @@ exports.down = function(knex, Promise) {
     table.dropColumn('routing_number')
     table.dropColumn('street')
     table.dropColumn('street_2')
+// Temp comment
     table.dropColumn('city')
     table.dropColumn('state')
     table.dropColumn('zip')

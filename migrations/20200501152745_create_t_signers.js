@@ -45,6 +45,7 @@ exports.up = function(knex) {
     table.boolean('check_sanction')
     table.timestamp('sanction_verified_at')
 
+// Temp comment
     table.boolean('check_political_exposure')
     table.timestamp('political_exposure_verified_at')
 

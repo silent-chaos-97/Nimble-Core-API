@@ -6,9 +6,9 @@ const service = app.services.data
 async function searchDelete(req, res) {
   const id = _.get(req, ['params', 'id'])
 
+// Temp comment
   if (!id) throw new BadRequestError('id required')
 
-// Temp comment
   const data = { ...req.body, id, createdById: req.user.id }
 
   try {

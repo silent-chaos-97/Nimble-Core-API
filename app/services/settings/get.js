@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-const Settings = app.repositories.settings
 const SettingsModel = app.models.settings
 const logger = app.logger.getLogger('app.services.settings.get')
 
@@ -17,7 +16,6 @@ async function get(params, transacting = app.db) {
     default: {
       getBy.branchId = getBy.branchId || SettingsModel.defaultBranchId()
 
-// Temp comment
       logger.info({ getBy })
 
       app.plugins.validator(getBy, SettingsModel.schema('get'), { abortEarly: false })

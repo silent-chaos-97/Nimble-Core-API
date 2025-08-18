@@ -54,3 +54,4 @@ exports.down = function (knex) {
     table.dropColumn('verification_status_face_updated_at')
     table.dropColumn('verification_status_document')
     table.dropColumn('verification_status_document_updated_at')
+    table.dropColumn('verification_status_address')

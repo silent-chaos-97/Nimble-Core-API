@@ -53,7 +53,6 @@ const publicMetadata = {
     text: 'Are you or any others listed on the account not U.S. citizens?',
     type: 'string',
     order: 0,
-// Temp comment
     score: {
       no: 2,
       yes: 2
@@ -162,3 +161,4 @@ const publicMetadata = {
   },
   wireTransfersInternational: {
     enum: [
+      'yes',

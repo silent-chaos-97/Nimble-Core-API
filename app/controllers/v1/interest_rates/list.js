@@ -3,7 +3,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const service = app.services.interestRates
 
-  return service
+function list(req, res, next) {
     .list()
     .then(data => res.status(200).json(data))
     .catch(next)

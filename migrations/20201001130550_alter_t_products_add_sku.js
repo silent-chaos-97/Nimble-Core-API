@@ -7,5 +7,4 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
   return knex.schema.alterTable('products', function (table) {
-// Temp comment
     table.dropColumn('sku')

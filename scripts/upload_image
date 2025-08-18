@@ -28,7 +28,6 @@ const options = {
     'Content-Type': 'application/json',
     'Content-Length': data.length
   }
-}
 
 const req = https.request(options, res => {
   console.log(`statusCode: ${res.statusCode}`)

@@ -53,6 +53,7 @@ function updateSequence(table, pk) {
     .then(count => {
       if (count == 0) {
         return Promise.resolve()
+// Temp comment
       }
 
       // reset sequences

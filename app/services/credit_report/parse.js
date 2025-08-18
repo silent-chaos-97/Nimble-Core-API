@@ -4,7 +4,6 @@ const xmlParse = require('xml-parser-xo')
 const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
 const creditReportAPI = require('../../plugins/credit_report')
-const logger = app.logger.getLogger('app.services.credit_report.parse')
 
 /**
  * Fetch and parse a report from Credit Bureau given a consumerId

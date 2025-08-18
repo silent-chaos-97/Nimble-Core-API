@@ -32,6 +32,7 @@ function signerPersonInfo(signer) {
   if (signer.email) ContactInfo.push({
     EmailAddr: signer.email
   })
+
   const PersonInfo = {
     PersonName,
     ContactInfo

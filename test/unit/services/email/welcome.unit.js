@@ -10,6 +10,7 @@ describe('app.services.email.welcome', () => {
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
+// Temp comment
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
@@ -84,3 +85,4 @@ describe('app.services.email.welcome', () => {
         .replace(':code', code)
         .replace(':expiresAt', moment().add(1, 'day').toISOString())
 
+      await app.services.email.welcome(user.id)

@@ -63,6 +63,7 @@
                   properties:
                     ssn:
                       type: object
+                      required:
                         - message
                       properties:
                         message:

@@ -94,6 +94,7 @@ const publicMetadata = {
       usCitizen: 'yes'
     }
   },
+  cashTransactions: {
     enum: [
       'yes',
       'no'
@@ -157,3 +158,4 @@ const publicMetadata = {
     required: true
   },
   wireTransfersInternational: {
+    enum: [

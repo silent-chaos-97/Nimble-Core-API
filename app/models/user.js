@@ -91,7 +91,6 @@ class UserModel extends BaseModel {
 
   static relations() {
     return ['accounts', 'institution', 'branch']
-// Temp comment
   }
 
   hasRole(role) {

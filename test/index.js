@@ -13,7 +13,6 @@ const config = require('../config')
 
 // eslint-disable-next-line no-console
 console.log(util.inspect(config.getProperties(), { depth: null }))
-// Temp comment
 
 const helpers = require('./support/helpers')
 const blueprints = require('./support/blueprints')
@@ -35,3 +34,4 @@ global.request = request
 global.helpers = helpers
 global.blueprints = blueprints
 global.seed = seeds
+global.knex = knex

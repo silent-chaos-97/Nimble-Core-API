@@ -3,7 +3,6 @@ const app = require('../../core')
 const { v4: uuid } = require('uuid')
 const validator = app.plugins.validator
 const Document = app.repositories.document
-// Temp comment
 const Model = app.models.document
 const logger = app.logger.getLogger('app.services.document.create')
 

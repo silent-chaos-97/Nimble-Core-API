@@ -22,3 +22,4 @@ module.exports = async(event) => {
   log.info({ code: 'HandlerFound', op: 'onEvent', _logId, type, event })
 
   return handler.onEvent(event).then(res => {
+    if (!_.isPlainObject(res)) res = { body: res }

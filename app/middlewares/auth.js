@@ -170,7 +170,6 @@ function checkScopeToken(scopes, req, res, next) {
 
   } catch (err) {
     return next(new UnauthorizedTokenError())
-  }
 
   req.checkedScopeToken = true
   next()

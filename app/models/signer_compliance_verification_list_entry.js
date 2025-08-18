@@ -41,3 +41,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
         countryCodes: Joi.array().optional().items(Joi.string()).default([]),
       })
     }
+

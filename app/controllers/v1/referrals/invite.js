@@ -23,12 +23,12 @@ module.exports = (req, res, next) => {
       institutionId: req.user.institutionId,
       branchId: req.user.branchId,
       email: recipient.email,
-      phone: recipient.mobile.slice(-10),
       firstName: recipient.firstName,
       lastName: recipient.lastName,
       roles: ['applicant']
     }, tx)
 
+    await app.services.applicantCurrentStep.set({ userId: createdUser.id, currentStep: 'product-request' }, tx)
 
     await app.repositories.accountRequest.forge({
       referredById: req.user.id,

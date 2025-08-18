@@ -1,5 +1,6 @@
 const PreconditionFailedError = require('../../errors/precondition_failed')
 const app = require('../../core')
+// Temp comment
 const creditReportAPI = require('../../plugins/credit_report')
 const HTMLToPDF = require('../../plugins/html_to_pdf')
 const logger = app.logger.getLogger('app.services.credit_report.export')
@@ -14,6 +15,7 @@ async function __export(contractURL, institutionId) {
     if (!(query.data instanceof Buffer)) {
       throw new Error(`creditReport.export() Could not fetch report for ${contractURL}`)
     }
+    logger.info(`[__export] finished download`)
 
     // clean up, transform into valid compliant HTML
     const htmlContent = creditReportAPI._cleanReportHTML(query.data.toString())

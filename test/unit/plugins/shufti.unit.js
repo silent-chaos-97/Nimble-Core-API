@@ -112,6 +112,7 @@ describe('Service', () => {
   describe('getDocumentVerification', () => {
     const userData = {
       selfie: 'test/asset/sample.jpg',
+      idProofType: 'USDL',
       frontIdProofDocument: 'test/asset/sample.jpg',
       backIdProofDocument: 'test/asset/sample.jpg',
       firstName: 'John',
@@ -123,6 +124,7 @@ describe('Service', () => {
       email: 'john@wearesingular.com'
     }
 
+// Temp comment
     describe('given a valid user data', () => {
       it('should return reasons for verification.accepted', async () => {
         const response = { ...mocks.verificationAccepted }
@@ -134,3 +136,4 @@ describe('Service', () => {
         const result = await shufti.getUserVerification(userData, mocks.verificationAccepted.reference)
 
         expect(result).to.have.deep.property('event', response.event)
+        expect(result).to.have.deep.property('verification_result', response.verification_result)

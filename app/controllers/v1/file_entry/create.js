@@ -5,7 +5,6 @@ const services = app.services
 const serializer = app.serializers.v1.fileEntry
 
 async function create(req, res) {
-  const { name, parentId } = req.body
   const isDir = !req.files || _.isEmpty(req.files)
 
   if (isDir) {
@@ -39,6 +38,7 @@ async function create(req, res) {
         parentId,
         fileId: f.id,
         mimetype: f.mimetype
+      },
       tx
     )
 

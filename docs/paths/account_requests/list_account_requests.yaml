@@ -19,6 +19,7 @@
       - in: query
         name: sort
         required: false
+        description: Sort account requests by property
         schema:
           type: string
           enum:
@@ -33,3 +34,4 @@
         content:
           application/json:
             schema:
+              type: array

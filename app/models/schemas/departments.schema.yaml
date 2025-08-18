@@ -1,4 +1,5 @@
 collection: Departments
+element: Department
 group: organization
 kind: custom
 order: 0
@@ -70,3 +71,4 @@ columns:
     type: dropdown
     source:
       - Eastern
+      - Central

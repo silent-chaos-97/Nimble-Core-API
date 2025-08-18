@@ -8,7 +8,6 @@ columns:
   - data: id
     readOnly: true
     title: ID
-    allowEmpty: false
 
   - data: name
     title: Title

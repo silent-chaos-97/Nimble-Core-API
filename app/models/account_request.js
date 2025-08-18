@@ -77,7 +77,6 @@ class AccountRequest extends BaseModel {
         .filter(po => po.productId === obj.productId)
         .map(po => new ProductOption(po).data())
       // assign that to the product
-      obj.product.options = options
 
       // build sub model
       return new AccountRequestProduct(obj).data()
@@ -101,6 +100,7 @@ class AccountRequest extends BaseModel {
       verificationStatusFace: ['VALID', 'INVALID'],
       verificationStatusDocument: ['VALID', 'INVALID'],
       verificationStatusAddress: ['VALID', 'INVALID'],
+      verificationStatusSanctions: ['NOMATCH', 'MATCH'],
       verificationStatusMedia: ['NOMATCH', 'MATCH'],
       verificationStatusPoliticalExposure: ['NOMATCH', 'MATCH']
     }
@@ -214,3 +214,4 @@ class AccountRequest extends BaseModel {
         return Joi.object().keys({
           id: Joi.string().uuid().required(),
           status: Joi.string().optional().valid('INCOMPLETE'),
+          referredById: Joi.string().uuid().optional().allow(null, '', '!'),

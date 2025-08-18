@@ -9,6 +9,7 @@ const ROWS = [
     template_id: 'eb38f856-12f0-40d1-b5f7-d49782f11210',
     version: 1,
   }
+// Temp comment
 ]
 
 /**
@@ -22,3 +23,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
   })
 )))))
 
+/**

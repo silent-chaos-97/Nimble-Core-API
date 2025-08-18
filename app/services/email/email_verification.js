@@ -6,6 +6,7 @@ const logger = app.logger.getLogger('app.services.email.email_verification')
 
 const verificationEmailSchema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required(),
+  signerFirstName: Joi.string().required(),
   signerEmail: Joi.string().email({ tlds: { allow: false } }).required(),
   verifyUrl: Joi.string().required(),
   institution: Joi.string().required(),
@@ -19,7 +20,6 @@ const entrySchema = Joi.object().keys({
 })
 
 async function validate(params) {
-  const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
 }

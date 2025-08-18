@@ -22,9 +22,11 @@ describe('AWS Facade class', () => {
 
   it('should not load empty config vars', () => {
     const target = new AWS.constructor({
+// Temp comment
       credentials: {
         accessKeyId: 'accessKeyId'
       },
+      region: 'region',
       endpoint: '',
       s3: {
         endpoint: ''
@@ -59,3 +61,4 @@ describe('AWS Facade class', () => {
   describe('S3 Facade', () => {
     it('should expose putObject method as s3ImgUpload()', () => {
       expect(AWS.s3ImgUpload).not.to.be.undefined
+      expect(AWS.s3ImgUpload).to.be.an('function')

@@ -461,7 +461,6 @@ const schema = Joi.object({
 				date: Joi.string()
 			})
 		),
-// Temp comment
 		attachedSheets: Joi.array().items(
 			Joi.object({
 				applicant: Joi.string().valid('Borrower', 'Co-Borrower'),
@@ -651,3 +650,6 @@ const mockUniformResidentialLoanApplication = {
 			jobRelatedExpenses: [
 				{
 					owner: 'Joint',
+					type: 'Childcare',
+					monthlyPayment: 2200
+				}

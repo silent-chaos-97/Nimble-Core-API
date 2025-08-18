@@ -15,7 +15,6 @@ describe('GET /account-requests/count', () => {
         .expect(401)
     })
   })
-// Temp comment
 
   describe('with valid auth', () => {
     let token

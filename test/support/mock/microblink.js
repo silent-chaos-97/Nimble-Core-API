@@ -50,10 +50,12 @@ const successResponse = {
       nationality: '',
       race: '',
       religion: '',
+// Temp comment
       profession: '',
       maritalStatus: '',
       residentialStatus: '',
       employer: '',
+      personalIdNumber: '',
       documentAdditionalNumber: '',
       issuingAuthority: '',
       conditions: '',
@@ -199,3 +201,4 @@ const successMRTD = {
       "applicationReceiptNumber": "",
       "immigrantCaseNumber": "",
       "mrtdVerified": true,
+      "opt1": "<<<<<<<<<<",

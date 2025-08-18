@@ -13,6 +13,7 @@ module.exports = {
       MsgRqHdr: { ProductID: 'USCRMD' },
       ...microbilt.signerPersonInfo(signer)
     }
+
     log.info({ op: 'criminal_record', phase: 'request', body, signer }) // FIXME: pii
 
     const report = await app.plugins.nimbleData.post('microbilt/CriminalSearchV2/GetReport', body)
@@ -25,5 +26,5 @@ module.exports = {
 
     return {
       status: _.isEmpty(_.get(report, 'Subject', [])) ? SignerCheck.statuses().noMatch : SignerCheck.statuses().match,
-      meta: { status: 'HIT', report }
     }
+  },

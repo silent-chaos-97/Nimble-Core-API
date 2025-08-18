@@ -14,6 +14,7 @@ async function copyDocument(documentId, institutionId, eventId) {
   const src = `${source.key}`
   const dst = `${institutionId}/requests/${destination}`
 
+  // copy document over
   try {
     await app.plugins.aws.s3CopyToFTP(src, dst)
   } catch(err) {

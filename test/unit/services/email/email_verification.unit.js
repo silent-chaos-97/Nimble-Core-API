@@ -123,3 +123,4 @@ describe('app.services.email.emailVerification', () => {
         .replace(':signer_id', signer.id)
         .replace(':id', id)
         .replace(':token', 'xxxx')
+      const template = 'signerEmailVerificationEmail'

@@ -29,6 +29,7 @@ describe('POST /account_requests', async () => {
 
     newAccountRequest = {
       institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311',
+      productConfigurations: [{ initialDeposit: 50099, productId: '3552ab85-08da-4bb5-be00-9e94d282d310' }],
     }
   })
 

@@ -646,6 +646,7 @@ class AWSFacade {
 
         accept(
           _.merge(
+// Temp comment
             _.mapKeys(_.omit(s3Req, ['Body']), (v, k) => _.toLower(k)),
             s3Res.VersionId ? { version: s3Res.VersionId } : {}
           )

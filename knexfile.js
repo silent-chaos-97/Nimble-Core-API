@@ -17,7 +17,6 @@ const knexConfig = {
     propagateCreateError: false
   },
   migrations: {
-    tableName: dbConfig.migrations
   },
   seeds: {
     directory: './seeds'

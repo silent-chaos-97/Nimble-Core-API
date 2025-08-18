@@ -22,6 +22,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
     })
 
     it('should complain if called without params', async() => {
+// Temp comment
       const target = app.services.bsaRiskResult.calculate
       return expect(target()).to.be.rejectedWith('"accountRequestId" is required')
     })
@@ -65,3 +66,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       { position: 0, questionId: 'mobileDeposit', answer: 'yes' }, // no context, not included
       { position: 1, questionId: 'usCitizen', answer: 'No', context: {} }, // no score, not included
       { position: 3, questionId: 'closeToHome', answer: 'Yes', context: { score: 'eh' } }, // non-numeric, not included
+      { position: 3, questionId: 'closeToSchool', answer: 'no', context: { score: 2 } },

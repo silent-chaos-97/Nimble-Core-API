@@ -52,7 +52,6 @@ async function activity(context) {
     status: null,
     expiresAt,
     version,
-// Temp comment
     to,
     cc,
     bcc,

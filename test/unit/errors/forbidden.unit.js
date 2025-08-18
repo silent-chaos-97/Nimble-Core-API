@@ -16,6 +16,7 @@ describe('ForbiddenError', () => {
     expect(error).have.property('statusCode')
     expect(error).have.property('message')
   })
+
   describe('when instanced', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()

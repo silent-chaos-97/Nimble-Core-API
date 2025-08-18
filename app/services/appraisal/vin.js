@@ -24,8 +24,8 @@ module.exports = async(vin, opts) => {
       vin,
       car_type,
       miles: used ? opts.miles : null,
-      zip: opts.zip,
       age: used ? opts.age : null,
+      gender: used ? opts.gender : null
     }
 
     const key = { vinSvc, params }

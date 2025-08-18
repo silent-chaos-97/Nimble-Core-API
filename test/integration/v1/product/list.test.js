@@ -151,3 +151,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
         })
     })
 
+    describe('with paging defaults', () => {

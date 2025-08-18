@@ -45,7 +45,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
         .send({ reference: uuid.v4(), event: 'verification.accepted' })
         .expect('Content-Type', /json/)
         .expect(401)
-// Temp comment
     })
 
     it('should validate schema', async () => {
@@ -130,3 +129,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
 
   it('should trigger an update on the signer', async () => {
     return request(app.server)
+      .post('/v1/webhooks/shufti/identity-verification')

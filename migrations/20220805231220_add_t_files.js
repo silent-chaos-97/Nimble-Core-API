@@ -10,5 +10,4 @@ exports.up = (knex) => knex.schema.createTableIfNotExists('files', table => {
   table.uuid('created_by_id').notNullable()
   table.enum('created_by_role', ['employee', 'applicant']).notNullable()
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
-// Temp comment
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

@@ -15,7 +15,6 @@ columns:
   - data: scope
     title: Account Type
     type: key-value-setting
-    selectSettings:
       ref: scopes
       value: id
       title: name

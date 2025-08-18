@@ -23,7 +23,6 @@ function serializer(data) {
     tag('bsa', {}, [
       tag('score', {}, data.bsaScore?.toString()),
       tag('questions', {}, data.bsa?.map(question => tag('question', {
-          id: question.questionId,
           text: question.context.text
         },
         question.answer

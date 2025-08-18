@@ -15,7 +15,6 @@ describe('app.services.email.inviteReminder', () => {
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     sinon.replace(app.services.token, 'get', () => 'xxxx')
-  })
 
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
@@ -38,6 +37,7 @@ describe('app.services.email.inviteReminder', () => {
       const id = uuid()
       const expectedErrorMsg = "The requested resource couldn't be found"
       return expect(app.services.email.inviteReminder(id)).to.be.rejectedWith(expectedErrorMsg)
+    })
   })
 
   describe('when calling with valid data', () => {
@@ -96,3 +96,4 @@ describe('app.services.email.inviteReminder', () => {
         .replace(':domain', institution.domain)
 
       const template = 'inviteeSignupReminderEmail'
+

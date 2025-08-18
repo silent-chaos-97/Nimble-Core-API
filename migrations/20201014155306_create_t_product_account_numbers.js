@@ -13,4 +13,3 @@ exports.up = function (knex) {
     table.index('account_number')
   })
 }
-

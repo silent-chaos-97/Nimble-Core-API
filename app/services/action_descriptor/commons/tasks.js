@@ -49,6 +49,7 @@ function wkflTask({
     activityId,
     activityToken,
     status: status || assignee ? Task.statuses().assigned : Task.statuses().created,
+    title,
     description,
     type,
     expiresAt,

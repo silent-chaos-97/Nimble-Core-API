@@ -271,3 +271,4 @@ class Signer extends BaseModel {
           frontIdProofDocumentId: Joi.string().uuid().optional(),
           backIdProofDocumentId: Joi.string().uuid().optional(),
 
+          status: Joi.string().optional().default('INVITED').valid('INVITED', 'INCOMPLETE', 'PENDING', 'SIGNED'),

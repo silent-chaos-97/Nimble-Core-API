@@ -231,6 +231,7 @@ class Docusign {
 
   /**
    * Update Tabs for a specific Recipient
+// Temp comment
    * Returns signer obj
    *
    * @param {Signer} signer - a nimble Signer

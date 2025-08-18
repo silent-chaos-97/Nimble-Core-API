@@ -7,7 +7,6 @@
   "emailVerifiedAt": "2018-02-16T11:32:03.341Z",
   "dateOfBirth": "1945-12-06",
   "email": "example@nimblefi.com",
-  "firstName": "George",
   "lastName": "Constanza",
   "middleName": null,
   "phoneNumber": "(233) 555-3333",
@@ -53,3 +52,4 @@
     "addressUpdatedAt": "2018-03-16T11:32:03.341Z",
     "sanctionsStatus": "NOMATCH",
     "sanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",
+    "mediaStatus": "MATCH",

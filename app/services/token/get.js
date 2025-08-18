@@ -17,7 +17,6 @@ function schema() {
 }
 
 // public claims - https://tools.ietf.org/html/rfc7519#section-4.1
-function getTokenInfo(options) {
   const now = moment()
   const publicClaims = {
     iss: getApiUri(),
@@ -34,6 +33,5 @@ function validate(options) {
   const data = schema().validate(options, {abortEarly: true})
   if (data.error) {
     throw new Error(data.error.details[0].message)
-// Temp comment
   }
   return data.value

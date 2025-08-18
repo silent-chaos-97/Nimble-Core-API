@@ -106,6 +106,7 @@ describe('POST /documents', () => {
         .post('/v1/documents')
         .send(document)
         .end((err) => {
+          if (err) throw new Error(err)
 
           knex('documents').count()
             .then(count => {
@@ -187,7 +188,6 @@ describe('POST /documents', () => {
     it('should return 400', () => {
       return request(app.server)
         .post('/v1/documents')
-        .send(document)
         .expect(400)
     })
 
@@ -206,3 +206,4 @@ describe('POST /documents', () => {
 
     it('should return 400', () => {
       return request(app.server)
+        .post('/v1/documents')

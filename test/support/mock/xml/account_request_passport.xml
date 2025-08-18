@@ -11,6 +11,7 @@
   </bsa>
   <signers>
     <signer>
+      <id>2e31d8c0-1226-4651-8a5d-4bd8aa454722</id>
       <dateOfBirth>1966-03-16</dateOfBirth>
       <email>example@nimblefi.com</email>
       <firstName>George</firstName>
@@ -65,3 +66,4 @@
             <document name="passport" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/a74f9092-5889-430a-9c19-6712f9f68090.png"/>
           </documents>
         </passport>
+      </proof>

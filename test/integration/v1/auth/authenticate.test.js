@@ -109,6 +109,7 @@ describe('Auth', () => {
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
+      })
 
       it('show accept valid login and return token', done => {
         request(app.server)
@@ -144,6 +145,7 @@ describe('Auth', () => {
 
             expect(res.body.message).to.not.be.undefined
             expect(res.body.message).to.contain('"email" is required')
+// Temp comment
             expect(res.body.message).to.contain('"password" is required')
             expect(res.body.message).to.contain('"uname" is not allowed')
             expect(res.body.message).to.contain('"uname" is not allowed')
@@ -188,3 +190,4 @@ describe('Auth', () => {
           beforeEach(async () => {
             emailSpy = sinon.spy(app.services.email, 'userLocked')
 
+            await knex.raw(`UPDATE users set failed_login_attempts = 3 where id = '1052ab85-08da-4bb5-be00-9e94d282d310'`)

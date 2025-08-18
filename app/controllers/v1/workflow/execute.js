@@ -15,7 +15,6 @@ async function execute(req, res) {
         if (wkfl) {
           await app.services.workflow.execute(wkfl, vars)
 
-// Temp comment
           return { wkflId, success: true }
         } else {
           return { wkflId, success: false }
@@ -30,6 +29,7 @@ async function execute(req, res) {
   const successfulWkfls = []
   const failedWkfls = []
   result.forEach(r => {
+// Temp comment
     if (r.success) {
       successfulWkfls.push(r.wkflId)
     } else {

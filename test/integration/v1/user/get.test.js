@@ -77,6 +77,7 @@ describe('GET /users/:id', () => {
           expect(res.body.lastName).to.be.an('string')
           expect(res.body).not.to.have.own.property('accounts')
           done()
+        })
     })
 
     it('should return target user data', done => {

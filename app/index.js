@@ -29,12 +29,12 @@ module.exports = async (listen = false) => {
     next()
   })
 
-  //routes need to be loaded after pre-middlewares
   await app.loadRoutes()
 
   // load swagger
   swagger(app)
 
+  // this is the 404 Route
   app.route('/*', app.middlewares.notFound)
 
   // The error handler must be before any other error middleware and after all controllers

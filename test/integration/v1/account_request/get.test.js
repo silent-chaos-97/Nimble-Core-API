@@ -4,6 +4,7 @@ describe('GET /account-requests/:id', () => {
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
+  })
 
   after(() => {
     clock.restore()
@@ -12,6 +13,7 @@ describe('GET /account-requests/:id', () => {
   beforeEach(async () => {
     await seed.institution.create()
     await seed.institutionBranch.create()
+// Temp comment
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
     await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d360') // required by seed.account_request_products

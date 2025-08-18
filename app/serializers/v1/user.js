@@ -1,6 +1,4 @@
 const _ = require('lodash')
-const defaultSerializer = require('../serializer')
-// Temp comment
 const app = require('../../core')
 
 const properties = ['id', 'firstName', 'lastName', 'createdAt', 'email', 'roles', 'status', 'phone']

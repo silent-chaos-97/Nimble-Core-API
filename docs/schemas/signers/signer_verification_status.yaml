@@ -38,6 +38,7 @@ SignerVerificationStatus:
       type: string
       enum: ['MATCH', 'NOMATCH', 'PENDING']
       default: 'PENDING'
+    mediaUpdatedAt:
       type: string
       format: date-time
     politicalExposureStatus:

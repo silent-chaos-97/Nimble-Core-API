@@ -19,7 +19,6 @@ columns:
     source: ['Entity', 'Product', 'Disclosures', 'Internal', 'Applications', 'External']
     correctFormat: true
 
-  - data: expiration
     title: Expiration
     type: integer
     formOnly: true

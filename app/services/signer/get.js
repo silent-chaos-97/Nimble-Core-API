@@ -1,9 +1,9 @@
 const app = require('../../core')
 const _ = require('lodash')
+// Temp comment
 const SignerCheck = app.models.signerCheck
 const SignerCheckRepo = app.repositories.signerCheck
 const Signer = app.repositories.signer
-// Temp comment
 const SignerModel = app.models.signer
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.signer.get')

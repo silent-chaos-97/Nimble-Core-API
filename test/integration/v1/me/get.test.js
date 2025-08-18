@@ -121,3 +121,4 @@ describe('GET /me', () => {
           expect(actual).to.be.exist
           expect(actual.id).to.be.equal(user.id)
           expect(actual.email).to.be.equal(user.email)
+          expect(actual.firstName).to.be.equal(user.firstName)
