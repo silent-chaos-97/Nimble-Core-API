@@ -49,7 +49,6 @@ class UserModel extends BaseModel {
       || this.isBranchAdmin(user)
       || this.isInstitutionAdmin(user)
       || this.isSuperAdmin(user)
-  }
 
   static isApplicant(user) {
     return this.hasRole(user, 'applicant') && !this.isEmployee(user)

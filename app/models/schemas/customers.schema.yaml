@@ -30,3 +30,4 @@ columns:
   - data: city
     allowEmpty: true
 
+  - data: state

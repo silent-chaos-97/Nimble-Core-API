@@ -17,7 +17,6 @@ async function update(institution) {
     let existing = await app.services.institution.get({ id: patch.id }, tx) // throws when non-existent
 
     // merge publicMetadata with the existing values
-    if (existing.publicMetadata && patch.publicMetadata) patch = _.merge({ publicMetadata: existing.publicMetadata }, patch)
 
     // remove `nil` values from `publicMetadata`
     if (patch.publicMetadata) patch.publicMetadata = _.omitBy(patch.publicMetadata, _.isNil)
@@ -25,6 +24,7 @@ async function update(institution) {
     if (patch.disclosures && !_.isEmpty(patch.disclosures.data)) patch.disclosures = {
       revised: moment().format(),
       count: _.size(patch.disclosures.data),
+      data: patch.disclosures.data
     }
 
     if (patch.questions) { // merge questions

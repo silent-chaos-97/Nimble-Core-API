@@ -109,7 +109,6 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('documentNumber', userData.documentNumber)
       expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')
       expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')
-// Temp comment
       expect(result).to.have.deep.property('documentIssuedDate', '2018-03-18')
       expect(result).to.have.deep.property('documentExpirationDate', '2025-03-18')
 
@@ -172,7 +171,6 @@ describe('MicroblinkService', () => {
         },
       }
 
-      const result = service.getBasicUserDataFromMicroblinkResponse(response.data.result)
       expect(result).to.have.deep.property('dateOfBirth', '1990-03-18')
     })
 
@@ -451,3 +449,8 @@ describe('MicroblinkService', () => {
 
     afterEach(() => {
       nock.cleanAll()
+    })
+
+    it('should throw a HttpException when a error occurs', async () => {
+      const response = {
+        code: 'IMAGE_IS_NOT_VALID_BASE64_STRING',

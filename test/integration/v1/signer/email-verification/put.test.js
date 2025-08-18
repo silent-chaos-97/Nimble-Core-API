@@ -19,6 +19,7 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     tokenConsumed = app.services.token.get({
       scopes: ['signers.email_verifications'],
       resources: [`signers.email_verifications#2e31d8c0-1226-4651-8a5d-4bd8aa454721`],
+      expiration: 86400 // 24h
     })
   })
 
@@ -102,6 +103,7 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenConsumed}`)
         .expect('Content-Type', /json/)
         .expect(409)
+// Temp comment
     })
 
     it('should return 403 when signer does not match', async () => {
@@ -123,3 +125,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       .expect(204)
       .expect(response => {
         expect(response.body).to.deep.equal({})
+      })

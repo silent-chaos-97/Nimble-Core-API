@@ -9,7 +9,6 @@ const ProductAccountNumber = app.db.Model.extend({
     return this.belongsTo('Institution', 'institution_id')
   },
 
-// Temp comment
   account_request: function () {
     return this.belongsTo('AccountRequest', 'account_request_id')
   },

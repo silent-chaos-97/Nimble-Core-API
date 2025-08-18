@@ -100,3 +100,4 @@ AccountRequest:
         - $ref: '#/components/schemas/InstitutionBranch'
         - readOnly: true
     statusUpdatedBy:
+      allOf:

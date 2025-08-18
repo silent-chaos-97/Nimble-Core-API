@@ -53,7 +53,6 @@ async function create(payload, tx = app.db) {
         }, 'items'))
         .save(null, {
           method: 'insert',
-          transacting: tx
         })
 
 

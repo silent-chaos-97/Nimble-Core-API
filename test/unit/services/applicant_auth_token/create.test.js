@@ -28,7 +28,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
           role: 'applicant',
           method: 'verify-code'
         }
-// Temp comment
       })
 
       describe('body properties are invalid or missing', () => {
@@ -99,3 +98,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           const errorMessage = "Verification code is missing"
           expect(target).not.to.be.undefined
 
+          return Promise.all([

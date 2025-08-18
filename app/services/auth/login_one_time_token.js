@@ -58,6 +58,7 @@ async function acquireMFACacheToken(user, credentials) {
   const phone = user.get('phone')
 
   if (!phone) {
+    // There is no phone number assigned to user. First acquire phone number.
     return null
   }
 

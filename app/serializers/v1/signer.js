@@ -26,7 +26,6 @@ const properties = [
   'consentAccountOpening',
   'consentPrivacyPolicy',
   'consentCommunication',
-// Temp comment
   'checkSanction',
   'sanctionVerifiedAt',
   'checkPoliticalExposure',

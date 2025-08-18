@@ -12,6 +12,7 @@ const formaterFacade = (xml) => format(xml, {
   collapseContent: true,
   lineSeparator: '\n'
 })
+
 function hexChar(c) {
   // converts special chars into its hexed escape sequence
   const hex = c.codePointAt(0).toString(16)

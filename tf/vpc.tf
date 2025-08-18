@@ -13,6 +13,7 @@ module "vpc" {
   one_nat_gateway_per_az     = true
   enable_dns_hostnames       = true
   enable_dns_support         = true
+  manage_default_route_table = true
 }
 
 resource "aws_security_group" "vpc" {

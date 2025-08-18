@@ -159,3 +159,5 @@ const publicMetadata = {
   },
   wireTransfersInternational: {
     enum: [
+      'yes',
+      'no'

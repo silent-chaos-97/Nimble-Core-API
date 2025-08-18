@@ -8,7 +8,6 @@ describe('GET /institution/:id/branches', () => {
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
 
     token = await helpers.getAuthToken()
-
   })
 
   it('should return 200 without auth', () => {
@@ -99,3 +98,5 @@ describe('GET /institution/:id/branches', () => {
         .expect(200)
         .then(response => {
           expect(response.body).to.have.lengthOf(1)
+          expect(response.body.pop().id).to.equal('2552ab85-0000-0000-0000-000000000006')
+        })

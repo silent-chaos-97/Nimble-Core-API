@@ -7,6 +7,5 @@ const AccountRecovery = app.db.Model.extend({
 
   account: function() {
     return this.belongsTo('Account', 'account_id')
-// Temp comment
   }
 })

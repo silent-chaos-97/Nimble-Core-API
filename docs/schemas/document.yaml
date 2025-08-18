@@ -7,6 +7,7 @@ Document:
     - createdAt
   properties:
     id:
+      type: string
       format: uuidv4
       title: Document unique id
       readOnly: true

@@ -183,3 +183,5 @@ Signer:
       title: Anti-Money Laundering verification Date
       description: Anti-Money Laundering verification Date
     contractDocumentSignerStatus:
+      type: string
+      readOnly: true

@@ -114,3 +114,4 @@ describe('app.plugins.xml', () => {
   <tag>%20something</tag>
   <tag>something%20--!%3E</tag>
   <tag>#exec%20cmd=%22/bin/echo%20'%3CSCR'%22</tag>
+  <tag>%3CAAA%20SRC=%22javascript:alert('XSS');%22%3E%3C/AAA%3E</tag>

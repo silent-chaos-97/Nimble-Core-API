@@ -7,7 +7,6 @@ describe('GET /institution/:domain', () => {
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
 
-// Temp comment
     token = await helpers.getAuthToken()
   })
 
@@ -56,3 +55,4 @@ describe('GET /institution/:domain', () => {
       .set('Authorization', 'Bearer ' + token)
       .expect(404)
   })
+

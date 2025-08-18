@@ -420,7 +420,6 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Rewards Program'
-// Temp comment
   },
   {
     type: 'Disclosures',
@@ -585,3 +584,9 @@ const fileTypes = [
   },
   {
     type: 'Applications',
+    name: 'Deposit Application - Business'
+  },
+  {
+    type: 'Applications',
+    name: 'Credit Card Application - Individual'
+  },

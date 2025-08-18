@@ -63,3 +63,4 @@ module.exports = {
       document: 1,
       face_on_document_matched: 0,
       document_proof: 1,
+      document_must_not_be_expired: 1,

@@ -47,7 +47,6 @@ class SearchModel extends BaseModel {
       ],
 
       delete: [
-        'id',
         'institutionId',
         'createdById'
       ]
@@ -66,6 +65,7 @@ class SearchModel extends BaseModel {
         id: Joi.string().pattern(/^\w+$/).required(),
         institutionId: Joi.string().uuid().required(),
         createdById: Joi.string().uuid().required(),
+        name: Joi.string().required(),
         description: Joi.string().optional(),
         query: Joi.object().required(),
         filters: Joi.array().items(Joi.object()).required()
@@ -75,3 +75,4 @@ class SearchModel extends BaseModel {
         id: Joi.string().pattern(/^\w+$/).required(),
         institutionId: Joi.string().uuid().required(),
         name: Joi.string().optional(),
+        description: Joi.string().optional(),

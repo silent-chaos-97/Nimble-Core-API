@@ -25,7 +25,6 @@
         schema:
           type: integer
           default: 0
-      - name: sort
         in: query
         required: false
         description: Sort records by property
@@ -42,3 +41,4 @@
         description: OK
         content:
           application/json:
+            schema:

@@ -49,6 +49,7 @@
 //     })
 //   }
 // }
+
 // async function tokenExchange(req,res){
 //   const {id, verification_token, verification_code } = req.body
 //

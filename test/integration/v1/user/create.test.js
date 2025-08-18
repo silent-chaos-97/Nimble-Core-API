@@ -72,7 +72,6 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(404)
-        .end(done)
     })
 
     it('should return 400 when email is not valid', done => {
@@ -233,3 +232,6 @@ describe('POST /users', () => {
             expect(res.body.message).to.not.be.undefined
             expect(res.body.message).to.contain('already exists')
           })
+      })
+    })
+  })

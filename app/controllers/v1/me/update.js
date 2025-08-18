@@ -1,5 +1,4 @@
 const app = require('../../../core')
-
 const service = app.services.user
 const serializer = app.serializers.v1.me
 
@@ -8,7 +7,6 @@ function update(req, res, next) {
   const institutionId = req.user.institution.id
   const payload = {...req.body, id, institutionId}
 
-// Temp comment
   return service
     .update(payload)
     .then(data => serializer(data, true))

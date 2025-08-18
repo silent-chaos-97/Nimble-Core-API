@@ -44,3 +44,4 @@
             "type": "string",
             "stereotype": "email"
           },
+          "reason": {

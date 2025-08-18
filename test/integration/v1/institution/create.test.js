@@ -34,6 +34,7 @@ describe('POST /institutions', () => {
         .expect(400)
     })
 
+    it('should return error details', () => {
       return request(app.server)
         .post('/v1/institutions')
         .set('X-API-KEY', 'superpowers')
@@ -111,3 +112,4 @@ describe('POST /institutions', () => {
         request(app.server)
           .get('/v1/institutions/' + institution.domain)
           .expect('Content-Type', /json/)
+          .expect(200)

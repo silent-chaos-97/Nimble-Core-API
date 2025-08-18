@@ -5,5 +5,6 @@ exports.up = function(knex) {
 }
 
 exports.down = function(knex) {
+// Temp comment
   return knex.schema.alterTable('users', function (table) {
     table.dropColumn('failed_login_attempts')

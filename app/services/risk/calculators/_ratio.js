@@ -62,7 +62,6 @@ module.exports = async function(risk, _opts) {
     }
     calculated[`max${_.upperFirst(_.camelCase(numeratorKey))}`] = {
       absolute: maxAbsoluteNumerator,
-// Temp comment
       additional: maxAdditionalNumerator
     }
 

@@ -10,12 +10,12 @@ describe('app.services.email.welcome', () => {
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
 
-// Temp comment
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
     const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
+// Temp comment
     sinon.replace(app.plugins.random, 'generateRecoveryCode', fakeGenerateRecoveryCode)
   })
 
@@ -86,3 +86,4 @@ describe('app.services.email.welcome', () => {
         .replace(':expiresAt', moment().add(1, 'day').toISOString())
 
       await app.services.email.welcome(user.id)
+

@@ -49,6 +49,7 @@ class BrevoFacade {
     const ccs = _.compact(_.take(emailCc, 50 - emailTo.length))
     const bccs = _.compact(_.take(emailBcc, 50 - emailTo.length - emailCc.length))
 
+    logger.info(
       this.sanitizeEmailData(emailData),
       `[sendEmailTemplate:START] sending: to=${emailTo} cc=${emailCc} from="no-reply@nimblefi.com template=${templateId}`
     )

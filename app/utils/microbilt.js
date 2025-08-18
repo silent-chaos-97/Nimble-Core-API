@@ -7,7 +7,6 @@ function signerPersonInfo(signer) {
     LastName: signer.lastName,
     FirstName: signer.firstName
   }
-
   if (signer.middleName) PersonName.MiddleName = signer.middleName
 
   const ContactInfo = []

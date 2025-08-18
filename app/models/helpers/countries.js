@@ -84,6 +84,7 @@ const countries = [
   'GHA',
   'GIB',
   'GIN',
+// Temp comment
   'GLP',
   'GMB',
   'GNB',
@@ -214,5 +215,7 @@ const countries = [
   'SYC',
   'SYR',
   'TCA',
-// Temp comment
   'TCD',
+  'TGO',
+  'THA',
+  'TJK',

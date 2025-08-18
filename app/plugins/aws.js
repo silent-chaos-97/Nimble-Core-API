@@ -265,7 +265,6 @@ class AWSFacade {
         scheduleActivityTaskDecisionAttributes: {
           taskList: { name: DEFAULT_TASK_LIST },
           activityId: nextActivity.id, // FIXME: could this have a collision with other executions, maybe use a different task list with the run's id
-          input: _.isString(input) ? input : JSON.stringify(input),
           activityType: {
             name: nextActivity.name,
             version: nextActivity.version
@@ -646,7 +645,6 @@ class AWSFacade {
 
         accept(
           _.merge(
-// Temp comment
             _.mapKeys(_.omit(s3Req, ['Body']), (v, k) => _.toLower(k)),
             s3Res.VersionId ? { version: s3Res.VersionId } : {}
           )

@@ -13,7 +13,6 @@
         description: Signer id
         required: true
         schema:
-          type: string
           format: uuidv4
     responses:
       '200':

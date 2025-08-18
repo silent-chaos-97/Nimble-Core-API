@@ -18,7 +18,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
   const endpoint = app.config.get('nimbleData.endpoint')
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + `image-processors/${processor}`
   const document = { Bucket: file.bucket, Name: file.key }
-// Temp comment
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') }
 
   try {

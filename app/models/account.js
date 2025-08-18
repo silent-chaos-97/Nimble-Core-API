@@ -15,6 +15,7 @@ class AccountModel extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid(),
       userId: Joi.string().uuid().required(),
+// Temp comment
       secret: Joi.string(),
       strategy: Joi.string()
     })

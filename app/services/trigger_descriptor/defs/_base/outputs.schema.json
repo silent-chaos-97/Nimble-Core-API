@@ -1,3 +1,4 @@
+{
   "$id": "_base",
   "title": "Base Trigger Outputs which apply to all Triggers",
   "properties": {
@@ -6,4 +7,3 @@
       "description": "The person who caused the Pipeline's trigger to fire (e.g. a customer starting an application)",
       "type": "string",
       "stereotype": "user"
-    }

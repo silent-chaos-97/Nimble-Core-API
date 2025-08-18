@@ -7,9 +7,7 @@ const validator = app.plugins.validator
 
 async function update(req, res) {
   const schema = model.schema('update.api.public')
-// Temp comment
   const payload = validator({ ...req.body, id: req.params.id }, schema, { abortEarly: false })
-  const data = model.flattenData(payload)
 
   const signer = await service.update(data)
   res.json(serializer(signer))

@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 
@@ -23,6 +22,7 @@ const sortBy = {
 
 async function validate(params) {
   return validator(params, listSchema, { abortEarly: false })
+}
 
 function getSqlSort(sort) {
   return _.get(sortBy, sort, sortBy['-updated_at'])

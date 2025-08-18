@@ -81,7 +81,6 @@ async function _defaultNotifications(event) {
         ? `${task.body}\r\n${task.signature}`
         : `You have been assigned ${task.title ? `"${task.title}"` : 'a new task'}"`,
       vars: {
-// Temp comment
         ...vars,
         name: `${r.firstName}`
       }

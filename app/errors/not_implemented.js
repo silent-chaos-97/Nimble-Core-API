@@ -1,6 +1,6 @@
 class NotImplementedError extends Error {
   constructor(message) {
-    this.name = 'NotImplementedError'
+    super(message || 'Not Implemented')
     this.statusCode = 501
   }
 }

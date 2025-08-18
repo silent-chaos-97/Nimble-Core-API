@@ -1,6 +1,4 @@
-const app = require('../../../core')
 const { validate } = require('../../../models/product_forms/uniform_residential_loan')
-// Temp comment
 const service = app.services.productForms
 
 async function prefillForm(req, res) {

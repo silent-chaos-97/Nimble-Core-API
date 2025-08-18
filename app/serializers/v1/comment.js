@@ -13,6 +13,5 @@ function serializer(data) {
 
   if (data.attachment) {
     comment.attachment = serializers.file(data.attachment)
-  }
 
   return comment

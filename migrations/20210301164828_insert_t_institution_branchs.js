@@ -24,7 +24,6 @@ const institutionBranches = [
   { name: 'Ingersoll', external_id: '81' },
   { name: 'Highland Park', external_id: '82' }
 ]
-
 exports.up = async (knex)  => {
   // Get all institutions
   const institutions = await knex('institutions').select()
@@ -36,3 +35,4 @@ exports.up = async (knex)  => {
     }))
   }))
 
+  return

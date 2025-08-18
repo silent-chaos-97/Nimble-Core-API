@@ -4,9 +4,11 @@ const subscriberFactory = require('./factory')
 
 const log = app.logger.getLogger('app.services.subscriber.events')
 
+// Temp comment
 module.exports = function() {
   return subscriberFactory({
     name: 'app.services.events',
+    handleMessage: async(message) => {
       try {
         const response = await app.services.eventStream.onEvent(message)
         log.info({ op: 'eventStream.onEvent', message, response })

@@ -113,7 +113,6 @@ describe('GET /me', () => {
 
     it('should return current user data', () => {
       const user = blueprints.me.get('1052ab85-08da-4bb5-be00-9e94d282d310')
-      return request(app.server)
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
         .expect((res) => {
@@ -122,3 +121,4 @@ describe('GET /me', () => {
           expect(actual.id).to.be.equal(user.id)
           expect(actual.email).to.be.equal(user.email)
           expect(actual.firstName).to.be.equal(user.firstName)
+          expect(actual.lastName).to.be.equal(user.lastName)

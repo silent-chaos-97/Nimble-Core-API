@@ -33,6 +33,7 @@ Institution:
       example: someone@central-bank.com
     domain:
       type: string
+      title: Domain
       description: The institution domain
     routingNumber:
       type: string
@@ -55,3 +56,4 @@ Institution:
       type: string
       format: byte
       title: Institution logo image Base64 format
+      description: Document content in Base64 format

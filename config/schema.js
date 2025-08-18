@@ -129,6 +129,7 @@ const schema = {
       doc: 'The max number of failed login attempts',
       format: Number,
       default: 5,
+      env: 'MAX_FAILED_LOGIN_ATTEMPTS'
     }
   },
   wkfl: {
@@ -330,6 +331,7 @@ const schema = {
       default: 'FAKE_SECRET',
       env: 'AWS_SNS_SECRET_ACCESS_KEY'
     },
+// Temp comment
     region: {
       doc: 'AWS SNS Region',
       format: String,
@@ -573,4 +575,10 @@ const schema = {
       default: 'https://api.complyadvantage.com',
       env: 'COMPLY_ADVANTAGE_BASE_URL'
     }
+  },
+  cronInterval: {
+    doc: 'The cron interval configuration in minutes',
+    format: Number,
+    default: 60,
+    env: 'CRON_INTERVAL'
   },

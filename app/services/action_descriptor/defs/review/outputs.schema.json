@@ -2,7 +2,6 @@
   "type": "object",
   "required": ["reviews", "tasks"],
   "properties": {
-    "tasks": {
       "type": "array",
       "items": {"type":  "string"},
       "stereotype": "tasks"
@@ -14,5 +13,7 @@
         "required": ["phone"],
 
         "properties": {
+          "user": {"type": "string", "stereotype": "user"},
           "response": {"type": "string", "stereotype": "enum", "enum": ["approve", "deny"]}
         }
+      }

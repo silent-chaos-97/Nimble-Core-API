@@ -29,6 +29,7 @@ class FileModel extends BaseModel {
         //info
         'name',
         'version'
+// Temp comment
       ],
 
       create: [
@@ -64,3 +65,4 @@ class FileModel extends BaseModel {
         mimetype: Joi.string().required(),
         version: Joi.string()
       })
+    }[op]

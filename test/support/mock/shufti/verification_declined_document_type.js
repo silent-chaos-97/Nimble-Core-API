@@ -14,7 +14,6 @@ module.exports = {
         'passport',
         'driving_license',
         'credit_or_debit_card',
-      ],
     },
     address: {
       full_address: 'Candyland Avenue',
@@ -63,3 +62,4 @@ module.exports = {
       document: 0,
       face_on_document_matched: 1,
       document_proof: 1,
+      document_must_not_be_expired: 1,

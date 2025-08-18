@@ -8,7 +8,6 @@ const properties = [
   'verificationStatusMedia',
   'verificationStatusPoliticalExposure',
 ]
-// Temp comment
 
 function serializer(data) {
   const format = defaultSerializer(properties, data)

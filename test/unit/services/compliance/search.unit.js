@@ -47,7 +47,6 @@ describe('app.services.compliance.search', () => {
     })
 
     it('should return search result', async () => {
-      const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
         .reply(200, mocks.successResponse)
 
@@ -83,7 +82,6 @@ describe('app.services.compliance.search', () => {
     it('should return must relevant hit from search term first', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
-// Temp comment
         .reply(200, mocks.successResponse)
 
       const entity = {
@@ -101,3 +99,4 @@ describe('app.services.compliance.search', () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
         .reply(400, mocks.badRequestResponse)
+

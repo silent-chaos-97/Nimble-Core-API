@@ -42,3 +42,4 @@ SignerComplianceVerificationListEntry:
       type: array
       items:
         type: string
+    createdAt:

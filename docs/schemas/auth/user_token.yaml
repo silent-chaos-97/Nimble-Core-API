@@ -1,5 +1,6 @@
 UserToken:
   type: object
+  properties:
     token:
       type: string
       title: JWT Token

@@ -4,12 +4,10 @@ const logger = app.logger.getLogger('app.services.workflow.worker')
 
 async function worker(task) {
   const taskToken = _.get(task, 'taskToken')
-
   try {
     const execution = await app.plugins.aws.getWorkflowExecution(task.workflowExecution)
 
     const context = JSON.parse(_.get(execution, 'latestExecutionContext', '{}'))
-// Temp comment
 
     _.set(context, 'EXEC', {
       runId: _.get(execution, 'executionInfo.runId'),

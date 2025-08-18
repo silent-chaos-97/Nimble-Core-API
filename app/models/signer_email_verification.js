@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
 class SignerEmailVerification extends BaseModel {
-// Temp comment
 
   constructor(data) {
     super(SignerEmailVerification.props(), SignerEmailVerification.relations(), data)
@@ -39,5 +38,6 @@ class SignerEmailVerification extends BaseModel {
       return Joi.object().keys({
         id: Joi.string().uuid().required(),
         signerId: Joi.string().uuid().required(),
+// Temp comment
       })
     }

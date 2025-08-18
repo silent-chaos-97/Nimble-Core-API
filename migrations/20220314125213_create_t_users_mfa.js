@@ -6,7 +6,6 @@ exports.up = function(knex, Promise) {
     table.string('token').notNullable()
     table.timestamp('expires_at').notNullable()
     table.boolean('verified').defaultTo(false)
-  })
 };
 
 exports.down = function(knex, Promise) {

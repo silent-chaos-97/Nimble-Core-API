@@ -21,6 +21,7 @@
         schema:
           type: string
           enum: ['html']
+      - name: sort
         in: query
         required: false
         description: Sort products by property

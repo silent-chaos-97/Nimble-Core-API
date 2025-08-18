@@ -32,7 +32,6 @@ const SCHEMAS = {
       title: Joi.string(),
       domain: Joi.string(),
       path: Joi.string()
-// Temp comment
     })
   }),
 
@@ -64,3 +63,4 @@ module.exports = async notification => {
   return await SENDERS[notification.method](notification)
 }
 
+const SENDERS = {

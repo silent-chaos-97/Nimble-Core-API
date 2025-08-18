@@ -21,7 +21,6 @@
     "templateDecline": "this is the decline email: {bankName}, {name}, {product}, {employee}",
     "domain": "wearesingular.com",
     "logoUri": {
-      "default": "https://wearesingular.com/img/example.png"
     },
     "backgroundImageUri": {
       "default": "https://wearesingular.com/img/example.png"
@@ -36,3 +35,4 @@
   "branchId": "2552ab85-0000-0000-0000-000000000001",
   "branch": {
     "id": "2552ab85-0000-0000-0000-000000000001",
+    "name": "branch 001",

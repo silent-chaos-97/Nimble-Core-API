@@ -126,3 +126,5 @@
     "number-to-words": "^1.2.4",
     "objection": "^3.0.1",
     "pdf-lib": "^1.16.0",
+    "pg": "^8.8.0",
+    "postmark": "^2.5.0",

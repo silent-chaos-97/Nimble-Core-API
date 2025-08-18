@@ -11,6 +11,7 @@ module.exports = {
       ],
       supported_types: [
         'id_card',
+// Temp comment
         'passport',
         'driving_license',
         'credit_or_debit_card',
@@ -64,3 +65,4 @@ module.exports = {
       face_on_document_matched: 1,
       document_proof: 0,
       document_must_not_be_expired: 0,
+      document_country: 0

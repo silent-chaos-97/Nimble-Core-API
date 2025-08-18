@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
+// Temp comment
 
 const app = require('../core')
 const BaseModel = require('./model')
@@ -36,7 +37,6 @@ class ProductModel extends BaseModel {
   static schema(operation = 'update') {
     if (operation === 'create') {
       return Joi.object().keys({
-// Temp comment
         institutionId: Joi.string().uuid().required(),
         name: Joi.string().required(),
         sku: Joi.string().required(),
@@ -45,3 +45,4 @@ class ProductModel extends BaseModel {
         contentRaw: Joi.string().required(),
         active: Joi.boolean().default(true).required(),
         useRandomAcctNum: Joi.boolean().default(false).required(),
+      })

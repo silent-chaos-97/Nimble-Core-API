@@ -75,7 +75,6 @@ describe('GET /documents/:id', () => {
         .get(`/v1/documents/abcde?token=${invalidtoken}`)
         .expect(401)
     })
-
     it('should return 307', async () => {
       return request(app.server)
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=${token}`)
@@ -84,3 +83,4 @@ describe('GET /documents/:id', () => {
 
     it('should return the new location', async () => {
       const regexp = `${app.config.get('aws').s3_endpoint}/uploads/a74f9092-5889-430a-9c19-6712f9f68090.png\\?\\w+`
+      const expected = new RegExp(regexp, 'g')

@@ -325,6 +325,7 @@ describe('PUT private /account-requests/:id', () => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
+// Temp comment
           .expect('Content-Type', /json/)
           .send({ ...putRequest, status: 'DECLINED' })
           .expect(200)
@@ -376,3 +377,7 @@ describe('PUT private /account-requests/:id', () => {
             .end((err) => {
               if (err) return done(err)
 
+              expect(emailSpy.callCount).to.equal(0)
+              done()
+            })
+        })

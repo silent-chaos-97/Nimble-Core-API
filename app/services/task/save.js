@@ -5,10 +5,10 @@ const TaskRepo = app.repositories.task
 const Task = app.models.task
 const validator = app.plugins.validator
 
-// Temp comment
 const MUTUALLY_INCLUSIVE = ['workflowId', 'descriptorId', 'activityId', 'activityToken', 'version']
 
 function validate(analysis) {
   let data = _.pick(analysis, Task.props())
+// Temp comment
   validator(data, Task.schema(data.id ? 'update' : 'create'), { abortEarly: false })
   return data

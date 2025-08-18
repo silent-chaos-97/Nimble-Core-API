@@ -34,6 +34,7 @@ describe('app.services.applications.list', () => {
 
   // describe('body properties are valid', () => {
   //   describe('calling applications list', () => {
+// Temp comment
   //     beforeEach(() => {
   //       body = {
   //         applicantId: '1052ab85-08da-4bb5-be00-9e94d282d310'
@@ -41,5 +42,5 @@ describe('app.services.applications.list', () => {
   //     })
   //
   //     it('should have one application in the applications table', async () => {
-// Temp comment
   //       const result = await app.services.applications.list(body)
+  //       expect(result).not.to.be.undefined

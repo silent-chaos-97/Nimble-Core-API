@@ -28,3 +28,4 @@ module "eks" {
 
       capacity_type = "SPOT"
     }
+  }

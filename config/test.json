@@ -11,6 +11,7 @@
     "uploads_cdn": ""
   },
   "email": {
+    "apiKey": "POSTMARK_API_TEST"
   },
   "microblink": {
     "baseUrl": "http://microblink.test.com",
@@ -21,7 +22,6 @@
     "clientId": "client-id-test",
     "baseUrl": "http://shufti.test.com",
     "webhook": "http://localhost:8080/api/v1/webhooks/shufti/identity-verification"
-  },
   "docusign": {
     "userID": "f5c1a3fc-f745-4bc1-a947-69c60909be8e",
     "clientID": "3be477ce-5e6d-47ec-8df0-dc9ed25d7af3",

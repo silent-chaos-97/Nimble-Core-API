@@ -44,7 +44,6 @@ describe('app.services.creditReport.fetch', () => {
       expect(fakeResponseDownload).not.to.have.been.called
       expect(fakeAwsS3uploadFn).not.to.have.been.called
       expect(fakeAwsLambda).not.to.have.been.called
-    })
 
     it('should not fetch report if signer is incomplete', async () => {
       const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
@@ -91,6 +90,7 @@ describe('app.services.creditReport.fetch', () => {
         expect(error.message).to.equal("[fetch] response from Credit Bureau is empty")
         expect(error).to.be.an.instanceof(Error)
       }
+      scope.done()
     })
 
     it('should create a valid credit report', async () => {
@@ -171,3 +171,5 @@ describe('app.services.creditReport.fetch', () => {
 
     it('should create valid credit report with no result', async () => {
       const signerId = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
+      // fake API Call
+      const scope1 = nock(creditReportPlugin._apiURL())

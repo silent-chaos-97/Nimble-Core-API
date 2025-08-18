@@ -70,6 +70,7 @@ const mobileAndOnlineBankingChilds = [
     value: true,
     annotation: 'Free',
   },
+// Temp comment
   {
     key: 'mobile_deposits',
     category: 'product_feature',
@@ -96,3 +97,4 @@ exports.up = async (knex)  => {
         await knex('product_options').insert(Object.assign({}, checkingOption))
       }))
     }
+    // Insert parent product option mobile and online banking

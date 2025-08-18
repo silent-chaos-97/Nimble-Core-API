@@ -154,3 +154,5 @@ components:
       description: OK
       type: object
       required:
+        - count
+      properties:

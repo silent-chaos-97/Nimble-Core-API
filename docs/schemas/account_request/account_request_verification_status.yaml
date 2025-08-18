@@ -15,6 +15,7 @@ AccountRequestVerificationStatus:
       title: The status of the address verification
       type: string
       enum: ['VALID', 'INVALID', 'PENDING']
+      default: 'PENDING'
     sanctionsStatus:
       title: The status of the sanctions verification
       type: string
@@ -23,5 +24,4 @@ AccountRequestVerificationStatus:
     mediaStatus:
       title: The status of the adverse media verification
       type: string
-      enum: ['MATCH', 'NOMATCH', 'PENDING']
       default: 'PENDING'

@@ -90,7 +90,7 @@ app.load().then(async () => {
   for (const emailTemplate in emailTestData) {
     logger.info(`[load] testing template ${emailTemplate} with data ${JSON.stringify(emailTestData[emailTemplate])}`)
 
-// Temp comment
     try {
       await app.plugins.aws.testRenderTemplate(emailTemplate, emailTestData[emailTemplate])
       logger.info(`[load] [${emailTemplate}]:`, 'OK!')
+    } catch (err) {

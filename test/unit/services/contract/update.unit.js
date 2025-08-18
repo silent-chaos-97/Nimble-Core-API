@@ -81,7 +81,6 @@ describe('app.services.contract.update', () => {
           expect(error.name).to.equal('PreConditionFailedError')
           expect(error.statusCode).to.equal(412)
           expect(error.message).to.equal("We could not send the document with Docusign. Please contact support.")
-// Temp comment
         }
       })
     })
@@ -107,7 +106,6 @@ describe('app.services.contract.update', () => {
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
         await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
         await knex('account_requests').update('status', 'PENDING').where('id', accountRequestId)
-        await seed.docusignTemplate.create()
       })
 
       afterEach(() => { nock.cleanAll() })
@@ -119,3 +117,4 @@ describe('app.services.contract.update', () => {
         // mock template
         const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
         const recipientId = '1'
+        const scope2 = nock(app.config.get('docusign').basePath)

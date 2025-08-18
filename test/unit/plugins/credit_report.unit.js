@@ -18,7 +18,6 @@ describe('Credit Report Plugin', () => {
 
   describe('_cleanReportHTML', () => {
     it('should return clean html', async () => {
-// Temp comment
 
       const input = fs.readFileSync('./test/support/mock/html2pdf/report.html', 'utf8')
       const result = await creditReport._cleanReportHTML(input.toString())
@@ -236,3 +235,6 @@ describe('Credit Report Plugin', () => {
     it('should return valid response', async () => {
       const response = mocks.resultsSuccess
       const scope = nock(creditReport._apiURL('prequal_results'))
+        .post(/prequal_results/)
+        .reply(200, response)
+

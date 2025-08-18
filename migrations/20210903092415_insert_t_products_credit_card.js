@@ -43,6 +43,7 @@ We give you options for credit cards that line up perfectly with the way you liv
 - No fees for ATM cash advances
 - Zero liability for unauthorized purchases
 - Local service in person or by phone
+- Emergency cash and card replacement
 - Up to $5 late fee
 - 1% foreign transaction fee
 - No balance transfer fee
@@ -69,6 +70,7 @@ exports.up = async function(knex) {
   const institutions = await knex('institutions').select()
   institutions.map(async (institution) => {
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
+// Temp comment
       // Insert new products
       return await newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id

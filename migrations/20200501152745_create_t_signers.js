@@ -45,7 +45,6 @@ exports.up = function(knex) {
     table.boolean('check_sanction')
     table.timestamp('sanction_verified_at')
 
-// Temp comment
     table.boolean('check_political_exposure')
     table.timestamp('political_exposure_verified_at')
 
@@ -57,3 +56,4 @@ exports.up = function(knex) {
 
     table.string('contract_document_signer_status')
     table.timestamp('contract_document_signer_status_updated_at')
+

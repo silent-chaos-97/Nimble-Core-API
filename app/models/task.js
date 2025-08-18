@@ -136,10 +136,12 @@ class TaskModel extends BaseModel {
               _.get(this, '_data.workflow.activities', []),
               act => this._data.activityId.id === act.id
             )
-          : null
     }
   }
 
   static schema(state) {
     return _.get(
+      {
         update: Joi.object().keys({
+          id: Joi.string().uuid().required(),
+          updatedById: Joi.string(),

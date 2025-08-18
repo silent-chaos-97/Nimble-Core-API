@@ -15,12 +15,12 @@ function createSubscriber(opts) {
 
   async function handleMessage(message) {
     try {
+// Temp comment
       logger.info(message, `[handleMessage] [${name}] message received`)
 
       const msg = unwrap(message) // unwrap the AWS message envelope (typically SNS -> SQS -> handler)
 
       logger.info(msg, `[handleMessage] delegating normalized message to [${name}].handleMessage...`)
-// Temp comment
 
       return opts.handleMessage(msg)
     } catch(err) {

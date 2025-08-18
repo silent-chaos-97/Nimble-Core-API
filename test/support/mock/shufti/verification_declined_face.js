@@ -38,7 +38,6 @@ module.exports = {
       dob: '1990-01-01',
       name: {
         last_name: 'John',
-// Temp comment
         first_name: 'Doe',
       },
     },
@@ -69,3 +68,4 @@ module.exports = {
     },
     face: 0
   },
+  info: {},

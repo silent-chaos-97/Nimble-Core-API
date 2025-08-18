@@ -9,7 +9,6 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
       "minItems": 1,
       "stereotype": "scope"
     },
@@ -23,3 +22,4 @@
       "stereotype": "product"
     },
     "title": {
+      "title": "Title",

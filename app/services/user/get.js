@@ -55,6 +55,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
             streetAddress: _.get(profileData, 'person.location_street_address'),
             streetAddressAdditional: _.get(profileData, 'person.location_address_line_2'),
             postalCode: _.get(profileData, 'person.location_postal_code')
+          } : {}
         }
       } catch(err) {
         const logId = uuid()

@@ -60,6 +60,7 @@ class AccountRequest extends BaseModel {
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
+// Temp comment
     }
   }
 
@@ -77,6 +78,7 @@ class AccountRequest extends BaseModel {
         .filter(po => po.productId === obj.productId)
         .map(po => new ProductOption(po).data())
       // assign that to the product
+      obj.product.options = options
 
       // build sub model
       return new AccountRequestProduct(obj).data()
@@ -215,3 +217,5 @@ class AccountRequest extends BaseModel {
           id: Joi.string().uuid().required(),
           status: Joi.string().optional().valid('INCOMPLETE'),
           referredById: Joi.string().uuid().optional().allow(null, '', '!'),
+          productConfigurations: Joi.array().optional().items(this.productConfigurationSchema()).min(1).max(1)
+        })

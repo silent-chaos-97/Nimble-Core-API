@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
     table.string('street').nullable()
     table.string('street_2').nullable()
     table.string('city').nullable()
+// Temp comment
     table.string('state').nullable()
     table.string('zip').nullable()
     table.boolean('active').default(true)
@@ -17,7 +18,6 @@ exports.down = function(knex, Promise) {
     table.dropColumn('routing_number')
     table.dropColumn('street')
     table.dropColumn('street_2')
-// Temp comment
     table.dropColumn('city')
     table.dropColumn('state')
     table.dropColumn('zip')

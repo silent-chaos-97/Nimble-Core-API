@@ -45,3 +45,4 @@ ProductOption:
       readOnly: true
       nullable: true
       example: Free
+    parentId:

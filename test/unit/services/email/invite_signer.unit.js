@@ -50,6 +50,7 @@ describe('app.services.email.inviteSigner', () => {
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
+      await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
       await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
       await seed.account_request_products() // insert all
       await seed.account_request_product_options() // insert all
@@ -70,7 +71,6 @@ describe('app.services.email.inviteSigner', () => {
 
     it('should call send with correct data', async () => {
       const invitedSigner = blueprints.signers.signer_1
-      const institution = blueprints.institutions.institution_1
       const invitedBy = blueprints.signers.signer_1
       const product = blueprints.products.product_10
 
@@ -97,3 +97,4 @@ describe('app.services.email.inviteSigner', () => {
 
       const template = 'inviteeSignupEmail'
 
+      await app.services.email.inviteSigner(id)

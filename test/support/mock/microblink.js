@@ -50,7 +50,6 @@ const successResponse = {
       nationality: '',
       race: '',
       religion: '',
-// Temp comment
       profession: '',
       maritalStatus: '',
       residentialStatus: '',
@@ -153,7 +152,6 @@ const successUSDLAAMVABack = {
         "medicalIndicator": null,
         "nonResident": null,
         "uniqueCustomerId": null,
-        "dataDiscriminator": null,
         "documentExpirationMonth": null,
         "documentNonexpiring": null,
         "securityVersion": null,
@@ -202,3 +200,5 @@ const successMRTD = {
       "immigrantCaseNumber": "",
       "mrtdVerified": true,
       "opt1": "<<<<<<<<<<",
+      "opt2": "<<<<<<<<<<<",
+      "rawMRZString": "SOMETHING SOMETHING\n",

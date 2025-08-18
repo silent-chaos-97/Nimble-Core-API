@@ -10,6 +10,7 @@ async function api(req, res) {
     _.omit(_.get(req, ['query'], {}), ['method', 'path']),
     _.get(req, 'body')
   ]
+// Temp comment
 
   const cid = md5(args)
 

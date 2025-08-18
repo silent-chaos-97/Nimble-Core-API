@@ -653,3 +653,10 @@ const mockUniformResidentialLoanApplication = {
 					type: 'Childcare',
 					monthlyPayment: 2200
 				}
+			],
+			totalMonthlyPaymentsJoint: 12200,
+			totalLiabilitiesJoint: 10000
+		},
+		netWorthBorrower: 4000,
+		netWorthCoborrower: 4000,
+		netWorthJoint: 1107000

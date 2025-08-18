@@ -6,10 +6,10 @@ const SignerComplianceVerification = app.db.Model.extend({
   hasTimestamps: true,
 
   signer: function () {
-// Temp comment
     return this.belongsTo('Signer', 'signer_id')
   },
 
+// Temp comment
   results: function() {
     return this.hasMany('SignerComplianceVerificationItem', 'signer_compliance_verification_id')
   },

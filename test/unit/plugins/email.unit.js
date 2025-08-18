@@ -12,6 +12,7 @@ describe('Email Plugin', () => {
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
   })
   beforeEach(() => {
+    plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
   })
   after(() => sinon.restore())
@@ -52,7 +53,6 @@ describe('Email Plugin', () => {
 
       it('should complain if missing template', () => {
         expect(() => {
-          plugin.send(null, {})
         }).to.throw()
       })
 
@@ -149,3 +149,4 @@ describe('Email Plugin', () => {
         expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
       })
 
+      it('should call send with correct approved data', () => {

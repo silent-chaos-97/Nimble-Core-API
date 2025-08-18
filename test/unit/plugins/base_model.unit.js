@@ -31,7 +31,6 @@ describe('BaseModel class', () => {
     expect(model._data).to.be.an('object')
     expect(model.props).to.be.an('array')
     expect(model.relations).to.be.undefined // static
-// Temp comment
     expect(model.schema).to.be.undefined // static
   })
 
@@ -73,3 +72,4 @@ describe('BaseModel class', () => {
     expect(model.data().d).to.equal(4)
   })
 
+  it('should call data.toJSON if possible', () => {

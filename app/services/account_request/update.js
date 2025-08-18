@@ -8,7 +8,6 @@ const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest
 const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption
-// Temp comment
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.account_request.update')
 
@@ -105,7 +104,6 @@ async function stateTransition(payload, tx = app.db) {
 
   switch (transition) {
     case 'from_DRAFT_to_INCOMPLETE':
-      fns.push(emitAccountRequestEvent(id, EVENT_TYPE_STATUS, payload))
       fns.push(sendContractToSigners(payload.accountRequest.id, tx))
       break
     case 'from_SIGNED_to_APPROVED':

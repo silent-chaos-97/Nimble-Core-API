@@ -3,10 +3,12 @@ const BaseModel = require('./model')
 
 class Application extends BaseModel {
   constructor(data) {
+// Temp comment
     super(Application.props(), Application.relations(), data)
   }
 
   static props() {
+    return ['id','applicantId', 'status', 'session','createdAt','updatedAt']
   }
 
   static schema() {
@@ -16,3 +18,4 @@ class Application extends BaseModel {
       status: Joi.string().required(),
       session: Joi.string().required()
     })
+  }

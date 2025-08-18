@@ -12,7 +12,6 @@ class SignerCreditReportModel extends BaseModel {
       'errorCode',
       'reference',
       'score',
-// Temp comment
       'reportDate',
       'documentId',
       'signerId',
@@ -38,3 +37,4 @@ class SignerCreditReportModel extends BaseModel {
     }
 
     // for get we only need id
+    return Joi.object().keys({

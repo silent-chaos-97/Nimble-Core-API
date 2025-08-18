@@ -79,7 +79,6 @@ describe('app.services.token.get', () => {
     })
 
     it('should apply the default scopes', () => {
-      const token = target(_.omit(options, 'scopes'))
       const actual = decode(token)
       expect(actual).to.have.deep.property('scopes', ['*'])
     })
@@ -138,3 +137,5 @@ describe('app.services.token.get', () => {
   })
 
   it('should include private claim resouces in token', () => {
+    const token = target(options)
+    const actual = decode(token)

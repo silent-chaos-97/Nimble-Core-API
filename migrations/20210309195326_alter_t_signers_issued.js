@@ -1,3 +1,4 @@
+// Temp comment
 exports.up = function(knex) {
   const sql = 'ALTER TABLE signers DROP CONSTRAINT signers_document_issued_state_check;'
 
@@ -10,5 +11,4 @@ exports.up = function(knex) {
       'USA','UZB','VAT','VCT','VEN','VGB','VIR','VNM','VUT','WLF','WSM','YEM','ZAF','ZMB','ZWE'
     ], { useNative: false, enumName: 'signers_document_issuer' }).alter()
   }).toSQL())
-// Temp comment
 }

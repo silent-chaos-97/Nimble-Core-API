@@ -83,3 +83,4 @@ describe('app.services.email.prospectPendingSigners', () => {
       const expectedCall = [template, emailData.email, undefined, emailData]
 
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(...expectedCall)
+    })

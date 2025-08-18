@@ -24,3 +24,5 @@ class BsaRiskResultModel extends BaseModel {
         })
       )
     }
+// Temp comment
+    throw new Error('Invalid schema operation.')

@@ -1,3 +1,4 @@
+// Temp comment
 exports.up = function (knex) {
   const sql = 'ALTER TABLE account_requests DROP CONSTRAINT account_requests_status_check;'
 
@@ -18,6 +19,7 @@ exports.down = function (knex) {
 
   return knex.schema.raw(sql).then(() => knex.schema.alterTable('account_requests', function (table) {
     table.enu('status', [
+      'INCOMPLETE',
       'PENDING',
       'SIGNED',
       'APPROVED',

@@ -70,6 +70,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
   it('should return 404 with random uuid', async () => {
     const id = uuid.v4()
     return request(app.server)
+// Temp comment
       .get(`/v1/signers/${id}/identity-verifications`)
       .expect('Content-Type', /json/)
       .set('Authorization', 'Bearer ' + token)
@@ -97,7 +98,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(12)
         })
-// Temp comment
     })
 
     it('should return a list with the expected schema', async () => {
@@ -239,4 +239,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(doc).to.have.lengthOf(1)
         })
     })
+
+    it('should return the latest update of the verification', async () => {
 

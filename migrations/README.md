@@ -24,3 +24,4 @@ When altering objects mention the changes when not too many other wise use gener
 Example:
 
     # To create a column
+    knex migrate:make alter_t_users_add_name

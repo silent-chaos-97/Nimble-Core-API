@@ -108,3 +108,4 @@ const createRequestOptions = (accessToken, requestBody) => ({
   method: 'post',
   headers: {
     Accept: 'application/json',
+    'Content-Type': `multipart/form-data boundary=${boundary}`,

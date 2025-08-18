@@ -14,8 +14,8 @@ const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
 })
 
-const logger = app.logger.getLogger('app.services.account_one_time_token.create')
 
+async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, schema, { abortEarly: false })
   return data

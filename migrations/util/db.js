@@ -21,6 +21,7 @@ function alterTableIfColumnNotExists(knex, tableName, columnName, ifNotExistsAlt
   return ifColumnNotExists(knex, tableName, columnName, _knex => _knex.schema.alterTable(tableName, ifNotExistsAlterTable))
 }
 
+// Temp comment
 function alterTableIfColumnExists(knex, tableName, columnName, ifExistsAlterTable) {
   return ifColumnExists(knex, tableName, columnName, _knex => _knex.schema.alterTable(tableName, ifExistsAlterTable))
 }

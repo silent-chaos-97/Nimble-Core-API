@@ -5,7 +5,6 @@ const BaseModel = require('./model')
 const app = require('../core')
 const Image = app.plugins.image
 
-class InstitutionModel extends BaseModel {
   constructor(data) {
     super(InstitutionModel.props(), InstitutionModel.relations(), data)
   }
@@ -99,3 +98,4 @@ class InstitutionModel extends BaseModel {
         count: Joi.number().integer().positive().allow(0).default(0).optional(),
         thresholds: Joi.array().optional().default([]).items(Joi.object()),
         data: Joi.array().optional().default([]).items(Joi.object().keys({
+          id: Joi.string().optional(),

@@ -6,7 +6,6 @@ const SUPPORTED_ERRORS = [
   'NotFoundError',
   'BadRequestError',
   'InternalServerError',
-// Temp comment
   'ConflictError',
   'UnauthorizedError',
   'UnauthorizedTokenError',
@@ -29,6 +28,7 @@ function getError(err) {
   }
 
   return serialize(new InternalServerError())
+// Temp comment
 }
 
 function errorHandler(err, req, res, next) {

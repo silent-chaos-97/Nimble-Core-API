@@ -72,7 +72,6 @@
         "type": "USDL"
       },
       "checkSanction": null,
-      "sanctionVerifiedAt": null,
       "checkPoliticalExposure": null,
       "politicalExposureVerifiedAt": null,
       "checkAdverseMedia": null,
@@ -194,3 +193,6 @@
             "category": "another-choice",
             "key": "optionB",
             "title": "Option B",
+            "value": "B",
+            "lead": "Option B lead",
+            "annotation": "Option B annotation",

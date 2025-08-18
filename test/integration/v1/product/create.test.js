@@ -45,7 +45,6 @@ describe('POST /institutions/:id/products', () => {
         })
     })
 
-// Temp comment
     it('should return error with not-allowed properties', () => {
       return request(app.server)
         .post(`/v1/institutions/${institutionId}/products`)
@@ -143,3 +142,4 @@ describe('POST /institutions/:id/products', () => {
     beforeEach(() => {
       seed.product.create(prodId)
     })
+

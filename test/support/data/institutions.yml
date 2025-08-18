@@ -48,3 +48,4 @@
 - id: '11000000-0000-0000-0000-000000005555'
   name: QueueBank
   slug: queuebnk
+  domain: queuebnktestbank.wearesingular.com

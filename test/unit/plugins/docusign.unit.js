@@ -651,7 +651,6 @@ describe('Docusign', () => {
         const scope1 = nock(app.config.get('docusign').basePath)
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
           .reply(200, { "textTabs": [] })
-
         const result = await docusign._getUpdatedRecipientAndTabs(mocks.validUser, config.get('docusign').accountID, envelopeId, recipientId)
 
         scope1.done()
@@ -680,6 +679,7 @@ describe('Docusign', () => {
     })
 
     describe('_buildSubject', () => {
+      it('should return valid subject', () => {
         const result = docusign._buildSubject(mocks.accountOptions.institutionName, mocks.accountOptions.productName)
 
         expect(result).not.to.be.undefined
@@ -979,3 +979,13 @@ describe('Docusign', () => {
 
         const result = await docusign._buildMainSigner([mocks.validUser], {...mocks.accountOptions, productConfigurations: [mockedProductConfiguration]}, tabs)
 
+        expect(result).not.to.be.undefined
+        expect(result.recipientId).to.equal('1')
+        expect(result.roleName).to.equal('signer')
+
+        // check if product name was passed
+        expect(result.tabs.textTabs[0].value).to.equal('xpto-001')
+        expect(result.tabs.textTabs[1].value).to.equal(mockedProductConfiguration.product.name)
+
+        // check values of checkboxes
+        const checkboxTabs = result.tabs.checkboxTabs

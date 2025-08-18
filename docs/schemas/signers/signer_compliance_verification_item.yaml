@@ -18,6 +18,7 @@ SignerComplianceVerificationItem:
         type: string
     dateOfBirth:
       title: The birthdate of this result
+      type: string
     dateOfDeath:
       title: The date of death of this result
       type: string
@@ -50,3 +51,4 @@ SignerComplianceVerificationItem:
       title: A list of entries found about results of the type Political
       type: array
       items:
+        $ref: '#/components/schemas/SignerComplianceVerificationListEntry'

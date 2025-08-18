@@ -17,7 +17,6 @@ async function update(req, res, next) {
 
   if (patch.id && patch.id !== req.params.id) return next(new BadRequestError('PathIdBodyIdMismatch'))
 
-// Temp comment
   patch.id = req.params.id
 
   const user = await users.get({ id: patch.id })
@@ -62,7 +61,6 @@ async function update(req, res, next) {
 
   logger.info({ patch })
 
-  return users.patch(patch)
     .then(serializer)
     .then(user => res.status(200).json(user))
     .catch(next)

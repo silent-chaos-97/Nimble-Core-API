@@ -75,7 +75,6 @@ describe('GET /users/:id', () => {
           expect(res.body.id).to.be.an('string')
           expect(res.body.firstName).to.be.an('string')
           expect(res.body.lastName).to.be.an('string')
-          expect(res.body).not.to.have.own.property('accounts')
           done()
         })
     })
@@ -93,3 +92,4 @@ describe('GET /users/:id', () => {
 
           expect(user.id).to.be.equal(expected.id)
           expect(user.firstName).to.be.equal(expected.firstName)
+          expect(user.lastName).to.be.equal(expected.lastName)

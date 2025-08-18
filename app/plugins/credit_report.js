@@ -255,7 +255,6 @@ class CreditReport {
     }
 
     const data = {
-      ...authorizationFields,
       applicantid: reference
     }
 

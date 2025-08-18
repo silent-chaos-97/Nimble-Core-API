@@ -1,4 +1,5 @@
 const uuid = require('uuid')
+const sinon = require('sinon')
 
 describe('POST /signers/:id/email-verifications', async () => {
   let clock
@@ -168,3 +169,5 @@ describe('POST /signers/:id/email-verifications', async () => {
         .post(`/v1/signers/${id}/email-verifications?token=${urlToken}`)
         .expect('Content-Type', /json/)
         .expect(403)
+    })
+

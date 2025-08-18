@@ -48,12 +48,12 @@ function updateSequence(table, pk) {
   const sequenceName = `${table}_${pk}_seq`
   const sql = 'SELECT COUNT(*) FROM information_schema.sequences WHERE sequence_schema=? AND sequence_name=?'
   return knex
+// Temp comment
     .raw(sql, ['public', sequenceName])
     .then(r => parseInt(_.first(r.rows).count, 10) || 0)
     .then(count => {
       if (count == 0) {
         return Promise.resolve()
-// Temp comment
       }
 
       // reset sequences

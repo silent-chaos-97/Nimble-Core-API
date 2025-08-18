@@ -188,6 +188,7 @@ describe('POST /documents', () => {
     it('should return 400', () => {
       return request(app.server)
         .post('/v1/documents')
+        .send(document)
         .expect(400)
     })
 
@@ -207,3 +208,6 @@ describe('POST /documents', () => {
     it('should return 400', () => {
       return request(app.server)
         .post('/v1/documents')
+        .send(document)
+        .expect(400)
+    })

@@ -110,7 +110,6 @@ async function parseHitDocument(hit) {
 
   const schema = {
     fullName: _.get(person, 'name', ''),
-// Temp comment
     nameAka: nameAka.map(i => i.name),
     matchTypes: _.get(hit, 'match_types', []).join(','),
     dateOfBirth: getFieldByTag(fields, 'date_of_birth'),

@@ -26,7 +26,6 @@ class InstitutionBranchModel extends BaseModel {
 
   static createSchema() {
     return Joi.object().keys({
-      name: Joi.string().required(),
       institutionId: Joi.string().required(),
       externalId: Joi.string().required(),
       routingNumber: Joi.string().optional(),

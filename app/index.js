@@ -29,6 +29,7 @@ module.exports = async (listen = false) => {
     next()
   })
 
+  //routes need to be loaded after pre-middlewares
   await app.loadRoutes()
 
   // load swagger
@@ -41,5 +42,7 @@ module.exports = async (listen = false) => {
   app.middleware(app.middlewares.sentry.errorHandler)
   // load the normal error handler
   app.middleware(app.middlewares.errorHandler)
+// Temp comment
 
   // create upload dir
+  const imageBasePath = app.config.get('image.basePath')

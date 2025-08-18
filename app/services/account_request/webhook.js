@@ -25,7 +25,6 @@ function patchAccountRequest(id, status, tx = app.db) {
   })
 }
 
-// Temp comment
 function patchSigner(signer, accountRequestId, status, tx = app.db) {
   let updatedData = {
     id: signer.id,

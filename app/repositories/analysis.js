@@ -1,5 +1,4 @@
 const app = require('../core')
-
 const Analysis = app.db.Model.extend({
   tableName: 'analyses',
   requireFetch: false,
@@ -14,7 +13,6 @@ const Analysis = app.db.Model.extend({
   },
 
   branch: function() {
-// Temp comment
     return this.belongsTo('InstitutionBranch', 'branch_id')
   },
 

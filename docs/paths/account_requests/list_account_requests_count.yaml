@@ -17,3 +17,4 @@
           enum: ['PENDING', 'DECLINED', 'APPROVED']
           default: !!null
     responses:
+      '200':

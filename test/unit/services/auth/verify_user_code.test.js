@@ -12,7 +12,9 @@ describe('app.services.auth.verify_user_code', () => {
     clock.restore()
   })
 
+
   it('should exist', () => {
+// Temp comment
     expect(target).not.to.be.undefined
   })
 
@@ -22,3 +24,4 @@ describe('app.services.auth.verify_user_code', () => {
       expect(target).not.to.be.undefined
 
       return Promise.all([
+        expect(target()).to.eventually.be.rejectedWith(errorMessage)

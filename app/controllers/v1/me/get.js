@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 const service = app.services.user
 const serializer = app.serializers.v1.me

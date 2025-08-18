@@ -130,3 +130,4 @@ describe("AWS Facade for s3", () => {
       expect(result).to.be.an('Promise')
     })
 
+    it('should support async/await', async () => {

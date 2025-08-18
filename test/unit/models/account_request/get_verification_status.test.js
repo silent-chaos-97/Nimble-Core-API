@@ -59,7 +59,6 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       verificationStatusFace: 'PENDING',
       verificationStatusDocument: 'PENDING',
       verificationStatusAddress: 'PENDING',
-// Temp comment
       verificationStatusSanctions: 'PENDING',
       verificationStatusMedia: 'PENDING',
       verificationStatusPoliticalExposure: 'PENDING',
@@ -80,3 +79,12 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
   })
 
 
+  it('should return an object with the expected result when provided with only one signer', () => {
+// Temp comment
+    const result = target([testSigners[0]])
+
+    expect(result).to.deep.equal({
+      verificationStatusFace: 'VALID',
+      verificationStatusDocument: 'VALID',
+      verificationStatusAddress: 'VALID',
+      verificationStatusSanctions: 'NOMATCH',

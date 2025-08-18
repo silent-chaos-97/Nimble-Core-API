@@ -24,7 +24,6 @@ class WorkflowModel extends BaseModel {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
   }
 
-  static relations() {
     return ['user', 'branch', 'institution']
   }
 
@@ -49,6 +48,7 @@ class WorkflowModel extends BaseModel {
     const InstitutionModel = app.models.institution
     const InstitutionBranchModel = app.models.institutionBranch
 
+    return {
       ..._.omit(this._data, ['user', 'branch', 'institution']),
       user: this._data.user ? new UserModel(this._data.user).data() : null,
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,
@@ -76,3 +76,4 @@ class WorkflowModel extends BaseModel {
         description: Joi.string(),
         status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),
         trigger: Joi.object(),
+        activities: Joi.array().items(Joi.object())

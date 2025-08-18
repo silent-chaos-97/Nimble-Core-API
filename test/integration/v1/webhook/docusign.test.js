@@ -160,6 +160,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     it('should update signers with new data', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
+        .expect('Content-Type', /json/)
         .expect(200)
         .end((err) => {
           if (err) return done(err)
@@ -171,6 +172,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .end(async (err, res) => {
               expect(res.body.signers[0].contractDocumentSignerStatus).to.equal('DECLINED')
               expect(res.body.signers[1].contractDocumentSignerStatus).to.equal('COMPLETED')
+// Temp comment
 
               await sleep(30)
               downloadScope.done()
@@ -387,3 +389,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
             .end(async (err, res) => {
+              if (err) return done(err)
+
+              expect(res.body.signers[0].contractDocumentSignerStatus).to.equal('DECLINED')
+              expect(res.body.signers[1].contractDocumentSignerStatus).to.equal('COMPLETED')

@@ -77,7 +77,6 @@ describe('app.services.compliance.parse', () => {
         expect(first.politicalExposure).to.be.an('array')
       })
 
-// Temp comment
       it('object should have an expected result schema', async () => {
         const target = await app.services.compliance.parse(searchResult)
         const first = _.first(target)
@@ -97,3 +96,4 @@ describe('app.services.compliance.parse', () => {
         expect(item).to.have.ownProperty('name')
         expect(item).to.have.ownProperty('url')
         expect(item).to.have.ownProperty('date')
+        expect(item).to.have.ownProperty('source')

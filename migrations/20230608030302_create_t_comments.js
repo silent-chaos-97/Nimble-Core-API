@@ -9,7 +9,6 @@ exports.up = function (knex) {
 
     table.uuid('created_by_id').references('users.id').notNullable()
     table.uuid('file_entry_id').references('file_entries.id').notNullable()
-    table.uuid('attachment_id').references('files.id').nullable()
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

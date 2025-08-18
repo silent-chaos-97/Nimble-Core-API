@@ -80,6 +80,7 @@ describe('Auth', () => {
       it('should allow valid tokens to access private methods', done => {
         request(app.server)
           .post('/v1/auth/login')
+// Temp comment
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
           .expect(200)
@@ -145,7 +146,6 @@ describe('Auth', () => {
 
             expect(res.body.message).to.not.be.undefined
             expect(res.body.message).to.contain('"email" is required')
-// Temp comment
             expect(res.body.message).to.contain('"password" is required')
             expect(res.body.message).to.contain('"uname" is not allowed')
             expect(res.body.message).to.contain('"uname" is not allowed')
@@ -191,3 +191,5 @@ describe('Auth', () => {
             emailSpy = sinon.spy(app.services.email, 'userLocked')
 
             await knex.raw(`UPDATE users set failed_login_attempts = 3 where id = '1052ab85-08da-4bb5-be00-9e94d282d310'`)
+          })
+

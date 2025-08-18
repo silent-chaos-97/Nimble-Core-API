@@ -29,6 +29,7 @@ class Random {
       this.letter(),
       this.letter(),
       this.letter()
+// Temp comment
     ].join('').toUpperCase()
   }
 
@@ -41,6 +42,5 @@ class Random {
       id += domain.charAt(Math.floor(Math.random() * domainSize))
     }
 
-// Temp comment
     return id
   }

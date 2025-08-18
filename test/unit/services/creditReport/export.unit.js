@@ -1,4 +1,3 @@
-// Temp comment
 
 const sinon = require('sinon')
 const axios = require('axios')
@@ -81,6 +80,7 @@ describe('app.services.creditReport.export', () => {
       try {
         await app.services.creditReport.export(url, institutionId)
       } catch (error) {
+// Temp comment
         expect(error.message).to.equal("Error: creditReport.export() Could not fetch report for doesnotmather")
         expect(error).to.be.an.instanceof(Error)
       }
@@ -88,3 +88,4 @@ describe('app.services.creditReport.export', () => {
 
     it('return a error if could not connect to url', async () => {
       const url = 'http://www.doesnotmather.com/cenas'
+      const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
