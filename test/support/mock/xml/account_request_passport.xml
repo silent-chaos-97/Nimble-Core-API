@@ -13,6 +13,7 @@
     <signer>
       <id>2e31d8c0-1226-4651-8a5d-4bd8aa454722</id>
       <dateOfBirth>1966-03-16</dateOfBirth>
+      <email>example@nimblefi.com</email>
       <firstName>George</firstName>
       <middleName/>
       <lastName>Constanza</lastName>
@@ -55,7 +56,6 @@
         <state/>
         <zipCode/>
       </address>
-      <proof documentType="PASSPORT">
         <passport>
           <number>555444333</number>
           <expirationDate>2033-02-16</expirationDate>
@@ -66,3 +66,4 @@
           </documents>
         </passport>
       </proof>
+    </signer>

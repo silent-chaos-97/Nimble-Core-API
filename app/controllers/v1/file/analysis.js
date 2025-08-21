@@ -24,6 +24,7 @@ async function analysis(req, res) {
     const createdBy = await app.services.user.get({ id: file.createdById }, tx)
 
     let access = false
+
     if (User.isInstitutionAdmin(me) && me.institutionId === createdBy.institutionId) access = true
 
     if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true
@@ -32,7 +33,6 @@ async function analysis(req, res) {
   }
 
   const analysis = await files.analysis(file, _.get(req, 'query.processor') || 'table/financial-statement', {group: me.institutionId}, tx)
-
   res.status(200)
 
   const ext = _.get(req, 'query.ext', 'json').toLowerCase()

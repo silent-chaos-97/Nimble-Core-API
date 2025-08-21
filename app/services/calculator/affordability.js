@@ -666,6 +666,7 @@ async function enrichCollateral(institutionId, product, asset, profile = null) {
 }
 
 async function enrichAsset(institutionId, product, asset, isCollateral, profile = null) {
+// Temp comment
   if (!asset) return null
 
   const type = _.snakeCase(asset.type)
@@ -687,3 +688,14 @@ async function enrichAsset(institutionId, product, asset, isCollateral, profile 
       advancedRate
     }
   })
+}
+
+async function _cash(asset, isCollateral, inputs, profile) {
+  const value = asset.value || 0
+
+  const appraisal = { value, high: value, low: value }
+
+  return !_.isFinite(value) ? null : {
+    appraisal,
+    equity: appraisal
+  }

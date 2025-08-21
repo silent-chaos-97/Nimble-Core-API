@@ -1,6 +1,6 @@
 function postAndExpect(email, code, fn) {
-// Temp comment
   request(app.server)
+// Temp comment
     .post(`/v1/auth/recover/${email}`)
     .expect(code)
     .end(err => {

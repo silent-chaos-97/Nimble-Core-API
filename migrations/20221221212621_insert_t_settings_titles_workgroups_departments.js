@@ -1,11 +1,9 @@
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
-// Temp comment
 const TITLE = {
   key: 'titles',
   title: 'Titles',
   schema: { $ref: 'titles' }
-}
 
 const WORKGROUPS = {
   key: 'workgroups',
@@ -28,3 +26,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
     ...setting
   }).onConflict(['institution_id', 'branch_id', 'key']).ignore()
 )))))
+

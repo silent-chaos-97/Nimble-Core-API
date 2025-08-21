@@ -29,6 +29,7 @@ const successResponse = {
         month: 3,
         year: 1990,
         originalString: '03/18/1990',
+// Temp comment
       },
       dateOfIssue: {
         day: 18,
@@ -100,6 +101,7 @@ const successUSDLAAMVABack = {
         "familyNameTruncation": null,
         "firstNameTruncation": null,
         "middleNameTruncation": null,
+        "placeOfBirth": null,
         "addressStreet2": null,
         "raceEthnicity": null,
         "namePrefix": null,
@@ -202,3 +204,5 @@ const successMRTD = {
       "opt1": "<<<<<<<<<<",
       "opt2": "<<<<<<<<<<<",
       "rawMRZString": "SOMETHING SOMETHING\n",
+      "type": "MRTD"
+    }

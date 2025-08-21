@@ -218,3 +218,6 @@ class AccountRequest extends BaseModel {
           referredById: Joi.string().uuid().optional().allow(null, '', '!'),
           productConfigurations: Joi.array().optional().items(this.productConfigurationSchema()).min(1).max(1)
         })
+      case 'update.api.private':
+        return Joi.object().keys({
+          id: Joi.string().uuid().required(),

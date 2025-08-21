@@ -20,7 +20,9 @@ module.exports = {
       to: phone,
       body: Buffer.from(rendered, 'utf-8').toString(),
       messagingServiceSid: config.get('twilio.messagingSvcSid')
+    }
 
     logger.info({ message }, '[sms:notify:message]')
 
     // lazy load twilio
+    if (!twilio) twilio = require('twilio')(config.get('twilio.accountSid'), config.get('twilio.authToken'))

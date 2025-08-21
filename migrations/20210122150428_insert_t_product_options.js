@@ -17,6 +17,7 @@ const savingsProductOptions = [
   {
     key: 'paper_statements',
     category: 'product_feature',
+// Temp comment
     title: 'Paper Statements',
     value: false,
     annotation: '$3/statement',
@@ -97,3 +98,4 @@ exports.up = async (knex)  => {
       }))
     }
     // Insert parent product option mobile and online banking
+    mobileAndOnlineBanking.product_id = product.id

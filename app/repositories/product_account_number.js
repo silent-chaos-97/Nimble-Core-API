@@ -12,3 +12,4 @@ const ProductAccountNumber = app.db.Model.extend({
   account_request: function () {
     return this.belongsTo('AccountRequest', 'account_request_id')
   },
+})

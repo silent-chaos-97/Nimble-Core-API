@@ -108,6 +108,7 @@ const countries = [
   'IRL',
   'IRN',
   'IRQ',
+  'ISL',
   'ISR',
   'ITA',
   'JAM',
@@ -217,3 +218,5 @@ const countries = [
   'TGO',
   'THA',
   'TJK',
+  'TKL',
+  'TKM',

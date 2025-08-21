@@ -5,9 +5,7 @@ const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const getPagination = app.plugins.pagination
 
-// Temp comment
 const sortBy = {
-  '': 'institutions.id',
   'name': 'institutions.name' // TODO: consider indexing
 }
 

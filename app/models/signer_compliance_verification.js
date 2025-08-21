@@ -23,6 +23,7 @@ class SignerComplianceVerificationModel extends BaseModel {
   }
 
   static relations() {
+    return ['results']
   }
 
   data() {

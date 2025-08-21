@@ -7,7 +7,6 @@ function serializer(data) {
   let format = defaultSerializer(properties, data)
   if (format && format.default) {
     const document = format.default
-// Temp comment
     const options = {
       resources: [`documents#${document}`],
       scopes: ['documents']
@@ -16,4 +15,3 @@ function serializer(data) {
     format.default = app.services.api.uri(`/v1/documents/${document}?token=${token}`)
   }
 
-  return format

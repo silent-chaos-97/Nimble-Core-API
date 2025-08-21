@@ -110,6 +110,7 @@ class TaskModel extends BaseModel {
     return { ...Types }
   }
 
+  static statuses() {
     return { ...Statuses }
   }
 
@@ -145,3 +146,5 @@ class TaskModel extends BaseModel {
         update: Joi.object().keys({
           id: Joi.string().uuid().required(),
           updatedById: Joi.string(),
+          assignerId: Joi.string(),
+          to: Joi.array().items(Joi.object()),

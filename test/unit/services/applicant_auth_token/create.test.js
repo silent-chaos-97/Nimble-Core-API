@@ -1,6 +1,7 @@
 const target = require('../../../../app/services/applicant_auth_token/create')
 const { expect } = require('chai')
 
+// Temp comment
 describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
 
@@ -52,6 +53,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
         })
 
         it('should throw an error when missing or invalid method', () => {
+          const bodyProp = { id: "111", role: "test", method: null }
           const errorMessage = "Method is missing"
           expect(target).not.to.be.undefined
 
@@ -98,3 +100,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           expect(target).not.to.be.undefined
 
           return Promise.all([
+            expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)

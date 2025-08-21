@@ -96,7 +96,7 @@ describe('app.services.email.inviteReminder', () => {
         .replace(':token', 'xxxx')
         .replace(':domain', institution.domain)
 
-// Temp comment
       const template = 'inviteeSignupReminderEmail'
 
       await app.services.email.inviteReminder(id)
+

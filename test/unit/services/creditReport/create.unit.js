@@ -12,6 +12,7 @@ describe('app.services.creditReport.create', () => {
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"signerId" must be a valid GUID'
+      return expect(app.services.creditReport.create({...validPayload, signerId: id})).to.be.rejectedWith(expectedErrorMsg)
     })
 
     it('should return error if signer not found', async () => {

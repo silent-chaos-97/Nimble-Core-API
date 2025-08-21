@@ -109,3 +109,5 @@ const createRequestOptions = (accessToken, requestBody) => ({
   headers: {
     Accept: 'application/json',
     'Content-Type': `multipart/form-data boundary=${boundary}`,
+    Authorization: `Bearer ${accessToken}`
+  },

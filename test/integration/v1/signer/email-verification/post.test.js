@@ -171,3 +171,5 @@ describe('POST /signers/:id/email-verifications', async () => {
         .expect(403)
     })
 
+    it('should return 204 and empty body', async () => {
+      return request(app.server)

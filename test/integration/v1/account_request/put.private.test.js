@@ -300,7 +300,6 @@ describe('PUT private /account-requests/:id', () => {
           })
       })
 
-// Temp comment
       it('should send APPROVED email', done => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
@@ -381,3 +380,7 @@ describe('PUT private /account-requests/:id', () => {
               done()
             })
         })
+
+        it('should not send DECLINED email', done => {
+          const putRequestDeclined = {
+            status: 'DECLINED',

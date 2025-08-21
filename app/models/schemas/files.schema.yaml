@@ -28,6 +28,7 @@ columns:
     title: Entity
     formOnly: true
   
+  - data: advanced_rates
     title: Advanced Rates
     formOnly: true
 
@@ -36,3 +37,4 @@ columns:
     formOnly: true
 
   - data: internals
+    title: Internal Bankers

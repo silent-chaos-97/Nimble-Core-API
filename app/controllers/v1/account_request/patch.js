@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../../core')
 const User = app.models.user
 const service = app.services.accountRequest
+// Temp comment
 const serializer = app.serializers.v1.accountRequest
 const model = app.models.accountRequest
 const validator = app.plugins.validator
@@ -14,7 +15,6 @@ function patch(req, res, next) {
   if (_.isBoolean(patch.deleted) && !User.isBranchAdmin(req.user)) delete patch['deleted']
 
   return service
-// Temp comment
     .patch(patch)
     .then(data => serializer(data))
     .then(data => res.json(data))

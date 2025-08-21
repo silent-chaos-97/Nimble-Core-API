@@ -481,7 +481,6 @@ describe('Docusign', () => {
 
         it('should update recipient', async () => {
           nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
-// Temp comment
           // preparation
           const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
           const recipientId = '1'
@@ -991,3 +990,14 @@ describe('Docusign', () => {
 
         // check values of checkboxes
         const checkboxTabs = result.tabs.checkboxTabs
+
+        expect(checkboxTabs[0].tabLabel).to.equal('checkFunds')
+        expect(checkboxTabs[0].selected).to.equal('false')
+
+        expect(checkboxTabs[1].tabLabel).to.equal('checkDebit')
+        expect(checkboxTabs[1].selected).to.equal('false')
+
+        expect(checkboxTabs[2].tabLabel).to.equal('checkATM')
+        expect(checkboxTabs[2].selected).to.equal('true')
+      })
+

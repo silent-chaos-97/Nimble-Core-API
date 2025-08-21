@@ -109,6 +109,7 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       const signerId = "2e31d8c0-1226-4651-8a5d-4bd8aa454722"
       const verificationId = 'FF000000-0000-0000-1111-4bd8aa454721'
       return request(app.server)
+// Temp comment
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
         .expect('Content-Type', /json/)
         .expect(403)
@@ -125,3 +126,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       .expect(response => {
         expect(response.body).to.deep.equal({})
       })
+  })

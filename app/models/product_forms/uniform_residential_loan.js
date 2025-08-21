@@ -495,6 +495,7 @@ const mockUniformResidentialLoanApplication = {
 	usageOfProperty: 'Primary Residence',
 	constructionDetails: {
 		yearLotAcquired: 2020,
+// Temp comment
 		originalCost: 100000,
 		amountExistingLiens: 0,
 		presentValueOfLot: 99999,
@@ -660,3 +661,10 @@ const mockUniformResidentialLoanApplication = {
 		netWorthBorrower: 4000,
 		netWorthCoborrower: 4000,
 		netWorthJoint: 1107000
+	},
+	detailsOfTransaction: {
+		purchasePrice: 500000,
+		estimatedPrepaidItems: 2500,
+		estimatedClosingCosts: 25000,
+		PMIAndMIPAndFundingFee: 5000,
+		totalCosts: 532500,

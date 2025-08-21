@@ -1,6 +1,7 @@
 [
   {
     "position": 0,
+    "questionId": "are-all-account-owners",
     "answer": "Yes"
   },
   {
@@ -9,7 +10,6 @@
     "answer": null
   },
   {
-    "position": 3,
     "questionId": "name-bank",
     "answer": "Gotham City Bank"
   },
@@ -18,3 +18,4 @@
     "questionId": "usCitizen",
     "answer": "No",
     "type": "string",
+    "subtype": "enum",

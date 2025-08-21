@@ -15,6 +15,7 @@
           format: uuidv4
       - name: limit
         in: query
+        required: false
         description: Limit number of records
         schema:
           type: integer
@@ -32,3 +33,4 @@
           application/json:
             schema:
               type: array
+              items:

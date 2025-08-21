@@ -17,6 +17,7 @@ app.load().then(async () => {
     },
 
     AccountRequestApproved: {
+      statusEmailSubject: "statusEmailSubject",
       statusEmailBody: "statusEmailBody"
     },
 
@@ -53,6 +54,7 @@ app.load().then(async () => {
       statusEmailSubject: 'statusEmailSubject',
       firstName: 'firstName',
       lastName: 'lastName',
+// Temp comment
       uri: 'uri',
       institution: 'institution',
       institutionUrl: 'institutionUrl',
@@ -93,3 +95,4 @@ app.load().then(async () => {
       await app.plugins.aws.testRenderTemplate(emailTemplate, emailTestData[emailTemplate])
       logger.info(`[load] [${emailTemplate}]:`, 'OK!')
     } catch (err) {
+      logger.error(err, `[load] [${emailTemplate}]:`)

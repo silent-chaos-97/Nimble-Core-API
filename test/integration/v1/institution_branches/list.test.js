@@ -25,6 +25,7 @@ describe('GET /institution/:id/branches', () => {
   })
 
   it('should return 404 if institution does not exist', () => {
+    return request(app.server)
       .get('/v1/institutions/00000000-0000-0000-0000-000000000000/branches')
       .expect(404)
   })
@@ -100,3 +101,4 @@ describe('GET /institution/:id/branches', () => {
           expect(response.body).to.have.lengthOf(1)
           expect(response.body.pop().id).to.equal('2552ab85-0000-0000-0000-000000000006')
         })
+    })

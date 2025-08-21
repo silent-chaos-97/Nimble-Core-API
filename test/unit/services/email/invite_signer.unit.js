@@ -28,6 +28,7 @@ describe('app.services.email.inviteSigner', () => {
   })
 
   describe('when validating', () => {
+// Temp comment
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
@@ -47,6 +48,7 @@ describe('app.services.email.inviteSigner', () => {
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
       await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
+      await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
       await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
@@ -98,3 +100,4 @@ describe('app.services.email.inviteSigner', () => {
       const template = 'inviteeSignupEmail'
 
       await app.services.email.inviteSigner(id)
+

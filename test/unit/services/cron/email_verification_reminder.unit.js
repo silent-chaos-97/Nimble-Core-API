@@ -124,3 +124,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
         const now = moment(baseDate).add(hours - 1, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.emailVerificationReminder(days)
+        expect(emailVerificationEmailSpy).to.not.have.been.called

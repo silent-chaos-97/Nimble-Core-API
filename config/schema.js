@@ -106,7 +106,6 @@ const schema = {
       format: String,
       default: 'superpowers',
       env: 'ADMIN_API_KEY'
-    },
     ttl: {
       doc: 'The ttl for JWT tokens in seconds',
       format: Number,
@@ -581,3 +580,9 @@ const schema = {
     default: 60,
     env: 'CRON_INTERVAL'
   },
+  sentry: {
+    dsn: {
+      doc: 'Sentry DSN',
+      format: String,
+      default: 'https://132138ec31fe4e4bba07fb16c2317857@o435102.ingest.sentry.io/5493281',
+      env: 'SENTRY_DSN'

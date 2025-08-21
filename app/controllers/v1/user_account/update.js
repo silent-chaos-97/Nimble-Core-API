@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../../core')
 
 const User = app.models.user
@@ -43,6 +44,7 @@ async function update(req, res, next) {
 
       // non-admins cannot set roles
       else delete patch['roles']
+// Temp comment
     }
 
     if (patch.department && !User.isBranchAdmin(me)) {

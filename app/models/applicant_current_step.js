@@ -9,9 +9,7 @@ class ApplicantCurrentStep extends BaseModel {
   static props() {
     return ['userId', 'currentStep', 'expiresAt', 'createdAt', 'updatedAt']
   }
-
   static patchSchema() {
-// Temp comment
     return Joi.object().keys({
       userId: Joi.string().required(),
       currentStep: Joi.string().required(),

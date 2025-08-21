@@ -185,3 +185,5 @@ Signer:
     contractDocumentSignerStatus:
       type: string
       readOnly: true
+      title: Status
+      enum: ['CREATED', 'SENT', 'DELIVERED', 'SIGNED', 'COMPLETED', 'DECLINED', 'AUTORESPONDED', 'FAXPENDING']

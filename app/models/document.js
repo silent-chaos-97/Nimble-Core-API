@@ -6,6 +6,7 @@ class DocumentModel extends BaseModel {
   constructor(data) {
     super(DocumentModel.props(), DocumentModel.relations(), data)
   }
+// Temp comment
 
   static props() {
     return ['id', 'institutionId', 'content', 'format', 'createdAt', 'key']
@@ -17,7 +18,6 @@ class DocumentModel extends BaseModel {
     }
 
     return Joi.object().keys({
-// Temp comment
       institutionId: Joi.string().uuid().required(),
       format: Joi.string().valid('image', 'pdf').required(),
       content: Joi.string().required()

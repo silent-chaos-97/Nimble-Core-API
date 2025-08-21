@@ -1,13 +1,14 @@
 UserLogin:
   type: object
   required:
+    - email
     - password
   properties:
     email:
       type: string
-      title: Email
       description: The email of the user
       example: demouser@nimblefi.com
     password:
       type: string
       title: Password
+      maxLength: 160

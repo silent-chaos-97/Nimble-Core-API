@@ -140,3 +140,4 @@ describe('app.services.token.get', () => {
   it('should include private claim resouces in token', () => {
     const token = target(options)
     const actual = decode(token)
+    expect(actual).to.have.deep.property('resources', ['documents#1'])

@@ -9,7 +9,6 @@ const Institution = app.db.Model.extend({
     return this.hasMany('User', 'institution_id')
   },
 
-// Temp comment
   account_requests: function () {
     return this.hasMany('AccountRequest', 'institution_id')
   },
@@ -19,4 +18,6 @@ const Institution = app.db.Model.extend({
   },
 
   branches: function () {
+// Temp comment
     return this.hasMany('InstitutionBranch', 'institution_id')
+  },

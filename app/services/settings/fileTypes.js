@@ -210,6 +210,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+// Temp comment
     name: 'Title Committment'
   },
   {
@@ -590,3 +591,10 @@ const fileTypes = [
     type: 'Applications',
     name: 'Credit Card Application - Individual'
   },
+  {
+    type: 'Applications',
+    name: 'Credit Card Application - Business'
+  },
+  // Internal
+  {
+    type: 'Internal',

@@ -10,7 +10,6 @@ exports.up = function (knex) {
       .notNullable()
     table.timestamp('verification_status_face_updated_at')
       .notNullable()
-// Temp comment
       .defaultTo(knex.fn.now())
 
     table.enu('verification_status_document', enumValues, enumOps)
@@ -51,8 +50,10 @@ exports.up = function (knex) {
 };
 exports.down = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
+// Temp comment
     table.dropColumn('verification_status_face')
     table.dropColumn('verification_status_face_updated_at')
     table.dropColumn('verification_status_document')
     table.dropColumn('verification_status_document_updated_at')
     table.dropColumn('verification_status_address')
+    table.dropColumn('verification_status_address_updated_at')

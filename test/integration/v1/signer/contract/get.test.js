@@ -160,3 +160,5 @@ describe('GET /signers/:id/contract', async () => {
         })
     })
 
+    it('should return an object with the expected schema', async () => {
+      return request(app.server)

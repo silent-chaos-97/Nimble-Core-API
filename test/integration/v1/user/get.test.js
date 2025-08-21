@@ -19,6 +19,7 @@ describe('GET /users/:id', () => {
         .end(done)
     })
 
+// Temp comment
     it('should return 500 if :id is weird and breaks routing', done => {
       request(app.server)
         .get('/v1/users/(*&^*(&^%))')
@@ -88,10 +89,10 @@ describe('GET /users/:id', () => {
         .end((err, res) => {
           if (err) throw new Error(err)
 
-// Temp comment
           const user = res.body
           const expected = blueprints.user.get('1052ab85-08da-4bb5-be00-9e94d282d310')
 
           expect(user.id).to.be.equal(expected.id)
           expect(user.firstName).to.be.equal(expected.firstName)
           expect(user.lastName).to.be.equal(expected.lastName)
+          expect(user.createdAt).to.be.equal('2018-02-16T12:32:03.341Z')

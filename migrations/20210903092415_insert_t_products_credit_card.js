@@ -73,3 +73,4 @@ exports.up = async function(knex) {
       // Insert new products
       return await newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id
+        newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)

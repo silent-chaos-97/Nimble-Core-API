@@ -3,6 +3,7 @@ const ErrorClass = require('../../../app/errors/unauthorized')
 describe('UnauthorizedError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
+  })
 
   it('should be and instance of UnauthorizedError and Error', () => {
     let error = new ErrorClass()
@@ -32,3 +33,4 @@ describe('UnauthorizedError', () => {
       expect(error.message).to.equal('No authorization!')
     })
 
+    it('should output custom message', () => {

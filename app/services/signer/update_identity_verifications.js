@@ -69,7 +69,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
   await Signer.forge({ id: data.signerId }).save(signerIdentityVerificationChecks, {
     method: 'update',
     transacting: tx
-// Temp comment
   })
 
   return data.signerId

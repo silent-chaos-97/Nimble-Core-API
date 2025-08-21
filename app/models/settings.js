@@ -57,3 +57,4 @@ class SettingsModel extends BaseModel {
         branchId: Joi.string().optional()
       }),
 
+      get: Joi.object().keys({

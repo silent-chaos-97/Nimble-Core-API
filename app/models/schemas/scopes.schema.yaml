@@ -1,5 +1,6 @@
 collection: Account Types
 element: Account Type
+group: common
 order: 0
 
 columns:

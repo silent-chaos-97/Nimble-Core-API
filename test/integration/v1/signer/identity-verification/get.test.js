@@ -241,3 +241,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
     it('should return the latest update of the verification', async () => {
 
+      await seed.signersIdentityVerification.create({
+        id: '00000000-0000-0000-0000-000000000013',
+        signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722',

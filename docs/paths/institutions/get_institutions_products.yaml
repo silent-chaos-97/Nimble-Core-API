@@ -19,7 +19,6 @@
         required: true
         default: html
         schema:
-          type: string
           enum: ['html']
       - name: sort
         in: query
@@ -39,3 +38,4 @@
         content:
           application/json:
             schema:
+              type: array

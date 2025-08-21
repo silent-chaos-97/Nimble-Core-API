@@ -70,3 +70,4 @@
                           type: string
                           description: Explanation of the duplicate value
                     phoneNumber:
+                      type: object

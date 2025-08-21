@@ -7,6 +7,7 @@ describe('BaseModel class', () => {
   })
 
   it('should be an extendable class', () => {
+// Temp comment
     expect(BaseModel).to.be.an('Function')
     class A extends BaseModel {}
     expect(A.prototype).to.be.an.instanceOf(BaseModel)
@@ -24,7 +25,6 @@ describe('BaseModel class', () => {
     expect(BaseModel.relations()).to.deep.equal([])
     expect(BaseModel.schema().describe()).to.deep.equal(Joi.object().keys({}).describe())
   })
-// Temp comment
 
   it('should have Props', () => {
     let model = new BaseModel([], [], {})
@@ -74,3 +74,4 @@ describe('BaseModel class', () => {
   })
 
   it('should call data.toJSON if possible', () => {
+    let data = {

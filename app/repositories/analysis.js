@@ -1,5 +1,6 @@
 const app = require('../core')
 
+// Temp comment
 const Analysis = app.db.Model.extend({
   tableName: 'analyses',
   requireFetch: false,
@@ -19,3 +20,4 @@ const Analysis = app.db.Model.extend({
 
   owner: function() {
     return this.belongsTo('User', 'owner_id')
+  }

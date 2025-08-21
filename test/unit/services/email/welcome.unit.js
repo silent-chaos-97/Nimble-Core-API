@@ -69,7 +69,6 @@ describe('app.services.email.welcome', () => {
     it('should call send with correct data', async() => {
       const user = blueprints.me.get('1052ab85-08da-4bb5-be00-9e94d282d310')
 
-// Temp comment
       const email = user.email
       const firstName = user.firstName
       const lastName = user.lastName
@@ -77,7 +76,6 @@ describe('app.services.email.welcome', () => {
       const statusEmailSubject = 'You have been added to Singular Nimble Account'
       const code = 'XXXXX'
       const institution = 'Singular'
-      const institutionUrl = 'wearesingular.com'
       const uri = config.get('frontend.welcome_uri')
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
@@ -87,3 +85,4 @@ describe('app.services.email.welcome', () => {
 
       await app.services.email.welcome(user.id)
 
+      const expectedCall = [template, email, undefined, {

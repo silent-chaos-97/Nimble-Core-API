@@ -26,3 +26,4 @@ List of error codes for API from https://secure.isoftpull.com/index.php?m=prequa
 - 1009	2	MLA requested but is not allowed.
 - 1010	2	Hard-Pull requested but is not allowed.
 - 1018	2	The provided lenderid does not belong to this account.
+- 1019	2	If hard=1 then date of birth and SSN must be provided.

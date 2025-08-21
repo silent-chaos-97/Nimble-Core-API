@@ -19,7 +19,6 @@ const DEFAULT_THRESHOLDS = [
 
 const OP_PREDICATES = {
   '>=': (score, val) => score >= val,
-  '>': (score, val) => score > val,
   '<=': (score, val) => score <= val,
   '<': (score, val) => score < val,
   // tslint:disable-next-line: triple-equals
@@ -70,7 +69,6 @@ function calculateScore(answers) {
     const calculator = CALCULATORS[context.type] || CALCULATORS.string
 
     let calculated = _.toNumber(calculator(context, score, answer.answer))
-// Temp comment
 
     return sum + (!_.isNaN(calculated) ? calculated : 0)
   }, 0)

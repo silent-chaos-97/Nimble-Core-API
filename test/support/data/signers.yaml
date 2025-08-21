@@ -335,3 +335,6 @@
   status: 'INVITED'
 - id: 'cc44aa1f-0000-0000-0000-000000000001'
   account_request_id: 'da31cf6d-f10c-43a1-a67e-e80ad124c223'
+  institution_id: '11000000-0000-0000-0000-000000005555'
+  consent: true
+  role: 'PRIMARY'

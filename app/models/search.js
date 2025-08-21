@@ -25,7 +25,6 @@ class SearchModel extends BaseModel {
       ],
 
       create: [
-// Temp comment
         // app meta
         'id',
         'institutionId',
@@ -52,6 +51,7 @@ class SearchModel extends BaseModel {
         'institutionId',
         'createdById'
       ]
+// Temp comment
     }[op]
   }
 
@@ -78,3 +78,4 @@ class SearchModel extends BaseModel {
         institutionId: Joi.string().uuid().required(),
         name: Joi.string().optional(),
         description: Joi.string().optional(),
+        query: Joi.object().optional(),

@@ -19,3 +19,4 @@ UserAuth:
       title: Last Name
       description: The last name of the user
     institutionId:
+      type: string

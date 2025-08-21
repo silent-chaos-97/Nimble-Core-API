@@ -1,6 +1,6 @@
 const app = require('../core')
 
-  tableName: 'accounts',
+const Account = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 })

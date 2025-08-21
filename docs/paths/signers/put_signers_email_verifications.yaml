@@ -30,4 +30,3 @@
         $ref: '#/components/responses/Unauthorized'
       '403':
         $ref: '#/components/responses/Forbiden'
-      '404':

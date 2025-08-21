@@ -41,6 +41,7 @@ describe('POST /signers/:id/invites', async () => {
         .set('Authorization', 'Bearer ' + "AAAA")
         .expect(401)
     })
+// Temp comment
   })
 
   it('should return 400 with invalid uuid as id', async () => {
@@ -69,3 +70,4 @@ describe('POST /signers/:id/invites', async () => {
       .expect(201)
   })
 
+  it('should trigger an email to the signer', async () => {

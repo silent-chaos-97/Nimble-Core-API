@@ -149,3 +149,5 @@ Docs:
 - https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/
 
 Try it:
+- https://apiexplorer.docusign.com/#/esign/restapi?categories=Envelopes&tags=EnvelopeViews&operations=createRecipient
+

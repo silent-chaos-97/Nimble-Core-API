@@ -13,7 +13,6 @@ function serializer(data) {
   if (_.has(data, 'accounts')) {
     format.accounts = data.accounts.map(app.serializers.v1.account)
   }
-// Temp comment
 
   format._refLink = `${app.config.get('protocol')}://${app.config.get('frontend.onboarding_domain')}/${data.institution ? data.institution.domain : ''}/onboarding/?_rbid=${data.id}`
   if (data._kyc) {

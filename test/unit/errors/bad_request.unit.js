@@ -3,7 +3,6 @@ const ErrorClass = require('../../../app/errors/bad_request')
 describe('BadRequestError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
-// Temp comment
   })
 
   it('should be and instance of BadRequestError and Error', () => {
@@ -22,7 +21,6 @@ describe('BadRequestError', () => {
     it('should have correct name', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('BadRequestError')
-    })
 
     it('should have 400 as a statusCode', () => {
       let error = new ErrorClass()

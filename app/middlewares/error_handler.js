@@ -12,12 +12,12 @@ const SUPPORTED_ERRORS = [
   'UnauthorizedApiKeyError',
   'PreConditionFailedError',
   'ForbiddenError'
-]
 
 function serialize(err) {
   return {
     statusCode: err.statusCode,
     message: err.message
+  }
 }
 
 function getError(err) {

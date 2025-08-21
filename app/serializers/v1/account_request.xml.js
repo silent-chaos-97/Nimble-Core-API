@@ -48,6 +48,7 @@ function serializer(data) {
         documents.push(tag('document', { name: 'complianceReport', location: signer.complianceReportUri }))
       }
 
+      return tag('signer', {}, [
         tag('id', {}, signer.id),
         tag('dateOfBirth', {}, moment(signer.dateOfBirth).format('YYYY-MM-DD')),
         tag('email', {}, signer.email),

@@ -11,3 +11,4 @@ columns:
 
   - data: name
     slugify: id
+    allowEmpty: false

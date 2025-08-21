@@ -93,6 +93,7 @@ describe('POST /users', () => {
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
         .end(done)
+// Temp comment
     })
   })
 
@@ -236,3 +237,5 @@ describe('POST /users', () => {
       })
     })
   })
+
+  describe('async jobs', ()=>{

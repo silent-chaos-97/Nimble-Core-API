@@ -33,3 +33,4 @@ exports.up = async function(knex) {
       })
     }
   })
+

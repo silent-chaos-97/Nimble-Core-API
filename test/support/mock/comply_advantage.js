@@ -3262,7 +3262,6 @@ const parsedResult = [
         "value": "Zimbabwe",
         "source": "ComplyAdvantage PEP Data",
         "subtype": "pep-class-1",
-        "countryCodes": [],
         "date": null,
         "deletedDate": null,
         "url": null
@@ -4209,3 +4208,50 @@ const parsedResult = [
         "deletedDate": null,
         "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
       },
+      {
+        "name": "Passport",
+        "value": "Passport: AD002119, Issuing Country: Zimbabwe",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Designation Date",
+        "value": "2003-03-10",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "List Name",
+        "value": "SDN List",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Listing Id",
+        "value": "OFAC-7480",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Program",
+        "value": "ZIMBABWE",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",

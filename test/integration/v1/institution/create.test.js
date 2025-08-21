@@ -34,7 +34,6 @@ describe('POST /institutions', () => {
         .expect(400)
     })
 
-// Temp comment
     it('should return error details', () => {
       return request(app.server)
         .post('/v1/institutions')
@@ -114,3 +113,4 @@ describe('POST /institutions', () => {
           .get('/v1/institutions/' + institution.domain)
           .expect('Content-Type', /json/)
           .expect(200)
+          .end(done)

@@ -1,3 +1,4 @@
+const Joi = require('@hapi/joi')
 const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
@@ -9,6 +10,7 @@ async function get(id, tx = app.db) {
   logger.debug(`[get] started for id [${id}]`)
   app.plugins.validator({ id }, schema, { abortEarly: false })
 
+// Temp comment
   const model = await InstitutionBranch.forge({ id }).fetch({
     transacting: tx,
     withRelated: ['institution']

@@ -34,3 +34,4 @@ describe('InternalServerError', () => {
       expect(error.message).to.equal('Something unexpected happened!')
     })
 
+    it('should output custom message', () => {

@@ -154,6 +154,7 @@
   },
   "productConfigurations": [
     {
+      "accountRequestId": "2552ab85-08da-4bb5-be00-9e94d282d348",
       "productId": "3552ab85-08da-4bb5-be00-9e94d282d310",
       "initialDeposit": 250000099,
       "createdAt": "2019-03-16T12:34:11.341Z",
@@ -191,3 +192,5 @@
             "createdAt": "2019-03-16T12:34:11.341Z",
             "updatedAt": "2019-03-16T12:34:11.341Z"
           }
+        ],
+        "active": true

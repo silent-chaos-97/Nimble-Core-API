@@ -169,3 +169,5 @@ columns:
       'RIFLGFCY30_XII_N.B': Treasury / Constant Maturities / Inflation Indexed / 30-Year
       'RIFLGFL_XII_N.B': Treasury / Inflation Indexed / Long-Term Averge (over 10 years)
 
+  - data: reprice_consideration
+    title: Reprice Consideration (bps)

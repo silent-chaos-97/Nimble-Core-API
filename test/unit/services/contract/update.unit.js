@@ -119,3 +119,4 @@ describe('app.services.contract.update', () => {
         const envelopeId = '5d715751-e027-45e4-884b-99bb85c357dc'
         const recipientId = '1'
         const scope2 = nock(app.config.get('docusign').basePath)
+          .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)

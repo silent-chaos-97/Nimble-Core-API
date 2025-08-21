@@ -8,7 +8,6 @@ Institution:
     - slug
     - logo
     - backgroundImage
-  properties:
     id:
       type: string
       format: uuidv4
@@ -57,3 +56,4 @@ Institution:
       format: byte
       title: Institution logo image Base64 format
       description: Document content in Base64 format
+      writeOnly: true

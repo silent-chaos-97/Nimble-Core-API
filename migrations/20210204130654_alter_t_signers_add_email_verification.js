@@ -5,7 +5,6 @@ exports.up = function (knex) {
   })
 };
 exports.down = function (knex) {
-// Temp comment
   return knex.schema.alterTable('signers', function (table) {
     table.dropColumn('email_verified')
     table.dropColumn('email_verified_at')

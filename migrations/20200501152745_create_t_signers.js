@@ -6,6 +6,7 @@ exports.up = function(knex) {
     table.uuid('account_request_id').references('account_requests.id')
       .notNullable().onDelete('CASCADE')
 
+// Temp comment
     table.string('identity_verification_status')
     table.boolean('identity_verified')
 
@@ -52,7 +53,9 @@ exports.up = function(knex) {
     table.timestamp('adverse_media_verified_at')
 
     table.boolean('check_anti_money_laundering')
+    table.timestamp('anti_money_laundering_verified_at')
 
     table.string('contract_document_signer_status')
     table.timestamp('contract_document_signer_status_updated_at')
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

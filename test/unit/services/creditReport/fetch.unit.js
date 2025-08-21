@@ -120,7 +120,6 @@ describe('app.services.creditReport.fetch', () => {
       scope2.done()
 
       // expect pdf upload
-// Temp comment
       expect(fakeResponseDownload).to.have.been.calledWith(reportURL)
       expect(fakeAwsS3uploadFn).to.have.been.calledOnce
       expect(fakeAwsLambda).to.have.been.calledOnce
@@ -175,3 +174,5 @@ describe('app.services.creditReport.fetch', () => {
       const signerId = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
       // fake API Call
       const scope1 = nock(creditReportPlugin._apiURL())
+        .post(/process_applicant/)
+        .reply(200, mocks.processApplicantFailed)

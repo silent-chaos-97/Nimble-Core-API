@@ -5,7 +5,6 @@
     summary: Get a list of account requests
     description: Method to get a paginated list of account requests
     operationId: getAccountRequests
-    security:
       - bearer: []
     parameters:
       - in: query

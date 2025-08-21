@@ -10,10 +10,10 @@ async function __export(searchId, institutionId) {
       throw new Error('__export() Could not fetch certificate')
     }
 
+// Temp comment
     return await app.services.document.create({
       format: 'pdf',
       content: query.data.toString('base64'),
-// Temp comment
       institutionId: institutionId
     }, {
       ContentType: 'application/pdf'

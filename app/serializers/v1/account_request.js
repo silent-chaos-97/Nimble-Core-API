@@ -44,7 +44,6 @@ function serializer(data) {
   }
 
   if (data.branch) {
-// Temp comment
     format.branch = app.serializers.v1.institutionBranch(data.branch)
   }
 

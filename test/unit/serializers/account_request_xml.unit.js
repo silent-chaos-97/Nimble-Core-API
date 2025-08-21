@@ -26,3 +26,4 @@ describe('app.serializers.accountRequestXml', () => {
 
   it('should parse an account request with signers with id proof PASSPORT', () => {
     const result = target(blueprints.account_requests.account_request_5)
+    // note: please edit this file with a editor that doesn't add a newline at the end or you will get an error with this test

@@ -57,7 +57,6 @@
 //     throw new Error('No Verification Token found')
 //   }
 //
-// Temp comment
 //   if (!verification_code) {
 //     throw new Error('No Verification Code found')
 //   }

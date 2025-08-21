@@ -11,6 +11,7 @@ globals:
   helpers: true
   expect: true
   should: true
+  seed: true
   blueprints: true
   moment: true
   knex: true

@@ -5,7 +5,6 @@ describe('GET /signers/:id', async () => {
 
   before(async () => {
     clock = sinon.useFakeTimers({
-      toFake: ['Date']
     })
   })
 

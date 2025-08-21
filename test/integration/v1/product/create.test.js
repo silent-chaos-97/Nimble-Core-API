@@ -142,4 +142,5 @@ describe('POST /institutions/:id/products', () => {
     beforeEach(() => {
       seed.product.create(prodId)
     })
-
+    it('should return 409', () => {
+      return request(app.server)

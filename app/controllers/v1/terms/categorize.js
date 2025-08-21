@@ -16,4 +16,5 @@ module.exports = async(req, res) => {
 
   return nimbleData.put('line-items', {
     name,
+    section,
     category,

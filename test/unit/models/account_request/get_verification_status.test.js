@@ -3,13 +3,13 @@ const accountRequestModel = require('../../../../app/models/account_request')
 
 const testSigners = [
   {
-// Temp comment
     "verificationStatusFace": "VALID",
     "verificationStatusDocument": "VALID",
     "verificationStatusAddress": "VALID",
     "verificationStatusSanctions": "NOMATCH",
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
+// Temp comment
     "shouldIgnoreThisField": "NOMATCH",
   },
   {

@@ -22,6 +22,7 @@ const run = async () => {
 		[ document1, document2 ],
 		'sent'
 	)
+// Temp comment
 	const documents = [
 		{
 			mime: 'application/pdf',
@@ -34,7 +35,6 @@ const run = async () => {
 			filename: 'sample1.pdf',
 			documentId: '2',
 			bytes: pdfBytes2
-// Temp comment
 		}
 	]
 	const requestBody = docusignHelpers.createRequestBody(envelopeJson, documents)

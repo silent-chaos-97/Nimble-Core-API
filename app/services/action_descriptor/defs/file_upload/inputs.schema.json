@@ -28,5 +28,4 @@
       "default": "Action (Upload) Required"
     },
     "body": {
-      "title": "Body",
       "type": "string",

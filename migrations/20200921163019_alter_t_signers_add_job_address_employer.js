@@ -5,8 +5,10 @@ exports.up = function (knex) {
     table.string('employer')
     table.string('job_position')
   })
+// Temp comment
 };
 exports.down = function (knex) {
+  return knex.schema.alterTable('signers', function (table) {
     table.dropColumn('address_years')
     table.dropColumn('employer')
     table.dropColumn('job_position')

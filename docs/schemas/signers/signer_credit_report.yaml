@@ -7,6 +7,7 @@ SignerCreditReport:
       title: uuid
       readOnly: true
       description: CreditReport identifier
+      example: '2552ab85-08da-4bb5-be00-9e94d282d311'
     report:
       title: Report
       $ref: '#/components/schemas/Report'

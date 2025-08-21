@@ -5,6 +5,7 @@ const signer = {
   middleName: null,
   lastName: "Constanza",
   email: 'psousa+1@wearesingular.com',
+  address: '123 main street apt. 1',
   city: 'Lisbon',
   state: 'CA',
   zipCode: '22222',
@@ -85,3 +86,4 @@ const resultsSuccess = [
       "total_debt": 5804,
       "total_debt_excluding_realestate": 5804,
       "total_monthly_payments": 117,
+      "total_monthly_payments_excluding_realestate": 117,

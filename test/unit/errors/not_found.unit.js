@@ -33,3 +33,4 @@ describe('NotFoundError', () => {
       expect(error.message).to.equal("The requested resource couldn't be found")
     })
 
+    it('should output custom message', () => {

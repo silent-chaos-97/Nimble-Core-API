@@ -57,7 +57,6 @@ class Signer extends BaseModel {
       'checkSanction',
       'sanctionVerifiedAt',
       'checkPoliticalExposure',
-      'politicalExposureVerifiedAt',
       'checkAdverseMedia',
       'adverseMediaVerifiedAt',
       'checkAntiMoneyLaundering',
@@ -275,3 +274,6 @@ class Signer extends BaseModel {
           invitedAt: Joi.date().optional(),
           emailVerified: Joi.boolean().optional(),
           emailVerifiedAt: Joi.date().optional().allow(null),
+        })
+      case 'update.api.public':
+        return publicUpdateSchema

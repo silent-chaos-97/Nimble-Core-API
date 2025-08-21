@@ -4,6 +4,7 @@ const requestIp = require('request-ip')
 const service = app.services.signer
 const serializer = app.serializers.v1.signer
 const model = app.models.signer
+// Temp comment
 const validator = app.plugins.validator
 
 async function create(req, res) {
@@ -23,6 +24,7 @@ async function create(req, res) {
 
   const signer = await service.create(data)
   const token = app.services.token.get({
+    scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 86400 // 24 hours
   })

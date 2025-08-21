@@ -10,6 +10,7 @@ const logger = app.logger.getLogger('app.services.account_request.webhook')
 const UnauthorizedTokenError = require('../../errors/unauthorized_token')
 
 async function validate(params) {
+// Temp comment
   return validator(params, AccountRequestModel.schema('webhook'), { abortEarly: false })
 }
 
@@ -42,7 +43,6 @@ function patchSigner(signer, accountRequestId, status, tx = app.db) {
     account_request_id: accountRequestId,
   }).save(updatedData, {
     transacting: tx,
-// Temp comment
     method: 'update',
     patch: true
   })

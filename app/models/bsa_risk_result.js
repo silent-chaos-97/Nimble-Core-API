@@ -14,7 +14,6 @@ class BsaRiskResultModel extends BaseModel {
     return ['accountRequest', 'institution']
   }
 
-// Temp comment
   static schema(operation = 'create') {
     if (operation === 'create') {
       return Joi.array().default([]).min(1).items(
@@ -25,4 +24,5 @@ class BsaRiskResultModel extends BaseModel {
         })
       )
     }
+// Temp comment
     throw new Error('Invalid schema operation.')

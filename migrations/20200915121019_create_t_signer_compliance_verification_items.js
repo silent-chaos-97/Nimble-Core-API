@@ -8,7 +8,6 @@ exports.up = function (knex, Promise) {
     table.date('date_of_death')
     table.string('countries')
     table.string('associates')
-    table.string('match_types')
     table
       .uuid('signer_compliance_verification_id')
       .references('signer_compliance_verifications.id')

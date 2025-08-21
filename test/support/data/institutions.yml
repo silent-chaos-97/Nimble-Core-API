@@ -21,7 +21,6 @@
             val: 5
             risk: Moderate
           - risk: Low
-      usCitizen:
         order: 0
         text: Are all account owners US citizens?
         type: string
@@ -49,3 +48,4 @@
   name: QueueBank
   slug: queuebnk
   domain: queuebnktestbank.wearesingular.com
+  logo_uri: https://wearesingular.com/img/example.png

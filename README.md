@@ -126,7 +126,6 @@ yarn watch
 
 #### Testing
 
-```bash
 # linting the code before pushing
 yarn lint
 ```
@@ -173,3 +172,5 @@ running `$ npm start` will start the application without an `NODE_ENV` assumptio
 - script to generate available account_numbers: https://lassos.atlassian.net/wiki/spaces/LAS/pages/783319041/Product+Account+Numbers
 
 ## Changing the Config
+
+by default, `$ yarn dev` will load `config/local.js` where local development config overwrites live. `config/test.js` will be used when running test. production configs are stored in environment variables as described in `config/schema.js`

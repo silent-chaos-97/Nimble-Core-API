@@ -28,7 +28,6 @@ function getEntity(data, pk, id) {
 
 function create(data, table, pk, entities) {
   // if is not defined create all collection
-  if (!entities) {
     entities = data
   }
 

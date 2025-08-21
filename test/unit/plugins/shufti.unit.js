@@ -137,3 +137,5 @@ describe('Service', () => {
         expect(result).to.have.deep.property('event', response.event)
         expect(result).to.have.deep.property('verification_result', response.verification_result)
 
+        scope.done()
+      })

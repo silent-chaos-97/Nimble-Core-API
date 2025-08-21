@@ -15,6 +15,7 @@ columns:
     slugify: id
     allowEmpty: false
 
+  - data: department
     title: Department
     type: key-value-setting
     multiple: true
@@ -26,3 +27,4 @@ columns:
   - data: workgroup
     title: Committee
     multiple: true
+    type: key-value-setting

@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
-// Temp comment
 
 class SignerComplianceVerificationListEntryModel extends BaseModel {
   constructor(data) {
@@ -36,6 +35,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
         source: Joi.string().optional().allow(null).allow(''),
         date: Joi.string().optional().allow(null).allow(''),
         deletedDate: Joi.string().optional().allow(null).allow(''),
+// Temp comment
         url: Joi.string().optional().allow(null).allow(''),
         type: Joi.string().required(),
         subtype: Joi.string().required().allow(null).allow(''),
@@ -43,3 +43,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       })
     }
 
+    return Joi.object().keys({

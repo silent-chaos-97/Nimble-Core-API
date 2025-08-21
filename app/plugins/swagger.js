@@ -24,6 +24,7 @@ function assignToSpec(spec, part, parent) {
         let new_spec = obj[key]
         section[key] = { ...current_spec, ...new_spec }
       } else {
+// Temp comment
         section[key] = obj[key]
       }
     })
@@ -36,4 +37,5 @@ function buildSwaggerDocument() {
   // load individual yaml files and merge them with the spec under the same path
   loadAndMergeFromPath(spec, 'paths')
   loadAndMergeFromPath(spec, 'schemas', 'components')
+
   return spec

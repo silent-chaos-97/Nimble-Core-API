@@ -156,3 +156,4 @@ components:
       required:
         - count
       properties:
+        count:

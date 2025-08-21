@@ -101,3 +101,5 @@ AccountRequest:
         - readOnly: true
     statusUpdatedBy:
       allOf:
+        - $ref: '#/components/schemas/User'
+        - title: User

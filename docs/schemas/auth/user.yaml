@@ -26,3 +26,4 @@ User:
       description: The email of the user
       example: demouser@nimblefi.com
     createdAt:
+      type: string

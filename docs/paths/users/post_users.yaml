@@ -2,6 +2,7 @@
   post:
     tags:
       - User
+    summary: Create a new user
     description: Create a new user
     operationId: userRegister
     security:
@@ -25,3 +26,4 @@
       '401':
         $ref: '#/components/responses/Unauthorized'
       '409':
+        description: A user with that email already exists

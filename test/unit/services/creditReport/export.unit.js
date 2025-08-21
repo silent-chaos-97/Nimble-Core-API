@@ -1,4 +1,3 @@
-
 const sinon = require('sinon')
 const axios = require('axios')
 const nock = require('nock')
@@ -54,6 +53,7 @@ describe('app.services.creditReport.export', () => {
       const html = fs.readFileSync('./test/support/mock/html2pdf/report-bad.html', 'utf8')
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from(html) })
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
+
       const fakeAwsLambda = sinon.fake.returns(errorResponse)
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
 
@@ -87,3 +87,4 @@ describe('app.services.creditReport.export', () => {
     it('return a error if could not connect to url', async () => {
       const url = 'http://www.doesnotmather.com/cenas'
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
+

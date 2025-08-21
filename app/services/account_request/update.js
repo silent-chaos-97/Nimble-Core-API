@@ -32,7 +32,6 @@ function getSignerFullName(signer) {
   if (signer.middleName) names.push(signer.middleName)
   if (signer.lastName) names.push(signer.lastName)
 
-  return names.join(' ').trim()
 }
 
 async function emitAccountRequestEvent(id, type, body = null) {
@@ -70,6 +69,7 @@ async function sendAprovedDeclinedMessage(statusTo, accountRequest, options) {
     })
   }))
 }
+
 /**
  * Send contract by docusign to all signers to sign.
  *

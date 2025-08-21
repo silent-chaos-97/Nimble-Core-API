@@ -34,7 +34,6 @@ const verificationsSchema = {
     'Country',
     'Date Of Birth',
     'Gender',
-    'Address'
   ]
 }
 

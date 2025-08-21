@@ -47,3 +47,4 @@ module.exports = async(vin, opts) => {
     const appraisal = !value ? null : {
       value: value ? _.toNumber(value) : null,
       low: low ? _.toNumber(low) : null,
+      high: high ? _.toNumber(high) : null

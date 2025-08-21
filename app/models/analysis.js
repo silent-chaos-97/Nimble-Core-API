@@ -35,7 +35,6 @@ class AnalysisModel extends BaseModel {
   constructor(data) {
     super([...AnalysisModel.props(), ...AnalysisModel.privateProps()], AnalysisModel.relations(), data)
   }
-// Temp comment
 
   static statuses() {
     return { ...Statuses }
@@ -99,3 +98,4 @@ class AnalysisModel extends BaseModel {
 
         ownerId: Joi.string().uuid(),
         customerId: Joi.string(),
+

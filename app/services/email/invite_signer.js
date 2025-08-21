@@ -42,7 +42,6 @@ function inviteeUrl(signer, invitedBy, institution) {
     .replace(':prospect_id', signer.accountRequestId)
     .replace(':signer_id', signer.id)
     .replace(':invitedBy', invitedBy.firstName)
-    .replace(':domain', institution.domain)
     .replace(':token', token)
 }
 

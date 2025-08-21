@@ -1,11 +1,11 @@
 const moment = require('moment')
 const _ = require('lodash')
-const jwtSimple = require('jwt-simple')
 const config = require('../../../config')
 
 const app = require('../../core')
 const getApiUri = require('../api/uri')
 const Joi = require('@hapi/joi')
+const { validator } = app.plugins
 
 const whitelist = ["id","expiration"]
 const schema = Joi.object().keys({

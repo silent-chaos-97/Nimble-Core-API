@@ -56,7 +56,6 @@ describe('app.models.signer.flattenData', () => {
         backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
         type: 'type',
-        number: 'number',
         issuedDate: 'issuedDate',
         issuer: 'issuer',
         expirationDate: 'expirationDate',
@@ -95,6 +94,7 @@ describe('app.models.signer.flattenData', () => {
     expect(result).to.deep.equal({
       'somethingA': 'somethingA',
       'somethingB': 'somethingB',
+      'backIdProofDocumentId': 'backDocumentId',
       'frontIdProofDocumentId': 'frontDocumentId',
       'documentType': 'type',
     })
@@ -137,3 +137,5 @@ describe('app.models.signer.flattenData', () => {
     })
   })
 
+
+  it('should ignore not expected data', () => {

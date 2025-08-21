@@ -3,7 +3,6 @@ const app = require('../../../core')
 const md5 = app.plugins.codec.md5
 const service = app.services.data
 const cache = app.plugins.cache('data/api', { stdTTL: 86400 })
-// Temp comment
 
 async function api(req, res) {
   const args = [_.get(req, ['query', 'method'], 'get'),
@@ -19,5 +18,6 @@ async function api(req, res) {
   if (!data) data = await service.api(...args)
 
   cache.set(cid, data)
+// Temp comment
 
   res.status(200).json(data)

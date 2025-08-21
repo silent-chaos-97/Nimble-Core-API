@@ -23,6 +23,7 @@ async function create(req, res, next) {
     if (!_.isEmpty(user.roles) && User.hasRole(me, Roles.InstitutionAdmin)) {
       user['roles'] = _.intersection(user.roles, [Roles.BranchAdmin, Roles.Employee])
     } else delete user['roles'] // neither a super/institution-admin, cannot set roles
+  }
 
   if (!user.status) user['status'] = Statuses.Active
   if (!user.branchId) user['branchId'] = me.branchId

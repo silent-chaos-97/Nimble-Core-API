@@ -45,7 +45,6 @@ describe('GET /documents/:id', () => {
   })
 
   describe('when authentication token does not have valid scope', () => {
-    it('should return 403 when token scope is not documents', async () => {
       const data = { scopes: ['users'] }
       token = await helpers.getScopedAuthToken(data)
 
@@ -85,3 +84,4 @@ describe('GET /documents/:id', () => {
     it('should return the new location', async () => {
       const regexp = `${app.config.get('aws').s3_endpoint}/uploads/a74f9092-5889-430a-9c19-6712f9f68090.png\\?\\w+`
       const expected = new RegExp(regexp, 'g')
+      return request(app.server)

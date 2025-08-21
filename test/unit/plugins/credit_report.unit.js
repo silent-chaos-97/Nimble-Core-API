@@ -238,3 +238,5 @@ describe('Credit Report Plugin', () => {
         .post(/prequal_results/)
         .reply(200, response)
 
+      const result = await creditReport.fetchReport('227031')
+

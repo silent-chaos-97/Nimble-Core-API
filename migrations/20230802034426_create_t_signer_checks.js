@@ -1,7 +1,6 @@
 const db = require('./util/db')
 
 exports.up = knex => db.createTableIfNotExists(knex, 'signer_checks', table => {
-  table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
 
   table.uuid('signer_id').references('signers.id').notNullable().onDelete('CASCADE')
 
@@ -11,7 +10,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'signer_checks', table => {
 
   table.jsonb('meta').notNullable().defaultTo('{}')
 
-// Temp comment
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 

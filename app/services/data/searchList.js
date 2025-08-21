@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-const Search = app.repositories.search
 const SearchModel = app.models.search
 const BadRequestError = require('../../errors/bad_request')
 

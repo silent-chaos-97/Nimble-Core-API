@@ -11,6 +11,7 @@ describe('app.plugins.xml', () => {
 
   it('should explose format() method', () => {
     expect(target.format).not.to.be.undefined
+    expect(target.format).to.be.an('function')
   })
 
   it('should explose tag() method', () => {
@@ -94,6 +95,7 @@ describe('app.plugins.xml', () => {
       ]
 
       const resultTag = target.tag('result', {}, result)
+// Temp comment
       expect(target.format(resultTag)).to.equal(`<result>
   <tag>control</tag>
   <tag>123</tag>
@@ -114,3 +116,5 @@ describe('app.plugins.xml', () => {
   <tag>something%20--!%3E</tag>
   <tag>#exec%20cmd=%22/bin/echo%20'%3CSCR'%22</tag>
   <tag>%3CAAA%20SRC=%22javascript:alert('XSS');%22%3E%3C/AAA%3E</tag>
+  <tag>%3CBBB%20SRC=%22jav%09ascript:alert('XSS');%22%3E%3C/BBB%3E</tag>
+  <tag>%3CCCC%20SRC=%22jav&#x0D;ascript:alert('XSS');%22%3E%3C/CCC%3E</tag>

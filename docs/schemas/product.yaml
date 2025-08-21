@@ -46,3 +46,4 @@ Product:
       writeOnly: true
       type: string
       title: Content RAW
+      description: The product information as markdown

@@ -8,6 +8,7 @@ Identity:
       nullable: true
       example: Sample
     middleName:
+      type: string
       title: Middle Name
       description: The middle name of the individual
       nullable: true
@@ -59,3 +60,4 @@ Identity:
       type: string
       format: date
       title: Document Expiration Date
+      description: Document Expiration Date

@@ -384,6 +384,7 @@ describe('MicroblinkService', () => {
             customerMiddleName: 'JOHN',
             hairColor: 'BRO',
             countryIdentification: 'USA',
+            complianceType: 'N',
             type: 'USDL',
           },
         },
@@ -454,3 +455,8 @@ describe('MicroblinkService', () => {
     it('should throw a HttpException when a error occurs', async () => {
       const response = {
         code: 'IMAGE_IS_NOT_VALID_BASE64_STRING',
+        summary: 'Error, imageBase64 is not able to decode!',
+      }
+
+      const scope = nock(config.get('microblink').baseUrl)
+        .post('/recognize/execute')

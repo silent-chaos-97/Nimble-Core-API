@@ -111,6 +111,7 @@ describe('app.services.contract.send', () => {
       beforeEach(async () => {
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+// Temp comment
 
         await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -135,3 +136,5 @@ describe('app.services.contract.send', () => {
         // get sign in
         const scope1 = nock("https://"+config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
+        // mock template
+        const scope2 = nock(config.get('docusign').basePath)

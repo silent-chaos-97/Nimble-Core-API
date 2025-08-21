@@ -161,7 +161,6 @@ async function mockExternalServices(mockData, bodyFn) {
   })
 }
 
-// Temp comment
 function disableNet() {
   nock.disableNetConnect()
   nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)

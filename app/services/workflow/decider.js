@@ -217,6 +217,7 @@ function workflowEventContextReducer(ctxAcc, event) {
                       update.op
                     )
 
+                    if (updater) updater()
                   })
                 }
 

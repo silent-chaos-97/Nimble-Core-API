@@ -134,7 +134,6 @@ describe('Email Plugin', () => {
       const statusEmailSubject = 'Password Recovery'
       const uri = `${config.get('frontend').recovery_password_uri}/${code}`
 
-      plugin.sendPasswordRecovery({ email, uri })
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(template, email, undefined, sinon.match({ uri, statusEmailSubject }))
     })
   })
@@ -151,3 +150,5 @@ describe('Email Plugin', () => {
       })
 
       it('should call send with correct approved data', () => {
+        plugin.sendAccountRequestStatus('APPROVED', { email: 'welcome@test.com', cc: 'admin@test.com' })
+        expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith('AccountRequestApproved', 'welcome@test.com', 'admin@test.com', sinon.match.object)

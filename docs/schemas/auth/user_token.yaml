@@ -4,3 +4,4 @@ UserToken:
     token:
       type: string
       title: JWT Token
+      description: A JWT token containing the authentication information for this user.

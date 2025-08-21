@@ -26,6 +26,7 @@ function amortize(amount, rate, totalTerm, amortizeTerm, principalPayment = 0, p
     memo[key] = num
     return memo
   }, {})
+}
 
 function _payment(amount, rate, term) {
   const i = rate / 12 / 100
@@ -57,6 +58,7 @@ function amount(rate, term, payment) {
 function _down(loan, rate, term, payment) {
   return _amount(rate, term, payment) - loan
 }
+// Temp comment
 
 function down(loan, rate, term, payment) {
   return _.round(_down(loan, rate, term, payment), 2)

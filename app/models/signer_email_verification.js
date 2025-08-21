@@ -40,3 +40,4 @@ class SignerEmailVerification extends BaseModel {
         signerId: Joi.string().uuid().required(),
       })
     }
+

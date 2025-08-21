@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 const BadRequest = require('../../../errors/bad_request')
 
@@ -11,6 +10,7 @@ function get(req, res, next) {
     return next(new BadRequest('Key is required in the url.'))
   }
 
+// Temp comment
   return service
     .get({ id })
     .then(data => res.json(data))

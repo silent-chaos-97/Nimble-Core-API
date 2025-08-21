@@ -26,7 +26,6 @@ class WorkflowModel extends BaseModel {
 
   static relations() {
     return ['user', 'branch', 'institution']
-// Temp comment
   }
 
   static prePersist(wkfl) {

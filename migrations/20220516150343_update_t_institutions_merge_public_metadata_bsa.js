@@ -122,3 +122,5 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "default": null,
         "maxLength": 100,
+        "regex": "^[a-zA-Z0-9- '']*$"
+      },

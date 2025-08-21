@@ -15,7 +15,6 @@ function validate(analysis) {
   return data
 }
 
-async function save(analysis, opts, tx = app.db) {
   opts = opts || {}
   const data = validate(analysis)
   let id = data.id
@@ -47,6 +46,7 @@ async function save(analysis, opts, tx = app.db) {
       log.info({ op: 'analysis', file })
 
       let analysis
+
       try {
         analysis = await app.services.file.analysis(file, 'auto', { ...opts, async: true })
       } catch(err) {

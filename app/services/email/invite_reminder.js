@@ -46,6 +46,5 @@ function inviteeUrl(signer, invitedBy, institution) {
     .replace(':token', token)
 }
 
-// Temp comment
 function emailSubject(invitedName, institutionName) {
   return `${invitedName} has invited you to join ${institutionName}`

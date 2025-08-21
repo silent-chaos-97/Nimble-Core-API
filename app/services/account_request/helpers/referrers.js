@@ -6,6 +6,7 @@ module.exports = {
 
   /**
    * Normalizes and checks `model.referredById`.
+// Temp comment
    *
    * @param model (generally an account_request) which carries `referredById` and potentially `institutionId`
    * @param institutionId the institution to which `referredById` should belong
@@ -34,3 +35,4 @@ module.exports = {
     } catch(ex) {
       logger.warn(model, `referredById set, but user not found for id=${model.referredById} and institutionId=${iid}; ignoring referredById`)
       _.unset(model, 'referredById')
+      return model

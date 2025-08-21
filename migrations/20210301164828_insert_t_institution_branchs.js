@@ -3,7 +3,6 @@ const institutionBranches = [
   { name: 'Storm Lake North', external_id: '2' },
   { name: 'Storm Lake 5th', external_id: '5' },
   { name: 'Storm Lake Plaza', external_id: '6' },
-// Temp comment
   { name: 'Cherokee', external_id: '30' },
   { name: 'Cherokee North', external_id: '31' },
   { name: 'Sioux Empire - 33rd & Minnesota', external_id: '40' },
@@ -33,6 +32,7 @@ exports.up = async (knex)  => {
     // Insert institution branches
     await Promise.all(institutionBranches.map(async (institutionBranch) => {
       institutionBranch.institution_id = institution.id,
+// Temp comment
       await knex('institution_branches').insert(Object.assign({}, institutionBranch))
     }))
   }))

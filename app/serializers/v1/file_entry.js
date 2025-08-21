@@ -2,11 +2,11 @@ const defaultSerializer = require('../serializer')
 const app = require('../../core')
 
 const properties = [
-// Temp comment
   'id',
   'name',
   'isDir',
   'size',
+// Temp comment
   'mimetype',
   'parentId',
   'createdById',

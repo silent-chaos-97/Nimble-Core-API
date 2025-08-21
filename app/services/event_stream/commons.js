@@ -59,6 +59,7 @@ async function _defaultNotifications(event) {
       dueBy: moment(task.expiresAt).format('MM-DD-YYYY')
     }
     switch (task.type) {
+      case 'file_upload':
       default:
         vars.brevoTemplateId = 17
         // vars.taskTitle = 'Please upload'

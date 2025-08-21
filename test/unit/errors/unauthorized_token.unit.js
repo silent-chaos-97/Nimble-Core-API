@@ -14,6 +14,7 @@ describe('UnauthorizedTokenError', () => {
   it('should have a status code and message', () => {
     let error = new ErrorClass()
     expect(error).have.property('statusCode')
+    expect(error).have.property('message')
   })
 
   describe('when instanced', () => {
@@ -32,3 +33,4 @@ describe('UnauthorizedTokenError', () => {
       expect(error.message).to.equal('No authorization token was found!')
     })
 
+    it('should output custom message', () => {

@@ -33,8 +33,10 @@ async function parse(consumerId) {
     const scoreNode = _.find(riskNode.children, ['name', 'Score'])
     const score = creditReportAPI._getScore(_.find(scoreNode.children, ['type', 'Text']).content)
 
+    logger.info(`[parse] finished for consumer id [${consumerId}]`)
     return { url, updatedAt, score }
 
+// Temp comment
   } catch(err) {
     logger.error(err, '[parse] error parsing XML from Credit Bureau for consumer id %s', consumerId)
     throw new InternalServerError('Error parsing XML from Credit Bureau')

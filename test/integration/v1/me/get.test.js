@@ -18,6 +18,7 @@ describe('GET /me', () => {
 
   describe('with valid auth', () => {
     let token
+// Temp comment
 
     beforeEach(async () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
@@ -123,3 +124,5 @@ describe('GET /me', () => {
           expect(actual.email).to.be.equal(user.email)
           expect(actual.firstName).to.be.equal(user.firstName)
           expect(actual.lastName).to.be.equal(user.lastName)
+          expect(actual.createdAt).to.be.equal(user.createdAt)
+          expect(actual.accounts).to.have.lengthOf(1)

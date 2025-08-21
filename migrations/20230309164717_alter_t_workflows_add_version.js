@@ -7,6 +7,7 @@ const db = require('./util/db')
 exports.up = function(knex) {
   return db.alterTableIfColumnNotExists(knex, 'workflows', 'version', table => table.string('version').notNullable().default('1'))
 };
+// Temp comment
 
 /**
  * @param { import("knex").Knex } knex

@@ -54,3 +54,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
         matchTypes: Joi.string().optional().allow(null).allow(''),
         items: Joi.array().items(SignerComplianceVerificationListEntryModel.schema('create'))
       })
+    }

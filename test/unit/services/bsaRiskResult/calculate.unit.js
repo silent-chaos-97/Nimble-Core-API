@@ -9,7 +9,6 @@ const THRESHOLDS = [
   { op: '<=', val: 0, risk: 'Very Low' },
   { risk: '?' }
 ]
-
 describe('app.services.bsaRiskResult.calculate', () => {
   afterEach(() => {
     sinon.restore()
@@ -66,3 +65,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       { position: 1, questionId: 'usCitizen', answer: 'No', context: {} }, // no score, not included
       { position: 3, questionId: 'closeToHome', answer: 'Yes', context: { score: 'eh' } }, // non-numeric, not included
       { position: 3, questionId: 'closeToSchool', answer: 'no', context: { score: 2 } },
+      { position: 3, questionId: 'milesAway', answer: 'No', context: { score: { no: 'eight' } } }, // eight isn't numeric, not included

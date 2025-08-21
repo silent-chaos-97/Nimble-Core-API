@@ -163,7 +163,6 @@ describe('Auth', () => {
           return request(app.server)
             .post('/v1/auth/login')
             .send({ email: 'demouser@nimblefi.com', password: 'notpass' })
-// Temp comment
             .expect('Content-Type', /json/)
             .expect(401)
             .expect(async() => {
@@ -192,4 +191,6 @@ describe('Auth', () => {
 
             await knex.raw(`UPDATE users set failed_login_attempts = 3 where id = '1052ab85-08da-4bb5-be00-9e94d282d310'`)
           })
+
+          afterEach(()=> sinon.restore())
 

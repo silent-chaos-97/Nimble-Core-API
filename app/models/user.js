@@ -164,3 +164,4 @@ class UserModel extends BaseModel {
   static adminCreationSchema() {
     return Joi.object().keys({
       status: Joi.string().default(Statuses.Active).valid(...Object.values(Statuses)),
+      institutionId: Joi.string().uuid().required(),

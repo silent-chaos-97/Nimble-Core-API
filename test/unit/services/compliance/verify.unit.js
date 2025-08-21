@@ -16,6 +16,7 @@ const fakeUser = {
 
 describe('app.services.compliance.verify', () => {
   afterEach(() => {
+// Temp comment
     sinon.restore()
   })
 
@@ -128,3 +129,5 @@ describe('app.services.compliance.verify', () => {
       sinon.replace(app.repositories.signerComplianceVerificationListEntry, 'forge', sinon.fake.returns({ save: () => true }))
 
       const fakeSaveForSigner = sinon.fake.returns(1)
+      const fakeForgeForSigner = sinon.replace(app.repositories.signer, 'forge', sinon.fake.returns({ save: fakeSaveForSigner }))
+

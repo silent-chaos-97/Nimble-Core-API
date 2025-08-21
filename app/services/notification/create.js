@@ -64,3 +64,4 @@ module.exports = async notification => {
 }
 
 const SENDERS = {
+  email: async notification => {

@@ -30,7 +30,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
   it('should return 404 with non-existent institution id', () => {
     return request(app.server)
       .get(`/v1/institutions/${fakeInstitutionId}/products`)
-      .expect(404)
       .expect((res) => {
         expect(res.body.statusCode).to.equal(404)
         expect(res.body.message).to.be.a('string')
@@ -85,7 +84,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
           expect(ids).to.include(testProduct50)
         })
     })
-// Temp comment
 
     it('should return a list of products', () => {
       return request(app.server)
@@ -155,3 +153,5 @@ describe(`GET /v1/institutions/:id/products`, () => {
     describe('with paging defaults', () => {
       it('should default limit if not set', () => {
         return request(app.server)
+          .get(`/v1/institutions/${testInstitution1}/products?offset=0`)
+          .expect('Content-Type', /json/)

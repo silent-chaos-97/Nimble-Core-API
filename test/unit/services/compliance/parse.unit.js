@@ -1,4 +1,5 @@
 const axios = require('axios')
+const nock = require('nock')
 const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
@@ -96,3 +97,4 @@ describe('app.services.compliance.parse', () => {
         expect(item).to.have.ownProperty('url')
         expect(item).to.have.ownProperty('date')
         expect(item).to.have.ownProperty('source')
+        expect(item).to.have.ownProperty('value')

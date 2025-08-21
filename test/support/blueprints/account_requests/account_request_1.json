@@ -31,7 +31,6 @@
     "faceStatus": "VALID",
     "documentStatus": "INVALID",
     "addressStatus": "INVALID",
-    "sanctionsStatus": "MATCH",
     "mediaStatus": "MATCH",
     "politicalExposure": "MATCH"
   },
@@ -197,3 +196,5 @@
             "value": "B",
             "lead": "Option B lead",
             "annotation": "Option B annotation",
+            "parentId": "3552ab85-0000-0000-0000-9e94d282d312"
+          },

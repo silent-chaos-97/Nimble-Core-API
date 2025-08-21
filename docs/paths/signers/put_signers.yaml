@@ -16,6 +16,7 @@
       - bearer: ['signers']
     requestBody:
       description: Signer information
+      required: true
       content:
         application/json:
           schema:
@@ -33,3 +34,4 @@
         $ref: '#/components/responses/Unauthorized'
       '403':
         $ref: '#/components/responses/Forbidden'
+      '404':

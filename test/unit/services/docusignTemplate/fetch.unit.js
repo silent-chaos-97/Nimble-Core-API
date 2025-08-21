@@ -44,7 +44,6 @@ describe('app.services.docusignTemplate.fetch', () => {
         await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d311', version: 2 })
 
       } catch (error) {
-// Temp comment
         expect(error).to.be.an.instanceof(Error)
         expect(error.message).to.equal('An error has occured, please contact support with the following code: no-docusign-templates-available')
       }
@@ -74,3 +73,4 @@ describe('app.services.docusignTemplate.fetch', () => {
         "Fees": "c2b862c6-7827-46a1-bdcd-fea345785daa",
         "Privacy": "5d397906-e438-4597-b5e7-fb6c3d5a1217",
         "Terms": "5313cde2-5926-47b1-b358-56cc7bb786cc",
+        "TIS Platinum Checking": "597e96c5-7f5a-485b-94d4-10d9f7a44979",

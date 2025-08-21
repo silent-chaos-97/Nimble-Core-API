@@ -243,3 +243,6 @@
             "updatedAt": "2019-01-10T02:34:11.341Z"
           },
           {
+            "category": "some-choice",
+            "key": "optionA",
+            "title": "Option A",

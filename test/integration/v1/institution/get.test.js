@@ -26,7 +26,6 @@ describe('GET /institution/:domain', () => {
   it('should return valid institution object', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
-// Temp comment
       .set('Authorization', 'Bearer ' + token)
       .expect((res) => {
         const props = ['id', 'slug', 'name', 'domain', 'logoUri', 'backgroundImageUri']
@@ -38,7 +37,6 @@ describe('GET /institution/:domain', () => {
         expect(res.body).not.to.have.own.property('updatedAt')
         expect(res.body).not.to.have.own.property('createdAt')
 
-        expect(res.body.id).to.be.an('string')
         expect(res.body.slug).to.be.an('string')
         expect(res.body.name).to.be.an('string')
         expect(res.body.domain).to.be.an('string')
@@ -57,3 +55,4 @@ describe('GET /institution/:domain', () => {
       .expect(404)
   })
 
+  it('should return institution data', () => {

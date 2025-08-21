@@ -4,6 +4,7 @@ const { Consumer } = require('sqs-consumer')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.subscriber.factory')
 
+function createSubscriber(opts) {
   const name = opts.name
 
   const sqs = new AWS.SQS({
@@ -20,7 +21,6 @@ const logger = app.logger.getLogger('app.services.subscriber.factory')
 
       logger.info(msg, `[handleMessage] delegating normalized message to [${name}].handleMessage...`)
 
-      return opts.handleMessage(msg)
     } catch(err) {
       logger.error(err, `[handleMessage] [${name}] subscriber handle message failed with error`)
       throw err

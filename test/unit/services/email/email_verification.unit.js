@@ -116,7 +116,6 @@ describe('app.services.email.emailVerification', () => {
         statusEmailSubject: 'Confirm your email address'
       }
 
-      emailData.verifyUrl = config.get('frontend.signerEmailVerificationURI')
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':domain', 'wearesingular.com')
@@ -125,3 +124,4 @@ describe('app.services.email.emailVerification', () => {
         .replace(':token', 'xxxx')
       const template = 'signerEmailVerificationEmail'
 
+      await app.services.email.emailVerification(id)

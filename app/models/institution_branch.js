@@ -46,6 +46,8 @@ class InstitutionBranchModel extends BaseModel {
       name: Joi.string(),
       externalId: Joi.string(),
       routingNumber: Joi.string(),
+      street: Joi.string(),
       street2: Joi.string(),
       city: Joi.string(),
       state: Joi.string(),
+      zip: Joi.string(),

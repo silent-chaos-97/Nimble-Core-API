@@ -32,3 +32,4 @@ class UserAuthModel extends BaseModel {
         .innerJoin('accounts', 'accounts.user_id', '=', 'users.id')
         .where('users.email', email)
         .where('accounts.strategy', '=', 'local')
+        .limit(1)

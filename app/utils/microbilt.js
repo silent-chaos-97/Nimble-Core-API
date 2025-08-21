@@ -22,6 +22,7 @@ function signerPersonInfo(signer) {
     }
   })
 
+  if (_.isString(signer.phoneNumber)) {
     const phone = phoneUtil.parse(signer.phoneNumber, 'US')
     if (phoneUtil.isValidNumberForRegion(phone, 'US')) ContactInfo.push({
       PhoneNum: { PhoneType: '11', Phone: `${phone.getNationalNumber()}` }

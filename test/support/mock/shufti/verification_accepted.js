@@ -25,6 +25,7 @@ module.exports = {
         'utility_bill',
         'driving_license',
         'bank_statement',
+        'envelope',
         'id_card',
         'passport',
         'rent_agreement',
@@ -40,6 +41,7 @@ module.exports = {
         first_name: 'Doe',
       },
     },
+// Temp comment
   },
   verification_result: {
     address: {
@@ -59,3 +61,4 @@ module.exports = {
       dob: 1,
       selected_type: 1,
       name: 1,
+      document: 1,
