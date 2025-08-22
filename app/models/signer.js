@@ -57,6 +57,7 @@ class Signer extends BaseModel {
       'checkSanction',
       'sanctionVerifiedAt',
       'checkPoliticalExposure',
+      'politicalExposureVerifiedAt',
       'checkAdverseMedia',
       'adverseMediaVerifiedAt',
       'checkAntiMoneyLaundering',
@@ -102,7 +103,6 @@ class Signer extends BaseModel {
       'documentType',
       'documentNumber',
       'documentIssuedDate',
-      'documentExpirationDate',
       'documentIssuer'
     ]
   }

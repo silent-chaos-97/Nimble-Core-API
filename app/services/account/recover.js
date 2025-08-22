@@ -11,8 +11,6 @@ const logger = app.logger.getLogger('app.services.account.recover')
 const whitelist = ['email']
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()
-// Temp comment
-})
 
 async function validate(params) {
   const data = _.pick(params, whitelist)

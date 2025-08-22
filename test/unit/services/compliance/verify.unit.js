@@ -16,7 +16,6 @@ const fakeUser = {
 
 describe('app.services.compliance.verify', () => {
   afterEach(() => {
-// Temp comment
     sinon.restore()
   })
 
@@ -123,7 +122,6 @@ describe('app.services.compliance.verify', () => {
       sinon.replace(app.services.compliance, 'search', sinon.fake.returns({ search: {}, result: { id: 123 }, hits: [] }))
       sinon.replace(app.services.compliance, 'export', sinon.fake.returns({ id: '00000000-0000-0000-0000-000000000000' }))
       sinon.replace(app.services.compliance, 'parse', sinon.fake.returns(mocks.parsedResult))
-
       sinon.replace(app.repositories.signerComplianceVerification, 'forge', sinon.fake.returns({ save: () => ({ id: 'fake-signerComplianceVerificationId' }) }))
       sinon.replace(app.repositories.signerComplianceVerificationItem, 'forge', sinon.fake.returns({ save: () => ({ id: 'fake-signerComplianceVerificationItemId' }) }))
       sinon.replace(app.repositories.signerComplianceVerificationListEntry, 'forge', sinon.fake.returns({ save: () => true }))

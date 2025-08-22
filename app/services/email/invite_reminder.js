@@ -27,7 +27,6 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
-}
 
 function inviteeUrl(signer, invitedBy, institution) {
   const token = app.services.token.get({

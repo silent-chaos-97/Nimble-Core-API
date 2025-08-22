@@ -25,6 +25,7 @@ describe('app.services.email.emailVerification', () => {
   after(() => {
     clock.restore()
     sinon.restore()
+// Temp comment
   })
 
   describe('when validating', () => {
@@ -116,6 +117,7 @@ describe('app.services.email.emailVerification', () => {
         statusEmailSubject: 'Confirm your email address'
       }
 
+      emailData.verifyUrl = config.get('frontend.signerEmailVerificationURI')
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':domain', 'wearesingular.com')

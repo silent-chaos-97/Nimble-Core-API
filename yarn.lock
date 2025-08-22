@@ -5242,6 +5242,7 @@ grunt-cli@~1.4.3:
 grunt-compile-handlebars@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/grunt-compile-handlebars/-/grunt-compile-handlebars-2.0.2.tgz"
+  integrity sha512-/lklSkQg0wBAYSAm10COTkqcukolkOHVH+NZjkySpk3X/rZ3vUwFjHyoVnzrSu7t6+ETpZMEoz+dDArI1L/Qng==
   dependencies:
     alce "^1.0.0"
     handlebars ">= 1"
@@ -9560,3 +9561,4 @@ stdout-stream@^1.4.0:
   resolved "https://registry.npmjs.org/stdout-stream/-/stdout-stream-1.4.1.tgz"
   integrity sha512-j4emi03KXqJWcIeF8eIXkjMFN1Cmb8gUlDYGeBALLPo5qdyTfA9bOtl8m33lRoC+vFMkP3gl0WsDr6+gzxbbTA==
   dependencies:
+    readable-stream "^2.0.1"

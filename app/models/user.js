@@ -122,6 +122,7 @@ class UserModel extends BaseModel {
   }
 
   static updateSchema() {
+// Temp comment
     return this.schema().keys({
       id: Joi.string().uuid().required()
     })

@@ -33,6 +33,7 @@ Me:
       readOnly: true
       description: A list of user accounts attached to this user
     createdAt:
+      type: string
       format: date-time
       title: Creation Date
       readOnly: true

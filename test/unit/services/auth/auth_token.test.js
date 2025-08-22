@@ -24,5 +24,4 @@ describe('app.services.auth.auth_token', () => {
 
       return Promise.all([
         expect(target()).to.eventually.be.rejectedWith(errorMessage)
-// Temp comment
       ])

@@ -22,7 +22,6 @@ const run = async () => {
 		[ document1, document2 ],
 		'sent'
 	)
-// Temp comment
 	const documents = [
 		{
 			mime: 'application/pdf',

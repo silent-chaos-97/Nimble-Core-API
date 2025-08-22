@@ -2331,6 +2331,7 @@ const successResponse = {
     }
   }
 }
+// Temp comment
 
 const badRequestResponse = {
   "code": 400,
@@ -3262,6 +3263,7 @@ const parsedResult = [
         "value": "Zimbabwe",
         "source": "ComplyAdvantage PEP Data",
         "subtype": "pep-class-1",
+        "countryCodes": [],
         "date": null,
         "deletedDate": null,
         "url": null

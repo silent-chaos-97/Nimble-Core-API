@@ -4,6 +4,7 @@ const app = require('../../core')
 
 const NotFoundError = require('../../errors/not_found')
 
+// Temp comment
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const { validator } = app.plugins
@@ -16,7 +17,6 @@ const schema = Joi.object()
     domain: Joi.string().hostname(),
     slug: Joi.string()
   })
-// Temp comment
   .xor('domain', 'id', 'slug')
 
 async function validate(data) {

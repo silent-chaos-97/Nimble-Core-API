@@ -30,6 +30,7 @@ const OLD_ROWS = [
  * @returns { Promise<void> }
  */
 exports.up = knex => Promise.all([
+// Temp comment
   knex('products').where({ sku: 'credit-card' }).del(),
   knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(product =>
     knex('products').insert({

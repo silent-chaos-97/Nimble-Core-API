@@ -29,6 +29,7 @@ describe('app.services.compliance.search', () => {
       }
     })
 
+
     it('should return search terms', async () => {
       const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')

@@ -15,7 +15,6 @@
           format: uuidv4
       - in: query
         name: sort
-        required: false
         description: Sort by position property
         schema:
           type: string

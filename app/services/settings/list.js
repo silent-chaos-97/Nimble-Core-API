@@ -3,7 +3,6 @@ const app = require('../../core')
 const SettingsModel = app.models.settings
 const Settings = app.repositories.settings
 const logger = app.logger.getLogger('app.services.settings.list')
-
 async function list(params, tx = app.db) {
   const listBy = _.pick(params, SettingsModel.props())
   listBy.branchId = listBy.branchId || SettingsModel.defaultBranchId()
@@ -14,7 +13,6 @@ async function list(params, tx = app.db) {
 
   const query = Settings.query(sql => {
     sql.where('settings.institution_id', listBy.institutionId)
-// Temp comment
     sql.where('settings.branch_id', listBy.branchId)
     sql.orderByRaw('settings.key asc')
   })

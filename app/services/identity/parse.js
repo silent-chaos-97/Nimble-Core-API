@@ -14,7 +14,6 @@ const VERIFICATIONS = {
   'document.name': 'name',
   'document.document_country': 'country',
   'document.dob': 'date_of_birth',
-  'address.address_document': 'address',
   // 'gender',
 }
 

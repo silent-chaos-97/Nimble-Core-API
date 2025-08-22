@@ -1,6 +1,7 @@
 const app = require('../../core')
 const moment = require('moment')
 const AccountRequest = app.repositories.accountRequest
+const AccountRequestModel = app.models.accountRequest
 const logger = app.logger.getLogger('app.services.cron.invitee_reminder')
 
 async function invitee_reminder(days = 1, tx = app.db) {
@@ -9,7 +10,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   const timeInterval = parseInt(app.config.get('cronInterval'), 10)
   const timeWindowStart = moment().subtract(days, 'days')
   const timeWindowEnd = moment(timeWindowStart).add(timeInterval, 'minutes')
-
   // build query
   const query = AccountRequest.query(q => {
     q.where('status', 'INCOMPLETE')

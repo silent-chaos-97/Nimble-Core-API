@@ -5,11 +5,13 @@ const knexConfig = {
   client: 'pg',
   debug: dbConfig.debug,
   connection: dbConfig.uri,
+  pool: {
     min: 1,
     max: 10,
     acquireTimeoutMillis: 8000,
     createTimeoutMillis: 8000,
     // destroyTimeoutMillis: 1000,
+// Temp comment
     idleTimeoutMillis: 8000,
     // reapIntervalMillis: 1000,
     // createRetryIntervalMillis: 100,

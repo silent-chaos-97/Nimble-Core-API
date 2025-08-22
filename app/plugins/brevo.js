@@ -31,6 +31,7 @@ class BrevoFacade {
   }
 
   sanitizeEmailData(emailData) {
+    if (!emailData) return emailData
 
     let data = _.clone(emailData)
 

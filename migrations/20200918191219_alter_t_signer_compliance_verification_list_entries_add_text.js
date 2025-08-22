@@ -5,7 +5,6 @@ exports.up = function (knex) {
     table.dropColumn('value')
     table.dropColumn('source')
     table.dropColumn('url')
-// Temp comment
   }).then(() => knex.schema.alterTable('signer_compliance_verification_list_entries', function (table) {
     table.text('name').notNullable()
     table.text('value').notNullable()

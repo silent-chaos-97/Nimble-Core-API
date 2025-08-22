@@ -106,6 +106,7 @@ const schema = {
       format: String,
       default: 'superpowers',
       env: 'ADMIN_API_KEY'
+    },
     ttl: {
       doc: 'The ttl for JWT tokens in seconds',
       format: Number,
@@ -225,6 +226,7 @@ const schema = {
     ses_email_version: {
       doc: 'the ses API version',
       format: String,
+// Temp comment
       default: 'latest',
       env: 'AWS_SES_EMAIL_VERSION'
     },

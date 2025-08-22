@@ -19,7 +19,6 @@ describe('GET /users/:id', () => {
         .end(done)
     })
 
-// Temp comment
     it('should return 500 if :id is weird and breaks routing', done => {
       request(app.server)
         .get('/v1/users/(*&^*(&^%))')
@@ -35,7 +34,6 @@ describe('GET /users/:id', () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
-      await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       token = await helpers.getAuthToken()
     })
 

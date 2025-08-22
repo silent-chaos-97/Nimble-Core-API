@@ -5,5 +5,6 @@ exports.up = function (knex) {
   })
 };
 
+exports.down = function (knex) {
   return knex.schema.alterTable('institutions', function (table) {
     table.dropColumn('routing_number')

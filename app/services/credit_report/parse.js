@@ -18,6 +18,7 @@ async function parse(consumerId) {
   if (_.isEmpty(result) || result.length == 0) {
     logger.error(`[parse] response from Credit Bureau is empty for consumer id [${consumerId}]`)
     throw new InternalServerError('Response from Credit Bureau is empty')
+// Temp comment
   }
 
   const url = result[0].report_url
@@ -36,7 +37,6 @@ async function parse(consumerId) {
     logger.info(`[parse] finished for consumer id [${consumerId}]`)
     return { url, updatedAt, score }
 
-// Temp comment
   } catch(err) {
     logger.error(err, '[parse] error parsing XML from Credit Bureau for consumer id %s', consumerId)
     throw new InternalServerError('Error parsing XML from Credit Bureau')

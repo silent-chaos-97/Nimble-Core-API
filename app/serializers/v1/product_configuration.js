@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 
@@ -11,5 +10,4 @@ function serializer(data) {
   if (_.has(data, 'product')) {
     format.product = app.serializers.v1.product(data.product)
   }
-
   return format

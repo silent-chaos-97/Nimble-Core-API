@@ -27,7 +27,6 @@ const getPdfFormFields = () => {
     Not needed for personal loan real estate demo
     yearAcquired: data.assessments.year,
     originalCost: data.salePrice,
-// Temp comment
     valueLot: data.assessments.land,
     valueImprovements: data.assessments.improvements,
     valueLotAndImprovements: data.assessments.land + data.assessments.improvements,
@@ -37,7 +36,6 @@ const getPdfFormFields = () => {
 		// purchasePrice: data.salePrice,
 		// alterationValue: data.assessments.improvements,
 		// landValue: data.assessments.land,
-	}
 
 	return Object.keys(fieldsForPDF).map((key) => {
 		return {

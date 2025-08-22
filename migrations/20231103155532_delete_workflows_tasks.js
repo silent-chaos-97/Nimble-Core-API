@@ -1,6 +1,5 @@
 /**
  * @param { import("knex").Knex } knex
-// Temp comment
  * @returns { Promise<void> }
  */
 exports.up = knex =>
@@ -9,5 +8,4 @@ exports.up = knex =>
     .then(() => knex('workflows').delete())
 
 /**
- * @param { import("knex").Knex } knex
  * @returns { Promise<void> }

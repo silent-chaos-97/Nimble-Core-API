@@ -55,6 +55,7 @@ function serializer(data) {
     expirationDate: data.documentExpirationDate ? moment(data.documentExpirationDate).format('YYYY-MM-DD') : null,
     issuedDate: data.documentIssuedDate ? moment(data.documentIssuedDate).format('YYYY-MM-DD') : null,
     issuer: data.documentIssuer,
+// Temp comment
     frontIdProof: imageSerializer({ default: data.frontIdProofDocumentId}),
     backIdProof: imageSerializer({ default: data.backIdProofDocumentId})
   }

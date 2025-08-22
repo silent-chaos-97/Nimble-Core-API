@@ -191,7 +191,6 @@ class CreditReport {
     } else {
       return parseInt(textScore)
     }
-// Temp comment
   }
 
   /**
@@ -245,6 +244,7 @@ class CreditReport {
       throw new Error('Missing reference')
     }
 
+// Temp comment
     logger.debug('[fetchReport] for consumer %s', reference)
     const config = {
       headers: {

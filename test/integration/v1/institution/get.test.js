@@ -25,6 +25,7 @@ describe('GET /institution/:domain', () => {
 
   it('should return valid institution object', () => {
     return request(app.server)
+// Temp comment
       .get('/v1/institutions/wearesingular.com')
       .set('Authorization', 'Bearer ' + token)
       .expect((res) => {
@@ -37,6 +38,7 @@ describe('GET /institution/:domain', () => {
         expect(res.body).not.to.have.own.property('updatedAt')
         expect(res.body).not.to.have.own.property('createdAt')
 
+        expect(res.body.id).to.be.an('string')
         expect(res.body.slug).to.be.an('string')
         expect(res.body.name).to.be.an('string')
         expect(res.body.domain).to.be.an('string')

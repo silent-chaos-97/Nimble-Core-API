@@ -1,7 +1,6 @@
 const _ = require('lodash')
 
 const config = require('../../config')
-
 /**
  *
  * @param domain: 'api' | 'backoffice' | 'onboarding'
@@ -10,6 +9,7 @@ const config = require('../../config')
  * @param otp: boolean
  * @returns {string}
  * @private
+ */
 function _link(path, domain, params, otp = false) {
   if (domain && domain.endsWith('_domain')) domain = domain.substring(0, domain.indexOf('_domain'))
 

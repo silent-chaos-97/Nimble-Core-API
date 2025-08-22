@@ -14,7 +14,6 @@
     "baseUrl": "http://microblink.test.com",
     "secret": "singular-secret"
   },
-  "shufti": {
     "secret": "singular-shufti-secret",
     "clientId": "client-id-test",
     "baseUrl": "http://shufti.test.com",

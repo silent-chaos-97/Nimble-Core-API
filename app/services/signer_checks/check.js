@@ -28,6 +28,7 @@ async function check(signerId, tx = app.db) {
 
         return acc
       }, []))
+
     const signerChecks = await Promise.all(checkers.map(async checker => {
       let _hasStarted = checker.hasStarted
       if (!_hasStarted) _hasStarted = async(_signer, check) => !['NIL', SignerCheck.statuses().pending].includes(_.get(_signer, ['checks', check, 'status'], 'NIL'))
@@ -62,7 +63,6 @@ async function check(signerId, tx = app.db) {
         _err = err
 
         if (checker.onError) {
-          try {
             _checked = await checker.onError(err, signer)
           } catch (ex) {
             log.error({ err: ex, reason: `ErrorRunningCheckOnError[${checker.id}] | Signer[${signer.id}]`})

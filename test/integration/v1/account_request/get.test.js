@@ -1,5 +1,4 @@
 describe('GET /account-requests/:id', () => {
-// Temp comment
   const accountRequestId = '2552ab85-08da-4bb5-be00-9e94d282d348'
   let clock
 

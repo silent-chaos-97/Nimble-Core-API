@@ -12,6 +12,7 @@ SignerComplianceVerificationListEntry:
       title: A title for this entry
       type: string
     value:
+      title: The value associated with this entry
       type: string
       example: Political Position
     source:

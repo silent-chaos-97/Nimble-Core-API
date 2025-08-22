@@ -10,7 +10,6 @@ app
     SUBSCRIBERS.forEach(subscriber => {
       logger.debug(`[load] start Subscriber[${subscriber}]`)
       app.services.subscriber[subscriber]().start()
-      logger.info(`[load] Subscriber[${subscriber}] started`)
     })
     logger.info(`[load] Subscribers started: ${SUBSCRIBERS}`)
   })

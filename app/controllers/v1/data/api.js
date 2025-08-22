@@ -8,7 +8,6 @@ async function api(req, res) {
   const args = [_.get(req, ['query', 'method'], 'get'),
     _.get(req, ['query', 'path'], 'people'),
     _.omit(_.get(req, ['query'], {}), ['method', 'path']),
-    _.get(req, 'body')
   ]
 
   const cid = md5(args)
@@ -18,6 +17,5 @@ async function api(req, res) {
   if (!data) data = await service.api(...args)
 
   cache.set(cid, data)
-// Temp comment
 
   res.status(200).json(data)

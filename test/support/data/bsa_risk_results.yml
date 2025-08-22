@@ -38,6 +38,7 @@
   version: '1'
   account_request_id: 'da31cf6d-f10c-43a1-a67e-e80ad124c223'
   institution_id: '11000000-0000-0000-0000-000000005555'
+  created_at: 2018-02-16T12:32:03.341Z
   updated_at: 2018-02-16T12:32:03.341Z
   position: 1
   question_id: 'countryOfOrigin'

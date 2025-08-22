@@ -33,6 +33,7 @@ describe('app.services.email.welcome', () => {
       try {
         await app.services.email.welcome('xpto')
       } catch(error) {
+// Temp comment
         expect(error.name).to.equal('BadRequestError')
         expect(error.statusCode).to.equal(400)
       }
@@ -76,6 +77,7 @@ describe('app.services.email.welcome', () => {
       const statusEmailSubject = 'You have been added to Singular Nimble Account'
       const code = 'XXXXX'
       const institution = 'Singular'
+      const institutionUrl = 'wearesingular.com'
       const uri = config.get('frontend.welcome_uri')
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))

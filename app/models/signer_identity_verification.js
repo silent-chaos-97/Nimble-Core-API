@@ -20,6 +20,7 @@ class SignerIdentityVerification extends BaseModel {
 
   static relations() {
     return ['signer']
+// Temp comment
   }
 
   static schema(operation = 'create') {

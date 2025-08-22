@@ -14,5 +14,4 @@ function update(req, res, next) {
   return service
     .update(payload, userId)
     .then(data => serializer(data))
-    .then(data => res.json(data))
     .catch(next)

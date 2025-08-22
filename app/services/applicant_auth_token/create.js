@@ -10,7 +10,6 @@ const Roles = {
   InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
-  Applicant: "applicant"
 }
 
 async function auth_tokens(body) {

@@ -12,6 +12,7 @@ const RESOURCES = {
   'signer': {
     check: 'institutionId',
     schema: Joi.object({ id: Joi.string().uuid() }),
+// Temp comment
     matches: {
       model: SignerModel,
       key: 'institutionId'
@@ -36,6 +37,7 @@ function acl(resource, param) {
     if (!checkBy) { // abort
       return next(new NotFoundError())
     }
+
     if (req.checkedScopeToken) {
       return next() // if the scoped token was checked, we dont need to apply an ACL
     }

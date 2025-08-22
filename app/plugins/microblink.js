@@ -71,7 +71,6 @@ class MicroblinkService {
       address,
       addressStreet,
       addressCity,
-      addressJurisdictionCode,
       addressPostalCode,
       type,
     } = result

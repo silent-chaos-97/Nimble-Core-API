@@ -23,7 +23,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
     .uuid('institution_id')
     .references('institutions.id')
     .onDelete('CASCADE')
-// Temp comment
     .notNullable()
 
   table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()

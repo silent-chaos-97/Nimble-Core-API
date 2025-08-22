@@ -5,6 +5,5 @@ const { mockUniformResidentialLoanApplication } = require("../../models/product_
 const get = productName => {
   const getters = {
     uniform_residential_loan_application: () => mockUniformResidentialLoanApplication
-  }
   return getters[productName]()
 }

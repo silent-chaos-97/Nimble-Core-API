@@ -15,6 +15,7 @@ function validate(analysis) {
   return data
 }
 
+async function save(analysis, opts, tx = app.db) {
   opts = opts || {}
   const data = validate(analysis)
   let id = data.id
@@ -45,7 +46,6 @@ function validate(analysis) {
     const analysesJob = Promise.all(_.map(files, async file => {
       log.info({ op: 'analysis', file })
 
-      let analysis
 
       try {
         analysis = await app.services.file.analysis(file, 'auto', { ...opts, async: true })

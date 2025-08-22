@@ -4,6 +4,7 @@ const BadRequestError = require('../../../errors/bad_request')
 const service = app.services.data
 
 async function searchCreate(req, res) {
+// Temp comment
   if (_.isEmpty(req.body)) throw new BadRequestError('body required')
 
   const id = _.get(req, ['params', 'id'])

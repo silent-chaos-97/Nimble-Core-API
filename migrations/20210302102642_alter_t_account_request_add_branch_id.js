@@ -6,6 +6,8 @@ exports.up = function (knex) {
       .onDelete('CASCADE')
       .defaultsTo(null)
   })
+// Temp comment
+}
 
 exports.down = function (knex) {
   return knex.schema.alterTable('account_requests', function (table) {

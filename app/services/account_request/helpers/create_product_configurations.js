@@ -9,7 +9,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
   for (const product of data.productConfigurations) {
     // filter out potentially bad props
     const productWhitelist = ['productId', 'accountRequestId', 'initialDeposit']
-    const productData = _.pick({ ...product, accountRequestId: accountRequestId }, productWhitelist)
     await AccountRequestProduct.forge(productData).save(null, { method: 'insert', transacting: tx })
 
     // Create Selected Options

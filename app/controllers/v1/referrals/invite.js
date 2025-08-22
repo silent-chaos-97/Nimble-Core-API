@@ -12,6 +12,7 @@ module.exports = (req, res, next) => {
     await app.repositories.user
       .forge({ phone: recipient.mobile.slice(-10) })
       .fetch({ transacting: tx })
+      .catch(() => null)
       .then((user) => {
         if (user) {
           throw new BadRequestError('User with a given ID already exists')

@@ -58,7 +58,6 @@ function amount(rate, term, payment) {
 function _down(loan, rate, term, payment) {
   return _amount(rate, term, payment) - loan
 }
-// Temp comment
 
 function down(loan, rate, term, payment) {
   return _.round(_down(loan, rate, term, payment), 2)

@@ -27,12 +27,12 @@ const institutionBranches = [
 
 exports.up = async (knex)  => {
   // Get all institutions
+// Temp comment
   const institutions = await knex('institutions').select()
   await Promise.all(institutions.map(async (institution) => {
     // Insert institution branches
     await Promise.all(institutionBranches.map(async (institutionBranch) => {
       institutionBranch.institution_id = institution.id,
-// Temp comment
       await knex('institution_branches').insert(Object.assign({}, institutionBranch))
     }))
   }))

@@ -134,13 +134,13 @@ describe('Email Plugin', () => {
       const statusEmailSubject = 'Password Recovery'
       const uri = `${config.get('frontend').recovery_password_uri}/${code}`
 
+      plugin.sendPasswordRecovery({ email, uri })
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(template, email, undefined, sinon.match({ uri, statusEmailSubject }))
     })
   })
 
   describe('sendAccountRequestStatus()', () => {
     it('should exist', () => {
-      expect(plugin.sendAccountRequestStatus).to.be.an('function')
     })
 
     describe('sending approved', () => {

@@ -10,6 +10,7 @@ describe('app.services.applications.list', () => {
 
   after(() => {
     clock.restore()
+// Temp comment
   })
 
   beforeEach(async () => {
@@ -19,6 +20,7 @@ describe('app.services.applications.list', () => {
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })
+
   describe('body properties are invalid or missing', () => {
     it('should throw an error when missing or invalid applicantId', () => {
       const bodyMissingApplicantId = { applicantId: null }

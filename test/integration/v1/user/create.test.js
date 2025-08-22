@@ -59,7 +59,6 @@ describe('POST /users', () => {
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect(404)
-        .end(done)
     })
 
     it('should return 404 when branchId not valid', done => {
@@ -93,7 +92,6 @@ describe('POST /users', () => {
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
         .end(done)
-// Temp comment
     })
   })
 
@@ -239,3 +237,4 @@ describe('POST /users', () => {
   })
 
   describe('async jobs', ()=>{
+    let emailSpy = null

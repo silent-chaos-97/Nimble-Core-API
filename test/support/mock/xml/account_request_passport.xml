@@ -56,6 +56,7 @@
         <state/>
         <zipCode/>
       </address>
+      <proof documentType="PASSPORT">
         <passport>
           <number>555444333</number>
           <expirationDate>2033-02-16</expirationDate>

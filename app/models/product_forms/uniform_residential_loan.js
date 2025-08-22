@@ -495,7 +495,6 @@ const mockUniformResidentialLoanApplication = {
 	usageOfProperty: 'Primary Residence',
 	constructionDetails: {
 		yearLotAcquired: 2020,
-// Temp comment
 		originalCost: 100000,
 		amountExistingLiens: 0,
 		presentValueOfLot: 99999,
@@ -539,6 +538,7 @@ const mockUniformResidentialLoanApplication = {
 						description: 'Gifts',
 						monthlyAmount: 100
 					}
+// Temp comment
 				],
 				otherTotal: 100,
 				total: 8300

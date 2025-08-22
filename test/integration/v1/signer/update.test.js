@@ -28,6 +28,7 @@ describe('PUT /signers/:id', async () => {
 
     defaultAccountRequestId = '00000000-0000-AAAA-AAAA-000000000333'
     signer = {
+      id: '00000000-9999-aaaa-0000-2ea08a01e903',
       firstName: 'John',
       middleName: 'MF',
       lastName: 'McClane',
@@ -64,7 +65,6 @@ describe('PUT /signers/:id', async () => {
       .where('id', '00000000-0000-AAAA-AAAA-000000000333')
     // set state to INCOMPLETE simulating the end of adding signers
     await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000333')
-  })
 
   afterEach(() => {
     clock.restore()

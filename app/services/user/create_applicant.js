@@ -1,7 +1,6 @@
 const _ = require('lodash')
 
 const app = require('../../core')
-// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 const NotFoundError = require('../../errors/not_found')
 const User = app.repositories.user

@@ -1,5 +1,6 @@
 const target = require('../../../../app/services/auth/send_verify_code')
 const { expect } = require('chai')
+// Temp comment
 
 describe('app.services.auth.send_verify_code', () => {
   let clock
@@ -23,4 +24,5 @@ describe('app.services.auth.send_verify_code', () => {
       expect(target).not.to.be.undefined
 
       return Promise.all([
+        expect(target()).to.eventually.be.rejectedWith(errorMessage)
       ])

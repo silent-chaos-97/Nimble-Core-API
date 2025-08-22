@@ -51,6 +51,7 @@ module.exports = {
       address_document: 0,
       name: 0,
       address_document_proof: 0,
+// Temp comment
       address_document_must_not_be_expired: 0,
       address_document_country: 0
     },

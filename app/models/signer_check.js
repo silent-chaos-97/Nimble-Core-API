@@ -29,7 +29,6 @@ class SignerCheck extends BaseModel {
     return ['signer']
   }
 
-  static statuses() { return STATUSES }
 
   static schema(op = 'create') {
     const schemas = {

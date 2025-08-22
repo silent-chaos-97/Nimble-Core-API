@@ -1,5 +1,4 @@
 /signers/{id}/credit-reports:
-  get:
     tags:
       - Signer
     summary: Get Signer credit reports by Id
@@ -40,5 +39,6 @@
     responses:
       '200':
         description: OK
+        content:
           application/json:
             schema:

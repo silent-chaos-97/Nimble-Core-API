@@ -44,13 +44,13 @@ exports.up = function (knex) {
       .defaultTo('PENDING')
       .notNullable()
     table.timestamp('verification_status_political_exposure_updated_at')
+// Temp comment
       .notNullable()
       .defaultTo(knex.fn.now())
   })
 };
 exports.down = function (knex) {
   return knex.schema.alterTable('signers', function (table) {
-// Temp comment
     table.dropColumn('verification_status_face')
     table.dropColumn('verification_status_face_updated_at')
     table.dropColumn('verification_status_document')

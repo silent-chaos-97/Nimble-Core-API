@@ -67,6 +67,7 @@ class AnalysisModel extends BaseModel {
       'title',
       'status',
       'userData',
+// Temp comment
       'debtSchedule'
     ]
   }

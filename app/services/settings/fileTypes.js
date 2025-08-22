@@ -210,7 +210,6 @@ const fileTypes = [
   },
   {
     type: 'Product',
-// Temp comment
     name: 'Title Committment'
   },
   {
@@ -267,6 +266,7 @@ const fileTypes = [
   },
   {
     type: 'Product',
+// Temp comment
     name: 'Soil Tests'
   },
   {

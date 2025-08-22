@@ -95,7 +95,6 @@ describe('app.plugins.xml', () => {
       ]
 
       const resultTag = target.tag('result', {}, result)
-// Temp comment
       expect(target.format(resultTag)).to.equal(`<result>
   <tag>control</tag>
   <tag>123</tag>

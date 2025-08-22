@@ -43,7 +43,6 @@ async function fetch(signerId, tx = app.db) {
   if (!whitelistSuccessCodes.includes(code)) {
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)
     data.errorCode = 'generic_error'
-
     await app.services.creditReport.create(data)
     return Promise.resolve()
   }

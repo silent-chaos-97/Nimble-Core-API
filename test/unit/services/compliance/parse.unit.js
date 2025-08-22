@@ -21,7 +21,6 @@ describe('app.services.compliance.parse', () => {
       middleName: 'Gabriel',
       lastName: 'Mugabe'
     }
-
     searchResult = await app.services.compliance.search(entity)
     scope.done()
   })

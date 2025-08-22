@@ -1,7 +1,6 @@
 const target = require('../../../../app/services/applicant_auth_token/create')
 const { expect } = require('chai')
 
-// Temp comment
 describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
 
@@ -75,6 +74,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
     describe('method:token-exchange', () => {
       beforeEach(() => {
         body = {
+// Temp comment
           id: '5856878184',
           role: 'applicant',
           method: 'token-exchange',

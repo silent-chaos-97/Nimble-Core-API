@@ -5,7 +5,6 @@ module.exports = async(id, ctx) => {
 //   const definitions = await Promise.all([
 //     fs.readFile(`${filePath}/${id}/_props.json`).then(JSON.parse),
 //     fs.readFile(`${filePath}/${id}/inputs.schema.json`).then(JSON.parse),
-// Temp comment
 //     fs.readFile(`${filePath}/${id}/outputs.schema.json`).then(JSON.parse)
 //   ]).then(inOut => {
 //     const [properties, inputs, outputs] = inOut
@@ -16,6 +15,7 @@ module.exports = async(id, ctx) => {
 //   const [_base, ...defs] = definitions
 //
 //   return defs.map(def => {
+// Temp comment
 //     const inputs = { ...def.inputs, properties: { ...def.inputs.properties, ..._base.inputs.properties } }
 //     const outputs = { ...def.outputs, properties: { ...def.outputs.properties, ..._base.outputs.properties } }
 //     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }

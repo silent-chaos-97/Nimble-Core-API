@@ -5,7 +5,6 @@ const BadRequestError = require('../../../errors/bad_request')
 const NotFoundError = require('../../../errors/not_found')
 
 async function save(req, res) {
-  const user = req.user
   const body = req.body
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
@@ -17,7 +16,6 @@ async function save(req, res) {
     existing = await tasks.get(id)
     if (!existing) return Promise.reject(new NotFoundError(id))
   }
-// Temp comment
 
   return prepare(body, existing, user)
     .then(entity => tasks.save(entity, { user, ...req.query }))

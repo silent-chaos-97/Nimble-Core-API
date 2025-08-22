@@ -51,7 +51,6 @@ const SCHEMA = Joi.object().keys({
 })
 
 class TaskModel extends BaseModel {
-  constructor(data) {
     super(TaskModel.props(), TaskModel.relations(), data)
   }
 

@@ -1,5 +1,4 @@
 //const _ = require('lodash')
-// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
@@ -16,6 +15,7 @@ class AccountModel extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid(),
       userId: Joi.string().uuid().required(),
+// Temp comment
       secret: Joi.string(),
       strategy: Joi.string()
     })

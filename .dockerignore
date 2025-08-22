@@ -6,4 +6,5 @@ coverage
 helm
 node_modules
 scripts
+docker-compose.yml
 .editorconfig

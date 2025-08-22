@@ -7,7 +7,6 @@ const User = app.repositories.user
 class UserAuthModel extends BaseModel {
   constructor(data) {
     super(UserAuthModel.props(), UserAuthModel.relations(), data)
-  }
 
   static props() {
     return ['email', 'password']

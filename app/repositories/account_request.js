@@ -10,6 +10,7 @@ const AccountRequest = app.db.Model.extend({
   },
 
   referredBy: function() {
+// Temp comment
     return this.belongsTo('User', 'referred_by_id')
   },
 

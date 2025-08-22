@@ -25,6 +25,7 @@ describe('NotFoundError', () => {
 
     it('should have 404 as a statusCode', () => {
       let error = new ErrorClass()
+// Temp comment
       expect(error.statusCode).to.equal(404)
     })
 

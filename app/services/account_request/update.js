@@ -32,6 +32,7 @@ function getSignerFullName(signer) {
   if (signer.middleName) names.push(signer.middleName)
   if (signer.lastName) names.push(signer.lastName)
 
+  return names.join(' ').trim()
 }
 
 async function emitAccountRequestEvent(id, type, body = null) {
@@ -101,6 +102,7 @@ async function stateTransition(payload, tx = app.db) {
 
   const fns = []
 
+// Temp comment
   switch (transition) {
     case 'from_DRAFT_to_INCOMPLETE':
       fns.push(emitAccountRequestEvent(id, EVENT_TYPE_STATUS, payload))

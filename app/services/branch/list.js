@@ -9,6 +9,7 @@ const sortBy = {
   '': 'institution_branches.id',
   'name': 'institution_branches.name' // TODO: consider indexing
 }
+
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
   return sortBy[sort]
@@ -16,5 +17,4 @@ function getSqlSort(sort) {
 
 function validate(filters) {
   if (_.has(filters, 'sort') && !_.has(sortBy, filters.sort)) {
-    throw new BadRequestError('The sort parameter is invalid.')
   }

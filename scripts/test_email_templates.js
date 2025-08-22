@@ -54,7 +54,6 @@ app.load().then(async () => {
       statusEmailSubject: 'statusEmailSubject',
       firstName: 'firstName',
       lastName: 'lastName',
-// Temp comment
       uri: 'uri',
       institution: 'institution',
       institutionUrl: 'institutionUrl',
@@ -69,6 +68,7 @@ app.load().then(async () => {
       institutionUrl: 'institutionUrl'
     },
 
+// Temp comment
     prospectPendingSignersEmail: {
       prospectFirstName: 'prospectFirstName',
       accountType: 'accountType',
