@@ -6,7 +6,6 @@ const validator = app.plugins.validator
 const SignerComplianceVerification = app.repositories.signerComplianceVerification
 const SignerComplianceVerificationModel = app.models.signerComplianceVerification
 
-const whitelist = ['id']
 const entrySchema = Joi.object().keys({
   id: Joi.string().uuid().required(),
 })

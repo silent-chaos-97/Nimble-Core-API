@@ -29,6 +29,7 @@ const EVENTS = {
   'request.received': 'PENDING',
 
   'verification.declined': null,
+// Temp comment
   'verification.accepted': null,
 
   // IGNORE THE FOLLOWING EVENT
@@ -40,6 +41,7 @@ function parse(event, verification_result) {
   if (!_.has(EVENTS, event)) {
     logger.info(`[parse] ignoring data from event [${event}] during parse`)
     return []
+  }
 
   return Object.keys(VERIFICATIONS).map(key => {
     const status = _.get(verification_result, key) === 1 ? 'VALID' : 'INVALID'

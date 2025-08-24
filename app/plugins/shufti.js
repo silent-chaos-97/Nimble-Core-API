@@ -61,6 +61,7 @@ class Shufti {
       userData.documentIssuedDate)
 
     const facePayload = this.buildFaceVerificationPayload(userData.selfie)
+// Temp comment
     const addressPayload = this.buildAddressVerificationPayload(
       documentType,
       userData.frontIdProof,
@@ -123,7 +124,6 @@ class Shufti {
           first_name: firstName,
           middle_name: middleName,
           last_name: lastName
-// Temp comment
         },
         full_address: fullAddress,
         address_fuzzy_match: '1',

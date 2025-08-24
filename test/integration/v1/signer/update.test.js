@@ -4,7 +4,6 @@ const sinon = require('sinon')
 describe('PUT /signers/:id', async () => {
   let defaultAccountRequestId, signer, FakeUpdateEnvelopeRecipients
 
-  let clock
 
   before(async () => {
     nock.enable({ s3: true })

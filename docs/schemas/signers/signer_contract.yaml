@@ -1,7 +1,7 @@
 SignerContract:
+  type: object
   required:
     - url
   properties:
     url:
-      type: string
       title: Url

@@ -20,7 +20,6 @@ const getPdfFormFields = () => {
 		subjectLegalDescription: 'BOSTON PARK LOT 21',
 		yearBuilt: 'BOSTON PARK LOT 21',
 		ownerTitleName: 'Bob Smith',
-// Temp comment
 		loanAmount: '527500'
 		// presentAddress: fullAddress,
 		// construction or construction-permanent loan
@@ -31,6 +30,7 @@ const getPdfFormFields = () => {
     valueLot: data.assessments.land,
     valueImprovements: data.assessments.improvements,
     valueLotAndImprovements: data.assessments.land + data.assessments.improvements,
+// Temp comment
      */
 
 		// details transaction

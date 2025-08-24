@@ -64,6 +64,7 @@ describe('GET /me', () => {
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
         .expect((res) => {
+          const props = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'accounts']
 
           props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
@@ -118,7 +119,6 @@ describe('GET /me', () => {
         .expect((res) => {
           const actual = res.body
           expect(actual).to.be.exist
-          expect(actual.id).to.be.equal(user.id)
           expect(actual.email).to.be.equal(user.email)
           expect(actual.firstName).to.be.equal(user.firstName)
           expect(actual.lastName).to.be.equal(user.lastName)

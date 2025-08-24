@@ -11,7 +11,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
     await seed.product.create(testProduct40)
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d310')
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d311')
-// Temp comment
     await seed.productOption.create('3552ab85-0000-0000-0000-9e94d282d312')
     await seed.productOption.create('7b9c52a2-c542-4031-8342-5fa29a2f6d0d')
   })
@@ -152,7 +151,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         })
     })
 
-    describe('with paging defaults', () => {
       it('should default limit if not set', () => {
         return request(app.server)
           .get(`/v1/institutions/${testInstitution1}/products?offset=0`)

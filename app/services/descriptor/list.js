@@ -51,7 +51,6 @@ function flattenSchema(schema, basePath = null) {
     const key = basePath ? basePath + '.' + path : path
     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
     return memo
-  }, {})
 }
 
 function unwrapJsonSchema(schema) {

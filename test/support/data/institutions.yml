@@ -21,6 +21,7 @@
             val: 5
             risk: Moderate
           - risk: Low
+      usCitizen:
         order: 0
         text: Are all account owners US citizens?
         type: string

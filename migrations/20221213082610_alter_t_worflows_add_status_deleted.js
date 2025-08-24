@@ -3,7 +3,6 @@ function indexStatus(knex) {
     table.enu('status', [
         'DRAFT',
         'ACTIVE',
-// Temp comment
         'PAUSED',
         'DELETED'
       ], { useNative: false, enumName: 'workflow_status_type' }

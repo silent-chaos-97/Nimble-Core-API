@@ -51,6 +51,7 @@
   "lambda": {
     "pdfTransformARN": "local-htmltopdf"
   },
+  "complyAdvantage": {
     "baseUrl": "https://api.complyadvantage.com",
     "secret": "secret"
   },

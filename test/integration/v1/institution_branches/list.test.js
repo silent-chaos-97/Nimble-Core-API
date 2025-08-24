@@ -30,6 +30,7 @@ describe('GET /institution/:id/branches', () => {
       .expect(404)
   })
 
+  it('should return an array', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)

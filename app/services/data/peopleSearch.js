@@ -4,14 +4,12 @@ const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.people.search')
-
 async function peopleSearch(query) {
   logger.info({ op: 'people.search', phase: 'started', query })
 
   if (!_.isObject(query) || _.isEmpty(query)) throw new Error('query required but not provided')
 
   const reqApiKey = query._api_key
-// Temp comment
   const endpoint = app.config.get('nimbleData.apiEndpoint')
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'people/search'
   const headers = { 'x-api-key': reqApiKey ? reqApiKey : app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage

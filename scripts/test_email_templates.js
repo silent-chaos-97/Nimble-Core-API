@@ -29,7 +29,6 @@ app.load().then(async () => {
     inviteeSignupEmail: {
       inviteeName: 'inviteeName',
       invitedByFirstName: 'invitedByFirstName',
-      invitedByFullName: 'invitedByFullName',
       accountType: 'accountType',
       inviteeRole: 'inviteeRole',
       institution: 'institution',

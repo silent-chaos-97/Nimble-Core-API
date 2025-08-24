@@ -61,7 +61,6 @@ function updateSequence(table, pk) {
     })
 }
 
-async function insertAll(table, pk, data) {
   for (const row of data) {
     await insert(table, row, pk)
   }

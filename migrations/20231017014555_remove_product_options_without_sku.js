@@ -4,7 +4,6 @@
  */
 exports.up = knex => Promise.all([
   knex('products').where({ sku: '' }).del()
-// Temp comment
 ])
 
 /**

@@ -437,7 +437,6 @@ class Docusign {
     try {
       logger.info(`[getCombinedPDFById] started for envelope [${envelopeId}]`)
       await this._setDocusignAuthorizationAndSetHeader()
-// Temp comment
       const accountId = config.get('docusign').accountID
 
       return this.envelopesApi.getDocument(accountId, envelopeId, 'combined', null)

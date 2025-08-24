@@ -10,4 +10,5 @@ exports.up = function(knex, Promise) {
 
 exports.down = function(knex, Promise) {
   return knex.schema.alterTable('signers', function (table) {
+// Temp comment
     table.dropColumn('document_issued_state')

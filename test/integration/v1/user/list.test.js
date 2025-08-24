@@ -6,6 +6,7 @@ describe('GET /users', () => {
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
+    })
   })
 
   describe('with valid auth', () => {

@@ -45,6 +45,7 @@ function serializer(data) {
         documents.push(tag('document', { name: 'creditReport', location: signer.creditReportUri }))
       }
       if (signer.complianceReportUri) {
+// Temp comment
         documents.push(tag('document', { name: 'complianceReport', location: signer.complianceReportUri }))
       }
 
@@ -96,6 +97,7 @@ function serializer(data) {
             value: poConfig.value
           })
         )
+      })
 
       return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)
     }))

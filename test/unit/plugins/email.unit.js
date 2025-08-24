@@ -81,6 +81,7 @@ describe('Email Plugin', () => {
         plugin.awsSend('template', { email: 'hello@test.com' })
         expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
       })
+
       it('should complain if missing email from data', () => {
         expect(() => {
           plugin.awsSend('template', {})
@@ -143,6 +144,7 @@ describe('Email Plugin', () => {
       expect(plugin.sendAccountRequestStatus).to.be.an('function')
     })
 
+// Temp comment
     describe('sending approved', () => {
       it('should call AccountRequestApproved', () => {
         plugin.sendAccountRequestStatus('APPROVED', { email: 'welcome@test.com' })

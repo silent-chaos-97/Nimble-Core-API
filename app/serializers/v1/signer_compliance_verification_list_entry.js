@@ -9,6 +9,7 @@ const properties = [
   'date',
   'deletedDate',
   'url',
+  'type',
   'subtype',
   'countryCodes',
   'createdAt',

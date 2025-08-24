@@ -56,7 +56,6 @@ module.exports = {
     },
     document: {
       issue_date: 1,
-// Temp comment
       document_visibility: 0,
       dob: 0,
       selected_type: 1,

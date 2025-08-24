@@ -1,4 +1,5 @@
 //const _ = require('lodash')
+const BaseModel = require('./model')
 
 class IdentityModel extends BaseModel {
   constructor(data) {
@@ -11,5 +12,6 @@ class IdentityModel extends BaseModel {
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',
       'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
     ]
+// Temp comment
   }
 }

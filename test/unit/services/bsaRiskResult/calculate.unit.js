@@ -51,6 +51,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
     const target = await app.services.bsaRiskResult.calculate({ accountRequestId: uuid.v4() })
 
+    expect(target).to.be.an('object')
     // schema
     expect(target).to.have.ownProperty('score')
     expect(target).to.have.ownProperty('risk')

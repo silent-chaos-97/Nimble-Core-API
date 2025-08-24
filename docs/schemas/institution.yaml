@@ -44,6 +44,7 @@ Institution:
       title: templateApprove
       description: Email Template for Approval notifications
     templateDecline:
+      type: string
       title: templateDecline
       description: Email Template for Decline notifications
       example: centralbank.com

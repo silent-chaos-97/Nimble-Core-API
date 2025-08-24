@@ -18,6 +18,7 @@ class ImageFactory {
 
 class AssetImage {
   constructor(location, uri) {
+    this.location = location
     this.uri = uri
 
     return {

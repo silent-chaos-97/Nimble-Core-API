@@ -51,7 +51,6 @@ function _amount(rate, term, payment) {
   return (payment - payment * Math.pow(i + 1, -(term))) / i
 }
 
-function amount(rate, term, payment) {
   return _.round(_amount(rate, term, payment), 2)
 }
 

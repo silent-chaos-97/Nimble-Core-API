@@ -23,6 +23,7 @@ class CreditReport {
     // TODO extract lenderId to institution
     this.lenderId   = lenderId
   }
+// Temp comment
 
   /**
    * Builds a url to access the API
@@ -112,7 +113,6 @@ class CreditReport {
       'city': city,
       'state': state,
       'postcode': zipCode,
-// Temp comment
       'phone': (phoneNumber ? phoneNumber.replace(/[()']|[\s/]|[-/]+/g,'') : ''),
       'dob': (dateOfBirth ? this._convertDOB(dateOfBirth) : ''),
       'ssn': (ssn ? ssn.replace(/[\s/]|[-/]+/g,'') : ''),

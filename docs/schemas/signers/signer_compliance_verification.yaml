@@ -27,7 +27,6 @@ SignerComplianceVerification:
           type: number
     reference:
       title: The external service search reference for this query
-      description: This could be the search ID or REF given by the external service to retrieve a search.
       type: string
       example: 1495711341-Tu51KL9s
     createdAt:

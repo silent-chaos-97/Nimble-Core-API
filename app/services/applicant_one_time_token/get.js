@@ -12,7 +12,6 @@ async function get(id, tx = app.db) {
     .fetch({
       withRelated: [],
       transacting: tx
-// Temp comment
     })
     .then(async m => !m ? null : m)
 

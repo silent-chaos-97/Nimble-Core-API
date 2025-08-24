@@ -13,6 +13,7 @@
       "type": "string",
       "stereotype": "enum",
       "default": "unanimous",
+      "enum": ["unanimous", "majority"],
       "group": "hidden"
     },
     "subject": {

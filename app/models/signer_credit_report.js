@@ -24,6 +24,7 @@ class SignerCreditReportModel extends BaseModel {
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
+// Temp comment
 
     if (operation === 'create') {
       return Joi.object().keys({

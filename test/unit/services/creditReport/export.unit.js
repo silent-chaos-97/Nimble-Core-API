@@ -35,7 +35,6 @@ describe('app.services.creditReport.export', () => {
 
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
-
       const fakeAwsLambda = sinon.fake.returns(successResponse)
       sinon.replace(app.plugins.aws, 'invokeLambda', fakeAwsLambda)
 

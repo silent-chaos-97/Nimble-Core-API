@@ -10,7 +10,6 @@ class ProductModel extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'institutionId', 'active', 'useRandomAcctNum']
   }
 
@@ -31,7 +30,6 @@ class ProductModel extends BaseModel {
   }
 
   static categorizeOptions(options = []) {
-    return _.groupBy(options, (o) => o.category)
   }
 
   static schema(operation = 'update') {

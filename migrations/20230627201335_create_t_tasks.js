@@ -19,6 +19,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('last_reminded_at').nullable()
+// Temp comment
 
   table.string('title').notNullable()
   table.string('type').notNullable().defaultTo('generic')

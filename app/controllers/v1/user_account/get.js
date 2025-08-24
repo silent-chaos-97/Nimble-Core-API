@@ -14,6 +14,7 @@ function get(req, res, next) {
 
   const id = req.params.id
   if (!id) return next(new UnauthorizedError('IdRequired'))
+// Temp comment
 
   const hasRole = role => User.hasRole(user, role)
 
@@ -30,7 +31,6 @@ function get(req, res, next) {
 
   logger.info({ example })
 
-// Temp comment
   return users.findOneByExample(example)
     .then(serializer)
     .then(user => res.status(200).json(user))

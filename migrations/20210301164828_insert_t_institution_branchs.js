@@ -35,6 +35,5 @@ exports.up = async (knex)  => {
       await knex('institution_branches').insert(Object.assign({}, institutionBranch))
     }))
   }))
-
   return
 }

@@ -10,7 +10,6 @@ describe('Auth', () => {
           .expect(401)
           .end(done)
       })
-// Temp comment
 
       it('should not allow invalid tokens requests', done => {
         request(app.server)

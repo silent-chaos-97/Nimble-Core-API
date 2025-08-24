@@ -28,7 +28,6 @@ const publicMetadata = {
       milesAway: 'yes'
     },
     maxLength: 255
-// Temp comment
   },
   milesAway: {
     enum: [
@@ -162,7 +161,6 @@ const publicMetadata = {
     enum: [
       'yes',
       'no'
-    ],
     text: 'Do you anticipate 1 or more monthly international wires?',
     type: 'string',
     order: 7,

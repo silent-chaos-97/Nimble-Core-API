@@ -4062,7 +4062,6 @@ const parsedResult = [
       {
         "name": "Program",
         "value": "Autonomous (Zimbabwe)",
-// Temp comment
         "source": "DFAT Australia Consolidated Sanctions List",
         "subtype": "sanction",
         "countryCodes": [],

@@ -3,5 +3,5 @@ exports.up = function (knex) {
     table.timestamp('invited_at').notNullable().defaultTo(knex.fn.now())
   })
 };
-  return knex.schema.alterTable('signers', function (table) {
+exports.down = function (knex) {
     table.dropColumn('invited_at')

@@ -60,7 +60,6 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       verificationStatusDocument: 'PENDING',
       verificationStatusAddress: 'PENDING',
       verificationStatusSanctions: 'PENDING',
-// Temp comment
       verificationStatusMedia: 'PENDING',
       verificationStatusPoliticalExposure: 'PENDING',
     })

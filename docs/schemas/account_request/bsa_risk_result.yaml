@@ -2,6 +2,7 @@ BsaRiskResult:
   type: object
   required:
     - answer
+    - position
     - questionId
   properties:
     questionId:
@@ -13,6 +14,5 @@ BsaRiskResult:
       type: string
       title: Answer
       description: The answer for this result
-      example: 'Yes'
     position:
       type: number

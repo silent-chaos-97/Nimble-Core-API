@@ -48,6 +48,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
           return Promise.all([
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
+          ])
         })
 
         it('should throw an error when missing or invalid method', () => {

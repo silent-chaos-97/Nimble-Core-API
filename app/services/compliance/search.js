@@ -46,4 +46,3 @@ async function search(entity, filterTypes) {
   } catch (err) {
     logger.info(err, `[search] error searching for searchTerm: [${searchTerm}]`)
     throw new PreconditionFailedError(err)
-  }

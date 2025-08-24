@@ -63,9 +63,7 @@ class AnalysisModel extends BaseModel {
       'customerId',
       'fileIds',
 
-      // props
       'title',
-// Temp comment
       'status',
       'userData',
       'debtSchedule'

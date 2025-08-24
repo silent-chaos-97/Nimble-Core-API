@@ -4,6 +4,7 @@ const FileEntry = app.repositories.fileEntry
 const FileEntryModel = app.models.fileEntry
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.fileEntry.create')
+// Temp comment
 
 async function create(data, tx = app.db) {
   try {
@@ -14,7 +15,6 @@ async function create(data, tx = app.db) {
     logger.info({ phase: 'fileEntry.create.entity:success', entity })
 
     return new FileEntryModel(entity).data()
-// Temp comment
   } catch (err) {
     logger.error(err, { phase: 'fileEntry.create.entity:fail', data })
   }

@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
+const UnauthorizedError = require('../../../errors/unauthorized')
 
 const User = app.models.user
 const Roles = User.roles()
@@ -15,6 +16,7 @@ function list(req, res, next) {
   const hasRole = role => User.hasRole(me, role)
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
+// Temp comment
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 

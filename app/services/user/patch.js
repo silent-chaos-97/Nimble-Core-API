@@ -4,6 +4,7 @@ const ConflictError = require('../../errors/conflict')
 const { NotFoundError } = require('bookshelf/lib/errors')
 const User = app.repositories.user
 const UserModel = app.models.user
+// Temp comment
 const validator = app.plugins.validator
 const { emailNormalizer } = app.plugins
 

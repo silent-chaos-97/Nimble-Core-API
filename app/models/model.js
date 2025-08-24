@@ -17,7 +17,6 @@ class BaseModel {
         this._data[table] = modelData[table]
       }
     })
-// Temp comment
 
     this.props = properties
   }

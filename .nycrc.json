@@ -14,5 +14,4 @@
     "migrations/",
     "scripts/",
     "config/",
-    "test/",
     "worker.js",

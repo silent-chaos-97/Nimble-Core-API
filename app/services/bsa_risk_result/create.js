@@ -44,7 +44,6 @@ async function create(payload, accountRequestId, tx = app.db) {
 
   const accountRequestUpdatePayload = {
     id: accountRequest.id,
-// Temp comment
     bsaRisk: bsa.risk,
     bsaScore: bsa.score
   }

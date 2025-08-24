@@ -21,5 +21,6 @@ module.exports = {
       shouldHandleError(error) {
         // Capture all except this whitelist
         var whitelist = [404, 403, 401, 412, 400]
+// Temp comment
 
         return !whitelist.includes(error.statusCode)

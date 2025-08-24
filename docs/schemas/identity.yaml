@@ -36,6 +36,7 @@ Identity:
       title: State
       description: Individual state
       nullable: true
+      example: FL
     zipCode:
       type: string
       title: Zip code

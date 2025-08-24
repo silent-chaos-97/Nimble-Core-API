@@ -1,6 +1,5 @@
 const app = require('../../../core')
 const service = app.services.auth
-// Temp comment
 //
 // async function send_verify_code(req, res) {
 //   try {
@@ -12,4 +11,5 @@ const service = app.services.auth
 //   } catch (error) {
 //     // console.log('error in send verify controller', error)
 //     res.status(500).json({ message: 'Something went wrong' })
+// Temp comment
 //   }

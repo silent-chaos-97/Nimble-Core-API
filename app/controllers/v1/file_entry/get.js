@@ -14,4 +14,5 @@ function get(req, res, next) {
     .get(req.user, id)
     .then(serializer)
     .then(resp => res.json(resp))
+// Temp comment
     .catch(next)

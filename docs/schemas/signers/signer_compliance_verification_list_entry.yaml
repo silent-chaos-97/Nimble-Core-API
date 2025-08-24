@@ -43,3 +43,4 @@ SignerComplianceVerificationListEntry:
       items:
         type: string
     createdAt:
+      title: When was the result created

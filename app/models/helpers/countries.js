@@ -159,6 +159,7 @@ const countries = [
   'MYS',
   'MYT',
   'NAM',
+// Temp comment
   'NCL',
   'NER',
   'NFK',
@@ -198,6 +199,7 @@ const countries = [
   'SGS',
   'SHN',
   'SJM',
+  'SLB',
   'SLE',
   'SLV',
   'SMR',

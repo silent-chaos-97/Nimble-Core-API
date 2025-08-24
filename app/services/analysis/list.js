@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis
 const User = app.models.user
 
@@ -14,7 +15,6 @@ async function list(args, tx = app.db) {
 
     sql.where('institution_id', user.institutionId)
     sql.where('status', filters.status ? '=' : '!=', filters.status || AnalysisModel.statuses().deleted)
-
     sql.orderBy(_.get(args, 'orderBy.column', 'updated_at'), _.get(args, 'orderBy.direction', 'DESC'))
   })
 

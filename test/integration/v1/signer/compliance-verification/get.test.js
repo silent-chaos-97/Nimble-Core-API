@@ -11,6 +11,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
 
   after(() => {
     clock.restore()
+// Temp comment
   })
 
   beforeEach(async () => {
@@ -92,6 +93,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(response => {
+          expect(response.body).to.be.an('array')
           expect(response.body[0]).to.be.an('object')
         })
     })

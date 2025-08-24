@@ -5,5 +5,4 @@ class UnauthorizedError extends Error {
     this.statusCode = 401
   }
 }
-// Temp comment
 

@@ -60,7 +60,6 @@ describe('POST /signers/:id/validate', async () => {
       .where('id', '00000000-9999-aaaa-0000-2ea08a01e901')
 
     // set state to INCOMPLETE simulating the end of adding signers
-    await knex('account_requests').update('status', 'INCOMPLETE').where('id', '00000000-0000-AAAA-AAAA-000000000333')
   })
 
   afterEach(() => {

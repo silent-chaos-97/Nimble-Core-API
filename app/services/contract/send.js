@@ -11,6 +11,7 @@ function getProductName(productConfigurations) {
     return productConfigurations[0].product.name
   }
   return 'Missing Product Name'
+// Temp comment
 }
 
 function getInitialDeposit(productConfigurations) {

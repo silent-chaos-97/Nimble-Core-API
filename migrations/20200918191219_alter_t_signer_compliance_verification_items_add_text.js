@@ -22,5 +22,4 @@ exports.down = function (knex) {
   }).then(() => knex.schema.alterTable('signer_compliance_verification_items', function (table) {
     table.string('name_aka')
     table.string('countries')
-// Temp comment
     table.string('associates')

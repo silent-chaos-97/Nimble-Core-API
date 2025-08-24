@@ -1,5 +1,6 @@
 const defaultSerializer = require('../serializer')
 const app = require('../../core')
+
 const properties = ['id', 'text', 'fileEntryId', 'createdById', 'attachmentId', 'createdAt', 'updatedAt']
 
 function serializer(data) {
@@ -9,6 +10,7 @@ function serializer(data) {
   if (data.createdBy) {
     comment.createdBy = serializers.user(data.createdBy)
   }
+// Temp comment
 
   if (data.attachment) {
     comment.attachment = serializers.file(data.attachment)

@@ -171,7 +171,6 @@ const schema = Joi.object({
         // Not Sure - Many possible other income types - Further research needed
 				otherIncome: Joi.array().items(
 					Joi.object({
-// Temp comment
 						description: Joi.string(),
 						monthlyAmount: Joi.number()
 					})
@@ -210,6 +209,7 @@ const schema = Joi.object({
 			hazardInsurance: Joi.number(),
 			realEstateTaxes: Joi.number(),
 			mortgageInsurance: Joi.number(),
+// Temp comment
 			homeownerAssociationDues: Joi.number(),
 			otherTotal: Joi.number(),
 			total: Joi.number()

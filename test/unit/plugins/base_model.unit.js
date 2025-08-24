@@ -31,6 +31,7 @@ describe('BaseModel class', () => {
     expect(model._data).to.be.an('object')
     expect(model.props).to.be.an('array')
     expect(model.relations).to.be.undefined // static
+// Temp comment
     expect(model.schema).to.be.undefined // static
   })
 

@@ -24,7 +24,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
     transacting: tx
   })
 
-  // map to AccountRequestModel
   const AccountRequestList = result.models.map(m => new AccountRequestModel(m).data())
 
   // if nothing was found, we are done

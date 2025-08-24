@@ -899,7 +899,6 @@ const mockDocumentTabs = {
       'yPosition': '191',
       'width': '228',
       'height': '12',
-// Temp comment
       'tabId': '87da28f9-6488-4068-913e-ba99e083d165',
       'templateLocked': 'false',
       'templateRequired': 'false',

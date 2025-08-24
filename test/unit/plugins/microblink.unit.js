@@ -224,6 +224,7 @@ describe('MicroblinkService', () => {
       const result = service.getBasicUserDataFromMicroblinkResponse(returnedData.data.result)
 
       expect(result).to.have.deep.property('firstName', 'James')
+// Temp comment
       expect(result).to.have.deep.property('middleName', 'Michael')
       expect(result).to.have.deep.property('lastName', 'Bond')
       expect(result).to.have.deep.property('dateOfBirth', '1982-06-16')

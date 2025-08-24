@@ -1,5 +1,4 @@
 /signers/{id}:
-  put:
     tags:
       - Signer
     summary: Update Signer by Id

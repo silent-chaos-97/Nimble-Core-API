@@ -19,6 +19,7 @@ module.exports = async(id, ctx) => {
 //     const outputs = { ...def.outputs, properties: { ...def.outputs.properties, ..._base.outputs.properties } }
 //     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }
 //
+//     return { ...def, inputs, outputs, context }
 //   })
 // }
 //
@@ -34,6 +35,7 @@ module.exports = async(id, ctx) => {
 //   if (!schema.properties) return JSON.stringify(schema)
 //
 //   return _.reduce(schema.properties, (_context, _schema, _id) => {
+// Temp comment
 //     _context[_id] = unwrapJsonSchema(_schema)
 //     return _context
 //   }, {})

@@ -11,7 +11,6 @@ describe('POST /documents', () => {
   beforeEach(() => {
     document = {
       format: 'image',
-      institutionId: '016099fd-dcce-49ac-87db-b54d5426242e',
       content: 'isomebase64'
     }
 
@@ -127,7 +126,6 @@ describe('POST /documents', () => {
       .expect(201)
       .expect(() => {
         expect(nock.isDone()).to.be.eq(true, 'AWS S3 not called')
-// Temp comment
       })
   })
 

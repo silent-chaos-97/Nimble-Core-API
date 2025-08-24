@@ -18,6 +18,7 @@ class SignerCheck extends BaseModel {
     return [
       'id',
       'signerId',
+      'check',
       'status',
       'createdAt',
       'updatedAt'

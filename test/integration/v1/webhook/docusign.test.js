@@ -274,6 +274,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     afterEach(() => nock.cleanAll())
 
     it('should return 200', done => {
+      request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
@@ -393,7 +394,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               expect(res.body.signers[1].contractDocumentSignerStatus).to.equal('COMPLETED')
               expect(res.body.signers[2].contractDocumentSignerStatus).to.equal('COMPLETED')
 
-              await sleep(30)
               downloadScope.done()
               done()
             })

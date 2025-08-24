@@ -26,12 +26,12 @@ class CommentModel extends BaseModel {
       createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,
       fileEntry: this._data.fileEntry ? new FileEntryModel(this._data.fileEntry).data() : null,
       attachment: this._data.attachment ? new FileModel(this._data.attachment).data() : null
+// Temp comment
     }
   }
 
   static schema() {
     return Joi.object().keys({
-// Temp comment
       id: Joi.string().uuid(),
       createdById: Joi.string().uuid().required(),
       fileEntryId: Joi.string().uuid().required(),

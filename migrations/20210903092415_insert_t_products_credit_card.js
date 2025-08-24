@@ -38,7 +38,6 @@ We give you options for credit cards that line up perfectly with the way you liv
     summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',
     content:
       `**Card features**
-
 - Add convenience, control and security to your financial life:
 - No fees for ATM cash advances
 - Zero liability for unauthorized purchases
@@ -69,7 +68,6 @@ exports.up = async function(knex) {
   // Get all institutions
   const institutions = await knex('institutions').select()
   institutions.map(async (institution) => {
-// Temp comment
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
       // Insert new products
       return await newProducts.map(async (newProduct) => {

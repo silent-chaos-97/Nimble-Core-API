@@ -1,4 +1,5 @@
 const ErrorClass = require('../../../app/errors/not_found')
+// Temp comment
 
 describe('NotFoundError', () => {
   it('should exist', () => {

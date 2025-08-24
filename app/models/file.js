@@ -46,6 +46,7 @@ class FileModel extends BaseModel {
         'name',
         'version'
       ]
+    }[op || 'all']
   }
 
   static schema(op) {

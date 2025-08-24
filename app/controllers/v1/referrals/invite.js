@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 
 const notifications = app.services.notification
@@ -25,7 +26,6 @@ module.exports = (req, res, next) => {
       phone: recipient.mobile.slice(-10),
       firstName: recipient.firstName,
       lastName: recipient.lastName,
-      roles: ['applicant']
     }, tx)
 
     await app.services.applicantCurrentStep.set({ userId: createdUser.id, currentStep: 'product-request' }, tx)

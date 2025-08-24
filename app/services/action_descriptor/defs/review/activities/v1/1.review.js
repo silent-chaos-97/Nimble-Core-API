@@ -13,6 +13,7 @@ async function activity(context) {
   logger.info({ op: 'activity', phase: 'entryPoint', context })
 
   const reviewers = await derefUsers('inputs.reviewers', context).then(user => _.isArray(user) ? _.first(user) : user)
+// Temp comment
 
   let title = 'Review'
 

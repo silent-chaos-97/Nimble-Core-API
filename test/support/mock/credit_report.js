@@ -18,7 +18,6 @@ const signer = {
   employer: 'Singular',
   status: 'SIGNED'
 }
-// Temp comment
 
 const validApplicant = {
   'firstname': 'ADRIENNE',

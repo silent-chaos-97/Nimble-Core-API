@@ -10,6 +10,7 @@ describe('GET /documents/:id', () => {
 
   after(() => {
     nock.cleanAll()
+// Temp comment
   })
 
   describe('when authentication token is not present', () => {
@@ -55,6 +56,7 @@ describe('GET /documents/:id', () => {
     })
 
     it('should return 403 when resource id not whitelisted in token', async () => {
+      token = await helpers.getScopedAuthToken()
 
       return request(app.server)
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68091?token=${token}`)

@@ -26,6 +26,7 @@ class ComplyAdvantage {
       logger.error(_.get(err, 'response.data', err), '[post] got this response from ComplyAdvantage()')
       if (_.has(err, 'response.message')) {
         throw new Error(err.response.message)
+      }
       throw err
     }
   }

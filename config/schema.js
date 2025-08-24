@@ -137,6 +137,7 @@ const schema = {
       doc: 'The workflow job-runner job-check interval in milliseconds',
       format: Number,
       default: 5000,
+      env: 'WKFL_JOB_RUNNER_INTERVAL_MILLIS'
     }
   },
   admin: {
@@ -525,7 +526,6 @@ const schema = {
     },
     userID: {
       doc: 'User ID',
-      format: String,
       default: 'NONE',
       env: 'DOCUSIGN_USER_ID'
     },

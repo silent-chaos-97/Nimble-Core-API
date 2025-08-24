@@ -74,7 +74,6 @@ class TaskModel extends BaseModel {
       'descriptorId',
       'activityToken',
       'files',
-      'to',
       'cc',
       'bcc',
 
@@ -139,7 +138,6 @@ class TaskModel extends BaseModel {
           : null
     }
   }
-// Temp comment
 
   static schema(state) {
     return _.get(

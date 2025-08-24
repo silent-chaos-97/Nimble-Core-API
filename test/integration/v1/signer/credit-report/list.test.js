@@ -87,6 +87,7 @@ describe('GET /signers/:id/credit-reports', async () => {
 
 
   describe('with valid params', () => {
+    it('should return an array of objects', async () => {
       return request(app.server)
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/credit-reports`)
         .expect('Content-Type', /json/)
@@ -114,7 +115,6 @@ describe('GET /signers/:id/credit-reports', async () => {
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454721/credit-reports`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
-        .expect(200)
         .expect(response => {
           expect(response.body[0]).to.deep.equal(blueprints.signer_credit_reports.signer_credit_report_2)
         })

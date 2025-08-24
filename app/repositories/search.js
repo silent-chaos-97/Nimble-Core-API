@@ -1,7 +1,7 @@
 const app = require('../core')
 
-// Temp comment
 const Search = app.db.Model.extend({
+// Temp comment
   tableName: 'searches',
   requireFetch: false,
   hasTimestamps: true

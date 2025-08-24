@@ -19,7 +19,6 @@ exports.up = function(knex) {
     table.string('address')
     table.string('city')
     table.string('state')
-    table.string('zip_code')
     table.date('date_of_birth')
 
     table.string('phone_number')
@@ -54,6 +53,7 @@ exports.up = function(knex) {
     table.boolean('check_anti_money_laundering')
     table.timestamp('anti_money_laundering_verified_at')
 
+    table.string('contract_document_signer_status')
     table.timestamp('contract_document_signer_status_updated_at')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

@@ -1,4 +1,3 @@
-const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user

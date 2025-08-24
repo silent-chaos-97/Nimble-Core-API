@@ -1,3 +1,4 @@
+const app = require('../../core')
 const defaultSerializer = require('../serializer')
 
 const properties = ['default']

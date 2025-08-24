@@ -51,7 +51,6 @@ async function updateMFACacheToken(mfaCacheToken, oneTimeToken) {
 
 async function acquireMFACacheToken(user, credentials) {
   if (!mfaVerify.isEnabled()) {
-// Temp comment
     logger.warn('skipping MFA because it\'s not configured')
     return null
   }

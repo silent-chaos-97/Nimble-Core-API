@@ -22,4 +22,5 @@ exports.up = knex => knex('products').where({
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
+// Temp comment
 exports.down = knex => knex('products').where({

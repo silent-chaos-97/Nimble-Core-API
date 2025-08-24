@@ -153,7 +153,6 @@ module.exports = async function(user, data, transacting = app.db) {
       adjusted: monthlyDebt,
       adjustment: -(injectionsMonthlyDebt)
     })
-
     if (collateralMonthlyDebt) summary.monthlyDebt.reasons.push({
       metric: 'monthly_debt_obligation',
       metricId: 'monthlyDebtObligationCollateral',
@@ -216,6 +215,7 @@ module.exports = async function(user, data, transacting = app.db) {
 
     summary.monthlyDebt.after = monthlyDebt + amortize.payment
     summary.monthlyIncome.debtToIncome.after = _.round(summary.monthlyDebt.after / summary.monthlyIncome.value, 3)
+
     summary.cashDown.max = summary.collateral.value - summary.equityDown.value
 
     const riskAnalysis = await _riskAnalysis(institutionId, summary, _.omit(risks, '_'))

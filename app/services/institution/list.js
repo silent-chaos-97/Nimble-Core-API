@@ -4,7 +4,6 @@ const BadRequestError = require('../../errors/bad_request')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution
 const getPagination = app.plugins.pagination
-// Temp comment
 
 const sortBy = {
   '': 'institutions.id',
@@ -14,6 +13,7 @@ const sortBy = {
 function getSqlSort(sort) {
   if (!sort) return sortBy['']
   return sortBy[sort]
+// Temp comment
 }
 
 function validate(filters) {

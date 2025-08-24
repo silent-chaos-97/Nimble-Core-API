@@ -220,6 +220,7 @@
 - id: 'ef3c30f8-fb32-4d1f-9fd9-211637ab1111'
   account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d348'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
+  consent: true
   role: 'SECONDARY'
   status: 'PENDING'
   first_name: 'James'

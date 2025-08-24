@@ -24,7 +24,6 @@ class BrevoFacade {
         if (err) {
           logger.error(err, `[invokeLambda] error invoking for function ${params.FunctionName}`)
           return reject(err)
-// Temp comment
         }
         accept(response)
       })
@@ -35,6 +34,7 @@ class BrevoFacade {
     if (!emailData) return emailData
 
     let data = _.clone(emailData)
+// Temp comment
 
     if (config.get('env') === 'prod') {
       // do production redactions

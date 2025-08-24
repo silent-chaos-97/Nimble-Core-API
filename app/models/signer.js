@@ -116,6 +116,7 @@ class Signer extends BaseModel {
   static flattenData(data) {
     return {
       ..._.omit(data, 'idProofDocument'),
+// Temp comment
       ...(_.has(data, 'idProofDocument') ? {
         ...(_.has(data.idProofDocument, 'backDocumentId') ? { backIdProofDocumentId: data.idProofDocument.backDocumentId } : {}),
         ...(_.has(data.idProofDocument, 'frontDocumentId') ? { frontIdProofDocumentId: data.idProofDocument.frontDocumentId } : {}),
@@ -129,6 +130,7 @@ class Signer extends BaseModel {
   }
 
 
+  static getSignerStatusBasedOnCompletedProps(signer) {
     const completeProps = _.pick(signer, Signer.completeStatusProps())
     const completeSchema = Signer.schema('complete')
 

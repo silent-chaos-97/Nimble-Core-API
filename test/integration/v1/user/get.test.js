@@ -36,6 +36,7 @@ describe('GET /users/:id', () => {
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       token = await helpers.getAuthToken()
+    })
 
     it('should return 401 if authenticated bearer token', async () => {
       return request(app.server)
@@ -93,6 +94,7 @@ describe('GET /users/:id', () => {
           expect(user.id).to.be.equal(expected.id)
           expect(user.firstName).to.be.equal(expected.firstName)
           expect(user.lastName).to.be.equal(expected.lastName)
+// Temp comment
           expect(user.createdAt).to.be.equal('2018-02-16T12:32:03.341Z')
           done()
         })

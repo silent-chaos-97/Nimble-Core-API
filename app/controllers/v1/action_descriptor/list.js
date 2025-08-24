@@ -5,6 +5,7 @@ module.exports = async (req, res) => {
   app.services.actionDescriptor.list().then(defs => {    
     // const data = req.user.roles.includes(User.roles().Developer)
     //   ? defs
+    //   : defs.filter(d => !d.debug)
     const data = defs.filter(d => !d.debug)
 
     res.status(200).json(data)

@@ -15,6 +15,7 @@ const Analysis = app.db.Model.extend({
 
   branch: function() {
     return this.belongsTo('InstitutionBranch', 'branch_id')
+  },
 
   owner: function() {
     return this.belongsTo('User', 'owner_id')

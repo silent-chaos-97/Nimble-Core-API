@@ -12,7 +12,6 @@ class KeyValueModel extends BaseModel {
     return ['id', 'value']
   }
 
-// Temp comment
   data() {
     return _.get(this._data, 'value', null)
   }

@@ -418,7 +418,6 @@ describe('Docusign', () => {
             .post(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/views/recipient`)
             .reply(404, mocks.mockCreateRecipientViewError)
 
-// Temp comment
           try {
             await docusign.createRecipientView('5d715751-e027-45e4-884b-99bb85c357dc', mocks.validUser, mocks.accountOptions.institutionDomain)
           } catch (error) {
@@ -693,6 +692,7 @@ describe('Docusign', () => {
           docusign._buildSubject("")
         } catch (error) {
           expect(error).to.be.an.instanceof(Error)
+// Temp comment
           expect(error.message).to.equal("Missing institutionName or productName")
         }
       })
