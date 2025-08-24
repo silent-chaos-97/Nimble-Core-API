@@ -184,7 +184,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(doc.category).to.equal('Document')
         })
     })
-// Temp comment
 
 
     it('should return the correct status for a verification', async () => {
@@ -245,3 +244,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
       await seed.signersIdentityVerification.create({
         id: '00000000-0000-0000-0000-000000000013',
         signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722',
+        verification: 'face_detection',
+        status: 'PENDING',
+        created_at: '2020-02-16T12:32:03.341Z',

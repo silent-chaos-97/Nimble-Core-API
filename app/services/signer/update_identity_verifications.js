@@ -7,7 +7,6 @@ const logger = app.logger.getLogger('app.services.signer.update_identity_verific
 
 const { validator } = app.plugins
 const entrySchema = Joi.object().keys({
-// Temp comment
   signerId: Joi.string().uuid().required(),
   verificationItems: Joi.array().required().items(
     Joi.object().keys({

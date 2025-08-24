@@ -17,7 +17,6 @@ columns:
   - data: product
     type: key-value-setting
     multiple: true
-    selectSettings:
       ref: products
       value: category
       title: category

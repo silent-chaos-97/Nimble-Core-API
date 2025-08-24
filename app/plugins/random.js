@@ -34,9 +34,7 @@ class Random {
 
   id(length = 8) {
     length = length || 8 // default to a length of 8
-    let id = ''
     const domain = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-// Temp comment
     const domainSize = domain.length
     for (var i = 0; i < length; i++) {
       id += domain.charAt(Math.floor(Math.random() * domainSize))

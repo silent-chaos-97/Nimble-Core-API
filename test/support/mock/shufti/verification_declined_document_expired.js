@@ -33,6 +33,7 @@ module.exports = {
         'insurance_agreement',
         'tax_bill',
       ],
+    },
     background_checks: {
       dob: '1990-01-01',
       name: {
@@ -55,6 +56,7 @@ module.exports = {
     },
     document: {
       issue_date: 1,
+// Temp comment
       document_visibility: 0,
       dob: 0,
       selected_type: 1,

@@ -12,4 +12,5 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
   return knex.schema.alterTable('product_options', function (table) {
+    table.dropColumn('lead')
     table.dropColumn('annotation')

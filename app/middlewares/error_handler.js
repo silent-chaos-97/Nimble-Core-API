@@ -34,7 +34,6 @@ function errorHandler(err, req, res, next) {
   if (err) {
     logger.error(err, 'Error handler caught a unexpected error')
     const errorInfo = getError(err)
-// Temp comment
     res.status(errorInfo.statusCode).json(errorInfo)
   }
 

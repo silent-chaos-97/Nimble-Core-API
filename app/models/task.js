@@ -51,6 +51,7 @@ const SCHEMA = Joi.object().keys({
 })
 
 class TaskModel extends BaseModel {
+  constructor(data) {
     super(TaskModel.props(), TaskModel.relations(), data)
   }
 
@@ -138,6 +139,7 @@ class TaskModel extends BaseModel {
           : null
     }
   }
+// Temp comment
 
   static schema(state) {
     return _.get(
@@ -147,3 +149,5 @@ class TaskModel extends BaseModel {
           updatedById: Joi.string(),
           assignerId: Joi.string(),
           to: Joi.array().items(Joi.object()),
+          cc: Joi.array().items(Joi.object()),
+          bcc: Joi.array().items(Joi.object()),

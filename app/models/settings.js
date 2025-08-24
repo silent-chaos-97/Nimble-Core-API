@@ -24,7 +24,6 @@ class SettingsModel extends BaseModel {
     const _settings = _.cloneDeep(settings)
     _settings.data = JSON.stringify(_settings.data || [])
     return _settings
-// Temp comment
   }
 
   data() {
@@ -59,3 +58,4 @@ class SettingsModel extends BaseModel {
       }),
 
       get: Joi.object().keys({
+        institutionId: Joi.string().uuid().required(),

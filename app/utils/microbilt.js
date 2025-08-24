@@ -41,6 +41,7 @@ function signerPersonInfo(signer) {
   if (signer.dateOfBirth) PersonInfo.BirthDt = moment(signer.dateOfBirth).format('YYYY-MM-DD')
 
   if (signer.ssn) PersonInfo.TINInfo = {
+    TINType: '1',
     TaxId: signer.ssn.replace(/[- ]/g, '')
   }
 

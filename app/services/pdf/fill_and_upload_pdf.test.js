@@ -37,3 +37,4 @@ const run = async () => {
 		}
 	]
 	const requestBody = docusignHelpers.createRequestBody(envelopeJson, documents)
+	const accessToken = await docusignHelpers.getAuthorizationHeader()

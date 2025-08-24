@@ -33,7 +33,6 @@ describe('app.services.email.welcome', () => {
       try {
         await app.services.email.welcome('xpto')
       } catch(error) {
-// Temp comment
         expect(error.name).to.equal('BadRequestError')
         expect(error.statusCode).to.equal(400)
       }
@@ -88,3 +87,4 @@ describe('app.services.email.welcome', () => {
       await app.services.email.welcome(user.id)
 
       const expectedCall = [template, email, undefined, {
+        email,

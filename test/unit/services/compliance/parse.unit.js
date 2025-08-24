@@ -21,6 +21,7 @@ describe('app.services.compliance.parse', () => {
       middleName: 'Gabriel',
       lastName: 'Mugabe'
     }
+
     searchResult = await app.services.compliance.search(entity)
     scope.done()
   })
@@ -97,3 +98,4 @@ describe('app.services.compliance.parse', () => {
         expect(item).to.have.ownProperty('date')
         expect(item).to.have.ownProperty('source')
         expect(item).to.have.ownProperty('value')
+        expect(item).to.have.ownProperty('countryCodes')

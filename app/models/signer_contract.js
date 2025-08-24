@@ -2,6 +2,7 @@ const BaseModel = require('./model')
 const moment = require('moment')
 
 /**
+ * SignerContract is a virtual model that symbolizes an embedded contract from docusign.
  */
 class SignerContract extends BaseModel {
 
@@ -9,7 +10,6 @@ class SignerContract extends BaseModel {
     super(SignerContract.props(), SignerContract.relations(), data)
   }
 
-  static props() {
     return [
       'url',
       'expiresAt'
@@ -21,3 +21,4 @@ class SignerContract extends BaseModel {
       ...this._data,
       expiresAt: moment().add(5, 'minutes').toISOString()
     }
+  }

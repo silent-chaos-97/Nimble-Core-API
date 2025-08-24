@@ -17,6 +17,7 @@ describe('app.services.email.emailVerification', () => {
     sinon.replace(app.services.token, 'get', () => 'xxxx')
   })
 
+// Temp comment
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
@@ -25,7 +26,6 @@ describe('app.services.email.emailVerification', () => {
   after(() => {
     clock.restore()
     sinon.restore()
-// Temp comment
   })
 
   describe('when validating', () => {
@@ -127,3 +127,5 @@ describe('app.services.email.emailVerification', () => {
       const template = 'signerEmailVerificationEmail'
 
       await app.services.email.emailVerification(id)
+
+      const expectedCall = [template, 'this.will.be.the.name@domain.com', undefined, emailData]

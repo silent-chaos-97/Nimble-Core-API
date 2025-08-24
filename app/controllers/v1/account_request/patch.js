@@ -13,6 +13,7 @@ function patch(req, res, next) {
   // FIXME: route acl should have managed the institution membership, however it should be checked here
   if (_.isBoolean(patch.deleted) && !User.isBranchAdmin(req.user)) delete patch['deleted']
 
+  return service
     .patch(patch)
     .then(data => serializer(data))
     .then(data => res.json(data))

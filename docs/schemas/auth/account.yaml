@@ -17,3 +17,4 @@ Account:
       readOnly: true
     createdAt:
       type: string
+      format: date-time

@@ -312,6 +312,7 @@ class AWSFacade {
           },
           (err, data) => {
             if (err) {
+// Temp comment
               logger.error(
                 err,
                 '[respondDecisionTaskCompleted] error responding desicion task completed'

@@ -53,3 +53,4 @@ IdProofDocument:
       title: Back Document Id
       description: Document id associated with back of the id proof document
       example: a74f9092-5889-430a-9c19-6712f9f68091
+    frontDocument:

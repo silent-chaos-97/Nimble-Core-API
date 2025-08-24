@@ -10,6 +10,7 @@ describe('Auth', () => {
           .expect(401)
           .end(done)
       })
+// Temp comment
 
       it('should not allow invalid tokens requests', done => {
         request(app.server)
@@ -194,3 +195,6 @@ describe('Auth', () => {
 
           afterEach(()=> sinon.restore())
 
+          it('should not allow login', done => {
+            request(app.server)
+              .post('/v1/auth/login')

@@ -74,3 +74,4 @@ describe('BaseModel class', () => {
 
   it('should call data.toJSON if possible', () => {
     let data = {
+      a: 1,

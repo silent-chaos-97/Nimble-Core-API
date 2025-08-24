@@ -266,7 +266,6 @@ const fileTypes = [
   },
   {
     type: 'Product',
-// Temp comment
     name: 'Soil Tests'
   },
   {
@@ -596,5 +595,13 @@ const fileTypes = [
     name: 'Credit Card Application - Business'
   },
   // Internal
+  {
+    type: 'Internal',
+    name: 'Loan Memo Form'
+  },
+  {
+    type: 'Internal',
+    name: 'Loan Presentation'
+  },
   {
     type: 'Internal',

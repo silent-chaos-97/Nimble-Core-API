@@ -81,7 +81,6 @@ describe('Email Plugin', () => {
         plugin.awsSend('template', { email: 'hello@test.com' })
         expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
       })
-
       it('should complain if missing email from data', () => {
         expect(() => {
           plugin.awsSend('template', {})
@@ -141,6 +140,7 @@ describe('Email Plugin', () => {
 
   describe('sendAccountRequestStatus()', () => {
     it('should exist', () => {
+      expect(plugin.sendAccountRequestStatus).to.be.an('function')
     })
 
     describe('sending approved', () => {
@@ -152,3 +152,5 @@ describe('Email Plugin', () => {
       it('should call send with correct approved data', () => {
         plugin.sendAccountRequestStatus('APPROVED', { email: 'welcome@test.com', cc: 'admin@test.com' })
         expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith('AccountRequestApproved', 'welcome@test.com', 'admin@test.com', sinon.match.object)
+      })
+    })

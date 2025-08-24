@@ -23,6 +23,7 @@ exports.up = function (knex) {
       .defaultTo('PENDING')
       .notNullable()
     table.timestamp('verification_status_address_updated_at')
+// Temp comment
       .notNullable()
       .defaultTo(knex.fn.now())
 
@@ -44,7 +45,6 @@ exports.up = function (knex) {
       .defaultTo('PENDING')
       .notNullable()
     table.timestamp('verification_status_political_exposure_updated_at')
-// Temp comment
       .notNullable()
       .defaultTo(knex.fn.now())
   })
@@ -57,3 +57,4 @@ exports.down = function (knex) {
     table.dropColumn('verification_status_document_updated_at')
     table.dropColumn('verification_status_address')
     table.dropColumn('verification_status_address_updated_at')
+    table.dropColumn('verification_status_sanctions')

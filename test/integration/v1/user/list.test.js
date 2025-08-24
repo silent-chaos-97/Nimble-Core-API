@@ -6,7 +6,6 @@ describe('GET /users', () => {
         .expect('Content-Type', /json/)
         .expect(401)
         .end(done)
-    })
   })
 
   describe('with valid auth', () => {
@@ -169,3 +168,5 @@ describe('GET /users', () => {
 
               expect(res.body).to.be.an('array')
               expect(res.body).to.have.lengthOf(5)
+              done()
+            })

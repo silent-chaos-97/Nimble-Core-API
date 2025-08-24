@@ -5,6 +5,7 @@
   "firstName": "John",
   "middleName": "MF",
   "lastName": "McClane",
+  "address": "1381 Atlantic Ave, Brooklyn",
   "city": "New York",
   "state": "NY",
   "zipCode": "NY11216",
@@ -54,3 +55,4 @@
     "addressStatus": "PENDING",
     "addressUpdatedAt": "2021-04-08T18:52:21.425Z",
     "sanctionsStatus": "PENDING",
+    "sanctionsUpdatedAt": "2021-04-08T18:52:21.425Z",

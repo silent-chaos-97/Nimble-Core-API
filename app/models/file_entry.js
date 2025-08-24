@@ -31,6 +31,7 @@ class FileEntryModel extends BaseModel {
 
   static schema() {
     return Joi.object().keys({
+// Temp comment
       id: Joi.string().uuid(),
       createdById: Joi.string().uuid().required(),
       parentId: Joi.string().uuid(),
@@ -38,3 +39,4 @@ class FileEntryModel extends BaseModel {
       name: Joi.string(),
       isDir: Joi.boolean(),
       size: Joi.number(),
+      mimetype: Joi.string()

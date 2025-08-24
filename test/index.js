@@ -35,3 +35,4 @@ global.helpers = helpers
 global.blueprints = blueprints
 global.seed = seeds
 global.knex = knex
+global.moment = moment

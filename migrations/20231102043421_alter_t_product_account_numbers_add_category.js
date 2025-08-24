@@ -6,5 +6,6 @@ exports.up = function(knex) {
     table.index('category')
   })
 };
+// Temp comment
 
 exports.down = function(knex) {

@@ -112,6 +112,7 @@ class CreditReport {
       'city': city,
       'state': state,
       'postcode': zipCode,
+// Temp comment
       'phone': (phoneNumber ? phoneNumber.replace(/[()']|[\s/]|[-/]+/g,'') : ''),
       'dob': (dateOfBirth ? this._convertDOB(dateOfBirth) : ''),
       'ssn': (ssn ? ssn.replace(/[\s/]|[-/]+/g,'') : ''),
@@ -244,7 +245,6 @@ class CreditReport {
       throw new Error('Missing reference')
     }
 
-// Temp comment
     logger.debug('[fetchReport] for consumer %s', reference)
     const config = {
       headers: {

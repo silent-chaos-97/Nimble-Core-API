@@ -3,7 +3,7 @@ const BaseModel = require('./model')
 const app = require('../core')
 const _ = require('lodash')
 
-  constructor(data) {
+class SignerComplianceVerificationModel extends BaseModel {
     super(SignerComplianceVerificationModel.props(), SignerComplianceVerificationModel.relations(), data)
   }
 
@@ -51,3 +51,4 @@ const _ = require('lodash')
         results: Joi.array().items(SignerComplianceVerificationItemModel.schema('create')).min(0).default([])
       })
     }
+

@@ -11,4 +11,3 @@ exports.up = function(knex) {
     ], { useNative: false, enumName: 'signers_document_issuer' }).alter()
   }).toSQL())
 }
-

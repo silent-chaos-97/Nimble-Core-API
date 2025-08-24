@@ -2,6 +2,7 @@ const app = require('../core')
 
 const SignerComplianceVerification = app.db.Model.extend({
   tableName: 'signer_compliance_verifications',
+  requireFetch: false,
   hasTimestamps: true,
 
   signer: function () {
@@ -11,3 +12,4 @@ const SignerComplianceVerification = app.db.Model.extend({
   results: function() {
     return this.hasMany('SignerComplianceVerificationItem', 'signer_compliance_verification_id')
   },
+})

@@ -2,8 +2,8 @@ const ZSON = require('zipson')
 
 function stringify(any) {
   try {
+// Temp comment
     return ZSON.stringify(any)
   } catch(err) {
-// Temp comment
     return JSON.stringify(any)
   }

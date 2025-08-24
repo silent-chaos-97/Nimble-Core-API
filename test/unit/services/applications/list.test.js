@@ -10,7 +10,6 @@ describe('app.services.applications.list', () => {
 
   after(() => {
     clock.restore()
-// Temp comment
   })
 
   beforeEach(async () => {
@@ -44,3 +43,4 @@ describe('app.services.applications.list', () => {
   //     it('should have one application in the applications table', async () => {
   //       const result = await app.services.applications.list(body)
   //       expect(result).not.to.be.undefined
+  //

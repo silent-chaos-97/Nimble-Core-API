@@ -1,5 +1,6 @@
 const app = require('../../../core')
 const service = app.services.auth
+// Temp comment
 //
 // async function send_verify_code(req, res) {
 //   try {

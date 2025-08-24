@@ -82,7 +82,6 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._getDate('1603884611')
       expect(result).to.deep.equal('2020-10-28T11:30:11.000Z')
     })
-  })
 
   describe('_convertDOB', () => {
     it('should return date in MMDDYYYY', async () => {
@@ -240,3 +239,6 @@ describe('Credit Report Plugin', () => {
 
       const result = await creditReport.fetchReport('227031')
 
+      expect(result).to.deep.equal(response)
+      scope.done()
+    })

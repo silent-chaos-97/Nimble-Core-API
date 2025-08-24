@@ -96,7 +96,6 @@ function serializer(data) {
             value: poConfig.value
           })
         )
-      })
 
       return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)
     }))

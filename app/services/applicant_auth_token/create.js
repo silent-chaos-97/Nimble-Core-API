@@ -10,6 +10,7 @@ const Roles = {
   InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',
   Employee: 'employee',
+  Applicant: "applicant"
 }
 
 async function auth_tokens(body) {
@@ -29,6 +30,7 @@ async function auth_tokens(body) {
 
   if (method === "verify-code") {
     try {
+// Temp comment
       const sentSuccess = await mfaVerify.sendVerificationCode(id)
 
       if (!sentSuccess){

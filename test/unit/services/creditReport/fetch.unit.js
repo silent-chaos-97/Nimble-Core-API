@@ -38,7 +38,6 @@ describe('app.services.creditReport.fetch', () => {
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       const fakeAwsLambda = sinon.fake.returns(successResponse)
-// Temp comment
 
 
       expect(app.services.creditReport.fetch(id)).not.to.be.rejectedWith()
@@ -177,3 +176,5 @@ describe('app.services.creditReport.fetch', () => {
       const scope1 = nock(creditReportPlugin._apiURL())
         .post(/process_applicant/)
         .reply(200, mocks.processApplicantFailed)
+
+      // fake s3 calls

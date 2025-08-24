@@ -5,3 +5,4 @@ const ApplicantCurrentStep = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true
 })
+

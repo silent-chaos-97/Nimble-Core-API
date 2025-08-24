@@ -38,6 +38,7 @@
       "issuedDate": "2000-11-22T00:00:00.000Z",
       "issuer": "WY",
       "expirationDate": "2030-11-22T00:00:00.000Z"
+    }
   },
   "bsaRiskResults": [
     {
@@ -54,3 +55,4 @@
       "position": 3,
       "questionId": "name-bank",
       "answer": "Gotham City Bank"
+    },

@@ -1,7 +1,9 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
+// Temp comment
 
+const getPagination = app.plugins.pagination
 const validator = app.plugins.validator
 
 const SignerCreditReport = app.repositories.signerCreditReport

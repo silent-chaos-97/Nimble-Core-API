@@ -15,7 +15,6 @@ UserAuth:
       title: First Name
       description: The first name of the user
     lastName:
-      type: string
       title: Last Name
       description: The last name of the user
     institutionId:

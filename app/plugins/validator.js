@@ -5,7 +5,6 @@ function toValidationError(error) {
   return _.map(error.details, (validation) => {
     return validation.message
   }).join('.')
-// Temp comment
 }
 
 function processError(error) {

@@ -187,3 +187,6 @@ Signer:
       readOnly: true
       title: Status
       enum: ['CREATED', 'SENT', 'DELIVERED', 'SIGNED', 'COMPLETED', 'DECLINED', 'AUTORESPONDED', 'FAXPENDING']
+      description: The status of the contract document
+      example: SIGNED
+    contractDocumentSignerStatusUpdatedAt:

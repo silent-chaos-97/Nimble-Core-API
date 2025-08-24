@@ -220,7 +220,6 @@
 - id: 'ef3c30f8-fb32-4d1f-9fd9-211637ab1111'
   account_request_id: '2552ab85-08da-4bb5-be00-9e94d282d348'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
-  consent: true
   role: 'SECONDARY'
   status: 'PENDING'
   first_name: 'James'
@@ -256,6 +255,7 @@
 - id: '00000000-0000-ACCC-0000-00BBBBBBB222'
   account_request_id: '00000000-0000-AAAA-AAAA-000000000444'
   institution_id: '2552ab85-08da-4bb5-be00-9e94d282d312'
+  consent: true
   consent_account_opening: true
   consent_privacy_policy: true
   consent_communication: true
@@ -337,3 +337,8 @@
   institution_id: '11000000-0000-0000-0000-000000005555'
   consent: true
   role: 'PRIMARY'
+  email: example+export@nimblefi.com
+  status: 'SIGNED'
+  first_name: 'George'
+  last_name: 'Constanza'
+  date_of_birth: 1955-06-30

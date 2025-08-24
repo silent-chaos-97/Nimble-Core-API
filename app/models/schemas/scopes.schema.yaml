@@ -13,7 +13,6 @@ columns:
   - data: name
     slugify: id
     allowEmpty: false
-
 defaults:
   - name: ANY
   - name: Personal

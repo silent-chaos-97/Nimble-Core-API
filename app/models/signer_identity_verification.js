@@ -20,7 +20,6 @@ class SignerIdentityVerification extends BaseModel {
 
   static relations() {
     return ['signer']
-// Temp comment
   }
 
   static schema(operation = 'create') {
@@ -31,5 +30,4 @@ class SignerIdentityVerification extends BaseModel {
         status: Joi.string().required().valid('VALID', 'INVALID', 'PENDING'),
       })
     }
-
     throw new Error('Invalid schema operation.')

@@ -1,6 +1,7 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
+// Temp comment
 class AccountOneTimeTokenModel extends BaseModel {
   constructor(data) {
     super(AccountOneTimeTokenModel.props(), AccountOneTimeTokenModel.relations(), data)
@@ -14,7 +15,6 @@ class AccountOneTimeTokenModel extends BaseModel {
     return Joi.object().keys({
       userId: Joi.string().optional().default(null),
       scopes: Joi.array().items(Joi.string()).min(1).default(['*']),
-// Temp comment
       resources: Joi.array().items(Joi.string()).min(1).default(['*']),
       expiration: Joi.number().positive().default(900),
       phone: Joi.string().optional()

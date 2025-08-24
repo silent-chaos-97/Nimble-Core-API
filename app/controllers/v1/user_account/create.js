@@ -31,6 +31,5 @@ async function create(req, res, next) {
   if (_.isEmpty(user.roles)) user['roles'] = [Roles.Employee]
 
   return users.register(user, 'local', false)
-    .then(serializer)
     .then(user => res.status(201).json(user))
     .catch(next)

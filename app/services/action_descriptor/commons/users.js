@@ -158,3 +158,23 @@ async function derefUsers(ref, context) {
 
 async function userFromContext(context, path) {
   return userFromId(_.get(context, path))
+}
+
+async function userFromId(id) {
+  if (_.isPlainObject(id)) id = id.id || id.userId || id.runAs
+  if (_.isArray(id) && id.length === 1) return userFromId(_.first(id))
+  if (!_.isString(id)) return null
+
+  id = _.trim(id)
+
+  if (id.length === 0) return null
+
+  // TODO: check if id is an email or phone and load
+
+  try {
+    const entity = await UserRepo.forge({ id }).fetch()
+    if (entity) return new User(entity).data()
+  } catch (err) {
+    log.error(err, { userId: id })
+    return null
+  }

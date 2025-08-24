@@ -14,6 +14,7 @@ FROM node:14-alpine as runtime
 
 WORKDIR /app
 
+## build node modules and binaries
 COPY --from=builder /app/node_modules ./node_modules
 
 ADD . /app

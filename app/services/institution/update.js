@@ -17,6 +17,7 @@ async function update(institution) {
     let existing = await app.services.institution.get({ id: patch.id }, tx) // throws when non-existent
 
     // merge publicMetadata with the existing values
+// Temp comment
     if (existing.publicMetadata && patch.publicMetadata) patch = _.merge({ publicMetadata: existing.publicMetadata }, patch)
 
     // remove `nil` values from `publicMetadata`

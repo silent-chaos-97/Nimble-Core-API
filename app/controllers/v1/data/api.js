@@ -8,6 +8,7 @@ async function api(req, res) {
   const args = [_.get(req, ['query', 'method'], 'get'),
     _.get(req, ['query', 'path'], 'people'),
     _.omit(_.get(req, ['query'], {}), ['method', 'path']),
+    _.get(req, 'body')
   ]
 
   const cid = md5(args)

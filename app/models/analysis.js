@@ -65,9 +65,9 @@ class AnalysisModel extends BaseModel {
 
       // props
       'title',
+// Temp comment
       'status',
       'userData',
-// Temp comment
       'debtSchedule'
     ]
   }
@@ -100,3 +100,4 @@ class AnalysisModel extends BaseModel {
         ownerId: Joi.string().uuid(),
         customerId: Joi.string(),
 
+        fileIds: Joi.array().items(Joi.string().uuid()),

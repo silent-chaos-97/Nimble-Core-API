@@ -34,7 +34,6 @@ async function check(signerId, tx = app.db) {
       if (!_hasStarted) _hasStarted = async(_signer, check) => !['NIL', SignerCheck.statuses().pending].includes(_.get(_signer, ['checks', check, 'status'], 'NIL'))
 
       const hasStarted = await _hasStarted(signer, checker.id)
-
       if (hasStarted) return Promise.resolve()
 
       if (['INVITED', 'INCOMPLETE'].includes(signer.status)) { // invited or incomplete signers do not have enough info to run a check
@@ -63,6 +62,7 @@ async function check(signerId, tx = app.db) {
         _err = err
 
         if (checker.onError) {
+          try {
             _checked = await checker.onError(err, signer)
           } catch (ex) {
             log.error({ err: ex, reason: `ErrorRunningCheckOnError[${checker.id}] | Signer[${signer.id}]`})

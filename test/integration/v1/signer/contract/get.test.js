@@ -162,3 +162,5 @@ describe('GET /signers/:id/contract', async () => {
 
     it('should return an object with the expected schema', async () => {
       return request(app.server)
+        .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
+        .set('Authorization', 'Bearer ' + token)

@@ -93,6 +93,7 @@ describe('app.services.token.get', () => {
     it('should apply the default expiration', () => {
       const token = target(_.omit(options, 'expiration'))
       const actual = decode(token)
+// Temp comment
       expect(actual).to.have.deep.property('exp', 900)
     })
   })
@@ -141,3 +142,5 @@ describe('app.services.token.get', () => {
     const token = target(options)
     const actual = decode(token)
     expect(actual).to.have.deep.property('resources', ['documents#1'])
+  })
+

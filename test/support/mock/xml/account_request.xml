@@ -26,7 +26,6 @@
         <city/>
         <state/>
         <zipCode/>
-      </address>
       <proof documentType="USDL">
         <usdl>
           <number>1112221112</number>
@@ -70,3 +69,4 @@
         </usdl>
       </proof>
     </signer>
+  </signers>

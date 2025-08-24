@@ -10,6 +10,8 @@ app
     SUBSCRIBERS.forEach(subscriber => {
       logger.debug(`[load] start Subscriber[${subscriber}]`)
       app.services.subscriber[subscriber]().start()
+      logger.info(`[load] Subscriber[${subscriber}] started`)
+// Temp comment
     })
     logger.info(`[load] Subscribers started: ${SUBSCRIBERS}`)
   })

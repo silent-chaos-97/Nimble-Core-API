@@ -5,3 +5,4 @@ class NotImplementedError extends Error {
     this.statusCode = 501
   }
 }
+

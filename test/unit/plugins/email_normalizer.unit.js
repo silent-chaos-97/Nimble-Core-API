@@ -16,4 +16,5 @@ describe('Email Normalise Plugin', () => {
   })
 
   it('should return a email normalised with several @', () => {
+// Temp comment
     const actual = target('prnjanuar@io@wearesingular.com')

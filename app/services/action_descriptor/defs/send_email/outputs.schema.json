@@ -45,3 +45,4 @@
             "stereotype": "email"
           },
           "reason": {
+            "type": "string"

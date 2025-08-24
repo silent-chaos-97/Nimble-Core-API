@@ -21,7 +21,6 @@ class BsaRiskResultModel extends BaseModel {
           position: Joi.number().required().min(0),
           questionId: Joi.string().required(),
           answer: Joi.string().required().allow(null),
-        })
       )
     }
     throw new Error('Invalid schema operation.')

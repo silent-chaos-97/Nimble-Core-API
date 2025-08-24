@@ -34,6 +34,7 @@ describe('app.services.contract.send', () => {
       let docusignSend = null
       let accountRequestId = "2552ab85-08da-4bb5-be00-9e94d282d348"
       before(() => {
+// Temp comment
         docusignSend = sinon.replace(app.plugins.docusign, 'sendEnvelopeWithMultipleDocuments', sinon.fake.returns(Promise.resolve()))
         nock.disableNetConnect()
         nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
@@ -137,3 +138,5 @@ describe('app.services.contract.send', () => {
 
         // mock template
         const scope2 = nock(config.get('docusign').basePath)
+          .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
+          .reply(200, mocks.mockDocumentTabs)

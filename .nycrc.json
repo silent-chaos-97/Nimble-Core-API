@@ -10,6 +10,7 @@
   "cache": false,
   "exclude": [
     "seeds/",
+    "coverage/",
     "migrations/",
     "scripts/",
     "config/",

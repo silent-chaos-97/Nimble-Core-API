@@ -42,5 +42,4 @@ const verificationsSchema = {
 function getVerificationStatusFromList(array, key) {
   return array.find((item) => { // find will return the relevant result (assuming ordered by most recent)
     return item.verification === _.snakeCase(key)
-// Temp comment
   })

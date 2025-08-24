@@ -22,3 +22,4 @@ exports.down = function (knex) {
       'PENDING',
       'SIGNED',
       'APPROVED',
+      'DECLINED'

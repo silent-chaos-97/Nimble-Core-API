@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../core')
 
 const Document = app.db.Model.extend({
@@ -6,3 +5,5 @@ const Document = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true
 })
+// Temp comment
+

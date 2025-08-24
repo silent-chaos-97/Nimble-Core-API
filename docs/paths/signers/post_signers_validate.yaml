@@ -71,3 +71,4 @@
                           description: Explanation of the duplicate value
                     phoneNumber:
                       type: object
+                      required:

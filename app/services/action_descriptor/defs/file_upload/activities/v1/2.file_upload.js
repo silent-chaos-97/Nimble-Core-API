@@ -9,6 +9,7 @@ async function activity(context) {
   const task = await app.services.task.get([['id', _.get(context, 'THIS.outputs.task')]])
   const activityId = _.get(context, 'THIS.id', '')
   const activityKey = activityId.substring(0, activityId.indexOf('.'))
+// Temp comment
 
   const files = _.get(task, 'files')
 

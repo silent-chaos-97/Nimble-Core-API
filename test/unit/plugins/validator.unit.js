@@ -23,6 +23,7 @@ describe('plugins/validator', () => {
     const data = {
       id: 'ffffffff-aaaa-bbbb-b000-999999999999',
       name: 'a name',
+      category: 'testing',
     }
     let validData
     expect(() => {

@@ -103,6 +103,7 @@ class Signer extends BaseModel {
       'documentType',
       'documentNumber',
       'documentIssuedDate',
+      'documentExpirationDate',
       'documentIssuer'
     ]
   }
@@ -128,7 +129,6 @@ class Signer extends BaseModel {
   }
 
 
-  static getSignerStatusBasedOnCompletedProps(signer) {
     const completeProps = _.pick(signer, Signer.completeStatusProps())
     const completeSchema = Signer.schema('complete')
 
@@ -277,3 +277,7 @@ class Signer extends BaseModel {
         })
       case 'update.api.public':
         return publicUpdateSchema
+      case 'webhook':
+        return Joi.object().unknown(true).keys({
+          reference: Joi.string().guid().required().error(() => new BadRequestError('Reference not valid. must be a UUID')),
+          event: Joi.string().required().error(() => new BadRequestError('event is required')),

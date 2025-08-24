@@ -4,7 +4,6 @@
     "response_expired"
   ],
   "properties": {
-    "task": {
       "title": "Upload Task Assignment",
       "type": "string",
       "stereotype": "task"
@@ -18,4 +17,6 @@
       "title": "Financial Analysis",
       "type": "string",
       "stereotype": "analysis"
+    },
     "response_expired": {
+      "type": "boolean"

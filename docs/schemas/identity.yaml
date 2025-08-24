@@ -36,7 +36,6 @@ Identity:
       title: State
       description: Individual state
       nullable: true
-      example: FL
     zipCode:
       type: string
       title: Zip code
@@ -61,3 +60,4 @@ Identity:
       format: date
       title: Document Expiration Date
       description: Document Expiration Date
+      nullable: true

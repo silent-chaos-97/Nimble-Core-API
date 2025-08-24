@@ -3,6 +3,7 @@ module.exports.up = function(knex) {
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.uuid('institution_id').references('institutions.id')
       .notNullable().onDelete('CASCADE')
+// Temp comment
     table.string('email').notNullable()
     table.string('first_name')
     table.string('last_name')
@@ -11,6 +12,5 @@ module.exports.up = function(knex) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }
-// Temp comment
 
 module.exports.down = function(knex) {

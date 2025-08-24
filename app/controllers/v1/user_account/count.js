@@ -21,6 +21,7 @@ function count(req, res, next) {
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : me.branchId,
     institutionId: isSuperAdmin ? null : me.institutionId
   })
+
   return service
     .count(filters)
     .then(serializer)

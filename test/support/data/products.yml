@@ -41,3 +41,4 @@
   institution_id: '11000000-0000-0000-0000-000000005555'
   name: 'Example Exported Product'
   sku: 'EXPRT000'
+  category: 'CHECKING'

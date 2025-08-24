@@ -3,7 +3,6 @@ describe('GET /institution/:domain', () => {
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
-    await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
 
@@ -25,7 +24,6 @@ describe('GET /institution/:domain', () => {
 
   it('should return valid institution object', () => {
     return request(app.server)
-// Temp comment
       .get('/v1/institutions/wearesingular.com')
       .set('Authorization', 'Bearer ' + token)
       .expect((res) => {

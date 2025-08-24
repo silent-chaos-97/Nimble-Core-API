@@ -139,3 +139,5 @@ describe('Service', () => {
 
         scope.done()
       })
+    })
+

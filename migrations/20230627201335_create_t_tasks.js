@@ -6,7 +6,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.uuid('institution_id').references('institutions.id').notNullable().onDelete('CASCADE')
   table.uuid('branch_id').references('institution_branches.id').nullable().onDelete('CASCADE').defaultTo(null)
 
-// Temp comment
   table.string('assignee_id').nullable() // can be `user.id`, but potentially an external identifier like email address, or phone number
   table.string('assigner_id').notNullable() // can be a user, or system component (i.e. workflow)
 
@@ -37,3 +36,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.index('activity_id', 'idx_tasks_activity')
   table.index('created_by_id', 'idx_tasks_created_by')
   table.index('updated_by_id', 'idx_tasks_updated_by')
+  table.index('created_at', 'idx_tasks_created_at')

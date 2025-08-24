@@ -1,10 +1,10 @@
 const AWS = require('../../../../app/plugins/aws')
 
+describe('AWS Facade class', () => {
   it('should exist', () => {
     expect(AWS).not.to.be.undefined
   })
 
-  it('should have configs', () => {
     expect(AWS.constructor.config).to.be.undefined
     expect(AWS.config).not.to.be.undefined //not static
   })
@@ -61,3 +61,4 @@ const AWS = require('../../../../app/plugins/aws')
       expect(AWS.s3ImgUpload).not.to.be.undefined
       expect(AWS.s3ImgUpload).to.be.an('function')
     })
+  })

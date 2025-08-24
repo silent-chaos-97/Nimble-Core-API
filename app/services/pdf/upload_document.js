@@ -111,3 +111,4 @@ const createRequestOptions = (accessToken, requestBody) => ({
     'Content-Type': `multipart/form-data boundary=${boundary}`,
     Authorization: `Bearer ${accessToken}`
   },
+  data: requestBody

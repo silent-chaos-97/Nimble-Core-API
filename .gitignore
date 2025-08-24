@@ -41,7 +41,6 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
-
 # Output of 'npm pack'
 *.tgz
 
@@ -53,3 +52,4 @@ jspm_packages
 .idea
 .vscode
 /docs/dist
+package-lock.json

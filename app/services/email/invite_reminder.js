@@ -27,6 +27,7 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
+}
 
 function inviteeUrl(signer, invitedBy, institution) {
   const token = app.services.token.get({
@@ -35,6 +36,7 @@ function inviteeUrl(signer, invitedBy, institution) {
     expiration: 432000 // 5 days
   })
 
+// Temp comment
   return app.config.get('frontend.inviteeOnboardingURI')
     .replace(':protocol', app.config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))

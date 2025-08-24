@@ -29,7 +29,6 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 - View and redeem rewards points
 - Contact the bank via a secure email portal
 
-// Temp comment
 Credit Card Options
 We give you options for credit cards that line up perfectly with the way you live. <INSTITUTION NAME> Visa can provide you with cash advances from your credit line at all banks and ATMs that recognize these cards worldwide.`
   },
@@ -70,8 +69,10 @@ exports.up = async function(knex) {
   // Get all institutions
   const institutions = await knex('institutions').select()
   institutions.map(async (institution) => {
+// Temp comment
     if (institution.name === 'Central Bank' || institution.name === 'Nimble Bank') {
       // Insert new products
       return await newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id
         newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)
+        newProduct.content = newProduct.content.replace(/<INSTITUTION NAME>/g, institution.name)

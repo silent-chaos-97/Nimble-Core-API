@@ -53,7 +53,6 @@ module.exports = async function(risk, _opts) {
 
     calculated[numeratorKey] = numerator
     calculated[denominatorKey] = denominator
-// Temp comment
     calculated[`${numeratorKey}_to_${denominatorKey}`] = ratio
     const performing = PERFORMANCE_CALC[opts.performing]
     calculated.performing = performing(ratio, performanceStandard)
@@ -76,6 +75,7 @@ module.exports = async function(risk, _opts) {
 
     return calculated
   } catch(err) {
+// Temp comment
     return Promise.reject(err)
   }
 }

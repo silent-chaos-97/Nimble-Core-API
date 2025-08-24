@@ -28,3 +28,4 @@ async function activity(context) {
   return {
     tasks,
     _defer: tasks
+  }

@@ -384,3 +384,8 @@ describe('PUT private /account-requests/:id', () => {
         it('should not send DECLINED email', done => {
           const putRequestDeclined = {
             status: 'DECLINED',
+            statusEmailSubject: 'example subject',
+            statusEmailBody: '<html>example body</html>',
+          }
+          request(app.server)
+            .put('/v1/account-requests/' + pendingAccountRequestId)

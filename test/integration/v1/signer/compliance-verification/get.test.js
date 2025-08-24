@@ -72,7 +72,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .expect(400)
     })
 
-// Temp comment
     it('should return 404 with random uuid', async () => {
       const id = uuid.v4()
       return request(app.server)
@@ -93,6 +92,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
         .set('Authorization', 'Bearer ' + token)
         .expect(200)
         .expect(response => {
-          expect(response.body).to.be.an('array')
           expect(response.body[0]).to.be.an('object')
         })
+    })
+

@@ -145,3 +145,5 @@ describe('POST /institutions/:id/products', () => {
 
     it('should return 409', () => {
       return request(app.server)
+        .post(`/v1/institutions/${institutionId}/products`)
+        .set('X-API-KEY', 'superpowers')

@@ -157,3 +157,5 @@ components:
         - count
       properties:
         count:
+          type: integer
+          title: Resource count

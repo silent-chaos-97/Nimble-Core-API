@@ -1,4 +1,3 @@
-collection: Products
 element: Product
 group: products
 kind: custom
@@ -171,3 +170,5 @@ columns:
 
   - data: reprice_consideration
     title: Reprice Consideration (bps)
+    type: numeric
+    width: 130

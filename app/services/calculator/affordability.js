@@ -16,6 +16,7 @@ const DEFAULT_BASE_RATE = 'RIFSPBLP_N.B' // prime
 const DEFAULT_RATE_CONSIDERATION_BPS = 500
 
 const DEFAULT_MIN_LOAN_TO_VALUE = .05
+const DEFAULT_MAX_LOAN_TO_VALUE = .5
 
 const DEFAULT_DEBT_TO_INCOME = .5
 // const DEFAULT_DEBT_TO_EQUITY = .5 // 50%
@@ -215,7 +216,6 @@ module.exports = async function(user, data, transacting = app.db) {
 
     summary.monthlyDebt.after = monthlyDebt + amortize.payment
     summary.monthlyIncome.debtToIncome.after = _.round(summary.monthlyDebt.after / summary.monthlyIncome.value, 3)
-
     summary.cashDown.max = summary.collateral.value - summary.equityDown.value
 
     const riskAnalysis = await _riskAnalysis(institutionId, summary, _.omit(risks, '_'))

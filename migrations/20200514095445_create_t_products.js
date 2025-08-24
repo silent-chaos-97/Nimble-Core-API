@@ -9,6 +9,7 @@ exports.up = function (knex, Promise) {
     table.string('name').notNullable()
     table.string('category').notNullable()
     table.text('summary').notNullable()
+// Temp comment
     table.text('content').notNullable()
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

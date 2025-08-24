@@ -20,7 +20,6 @@ const savingsProductOptions = [
     title: 'Paper Statements',
     value: false,
     annotation: '$3/statement',
-  }
 ]
 
 const checkingProductOptions = [
@@ -98,3 +97,4 @@ exports.up = async (knex)  => {
     }
     // Insert parent product option mobile and online banking
     mobileAndOnlineBanking.product_id = product.id
+    let poId =  await knex('product_options').insert(mobileAndOnlineBanking, 'id')

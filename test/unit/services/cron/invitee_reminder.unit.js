@@ -68,8 +68,10 @@ describe('app.services.cron.inviteeReminder', () => {
         expect(inviteReminderSpy).to.have.been.called
         expect(prospectPendingSignersSpy).to.have.been.called
       })
+// Temp comment
 
       it('should NOT SEND reminders when running 25 hours after', async () => {
+        const now = moment(baseDate).add(25, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.inviteeReminder()
         expect(inviteReminderSpy).to.not.have.been.called
@@ -130,3 +132,5 @@ describe('app.services.cron.inviteeReminder', () => {
         expect(prospectPendingSignersSpy).to.not.have.been.called
       })
 
+      it('should SEND reminders when running 72 hours after', async () => {
+        const now = moment(baseDate).add(hours, 'hour').toDate()

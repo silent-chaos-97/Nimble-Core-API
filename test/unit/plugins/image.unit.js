@@ -7,7 +7,6 @@ describe("ImageFactory class", () => {
     expect(ImageFactory).not.to.be.undefined
   })
 
-  it("should have static Props", () => {
     expect(ImageFactory.uri).to.be.undefined //not static
     expect(ImageFactory.assetsLocation).to.be.an("string") // static
     expect(ImageFactory.cdnLocation).to.be.an("string") // static
@@ -19,6 +18,7 @@ describe("ImageFactory class", () => {
   })
 
   describe(".asset()", () => {
+    it("should have .asset() method", () => {
       expect(ImageFactory.asset).not.to.be.undefined
       expect(ImageFactory.asset).to.be.an("Function")
     })
@@ -49,3 +49,4 @@ describe("ImageFactory class", () => {
       expect(img).to.be.an("object")
       expect(img.default).not.to.be.undefined
     })
+

@@ -11,6 +11,7 @@ module.exports = {
    * @param institutionId the institution to which `referredById` should belong
    * @param tx the existing transaction
    */
+  normalizeReferredById: async(model, institutionId = null, tx = app.db) => {
     if (!_.has(model, 'referredById')) return model
 
     model.referredById = _.trim(model.referredById)
@@ -34,3 +35,8 @@ module.exports = {
       logger.warn(model, `referredById set, but user not found for id=${model.referredById} and institutionId=${iid}; ignoring referredById`)
       _.unset(model, 'referredById')
       return model
+    }
+
+    return model // no more checks, the user identified by `referredById` belongs to the institution identified by `iid`
+  }
+}

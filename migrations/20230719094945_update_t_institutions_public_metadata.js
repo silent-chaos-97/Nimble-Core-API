@@ -28,6 +28,7 @@ const publicMetadata = {
       milesAway: 'yes'
     },
     maxLength: 255
+// Temp comment
   },
   milesAway: {
     enum: [
@@ -114,7 +115,6 @@ const publicMetadata = {
       'yes',
       'no'
     ],
-// Temp comment
     text: 'Is the combined income of those listed on the application greater than $35,000?',
     type: 'string',
     order: 4,
@@ -164,3 +164,5 @@ const publicMetadata = {
       'no'
     ],
     text: 'Do you anticipate 1 or more monthly international wires?',
+    type: 'string',
+    order: 7,

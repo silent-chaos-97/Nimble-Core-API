@@ -418,6 +418,7 @@ describe('Docusign', () => {
             .post(`/v2.1/accounts/8872016/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/views/recipient`)
             .reply(404, mocks.mockCreateRecipientViewError)
 
+// Temp comment
           try {
             await docusign.createRecipientView('5d715751-e027-45e4-884b-99bb85c357dc', mocks.validUser, mocks.accountOptions.institutionDomain)
           } catch (error) {
@@ -532,7 +533,6 @@ describe('Docusign', () => {
           }
           const result = await docusign.updateEnvelopeRecipients(args, envelopeId, '001')
 
-// Temp comment
           scope1.done()
           scope2.done()
 
@@ -1002,3 +1002,17 @@ describe('Docusign', () => {
         expect(checkboxTabs[2].selected).to.equal('true')
       })
 
+    })
+
+
+    describe('_mapSignerInformationToTextLabels', () => {
+      it('should map signer to common info', async () => {
+        const result = await docusign._mapSignerInformationToTextLabels(mocks.validUser)
+
+        const validMapping = {
+          fullName: 'George Constanza',
+          email: 'psousa+1@wearesingular.com',
+          clientUserId: '2e31d8c0-1226-4651-8a5d-4bd8aa454722',
+          address1_2: "123 main street apt. 1\nLisbon, Orlando, fl 17101-0000",
+          ssn: '123',
+          birthDate: "3/13/1978",

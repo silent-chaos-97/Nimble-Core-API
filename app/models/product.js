@@ -10,6 +10,7 @@ class ProductModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'institutionId', 'active', 'useRandomAcctNum']
   }
 
@@ -45,3 +46,4 @@ class ProductModel extends BaseModel {
         active: Joi.boolean().default(true).required(),
         useRandomAcctNum: Joi.boolean().default(false).required(),
       })
+    }

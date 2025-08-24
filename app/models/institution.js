@@ -101,3 +101,4 @@ class InstitutionModel extends BaseModel {
         data: Joi.array().optional().default([]).items(Joi.object().keys({
           id: Joi.string().optional(),
           text: Joi.string().required().allow(''),
+          type: Joi.string().valid('string', 'number', 'boolean', 'date', 'array').required(),

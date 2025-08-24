@@ -28,7 +28,6 @@ describe('app.services.contract.update', () => {
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d340') // required by seed.account_request_products
-// Temp comment
         await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
         await seed.document.create()
@@ -82,7 +81,6 @@ describe('app.services.contract.update', () => {
           expect(error.name).to.equal('PreConditionFailedError')
           expect(error.statusCode).to.equal(412)
           expect(error.message).to.equal("We could not send the document with Docusign. Please contact support.")
-        }
       })
     })
 
@@ -121,3 +119,5 @@ describe('app.services.contract.update', () => {
         const recipientId = '1'
         const scope2 = nock(app.config.get('docusign').basePath)
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
+          .reply(200, mocks.mockTemplateTabs)
+

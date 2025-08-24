@@ -14,6 +14,7 @@ const VERIFICATIONS = {
   'document.name': 'name',
   'document.document_country': 'country',
   'document.dob': 'date_of_birth',
+  'address.address_document': 'address',
   // 'gender',
 }
 
@@ -39,7 +40,6 @@ function parse(event, verification_result) {
   if (!_.has(EVENTS, event)) {
     logger.info(`[parse] ignoring data from event [${event}] during parse`)
     return []
-  }
 
   return Object.keys(VERIFICATIONS).map(key => {
     const status = _.get(verification_result, key) === 1 ? 'VALID' : 'INVALID'

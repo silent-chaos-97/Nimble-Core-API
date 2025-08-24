@@ -5,6 +5,7 @@
     summary: post an account request contract
     description: this is a webhook that forces an update on the contract document status
     operationId: postDocusignConnect
+    parameters:
       - name: id
         in: path
         description: Account request ID

@@ -55,7 +55,6 @@ describe('GET /documents/:id', () => {
     })
 
     it('should return 403 when resource id not whitelisted in token', async () => {
-      token = await helpers.getScopedAuthToken()
 
       return request(app.server)
         .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68091?token=${token}`)
@@ -86,3 +85,4 @@ describe('GET /documents/:id', () => {
       const regexp = `${app.config.get('aws').s3_endpoint}/uploads/a74f9092-5889-430a-9c19-6712f9f68090.png\\?\\w+`
       const expected = new RegExp(regexp, 'g')
       return request(app.server)
+        .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=${token}`)

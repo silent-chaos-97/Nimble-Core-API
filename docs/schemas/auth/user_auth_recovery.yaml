@@ -13,3 +13,4 @@ UserAuthRecovery:
       example: safe-password
     code:
       type: string
+      title: Code

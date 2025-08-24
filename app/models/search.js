@@ -22,7 +22,6 @@ class SearchModel extends BaseModel {
         'description',
         'filters',
         'query'
-      ],
 
       create: [
         // app meta
@@ -78,3 +77,4 @@ class SearchModel extends BaseModel {
         name: Joi.string().optional(),
         description: Joi.string().optional(),
         query: Joi.object().optional(),
+        filters: Joi.array().items(Joi.object()).optional()

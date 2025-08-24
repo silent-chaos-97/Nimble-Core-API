@@ -100,3 +100,4 @@ describe('app.services.email.inviteSigner', () => {
 
       await app.services.email.inviteSigner(id)
 
+      const expectedCall = [template, emailData.email, undefined, emailData]

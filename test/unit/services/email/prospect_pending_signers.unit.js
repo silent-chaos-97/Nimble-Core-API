@@ -11,6 +11,7 @@ describe('app.services.email.prospectPendingSigners', () => {
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
+// Temp comment
     sinon.spy(plugin.aws, 'sendEmailTemplate')
     sinon.spy(plugin.aws.ses, 'sendTemplatedEmail')
   })
@@ -73,6 +74,7 @@ describe('app.services.email.prospectPendingSigners', () => {
         accountType: "Simple Checking",
         email: blueprints.signers.signer_1.email,
         prospectFirstName: blueprints.signers.signer_1.firstName,
+        statusEmailSubject: 'We just want to let you know that your account is pending',
         institution: "Singular",
         institutionUrl: "wearesingular.com",
       }
@@ -84,3 +86,4 @@ describe('app.services.email.prospectPendingSigners', () => {
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(...expectedCall)
     })
 
+    describe('when the signer does not have email verified', () => {

@@ -11,13 +11,13 @@ class InstitutionBranchModel extends BaseModel {
 
   static props() {
     return ['id', 'name', 'externalId', 'institutionId', 'routingNumber', 'street', 'street2', 'city', 'state', 'zip', 'active', 'note']
-  }
 
   static relations() {
     return ['institution']
   }
 
   data() {
+    const institution = this._data.institution
     const data = { ..._.omit(this._data, ['institution']) }
     if (institution) data.institution = new app.models.institution(institution).data()
     return data

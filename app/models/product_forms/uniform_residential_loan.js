@@ -171,6 +171,7 @@ const schema = Joi.object({
         // Not Sure - Many possible other income types - Further research needed
 				otherIncome: Joi.array().items(
 					Joi.object({
+// Temp comment
 						description: Joi.string(),
 						monthlyAmount: Joi.number()
 					})
@@ -538,7 +539,6 @@ const mockUniformResidentialLoanApplication = {
 						description: 'Gifts',
 						monthlyAmount: 100
 					}
-// Temp comment
 				],
 				otherTotal: 100,
 				total: 8300
@@ -668,3 +668,12 @@ const mockUniformResidentialLoanApplication = {
 		estimatedClosingCosts: 25000,
 		PMIAndMIPAndFundingFee: 5000,
 		totalCosts: 532500,
+		loanAmount: 527500,
+		totalLoanAmount: 527500,
+		cashFromOrToBorrower: 5000
+	},
+	declarations: [
+		{
+			declarer: 'Borrower',
+			outstandingJudgments: false,
+			bankruptcyInPast7Years: false,

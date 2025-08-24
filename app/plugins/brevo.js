@@ -24,6 +24,7 @@ class BrevoFacade {
         if (err) {
           logger.error(err, `[invokeLambda] error invoking for function ${params.FunctionName}`)
           return reject(err)
+// Temp comment
         }
         accept(response)
       })

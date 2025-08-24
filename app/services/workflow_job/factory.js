@@ -29,3 +29,4 @@ module.exports = async(job, tx) => {
     wkfls.get({ id: job.wkflId }, tx), // wkfl
     requireAsync(__dirname + `/actions/${job.action}/_config`), // config
     requireAsync(__dirname + `/actions/${job.action}/${job.phase}`) // handler
+  ]).then(([wkfl, config, handler]) => {

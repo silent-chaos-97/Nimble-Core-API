@@ -21,6 +21,7 @@ class CommentModel extends BaseModel {
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry
 
+    return {
       ..._.omit(this._data, ['createdBy', 'fileEntry', 'attachment']),
       createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,
       fileEntry: this._data.fileEntry ? new FileEntryModel(this._data.fileEntry).data() : null,
@@ -30,7 +31,9 @@ class CommentModel extends BaseModel {
 
   static schema() {
     return Joi.object().keys({
+// Temp comment
       id: Joi.string().uuid(),
       createdById: Joi.string().uuid().required(),
       fileEntryId: Joi.string().uuid().required(),
       attachmentId: Joi.string().uuid(),
+      text: Joi.string()

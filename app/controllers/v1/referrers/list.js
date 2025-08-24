@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const users = app.services.user

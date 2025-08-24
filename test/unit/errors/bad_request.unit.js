@@ -35,3 +35,4 @@ describe('BadRequestError', () => {
       )
     })
 
+    it('should output custom message', () => {

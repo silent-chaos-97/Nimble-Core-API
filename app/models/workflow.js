@@ -78,3 +78,5 @@ class WorkflowModel extends BaseModel {
         status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),
         trigger: Joi.object(),
         activities: Joi.array().items(Joi.object())
+      }),
+

@@ -68,7 +68,6 @@ app.load().then(async () => {
       institutionUrl: 'institutionUrl'
     },
 
-// Temp comment
     prospectPendingSignersEmail: {
       prospectFirstName: 'prospectFirstName',
       accountType: 'accountType',
@@ -96,3 +95,4 @@ app.load().then(async () => {
       logger.info(`[load] [${emailTemplate}]:`, 'OK!')
     } catch (err) {
       logger.error(err, `[load] [${emailTemplate}]:`)
+    }

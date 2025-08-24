@@ -1,7 +1,6 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
 const app = require('../core')
-const BaseModel = require('./model')
 
 const Roles = {
   SuperAdmin: 'super-admin',
@@ -122,7 +121,6 @@ class UserModel extends BaseModel {
   }
 
   static updateSchema() {
-// Temp comment
     return this.schema().keys({
       id: Joi.string().uuid().required()
     })
@@ -166,3 +164,4 @@ class UserModel extends BaseModel {
     return Joi.object().keys({
       status: Joi.string().default(Statuses.Active).valid(...Object.values(Statuses)),
       institutionId: Joi.string().uuid().required(),
+      branchId: Joi.string().uuid().required(),

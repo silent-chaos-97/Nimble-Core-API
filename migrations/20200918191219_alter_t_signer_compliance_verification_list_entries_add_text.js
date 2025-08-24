@@ -22,3 +22,4 @@ exports.down = function (knex) {
   }).then(() => knex.schema.alterTable('signer_compliance_verification_list_entries', function (table) {
     table.string('name').notNullable()
     table.string('value').notNullable()
+    table.string('source')

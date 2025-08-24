@@ -30,7 +30,6 @@ describe('GET /institution/:id/branches', () => {
       .expect(404)
   })
 
-  it('should return an array', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
@@ -102,3 +101,4 @@ describe('GET /institution/:id/branches', () => {
           expect(response.body.pop().id).to.equal('2552ab85-0000-0000-0000-000000000006')
         })
     })
+

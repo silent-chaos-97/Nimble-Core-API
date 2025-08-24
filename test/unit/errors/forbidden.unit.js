@@ -8,6 +8,7 @@ describe('ForbiddenError', () => {
   it('should be and instance of ForbiddenError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
+    expect(error).to.be.instanceOf(Error)
   })
 
   it('should have a status code and message', () => {
@@ -21,6 +22,7 @@ describe('ForbiddenError', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('ForbiddenError')
     })
+// Temp comment
 
     it('should have 403 as a statusCode', () => {
       let error = new ErrorClass()

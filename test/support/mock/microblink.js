@@ -79,7 +79,6 @@ const successUSDLAAMVABack = {
         "sex": "1",
         "eyeColor": "BRO",
         "addressStreet": "4151 WEST YOAKUM AVE",
-        "addressCity": "KINGSVILLE",
         "addressJurisdictionCode": "TX",
         "addressPostalCode": "78363",
         "fullAddress": "4151 WEST YOAKUM AVE, KINGSVILLE, TX, 78363",
@@ -205,3 +204,6 @@ const successMRTD = {
       "rawMRZString": "SOMETHING SOMETHING\n",
       "type": "MRTD"
     }
+  }
+}
+

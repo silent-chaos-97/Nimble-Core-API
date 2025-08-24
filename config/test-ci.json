@@ -14,6 +14,7 @@
     "baseUrl": "http://microblink.test.com",
     "secret": "singular-secret"
   },
+  "shufti": {
     "secret": "singular-shufti-secret",
     "clientId": "client-id-test",
     "baseUrl": "http://shufti.test.com",
@@ -50,6 +51,6 @@
   "lambda": {
     "pdfTransformARN": "local-htmltopdf"
   },
-  "complyAdvantage": {
     "baseUrl": "https://api.complyadvantage.com",
     "secret": "secret"
+  },

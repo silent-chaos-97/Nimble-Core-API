@@ -107,7 +107,6 @@ The values are available in Twilio dashboard ("Verify" service).
 ## Cronjobs
 
 Cronjobs are configured to execute the `worker.js` content, to run locally you can run:
-
 ```bash
 yarn dev-worker
 ```
@@ -175,3 +174,5 @@ running `$ npm start` will start the application without an `NODE_ENV` assumptio
 ## Changing the Config
 
 by default, `$ yarn dev` will load `config/local.js` where local development config overwrites live. `config/test.js` will be used when running test. production configs are stored in environment variables as described in `config/schema.js`
+
+## API Documentation

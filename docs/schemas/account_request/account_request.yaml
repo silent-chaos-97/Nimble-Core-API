@@ -103,3 +103,4 @@ AccountRequest:
       allOf:
         - $ref: '#/components/schemas/User'
         - title: User
+        - readOnly: true

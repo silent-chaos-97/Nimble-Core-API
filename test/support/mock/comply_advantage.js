@@ -2331,7 +2331,6 @@ const successResponse = {
     }
   }
 }
-// Temp comment
 
 const badRequestResponse = {
   "code": 400,
@@ -4063,6 +4062,7 @@ const parsedResult = [
       {
         "name": "Program",
         "value": "Autonomous (Zimbabwe)",
+// Temp comment
         "source": "DFAT Australia Consolidated Sanctions List",
         "subtype": "sanction",
         "countryCodes": [],
@@ -4257,3 +4257,60 @@ const parsedResult = [
         "subtype": "sanction",
         "countryCodes": [],
         "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Sanction Type",
+        "value": "Block",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Title",
+        "value": "President of the Republic of Zimbabwe",
+        "source": "OFAC SDN List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2003-03-10T00:00:00Z",
+        "deletedDate": null,
+        "url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx"
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "DFATD Canada Special Economic Measures Act Designations",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng"
+      },
+      {
+        "name": "Regime",
+        "value": "Zimbabwe",
+        "source": "DFATD Canada Special Economic Measures Act Designations",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng"
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Passport",
+        "value": "AD001095, Issued by Zimbabwe, Issuing country Zimbabwe",
+        "source": "Swiss SECO List",

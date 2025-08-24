@@ -165,3 +165,5 @@ const publicMetadata = {
       'no'
     ],
     text: 'Do you anticipate 1 or more monthly international wires?',
+    type: 'string',
+    order: 7,

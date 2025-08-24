@@ -58,6 +58,7 @@ const CALCULATORS = {
   number: (ctx, score, answer) => CALCULATORS.string(ctx, score, answer),
   boolean: (ctx, score, answer) => CALCULATORS.string(ctx, score, answer),
 }
+// Temp comment
 
 function calculateScore(answers) {
   return answers.reduce((sum, answer) => {

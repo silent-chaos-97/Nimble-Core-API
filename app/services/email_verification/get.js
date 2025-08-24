@@ -12,6 +12,5 @@ async function get(id, tx = app.db) {
   const emailVerification = await SignerEmailVerification.forge({ id }).fetch({
     withRelated: ['signer'],
     transacting: tx
-  })
 
   return new SignerEmailVerificationModel(emailVerification).data()

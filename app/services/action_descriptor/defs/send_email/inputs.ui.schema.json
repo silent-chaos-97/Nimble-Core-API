@@ -4,3 +4,5 @@
   },
   "message": {
     "ui:widget": "textarea",
+    "ui:rows": 20
+  }

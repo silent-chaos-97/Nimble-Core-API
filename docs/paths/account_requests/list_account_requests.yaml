@@ -15,7 +15,6 @@
         schema:
           type: string
           enum: ['PENDING', 'DECLINED', 'APPROVED']
-          default: !!null
       - in: query
         name: sort
         required: false
@@ -35,3 +34,4 @@
           application/json:
             schema:
               type: array
+              items:

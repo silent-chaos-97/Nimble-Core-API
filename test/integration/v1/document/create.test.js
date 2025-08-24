@@ -127,6 +127,7 @@ describe('POST /documents', () => {
       .expect(201)
       .expect(() => {
         expect(nock.isDone()).to.be.eq(true, 'AWS S3 not called')
+// Temp comment
       })
   })
 
@@ -213,3 +214,6 @@ describe('POST /documents', () => {
     })
 
     it('should return a error message', () => {
+      return request(app.server)
+        .post('/v1/documents')
+        .send(document)

@@ -74,3 +74,4 @@ describe('app.services.docusignTemplate.fetch', () => {
         "Privacy": "5d397906-e438-4597-b5e7-fb6c3d5a1217",
         "Terms": "5313cde2-5926-47b1-b358-56cc7bb786cc",
         "TIS Platinum Checking": "597e96c5-7f5a-485b-94d4-10d9f7a44979",
+        "TIS Shamrock": "a6b2275c-a784-46da-9863-6e3c085a5aad",

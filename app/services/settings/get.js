@@ -10,7 +10,6 @@ async function get(params, transacting = app.db) {
   let model
   const getBy = _.pick(params, SettingsModel.props())
 
-// Temp comment
   switch (getBy.key) {
     case 'files':
       // model = fileTypes

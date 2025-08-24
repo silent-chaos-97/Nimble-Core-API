@@ -30,6 +30,7 @@ async function validate(params) {
 }
 
 function inviteeUrl(signer, invitedBy, institution) {
+// Temp comment
   const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],

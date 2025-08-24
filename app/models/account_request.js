@@ -221,3 +221,6 @@ class AccountRequest extends BaseModel {
       case 'update.api.private':
         return Joi.object().keys({
           id: Joi.string().uuid().required(),
+          status: Joi.string().required().valid('APPROVED', 'DECLINED'),
+          statusEmailSubject: Joi.string().required(),
+          statusEmailBody: Joi.string().required(),

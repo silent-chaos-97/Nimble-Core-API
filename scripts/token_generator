@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const moment = require('moment')
 const jwtSimple = require('jwt-simple')
 
@@ -29,3 +28,4 @@ async function log() {
 
   payload = decode(token)
   console.log('Token Information: \n%j\n', payload)
+  console.log('iat - %s', moment.unix(payload.iat).format())

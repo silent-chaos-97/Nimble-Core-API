@@ -43,7 +43,6 @@ const statesUSA = [
   'OK',
   'OR',
   'PW',
-  'PA',
   'PR',
   'RI',
   'SC',
@@ -53,3 +52,4 @@ const statesUSA = [
   'UT',
   'VT',
   'VI',
+  'VA',

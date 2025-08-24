@@ -25,7 +25,6 @@ describe('app.models.signer.flattenData', () => {
         backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
         type: 'type',
-        number: 'number',
         issuedDate: 'issuedDate',
         issuer: 'issuer',
         expirationDate: 'expirationDate',
@@ -56,6 +55,7 @@ describe('app.models.signer.flattenData', () => {
         backDocumentId: 'backDocumentId',
         frontDocumentId: 'frontDocumentId',
         type: 'type',
+        number: 'number',
         issuedDate: 'issuedDate',
         issuer: 'issuer',
         expirationDate: 'expirationDate',
@@ -139,3 +139,5 @@ describe('app.models.signer.flattenData', () => {
 
 
   it('should ignore not expected data', () => {
+    const result = target({
+      somethingA: 'somethingA',

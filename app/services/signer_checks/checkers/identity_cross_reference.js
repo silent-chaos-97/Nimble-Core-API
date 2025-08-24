@@ -28,3 +28,4 @@ module.exports = {
       meta: { status: 'HIT', report }
     }
   },
+  onError: async(err, signer) => Promise.resolve({

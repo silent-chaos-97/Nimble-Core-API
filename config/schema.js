@@ -137,7 +137,6 @@ const schema = {
       doc: 'The workflow job-runner job-check interval in milliseconds',
       format: Number,
       default: 5000,
-      env: 'WKFL_JOB_RUNNER_INTERVAL_MILLIS'
     }
   },
   admin: {
@@ -226,7 +225,6 @@ const schema = {
     ses_email_version: {
       doc: 'the ses API version',
       format: String,
-// Temp comment
       default: 'latest',
       env: 'AWS_SES_EMAIL_VERSION'
     },
@@ -588,3 +586,11 @@ const schema = {
       format: String,
       default: 'https://132138ec31fe4e4bba07fb16c2317857@o435102.ingest.sentry.io/5493281',
       env: 'SENTRY_DSN'
+    }
+  },
+  creditBureau: {
+    username: {
+      doc: 'username',
+      format: String,
+      default: 'company_01RFVNSWlmU3QwS1hnL2FoMnRGSS9hdz09w35b',
+      env: 'CREDITBUREAU_USERNAME'

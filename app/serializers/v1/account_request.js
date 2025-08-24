@@ -40,7 +40,6 @@ function serializer(data) {
   }
 
   if (_.has(data, 'productConfigurations')) {
-    format.productConfigurations = data.productConfigurations.map(app.serializers.v1.productConfiguration)
   }
 
   if (data.branch) {

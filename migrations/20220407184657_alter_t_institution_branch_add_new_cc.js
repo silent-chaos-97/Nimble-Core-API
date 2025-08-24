@@ -20,3 +20,4 @@ exports.down = function(knex, Promise) {
     table.dropColumn('city')
     table.dropColumn('state')
     table.dropColumn('zip')
+    table.dropColumn('active')

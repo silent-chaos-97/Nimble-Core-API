@@ -45,3 +45,4 @@ module.exports = async (listen = false) => {
 
   // create upload dir
   const imageBasePath = app.config.get('image.basePath')
+  fs.mkdir(imageBasePath, () => {

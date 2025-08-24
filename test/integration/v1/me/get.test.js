@@ -64,7 +64,6 @@ describe('GET /me', () => {
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
         .expect((res) => {
-          const props = ['id', 'email', 'firstName', 'lastName', 'createdAt', 'accounts']
 
           props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
@@ -125,3 +124,4 @@ describe('GET /me', () => {
           expect(actual.lastName).to.be.equal(user.lastName)
           expect(actual.createdAt).to.be.equal(user.createdAt)
           expect(actual.accounts).to.have.lengthOf(1)
+

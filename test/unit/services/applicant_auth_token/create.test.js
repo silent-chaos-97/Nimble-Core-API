@@ -48,7 +48,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
           return Promise.all([
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
-          ])
         })
 
         it('should throw an error when missing or invalid method', () => {
@@ -74,7 +73,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
     describe('method:token-exchange', () => {
       beforeEach(() => {
         body = {
-// Temp comment
           id: '5856878184',
           role: 'applicant',
           method: 'token-exchange',
@@ -101,3 +99,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
 
           return Promise.all([
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
+          ])

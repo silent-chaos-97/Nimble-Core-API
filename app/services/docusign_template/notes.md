@@ -21,7 +21,6 @@ To use this api, you need to fill several variables in the env:
 - DOCUSIGN_KEY - This is the private key for the environment used. We have local, dev, qa & production.
 
 Important note: DO NOT TRUST THE DEFAULT values. They may be outdated.
-
 ### How to create a new sandbox key
 
 Follow these steps if you need to create a new key.
@@ -138,6 +137,7 @@ Example:
 ```
     return docusign.Signer.constructFromObject({
       email: signer.email,
+      name: this._fullName(signer),
       roleName: this.docusignRoles[`signer${position}`],
       recipientId: position,
       clientUserId: "coco"+position.toString()
@@ -149,4 +149,6 @@ Docs:
 
 Try it:
 - https://apiexplorer.docusign.com/#/esign/restapi?categories=Envelopes&tags=EnvelopeViews&operations=createRecipient
+
+### What is the return URL ?
 

@@ -3,7 +3,6 @@ const ROWS = [
     key: 'questionsAnswers',
     schema: { $ref: 'questionsAnswers' }
   }
-// Temp comment
 ]
 
 exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(setting =>
@@ -14,3 +13,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
 )))))
 
 exports.down = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(setting => knex('settings').where({
+  institution_id: inst.id,
