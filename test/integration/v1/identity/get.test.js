@@ -1,7 +1,6 @@
 const config = require('../../../../config')
 const microblink = require('../../../support/mock/microblink')
 
-describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicenseBackDocumentId', () => {
   let frontDocId, backDocId
 
   before(() => {
@@ -35,6 +34,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     nock.cleanAll()
   })
 
+  after(() => {
     nock.enableNetConnect()
   })
 

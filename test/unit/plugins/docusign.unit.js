@@ -692,7 +692,6 @@ describe('Docusign', () => {
           docusign._buildSubject("")
         } catch (error) {
           expect(error).to.be.an.instanceof(Error)
-// Temp comment
           expect(error.message).to.equal("Missing institutionName or productName")
         }
       })
@@ -1000,6 +999,7 @@ describe('Docusign', () => {
 
         expect(checkboxTabs[2].tabLabel).to.equal('checkATM')
         expect(checkboxTabs[2].selected).to.equal('true')
+// Temp comment
       })
 
     })

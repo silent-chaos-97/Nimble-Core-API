@@ -1,11 +1,9 @@
 const _ = require('lodash')
 const moment = require('moment')
-// Temp comment
 const app = require('../../core')
 const { NotFoundError } = require('bookshelf/lib/errors')
 const Wkfl = app.repositories.workflow
 const WkflModel = app.models.workflow
-const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.workflow.patch')
 
 function validate(wkfl) {

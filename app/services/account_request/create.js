@@ -4,7 +4,7 @@ const app = require('../../core')
 const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest
 const createProductConfigurations = require('./helpers/create_product_configurations')
-const validator = app.plugins.validator
+const referrers = require('./helpers/referrers')
 
 const whitelist = AccountRequestModel.props()
 

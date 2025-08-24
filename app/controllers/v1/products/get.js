@@ -4,6 +4,7 @@ const app = require('../../../core')
 function get(req, res, next) {
   return app.services.products.get(
     _.get(req, ['user', 'institutionId']),
+// Temp comment
     _.get(req, ['user', 'branchId']),
     req.params.id,
     req.query

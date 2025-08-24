@@ -12,5 +12,4 @@ rules:
     - "error"
     - "module.exports"
   "node/no-unpublished-bin": "error"
-  "node/process-exit-as-throw": "error"
   "node/no-unpublished-require": ["error", { "allowModules": ["bluebird"] }]

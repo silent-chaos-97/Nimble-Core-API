@@ -5,8 +5,8 @@ const SignerEmailVerification = app.db.Model.extend({
   hasTimestamps: true,
 
   signer: function () {
-// Temp comment
     return this.belongsTo('Signer', 'signer_id')
   },
+// Temp comment
 
 })

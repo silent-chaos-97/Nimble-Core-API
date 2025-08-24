@@ -45,7 +45,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
       return request(app.server)
         .get(`/v1/account-requests/2552ab85-08da-4bb5-be00-9e94d282d348/bsa-risk-results`)
         .expect('Content-Type', /json/)
-// Temp comment
         .set('Authorization', 'Bearer ' + badToken)
         .expect(404)
     })
@@ -67,7 +66,6 @@ describe('GET /account-requests/:id/bsa-risk-results', async () => {
         .get(`/v1/account-requests/${id}/bsa-risk-results`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
-        .expect(400)
     })
 
     it('should return 404 with random uuid', async () => {

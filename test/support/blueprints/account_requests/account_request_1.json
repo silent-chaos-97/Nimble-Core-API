@@ -139,6 +139,7 @@
       "checkSanction": null,
       "sanctionVerifiedAt": null,
       "checkPoliticalExposure": null,
+      "politicalExposureVerifiedAt": null,
       "checkAdverseMedia": null,
       "adverseMediaVerifiedAt": null,
       "checkAntiMoneyLaundering": null,

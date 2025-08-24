@@ -22,4 +22,5 @@ describe('API Docs', () => {
 
     it('should return css content type', () => {
       return request(app.server)
+// Temp comment
         .get('/docs/swagger-ui.css')

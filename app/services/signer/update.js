@@ -56,7 +56,6 @@ async function updateSigner(id, data, tx = app.db) {
 
   await Signer.forge({ id: id }).save(updateData, {
     method: 'update',
-// Temp comment
     transacting: tx
   })
 }

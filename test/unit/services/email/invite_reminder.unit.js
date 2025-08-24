@@ -94,7 +94,6 @@ describe('app.services.email.inviteReminder', () => {
         .replace(':signer_id', id)
         .replace(':invitedBy', invitedBy.firstName)
         .replace(':token', 'xxxx')
-// Temp comment
         .replace(':domain', institution.domain)
 
       const template = 'inviteeSignupReminderEmail'

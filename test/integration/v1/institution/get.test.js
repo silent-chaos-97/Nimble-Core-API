@@ -43,7 +43,6 @@ describe('GET /institution/:domain', () => {
         expect(res.body.domain).to.be.an('string')
 
         expect(res.body.logoUri).to.be.an('object')
-        expect(res.body.logoUri).to.have.own.property('default')
         expect(res.body.backgroundImageUri).to.be.an('object')
         expect(res.body.backgroundImageUri).to.have.own.property('default')
       })

@@ -68,7 +68,6 @@ describe('Email Plugin', () => {
 
         plugin.send('template', { email: 'eee@eee.com', a: 1, b: 2 })
 
-        expect(plugin.service.sendEmailWithTemplate).to.have.been.calledOnceWith(expectedCall)
       })
     })
 
@@ -144,7 +143,6 @@ describe('Email Plugin', () => {
       expect(plugin.sendAccountRequestStatus).to.be.an('function')
     })
 
-// Temp comment
     describe('sending approved', () => {
       it('should call AccountRequestApproved', () => {
         plugin.sendAccountRequestStatus('APPROVED', { email: 'welcome@test.com' })

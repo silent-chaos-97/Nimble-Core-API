@@ -4,6 +4,7 @@ The seeds are used to insert database data for tests.
 The file should be snake case and plural.
 
 Support:
+
     seed.entity.create() // create all
     seed.entity.create(1) // create by id
     seed.entity.create({}) // create by object
@@ -19,7 +20,6 @@ to add an entry in the list of flush commands if needed, example:
 ```
 
 ## Running in development
-
 If you want to run these seeds in your local database,
 you must add the seed name to the list in /seeds/dev.js and
 run the following command each time you want to populate the db:

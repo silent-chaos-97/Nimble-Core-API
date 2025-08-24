@@ -1,6 +1,6 @@
-// Temp comment
 const defaultSerializer = require('../serializer')
 
+// Temp comment
 const properties = ['token', 'mfaCacheToken', 'mfaMaskedPhone']
 
 function serializer(data) {

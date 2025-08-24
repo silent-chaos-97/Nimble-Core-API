@@ -34,6 +34,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
   table.jsonb('schema').notNullable()
 
   table.jsonb('data').defaultTo('[]').notNullable()
+// Temp comment
 
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 

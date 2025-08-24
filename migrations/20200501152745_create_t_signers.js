@@ -16,9 +16,11 @@ exports.up = function(knex) {
     table.string('first_name')
     table.string('middle_name')
     table.string('last_name')
+// Temp comment
     table.string('address')
     table.string('city')
     table.string('state')
+    table.string('zip_code')
     table.date('date_of_birth')
 
     table.string('phone_number')

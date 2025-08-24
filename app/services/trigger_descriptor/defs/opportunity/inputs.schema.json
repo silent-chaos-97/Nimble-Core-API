@@ -5,7 +5,6 @@
       "title": "Status",
       "type": "string",
       "description": "Selects an Application when its status changes to this.",
-      "enum": [
         "Referred",
         "Started",
         "Ready to Sign",

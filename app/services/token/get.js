@@ -7,6 +7,7 @@ const getApiUri = require('../api/uri')
 const jwt = app.plugins.jwt
 
 function schema() {
+// Temp comment
   return Joi.object().keys({
     userId: Joi.string().optional().default(null),
     scopes: Joi.array().items(Joi.string()).min(1).default(['*']),
@@ -21,7 +22,6 @@ function getTokenInfo(options) {
   const now = moment()
   const publicClaims = {
     iss: getApiUri(),
-// Temp comment
     sub: getApiUri(`/v1/users/${options.userId}`),
     aud: getApiUri(),
     exp: moment(now).add(options.expiration, 's').unix(),

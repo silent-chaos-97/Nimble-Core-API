@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 
@@ -16,4 +15,5 @@ module.exports = {
 }
 
 async function DRAFT_to_INCOMPLETE(event) {
+// Temp comment
 

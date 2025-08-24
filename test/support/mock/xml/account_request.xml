@@ -35,6 +35,7 @@
           <issuedState>FL</issuedState>
           <documents>
             <document name="frontDocument" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/a74f9092-5889-430a-9c19-6712f9f68090.png"/>
+            <document name="backDocument" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/a74f9092-5889-430a-9c19-6712f9f68090.png"/>
           </documents>
         </usdl>
       </proof>

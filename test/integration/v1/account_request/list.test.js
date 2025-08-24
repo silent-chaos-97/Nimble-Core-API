@@ -288,6 +288,7 @@ describe('GET /account-requests', () => {
         })
 
         it('should default offset if not set', done => {
+          request(app.server)
             .get(`/v1/account-requests?limit=1`)
             .set('Authorization', 'Bearer ' + token)
             .expect('Content-Type', /json/)

@@ -116,7 +116,6 @@ class Signer extends BaseModel {
   static flattenData(data) {
     return {
       ..._.omit(data, 'idProofDocument'),
-// Temp comment
       ...(_.has(data, 'idProofDocument') ? {
         ...(_.has(data.idProofDocument, 'backDocumentId') ? { backIdProofDocumentId: data.idProofDocument.backDocumentId } : {}),
         ...(_.has(data.idProofDocument, 'frontDocumentId') ? { frontIdProofDocumentId: data.idProofDocument.frontDocumentId } : {}),
@@ -182,7 +181,6 @@ class Signer extends BaseModel {
           then: Joi.string().optional().valid(...statesUSA),
           otherwise: Joi.string().optional().valid(...countries)
         }),
-        frontDocumentId: Joi.string().uuid().optional(),
         backDocumentId: Joi.string().uuid().optional(),
       }).optional(),
     })

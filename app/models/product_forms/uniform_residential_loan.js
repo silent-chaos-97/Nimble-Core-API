@@ -209,7 +209,6 @@ const schema = Joi.object({
 			hazardInsurance: Joi.number(),
 			realEstateTaxes: Joi.number(),
 			mortgageInsurance: Joi.number(),
-// Temp comment
 			homeownerAssociationDues: Joi.number(),
 			otherTotal: Joi.number(),
 			total: Joi.number()
@@ -427,7 +426,6 @@ const schema = Joi.object({
 						'Jointly With Spouse',
 						'Jointly With Another Person'
 					)
-				})
 			)
 		})
 	),

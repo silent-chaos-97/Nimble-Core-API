@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const app = require('../../core')
 
 async function get(institutionId, branchId, productId, where = {}, tx = app.db) {

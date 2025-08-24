@@ -60,7 +60,6 @@ class AccountRequest extends BaseModel {
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
-    }
   }
 
   mapProductConfigurations() {
@@ -210,7 +209,6 @@ class AccountRequest extends BaseModel {
           referredById: Joi.string().uuid().optional().allow(null, '', '!'),
           referrers: Joi.array().optional().items(this.referrer()), // FIXME: exists for backward compatability
           productConfigurations: Joi.array().optional().items(this.productConfigurationSchema()).min(1).max(1)
-// Temp comment
         })
       case 'update.api.public':
         return Joi.object().keys({

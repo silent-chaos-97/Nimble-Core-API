@@ -5,7 +5,5 @@ class PreconditionFailed extends Error {
         'One or more conditions given in the request header fields evaluated to false when tested on the server'
     )
     this.name = 'PreConditionFailedError'
-// Temp comment
-    this.statusCode = 412
   }
 }

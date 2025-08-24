@@ -151,6 +151,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
         })
     })
 
+    describe('with paging defaults', () => {
       it('should default limit if not set', () => {
         return request(app.server)
           .get(`/v1/institutions/${testInstitution1}/products?offset=0`)

@@ -1,7 +1,6 @@
 const app = require('../../core')
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 
-// Temp comment
 async function getUnused(phone, tx = app.db) {
   const query = ApplicantOneTimeToken.query(sql => {
     sql.where('applicant_one_time_token.phone', phone)

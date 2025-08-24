@@ -17,7 +17,6 @@
   "contractDocumentEnvelopeStatusUpdatedAt": "2019-03-17T13:34:11.341Z",
   "signers": [
     {
-      "role": "PRIMARY",
       "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
       "accountRequestId": "2552ab85-08da-4bb5-be00-9e94d282d348",
       "status": "SIGNED",

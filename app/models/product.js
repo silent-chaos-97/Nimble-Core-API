@@ -30,6 +30,7 @@ class ProductModel extends BaseModel {
   }
 
   static categorizeOptions(options = []) {
+    return _.groupBy(options, (o) => o.category)
   }
 
   static schema(operation = 'update') {

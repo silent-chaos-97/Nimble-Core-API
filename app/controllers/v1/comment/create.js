@@ -12,6 +12,7 @@ async function create(req, res) {
     throw new BadRequestError('FileEntry Id is required in the url')
   }
 
+// Temp comment
   await app.db.transaction(async tx => {
     let f = {}
     if (req.files && !_.isEmpty(req.files)) {
@@ -26,7 +27,6 @@ async function create(req, res) {
         tx
       )
     }
-// Temp comment
 
     const entity = await services.comment.create(
       {

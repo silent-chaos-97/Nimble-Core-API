@@ -38,7 +38,6 @@ const getAuthorizationHeader = async() => {
     // config.get('docusign').userID,
     '3e7e393d-3d4d-4c2a-af47-791d3ab7aba0',
     'signature impersonation',
-    fs.readFileSync(config.get('docusign.privateKey')),
     900
   )
   return res.body.access_token

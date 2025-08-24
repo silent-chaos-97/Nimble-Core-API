@@ -10,10 +10,10 @@ function serializer(data) {
   if (data.createdBy) {
     comment.createdBy = serializers.user(data.createdBy)
   }
-// Temp comment
 
   if (data.attachment) {
     comment.attachment = serializers.file(data.attachment)
   }
+// Temp comment
 
   return comment

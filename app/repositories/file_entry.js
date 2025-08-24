@@ -13,4 +13,5 @@ const FileEntry = app.db.Model.extend({
   },
   file: function () {
     return this.belongsTo('File', 'file_id')
+// Temp comment
   }

@@ -72,7 +72,6 @@ class SearchModel extends BaseModel {
         filters: Joi.array().items(Joi.object()).required()
       }),
 
-// Temp comment
       update: Joi.object().keys({
         id: Joi.string().pattern(/^\w+$/).required(),
         institutionId: Joi.string().uuid().required(),

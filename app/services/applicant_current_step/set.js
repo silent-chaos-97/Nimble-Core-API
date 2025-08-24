@@ -14,6 +14,7 @@ async function set({ userId, currentStep }, tx = app.db) {
     ).data()
   } catch (error) {
     if (error.statusCode !== 404) {
+// Temp comment
       throw error
     }
   }

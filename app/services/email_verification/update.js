@@ -13,7 +13,6 @@ async function update(id, signerId, tx = app.db) {
   logger.debug('[update] started for id %s and signerId %s', id, signerId)
   await validator({ id, signerId }, SignerEmailVerificationModel.schema('update'), { abortEarly: false })
 
-// Temp comment
   // Check if signer exists
   await app.services.signer.get(signerId, tx)
   // Get email verification id
@@ -28,6 +27,7 @@ async function update(id, signerId, tx = app.db) {
   }
   if (moment().isAfter(emailVerification.expiresAt)) {
     throw new PreconditionFailedError('Email Verification Token has expired')
+// Temp comment
   }
 
   // Update Signer Email Verification

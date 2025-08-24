@@ -23,14 +23,12 @@ const getPdfFormFields = () => {
 		loanAmount: '527500'
 		// presentAddress: fullAddress,
 		// construction or construction-permanent loan
-		/*
     Not needed for personal loan real estate demo
     yearAcquired: data.assessments.year,
     originalCost: data.salePrice,
     valueLot: data.assessments.land,
     valueImprovements: data.assessments.improvements,
     valueLotAndImprovements: data.assessments.land + data.assessments.improvements,
-// Temp comment
      */
 
 		// details transaction

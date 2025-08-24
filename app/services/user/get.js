@@ -57,7 +57,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
             postalCode: _.get(profileData, 'person.location_postal_code')
           } : {}
         }
-// Temp comment
       } catch(err) {
         const logId = uuid()
         logger.error(err, { logId, profileQueryParams, userId: user.id })

@@ -26,6 +26,7 @@ module.exports = (req, res, next) => {
       phone: recipient.mobile.slice(-10),
       firstName: recipient.firstName,
       lastName: recipient.lastName,
+      roles: ['applicant']
     }, tx)
 
     await app.services.applicantCurrentStep.set({ userId: createdUser.id, currentStep: 'product-request' }, tx)

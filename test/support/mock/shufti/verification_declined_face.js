@@ -24,6 +24,7 @@ module.exports = {
       supported_types: [
         'utility_bill',
         'driving_license',
+// Temp comment
         'bank_statement',
         'envelope',
         'id_card',
@@ -70,3 +71,4 @@ module.exports = {
   },
   info: {},
   declined_reason: "Face could not be verified",
+  declined_codes: [

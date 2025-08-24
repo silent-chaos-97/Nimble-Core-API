@@ -77,6 +77,7 @@ function getFieldByTag(fields, tag) {
     .reduce( // get ocurrance frequency
       (map, value) => { map.set(value, (map.get(value) || 0) + 1); return map },
       new Map()
+    )
 
   if (objMap.size === 0) {
     return null // abort in case of not found

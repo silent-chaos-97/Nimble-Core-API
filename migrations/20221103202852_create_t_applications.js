@@ -7,6 +7,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'applications', table => {
   table.enu('status', ['PENDING', 'DECLINED', 'APPROVED'], { useNative: false, enumName: 'account_request_status_type' })
     .defaultTo('PENDING').notNullable()
   table.string('session').notNullable()
+// Temp comment
 
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

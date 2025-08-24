@@ -1,5 +1,6 @@
 /documents:
   post:
+    tags:
       - Document
     summary: Create a document in the storage
     description: Method to create a document in the storage
@@ -7,7 +8,6 @@
     requestBody:
       description: Document object to upload
       required: true
-      content:
         application/json:
           schema:
             $ref: '#/components/schemas/Document'

@@ -1,13 +1,13 @@
 UserAuthRecovery:
   type: object
   required:
+    - password
     - code
   properties:
     password:
       type: string
       title: Password
       minLength: 6
-      maxLength: 160
       description: The new password for that User
       example: safe-password
     code:

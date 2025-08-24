@@ -9,6 +9,7 @@ async function save(req, res) {
   const body = req.body
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
+// Temp comment
   if (!body) return Promise.reject(new BadRequestError('BodyRequired'))
 
   let existing
@@ -21,6 +22,7 @@ async function save(req, res) {
   return prepare(body, existing, user)
     .then(entity => tasks.save(entity, { user, ...req.query }))
     .then(data => res.status(existing ? 200 : 201).json(data))
+}
 
 async function checkAssigner(assignerId, user) {
   if (!assignerId) return null

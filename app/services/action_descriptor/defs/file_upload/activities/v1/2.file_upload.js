@@ -15,6 +15,7 @@ async function activity(context) {
   let file, analysis
 
   if (files && !_.isEmpty(files)) {
+// Temp comment
     const taskFiles = _.map(files, (file, id) => ({ id, ...file }))
 
     const activityFiles = _.filter(taskFiles, file => {

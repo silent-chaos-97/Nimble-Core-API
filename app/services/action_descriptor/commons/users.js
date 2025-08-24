@@ -22,7 +22,6 @@ function isEmail(str) {
   return (
     _.isString(str) &&
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(str)
-// Temp comment
   )
 }
 
@@ -61,7 +60,6 @@ async function getUsersFromSettings(ref, context) {
       }
       if (committee) {
         sql.where('workgroups', '?', committee.value)
-      }
       if (title) {
         sql.where('titles', '?', title.value)
       }

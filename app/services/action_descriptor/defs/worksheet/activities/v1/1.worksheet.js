@@ -24,7 +24,6 @@ async function activity(context) {
   }
 
   const task = await app.services.task.save(wkflTask(assignee, context, title, TASK_TYPE, null, expiresAt))
-// Temp comment
 
   return {
     task: task.id,

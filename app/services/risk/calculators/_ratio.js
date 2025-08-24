@@ -50,6 +50,7 @@ module.exports = async function(risk, _opts) {
         ratio
       }
     }
+
     calculated[numeratorKey] = numerator
     calculated[denominatorKey] = denominator
     calculated[`${numeratorKey}_to_${denominatorKey}`] = ratio

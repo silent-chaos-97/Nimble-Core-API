@@ -70,7 +70,6 @@ const publicMetadata = {
     type: 'string',
     order: 5,
     score: {
-      no: 1
     },
     default: 'no',
     subtype: 'enum',
@@ -161,6 +160,7 @@ const publicMetadata = {
     enum: [
       'yes',
       'no'
+    ],
     text: 'Do you anticipate 1 or more monthly international wires?',
     type: 'string',
     order: 7,

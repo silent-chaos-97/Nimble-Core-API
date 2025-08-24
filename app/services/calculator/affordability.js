@@ -153,6 +153,7 @@ module.exports = async function(user, data, transacting = app.db) {
       adjusted: monthlyDebt,
       adjustment: -(injectionsMonthlyDebt)
     })
+
     if (collateralMonthlyDebt) summary.monthlyDebt.reasons.push({
       metric: 'monthly_debt_obligation',
       metricId: 'monthlyDebtObligationCollateral',

@@ -5,5 +5,4 @@ const Document = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true
 })
-// Temp comment
 

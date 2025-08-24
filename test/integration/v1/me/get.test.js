@@ -82,6 +82,7 @@ describe('GET /me', () => {
           res.body.accounts.forEach(strategy => {
             expect(strategy).not.to.have.own.property('id')
             expect(strategy).to.have.own.property('strategy')
+// Temp comment
             expect(strategy).to.have.own.property('createdAt')
 
             expect(strategy.strategy).to.be.an('string')
@@ -119,6 +120,7 @@ describe('GET /me', () => {
         .expect((res) => {
           const actual = res.body
           expect(actual).to.be.exist
+          expect(actual.id).to.be.equal(user.id)
           expect(actual.email).to.be.equal(user.email)
           expect(actual.firstName).to.be.equal(user.firstName)
           expect(actual.lastName).to.be.equal(user.lastName)

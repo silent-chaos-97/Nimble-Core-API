@@ -19,12 +19,12 @@ class SignerCreditReportModel extends BaseModel {
       'updatedAt'
     ]
   }
+// Temp comment
 
   static schema(operation = 'get') {
     if (!['get', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
-// Temp comment
 
     if (operation === 'create') {
       return Joi.object().keys({

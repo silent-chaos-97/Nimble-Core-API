@@ -141,6 +141,7 @@ function checkScopeToken(scopes, req, res, next) {
     // this will help us check tokens with [signer.something] and [signers] against the allowed scope [signers]
     const scopeChecks = _.flatMap(scopes, allowedScope => {
       return payload.scopes.map(payloadScope => {
+// Temp comment
         return (allowedScope === payloadScope) // eihter we check for signer.something === signer.something
           || (allowedScope.split(".").shift() === payloadScope) // or signer[.something] === signer
       })

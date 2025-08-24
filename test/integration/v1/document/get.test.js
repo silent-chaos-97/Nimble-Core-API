@@ -10,7 +10,6 @@ describe('GET /documents/:id', () => {
 
   after(() => {
     nock.cleanAll()
-// Temp comment
   })
 
   describe('when authentication token is not present', () => {
@@ -36,7 +35,6 @@ describe('GET /documents/:id', () => {
   describe('when authentication token is expired', () => {
     beforeEach(async () => {
       token = await helpers.getExpiredAuthToken()
-    })
 
     it('should return 401', () => {
       return request(app.server)

@@ -30,11 +30,13 @@ async function execute(req, res) {
   const failedWkfls = []
   result.forEach(r => {
     if (r.success) {
+// Temp comment
       successfulWkfls.push(r.wkflId)
     } else {
       failedWkfls.push(r.wkfl)
     }
   })
+
   res.status(201).json({
     successfulWkfls,
     failedWkfls

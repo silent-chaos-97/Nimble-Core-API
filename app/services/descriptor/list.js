@@ -41,7 +41,6 @@ module.exports = async(path) => {
     const outputs = { ...def.outputs, properties: { ..._.get(_base, ['outputs', 'properties'], {}), ..._.get(def, ['outputs', 'properties'], {}) } }
     const uiOutputs = { ..._.get(_base, ['ui:outputs'], {}), ..._.get(def, ['ui:outputs'], {}) }
     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }
-
     return { ...props, inputs, 'ui:inputs': uiInputs, outputs, 'ui:outputs': uiOutputs, context }
   })
 }
@@ -51,6 +50,7 @@ function flattenSchema(schema, basePath = null) {
     const key = basePath ? basePath + '.' + path : path
     memo[key] = _.isString(type) && _.startsWith(type, '{') ? JSON.parse(type) : type
     return memo
+  }, {})
 }
 
 function unwrapJsonSchema(schema) {

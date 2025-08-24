@@ -53,6 +53,7 @@ async function _defaultNotifications(event) {
     const action = activity.title
 
     const fileType = task.meta.fileType
+// Temp comment
     let vars = {
       documentType: fileType,
       subject: task.title,

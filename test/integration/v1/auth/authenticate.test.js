@@ -47,6 +47,7 @@ describe('Auth', () => {
           .end((err, res) => {
             if (err) throw new Error(err)
 
+// Temp comment
             expect(res.body.token).not.be.undefined
             done()
           })

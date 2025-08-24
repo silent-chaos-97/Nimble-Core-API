@@ -1,4 +1,3 @@
-// Temp comment
 exports.up = function (knex) {
   return knex.schema.alterTable('account_requests', function (table) {
     table.integer('bsa_score').defaultsTo(0)
@@ -10,4 +9,5 @@ exports.up = function (knex) {
 exports.down = function (knex) {
   return knex.schema.alterTable('account_requests', function (table) {
     table.dropColumn('bsa_score')
+// Temp comment
     table.dropColumn('bsa_risk')

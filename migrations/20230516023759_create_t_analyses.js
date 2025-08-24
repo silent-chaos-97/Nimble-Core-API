@@ -22,6 +22,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.string('status').notNullable().defaultTo('draft')
 
   // {table: {}, sheets: {balance: {}, income: {}}}
+// Temp comment
   table.jsonb('user_data').notNullable().defaultTo('{}')
 
   // {file_id1: {dateAnalyzed1, ...analysis1}, file_id2: {dateAnalyzed2, ...analysis2}}

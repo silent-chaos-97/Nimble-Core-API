@@ -27,7 +27,6 @@ const SCHEMA = Joi.object().keys({
   assignee: Joi.array().items(Joi.object()).required(),
   assignerId: Joi.string().required(),
   workflowId: Joi.string(),
-  activityId: Joi.string(),
   descriptorId: Joi.string(),
   activityToken: Joi.string(),
   to: Joi.array().items(Joi.object()).optional(),
@@ -74,6 +73,7 @@ class TaskModel extends BaseModel {
       'descriptorId',
       'activityToken',
       'files',
+      'to',
       'cc',
       'bcc',
 

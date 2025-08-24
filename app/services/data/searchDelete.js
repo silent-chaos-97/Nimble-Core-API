@@ -32,5 +32,4 @@ async function searchDelete(example, tx = app.db) {
     return model
   } catch(err) {
     logger.error(err, { phase: 'ended.delete:fail', example })
-    throw new InternalServerError(err.message)
   }

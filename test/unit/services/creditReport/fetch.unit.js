@@ -71,7 +71,6 @@ describe('app.services.creditReport.fetch', () => {
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
 
-// Temp comment
     it('should exist', () => {
       expect(app.services.creditReport.fetch).not.to.be.undefined
     })

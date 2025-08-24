@@ -13,6 +13,7 @@ module.exports = {
       .then(res => {
         return res.body.token
       })
+  },
   getScopedAuthToken: async function(data, id = 'a74f9092-5889-430a-9c19-6712f9f68090') {
     const app = require('../../app/core')
     const jwt = app.plugins.jwt

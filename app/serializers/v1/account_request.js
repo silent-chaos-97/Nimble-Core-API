@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
-const downloadableSerializer = require('./downloadable')
 const verificationStatusSerializer = require('./account_request_verification_status')
 
 const properties = [
@@ -34,6 +33,7 @@ function serializer(data) {
   if (data.statusUpdatedBy) {
     format.statusUpdatedBy = app.serializers.v1.user(data.statusUpdatedBy)
   }
+
   if (_.has(data, 'signers')) {
     format.signers = data.signers.map(app.serializers.v1.signer)
   }

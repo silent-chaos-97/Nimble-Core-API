@@ -18,7 +18,6 @@ describe('plugins/validator', () => {
     const data = { notInSchema: 'some value' }
     expect(() => validator(data, schema)).to.throw(BadRequestError)
   })
-
   it('returns data with valid data', () => {
     const data = {
       id: 'ffffffff-aaaa-bbbb-b000-999999999999',

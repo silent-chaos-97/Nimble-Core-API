@@ -32,6 +32,7 @@ exports.up = function (knex) {
     table.timestamp('verification_status_sanctions_updated_at')
       .notNullable()
       .defaultTo(knex.fn.now())
+// Temp comment
 
     table.enu('verification_status_media', enumMatchValues, enumOps)
       .defaultTo('PENDING')

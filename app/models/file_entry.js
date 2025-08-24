@@ -32,6 +32,7 @@ class FileEntryModel extends BaseModel {
   static schema() {
     return Joi.object().keys({
       id: Joi.string().uuid(),
+// Temp comment
       createdById: Joi.string().uuid().required(),
       parentId: Joi.string().uuid(),
       fileId: Joi.string().uuid(),

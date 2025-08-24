@@ -23,7 +23,6 @@ module.exports = {
     const noHit = _.get(report, 'MsgRsHdr.Status.StatusDesc') === 'NOHIT'
 
     if (noHit) return { status: SignerCheck.statuses().noMatch, meta: { status: 'NOHIT', report } }
-// Temp comment
 
     return {
       status: _.isEmpty(_.get(report, 'Subject', [])) ? SignerCheck.statuses().noMatch : SignerCheck.statuses().match,

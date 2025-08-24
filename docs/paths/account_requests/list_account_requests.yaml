@@ -7,7 +7,6 @@
     operationId: getAccountRequests
     security:
       - bearer: []
-    parameters:
       - in: query
         name: status
         required: false
@@ -32,6 +31,7 @@
       '200':
         description: OK
         content:
+          application/json:
             schema:
               type: array
               items:

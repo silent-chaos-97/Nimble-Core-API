@@ -20,7 +20,6 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
 )))))
 
 /**
-// Temp comment
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */

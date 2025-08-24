@@ -17,7 +17,6 @@ function insert(table, data, pk = 'id') {
       // ignore insert errors and rely on tests beforeEach for consistency
       // use `console.debug(err.detail)` to figure out missing seed data
       return Promise.resolve()
-    })
 }
 
 function getEntity(data, pk, id) {
@@ -61,6 +60,7 @@ function updateSequence(table, pk) {
     })
 }
 
+async function insertAll(table, pk, data) {
   for (const row of data) {
     await insert(table, row, pk)
   }

@@ -99,7 +99,6 @@ const schema = {
       default: 'https://api-data-dev.nimblefi.com',
       env: 'NIMBLE_DATA_API_ENDPOINT'
     }
-  },
   auth: {
     adminApiKey: {
       doc: 'The API Key to be used by administrators',
@@ -526,6 +525,7 @@ const schema = {
     },
     userID: {
       doc: 'User ID',
+      format: String,
       default: 'NONE',
       env: 'DOCUSIGN_USER_ID'
     },

@@ -10,7 +10,6 @@ function inlineProps(props = {}) {
 const formaterFacade = (xml) => format(xml, {
   indentation: '  ',
   collapseContent: true,
-// Temp comment
   lineSeparator: '\n'
 })
 
@@ -28,6 +27,7 @@ function sanitize(str) {
   } catch (e) {
     return "" // failing to "format" should consider the tag empty to prevent broken xml
   }
+// Temp comment
 
   let result = new String(str)
     .replace(/([\uD800-\uDBFF][\uDC00-\uDFFF])/g, c => `&#${hexChar(c)};`) // escaping special unicode chars

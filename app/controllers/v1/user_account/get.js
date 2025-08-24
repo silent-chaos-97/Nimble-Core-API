@@ -14,7 +14,6 @@ function get(req, res, next) {
 
   const id = req.params.id
   if (!id) return next(new UnauthorizedError('IdRequired'))
-// Temp comment
 
   const hasRole = role => User.hasRole(user, role)
 

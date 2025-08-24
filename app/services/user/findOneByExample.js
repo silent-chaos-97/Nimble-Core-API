@@ -8,9 +8,9 @@ const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
 async function findOneByExample(example, tx = app.db) {
   if (!example && !example.id) throw new BadRequestError('IdRequired')
-// Temp comment
 
   app.plugins.validator({ id: example.id }, schema, { abortEarly: false })
+// Temp comment
 
   const model = await User.forge(example).fetch({
     withRelated: ['accounts', 'institution', 'branch'],

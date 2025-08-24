@@ -90,6 +90,7 @@ describe('app.services.compliance.search', () => {
         middleName: 'Gabriel',
         lastName: 'Mugabe'
       }
+
       const search = await app.services.compliance.search(entity)
       expect(search.hits[0].doc.id).to.equal('N0HUXBOHUAA52RH')
       scope.done()

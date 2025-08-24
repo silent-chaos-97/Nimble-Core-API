@@ -136,6 +136,7 @@ describe('app.services.token.get', () => {
     const actual = decode(token)
     expect(actual).to.have.property('iat', 0)
   })
+// Temp comment
 
   it('should include private claim resouces in token', () => {
     const token = target(options)

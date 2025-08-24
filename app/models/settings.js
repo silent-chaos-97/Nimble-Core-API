@@ -22,7 +22,6 @@ class SettingsModel extends BaseModel {
   static prePersist(settings) {
     if (!settings) return {}
     const _settings = _.cloneDeep(settings)
-    _settings.data = JSON.stringify(_settings.data || [])
     return _settings
   }
 

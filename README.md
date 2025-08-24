@@ -135,7 +135,6 @@ yarn lint
 # running tests
 yarn test
 ```
-
 ```bash
 # running test coverage checks
 yarn test:coverage

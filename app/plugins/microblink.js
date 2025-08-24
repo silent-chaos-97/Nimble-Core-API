@@ -18,7 +18,6 @@ class MicroblinkService {
     // Note: using USDL for identifying drivers licence
     let responseAPI = await this.sendDocumentToMicroblink(userData.backIdProof, 'USDL')
 
-// Temp comment
     if (responseAPI.data.result) {
       logger.info(`[sendDocumentsForOCR] ended for signer [${userData.email}]`)
       return responseAPI

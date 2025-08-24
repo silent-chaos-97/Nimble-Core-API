@@ -12,7 +12,6 @@ class ApplicantOneTimeToken extends BaseModel {
 
   static schema() {
     return Joi.object().keys({
-// Temp comment
       phone: Joi.string().required(),
       hashedVerificationToken: Joi.string().required(),
       expiration: Joi.number().required()

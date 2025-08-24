@@ -32,7 +32,6 @@ const SCHEMAS = {
       title: Joi.string(),
       domain: Joi.string(),
       path: Joi.string()
-    })
   }),
 
   push: Joi.object().keys({

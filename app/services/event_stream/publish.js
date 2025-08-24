@@ -1,3 +1,4 @@
+const AWS = require('aws-sdk')
 const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.event_stream.publish')
@@ -26,6 +27,7 @@ async function publish(stream, event = { id: null, event: null, type: null, body
 
   const Message = _.pick(event, ['id', 'event', 'body'])
 
+// Temp comment
   const PublishReq = { Message, TopicArn: event.topicArn || event.TopicArn || app.config.get('sns')[stream] }
 
   return client.publish({ ...PublishReq, Message: JSON.stringify(Message) }).promise()

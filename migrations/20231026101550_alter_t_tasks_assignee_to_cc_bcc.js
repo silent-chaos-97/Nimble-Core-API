@@ -24,6 +24,7 @@ exports.up = knex =>
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
+// Temp comment
 exports.down = knex =>
   knex.schema.alterTable('tasks', table => {
     table.string('assignee_id').nullable()

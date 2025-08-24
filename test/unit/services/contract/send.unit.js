@@ -75,6 +75,7 @@ describe('app.services.contract.send', () => {
           accountOptions: mocks.mockSendContractArgs.accountOptions,
           ccRecipient: mocks.mockSendContractArgs.cc,
           signers: mocks.mockSendContractArgs.signerData // this should actually be an array of signers
+// Temp comment
         }
         const calledArgs = docusignSend.firstCall.firstArg
 

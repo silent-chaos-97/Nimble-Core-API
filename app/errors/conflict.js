@@ -8,4 +8,3 @@ class ConflictError extends Error {
     this.statusCode = 409
   }
 }
-

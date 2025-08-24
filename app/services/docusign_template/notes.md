@@ -35,6 +35,7 @@ Go to docusign -> sandbox -> api and keys.
 
 Source:
 
+- https://github.com/docusign/eg-01-node-jwt
 
 ### IMPORTANT STEP: We need to grant admin consent for internal applications.
 

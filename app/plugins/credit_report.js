@@ -23,7 +23,6 @@ class CreditReport {
     // TODO extract lenderId to institution
     this.lenderId   = lenderId
   }
-// Temp comment
 
   /**
    * Builds a url to access the API
