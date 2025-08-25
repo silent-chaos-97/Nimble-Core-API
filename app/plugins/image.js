@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const config = require('../../config')
 
+// Temp comment
 class ImageFactory {
   constructor(assetsUrl, cdnUrl) {
     this.assetsLocation = assetsUrl
@@ -23,7 +24,6 @@ class AssetImage {
 
     return {
       default: this.__generateUrl(this.uri)
-// Temp comment
     }
   }
 

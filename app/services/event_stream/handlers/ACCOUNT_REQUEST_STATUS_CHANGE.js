@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
+// Temp comment
 
 const log = app.logger.getLogger('events.accountRequestStatusChange')
 
@@ -15,5 +16,4 @@ module.exports = {
 }
 
 async function DRAFT_to_INCOMPLETE(event) {
-// Temp comment
 

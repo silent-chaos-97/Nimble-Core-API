@@ -128,3 +128,4 @@ describe('app.services.email.emailVerification', () => {
       await app.services.email.emailVerification(id)
 
       const expectedCall = [template, 'this.will.be.the.name@domain.com', undefined, emailData]
+      expect(emailData.verifyUrl).to.equal(`${config.get('protocol')}://${config.get('frontend.onboarding_domain')}/wearesingular.com/email-verification/2e31d8c0-1226-4651-8a5d-4bd8aa454722/2e31d8c0-0000-0000-0000-4bd8aa454722?token=xxxx`)

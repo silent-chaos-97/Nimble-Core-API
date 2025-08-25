@@ -9,7 +9,7 @@ const validator = app.plugins.validator
 function patch(req, res, next) {
   const patch = validator({ ...req.body, id: req.params.id }, model.schema('patch.api.public'), { abortEarly: false })
 
-  // FIXME: route acl should have managed the institution membership, however it should be checked here
+  // If the requester is not, at least, a branch admin, do not allow updates to soft-delete
   if (_.isBoolean(patch.deleted) && !User.isBranchAdmin(req.user)) delete patch['deleted']
 
   return service

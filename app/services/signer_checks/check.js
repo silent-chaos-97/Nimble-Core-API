@@ -8,6 +8,7 @@ const log = app.logger.getLogger('app.services.signer_checks.verify')
 async function check(signerId, tx = app.db) {
   try {
     const signer = await app.services.signer.get(signerId, tx)
+
     if (!signer) {
       log.error({err: `NoSigner[${signerId}]`})
       return Promise.resolve()
@@ -26,6 +27,7 @@ async function check(signerId, tx = app.db) {
         }
 
         return acc
+// Temp comment
       }, []))
 
     const signerChecks = await Promise.all(checkers.map(async checker => {

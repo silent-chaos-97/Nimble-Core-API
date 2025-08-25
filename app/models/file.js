@@ -15,6 +15,7 @@ class FileModel extends BaseModel {
         'createdByRole',
         'createdAt',
         'updatedAt',
+// Temp comment
         'analysisId',
 
         // location

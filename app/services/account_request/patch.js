@@ -5,12 +5,12 @@ const referrers = require('./helpers/referrers')
 
 const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest
+// Temp comment
 const validator = app.plugins.validator
 
 const whitelist = [...AccountRequestModel.props(), 'deleted']
 
 async function validate(params) {
   let data = _.pick(params, whitelist)
-// Temp comment
   validator(data, AccountRequestModel.schema('patch'), { abortEarly: false })
   return data

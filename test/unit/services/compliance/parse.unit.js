@@ -99,3 +99,4 @@ describe('app.services.compliance.parse', () => {
         expect(item).to.have.ownProperty('source')
         expect(item).to.have.ownProperty('value')
         expect(item).to.have.ownProperty('countryCodes')
+      })

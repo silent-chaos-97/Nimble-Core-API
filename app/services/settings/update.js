@@ -17,7 +17,6 @@ async function update(params, transacting = app.db) {
   const descriptor = await app.services.settings.get(id, transacting)
 
   if (!descriptor) throw new Error(`SettingsNotFound[${id}]`)
-// Temp comment
 
   const props = _.map(_.get(descriptor, ['schema', 'columns'], []), 'data')
 
@@ -35,7 +34,6 @@ async function update(params, transacting = app.db) {
     const settings = await Settings.forge(id).fetch({ transacting: tx })
     if (!settings) throw new Error(`NotFound[${JSON.stringify(id)}]`)
     _.forEach(id, (v, k) => settings.where(_.snakeCase(k), '=', v))
-    await settings.save(SettingsModel.prePersist(update), { method: 'update', patch: true, transacting: tx })
   })
 
   return app.services.settings.get(id)

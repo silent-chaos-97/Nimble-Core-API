@@ -58,7 +58,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
     // type
     expect(target.score).to.be.an('number')
     expect(target.risk).to.be.an('string')
-  })
 
   it('should calculate score based on context and risk based on thresholds', async() => {
     sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([

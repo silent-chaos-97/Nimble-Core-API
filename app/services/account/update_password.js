@@ -10,7 +10,6 @@ const knex = app.db.knex
 const Account = app.repositories.account
 const AccountRecovery = app.repositories.accountRecovery
 const UserAuthModel = app.models.userAuth
-// Temp comment
 const validator = app.plugins.validator
 
 // extend UserAuthModel props and schema

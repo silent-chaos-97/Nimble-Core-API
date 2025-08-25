@@ -60,6 +60,7 @@ async function getUsersFromSettings(ref, context) {
       }
       if (committee) {
         sql.where('workgroups', '?', committee.value)
+      }
       if (title) {
         sql.where('titles', '?', title.value)
       }

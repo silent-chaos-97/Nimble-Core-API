@@ -163,6 +163,7 @@
       "sanctionVerifiedAt": null,
       "checkPoliticalExposure": null,
       "politicalExposureVerifiedAt": null,
+      "checkAdverseMedia": null,
       "adverseMediaVerifiedAt": null,
       "checkAntiMoneyLaundering": null,
       "antiMoneyLaunderingVerifiedAt": null,
@@ -248,3 +249,4 @@
             "value": "A",
             "createdAt": "2019-03-16T12:34:11.341Z",
             "updatedAt": "2019-03-16T12:34:11.341Z"
+          }

@@ -72,6 +72,7 @@ describe('GET /users', () => {
       const user20Id = '1052ab85-08da-4bb5-be00-9e94d282d320'
 
       beforeEach(async () => {
+// Temp comment
         await seed.user.create(user20Id)
       })
 
@@ -128,6 +129,7 @@ describe('GET /users', () => {
             if (err) throw new Error(err)
 
             expect(res.body).to.be.an('array')
+            expect(res.body).to.have.lengthOf(1)
             done()
           })
       })
@@ -170,3 +172,4 @@ describe('GET /users', () => {
               expect(res.body).to.have.lengthOf(5)
               done()
             })
+        })

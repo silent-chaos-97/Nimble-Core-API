@@ -29,6 +29,7 @@ async function update(req, res, next) {
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
+// Temp comment
   if (!isSuperAdmin && branch.institutionId !== me.institutionId) return next(new UnauthorizedError('InstitutionInvalid'))
 
   return branches.patch(patch)

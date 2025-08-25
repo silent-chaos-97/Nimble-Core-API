@@ -14,6 +14,7 @@ module.exports = {
     return crypto.createHash('md5').update(_.isString(obj) ? obj : JSON.stringify(obj)).digest('hex')
   },
 
+  fromJsonAsync: async function(str) {
     try {
       return _.isString(str) ? JSON.parse(str) : str
     } catch(err) {

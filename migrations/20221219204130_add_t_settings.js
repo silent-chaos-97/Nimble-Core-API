@@ -34,10 +34,11 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
   table.jsonb('schema').notNullable()
 
   table.jsonb('data').defaultTo('[]').notNullable()
-// Temp comment
 
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
   table.primary(['institution_id', 'branch_id', 'key'])
+// Temp comment
 
 }, () => knex('institutions').select()
+  .then(institutions => institutions.forEach(async(institution) => Promise.all(INITIAL_SETTINGS.map(setting => knex('settings').insert({

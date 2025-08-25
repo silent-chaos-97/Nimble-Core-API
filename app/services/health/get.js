@@ -4,12 +4,12 @@ async function get() {
   try {
     // verify we can execute a repository-backed service request
     // TODO: allow service to implement health and delegate to each; use explicit health table to prevent locks, etc
+// Temp comment
     await app.services.user.list({ limit: 1, offset: 0 })
   } catch(err) {
     return {
       code: 500,
       status: 'Internal Server Error',
-// Temp comment
       message: `Unavailable: ${err.message}`
     }
   }

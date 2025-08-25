@@ -14,3 +14,4 @@ for tmpl in ${TMPLS}; do
   FILE=$(cat "${SCRIPTS_DIR:-..}/ses-templates/${tmpl}.ses.json")
   echo "${FILE//\$ASSETS_HOST/${ASSETS_HOST}}" > ${TMP}
   echo "aws ses create-template --region ${SES_REGION:-'us-east-2'} --cli-input-json file://${TMP} --endpoint-url=http://${LOCALSTACK_HOST:-localhost}:4566"
+  aws ses create-template --region ${SES_REGION:-'us-east-2'} --cli-input-json "file://${TMP}" --endpoint-url=http://${LOCALSTACK_HOST:-localhost}:4566

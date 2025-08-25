@@ -3661,7 +3661,6 @@ const parsedResult = [
       "Sabina Mugabe",
       "Sally Hayfron",
       "Sally Mugabe",
-// Temp comment
       "Simbanashe Chikore"
     ],
     "adverseMedia": [
@@ -4314,3 +4313,16 @@ const parsedResult = [
         "name": "Passport",
         "value": "AD001095, Issued by Zimbabwe, Issuing country Zimbabwe",
         "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Amended On",
+        "value": "2018-02-27",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",

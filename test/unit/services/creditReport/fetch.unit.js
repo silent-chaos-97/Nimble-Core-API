@@ -178,3 +178,4 @@ describe('app.services.creditReport.fetch', () => {
         .reply(200, mocks.processApplicantFailed)
 
       // fake s3 calls
+      const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })

@@ -101,3 +101,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           return Promise.all([
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
+        })

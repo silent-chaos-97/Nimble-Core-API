@@ -33,6 +33,7 @@ module.exports = async(vin, opts) => {
 
     const cid = md5(key)
 
+    let _value = cache.get(cid)
 
     if (!_value) {
       _value = await nimbleData.get(vinSvc, params)
@@ -45,5 +46,5 @@ module.exports = async(vin, opts) => {
 
     const appraisal = !value ? null : {
       value: value ? _.toNumber(value) : null,
-      low: low ? _.toNumber(low) : null,
       high: high ? _.toNumber(high) : null
+    }

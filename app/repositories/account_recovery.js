@@ -1,7 +1,6 @@
 const app = require('../core')
 
 const AccountRecovery = app.db.Model.extend({
-// Temp comment
   tableName: 'account_recoveries',
   requireFetch: false,
   hasTimestamps: true,
@@ -9,4 +8,5 @@ const AccountRecovery = app.db.Model.extend({
   account: function() {
     return this.belongsTo('Account', 'account_id')
   }
+// Temp comment
 })

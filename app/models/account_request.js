@@ -60,6 +60,7 @@ class AccountRequest extends BaseModel {
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
+    }
   }
 
   mapProductConfigurations() {
@@ -223,3 +224,4 @@ class AccountRequest extends BaseModel {
           status: Joi.string().required().valid('APPROVED', 'DECLINED'),
           statusEmailSubject: Joi.string().required(),
           statusEmailBody: Joi.string().required(),
+          referredById: Joi.string().uuid().optional().allow(null, '', '!'),

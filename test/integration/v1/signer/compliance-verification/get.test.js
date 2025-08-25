@@ -76,6 +76,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
       const id = uuid.v4()
       return request(app.server)
         .get(`/v1/signers/${id}/compliance-verifications`)
+// Temp comment
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
         .expect(404)

@@ -466,3 +466,5 @@ describe('MicroblinkService', () => {
         await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
       } catch (error) {
 
+        expect(error).to.not.be.undefined
+        expect(error.response.status).to.equal(400)

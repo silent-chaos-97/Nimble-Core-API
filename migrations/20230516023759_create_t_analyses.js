@@ -22,7 +22,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.string('status').notNullable().defaultTo('draft')
 
   // {table: {}, sheets: {balance: {}, income: {}}}
-// Temp comment
   table.jsonb('user_data').notNullable().defaultTo('{}')
 
   // {file_id1: {dateAnalyzed1, ...analysis1}, file_id2: {dateAnalyzed2, ...analysis2}}
@@ -30,6 +29,5 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
 
   // {date1: {...model}, date2: {...model}}
   table.jsonb('revisions').notNullable().defaultTo('{}')
-
 }, () => knex.schema.alterTable('analyses', table => {
     table.index('status', 'idx_analyses_status')

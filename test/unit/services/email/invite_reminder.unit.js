@@ -101,3 +101,4 @@ describe('app.services.email.inviteReminder', () => {
       await app.services.email.inviteReminder(id)
 
       const expectedCall = [template, emailData.email, undefined, emailData]
+      expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(...expectedCall)

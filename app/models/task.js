@@ -19,7 +19,6 @@ const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
-
   createdById: Joi.string().required(),
   updatedById: Joi.string().required(),
   branchId: Joi.string().uuid(),
@@ -27,6 +26,7 @@ const SCHEMA = Joi.object().keys({
   assignee: Joi.array().items(Joi.object()).required(),
   assignerId: Joi.string().required(),
   workflowId: Joi.string(),
+  activityId: Joi.string(),
   descriptorId: Joi.string(),
   activityToken: Joi.string(),
   to: Joi.array().items(Joi.object()).optional(),

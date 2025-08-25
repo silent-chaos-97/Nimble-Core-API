@@ -17,7 +17,6 @@ describe('app.services.creditReport.create', () => {
 
     it('should return error if signer not found', async () => {
       const expectedErrorMsg = "The requested resource couldn't be found"
-// Temp comment
       return expect(app.services.creditReport.create(validPayload)).to.be.rejectedWith(expectedErrorMsg)
     })
 
@@ -67,3 +66,4 @@ describe('app.services.creditReport.create', () => {
     it('create a valid credit report with no score', async () => {
       const id = await app.services.creditReport.create({...validPayload, score: null, reportDate: null, documentId: null })
 
+      const result = await knex.raw(`SELECT * FROM signer_credit_reports WHERE id='${id}'`)

@@ -21,5 +21,6 @@ module.exports = {
    *   wkfl: object,
    *   config: object,
    *   job: {wkflId: string, action: string, phase: string, operation?: string, _from?: Job, body: object},
+   *   next: {wkflId: string, action: string, phase: string, operation?: string, body: object}
    * }
    * } opts

@@ -23,11 +23,9 @@ const client = new AWS.SNS({
 async function publish(stream, event = { id: null, event: null, type: null, body: null }) {
   logger.info({ message: '[publish] PublishingEvent', stream, event })
 
-  event = { ...event, event: event.event || event.type, body: event.body || event.payload }
 
   const Message = _.pick(event, ['id', 'event', 'body'])
 
-// Temp comment
   const PublishReq = { Message, TopicArn: event.topicArn || event.TopicArn || app.config.get('sns')[stream] }
 
   return client.publish({ ...PublishReq, Message: JSON.stringify(Message) }).promise()

@@ -21,4 +21,5 @@
   },
   "remind_period": {
     "ui:widget": "selectDuration"
+  },
   "terminate_after": {

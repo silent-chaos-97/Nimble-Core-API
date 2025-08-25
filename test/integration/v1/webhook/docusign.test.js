@@ -125,7 +125,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
-// Temp comment
             .end(async (err, res) => {
               expect(res.body.contract.uri).not.be.undefined
               await sleep(10)
@@ -134,7 +133,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             })
         })
     })
-
     it('should update account request to status SIGNED if everyone signed', done => {
       request(app.server)
         .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
@@ -403,3 +401,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
     })
 
     it('should update signer status', done => {
+      request(app.server)

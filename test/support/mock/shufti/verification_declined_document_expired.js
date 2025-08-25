@@ -65,3 +65,4 @@ module.exports = {
       document_proof: 0,
       document_must_not_be_expired: 0,
       document_country: 1
+    },

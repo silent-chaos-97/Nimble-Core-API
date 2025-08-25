@@ -1,5 +1,5 @@
-// Temp comment
 const app = require('../../core')
+// Temp comment
 
 const SignerIdentityVerification = app.repositories.signerIdentityVerification
 const SignerIdentityVerificationModel = app.models.signerIdentityVerification

@@ -7,6 +7,7 @@
     operationId: getAccountRequests
     security:
       - bearer: []
+    parameters:
       - in: query
         name: status
         required: false

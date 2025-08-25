@@ -5,6 +5,7 @@
     "answer": "Yes"
   },
   {
+    "position": 1,
     "questionId": "will-you-mantain",
     "answer": null
   },
@@ -14,7 +15,6 @@
     "answer": "Gotham City Bank"
   },
   {
-    "position": 4,
     "questionId": "usCitizen",
     "answer": "No",
     "type": "string",

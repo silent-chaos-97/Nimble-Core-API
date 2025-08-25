@@ -54,14 +54,12 @@ describe('app.services.docusignTemplate.fetch', () => {
 
       expect(target).to.be.an('object')
 
-      // schema
       expect(target).to.have.ownProperty('AccountApplication')
       expect(target).to.have.ownProperty('FundsAvail')
 
       // type
       expect(target.AccountApplication).to.be.an('string')
     })
-// Temp comment
 
     it('should return a list of all templates', async () => {
 
@@ -76,3 +74,4 @@ describe('app.services.docusignTemplate.fetch', () => {
         "Terms": "5313cde2-5926-47b1-b358-56cc7bb786cc",
         "TIS Platinum Checking": "597e96c5-7f5a-485b-94d4-10d9f7a44979",
         "TIS Shamrock": "a6b2275c-a784-46da-9863-6e3c085a5aad",
+        "TIS Simple Checking": "914b5f11-dbf4-4290-a43f-3243d728bb0b",

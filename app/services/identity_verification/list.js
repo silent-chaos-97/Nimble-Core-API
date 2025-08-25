@@ -18,6 +18,7 @@ async function validate(params) {
   return data
 }
 
+
 const verificationsSchema = {
   'Face': [
     'Face Detection',

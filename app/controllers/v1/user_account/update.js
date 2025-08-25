@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../../core')
 
 const User = app.models.user
 const Roles = User.roles()
@@ -18,7 +19,6 @@ async function update(req, res, next) {
 
   patch.id = req.params.id
 
-  const user = await users.get({ id: patch.id })
   if (!user) return next(new NotFoundError(`user[${patch.id}]`))
 
   if (!User.isSuperAdmin(me)) {

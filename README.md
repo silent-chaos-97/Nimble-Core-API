@@ -135,6 +135,7 @@ yarn lint
 # running tests
 yarn test
 ```
+
 ```bash
 # running test coverage checks
 yarn test:coverage
@@ -176,3 +177,4 @@ running `$ npm start` will start the application without an `NODE_ENV` assumptio
 by default, `$ yarn dev` will load `config/local.js` where local development config overwrites live. `config/test.js` will be used when running test. production configs are stored in environment variables as described in `config/schema.js`
 
 ## API Documentation
+

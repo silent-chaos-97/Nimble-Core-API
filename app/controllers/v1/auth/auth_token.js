@@ -67,7 +67,6 @@
 //
 //     if (tokenListLength === 0){
 //       // return error if no unused Verification Token found for that phone number
-//       return res.status(500).json({ message: 'Verification Token not found or already used', status:false })
 //     }
 //
 //     for(const item of hashedTokenList){

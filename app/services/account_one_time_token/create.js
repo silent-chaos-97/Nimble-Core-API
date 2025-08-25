@@ -8,6 +8,7 @@ const NotFoundError = require('../../errors/not_found')
 const User = app.repositories.user
 const AccountOneTimeToken = app.repositories.accountOneTimeToken
 const { hash, validator, emailNormalizer } = app.plugins
+
 const whitelist = ['email']
 const schema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required()

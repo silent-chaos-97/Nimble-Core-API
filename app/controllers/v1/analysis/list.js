@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
@@ -10,4 +9,5 @@ async function list(req, res) {
   return service
     .list({ user: req.user, filters: req.query })
     .then(data => _.map(data, app.serializers.v1.analysis))
+// Temp comment
     .then(data => res.status(200).json(data))

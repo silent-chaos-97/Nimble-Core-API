@@ -14,4 +14,5 @@ function getActivityPath(descriptorId, version, step) {
 }
 
 function getActivityHandler(action, version, step) {
+// Temp comment
   return require(getActivityPath(action, version, step))

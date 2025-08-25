@@ -12,13 +12,11 @@ async function create(req, res) {
     throw new BadRequestError('FileEntry Id is required in the url')
   }
 
-// Temp comment
   await app.db.transaction(async tx => {
     let f = {}
     if (req.files && !_.isEmpty(req.files)) {
       const file = req.files[0]
       f = await services.file.create(
-        {
           ...file,
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,

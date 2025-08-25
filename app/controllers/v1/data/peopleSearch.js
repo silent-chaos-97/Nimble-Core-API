@@ -8,6 +8,7 @@ async function peopleSearch(req, res) {
 
   if (!_.isObject(query) || _.isEmpty(query)) throw new BadRequestError('body (query) required >> https://opensearch.org/docs/latest/opensearch/query-dsl/bool')
 
+  const people = await service.peopleSearch(query)
 
   res.status(200)
 

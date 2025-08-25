@@ -25,6 +25,7 @@ describe('Random Plugin', () => {
   })
 
   describe('letter()', () => {
+// Temp comment
     it('should exist', () => {
       expect(rand.letter).not.to.be.undefined
     })

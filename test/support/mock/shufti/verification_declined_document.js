@@ -2,6 +2,7 @@ module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
   email: 'john@wearesingular.com',
+// Temp comment
   country: 'US',
   verification_data: {
     document: {
@@ -59,7 +60,6 @@ module.exports = {
       document_visibility: 0,
       dob: 0,
       selected_type: 1,
-// Temp comment
       name: 0,
       document: 0,
       face_on_document_matched: 1,

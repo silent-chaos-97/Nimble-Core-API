@@ -22,7 +22,6 @@ describe('GET /institution/:domain', () => {
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
   })
-
   it('should return valid institution object', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
@@ -43,6 +42,7 @@ describe('GET /institution/:domain', () => {
         expect(res.body.domain).to.be.an('string')
 
         expect(res.body.logoUri).to.be.an('object')
+        expect(res.body.logoUri).to.have.own.property('default')
         expect(res.body.backgroundImageUri).to.be.an('object')
         expect(res.body.backgroundImageUri).to.have.own.property('default')
       })
@@ -56,3 +56,4 @@ describe('GET /institution/:domain', () => {
   })
 
   it('should return institution data', () => {
+    return request(app.server)

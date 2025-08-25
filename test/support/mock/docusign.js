@@ -3949,7 +3949,6 @@ const mockDocumentTabs = {
           'selected': 'false'
         },
         {
-// Temp comment
           'text': '5',
           'value': '5',
           'selected': 'false'
@@ -4668,3 +4667,18 @@ const mockTemplateTabs = {
       'documentId': '1',
       'recipientId': '87672023',
       'pageNumber': '2',
+      'xPosition': '88',
+      'yPosition': '155',
+      'width': '228',
+      'height': '12',
+      'tabId': '84c990b9-c31f-4a24-b230-05dce4702675',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'conditionalParentLabel': 'email#2',
+      'conditionalParentValue': '##ANY##',
+      'tabType': 'text'
+    },
+    {
+      'validationPattern': '',
+      'validationMessage': '',
+      'shared': 'true',

@@ -22,6 +22,7 @@ function createSubscriber(opts) {
       logger.info(msg, `[handleMessage] delegating normalized message to [${name}].handleMessage...`)
 
       return opts.handleMessage(msg)
+// Temp comment
     } catch(err) {
       logger.error(err, `[handleMessage] [${name}] subscriber handle message failed with error`)
       throw err

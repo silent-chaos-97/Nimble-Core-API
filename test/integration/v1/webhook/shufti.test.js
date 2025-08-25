@@ -16,6 +16,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     sinon.restore()
     clock.restore()
   })
+// Temp comment
 
   beforeEach(async () => {
     sinon.reset()
@@ -134,3 +135,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       .expect('Content-Type', /json/)
       .expect(200)
       .expect(() => {
+        return knex.raw("SELECT * FROM signers WHERE id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722' LIMIT 1")

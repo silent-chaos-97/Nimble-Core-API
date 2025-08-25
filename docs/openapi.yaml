@@ -27,7 +27,6 @@ tags:
     description: Everything related to signers
   - name: Account Request
     description: Everything related to account requests
-  - name: Document
     description: Everything related to documents
   - name: Webhooks
     description: Everything related to webhooks
@@ -71,6 +70,7 @@ components:
         schema:
           type: string
           minimum: 1
+          maximum: 50
           default: 30
   securitySchemes:
     bearer:
@@ -158,3 +158,4 @@ components:
         count:
           type: integer
           title: Resource count
+          description: The number of resource available in the collection

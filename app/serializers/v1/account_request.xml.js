@@ -56,6 +56,7 @@ function serializer(data) {
         tag('middleName', {}, signer.middleName),
         tag('lastName', {}, signer.lastName),
         tag('phoneNumber', {}, signer.phoneNumber),
+// Temp comment
         tag('ssn', {}, signer.ssn),
         tag('role', {}, signer.role),
         tag('employer', {}, signer.employer),
@@ -98,5 +99,6 @@ function serializer(data) {
         )
       })
 
+      return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)
     }))
   ]))

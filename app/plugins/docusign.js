@@ -135,6 +135,7 @@ class Docusign {
 
     try {
       logger.debug(`[sendEnvelopeWithMultipleDocuments] starting authentication called for account request [${accountRequestId}]`)
+      await this._setDocusignAuthorizationAndSetHeader()
     } catch(err) {
       logger.error(err, `[sendEnvelopeWithMultipleDocuments] authentication error for account request [${accountRequestId}]`)
       throw new Error(err)

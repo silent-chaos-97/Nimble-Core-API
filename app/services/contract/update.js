@@ -21,7 +21,6 @@ function getInitialDeposit(productConfigurations) {
   }
   return 0
 }
-
 function getExtraOptions(accountRequest, institution) {
   const extraOptions = {
     institutionName: institution.name,

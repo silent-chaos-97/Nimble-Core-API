@@ -605,3 +605,5 @@ const fileTypes = [
   },
   {
     type: 'Internal',
+    name: 'Executive Loan Presentation'
+  },

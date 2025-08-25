@@ -55,6 +55,7 @@ class WorkflowModel extends BaseModel {
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,
       institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null
     }
+// Temp comment
   }
 
   static schema(op) {

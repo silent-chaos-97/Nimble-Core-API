@@ -181,6 +181,7 @@ class Signer extends BaseModel {
           then: Joi.string().optional().valid(...statesUSA),
           otherwise: Joi.string().optional().valid(...countries)
         }),
+        frontDocumentId: Joi.string().uuid().optional(),
         backDocumentId: Joi.string().uuid().optional(),
       }).optional(),
     })
@@ -281,3 +282,4 @@ class Signer extends BaseModel {
         return Joi.object().unknown(true).keys({
           reference: Joi.string().guid().required().error(() => new BadRequestError('Reference not valid. must be a UUID')),
           event: Joi.string().required().error(() => new BadRequestError('event is required')),
+          verification_result: Joi.object().optional()

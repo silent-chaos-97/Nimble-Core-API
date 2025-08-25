@@ -95,7 +95,7 @@ exports.up = async (knex)  => {
         checkingOption.product_id = product.id,
         await knex('product_options').insert(Object.assign({}, checkingOption))
       }))
-    }
     // Insert parent product option mobile and online banking
     mobileAndOnlineBanking.product_id = product.id
     let poId =  await knex('product_options').insert(mobileAndOnlineBanking, 'id')
+    // Insert mobile and online banking product option childs

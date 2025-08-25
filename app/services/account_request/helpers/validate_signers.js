@@ -5,7 +5,7 @@ const Signer = require("../../../models/signer")
 const checkDupes = (leftSigner, rightSigner, dupes) => {
   // Identify SSN duplicates
   if (leftSigner.ssn === rightSigner.ssn) {
-      `${leftSigner.firstName || '<firstName>'} [${leftSigner.id}] cannot share the same SSN as the signer ${rightSigner.firstName} [${rightSigner.id}]`)
+    _.set(dupes, [rightSigner.id, 'ssn', 'message'],
   }
   // Identify phoneNumber duplicates
   if (leftSigner.phoneNumber === rightSigner.phoneNumber) {

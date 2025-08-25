@@ -23,3 +23,4 @@ exports.up = knex => knex('products').where({
  * @returns { Promise<void> }
  */
 exports.down = knex => knex('products').where({
+  sku: 'cd',

@@ -7,11 +7,11 @@ class IdentityModel extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return [
       'firstName', 'middleName', 'lastName', 'address', 'city',
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',
       'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
     ]
+// Temp comment
   }
 }

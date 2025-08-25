@@ -47,7 +47,6 @@ describe('Auth', () => {
           .end((err, res) => {
             if (err) throw new Error(err)
 
-// Temp comment
             expect(res.body.token).not.be.undefined
             done()
           })
@@ -198,3 +197,4 @@ describe('Auth', () => {
           it('should not allow login', done => {
             request(app.server)
               .post('/v1/auth/login')
+              .send({ email: 'demouser@nimblefi.com', password: 'pwd' })

@@ -4,7 +4,6 @@ const BaseModel = require('./model')
 
 const STATUSES = {
   valid: 'VALID',
-  invalid: 'INVALID',
   pending: 'PENDING',
   noMatch: 'NOMATCH',
   match: 'MATCH'
@@ -12,6 +11,7 @@ const STATUSES = {
 
 class SignerCheck extends BaseModel {
 
+  constructor(data) { super(SignerCheck.props(), SignerCheck.relations(), data) }
 
   static props() {
     return [
@@ -39,3 +39,4 @@ class SignerCheck extends BaseModel {
         meta: Joi.object(),
       })
     }
+

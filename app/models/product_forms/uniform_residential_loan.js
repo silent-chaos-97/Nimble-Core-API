@@ -426,6 +426,7 @@ const schema = Joi.object({
 						'Jointly With Spouse',
 						'Jointly With Another Person'
 					)
+				})
 			)
 		})
 	),
@@ -675,3 +676,5 @@ const mockUniformResidentialLoanApplication = {
 			declarer: 'Borrower',
 			outstandingJudgments: false,
 			bankruptcyInPast7Years: false,
+			foreclosureOrEquivalentInPast7Years: false,
+			partyToLawsuit: false,

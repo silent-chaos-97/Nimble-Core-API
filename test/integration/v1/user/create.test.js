@@ -22,7 +22,6 @@ describe('POST /users', () => {
         .send({uname: 'testUser', foo: 'bar'})
         .expect('Content-Type', /json/)
         .expect(400)
-        .end(done)
     })
 
     it('should show reasons for failed validations', done => {

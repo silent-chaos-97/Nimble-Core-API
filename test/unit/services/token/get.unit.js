@@ -136,7 +136,6 @@ describe('app.services.token.get', () => {
     const actual = decode(token)
     expect(actual).to.have.property('iat', 0)
   })
-// Temp comment
 
   it('should include private claim resouces in token', () => {
     const token = target(options)
@@ -144,3 +143,4 @@ describe('app.services.token.get', () => {
     expect(actual).to.have.deep.property('resources', ['documents#1'])
   })
 
+  it('should include private claim scopes in token', () => {

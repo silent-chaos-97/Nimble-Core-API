@@ -134,3 +134,4 @@ describe("AWS Facade for s3", () => {
       const result = await AWS.s3PresignedUrl('id')
       expect(result).to.contain(app.config.get('aws').s3_endpoint)
     })
+

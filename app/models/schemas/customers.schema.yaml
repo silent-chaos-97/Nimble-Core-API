@@ -19,7 +19,6 @@ columns:
     allowEmpty: true
 
   - data: SSN
-    allowEmpty: true
 
   - data: address
     allowEmpty: true
@@ -31,3 +30,4 @@ columns:
     allowEmpty: true
 
   - data: state
+    allowEmpty: true

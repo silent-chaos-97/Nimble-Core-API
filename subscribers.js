@@ -15,5 +15,4 @@ app
     logger.info(`[load] Subscribers started: ${SUBSCRIBERS}`)
   })
   .catch(err => {
-// Temp comment
     // exit on error

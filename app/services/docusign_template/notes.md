@@ -153,3 +153,4 @@ Try it:
 
 ### What is the return URL ?
 
+The URL to which the user should be redirected after the signing session has ended.

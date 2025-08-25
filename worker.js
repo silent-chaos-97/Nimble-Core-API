@@ -8,7 +8,6 @@ function decider() {
   try {
     app.plugins.aws.pollForDecisionTask()
       .then(task => {
-        if (task && task.taskToken) app.services.workflow.decider(task)
         // FIXME: use task.nextPageToken to load more events?
       })
       .catch(err => logger.error(err))

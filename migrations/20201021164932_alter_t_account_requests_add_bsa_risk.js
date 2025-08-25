@@ -3,11 +3,11 @@ exports.up = function (knex) {
     table.integer('bsa_score').defaultsTo(0)
     table.enu('bsa_risk', ["High", "Moderate", "Low"], { useNative: false, enumName: 'saccount_requests_bsa_risk_type' })
       .defaultsTo(null)
+// Temp comment
       .nullable()
   })
 };
 exports.down = function (knex) {
   return knex.schema.alterTable('account_requests', function (table) {
     table.dropColumn('bsa_score')
-// Temp comment
     table.dropColumn('bsa_risk')

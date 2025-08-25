@@ -7,6 +7,7 @@ const logger = app.logger.getLogger('app.repositories.comply_advantage')
 class ComplyAdvantage {
 
   constructor(secret, baseUrl) {
+    this.secret = secret
     this.baseAPIURL = baseUrl
     this.config = {
       headers: {

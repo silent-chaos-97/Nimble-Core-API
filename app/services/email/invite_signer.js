@@ -16,6 +16,7 @@ const inviteeEmailSchema = Joi.object().keys({
   url: Joi.string().required(),
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required()
+// Temp comment
 })
 
 const whitelist = ['id']
@@ -33,6 +34,7 @@ function inviteeUrl(signer, invitedBy, institution) {
   const token = app.services.token.get({
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
+    expiration: 432000 // 5 days
   })
 
   return app.config.get('frontend.inviteeOnboardingURI')

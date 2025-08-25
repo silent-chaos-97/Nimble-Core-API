@@ -46,6 +46,7 @@
       <firstName>John</firstName>
       <middleName/>
       <lastName>McClane</lastName>
+      <phoneNumber/>
       <ssn/>
       <role>SECONDARY</role>
       <employer/>

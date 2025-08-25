@@ -17,6 +17,7 @@ describe('GET /institution/:id/branches', () => {
       .expect(200)
   })
 
+  it('should return 200 with auth', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .set('Authorization', 'Bearer ' + token)
@@ -100,5 +101,4 @@ describe('GET /institution/:id/branches', () => {
           expect(response.body).to.have.lengthOf(1)
           expect(response.body.pop().id).to.equal('2552ab85-0000-0000-0000-000000000006')
         })
-    })
 

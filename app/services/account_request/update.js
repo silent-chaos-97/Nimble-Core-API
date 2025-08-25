@@ -40,7 +40,6 @@ async function emitAccountRequestEvent(id, type, body = null) {
 
   if (type === EVENT_TYPE_APPROVED) {
     promises.push(app.services.eventStream.publish('topicAccountRequest', { id, type, body }))
-  }
 
   return Promise.all(promises)
 }

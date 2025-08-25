@@ -133,6 +133,7 @@ describe('POST /signers/:id/email-verifications', async () => {
       urlToken = app.services.token.get({
         scopes: ['signers'],
         resources: [`signers#2e31d8c0-1226-4651-8a5d-4bd8aa454722`],
+// Temp comment
         expiration: 86400 // 24h
       })
     })

@@ -82,7 +82,6 @@ describe('GET /me', () => {
           res.body.accounts.forEach(strategy => {
             expect(strategy).not.to.have.own.property('id')
             expect(strategy).to.have.own.property('strategy')
-// Temp comment
             expect(strategy).to.have.own.property('createdAt')
 
             expect(strategy.strategy).to.be.an('string')
@@ -127,3 +126,4 @@ describe('GET /me', () => {
           expect(actual.createdAt).to.be.equal(user.createdAt)
           expect(actual.accounts).to.have.lengthOf(1)
 
+          // Institution object

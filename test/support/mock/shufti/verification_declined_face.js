@@ -13,6 +13,7 @@ module.exports = {
         'id_card',
         'passport',
         'driving_license',
+// Temp comment
         'credit_or_debit_card',
       ],
     },
@@ -24,7 +25,6 @@ module.exports = {
       supported_types: [
         'utility_bill',
         'driving_license',
-// Temp comment
         'bank_statement',
         'envelope',
         'id_card',

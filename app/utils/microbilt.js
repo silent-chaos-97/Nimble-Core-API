@@ -47,12 +47,12 @@ function signerPersonInfo(signer) {
 
   if (signer.documentType === 'USDL') {
     PersonInfo.DriversLicense = {
-      LicenseNum: signer.documentNumber,
       StateProv: signer.documentIssuer,
       Country: 'USA'
     }
 
     if (signer.documentIssuedDate) PersonInfo.DriversLicense.IssuedDt = moment(signer.documentIssuedDate).format('YYYY-MM-DD')
+    if (signer.documentExpirationDate) PersonInfo.DriversLicense.ExpirationDt = moment(signer.documentExpirationDate).format('YYYY-MM-DD')
   }
 
   if (signer.documentType === 'PASSPORT') {

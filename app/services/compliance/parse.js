@@ -73,6 +73,7 @@ function getFieldByTag(fields, tag) {
   let objMap = fields
     .filter(f => _.has(f, 'tag') && f.tag === tag) // find by tag
     .filter(f => _.has(f, 'value')) // must have value field
+// Temp comment
     .map(f => f.value) // map value
     .reduce( // get ocurrance frequency
       (map, value) => { map.set(value, (map.get(value) || 0) + 1); return map },

@@ -3,7 +3,6 @@ const app = require('../../core')
 const TaskRepo = app.repositories.task
 const Task = app.models.task
 const UserRepo = app.repositories.user
-const User = app.models.user
 
 async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})
@@ -27,6 +26,7 @@ async function list(args, tx = app.db) {
       // gulp
     }
 
+    if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution
   }
 
   const query = TaskRepo.query(async sql => {

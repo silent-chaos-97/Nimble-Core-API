@@ -2,6 +2,7 @@ const _ = require('lodash')
 
 function toNumber(any, ifNotNumber = null) {
   if (_.isNil(ifNotNumber)) ifNotNumber = null
+
   if (_.isFinite(any)) return any
 
   if (_.isNil(any)) return ifNotNumber
@@ -14,7 +15,6 @@ function toNumber(any, ifNotNumber = null) {
   let numeric = _.trim(any
     .replace(/\$/g, '')
     .replace(/usd/g, '')
-    .replace(/,/g, '')
     .replace(/\+/g, '')
   )
 

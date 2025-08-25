@@ -37,7 +37,7 @@ const EVENTS = {
 
 
 function parse(event, verification_result) {
-    logger.info(`[parse] ignoring data from event [${event}] during parse`)
+  if (!_.has(EVENTS, event)) {
     return []
   }
 

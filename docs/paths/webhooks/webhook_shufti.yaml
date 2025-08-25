@@ -31,3 +31,4 @@
                 description: Shufti verification event result
     responses:
       '200':
+        description: OK

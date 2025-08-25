@@ -15,7 +15,6 @@ exports.up = knex => db.alterTableIfColumnNotExists(knex, 'tasks', 'to_id', tabl
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
- */
 exports.down = knex => knex.schema.alterTable('tasks', table => {
   table.dropColumn('to_id')
   table.dropColumn('cc_id')

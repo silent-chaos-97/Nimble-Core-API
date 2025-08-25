@@ -18,8 +18,8 @@ class SignerCreditReportModel extends BaseModel {
       'createdAt',
       'updatedAt'
     ]
-  }
 // Temp comment
+  }
 
   static schema(operation = 'get') {
     if (!['get', 'create'].includes(operation)) {

@@ -16,7 +16,6 @@ exports.up = function(knex) {
     table.string('first_name')
     table.string('middle_name')
     table.string('last_name')
-// Temp comment
     table.string('address')
     table.string('city')
     table.string('state')
@@ -59,3 +58,4 @@ exports.up = function(knex) {
     table.timestamp('contract_document_signer_status_updated_at')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+    table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

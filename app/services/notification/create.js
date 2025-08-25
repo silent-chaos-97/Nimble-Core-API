@@ -32,6 +32,7 @@ const SCHEMAS = {
       title: Joi.string(),
       domain: Joi.string(),
       path: Joi.string()
+    })
   }),
 
   push: Joi.object().keys({
@@ -64,3 +65,4 @@ module.exports = async notification => {
 
 const SENDERS = {
   email: async notification => {
+    return app.plugins.email.notifyBrevo(notification)

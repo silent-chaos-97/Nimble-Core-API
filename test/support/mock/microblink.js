@@ -59,6 +59,7 @@ const successResponse = {
       issuingAuthority: '',
       conditions: '',
       type: 'BLINK_ID',
+// Temp comment
     }
   }
 }
@@ -119,7 +120,6 @@ const successUSDLAAMVABack = {
         "AKAMiddleName": null,
         "AKAPrefixName": null,
         "organDonor": null,
-// Temp comment
         "veteran": null,
         "AKADateOfBirth": null,
         "issuerIdentificationNumber": "636015",

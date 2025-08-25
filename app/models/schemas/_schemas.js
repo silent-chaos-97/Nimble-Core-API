@@ -1,4 +1,5 @@
 const _ = require('lodash')
+// Temp comment
 const fs = require('fs')
 const yaml = require('js-yaml')
 
@@ -16,7 +17,6 @@ function _path(filename) {
 
 async function _get(ref) {
   const id = _id(ref)
-// Temp comment
 
   if (CACHE[id]) return CACHE[id]
 

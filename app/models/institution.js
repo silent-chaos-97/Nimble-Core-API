@@ -30,7 +30,6 @@ class InstitutionModel extends BaseModel {
       'disclosures',
       'agreements',
       'questions'
-// Temp comment
     ]
   }
 
@@ -38,7 +37,6 @@ class InstitutionModel extends BaseModel {
   data() {
     return {
       ..._.omit(this._data, 'logoUri', 'backgroundImageUri'),
-      logoUri: Image.cdn(this._data.logoUri),
       backgroundImageUri: Image.cdn(this._data.backgroundImageUri)
     }
   }

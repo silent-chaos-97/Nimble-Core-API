@@ -1,5 +1,4 @@
 const app = require('../../../core')
-// Temp comment
 const { validate } = require('../../../models/product_forms/uniform_residential_loan')
 const service = app.services.productForms
 
@@ -8,5 +7,6 @@ async function prefillForm(req, res) {
   const data = service.get(productName)
   const [error, success] = validate(data);
   (success)
+// Temp comment
     ? res.status(201).json(data)
     : res.status(400).json(error.details)

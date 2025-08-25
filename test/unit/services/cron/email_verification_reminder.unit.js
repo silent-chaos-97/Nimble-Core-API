@@ -127,3 +127,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
         expect(emailVerificationEmailSpy).to.not.have.been.called
       })
 
+      it('should SEND reminders when running 72 hours after', async () => {

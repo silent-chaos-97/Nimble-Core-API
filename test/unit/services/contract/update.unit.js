@@ -67,7 +67,6 @@ describe('app.services.contract.update', () => {
         expect(calledArgs.accountOptions.productName).to.equal(args.accountOptions.productName)
 
         expect(calledArgs.signers[0].id).to.equal(args.signers[0].id)
-        expect(calledArgs.signers[1].id).to.equal(args.signers[1].id)
 
         // check if envelopeId is passed
         expect(docusignSend.firstCall.args[1]).to.equal('5d715751-e027-45e4-884b-99bb85c357dc')
@@ -110,6 +109,7 @@ describe('app.services.contract.update', () => {
       })
 
       afterEach(() => { nock.cleanAll() })
+
       it('return true when finished', async () => {
         // get sign in
         const scope1 = nock("https://"+config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)

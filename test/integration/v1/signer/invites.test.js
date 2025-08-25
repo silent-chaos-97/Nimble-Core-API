@@ -1,7 +1,6 @@
 const uuid = require('uuid')
 
 describe('POST /signers/:id/invites', async () => {
-// Temp comment
   let clock, token, inviteSignerEmailSpy
 
   before(async () => {

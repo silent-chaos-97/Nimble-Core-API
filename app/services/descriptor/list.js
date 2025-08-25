@@ -17,7 +17,6 @@ async function readJson(path) {
 
 module.exports = async(path) => {
   const ids = await fs.readdir(path)
-
   const definitions = await Promise.all(ids.map(id => Promise.all([
     readJson(`${path}/${id}/_props.json`),
     readJson(`${path}/${id}/inputs.schema.json`),
@@ -41,6 +40,7 @@ module.exports = async(path) => {
     const outputs = { ...def.outputs, properties: { ..._.get(_base, ['outputs', 'properties'], {}), ..._.get(def, ['outputs', 'properties'], {}) } }
     const uiOutputs = { ..._.get(_base, ['ui:outputs'], {}), ..._.get(def, ['ui:outputs'], {}) }
     const context = { ...flattenSchema(inputs, 'inputs'), ...flattenSchema(outputs, 'outputs') }
+
     return { ...props, inputs, 'ui:inputs': uiInputs, outputs, 'ui:outputs': uiOutputs, context }
   })
 }

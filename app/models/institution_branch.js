@@ -51,3 +51,4 @@ class InstitutionBranchModel extends BaseModel {
       city: Joi.string(),
       state: Joi.string(),
       zip: Joi.string(),
+      active: Joi.boolean().default(true),

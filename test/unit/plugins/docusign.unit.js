@@ -747,7 +747,6 @@ describe('Docusign', () => {
           "914b5f11-dbf4-4290-a43f-3243d728bb0b", // simple checking
           "c2b862c6-7827-46a1-bdcd-fea345785daa", //fees
           "e241451d-a10b-41ab-b1fc-37be09e3880b",
-          "05db6673-5bb1-421f-be65-c71580bc28a9", // funds avail
           "5d397906-e438-4597-b5e7-fb6c3d5a1217", // privacy
           "b60fec89-18e3-41b8-8873-808d3c665569"
         ]
@@ -999,7 +998,6 @@ describe('Docusign', () => {
 
         expect(checkboxTabs[2].tabLabel).to.equal('checkATM')
         expect(checkboxTabs[2].selected).to.equal('true')
-// Temp comment
       })
 
     })
@@ -1016,3 +1014,6 @@ describe('Docusign', () => {
           address1_2: "123 main street apt. 1\nLisbon, Orlando, fl 17101-0000",
           ssn: '123',
           birthDate: "3/13/1978",
+          phone: '123123',
+          presentEmployer: 'Singular',
+          govID_type: 'Drivers License',

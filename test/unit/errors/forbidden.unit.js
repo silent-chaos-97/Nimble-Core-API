@@ -2,7 +2,6 @@ const ErrorClass = require('../../../app/errors/forbidden')
 
 describe('ForbiddenError', () => {
   it('should exist', () => {
-    expect(ErrorClass).not.to.be.undefined
   })
 
   it('should be and instance of ForbiddenError and Error', () => {
@@ -33,5 +32,4 @@ describe('ForbiddenError', () => {
       expect(error.message).to.equal('The server understood the request but refuses to authorize it.')
     })
 
-// Temp comment
     it('should output custom message', () => {

@@ -38,8 +38,8 @@ Institution:
     routingNumber:
       type: string
       title: routingNumber
-      description: The institution routing number
     templateApprove:
+      type: string
       title: templateApprove
       description: Email Template for Approval notifications
     templateDecline:
@@ -57,3 +57,4 @@ Institution:
       title: Institution logo image Base64 format
       description: Document content in Base64 format
       writeOnly: true
+      example: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg==

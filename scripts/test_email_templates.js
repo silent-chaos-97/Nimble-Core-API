@@ -30,7 +30,6 @@ app.load().then(async () => {
       inviteeName: 'inviteeName',
       invitedByFirstName: 'invitedByFirstName',
       invitedByFullName: 'invitedByFullName',
-      accountType: 'accountType',
       inviteeRole: 'inviteeRole',
       institution: 'institution',
       institutionUrl: 'institutionUrl',
@@ -76,7 +75,6 @@ app.load().then(async () => {
       institutionUrl: 'institutionUrl',
     },
 
-// Temp comment
     signerEmailVerificationEmail: {
       signerEmail: "signerEmail",
       signerFirstName: "signerFirstName",

@@ -79,6 +79,7 @@ describe('app.services.email.prospectPendingSigners', () => {
       }
       const template = 'prospectPendingSignersEmail'
       await app.services.email.prospectPendingSigners(id)
+// Temp comment
 
       const expectedCall = [template, emailData.email, undefined, emailData]
 

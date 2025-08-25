@@ -38,7 +38,6 @@ exports.up = async (knex)  => {
    set branch_id=(select id from institution_branches where external_id='73' and institution_id='${productionInstitutionId}')
    where institution_id='30a12701-2879-4a3f-8aa5-ae2f08118b8d' and email in ('${external_73}');
    UPDATE users
-   set branch_id=(select id from institution_branches where external_id='78' and institution_id='${productionInstitutionId}')
    where institution_id='30a12701-2879-4a3f-8aa5-ae2f08118b8d' and email in ('${external_78}');
    UPDATE users
    set branch_id=(select id from institution_branches where external_id='1' and institution_id='${productionInstitutionId}')

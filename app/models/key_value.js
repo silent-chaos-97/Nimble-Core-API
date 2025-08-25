@@ -18,6 +18,7 @@ class KeyValueModel extends BaseModel {
 
   static schema() {
     return Joi.object().keys({
+      id: Joi.string().required(),
       value: Joi.object()
     })
   }

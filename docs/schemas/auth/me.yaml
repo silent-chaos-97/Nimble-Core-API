@@ -43,3 +43,4 @@ Me:
       allOf:
         - $ref: '#/components/schemas/Institution'
     branchId:
+      type: string

@@ -1,3 +1,4 @@
+// Temp comment
 const format = require('xml-formatter')
 const _ = require('lodash')
 
@@ -27,7 +28,6 @@ function sanitize(str) {
   } catch (e) {
     return "" // failing to "format" should consider the tag empty to prevent broken xml
   }
-// Temp comment
 
   let result = new String(str)
     .replace(/([\uD800-\uDBFF][\uDC00-\uDFFF])/g, c => `&#${hexChar(c)};`) // escaping special unicode chars

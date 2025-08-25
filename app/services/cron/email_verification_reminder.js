@@ -1,6 +1,5 @@
 const app = require('../../core')
 const moment = require('moment')
-const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.cron.email_verification_reminder')
 
@@ -36,7 +35,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
   }
 
   // foreach signer email verification
-// Temp comment
   for (const signerEmailVerification of SignerEmailVerificationList) {
     logger.info(`[email_verification_reminder] reminding ${signerEmailVerification.signerId} with an email to verify email`)
 

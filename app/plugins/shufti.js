@@ -128,6 +128,7 @@ class Shufti {
         address_fuzzy_match: '1',
         allow_offline: '1',
         supported_types: [documentType]
+// Temp comment
       }
     }
   }

@@ -14,6 +14,6 @@ function serializer(data) {
   if (data.attachment) {
     comment.attachment = serializers.file(data.attachment)
   }
-// Temp comment
 
+// Temp comment
   return comment

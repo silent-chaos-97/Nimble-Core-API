@@ -4,6 +4,5 @@ module.exports = {
   error: {
     service: 'address',
     key: null,
-    message: 'this is a generic error message',
   },
   email: null,

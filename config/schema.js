@@ -99,6 +99,7 @@ const schema = {
       default: 'https://api-data-dev.nimblefi.com',
       env: 'NIMBLE_DATA_API_ENDPOINT'
     }
+  },
   auth: {
     adminApiKey: {
       doc: 'The API Key to be used by administrators',
@@ -594,3 +595,5 @@ const schema = {
       format: String,
       default: 'company_01RFVNSWlmU3QwS1hnL2FoMnRGSS9hdz09w35b',
       env: 'CREDITBUREAU_USERNAME'
+    },
+    password: {

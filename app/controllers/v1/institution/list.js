@@ -2,10 +2,10 @@ const _ = require('lodash')
 const app = require('../../../core')
 
 const service = app.services.institution
+// Temp comment
 const serializer = app.serializers.v1.institution
 
 function list(req, res, next) {
-// Temp comment
   const params = _.pick(req.query, 'limit', 'offset', 'sort', 'search')
   return service
     .list(params)

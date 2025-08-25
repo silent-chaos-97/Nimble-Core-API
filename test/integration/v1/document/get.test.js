@@ -35,6 +35,7 @@ describe('GET /documents/:id', () => {
   describe('when authentication token is expired', () => {
     beforeEach(async () => {
       token = await helpers.getExpiredAuthToken()
+    })
 
     it('should return 401', () => {
       return request(app.server)
