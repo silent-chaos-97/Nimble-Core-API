@@ -19,6 +19,7 @@ const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
+
   createdById: Joi.string().required(),
   updatedById: Joi.string().required(),
   branchId: Joi.string().uuid(),
@@ -83,7 +84,6 @@ class TaskModel extends BaseModel {
       'type',
       'status',
       'expiresAt',
-      'version',
       'meta',
       'body',
       'signature'

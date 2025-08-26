@@ -2,7 +2,6 @@ const app = require('../../core')
 const _ = require('lodash')
 const logger = app.logger.getLogger('app.services.risk.list')
 
-// Temp comment
 module.exports = async function(institutionId, productId, transacting = app.db) {
   return riskSettings(institutionId, productId, transacting).then(risks => {
     return _.reduce(risks, (_risks, risk, indicator) => {
@@ -38,6 +37,5 @@ function normalize(risk) {
   return {
     ...risk,
     scope: _.snakeCase(risk.scope),
-    product: _.snakeCase(risk.product),
     indicator: _.snakeCase(risk.indicator)
   }

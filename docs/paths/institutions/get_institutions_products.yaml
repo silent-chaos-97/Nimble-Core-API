@@ -16,6 +16,7 @@
       - name: content-format
         in: query
         description: The format of the content property
+        required: true
         default: html
         schema:
           type: string

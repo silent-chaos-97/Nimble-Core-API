@@ -651,7 +651,6 @@ const mockUniformResidentialLoanApplication = {
 				{
 					owner: 'Joint',
 					type: 'Childcare',
-					monthlyPayment: 2200
 				}
 			],
 			totalMonthlyPaymentsJoint: 12200,

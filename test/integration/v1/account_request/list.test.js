@@ -82,6 +82,7 @@ describe('GET /account-requests', () => {
             expect(first.signers).to.be.an('array')
             expect(first.createdAt).to.be.an('string')
           })
+// Temp comment
       })
 
       it('should return valid productConfiguration.product', () => {

@@ -16,6 +16,7 @@
         name: verificationId
         description: signer email verification id
         required: true
+        schema:
           type: string
           format: uuidv4
     security:
@@ -29,5 +30,4 @@
         $ref: '#/components/responses/Unauthorized'
       '403':
         $ref: '#/components/responses/Forbiden'
-      '404':
         $ref: '#/components/responses/NotFound'

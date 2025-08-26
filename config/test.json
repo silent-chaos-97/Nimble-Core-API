@@ -41,6 +41,7 @@
     "key": "FAKE_ID",
     "secret": "FAKE_SECRET",
     "endpoint": "http://localhost:4566",
+    "region": "us-east-2",
     "s3_endpoint": "http://localhost:4566",
     "s3_upload_bucket": "uploads",
     "s3_asset_bucket": "assets",

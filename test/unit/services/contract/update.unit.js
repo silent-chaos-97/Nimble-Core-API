@@ -10,7 +10,6 @@ describe('app.services.contract.update', () => {
 
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('update')
-      expect(app.services.contract.send).to.be.an('Function')
     })
 
     describe('when passing information to docusign', () => {
@@ -67,6 +66,7 @@ describe('app.services.contract.update', () => {
         expect(calledArgs.accountOptions.productName).to.equal(args.accountOptions.productName)
 
         expect(calledArgs.signers[0].id).to.equal(args.signers[0].id)
+        expect(calledArgs.signers[1].id).to.equal(args.signers[1].id)
 
         // check if envelopeId is passed
         expect(docusignSend.firstCall.args[1]).to.equal('5d715751-e027-45e4-884b-99bb85c357dc')

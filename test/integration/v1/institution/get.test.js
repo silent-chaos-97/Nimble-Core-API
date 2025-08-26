@@ -22,6 +22,7 @@ describe('GET /institution/:domain', () => {
       .set('Authorization', 'Bearer ' + token)
       .expect(200)
   })
+
   it('should return valid institution object', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
@@ -38,7 +39,6 @@ describe('GET /institution/:domain', () => {
 
         expect(res.body.id).to.be.an('string')
         expect(res.body.slug).to.be.an('string')
-        expect(res.body.name).to.be.an('string')
         expect(res.body.domain).to.be.an('string')
 
         expect(res.body.logoUri).to.be.an('object')

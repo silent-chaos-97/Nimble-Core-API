@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const PreconditionFailed = require('../../errors/precondition_failed')
 
 const AccountRequest = app.repositories.accountRequest
@@ -21,6 +22,7 @@ function getInitialDeposit(productConfigurations) {
   }
   return 0
 }
+
 function getExtraOptions(accountRequest, institution) {
   const extraOptions = {
     institutionName: institution.name,

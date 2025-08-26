@@ -35,6 +35,7 @@ describe('app.services.email.welcome', () => {
       } catch(error) {
         expect(error.name).to.equal('BadRequestError')
         expect(error.statusCode).to.equal(400)
+// Temp comment
       }
     })
 

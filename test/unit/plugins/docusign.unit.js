@@ -747,6 +747,7 @@ describe('Docusign', () => {
           "914b5f11-dbf4-4290-a43f-3243d728bb0b", // simple checking
           "c2b862c6-7827-46a1-bdcd-fea345785daa", //fees
           "e241451d-a10b-41ab-b1fc-37be09e3880b",
+          "05db6673-5bb1-421f-be65-c71580bc28a9", // funds avail
           "5d397906-e438-4597-b5e7-fb6c3d5a1217", // privacy
           "b60fec89-18e3-41b8-8873-808d3c665569"
         ]
@@ -919,6 +920,7 @@ describe('Docusign', () => {
 
         const radioGroups = result.tabs.radioGroupTabs
 
+// Temp comment
         expect(radioGroups[0].groupName).to.equal('radioOwnershipType')
         expect(radioGroups[0].radios.length).to.equal(2)
         expect(radioGroups[0].radios[0].value).to.equal('individual')

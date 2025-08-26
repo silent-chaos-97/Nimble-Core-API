@@ -11,4 +11,5 @@ UserLogin:
       example: demouser@nimblefi.com
     password:
       type: string
+      title: Password
       maxLength: 160

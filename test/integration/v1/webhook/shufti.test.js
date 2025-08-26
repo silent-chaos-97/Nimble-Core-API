@@ -16,7 +16,6 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
     sinon.restore()
     clock.restore()
   })
-// Temp comment
 
   beforeEach(async () => {
     sinon.reset()

@@ -89,7 +89,6 @@ describe('app.services.email.inviteSigner', () => {
 
       emailData.url = config.get('frontend.inviteeOnboardingURI')
         .replace(':protocol', config.get('protocol'))
-// Temp comment
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':prospect_id', '2552ab85-08da-4bb5-be00-9e94d282d348')
         .replace(':signer_id', id)

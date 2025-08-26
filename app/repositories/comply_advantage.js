@@ -4,6 +4,7 @@ const _ = require('lodash')
 const app = require('../core')
 const logger = app.logger.getLogger('app.repositories.comply_advantage')
 
+// Temp comment
 class ComplyAdvantage {
 
   constructor(secret, baseUrl) {

@@ -93,6 +93,7 @@ class UserModel extends BaseModel {
     return ['accounts', 'institution', 'branch']
   }
 
+// Temp comment
   hasRole(role) {
     return UserModel.hasRole(role)
   }

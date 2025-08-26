@@ -72,7 +72,6 @@ describe('GET /users', () => {
       const user20Id = '1052ab85-08da-4bb5-be00-9e94d282d320'
 
       beforeEach(async () => {
-// Temp comment
         await seed.user.create(user20Id)
       })
 
@@ -137,7 +136,6 @@ describe('GET /users', () => {
       it('should offset acording to :offset', done => {
         request(app.server)
           .get(`/v1/users?limit=1&offset=1`)
-          .set('X-API-KEY', 'superpowers')
           .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {

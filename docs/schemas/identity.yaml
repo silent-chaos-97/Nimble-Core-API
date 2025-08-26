@@ -28,6 +28,7 @@ Identity:
     city:
       type: string
       title: City
+      description: Individual city
       nullable: true
       example: ORLANDO
     state:
@@ -43,7 +44,6 @@ Identity:
       nullable: true
       example: 17101-0000
     dateOfBirth:
-      type: string
       format: date
       title: dateOfBirth
       description: Individual date of birth

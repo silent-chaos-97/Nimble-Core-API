@@ -30,6 +30,7 @@ app.load().then(async () => {
       inviteeName: 'inviteeName',
       invitedByFirstName: 'invitedByFirstName',
       invitedByFullName: 'invitedByFullName',
+      accountType: 'accountType',
       inviteeRole: 'inviteeRole',
       institution: 'institution',
       institutionUrl: 'institutionUrl',

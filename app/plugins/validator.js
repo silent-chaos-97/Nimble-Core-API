@@ -5,6 +5,7 @@ function toValidationError(error) {
   return _.map(error.details, (validation) => {
     return validation.message
   }).join('.')
+}
 
 function processError(error) {
   if (error.isJoi) {

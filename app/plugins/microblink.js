@@ -134,6 +134,7 @@ class MicroblinkService {
       city: _.capitalize(microblinkAddress.addressCity),
       state: microblinkAddress.addressJurisdictionCode,
       zipCode: microblinkAddress.addressPostalCode,
+    }
   }
 
   parseFullAddress(fullAddress) {

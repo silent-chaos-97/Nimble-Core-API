@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.count
 

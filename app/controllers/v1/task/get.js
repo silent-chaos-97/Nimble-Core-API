@@ -6,7 +6,6 @@ const tasks = app.services.task
 
 async function get(req, res) {
   const user = req.user
-
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
 
   const id = req.params.id

@@ -1,5 +1,6 @@
 const _ = require('lodash')
 
+// Temp comment
 describe('PUT /account_requests/:id', async () => {
   const accountRequestId = '17ba2033-1c12-463b-bbc7-72deed747ae8'
   let clock, accountRequest
@@ -14,7 +15,6 @@ describe('PUT /account_requests/:id', async () => {
   afterEach(() => {
     sinon.restore()
   })
-// Temp comment
 
   beforeEach(async () => {
     await seed.institution.create()

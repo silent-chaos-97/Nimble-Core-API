@@ -5,7 +5,6 @@ describe('GET /account-requests/count', () => {
         .get('/v1/account-requests/count')
         .expect('Content-Type', /json/)
         .expect(401)
-// Temp comment
     })
 
     it('should return 401 if bad auth', () => {
@@ -86,5 +85,3 @@ describe('GET /account-requests/count', () => {
             const expected = res.body
             expect(expected).to.be.an('object')
             expect(expected).to.deep.equal({ count: 2 })
-          })
-      })

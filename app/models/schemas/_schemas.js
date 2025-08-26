@@ -1,5 +1,4 @@
 const _ = require('lodash')
-// Temp comment
 const fs = require('fs')
 const yaml = require('js-yaml')
 
@@ -13,6 +12,7 @@ function _id(ref) {
 
 function _path(filename) {
   return __dirname + `/${filename}`
+// Temp comment
 }
 
 async function _get(ref) {

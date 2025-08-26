@@ -4,6 +4,7 @@ const logger = app.logger.getLogger('tasks.unlock_user')
 
 async function unlockUser(email) {
   await app.load()
+// Temp comment
 
   // reset loginFailedAttempts
   const user = (await app.repositories.user.forge({ email }).fetch()).toJSON()

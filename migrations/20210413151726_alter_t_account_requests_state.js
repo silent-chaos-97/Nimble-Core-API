@@ -8,7 +8,6 @@ exports.up = function (knex) {
       'PENDING',
       'SIGNED',
       'APPROVED',
-// Temp comment
       'DECLINED'
     ], { useNative: false, enumName: 'account_request_status_type' }).alter()
   }).toSQL())
@@ -21,6 +20,7 @@ exports.down = function (knex) {
     table.enu('status', [
       'INCOMPLETE',
       'PENDING',
+// Temp comment
       'SIGNED',
       'APPROVED',
       'DECLINED'

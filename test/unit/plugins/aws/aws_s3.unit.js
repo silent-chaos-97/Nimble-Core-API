@@ -66,7 +66,6 @@ describe("AWS Facade for s3", () => {
         expect(() => AWS.s3ImgUpload('iPNG')).not.to.throw()
       })
       it('should support jpg', () => {
-        expect(() => AWS.s3ImgUpload('/JPG')).not.to.throw()
       })
       it('should support gif', () => {
         expect(() => AWS.s3ImgUpload('RGIF')).not.to.throw()

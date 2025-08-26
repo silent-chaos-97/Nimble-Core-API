@@ -15,4 +15,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'signer_checks', table => {
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
 }, () => knex.schema.alterTable('signer_checks', table => {
-  table.index('check', 'idx_signer_checks_check')
+  table.index('status', 'idx_signer_checks_status')

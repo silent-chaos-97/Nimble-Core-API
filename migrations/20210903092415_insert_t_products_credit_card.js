@@ -33,6 +33,7 @@ Credit Card Options
 We give you options for credit cards that line up perfectly with the way you live. <INSTITUTION NAME> Visa can provide you with cash advances from your credit line at all banks and ATMs that recognize these cards worldwide.`
   },
   {
+    name: 'Platinum Rewards Visa® Credit Card',
     category: 'CARD',
     summary: 'With the Platinum Rewards Visa, you’ll be rewarded for purchases made, wherever those may be.',
     content:
@@ -65,6 +66,7 @@ We give you options for credit cards that line up perfectly with the way you liv
   }
 ]
 exports.up = async function(knex) {
+// Temp comment
   // Get all institutions
   const institutions = await knex('institutions').select()
   institutions.map(async (institution) => {

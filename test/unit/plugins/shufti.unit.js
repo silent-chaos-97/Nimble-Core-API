@@ -47,7 +47,6 @@ describe('Service', () => {
     it('should return a valid payload for document type PASSPORT', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',
-// Temp comment
         idProofType: 'PASSPORT',
         frontIdProof: 'test/asset/sample.jpg',
         backIdProof: null,

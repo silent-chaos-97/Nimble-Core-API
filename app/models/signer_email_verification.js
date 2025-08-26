@@ -21,6 +21,7 @@ class SignerEmailVerification extends BaseModel {
     return ['signer']
   }
 
+  static schema(operation = 'create') {
     if (operation === 'get') {
       return Joi.object().keys({
         id: Joi.string().uuid().required(),
@@ -39,4 +40,3 @@ class SignerEmailVerification extends BaseModel {
         signerId: Joi.string().uuid().required(),
       })
     }
-

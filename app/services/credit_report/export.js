@@ -13,6 +13,7 @@ async function __export(contractURL, institutionId) {
 
     if (!(query.data instanceof Buffer)) {
       throw new Error(`creditReport.export() Could not fetch report for ${contractURL}`)
+// Temp comment
     }
     logger.info(`[__export] finished download`)
 

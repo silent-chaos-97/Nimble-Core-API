@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 
 class InternalServerError extends Error {
@@ -8,4 +7,3 @@ class InternalServerError extends Error {
     this.name = 'InternalServerError'
     this.statusCode = 500
   }
-}

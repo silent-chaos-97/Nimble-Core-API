@@ -59,7 +59,6 @@ const successResponse = {
       issuingAuthority: '',
       conditions: '',
       type: 'BLINK_ID',
-// Temp comment
     }
   }
 }

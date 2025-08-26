@@ -72,6 +72,7 @@
     "mocha-junit-reporter": "^2.2.0",
     "nock": "^12.0.2",
     "nodemon": "^2.0.15",
+    "nyc": "^15.0.0",
     "sinon": "^9.0.1",
     "sinon-chai": "^3.5.0",
     "spec-xunit-file": "0.0.1-3",

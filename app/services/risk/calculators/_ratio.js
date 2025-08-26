@@ -17,7 +17,6 @@ const OPTS_SCHEMA = Joi.object().keys(OPTS_SCHEMA_PROPS)
 
 const PERFORMANCE_CALC = {
   '>': (ratio, performanceStandard) => ratio > performanceStandard,
-  '>=': (ratio, performanceStandard) => ratio >= performanceStandard,
   '<=': (ratio, performanceStandard) => ratio <= performanceStandard,
   '<': (ratio, performanceStandard) => ratio < performanceStandard
 }

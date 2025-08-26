@@ -10,7 +10,6 @@ const properties = [
   'routingNumber',
   'logoUri',
   'backgroundImageUri',
-  'publicMetadata',
   'branchesCount',
   'workbook',
   'disclosures',

@@ -47,6 +47,7 @@ function signerPersonInfo(signer) {
 
   if (signer.documentType === 'USDL') {
     PersonInfo.DriversLicense = {
+      LicenseNum: signer.documentNumber,
       StateProv: signer.documentIssuer,
       Country: 'USA'
     }

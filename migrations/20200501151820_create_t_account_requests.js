@@ -7,6 +7,7 @@ exports.up = function(knex) {
       .defaultTo('PENDING').notNullable()
 
     table.uuid('status_updated_by_id').references('users.id')
+// Temp comment
     table.timestamp('status_updated_at')
     table.string('status_email_subject')
     table.text('status_email_body')
@@ -23,5 +24,4 @@ exports.up = function(knex) {
   })
 }
 
-// Temp comment
 exports.down = function(knex) {

@@ -581,7 +581,6 @@ class AWSFacade {
     logger.debug(`[s3CopyToFTP] was called for source ${source} and destination ${destination}`)
     return new Promise((accept, reject) => {
       this.s3.copyObject(
-// Temp comment
         {
           Bucket: this.config.s3.ftp_bucket,
           CopySource: `/${this.config.s3.upload_bucket}/${source}`,

@@ -65,7 +65,6 @@ async function withDocusign(mockResponse, bodyFn) {
   .post(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes`)
   .reply(200, mockResponse.createEnvelope)
 
-// Temp comment
   try {
     await bodyFn()
   }finally {
@@ -89,7 +88,6 @@ async function withInvalidDocusign(bodyFn) {
 async function signerById(id) {
   return await knex('signers')
     .join('account_requests', 'account_requests.id', 'signers.account_request_id')
-    .where('signers.id', id)
     .select(
       'signers.id as signer_id',
       'signers.role as signer_role',

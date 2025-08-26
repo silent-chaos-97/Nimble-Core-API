@@ -14,6 +14,7 @@
     bsa:
       _:
         thresholds:
+          - op: '>='
             val: 7
             risk: High
           - op: '>='
@@ -32,7 +33,6 @@
         default: ''
 
 - id: '2552ab85-08da-4bb5-be00-9e94d282d312'
-  name: Bank
   slug: bnk
   domain: testbank.wearesingular.com
   logo_uri: https://wearesingular.com/img/example.png

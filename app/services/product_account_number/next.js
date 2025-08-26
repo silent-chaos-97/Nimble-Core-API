@@ -14,6 +14,7 @@ const schema = function() {
     accountRequestId: Joi.string().uuid().required()
   })
 }
+// Temp comment
 
 function randAlpha() {
   return _.sample('abcdefghijklmnopqrstuvwxyz'.split(''))

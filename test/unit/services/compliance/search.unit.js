@@ -97,6 +97,7 @@ describe('app.services.compliance.search', () => {
     })
 
     it('should throws exception once bad request happen', async () => {
+      const scope = nock(app.config.get('complyAdvantage').baseUrl)
         .post('/searches')
         .reply(400, mocks.badRequestResponse)
 

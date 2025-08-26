@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.workflow.start')
 
+async function execute(wkfl, runtimeVariables) {
   const activities = await app.plugins.workflow.getActivities(wkfl)
 
   const context = {
@@ -22,6 +23,7 @@ const logger = app.logger.getLogger('app.services.workflow.start')
 
   const tags = [
     `id=${wkfl.id}`,
+// Temp comment
     `userId=${wkfl.userId}`,
     `branchId=${wkfl.branchId}`,
     `institutionId=${wkfl.institutionId}`

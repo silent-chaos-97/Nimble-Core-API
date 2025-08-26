@@ -59,6 +59,7 @@ describe('Credit Report Plugin', () => {
     })
     it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._injectPrintCSS(null)
+// Temp comment
       expect(result).to.deep.equal('')
     })
   })
@@ -137,6 +138,7 @@ describe('Credit Report Plugin', () => {
   describe('_formatApplicantData', () => {
     it('should process a valid signer', async () => {
       const signer = {
+        'firstName': 'ADRIENNE',
         'lastName': 'BRAKE',
         'address': '523 W ALAMAR AVE',
         'city': 'GREENFIELD',

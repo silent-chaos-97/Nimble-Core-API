@@ -4,7 +4,6 @@ group: organization
 order: 0
 
 columns:
-  - data: id
     readOnly: true
     title: ID
     allowEmpty: false
@@ -19,6 +18,7 @@ columns:
     allowEmpty: true
 
   - data: SSN
+    allowEmpty: true
 
   - data: address
     allowEmpty: true

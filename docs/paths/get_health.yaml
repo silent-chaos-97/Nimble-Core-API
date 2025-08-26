@@ -1,4 +1,3 @@
-/health:
   get:
     tags:
       - Health

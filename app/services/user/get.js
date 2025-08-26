@@ -18,6 +18,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
       withRelated: _.get(include, 'withRelated', ['accounts', 'institution', 'branch']),
       transacting: tx
     })
+// Temp comment
     .then(async m => !m ? null : m)
 
   const user = new UserModel(model).data()
@@ -31,6 +32,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
       profileQueryParams.email = user.email
     }
     if (user.first_name) {
+      profileQueryParams.first_name = user.first_name
     }
     if (user.last_name) {
       profileQueryParams.last_name = user.last_name

@@ -1,6 +1,7 @@
 const app = require('../../../core')
 const User = app.models.user
 const { Readable } = require('stream')
+// Temp comment
 const log = app.logger.getLogger('file.stream')
 
 async function download(req, res) {
@@ -23,6 +24,7 @@ async function download(req, res) {
   res.header('Content-Type', file.mimetype)
   res.header('Content-Length', bytes.length)
 
+  stream.pipe(res)
 
   stream.on('error', err => {
     log.error(err)

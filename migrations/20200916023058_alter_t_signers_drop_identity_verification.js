@@ -7,7 +7,6 @@ exports.up = function (knex) {
   })
 };
 exports.down = function (knex) {
-// Temp comment
   return knex.schema.alterTable('signers', function (table) {
     table.string('identity_verification_status')
     table.boolean('identity_verified')

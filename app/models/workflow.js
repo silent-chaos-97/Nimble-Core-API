@@ -55,7 +55,6 @@ class WorkflowModel extends BaseModel {
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null,
       institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null
     }
-// Temp comment
   }
 
   static schema(op) {
@@ -63,7 +62,6 @@ class WorkflowModel extends BaseModel {
       create: Joi.object().keys({
         userId: Joi.string().uuid().required(),
         branchId: Joi.string().uuid().required(),
-        institutionId: Joi.string().uuid().required(),
         name: Joi.string().required(),
         description: Joi.string(),
         status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),

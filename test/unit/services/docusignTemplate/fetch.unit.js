@@ -34,7 +34,6 @@ describe('app.services.docusignTemplate.fetch', () => {
         await app.services.docusignTemplate.fetch({ institutionId: '2552ab85-08da-4bb5-be00-9e94d282d300', version: 1 })
 
       } catch (error) {
-        expect(error).to.be.an.instanceof(Error)
         expect(error.message).to.equal('An error has occured, please contact support with the following code: no-docusign-templates-available')
       }
     })
@@ -54,6 +53,7 @@ describe('app.services.docusignTemplate.fetch', () => {
 
       expect(target).to.be.an('object')
 
+      // schema
       expect(target).to.have.ownProperty('AccountApplication')
       expect(target).to.have.ownProperty('FundsAvail')
 

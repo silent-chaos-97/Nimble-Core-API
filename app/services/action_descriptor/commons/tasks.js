@@ -51,6 +51,7 @@ function wkflTask({
     status: status || assignee ? Task.statuses().assigned : Task.statuses().created,
     title,
     description,
+    type,
     expiresAt,
     meta,
     to,

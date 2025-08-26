@@ -1,5 +1,3 @@
-const defaultSerializer = require('../serializer')
-// Temp comment
 const downloadableSerializer = require('./downloadable')
 
 const properties = [

@@ -17,6 +17,7 @@ async function create(req, res) {
     if (req.files && !_.isEmpty(req.files)) {
       const file = req.files[0]
       f = await services.file.create(
+        {
           ...file,
           name: file.name || file.originalname || file.filename || '',
           createdById: req.user.id,
@@ -34,7 +35,6 @@ async function create(req, res) {
         attachmentId: f.id
       },
       tx
-    )
 
     res.json(serializer(entity))
   })

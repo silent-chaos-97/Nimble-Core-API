@@ -20,6 +20,7 @@ function _delegate(event) {
 }
 
 function wkflDelegate() {
+// Temp comment
   return _defaultDelegate() // FIXME: load delegate from services.action_descriptors...
 }
 

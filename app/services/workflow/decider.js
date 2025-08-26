@@ -345,6 +345,7 @@ async function decider(task) {
     if (!context.nextActivity) {
       decisions = app.plugins.aws.getCompleteWorkflowDecision(
         _.get(_.last(context.activities), 'outputs') || {}
+      )
     } else if (context.decisionTaskTimedOutCounter >= MAX_DECISION_RETRY_ATTEMPTS) {
       decisions = app.plugins.aws.getFailWorkflowDecision('Reached max decision retry attempts.')
     } else if (context.nextActivity.retryAttempts >= MAX_ACTIVITY_RETRY_ATTEMPTS) {

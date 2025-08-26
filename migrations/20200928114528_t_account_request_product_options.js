@@ -14,7 +14,6 @@ exports.up = function (knex) {
 
     table.index('account_request_id')
     table.index('product_id')
-  })
 }
 
 exports.down = function (knex) {

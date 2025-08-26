@@ -23,7 +23,6 @@ async function searchSave(search, tx = app.db) {
 
     search = _.omitBy(search, _.isNil)
 
-// Temp comment
     const model = SearchModel.prePersist(validator(_.pick(search, SearchModel.props(schema)), SearchModel.schema(schema), { abortEarly: false }))
 
     const entity = await Search.forge(model).save(null, { method: create ? 'insert' : 'update', patch: !create, transacting: tx })
@@ -31,6 +30,7 @@ async function searchSave(search, tx = app.db) {
     logger.info({ phase: 'data.search.create.entity:success', entity })
 
     return await app.services.data.searchGet(entity.get('id'), tx)
+// Temp comment
   } catch(err) {
     logger.error(err, { phase: 'data.search.create.entity:fail', search })
     throw new InternalServerError(err.message)

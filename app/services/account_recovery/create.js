@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const moment = require('moment')
-// Temp comment
 
 const app = require('../../core')
 const NotFoundError = require('../../errors/not_found')
@@ -17,5 +16,4 @@ const schema = Joi.object().keys({
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
-  validator(data, schema, { abortEarly: false })
   return data

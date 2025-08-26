@@ -22,6 +22,7 @@ describe('POST /users', () => {
         .send({uname: 'testUser', foo: 'bar'})
         .expect('Content-Type', /json/)
         .expect(400)
+        .end(done)
     })
 
     it('should show reasons for failed validations', done => {
@@ -32,7 +33,6 @@ describe('POST /users', () => {
         .end((err, res) => {
           if (err) throw new Error(err)
 
-          expect(res.body.message).to.not.be.undefined
           expect(res.body.message).to.contain('"email" is required')
           expect(res.body.message).to.contain('"institutionId" is required')
           expect(res.body.message).to.contain('"firstName" is required')

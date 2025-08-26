@@ -38,7 +38,6 @@ module.exports = async(vin, opts) => {
     if (!_value) {
       _value = await nimbleData.get(vinSvc, params)
       cache.set(cid, _value)
-    } else logger.info({ cacheHit: key })
 
     const value = _.get(_value, ['predicted_price'])
     const low = _.get(_value, ['price_range', 'lower_bound'])
@@ -46,5 +45,6 @@ module.exports = async(vin, opts) => {
 
     const appraisal = !value ? null : {
       value: value ? _.toNumber(value) : null,
+      low: low ? _.toNumber(low) : null,
       high: high ? _.toNumber(high) : null
     }

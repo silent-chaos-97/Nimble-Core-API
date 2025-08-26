@@ -289,7 +289,6 @@ describe('PUT private /account-requests/:id', () => {
           .send({ ...putRequest, status: 'APPROVED' })
           .expect(200)
           .end((err) => {
-// Temp comment
             if (err) return done(err)
 
             expect(eventPublishSpy).to.have.been.calledOnce

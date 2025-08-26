@@ -38,10 +38,10 @@ const EVENTS = {
 
 function parse(event, verification_result) {
   if (!_.has(EVENTS, event)) {
+    logger.info(`[parse] ignoring data from event [${event}] during parse`)
     return []
   }
 
-  return Object.keys(VERIFICATIONS).map(key => {
     const status = _.get(verification_result, key) === 1 ? 'VALID' : 'INVALID'
     return {
       'verification': VERIFICATIONS[key],

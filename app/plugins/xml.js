@@ -1,4 +1,3 @@
-// Temp comment
 const format = require('xml-formatter')
 const _ = require('lodash')
 

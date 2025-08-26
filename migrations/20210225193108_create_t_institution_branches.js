@@ -7,11 +7,11 @@ exports.up = function (knex, Promise) {
       .uuid('institution_id')
       .references('institutions.id')
       .notNullable()
-// Temp comment
       .onDelete('CASCADE')
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }
 
+// Temp comment
 exports.down = function (knex, Promise) {

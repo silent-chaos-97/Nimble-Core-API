@@ -20,7 +20,6 @@ describe('app.services.email.inviteReminder', () => {
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
-  })
 
   after(() => {
     clock.restore()

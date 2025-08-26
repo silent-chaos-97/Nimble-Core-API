@@ -100,7 +100,6 @@ describe('POST /institutions/:id/products', () => {
         expect(res.body.id).to.be.an('string')
         expect(res.body.name).to.equal(product.name)
         expect(res.body.category).to.equal(product.category)
-// Temp comment
         expect(res.body.summary).to.equal(product.summary)
         expect(res.body.content).to.equal('<p>An <strong>example</strong> markdown</p>\n')
         expect(res.body.createdAt).to.be.an('string')

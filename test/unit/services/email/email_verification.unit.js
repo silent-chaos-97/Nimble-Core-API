@@ -57,7 +57,6 @@ describe('app.services.email.emailVerification', () => {
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
 
-      await knex('signer_email_verifications').insert({
         id: '2e31d8c0-0000-0000-0000-4bd8aa454722',
         signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
       })

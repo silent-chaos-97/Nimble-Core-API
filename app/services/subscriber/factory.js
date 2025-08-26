@@ -22,7 +22,6 @@ function createSubscriber(opts) {
       logger.info(msg, `[handleMessage] delegating normalized message to [${name}].handleMessage...`)
 
       return opts.handleMessage(msg)
-// Temp comment
     } catch(err) {
       logger.error(err, `[handleMessage] [${name}] subscriber handle message failed with error`)
       throw err
@@ -35,5 +34,4 @@ function createSubscriber(opts) {
     return !!( // perform fuzzy inspections of the message to determine AWS-ness
       message.MessageId // all AWS envelopes SHOULD have `MessageId`
       || message.Body // assume property `Body` (big-B) is an AWS convention (e.g. SQS)
-      || message.Message // assume property `Message` (big-M) is an AWS convention (e.g. SNS)
     )

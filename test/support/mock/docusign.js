@@ -2210,7 +2210,6 @@ const mockDocumentTabs = {
       'recipientId': '8bf2ee02-28b9-4489-a9fc-9f8de6544eca',
       'pageNumber': '2',
       'xPosition': '88',
-      'yPosition': '599',
       'width': '228',
       'height': '12',
       'tabId': '2962f034-211c-438c-8dd9-665662e29a5d',

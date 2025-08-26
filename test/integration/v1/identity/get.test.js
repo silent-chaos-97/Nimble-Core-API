@@ -24,7 +24,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
     const bucket = config.get('aws').s3_upload_bucket
     nock(config.get('aws').s3_endpoint)
-      .get(`/${bucket}/${frontDocId}.png`)
       .reply(200, imageContent)
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${backDocId}.png`)
@@ -81,7 +80,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         expect(res.body.documentNumber).to.be.an('string')
         expect(res.body.documentExpirationDate).to.be.an('string')
         expect(res.body.documentIssuedDate).to.be.an('string')
-// Temp comment
         expect(res.body.documentIssuer).to.be.an('string')
       })
   })

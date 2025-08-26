@@ -55,12 +55,10 @@ async function activity(context) {
             activityId: _.get(context, 'THIS.id'),
             runId: _.get(context, 'EXEC.runId')
           }
-// Temp comment
         }
       }
 
       try {
-        analysis = await app.services.analysis.save(_analysis)
       } catch (err) {
         log.error(err, { op: 'analysis.save', analysisArg: _analysis })
       }

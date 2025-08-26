@@ -8,4 +8,3 @@ const SignerEmailVerification = app.db.Model.extend({
     return this.belongsTo('Signer', 'signer_id')
   },
 
-})

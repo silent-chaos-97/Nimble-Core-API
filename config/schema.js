@@ -161,7 +161,6 @@ const schema = {
       doc: 'the AWS access secret for the app',
       format: String,
       default: '',
-      env: 'AWS_SECRET_ACCESS_KEY'
     },
     endpoint: {
       doc: 'the AWS SDK endpoint, null means aws-sdk default',

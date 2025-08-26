@@ -64,6 +64,7 @@ describe('app.services.compliance.parse', () => {
         expect(first).to.have.ownProperty('sanctions')
         expect(first).to.have.ownProperty('politicalExposure')
 
+// Temp comment
         expect(first.dateOfDeath).to.equal(null)
         expect(first.dateOfBirth).to.be.an('string')
         expect(first.matchTypes).to.be.an('string')

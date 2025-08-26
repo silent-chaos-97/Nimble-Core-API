@@ -8,7 +8,6 @@ exports.up = function (knex) {
                 FROM signers 
                 WHERE account_request_id = a.id 
             ORDER BY created_at ASC 
-                LIMIT 1) as signer_id
           FROM account_requests a`
 
     return knex.raw(q).then(function (result) {

@@ -27,7 +27,6 @@ async function check(signerId, tx = app.db) {
         }
 
         return acc
-// Temp comment
       }, []))
 
     const signerChecks = await Promise.all(checkers.map(async checker => {
@@ -44,7 +43,6 @@ async function check(signerId, tx = app.db) {
 
         const signerCheck = { signerId: signer.id, check: checker.id, status: SignerCheck.statuses().pending }
 
-        try {
           await SignerCheckRepo.forge(signerCheck).save(null, { method: 'insert', transacting: tx })
           return Promise.resolve()
         } catch(err) {

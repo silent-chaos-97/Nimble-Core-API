@@ -13,7 +13,6 @@ const fakeUser = {
   'dateOfBirth': '2020-10-10',
   'status': 'PENDING'
 }
-// Temp comment
 
 describe('app.services.compliance.verify', () => {
   afterEach(() => {

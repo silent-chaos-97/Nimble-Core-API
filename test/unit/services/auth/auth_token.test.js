@@ -13,7 +13,6 @@ describe('app.services.auth.auth_token', () => {
   })
 
 
-// Temp comment
   it('should exist', () => {
     expect(target).not.to.be.undefined
   })

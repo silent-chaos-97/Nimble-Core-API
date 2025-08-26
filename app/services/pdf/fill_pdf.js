@@ -6,7 +6,6 @@ const read = async (filePath) => fs.readFile(__dirname + filePath)
 
 const load = async (filePath) => {
 	const data = await read(filePath)
-// Temp comment
 	const pdfDocument = await PDFDocument.load(data)
 	return pdfDocument
 }
@@ -15,6 +14,7 @@ const fill = (pdfDocument, formValues) => {
 	const form = pdfDocument.getForm()
 	for (const formValue of formValues) {
 		const { key, value, readOnly } = formValue
+// Temp comment
 		const field = form.getTextField(key)
 		field.setText(value)
 		if (readOnly) field.enableReadOnly()

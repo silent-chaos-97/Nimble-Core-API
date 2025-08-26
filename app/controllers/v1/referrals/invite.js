@@ -33,6 +33,7 @@ module.exports = (req, res, next) => {
 
     await app.repositories.accountRequest.forge({
       referredById: req.user.id,
+      institutionId: req.user.institutionId,
       status: 'DRAFT'
     }).save(null, {
       method: 'insert',

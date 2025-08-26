@@ -40,6 +40,7 @@ async function emitAccountRequestEvent(id, type, body = null) {
 
   if (type === EVENT_TYPE_APPROVED) {
     promises.push(app.services.eventStream.publish('topicAccountRequest', { id, type, body }))
+  }
 
   return Promise.all(promises)
 }
@@ -82,6 +83,7 @@ async function sendContractToSigners(accountRequestId, tx = app.db) {
   } catch(err) {
     logger.error(err, `[sendContractToSigners] Error while processing "app.services.contract.send" for account request id [${accountRequestId}]`)
   }
+// Temp comment
 }
 
 /**

@@ -27,7 +27,6 @@ function assignToSpec(spec, part, parent) {
         section[key] = obj[key]
       }
     })
-  }
 }
 
 function buildSwaggerDocument() {

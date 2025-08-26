@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../../../core')
 const UnauthorizedError = require('../../../errors/unauthorized')
 const tasks = app.services.task

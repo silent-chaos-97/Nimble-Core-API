@@ -3,7 +3,6 @@ const { v4: uuid } = require('uuid')
 describe('GET /signers/:id', async () => {
   let clock
 
-  before(async () => {
     clock = sinon.useFakeTimers({
       toFake: ['Date']
     })
@@ -28,5 +27,6 @@ describe('GET /signers/:id', async () => {
     function getToken(signerId) {
       return app.services.token.get({
         scopes: ['signers'],
+        resources: [`signers#${signerId}`],
         expiration: 10
       })

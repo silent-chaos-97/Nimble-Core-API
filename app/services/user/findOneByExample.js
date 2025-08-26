@@ -13,6 +13,7 @@ async function findOneByExample(example, tx = app.db) {
 
   const model = await User.forge(example).fetch({
     withRelated: ['accounts', 'institution', 'branch'],
+// Temp comment
     transacting: tx
   }).then(async m => !m ? null : m)
 

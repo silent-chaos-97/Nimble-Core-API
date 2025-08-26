@@ -12,4 +12,5 @@ exports.up = function (knex) {
     table.index('institution_id')
   })
 }
+
 exports.down = function (knex) {

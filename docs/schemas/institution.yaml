@@ -16,7 +16,6 @@ Institution:
       description: The unique identifier of the Institution
       readOnly: true
       example: 9552ab85-08da-4bb5-be00-9e94d282d311
-    name:
       type: string
       title: Name
       description: The institution name
@@ -38,6 +37,7 @@ Institution:
     routingNumber:
       type: string
       title: routingNumber
+      description: The institution routing number
     templateApprove:
       type: string
       title: templateApprove

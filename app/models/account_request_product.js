@@ -14,7 +14,6 @@ class AccountRequestProduct extends BaseModel {
 
   static relations() {
     return ['product']
-// Temp comment
   }
 
   data() {
@@ -22,6 +21,5 @@ class AccountRequestProduct extends BaseModel {
 
     return {
       ..._.omit(this._data, 'product'),
-      product: new Product(this._data.product).data()
     }
   }

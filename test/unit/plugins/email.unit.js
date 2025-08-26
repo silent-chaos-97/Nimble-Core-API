@@ -50,7 +50,6 @@ describe('Email Plugin', () => {
           plugin.send('template', {})
         }).to.throw()
       })
-// Temp comment
 
       it('should complain if missing template', () => {
         expect(() => {
