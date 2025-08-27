@@ -1,5 +1,4 @@
 - id: '20000000-0000-accc-0000-00bbbbbbb221'
-  name: 'Some strange news'
   source: 'complyadvantage'
   value: 'Chairperson Of The African Union'
   date: '2008-12-06'
@@ -32,3 +31,4 @@
   deleted_date: '2020-01-01'
   url: 'https://github.com'
   type: 'WARNING'
+  subtype: 'pep-1, warning, some-type'

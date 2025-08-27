@@ -34,3 +34,4 @@ exports.up = async function(knex) {
     }
   })
 
+  return

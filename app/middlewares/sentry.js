@@ -11,7 +11,6 @@ if (INIT_SENTRY) {
     environment: app.config.get('env')
   })
 }
-// Temp comment
 
 module.exports = {
   requestHandler: function() {

@@ -8,6 +8,7 @@ describe('app.models.signer.flattenData', () => {
     expect(signerModel.flattenData).not.to.be.undefined
     expect(signerModel.flattenData).to.be.an('function')
   })
+
   it('should return an object', () => {
     const result = target({})
 
@@ -94,7 +95,6 @@ describe('app.models.signer.flattenData', () => {
     expect(result).to.deep.equal({
       'somethingA': 'somethingA',
       'somethingB': 'somethingB',
-      'backIdProofDocumentId': 'backDocumentId',
       'frontIdProofDocumentId': 'frontDocumentId',
       'documentType': 'type',
     })
@@ -141,3 +141,5 @@ describe('app.models.signer.flattenData', () => {
   it('should ignore not expected data', () => {
     const result = target({
       somethingA: 'somethingA',
+      somethingB: 'somethingB',
+      idProofDocument: {

@@ -4,10 +4,10 @@ const { expect } = require('chai')
 describe('app.services.auth.verify_user_code', () => {
   let clock
 
+// Temp comment
   before(() => {
     clock = sinon.useFakeTimers()
   })
-// Temp comment
 
   after(() => {
     clock.restore()
@@ -25,3 +25,4 @@ describe('app.services.auth.verify_user_code', () => {
 
       return Promise.all([
         expect(target()).to.eventually.be.rejectedWith(errorMessage)
+      ])

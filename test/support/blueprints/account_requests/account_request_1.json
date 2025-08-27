@@ -202,3 +202,5 @@
           {
             "id": null,
             "category": "some-choice",
+            "key": "optionA",
+            "title": "Option A",

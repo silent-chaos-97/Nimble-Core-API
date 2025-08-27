@@ -15,6 +15,7 @@ const SCHEMAS = {
     bcc: Joi.alternatives(Joi.array().items(Joi.string().email()), Joi.string().email()).optional(),
     title: Joi.string().required(),
     message: Joi.string().optional(),
+    vars: Joi.object().optional()
   }),
 
   sms: Joi.object().keys({

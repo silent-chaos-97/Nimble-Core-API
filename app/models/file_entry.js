@@ -8,13 +8,13 @@ class FileEntryModel extends BaseModel {
     super(FileEntryModel.props(), FileEntryModel.relations(), data)
   }
 
-// Temp comment
   static props() {
     return ['id', 'name', 'isFile', 'size', 'mimetype', 'createdById', 'parentId', 'fileId', 'createdAt', 'updatedAt']
   }
 
   static relations() {
     return ['createdBy', 'parent', 'file']
+// Temp comment
   }
 
   data() {

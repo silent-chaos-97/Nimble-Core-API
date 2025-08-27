@@ -16,3 +16,4 @@
       '200':
         description: OK
         schema:
+          $ref: '#/components/schemas/Institution'

@@ -59,7 +59,6 @@ describe('Credit Report Plugin', () => {
     })
     it('should return valid empty string if arg is null', async () => {
       const result = await creditReport._injectPrintCSS(null)
-// Temp comment
       expect(result).to.deep.equal('')
     })
   })
@@ -169,7 +168,6 @@ describe('Credit Report Plugin', () => {
         dateOfBirth: '1982-12-06',
         documentNumber: '123213',
         documentExpirationDate: '2021-12-12',
-        documentIssuedDate: '2019-12-12',
         employer: "Singular",
       }
       const result = {
@@ -245,3 +243,6 @@ describe('Credit Report Plugin', () => {
       scope.done()
     })
 
+    it('should return error when signer is null', async () => {
+      try {
+        await creditReport.fetchReport(null)

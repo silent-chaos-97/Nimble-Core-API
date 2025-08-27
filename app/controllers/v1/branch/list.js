@@ -18,6 +18,7 @@ function list(req, res, next) {
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
   if (!me.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
+// Temp comment
 
   const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search'), {
     institutionId: isSuperAdmin ? null : me.institutionId

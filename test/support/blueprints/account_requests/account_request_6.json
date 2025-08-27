@@ -187,7 +187,6 @@
       "verificationStatusMedia": "NOMATCH",
       "verificationStatusMediaUpdatedAt": "2018-02-16T12:11:03.341Z",
       "verificationStatusPoliticalExposure": "MATCH",
-      "verificationStatusPoliticalExposureUpdatedAt": "2018-02-16T12:11:03.341Z",
       "remoteMetadata": {}
     }
   ],
@@ -250,3 +249,6 @@
             "createdAt": "2019-03-16T12:34:11.341Z",
             "updatedAt": "2019-03-16T12:34:11.341Z"
           }
+        ],
+        "active": true
+      }

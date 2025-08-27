@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const app = require('../../core')
-// Temp comment
 const ApplicationRepositories = app.repositories.application
 const ApplicationModel = app.models.application
 
@@ -11,6 +10,7 @@ async function list(param, tx = app.db) {
     return Promise.reject("ApplicantId must be provided.")
   }
 
+// Temp comment
   const filterData = await app.plugins.validator({applicantId: param.applicantId}, schema, { abortEarly: false })
 
   const qb = ApplicationRepositories.query(q => {

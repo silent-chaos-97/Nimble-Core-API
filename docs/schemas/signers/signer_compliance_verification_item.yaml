@@ -13,7 +13,6 @@ SignerComplianceVerificationItem:
       type: string
     nameAka:
       title: Other names for this result
-      type: array
       items:
         type: string
     dateOfBirth:
@@ -52,3 +51,5 @@ SignerComplianceVerificationItem:
       type: array
       items:
         $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
+    createdAt:
+      title: When was the result created

@@ -3,7 +3,6 @@ module "eks" {
 
   cluster_name                   = "nimble_core_cluster"
   cluster_version                = "1.21"
-  cluster_endpoint_public_access = true
 
   cluster_addons = {
     vpc-cni = {
@@ -29,3 +28,4 @@ module "eks" {
       capacity_type = "SPOT"
     }
   }
+}

@@ -1,4 +1,5 @@
 User:
+  type: object
   required:
     - id
   properties:
@@ -19,7 +20,6 @@ User:
       title: Last Name
       description: The last name of the user
       example: Specimen
-    email:
       type: string
       title: Email
       description: The email of the user

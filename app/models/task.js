@@ -84,6 +84,7 @@ class TaskModel extends BaseModel {
       'type',
       'status',
       'expiresAt',
+      'version',
       'meta',
       'body',
       'signature'
@@ -149,3 +150,5 @@ class TaskModel extends BaseModel {
           to: Joi.array().items(Joi.object()),
           cc: Joi.array().items(Joi.object()),
           bcc: Joi.array().items(Joi.object()),
+
+          title: Joi.string(),

@@ -35,6 +35,7 @@ async function create(req, res) {
         attachmentId: f.id
       },
       tx
+    )
 
     res.json(serializer(entity))
   })

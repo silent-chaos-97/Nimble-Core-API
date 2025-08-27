@@ -11,10 +11,12 @@ class SignerContract extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return [
       'url',
       'expiresAt'
     ]
+  }
 
   data() {
     return {

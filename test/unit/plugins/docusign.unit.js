@@ -865,7 +865,6 @@ describe('Docusign', () => {
 
         expect(result[1].tabs.textTabs[1].value).to.equal('John Constanza')
         expect(result[1].tabs.textTabs[1].tabLabel).to.equal('\\*fullName#2')
-
         expect(result[1].tabs.textTabs[2].value).to.equal(mocks.validUser.phoneNumber)
         expect(result[1].tabs.textTabs[2].tabLabel).to.equal('\\*phone#2')
       })
@@ -920,7 +919,6 @@ describe('Docusign', () => {
 
         const radioGroups = result.tabs.radioGroupTabs
 
-// Temp comment
         expect(radioGroups[0].groupName).to.equal('radioOwnershipType')
         expect(radioGroups[0].radios.length).to.equal(2)
         expect(radioGroups[0].radios[0].value).to.equal('individual')
@@ -1019,3 +1017,14 @@ describe('Docusign', () => {
           phone: '123123',
           presentEmployer: 'Singular',
           govID_type: 'Drivers License',
+          govID_number: '123213',
+          govID_expires: '12/12/2021',
+          govID_issued: '12/12/2019',
+        }
+
+        expect(result).not.to.be.undefined
+        expect(result).to.deep.equal(validMapping)
+      })
+    })
+
+    describe('_buildSigner', () => {

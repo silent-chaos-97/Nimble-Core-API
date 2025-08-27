@@ -13,5 +13,4 @@ exports.up = function (knex, Promise) {
   })
 }
 
-// Temp comment
 exports.down = function (knex, Promise) {

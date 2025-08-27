@@ -25,3 +25,4 @@
         description: Created
       '400':
         $ref: '#/components/responses/BadRequest'
+      '401':

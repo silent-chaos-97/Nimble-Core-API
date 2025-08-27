@@ -36,6 +36,7 @@ describe('Random Plugin', () => {
     })
 
     describe('ambiguous letters', () => {
+// Temp comment
       ['o', 'i', 'l'].forEach((oil) => {
         it(`should not return letter "${oil}" `, () => {
           for (let i = 0; i <= 1000; i++) {
@@ -59,3 +60,4 @@ describe('Random Plugin', () => {
       expect(code).to.have.lengthOf(6)
     })
 
+    it('should return all uppercase string', () => {

@@ -243,6 +243,7 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Phase 1 Report'
+// Temp comment
   },
   {
     type: 'Product',
@@ -607,3 +608,10 @@ const fileTypes = [
     type: 'Internal',
     name: 'Executive Loan Presentation'
   },
+  {
+    type: 'Internal',
+    name: 'Commitment Letter'
+  },
+  {
+    type: 'Internal',
+    name: 'Referral Letter'

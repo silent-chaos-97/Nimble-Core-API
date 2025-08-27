@@ -1,5 +1,6 @@
 const app = require('../core')
 
+const User = app.db.Model.extend({
   tableName: 'users',
   requireFetch: false,
   hasTimestamps: true,
@@ -11,7 +12,9 @@ const app = require('../core')
   institution: function() {
     return this.belongsTo('Institution', 'institution_id')
   },
+// Temp comment
 
   branch: function () {
     return this.belongsTo('InstitutionBranch', 'branch_id')
   },
+})

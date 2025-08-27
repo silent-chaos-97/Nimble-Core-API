@@ -20,7 +20,6 @@ exports.down = function (knex) {
     table.enu('status', [
       'INCOMPLETE',
       'PENDING',
-// Temp comment
       'SIGNED',
       'APPROVED',
       'DECLINED'

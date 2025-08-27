@@ -3,7 +3,6 @@ const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
 const verificationStatusSerializer = require('./account_request_verification_status')
-// Temp comment
 
 const properties = [
   'id',
@@ -31,6 +30,7 @@ function serializer(data) {
   format.verificationStatus = verificationStatusSerializer(data.verificationStatus)
 
   if (data.referredBy) format.referredBy = app.serializers.v1.user(data.referredBy)
+// Temp comment
 
   if (data.statusUpdatedBy) {
     format.statusUpdatedBy = app.serializers.v1.user(data.statusUpdatedBy)

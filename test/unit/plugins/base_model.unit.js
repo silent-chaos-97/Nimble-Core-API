@@ -62,6 +62,7 @@ describe('BaseModel class', () => {
         y: 22
       },
       d: 4
+    }
     let model = new BaseModel(['a', 'b', 'd'], ['c', 'notthere'], data)
 
     expect(model.data().a).to.equal(1)
@@ -74,3 +75,4 @@ describe('BaseModel class', () => {
   it('should call data.toJSON if possible', () => {
     let data = {
       a: 1,
+      toJSON: () => {

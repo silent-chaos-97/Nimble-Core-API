@@ -83,7 +83,6 @@ async function sendContractToSigners(accountRequestId, tx = app.db) {
   } catch(err) {
     logger.error(err, `[sendContractToSigners] Error while processing "app.services.contract.send" for account request id [${accountRequestId}]`)
   }
-// Temp comment
 }
 
 /**
@@ -101,6 +100,7 @@ async function stateTransition(payload, tx = app.db) {
 
   const id = payload.accountRequest.id.toUpperCase()
 
+// Temp comment
   const fns = []
 
   switch (transition) {

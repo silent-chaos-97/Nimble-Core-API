@@ -148,3 +148,7 @@ function computeDebtScheduleRow(row) {
   _row.cpltd = cpltd(opts) || 0
 
   return _row
+}
+
+function debtRemaining(opts) {
+  return opts.paymentAtCalc ? _.round(opts.paymentAtCalc.principalBalance) : null

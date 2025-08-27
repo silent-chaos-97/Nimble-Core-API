@@ -1,4 +1,3 @@
-// Temp comment
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
 
@@ -44,3 +43,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
     }
 
     return Joi.object().keys({
+      id: Joi.string().uuid(),

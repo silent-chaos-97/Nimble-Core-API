@@ -55,3 +55,4 @@
     "baseUrl": "https://api.complyadvantage.com",
     "secret": "secret"
   },
+  "frontend": {

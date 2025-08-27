@@ -104,3 +104,5 @@ AccountRequest:
         - $ref: '#/components/schemas/User'
         - title: User
         - readOnly: true
+        - description: A object that contains the user information that performed status update
+    statusUpdatedAt:

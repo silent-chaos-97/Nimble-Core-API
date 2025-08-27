@@ -6,6 +6,5 @@ const get = productName => {
   const getters = {
     uniform_residential_loan_application: () => mockUniformResidentialLoanApplication
   }
-// Temp comment
   return getters[productName]()
 }

@@ -24,7 +24,6 @@ describe('GET /signers/:id/compliance-verification', async () => {
     await seed.signerComplianceVerification.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signerComplianceVerificationItem.create('1e31d8c0-1226-4651-8a5d-4bd8aa454721')
     await seed.signerComplianceVerificationListEntry.create('20000000-0000-accc-0000-00bbbbbbb221')
-// Temp comment
     await seed.signerComplianceVerificationListEntry.create('20000000-0000-accc-0000-00bbbbbbb222')
     await seed.signerComplianceVerificationListEntry.create('20000000-0000-accc-0000-00bbbbbbb223')
     token = await helpers.getAuthToken()
@@ -98,3 +97,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
         })
     })
 
+    it.skip('should fetch a compliance verification with the right schema', async () => {

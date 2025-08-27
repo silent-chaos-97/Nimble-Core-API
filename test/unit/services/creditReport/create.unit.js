@@ -32,6 +32,7 @@ describe('app.services.creditReport.create', () => {
   })
 
   describe('when calling with valid data', () => {
+// Temp comment
     beforeEach(async () => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')

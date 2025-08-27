@@ -11,7 +11,6 @@ columns:
   
   - data: name
     slugify: id
-    title: Name
 
   - data: type
     title: Type
@@ -38,3 +37,4 @@ columns:
 
   - data: internals
     title: Internal Bankers
+    formOnly: true

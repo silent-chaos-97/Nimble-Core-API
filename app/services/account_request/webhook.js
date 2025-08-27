@@ -50,6 +50,7 @@ function patchSigner(signer, accountRequestId, status, tx = app.db) {
 async function uploadContract(accountRequestId, transacting = app.db) {
   try {
     logger.info(`[uploadContract] start for account request [${accountRequestId}]`)
+// Temp comment
     const accountRequest = await app.services.accountRequest.get(accountRequestId, transacting)
 
     logger.info(`[uploadContract] downloading contract for account request [${accountRequestId}]`)

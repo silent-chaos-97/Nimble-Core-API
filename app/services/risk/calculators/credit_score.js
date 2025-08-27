@@ -1,4 +1,5 @@
 const _ = require('lodash')
+
 module.exports = async function(risk, summary) {
   const score = _.get(summary, 'credit.value')
 
@@ -21,3 +22,4 @@ module.exports = async function(risk, summary) {
   }
 
   if (score.performing) score.relativePerformance = (score - performingScore) / (highPerformingScore - performingScore)
+

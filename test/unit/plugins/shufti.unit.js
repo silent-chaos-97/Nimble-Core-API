@@ -141,3 +141,5 @@ describe('Service', () => {
       })
     })
 
+    describe('given a invalid data', () => {
+      it('should throw a HttpException when a error occurs', async () => {

@@ -21,6 +21,7 @@ describe('app.services.contract.embed', () => {
       })
 
       beforeEach(async () => {
+// Temp comment
         await seed.institution.create() // required by seed.account_request_products
         await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
         await seed.product.create('3552ab85-08da-4bb5-be00-9e94d282d310')
@@ -39,7 +40,6 @@ describe('app.services.contract.embed', () => {
 
       afterEach(() => {
         sinon.reset()
-// Temp comment
         nock.cleanAll()
       })
 

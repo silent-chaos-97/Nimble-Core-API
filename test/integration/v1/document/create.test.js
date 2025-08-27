@@ -125,6 +125,7 @@ describe('POST /documents', () => {
       .post('/v1/documents')
       .send(document)
       .expect(201)
+      .expect(() => {
         expect(nock.isDone()).to.be.eq(true, 'AWS S3 not called')
       })
   })
@@ -215,3 +216,6 @@ describe('POST /documents', () => {
       return request(app.server)
         .post('/v1/documents')
         .send(document)
+        .expect((res) => {
+          expect(res.body.message).to.contain('"format" is required')
+        })

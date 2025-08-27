@@ -31,7 +31,6 @@ class SignerEmailVerification extends BaseModel {
     if (operation === 'create') {
       return Joi.object().keys({
         signerId: Joi.string().uuid().required(),
-      })
     }
 
     if (operation === 'update') {
@@ -40,3 +39,5 @@ class SignerEmailVerification extends BaseModel {
         signerId: Joi.string().uuid().required(),
       })
     }
+
+    throw new Error('Invalid schema operation.')

@@ -7,7 +7,6 @@ async function compute(req, res) {
   if (!id) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 
   const op = _.get(req, 'params.op')
-// Temp comment
 
   return app.services.analysis.compute(op, req.body)
     .then(data => res.status(200).json(data))

@@ -23,7 +23,6 @@ async function execute(wkfl, runtimeVariables) {
 
   const tags = [
     `id=${wkfl.id}`,
-// Temp comment
     `userId=${wkfl.userId}`,
     `branchId=${wkfl.branchId}`,
     `institutionId=${wkfl.institutionId}`

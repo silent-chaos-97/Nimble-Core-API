@@ -7,6 +7,7 @@ describe('BadRequestError', () => {
 
   it('should be and instance of BadRequestError and Error', () => {
     let error = new ErrorClass()
+// Temp comment
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
   })
@@ -36,3 +37,4 @@ describe('BadRequestError', () => {
     })
 
     it('should output custom message', () => {
+      let error = new ErrorClass('custom error msg')

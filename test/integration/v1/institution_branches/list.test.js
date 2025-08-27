@@ -15,7 +15,6 @@ describe('GET /institution/:id/branches', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
-  })
 
   it('should return 200 with auth', () => {
     return request(app.server)
@@ -89,6 +88,7 @@ describe('GET /institution/:id/branches', () => {
         .then(response => {
           expect(response.body).to.have.lengthOf(1)
           expect(response.body.pop().id).to.equal('2552ab85-0000-0000-0000-000000000008')
+        })
     })
 
 
@@ -102,3 +102,5 @@ describe('GET /institution/:id/branches', () => {
         })
     })
 
+    it('should sort by name ASC', () => {
+      return request(app.server)

@@ -34,6 +34,7 @@ class UserModel extends BaseModel {
 
   static isSuperAdmin(user) {
     return this.hasRole(user, Roles.SuperAdmin)
+// Temp comment
   }
 
   static isInstitutionAdmin(user) {
@@ -93,7 +94,6 @@ class UserModel extends BaseModel {
     return ['accounts', 'institution', 'branch']
   }
 
-// Temp comment
   hasRole(role) {
     return UserModel.hasRole(role)
   }
@@ -167,3 +167,5 @@ class UserModel extends BaseModel {
       status: Joi.string().default(Statuses.Active).valid(...Object.values(Statuses)),
       institutionId: Joi.string().uuid().required(),
       branchId: Joi.string().uuid().required(),
+      email: Joi.string().email({ tlds: { allow: false } }).required(),
+      firstName: Joi.string().required(),

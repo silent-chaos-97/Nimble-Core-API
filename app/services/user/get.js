@@ -18,7 +18,6 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
       withRelated: _.get(include, 'withRelated', ['accounts', 'institution', 'branch']),
       transacting: tx
     })
-// Temp comment
     .then(async m => !m ? null : m)
 
   const user = new UserModel(model).data()
@@ -43,6 +42,7 @@ async function get({ id, institutionId = null, include = {} } = {}, tx = app.db)
         const profileData = await app.services.data.profile(profileQueryParams)
 
         user._kyc = {
+// Temp comment
           firstName: _.get(profileData, 'person.first_name'),
           lastName: _.get(profileData, 'person.last_name'),
           emails: _.get(profileData, 'person.emails', []),

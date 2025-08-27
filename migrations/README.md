@@ -9,7 +9,6 @@ Use the following conventions for migration names:
   object abbreviation: t (table), v (view)
   modifier: create, drop
 
-To create and drop of objects:
 
     <action>_<object_abbreviation>_<object_name>
 
@@ -25,3 +24,4 @@ Example:
 
     # To create a column
     knex migrate:make alter_t_users_add_name
+    # To drop a column

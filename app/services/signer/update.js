@@ -29,7 +29,6 @@ async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
   if (signer.status === 'SIGNED') { // status is SIGNER, we cant allow further changes on this signer personal data
     throw new PreconditionFailedError('Signer status is not correct.')
   }
-
   const status = SignerModel.getSignerStatusBasedOnCompletedProps(signer)
   logger.debug(`[validateAndUpdateSignerStatus] - status should be [${status}] for signer [${signerId}]`)
 

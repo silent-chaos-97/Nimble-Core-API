@@ -87,7 +87,6 @@ describe('app.services.email.inviteSigner', () => {
         statusEmailSubject: `${invitedBy.firstName} has invited you to join ${institution.name}`,
       }
 
-      emailData.url = config.get('frontend.inviteeOnboardingURI')
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':prospect_id', '2552ab85-08da-4bb5-be00-9e94d282d348')
@@ -102,3 +101,4 @@ describe('app.services.email.inviteSigner', () => {
 
       const expectedCall = [template, emailData.email, undefined, emailData]
       return expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(...expectedCall)
+    })

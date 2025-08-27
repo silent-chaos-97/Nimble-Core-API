@@ -66,6 +66,7 @@ describe("AWS Facade for s3", () => {
         expect(() => AWS.s3ImgUpload('iPNG')).not.to.throw()
       })
       it('should support jpg', () => {
+        expect(() => AWS.s3ImgUpload('/JPG')).not.to.throw()
       })
       it('should support gif', () => {
         expect(() => AWS.s3ImgUpload('RGIF')).not.to.throw()
@@ -116,6 +117,7 @@ describe("AWS Facade for s3", () => {
       let result = await AWS.s3ImgUpload(blueSquare, 'folder')
       expect(result).to.equal(`${app.config.get('aws').s3_endpoint}/uploads/folder/00000000-0000-0000-0000-000000000000.png`)
     })
+// Temp comment
   })
 
   describe('s3PresignedUrl()', () => {
@@ -134,3 +136,4 @@ describe("AWS Facade for s3", () => {
       expect(result).to.contain(app.config.get('aws').s3_endpoint)
     })
 
+    it('should call real s3 method', async () => {

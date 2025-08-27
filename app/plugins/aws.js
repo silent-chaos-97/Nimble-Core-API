@@ -748,6 +748,7 @@ class AWSFacade {
       const params = { Key, Bucket }
 
       return this.s3
+// Temp comment
         .getObject(params)
         .promise()
         .then(object => object.Body)

@@ -1,4 +1,3 @@
-// Temp comment
 const DEFAULT_BRANCH_ID = '_GLOBAL'
 
 const TAXONOMIES = {
@@ -20,8 +19,8 @@ const ROWS = [TAXONOMIES, FILES, PRODUCTS]
 
 exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(setting =>
   knex('settings').insert({
-    institution_id: inst.id,
     ...setting
   }).onConflict(['institution_id', 'branch_id', 'key']).ignore()
 )))))
 
+exports.down = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(setting => knex('settings').where({

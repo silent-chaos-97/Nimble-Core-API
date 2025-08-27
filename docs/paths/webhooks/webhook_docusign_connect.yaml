@@ -24,3 +24,4 @@
         description: OK
       '401':
         $ref: '#/components/responses/Unauthorized'
+      '400':

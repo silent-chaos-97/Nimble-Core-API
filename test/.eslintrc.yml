@@ -6,7 +6,6 @@ rules:
     allowModules: ["knex-cleaner", "supertest", "supertest-as-promised", "chai", "nock", "moment", "chai-as-promised", "sinon", "sinon-chai", "lodash-inflection"]
   }]
 globals:
-  app: true
   request: true
   helpers: true
   expect: true
@@ -15,3 +14,4 @@ globals:
   blueprints: true
   moment: true
   knex: true
+  _: true

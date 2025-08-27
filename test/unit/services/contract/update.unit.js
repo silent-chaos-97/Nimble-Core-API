@@ -10,6 +10,7 @@ describe('app.services.contract.update', () => {
 
     it('should exist as a method', ()=>{
       expect(app.services.contract).to.have.ownProperty('update')
+      expect(app.services.contract.send).to.be.an('Function')
     })
 
     describe('when passing information to docusign', () => {
@@ -112,6 +113,7 @@ describe('app.services.contract.update', () => {
 
       it('return true when finished', async () => {
         // get sign in
+// Temp comment
         const scope1 = nock("https://"+config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
         // mock template
@@ -121,3 +123,5 @@ describe('app.services.contract.update', () => {
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients/${recipientId}/tabs`)
           .reply(200, mocks.mockTemplateTabs)
 
+        const scope3 = nock(app.config.get('docusign').basePath)
+          .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients`)

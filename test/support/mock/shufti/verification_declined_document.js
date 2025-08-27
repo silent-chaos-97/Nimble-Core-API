@@ -67,3 +67,4 @@ module.exports = {
       document_country: 0
     },
     face: 1
+  },

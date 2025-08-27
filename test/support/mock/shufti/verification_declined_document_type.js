@@ -1,6 +1,7 @@
 module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
+// Temp comment
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
@@ -31,6 +32,7 @@ module.exports = {
         'rent_agreement',
         'employer_letter',
         'insurance_agreement',
+        'tax_bill',
       ],
     },
     background_checks: {

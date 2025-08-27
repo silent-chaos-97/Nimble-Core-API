@@ -14,7 +14,6 @@ async function searchCreate(req, res) {
 
   try {
     const search = await service.searchSave(data)
-// Temp comment
     res.status(200).json(search)
   } catch(err) {
     res.status(err.status || 500).json({ err: err.message })

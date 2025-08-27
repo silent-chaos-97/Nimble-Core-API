@@ -60,7 +60,6 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     }
 
     log.info({ op: 'analysis', phase: 'response-received', document })
-
     return data
   } catch(err) {
     log.error(err, { op: 'analysis', phase: 'failure', document, processor, opts })

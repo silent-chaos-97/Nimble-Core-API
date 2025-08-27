@@ -651,6 +651,7 @@ const mockUniformResidentialLoanApplication = {
 				{
 					owner: 'Joint',
 					type: 'Childcare',
+					monthlyPayment: 2200
 				}
 			],
 			totalMonthlyPaymentsJoint: 12200,
@@ -677,3 +678,11 @@ const mockUniformResidentialLoanApplication = {
 			bankruptcyInPast7Years: false,
 			foreclosureOrEquivalentInPast7Years: false,
 			partyToLawsuit: false,
+			priorLoanResultedInForeclosureOrEquivalentOrJudgment: false,
+			presentlyDelinquentOrInDefault: false,
+			alimonyChildSupportOrSeparateMaintenance: false,
+			anyPartOfDownPaymentBorrowed: false,
+			comakerOrEndorserOnNote: false,
+			usCitizen: true,
+			permanentResidentAlien: false,
+			willOccupyPropertyAsPrimaryResidence: true,

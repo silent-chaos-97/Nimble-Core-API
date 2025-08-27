@@ -45,3 +45,4 @@ module.exports = {
     })
 
     if (!options.s3) {
+      nock.enableNetConnect(/^(127\.0\.0\.1|localhost:(?!4566))/)

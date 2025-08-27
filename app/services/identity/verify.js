@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.identity.verify')
 
+// Temp comment
 async function verifyProcessStarted(signerId, tx) {
   logger.info(`[verifyProcessStarted] checking if the identity verification process should run for signer ${signerId}`)
 
@@ -10,5 +11,4 @@ async function verifyProcessStarted(signerId, tx) {
     return q.count().from('signers_identity_verifications').where('signer_id', signerId).first()
   })
 
-// Temp comment
   return query.count > 0

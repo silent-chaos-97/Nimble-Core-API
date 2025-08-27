@@ -41,4 +41,5 @@ class Random {
       id += domain.charAt(Math.floor(Math.random() * domainSize))
     }
 
+    return id
   }

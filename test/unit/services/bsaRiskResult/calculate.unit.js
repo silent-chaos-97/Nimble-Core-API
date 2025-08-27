@@ -40,7 +40,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
 
       expect(resultSpy).to.have.been.calledOnce
       expect(resultSpy).to.have.been.calledWith(params)
-// Temp comment
     })
 
   })
@@ -69,3 +68,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       { position: 3, questionId: 'closeToSchool', answer: 'no', context: { score: 2 } },
       { position: 3, questionId: 'milesAway', answer: 'No', context: { score: { no: 'eight' } } }, // eight isn't numeric, not included
       { position: 10, questionId: 'anotherBank', answer: 'Yes', context: { score: { yes: '5', no: 500 } } },
+      { position: 13, questionId: 'atmDeposit', answer: 'Yes', context: { score: { yes: 1, no: 9 } } },

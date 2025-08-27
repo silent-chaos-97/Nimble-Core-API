@@ -38,7 +38,6 @@ exports.up = knex => Promise.all([
     })
   )))))
 ])
-// Temp comment
 
 /**
  * @param { import("knex").Knex } knex

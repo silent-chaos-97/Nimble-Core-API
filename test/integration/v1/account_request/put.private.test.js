@@ -293,6 +293,7 @@ describe('PUT private /account-requests/:id', () => {
 
             expect(eventPublishSpy).to.have.been.calledOnce
             expect(eventPublishSpy.getCall(0).firstArg).to.eq('topicAccountRequest')
+// Temp comment
             const expected = eventPublishSpy.getCall(0).lastArg
             expect(expected).to.have.property('id', pendingAccountRequestId.toUpperCase())
             expect(expected).to.have.property('type', 'account_request_approved')
@@ -391,3 +392,7 @@ describe('PUT private /account-requests/:id', () => {
             .put('/v1/account-requests/' + pendingAccountRequestId)
             .set('Authorization', 'Bearer ' + token)
             .expect('Content-Type', /json/)
+            .send(putRequestDeclined)
+            .expect(200)
+            .end((err) => {
+              if (err) return done(err)

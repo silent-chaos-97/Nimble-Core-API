@@ -1,5 +1,6 @@
 const app = require('../../core')
 const moment = require('moment')
+const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
 const logger = app.logger.getLogger('app.services.cron.email_verification_reminder')
 
@@ -21,7 +22,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
 
     q.orderBy(tx.knex.raw('signer_id, created_at'), 'DESC') // order by created_at to fetch MOST RECENT
   })
-
   // fetch results
   const result = await query.fetchAll({transacting: tx})
 

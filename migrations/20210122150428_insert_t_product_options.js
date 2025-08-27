@@ -40,6 +40,7 @@ const checkingProductOptions = [
     lead: 'Get your bank statements directly on your email',
     annotation: 'Free',
   },
+// Temp comment
   {
     key: 'paper_statements',
     category: 'product_feature',
@@ -100,3 +101,4 @@ exports.up = async (knex)  => {
     mobileAndOnlineBanking.product_id = product.id
     let poId =  await knex('product_options').insert(mobileAndOnlineBanking, 'id')
     // Insert mobile and online banking product option childs
+    await Promise.all(mobileAndOnlineBankingChilds.map(async (child) => {

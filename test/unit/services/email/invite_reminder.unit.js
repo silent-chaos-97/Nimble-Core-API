@@ -20,6 +20,7 @@ describe('app.services.email.inviteReminder', () => {
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()
+  })
 
   after(() => {
     clock.restore()
@@ -68,6 +69,7 @@ describe('app.services.email.inviteReminder', () => {
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
 
+// Temp comment
     it('should call send with correct data', async () => {
       const invitedSigner = blueprints.signers.signer_1
       const institution = blueprints.institutions.institution_1
@@ -101,3 +103,4 @@ describe('app.services.email.inviteReminder', () => {
 
       const expectedCall = [template, emailData.email, undefined, emailData]
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(...expectedCall)
+    })

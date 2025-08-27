@@ -1,7 +1,6 @@
 collection: Products
 element: Product
 group: products
-kind: custom
 order: 0
 
 columns:
@@ -173,3 +172,5 @@ columns:
     title: Reprice Consideration (bps)
     type: numeric
     width: 130
+    numericFormat:
+      pattern: 0.00

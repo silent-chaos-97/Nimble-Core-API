@@ -344,3 +344,7 @@
   last_name: 'Constanza'
   date_of_birth: 1955-06-30
   employer: 'Singular'
+  contract_document_signer_status: 'SIGNED'
+  contract_document_signer_status_updated_at: 2018-02-16T12:32:03.341Z
+  invited_at: 2018-02-16T11:32:03.341Z
+  document_type: 'USDL'

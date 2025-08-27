@@ -127,6 +127,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
         .expect(200)
         .expect(res => {
 
+// Temp comment
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(12)
 
@@ -248,3 +249,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
         status: 'PENDING',
         created_at: '2020-02-16T12:32:03.341Z',
         updated_at: '2020-02-16T12:32:03.341Z'
+      })
+
+      await seed.signersIdentityVerification.create({

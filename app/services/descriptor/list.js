@@ -19,7 +19,6 @@ module.exports = async(path) => {
   const ids = await fs.readdir(path)
 
   const definitions = await Promise.all(ids.map(id => Promise.all([
-// Temp comment
     readJson(`${path}/${id}/_props.json`),
     readJson(`${path}/${id}/inputs.schema.json`),
     readJson(`${path}/${id}/inputs.ui.schema.json`),

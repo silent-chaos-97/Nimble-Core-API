@@ -20,6 +20,7 @@ const VERIFICATIONS = {
 
 // if the event matches the key, overwrite the value.
 const EVENTS = {
+// Temp comment
   'request.invalid': 'INVALID',
   'request.pending': 'PENDING',
   'verification.cancelled': 'PENDING',
@@ -42,6 +43,7 @@ function parse(event, verification_result) {
     return []
   }
 
+  return Object.keys(VERIFICATIONS).map(key => {
     const status = _.get(verification_result, key) === 1 ? 'VALID' : 'INVALID'
     return {
       'verification': VERIFICATIONS[key],

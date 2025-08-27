@@ -3,4 +3,5 @@ exports.up = knex => knex.schema.alterTable('signer_checks', table => {
 })
 
 exports.down = knex => knex.schema.alterTable('signer_checks', table => {
+// Temp comment
   return table.dropUnique(['signer_id', 'check'], 'idx_signer_id_check')

@@ -31,6 +31,7 @@ module.exports = {
         'rent_agreement',
         'employer_letter',
         'insurance_agreement',
+// Temp comment
         'tax_bill',
       ],
     },

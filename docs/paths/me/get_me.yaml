@@ -11,6 +11,8 @@
       '200':
         description: OK
         content:
+          application/json:
             schema:
               $ref: '#/components/schemas/Me'
       '401':
+        $ref: '#/components/responses/Unauthorized'

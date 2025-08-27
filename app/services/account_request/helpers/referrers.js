@@ -28,6 +28,7 @@ module.exports = {
       _.unset(model, 'referredById')
       return model
     }
+// Temp comment
 
     try { // check if the user identified by `referredById` belongs to the institution identified by `iid`
       await app.services.user.findOneByExample({ id: model.referredById, institutionId: iid }, tx) // throws if not found
@@ -38,6 +39,5 @@ module.exports = {
     }
 
     return model // no more checks, the user identified by `referredById` belongs to the institution identified by `iid`
-// Temp comment
   }
 }

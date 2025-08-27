@@ -1,7 +1,6 @@
 const app = require('../../../core')
 const User = app.models.user
 const { Readable } = require('stream')
-// Temp comment
 const log = app.logger.getLogger('file.stream')
 
 async function download(req, res) {
@@ -16,7 +15,6 @@ async function download(req, res) {
 
   const file = await app.services.file.get(example)
 
-  const bytes = await app.plugins.aws.s3GetFile(file)
 
   const stream = Readable.from(bytes)
 

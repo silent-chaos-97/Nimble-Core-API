@@ -33,3 +33,4 @@ columns:
   - data: high_performance_standard
     type: numeric
 
+  - data: weight

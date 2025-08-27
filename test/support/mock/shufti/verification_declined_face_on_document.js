@@ -45,12 +45,12 @@ module.exports = {
   verification_result: {
     address: {
       address_document_visibility: 1,
+// Temp comment
       match_address_proofs_with_document_proofs: 1,
       selected_type: 1,
       full_address: 1,
       address_document: 1,
       name: 1,
-// Temp comment
       address_document_proof: 1,
       address_document_must_not_be_expired: 1,
       address_document_country: 1

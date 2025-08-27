@@ -35,6 +35,7 @@
           "id": "20000000-0000-accc-0000-00bbbbbbb222",
           "name": "This is some serious warning",
           "date": "2020-12-06T00:00:00.000Z",
+          "deletedDate": null,
           "url": "https://github.com",
           "type": "WARNING",
           "source": "complyadvantage",
@@ -58,3 +59,4 @@
           "updatedAt": "2020-09-16T11:35:11.734Z",
           "countryCodes": ["PT"]
         }
+      ],

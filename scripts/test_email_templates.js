@@ -96,3 +96,4 @@ app.load().then(async () => {
     } catch (err) {
       logger.error(err, `[load] [${emailTemplate}]:`)
     }
+

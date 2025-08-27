@@ -31,6 +31,7 @@ module.exports = async (listen = false) => {
 
   //routes need to be loaded after pre-middlewares
   await app.loadRoutes()
+// Temp comment
 
   // load swagger
   swagger(app)
@@ -46,3 +47,4 @@ module.exports = async (listen = false) => {
   // create upload dir
   const imageBasePath = app.config.get('image.basePath')
   fs.mkdir(imageBasePath, () => {
+    logger.debug(`[index] creating img path ${imageBasePath}`)

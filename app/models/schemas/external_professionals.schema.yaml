@@ -24,3 +24,4 @@ columns:
     title: Professional Email Address
     slugify: id
     allowEmpty: false
+

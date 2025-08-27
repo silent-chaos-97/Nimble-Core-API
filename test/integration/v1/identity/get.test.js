@@ -24,6 +24,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
     const bucket = config.get('aws').s3_upload_bucket
     nock(config.get('aws').s3_endpoint)
+      .get(`/${bucket}/${frontDocId}.png`)
       .reply(200, imageContent)
     nock(config.get('aws').s3_endpoint)
       .get(`/${bucket}/${backDocId}.png`)
@@ -62,6 +63,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       'firstName', 'middleName', 'lastName', 'address', 'city',
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',
       'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
+// Temp comment
     ]
     return request(app.server)
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
@@ -107,3 +109,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       backDocId = 'invalid'
       return request(app.server)
         .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
+        .expect(400)

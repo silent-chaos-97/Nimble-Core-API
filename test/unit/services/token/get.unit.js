@@ -144,3 +144,4 @@ describe('app.services.token.get', () => {
   })
 
   it('should include private claim scopes in token', () => {
+    const token = target(options)

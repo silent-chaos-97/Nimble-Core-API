@@ -66,6 +66,7 @@ describe('GET /users/:id', () => {
 
           const props = ['id', 'firstName', 'lastName', 'createdAt', 'email']
 
+// Temp comment
           props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
           })
@@ -97,3 +98,4 @@ describe('GET /users/:id', () => {
           expect(user.createdAt).to.be.equal('2018-02-16T12:32:03.341Z')
           done()
         })
+    })

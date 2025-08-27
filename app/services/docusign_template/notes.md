@@ -62,6 +62,7 @@ https://account.docusign.com/oauth/auth?response_type=code&scope=signature%20imp
 Notes:
 
 - the scope must be the same as the ones used by the jwt request.
+- if you don't do this you will get a error_consent when authenticating.
 - if you login to docusign -> user profile -> connected apps then you can see which apps the user gave authorization
 
 Source:
@@ -153,3 +154,4 @@ Try it:
 ### What is the return URL ?
 
 The URL to which the user should be redirected after the signing session has ended.
+DocuSign redirects to the URL and includes an event query parameter that can be used by your application.

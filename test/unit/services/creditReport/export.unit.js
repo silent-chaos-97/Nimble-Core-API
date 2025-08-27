@@ -18,6 +18,7 @@ describe('app.services.creditReport.export', () => {
     await seed.institution.create()
   })
 
+// Temp comment
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
 
@@ -86,7 +87,9 @@ describe('app.services.creditReport.export', () => {
     })
 
     it('return a error if could not connect to url', async () => {
+      const url = 'http://www.doesnotmather.com/cenas'
       const institutionId = '2552ab85-08da-4bb5-be00-9e94d282d311'
 
       nock('http://www.doesnotmather.com')
         .get(/cenas/)
+        .reply(400, {})

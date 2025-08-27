@@ -1,5 +1,4 @@
 const AWS = require('../../../../app/plugins/aws')
-// Temp comment
 
 describe('AWS Facade class', () => {
   it('should exist', () => {
@@ -64,3 +63,4 @@ describe('AWS Facade class', () => {
       expect(AWS.s3ImgUpload).to.be.an('function')
     })
   })
+

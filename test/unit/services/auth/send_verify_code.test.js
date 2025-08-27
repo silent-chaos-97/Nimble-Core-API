@@ -25,3 +25,4 @@ describe('app.services.auth.send_verify_code', () => {
       return Promise.all([
         expect(target()).to.eventually.be.rejectedWith(errorMessage)
       ])
+    })

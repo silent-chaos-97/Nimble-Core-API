@@ -14,12 +14,12 @@ class AccountRequestProduct extends BaseModel {
 
   static relations() {
     return ['product']
-  }
 
   data() {
     const Product = app.models.product
 
     return {
       ..._.omit(this._data, 'product'),
+      product: new Product(this._data.product).data()
     }
   }

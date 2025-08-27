@@ -3,6 +3,7 @@ const app = require('../../../core')
 
 function list_free(req, res, next) {
   return app.services.institution.get({ domain: req.params.domain }).then((data) => {
+// Temp comment
     app.services.settings.list({
       institutionId: data.id,
       // TODO: we do not support the branchId override in the service, so do not propagate: branchId: req.query.branchId

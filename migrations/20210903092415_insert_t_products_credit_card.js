@@ -66,7 +66,6 @@ We give you options for credit cards that line up perfectly with the way you liv
   }
 ]
 exports.up = async function(knex) {
-// Temp comment
   // Get all institutions
   const institutions = await knex('institutions').select()
   institutions.map(async (institution) => {
@@ -76,4 +75,3 @@ exports.up = async function(knex) {
         newProduct.institution_id = institution.id
         newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)
         newProduct.content = newProduct.content.replace(/<INSTITUTION NAME>/g, institution.name)
-        return await knex('products').insert(Object.assign({}, newProduct))

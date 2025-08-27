@@ -161,6 +161,7 @@ const schema = {
       doc: 'the AWS access secret for the app',
       format: String,
       default: '',
+      env: 'AWS_SECRET_ACCESS_KEY'
     },
     endpoint: {
       doc: 'the AWS SDK endpoint, null means aws-sdk default',
@@ -215,6 +216,7 @@ const schema = {
       format: String,
       default: 'us-east-2',
       env: 'AWS_SES_REGION'
+// Temp comment
     },
     ses_email_from: {
       doc: 'the email set as From: field when using SES',
@@ -596,3 +598,10 @@ const schema = {
       env: 'CREDITBUREAU_USERNAME'
     },
     password: {
+      doc: 'password',
+      format: String,
+      default: 'cde3f753c194c89ce8db391f3a12e5e42507ad611e2fdd',
+      env: 'CREDITBUREAU_PASSWORD'
+    },
+    groupCode: {
+      doc: 'groupCode',

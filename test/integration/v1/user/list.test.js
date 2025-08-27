@@ -36,7 +36,6 @@ describe('GET /users', () => {
         .set('X-API-KEY', 'superpowers')
         .expect('Content-Type', /json/)
         .expect(200)
-        .end(done)
     })
 
     it('should return valid user object', done => {
@@ -136,6 +135,7 @@ describe('GET /users', () => {
       it('should offset acording to :offset', done => {
         request(app.server)
           .get(`/v1/users?limit=1&offset=1`)
+          .set('X-API-KEY', 'superpowers')
           .expect('Content-Type', /json/)
           .expect(200)
           .end((err, res) => {
@@ -171,3 +171,5 @@ describe('GET /users', () => {
               done()
             })
         })
+
+        it('should default offset if not set', done => {

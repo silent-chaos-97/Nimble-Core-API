@@ -79,3 +79,4 @@ class SearchModel extends BaseModel {
         description: Joi.string().optional(),
         query: Joi.object().optional(),
         filters: Joi.array().items(Joi.object()).optional()
+      })

@@ -4,7 +4,6 @@ const _ = require('lodash')
 const app = require('../core')
 const logger = app.logger.getLogger('app.repositories.comply_advantage')
 
-// Temp comment
 class ComplyAdvantage {
 
   constructor(secret, baseUrl) {
@@ -34,6 +33,7 @@ class ComplyAdvantage {
 
   async getCertificate(searchId) {
     return await axios.get(`${this.baseAPIURL}/searches/${searchId}/certificate`, {
+// Temp comment
       headers: {
         Authorization: `Token ${this.secret}`,
       },

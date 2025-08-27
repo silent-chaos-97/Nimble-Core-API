@@ -17,7 +17,6 @@ Identity:
       type: string
       title: Last Name
       description: The last name of the individual
-      nullable: true
       example: Specimen
     address:
       type: string
@@ -44,6 +43,7 @@ Identity:
       nullable: true
       example: 17101-0000
     dateOfBirth:
+      type: string
       format: date
       title: dateOfBirth
       description: Individual date of birth
@@ -61,3 +61,4 @@ Identity:
       title: Document Expiration Date
       description: Document Expiration Date
       nullable: true
+      example: 2025-3-18

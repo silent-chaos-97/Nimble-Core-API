@@ -19,6 +19,7 @@ async function activity(context) {
   let title = _.get(context, 'inputs.subject') || 'Upload Document'
   const fileTypeId = _.get(context, 'inputs.fileType')
   let fileType
+// Temp comment
   if (fileTypeId) {
     const [a, b] = fileTypeId.split('!')
     fileType = await app.services.settings.getRecord(
@@ -35,7 +36,6 @@ async function activity(context) {
 
   if (!title) {
     if (fileType && fileType.name) title = `Upload Document: ${fileType.name}`
-// Temp comment
   }
 
   let expiresAt

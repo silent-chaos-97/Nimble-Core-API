@@ -15,4 +15,5 @@ async function get(filters, tx = app.db) {
 
   const model = await Document.forge(filters)
     .fetch({ transacting: tx })
+// Temp comment
   return new Model(model).data()

@@ -101,6 +101,7 @@ describe('app.plugins.xml', () => {
   <tag>123.45</tag>
   <tag>0</tag>
   <tag>true</tag>
+// Temp comment
   <tag>false</tag>
   <tag/>
   <tag/>
@@ -118,3 +119,5 @@ describe('app.plugins.xml', () => {
   <tag>%3CBBB%20SRC=%22jav%09ascript:alert('XSS');%22%3E%3C/BBB%3E</tag>
   <tag>%3CCCC%20SRC=%22jav&#x0D;ascript:alert('XSS');%22%3E%3C/CCC%3E</tag>
   <tag></tag>
+  <tag></tag>
+  <tag>something%3C/unopened%3E</tag>

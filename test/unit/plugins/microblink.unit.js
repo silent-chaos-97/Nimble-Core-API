@@ -468,3 +468,8 @@ describe('MicroblinkService', () => {
 
         expect(error).to.not.be.undefined
         expect(error.response.status).to.equal(400)
+        expect(error.response.data.code).to.equal(response.code)
+        expect(error.response.data.summary).to.equal(response.summary)
+      }
+      scope.done()
+    })

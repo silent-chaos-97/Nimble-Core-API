@@ -58,3 +58,4 @@ exports.up = function(knex) {
     table.timestamp('contract_document_signer_status_updated_at')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
+    table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

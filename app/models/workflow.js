@@ -61,7 +61,7 @@ class WorkflowModel extends BaseModel {
     return {
       create: Joi.object().keys({
         userId: Joi.string().uuid().required(),
-        branchId: Joi.string().uuid().required(),
+        institutionId: Joi.string().uuid().required(),
         name: Joi.string().required(),
         description: Joi.string(),
         status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),
@@ -79,3 +79,4 @@ class WorkflowModel extends BaseModel {
         activities: Joi.array().items(Joi.object())
       }),
 
+      get: Joi.object().keys({

@@ -1,4 +1,5 @@
 SignerComplianceVerification:
+  type: object
   properties:
     id:
       type: string
@@ -41,3 +42,4 @@ SignerComplianceVerification:
       type: string
       format: uuidv4
       title: Signer Id
+      description: The signer id associated with this compliance search

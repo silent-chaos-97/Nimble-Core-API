@@ -132,3 +132,5 @@ describe('app.services.compliance.verify', () => {
 
       // call target
       await app.services.compliance.verify(fakeUser.id)
+
+      expect(fakeForgeForSigner).to.have.been.called

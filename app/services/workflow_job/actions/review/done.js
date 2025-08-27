@@ -1,7 +1,6 @@
 module.exports = {
 
   /**
-// Temp comment
    * @param {
    * {
    *   wkfl: object,
@@ -17,7 +16,6 @@ module.exports = {
   },
 
   /**
-   * @param {
    * {
    *   wkfl: object,
    *   config: object,
@@ -25,3 +23,4 @@ module.exports = {
    *   next: {wkflId: string, action: string, phase: string, operation?: string, body: object}
    * }
    * } opts
+   * @return {Promise<void>}

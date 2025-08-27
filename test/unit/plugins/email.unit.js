@@ -21,7 +21,6 @@ describe('Email Plugin', () => {
     it('should exist', () => {
       expect(target).not.to.be.undefined
     })
-
     it('should be configured', () => {
       expect(target.service).not.to.be.undefined
       expect(target.service).not.to.be.a('null')
@@ -155,3 +154,5 @@ describe('Email Plugin', () => {
         expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith('AccountRequestApproved', 'welcome@test.com', 'admin@test.com', sinon.match.object)
       })
     })
+
+    describe('sending decline', () => {

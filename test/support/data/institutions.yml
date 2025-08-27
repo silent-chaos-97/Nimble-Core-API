@@ -12,7 +12,6 @@
   updated_at: 2018-05-13T12:32:03.341Z
   public_metadata:
     bsa:
-      _:
         thresholds:
           - op: '>='
             val: 7
@@ -33,6 +32,7 @@
         default: ''
 
 - id: '2552ab85-08da-4bb5-be00-9e94d282d312'
+  name: Bank
   slug: bnk
   domain: testbank.wearesingular.com
   logo_uri: https://wearesingular.com/img/example.png
@@ -49,3 +49,4 @@
   slug: queuebnk
   domain: queuebnktestbank.wearesingular.com
   logo_uri: https://wearesingular.com/img/example.png
+  background_image_uri: https://wearesingular.com/img/example.png

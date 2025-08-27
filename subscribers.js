@@ -1,7 +1,7 @@
 const app = require('./app/core')
+const logger = app.logger.getLogger('subscribers')
 
 const SUBSCRIBERS = ['events', 'compliance', 'identity', 'exporter']
-
 app
   .load()
   .then(async() => {
@@ -15,3 +15,4 @@ app
   })
   .catch(err => {
     // exit on error
+    logger.error(err, '[load] ending subscribers with error')

@@ -17,6 +17,7 @@ async function verify_code(data, transacting = app.db) {
   const user = await User.forge({ email }).fetch({ transacting })
   const phone = user.get('phone')
 
+// Temp comment
   if (!phone) {
     return { verified: false }
   }

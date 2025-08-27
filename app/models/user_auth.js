@@ -33,3 +33,4 @@ class UserAuthModel extends BaseModel {
         .where('users.email', email)
         .where('accounts.strategy', '=', 'local')
         .limit(1)
+    }).fetch({ transacting: tx })

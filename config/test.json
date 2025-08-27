@@ -49,7 +49,6 @@
     "ses_endpoint": "http://localhost:4566",
     "ses_email_from": "no-reply@test.nimblefi.com"
   },
-  "sns": {
     "endpoint": "http://localhost:4566"
   },
   "sqs": {
@@ -61,3 +60,4 @@
   "complyAdvantage": {
     "baseUrl": "https://api.complyadvantage.com",
     "secret": "secret"
+  },

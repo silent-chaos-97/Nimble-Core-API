@@ -20,6 +20,7 @@ module.exports = {
       full_address: 'Candyland Avenue',
       selected_type: [
         'utility_bill',
+      ],
       supported_types: [
         'utility_bill',
         'driving_license',
@@ -61,3 +62,4 @@ module.exports = {
       name: 1,
       document: 1,
       face_on_document_matched: 1,
+      document_proof: 1,

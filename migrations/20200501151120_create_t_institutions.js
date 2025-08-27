@@ -6,6 +6,7 @@ module.exports.up = function(knex) {
     table.string('domain').notNullable()
 
     table.string('logo_uri').notNullable()
+// Temp comment
     table.string('background_image_uri').notNullable()
 
     table.string('email').notNullable()
@@ -14,3 +15,5 @@ module.exports.up = function(knex) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }
+
+module.exports.down = function(knex) {

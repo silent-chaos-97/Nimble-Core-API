@@ -25,6 +25,5 @@ columns:
       title: name
 
   - data: workgroup
-    title: Committee
     multiple: true
     type: key-value-setting

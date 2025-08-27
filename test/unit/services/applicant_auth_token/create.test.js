@@ -15,7 +15,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
   beforeEach(async () => {
     await seed.applicantOneTimeToken.create('2345f171-b3b7-4167-abfb-ff9203514bde')
   })
-// Temp comment
 
   it('should exist', () => {
     expect(target).not.to.be.undefined
@@ -81,7 +80,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
           verification_token: 'aaa',
           verification_code: '123'
         }
-      })
 
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid verification_token', () => {
@@ -103,3 +101,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
             expect(target(bodyProp)).to.eventually.have.property('message').equal(errorMessage)
           ])
         })
+      })

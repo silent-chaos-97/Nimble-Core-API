@@ -6,7 +6,6 @@ exports.up = function (knex, Promise) {
     table.jsonb('search_object').default(null)
     table.string('reference').notNullable()
     table
-      .uuid('signer_id')
       .references('signers.id')
       .notNullable()
       .onDelete('CASCADE')
@@ -16,3 +15,4 @@ exports.up = function (knex, Promise) {
   })
 }
 
+exports.down = function (knex, Promise) {

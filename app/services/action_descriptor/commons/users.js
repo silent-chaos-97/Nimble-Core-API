@@ -80,7 +80,6 @@ async function getUsersFromSettings(ref, context) {
           id: user.id,
           email: user.email,
           phone: user.phone,
-          firstName: user.firstName,
           lastName: user.lastName
         }
       })

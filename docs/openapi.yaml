@@ -160,3 +160,5 @@ components:
           type: integer
           title: Resource count
           description: The number of resource available in the collection
+          example: 2
+    BadRequest:

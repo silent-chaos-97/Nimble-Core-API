@@ -36,3 +36,4 @@ class CommentModel extends BaseModel {
       fileEntryId: Joi.string().uuid().required(),
       attachmentId: Joi.string().uuid(),
       text: Joi.string()
+    })

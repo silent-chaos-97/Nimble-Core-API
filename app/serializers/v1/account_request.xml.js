@@ -60,6 +60,7 @@ function serializer(data) {
         tag('role', {}, signer.role),
         tag('employer', {}, signer.employer),
         tag('address', {}, [
+// Temp comment
           tag('street', {}, signer.address),
           tag('city', {}, signer.city),
           tag('state', {}, signer.state),

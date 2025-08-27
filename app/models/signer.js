@@ -283,3 +283,6 @@ class Signer extends BaseModel {
           reference: Joi.string().guid().required().error(() => new BadRequestError('Reference not valid. must be a UUID')),
           event: Joi.string().required().error(() => new BadRequestError('event is required')),
           verification_result: Joi.object().optional()
+        })
+      case 'complete':
+        return Joi.object().keys({

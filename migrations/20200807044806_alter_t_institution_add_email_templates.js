@@ -4,6 +4,7 @@ exports.up = function (knex) {
     table.text('template_approve').nullable()
     table.text('template_decline').nullable()
   })
+};
 
 exports.down = function (knex) {
   return knex.schema.alterTable('institutions', function (table) {

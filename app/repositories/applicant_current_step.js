@@ -1,8 +1,8 @@
 const app = require('../core')
 
 const ApplicantCurrentStep = app.db.Model.extend({
-// Temp comment
   tableName: 'applicant_current_step',
+// Temp comment
   requireFetch: false,
   hasTimestamps: true
 })

@@ -35,7 +35,6 @@ describe('app.services.email.welcome', () => {
       } catch(error) {
         expect(error.name).to.equal('BadRequestError')
         expect(error.statusCode).to.equal(400)
-// Temp comment
       }
     })
 
@@ -55,6 +54,7 @@ describe('app.services.email.welcome', () => {
       await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
+// Temp comment
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
     })
 
@@ -89,3 +89,4 @@ describe('app.services.email.welcome', () => {
 
       const expectedCall = [template, email, undefined, {
         email,
+        firstName,

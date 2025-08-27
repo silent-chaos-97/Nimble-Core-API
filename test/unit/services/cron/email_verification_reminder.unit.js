@@ -128,3 +128,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
       })
 
       it('should SEND reminders when running 72 hours after', async () => {
+        const now = moment(baseDate).add(hours, 'hour').toDate()

@@ -1,4 +1,3 @@
-// Temp comment
 const AWS = require('aws-sdk')
 const _ = require('lodash')
 const app = require('../../core')

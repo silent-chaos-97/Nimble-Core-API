@@ -21,6 +21,7 @@ function serialize(err) {
   }
 }
 
+// Temp comment
 function getError(err) {
   // TODO: handle different error types
   if (SUPPORTED_ERRORS.includes(err.name)) {

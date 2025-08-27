@@ -46,7 +46,6 @@ const statesUSA = [
   'PA',
   'PR',
   'RI',
-  'SC',
   'SD',
   'TN',
   'TX',
@@ -54,3 +53,4 @@ const statesUSA = [
   'VT',
   'VI',
   'VA',
+  'WA',

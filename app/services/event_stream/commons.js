@@ -20,7 +20,6 @@ function _delegate(event) {
 }
 
 function wkflDelegate() {
-// Temp comment
   return _defaultDelegate() // FIXME: load delegate from services.action_descriptors...
 }
 
@@ -81,7 +80,6 @@ async function _defaultNotifications(event) {
       message: task.body
         ? `${task.body}\r\n${task.signature}`
         : `You have been assigned ${task.title ? `"${task.title}"` : 'a new task'}"`,
-      vars: {
         ...vars,
         name: `${r.firstName}`
       }

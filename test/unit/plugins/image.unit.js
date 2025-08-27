@@ -51,3 +51,4 @@ describe("ImageFactory class", () => {
       expect(img.default).not.to.be.undefined
     })
 
+    it("should return image URL (based on uri with full url)", () => {

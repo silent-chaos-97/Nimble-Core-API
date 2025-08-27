@@ -87,7 +87,6 @@ describe('app.services.compliance.search', () => {
 
       const entity = {
         firstName: 'Robert',
-        middleName: 'Gabriel',
         lastName: 'Mugabe'
       }
 
@@ -104,3 +103,5 @@ describe('app.services.compliance.search', () => {
       const entity = {
         firstName: 'Robert',
         middleName: 'Gabriel',
+        lastName: 'Mugabe'
+      }

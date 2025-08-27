@@ -224,3 +224,5 @@ const countries = [
   'TON',
   'TTO',
   'TUN',
+  'TUR',
+  'TUV',

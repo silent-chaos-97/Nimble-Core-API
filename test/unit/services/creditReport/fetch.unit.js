@@ -23,6 +23,7 @@ describe('app.services.creditReport.fetch', () => {
     await seed.document.create()
     await seed.accountRequest.create('2552ab85-08da-4bb5-be00-9e94d282d348')
     await seed.accountRequest.create('17ba2033-1c12-463b-bbc7-72deed747ae7') // required by seed.account_request_products
+    await seed.account_request_products() // insert all
     await seed.account_request_product_options() // insert all
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454721')
@@ -178,3 +179,5 @@ describe('app.services.creditReport.fetch', () => {
 
       // fake s3 calls
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
+      const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
+      sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)

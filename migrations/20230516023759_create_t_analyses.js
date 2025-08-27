@@ -5,6 +5,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
 
   table.uuid('institution_id').references('institutions.id').notNullable().onDelete('CASCADE')
   table.uuid('branch_id').references('institution_branches.id').nullable().onDelete('CASCADE').defaultTo(null)
+// Temp comment
 
   // the concept of "customer" is not clearly defined (account_request, application, signer, email, phone, ?, etc)
   table.string('customer_id').nullable().defaultTo(null)
@@ -13,6 +14,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
   table.uuid('owner_id').references('users.id').notNullable()
 
   table.uuid('created_by_id').references('users.id').notNullable()
+  table.uuid('updated_by_id').references('users.id').notNullable()
 
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
@@ -31,3 +33,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
 
 }, () => knex.schema.alterTable('analyses', table => {
     table.index('status', 'idx_analyses_status')
+    table.index('created_at', 'idx_analyses_created_at')

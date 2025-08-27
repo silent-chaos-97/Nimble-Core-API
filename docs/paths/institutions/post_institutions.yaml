@@ -16,3 +16,4 @@
       '201':
         $ref: '#/components/schemas/Institution'
       '400':
+        $ref: '#/components/responses/BadRequest'

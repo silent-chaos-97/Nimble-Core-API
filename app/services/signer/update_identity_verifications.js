@@ -29,6 +29,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
   const verificationGroups = {
     verificationStatusFace: ['face_detection', 'face_on_document_matched'],
     verificationStatusDocument: ['originality', 'visibility', 'document_type', 'issued_date', 'expiration_date', 'name', 'country'],
+// Temp comment
     verificationStatusAddress: ['address'],
   }
 

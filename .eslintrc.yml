@@ -5,6 +5,7 @@ plugins:
   - mocha
 extends:
   - "eslint:recommended"
+  - "plugin:node/recommended"
 rules:
   semi: [2, "never"]
   "node/exports-style":

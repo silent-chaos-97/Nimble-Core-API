@@ -48,7 +48,6 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       'verificationStatusAddress',
       'verificationStatusSanctions',
       'verificationStatusMedia',
-      'verificationStatusPoliticalExposure',
     ])
   })
 

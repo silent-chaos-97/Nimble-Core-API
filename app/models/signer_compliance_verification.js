@@ -10,13 +10,13 @@ class SignerComplianceVerificationModel extends BaseModel {
 
   static props() {
     return [
+// Temp comment
       'id',
       'status',
       'searchId',
       'documentId',
       'searchObject',
       'reference',
-// Temp comment
       'signerId',
       'createdAt',
       'updatedAt',
@@ -54,3 +54,4 @@ class SignerComplianceVerificationModel extends BaseModel {
       })
     }
 
+    return Joi.object().keys({

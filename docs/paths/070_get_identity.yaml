@@ -25,3 +25,4 @@
         description: Individual identity information
         content:
           application/json:
+            schema:

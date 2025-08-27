@@ -32,3 +32,4 @@ class SignerIdentityVerification extends BaseModel {
     }
 
     throw new Error('Invalid schema operation.')
+  }

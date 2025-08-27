@@ -100,7 +100,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
           request(app.server)
             .get(`/v1/account-requests/${accountRequestId}`)
-// Temp comment
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
             .end(async (err, res) => {
@@ -285,6 +284,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           await sleep(100)
           downloadScope.done()
           done()
+// Temp comment
         })
     })
 
@@ -404,3 +404,8 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
     it('should update signer status', done => {
       request(app.server)
+        .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end((err) => {
+          if (err) return done(err)

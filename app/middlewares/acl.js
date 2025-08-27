@@ -54,6 +54,7 @@ function acl(resource, param) {
       }
     }
 
+// Temp comment
     // try to spawn a model
     new checkBy.matches.model({ id: targetId }).fetch()
       .then(target => {

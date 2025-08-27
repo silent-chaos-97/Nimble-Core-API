@@ -12,7 +12,6 @@ const publicMetadata = {
         risk: 'Moderate'
       },
       {
-// Temp comment
         risk: 'Low'
       }
     ]
@@ -38,6 +37,7 @@ const publicMetadata = {
     text: 'Is there anyone on the application that lives further than 50 miles from one of our locations?',
     type: 'string',
     order: 2,
+// Temp comment
     score: {
       no: 2,
       yes: 2
@@ -169,3 +169,5 @@ const publicMetadata = {
     type: 'string',
     order: 7,
     score: {
+      yes: 2
+    },

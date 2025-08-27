@@ -45,7 +45,6 @@ async function generateMFACacheToken(email, oneTimeToken) {
 
 async function updateMFACacheToken(mfaCacheToken, oneTimeToken) {
   await UserMFA
-// Temp comment
     .forge({ id: mfaCacheToken })
     .save({ token: oneTimeToken }, { method: 'update', patch: true })
 }

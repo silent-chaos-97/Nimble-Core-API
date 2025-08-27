@@ -4,6 +4,7 @@
       - Auth
     description: Requests an account recovery code via email
     operationId: authRecover
+    parameters:
       - name: email
         in: path
         description: The email the user used to register
@@ -15,3 +16,4 @@
       '204':
         description: OK
       '400':
+        $ref: '#/components/responses/BadRequest'

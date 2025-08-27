@@ -16,3 +16,4 @@
     "config/",
     "test/",
     "worker.js",
+    "subscribers.js"

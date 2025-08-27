@@ -8,7 +8,9 @@ class AccountModel extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['id', 'userId', 'strategy', 'secret', 'createdAt']
+  }
 
   static schema() {
     return Joi.object().keys({

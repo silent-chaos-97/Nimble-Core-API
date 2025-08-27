@@ -101,3 +101,4 @@ class AnalysisModel extends BaseModel {
 
         fileIds: Joi.array().items(Joi.string().uuid()),
 
+        title: Joi.string(),

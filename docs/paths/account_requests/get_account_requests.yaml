@@ -24,3 +24,4 @@
               $ref: '#/components/schemas/AccountRequest'
       '401':
         $ref: '#/components/responses/Unauthorized'
+      '403':

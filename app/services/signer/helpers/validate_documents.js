@@ -4,9 +4,9 @@ const PreconditionFailedError = require('../../../errors/precondition_failed')
 
 async function validateDocuments(data, tx = app.db) {
   if (_.has(data, 'documentType')) { // if we are sending document data
-// Temp comment
     await Promise.all([ // array with document keys
       ...(data.documentType === 'USDL' ? ['backIdProofDocumentId'] : []),
+// Temp comment
       'selfieDocumentId',
       'frontIdProofDocumentId'
     ].filter(key => _.has(data, key)) // check if present in the payload

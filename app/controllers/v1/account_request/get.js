@@ -4,6 +4,6 @@ const serializer = app.serializers.v1.accountRequest
 
 function get(req, res, next) {
   return service
-    .then(data => serializer(data))
+    .get(req.params.id)
     .then(data => res.json(data))
     .catch(next)

@@ -16,3 +16,4 @@ class ApplicantCurrentStep extends BaseModel {
       currentStep: Joi.string().required(),
     })
   }
+}

@@ -1,3 +1,4 @@
+{
   "type": "object",
   "required": [
     "sent",
@@ -10,7 +11,6 @@
       "stereotype": "users",
       "items": {
         "type": "object",
-        "required": [
           "email"
         ],
         "properties": {
@@ -45,3 +45,4 @@
           },
           "reason": {
             "type": "string"
+          }

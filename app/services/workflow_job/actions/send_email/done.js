@@ -24,3 +24,4 @@ module.exports = {
    *   next: {wkflId: string, action: string, phase: string, operation?: string, body: object}
    * }
    * } opts
+   * @return {Promise<void>}

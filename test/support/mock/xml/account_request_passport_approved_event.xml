@@ -34,6 +34,7 @@
           <zipCode/>
         </address>
         <proof documentType="PASSPORT">
+          <passport>
             <number>123123123</number>
             <expirationDate>2022-02-16</expirationDate>
             <issuedDate>2000-02-16</issuedDate>

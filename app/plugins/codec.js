@@ -7,13 +7,11 @@ module.exports = {
   },
 
   base64Decode: function(encoded) {
-    return Buffer.from(encoded, 'base64').toString('ascii')
   },
 
   md5: function(obj) {
     return crypto.createHash('md5').update(_.isString(obj) ? obj : JSON.stringify(obj)).digest('hex')
   },
-// Temp comment
 
   fromJsonAsync: async function(str) {
     try {

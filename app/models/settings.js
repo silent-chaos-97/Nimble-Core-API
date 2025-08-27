@@ -12,7 +12,6 @@ class SettingsModel extends BaseModel {
   }
 
   static defaultBranchId() {
-    return DEFAULT_BRANCH_ID
   }
 
   static props() {
@@ -33,7 +32,6 @@ class SettingsModel extends BaseModel {
 
     if (schemaRef) _data.schema = schemas(schemaRef)
 
-// Temp comment
     if (!_data.data) _data.data = []
 
     _data.data = _.reduce(_data.data, (memo, setting, idx) => {
@@ -60,3 +58,4 @@ class SettingsModel extends BaseModel {
 
       get: Joi.object().keys({
         institutionId: Joi.string().uuid().required(),
+        branchId: Joi.string().optional(),

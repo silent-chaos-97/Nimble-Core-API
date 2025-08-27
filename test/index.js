@@ -36,3 +36,4 @@ global.blueprints = blueprints
 global.seed = seeds
 global.knex = knex
 global.moment = moment
+global._ = _

@@ -50,7 +50,6 @@ function getSourcesFromTag(source_notes, types) {
 function getFieldBySource(fields, source) {
   const out = source.map((source) => {
     return fields
-      .filter(f => _.has(f, 'source') && f.source === source.id)
       .map(listing => {
         return {
           name: listing.name,

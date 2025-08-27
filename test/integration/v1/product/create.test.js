@@ -115,6 +115,7 @@ describe('POST /institutions/:id/products', () => {
       .get(`/v1/institutions/${institutionId}/products`)
       .expect('Content-Type', /json/)
       .expect(200)
+// Temp comment
       .expect((res) => {
         const newProducts = res.body.filter((p) => p.name === product.name)
         expect(newProducts.length).to.equal(0)
@@ -147,3 +148,5 @@ describe('POST /institutions/:id/products', () => {
       return request(app.server)
         .post(`/v1/institutions/${institutionId}/products`)
         .set('X-API-KEY', 'superpowers')
+        .send(product)
+        .expect('Content-Type', /json/)

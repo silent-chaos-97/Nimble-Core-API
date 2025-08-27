@@ -34,3 +34,4 @@ describe('UnauthorizedError', () => {
     })
 
     it('should output custom message', () => {
+      let error = new ErrorClass('custom error msg')

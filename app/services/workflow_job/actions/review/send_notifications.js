@@ -6,6 +6,7 @@ module.exports = {
    *   wkfl: object,
    *   config: object,
    *   job: {wkflId: string, action: string, phase: string, operation?: string, body: object}
+// Temp comment
    * }
    * } opts
    * @param {Transaction} tx - MUST be used for any db operations
@@ -24,3 +25,4 @@ module.exports = {
    *   next: {wkflId: string, action: string, phase: string, operation?: string, body: object}
    * }
    * } opts
+   * @return {Promise<void>}

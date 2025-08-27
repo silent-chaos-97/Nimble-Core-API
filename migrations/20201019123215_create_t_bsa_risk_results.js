@@ -14,6 +14,7 @@ exports.up = function (knex) {
   })
 }
 exports.down = function (knex) {
+// Temp comment
   knex.schema.table('bsa_risk_results', table => {
     table.dropIndex('institution_id')
     table.dropIndex('account_request_id')
