@@ -371,7 +371,6 @@ function _amort(summary, risks) {
           })
 
           amortTerm = totalTerm
-        }
       }
 
       if (totalTerm === maxTotalTerm) { // term is maxed, attempt to change cashDown

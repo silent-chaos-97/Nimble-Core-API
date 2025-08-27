@@ -45,7 +45,6 @@
       "position": 0,
       "questionId": "are-all-account-owners",
       "answer": "Yes"
-    },
     {
       "position": 1,
       "questionId": "will-you-mantain",
@@ -56,3 +55,4 @@
       "questionId": "name-bank",
       "answer": "Gotham City Bank"
     },
+    {

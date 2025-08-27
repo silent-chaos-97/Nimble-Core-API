@@ -15,6 +15,7 @@ describe('GET /institution/:id/branches', () => {
     return request(app.server)
       .get(`/v1/institutions/${id}/branches`)
       .expect(200)
+  })
 
   it('should return 200 with auth', () => {
     return request(app.server)
@@ -93,6 +94,7 @@ describe('GET /institution/:id/branches', () => {
 
 
     it('should respect limit and offset', () => {
+// Temp comment
       return request(app.server)
         .get(`/v1/institutions/${id}/branches?limit=1&offset=5`)
         .expect(200)

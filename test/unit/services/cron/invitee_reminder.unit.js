@@ -37,7 +37,6 @@ describe('app.services.cron.inviteeReminder', () => {
 
   describe('running the service', () => {
     beforeEach(async () => {
-      await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
       await seed.document.create()
 
       await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000111')
@@ -132,5 +131,7 @@ describe('app.services.cron.inviteeReminder', () => {
       })
 
       it('should SEND reminders when running 72 hours after', async () => {
+        const now = moment(baseDate).add(hours, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.inviteeReminder(days)
+        expect(inviteReminderSpy).to.have.been.called

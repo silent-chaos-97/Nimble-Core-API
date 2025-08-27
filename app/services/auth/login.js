@@ -3,6 +3,8 @@ const bcrypt = require('bcrypt')
 
 const app = require('../../core')
 const UserAuthModel = app.models.userAuth
+const User = app.repositories.user
+// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 const UnauthorizedError = require('../../errors/unauthorized')
 const { validator, emailNormalizer } = app.plugins

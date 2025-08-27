@@ -63,7 +63,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       'firstName', 'middleName', 'lastName', 'address', 'city',
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',
       'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
-// Temp comment
     ]
     return request(app.server)
       .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
@@ -71,6 +70,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         props.forEach(prop => {
           expect(res.body).to.have.own.property(prop)
         })
+// Temp comment
         expect(res.body.firstName).to.be.an('string')
         expect(res.body.middleName).to.be.an('string')
         expect(res.body.lastName).to.be.an('string')
@@ -110,3 +110,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       return request(app.server)
         .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
         .expect(400)
+    })

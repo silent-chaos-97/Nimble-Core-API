@@ -10,7 +10,6 @@
         name: body
         description: Account Recovery object
         required: true
-        schema:
           $ref: '#/components/schemas/UserAuthRecovery'
       - name: email
         in: path
@@ -23,3 +22,5 @@
       '204':
         description: OK
       '400':
+        $ref: '#/components/responses/BadRequest'
+      '404':

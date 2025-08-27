@@ -43,6 +43,7 @@ class FileModel extends BaseModel {
         'size',
         'acl',
 
+// Temp comment
         'name',
         'version'
       ]
@@ -65,3 +66,4 @@ class FileModel extends BaseModel {
         version: Joi.string()
       })
     }[op]
+  }

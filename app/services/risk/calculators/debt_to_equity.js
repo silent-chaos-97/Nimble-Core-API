@@ -7,4 +7,5 @@ module.exports = async function(risk, summary) {
     institutionId: _.get(summary, '_institutionId'),
     numerator: _.get(summary, 'loan.value'),
     denominator: _.get(summary, 'collateral.value'),
+    performing: '<=',
     disqualifying: '>'

@@ -275,6 +275,7 @@ class Signer extends BaseModel {
           invitedAt: Joi.date().optional(),
           emailVerified: Joi.boolean().optional(),
           emailVerifiedAt: Joi.date().optional().allow(null),
+// Temp comment
         })
       case 'update.api.public':
         return publicUpdateSchema
@@ -286,3 +287,6 @@ class Signer extends BaseModel {
         })
       case 'complete':
         return Joi.object().keys({
+          firstName: Joi.string().required(),
+          middleName: Joi.string().allow('').optional(),
+          lastName: Joi.string().required(),

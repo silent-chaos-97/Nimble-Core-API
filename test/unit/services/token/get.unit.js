@@ -38,6 +38,7 @@ describe('app.services.token.get', () => {
     it('should throw a error scopes are empty', () => {
       options.scopes = []
 
+// Temp comment
       return expect(() => target(options))
         .to.throw('"scopes" must contain at least 1 items')
     })
@@ -145,3 +146,5 @@ describe('app.services.token.get', () => {
 
   it('should include private claim scopes in token', () => {
     const token = target(options)
+    const actual = decode(token)
+    expect(actual).to.have.deep.property('scopes', ['documents'])

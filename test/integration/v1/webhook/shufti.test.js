@@ -112,6 +112,7 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       })
   })
 
+  it('should save an expected list of INVALID verifications on error', async () => {
     return request(app.server)
       .post('/v1/webhooks/shufti/identity-verification')
       .send({ event: 'request.invalid', reference: '2e31d8c0-1226-4651-8a5d-4bd8aa454722', verification_result: mock.verificationAccepted.verification_result })
@@ -135,3 +136,5 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
       .expect(() => {
         return knex.raw("SELECT * FROM signers WHERE id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722' LIMIT 1")
           .then(r => {
+            const signer = r.rows[0]
+            const now = new Date()

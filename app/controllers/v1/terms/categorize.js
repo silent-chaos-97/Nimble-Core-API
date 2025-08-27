@@ -18,3 +18,4 @@ module.exports = async(req, res) => {
     name,
     section,
     category,
+    group: _.get(req, 'user.institutionId') || _.get(req, 'user.institution.id')

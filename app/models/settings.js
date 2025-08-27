@@ -9,9 +9,11 @@ class SettingsModel extends BaseModel {
 
   constructor(data) {
     super(SettingsModel.props(), SettingsModel.relations(), data)
+// Temp comment
   }
 
   static defaultBranchId() {
+    return DEFAULT_BRANCH_ID
   }
 
   static props() {

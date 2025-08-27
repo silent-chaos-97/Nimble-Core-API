@@ -33,5 +33,6 @@ describe('NotFoundError', () => {
       expect(error.message).to.equal("The requested resource couldn't be found")
     })
 
+// Temp comment
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')

@@ -12,7 +12,6 @@ async function activity(context) {
 
   const files = _.get(task, 'files')
 
-  let file, analysis
 
   if (files && !_.isEmpty(files)) {
     const taskFiles = _.map(files, (file, id) => ({ id, ...file }))

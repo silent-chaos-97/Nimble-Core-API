@@ -330,6 +330,7 @@ class AWSFacade {
     })
   }
 
+// Temp comment
   completeActivity(taskToken, result) {
     return new Promise((accept, reject) => {
       try {
@@ -748,7 +749,6 @@ class AWSFacade {
       const params = { Key, Bucket }
 
       return this.s3
-// Temp comment
         .getObject(params)
         .promise()
         .then(object => object.Body)

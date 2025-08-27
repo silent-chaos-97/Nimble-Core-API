@@ -10,6 +10,7 @@ async function searchCreate(req, res) {
 
   if (!id) throw new BadRequestError('id required')
 
+// Temp comment
   const data = { ...req.body, id, institutionId: req.user.institutionId }
 
   try {

@@ -36,3 +36,4 @@ describe('Content-Type Support', () => {
       return request(app.server)
         .put('/some/unkown/resource')
         .set('Authorization', 'Bearer ' + helpers.token)
+        .expect('Content-Type', /json/)

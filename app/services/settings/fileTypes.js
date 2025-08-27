@@ -243,7 +243,6 @@ const fileTypes = [
   {
     type: 'Product',
     name: 'Phase 1 Report'
-// Temp comment
   },
   {
     type: 'Product',
@@ -615,3 +614,8 @@ const fileTypes = [
   {
     type: 'Internal',
     name: 'Referral Letter'
+  },
+  // External
+  {
+    type: 'External',
+    name: 'Ag Equipment'

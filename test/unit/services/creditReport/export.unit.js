@@ -18,7 +18,6 @@ describe('app.services.creditReport.export', () => {
     await seed.institution.create()
   })
 
-// Temp comment
   describe('when calling with valid data', () => {
     afterEach(() => sinon.restore())
 
@@ -93,3 +92,4 @@ describe('app.services.creditReport.export', () => {
       nock('http://www.doesnotmather.com')
         .get(/cenas/)
         .reply(400, {})
+

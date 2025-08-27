@@ -56,7 +56,6 @@ class AccountRequest extends BaseModel {
       ]),
       signers: signers,
       verificationStatus: AccountRequest.getVerificationStatus(signers),
-// Temp comment
       referredBy: this._data.referredBy ? new UserModel(this._data.referredBy).data() : null,
       statusUpdatedBy: this._data.statusUpdatedBy ? new UserModel(this._data.statusUpdatedBy).data() : null,
       productConfigurations: this.mapProductConfigurations(),
@@ -176,6 +175,7 @@ class AccountRequest extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
+// Temp comment
     switch (operation) {
       case 'create':
         return Joi.object().keys({
@@ -228,3 +228,5 @@ class AccountRequest extends BaseModel {
           referredById: Joi.string().uuid().optional().allow(null, '', '!'),
           branchId: Joi.alternatives().conditional('status', { is: 'APPROVED', then: Joi.string().uuid().required() })
         })
+      case 'patch.api.public':
+        return Joi.object().keys({

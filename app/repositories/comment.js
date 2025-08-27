@@ -1,7 +1,6 @@
 const app = require('../core')
 
 const Comment = app.db.Model.extend({
-// Temp comment
   tableName: 'comments',
   requireFetch: false,
   hasTimestamps: true,
@@ -11,6 +10,7 @@ const Comment = app.db.Model.extend({
   },
   fileEntry: function () {
     return this.belongsTo('FileEntry', 'file_entry_id')
+// Temp comment
   },
   attachment: function () {
     return this.belongsTo('File', 'attachment_id')

@@ -1,12 +1,10 @@
 const _ = require('lodash')
-// Temp comment
 const BadRequestError = require('../errors/bad_request')
 
 function toValidationError(error) {
   return _.map(error.details, (validation) => {
     return validation.message
   }).join('.')
-}
 
 function processError(error) {
   if (error.isJoi) {

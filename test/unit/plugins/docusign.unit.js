@@ -248,6 +248,7 @@ describe('Docusign', () => {
 
         scope = nock(config.get('docusign').basePath)
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
+// Temp comment
           .reply(200, mocks.mockDocumentTabs)
 
         const ccRecipient = {
@@ -865,6 +866,7 @@ describe('Docusign', () => {
 
         expect(result[1].tabs.textTabs[1].value).to.equal('John Constanza')
         expect(result[1].tabs.textTabs[1].tabLabel).to.equal('\\*fullName#2')
+
         expect(result[1].tabs.textTabs[2].value).to.equal(mocks.validUser.phoneNumber)
         expect(result[1].tabs.textTabs[2].tabLabel).to.equal('\\*phone#2')
       })
@@ -1028,3 +1030,12 @@ describe('Docusign', () => {
     })
 
     describe('_buildSigner', () => {
+      it('should return a docusign object with co-signer info', async () => {
+        const result = await docusign._buildSigner(mocks.validUser, 1, {})
+
+        expect(result).not.to.be.undefined
+        expect(result.email).to.equal(mocks.validUser.email)
+        expect(result.name).to.equal(mocks.validMapping.fullName)
+        expect(result.recipientId).to.equal('1')
+        expect(result.clientUserId).to.equal(mocks.validUser.id)
+        expect(result.roleName).to.equal('signer')

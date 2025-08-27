@@ -61,7 +61,6 @@ class Shufti {
       userData.documentIssuedDate)
 
     const facePayload = this.buildFaceVerificationPayload(userData.selfie)
-    const addressPayload = this.buildAddressVerificationPayload(
       documentType,
       userData.frontIdProof,
       userData.firstName,

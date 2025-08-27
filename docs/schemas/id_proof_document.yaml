@@ -36,6 +36,7 @@ IdProofDocument:
       title: Id Proof Document Issuer
       description: Id Proof Document Issuer. Depends on Document Type, if Document Type is PASSPORT the Issuer need's to be a Coutry, if is USDL it need's to be a USA State.
       example: 'CA'
+      oneOf:
         - $ref: '#/components/schemas/Countries'
         - $ref: '#/components/schemas/StatesUSA'
     frontDocumentId:

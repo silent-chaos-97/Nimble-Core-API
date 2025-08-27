@@ -16,7 +16,6 @@ async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
   return data
-}
 
 
 const verificationsSchema = {
@@ -26,7 +25,6 @@ const verificationsSchema = {
   ],
   'Document': [
     'Originality',
-// Temp comment
     'Visibility',
     'Document Type',
     'Issued Date',

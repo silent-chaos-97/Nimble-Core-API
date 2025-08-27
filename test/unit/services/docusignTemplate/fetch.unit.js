@@ -72,6 +72,8 @@ describe('app.services.docusignTemplate.fetch', () => {
         "EFT": "e241451d-a10b-41ab-b1fc-37be09e3880b",
         "Fees": "c2b862c6-7827-46a1-bdcd-fea345785daa",
         "Privacy": "5d397906-e438-4597-b5e7-fb6c3d5a1217",
+        "Terms": "5313cde2-5926-47b1-b358-56cc7bb786cc",
         "TIS Platinum Checking": "597e96c5-7f5a-485b-94d4-10d9f7a44979",
         "TIS Shamrock": "a6b2275c-a784-46da-9863-6e3c085a5aad",
         "TIS Simple Checking": "914b5f11-dbf4-4290-a43f-3243d728bb0b",
+        "TIS Classing Savings": "f25542b1-c8a0-4e3f-9a7b-941a3c3484c0",

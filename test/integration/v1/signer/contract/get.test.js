@@ -134,7 +134,6 @@ describe('GET /signers/:id/contract', async () => {
         .expect('Content-Type', /json/)
     })
 
-    it('should call the docusign embed() service', async () => {
       return request(app.server)
         .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
         .set('Authorization', 'Bearer ' + token)
@@ -167,3 +166,4 @@ describe('GET /signers/:id/contract', async () => {
         .expect(200)
         .expect('Content-Type', /json/)
         .expect(res => {
+          expect(res.body).to.have.ownProperty('url')

@@ -11,6 +11,7 @@ class BsaRiskResultModel extends BaseModel {
   }
 
   static relations() {
+    return ['accountRequest', 'institution']
   }
 
   static schema(operation = 'create') {

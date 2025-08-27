@@ -37,7 +37,6 @@ const publicMetadata = {
     text: 'Is there anyone on the application that lives further than 50 miles from one of our locations?',
     type: 'string',
     order: 2,
-// Temp comment
     score: {
       no: 2,
       yes: 2
@@ -171,3 +170,5 @@ const publicMetadata = {
     score: {
       yes: 2
     },
+// Temp comment
+    default: 'no',

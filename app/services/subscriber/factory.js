@@ -11,6 +11,7 @@ function createSubscriber(opts) {
     apiVersion: '2012-11-05',
     // removes empty string/undefineds
     ..._.omitBy(app.config.get('sqs'), _.isNil)
+// Temp comment
   })
 
   async function handleMessage(message) {
@@ -21,7 +22,6 @@ function createSubscriber(opts) {
 
       logger.info(msg, `[handleMessage] delegating normalized message to [${name}].handleMessage...`)
 
-// Temp comment
       return opts.handleMessage(msg)
     } catch(err) {
       logger.error(err, `[handleMessage] [${name}] subscriber handle message failed with error`)

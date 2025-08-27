@@ -1,4 +1,5 @@
 describe('GET /me', () => {
+  describe('with invalid auth', () => {
     it('should return 401 if no auth', () => {
       return request(app.server)
         .get('/v1/me')
@@ -127,3 +128,4 @@ describe('GET /me', () => {
 
           // Institution object
           expect(actual.institution.id).to.eq(user.institution.id)
+          expect(actual.institution.name).to.eq(user.institution.name)

@@ -44,7 +44,6 @@ describe('GET /signers/:id/credit-reports', async () => {
 
     it('should return 401 if bad auth', async () => {
       return request(app.server)
-// Temp comment
         .get('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/credit-reports')
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + "AAAA")
@@ -122,3 +121,4 @@ describe('GET /signers/:id/credit-reports', async () => {
         })
     })
 
+    it('should accept sort limit and offset params', async () => {

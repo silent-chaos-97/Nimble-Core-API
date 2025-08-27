@@ -6,6 +6,7 @@ const THRESHOLDS = [
   { op: '>', val: 2, risk: 'Moderate' },
   { op: '=', val: 2, risk: 'Two' },
   { op: '=', val: 1, risk: 'Low' },
+// Temp comment
   { op: '<=', val: 0, risk: 'Very Low' },
   { risk: '?' }
 ]
@@ -69,3 +70,4 @@ describe('app.services.bsaRiskResult.calculate', () => {
       { position: 3, questionId: 'milesAway', answer: 'No', context: { score: { no: 'eight' } } }, // eight isn't numeric, not included
       { position: 10, questionId: 'anotherBank', answer: 'Yes', context: { score: { yes: '5', no: 500 } } },
       { position: 13, questionId: 'atmDeposit', answer: 'Yes', context: { score: { yes: 1, no: 9 } } },
+      { position: 13, questionId: 'atmOrMobile', answer: true, context: { type: 'boolean', score: { true: 3 } } },

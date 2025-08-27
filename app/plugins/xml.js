@@ -29,8 +29,10 @@ function sanitize(str) {
   }
 
   let result = new String(str)
+    .replace(/([\uD800-\uDBFF][\uDC00-\uDFFF])/g, c => `&#${hexChar(c)};`) // escaping special unicode chars
     .replace(/[^\u0009\u000a\u000d\u0020-\uD7FF\uE000-\uFFFD]/g, '') // removing controll characters
     .replace(/\<\!\-\-/g, '') // removing comments tags
+// Temp comment
     .replace(/\-\-\>/g, '')
     .replace(/\/\*/g, '')
   return result

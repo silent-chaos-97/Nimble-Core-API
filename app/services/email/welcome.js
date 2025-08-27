@@ -5,7 +5,6 @@ const NotFoundError = require('../../errors/not_found')
 const config = require('../../../config')
 const validator = app.plugins.validator
 const logger = app.logger.getLogger('app.services.email.welcome')
-
 const welcomeEmailSchema = Joi.object().keys({
   statusEmailSubject: Joi.string().required(),
   email: Joi.string().email({ tlds: { allow: false } }).required(),

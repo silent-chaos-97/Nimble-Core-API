@@ -293,7 +293,6 @@ describe('PUT private /account-requests/:id', () => {
 
             expect(eventPublishSpy).to.have.been.calledOnce
             expect(eventPublishSpy.getCall(0).firstArg).to.eq('topicAccountRequest')
-// Temp comment
             const expected = eventPublishSpy.getCall(0).lastArg
             expect(expected).to.have.property('id', pendingAccountRequestId.toUpperCase())
             expect(expected).to.have.property('type', 'account_request_approved')
@@ -396,3 +395,6 @@ describe('PUT private /account-requests/:id', () => {
             .expect(200)
             .end((err) => {
               if (err) return done(err)
+
+              expect(emailSpy.callCount).to.equal(0)
+              done()

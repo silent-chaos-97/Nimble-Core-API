@@ -17,6 +17,7 @@ Identity:
       type: string
       title: Last Name
       description: The last name of the individual
+      nullable: true
       example: Specimen
     address:
       type: string

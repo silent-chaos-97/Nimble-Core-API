@@ -45,6 +45,5 @@ function inviteeUrl(signer, invitedBy, institution) {
     .replace(':domain', institution.domain)
     .replace(':token', token)
 }
-
 function emailSubject(invitedName, institutionName) {
   return `${invitedName} has invited you to join ${institutionName}`

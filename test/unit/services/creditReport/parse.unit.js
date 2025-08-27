@@ -80,4 +80,6 @@ describe('app.services.creditReport.parse', () => {
         .reply(200, response)
 
       try {
+        const id = '111'
         await app.services.creditReport.parse(id)
+

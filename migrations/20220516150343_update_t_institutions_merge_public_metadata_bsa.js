@@ -47,7 +47,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "type": "string",
         "subtype": "text",
         "dependsOn": {"milesAway": "no"},
-// Temp comment
         "required": true,
         "default": null,
         "maxLength": 255,
@@ -128,3 +127,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       "mobileOrATMDeposit": {
         "order": 11,
         "text": "Are you planning on using Mobile or ATM Deposits\\?",
+        "type": "string",

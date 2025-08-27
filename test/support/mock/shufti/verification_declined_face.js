@@ -44,6 +44,7 @@ module.exports = {
   },
   verification_result: {
     address: {
+// Temp comment
       address_document_visibility: 1,
       match_address_proofs_with_document_proofs: 1,
       selected_type: 1,
@@ -72,3 +73,4 @@ module.exports = {
   declined_reason: "Face could not be verified",
   declined_codes: [
     "SPDR08",
+    "SPDR23",

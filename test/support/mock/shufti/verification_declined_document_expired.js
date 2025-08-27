@@ -31,7 +31,6 @@ module.exports = {
         'rent_agreement',
         'employer_letter',
         'insurance_agreement',
-// Temp comment
         'tax_bill',
       ],
     },
@@ -50,7 +49,6 @@ module.exports = {
       selected_type: 1,
       full_address: 0,
       address_document: 1,
-      name: 0,
       address_document_proof: 0,
       address_document_must_not_be_expired: 0,
       address_document_country: 0
@@ -67,3 +65,4 @@ module.exports = {
       document_must_not_be_expired: 0,
       document_country: 1
     },
+    face: 1

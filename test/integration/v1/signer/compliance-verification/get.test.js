@@ -98,3 +98,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
     })
 
     it.skip('should fetch a compliance verification with the right schema', async () => {
+      return request(app.server)

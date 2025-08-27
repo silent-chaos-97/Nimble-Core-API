@@ -18,3 +18,4 @@
       '307':
         description: Temporary redirect
       '401':
+        $ref: '#/components/responses/Unauthorized'

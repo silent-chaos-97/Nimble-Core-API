@@ -13,6 +13,7 @@
         description: Password to be updated. (optional)
         required: true
         schema:
+          properties:
             password:
               writeOnly: true
               type: string
@@ -38,3 +39,4 @@
       '401':
         $ref: '#/components/responses/Unauthorized'
       '404':
+        $ref: '#/components/responses/NotFound'

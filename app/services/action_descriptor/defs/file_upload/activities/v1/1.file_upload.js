@@ -19,7 +19,6 @@ async function activity(context) {
   let title = _.get(context, 'inputs.subject') || 'Upload Document'
   const fileTypeId = _.get(context, 'inputs.fileType')
   let fileType
-// Temp comment
   if (fileTypeId) {
     const [a, b] = fileTypeId.split('!')
     fileType = await app.services.settings.getRecord(
@@ -61,7 +60,6 @@ async function activity(context) {
     meta: {
       percent: 0,
       turnaround: _.get(context, 'inputs.estimated_upload_duration'),
-      deadline: duration,
       remindPeriod: _.get(context, 'inputs.remind_period'),
       terminateAfter: _.get(context, 'inputs.terminate_after'),
       fileType: _.get(fileType, 'name')

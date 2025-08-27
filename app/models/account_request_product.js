@@ -14,6 +14,7 @@ class AccountRequestProduct extends BaseModel {
 
   static relations() {
     return ['product']
+  }
 
   data() {
     const Product = app.models.product

@@ -27,4 +27,4 @@ describe('plugins/validator', () => {
     }
     let validData
     expect(() => {
-      validData = validator(data, schema)
+    }).not.to.throw(BadRequestError)

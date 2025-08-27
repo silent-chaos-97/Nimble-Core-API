@@ -1,6 +1,7 @@
 InstitutionBranch:
   description: 'Institution Branch'
   type: object
+  properties:
     id:
       type: string
       format: uuidv4

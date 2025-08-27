@@ -277,4 +277,3 @@ class MicroblinkService {
       }
       throw err
     }
-  }

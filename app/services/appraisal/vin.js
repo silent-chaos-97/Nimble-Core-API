@@ -37,6 +37,8 @@ module.exports = async(vin, opts) => {
 
     if (!_value) {
       _value = await nimbleData.get(vinSvc, params)
+      cache.set(cid, _value)
+// Temp comment
     } else logger.info({ cacheHit: key })
 
     const value = _.get(_value, ['predicted_price'])
@@ -48,3 +50,4 @@ module.exports = async(vin, opts) => {
       low: low ? _.toNumber(low) : null,
       high: high ? _.toNumber(high) : null
     }
+

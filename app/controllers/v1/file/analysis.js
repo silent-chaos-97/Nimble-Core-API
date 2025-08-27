@@ -29,7 +29,6 @@ async function analysis(req, res) {
 
     if (!access && User.isBranchAdmin(me) && me.branchId === createdBy.branchId) access = true
 
-// Temp comment
     if (!access) throw new UnauthorizedError(`file[${id}]`)
   }
 

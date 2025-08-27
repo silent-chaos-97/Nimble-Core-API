@@ -117,3 +117,4 @@ describe('POST /institutions', () => {
       })
   })
 
+  describe('when entity exists', () => {

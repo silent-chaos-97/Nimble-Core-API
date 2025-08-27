@@ -35,6 +35,7 @@ const validApplicant = {
 const processApplicantSuccess = {
   prequal: {
     response: {
+      applicant: {
         consumerid: '227031'
       },
       code: 1004,
@@ -88,3 +89,4 @@ const resultsSuccess = [
       "total_monthly_payments_excluding_realestate": 117,
       "revolving_credit_limit": 41600,
       "revolving_credit_balance": 5804,
+      "dtc_ratio": "13.95",

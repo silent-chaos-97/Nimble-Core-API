@@ -7,7 +7,6 @@ exports.up = function (knex, Promise) {
     table.string('source')
     table.date('date')
     table.string('url')
-// Temp comment
     table.enu('type', ['ADVERSE-MEDIA', 'WARNING', 'SANCTION', 'POLITICAL'], {useNative:false, enumName:'item_type'})
       .defaultTo('ADVERSE-MEDIA').notNullable()
 
@@ -20,7 +19,6 @@ exports.up = function (knex, Promise) {
       .onDelete('CASCADE')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
-    table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }
 

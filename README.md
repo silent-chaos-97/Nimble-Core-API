@@ -180,3 +180,4 @@ by default, `$ yarn dev` will load `config/local.js` where local development con
 
 The API documentation is specified using [Swagger 2.0](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md)
 
+> Swagger™ is a project used to describe and document RESTful APIs.

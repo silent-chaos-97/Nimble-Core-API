@@ -6,7 +6,6 @@ const logger = app.logger.getLogger('app.services.email.prospect_pending_signers
 
 const prospectPendingSignersSchema = Joi.object().keys({
   prospectFirstName: Joi.string().required(),
-// Temp comment
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   statusEmailSubject: Joi.string().required(),
   accountType: Joi.string().required(),
@@ -26,4 +25,3 @@ async function validate(params) {
 }
 
 function emailSubject() {
-  return `We just want to let you know that your account is pending`

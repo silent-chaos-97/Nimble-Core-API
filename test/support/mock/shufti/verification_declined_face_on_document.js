@@ -7,7 +7,6 @@ module.exports = {
     document: {
       issue_date: '1990-01-01',
       selected_type: [
-        'id_card',
       ],
       supported_types: [
         'id_card',
@@ -45,7 +44,6 @@ module.exports = {
   verification_result: {
     address: {
       address_document_visibility: 1,
-// Temp comment
       match_address_proofs_with_document_proofs: 1,
       selected_type: 1,
       full_address: 1,
@@ -67,3 +65,4 @@ module.exports = {
       document_must_not_be_expired: 1,
       document_country: 1
     },
+    face: 1

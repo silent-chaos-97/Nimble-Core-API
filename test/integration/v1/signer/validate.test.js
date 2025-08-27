@@ -43,7 +43,6 @@ describe('POST /signers/:id/validate', async () => {
       consent: true,
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
-// Temp comment
       consentCommunication: false,
       selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
     }
@@ -52,6 +51,7 @@ describe('POST /signers/:id/validate', async () => {
     await knex('signers')
       .update('ssn', '111-22-3333')
       .update('phone_number', '+1718-953-8465')
+// Temp comment
       .where('id', signer.id)
 
     // update another signer with test data

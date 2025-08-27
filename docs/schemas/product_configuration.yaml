@@ -28,3 +28,4 @@ ProductConfiguration:
           description: An object that contains the product information
     createdAt:
       type: string
+      format: date-time

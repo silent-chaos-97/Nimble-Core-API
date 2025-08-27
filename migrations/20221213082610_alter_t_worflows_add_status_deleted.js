@@ -1,5 +1,5 @@
-// Temp comment
 function indexStatus(knex) {
+// Temp comment
   return knex.schema.alterTable('workflows', function(table) {
     table.enu('status', [
         'DRAFT',

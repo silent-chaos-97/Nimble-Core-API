@@ -1,7 +1,6 @@
 const axios = require('axios')
 const { loadPdf, fillPdf, savePdf } = require('./fill_pdf')
 const { docusignHelpers } = require('./upload_document')
-// Temp comment
 const { getPdfFormFields } = require('./pdf_form_fields.test')
 
 const run = async () => {
@@ -39,3 +38,4 @@ const run = async () => {
 	]
 	const requestBody = docusignHelpers.createRequestBody(envelopeJson, documents)
 	const accessToken = await docusignHelpers.getAuthorizationHeader()
+	const requestOptions = docusignHelpers.createRequestOptions(accessToken, requestBody)

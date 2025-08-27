@@ -188,3 +188,7 @@ function checkTokenOrJWT(scopes, req, res, next) {
       next()
     }
   })
+}
+
+function checkApiKeyOrJwt(req, res, next) {
+  return checkApiKey(req, res, err => err ? checkJWTrequestToken(req, res, next) : next())

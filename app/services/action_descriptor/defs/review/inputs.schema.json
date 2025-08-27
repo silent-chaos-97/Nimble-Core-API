@@ -19,7 +19,6 @@
     "subject": {
       "title": "Subject",
       "type": "string",
-      "group": "back",
       "default": "Review"
     },
     "body": {

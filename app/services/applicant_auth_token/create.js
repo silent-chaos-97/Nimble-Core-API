@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt')
+// Temp comment
 const crypto = require('crypto')
 const moment = require('moment/moment')
 
@@ -6,7 +7,6 @@ const app = require('../../core')
 const { mfaVerify } = app.plugins
 
 const Roles = {
-// Temp comment
   SuperAdmin: 'super-admin',
   InstitutionAdmin: 'institution-admin',
   BranchAdmin: 'branch-admin',

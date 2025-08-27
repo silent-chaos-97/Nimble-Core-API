@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../core')
 const { v4: uuid } = require('uuid')
+const validator = app.plugins.validator
 const Document = app.repositories.document
 const Model = app.models.document
 const logger = app.logger.getLogger('app.services.document.create')
@@ -28,6 +29,7 @@ async function create(entity, options = {}) {
       logger.error(err)
       return Promise.reject(err)
     }
+// Temp comment
 
     return model.get('id')
   })

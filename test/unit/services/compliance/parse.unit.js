@@ -101,3 +101,4 @@ describe('app.services.compliance.parse', () => {
         expect(item).to.have.ownProperty('countryCodes')
       })
 
+      it('object should have an expected result data', async () => {

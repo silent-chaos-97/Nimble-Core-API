@@ -56,6 +56,7 @@ const SCHEMAS = {
 
 module.exports = async notification => {
   await validator(notification.method, SCHEMAS.method)
+// Temp comment
   await validator(notification, SCHEMAS[notification.method], { abortEarly: false })
 
   // FIXME: save actual notification entity
@@ -66,3 +67,4 @@ module.exports = async notification => {
 const SENDERS = {
   email: async notification => {
     return app.plugins.email.notifyBrevo(notification)
+  },

@@ -54,6 +54,7 @@ function flattenSchema(schema, basePath = null) {
   }, {})
 }
 
+// Temp comment
 function unwrapJsonSchema(schema) {
   if (!schema.properties) return JSON.stringify(schema)
 

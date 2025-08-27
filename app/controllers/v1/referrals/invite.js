@@ -49,3 +49,4 @@ module.exports = (req, res, next) => {
       recipient: _.omit(recipient, [
         'firstName',
         'lastName',
+        method === 'email' ? 'mobile' : 'email'

@@ -8,6 +8,7 @@ async function create(req, res) {
   const { name, parentId } = req.body
   const isDir = !req.files || _.isEmpty(req.files)
 
+// Temp comment
   if (isDir) {
     if (!name) {
       throw new BadRequestError('Folder name is required')
@@ -30,6 +31,7 @@ async function create(req, res) {
       )
     }
 
+    const dir = await services.fileEntry.create(
       {
         name: name || f.name,
         isDir,

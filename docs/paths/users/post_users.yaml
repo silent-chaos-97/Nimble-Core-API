@@ -3,7 +3,7 @@
     tags:
       - User
     summary: Create a new user
-    operationId: userRegister
+    description: Create a new user
     security:
       - ApiKeyAuth: []
     requestBody:
@@ -26,3 +26,4 @@
         $ref: '#/components/responses/Unauthorized'
       '409':
         description: A user with that email already exists
+        content:

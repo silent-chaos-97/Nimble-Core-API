@@ -9,4 +9,3 @@ module.exports = {
   timeoutMillis: () => ANALYSIS_REQ_TIMEOUT_MILLIS,
   timeoutRetries: () => MAX_TIMEOUT_RETRIES,
   isBlocking: (opts) => {
-    return !!(_.get(opts, 'await') || _.get(opts, 'block') || _.get(opts, 'query.await') || _.get(opts, 'query.block'))

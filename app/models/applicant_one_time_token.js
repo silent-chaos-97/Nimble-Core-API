@@ -17,3 +17,4 @@ class ApplicantOneTimeToken extends BaseModel {
       expiration: Joi.number().required()
     })
   }
+}

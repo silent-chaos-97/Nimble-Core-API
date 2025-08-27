@@ -92,6 +92,7 @@
   contract_document_envelope_status_updated_at: 2019-03-17T13:34:11.341Z
 
 
+- id: 'da31cf6d-f10c-43a1-a67e-e80ad124c223'
   status: 'APPROVED'
   institution_id: '11000000-0000-0000-0000-000000005555'
   branch_id: '2552ab85-0000-0000-0000-000000000050'

@@ -101,7 +101,6 @@ describe('app.plugins.xml', () => {
   <tag>123.45</tag>
   <tag>0</tag>
   <tag>true</tag>
-// Temp comment
   <tag>false</tag>
   <tag/>
   <tag/>
@@ -121,3 +120,4 @@ describe('app.plugins.xml', () => {
   <tag></tag>
   <tag></tag>
   <tag>something%3C/unopened%3E</tag>
+  <tag>something%20unopened/%3E</tag>

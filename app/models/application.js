@@ -8,12 +8,13 @@ class Application extends BaseModel {
 
   static props() {
     return ['id','applicantId', 'status', 'session','createdAt','updatedAt']
-  }
 
   static schema() {
+    return Joi.object().keys({
       id: Joi.string().uuid(),
       applicantId: Joi.string().required(),
       status: Joi.string().required(),
       session: Joi.string().required()
     })
   }
+}

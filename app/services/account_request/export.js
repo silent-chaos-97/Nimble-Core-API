@@ -37,7 +37,6 @@ async function processReports(reports, institutionId, eventId) {
 
 function getProductTemplate(sku, template) {
   let productTemplate
-
   _.forEach(_.get(app.plugins.docusign._productTemplates, sku, []), tmpl => {
     if (tmpl === template) {
       productTemplate = { template, name: _.camelCase(template) }
@@ -46,6 +45,7 @@ function getProductTemplate(sku, template) {
 
     if (_.isPlainObject(tmpl) && tmpl.template === template) {
       productTemplate = tmpl
+      return false
     }
   })
 

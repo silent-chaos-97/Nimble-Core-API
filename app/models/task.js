@@ -15,7 +15,6 @@ const Statuses = _.mapKeys(
   _.identity
 )
 
-const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
@@ -152,3 +151,4 @@ class TaskModel extends BaseModel {
           bcc: Joi.array().items(Joi.object()),
 
           title: Joi.string(),
+          description: Joi.string(),

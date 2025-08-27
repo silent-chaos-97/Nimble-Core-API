@@ -60,6 +60,7 @@
                   type: object
                   format: uuidv4
                   title: the ID of the signer that has duplicated values
+                  properties:
                     ssn:
                       type: object
                       required:

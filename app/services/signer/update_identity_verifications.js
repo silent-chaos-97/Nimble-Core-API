@@ -29,7 +29,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
   const verificationGroups = {
     verificationStatusFace: ['face_detection', 'face_on_document_matched'],
     verificationStatusDocument: ['originality', 'visibility', 'document_type', 'issued_date', 'expiration_date', 'name', 'country'],
-// Temp comment
     verificationStatusAddress: ['address'],
   }
 
@@ -66,6 +65,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     'verificationStatusAddressUpdatedAt': new Date(),
   }
 
+// Temp comment
   // SAVE all signerIdentityVerificationChecks fields into signer
   await Signer.forge({ id: data.signerId }).save(signerIdentityVerificationChecks, {
     method: 'update',

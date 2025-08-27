@@ -11,6 +11,7 @@ columns:
   
   - data: name
     slugify: id
+    title: Name
 
   - data: type
     title: Type

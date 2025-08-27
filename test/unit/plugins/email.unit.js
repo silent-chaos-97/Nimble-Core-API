@@ -21,6 +21,7 @@ describe('Email Plugin', () => {
     it('should exist', () => {
       expect(target).not.to.be.undefined
     })
+
     it('should be configured', () => {
       expect(target.service).not.to.be.undefined
       expect(target.service).not.to.be.a('null')
@@ -156,3 +157,5 @@ describe('Email Plugin', () => {
     })
 
     describe('sending decline', () => {
+      it('should call AccountRequestApproved', () => {
+        plugin.sendAccountRequestStatus('DECLINED', { email: 'welcome@test.com', cc: 'admin@test.com' })

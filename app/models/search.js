@@ -36,7 +36,6 @@ class SearchModel extends BaseModel {
         'filters',
         'query'
       ],
-
       update: [
         'id',
         'institutionId',
@@ -80,3 +79,4 @@ class SearchModel extends BaseModel {
         query: Joi.object().optional(),
         filters: Joi.array().items(Joi.object()).optional()
       })
+    }[op]

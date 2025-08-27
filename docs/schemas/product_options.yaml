@@ -12,7 +12,6 @@ ProductOption:
       type: string
       description: the property key
       example: loan_max_value
-    title:
       type: string
       title: Name
       description: The human readable title for the property
@@ -47,3 +46,4 @@ ProductOption:
       example: Free
     parentId:
       type: string
+      format: uuidv4

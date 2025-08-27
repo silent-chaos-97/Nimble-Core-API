@@ -18,6 +18,7 @@ describe("AWS Facade for s3", () => {
   after(() => sandbox.restore())
 
   describe('s3Copy()', () => {
+// Temp comment
 
     beforeEach(async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
@@ -117,7 +118,6 @@ describe("AWS Facade for s3", () => {
       let result = await AWS.s3ImgUpload(blueSquare, 'folder')
       expect(result).to.equal(`${app.config.get('aws').s3_endpoint}/uploads/folder/00000000-0000-0000-0000-000000000000.png`)
     })
-// Temp comment
   })
 
   describe('s3PresignedUrl()', () => {
@@ -137,3 +137,5 @@ describe("AWS Facade for s3", () => {
     })
 
     it('should call real s3 method', async () => {
+      await AWS.s3PresignedUrl('id')
+      expect(AWS.s3.getSignedUrl).to.have.been.called

@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const fs = require('fs')
-const yaml = require('js-yaml')
 
 const CACHE = {}
 
@@ -18,6 +17,7 @@ async function _get(ref) {
   const id = _id(ref)
 
   if (CACHE[id]) return CACHE[id]
+
   const file = await fs.promises.readFile(_path(id), 'utf-8')
   const json = yaml.load(file)
 

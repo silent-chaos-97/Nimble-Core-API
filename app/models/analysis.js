@@ -10,7 +10,6 @@ const Statuses = {
 }
 
 const SCHEMA = Joi.object().keys({
-  id: Joi.string().uuid(),
   createdById: Joi.string().uuid().required(),
   updatedById: Joi.string().uuid().required(),
 
@@ -102,3 +101,4 @@ class AnalysisModel extends BaseModel {
         fileIds: Joi.array().items(Joi.string().uuid()),
 
         title: Joi.string(),
+        status: Joi.string().default(Statuses.draft).valid(..._.values(AnalysisModel.statuses())),

@@ -113,7 +113,6 @@ describe('app.services.contract.update', () => {
 
       it('return true when finished', async () => {
         // get sign in
-// Temp comment
         const scope1 = nock("https://"+config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
         // mock template
@@ -125,3 +124,4 @@ describe('app.services.contract.update', () => {
 
         const scope3 = nock(app.config.get('docusign').basePath)
           .put(`/v2.1/accounts/${config.get('docusign').accountID}/envelopes/${envelopeId}/recipients`)
+          .reply(200, mocks.mockUpdateRecipients)

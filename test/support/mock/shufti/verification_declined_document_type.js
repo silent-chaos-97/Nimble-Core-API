@@ -1,7 +1,6 @@
 module.exports = {
   reference: '5674563147',
   event: 'verification.declined',
-// Temp comment
   email: 'john@wearesingular.com',
   country: 'US',
   verification_data: {
@@ -67,3 +66,4 @@ module.exports = {
       document_must_not_be_expired: 1,
       document_country: 1
     },
+    face: 1

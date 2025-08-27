@@ -37,6 +37,7 @@ function verificationUrl(signerId, emailVerificationId, domain) {
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
     .replace(':signer_id', signerId)
     .replace(':id', emailVerificationId)
+    .replace(':domain', domain)
     .replace(':token', token)
 }
 

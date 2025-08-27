@@ -32,7 +32,6 @@ describe('app.services.creditReport.create', () => {
   })
 
   describe('when calling with valid data', () => {
-// Temp comment
     beforeEach(async () => {
       await seed.institution.create()
       await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
@@ -68,3 +67,4 @@ describe('app.services.creditReport.create', () => {
       const id = await app.services.creditReport.create({...validPayload, score: null, reportDate: null, documentId: null })
 
       const result = await knex.raw(`SELECT * FROM signer_credit_reports WHERE id='${id}'`)
+      expect(result.rows[0].score).to.equal(null)

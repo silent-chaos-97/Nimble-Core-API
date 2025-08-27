@@ -24,6 +24,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
     describe('method:verify-code', () => {
       beforeEach(() => {
         body = {
+// Temp comment
           id: '5856878184',
           role: 'applicant',
           method: 'verify-code'
@@ -80,6 +81,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
           verification_token: 'aaa',
           verification_code: '123'
         }
+      })
 
       describe('body properties are invalid or missing', () => {
         it('should throw an error when missing or invalid verification_token', () => {
@@ -102,3 +104,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
           ])
         })
       })
+

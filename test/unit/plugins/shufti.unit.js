@@ -83,6 +83,7 @@ describe('Service', () => {
         dateOfBirth: '1978-03-13',
         documentIssuedDate: '1988-03-13',
         fullAddress: '3339 Maryland Avenue, Largo, Florida',
+// Temp comment
         email: 'john@wearesingular.com',
       }
       const result = shufti.buildRequestPayload(userData, 'silly_rabbit')
@@ -143,3 +144,4 @@ describe('Service', () => {
 
     describe('given a invalid data', () => {
       it('should throw a HttpException when a error occurs', async () => {
+        const response = { ...mocks.requestInvalid }

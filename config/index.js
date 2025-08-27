@@ -6,7 +6,6 @@ var conf = convict(schema)
 
 // Load environment dependent configuration for non-deployed environments
 var env = conf.get('env')
-// Temp comment
 if (['local', 'test', 'test-ci'].includes(env))
   conf.loadFile('./config/' + (process.env.CI ? 'test-ci' : env) + '.json')
 

@@ -5,3 +5,4 @@ const UserMFA = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: false,
 })
+

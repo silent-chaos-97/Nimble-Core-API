@@ -1,6 +1,7 @@
 collection: Products
 element: Product
 group: products
+kind: custom
 order: 0
 
 columns:
@@ -174,3 +175,5 @@ columns:
     width: 130
     numericFormat:
       pattern: 0.00
+      postfix: '%'
+    allowEmpty: false

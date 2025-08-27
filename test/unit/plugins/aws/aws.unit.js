@@ -63,4 +63,3 @@ describe('AWS Facade class', () => {
       expect(AWS.s3ImgUpload).to.be.an('function')
     })
   })
-

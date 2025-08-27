@@ -1,4 +1,3 @@
-const ROWS = [
   {
     name: 'Credit Card',
     sku: 'credit-card',
@@ -14,7 +13,6 @@ const ROWS = [
  */
 exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(ROWS.map(product =>
   knex('products').insert({
-// Temp comment
     institution_id: inst.id,
     ...product
   })

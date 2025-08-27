@@ -66,7 +66,6 @@ describe('GET /users/:id', () => {
 
           const props = ['id', 'firstName', 'lastName', 'createdAt', 'email']
 
-// Temp comment
           props.forEach(prop => {
             expect(res.body).to.have.own.property(prop)
           })
@@ -99,3 +98,4 @@ describe('GET /users/:id', () => {
           done()
         })
     })
+

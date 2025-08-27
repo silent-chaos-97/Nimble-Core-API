@@ -5,7 +5,6 @@ exports.up = function (knex, Promise) {
     table.string('full_name').notNullable()
     table.string('name_aka')
     table.date('date_of_birth')
-    table.date('date_of_death')
     table.string('countries')
     table.string('associates')
     table.string('match_types')
@@ -15,7 +14,9 @@ exports.up = function (knex, Promise) {
       .notNullable()
       .onDelete('CASCADE')
 
+    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }
 
+exports.down = function (knex, Promise) {

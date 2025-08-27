@@ -4,7 +4,6 @@ describe('POST /users', () => {
   let user
 
   describe('with invalid auth', () => {
-// Temp comment
     it('should reject with 401 without apikey', done => {
       request(app.server)
         .post('/v1/users')
@@ -185,6 +184,7 @@ describe('POST /users', () => {
     it('should return newly created user account', done => {
       request(app.server)
         .post('/v1/users')
+// Temp comment
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect('Content-Type', /json/)
@@ -246,3 +246,5 @@ describe('POST /users', () => {
       const branchId = '2552ab85-0000-0000-0000-000000000001'
       user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')
       user.institutionId = institutionId
+      user.branchId = branchId
+      emailSpy = sinon.spy(app.services.email, 'welcome')

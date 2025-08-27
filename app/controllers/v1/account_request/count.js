@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../../core')
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.count
@@ -11,7 +10,6 @@ function count(req, res, next) {
 
   return service
     .count(params)
-// Temp comment
     .then(serializer)
     .then(data => res.status(200).json(data))
     .catch(next)

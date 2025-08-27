@@ -6,7 +6,9 @@ module.exports = {
     return Buffer.from(str).toString('base64')
   },
 
+// Temp comment
   base64Decode: function(encoded) {
+    return Buffer.from(encoded, 'base64').toString('ascii')
   },
 
   md5: function(obj) {

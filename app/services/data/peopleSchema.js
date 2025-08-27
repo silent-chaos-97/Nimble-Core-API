@@ -12,9 +12,9 @@ async function peopleSchema() {
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'docs'
   const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage
 
-  logger.info({ op: 'people.schema', phase: 'prepared', request: { endpoint, apiUrl, headers } })
 
   try {
+    const res = await axios.get(apiUrl, { headers })
     logger.info({ op: 'people.schema', phase: 'completed' })
     return _.get(res, ['data', 'components', 'schemas', 'Person'])
   } catch(err) {

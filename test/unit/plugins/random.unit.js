@@ -27,7 +27,6 @@ describe('Random Plugin', () => {
   describe('letter()', () => {
     it('should exist', () => {
       expect(rand.letter).not.to.be.undefined
-    })
 
     it('should return random char', () => {
       let letter = rand.letter()
@@ -36,7 +35,6 @@ describe('Random Plugin', () => {
     })
 
     describe('ambiguous letters', () => {
-// Temp comment
       ['o', 'i', 'l'].forEach((oil) => {
         it(`should not return letter "${oil}" `, () => {
           for (let i = 0; i <= 1000; i++) {
@@ -61,3 +59,4 @@ describe('Random Plugin', () => {
     })
 
     it('should return all uppercase string', () => {
+      let code = rand.generateRecoveryCode()

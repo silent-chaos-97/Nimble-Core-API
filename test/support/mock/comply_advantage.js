@@ -4376,3 +4376,39 @@ const parsedResult = [
         "subtype": "sanction",
         "countryCodes": [],
         "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Removal Date",
+        "value": "2020-03-03",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Sanction Type",
+        "value": "article 2 paragraphs 1 and 2 (Financial sanctions) and article 4 paragraph 1 (Travel ban)",
+        "source": "Swiss SECO List",
+        "subtype": "sanction",
+        "countryCodes": [],
+        "date": "2018-02-27T00:00:00Z",
+        "deletedDate": "2020-03-03T00:00:00Z",
+        "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction"
+      },
+      {
+        "name": "Country",
+        "value": "Zimbabwe",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {

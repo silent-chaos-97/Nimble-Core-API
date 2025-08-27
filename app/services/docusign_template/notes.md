@@ -1,5 +1,4 @@
 # Docusign
-
 ## Docusign requirements
 
 The app uses a third-party SAAS called Docusign to send and allow prospects to sign contracts.
@@ -155,3 +154,5 @@ Try it:
 
 The URL to which the user should be redirected after the signing session has ended.
 DocuSign redirects to the URL and includes an event query parameter that can be used by your application.
+
+So we can use this URL and the parameters to know if a user finished signing a document or not.

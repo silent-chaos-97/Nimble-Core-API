@@ -167,3 +167,5 @@ const publicMetadata = {
     order: 7,
     score: {
       yes: 2
+    },
+    default: 'no',

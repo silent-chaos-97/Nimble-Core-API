@@ -219,3 +219,5 @@ describe('POST /documents', () => {
         .expect((res) => {
           expect(res.body.message).to.contain('"format" is required')
         })
+    })
+  })

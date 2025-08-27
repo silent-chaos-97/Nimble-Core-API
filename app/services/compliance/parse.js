@@ -50,6 +50,7 @@ function getSourcesFromTag(source_notes, types) {
 function getFieldBySource(fields, source) {
   const out = source.map((source) => {
     return fields
+      .filter(f => _.has(f, 'source') && f.source === source.id)
       .map(listing => {
         return {
           name: listing.name,
@@ -95,6 +96,7 @@ function getFieldByTag(fields, tag) {
     return hits.sort((a, b) => a.frequency < b.frequency ? 1 : -1).shift().value
   }
 
+// Temp comment
   // else, just return empty string
   return null
 }

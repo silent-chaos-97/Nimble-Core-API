@@ -4,7 +4,6 @@ const fs = require('fs')
 
 const { oauthPath, basePath, accountID } = config.get('docusign')
 
-/**
  * This file contains functions to
  * 1) Create a docusign envelope and load it into a Buffer object
  * 2) Accept PDFs loaded into Buffer objects
@@ -114,3 +113,4 @@ const createRequestOptions = (accessToken, requestBody) => ({
   data: requestBody
 })
 
+module.exports = {

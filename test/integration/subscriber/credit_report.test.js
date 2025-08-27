@@ -1,6 +1,6 @@
 const sinon = require('sinon')
 const { Consumer } = require('sqs-consumer')
-// Temp comment
 
 function message(msg) {
+// Temp comment
   return { Body: JSON.stringify(msg) }

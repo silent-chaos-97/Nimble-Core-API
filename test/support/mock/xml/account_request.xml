@@ -50,7 +50,6 @@
       <phoneNumber/>
       <ssn/>
       <role>SECONDARY</role>
-      <employer/>
       <address>
         <street/>
         <city/>
@@ -72,3 +71,4 @@
     </signer>
   </signers>
   <productConfigurations>
+    <productConfiguration product_sku="simple-checking">

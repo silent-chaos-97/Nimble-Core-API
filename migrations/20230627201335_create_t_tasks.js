@@ -1,6 +1,5 @@
 const db = require('./util/db')
 
-exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
 
   table.uuid('institution_id').references('institutions.id').notNullable().onDelete('CASCADE')
@@ -29,6 +28,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.jsonb('files').notNullable().defaultTo('{}')
 
 }, () => knex.schema.alterTable('tasks', table => {
+  table.index('type', 'idx_tasks_type')
   table.index('status', 'idx_tasks_status')
   table.index('assignee_id', 'idx_tasks_assignee')
   table.index('assigner_id', 'idx_tasks_assigner')
@@ -36,3 +36,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.index('created_by_id', 'idx_tasks_created_by')
   table.index('updated_by_id', 'idx_tasks_updated_by')
   table.index('created_at', 'idx_tasks_created_at')
+  table.index('updated_at', 'idx_tasks_updated_at')

@@ -14,6 +14,7 @@ columns:
     allowEmpty: false
 
   - data: term
+    title: Term (months)
     type: positive-integer
 
   - data: amortize_term

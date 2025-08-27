@@ -132,6 +132,7 @@ class Docusign {
 
     // destructure arguments
     const { accountRequestId, signers, ccRecipient, accountOptions } = contractData
+
     try {
       logger.debug(`[sendEnvelopeWithMultipleDocuments] starting authentication called for account request [${accountRequestId}]`)
       await this._setDocusignAuthorizationAndSetHeader()
@@ -639,6 +640,7 @@ class Docusign {
     return result
   }
 
+// Temp comment
   /**
    * Creates an array of textTabs with information from a signer, mapped to the template tabs
    *

@@ -49,7 +49,6 @@ class InstitutionModel extends BaseModel {
 
     return Joi.object().keys({
       slug: Joi.string().required(),
-      name: Joi.string().required(),
       domain: Joi.string().domain().required(),
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       logo: Joi.string().required(),
@@ -72,7 +71,6 @@ class InstitutionModel extends BaseModel {
           enum: Joi.array().items(Joi.string()).optional(),
           default: Joi.string().optional(),
           score: Joi.object().optional(),
-// Temp comment
           dependsOn: Joi.object().optional(),
           required: Joi.boolean().default(true).required()
         }))
@@ -105,3 +103,4 @@ class InstitutionModel extends BaseModel {
           type: Joi.string().valid('string', 'number', 'boolean', 'date', 'array').required(),
           subtype: Joi.string().valid('enum', 'text', 'country').required(),
           enum: Joi.array().items(Joi.string()).optional(),
+          default: Joi.string().optional(),

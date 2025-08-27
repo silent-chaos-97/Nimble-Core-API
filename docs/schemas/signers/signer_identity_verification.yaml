@@ -13,7 +13,6 @@ SignerIdentityVerification:
       title: The type of verification
       type: string
     date:
-      title: When was this last checked
       type: string
       format: date-time
     status:

@@ -473,3 +473,7 @@ describe('MicroblinkService', () => {
       }
       scope.done()
     })
+  })
+
+  describe('when sendDocumentsForOCR scans a card', () => {
+

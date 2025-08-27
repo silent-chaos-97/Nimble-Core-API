@@ -87,3 +87,4 @@ describe('app.services.email.prospectPendingSigners', () => {
 
     describe('when the signer does not have email verified', () => {
       beforeEach(async () => {
+        await knex('signers').update('email_verified', false).where('id', id)

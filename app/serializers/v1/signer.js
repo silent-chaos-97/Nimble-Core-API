@@ -21,7 +21,6 @@ const properties = [
   'employer',
   'dateOfBirth',
   'emailVerified',
-  'emailVerifiedAt',
   'consent',
   'consentAccountOpening',
   'consentPrivacyPolicy',

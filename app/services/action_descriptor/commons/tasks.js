@@ -44,6 +44,7 @@ function wkflTask({
     branchId: _.get(context, 'WKFL.branchId'),
     institutionId: _.get(context, 'WKFL.institutionId'),
     assignee,
+    workflowId,
     descriptorId,
     activityId,
     activityToken,

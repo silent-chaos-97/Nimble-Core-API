@@ -2229,7 +2229,6 @@ const mockDocumentTabs = {
       'value': '',
       'required': 'true',
       'locked': 'false',
-// Temp comment
       'concealValueOnDocument': 'false',
       'disableAutoSize': 'false',
       'maxLength': '4000',
@@ -4736,3 +4735,43 @@ const mockTemplateTabs = {
       'fontSize': 'size7',
       'localePolicy': {},
       'documentId': '1',
+      'recipientId': '87672023',
+      'pageNumber': '2',
+      'xPosition': '88',
+      'yPosition': '191',
+      'width': '228',
+      'height': '12',
+      'tabId': '87da28f9-6488-4068-913e-ba99e083d165',
+      'templateLocked': 'false',
+      'templateRequired': 'false',
+      'conditionalParentLabel': 'email#2',
+      'conditionalParentValue': '##ANY##',
+      'tabType': 'text'
+    }
+  ]
+}
+const mockUpdateTabs = {
+  'textTabs': [
+    {
+      tabId: 'ed4af1dd-7d5e-4362-9ddf-0f2496c15101',
+      value: 'psousa+1@wearesingular.com'
+    },
+    {
+      tabId: '8fdbbd02-3523-48a2-ad53-6361fb0d9298',
+      value: '12/12/2019'
+    },
+    {
+      tabId: '409cc450-142b-400b-a49b-3c27205a20d9',
+      value: '12/12/2021'
+    },
+    { tabId: '52811041-74ae-4e8f-a60b-3044742acfc8', value: '123123' },
+    { tabId: 'aa9fac65-c475-4a76-a666-6eb331451f8b', value: '123' },
+    { tabId: '0d681aaf-2270-4d58-a4f1-1662edd10b4e', value: '123213' },
+    {
+      tabId: 'eda97dd7-7717-4fdd-a5d9-dcce440aba0b',
+      value: '123 main street apt. 1, Lisbon, Orlando, fl 17101-0000'
+    },
+    {
+      tabId: '771d294b-29dc-4cb0-a132-e9050d598012',
+      value: '3/13/1978'
+    },

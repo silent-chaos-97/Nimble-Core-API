@@ -13,6 +13,7 @@ function queue() {
     sqs: new SQSClient({
       region: sqsConfig.region,
       credentials: {
+        accessKeyId: sqsConfig.accessKeyId,
         secretAccessKey: sqsConfig.secretAccessKey
       }
     })

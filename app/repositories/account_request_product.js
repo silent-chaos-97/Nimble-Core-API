@@ -8,7 +8,7 @@ const AccountRequestProduct = app.db.Model.extend({
   accountRequest: function () {
     return this.belongsTo('AccountRequest', 'account_request_id')
   },
-
   product: function () {
     return this.belongsTo('Product', 'product_id')
   }
+})

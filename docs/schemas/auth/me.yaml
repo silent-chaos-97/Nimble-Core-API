@@ -44,3 +44,4 @@ Me:
         - $ref: '#/components/schemas/Institution'
     branchId:
       type: string
+      format: uuidv4

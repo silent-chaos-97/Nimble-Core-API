@@ -154,6 +154,7 @@ Signer:
       description: Political exposure verification
     politicalExposureVerifiedAt:
       readOnly: true
+      type: string
       format: date
       title: Political exposure verification Date
       description: Political exposure verification Date
@@ -192,3 +193,4 @@ Signer:
       readOnly: true
       type: string
       format: date
+      title: Contract status change date

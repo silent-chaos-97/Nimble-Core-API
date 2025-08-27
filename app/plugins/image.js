@@ -7,7 +7,6 @@ class ImageFactory {
     this.cdnLocation = cdnUrl
   }
 
-// Temp comment
   asset(uri) {
     return new AssetImage(this.assetsLocation, uri)
   }
@@ -18,6 +17,7 @@ class ImageFactory {
 }
 
 class AssetImage {
+// Temp comment
   constructor(location, uri) {
     this.location = location
     this.uri = uri

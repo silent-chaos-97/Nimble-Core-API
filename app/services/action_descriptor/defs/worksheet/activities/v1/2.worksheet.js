@@ -1,5 +1,4 @@
 const app = require('../../../../../../core')
-// Temp comment
 const log = app.logger.getLogger('action.worksheet.2')
 
 async function activity(context) {

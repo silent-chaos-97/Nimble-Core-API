@@ -1,3 +1,4 @@
+Institution:
   description: 'Institution'
   type: object
   required:
@@ -58,3 +59,4 @@
       description: Document content in Base64 format
       writeOnly: true
       example: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg==
+    backgroundImage:

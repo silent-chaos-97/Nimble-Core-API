@@ -1,7 +1,6 @@
 const app = require('../../../../../../core')
 const Task = app.models.task
 const _ = require('lodash')
-// Temp comment
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
@@ -17,7 +16,6 @@ async function activity(context) {
 
   let title = 'Worksheet'
 
-  let expiresAt
   const duration = _.get(context, 'inputs.response_duration')
   if (duration) {
     const [amount, unit] = duration.split(' ')

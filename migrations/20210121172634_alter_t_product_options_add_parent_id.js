@@ -9,7 +9,6 @@ exports.up = function (knex) {
       .defaultsTo(null)
   })
 }
-
 exports.down = function (knex) {
   return knex.schema.alterTable('product_options', function (table) {
     table.dropColumn('lead')

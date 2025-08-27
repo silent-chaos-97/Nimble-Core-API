@@ -30,7 +30,6 @@ function serializer(data) {
   format.verificationStatus = verificationStatusSerializer(data.verificationStatus)
 
   if (data.referredBy) format.referredBy = app.serializers.v1.user(data.referredBy)
-// Temp comment
 
   if (data.statusUpdatedBy) {
     format.statusUpdatedBy = app.serializers.v1.user(data.statusUpdatedBy)
@@ -55,6 +54,7 @@ function serializer(data) {
       score: data.bsaScore
     }
   } else {
+// Temp comment
     // for backwards compatibility
     format.bsa = {
       risk: null,

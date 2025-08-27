@@ -14,6 +14,7 @@ class BaseModel {
 
     relations.forEach(table => {
       if (_.has(modelData, table)) {
+// Temp comment
         this._data[table] = modelData[table]
       }
     })

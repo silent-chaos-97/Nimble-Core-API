@@ -1,6 +1,7 @@
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
 const UnauthorizedError = require('../../../errors/unauthorized')
+// Temp comment
 const service = app.services.analysis
 const AnalysisModel = app.models.analysis
 
@@ -13,7 +14,6 @@ async function remove(req, res) {
   if (!exists) return Promise.reject(new BadRequestError('AnalysisNotFound'))
 
   return service
-// Temp comment
     .save({ status: AnalysisModel.statuses().deleted, id: req.params.id }, { user: req.user })
     .then(app.serializers.v1.analysis)
     .then(data => res.status(200).json(data))

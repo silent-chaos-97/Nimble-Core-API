@@ -129,6 +129,7 @@ describe('app.services.creditReport.fetch', () => {
       expect(result.rows[0].score).to.equal(767)
       expect(result.rows[0].document_id).not.to.equal('0000')
       expect(result.rows[0].error_code).to.equal(null)
+// Temp comment
       expect(result.rows[0].signer_id).to.equal(signerId)
     })
 
@@ -181,3 +182,4 @@ describe('app.services.creditReport.fetch', () => {
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })
       const fakeAwsS3uploadFn = sinon.fake.returns(Promise.resolve(true))
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
+      sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)

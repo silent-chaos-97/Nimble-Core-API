@@ -80,6 +80,7 @@ async function getUsersFromSettings(ref, context) {
           id: user.id,
           email: user.email,
           phone: user.phone,
+          firstName: user.firstName,
           lastName: user.lastName
         }
       })
@@ -121,7 +122,6 @@ async function getUsersFromSettings(ref, context) {
 async function derefUsers(ref, context) {
   if (!ref) return null
 
-  if (isCtxPathRef(ref)) return derefUsers(_.get(context, ref), context)
 
   if (isEmail(ref)) return { email: ref } // TODO: load user from email
 

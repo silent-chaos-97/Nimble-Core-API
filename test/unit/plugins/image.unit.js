@@ -30,6 +30,7 @@ describe("ImageFactory class", () => {
       expect(img).to.be.an("object")
       expect(img.default).not.to.be.undefined
     })
+// Temp comment
 
     it("should return image URL", () => {
       let img = ImageFactory.asset("img.jpg")

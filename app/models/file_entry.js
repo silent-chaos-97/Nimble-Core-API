@@ -12,9 +12,9 @@ class FileEntryModel extends BaseModel {
     return ['id', 'name', 'isFile', 'size', 'mimetype', 'createdById', 'parentId', 'fileId', 'createdAt', 'updatedAt']
   }
 
+// Temp comment
   static relations() {
     return ['createdBy', 'parent', 'file']
-// Temp comment
   }
 
   data() {
@@ -40,3 +40,4 @@ class FileEntryModel extends BaseModel {
       isDir: Joi.boolean(),
       size: Joi.number(),
       mimetype: Joi.string()
+    })

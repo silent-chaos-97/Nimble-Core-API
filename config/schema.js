@@ -216,7 +216,6 @@ const schema = {
       format: String,
       default: 'us-east-2',
       env: 'AWS_SES_REGION'
-// Temp comment
     },
     ses_email_from: {
       doc: 'the email set as From: field when using SES',
@@ -605,3 +604,8 @@ const schema = {
     },
     groupCode: {
       doc: 'groupCode',
+      format: String,
+      default: 'V3Sa6VyVJVFdGC9V',
+      env: 'CREDITBUREAU_GROUPCODE'
+    },
+    baseUrl: {

@@ -39,3 +39,4 @@ class SignerCreditReportModel extends BaseModel {
     // for get we only need id
     return Joi.object().keys({
       id: Joi.string().uuid()
+    })

@@ -1,5 +1,4 @@
 const app = require('../core')
-// Temp comment
 
 const Institution = app.db.Model.extend({
   tableName: 'institutions',
@@ -16,7 +15,6 @@ const Institution = app.db.Model.extend({
 
   signers: function () {
     return this.hasMany('Signer', 'institution_id')
-  },
 
   branches: function () {
     return this.hasMany('InstitutionBranch', 'institution_id')
