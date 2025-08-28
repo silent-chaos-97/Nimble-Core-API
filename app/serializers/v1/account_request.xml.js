@@ -69,7 +69,6 @@ function serializer(data) {
           tag(signer.documentType.toLowerCase(), {}, [
             tag('number', {}, signer.documentNumber),
             tag('expirationDate', {}, moment(signer.documentExpirationDate).format('YYYY-MM-DD')),
-            tag('issuedDate', {}, moment(signer.documentIssuedDate).format('YYYY-MM-DD')),
             tag(signer.documentType === 'USDL' ? 'issuedState' : 'issuer', {}, signer.documentIssuer),
             tag('documents', {}, documents)
           ])

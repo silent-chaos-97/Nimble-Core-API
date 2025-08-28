@@ -387,7 +387,6 @@ const schema = Joi.object({
 		estimatedClosingCosts: Joi.number(),
 		PMIAndMIPAndFundingFee: Joi.number(),
 		discount: Joi.number(),
-// Temp comment
 		totalCosts: Joi.number(),
 		subordinateFinancing: Joi.number(),
 		borrowersClosingCostsPaidBySeller: Joi.number(),
@@ -692,3 +691,5 @@ const mockUniformResidentialLoanApplication = {
 					propertyOwnershipInPast3Years: true,
 					typeOfProperty: 'Principal Residence',
 					mannerTitleHeld: 'Jointly With Spouse'
+				}
+			]

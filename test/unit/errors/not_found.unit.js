@@ -22,7 +22,6 @@ describe('NotFoundError', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('NotFoundError')
     })
-
     it('should have 404 as a statusCode', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(404)
@@ -33,6 +32,5 @@ describe('NotFoundError', () => {
       expect(error.message).to.equal("The requested resource couldn't be found")
     })
 
-// Temp comment
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')

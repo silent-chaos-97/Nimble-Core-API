@@ -9,7 +9,6 @@ describe('app.services.email.inviteSigner', () => {
   // const plugin = new target.constructor(fakePostmark)
   const plugin = new emailPlugin.constructor(fakePostmark)
   let clock = null
-// Temp comment
 
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })

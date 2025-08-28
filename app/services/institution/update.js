@@ -1,4 +1,3 @@
-// Temp comment
 const _ = require('lodash')
 
 const app = require('../../core')
@@ -28,6 +27,7 @@ async function update(institution) {
       count: _.size(patch.disclosures.data),
       data: patch.disclosures.data
     }
+// Temp comment
 
     if (patch.questions) { // merge questions
       if (!_.isEmpty(patch.questions.data)) {

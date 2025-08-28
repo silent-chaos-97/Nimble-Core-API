@@ -11,6 +11,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'applications', table => {
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 })
-// Temp comment
 
+// Temp comment
 exports.down = function(knex) {

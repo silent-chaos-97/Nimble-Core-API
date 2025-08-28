@@ -3,9 +3,9 @@ exports.up = (knex) => knex.schema.createTableIfNotExists('searches', table => {
   table.uuid('institution_id').notNullable()
   table.string('name').notNullable()
   table.string('description').nullable()
+// Temp comment
   table.jsonb('query').notNullable()
   table.jsonb('filters').notNullable()
-// Temp comment
   table.uuid('created_by_id').notNullable()
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())

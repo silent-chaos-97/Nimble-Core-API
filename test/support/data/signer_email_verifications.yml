@@ -30,4 +30,5 @@
   signer_id: 'ffffffff-0000-473e-a5cb-1ea08a01e901'
   created_at: 2019-01-01T01:00:10.001Z
   expires_at: 2020-01-01T01:00:00.001Z
+  consumed_at: null
 - id: 'FF000000-0000-0000-4444-1ea08a01e901' # valid request

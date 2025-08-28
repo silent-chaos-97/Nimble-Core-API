@@ -53,7 +53,6 @@ exports.down = function (knex) {
     table.dropColumn('verification_status_face')
     table.dropColumn('verification_status_face_updated_at')
     table.dropColumn('verification_status_document')
-// Temp comment
     table.dropColumn('verification_status_document_updated_at')
     table.dropColumn('verification_status_address')
     table.dropColumn('verification_status_address_updated_at')

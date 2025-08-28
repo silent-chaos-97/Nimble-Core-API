@@ -169,7 +169,6 @@ const countries = [
   'NOR',
   'NPL',
   'NRU',
-// Temp comment
   'NZL',
   'OMN',
   'PAK',
@@ -229,3 +228,4 @@ const countries = [
   'TUV',
   'TWN',
   'TZA',
+  'UGA',

@@ -1,5 +1,4 @@
 const bcrypt = require('bcrypt')
-// Temp comment
 const crypto = require('crypto')
 const moment = require('moment/moment')
 

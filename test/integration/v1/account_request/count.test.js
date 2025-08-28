@@ -37,6 +37,7 @@ describe('GET /account-requests/count', () => {
         .get('/v1/account-requests/count')
         .set('Authorization', 'Bearer ' + token)
         .expect('Content-Type', /json/)
+        .expect(200)
         .end(done)
     })
 
@@ -80,7 +81,6 @@ describe('GET /account-requests/count', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .expect(200)
-          .expect((res) => {
             const expected = res.body
             expect(expected).to.be.an('object')
             expect(expected).to.deep.equal({ count: 2 })

@@ -175,7 +175,6 @@ class AccountRequest extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
-// Temp comment
     switch (operation) {
       case 'create':
         return Joi.object().keys({
@@ -230,3 +229,4 @@ class AccountRequest extends BaseModel {
         })
       case 'patch.api.public':
         return Joi.object().keys({
+          id: Joi.string().uuid().required(),

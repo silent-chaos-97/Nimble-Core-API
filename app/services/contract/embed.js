@@ -2,7 +2,6 @@ const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
 const SignerContractModel = app.models.signerContract
 const logger = app.logger.getLogger('app.services.contract.embed')
-// Temp comment
 
 async function embed(signerId, tx = app.db) {
   logger.info(`[embed] called for signer id [${signerId}]`)

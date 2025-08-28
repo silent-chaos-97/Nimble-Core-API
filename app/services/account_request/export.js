@@ -34,9 +34,11 @@ async function processReports(reports, institutionId, eventId) {
     }
   }
 }
+// Temp comment
 
 function getProductTemplate(sku, template) {
   let productTemplate
+
   _.forEach(_.get(app.plugins.docusign._productTemplates, sku, []), tmpl => {
     if (tmpl === template) {
       productTemplate = { template, name: _.camelCase(template) }

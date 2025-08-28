@@ -30,3 +30,4 @@ resource "aws_security_group" "vpc" {
   egress {
     from_port   = 0
     to_port     = 0
+    protocol    = "-1"

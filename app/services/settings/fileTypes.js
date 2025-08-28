@@ -117,7 +117,6 @@ const fileTypes = [
     name: 'Collateral Matches Approval'
   },
   {
-    type: 'Product',
     name: 'Pricing Sheet'
   },
   {
@@ -619,3 +618,4 @@ const fileTypes = [
   {
     type: 'External',
     name: 'Ag Equipment'
+  },

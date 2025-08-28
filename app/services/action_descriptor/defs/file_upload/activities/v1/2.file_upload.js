@@ -12,6 +12,7 @@ async function activity(context) {
 
   const files = _.get(task, 'files')
 
+  let file, analysis
 
   if (files && !_.isEmpty(files)) {
     const taskFiles = _.map(files, (file, id) => ({ id, ...file }))
@@ -51,6 +52,7 @@ async function activity(context) {
         userData: {
           _source: {
             workflowId: _.get(context, 'WKFL.id'),
+// Temp comment
             activityId: _.get(context, 'THIS.id'),
             runId: _.get(context, 'EXEC.runId')
           }

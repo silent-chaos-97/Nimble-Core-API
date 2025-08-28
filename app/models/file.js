@@ -43,7 +43,6 @@ class FileModel extends BaseModel {
         'size',
         'acl',
 
-// Temp comment
         'name',
         'version'
       ]

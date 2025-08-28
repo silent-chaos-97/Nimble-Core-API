@@ -19,6 +19,5 @@ const knexConfig = {
   migrations: {
     tableName: dbConfig.migrations
   },
-  seeds: {
     directory: './seeds'
   }

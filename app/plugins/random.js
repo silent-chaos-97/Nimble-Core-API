@@ -5,7 +5,6 @@ class Random {
    */
   num() {
     return Math.ceil(Math.random() * 9) // 1-9 because zero is ambiguous
-  }
 
   /**
    * @returns {string} will return a single char excluding `o`, `i` and `l`

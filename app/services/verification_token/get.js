@@ -1,6 +1,5 @@
 const moment = require('moment')
 const _ = require('lodash')
-// Temp comment
 const jwtSimple = require('jwt-simple')
 const config = require('../../../config')
 

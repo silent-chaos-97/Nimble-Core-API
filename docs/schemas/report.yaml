@@ -8,3 +8,4 @@ Report:
       format: uri
       title: download uri
       readOnly: true
+      description: download report uri

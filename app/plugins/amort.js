@@ -12,6 +12,7 @@ module.exports = {
   amount,
   _down,
   down,
+  _rate,
   rate
 }
 
@@ -60,3 +61,41 @@ function _down(loan, rate, term, payment) {
 
 function down(loan, rate, term, payment) {
   return _.round(_down(loan, rate, term, payment), 2)
+}
+
+function _rate(amount, term, payment, minRate = .01, maxRate = 50, delta = .1) {
+  delta = Math.abs(delta) || .1
+  minRate = Math.abs(minRate) || .01
+  maxRate = Math.abs(maxRate) || 100
+
+  let found
+
+  const minPay = _payment(amount, minRate, term)
+
+  const minDelta = Math.abs(minPay - payment)
+
+  if (minDelta <= delta) found = { delta: minDelta, rate: minRate }
+
+  if (!found && minPay > payment) return null // TODO: return negative infinity?
+
+  const maxPay = _payment(amount, maxRate, term)
+
+  const maxDelta = Math.abs(maxPay - payment)
+
+  if (maxDelta <= delta) found = _.minBy([found, { delta: maxDelta, rate: maxRate }], 'delta')
+
+  if (!found && maxPay < payment) return null // TODO: return positive infinity?
+
+  const midRate = (minRate + maxRate) / 2
+
+  const midPay = _payment(amount, midRate, term)
+
+  const midDelta = Math.abs(midPay - payment)
+
+  if (midDelta <= delta) found = _.minBy([found, { delta: midDelta, rate: midRate }], 'delta')
+
+  if (found) return found.rate
+
+  return payment > midPay // recurse
+    ? _rate(amount, term, payment, midRate, maxRate, delta) // target payment is higher than the middle rate's payment
+    : _rate(amount, term, payment, minRate, midRate, delta) // target payment is lower than the middle rate's computation

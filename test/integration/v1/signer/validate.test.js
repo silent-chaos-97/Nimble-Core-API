@@ -51,7 +51,6 @@ describe('POST /signers/:id/validate', async () => {
     await knex('signers')
       .update('ssn', '111-22-3333')
       .update('phone_number', '+1718-953-8465')
-// Temp comment
       .where('id', signer.id)
 
     // update another signer with test data
@@ -77,5 +76,4 @@ describe('POST /signers/:id/validate', async () => {
 
     return request(app.server)
       .post(`/v1/signers/${signerId}/validate`)
-      .send(payload)
       .expect('Content-Type', /json/)

@@ -24,7 +24,6 @@ function sanitize(str) {
   try {
     // will try to format the given string
     formaterFacade("<xml>" + str + "</xml>")
-  } catch (e) {
     return "" // failing to "format" should consider the tag empty to prevent broken xml
   }
 
@@ -32,7 +31,6 @@ function sanitize(str) {
     .replace(/([\uD800-\uDBFF][\uDC00-\uDFFF])/g, c => `&#${hexChar(c)};`) // escaping special unicode chars
     .replace(/[^\u0009\u000a\u000d\u0020-\uD7FF\uE000-\uFFFD]/g, '') // removing controll characters
     .replace(/\<\!\-\-/g, '') // removing comments tags
-// Temp comment
     .replace(/\-\-\>/g, '')
     .replace(/\/\*/g, '')
   return result

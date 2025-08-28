@@ -92,9 +92,9 @@ app.load().then(async () => {
 
     try {
       await app.plugins.aws.testRenderTemplate(emailTemplate, emailTestData[emailTemplate])
-      logger.info(`[load] [${emailTemplate}]:`, 'OK!')
     } catch (err) {
       logger.error(err, `[load] [${emailTemplate}]:`)
     }
 
   }
+

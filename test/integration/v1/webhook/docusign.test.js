@@ -411,3 +411,4 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
           request(app.server)
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
+            .expect(200)

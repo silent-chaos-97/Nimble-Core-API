@@ -4,6 +4,7 @@ const fs = require('fs')
 
 const { oauthPath, basePath, accountID } = config.get('docusign')
 
+/**
  * This file contains functions to
  * 1) Create a docusign envelope and load it into a Buffer object
  * 2) Accept PDFs loaded into Buffer objects
@@ -59,7 +60,6 @@ const createSignHereTab = (anchorString, anchorXOffset, anchorYOffset, anchorUni
   anchorYOffset,
   anchorUnits
 })
-
 const createEnvelopeJson = (emailSubject, signers, carbonCopies, documents, status) => ({
   emailSubject,
   recipients: { signers, carbonCopies },

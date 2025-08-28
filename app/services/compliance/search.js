@@ -14,7 +14,6 @@ async function search(entity, filterTypes) {
   if (entity.dateOfBirth) {
     filters.birth_year = moment(entity.dateOfBirth).year()
   }
-
   const searchTerm = [
     entity.firstName,
     entity.middleName,

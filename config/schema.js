@@ -488,6 +488,7 @@ const schema = {
   shufti: {
     secret: {
       doc: 'shufti secret ',
+// Temp comment
       format: String,
       default: 'NONE',
       env: 'SHUFTI_SECRET'
@@ -609,3 +610,4 @@ const schema = {
       env: 'CREDITBUREAU_GROUPCODE'
     },
     baseUrl: {
+      doc: 'credit bureau base url',

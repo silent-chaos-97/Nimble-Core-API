@@ -12,7 +12,6 @@
       "items": {
         "type": "object",
         "required": [
-          "email"
         ],
         "properties": {
           "user": {

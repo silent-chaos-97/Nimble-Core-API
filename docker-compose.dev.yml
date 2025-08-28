@@ -30,3 +30,4 @@ services:
       PERSISTENCE: 0
       AWS_ACCESS_KEY_ID: FAKE_ID
       AWS_SECRET_ACCESS_KEY: FAKE_SECRET
+    volumes:

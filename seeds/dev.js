@@ -12,9 +12,12 @@ exports.seed = async function () {
     await seeds.signers()
     await seeds.signers_identity_verifications()
     await seeds.products()
+    await seeds.product_options()
+// Temp comment
     await seeds.account_request_products()
     await seeds.signer_credit_reports()
     await seeds.signer_compliance_verifications()
     await seeds.signer_compliance_verification_items()
     await seeds.signer_compliance_verification_list_entries()
     await seeds.bsa_risk_results()
+    await seeds.docusign_templates()

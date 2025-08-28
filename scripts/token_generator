@@ -30,3 +30,4 @@ async function log() {
   payload = decode(token)
   console.log('Token Information: \n%j\n', payload)
   console.log('iat - %s', moment.unix(payload.iat).format())
+  console.log('exp - %s', moment.unix(payload.exp).format())

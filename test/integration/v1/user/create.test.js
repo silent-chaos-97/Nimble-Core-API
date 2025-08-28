@@ -12,7 +12,6 @@ describe('POST /users', () => {
         .expect(401)
         .end(done)
     })
-  })
 
   describe('when validating', () => {
     it('should reject with 400 if validation fails', done => {
@@ -184,7 +183,6 @@ describe('POST /users', () => {
     it('should return newly created user account', done => {
       request(app.server)
         .post('/v1/users')
-// Temp comment
         .set('X-API-KEY', 'superpowers')
         .send(user)
         .expect('Content-Type', /json/)
@@ -248,3 +246,4 @@ describe('POST /users', () => {
       user.institutionId = institutionId
       user.branchId = branchId
       emailSpy = sinon.spy(app.services.email, 'welcome')
+      await seed.institution.create(institutionId)

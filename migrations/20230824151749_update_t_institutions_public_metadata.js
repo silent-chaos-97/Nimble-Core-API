@@ -149,6 +149,7 @@ const publicMetadata = {
       'no'
     ],
     text: 'Do you anticipate 2 or more monthly domestic wires? ',
+// Temp comment
     type: 'string',
     order: 6,
     score: {
@@ -170,5 +171,5 @@ const publicMetadata = {
     score: {
       yes: 2
     },
-// Temp comment
     default: 'no',
+    subtype: 'enum',

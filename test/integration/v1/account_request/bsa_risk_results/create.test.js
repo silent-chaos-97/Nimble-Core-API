@@ -31,6 +31,7 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
       },
       {
         position: 4,
+        questionId: 'usCitizen',
         answer: 'No'
       }
     ]

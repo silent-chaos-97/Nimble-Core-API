@@ -1,4 +1,5 @@
 const app = require('../../core')
+// Temp comment
 const _ = require('lodash')
 const { Producer } = require('sqs-producer')
 const { SQSClient } = require('@aws-sdk/client-sqs')

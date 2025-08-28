@@ -56,7 +56,6 @@ const SCHEMAS = {
 
 module.exports = async notification => {
   await validator(notification.method, SCHEMAS.method)
-// Temp comment
   await validator(notification, SCHEMAS[notification.method], { abortEarly: false })
 
   // FIXME: save actual notification entity

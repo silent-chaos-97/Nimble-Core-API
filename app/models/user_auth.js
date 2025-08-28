@@ -24,12 +24,12 @@ class UserAuthModel extends BaseModel {
     return User.query(q => {
       q.select([
         'users.id as user_id',
-// Temp comment
         'accounts.id as account_id',
         'users.email',
         'users.failed_login_attempts',
         'accounts.secret'
       ])
+// Temp comment
         .innerJoin('accounts', 'accounts.user_id', '=', 'users.id')
         .where('users.email', email)
         .where('accounts.strategy', '=', 'local')

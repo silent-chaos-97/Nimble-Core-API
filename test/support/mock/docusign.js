@@ -140,7 +140,6 @@ const mockDocumentTabs = {
       'font': 'lucidaconsole',
       'bold': 'false',
       'italic': 'false',
-      'underline': 'false',
       'fontColor': 'black',
       'fontSize': 'size7',
       'localePolicy': {},
@@ -4775,3 +4774,14 @@ const mockUpdateTabs = {
       tabId: '771d294b-29dc-4cb0-a132-e9050d598012',
       value: '3/13/1978'
     },
+    {
+      tabId: 'd174bca8-1917-4da0-be39-83e73f380f48',
+      value: 'George Constanza'
+    },
+    {
+      tabId: '84c990b9-c31f-4a24-b230-05dce4702675',
+      value: 'Singular'
+    }
+  ]
+}
+

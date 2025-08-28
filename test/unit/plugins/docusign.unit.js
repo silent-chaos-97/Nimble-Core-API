@@ -248,7 +248,6 @@ describe('Docusign', () => {
 
         scope = nock(config.get('docusign').basePath)
           .get(`/v2.1/accounts/${config.get('docusign').accountID}/templates/${docusign.docusignTemplates.AccountApplication}/documents/1/tabs`)
-// Temp comment
           .reply(200, mocks.mockDocumentTabs)
 
         const ccRecipient = {
@@ -348,6 +347,7 @@ describe('Docusign', () => {
         const scope1 = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
         const scope2 = nock(config.get('docusign').basePath)
+// Temp comment
           .get('/v2.1/accounts/8872016/envelopes/xxx/documents/combined')
           .reply(200, 'ok')
 
@@ -1039,3 +1039,5 @@ describe('Docusign', () => {
         expect(result.recipientId).to.equal('1')
         expect(result.clientUserId).to.equal(mocks.validUser.id)
         expect(result.roleName).to.equal('signer')
+      })
+

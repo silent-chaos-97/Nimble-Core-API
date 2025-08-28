@@ -18,11 +18,9 @@ describe("AWS Facade for s3", () => {
   after(() => sandbox.restore())
 
   describe('s3Copy()', () => {
-// Temp comment
 
     beforeEach(async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
-    })
 
     it('should exist', () => {
       expect(AWS.s3CopyToFTP).not.to.be.undefined

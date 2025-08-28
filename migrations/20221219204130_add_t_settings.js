@@ -41,3 +41,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
 
 }, () => knex('institutions').select()
   .then(institutions => institutions.forEach(async(institution) => Promise.all(INITIAL_SETTINGS.map(setting => knex('settings').insert({
+    institution_id: institution.id,

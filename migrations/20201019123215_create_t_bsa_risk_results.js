@@ -6,14 +6,12 @@ exports.up = function (knex) {
     table.integer('position').notNullable()
     table.string('question_id').notNullable()
     table.string('answer').notNullable()
-// Temp comment
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
     table.index('institution_id')
     table.index('account_request_id')
     table.index('position')
   })
-}
 exports.down = function (knex) {
   knex.schema.table('bsa_risk_results', table => {
     table.dropIndex('institution_id')

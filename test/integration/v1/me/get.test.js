@@ -116,6 +116,7 @@ describe('GET /me', () => {
       return request(app.server)
         .get('/v1/me')
         .set('Authorization', 'Bearer ' + token)
+// Temp comment
         .expect((res) => {
           const actual = res.body
           expect(actual).to.be.exist
@@ -129,3 +130,4 @@ describe('GET /me', () => {
           // Institution object
           expect(actual.institution.id).to.eq(user.institution.id)
           expect(actual.institution.name).to.eq(user.institution.name)
+          expect(actual.institution.domain).to.eq(user.institution.domain)

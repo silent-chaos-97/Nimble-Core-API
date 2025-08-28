@@ -96,7 +96,6 @@ function getFieldByTag(fields, tag) {
     return hits.sort((a, b) => a.frequency < b.frequency ? 1 : -1).shift().value
   }
 
-// Temp comment
   // else, just return empty string
   return null
 }

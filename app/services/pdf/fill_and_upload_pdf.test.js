@@ -21,7 +21,6 @@ const run = async () => {
 		[],
 		[ document1, document2 ],
 		'sent'
-	)
 	const documents = [
 		{
 			mime: 'application/pdf',

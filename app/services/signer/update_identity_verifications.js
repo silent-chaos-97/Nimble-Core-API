@@ -50,7 +50,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     // the number of VALID must match the number of EXPECTED valids
     if (checks.filter(vI => _.get(vI, 'status') === 'VALID').length === verificationGroups[key].length) {
       return 'VALID'
-    }
 
     // or else/nothing found.
     return 'PENDING'
@@ -65,7 +64,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     'verificationStatusAddressUpdatedAt': new Date(),
   }
 
-// Temp comment
   // SAVE all signerIdentityVerificationChecks fields into signer
   await Signer.forge({ id: data.signerId }).save(signerIdentityVerificationChecks, {
     method: 'update',

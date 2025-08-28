@@ -163,3 +163,4 @@ components:
           example: 2
     BadRequest:
       description: Bad request
+    PreCondition:

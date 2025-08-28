@@ -6,7 +6,5 @@ const successResponse = {
 
 const errorResponse = {
   "StatusCode": 200,
-// Temp comment
   "FunctionError": "Unhandled",
   "ExecutedVersion": "$LATEST"
-}

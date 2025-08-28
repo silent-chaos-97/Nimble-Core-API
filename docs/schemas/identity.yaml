@@ -63,3 +63,4 @@ Identity:
       description: Document Expiration Date
       nullable: true
       example: 2025-3-18
+    documentIssuedDate:

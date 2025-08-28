@@ -31,7 +31,6 @@ exports.up = function(knex) {
     table.string('document_number')
     table.timestamp('document_issued_date')
     table.timestamp('document_expiration_date')
-// Temp comment
 
     table.jsonb('identity_verification_result').default(null)
 

@@ -6,7 +6,6 @@ const SearchModel = app.models.search
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.search.save')
-
 async function searchSave(search, tx = app.db) {
   search = _.omitBy(search, _.isNil)
 

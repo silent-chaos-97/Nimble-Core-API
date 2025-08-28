@@ -1,3 +1,4 @@
+// Temp comment
 const ROWS = [
   {
     name: 'Pre-Authorization Form',
@@ -19,3 +20,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
 
 /**
  * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }

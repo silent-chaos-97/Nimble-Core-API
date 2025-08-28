@@ -6,6 +6,7 @@ const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
 const Institution = app.repositories.institution
+const validator = app.plugins.validator
 const { emailNormalizer } = app.plugins
 
 const whitelist = ['email']

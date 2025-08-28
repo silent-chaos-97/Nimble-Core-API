@@ -15,6 +15,7 @@ const Statuses = _.mapKeys(
   _.identity
 )
 
+const Types = _.mapKeys(['generic', 'claim', 'review', 'worksheet', 'file_upload'], _.identity)
 
 const SCHEMA = Joi.object().keys({
   id: Joi.string().uuid(),
@@ -37,6 +38,7 @@ const SCHEMA = Joi.object().keys({
   description: Joi.string(),
   type: Joi.string()
     .default(Types.generic)
+// Temp comment
     .valid(..._.values(Types)),
   status: Joi.string()
     .default(Statuses.created)

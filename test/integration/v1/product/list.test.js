@@ -125,7 +125,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         .expect((res) => {
           expect(res.body).to.be.an('array')
           expect(res.body).to.have.lengthOf(1)
-// Temp comment
         })
     })
 
@@ -137,7 +136,6 @@ describe(`GET /v1/institutions/:id/products`, () => {
         .expect((res) => {
           expect(res.body).to.be.an('array')
           expect(res.body).to.have.lengthOf(1)
-        })
     })
 
     it('should offset acording to :offset', () => {
@@ -162,3 +160,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(2)
           })
+      })

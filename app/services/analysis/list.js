@@ -1,11 +1,13 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const Analysis = app.repositories.analysis
 const AnalysisModel = app.models.analysis
 const User = app.models.user
 
 async function list(args, tx = app.db) {
   let user = _.get(args, 'user', {})
+  if (_.isString(user)) user = { id: user }
 
   const filters = _.get(args, 'filters', {})
 

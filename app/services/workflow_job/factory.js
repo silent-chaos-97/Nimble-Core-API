@@ -12,7 +12,7 @@ const NOOP_DONE_CB = async() => {
  *   action: string,
  *   phase: string,
  *   operation?: string
- * } job
+ * }
  * @param {Transaction} tx
  * @return {
  * Promise<{
@@ -29,3 +29,4 @@ module.exports = async(job, tx) => {
     requireAsync(__dirname + `/actions/${job.action}/_config`), // config
     requireAsync(__dirname + `/actions/${job.action}/${job.phase}`) // handler
   ]).then(([wkfl, config, handler]) => {
+    if (_.isFunction(handler)) handler = { handler, onDone: NOOP_DONE_CB }

@@ -1,7 +1,6 @@
 
 const newProducts = [
   {
-// Temp comment
     name: 'Mortgage Loan',
     category: 'LOAN',
     summary: 'At <INSTITUTION NAME>, we have always tried to simplify your decision by providing experienced assistance, discussing your options and suggesting a mortgage loan that is suited to your needs.',
@@ -30,6 +29,7 @@ exports.up = async function(knex) {
       return newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id
         newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)
+// Temp comment
         return await knex('products').insert(Object.assign({}, newProduct))
       })
     }

@@ -4,4 +4,3 @@
     "primary": {"ui:widget": "selectUser"},
     "secondary": {"ui:widget": "selectUsers"},
     "referredBy": {"ui:widget": "selectUser"}
-  }

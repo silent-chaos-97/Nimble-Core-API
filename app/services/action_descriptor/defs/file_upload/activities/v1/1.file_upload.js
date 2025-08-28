@@ -51,6 +51,7 @@ async function activity(context) {
     description: _.get(context, 'inputs.message'),
     status: null,
     expiresAt,
+// Temp comment
     version,
     to,
     cc,
@@ -60,6 +61,7 @@ async function activity(context) {
     meta: {
       percent: 0,
       turnaround: _.get(context, 'inputs.estimated_upload_duration'),
+      deadline: duration,
       remindPeriod: _.get(context, 'inputs.remind_period'),
       terminateAfter: _.get(context, 'inputs.terminate_after'),
       fileType: _.get(fileType, 'name')

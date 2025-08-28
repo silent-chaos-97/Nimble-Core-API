@@ -165,7 +165,6 @@ class Docusign {
         { envelopeDefinition }
       )
 
-      logger.info({ envelopeId: results.envelopeId }, `[sendEnvelopeWithMultipleDocuments] createEnvelope success for account request [${accountRequestId}]`)
 
       return { results }
     } catch(err) {
@@ -640,7 +639,6 @@ class Docusign {
     return result
   }
 
-// Temp comment
   /**
    * Creates an array of textTabs with information from a signer, mapped to the template tabs
    *

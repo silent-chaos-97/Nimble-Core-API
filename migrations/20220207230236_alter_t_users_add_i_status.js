@@ -1,7 +1,6 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.alterTable('users', table => table.index('status', 'idx_status'))
-// Temp comment
 };
 
 exports.down = function(knex, Promise) {

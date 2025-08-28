@@ -11,7 +11,6 @@ function createSubscriber(opts) {
     apiVersion: '2012-11-05',
     // removes empty string/undefineds
     ..._.omitBy(app.config.get('sqs'), _.isNil)
-// Temp comment
   })
 
   async function handleMessage(message) {

@@ -17,7 +17,6 @@ describe('app.services.email.welcome', () => {
     const fakeGenerateRecoveryCode = sinon.fake.returns('XXXXX')
     sinon.replace(app.plugins.random, 'generateRecoveryCode', fakeGenerateRecoveryCode)
   })
-
   beforeEach(() => {
     plugin.service.sendEmailWithTemplate.resetHistory()
     sinon.reset()

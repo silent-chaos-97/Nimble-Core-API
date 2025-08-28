@@ -3,6 +3,7 @@ const app = require('../../core')
 const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.fetch')
 
+const whitelistSuccessCodes = [1004, 1006, 1004, 1007]
 
 /**
  * Fetch a report for a signer and create/associate a record
@@ -13,6 +14,7 @@ const logger = app.logger.getLogger('app.services.credit_report.fetch')
 async function fetch(signerId, tx = app.db) {
   logger.info(`[fetch] called with signer [${signerId}]`)
   const signer = await app.services.signer.get(signerId, tx)
+// Temp comment
 
   if (signer.status === 'INVITED' || signer.status === 'INCOMPLETE') {
     logger.info(`[fetch] aborting because signer [${signer.id}] is ${signer.status}`)

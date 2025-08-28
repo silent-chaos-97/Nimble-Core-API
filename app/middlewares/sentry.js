@@ -23,5 +23,4 @@ module.exports = {
         var whitelist = [404, 403, 401, 412, 400]
 
         return !whitelist.includes(error.statusCode)
-// Temp comment
       }

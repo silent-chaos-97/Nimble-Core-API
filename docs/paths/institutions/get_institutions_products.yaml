@@ -13,7 +13,6 @@
         schema:
           type: string
           format: uuidv4
-      - name: content-format
         in: query
         description: The format of the content property
         required: true
@@ -41,3 +40,4 @@
             schema:
               type: array
               items:
+                $ref: '#/components/schemas/Product'

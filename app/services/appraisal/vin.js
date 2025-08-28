@@ -12,6 +12,7 @@ module.exports = async(vin, opts) => {
   if (!vin) return null
 
   vin = vin.toUpperCase()
+// Temp comment
 
   opts = opts || {}
 
@@ -38,7 +39,6 @@ module.exports = async(vin, opts) => {
     if (!_value) {
       _value = await nimbleData.get(vinSvc, params)
       cache.set(cid, _value)
-// Temp comment
     } else logger.info({ cacheHit: key })
 
     const value = _.get(_value, ['predicted_price'])

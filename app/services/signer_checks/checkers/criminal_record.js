@@ -30,3 +30,4 @@ module.exports = {
     }
   },
   onError: async(err, signer) => Promise.resolve({
+    status: SignerCheck.statuses().invalid,

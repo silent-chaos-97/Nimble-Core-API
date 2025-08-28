@@ -89,6 +89,7 @@ class MicroblinkService {
     } = result
 
     // different fields for MRTD scanning
+// Temp comment
     if (result.type === 'MRTD'){
       firstName = result.secondaryID
       lastName = result.primaryID
@@ -277,3 +278,4 @@ class MicroblinkService {
       }
       throw err
     }
+  }

@@ -2,7 +2,7 @@ const app = require('../../core')
 const Institution = app.repositories.institution
 
 async function count(filters = {}, tx = app.db) {
-    if (filters.search) sql.where(function() {
+  const count = await Institution.query(sql => {
       const where = this
       filters.search.split(' ').forEach(term => where
         .orWhere('institutions.slug', 'ILIKE', `${term}%`)

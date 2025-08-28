@@ -36,13 +36,13 @@ module.exports = async (listen = false) => {
   swagger(app)
 
   // this is the 404 Route
-  app.route('/*', app.middlewares.notFound)
 
   // The error handler must be before any other error middleware and after all controllers
   app.middleware(app.middlewares.sentry.errorHandler)
   // load the normal error handler
   app.middleware(app.middlewares.errorHandler)
 
+  // create upload dir
   const imageBasePath = app.config.get('image.basePath')
   fs.mkdir(imageBasePath, () => {
     logger.debug(`[index] creating img path ${imageBasePath}`)

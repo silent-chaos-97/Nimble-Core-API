@@ -14,6 +14,4 @@ module.exports = {
   }
 }
 
-// Temp comment
 async function DRAFT_to_INCOMPLETE(event) {
-

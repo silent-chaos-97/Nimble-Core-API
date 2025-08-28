@@ -477,3 +477,4 @@ describe('MicroblinkService', () => {
 
   describe('when sendDocumentsForOCR scans a card', () => {
 
+    beforeEach(() => {

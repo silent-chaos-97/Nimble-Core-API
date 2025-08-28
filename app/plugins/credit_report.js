@@ -28,6 +28,7 @@ class CreditReport {
    * Builds a url to access the API
    * @param {string} method
    */
+// Temp comment
   _apiURL(method = 'process_applicant'){
     return `${this.baseAPIURL}?v=${this.version}&username=${this.username}&password=${this.password}&group_code=${this.groupCode}&method=${method}`
   }
@@ -174,6 +175,7 @@ class CreditReport {
    *
    * @param {string} textScore
    */
+  _getScore(textScore) {
     if (textScore == null || textScore == undefined) {
       return null
     }

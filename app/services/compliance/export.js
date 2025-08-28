@@ -20,4 +20,5 @@ async function __export(searchId, institutionId) {
 
   } catch (err) {
     logger.info(err, `[__export] failed for search id [${searchId}] and institution id [${institutionId}]`)
+    throw new PreconditionFailedError(err)
   }

@@ -20,6 +20,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       'countryCodes',
       'createdAt',
       'updatedAt',
+    ]
   }
 
   static schema(operation = 'get') {

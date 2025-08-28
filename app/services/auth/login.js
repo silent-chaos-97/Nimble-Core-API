@@ -4,9 +4,9 @@ const bcrypt = require('bcrypt')
 const app = require('../../core')
 const UserAuthModel = app.models.userAuth
 const User = app.repositories.user
-// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 const UnauthorizedError = require('../../errors/unauthorized')
+// Temp comment
 const { validator, emailNormalizer } = app.plugins
 const moment = require('moment')
 const MAX_FAILED_LOGIN_ATTEMPTS = app.config.get('auth').maxFailedLoginAttempts

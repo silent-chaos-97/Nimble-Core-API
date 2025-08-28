@@ -10,7 +10,6 @@ module.exports = {
         'id_card',
       ],
       supported_types: [
-        'id_card',
         'passport',
         'driving_license',
         'credit_or_debit_card',

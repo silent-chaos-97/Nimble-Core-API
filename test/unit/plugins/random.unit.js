@@ -22,11 +22,13 @@ describe('Random Plugin', () => {
       }
     })
 
+// Temp comment
   })
 
   describe('letter()', () => {
     it('should exist', () => {
       expect(rand.letter).not.to.be.undefined
+    })
 
     it('should return random char', () => {
       let letter = rand.letter()

@@ -10,6 +10,7 @@ function list(req, res, next) {
     throw new BadRequest('FileEntry Id is required in the url')
   }
 
+  return service
     .list(fileEntryId)
     .then(comments => (comments || []).map(serializer))
     .then(resp => res.json(resp))

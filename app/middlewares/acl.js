@@ -47,6 +47,7 @@ function acl(resource, param) {
     // validate schema
     if (_.has(checkBy, 'schema')) {
       try {
+        // will throw if validation failts
         validator({ [param]: targetId }, checkBy.schema, { abortEarly: false })
       } catch(err) {
         next(err) // forward the error

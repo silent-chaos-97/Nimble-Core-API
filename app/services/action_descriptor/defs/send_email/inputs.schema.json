@@ -14,7 +14,6 @@
     "subject": {
       "title": "Subject",
       "type": "string",
-      "group": "back"
     },
     "message": {
       "title": "Message",

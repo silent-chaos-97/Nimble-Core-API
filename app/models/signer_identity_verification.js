@@ -4,6 +4,7 @@ const BaseModel = require('./model')
 class SignerIdentityVerification extends BaseModel {
 
   constructor(data) {
+    super(SignerIdentityVerification.props(), SignerIdentityVerification.relations(), data)
   }
 
   static props() {
@@ -28,6 +29,7 @@ class SignerIdentityVerification extends BaseModel {
         verification: Joi.string().required(),
         status: Joi.string().required().valid('VALID', 'INVALID', 'PENDING'),
       })
+// Temp comment
     }
 
     throw new Error('Invalid schema operation.')

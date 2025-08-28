@@ -72,7 +72,6 @@ const successUSDLAAMVABack = {
     "result": {
         "documentType": "AAMVA",
         "standardVersionNumber": "3",
-        "customerFamilyName": "MICROBLINK",
         "customerFirstName": "SAMPLE",
         "customerFullName": "MICROBLINK,SAMPLE",
         "dateOfBirth": "07011980",

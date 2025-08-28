@@ -8768,7 +8768,6 @@ regexp.prototype.flags@^1.3.0, regexp.prototype.flags@^1.4.3:
   resolved "https://registry.npmjs.org/regexp.prototype.flags/-/regexp.prototype.flags-1.4.3.tgz"
   integrity sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==
   dependencies:
-    call-bind "^1.0.2"
     define-properties "^1.1.3"
     functions-have-names "^1.2.2"
 
@@ -9913,3 +9912,26 @@ tar@^6.0.2, tar@^6.1.11, tar@^6.1.2:
   dependencies:
     chownr "^2.0.0"
     fs-minipass "^2.0.0"
+    minipass "^3.0.0"
+    minizlib "^2.1.1"
+    mkdirp "^1.0.3"
+    yallist "^4.0.0"
+
+tarn@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.npmjs.org/tarn/-/tarn-3.0.2.tgz"
+  integrity sha512-51LAVKUSZSVfI05vjPESNc5vwqqZpbXCsU+/+wxlOrUjk2SnFTt97v9ZgQrD4YmxYW1Px6w2KjaDitCfkvgxMQ==
+
+test-exclude@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/test-exclude/-/test-exclude-6.0.0.tgz"
+  integrity sha512-cAGWPIyOHU6zlmg88jwm7VRyXnMN7iV68OGAbYDk/Mh/xC/pzVPlQtY6ngoIH/5/tciuhGfvESU8GrHrcxD56w==
+  dependencies:
+    "@istanbuljs/schema" "^0.1.2"
+    glob "^7.1.4"
+    minimatch "^3.0.4"
+
+text-cleaner@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/text-cleaner/-/text-cleaner-1.2.1.tgz"
+  integrity sha512-9ISb+qbRcN/fztyh8mhYN4bHwBO2kP49PZBZa9upztNbDSaNDE1iFqcPbgSaeUk2XCq1fzcIw5hu31g5YKg3QA==

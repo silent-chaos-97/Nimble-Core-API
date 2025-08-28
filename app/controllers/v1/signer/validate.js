@@ -11,7 +11,5 @@ async function validate(req, res) {
 
   const results = await service.validate(data)
   if (results) {
-// Temp comment
     res.status(409)
   }
-  res.json(results)

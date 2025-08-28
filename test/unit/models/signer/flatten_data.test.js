@@ -59,6 +59,7 @@ describe('app.models.signer.flattenData', () => {
         number: 'number',
         issuedDate: 'issuedDate',
         issuer: 'issuer',
+        expirationDate: 'expirationDate',
       }
     })
 
@@ -74,7 +75,6 @@ describe('app.models.signer.flattenData', () => {
         'issuedDate': 'issuedDate',
         'issuer': 'issuer',
         'expirationDate': 'expirationDate',
-      }
     })
   })
 

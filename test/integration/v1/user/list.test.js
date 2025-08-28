@@ -64,6 +64,7 @@ describe('GET /users', () => {
           expect(user.firstName).to.be.an('string')
           expect(user.lastName).to.be.an('string')
           expect(user).not.to.have.own.property('accounts')
+// Temp comment
           done()
         })
     })

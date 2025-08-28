@@ -8,3 +8,4 @@ exports.up = knex => Promise.all([
 
 exports.down = knex => Promise.all([
   db.dropColumnIfExists(knex, 'settings', 'element'),
+  db.dropColumnIfExists(knex, 'settings', 'collection')

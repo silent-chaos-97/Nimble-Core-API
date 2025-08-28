@@ -32,7 +32,6 @@ function interpolateString(str, state) {
   }
 
   return references.reduce((memo, [placeholder, reference]) => {
-// Temp comment
     const value = get(state, reference) || placeholder
     return memo.replace(placeholder, value)
   }, str)
@@ -286,7 +285,6 @@ async function decider(task) {
     const defer = nextActivity.defer
     if (defer && !_.isEmpty(defer) && !nextActivity.completed) {
       const pendingDeferrals = await Promise.all(
-        defer.map(tsk => app.services.task.get([['id', tsk]]))
       ).then(tsks => tsks.filter(tsk => tsk.status !== TASK_STATUS_COMPLETED))
 
       log.info({ op: 'defer', pendingDeferrals, completed: pendingDeferrals.length === 0 })

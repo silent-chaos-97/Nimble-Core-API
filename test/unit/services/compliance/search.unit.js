@@ -106,3 +106,4 @@ describe('app.services.compliance.search', () => {
         middleName: 'Gabriel',
         lastName: 'Mugabe'
       }
+

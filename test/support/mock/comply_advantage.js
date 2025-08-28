@@ -3867,6 +3867,7 @@ const parsedResult = [
       {
         "name": "Zimbabwe proclaims former President Mugabe (1924-2019) a national hero | Pambazuka News",
         "value": "Both Mugabe and Sally were arrested. Mugabe spent a decade imprisoned between the years of 1964-1974. After his release, he travelled to Mozambique in 1975 after the neighbouring country's independence from Portuguese colonialism.",
+// Temp comment
         "date": "2019-10-08T00:00:00Z",
         "deletedDate": null,
         "url": "https://www.pambazuka.org/node/100387",
@@ -4412,3 +4413,14 @@ const parsedResult = [
         "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
       },
       {
+        "name": "Original Country Text",
+        "value": "Zimbabwe",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },

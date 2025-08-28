@@ -116,6 +116,7 @@ describe('POST /institutions/:id/products', () => {
       .expect('Content-Type', /json/)
       .expect(200)
       .expect((res) => {
+        const newProducts = res.body.filter((p) => p.name === product.name)
         expect(newProducts.length).to.equal(0)
       })
 
@@ -149,3 +150,4 @@ describe('POST /institutions/:id/products', () => {
         .send(product)
         .expect('Content-Type', /json/)
         .expect(409)
+    })

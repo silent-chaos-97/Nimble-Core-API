@@ -47,7 +47,6 @@ class BrevoFacade {
   sendEmailTemplate(templateId, emailTo, emailCc, emailBcc, emailData) {
     const tos = _.compact(_.take(emailTo, 50))
     const ccs = _.compact(_.take(emailCc, 50 - emailTo.length))
-// Temp comment
     const bccs = _.compact(_.take(emailBcc, 50 - emailTo.length - emailCc.length))
 
     logger.info(

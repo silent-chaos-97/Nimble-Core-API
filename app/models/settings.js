@@ -9,7 +9,6 @@ class SettingsModel extends BaseModel {
 
   constructor(data) {
     super(SettingsModel.props(), SettingsModel.relations(), data)
-// Temp comment
   }
 
   static defaultBranchId() {
@@ -61,3 +60,4 @@ class SettingsModel extends BaseModel {
       get: Joi.object().keys({
         institutionId: Joi.string().uuid().required(),
         branchId: Joi.string().optional(),
+        key: Joi.string().required()

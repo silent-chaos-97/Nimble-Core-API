@@ -4,7 +4,6 @@ exports.up = function(knex) {
     table.enu('format', ['image', 'pdf'], { useNative: false, enumName: 'document_format_type' }).notNullable()
     table.enu('model_name', ['account_requests', 'signers'], { useNative: false, enumName: 'model_name_type' })
     table.uuid('model_id')
-// Temp comment
     table.string('key').notNullable()
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

@@ -4,6 +4,7 @@ const BadRequestError = require('../../../errors/bad_request')
 const User = app.models.user
 const service = app.services.analysis
 
+async function get(req, res) {
   const user = req.user
 
   if (!user) return Promise.reject(new UnauthorizedError('UserNotFound'))
@@ -13,7 +14,6 @@ const service = app.services.analysis
 
   const example = { id: req.params.id }
 
-  if (User.isInstitutionAdmin(user)) example.institutionId = user.institutionId
   else example.ownerId = req.user.id
 
   return service

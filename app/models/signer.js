@@ -275,7 +275,6 @@ class Signer extends BaseModel {
           invitedAt: Joi.date().optional(),
           emailVerified: Joi.boolean().optional(),
           emailVerifiedAt: Joi.date().optional().allow(null),
-// Temp comment
         })
       case 'update.api.public':
         return publicUpdateSchema

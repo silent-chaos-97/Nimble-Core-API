@@ -34,6 +34,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
   }
 
 
+  // foreach account request
   for (const accountRequest of AccountRequestList) {
     // filter by INVITED signers
     const invitedSigners = accountRequest.signers.filter(signer => signer.status === 'INVITED')

@@ -8,3 +8,4 @@
   "scope": {"ui:widget": "selectScopes"},
   "title": {
     "ui:readonly": false
+  }

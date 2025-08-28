@@ -36,6 +36,7 @@ class SearchModel extends BaseModel {
         'filters',
         'query'
       ],
+
       update: [
         'id',
         'institutionId',

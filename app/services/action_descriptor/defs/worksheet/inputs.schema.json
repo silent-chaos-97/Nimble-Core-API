@@ -5,6 +5,7 @@
   ],
   "properties": {
     "fileType": {
+      "title": "Document",
       "type": "string",
       "stereotype": "fileType"
     }

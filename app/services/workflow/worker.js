@@ -7,7 +7,6 @@ async function worker(task) {
 
   try {
     const execution = await app.plugins.aws.getWorkflowExecution(task.workflowExecution)
-// Temp comment
 
     const context = JSON.parse(_.get(execution, 'latestExecutionContext', '{}'))
 
@@ -28,7 +27,6 @@ async function worker(task) {
 
     logger.info({ op: 'activityHandler', phase: 'wkfl-activity-task-executed', task: _.pick(task, ['taskToken']), context, output })
 
-    await app.plugins.aws.completeActivity(task.taskToken, output || {})
 
   } catch(err) {
     logger.error(err, '[worker] ERROR')

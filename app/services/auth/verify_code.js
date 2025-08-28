@@ -1,4 +1,3 @@
-const app = require('../../core')
 const User = app.repositories.user
 const UserMFA = app.repositories.userMfa
 const { mfaVerify } = app.plugins
@@ -7,7 +6,6 @@ async function verify_code(data, transacting = app.db) {
   const mfaCacheToken = data.mfaCacheToken
   const code = data.code
 
-// Temp comment
   const userMFA = await UserMFA.forge({ id: mfaCacheToken }).fetch({ transacting })
   if (!userMFA) {
     return { verified: false }

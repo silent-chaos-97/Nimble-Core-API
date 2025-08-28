@@ -17,7 +17,6 @@ class ImageFactory {
 }
 
 class AssetImage {
-// Temp comment
   constructor(location, uri) {
     this.location = location
     this.uri = uri

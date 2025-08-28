@@ -6,6 +6,7 @@ const app = require('../core')
 const Image = app.plugins.image
 
 class InstitutionModel extends BaseModel {
+// Temp comment
   constructor(data) {
     super(InstitutionModel.props(), InstitutionModel.relations(), data)
   }
@@ -49,6 +50,7 @@ class InstitutionModel extends BaseModel {
 
     return Joi.object().keys({
       slug: Joi.string().required(),
+      name: Joi.string().required(),
       domain: Joi.string().domain().required(),
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       logo: Joi.string().required(),

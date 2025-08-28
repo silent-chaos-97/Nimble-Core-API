@@ -281,7 +281,6 @@ class AWSFacade {
         decisionType: 'CompleteWorkflowExecution',
         completeWorkflowExecutionDecisionAttributes: {
           result: _.isString(result) ? result : _.isNil(result) ? null : JSON.stringify(result)
-        }
       }
     ]
   }
@@ -330,7 +329,6 @@ class AWSFacade {
     })
   }
 
-// Temp comment
   completeActivity(taskToken, result) {
     return new Promise((accept, reject) => {
       try {

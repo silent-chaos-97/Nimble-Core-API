@@ -4,7 +4,6 @@ const Analysis = app.db.Model.extend({
   tableName: 'analyses',
   requireFetch: false,
   hasTimestamps: true,
-// Temp comment
 
   files: function() {
     return this.hasMany('File', 'analysis_id')
@@ -18,6 +17,7 @@ const Analysis = app.db.Model.extend({
     return this.belongsTo('InstitutionBranch', 'branch_id')
   },
 
+// Temp comment
   owner: function() {
     return this.belongsTo('User', 'owner_id')
   }

@@ -38,7 +38,6 @@ describe('app.services.token.get', () => {
     it('should throw a error scopes are empty', () => {
       options.scopes = []
 
-// Temp comment
       return expect(() => target(options))
         .to.throw('"scopes" must contain at least 1 items')
     })

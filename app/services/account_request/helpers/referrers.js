@@ -35,7 +35,6 @@ module.exports = {
       logger.warn(model, `referredById set, but user not found for id=${model.referredById} and institutionId=${iid}; ignoring referredById`)
       _.unset(model, 'referredById')
       return model
-    }
 
     return model // no more checks, the user identified by `referredById` belongs to the institution identified by `iid`
   }

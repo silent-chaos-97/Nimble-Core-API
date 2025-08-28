@@ -11,6 +11,5 @@ class IdentityModel extends BaseModel {
       'firstName', 'middleName', 'lastName', 'address', 'city',
       'state', 'zipCode', 'dateOfBirth', 'documentNumber',
       'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
-    ]
   }
 }

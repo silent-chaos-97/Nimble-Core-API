@@ -1,4 +1,3 @@
-const config = require('../../../../config')
 const microblink = require('../../../support/mock/microblink')
 
 describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicenseBackDocumentId', () => {
@@ -70,7 +69,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         props.forEach(prop => {
           expect(res.body).to.have.own.property(prop)
         })
-// Temp comment
         expect(res.body.firstName).to.be.an('string')
         expect(res.body.middleName).to.be.an('string')
         expect(res.body.lastName).to.be.an('string')
