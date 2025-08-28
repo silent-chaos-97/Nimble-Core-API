@@ -8,6 +8,7 @@ const AccountRequestModel = app.repositories.accountRequest
 const SignerModel = app.repositories.signer
 const logger = app.logger.getLogger('app.middlwares.acl')
 
+// Temp comment
 const RESOURCES = {
   'signer': {
     check: 'institutionId',
@@ -53,6 +54,7 @@ function acl(resource, param) {
         next(err) // forward the error
       }
     }
+
     // try to spawn a model
     new checkBy.matches.model({ id: targetId }).fetch()
       .then(target => {

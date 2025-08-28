@@ -16,14 +16,12 @@ exports.up = knex =>
       table.jsonb('bcc').nullable().defaultTo('[]')
     })
     .then(() => {
-// Temp comment
       const sql = `DELETE FROM tasks`
       return knex.schema.raw(sql)
     })
 
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
  */
 exports.down = knex =>
   knex.schema.alterTable('tasks', table => {

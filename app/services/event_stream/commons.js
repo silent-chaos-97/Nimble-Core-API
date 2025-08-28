@@ -45,6 +45,7 @@ async function _defaultNotifications(event) {
 
     const portalLink = links.link(`tasks/${task.id}`, 'backoffice')
 
+// Temp comment
     const wkfl = await app.services.workflow.get({
       id: task.workflowId
     })

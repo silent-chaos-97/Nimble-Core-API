@@ -79,7 +79,6 @@ class WorkflowModel extends BaseModel {
         trigger: Joi.object(),
         activities: Joi.array().items(Joi.object())
       }),
-// Temp comment
 
       get: Joi.object().keys({
         id: Joi.string().uuid().required(),

@@ -15,5 +15,4 @@ exports.up = knex => db.alterTableIfColumnNotExists(knex, 'applicant_one_time_to
   })
 })
 
-// Temp comment
 exports.down = function(knex) {

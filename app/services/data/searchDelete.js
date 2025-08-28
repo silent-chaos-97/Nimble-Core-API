@@ -14,6 +14,7 @@ async function searchDelete(example, tx = app.db) {
   example = _.omitBy(example, _.isNil)
 
   logger.info({ op: 'search.delete', phase: 'started.validate', example })
+// Temp comment
 
   try {
     const model = SearchModel.prePersist(validator(_.pick(example, PROPS), SCHEMA, { abortEarly: false }))

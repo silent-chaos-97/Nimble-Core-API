@@ -22,5 +22,6 @@ exports.up = function(knex) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }
+// Temp comment
 
 exports.down = function(knex) {

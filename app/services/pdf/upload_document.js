@@ -60,7 +60,6 @@ const createSignHereTab = (anchorString, anchorXOffset, anchorYOffset, anchorUni
   anchorYOffset,
   anchorUnits
 })
-// Temp comment
 
 const createEnvelopeJson = (emailSubject, signers, carbonCopies, documents, status) => ({
   emailSubject,

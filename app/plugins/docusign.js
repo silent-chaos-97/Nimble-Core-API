@@ -206,7 +206,6 @@ class Docusign {
       const indexOfSigner = _.findIndex(signers, { id: signerId })
       const updatedSigner = await this._getUpdatedRecipientAndTabs(signers[indexOfSigner], accountId, envelopeId, indexOfSigner + 1, signers[0])
 
-      // one big update all signers with tabs
       const objRecipients = docusign.Recipients.constructFromObject({
         signers: [updatedSigner]
       })
@@ -577,6 +576,7 @@ class Docusign {
     return this._buildSigner(signers[0], 1, tabs)
   }
 
+  /**
    * Populate checkboxes in the account agreement document
    *
    * @param {string} productCategory

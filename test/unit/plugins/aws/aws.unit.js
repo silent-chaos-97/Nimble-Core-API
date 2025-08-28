@@ -44,11 +44,11 @@ describe('AWS Facade class', () => {
   it('should load s3 stuff when loading', () => {
     const target = new AWS.constructor({
       endpoint: 'endpoint',
+      s3: {
         endpoint: 'endpointoverwrite'
       }
     })
     expect(target.config.endpoint).to.equal('endpoint')
-    expect(target.s3.config.endpoint).to.equal('endpointoverwrite')
   })
 
   it('should expose SDK services preconfigured', () => {

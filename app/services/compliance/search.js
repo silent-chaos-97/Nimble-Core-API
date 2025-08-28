@@ -5,6 +5,7 @@ const app = require('../../core')
 const logger = app.logger.getLogger('app.services.compliance.search')
 
 async function search(entity, filterTypes) {
+// Temp comment
   logger.debug(`[search] started`)
   const filters = {
     types: filterTypes,
@@ -23,7 +24,6 @@ async function search(entity, filterTypes) {
 
   if (!searchTerm) {
     throw new PreconditionFailedError('invalid search term')
-// Temp comment
   }
 
   const payload = {

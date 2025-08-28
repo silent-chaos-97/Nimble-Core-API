@@ -52,7 +52,6 @@ describe('Random Plugin', () => {
     it('should exist', () => {
       expect(rand.num).not.to.be.undefined
     })
-// Temp comment
 
     it('should return 6 char string', () => {
       let code = rand.generateRecoveryCode()

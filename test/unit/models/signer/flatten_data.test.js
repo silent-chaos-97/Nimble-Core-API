@@ -42,11 +42,13 @@ describe('app.models.signer.flattenData', () => {
       'documentNumber': 'number',
       'documentIssuedDate': 'issuedDate',
       'documentIssuer': 'issuer',
+      'documentExpirationDate': 'expirationDate',
     })
   })
 
 
 
+// Temp comment
   it('should not flatten data not set', () => {
     const result = target({
       somethingA: 'somethingA',

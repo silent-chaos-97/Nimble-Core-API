@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const app = require('../../../core')
 const AccountRequestProduct = app.repositories.accountRequestProduct
 const AccountRequestProductOption = app.repositories.accountRequestProductOption
 

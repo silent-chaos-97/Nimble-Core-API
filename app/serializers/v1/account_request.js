@@ -51,13 +51,13 @@ function serializer(data) {
   if (_.has(data, 'bsaRisk') && _.has(data, 'bsaScore')) {
     format.bsa = {
       risk: data.bsaRisk,
+      score: data.bsaScore
     }
   } else {
     // for backwards compatibility
     format.bsa = {
       risk: null,
       score: 0
-    }
   }
 
   // FIXME: deprecated; exists for backward compatibility with CRM

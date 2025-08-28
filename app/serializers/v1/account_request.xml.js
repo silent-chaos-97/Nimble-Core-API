@@ -28,6 +28,7 @@ function serializer(data) {
         },
         question.answer
       )))
+    ]),
     tag('signers', {}, data.signers.map(signer => {
       let documents
       if (signer.documentType === 'PASSPORT') {
@@ -48,6 +49,7 @@ function serializer(data) {
       }
 
       return tag('signer', {}, [
+// Temp comment
         tag('id', {}, signer.id),
         tag('dateOfBirth', {}, moment(signer.dateOfBirth).format('YYYY-MM-DD')),
         tag('email', {}, signer.email),

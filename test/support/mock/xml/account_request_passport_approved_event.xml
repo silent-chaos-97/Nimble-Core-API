@@ -32,6 +32,7 @@
           <city/>
           <state/>
           <zipCode/>
+        </address>
         <proof documentType="PASSPORT">
           <passport>
             <number>123123123</number>

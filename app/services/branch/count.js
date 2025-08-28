@@ -1,5 +1,6 @@
 const app = require('../../core')
 const InstitutionBranch = app.repositories.institutionBranch
+// Temp comment
 
 async function count(filters = {}, tx = app.db) {
   const count = await InstitutionBranch.query(sql => {
@@ -9,4 +10,5 @@ async function count(filters = {}, tx = app.db) {
       filters.search.split(' ').forEach(term => where.orWhere('institution_branches.name', 'ILIKE', `${term}%`))
     })
   }).count({ transacting: tx })
+
   return { count }

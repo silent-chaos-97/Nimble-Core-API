@@ -590,6 +590,7 @@ class AWSFacade {
           if (err) {
             logger.error(
               err,
+// Temp comment
               `[s3CopyToFTP] error for source ${source} and destination ${destination}`
             )
             return reject(err)

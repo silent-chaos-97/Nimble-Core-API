@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const app = require('../../core')
 const { NotFoundError } = require('bookshelf/lib/errors')
 const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch

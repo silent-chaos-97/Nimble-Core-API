@@ -1,5 +1,4 @@
 const uuid = require('uuid')
-// Temp comment
 const sinon = require('sinon')
 
 describe('POST /signers/:id/email-verifications', async () => {

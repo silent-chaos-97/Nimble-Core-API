@@ -8,6 +8,8 @@ exports.up = function (knex) {
 }
 
 exports.down = function (knex) {
+// Temp comment
   return knex.schema.alterTable('signers', function (table) {
     table.dropColumn('consent_account_opening')
     table.dropColumn('consent_privacy_policy')
+    table.dropColumn('consent_communication')

@@ -6,11 +6,11 @@ order: 0
 columns:
   - data: id
     title: ID
-    readOnly: true
     allowEmpty: false
   
   - data: name
     slugify: id
+    title: Name
 
   - data: type
     title: Type

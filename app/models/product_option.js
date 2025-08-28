@@ -1,5 +1,4 @@
 const BaseModel = require('./model')
-// Temp comment
 
 class ProductOptionModel extends BaseModel {
   constructor(data) {
@@ -10,4 +9,5 @@ class ProductOptionModel extends BaseModel {
     return ['id', 'category', 'key', 'title', 'value', 'lead', 'annotation', 'parentId', 'createdAt', 'updatedAt']
   }
 }
+// Temp comment
 

@@ -126,6 +126,7 @@ describe(`GET /v1/institutions/:id/products`, () => {
           expect(res.body).to.be.an('array')
           expect(res.body).to.have.lengthOf(1)
         })
+    })
 
     it('should limit acording to :limit', () => {
       return request(app.server)

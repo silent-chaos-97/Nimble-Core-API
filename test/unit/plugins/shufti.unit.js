@@ -129,7 +129,6 @@ describe('Service', () => {
         const response = { ...mocks.verificationAccepted }
 
         const scope = nock(config.get('shufti').baseUrl)
-          .post('/api/')
           .reply(200, response)
 
         const result = await shufti.getUserVerification(userData, mocks.verificationAccepted.reference)

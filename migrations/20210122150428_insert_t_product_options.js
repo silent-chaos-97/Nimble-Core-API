@@ -56,7 +56,6 @@ const checkingProductOptions = [
 ]
 
 const mobileAndOnlineBanking = {
-  key: 'mobile_and_online_banking',
   category: 'product_feature',
   title: 'Mobile & Online Banking',
   value: true,

@@ -10,9 +10,9 @@ module.exports = {
 
     // coerce phone
     let phone = ctx.recipient.mobile || ''
-    if (phone.length < 7) return Promise.reject('InvalidPhoneNumber')
     if (phone.length === 7) phone = `+1${phone}`
     if (!phone.startsWith('+')) phone = `+${phone}`
+
     const rendered = TextCleaner(Mustache.render(ctx.message, ctx)).stripHtml().decodeHtmlEntities().condense()
 
     const message = {

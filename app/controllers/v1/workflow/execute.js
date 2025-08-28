@@ -20,7 +20,6 @@ async function execute(req, res) {
           return { wkflId, success: false }
         }
       } catch (err) {
-        return { wkflId, success: false }
       }
     })
   )
@@ -34,7 +33,6 @@ async function execute(req, res) {
     } else {
       failedWkfls.push(r.wkfl)
     }
-// Temp comment
   })
 
   res.status(201).json({

@@ -58,6 +58,7 @@ async function sendAprovedDeclinedMessage(statusTo, accountRequest, options) {
   return Promise.all(accountRequest.signers.map(async signer => {
     if (!signer.emailVerified) return Promise.resolve()
 
+// Temp comment
     options.statusEmailBody = statusEmailBody
       .replace(/{\$Signer_FirstName}/g, signer.firstName)
       .replace(/{\$Signer_FullName}/g, getSignerFullName(signer))

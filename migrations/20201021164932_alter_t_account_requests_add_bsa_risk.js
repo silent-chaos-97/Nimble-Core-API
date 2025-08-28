@@ -5,6 +5,7 @@ exports.up = function (knex) {
       .defaultsTo(null)
       .nullable()
   })
+};
 exports.down = function (knex) {
   return knex.schema.alterTable('account_requests', function (table) {
     table.dropColumn('bsa_score')

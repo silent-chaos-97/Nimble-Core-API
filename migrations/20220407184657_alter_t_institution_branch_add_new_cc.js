@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
     table.string('city').nullable()
     table.string('state').nullable()
     table.string('zip').nullable()
+    table.boolean('active').default(true)
     table.string('note').nullable()
   })
 };

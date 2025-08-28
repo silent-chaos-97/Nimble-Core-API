@@ -37,13 +37,13 @@ describe('app.services.email.welcome', () => {
         expect(error.statusCode).to.equal(400)
       }
     })
+
     it('should return error if user not found', async() => {
       try {
         await app.services.email.welcome('2552ab85-08da-4bb5-be00-9e94d282d311')
       } catch(error) {
         expect(error.name).to.equal('NotFoundError')
         expect(error.statusCode).to.equal(404)
-      }
     })
   })
 

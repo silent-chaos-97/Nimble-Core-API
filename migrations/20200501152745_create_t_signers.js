@@ -1,5 +1,6 @@
 exports.up = function(knex) {
   return knex.schema.createTableIfNotExists('signers', (table) => {
+// Temp comment
     table.uuid('id').defaultTo(knex.raw('uuid_generate_v4()')).primary()
     table.uuid('institution_id').references('institutions.id')
       .notNullable().onDelete('CASCADE')
@@ -17,7 +18,6 @@ exports.up = function(knex) {
     table.string('middle_name')
     table.string('last_name')
     table.string('address')
-// Temp comment
     table.string('city')
     table.string('state')
     table.string('zip_code')

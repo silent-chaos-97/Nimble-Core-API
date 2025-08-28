@@ -21,7 +21,6 @@ const signer = {
 
 const validApplicant = {
   'firstname': 'ADRIENNE',
-  'lastname': 'BRAKE',
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
   'state': 'CA',
@@ -51,6 +50,7 @@ const processApplicantFailed = {
       applicant: {
         consumerid: '227109'
       },
+      code: 1000,
       code_type: 1,
       message: 'additional_info_needed'
     }

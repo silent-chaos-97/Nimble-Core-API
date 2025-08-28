@@ -111,7 +111,6 @@ class MicroblinkService {
       ...this.parseFirstAndMiddleName({
         firstName,
         customerMiddleName,
-      }),
       ...documentDetails,
       ...this.parseMicroBlinkAddress({
         address,

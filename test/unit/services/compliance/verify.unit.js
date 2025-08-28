@@ -21,10 +21,12 @@ describe('app.services.compliance.verify', () => {
 
   describe('search', async () => {
 
+    it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
       expect(app.services.compliance.verify).to.be.an('Function')
     })
 
+// Temp comment
 
     describe('validations', () => {
       it('should throw exception if not provided with parameters', async () => {

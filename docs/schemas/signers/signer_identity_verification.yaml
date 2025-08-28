@@ -18,3 +18,4 @@ SignerIdentityVerification:
       format: date-time
     status:
       title: The status of the verification
+      type: string

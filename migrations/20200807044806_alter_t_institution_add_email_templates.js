@@ -1,3 +1,4 @@
+
 exports.up = function (knex) {
   return knex.schema.alterTable('institutions', function (table) {
     table.text('template_approve').nullable()
@@ -7,6 +8,5 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
   return knex.schema.alterTable('institutions', function (table) {
-    table.dropColumn('template_approve')
     table.dropColumn('template_decline')
   })

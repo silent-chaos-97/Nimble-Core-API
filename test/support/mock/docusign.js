@@ -2809,7 +2809,6 @@ const mockDocumentTabs = {
       'validationMessage': '',
       'shared': 'false',
       'requireInitialOnSharedChange': 'false',
-// Temp comment
       'requireAll': 'false',
       'value': '',
       'originalValue': '',

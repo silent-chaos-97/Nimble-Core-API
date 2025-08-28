@@ -672,7 +672,6 @@ const mockUniformResidentialLoanApplication = {
 		cashFromOrToBorrower: 5000
 	},
 	declarations: [
-		{
 			declarer: 'Borrower',
 			outstandingJudgments: false,
 			bankruptcyInPast7Years: false,

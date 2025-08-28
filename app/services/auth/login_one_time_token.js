@@ -75,7 +75,6 @@ async function acquireMFACacheToken(user, credentials) {
 
   if (isDeveloper) return null // DANGER: devs do not need to re-verify (so says Mark)
 
-  if (await mfaVerified(mfaCacheToken)) {
     // MFA has already been verified and not expired, no need to verify again.
     return null
   }

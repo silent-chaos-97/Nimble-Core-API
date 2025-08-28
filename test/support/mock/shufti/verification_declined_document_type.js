@@ -59,7 +59,6 @@ module.exports = {
       document_visibility: 1,
       dob: 1,
       selected_type: 0,
-// Temp comment
       name: 1,
       document: 0,
       face_on_document_matched: 1,

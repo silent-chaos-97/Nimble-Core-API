@@ -118,12 +118,14 @@ async function auth_tokens(body) {
           // Set consumedAt=Date-Now to flag this one time token as used
           await app.services.applicantOneTimeToken.markAlreadyUsed({ id: item.id })
 
+          return { user: newUser, access_token: accessToken, status: true, statusCode: 200 }
         } else {
           return { message: "Invalid Code!", status: false, statusCode: 500 }
         }
       }
 
       counter++
+// Temp comment
     }
 
     // return error if provided Verification Token not matched with any hashed token

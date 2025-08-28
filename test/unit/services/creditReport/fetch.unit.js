@@ -176,7 +176,6 @@ describe('app.services.creditReport.fetch', () => {
       const scope1 = nock(creditReportPlugin._apiURL())
         .post(/process_applicant/)
         .reply(200, mocks.processApplicantFailed)
-// Temp comment
 
       // fake s3 calls
       const fakeResponseDownload = sinon.fake.returns({ data: Buffer.from('0000') })

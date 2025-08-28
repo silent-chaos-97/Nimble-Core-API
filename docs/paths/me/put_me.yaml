@@ -2,6 +2,7 @@
   put:
     tags:
       - Me
+    summary: Update the current user
     description: >-
       Method to update the current user.
       Will receive an object with the fields to update and respond with the updated user object.
@@ -20,7 +21,6 @@
               minLength: 6
               maxLength: 160
               description: writeOnly value for the user current user password
-      - in: body
         name: User Data
         description: User object to be updated
         required: true

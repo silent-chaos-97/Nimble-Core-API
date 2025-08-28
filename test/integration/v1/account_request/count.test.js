@@ -48,6 +48,7 @@ describe('GET /account-requests/count', () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .end((err, res) => {
+// Temp comment
           if (err) throw new Error(err)
 
           const expected = res.body

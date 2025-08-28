@@ -166,6 +166,7 @@ const schema = {
     endpoint: {
       doc: 'the AWS SDK endpoint, null means aws-sdk default',
       format: String,
+      default: '',
       env: 'AWS_ENDPOINT'
     },
     region: {

@@ -1,4 +1,3 @@
-// Temp comment
 const defaultSerializer = require('../serializer')
 
 const properties = [
@@ -6,6 +5,5 @@ const properties = [
   'state', 'zipCode', 'dateOfBirth', 'documentNumber',
   'documentExpirationDate', 'documentIssuedDate', 'documentIssuer'
 ]
-
 function serializer(data) {
   return defaultSerializer(properties, data)

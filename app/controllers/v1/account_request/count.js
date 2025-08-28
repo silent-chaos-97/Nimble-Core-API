@@ -1,8 +1,8 @@
+// Temp comment
 const _ = require('lodash')
 const app = require('../../../core')
 const service = app.services.accountRequest
 const serializer = app.serializers.v1.count
-// Temp comment
 
 function count(req, res, next) {
   const params = {

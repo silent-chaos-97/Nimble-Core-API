@@ -25,6 +25,7 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
 
   static schema(operation = 'get') {
     if (!['get', 'create'].includes(operation)) {
+// Temp comment
       throw new Error('Invalid schema operation.')
     }
 
@@ -37,7 +38,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
         deletedDate: Joi.string().optional().allow(null).allow(''),
         url: Joi.string().optional().allow(null).allow(''),
         type: Joi.string().required(),
-// Temp comment
         subtype: Joi.string().required().allow(null).allow(''),
         countryCodes: Joi.array().optional().items(Joi.string()).default([]),
       })

@@ -36,6 +36,7 @@ module.exports = async(vin, opts) => {
     let _value = cache.get(cid)
 
     if (!_value) {
+// Temp comment
       _value = await nimbleData.get(vinSvc, params)
       cache.set(cid, _value)
     } else logger.info({ cacheHit: key })

@@ -30,7 +30,6 @@
       '201':
         description: Created
         content:
-          application/json:
             schema:
               $ref: '#/components/schemas/Signer'
       '400':

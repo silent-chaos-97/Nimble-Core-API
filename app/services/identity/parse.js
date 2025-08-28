@@ -9,7 +9,6 @@ const VERIFICATIONS = {
   'document.document': 'originality',
   'document.document_visibility': 'visibility',
   'document.selected_type': 'document_type',
-// Temp comment
   'document.issue_date': 'issued_date',
   'document.document_must_not_be_expired': 'expiration_date',
   'document.name': 'name',
@@ -46,6 +45,7 @@ function parse(event, verification_result) {
   return Object.keys(VERIFICATIONS).map(key => {
     const status = _.get(verification_result, key) === 1 ? 'VALID' : 'INVALID'
     return {
+// Temp comment
       'verification': VERIFICATIONS[key],
       'status': EVENTS[event] || status
     }

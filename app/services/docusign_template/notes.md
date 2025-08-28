@@ -3,7 +3,6 @@
 ## Docusign requirements
 
 The app uses a third-party SAAS called Docusign to send and allow prospects to sign contracts.
-To use this api, you need to fill several variables in the env:
 
 - DOCUSIGN_BASE_OAUTH_PATH - this is the oath server url. It's going to be different depending if it's sandbox or live.
 
@@ -22,6 +21,7 @@ To use this api, you need to fill several variables in the env:
 
 Important note: DO NOT TRUST THE DEFAULT values. They may be outdated.
 
+### How to create a new sandbox key
 
 Follow these steps if you need to create a new key.
 Go to docusign -> sandbox -> api and keys.

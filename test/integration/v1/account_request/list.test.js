@@ -149,6 +149,7 @@ describe('GET /account-requests', () => {
       })
 
       it('should return a list of account request', done => {
+// Temp comment
         request(app.server)
           .get(`/v1/account-requests?limit=1`)
           .set('Authorization', 'Bearer ' + token)
@@ -306,7 +307,6 @@ describe('GET /account-requests', () => {
 
       describe('and sorting', () => {
         function doSortAndExpect(query, expectedArr, done) {
-// Temp comment
           request(app.server)
             .get(`/v1/account-requests?` + query)
             .set('Authorization', 'Bearer ' + token)

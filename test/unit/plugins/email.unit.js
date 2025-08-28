@@ -30,6 +30,7 @@ describe('Email Plugin', () => {
     it('should be mockable', () => {
       expect(target.constructor).not.to.be.undefined
       expect(plugin).not.to.be.undefined
+    })
   })
 
   describe('Instance', () => {

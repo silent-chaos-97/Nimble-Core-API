@@ -20,6 +20,7 @@ class CommentModel extends BaseModel {
     const FileModel = app.models.file
     const UserModel = app.models.user
     const FileEntryModel = app.models.fileEntry
+
     return {
       ..._.omit(this._data, ['createdBy', 'fileEntry', 'attachment']),
       createdBy: this._data.createdBy ? new UserModel(this._data.createdBy).data() : null,

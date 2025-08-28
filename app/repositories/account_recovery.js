@@ -9,3 +9,4 @@ const AccountRecovery = app.db.Model.extend({
     return this.belongsTo('Account', 'account_id')
   }
 })
+

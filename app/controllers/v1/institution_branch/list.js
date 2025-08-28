@@ -9,7 +9,6 @@ function list(req, res, next) {
     ..._.pick(req.query, 'limit', 'offset'),
     institutionId: req.params.id,
   }
-
   return service
     .list(params)
     .then(data => data.map(serializer))

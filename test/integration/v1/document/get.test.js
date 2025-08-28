@@ -65,10 +65,10 @@ describe('GET /documents/:id', () => {
 
   describe('when a valid request', () => {
     beforeEach(async () => {
+// Temp comment
       await seed.document.create()
       token = await helpers.getScopedAuthToken()
     })
-// Temp comment
 
     it('should return 401', async () => {
       const invalidtoken = await helpers.getScopedAuthToken({}, 'abcde')

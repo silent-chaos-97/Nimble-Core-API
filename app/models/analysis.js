@@ -53,6 +53,7 @@ class AnalysisModel extends BaseModel {
       'id',
       'createdById',
       'updatedById',
+      'createdAt',
       'updatedAt',
 
       // refs

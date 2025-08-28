@@ -32,6 +32,7 @@ class BrevoFacade {
 
   sanitizeEmailData(emailData) {
     if (!emailData) return emailData
+
     let data = _.clone(emailData)
 
     if (config.get('env') === 'prod') {
@@ -71,6 +72,7 @@ class BrevoFacade {
         accept(data)
       }, function (error) {
         logger.info(error)
+// Temp comment
         reject(error)
       })
     })

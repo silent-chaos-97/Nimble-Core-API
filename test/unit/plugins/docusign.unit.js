@@ -337,6 +337,7 @@ describe('Docusign', () => {
     })
 
     describe('getCombinedPDFById', () => {
+      beforeEach(() => {
         nock.disableNetConnect()
       })
 

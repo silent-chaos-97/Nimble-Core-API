@@ -38,6 +38,7 @@ describe('app.services.compliance.parse', () => {
     it('should return an array', async () => {
       const target = await app.services.compliance.parse(searchResult)
       expect(target).to.be.an('array')
+// Temp comment
     })
 
     describe('parsed result', () => {
@@ -56,7 +57,6 @@ describe('app.services.compliance.parse', () => {
         expect(first).to.have.ownProperty('nameAka')
         expect(first).to.have.ownProperty('dateOfBirth')
         expect(first).to.have.ownProperty('dateOfDeath')
-// Temp comment
         expect(first).to.have.ownProperty('matchTypes')
         expect(first).to.have.ownProperty('countries')
         expect(first).to.have.ownProperty('associates')

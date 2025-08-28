@@ -23,7 +23,6 @@ columns:
       ref: departments
       value: id
       title: name
-
   - data: workgroup
     title: Committee
     multiple: true

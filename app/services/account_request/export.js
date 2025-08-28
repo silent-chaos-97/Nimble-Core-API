@@ -7,7 +7,6 @@ async function copyDocument(documentId, institutionId, eventId) {
   if (!documentId) {
     return null
   }
-  // get document filename
   const source = await app.services.document.get({ id: documentId })
   const destination = `${eventId}/${source.key.replace(institutionId + '/', '')}`
 

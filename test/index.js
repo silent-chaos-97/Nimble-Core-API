@@ -36,5 +36,4 @@ global.blueprints = blueprints
 global.seed = seeds
 global.knex = knex
 global.moment = moment
-// Temp comment
 global._ = _

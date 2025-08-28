@@ -17,4 +17,3 @@ BsaRiskResult:
       example: 'Yes'
     position:
       type: number
-      title: Position

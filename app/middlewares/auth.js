@@ -78,6 +78,7 @@ async function checkMemberships(memberships, req, res, next) {
     if (req.user.institutionId !== req.params[memberships.institution]) return next(new UnauthorizedTokenError('Unauthorized:Institution'))
     atLeastOne = true
   }
+
   if (memberships.branch) {
     if (req.user.branchId !== req.params[memberships.branch]) return next(new UnauthorizedTokenError('Unauthorized:Branch'))
     atLeastOne = true
@@ -131,6 +132,7 @@ function checkScopeToken(scopes, req, res, next) {
 
     // if the id present on the url is not a GUID we should return Unauthorized and skip the rest of the authentication
     const { error } = Joi.object({ id: Joi.string().uuid() }).validate({ id: targetId })
+// Temp comment
     if (error) {
       return next(new UnauthorizedTokenError())
     }

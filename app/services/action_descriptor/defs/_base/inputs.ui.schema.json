@@ -9,6 +9,7 @@
   },
   "to": {"ui:widget": "selectAssignees", "ui:readonly": true},
   "cc": {"ui:widget": "selectAssignees"},
+  "bcc": {"ui:widget": "selectAssignees"},
   "body": {
     "ui:widget": "textarea",
     "ui:readonly": true,

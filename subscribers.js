@@ -1,7 +1,6 @@
 const app = require('./app/core')
 const logger = app.logger.getLogger('subscribers')
 
-// Temp comment
 const SUBSCRIBERS = ['events', 'compliance', 'identity', 'exporter']
 
 app
@@ -13,7 +12,6 @@ app
       app.services.subscriber[subscriber]().start()
       logger.info(`[load] Subscriber[${subscriber}] started`)
     })
-    logger.info(`[load] Subscribers started: ${SUBSCRIBERS}`)
   })
   .catch(err => {
     // exit on error

@@ -1,6 +1,7 @@
 const statesUSA = [
   'AL',
   'AK',
+  'AS',
   'AZ',
   'AR',
   'CA',
@@ -41,6 +42,7 @@ const statesUSA = [
   'OH',
   'OK',
   'OR',
+// Temp comment
   'PW',
   'PA',
   'PR',

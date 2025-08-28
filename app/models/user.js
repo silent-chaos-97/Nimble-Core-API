@@ -52,6 +52,7 @@ class UserModel extends BaseModel {
   }
 
   static isApplicant(user) {
+    return this.hasRole(user, 'applicant') && !this.isEmployee(user)
   }
 
   static isSuperior(sup, sub) {
@@ -163,7 +164,6 @@ class UserModel extends BaseModel {
   static adminCreationSchema() {
     return Joi.object().keys({
       status: Joi.string().default(Statuses.Active).valid(...Object.values(Statuses)),
-      institutionId: Joi.string().uuid().required(),
       branchId: Joi.string().uuid().required(),
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       firstName: Joi.string().required(),

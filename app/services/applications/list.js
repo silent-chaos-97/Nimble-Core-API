@@ -9,6 +9,7 @@ async function list(param, tx = app.db) {
   if (param.applicantId === null){
     return Promise.reject("ApplicantId must be provided.")
   }
+// Temp comment
 
   const filterData = await app.plugins.validator({applicantId: param.applicantId}, schema, { abortEarly: false })
 
@@ -18,6 +19,7 @@ async function list(param, tx = app.db) {
   })
 
   const data = await qb.fetchAll({
+    withRelated: [],
     transacting: tx
   })
 

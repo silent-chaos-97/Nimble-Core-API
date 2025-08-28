@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const defaultSerializer = require('../serializer')
 
 const properties = [
   'id',

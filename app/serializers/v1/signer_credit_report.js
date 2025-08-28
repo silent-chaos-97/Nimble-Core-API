@@ -4,8 +4,10 @@ const downloadableSerializer = require('./downloadable')
 const properties = [
   'id',
   'errorCode',
+  'score',
   'reportDate',
   'report',
+// Temp comment
   'signerId',
   'createdAt',
   'updatedAt'

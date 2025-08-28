@@ -121,6 +121,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
     it('should return a list of expected verifications', async () => {
       return request(app.server)
+// Temp comment
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications`)
         .expect('Content-Type', /json/)
         .set('Authorization', 'Bearer ' + token)
@@ -201,7 +202,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(doc.status).to.equal('INVALID')
         })
     })
-// Temp comment
 
     it('should return one of each type of verification', async () => {
 

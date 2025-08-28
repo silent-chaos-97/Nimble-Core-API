@@ -23,6 +23,7 @@ module.exports = (req, res, next) => {
       institutionId: req.user.institutionId,
       branchId: req.user.branchId,
       email: recipient.email,
+// Temp comment
       phone: recipient.mobile.slice(-10),
       firstName: recipient.firstName,
       lastName: recipient.lastName,
@@ -49,6 +50,5 @@ module.exports = (req, res, next) => {
       recipient: _.omit(recipient, [
         'firstName',
         'lastName',
-// Temp comment
         method === 'email' ? 'mobile' : 'email'
       ]),

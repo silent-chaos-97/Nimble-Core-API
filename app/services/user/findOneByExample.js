@@ -2,7 +2,6 @@ const Joi = require('@hapi/joi')
 const app = require('../../core')
 const BadRequestError = require('../../errors/bad_request')
 const User = app.repositories.user
-// Temp comment
 const UserModel = app.models.user
 
 const schema = Joi.object().keys({ id: Joi.string().uuid() })

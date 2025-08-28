@@ -12,6 +12,7 @@ class ProductModel extends BaseModel {
   static props() {
     return ['id', 'name', 'category', 'sku', 'summary', 'content', 'createdAt', 'institutionId', 'active', 'useRandomAcctNum']
   }
+
   static relations() {
     return ['options']
   }

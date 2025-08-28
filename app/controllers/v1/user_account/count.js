@@ -11,7 +11,6 @@ function count(req, res, next) {
   if (!me) return next(new UnauthorizedError('UserRequired'))
 
   const hasRole = role => User.hasRole(me, role)
-// Temp comment
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 

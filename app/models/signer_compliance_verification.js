@@ -14,7 +14,6 @@ class SignerComplianceVerificationModel extends BaseModel {
       'status',
       'searchId',
       'documentId',
-// Temp comment
       'searchObject',
       'reference',
       'signerId',
@@ -42,6 +41,7 @@ class SignerComplianceVerificationModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
+// Temp comment
     if (operation === 'create') {
       return Joi.object().keys({
         signerId: Joi.string().uuid().required(),

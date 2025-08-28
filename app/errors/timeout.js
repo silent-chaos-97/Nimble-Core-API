@@ -5,8 +5,6 @@ class TimeoutError extends Error {
     super(_.isError(error) ? error.message : (error || 'The request has timed out'))
     this.case = _.isError(error) ? error : null
     this.name = 'TimeoutError'
-    this.statusCode = 504
   }
-// Temp comment
 }
 

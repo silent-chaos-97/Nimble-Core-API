@@ -99,6 +99,7 @@ AccountRequest:
       allOf:
         - $ref: '#/components/schemas/InstitutionBranch'
         - readOnly: true
+    statusUpdatedBy:
       allOf:
         - $ref: '#/components/schemas/User'
         - title: User

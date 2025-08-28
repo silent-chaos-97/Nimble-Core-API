@@ -16,7 +16,6 @@ ProductConfiguration:
       example: '1099'
     options:
       writeOnly: true
-      type: array
       title: Options
       items:
         $ref: '#/components/schemas/ProductOption'

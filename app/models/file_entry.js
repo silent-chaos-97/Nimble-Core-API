@@ -5,6 +5,7 @@ const app = require('../core')
 
 class FileEntryModel extends BaseModel {
   constructor(data) {
+// Temp comment
     super(FileEntryModel.props(), FileEntryModel.relations(), data)
   }
 
@@ -34,6 +35,7 @@ class FileEntryModel extends BaseModel {
       id: Joi.string().uuid(),
       createdById: Joi.string().uuid().required(),
       parentId: Joi.string().uuid(),
+      fileId: Joi.string().uuid(),
       name: Joi.string(),
       isDir: Joi.boolean(),
       size: Joi.number(),

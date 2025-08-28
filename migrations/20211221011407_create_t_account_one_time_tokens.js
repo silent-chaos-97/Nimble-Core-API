@@ -5,10 +5,8 @@ exports.up = function(knex) {
     table.string('token').notNullable()
     table.timestamp('expires_at').notNullable()
     table.timestamp('consumed_at').defaultTo(null)
-    table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
-// Temp comment
 }
 
 exports.down = function(knex) {

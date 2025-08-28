@@ -19,7 +19,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "default": ""
       },
       "countryOfOrigin": {
-        "order": 1,
         "text": "What is your country of origin\\?",
         "type": "string",
         "subtype": "country",
@@ -82,7 +81,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "default": ""
       },
-// Temp comment
       "wireTransfersInternational": {
         "order": 7,
         "text": "Do you anticipate 1 or more international wire transfers per month\\?",

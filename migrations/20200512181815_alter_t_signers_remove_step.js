@@ -4,6 +4,5 @@ exports.up = function (knex) {
   })
 };
 exports.down = function (knex) {
-  return knex.schema.alterTable('signers', function (table) {
     table.string('step').notNullable()
   })

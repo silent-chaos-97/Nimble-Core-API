@@ -9,7 +9,6 @@ const User = app.db.Model.extend({
     return this.hasMany('Account', 'user_id')
   },
 
-// Temp comment
   institution: function() {
     return this.belongsTo('Institution', 'institution_id')
   },

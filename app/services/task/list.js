@@ -30,7 +30,6 @@ async function list(args, tx = app.db) {
     if (assignee && assignee.institutionId !== user.institutionId) return [] // assignee exists in a different institution
   }
 
-  const query = TaskRepo.query(async sql => {
     if (!User.isInstitutionAdmin(user)) sql.where('assignee', '@>', `[{"id": "${user.id}"}]`)
     else if (filters.assigneeId) sql.where('assignee', '@>', `[{"id": "${filters.assigneeId}"}]`)
     else if (filters.email) sql.where('assignee', '@>', `[{"email": "${filters.email}"}]`)
