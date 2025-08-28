@@ -127,7 +127,6 @@ const schema = Joi.object({
           // Microbilt - Payroll Verification Service
 					employerAddress: Joi.string(),
           // Not sure - Microbilt - Employment Search
-					yearsOnJob: Joi.number(),
           // Not sure - User input
 					yearsInProfession: Joi.number(),
           // Not sure - Data Axle - fill rate may be low though (meaning the percentage of people they have this info for) - Data Axle - primaryContactManagementLevel
@@ -693,3 +692,9 @@ const mockUniformResidentialLoanApplication = {
 					mannerTitleHeld: 'Jointly With Spouse'
 				}
 			]
+		},
+		{
+			declarer: 'Co-Borrower',
+			outstandingJudgments: false,
+			bankruptcyInPast7Years: false,
+			foreclosureOrEquivalentInPast7Years: false,

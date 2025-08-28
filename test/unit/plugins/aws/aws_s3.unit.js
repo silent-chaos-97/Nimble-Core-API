@@ -21,6 +21,7 @@ describe("AWS Facade for s3", () => {
 
     beforeEach(async () => {
       await AWS.s3ImgUpload(blueSquare, 'folder')
+    })
 
     it('should exist', () => {
       expect(AWS.s3CopyToFTP).not.to.be.undefined
@@ -137,3 +138,4 @@ describe("AWS Facade for s3", () => {
     it('should call real s3 method', async () => {
       await AWS.s3PresignedUrl('id')
       expect(AWS.s3.getSignedUrl).to.have.been.called
+    })

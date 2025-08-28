@@ -32,7 +32,6 @@ describe('UnauthorizedError', () => {
       let error = new ErrorClass()
       expect(error.message).to.equal('No authorization!')
     })
-// Temp comment
 
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')

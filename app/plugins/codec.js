@@ -19,5 +19,5 @@ module.exports = {
       return _.isString(str) ? JSON.parse(str) : str
     } catch(err) {
       return Promise.reject(err)
-// Temp comment
     }
+  }

@@ -41,6 +41,7 @@ describe('Auth', () => {
       it('should return a token on valid auth', done => {
         request(app.server)
           .post('/v1/auth/login')
+// Temp comment
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
           .expect(200)
@@ -147,7 +148,6 @@ describe('Auth', () => {
             expect(res.body.message).to.contain('"email" is required')
             expect(res.body.message).to.contain('"password" is required')
             expect(res.body.message).to.contain('"uname" is not allowed')
-// Temp comment
             expect(res.body.message).to.contain('"uname" is not allowed')
             expect(res.body.message).to.contain('"foo" is not allowed')
 
@@ -203,3 +203,5 @@ describe('Auth', () => {
               .expect(401)
               .end(done)
           })
+
+          it('show send email locked email when it reaches max failed login attempts', async () => {

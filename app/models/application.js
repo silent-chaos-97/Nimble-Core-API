@@ -14,6 +14,7 @@ class Application extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid(),
       applicantId: Joi.string().required(),
+      status: Joi.string().required(),
       session: Joi.string().required()
     })
   }

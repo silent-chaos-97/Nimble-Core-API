@@ -107,3 +107,4 @@ AccountRequest:
         - description: A object that contains the user information that performed status update
     statusUpdatedAt:
       type: string
+      format: date-time

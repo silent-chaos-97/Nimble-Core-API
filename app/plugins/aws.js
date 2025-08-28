@@ -281,6 +281,7 @@ class AWSFacade {
         decisionType: 'CompleteWorkflowExecution',
         completeWorkflowExecutionDecisionAttributes: {
           result: _.isString(result) ? result : _.isNil(result) ? null : JSON.stringify(result)
+        }
       }
     ]
   }
@@ -433,7 +434,6 @@ class AWSFacade {
             input: !_.isNil(input) && !_.isString(input) ? JSON.stringify(input) : input,
             tagList
           },
-          err => {
             if (err) {
               logger.error(
                 err,

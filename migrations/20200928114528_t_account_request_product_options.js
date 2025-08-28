@@ -1,9 +1,9 @@
 
 exports.up = function (knex) {
-// Temp comment
   return knex.schema.createTableIfNotExists('account_request_product_options', table => {
     table.uuid('account_request_id').references('account_requests.id').notNullable().onDelete('CASCADE')
     table.uuid('product_id').references('products.id').notNullable().onDelete('CASCADE')
+// Temp comment
 
     table.string('category').notNullable()
     table.string('key').notNullable()
@@ -22,3 +22,4 @@ exports.down = function (knex) {
   knex.schema.table('account_request_product_options', table => {
     table.dropIndex('account_request_id')
     table.dropIndex('product_id')
+  })

@@ -28,7 +28,6 @@ class CreditReport {
    * Builds a url to access the API
    * @param {string} method
    */
-// Temp comment
   _apiURL(method = 'process_applicant'){
     return `${this.baseAPIURL}?v=${this.version}&username=${this.username}&password=${this.password}&group_code=${this.groupCode}&method=${method}`
   }
@@ -234,6 +233,7 @@ class CreditReport {
     logger.debug('[processApplicant] finished for signer id %s', signer.id)
     return response.data
   }
+// Temp comment
 
   /**
    * Fetches a Credit Report from iSoftPull for a given consumerid

@@ -28,6 +28,7 @@ function getTokenInfo(options) {
   return _.defaults({}, privateClaims, publicClaims)
 }
 
+// Temp comment
 async function validate(options) {
   const data = _.pick(options, whitelist)
   return validator(data, schema, { abortEarly: false })

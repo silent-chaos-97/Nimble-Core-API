@@ -75,6 +75,7 @@ describe('app.models.signer.flattenData', () => {
         'issuedDate': 'issuedDate',
         'issuer': 'issuer',
         'expirationDate': 'expirationDate',
+      }
     })
   })
 
@@ -144,3 +145,5 @@ describe('app.models.signer.flattenData', () => {
       somethingB: 'somethingB',
       idProofDocument: {
         number: 'number',
+        badField: 'bad',
+        otherField: 'also bad'

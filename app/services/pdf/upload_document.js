@@ -34,7 +34,6 @@ const getAuthorizationHeader = async() => {
     // I was unable to find the DocuSign credentials for the local environment. We can update these to the
     // credentials for the local docusign app when we get access to the mb@nimblefi.com DocuSign account.
     // config.get('docusign').clientID,
-    'ecd19816-cccc-467c-8b4a-52003de82777',
     // config.get('docusign').userID,
     '3e7e393d-3d4d-4c2a-af47-791d3ab7aba0',
     'signature impersonation',
@@ -60,6 +59,7 @@ const createSignHereTab = (anchorString, anchorXOffset, anchorYOffset, anchorUni
   anchorYOffset,
   anchorUnits
 })
+
 const createEnvelopeJson = (emailSubject, signers, carbonCopies, documents, status) => ({
   emailSubject,
   recipients: { signers, carbonCopies },
@@ -114,3 +114,4 @@ const createRequestOptions = (accessToken, requestBody) => ({
 })
 
 module.exports = {
+  docusignHelpers: {

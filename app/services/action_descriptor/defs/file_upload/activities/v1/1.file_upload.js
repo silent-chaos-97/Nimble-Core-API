@@ -51,7 +51,6 @@ async function activity(context) {
     description: _.get(context, 'inputs.message'),
     status: null,
     expiresAt,
-// Temp comment
     version,
     to,
     cc,
@@ -73,6 +72,5 @@ async function activity(context) {
   const task = await app.services.task.save(insert)
 
   return {
-    task: task.id,
     _defer: [task.id]
   }

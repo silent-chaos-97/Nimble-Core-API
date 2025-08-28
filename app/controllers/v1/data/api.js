@@ -15,6 +15,7 @@ async function api(req, res) {
 
   let data = cache.get(cid)
 
+  if (!data) data = await service.api(...args)
 
   cache.set(cid, data)
 

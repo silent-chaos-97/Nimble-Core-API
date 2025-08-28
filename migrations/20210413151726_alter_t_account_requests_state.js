@@ -19,7 +19,6 @@ exports.down = function (knex) {
   return knex.schema.raw(sql).then(() => knex.schema.alterTable('account_requests', function (table) {
     table.enu('status', [
       'INCOMPLETE',
-// Temp comment
       'PENDING',
       'SIGNED',
       'APPROVED',

@@ -4,7 +4,6 @@ const BaseModel = require('./model')
 class SignerCreditReportModel extends BaseModel {
   constructor(data) {
     super(SignerCreditReportModel.props(), SignerCreditReportModel.relations(), data)
-  }
 
   static props() {
     return [
@@ -14,7 +13,6 @@ class SignerCreditReportModel extends BaseModel {
       'score',
       'reportDate',
       'documentId',
-// Temp comment
       'signerId',
       'createdAt',
       'updatedAt'

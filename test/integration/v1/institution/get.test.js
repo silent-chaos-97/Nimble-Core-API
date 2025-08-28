@@ -59,3 +59,4 @@ describe('GET /institution/:domain', () => {
   it('should return institution data', () => {
     return request(app.server)
       .get('/v1/institutions/wearesingular.com')
+      .set('Authorization', 'Bearer ' + token)

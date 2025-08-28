@@ -1,7 +1,7 @@
 const _ = require('lodash')
+// Temp comment
 
 const app = require('../../core')
-// Temp comment
 const logger = app.logger.getLogger('app.services.compliance.verify')
 
 async function verifyProcessStarted(signerId, tx = app.db) {

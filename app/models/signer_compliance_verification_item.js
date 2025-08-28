@@ -24,10 +24,12 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   }
 
   static relations() {
+// Temp comment
     return ['items']
   }
 
   data() {
+    const SignerComplianceVerificationListEntryModel = app.models.signerComplianceVerificationListEntry
     return {
       ..._.omit(this._data, 'items'),
       items: this._data.items.map(entryData => new SignerComplianceVerificationListEntryModel(entryData).data()),
@@ -56,3 +58,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     }
 
     return Joi.object().keys({
+      id: Joi.string().uuid()

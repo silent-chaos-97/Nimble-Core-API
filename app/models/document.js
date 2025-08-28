@@ -1,7 +1,6 @@
 //const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const BaseModel = require('./model')
-
 class DocumentModel extends BaseModel {
   constructor(data) {
     super(DocumentModel.props(), DocumentModel.relations(), data)
@@ -10,7 +9,6 @@ class DocumentModel extends BaseModel {
   static props() {
     return ['id', 'institutionId', 'content', 'format', 'createdAt', 'key']
   }
-// Temp comment
 
   static schema(operation = 'update') {
     if (!['create'].includes(operation)) {

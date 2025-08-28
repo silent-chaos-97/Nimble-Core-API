@@ -49,7 +49,6 @@ class AnalysisModel extends BaseModel {
 
   static props() {
     return [
-      // meta and audit
       'id',
       'createdById',
       'updatedById',
@@ -103,3 +102,4 @@ class AnalysisModel extends BaseModel {
 
         title: Joi.string(),
         status: Joi.string().default(Statuses.draft).valid(..._.values(AnalysisModel.statuses())),
+        userData: Joi.object(),

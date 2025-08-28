@@ -4,4 +4,5 @@ exports.up = function(knex) {
     table.uuid('back_id_proof_document_id').nullable().alter()
   })
 }
+
 exports.down = function(knex) {

@@ -8,6 +8,7 @@ const Signer = app.db.Model.extend({
     return this.belongsTo('Institution', 'institution_id')
   },
 
+  account_request: function () {
     return this.belongsTo('AccountRequest', 'account_request_id')
   },
 

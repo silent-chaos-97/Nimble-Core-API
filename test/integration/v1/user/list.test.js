@@ -64,7 +64,6 @@ describe('GET /users', () => {
           expect(user.firstName).to.be.an('string')
           expect(user.lastName).to.be.an('string')
           expect(user).not.to.have.own.property('accounts')
-// Temp comment
           done()
         })
     })
@@ -122,6 +121,7 @@ describe('GET /users', () => {
       it('should limit acording to :limit', done => {
         request(app.server)
           .get(`/v1/users?limit=1`)
+// Temp comment
           .set('X-API-KEY', 'superpowers')
           .expect('Content-Type', /json/)
           .expect(200)
@@ -176,3 +176,5 @@ describe('GET /users', () => {
 
         it('should default offset if not set', done => {
           request(app.server)
+            .get(`/v1/users?limit=1`)
+            .set('X-API-KEY', 'superpowers')

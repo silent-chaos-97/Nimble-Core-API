@@ -29,8 +29,8 @@ class SignerIdentityVerification extends BaseModel {
         verification: Joi.string().required(),
         status: Joi.string().required().valid('VALID', 'INVALID', 'PENDING'),
       })
-// Temp comment
     }
 
     throw new Error('Invalid schema operation.')
   }
+

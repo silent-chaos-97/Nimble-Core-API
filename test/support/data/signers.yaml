@@ -352,3 +352,6 @@
   document_expiration_date: 2022-02-16
   document_issued_date: 2000-02-16
   document_issuer: 'FL'
+  selfie_document_id: '47939285-7fa7-43ee-8dfa-ac7967be4bef'
+  front_id_proof_document_id: '0ca05e4f-e97f-41e5-83f9-2d4bd0b98ff3'
+  back_id_proof_document_id: '2f02077a-7636-4eb8-bad7-6635998de075'

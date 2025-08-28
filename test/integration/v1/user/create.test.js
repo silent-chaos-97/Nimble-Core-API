@@ -12,6 +12,7 @@ describe('POST /users', () => {
         .expect(401)
         .end(done)
     })
+  })
 
   describe('when validating', () => {
     it('should reject with 400 if validation fails', done => {
@@ -247,3 +248,5 @@ describe('POST /users', () => {
       user.branchId = branchId
       emailSpy = sinon.spy(app.services.email, 'welcome')
       await seed.institution.create(institutionId)
+      await seed.institutionBranch.create(branchId)
+    })

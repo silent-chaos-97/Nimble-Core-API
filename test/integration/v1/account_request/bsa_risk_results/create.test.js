@@ -15,7 +15,6 @@ describe('POST /account-requests/:id/bsa-risk-results', async () => {
 
     bsaRiskResults = [
       {
-        position: 0,
         questionId: 'are-all-account-owners',
         answer: 'Yes'
       },

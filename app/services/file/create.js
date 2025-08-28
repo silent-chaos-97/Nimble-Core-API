@@ -14,6 +14,7 @@ const logger = app.logger.getLogger('app.services.file.create')
  *   createdByRole: [user, applicant]
  *   bytes?: string (base64-bytes)
  *   buffer?: Buffer
+ *   size: number
  * }
  */
 async function create(data, tx = app.db) {

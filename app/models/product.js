@@ -25,6 +25,7 @@ class ProductModel extends BaseModel {
 
     return {
       ..._.omit(this._data, 'options'),
+      options: optionsMap,
     }
   }
 

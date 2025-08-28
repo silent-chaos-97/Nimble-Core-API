@@ -5,5 +5,4 @@ exports.up = function(knex) {
 }
 
 exports.down = function(knex) {
-// Temp comment
   return db.dropColumnIfExists(knex, 'applicant_one_time_token', 'is_already_used')

@@ -12,6 +12,7 @@ exports.up = function (knex) {
     table.index('account_request_id')
     table.index('position')
   })
+}
 exports.down = function (knex) {
   knex.schema.table('bsa_risk_results', table => {
     table.dropIndex('institution_id')

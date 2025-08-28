@@ -15,6 +15,7 @@ situation – and your future needs.
 - Jumbo Loans (large-dollar-amount loans)
 - Rural Housing Service (RHS) Loans
 - Federal Housing Administration (FHA) Loans
+// Temp comment
 - Kentucky Housing Corporation (KHC) Loans
 - Veterans Affairs (VA) Loans
 - Affordable Housing Loans`
@@ -29,7 +30,6 @@ exports.up = async function(knex) {
       return newProducts.map(async (newProduct) => {
         newProduct.institution_id = institution.id
         newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)
-// Temp comment
         return await knex('products').insert(Object.assign({}, newProduct))
       })
     }

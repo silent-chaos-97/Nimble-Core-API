@@ -26,6 +26,7 @@ const validApplicant = {
   'city': 'GREENFIELD',
   'state': 'CA',
   'postcode': '931054826',
+  'phone': '2335553333',
   'email': 'psousa+test@wearesingular.com',
   "ssn": "666707610",
   "dob": "12061945"
@@ -43,7 +44,6 @@ const processApplicantSuccess = {
     }
   }
 }
-
 const processApplicantFailed = {
   prequal: {
     response: {
@@ -89,3 +89,4 @@ const resultsSuccess = [
       "revolving_credit_limit": 41600,
       "revolving_credit_balance": 5804,
       "dtc_ratio": "13.95",
+      "revolving_credit_limit_excluding_secured": 41600,

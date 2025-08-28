@@ -5,6 +5,7 @@ order: 0
 
 columns:
   - data: id
+    readOnly: true
     title: ID
     allowEmpty: false
 
@@ -30,4 +31,4 @@ columns:
     allowEmpty: true
 
   - data: state
-    allowEmpty: true
+

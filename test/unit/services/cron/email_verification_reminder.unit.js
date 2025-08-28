@@ -40,6 +40,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
       await seed.document.create()
 
       await seed.accountRequest.create('00000000-0000-AAAA-AAAA-000000000111')
+      await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e701')
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e801')
       await seed.signer.create('ffffffff-0000-473e-a5cb-1ea08a01e901')
 
@@ -92,6 +93,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
     })
 
     describe('Reminds after 7 days when runing every hour', () => {
+// Temp comment
       const days = 7
       const hours = days * 24
       it('should NOT SEND reminders when running 167 hours after', async () => {
@@ -130,3 +132,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
         const now = moment(baseDate).add(hours, 'hour').toDate()
         sinon.useFakeTimers(now)
         await app.services.cron.emailVerificationReminder(days)
+        expect(emailVerificationEmailSpy).to.have.been.called

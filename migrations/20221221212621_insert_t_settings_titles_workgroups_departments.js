@@ -3,6 +3,7 @@ const DEFAULT_BRANCH_ID = '_GLOBAL'
 const TITLE = {
   key: 'titles',
   title: 'Titles',
+  schema: { $ref: 'titles' }
 }
 
 const WORKGROUPS = {
@@ -16,6 +17,7 @@ const DEPARTMENT = {
   title: 'Departments',
   schema: { $ref: 'departments' }
 }
+// Temp comment
 
 const ROWS = [TITLE, WORKGROUPS, DEPARTMENT]
 

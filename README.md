@@ -182,3 +182,5 @@ The API documentation is specified using [Swagger 2.0](https://github.com/OAI/Op
 
 > Swagger™ is a project used to describe and document RESTful APIs.
 
+> The Swagger specification defines a set of files required to describe such an API. These files can then be used by the Swagger-UI project to display the API and Swagger-Codegen to generate clients in various languages. Additional utilities can also take advantage of the resulting files, such as testing tools.
+

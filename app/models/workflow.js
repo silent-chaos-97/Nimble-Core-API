@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
+// Temp comment
 const app = require('../core')
 const BaseModel = require('./model')
 
@@ -82,3 +83,4 @@ class WorkflowModel extends BaseModel {
 
       get: Joi.object().keys({
         id: Joi.string().uuid().required(),
+        branchId: Joi.string().uuid().optional(),

@@ -93,3 +93,4 @@ describe('app.services.creditReport.export', () => {
         .get(/cenas/)
         .reply(400, {})
 
+      try {

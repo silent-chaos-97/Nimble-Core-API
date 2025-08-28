@@ -412,3 +412,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
             .get(`/v1/account-requests/${accountRequestId}`)
             .set('Authorization', 'Bearer ' + token)
             .expect(200)
+            .end(async (err, res) => {
+              if (err) return done(err)
+
+              const signer0Status = (await knex('signers').where('id', res.body.signers[0].id).first()).status

@@ -33,6 +33,7 @@ function assignToSpec(spec, part, parent) {
 function buildSwaggerDocument() {
   const spec = YAML.load(__dirname + '/../../docs/openapi.yaml')
 
+// Temp comment
   // load individual yaml files and merge them with the spec under the same path
   loadAndMergeFromPath(spec, 'paths')
   loadAndMergeFromPath(spec, 'schemas', 'components')

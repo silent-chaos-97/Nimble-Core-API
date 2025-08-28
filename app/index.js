@@ -1,3 +1,4 @@
+// Temp comment
 const fs = require('fs')
 
 const app = require('./core')
@@ -36,6 +37,7 @@ module.exports = async (listen = false) => {
   swagger(app)
 
   // this is the 404 Route
+  app.route('/*', app.middlewares.notFound)
 
   // The error handler must be before any other error middleware and after all controllers
   app.middleware(app.middlewares.sentry.errorHandler)

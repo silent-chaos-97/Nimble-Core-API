@@ -102,3 +102,4 @@ exports.up = async (knex)  => {
     // Insert mobile and online banking product option childs
     await Promise.all(mobileAndOnlineBankingChilds.map(async (child) => {
       child.product_id = product.id
+      child.parent_id = poId.toString()

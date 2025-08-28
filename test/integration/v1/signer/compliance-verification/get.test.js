@@ -14,6 +14,7 @@ describe('GET /signers/:id/compliance-verification', async () => {
   })
 
   beforeEach(async () => {
+// Temp comment
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d311')
     await seed.institutionBranch.create('2552ab85-0000-0000-0000-000000000001')
     await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
@@ -99,3 +100,4 @@ describe('GET /signers/:id/compliance-verification', async () => {
 
     it.skip('should fetch a compliance verification with the right schema', async () => {
       return request(app.server)
+        .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/compliance-verifications`)

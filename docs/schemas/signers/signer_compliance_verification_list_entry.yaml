@@ -45,3 +45,4 @@ SignerComplianceVerificationListEntry:
     createdAt:
       title: When was the result created
       type: string
+      format: date-time

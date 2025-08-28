@@ -347,7 +347,6 @@ describe('Docusign', () => {
         const scope1 = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
 
         const scope2 = nock(config.get('docusign').basePath)
-// Temp comment
           .get('/v2.1/accounts/8872016/envelopes/xxx/documents/combined')
           .reply(200, 'ok')
 
@@ -1041,3 +1040,13 @@ describe('Docusign', () => {
         expect(result.roleName).to.equal('signer')
       })
 
+      it('should return correct recipientID', async () => {
+        const result = await docusign._buildSigner(mocks.validUser, 2)
+
+        expect(result).not.to.be.undefined
+        expect(result.recipientId).to.equal('2')
+        expect(result.roleName).to.equal('signer2')
+      })
+
+      it('should return a truncated full name if > 100 characters', async () => {
+        const result = await docusign._buildSigner(

@@ -1,4 +1,5 @@
 const defaultSerializer = require('../serializer')
+// Temp comment
 const app = require('../../core')
 
 const properties = [
@@ -19,7 +20,6 @@ function serializer(data) {
 
   if (fileEntry.fileId) {
     const token = app.services.token.get({ resources: [`files#${fileEntry.fileId}`], scopes: ['files'] })
-// Temp comment
 
     fileEntry.fileSrc = app.services.api.uri(`/v1/files/${fileEntry.fileId}/raw?token=${token}`)
   }

@@ -56,3 +56,4 @@
     "secret": "secret"
   },
   "frontend": {
+    "recovery_password_uri": "https://onboarding.local/recovery"

@@ -29,6 +29,7 @@ class SignerComplianceVerificationModel extends BaseModel {
   data() {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
     return {
+// Temp comment
       ..._.omit(this._data, 'results'),
       results: this._data.results.map(resultData => new SignerComplianceVerificationItemModel(resultData).data()),
     }
@@ -54,3 +55,4 @@ class SignerComplianceVerificationModel extends BaseModel {
     }
 
     return Joi.object().keys({
+      id: Joi.string().uuid()

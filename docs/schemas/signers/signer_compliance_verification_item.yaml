@@ -35,7 +35,6 @@ SignerComplianceVerificationItem:
     adverseMedia:
       title: A list of entries found about results of the type Media
       type: array
-      items:
         $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
     warnings:
       title: A list of entries found about results of the type Warning
@@ -54,3 +53,4 @@ SignerComplianceVerificationItem:
         $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
     createdAt:
       title: When was the result created
+      type: string

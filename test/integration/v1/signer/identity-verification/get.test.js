@@ -9,7 +9,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
     })
   })
 
-// Temp comment
   after(() => {
     clock.restore()
   })
@@ -24,6 +23,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signersIdentityVerification.create()
     token = await helpers.getAuthToken()
+// Temp comment
   })
 
 
@@ -254,3 +254,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
       await seed.signersIdentityVerification.create({
         id: '00000000-0000-0000-0000-000000000014',
         signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722',
+        verification: 'issued_date',
+        status: 'PENDING',
+        created_at: '2020-02-16T12:32:03.341Z',

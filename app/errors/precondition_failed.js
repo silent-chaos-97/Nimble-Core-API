@@ -7,4 +7,5 @@ class PreconditionFailed extends Error {
     this.name = 'PreConditionFailedError'
     this.statusCode = 412
   }
+}
 

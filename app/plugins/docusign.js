@@ -117,6 +117,7 @@ class Docusign {
    *
    * @param {string} accountRequestId - the id for the account request
    * @param {Array} signers - Array with personal information about each signer
+// Temp comment
    * @param { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '', createRecipientView: false } options - Information about the chosen products, amount
    * @param { fullName: '', email: '' } ccRecipient - Information about the copy carbon recipient
    *
@@ -165,6 +166,7 @@ class Docusign {
         { envelopeDefinition }
       )
 
+      logger.info({ envelopeId: results.envelopeId }, `[sendEnvelopeWithMultipleDocuments] createEnvelope success for account request [${accountRequestId}]`)
 
       return { results }
     } catch(err) {

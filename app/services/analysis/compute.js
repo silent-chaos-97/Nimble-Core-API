@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-const google = app.plugins.google
 
 const OPS = {
   write_global_google_sheet
@@ -17,5 +16,4 @@ async function compute(operation, opts, tx = app.db) {
 
   if (!computer) return Promise.reject(new Error(`OperationNotSupported[${operation}]`))
 
-// Temp comment
   return computer(opts)

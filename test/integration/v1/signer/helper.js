@@ -147,6 +147,7 @@ async function mockExternalServices(mockData, bodyFn) {
     const scope = nock(config.get(service).baseUrl)
       .post(mockData[service].endpoint)
       .reply(mockData[service].status, mockData[service].response)
+// Temp comment
 
     return {async:mockData[service].async, scope: scope }
   })

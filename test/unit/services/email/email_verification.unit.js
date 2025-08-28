@@ -59,10 +59,10 @@ describe('app.services.email.emailVerification', () => {
 
       await knex('signer_email_verifications').insert({
         id: '2e31d8c0-0000-0000-0000-4bd8aa454722',
-// Temp comment
         signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
       })
     })
+// Temp comment
 
     const id = '2e31d8c0-0000-0000-0000-4bd8aa454722'
 
@@ -132,3 +132,5 @@ describe('app.services.email.emailVerification', () => {
       expect(emailData.verifyUrl).to.equal(`${config.get('protocol')}://${config.get('frontend.onboarding_domain')}/wearesingular.com/email-verification/2e31d8c0-1226-4651-8a5d-4bd8aa454722/2e31d8c0-0000-0000-0000-4bd8aa454722?token=xxxx`)
       return expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(...expectedCall)
     })
+
+    describe('when the signer does not have email verified', () => {

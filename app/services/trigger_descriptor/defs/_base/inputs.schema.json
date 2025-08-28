@@ -1,5 +1,4 @@
 {
-  "properties": {
     "memo": {
       "title": "Memo",
       "type": "string"
@@ -7,6 +6,7 @@
     "scope": {
       "title": "Account Type",
       "type": "array",
+      "items": {
         "type": "string"
       },
       "minItems": 1,

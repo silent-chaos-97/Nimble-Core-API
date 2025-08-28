@@ -141,6 +141,7 @@ const publicMetadata = {
     dependsOn: {
       combinedIncome35000: 'yes'
     }
+  },
   wireTransfersDomestic: {
     enum: [
       'yes',
@@ -168,3 +169,4 @@ const publicMetadata = {
       yes: 2
     },
     default: 'no',
+    required: true

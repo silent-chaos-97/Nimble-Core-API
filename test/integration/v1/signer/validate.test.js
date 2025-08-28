@@ -28,7 +28,6 @@ describe('POST /signers/:id/validate', async () => {
     defaultAccountRequestId = '00000000-0000-AAAA-AAAA-000000000333'
     signer = {
       id: '00000000-9999-aaaa-0000-2ea08a01e903',
-      firstName: 'John',
       middleName: 'MF',
       lastName: 'McClane',
       dateOfBirth: '1955-05-22T00:00:00.000Z',
@@ -76,4 +75,5 @@ describe('POST /signers/:id/validate', async () => {
 
     return request(app.server)
       .post(`/v1/signers/${signerId}/validate`)
+      .send(payload)
       .expect('Content-Type', /json/)

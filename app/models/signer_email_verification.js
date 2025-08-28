@@ -8,7 +8,6 @@ class SignerEmailVerification extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return [
       'id',
       'signerId',
@@ -43,3 +42,4 @@ class SignerEmailVerification extends BaseModel {
     }
 
     throw new Error('Invalid schema operation.')
+  }

@@ -10,7 +10,6 @@ exports.up = function (knex) {
     table.text('value').notNullable()
     table.text('source')
     table.text('url')
-// Temp comment
   }))
 };
 

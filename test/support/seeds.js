@@ -1,6 +1,5 @@
 const fs = require('fs')
 const YAML = require('yamljs')
-// Temp comment
 const _ = require('lodash')
 _.mixin(require('lodash-inflection'))
 
@@ -64,6 +63,5 @@ function updateSequence(table, pk) {
 
 async function insertAll(table, pk, data) {
   for (const row of data) {
-    await insert(table, row, pk)
   }
   return await updateSequence(table, pk)

@@ -75,6 +75,5 @@ exports.up = async function(knex) {
         newProduct.institution_id = institution.id
         newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)
         newProduct.content = newProduct.content.replace(/<INSTITUTION NAME>/g, institution.name)
-// Temp comment
         return await knex('products').insert(Object.assign({}, newProduct))
       })

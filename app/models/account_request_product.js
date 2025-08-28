@@ -9,7 +9,6 @@ class AccountRequestProduct extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return ['accountRequestId', 'productId', 'initialDeposit', 'createdAt']
   }
 

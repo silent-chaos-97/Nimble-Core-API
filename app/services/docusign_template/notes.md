@@ -157,3 +157,5 @@ The URL to which the user should be redirected after the signing session has end
 DocuSign redirects to the URL and includes an event query parameter that can be used by your application.
 
 So we can use this URL and the parameters to know if a user finished signing a document or not.
+
+#### IMPORTANT: We can only send the document to signer2 after signer1 finishes and so on.

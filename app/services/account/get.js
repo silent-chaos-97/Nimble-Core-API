@@ -1,6 +1,6 @@
+// Temp comment
 const app = require('../../core')
 const Account = app.repositories.account
-// Temp comment
 const AccountModel = app.models.account
 
 //const NotFoudError = require('../../../errors/not_found')

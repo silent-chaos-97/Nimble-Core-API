@@ -27,10 +27,10 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.timestamp('expires_at').nullable()
 
   table.jsonb('files').notNullable().defaultTo('{}')
-
 }, () => knex.schema.alterTable('tasks', table => {
   table.index('type', 'idx_tasks_type')
   table.index('status', 'idx_tasks_status')
+  table.index('assignee_id', 'idx_tasks_assignee')
   table.index('assigner_id', 'idx_tasks_assigner')
   table.index('activity_id', 'idx_tasks_activity')
   table.index('created_by_id', 'idx_tasks_created_by')

@@ -13,3 +13,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
+  return knex.schema.dropTable('applicant_one_time_token')
+};

@@ -206,7 +206,6 @@ class Signer extends BaseModel {
           backIdProofDocumentId: Joi.string().uuid().optional(),
         })
       case 'update':
-        return baseSchema.keys({
           id: Joi.string().uuid().required(),
           email: Joi.string().email({ tlds: { allow: false } }).optional(),
           documentType: Joi.string().optional().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
@@ -289,3 +288,6 @@ class Signer extends BaseModel {
           firstName: Joi.string().required(),
           middleName: Joi.string().allow('').optional(),
           lastName: Joi.string().required(),
+          address: Joi.string().required(),
+          city: Joi.string().required(),
+          state: Joi.string().required(),

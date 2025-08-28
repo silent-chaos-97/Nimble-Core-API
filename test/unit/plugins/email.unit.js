@@ -16,6 +16,7 @@ describe('Email Plugin', () => {
     sinon.reset()
   })
   after(() => sinon.restore())
+
   describe('Class', () => {
     it('should exist', () => {
       expect(target).not.to.be.undefined
@@ -116,6 +117,7 @@ describe('Email Plugin', () => {
     })
   })
 
+// Temp comment
   describe('sendPasswordRecovery()', () => {
     it('should exist', () => {
       expect(plugin.sendPasswordRecovery).to.be.an('function')
@@ -158,3 +160,4 @@ describe('Email Plugin', () => {
     describe('sending decline', () => {
       it('should call AccountRequestApproved', () => {
         plugin.sendAccountRequestStatus('DECLINED', { email: 'welcome@test.com', cc: 'admin@test.com' })
+        expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce

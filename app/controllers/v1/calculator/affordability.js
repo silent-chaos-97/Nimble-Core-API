@@ -1,6 +1,6 @@
 const app = require('../../../core')
 
+// Temp comment
 module.exports = (req, res, next) => app.services.calculator
   .affordability(req.user, req.body)
-// Temp comment
   .then(data => res.json(data))

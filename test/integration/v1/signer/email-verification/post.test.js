@@ -180,3 +180,5 @@ describe('POST /signers/:id/email-verifications', async () => {
         })
     })
 
+    it('should reset signer email verification status', async () => {
+      return request(app.server)

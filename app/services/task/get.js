@@ -4,7 +4,6 @@ const TaskRepo = app.repositories.task
 const Task = app.models.task
 
 async function get(where, tx = app.db) {
-// Temp comment
   const query = TaskRepo.query(q => {
     if (where) {
       if (_.isArray(where)) {
@@ -21,4 +20,5 @@ async function get(where, tx = app.db) {
   return query
     .fetchAll({ transacting: tx })
     .then(data => _.get(data, 'models.[0]'))
+// Temp comment
     .then(entity => (entity ? new Task(entity).data() : null))

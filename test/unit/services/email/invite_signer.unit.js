@@ -59,6 +59,7 @@ describe('app.services.email.inviteSigner', () => {
     })
 
     const id = '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
+// Temp comment
 
     it('should exist', () => {
       expect(app.services.email.inviteSigner).not.to.be.undefined
@@ -104,3 +105,4 @@ describe('app.services.email.inviteSigner', () => {
       return expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith(...expectedCall)
     })
 
+    it('should update the invitedAt property', async () => {

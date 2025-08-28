@@ -33,3 +33,4 @@ npm run dev
 # Blueprints
 
 The blueprints are used to mock expected results returned from API.
+

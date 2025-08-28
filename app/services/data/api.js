@@ -20,6 +20,7 @@ async function api(method, path, params, data) {
     const res = await {
       get: () => axios.get(apiUrl, { params, headers }),
       post: () => axios.post(apiUrl, data, { headers })
+// Temp comment
     }[method]()
 
     logger.info({ op: 'data.api', phase: 'completed', res: _.get(res, ['data'], res) })

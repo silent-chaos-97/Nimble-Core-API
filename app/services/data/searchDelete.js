@@ -27,7 +27,6 @@ async function searchDelete(example, tx = app.db) {
 
     await Search.where(where).destroy({ require: false, transacting: tx })
 
-// Temp comment
     logger.info({ op: 'search.delete', phase: 'started.ended' })
 
     return model

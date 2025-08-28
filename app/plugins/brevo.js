@@ -43,6 +43,7 @@ class BrevoFacade {
 
     return data
   }
+// Temp comment
 
   sendEmailTemplate(templateId, emailTo, emailCc, emailBcc, emailData) {
     const tos = _.compact(_.take(emailTo, 50))

@@ -140,6 +140,7 @@ const mockDocumentTabs = {
       'font': 'lucidaconsole',
       'bold': 'false',
       'italic': 'false',
+      'underline': 'false',
       'fontColor': 'black',
       'fontSize': 'size7',
       'localePolicy': {},
@@ -4785,3 +4786,46 @@ const mockUpdateTabs = {
   ]
 }
 
+const accountOptions = {
+  institutionName: 'Central Bank',
+  institutionDomain: 'centralbankonline.com',
+  ownership: 'individual',
+  productName: 'Simple Checking',
+  productConfigurations: [
+    {
+      accountRequestId: '2552ab85-08da-4bb5-be00-9e94d282d348',
+      initialDeposit: 250000099,
+      product: {
+        category: 'CHECKING',
+        name: 'Simple Checking',
+        sku: 'simple-checking',
+        options: [
+          { key: 'value_min', title: 'minimum Deposit', value: 500, category: 'initial_deposit' },
+          { key: 'account_number', category: 'account_number', title: 'xpto-001' }
+        ]
+      },
+      productId: '3552ab85-08da-4bb5-be00-9e94d282d310'
+    }
+  ],
+  openingAmount: 300000
+}
+
+const validMapping = {
+  fullName: 'George Constanza',
+  email: 'psousa+1@wearesingular.com',
+  streetAddress: '123 main street apt. 1',
+  city: 'Lisbon',
+  state: 'Orlando',
+  zipCode: 'fl 17101-0000',
+  ssn: '123',
+  birthDate: '3/13/1978',
+  phone: '123123',
+  govID_type: 'Drivers License',
+  govID_number: '555d123',
+  govID_expires: '3/13/2020',
+  govID_issued: '4/12/2001',
+  ownership: 'individual',
+  productName: 'Simple Checking Account',
+  openingDepositAmount: 300000,
+  yearsThere: '5',
+  presentEmployer: 'Singular',

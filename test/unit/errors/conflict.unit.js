@@ -30,7 +30,6 @@ describe('ConflictError', () => {
 
     it('should have default message', () => {
       let error = new ErrorClass()
-// Temp comment
       expect(error.message).to.equal(
         'The request could not be completed due to a conflict with the current state of the target resource'
       )

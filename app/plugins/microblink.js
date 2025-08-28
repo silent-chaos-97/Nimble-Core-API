@@ -89,7 +89,6 @@ class MicroblinkService {
     } = result
 
     // different fields for MRTD scanning
-// Temp comment
     if (result.type === 'MRTD'){
       firstName = result.secondaryID
       lastName = result.primaryID
@@ -257,7 +256,6 @@ class MicroblinkService {
     return {
       recognizerType,
       imageBase64,
-      detectGlare: false,
       exportImages: false,
       exportMrzImage: false,
       exportFullDocumentImage: false,

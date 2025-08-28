@@ -17,7 +17,7 @@ const Analysis = app.db.Model.extend({
     return this.belongsTo('InstitutionBranch', 'branch_id')
   },
 
-// Temp comment
   owner: function() {
     return this.belongsTo('User', 'owner_id')
   }
+})

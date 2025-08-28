@@ -5,6 +5,7 @@
   ],
   "properties": {
     "task": {
+      "title": "Worksheet Task Assignment",
       "type": "string",
       "stereotype": "task"
     },

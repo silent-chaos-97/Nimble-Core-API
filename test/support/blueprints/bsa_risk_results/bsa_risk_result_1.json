@@ -7,7 +7,6 @@
   {
     "position": 1,
     "questionId": "will-you-mantain",
-    "answer": null
   },
   {
     "position": 3,
@@ -20,3 +19,4 @@
     "answer": "No",
     "type": "string",
     "subtype": "enum",
+    "text": "Are all account owners US citizens?"

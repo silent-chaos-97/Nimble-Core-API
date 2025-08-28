@@ -343,7 +343,6 @@ describe('MicroblinkService', () => {
       const response = {
         data: {
           recognizer: 'USDL',
-          result: {
             uncertain: false,
             firstName: 'SAMPLE',
             lastName: 'SPECIMEN',
@@ -478,3 +477,7 @@ describe('MicroblinkService', () => {
   describe('when sendDocumentsForOCR scans a card', () => {
 
     beforeEach(() => {
+      nock.disableNetConnect()
+      nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+    })
+

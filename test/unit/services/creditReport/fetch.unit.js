@@ -183,3 +183,4 @@ describe('app.services.creditReport.fetch', () => {
       sinon.replace(creditReportPlugin, '_downloadReport', fakeResponseDownload)
       sinon.replace(app.plugins.aws, 's3Upload', fakeAwsS3uploadFn)
 
+      await app.services.creditReport.fetch(signerId)

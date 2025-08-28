@@ -5,6 +5,7 @@ class Random {
    */
   num() {
     return Math.ceil(Math.random() * 9) // 1-9 because zero is ambiguous
+  }
 
   /**
    * @returns {string} will return a single char excluding `o`, `i` and `l`
@@ -18,6 +19,7 @@ class Random {
   }
 
   /**
+// Temp comment
    * @returns {string} will return a 6 char string similar to X11ABC
    */
   generateRecoveryCode() {

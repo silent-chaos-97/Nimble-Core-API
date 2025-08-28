@@ -74,7 +74,6 @@ Signer:
     zipCode:
       type: string
       title: Zip code
-      description: Signer zip code
       maxLength: 100
       example: 17101-0000
     phoneNumber:
@@ -159,6 +158,7 @@ Signer:
       title: Political exposure verification Date
       description: Political exposure verification Date
     checkAdverseMedia:
+      readOnly: true
       type: boolean
       nullable: true
       title: Adverse Media verification
@@ -194,3 +194,4 @@ Signer:
       format: date
       title: Contract status change date
       description: the date when contractDocumentSignerStatus last changed
+    idProofDocument:

@@ -100,6 +100,7 @@ describe('PUT private /account-requests/:id', () => {
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
+// Temp comment
           .send(putRequest)
           .expect(200)
           .end(done)
@@ -345,6 +346,7 @@ describe('PUT private /account-requests/:id', () => {
         request(app.server)
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)
           .send({ ...putRequest, status: 'APPROVED', statusEmailBody: "something \n something else \n third thing" })
           .expect(200)
           .end((err) => {
@@ -398,3 +400,7 @@ describe('PUT private /account-requests/:id', () => {
               expect(emailSpy.callCount).to.equal(0)
               done()
             })
+        })
+      })
+
+      describe('when aproving or declining an Account Request', () => {

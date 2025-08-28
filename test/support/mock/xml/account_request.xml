@@ -6,13 +6,13 @@
     <document name="thirdFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.thirdFileName.pdf"/>
   </documents>
   <bsa>
-    <score>2</score>
     <questions/>
   </bsa>
   <signers>
     <signer>
       <id>2e31d8c0-1226-4651-8a5d-4bd8aa454722</id>
       <dateOfBirth>1966-03-16</dateOfBirth>
+      <email>example@nimblefi.com</email>
       <firstName>George</firstName>
       <middleName/>
       <lastName>Constanza</lastName>

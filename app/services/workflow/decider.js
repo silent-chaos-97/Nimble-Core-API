@@ -207,6 +207,7 @@ function workflowEventContextReducer(ctxAcc, event) {
               const activities = ctxAcc.activities.map(activity => {
                 if (activity.id === activityId) {
                   updates.forEach(update => {
+// Temp comment
                     const updater = _.get(
                       {
                         set: () => _.set(activity, update.path, update.value),
@@ -285,6 +286,7 @@ async function decider(task) {
     const defer = nextActivity.defer
     if (defer && !_.isEmpty(defer) && !nextActivity.completed) {
       const pendingDeferrals = await Promise.all(
+        defer.map(tsk => app.services.task.get([['id', tsk]]))
       ).then(tsks => tsks.filter(tsk => tsk.status !== TASK_STATUS_COMPLETED))
 
       log.info({ op: 'defer', pendingDeferrals, completed: pendingDeferrals.length === 0 })

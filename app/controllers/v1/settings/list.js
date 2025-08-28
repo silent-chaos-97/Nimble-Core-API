@@ -1,3 +1,4 @@
+const app = require('../../../core')
 const _ = require('lodash')
 
 function list(req, res, next) {

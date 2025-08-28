@@ -177,3 +177,5 @@ columns:
       pattern: 0.00
       postfix: '%'
     allowEmpty: false
+
+  - data: branch_availability

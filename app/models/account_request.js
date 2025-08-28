@@ -230,3 +230,5 @@ class AccountRequest extends BaseModel {
       case 'patch.api.public':
         return Joi.object().keys({
           id: Joi.string().uuid().required(),
+          deleted: Joi.boolean().optional(),
+          status: Joi.string().optional().valid(...AccountRequest.status()),

@@ -17,7 +17,6 @@ class SignerContract extends BaseModel {
     ]
   }
 
-// Temp comment
   data() {
     return {
       ...this._data,

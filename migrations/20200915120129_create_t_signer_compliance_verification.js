@@ -12,7 +12,6 @@ exports.up = function (knex, Promise) {
       .onDelete('CASCADE')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
-// Temp comment
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }

@@ -32,5 +32,6 @@ Document:
       title: Document format identifier
       enum: ['image', 'pdf']
       description: The document format identifier
+      example: image
     createdAt:
       type: string

@@ -129,3 +129,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "text": "Are you planning on using Mobile or ATM Deposits\\?",
         "type": "string",
         "subtype": "enum",
+        "enum": ["yes", "no"],

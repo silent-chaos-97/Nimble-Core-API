@@ -97,6 +97,7 @@ describe('Credit Report Plugin', () => {
       const result = await creditReport._convertDOB(null)
       expect(result).to.deep.equal('')
     })
+    it('should return if date is invalid arg', async () => {
       const result = await creditReport._convertDOB('1982')
       expect(result).to.deep.equal('')
     })
@@ -249,3 +250,5 @@ describe('Credit Report Plugin', () => {
       } catch (error) {
         expect(error.message).to.equal("Missing reference")
         expect(error).to.be.an.instanceof(Error)
+      }
+    })

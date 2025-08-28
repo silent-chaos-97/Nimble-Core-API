@@ -1,4 +1,5 @@
 exports.up = function(knex) {
+  const sql = 'ALTER TABLE signers DROP CONSTRAINT signers_document_issued_state_check;'
 
   return knex.schema.raw(sql).then(() => knex.schema.alterTable('signers', function (table) {
     table.enu('document_issuer',
@@ -9,5 +10,4 @@ exports.up = function(knex) {
       'USA','UZB','VAT','VCT','VEN','VGB','VIR','VNM','VUT','WLF','WSM','YEM','ZAF','ZMB','ZWE'
     ], { useNative: false, enumName: 'signers_document_issuer' }).alter()
   }).toSQL())
-}
 

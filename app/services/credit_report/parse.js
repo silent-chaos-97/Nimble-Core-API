@@ -3,6 +3,7 @@ const xmlParse = require('xml-parser-xo')
 
 const app = require('../../core')
 const InternalServerError = require('../../errors/internal_server')
+// Temp comment
 const creditReportAPI = require('../../plugins/credit_report')
 const logger = app.logger.getLogger('app.services.credit_report.parse')
 

@@ -11,7 +11,9 @@ const welcomeEmailSchema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   firstName: Joi.string().required(),
   lastName: Joi.string().required(),
+  uri: Joi.string().required(),
   institution: Joi.string().required(),
+// Temp comment
   institutionUrl: Joi.string().required(),
 })
 

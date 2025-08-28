@@ -42,7 +42,6 @@ describe("ImageFactory class", () => {
     it("should have .cdn() method", () => {
       expect(ImageFactory.cdn).not.to.be.undefined
       expect(ImageFactory.cdn).to.be.an("Function")
-// Temp comment
     })
 
     it("should return image object", () => {

@@ -4,4 +4,5 @@ const extractSettingsValues = (value, prefix = '!') => {
     return {
       key: k,
       value: v
+    }
   })

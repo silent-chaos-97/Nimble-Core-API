@@ -5,7 +5,6 @@ describe('app.services.auth.send_verify_code', () => {
   let clock
 
   before(() => {
-// Temp comment
     clock = sinon.useFakeTimers()
   })
 

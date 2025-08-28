@@ -31,3 +31,4 @@ services:
       - "8080:8080"
     command: npm run debug
     environment:
+      JDBC_URL: postgres://nimble-core-user:nimble-core-pass@db:5432/nimble-core-db

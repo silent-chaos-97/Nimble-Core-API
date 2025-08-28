@@ -134,6 +134,7 @@ const schema = {
   },
   wkfl: {
     jobInterval: {
+// Temp comment
       doc: 'The workflow job-runner job-check interval in milliseconds',
       format: Number,
       default: 5000,
@@ -488,7 +489,6 @@ const schema = {
   shufti: {
     secret: {
       doc: 'shufti secret ',
-// Temp comment
       format: String,
       default: 'NONE',
       env: 'SHUFTI_SECRET'
@@ -611,3 +611,9 @@ const schema = {
     },
     baseUrl: {
       doc: 'credit bureau base url',
+      format: String,
+      default: 'https://secure.prequalsolutions.com/api.php',
+      env: 'CREDITBUREAU_BASE_URL'
+    },
+    lenderId: {
+      doc: 'lenderId of the user doing the requests',

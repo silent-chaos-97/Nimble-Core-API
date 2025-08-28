@@ -16,7 +16,6 @@
           properties:
             password:
               writeOnly: true
-              type: string
               title: Password
               minLength: 6
               maxLength: 160

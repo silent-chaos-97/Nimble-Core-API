@@ -54,7 +54,6 @@
         <street/>
         <city/>
         <state/>
-        <zipCode/>
       </address>
       <proof documentType="PASSPORT">
         <passport>
@@ -71,3 +70,4 @@
   </signers>
   <productConfigurations>
     <productConfiguration product_sku="simple-checking">
+      <productOption category="product_config" key="initial_deposit" value="250000099"/>

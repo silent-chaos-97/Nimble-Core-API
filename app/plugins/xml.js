@@ -24,6 +24,7 @@ function sanitize(str) {
   try {
     // will try to format the given string
     formaterFacade("<xml>" + str + "</xml>")
+  } catch (e) {
     return "" // failing to "format" should consider the tag empty to prevent broken xml
   }
 

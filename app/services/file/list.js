@@ -6,12 +6,10 @@ const FileModel = app.models.file
 async function list(user, tx = app.db) {
   const uid = _.isString(user) ? user : user.id || user._id
 
-  if (!uid) throw new Error('AssertionError: user required')
 
   const query = File.query(q => {
     q.where('created_by_id', uid)
   })
-// Temp comment
 
   const records = await query.fetchAll({ transacting: tx })
 

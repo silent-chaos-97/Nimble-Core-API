@@ -2,12 +2,12 @@ const _ = require('lodash')
 const app = require('../../core')
 const Search = app.repositories.search
 const SearchModel = app.models.search
-// Temp comment
 const BadRequestError = require('../../errors/bad_request')
 
 async function searchList(example, tx = app.db) {
   if (!example || _.isEmpty(example)) throw new BadRequestError('`example` required')
 
+// Temp comment
   const query = Search.query(sql => _.forEach(example, (val, key) => {
     sql.where(_.snakeCase(key), val)
   }))

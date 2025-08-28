@@ -81,3 +81,4 @@ class SearchModel extends BaseModel {
         filters: Joi.array().items(Joi.object()).optional()
       })
     }[op]
+  }

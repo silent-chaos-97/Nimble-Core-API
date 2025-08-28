@@ -10,7 +10,6 @@ const verificationEmailSchema = Joi.object().keys({
   signerEmail: Joi.string().email({ tlds: { allow: false } }).required(),
   verifyUrl: Joi.string().required(),
   institution: Joi.string().required(),
-  institutionUrl: Joi.string().required(),
   statusEmailSubject: Joi.string().required()
 })
 
@@ -26,6 +25,7 @@ async function validate(params) {
 }
 
 function verificationUrl(signerId, emailVerificationId, domain) {
+  const token = app.services.token.get({
     scopes: ['signers.email_verifications'],
     resources: [`signers.email_verifications#${signerId}`],
     expiration: 999999999 // endless

@@ -1,5 +1,4 @@
 const db = require('./util/db')
-
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
@@ -20,3 +19,4 @@ exports.down = knex => knex.schema.alterTable('tasks', table => {
   table.dropColumn('to_id')
   table.dropColumn('cc_id')
   table.dropColumn('bcc_id')
+  table.dropColumn('body')

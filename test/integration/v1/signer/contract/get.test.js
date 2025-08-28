@@ -146,6 +146,7 @@ describe('GET /signers/:id/contract', async () => {
             'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC',
             sinon.match.object
               .and(sinon.match.has("accountRequestId"))
+// Temp comment
               .and(sinon.match.has("id")),
             'testbank.wearesingular.com'
           )
@@ -156,6 +157,7 @@ describe('GET /signers/:id/contract', async () => {
           // expect correct IDs
           expect(expectedSignerId).to.equal('00000000-9999-aaaa-0000-2ea08a01e901')
           expect(expectedAccountRequestId).to.equal('00000000-0000-aaaa-aaaa-000000000333')
+          return true
         })
     })
 
@@ -168,3 +170,4 @@ describe('GET /signers/:id/contract', async () => {
         .expect(res => {
           expect(res.body).to.have.ownProperty('url')
           expect(res.body).to.have.ownProperty('expiresAt')
+        })

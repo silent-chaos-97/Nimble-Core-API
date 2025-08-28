@@ -91,7 +91,6 @@ class Shufti {
   }
 
   /** build json payload for face check */
-  buildFaceVerificationPayload(base64Image) {
     return {
       face: {
         proof: base64Image,
@@ -124,6 +123,7 @@ class Shufti {
           middle_name: middleName,
           last_name: lastName
         },
+        full_address: fullAddress,
         address_fuzzy_match: '1',
         allow_offline: '1',
         supported_types: [documentType]

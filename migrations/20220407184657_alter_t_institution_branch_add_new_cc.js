@@ -21,3 +21,4 @@ exports.down = function(knex, Promise) {
     table.dropColumn('state')
     table.dropColumn('zip')
     table.dropColumn('active')
+    table.dropColumn('note')

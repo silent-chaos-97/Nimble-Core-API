@@ -19,7 +19,6 @@ async function create(req, res) {
       ip: requestIp.getClientIp(req),
       ips: req.ips
     }
-  }
 
   const signer = await service.create(data)
   const token = app.services.token.get({

@@ -20,3 +20,4 @@ UserAuth:
       description: The last name of the user
     institutionId:
       type: string
+      format: uuidv4

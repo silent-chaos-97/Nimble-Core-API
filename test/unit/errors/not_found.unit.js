@@ -22,10 +22,10 @@ describe('NotFoundError', () => {
       let error = new ErrorClass()
       expect(error.name).to.equal('NotFoundError')
     })
+
     it('should have 404 as a statusCode', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(404)
-    })
 
     it('should have default message', () => {
       let error = new ErrorClass()

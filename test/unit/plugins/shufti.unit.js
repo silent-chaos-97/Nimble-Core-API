@@ -16,6 +16,7 @@ describe('Service', () => {
   afterEach(() => { nock.cleanAll() })
 
   describe('buildRequestPayload', () => {
+// Temp comment
     it('should return a valid payload', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',
@@ -144,3 +145,5 @@ describe('Service', () => {
     describe('given a invalid data', () => {
       it('should throw a HttpException when a error occurs', async () => {
         const response = { ...mocks.requestInvalid }
+        const scope = nock(config.get('shufti').baseUrl).post('/api/').reply(400, response)
+

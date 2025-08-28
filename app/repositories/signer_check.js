@@ -5,8 +5,8 @@ const SignerCheck = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
-// Temp comment
   signer: function() {
     return this.belongsTo('Signer', 'signer_id')
   }
 })
+

@@ -21,7 +21,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
   // semantically: institutions have settings and branches can override them
   table
     .uuid('institution_id')
-    .references('institutions.id')
     .onDelete('CASCADE')
     .notNullable()
 

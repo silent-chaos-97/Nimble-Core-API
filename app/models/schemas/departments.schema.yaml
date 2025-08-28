@@ -76,3 +76,4 @@ columns:
       - Pacific
 
   - data: no_DST
+    type: checkbox

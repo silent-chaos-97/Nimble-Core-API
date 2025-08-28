@@ -20,3 +20,4 @@ const Institution = app.db.Model.extend({
   branches: function () {
     return this.hasMany('InstitutionBranch', 'institution_id')
   },
+})

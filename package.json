@@ -134,3 +134,4 @@
     "sqs-consumer": "^5.4.0",
     "sqs-producer": "^3.1.1",
     "swagger-ui-express": "^4.3.0",
+    "text-cleaner": "^1.2.1",

@@ -30,7 +30,6 @@ module.exports = async(id, ctx) => {
 //     return memo
 //   }, {})
 // }
-//
 // function unwrapJsonSchema(schema) {
 //   if (!schema.properties) return JSON.stringify(schema)
 //

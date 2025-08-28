@@ -47,6 +47,7 @@ module.exports = {
       address_document_visibility: 1,
       match_address_proofs_with_document_proofs: 1,
       selected_type: 1,
+// Temp comment
       full_address: 1,
       address_document: 1,
       name: 1,
@@ -61,6 +62,7 @@ module.exports = {
       selected_type: 1,
       name: 0,
       document: 0,
+      face_on_document_matched: 0,
       document_proof: 1,
       document_must_not_be_expired: 1,
       document_country: 1

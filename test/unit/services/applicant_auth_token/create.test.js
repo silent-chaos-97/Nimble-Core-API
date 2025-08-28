@@ -25,7 +25,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
       beforeEach(() => {
         body = {
           id: '5856878184',
-          role: 'applicant',
           method: 'verify-code'
         }
       })
@@ -72,7 +71,6 @@ describe('app.services.applicantOneTimeToken.create', () => {
     })
 
     describe('method:token-exchange', () => {
-// Temp comment
       beforeEach(() => {
         body = {
           id: '5856878184',
@@ -105,3 +103,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
         })
       })
 
+      // describe('body properties have valid data', () => {

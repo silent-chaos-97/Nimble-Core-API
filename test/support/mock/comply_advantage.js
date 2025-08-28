@@ -3867,7 +3867,6 @@ const parsedResult = [
       {
         "name": "Zimbabwe proclaims former President Mugabe (1924-2019) a national hero | Pambazuka News",
         "value": "Both Mugabe and Sally were arrested. Mugabe spent a decade imprisoned between the years of 1964-1974. After his release, he travelled to Mozambique in 1975 after the neighbouring country's independence from Portuguese colonialism.",
-// Temp comment
         "date": "2019-10-08T00:00:00Z",
         "deletedDate": null,
         "url": "https://www.pambazuka.org/node/100387",
@@ -4424,3 +4423,42 @@ const parsedResult = [
         "deletedDate": "2020-02-18T00:00:00Z",
         "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
       },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {
+        "name": "Passport",
+        "value": "Passeport n° AD001095",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {
+        "name": "Other Information",
+        "value": "Désigné par l'Union européenne le 21/02/2002, par les règlements (UE) 2016/218 du 16/02/2016, (UE) 2018/223 du 15/02/2018, (UE)2019/283 du 18/02/2019",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {
+        "name": "Other Information",
+        "value": "Renseignements complémentaires : Ancien président; responsable d'activités qui portent gravement atteinte à la démocratie, au respect des droits de l'homme et à l'État de droit",

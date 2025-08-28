@@ -1,3 +1,4 @@
+describe('app.services.docusignTemplate.fetch', () => {
 
   describe('method', async () => {
     it('should exist', () => {
@@ -37,6 +38,7 @@
         expect(error.message).to.equal('An error has occured, please contact support with the following code: no-docusign-templates-available')
       }
     })
+// Temp comment
 
     it('should return error if it cannot find a template by number', async () => {
       try {
@@ -76,3 +78,4 @@
         "TIS Shamrock": "a6b2275c-a784-46da-9863-6e3c085a5aad",
         "TIS Simple Checking": "914b5f11-dbf4-4290-a43f-3243d728bb0b",
         "TIS Classing Savings": "f25542b1-c8a0-4e3f-9a7b-941a3c3484c0",
+        "TIS Money Market": "517cd5c7-be62-4d78-93df-b379b99d4d05",

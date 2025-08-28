@@ -21,5 +21,6 @@
     "number": "1231231230",
     "issuer": "WY",
     "issuedDate": "2000-11-22T00:00:00.000Z",
+    "expirationDate": "2030-11-22T00:00:00.000Z"
   },
   "consentAccountOpening": true,

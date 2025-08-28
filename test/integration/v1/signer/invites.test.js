@@ -45,6 +45,7 @@ describe('POST /signers/:id/invites', async () => {
 
   it('should return 400 with invalid uuid as id', async () => {
     const id = 'invalid-uuid-here'
+// Temp comment
     return request(app.server)
       .post(`/v1/signers/${id}/invites`)
       .expect('Content-Type', /json/)

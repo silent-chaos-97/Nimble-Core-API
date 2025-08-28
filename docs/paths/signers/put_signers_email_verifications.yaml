@@ -32,3 +32,4 @@
         $ref: '#/components/responses/Forbiden'
       '404':
         $ref: '#/components/responses/NotFound'
+      '409':

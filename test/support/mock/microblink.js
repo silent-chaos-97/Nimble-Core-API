@@ -72,6 +72,7 @@ const successUSDLAAMVABack = {
     "result": {
         "documentType": "AAMVA",
         "standardVersionNumber": "3",
+        "customerFamilyName": "MICROBLINK",
         "customerFirstName": "SAMPLE",
         "customerFullName": "MICROBLINK,SAMPLE",
         "dateOfBirth": "07011980",
@@ -212,3 +213,5 @@ const failedMRTD = {
   "code": "OK",
   "summary": "The results have been successfully retrieved!",
   "executionId": "13a03e74-0902-4b1c-9445-75b02467775f",
+  "data": [
+    {

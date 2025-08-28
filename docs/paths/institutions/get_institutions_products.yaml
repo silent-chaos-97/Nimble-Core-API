@@ -13,6 +13,7 @@
         schema:
           type: string
           format: uuidv4
+      - name: content-format
         in: query
         description: The format of the content property
         required: true

@@ -5,6 +5,7 @@ Contract:
   properties:
     uri:
       type: string
+      format: uri
       title: contract uri
       readOnly: true
       description: account request's contract uri

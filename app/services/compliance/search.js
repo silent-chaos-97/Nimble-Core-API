@@ -14,6 +14,7 @@ async function search(entity, filterTypes) {
   if (entity.dateOfBirth) {
     filters.birth_year = moment(entity.dateOfBirth).year()
   }
+
   const searchTerm = [
     entity.firstName,
     entity.middleName,
@@ -33,7 +34,6 @@ async function search(entity, filterTypes) {
   try {
     const query = app.repositories.complyAdvantage.post("/searches", payload)
 
-    const result = await query
       .then(result => _.get(result, 'data.content.data', []))
       .then(result => _.omit(result, 'hits', []))
 

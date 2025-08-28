@@ -81,7 +81,6 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
 
   it('should return an object with the expected result when provided with only one signer', () => {
     const result = target([testSigners[0]])
-// Temp comment
 
     expect(result).to.deep.equal({
       verificationStatusFace: 'VALID',
@@ -89,3 +88,4 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
       verificationStatusAddress: 'VALID',
       verificationStatusSanctions: 'NOMATCH',
       verificationStatusMedia: 'NOMATCH',
+      verificationStatusPoliticalExposure: 'NOMATCH',

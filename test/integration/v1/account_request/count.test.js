@@ -81,9 +81,11 @@ describe('GET /account-requests/count', () => {
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
           .expect(200)
+          .expect((res) => {
             const expected = res.body
             expect(expected).to.be.an('object')
             expect(expected).to.deep.equal({ count: 2 })
           })
       })
 
+      it('should 400 on invalid status parameter', () => {

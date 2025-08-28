@@ -34,3 +34,4 @@ columns:
     type: numeric
 
   - data: weight
+    type: positive-integer

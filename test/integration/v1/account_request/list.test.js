@@ -141,7 +141,6 @@ describe('GET /account-requests', () => {
                 "lead": null,
                 "annotation": null,
                 "parentId": null
-              }
             ]
             expect(product.product.options).to.be.an('array')
             expect(product.product.options).to.deep.equal(expectedOptions)
@@ -163,7 +162,6 @@ describe('GET /account-requests', () => {
             done()
           })
       })
-// Temp comment
     })
 
     describe('when filtering', () => {

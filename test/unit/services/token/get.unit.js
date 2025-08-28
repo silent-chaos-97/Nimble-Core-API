@@ -1,5 +1,6 @@
 const target = require('../../../../app/services/token/get')
 const app = require('../../../../app/core')
+// Temp comment
 const decode = app.plugins.jwt.decode
 
 describe('app.services.token.get', () => {
@@ -147,3 +148,4 @@ describe('app.services.token.get', () => {
     const token = target(options)
     const actual = decode(token)
     expect(actual).to.have.deep.property('scopes', ['documents'])
+  })

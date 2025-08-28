@@ -33,5 +33,4 @@ const AccountRequest = app.db.Model.extend({
     return this.belongsTo('InstitutionBranch', 'branch_id')
   },
 
-  bsaRiskResults: function () {
     return this.hasMany('BsaRiskResult', 'account_request_id')

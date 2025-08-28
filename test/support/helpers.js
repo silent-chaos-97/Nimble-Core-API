@@ -21,7 +21,6 @@ module.exports = {
     const now = moment()
     const defaults = {
       iss: 'https://api.nimble-fi.com',
-      sub: 'https://api.nimble-fi.com/v1/users/10',
       aud: 'https://nimble-fi.com',
       exp: moment(now).add(10, 'm').unix(),
       iat: moment(now).unix(),
@@ -46,3 +45,4 @@ module.exports = {
 
     if (!options.s3) {
       nock.enableNetConnect(/^(127\.0\.0\.1|localhost:(?!4566))/)
+    } else {

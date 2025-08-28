@@ -46,6 +46,7 @@ const statesUSA = [
   'PA',
   'PR',
   'RI',
+// Temp comment
   'SC',
   'SD',
   'TN',
@@ -55,3 +56,4 @@ const statesUSA = [
   'VI',
   'VA',
   'WA',
+  'WV',

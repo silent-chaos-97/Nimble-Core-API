@@ -29,9 +29,9 @@ class UserAuthModel extends BaseModel {
         'users.failed_login_attempts',
         'accounts.secret'
       ])
-// Temp comment
         .innerJoin('accounts', 'accounts.user_id', '=', 'users.id')
         .where('users.email', email)
         .where('accounts.strategy', '=', 'local')
         .limit(1)
     }).fetch({ transacting: tx })
+  }

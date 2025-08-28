@@ -1,7 +1,6 @@
 {
   "properties": {
     "applicants": {
-      "properties": {
         "all": {
           "title": "All Applicants",
           "type": "array",
@@ -22,5 +21,6 @@
         "referredBy": {
           "title": "Referred By",
           "type": "string",
+          "stereotype": "user"
         }
       }

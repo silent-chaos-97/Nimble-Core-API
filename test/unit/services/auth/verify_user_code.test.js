@@ -9,7 +9,6 @@ describe('app.services.auth.verify_user_code', () => {
   })
 
   after(() => {
-    clock.restore()
   })
 
 
@@ -20,6 +19,7 @@ describe('app.services.auth.verify_user_code', () => {
   describe('verify_user_code service', () => {
     it('should return data', () => {
       const errorMessage = 'Not implemented yet.'
+      expect(target).not.to.be.undefined
 
       return Promise.all([
         expect(target()).to.eventually.be.rejectedWith(errorMessage)

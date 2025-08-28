@@ -18,6 +18,7 @@ const SCHEMAS = {
     vars: Joi.object().optional()
   }),
 
+// Temp comment
   sms: Joi.object().keys({
     taskId: Joi.string(),
     method: Joi.string().required().valid('sms'),
@@ -67,3 +68,4 @@ const SENDERS = {
   email: async notification => {
     return app.plugins.email.notifyBrevo(notification)
   },
+  sms: async notification => {

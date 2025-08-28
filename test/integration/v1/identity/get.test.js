@@ -1,3 +1,4 @@
+const config = require('../../../../config')
 const microblink = require('../../../support/mock/microblink')
 
 describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicenseBackDocumentId', () => {
@@ -14,7 +15,6 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       seed.document.create(frontDocId),
       seed.document.create(backDocId)
     ])
-
     const imageContent = 'iaa'
     const match = _.matches({ recognizerType: 'USDL', imageBase64: 'aWFh' })
     nock(config.get('microblink').baseUrl)
@@ -109,3 +109,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         .get(`/v1/prospects/identities/${frontDocId}/${backDocId}`)
         .expect(400)
     })
+  })

@@ -9,3 +9,4 @@ exports.up = function (knex) {
   return knex.schema.raw(sql);
 }
 
+exports.down = function (knex) {

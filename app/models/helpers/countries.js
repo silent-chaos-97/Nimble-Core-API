@@ -229,3 +229,5 @@ const countries = [
   'TWN',
   'TZA',
   'UGA',
+  'UKR',
+  'UMI',
