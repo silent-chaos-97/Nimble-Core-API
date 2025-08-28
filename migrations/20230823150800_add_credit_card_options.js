@@ -16,7 +16,6 @@ const ROWS = [
 ]
 
 const OLD_ROWS = [
-// Temp comment
   {
     name: 'Credit Card',
     sku: 'credit-card',
@@ -49,3 +48,4 @@ exports.down = knex => Promise.all([
   knex('products').where({ sku: 'visa-rewards' }).del(),
   knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(OLD_ROWS.map(product =>
     knex('products').insert({
+      institution_id: inst.id,

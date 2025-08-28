@@ -416,3 +416,5 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               if (err) return done(err)
 
               const signer0Status = (await knex('signers').where('id', res.body.signers[0].id).first()).status
+              const signer1Status = (await knex('signers').where('id', res.body.signers[1].id).first()).status
+              const signer2Status = (await knex('signers').where('id', res.body.signers[2].id).first()).status

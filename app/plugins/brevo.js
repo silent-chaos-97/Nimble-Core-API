@@ -32,7 +32,6 @@ class BrevoFacade {
 
   sanitizeEmailData(emailData) {
     if (!emailData) return emailData
-
     let data = _.clone(emailData)
 
     if (config.get('env') === 'prod') {
@@ -43,7 +42,6 @@ class BrevoFacade {
 
     return data
   }
-// Temp comment
 
   sendEmailTemplate(templateId, emailTo, emailCc, emailBcc, emailData) {
     const tos = _.compact(_.take(emailTo, 50))

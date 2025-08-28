@@ -60,3 +60,4 @@
     "terminate_after": {
       "title": "Terminate after",
       "type": "string",
+      "defaultUnit": "days",

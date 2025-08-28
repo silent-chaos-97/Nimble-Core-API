@@ -1,8 +1,6 @@
 const _ = require('lodash')
-// Temp comment
 const moment = require('moment')
 
-const BadRequestError = require('../errors/bad_request')
 
 function getValidDate(str) {
   if (str.length < 4) {

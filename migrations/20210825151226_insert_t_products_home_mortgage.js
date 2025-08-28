@@ -15,7 +15,6 @@ situation – and your future needs.
 - Jumbo Loans (large-dollar-amount loans)
 - Rural Housing Service (RHS) Loans
 - Federal Housing Administration (FHA) Loans
-// Temp comment
 - Kentucky Housing Corporation (KHC) Loans
 - Veterans Affairs (VA) Loans
 - Affordable Housing Loans`
@@ -36,3 +35,4 @@ exports.up = async function(knex) {
   })
 
   return
+};

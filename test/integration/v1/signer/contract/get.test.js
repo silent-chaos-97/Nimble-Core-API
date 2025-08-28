@@ -146,7 +146,6 @@ describe('GET /signers/:id/contract', async () => {
             'CCCC00CC-BBBB-AAAA-AAAA-000000000CCC',
             sinon.match.object
               .and(sinon.match.has("accountRequestId"))
-// Temp comment
               .and(sinon.match.has("id")),
             'testbank.wearesingular.com'
           )
@@ -171,3 +170,4 @@ describe('GET /signers/:id/contract', async () => {
           expect(res.body).to.have.ownProperty('url')
           expect(res.body).to.have.ownProperty('expiresAt')
         })
+    })

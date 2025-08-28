@@ -56,6 +56,7 @@ describe('app.services.compliance.parse', () => {
         expect(first).to.have.ownProperty('nameAka')
         expect(first).to.have.ownProperty('dateOfBirth')
         expect(first).to.have.ownProperty('dateOfDeath')
+// Temp comment
         expect(first).to.have.ownProperty('matchTypes')
         expect(first).to.have.ownProperty('countries')
         expect(first).to.have.ownProperty('associates')
@@ -87,6 +88,7 @@ describe('app.services.compliance.parse', () => {
         expect(first.nameAka).to.have.lengthOf(51)
         expect(first.adverseMedia).to.have.lengthOf(30)
         expect(first.politicalExposure).to.have.lengthOf(32)
+        expect(first.warnings).to.have.lengthOf(0)
         expect(first.sanctions).to.have.lengthOf(51)
 
 
@@ -102,3 +104,4 @@ describe('app.services.compliance.parse', () => {
 
       it('object should have an expected result data', async () => {
         const target = await app.services.compliance.parse(searchResult)
+

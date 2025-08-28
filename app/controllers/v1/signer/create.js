@@ -13,12 +13,12 @@ async function create(req, res) {
     ...model.flattenData(payload),
     remoteMetadata: {
       userAgent: req.get('user-agent'),
-      cookie: req.get('cookie'),
       hostname: req.hostname,
       host: req.get('x-forwarded-host') || req.get('host'),
       ip: requestIp.getClientIp(req),
       ips: req.ips
     }
+  }
 
   const signer = await service.create(data)
   const token = app.services.token.get({

@@ -105,5 +105,4 @@ describe('GET /institution/:id/branches', () => {
 
     it('should sort by name ASC', () => {
       return request(app.server)
-        .get(`/v1/institutions/${id}/branches?limit=3`)
         .expect(200)

@@ -60,3 +60,4 @@ Institution:
       writeOnly: true
       example: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg==
     backgroundImage:
+      type: string

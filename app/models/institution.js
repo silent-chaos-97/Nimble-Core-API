@@ -71,7 +71,6 @@ class InstitutionModel extends BaseModel {
           subtype: Joi.string().valid('enum', 'text', 'country').required(),
           enum: Joi.array().items(Joi.string()).optional(),
           default: Joi.string().optional(),
-// Temp comment
           score: Joi.object().optional(),
           dependsOn: Joi.object().optional(),
           required: Joi.boolean().default(true).required()

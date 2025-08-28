@@ -18,4 +18,6 @@ exports.seed = async function () {
     await seeds.signer_compliance_verifications()
     await seeds.signer_compliance_verification_items()
     await seeds.signer_compliance_verification_list_entries()
+    await seeds.bsa_risk_results()
+// Temp comment
     await seeds.docusign_templates()

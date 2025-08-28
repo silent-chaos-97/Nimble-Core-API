@@ -134,7 +134,6 @@ const schema = {
   },
   wkfl: {
     jobInterval: {
-// Temp comment
       doc: 'The workflow job-runner job-check interval in milliseconds',
       format: Number,
       default: 5000,
@@ -167,7 +166,6 @@ const schema = {
     endpoint: {
       doc: 'the AWS SDK endpoint, null means aws-sdk default',
       format: String,
-      default: '',
       env: 'AWS_ENDPOINT'
     },
     region: {
@@ -617,3 +615,6 @@ const schema = {
     },
     lenderId: {
       doc: 'lenderId of the user doing the requests',
+      format: String,
+      default: '1426',
+      env: 'CREDITBUREAU_LENDERID'

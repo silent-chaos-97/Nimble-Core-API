@@ -63,7 +63,6 @@ The <INSTITUTION NAME> CardManager allows you anytime access to easily manage yo
 
 Credit Card Options
 We give you options for credit cards that line up perfectly with the way you live. <INSTITUTION NAME> Visa can provide you with cash advances from your credit line at all banks and ATMs that recognize these cards worldwide.`
-  }
 ]
 exports.up = async function(knex) {
   // Get all institutions
@@ -77,3 +76,4 @@ exports.up = async function(knex) {
         newProduct.content = newProduct.content.replace(/<INSTITUTION NAME>/g, institution.name)
         return await knex('products').insert(Object.assign({}, newProduct))
       })
+    }

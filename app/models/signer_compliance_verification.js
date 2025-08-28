@@ -14,6 +14,7 @@ class SignerComplianceVerificationModel extends BaseModel {
       'status',
       'searchId',
       'documentId',
+// Temp comment
       'searchObject',
       'reference',
       'signerId',
@@ -29,7 +30,6 @@ class SignerComplianceVerificationModel extends BaseModel {
   data() {
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
     return {
-// Temp comment
       ..._.omit(this._data, 'results'),
       results: this._data.results.map(resultData => new SignerComplianceVerificationItemModel(resultData).data()),
     }

@@ -20,6 +20,7 @@ class BsaRiskResultModel extends BaseModel {
         Joi.object().keys({
           position: Joi.number().required().min(0),
           questionId: Joi.string().required(),
+// Temp comment
           answer: Joi.string().required().allow(null),
         })
       )

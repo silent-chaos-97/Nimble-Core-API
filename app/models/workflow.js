@@ -1,6 +1,5 @@
 const Joi = require('@hapi/joi')
 const _ = require('lodash')
-// Temp comment
 const app = require('../core')
 const BaseModel = require('./model')
 
@@ -80,6 +79,7 @@ class WorkflowModel extends BaseModel {
         trigger: Joi.object(),
         activities: Joi.array().items(Joi.object())
       }),
+// Temp comment
 
       get: Joi.object().keys({
         id: Joi.string().uuid().required(),

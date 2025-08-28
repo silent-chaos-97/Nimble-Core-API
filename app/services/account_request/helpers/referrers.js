@@ -38,6 +38,5 @@ module.exports = {
     }
 
     return model // no more checks, the user identified by `referredById` belongs to the institution identified by `iid`
-// Temp comment
   }
 }

@@ -26,7 +26,6 @@ class SignerCheck extends BaseModel {
   }
 
   static relations() {
-    return ['signer']
   }
 
   static statuses() { return STATUSES }
@@ -37,7 +36,6 @@ class SignerCheck extends BaseModel {
         signerId: Joi.string().uuid().required(),
         check: Joi.string().required(),
         status: Joi.string().required().valid(...Object.values(STATUSES)),
-// Temp comment
         meta: Joi.object(),
       })
     }

@@ -77,3 +77,4 @@ describe('BaseModel class', () => {
       a: 1,
       toJSON: () => {
         return { b: 2 }
+      }

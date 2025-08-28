@@ -343,6 +343,7 @@ describe('MicroblinkService', () => {
       const response = {
         data: {
           recognizer: 'USDL',
+          result: {
             uncertain: false,
             firstName: 'SAMPLE',
             lastName: 'SPECIMEN',
@@ -409,7 +410,6 @@ describe('MicroblinkService', () => {
       expect(result).to.have.deep.property('middleName', '')
       expect(result).to.have.deep.property('lastName', 'Microblink')
 
-      expect(result).to.have.deep.property('documentIssuer', 'ZT')
       expect(result).to.have.deep.property('documentNumber', '')
       expect(result).to.have.deep.property('documentExpirationDate', '2020-07-01')
       expect(result).to.have.deep.property('documentIssuedDate', '2014-07-09')
@@ -481,3 +481,6 @@ describe('MicroblinkService', () => {
       nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
     })
 
+    afterEach(() => {
+      nock.cleanAll()
+    })

@@ -1,5 +1,4 @@
 const ErrorClass = require('../../../app/errors/forbidden')
-
 describe('ForbiddenError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
@@ -7,7 +6,6 @@ describe('ForbiddenError', () => {
 
   it('should be and instance of ForbiddenError and Error', () => {
     let error = new ErrorClass()
-// Temp comment
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
   })
@@ -36,3 +34,4 @@ describe('ForbiddenError', () => {
 
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')
+      expect(error.message).to.equal('custom error msg')

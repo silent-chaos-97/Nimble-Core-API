@@ -74,6 +74,7 @@ Signer:
     zipCode:
       type: string
       title: Zip code
+      description: Signer zip code
       maxLength: 100
       example: 17101-0000
     phoneNumber:
@@ -195,3 +196,4 @@ Signer:
       title: Contract status change date
       description: the date when contractDocumentSignerStatus last changed
     idProofDocument:
+      allOf:

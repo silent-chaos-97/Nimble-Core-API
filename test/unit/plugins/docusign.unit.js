@@ -337,7 +337,6 @@ describe('Docusign', () => {
     })
 
     describe('getCombinedPDFById', () => {
-      beforeEach(() => {
         nock.disableNetConnect()
       })
 
@@ -1050,3 +1049,55 @@ describe('Docusign', () => {
 
       it('should return a truncated full name if > 100 characters', async () => {
         const result = await docusign._buildSigner(
+          {
+            ...mocks.validUser,
+            firstName: 'cvYfTaGr4SgImWlC3ZazYD687YIUCsMHA7rgK1SWVfIJwFsTBcsHyiN',
+            lastName: 'pXWCFXPebSTGvajyRUBxYu9psSyUYSnNXYW5LqLDlwuoQgpRkpZguj7'
+          },
+          1,
+          {}
+        )
+
+        expect(result).not.to.be.undefined
+        expect(result.email).to.equal(mocks.validUser.email)
+        expect(result.name).to.equal(
+          'cvYfTaGr4SgImWlC3ZazYD687YIUCsMHA7rgK1SWVfIJwFsTBcsHyiN pXWCFXPebSTGvajyRUBxYu9psSyUYSnNXYW5LqLDl...'
+        )
+        expect(result.name.length).to.equal(100)
+        expect(result.recipientId).to.equal('1')
+        expect(result.clientUserId).to.equal(mocks.validUser.id)
+        expect(result.roleName).to.equal('signer')
+      })
+    })
+
+    describe('_setDocusignAuthorizationAndSetHeader', () => {
+      beforeEach(() => {
+        nock.disableNetConnect()
+        nock.enableNetConnect(/^(127\.0\.0\.1|localhost)/)
+      })
+
+      afterEach(() => { nock.cleanAll() })
+
+      it('should not crash', async () => {
+        const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
+
+        const result = await docusign._setDocusignAuthorizationAndSetHeader()
+        expect(result).to.be.undefined
+
+        scope.done()
+      })
+
+      it('should throw a error occurs', async () => {
+        const scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(500, mocks.mockToken)
+
+        try {
+          await docusign._setDocusignAuthorizationAndSetHeader()
+        } catch (error) {
+          expect(error).to.be.an.instanceof(Error)
+        }
+        scope.done()
+      })
+    })
+
+    describe('_buildNotifyWebhook', () => {
+      it('should return a webhook config', async () => {

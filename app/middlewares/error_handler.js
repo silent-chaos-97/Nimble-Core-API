@@ -14,6 +14,7 @@ const SUPPORTED_ERRORS = [
   'ForbiddenError'
 ]
 
+// Temp comment
 function serialize(err) {
   return {
     statusCode: err.statusCode,

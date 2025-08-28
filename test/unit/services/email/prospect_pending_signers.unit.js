@@ -89,3 +89,4 @@ describe('app.services.email.prospectPendingSigners', () => {
       beforeEach(async () => {
         await knex('signers').update('email_verified', false).where('id', id)
       })
+

@@ -67,7 +67,6 @@ describe('app.models.accountRequest.getVerificationStatus', () => {
 
   it('should return an object with the expected result when provided with signers', () => {
     const result = target(testSigners)
-
     expect(result).to.deep.equal({
       verificationStatusFace: 'VALID',
       verificationStatusDocument: 'INVALID',

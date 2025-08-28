@@ -19,7 +19,6 @@ class SignerEmailVerification extends BaseModel {
 
   static relations() {
     return ['signer']
-  }
 
   static schema(operation = 'create') {
     if (operation === 'get') {

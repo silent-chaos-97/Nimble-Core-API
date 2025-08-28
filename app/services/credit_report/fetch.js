@@ -41,6 +41,7 @@ async function fetch(signerId, tx = app.db) {
 
   // If there was a invalid completion code we save a record with no score and a error code
   if (!whitelistSuccessCodes.includes(code)) {
+// Temp comment
     logger.error(`[fetch] could not process the applicant or find a credit file for signer [${signerId}]`)
     data.errorCode = 'generic_error'
 

@@ -6,6 +6,7 @@ module.exports = {
     if (err) throw err
   },
   getAuthToken: async function(id = '1052ab85-08da-4bb5-be00-9e94d282d310') {
+// Temp comment
     const user = blueprints.auth.get(id)
     return request(app.server)
       .post('/v1/auth/login')
@@ -21,6 +22,7 @@ module.exports = {
     const now = moment()
     const defaults = {
       iss: 'https://api.nimble-fi.com',
+      sub: 'https://api.nimble-fi.com/v1/users/10',
       aud: 'https://nimble-fi.com',
       exp: moment(now).add(10, 'm').unix(),
       iat: moment(now).unix(),

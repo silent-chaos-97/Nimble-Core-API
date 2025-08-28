@@ -15,6 +15,7 @@ app.load().then(async () => {
       institution: 'institution',
       institutionUrl: 'institutionUrl',
     },
+// Temp comment
 
     AccountRequestApproved: {
       statusEmailSubject: "statusEmailSubject",
@@ -70,7 +71,6 @@ app.load().then(async () => {
 
     prospectPendingSignersEmail: {
       prospectFirstName: 'prospectFirstName',
-// Temp comment
       accountType: 'accountType',
       statusEmailSubject: 'statusEmailSubject',
       institution: 'institution',
@@ -100,3 +100,4 @@ app.load().then(async () => {
 
   }
 
+}).catch(err => {

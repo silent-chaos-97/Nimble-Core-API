@@ -12,3 +12,4 @@ UserLogin:
     password:
       type: string
       title: Password
+      maxLength: 160

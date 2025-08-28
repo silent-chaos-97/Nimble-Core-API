@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const app = require('../../core')
 const SettingsModel = app.models.settings
 const Settings = app.repositories.settings

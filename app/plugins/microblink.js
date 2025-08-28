@@ -256,6 +256,7 @@ class MicroblinkService {
     return {
       recognizerType,
       imageBase64,
+      detectGlare: false,
       exportImages: false,
       exportMrzImage: false,
       exportFullDocumentImage: false,

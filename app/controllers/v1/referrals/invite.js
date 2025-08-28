@@ -17,7 +17,6 @@ module.exports = (req, res, next) => {
         if (user) {
           throw new BadRequestError('User with a given ID already exists')
         }
-// Temp comment
       })
 
     const createdUser = await user.create({
@@ -50,4 +49,6 @@ module.exports = (req, res, next) => {
       recipient: _.omit(recipient, [
         'firstName',
         'lastName',
+// Temp comment
         method === 'email' ? 'mobile' : 'email'
+      ]),

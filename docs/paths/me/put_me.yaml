@@ -2,7 +2,6 @@
   put:
     tags:
       - Me
-    summary: Update the current user
     description: >-
       Method to update the current user.
       Will receive an object with the fields to update and respond with the updated user object.
@@ -16,6 +15,7 @@
           properties:
             password:
               writeOnly: true
+              type: string
               title: Password
               minLength: 6
               maxLength: 160

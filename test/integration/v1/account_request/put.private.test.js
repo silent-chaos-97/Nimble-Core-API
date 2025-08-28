@@ -100,7 +100,6 @@ describe('PUT private /account-requests/:id', () => {
           .put('/v1/account-requests/' + pendingAccountRequestId)
           .set('Authorization', 'Bearer ' + token)
           .expect('Content-Type', /json/)
-// Temp comment
           .send(putRequest)
           .expect(200)
           .end(done)
@@ -404,3 +403,5 @@ describe('PUT private /account-requests/:id', () => {
       })
 
       describe('when aproving or declining an Account Request', () => {
+        beforeEach(async () => {
+          await seed.accountRequest.create(aprovedAccountRequestId)

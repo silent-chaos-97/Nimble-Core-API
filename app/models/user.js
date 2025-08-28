@@ -52,7 +52,6 @@ class UserModel extends BaseModel {
   }
 
   static isApplicant(user) {
-    return this.hasRole(user, 'applicant') && !this.isEmployee(user)
   }
 
   static isSuperior(sup, sub) {
@@ -107,6 +106,7 @@ class UserModel extends BaseModel {
     if (_user.workgroups) _user.workgroups = JSON.stringify(_user.workgroups)
 
     return _user
+  }
 
   //overwrite the data() function to compose props
   data() {
@@ -168,3 +168,4 @@ class UserModel extends BaseModel {
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       firstName: Joi.string().required(),
       lastName: Joi.string().required(),
+      roles: Joi.array().default([Roles.Employee]).items(Joi.string().valid(...Object.values(Roles))),

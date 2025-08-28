@@ -71,7 +71,6 @@ const publicMetadata = {
     order: 5,
     score: {
       no: 1
-// Temp comment
     },
     default: 'no',
     subtype: 'enum',
@@ -174,3 +173,4 @@ const publicMetadata = {
     default: 'no',
     subtype: 'enum',
     required: true,
+    exclude: ['CARD']

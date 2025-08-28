@@ -8,6 +8,7 @@ const NOOP_DONE_CB = async() => {
 
 /**
  * @param {
+ * {
  *   action: string,
  *   phase: string,
  *   operation?: string

@@ -15,6 +15,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
       seed.document.create(frontDocId),
       seed.document.create(backDocId)
     ])
+
     const imageContent = 'iaa'
     const match = _.matches({ recognizerType: 'USDL', imageBase64: 'aWFh' })
     nock(config.get('microblink').baseUrl)
@@ -110,3 +111,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
         .expect(400)
     })
   })
+

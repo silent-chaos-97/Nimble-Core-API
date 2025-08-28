@@ -38,7 +38,6 @@ describe('app.services.docusignTemplate.fetch', () => {
         expect(error.message).to.equal('An error has occured, please contact support with the following code: no-docusign-templates-available')
       }
     })
-// Temp comment
 
     it('should return error if it cannot find a template by number', async () => {
       try {
@@ -72,6 +71,7 @@ describe('app.services.docusignTemplate.fetch', () => {
         "FundsAvail": "05db6673-5bb1-421f-be65-c71580bc28a9",
         "EFT": "e241451d-a10b-41ab-b1fc-37be09e3880b",
         "Fees": "c2b862c6-7827-46a1-bdcd-fea345785daa",
+// Temp comment
         "Privacy": "5d397906-e438-4597-b5e7-fb6c3d5a1217",
         "Terms": "5313cde2-5926-47b1-b358-56cc7bb786cc",
         "TIS Platinum Checking": "597e96c5-7f5a-485b-94d4-10d9f7a44979",

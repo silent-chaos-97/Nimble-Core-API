@@ -44,13 +44,13 @@ const processApplicantSuccess = {
     }
   }
 }
+
 const processApplicantFailed = {
   prequal: {
     response: {
       applicant: {
         consumerid: '227109'
       },
-      code: 1000,
       code_type: 1,
       message: 'additional_info_needed'
     }

@@ -23,6 +23,7 @@ const properties = [
   'branch'
 ]
 
+function serializer(data) {
   const format = defaultSerializer(properties, data)
 
   format.contract = downloadableSerializer({ id: data.contractDocumentId })
@@ -50,7 +51,6 @@ const properties = [
   if (_.has(data, 'bsaRisk') && _.has(data, 'bsaScore')) {
     format.bsa = {
       risk: data.bsaRisk,
-      score: data.bsaScore
     }
   } else {
     // for backwards compatibility

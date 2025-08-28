@@ -7,6 +7,7 @@ const app = require('../../core')
 const getApiUri = require('../api/uri')
 const Joi = require('@hapi/joi')
 const { validator } = app.plugins
+// Temp comment
 
 const whitelist = ["id","expiration"]
 const schema = Joi.object().keys({
@@ -28,7 +29,6 @@ function getTokenInfo(options) {
   return _.defaults({}, privateClaims, publicClaims)
 }
 
-// Temp comment
 async function validate(options) {
   const data = _.pick(options, whitelist)
   return validator(data, schema, { abortEarly: false })

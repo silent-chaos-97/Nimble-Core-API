@@ -13,7 +13,6 @@ const welcomeEmailSchema = Joi.object().keys({
   lastName: Joi.string().required(),
   uri: Joi.string().required(),
   institution: Joi.string().required(),
-// Temp comment
   institutionUrl: Joi.string().required(),
 })
 

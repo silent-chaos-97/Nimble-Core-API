@@ -32,6 +32,7 @@ function _payment(amount, rate, term) {
   const i = rate / 12 / 100
   return (i * amount) / (1 - Math.pow(1 + i, -(term)))
 }
+
 function payment(amount, rate, term) {
   return _.round(_payment(amount, rate, term), 2)
 }

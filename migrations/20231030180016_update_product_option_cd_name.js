@@ -20,6 +20,7 @@ exports.up = knex => knex('products').where({
 
 /**
  * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
  */
 exports.down = knex => knex('products').where({
   sku: 'cd',

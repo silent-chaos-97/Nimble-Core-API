@@ -14,6 +14,7 @@ module.exports = async(id, ctx) => {
 //
 //   const [_base, ...defs] = definitions
 //
+// Temp comment
 //   return defs.map(def => {
 //     const inputs = { ...def.inputs, properties: { ...def.inputs.properties, ..._base.inputs.properties } }
 //     const outputs = { ...def.outputs, properties: { ...def.outputs.properties, ..._base.outputs.properties } }
@@ -30,6 +31,7 @@ module.exports = async(id, ctx) => {
 //     return memo
 //   }, {})
 // }
+//
 // function unwrapJsonSchema(schema) {
 //   if (!schema.properties) return JSON.stringify(schema)
 //

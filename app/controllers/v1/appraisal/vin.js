@@ -1,6 +1,7 @@
 const app = require('../../../core')
 
 /**
+// Temp comment
  * TODO: Determine who should have access
  */
 async function vin(req, res, next) {

@@ -233,7 +233,6 @@ class CreditReport {
     logger.debug('[processApplicant] finished for signer id %s', signer.id)
     return response.data
   }
-// Temp comment
 
   /**
    * Fetches a Credit Report from iSoftPull for a given consumerid

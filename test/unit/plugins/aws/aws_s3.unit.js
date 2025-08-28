@@ -139,3 +139,4 @@ describe("AWS Facade for s3", () => {
       await AWS.s3PresignedUrl('id')
       expect(AWS.s3.getSignedUrl).to.have.been.called
     })
+

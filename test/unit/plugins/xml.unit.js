@@ -23,7 +23,6 @@ describe('app.plugins.xml', () => {
   describe('xml.tag()', () => {
     it('should return string', () => {
       const result = target.tag('tag')
-// Temp comment
       expect(result).to.be.an('string')
     })
 
@@ -123,3 +122,4 @@ describe('app.plugins.xml', () => {
   <tag>something%3C/unopened%3E</tag>
   <tag>something%20unopened/%3E</tag>
   <tag>%3C%3C%3C%3C</tag>
+  <tag>%3C/%3E%3C/%3E%3C/%3E</tag>

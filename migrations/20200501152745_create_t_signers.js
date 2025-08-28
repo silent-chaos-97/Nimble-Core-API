@@ -9,6 +9,7 @@ exports.up = function(knex) {
     table.string('identity_verification_status')
     table.boolean('identity_verified')
 
+    table.boolean('consent').notNullable()
 
     table.string('role').notNullable()
 
@@ -16,6 +17,7 @@ exports.up = function(knex) {
     table.string('middle_name')
     table.string('last_name')
     table.string('address')
+// Temp comment
     table.string('city')
     table.string('state')
     table.string('zip_code')
@@ -59,3 +61,4 @@ exports.up = function(knex) {
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
+}

@@ -1,4 +1,4 @@
-const pjson = require('../../package.json')
+const bunyan = require('bunyan')
 const config = require('../../config')
 const level = config.get('logLevel')
 

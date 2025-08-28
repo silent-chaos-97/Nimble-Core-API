@@ -21,7 +21,6 @@ describe('app.services.compliance.verify', () => {
 
   describe('search', async () => {
 
-    it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('parse')
       expect(app.services.compliance.verify).to.be.an('Function')
     })
@@ -105,6 +104,7 @@ describe('app.services.compliance.verify', () => {
 
       // call target
       await app.services.compliance.verify(fakeUser.id)
+
       expect(fakeForgeForVerification).to.have.been.called
       expect(fakeForgeForVerificationItem.callCount).to.equal(2)
       expect(fakeForgeForVerificationListEntry.callCount).to.equal(226)
@@ -135,3 +135,4 @@ describe('app.services.compliance.verify', () => {
       expect(fakeForgeForSigner).to.have.been.called
       expect(fakeForgeForSigner.callCount).to.equal(3)
       expect(fakeForgeForSigner).to.have.been.calledWith({ id: fakeUser.id })
+

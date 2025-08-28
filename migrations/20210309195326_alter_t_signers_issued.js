@@ -10,4 +10,5 @@ exports.up = function(knex) {
       'USA','UZB','VAT','VCT','VEN','VGB','VIR','VNM','VUT','WLF','WSM','YEM','ZAF','ZMB','ZWE'
     ], { useNative: false, enumName: 'signers_document_issuer' }).alter()
   }).toSQL())
+}
 

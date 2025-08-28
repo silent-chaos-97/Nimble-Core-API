@@ -2,13 +2,11 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 
-// Temp comment
 const getPagination = app.plugins.pagination
 const validator = app.plugins.validator
 
 const SignerCreditReport = app.repositories.signerCreditReport
 const SignerCreditReportModel = app.models.signerCreditReport
-const logger = app.logger.getLogger('app.services.credit_report.list')
 
 const listSchema = Joi.object().keys({
   signerId: Joi.string().uuid().required(),

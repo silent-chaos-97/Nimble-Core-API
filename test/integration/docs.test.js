@@ -1,4 +1,3 @@
-// Temp comment
 describe('API Docs', () => {
   describe('GET /docs', () => {
     it('should return 200 without auth', () => {
@@ -20,7 +19,6 @@ describe('API Docs', () => {
         .get('/docs/swagger-ui.css')
         .expect(200)
     })
-
     it('should return css content type', () => {
       return request(app.server)
         .get('/docs/swagger-ui.css')

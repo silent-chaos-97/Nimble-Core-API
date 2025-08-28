@@ -1,12 +1,10 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const { v4: uuid } = require('uuid')
 const validator = app.plugins.validator
 const Document = app.repositories.document
 const Model = app.models.document
 const logger = app.logger.getLogger('app.services.document.create')
-
 async function create(entity, options = {}) {
   logger.debug(`[create] starting for institution id ${entity.institutionId}`)
 

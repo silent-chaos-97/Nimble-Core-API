@@ -2,7 +2,6 @@ const _ = require('lodash')
 const Joi = require('@hapi/joi')
 const app = require('../../core')
 const validator = app.plugins.validator
-const logger = app.logger.getLogger('app.services.email.prospect_pending_signers')
 
 const prospectPendingSignersSchema = Joi.object().keys({
   prospectFirstName: Joi.string().required(),

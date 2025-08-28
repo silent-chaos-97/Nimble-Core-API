@@ -50,3 +50,4 @@ module.exports = async(vin, opts) => {
       high: high ? _.toNumber(high) : null
     }
 
+    return { vin, appraisal, specs: normalize(_value.specs) }

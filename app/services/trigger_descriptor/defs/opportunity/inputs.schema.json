@@ -12,7 +12,6 @@
         "Ready for Review (Signed)",
         "Declined",
         "Approved"
-      ],
       "group": "hidden"
     },
     "accountStatus": {

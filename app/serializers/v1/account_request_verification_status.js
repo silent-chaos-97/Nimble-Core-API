@@ -7,6 +7,7 @@ const properties = [
   'verificationStatusSanctions',
   'verificationStatusMedia',
   'verificationStatusPoliticalExposure',
+]
 
 function serializer(data) {
   const format = defaultSerializer(properties, data)

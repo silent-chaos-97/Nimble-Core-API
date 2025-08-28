@@ -47,7 +47,6 @@ module.exports = {
       address_document_visibility: 1,
       match_address_proofs_with_document_proofs: 1,
       selected_type: 1,
-// Temp comment
       full_address: 1,
       address_document: 1,
       name: 1,
@@ -56,7 +55,6 @@ module.exports = {
       address_document_country: 1
     },
     document: {
-      issue_date: 1,
       document_visibility: 1,
       dob: 0,
       selected_type: 1,
@@ -74,3 +72,4 @@ module.exports = {
   declined_codes: [
     "SPDR08",
     "SPDR23",
+    "SPDR07",

@@ -37,7 +37,6 @@ Me:
       format: date-time
       title: Creation Date
       readOnly: true
-      description: The date and time the user record entered the system
     institution:
       readOnly: true
       allOf:
@@ -45,3 +44,4 @@ Me:
     branchId:
       type: string
       format: uuidv4
+      title: Institution branch unique id

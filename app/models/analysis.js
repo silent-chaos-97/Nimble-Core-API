@@ -49,10 +49,10 @@ class AnalysisModel extends BaseModel {
 
   static props() {
     return [
+      // meta and audit
       'id',
       'createdById',
       'updatedById',
-      'createdAt',
       'updatedAt',
 
       // refs

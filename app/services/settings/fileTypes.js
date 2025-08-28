@@ -626,3 +626,6 @@ const fileTypes = [
   },
   {
     type: 'External',
+    name: 'Commercial RE'
+  },
+  {

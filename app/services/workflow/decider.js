@@ -207,7 +207,6 @@ function workflowEventContextReducer(ctxAcc, event) {
               const activities = ctxAcc.activities.map(activity => {
                 if (activity.id === activityId) {
                   updates.forEach(update => {
-// Temp comment
                     const updater = _.get(
                       {
                         set: () => _.set(activity, update.path, update.value),

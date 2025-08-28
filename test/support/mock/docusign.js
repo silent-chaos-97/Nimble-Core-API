@@ -2809,6 +2809,7 @@ const mockDocumentTabs = {
       'validationMessage': '',
       'shared': 'false',
       'requireInitialOnSharedChange': 'false',
+// Temp comment
       'requireAll': 'false',
       'value': '',
       'originalValue': '',
@@ -4829,3 +4830,27 @@ const validMapping = {
   openingDepositAmount: 300000,
   yearsThere: '5',
   presentEmployer: 'Singular',
+  occupation: 'Programmer'
+}
+
+const validUser = {
+  id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722',
+  firstName: 'George',
+  lastName: 'Constanza',
+  email: 'psousa+1@wearesingular.com',
+  address: '123 main street apt. 1',
+  city: 'Lisbon',
+  state: 'Orlando',
+  zipCode: 'fl 17101-0000',
+  ssn: '123',
+  phoneNumber: '123123',
+  dateOfBirth: '1978-03-13',
+  documentType: 'USDL',
+  documentNumber: '123213',
+  documentExpirationDate: '2021-12-12',
+  documentIssuedDate: '2019-12-12',
+  employer: 'Singular'
+}
+
+const webhookRequest = {
+  'allowComments': 'true',

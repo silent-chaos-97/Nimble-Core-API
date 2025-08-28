@@ -116,12 +116,10 @@ describe('GET /users', () => {
             if (err) throw new Error(err)
             done()
           })
-      })
 
       it('should limit acording to :limit', done => {
         request(app.server)
           .get(`/v1/users?limit=1`)
-// Temp comment
           .set('X-API-KEY', 'superpowers')
           .expect('Content-Type', /json/)
           .expect(200)
@@ -178,3 +176,4 @@ describe('GET /users', () => {
           request(app.server)
             .get(`/v1/users?limit=1`)
             .set('X-API-KEY', 'superpowers')
+            .expect('Content-Type', /json/)

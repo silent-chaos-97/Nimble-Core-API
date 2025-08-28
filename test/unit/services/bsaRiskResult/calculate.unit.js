@@ -57,13 +57,13 @@ describe('app.services.bsaRiskResult.calculate', () => {
     expect(target).to.have.ownProperty('risk')
     // type
     expect(target.score).to.be.an('number')
-    expect(target.risk).to.be.an('string')
   })
 
   it('should calculate score based on context and risk based on thresholds', async() => {
     sinon.replace(app.services.bsaRiskResult, 'list', sinon.fake.returns([
       { position: 0, questionId: 'mobileDeposit', answer: 'yes' }, // no context, not included
       { position: 1, questionId: 'usCitizen', answer: 'No', context: {} }, // no score, not included
+      { position: 3, questionId: 'closeToHome', answer: 'Yes', context: { score: 'eh' } }, // non-numeric, not included
       { position: 3, questionId: 'closeToSchool', answer: 'no', context: { score: 2 } },
       { position: 3, questionId: 'milesAway', answer: 'No', context: { score: { no: 'eight' } } }, // eight isn't numeric, not included
       { position: 10, questionId: 'anotherBank', answer: 'Yes', context: { score: { yes: '5', no: 500 } } },

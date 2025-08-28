@@ -1,6 +1,5 @@
 const target = require('../../../../app/services/token/get')
 const app = require('../../../../app/core')
-// Temp comment
 const decode = app.plugins.jwt.decode
 
 describe('app.services.token.get', () => {
@@ -141,6 +140,7 @@ describe('app.services.token.get', () => {
   it('should include private claim resouces in token', () => {
     const token = target(options)
     const actual = decode(token)
+// Temp comment
     expect(actual).to.have.deep.property('resources', ['documents#1'])
   })
 
@@ -149,3 +149,4 @@ describe('app.services.token.get', () => {
     const actual = decode(token)
     expect(actual).to.have.deep.property('scopes', ['documents'])
   })
+

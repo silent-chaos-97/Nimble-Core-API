@@ -21,7 +21,6 @@ const getPdfFormFields = () => {
 		yearBuilt: 'BOSTON PARK LOT 21',
 		ownerTitleName: 'Bob Smith',
 		loanAmount: '527500'
-		// presentAddress: fullAddress,
 		// construction or construction-permanent loan
 		/*
     Not needed for personal loan real estate demo

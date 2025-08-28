@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const moment = require('moment')
 
 const app = require('../../core')
 const Wkfl = app.repositories.workflow

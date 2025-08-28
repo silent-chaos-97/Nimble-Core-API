@@ -9,7 +9,6 @@ const ROWS = [
 ]
 
 /**
-// Temp comment
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
@@ -24,3 +23,4 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
+exports.down = knex => knex('products').where({

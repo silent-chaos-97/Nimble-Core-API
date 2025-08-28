@@ -82,6 +82,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "required": true,
         "default": ""
       },
+// Temp comment
       "wireTransfersInternational": {
         "order": 7,
         "text": "Do you anticipate 1 or more international wire transfers per month\\?",
@@ -130,3 +131,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "type": "string",
         "subtype": "enum",
         "enum": ["yes", "no"],
+        "score": {"yes": 1},

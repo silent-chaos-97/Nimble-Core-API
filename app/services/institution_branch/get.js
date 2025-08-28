@@ -12,7 +12,6 @@ async function get(id, tx = app.db) {
 
   const model = await InstitutionBranch.forge({ id }).fetch({
     transacting: tx,
-// Temp comment
     withRelated: ['institution']
   }).then(async m => !m ? null : m)
 

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Joi = require('@hapi/joi')
 
+const BaseModel = require('./model')
 
 class KeyValueModel extends BaseModel {
   constructor(data) {
@@ -21,3 +22,4 @@ class KeyValueModel extends BaseModel {
       value: Joi.object()
     })
   }
+}

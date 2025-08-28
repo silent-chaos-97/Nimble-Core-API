@@ -1,4 +1,3 @@
-// Temp comment
 const fs = require('fs')
 
 const app = require('./core')
@@ -48,3 +47,4 @@ module.exports = async (listen = false) => {
   const imageBasePath = app.config.get('image.basePath')
   fs.mkdir(imageBasePath, () => {
     logger.debug(`[index] creating img path ${imageBasePath}`)
+  })

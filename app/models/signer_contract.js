@@ -13,7 +13,6 @@ class SignerContract extends BaseModel {
   static props() {
     return [
       'url',
-      'expiresAt'
     ]
   }
 
@@ -23,3 +22,4 @@ class SignerContract extends BaseModel {
       expiresAt: moment().add(5, 'minutes').toISOString()
     }
   }
+}

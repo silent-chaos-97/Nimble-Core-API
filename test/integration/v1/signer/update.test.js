@@ -52,6 +52,7 @@ describe('PUT /signers/:id', async () => {
         number: '1231231230',
         issuer: 'WY',
         issuedDate: '2000-11-22T00:00:00.000Z',
+        expirationDate: '2030-11-22T00:00:00.000Z'
       },
       selfieDocumentId: 'a74f9092-5889-430a-9c19-6712f9f68090'
     }

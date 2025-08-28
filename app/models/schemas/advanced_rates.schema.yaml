@@ -21,6 +21,5 @@ columns:
     title: Amortization (months)
     type: positive-integer
 
-  - data: analysis
     title: Collateral Analysis
     type: numeric

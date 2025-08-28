@@ -7,6 +7,5 @@ module.exports = async (req, res) => {
     //   ? defs
     //   : defs.filter(d => !d.debug)
     const data = defs.filter(d => !d.debug)
-
     res.status(200).json(data)
   })

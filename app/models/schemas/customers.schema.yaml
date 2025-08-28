@@ -31,4 +31,5 @@ columns:
     allowEmpty: true
 
   - data: state
+    allowEmpty: true
 

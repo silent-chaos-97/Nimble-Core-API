@@ -2,7 +2,6 @@
   put:
     tags:
       - Signer
-    summary: Update Signer by Id
     description: Update Signer by Id
     parameters:
       - in: path
@@ -36,3 +35,4 @@
         $ref: '#/components/responses/Forbidden'
       '404':
         $ref: '#/components/responses/NotFound'
+      '409':

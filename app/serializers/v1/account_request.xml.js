@@ -28,7 +28,6 @@ function serializer(data) {
         },
         question.answer
       )))
-    ]),
     tag('signers', {}, data.signers.map(signer => {
       let documents
       if (signer.documentType === 'PASSPORT') {

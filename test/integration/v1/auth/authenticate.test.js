@@ -41,7 +41,6 @@ describe('Auth', () => {
       it('should return a token on valid auth', done => {
         request(app.server)
           .post('/v1/auth/login')
-// Temp comment
           .send({ email: 'demouser@nimblefi.com', password: 'pwd' })
           .expect('Content-Type', /json/)
           .expect(200)
@@ -205,3 +204,4 @@ describe('Auth', () => {
           })
 
           it('show send email locked email when it reaches max failed login attempts', async () => {
+            await knex.raw(`UPDATE users set failed_login_attempts = 2 where id = '1052ab85-08da-4bb5-be00-9e94d282d310'`)

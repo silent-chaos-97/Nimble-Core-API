@@ -434,6 +434,7 @@ class AWSFacade {
             input: !_.isNil(input) && !_.isString(input) ? JSON.stringify(input) : input,
             tagList
           },
+          err => {
             if (err) {
               logger.error(
                 err,

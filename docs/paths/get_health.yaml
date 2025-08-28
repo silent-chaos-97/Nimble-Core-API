@@ -3,10 +3,10 @@
     tags:
       - Health
     summary: Status method
-    description: Method to check API connectivity status.
     operationId: getHealth
     responses:
       '200':
         description: OK
         content:
           application/json:
+            schema:

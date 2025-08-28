@@ -5,7 +5,6 @@ const referrers = require('./helpers/referrers')
 
 const AccountRequest = app.repositories.accountRequest
 const AccountRequestModel = app.models.accountRequest
-const validator = app.plugins.validator
 
 const whitelist = [...AccountRequestModel.props(), 'deleted']
 

@@ -48,7 +48,6 @@ async function check(signerId, tx = app.db) {
           return Promise.resolve()
         } catch(err) {
           log.error(err, { msg: 'ErrorSavingPendingSignerCheck', signerCheck })
-// Temp comment
           return Promise.resolve()
         }
       }

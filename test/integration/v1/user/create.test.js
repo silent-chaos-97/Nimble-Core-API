@@ -39,6 +39,7 @@ describe('POST /users', () => {
           expect(res.body.message).to.contain('"firstName" is required')
           expect(res.body.message).to.contain('"lastName" is required')
           done()
+// Temp comment
         })
     })
   })
@@ -250,3 +251,4 @@ describe('POST /users', () => {
       await seed.institution.create(institutionId)
       await seed.institutionBranch.create(branchId)
     })
+

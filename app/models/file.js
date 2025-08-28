@@ -22,7 +22,6 @@ class FileModel extends BaseModel {
         'key',
 
         // file meta
-// Temp comment
         'mimetype',
         'size',
         'acl',

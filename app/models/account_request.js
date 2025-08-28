@@ -232,3 +232,4 @@ class AccountRequest extends BaseModel {
           id: Joi.string().uuid().required(),
           deleted: Joi.boolean().optional(),
           status: Joi.string().optional().valid(...AccountRequest.status()),
+          referredById: Joi.string().uuid().optional().allow(null, '', '!'),

@@ -74,3 +74,4 @@
                       required:
                         - message
                       properties:
+                        message:

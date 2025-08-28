@@ -53,7 +53,6 @@ function acl(resource, param) {
         next(err) // forward the error
       }
     }
-
     // try to spawn a model
     new checkBy.matches.model({ id: targetId }).fetch()
       .then(target => {

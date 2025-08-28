@@ -25,6 +25,7 @@ describe('app.services.applicantOneTimeToken.create', () => {
       beforeEach(() => {
         body = {
           id: '5856878184',
+          role: 'applicant',
           method: 'verify-code'
         }
       })

@@ -223,3 +223,4 @@ describe('POST /documents', () => {
   })
 
   describe('when format invalid', () => {
+    it('should return 400', () => {

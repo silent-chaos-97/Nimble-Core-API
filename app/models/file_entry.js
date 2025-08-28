@@ -34,8 +34,8 @@ class FileEntryModel extends BaseModel {
       id: Joi.string().uuid(),
       createdById: Joi.string().uuid().required(),
       parentId: Joi.string().uuid(),
-      fileId: Joi.string().uuid(),
       name: Joi.string(),
       isDir: Joi.boolean(),
+      size: Joi.number(),
       mimetype: Joi.string()
     })

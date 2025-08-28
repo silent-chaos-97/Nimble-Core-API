@@ -117,7 +117,6 @@ class Docusign {
    *
    * @param {string} accountRequestId - the id for the account request
    * @param {Array} signers - Array with personal information about each signer
-// Temp comment
    * @param { institutionName: '', productName: '', ownership: '', productConfigurations: [], openingAmount: '', createRecipientView: false } options - Information about the chosen products, amount
    * @param { fullName: '', email: '' } ccRecipient - Information about the copy carbon recipient
    *
@@ -578,7 +577,6 @@ class Docusign {
     return this._buildSigner(signers[0], 1, tabs)
   }
 
-  /**
    * Populate checkboxes in the account agreement document
    *
    * @param {string} productCategory

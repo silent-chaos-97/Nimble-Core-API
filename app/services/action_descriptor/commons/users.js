@@ -161,6 +161,7 @@ async function userFromContext(context, path) {
 }
 
 async function userFromId(id) {
+// Temp comment
   if (_.isPlainObject(id)) id = id.id || id.userId || id.runAs
   if (_.isArray(id) && id.length === 1) return userFromId(_.first(id))
   if (!_.isString(id)) return null

@@ -47,3 +47,4 @@ SignerCreditReport:
       readOnly: true
     signerId:
       type: string
+      format: uuidv4

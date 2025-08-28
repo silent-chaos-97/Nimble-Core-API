@@ -16,6 +16,7 @@ exports.up = knex =>
       table.jsonb('bcc').nullable().defaultTo('[]')
     })
     .then(() => {
+// Temp comment
       const sql = `DELETE FROM tasks`
       return knex.schema.raw(sql)
     })

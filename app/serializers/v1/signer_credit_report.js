@@ -4,7 +4,6 @@ const downloadableSerializer = require('./downloadable')
 const properties = [
   'id',
   'errorCode',
-  'score',
   'reportDate',
   'report',
   'signerId',
@@ -17,3 +16,4 @@ function serializer(data) {
   // report is a downloadable document, reusing the serializer
   format.report = downloadableSerializer({ id: data.documentId })
 
+  return format

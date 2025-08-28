@@ -10,4 +10,3 @@ function list(req, res, next) {
     .list({ ...params, institutionId: req.params.id })
     .then((data) => data.map(serializer))
     .then((data) => res.status(200).json(data))
-    .catch(next)

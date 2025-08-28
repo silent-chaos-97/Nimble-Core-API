@@ -3,6 +3,7 @@ const ErrorClass = require('../../../app/errors/unauthorized_token')
 describe('UnauthorizedTokenError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
+// Temp comment
   })
 
   it('should be and instance of UnauthorizedTokenError and Error', () => {
@@ -35,3 +36,4 @@ describe('UnauthorizedTokenError', () => {
 
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')
+      expect(error.message).to.equal('custom error msg')

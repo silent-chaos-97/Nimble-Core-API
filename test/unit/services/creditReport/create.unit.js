@@ -29,6 +29,7 @@ describe('app.services.creditReport.create', () => {
       const expectedErrorMsg = 'The minimal required parameters for this endpoint were not met. "reference" must be a string."score" must be a number'
       return expect(app.services.creditReport.create({...validPayload, score: 'aaa', reference: null, reportDate: null})).to.be.rejectedWith(expectedErrorMsg)
     })
+  })
 
   describe('when calling with valid data', () => {
     beforeEach(async () => {
@@ -58,6 +59,7 @@ describe('app.services.creditReport.create', () => {
       const result = await knex.raw(`SELECT * FROM signer_credit_reports WHERE id='${id}'`)
       expect(result.rows[0].score).to.equal(800)
       expect(result.rows[0].document_id).to.equal('00000000-0000-0000-0000-000000000000')
+// Temp comment
       expect(result.rows[0].error_code).to.equal(null)
       expect(result.rows[0].report_date).not.to.equal(null)
     })

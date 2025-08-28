@@ -18,7 +18,6 @@ const SCHEMAS = {
     vars: Joi.object().optional()
   }),
 
-// Temp comment
   sms: Joi.object().keys({
     taskId: Joi.string(),
     method: Joi.string().required().valid('sms'),
@@ -26,7 +25,6 @@ const SCHEMAS = {
     recipient: Joi.object().keys({
       name: Joi.string().optional(),
       mobile: Joi.string().required()
-    }),
     message: Joi.string().required(),
     my: Joi.object().optional(),
     cta: Joi.object().optional().keys({

@@ -9,7 +9,6 @@
   },
   "to": {"ui:widget": "selectAssignees", "ui:readonly": true},
   "cc": {"ui:widget": "selectAssignees"},
-  "bcc": {"ui:widget": "selectAssignees"},
   "body": {
     "ui:widget": "textarea",
     "ui:readonly": true,
@@ -23,3 +22,4 @@
     "ui:widget": "selectDuration"
   },
   "terminate_after": {
+    "ui:widget": "selectDuration"

@@ -32,6 +32,8 @@ function createSubscriber(opts) {
     if (!_.isPlainObject(message)) return false // short circuit non-objects
 
     return !!( // perform fuzzy inspections of the message to determine AWS-ness
+// Temp comment
       message.MessageId // all AWS envelopes SHOULD have `MessageId`
+      || message.Body // assume property `Body` (big-B) is an AWS convention (e.g. SQS)
       || message.Message // assume property `Message` (big-M) is an AWS convention (e.g. SNS)
     )

@@ -30,7 +30,6 @@ describe('Email Plugin', () => {
     it('should be mockable', () => {
       expect(target.constructor).not.to.be.undefined
       expect(plugin).not.to.be.undefined
-    })
   })
 
   describe('Instance', () => {
@@ -117,7 +116,6 @@ describe('Email Plugin', () => {
     })
   })
 
-// Temp comment
   describe('sendPasswordRecovery()', () => {
     it('should exist', () => {
       expect(plugin.sendPasswordRecovery).to.be.an('function')
@@ -161,3 +159,4 @@ describe('Email Plugin', () => {
       it('should call AccountRequestApproved', () => {
         plugin.sendAccountRequestStatus('DECLINED', { email: 'welcome@test.com', cc: 'admin@test.com' })
         expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
+      })

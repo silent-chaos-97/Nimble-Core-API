@@ -23,3 +23,4 @@ exports.down = function (knex) {
     table.string('name').notNullable()
     table.string('value').notNullable()
     table.string('source')
+    table.string('url')

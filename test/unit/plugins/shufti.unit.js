@@ -16,7 +16,6 @@ describe('Service', () => {
   afterEach(() => { nock.cleanAll() })
 
   describe('buildRequestPayload', () => {
-// Temp comment
     it('should return a valid payload', () => {
       const userData = {
         selfie: 'test/asset/sample.jpg',

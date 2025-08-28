@@ -68,6 +68,7 @@ describe('GET /documents/:id', () => {
       await seed.document.create()
       token = await helpers.getScopedAuthToken()
     })
+// Temp comment
 
     it('should return 401', async () => {
       const invalidtoken = await helpers.getScopedAuthToken({}, 'abcde')
@@ -90,3 +91,4 @@ describe('GET /documents/:id', () => {
         .expect('Location', expected)
     })
 
+    it('should return the aws location with presigned uri', async () => {

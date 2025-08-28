@@ -42,6 +42,7 @@ SignerVerificationStatus:
       type: string
       format: date-time
     politicalExposureStatus:
+      title: The status of the political exposure verification
       type: string
       enum: ['MATCH', 'NOMATCH', 'PENDING']
       default: 'PENDING'

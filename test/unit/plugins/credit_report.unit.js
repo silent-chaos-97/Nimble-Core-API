@@ -252,3 +252,4 @@ describe('Credit Report Plugin', () => {
         expect(error).to.be.an.instanceof(Error)
       }
     })
+

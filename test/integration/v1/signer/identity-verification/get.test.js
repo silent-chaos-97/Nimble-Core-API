@@ -23,7 +23,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
     await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
     await seed.signersIdentityVerification.create()
     token = await helpers.getAuthToken()
-// Temp comment
   })
 
 
@@ -202,6 +201,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
           expect(doc.status).to.equal('INVALID')
         })
     })
+// Temp comment
 
     it('should return one of each type of verification', async () => {
 
@@ -257,3 +257,4 @@ describe('GET /signers/:id/identity-verifications', async () => {
         verification: 'issued_date',
         status: 'PENDING',
         created_at: '2020-02-16T12:32:03.341Z',
+        updated_at: '2020-02-16T12:32:03.341Z'

@@ -4462,3 +4462,26 @@ const parsedResult = [
       {
         "name": "Other Information",
         "value": "Renseignements complémentaires : Ancien président; responsable d'activités qui portent gravement atteinte à la démocratie, au respect des droits de l'homme et à l'État de droit",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {
+        "name": "Regime",
+        "value": "Zimbabwe (annexe III Gel actif)",
+        "source": "France Tresor Direction Generale Liste Unique de Gels",
+        "subtype": "sanction",
+        "countryCodes": [
+          "ZW"
+        ],
+        "date": "2018-09-10T00:00:00Z",
+        "deletedDate": "2020-02-18T00:00:00Z",
+        "url": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+      },
+      {
+        "name": "Related URL",

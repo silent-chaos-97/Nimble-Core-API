@@ -169,4 +169,5 @@ const publicMetadata = {
       yes: 2
     },
     default: 'no',
+    subtype: 'enum',
     required: true

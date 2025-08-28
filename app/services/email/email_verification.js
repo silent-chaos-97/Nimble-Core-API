@@ -10,6 +10,7 @@ const verificationEmailSchema = Joi.object().keys({
   signerEmail: Joi.string().email({ tlds: { allow: false } }).required(),
   verifyUrl: Joi.string().required(),
   institution: Joi.string().required(),
+  institutionUrl: Joi.string().required(),
   statusEmailSubject: Joi.string().required()
 })
 
@@ -21,6 +22,7 @@ const entrySchema = Joi.object().keys({
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
+// Temp comment
   return data
 }
 

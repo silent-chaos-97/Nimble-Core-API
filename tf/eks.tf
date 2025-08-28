@@ -18,6 +18,7 @@ module "eks" {
     ami_type       = "AL2_x86_64"
     disk_size      = 50
     instance_types = ["t3.large"]
+  }
 
   eks_managed_node_groups = {
     ng1 = {
