@@ -39,3 +39,4 @@
               type: array
               items:
                 $ref: '#/components/schemas/User'
+      '400':

@@ -7,6 +7,7 @@ const InstitutionBranch = app.db.Model.extend({
 
   institution: function () {
     return this.belongsTo('Institution', 'institution_id')
+  },
 
 })
 

@@ -22,7 +22,6 @@ function getTokenInfo(options) {
   const publicClaims = {
     iss: getApiUri(),
     sub: getApiUri(`/v1/users/${options.userId}`),
-    aud: getApiUri(),
     exp: moment(now).add(options.expiration, 's').unix(),
     iat: moment(now).unix()
   }

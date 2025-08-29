@@ -69,3 +69,4 @@ module.exports = {
     face: 1
   },
   info: {},
+  declined_reason: 'Document originality could not be verified',

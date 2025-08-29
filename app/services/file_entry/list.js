@@ -13,6 +13,5 @@ async function list(user, parentId = null, tx = app.db) {
     q.where('parent_id', parentId)
   })
 
-  const data = await query.fetchAll({ withRelated: ['createdBy', 'file'], transacting: tx })
 
   return data.models.map(m => new FileEntryModel(m).data())

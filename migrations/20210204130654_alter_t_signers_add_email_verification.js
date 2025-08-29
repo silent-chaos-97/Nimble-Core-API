@@ -4,7 +4,7 @@ exports.up = function (knex) {
     table.timestamp('email_verified_at')
   })
 };
-  return knex.schema.alterTable('signers', function (table) {
+exports.down = function (knex) {
     table.dropColumn('email_verified')
     table.dropColumn('email_verified_at')
   })

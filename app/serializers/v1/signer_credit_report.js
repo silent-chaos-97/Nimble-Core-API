@@ -6,8 +6,6 @@ const properties = [
   'errorCode',
   'score',
   'reportDate',
-  'report',
-// Temp comment
   'signerId',
   'createdAt',
   'updatedAt'

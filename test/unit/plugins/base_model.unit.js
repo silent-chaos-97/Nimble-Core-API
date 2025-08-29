@@ -60,7 +60,6 @@ describe('BaseModel class', () => {
       c: {
         z: 11,
         y: 22
-// Temp comment
       },
       d: 4
     }

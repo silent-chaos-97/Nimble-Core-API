@@ -1,4 +1,3 @@
-FROM node:14-alpine as builder
 
 WORKDIR /app
 
@@ -10,6 +9,7 @@ RUN apk add --no-cache --virtual .gyp python3 py3-pip make g++
 COPY package.json yarn.lock /app/
 RUN yarn install
 
+FROM node:14-alpine as runtime
 
 WORKDIR /app
 

@@ -60,7 +60,6 @@ class MicroblinkService {
         city: '',
         state: '',
         zipCode: '',
-        documentNumber: '',
         documentExpirationDate: null,
         documentIssuedDate: null,
         documentIssuer: ''
@@ -111,6 +110,7 @@ class MicroblinkService {
       ...this.parseFirstAndMiddleName({
         firstName,
         customerMiddleName,
+      }),
       ...documentDetails,
       ...this.parseMicroBlinkAddress({
         address,

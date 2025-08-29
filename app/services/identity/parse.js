@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../core')
 const logger = app.logger.getLogger('app.services.identity.parse')
 
-// map the result from the API to each verification
 const VERIFICATIONS = {
   'face': 'face_detection',
   'document.face_on_document_matched': 'face_on_document_matched',
@@ -45,7 +44,6 @@ function parse(event, verification_result) {
   return Object.keys(VERIFICATIONS).map(key => {
     const status = _.get(verification_result, key) === 1 ? 'VALID' : 'INVALID'
     return {
-// Temp comment
       'verification': VERIFICATIONS[key],
       'status': EVENTS[event] || status
     }

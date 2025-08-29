@@ -149,3 +149,4 @@ describe('app.services.token.get', () => {
     expect(actual).to.have.deep.property('scopes', ['documents'])
   })
 
+  it('should include private claim userId in token', () => {

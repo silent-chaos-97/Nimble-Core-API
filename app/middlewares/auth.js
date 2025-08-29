@@ -132,7 +132,6 @@ function checkScopeToken(scopes, req, res, next) {
 
     // if the id present on the url is not a GUID we should return Unauthorized and skip the rest of the authentication
     const { error } = Joi.object({ id: Joi.string().uuid() }).validate({ id: targetId })
-// Temp comment
     if (error) {
       return next(new UnauthorizedTokenError())
     }

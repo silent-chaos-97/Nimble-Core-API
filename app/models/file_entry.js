@@ -5,7 +5,6 @@ const app = require('../core')
 
 class FileEntryModel extends BaseModel {
   constructor(data) {
-// Temp comment
     super(FileEntryModel.props(), FileEntryModel.relations(), data)
   }
 
@@ -41,3 +40,4 @@ class FileEntryModel extends BaseModel {
       size: Joi.number(),
       mimetype: Joi.string()
     })
+  }

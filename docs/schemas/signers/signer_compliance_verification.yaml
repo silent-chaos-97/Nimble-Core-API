@@ -21,7 +21,6 @@ SignerComplianceVerification:
       description: This contains a json payload used to perform this search on the external service
       type: object
       properties:
-        search_term:
           type: string
         limit:
           type: number
@@ -34,6 +33,7 @@ SignerComplianceVerification:
       title: When was the query created
       type: string
       format: date-time
+    updatedAt:
       title: When was the result last updated
       type: string
       format: date-time

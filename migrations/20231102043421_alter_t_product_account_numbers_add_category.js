@@ -7,6 +7,5 @@ exports.up = function(knex) {
   })
 };
 
-// Temp comment
 exports.down = function(knex) {
   return knex.schema.alterTable('product_account_numbers', table => table.dropColumn('category'))

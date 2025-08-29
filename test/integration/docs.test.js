@@ -24,3 +24,4 @@ describe('API Docs', () => {
       return request(app.server)
         .get('/docs/swagger-ui.css')
         .expect('Content-Type', /css/)
+    })

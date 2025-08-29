@@ -8,7 +8,6 @@ const signer = {
   address: '123 main street apt. 1',
   city: 'Lisbon',
   state: 'CA',
-  zipCode: '22222',
   ssn: '333-33-3333',
   phoneNumber: '(233) 555-3333',
   dateOfBirth: '1982-12-06',
@@ -21,6 +20,7 @@ const signer = {
 
 const validApplicant = {
   'firstname': 'ADRIENNE',
+  'lastname': 'BRAKE',
   'address1': '523 W ALAMAR AVE',
   'city': 'GREENFIELD',
   'state': 'CA',
@@ -90,3 +90,4 @@ const resultsSuccess = [
       "revolving_credit_balance": 5804,
       "dtc_ratio": "13.95",
       "revolving_credit_limit_excluding_secured": 41600,
+      "revolving_credit_balance_excluding_secured": 5804,

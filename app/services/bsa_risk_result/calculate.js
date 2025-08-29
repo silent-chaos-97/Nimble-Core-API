@@ -45,7 +45,6 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
     const predicate = OP_PREDICATES[op]
 
     if (predicate && predicate(score, threshold.val)) {
-      risk = threshold.risk
       return false // break
     }
   })

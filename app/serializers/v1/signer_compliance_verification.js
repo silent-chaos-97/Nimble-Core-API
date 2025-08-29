@@ -11,7 +11,6 @@ const properties = [
   'signerId',
   'createdAt',
   'updatedAt'
-]
 
 function serializer(data) {
   let format = defaultSerializer(properties, data)

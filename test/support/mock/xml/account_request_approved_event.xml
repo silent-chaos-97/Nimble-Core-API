@@ -52,3 +52,4 @@
     <productConfigurations>
       <productConfiguration product_sku="EXPRT000">
         <productOption category="product_config" key="initial_deposit" value="12000"/>
+        <productOption category="product_config" key="account_number" value="003"/>

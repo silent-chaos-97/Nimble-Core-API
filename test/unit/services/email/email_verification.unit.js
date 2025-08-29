@@ -133,3 +133,4 @@ describe('app.services.email.emailVerification', () => {
     })
 
     describe('when the signer does not have email verified', () => {
+      beforeEach(async() => {

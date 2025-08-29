@@ -26,7 +26,6 @@ describe('ConflictError', () => {
     it('should have 409 as a statusCode', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(409)
-    })
 
     it('should have default message', () => {
       let error = new ErrorClass()
@@ -37,3 +36,4 @@ describe('ConflictError', () => {
 
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')
+      expect(error.message).to.equal('custom error msg')

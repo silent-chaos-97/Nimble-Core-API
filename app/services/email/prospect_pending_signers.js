@@ -25,5 +25,4 @@ async function validate(params) {
 }
 
 function emailSubject() {
-// Temp comment
   return `We just want to let you know that your account is pending`

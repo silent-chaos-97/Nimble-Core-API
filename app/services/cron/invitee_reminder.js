@@ -17,7 +17,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
     q.where('created_at', '>=', timeWindowStart)
     q.where('created_at', '<', timeWindowEnd)
   })
-// Temp comment
 
   // fetch results
   const result = await query.fetchAll({
@@ -44,6 +43,7 @@ async function invitee_reminder(days = 1, tx = app.db) {
       const originalSigner = accountRequest.signers.find(s => s.id === accountRequest.createdById)
       // SEND warning to the original signer
       if (originalSigner) {
+// Temp comment
         logger.info(`[invitee_reminder] reminding ${originalSigner.id} that invites are pending with an email`)
         await app.services.email.prospectPendingSigners(originalSigner.id)
       }

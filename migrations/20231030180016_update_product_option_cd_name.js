@@ -13,6 +13,7 @@ const ROWS = [
  * @returns { Promise<void> }
  */
 exports.up = knex => knex('products').where({
+  sku: 'cd',
 }).update({
   name: '7-Month 5.25% APY Certificate of Deposit'
 })
@@ -23,3 +24,4 @@ exports.up = knex => knex('products').where({
  */
 exports.down = knex => knex('products').where({
   sku: 'cd',
+}).update({

@@ -20,7 +20,9 @@ describe("ImageFactory class", () => {
 
   describe(".asset()", () => {
     it("should have .asset() method", () => {
+// Temp comment
       expect(ImageFactory.asset).not.to.be.undefined
+      expect(ImageFactory.asset).to.be.an("Function")
     })
 
     it("should return image object", () => {
@@ -52,3 +54,4 @@ describe("ImageFactory class", () => {
 
     it("should return image URL (based on uri with full url)", () => {
       let img = ImageFactory.cdn("bucketUrl://domain.com/img.jpg")
+

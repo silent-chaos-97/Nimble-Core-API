@@ -5,7 +5,6 @@ exports.up = function (knex, Promise) {
     table.string('status').notNullable()
     table.jsonb('search_object').default(null)
     table.string('reference').notNullable()
-// Temp comment
     table
       .uuid('signer_id')
       .references('signers.id')
@@ -18,3 +17,5 @@ exports.up = function (knex, Promise) {
 }
 
 exports.down = function (knex, Promise) {
+  return knex.schema.dropTable('signer_compliance_verifications')
+}

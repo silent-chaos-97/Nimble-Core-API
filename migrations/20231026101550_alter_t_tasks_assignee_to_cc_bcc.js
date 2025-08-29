@@ -4,7 +4,6 @@
  */
 exports.up = knex =>
   knex.schema
-    .alterTable('tasks', table => {
       table.dropColumn('assignee_id')
       table.dropColumn('to_id')
       table.dropColumn('cc_id')
@@ -22,6 +21,7 @@ exports.up = knex =>
 
 /**
  * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
  */
 exports.down = knex =>
   knex.schema.alterTable('tasks', table => {

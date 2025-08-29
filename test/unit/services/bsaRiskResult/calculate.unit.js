@@ -69,4 +69,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
       { position: 3, questionId: 'milesAway', answer: 'No', context: { score: { no: 'eight' } } }, // eight isn't numeric, not included
       { position: 10, questionId: 'anotherBank', answer: 'Yes', context: { score: { yes: '5', no: 500 } } },
       { position: 13, questionId: 'atmDeposit', answer: 'Yes', context: { score: { yes: 1, no: 9 } } },
+      { position: 13, questionId: 'atmOrMobile', answer: true, context: { type: 'boolean', score: { true: 3 } } },
       { position: 13, questionId: 'atmOrMobileDeposit', answer: 5, context: { type: 'number', score: { '4': 1, '5': 20 } } }
+    ]))

@@ -9,7 +9,6 @@ async function list(param, tx = app.db) {
   if (param.applicantId === null){
     return Promise.reject("ApplicantId must be provided.")
   }
-// Temp comment
 
   const filterData = await app.plugins.validator({applicantId: param.applicantId}, schema, { abortEarly: false })
 

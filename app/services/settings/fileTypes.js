@@ -436,7 +436,6 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Changes to Terms and Conditions'
-  },
   {
     type: 'Disclosures',
     name: 'Dispute Resolution'
@@ -629,3 +628,8 @@ const fileTypes = [
     name: 'Commercial RE'
   },
   {
+    type: 'External',
+    name: 'Farm Ground'
+  },
+  {
+    type: 'External',

@@ -7,7 +7,6 @@ columns:
 
   - data: product
     type: key-value-setting
-    selectSettings:
       ref: products
       value: id
       title: name
@@ -21,6 +20,7 @@ columns:
       title: name
 
   - data: indicator
+    type: key-value-setting
     selectSettings:
       ref: financial_indicators
       value: id

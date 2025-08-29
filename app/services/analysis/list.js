@@ -19,6 +19,7 @@ async function list(args, tx = app.db) {
     sql.orderBy(_.get(args, 'orderBy.column', 'updated_at'), _.get(args, 'orderBy.direction', 'DESC'))
   })
 
+  const results = await query.fetchAll({
     withRelated: ['files', 'owner'],
     transacting: tx
   })

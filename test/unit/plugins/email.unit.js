@@ -131,7 +131,6 @@ describe('Email Plugin', () => {
       const email = 'recover@test.com'
       const template = 'passwordResetEmail'
       const code = 'random-code'
-      const statusEmailSubject = 'Password Recovery'
       const uri = `${config.get('frontend').recovery_password_uri}/${code}`
 
       plugin.sendPasswordRecovery({ email, uri })
@@ -161,3 +160,4 @@ describe('Email Plugin', () => {
         plugin.sendAccountRequestStatus('DECLINED', { email: 'welcome@test.com', cc: 'admin@test.com' })
         expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
       })
+

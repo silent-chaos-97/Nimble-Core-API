@@ -485,3 +485,7 @@ describe('MicroblinkService', () => {
     afterEach(() => {
       nock.cleanAll()
     })
+
+    it('should scan USDL first', async () => {
+      const scope = nock(config.get('microblink').baseUrl)
+        .post('/recognize/execute')

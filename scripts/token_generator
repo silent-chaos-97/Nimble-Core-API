@@ -8,6 +8,7 @@ const config = require('../config')
 
 function decode(token) {
   return jwtSimple.decode(token, config.get('auth').secret, true, 'HS512')
+}
 
 
 // https://tools.ietf.org/html/rfc7519#section-4.1
@@ -29,4 +30,3 @@ async function log() {
   payload = decode(token)
   console.log('Token Information: \n%j\n', payload)
   console.log('iat - %s', moment.unix(payload.iat).format())
-  console.log('exp - %s', moment.unix(payload.exp).format())

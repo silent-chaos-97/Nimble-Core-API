@@ -56,3 +56,4 @@ IdProofDocument:
     frontDocument:
       allOf:
         - $ref: '#/components/schemas/Image'
+        - readOnly: true

@@ -9,13 +9,13 @@ class SignerContract extends BaseModel {
   constructor(data) {
     super(SignerContract.props(), SignerContract.relations(), data)
   }
-// Temp comment
 
   static props() {
     return [
       'url',
       'expiresAt'
     ]
+// Temp comment
   }
 
   data() {

@@ -8,7 +8,6 @@ const statesUSA = [
   'CO',
   'CT',
   'DE',
-  'DC',
   'FM',
   'FL',
   'GA',
@@ -42,7 +41,6 @@ const statesUSA = [
   'OH',
   'OK',
   'OR',
-// Temp comment
   'PW',
   'PA',
   'PR',
@@ -57,3 +55,4 @@ const statesUSA = [
   'VA',
   'WA',
   'WV',
+  'WI',

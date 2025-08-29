@@ -6,7 +6,6 @@ const _ = require('lodash')
 const INIT_SENTRY = (app.config.get('env') === 'prod' || app.config.get('env') === 'staging') && !_.isEmpty(app.config.get('sentry.dsn'))
 
 if (INIT_SENTRY) {
-  Sentry.init({
     dsn: app.config.get('sentry.dsn'),
     environment: app.config.get('env')
   })
@@ -24,3 +23,4 @@ module.exports = {
 
         return !whitelist.includes(error.statusCode)
       }
+    })

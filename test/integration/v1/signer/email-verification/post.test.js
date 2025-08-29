@@ -183,3 +183,4 @@ describe('POST /signers/:id/email-verifications', async () => {
     it('should reset signer email verification status', async () => {
       return request(app.server)
         .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications?token=${urlToken}`)
+        .expect(204)

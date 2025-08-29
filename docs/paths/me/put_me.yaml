@@ -21,6 +21,7 @@
               minLength: 6
               maxLength: 160
               description: writeOnly value for the user current user password
+      - in: body
         name: User Data
         description: User object to be updated
         required: true
@@ -39,3 +40,4 @@
         $ref: '#/components/responses/Unauthorized'
       '404':
         $ref: '#/components/responses/NotFound'
+      '409':

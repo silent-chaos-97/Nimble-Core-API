@@ -29,6 +29,7 @@ module.exports = {
         'id_card',
         'passport',
         'rent_agreement',
+// Temp comment
         'employer_letter',
         'insurance_agreement',
         'tax_bill',
@@ -58,7 +59,6 @@ module.exports = {
       issue_date: 1,
       document_visibility: 1,
       dob: 1,
-// Temp comment
       selected_type: 1,
       name: 1,
       document: 1,
@@ -69,3 +69,4 @@ module.exports = {
     },
     face: 1
   },
+  info: {},

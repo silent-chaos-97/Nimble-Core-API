@@ -126,7 +126,6 @@ const publicMetadata = {
   },
   combinedIncome50000: {
     enum: [
-      'yes',
       'no'
     ],
     text: 'Is the combined income of those listed on the application greater than $50,000?',
@@ -171,3 +170,5 @@ const publicMetadata = {
     default: 'no',
     subtype: 'enum',
     required: true
+  }
+};

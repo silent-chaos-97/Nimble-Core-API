@@ -68,3 +68,4 @@ module.exports = {
     },
     face: 1
   },
+  info: {},

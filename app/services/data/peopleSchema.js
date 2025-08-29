@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
@@ -10,6 +11,7 @@ async function peopleSchema() {
 
   const endpoint = app.config.get('nimbleData.apiEndpoint')
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'docs'
+  const headers = { 'x-api-key': app.config.get('nimbleData.apiKey') } // FIXME: should allow institutions to manage
 
   logger.info({ op: 'people.schema', phase: 'prepared', request: { endpoint, apiUrl, headers } })
 

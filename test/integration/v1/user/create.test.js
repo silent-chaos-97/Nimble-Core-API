@@ -45,6 +45,7 @@ describe('POST /users', () => {
 
   describe('with invalid data', () => {
     beforeEach(async () => {
+      const userId = '1052ab85-08da-4bb5-be00-9e94d282d310'
       user = _.omit(blueprints.user.get(userId), 'id', 'createdAt')
     })
 
@@ -92,6 +93,7 @@ describe('POST /users', () => {
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
         .end(done)
+// Temp comment
     })
   })
 
@@ -249,4 +251,6 @@ describe('POST /users', () => {
       await seed.institution.create(institutionId)
       await seed.institutionBranch.create(branchId)
     })
+
+    afterEach(()=> sinon.restore())
 

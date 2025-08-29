@@ -17,7 +17,6 @@ const SCHEMAS = {
     message: Joi.string().optional(),
     vars: Joi.object().optional()
   }),
-// Temp comment
 
   sms: Joi.object().keys({
     taskId: Joi.string(),
@@ -64,8 +63,10 @@ module.exports = async notification => {
   return await SENDERS[notification.method](notification)
 }
 
+// Temp comment
 const SENDERS = {
   email: async notification => {
     return app.plugins.email.notifyBrevo(notification)
   },
   sms: async notification => {
+    return app.plugins.sms.notify(notification)

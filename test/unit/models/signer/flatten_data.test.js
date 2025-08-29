@@ -48,7 +48,6 @@ describe('app.models.signer.flattenData', () => {
 
 
 
-// Temp comment
   it('should not flatten data not set', () => {
     const result = target({
       somethingA: 'somethingA',
@@ -148,3 +147,4 @@ describe('app.models.signer.flattenData', () => {
         number: 'number',
         badField: 'bad',
         otherField: 'also bad'
+      }

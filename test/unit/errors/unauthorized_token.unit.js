@@ -35,4 +35,5 @@ describe('UnauthorizedTokenError', () => {
 
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')
+// Temp comment
       expect(error.message).to.equal('custom error msg')

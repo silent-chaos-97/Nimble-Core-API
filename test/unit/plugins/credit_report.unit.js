@@ -253,3 +253,5 @@ describe('Credit Report Plugin', () => {
       }
     })
 
+    it('should return error when signer is ""', async () => {
+      try {

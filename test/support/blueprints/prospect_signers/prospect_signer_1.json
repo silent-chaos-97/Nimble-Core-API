@@ -13,6 +13,7 @@
   "zipCode": "NY11216",
   "ssn": "111-22-3333",
   "employer": "New York Police Dep.",
+  "consent": true,
   "idProofDocument": {
     "backDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",
     "frontDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",

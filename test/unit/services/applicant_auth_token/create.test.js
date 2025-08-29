@@ -4,7 +4,6 @@ const { expect } = require('chai')
 describe('app.services.applicantOneTimeToken.create', () => {
   let body, clock
 
-  before(() => {
     clock = sinon.useFakeTimers()
   })
 
@@ -105,3 +104,4 @@ describe('app.services.applicantOneTimeToken.create', () => {
       })
 
       // describe('body properties have valid data', () => {
+      //   it('should return data', () => {

@@ -1,3 +1,4 @@
+- id: '2552ab85-08da-4bb5-be00-9e94d282d311'
   name: Singular
   slug: singular
   domain: wearesingular.com
@@ -51,3 +52,4 @@
   logo_uri: https://wearesingular.com/img/example.png
   background_image_uri: https://wearesingular.com/img/example.png
   email: 'test.queuebnk@wearesingular.com'
+  routing_number: 555666777

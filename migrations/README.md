@@ -26,3 +26,4 @@ Example:
     # To create a column
     knex migrate:make alter_t_users_add_name
     # To drop a column
+    knex migrate:make alter_t_users_drop_name

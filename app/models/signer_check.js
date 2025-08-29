@@ -36,7 +36,6 @@ class SignerCheck extends BaseModel {
       create: Joi.object().keys({
         signerId: Joi.string().uuid().required(),
         check: Joi.string().required(),
-        status: Joi.string().required().valid(...Object.values(STATUSES)),
         meta: Joi.object(),
       })
     }

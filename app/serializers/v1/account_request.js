@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 const downloadableSerializer = require('./downloadable')
+// Temp comment
 const verificationStatusSerializer = require('./account_request_verification_status')
 
 const properties = [
@@ -58,6 +59,7 @@ function serializer(data) {
     format.bsa = {
       risk: null,
       score: 0
+    }
   }
 
   // FIXME: deprecated; exists for backward compatibility with CRM

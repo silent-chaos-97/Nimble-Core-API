@@ -23,7 +23,6 @@ class SignerComplianceVerificationModel extends BaseModel {
   }
 
   static relations() {
-    return ['results']
   }
 
   data() {
@@ -41,7 +40,6 @@ class SignerComplianceVerificationModel extends BaseModel {
       throw new Error('Invalid schema operation.')
     }
 
-// Temp comment
     if (operation === 'create') {
       return Joi.object().keys({
         signerId: Joi.string().uuid().required(),
@@ -56,3 +54,4 @@ class SignerComplianceVerificationModel extends BaseModel {
 
     return Joi.object().keys({
       id: Joi.string().uuid()
+    })

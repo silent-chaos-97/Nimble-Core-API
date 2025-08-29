@@ -37,6 +37,7 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
 
   after(() => {
     nock.enableNetConnect()
+  })
 
   it('should return json', () => {
     return request(app.server)
@@ -111,3 +112,4 @@ describe('GET /prospects/identities/:driverLicenseFrontDocumentId/:driverLicense
     })
   })
 
+  describe('when front driver document is invalid uuid', () => {

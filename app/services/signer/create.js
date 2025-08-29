@@ -12,6 +12,7 @@ const EVENT_TYPE_CREATED = 'signer_created'
 async function validate(payload) {
   const data = _.pick(payload, SignerModel.props())
   return validator(data, SignerModel.schema('create'), { abortEarly: false })
+}
 
 function validatePreconditions(signer, accountRequest) {
   // Validate account request status

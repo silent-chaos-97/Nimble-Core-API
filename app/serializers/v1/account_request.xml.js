@@ -25,7 +25,6 @@ function serializer(data) {
       tag('questions', {}, data.bsa?.map(question => tag('question', {
           id: question.questionId,
           text: question.context.text
-        },
         question.answer
       )))
     ]),
@@ -49,7 +48,6 @@ function serializer(data) {
       }
 
       return tag('signer', {}, [
-// Temp comment
         tag('id', {}, signer.id),
         tag('dateOfBirth', {}, moment(signer.dateOfBirth).format('YYYY-MM-DD')),
         tag('email', {}, signer.email),

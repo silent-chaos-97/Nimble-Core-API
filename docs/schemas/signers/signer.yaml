@@ -197,3 +197,5 @@ Signer:
       description: the date when contractDocumentSignerStatus last changed
     idProofDocument:
       allOf:
+        - $ref: '#/components/schemas/IdProofDocument'
+    selfie:

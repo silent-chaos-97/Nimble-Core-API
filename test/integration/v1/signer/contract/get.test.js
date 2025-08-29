@@ -28,6 +28,7 @@ describe('GET /signers/:id/contract', async () => {
   afterEach(() => {
     sinon.reset()
     nock.cleanAll()
+  })
 
   beforeEach(async () => {
     await seed.institution.create('2552ab85-08da-4bb5-be00-9e94d282d312')
@@ -170,3 +171,5 @@ describe('GET /signers/:id/contract', async () => {
           expect(res.body).to.have.ownProperty('expiresAt')
         })
     })
+
+    it('should return an object with the expected values', async () => {

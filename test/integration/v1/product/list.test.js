@@ -164,3 +164,4 @@ describe(`GET /v1/institutions/:id/products`, () => {
       })
 
       it('should default offset if not set', () => {
+        return request(app.server)

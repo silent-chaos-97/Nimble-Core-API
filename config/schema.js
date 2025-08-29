@@ -114,7 +114,6 @@ const schema = {
       env: 'JWT_EXPIRATION'
     },
     ttlDev: {
-      doc: 'The ttl for JWT tokens in seconds (for developers)',
       format: Number,
       default: 999999999,
       env: 'JWT_EXPIRATION_DEV'
@@ -619,3 +618,8 @@ const schema = {
       format: String,
       default: '1426',
       env: 'CREDITBUREAU_LENDERID'
+    }
+  },
+  lambda: {
+    pdfTransformARN: {
+      doc: 'Lambda ARN for html to pdf service',

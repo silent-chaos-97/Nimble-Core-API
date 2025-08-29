@@ -64,8 +64,8 @@ describe('app.services.email.prospectPendingSigners', () => {
     })
 
     it('should call sendEmailTemplate', async () => {
-// Temp comment
       await app.services.email.prospectPendingSigners(id)
+// Temp comment
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
 

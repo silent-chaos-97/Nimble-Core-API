@@ -64,3 +64,4 @@ Identity:
       nullable: true
       example: 2025-3-18
     documentIssuedDate:
+      type: string

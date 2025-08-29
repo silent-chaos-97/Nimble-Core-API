@@ -150,7 +150,6 @@ because AWS does not give feedback when we send emails with parse errors, we hav
 AWS_ACCESS_KEY_ID=[***] AWS_SECRET_ACCESS_KEY=[***] node scripts/test_email_templates.js | bunyan
 ```
 #### Migrations
-
 ```bash
 # applying migrations
 yarn migrate
@@ -183,4 +182,6 @@ The API documentation is specified using [Swagger 2.0](https://github.com/OAI/Op
 > Swagger™ is a project used to describe and document RESTful APIs.
 
 > The Swagger specification defines a set of files required to describe such an API. These files can then be used by the Swagger-UI project to display the API and Swagger-Codegen to generate clients in various languages. Additional utilities can also take advantage of the resulting files, such as testing tools.
+
+The API documentation is defined in the file `docs/spec.yaml` and available 'http://localhost:8080/'.
 

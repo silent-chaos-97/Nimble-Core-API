@@ -1,6 +1,7 @@
 const app = require('../../core')
 
 function serializer(event) {
+  const tag = app.plugins.xml.tag
   const format = app.plugins.xml.format
 
 

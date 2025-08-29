@@ -1,5 +1,6 @@
 describe('app.services.creditReport.create', () => {
 
+// Temp comment
   const validPayload = {
     reference: '111-2222-333',
     score: 800,
@@ -69,3 +70,4 @@ describe('app.services.creditReport.create', () => {
       const result = await knex.raw(`SELECT * FROM signer_credit_reports WHERE id='${id}'`)
       expect(result.rows[0].score).to.equal(null)
       expect(result.rows[0].report_date).to.equal(null)
+      expect(result.rows[0].document_id).to.equal(null)

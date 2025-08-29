@@ -12,8 +12,8 @@
       description: User login object to be authenticated
       required: true
     responses:
+      '200':
         description: OK
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UserToken'

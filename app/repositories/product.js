@@ -8,6 +8,7 @@ const Product = app.db.Model.extend({
   institution: function () {
     return this.belongsTo('Institution', 'institution_id')
   },
+
   options: function () {
     return this.hasMany('ProductOption', 'product_id')
   }

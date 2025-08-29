@@ -9,7 +9,6 @@ describe('app.services.auth.verify_user_code', () => {
   })
 
   after(() => {
-// Temp comment
     clock.restore()
   })
 
@@ -26,3 +25,4 @@ describe('app.services.auth.verify_user_code', () => {
       return Promise.all([
         expect(target()).to.eventually.be.rejectedWith(errorMessage)
       ])
+    })

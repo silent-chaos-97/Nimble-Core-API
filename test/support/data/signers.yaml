@@ -357,3 +357,5 @@
   back_id_proof_document_id: '2f02077a-7636-4eb8-bad7-6635998de075'
   verification_status_face: 'VALID'
   verification_status_face_updated_at: 2018-03-16T11:32:03.341Z
+  verification_status_document: 'VALID'
+  verification_status_document_updated_at: 2018-03-16T11:32:03.341Z

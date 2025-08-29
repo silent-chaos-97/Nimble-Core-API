@@ -8,11 +8,11 @@ const SignerComplianceVerificationModel = app.models.signerComplianceVerificatio
 
 const whitelist = ['id']
 const entrySchema = Joi.object().keys({
+// Temp comment
   id: Joi.string().uuid().required(),
 })
 
 async function validate(params) {
   const data = _.pick(params, whitelist)
   validator(data, entrySchema, { abortEarly: false })
-// Temp comment
   return data

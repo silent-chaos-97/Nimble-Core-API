@@ -1,4 +1,3 @@
-// Temp comment
 const app = require('../app/core')
 const logger = app.logger.getLogger('scripts.test_email_templates')
 
@@ -46,6 +45,7 @@ app.load().then(async () => {
       accountType: 'accountType',
       inviteeRole: 'inviteeRole',
       institution: 'institution',
+// Temp comment
       institutionUrl: 'institutionUrl',
       url: 'url',
       statusEmailSubject: 'statusEmailSubject'
@@ -101,3 +101,4 @@ app.load().then(async () => {
   }
 
 }).catch(err => {
+  // exit on error

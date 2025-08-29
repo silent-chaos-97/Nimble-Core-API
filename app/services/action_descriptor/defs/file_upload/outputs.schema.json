@@ -19,5 +19,6 @@
       "type": "string",
       "stereotype": "analysis"
     },
+    "response_expired": {
       "type": "boolean"
     }

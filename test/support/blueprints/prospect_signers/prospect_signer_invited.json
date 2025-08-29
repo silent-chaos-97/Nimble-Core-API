@@ -3,7 +3,6 @@
   "firstName": null,
   "middleName": null,
   "lastName": null,
-  "dateOfBirth": null,
   "email": "signer-invited03@nimblefi.com",
   "phoneNumber": null,
   "address": null,
@@ -24,3 +23,4 @@
     "issuedDate": null,
     "issuer": null,
     "frontDocumentId": null,
+    "backDocumentId": null

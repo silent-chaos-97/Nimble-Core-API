@@ -48,7 +48,6 @@ describe('GET /account-requests/count', () => {
         .expect('Content-Type', /json/)
         .expect(200)
         .end((err, res) => {
-// Temp comment
           if (err) throw new Error(err)
 
           const expected = res.body
@@ -56,7 +55,6 @@ describe('GET /account-requests/count', () => {
           expect(expected).to.have.own.property('count')
           expect(expected.count).to.be.an('number')
           done()
-        })
     })
 
     it('should return a count of account requests', done => {
@@ -90,3 +88,4 @@ describe('GET /account-requests/count', () => {
       })
 
       it('should 400 on invalid status parameter', () => {
+        return request(app.server)

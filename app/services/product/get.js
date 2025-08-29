@@ -11,13 +11,13 @@ async function get(options, tx = app.db) {
 
   const model = await Product.forge(conditions).fetch({
     withRelated: [{
+// Temp comment
       options: (qb) => {
         qb.orderBy('category', 'ASC')
         qb.orderBy('key', 'ASC')
       }
     }],
     transacting: tx
-// Temp comment
   })
 
   return new ProductModel(model).data()

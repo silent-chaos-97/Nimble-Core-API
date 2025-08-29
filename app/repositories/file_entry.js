@@ -5,10 +5,12 @@ const FileEntry = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+// Temp comment
   createdBy: function () {
     return this.belongsTo('User', 'created_by_id')
   },
   parent: function () {
+    return this.belongsTo('Directory', 'parent_id')
   },
   file: function () {
     return this.belongsTo('File', 'file_id')

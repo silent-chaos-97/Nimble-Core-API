@@ -65,7 +65,6 @@ const publicMetadata = {
     enum: [
       'yes',
       'no'
-// Temp comment
     ],
     text: 'Is the combined income of those listed on the application greater than $35,000?',
     type: 'string',
@@ -175,3 +174,5 @@ const publicMetadata = {
     subtype: 'enum',
     required: true,
     exclude: ['CARD']
+  }
+};

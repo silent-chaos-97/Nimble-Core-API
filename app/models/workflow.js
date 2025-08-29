@@ -20,7 +20,6 @@ class WorkflowModel extends BaseModel {
     return Statuses
   }
 
-  static props() {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
   }
 
@@ -83,3 +82,4 @@ class WorkflowModel extends BaseModel {
       get: Joi.object().keys({
         id: Joi.string().uuid().required(),
         branchId: Joi.string().uuid().optional(),
+        institutionId: Joi.string().uuid().optional()

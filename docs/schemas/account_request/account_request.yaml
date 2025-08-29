@@ -108,3 +108,4 @@ AccountRequest:
     statusUpdatedAt:
       type: string
       format: date-time
+      title: Status Update Date

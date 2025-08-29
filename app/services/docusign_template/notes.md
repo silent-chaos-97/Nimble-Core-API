@@ -3,6 +3,7 @@
 ## Docusign requirements
 
 The app uses a third-party SAAS called Docusign to send and allow prospects to sign contracts.
+To use this api, you need to fill several variables in the env:
 
 - DOCUSIGN_BASE_OAUTH_PATH - this is the oath server url. It's going to be different depending if it's sandbox or live.
 
@@ -158,3 +159,5 @@ DocuSign redirects to the URL and includes an event query parameter that can be 
 So we can use this URL and the parameters to know if a user finished signing a document or not.
 
 #### IMPORTANT: We can only send the document to signer2 after signer1 finishes and so on.
+
+Possible event parameter values include:

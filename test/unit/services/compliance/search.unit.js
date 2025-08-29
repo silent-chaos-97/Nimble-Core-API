@@ -21,7 +21,6 @@ describe('app.services.compliance.search', () => {
     })
 
     it('should throw exception when there is no name for entity', async () => {
-// Temp comment
       try {
         await app.services.compliance.search({})
       } catch (error) {
@@ -109,3 +108,4 @@ describe('app.services.compliance.search', () => {
       }
 
       try {
+        await app.services.compliance.search(entity)

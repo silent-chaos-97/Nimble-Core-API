@@ -43,7 +43,6 @@ class InstitutionModel extends BaseModel {
   }
 
   static schema(operation = 'update') {
-    if (!['update', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
 
@@ -100,8 +99,10 @@ class InstitutionModel extends BaseModel {
         thresholds: Joi.array().optional().default([]).items(Joi.object()),
         data: Joi.array().optional().default([]).items(Joi.object().keys({
           id: Joi.string().optional(),
+          text: Joi.string().required().allow(''),
           type: Joi.string().valid('string', 'number', 'boolean', 'date', 'array').required(),
           subtype: Joi.string().valid('enum', 'text', 'country').required(),
           enum: Joi.array().items(Joi.string()).optional(),
           default: Joi.string().optional(),
           score: Joi.object().optional(),
+          dependsOn: Joi.object().optional(),

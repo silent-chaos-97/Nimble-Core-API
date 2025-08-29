@@ -49,7 +49,6 @@
   "sns": {"endpoint": "http://localstack:4566"},
   "sqs": {"endpoint": "http://localstack:4566"},
   "lambda": {
-    "pdfTransformARN": "local-htmltopdf"
   },
   "complyAdvantage": {
     "baseUrl": "https://api.complyadvantage.com",

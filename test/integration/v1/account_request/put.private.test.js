@@ -405,3 +405,6 @@ describe('PUT private /account-requests/:id', () => {
       describe('when aproving or declining an Account Request', () => {
         beforeEach(async () => {
           await seed.accountRequest.create(aprovedAccountRequestId)
+        })
+
+        it('should return 403 if already approved', done => {

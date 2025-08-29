@@ -25,3 +25,4 @@ module.exports = {
    * }
    * } opts
    * @return {Promise<void>}
+   */

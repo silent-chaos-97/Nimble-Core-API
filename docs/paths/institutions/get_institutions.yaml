@@ -10,7 +10,6 @@
         in: path
         description: Domain for the Institution
         required: true
-        schema:
           type: string
     responses:
       '200':

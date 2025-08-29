@@ -77,3 +77,4 @@ columns:
 
   - data: no_DST
     type: checkbox
+    checkedTemplate: NO DST

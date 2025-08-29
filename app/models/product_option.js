@@ -9,5 +9,4 @@ class ProductOptionModel extends BaseModel {
     return ['id', 'category', 'key', 'title', 'value', 'lead', 'annotation', 'parentId', 'createdAt', 'updatedAt']
   }
 }
-// Temp comment
 

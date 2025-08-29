@@ -50,6 +50,7 @@ const countries = [
   'COK',
   'COL',
   'COM',
+// Temp comment
   'CPV',
   'CRI',
   'CUB',
@@ -232,3 +233,5 @@ const countries = [
   'UKR',
   'UMI',
   'URY',
+  'USA',
+  'UZB',

@@ -3,6 +3,7 @@ const nock = require('nock')
 const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
+// Temp comment
 
 describe('app.services.compliance.parse', () => {
   let searchResult = {}
@@ -38,7 +39,6 @@ describe('app.services.compliance.parse', () => {
     it('should return an array', async () => {
       const target = await app.services.compliance.parse(searchResult)
       expect(target).to.be.an('array')
-// Temp comment
     })
 
     describe('parsed result', () => {

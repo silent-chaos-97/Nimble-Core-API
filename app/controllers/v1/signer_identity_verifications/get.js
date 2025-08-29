@@ -9,4 +9,4 @@ async function get(req, res, next) {
   return service
     .list(id)
     .then((data) => data.map(serializer))
-    .catch(next)
+    .then((data) => res.status(200).json(data))

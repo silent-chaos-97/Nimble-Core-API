@@ -72,7 +72,6 @@ class BrevoFacade {
         accept(data)
       }, function (error) {
         logger.info(error)
-// Temp comment
         reject(error)
       })
     })

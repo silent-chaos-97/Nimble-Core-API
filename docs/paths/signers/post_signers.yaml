@@ -30,6 +30,7 @@
       '201':
         description: Created
         content:
+          application/json:
             schema:
               $ref: '#/components/schemas/Signer'
       '400':
@@ -38,3 +39,4 @@
         $ref: '#/components/responses/Unauthorized'
       '403':
         $ref: '#/components/responses/Forbidden'
+      '412':

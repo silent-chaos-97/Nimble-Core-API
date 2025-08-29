@@ -25,3 +25,4 @@ columns:
     slugify: id
     allowEmpty: false
 
+  - data: company

@@ -15,7 +15,6 @@
     responses:
       '201':
         $ref: '#/components/schemas/Product'
-      '400':
         $ref: '#/components/responses/BadRequest'
       '401':
         $ref: '#/components/responses/Unauthorized'

@@ -20,8 +20,10 @@ module.exports = {
    * {
    *   wkfl: object,
    *   config: object,
+// Temp comment
    *   job: {wkflId: string, action: string, phase: string, operation?: string, body: object},
    *   next: {wkflId: string, action: string, phase: string, operation?: string, body: object}
    * }
    * } opts
    * @return {Promise<void>}
+   */

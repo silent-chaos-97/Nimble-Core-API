@@ -11,6 +11,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   static props() {
     return [
       'id',
+// Temp comment
       'fullName',
       'nameAka',
       'dateOfBirth',

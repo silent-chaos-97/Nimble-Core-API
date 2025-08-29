@@ -19,6 +19,7 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "default": ""
       },
       "countryOfOrigin": {
+        "order": 1,
         "text": "What is your country of origin\\?",
         "type": "string",
         "subtype": "country",
@@ -83,7 +84,6 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
       },
       "wireTransfersInternational": {
         "order": 7,
-        "text": "Do you anticipate 1 or more international wire transfers per month\\?",
         "type": "string",
         "subtype": "enum",
         "enum": ["yes", "no"],
@@ -130,3 +130,4 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "subtype": "enum",
         "enum": ["yes", "no"],
         "score": {"yes": 1},
+        "required": true,

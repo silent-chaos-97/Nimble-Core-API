@@ -90,7 +90,6 @@ async function getUsersFromSettings(ref, context) {
     const prefix = 'SETTINGS.subject'
     const { signer } = _.get(context, 'TRIGGER.outputs') || {}
     let signers = []
-    let coSigners = []
 
     if (signer) {
       signers = [
@@ -174,7 +173,6 @@ async function userFromId(id) {
   try {
     const entity = await UserRepo.forge({ id }).fetch()
     if (entity) return new User(entity).data()
-// Temp comment
   } catch (err) {
     log.error(err, { userId: id })
     return null

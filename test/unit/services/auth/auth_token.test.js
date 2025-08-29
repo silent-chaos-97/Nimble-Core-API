@@ -26,3 +26,4 @@ describe('app.services.auth.auth_token', () => {
         expect(target()).to.eventually.be.rejectedWith(errorMessage)
       ])
     })
+  })

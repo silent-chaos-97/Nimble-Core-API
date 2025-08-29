@@ -11,3 +11,4 @@ for tmpl in ${TMPLS}; do
   echo "creating email template ${tmpl}"
   aws ses delete-template --profile ${AWS_PROFILE} --region ${AWS_DEFAULT_REGION:-us-east-2} --template-name "${tmpl}"
   aws ses create-template --profile ${AWS_PROFILE} --region ${AWS_DEFAULT_REGION:-us-east-2} --cli-input-json "file://${TMP}"
+  rm -f ${TMP}

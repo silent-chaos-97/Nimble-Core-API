@@ -44,6 +44,7 @@ describe('app.services.email.welcome', () => {
       } catch(error) {
         expect(error.name).to.equal('NotFoundError')
         expect(error.statusCode).to.equal(404)
+      }
     })
   })
 
@@ -90,3 +91,4 @@ describe('app.services.email.welcome', () => {
         firstName,
         lastName,
         statusEmailSubject,
+        uri,

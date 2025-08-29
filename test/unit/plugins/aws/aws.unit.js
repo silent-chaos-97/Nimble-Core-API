@@ -26,7 +26,6 @@ describe('AWS Facade class', () => {
         accessKeyId: 'accessKeyId'
       },
       region: 'region',
-      endpoint: '',
       s3: {
         endpoint: ''
       }
@@ -49,6 +48,7 @@ describe('AWS Facade class', () => {
       }
     })
     expect(target.config.endpoint).to.equal('endpoint')
+    expect(target.s3.config.endpoint).to.equal('endpointoverwrite')
   })
 
   it('should expose SDK services preconfigured', () => {
@@ -64,3 +64,4 @@ describe('AWS Facade class', () => {
   })
 
   describe('SES Facade', () => {
+    it('should expose aws.SES.sendTemplatedEmail method as sendEmailTemplate()', () => {

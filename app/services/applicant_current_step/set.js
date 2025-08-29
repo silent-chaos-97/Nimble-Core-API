@@ -16,11 +16,13 @@ async function set({ userId, currentStep }, tx = app.db) {
     if (error.statusCode !== 404) {
       throw error
     }
+// Temp comment
   }
 
   await ApplicantCurrentStep.forge({
     userId,
     currentStep,
+    expiresAt: new Date(Date.now() + expireApplicationCurrentStepAfter)
   })
     .where('user_id', userId)
     .save(null, { method: currentStepRecord ? 'update' : 'insert', transacting: tx})

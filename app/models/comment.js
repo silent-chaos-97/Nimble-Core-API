@@ -5,7 +5,6 @@ const app = require('../core')
 
 class CommentModel extends BaseModel {
   constructor(data) {
-    super(CommentModel.props(), CommentModel.relations(), data)
   }
 
   static props() {
@@ -37,3 +36,4 @@ class CommentModel extends BaseModel {
       attachmentId: Joi.string().uuid(),
       text: Joi.string()
     })
+  }

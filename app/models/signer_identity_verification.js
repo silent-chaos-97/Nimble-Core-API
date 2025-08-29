@@ -19,7 +19,6 @@ class SignerIdentityVerification extends BaseModel {
   }
 
   static relations() {
-    return ['signer']
   }
 
   static schema(operation = 'create') {

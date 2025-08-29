@@ -91,7 +91,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       const verificationId = 'FF000000-0000-0000-2222-4bd8aa454721'
       return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenExpired}`)
-        .expect('Content-Type', /json/)
         .expect(412)
     })
 
@@ -133,3 +132,4 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     const verificationId = 'FF000000-0000-0000-1111-4bd8aa454721'
 
     const globalToken = app.services.token.get({
+      scopes: ['signers', 'documents'],

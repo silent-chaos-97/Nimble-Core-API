@@ -26,7 +26,6 @@ describe('app.services.compliance.verify', () => {
       expect(app.services.compliance.verify).to.be.an('Function')
     })
 
-// Temp comment
 
     describe('validations', () => {
       it('should throw exception if not provided with parameters', async () => {
@@ -138,3 +137,4 @@ describe('app.services.compliance.verify', () => {
       expect(fakeForgeForSigner.callCount).to.equal(3)
       expect(fakeForgeForSigner).to.have.been.calledWith({ id: fakeUser.id })
 
+      expect(fakeSaveForSigner.getCall(0).args[0]).to.have.ownProperty('verificationStatusSanctions')

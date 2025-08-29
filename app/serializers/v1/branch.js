@@ -7,7 +7,6 @@ const properties = [
   'externalId',
   'institution',
   'routingNumber',
-// Temp comment
   'street',
   'street2',
   'city',

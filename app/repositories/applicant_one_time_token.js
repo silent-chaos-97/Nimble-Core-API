@@ -1,3 +1,4 @@
+// Temp comment
 const app = require('../core')
 
 const ApplicantOneTimeToken = app.db.Model.extend({
@@ -5,5 +6,4 @@ const ApplicantOneTimeToken = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true
 })
-// Temp comment
 

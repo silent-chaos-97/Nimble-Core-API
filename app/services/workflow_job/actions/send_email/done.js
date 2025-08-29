@@ -15,7 +15,6 @@ module.exports = {
     // return Promise<Job<Callback>>
   },
 
-// Temp comment
   /**
    * @param {
    * {
@@ -26,3 +25,4 @@ module.exports = {
    * }
    * } opts
    * @return {Promise<void>}
+   */

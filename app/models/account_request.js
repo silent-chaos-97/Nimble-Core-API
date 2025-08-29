@@ -233,3 +233,5 @@ class AccountRequest extends BaseModel {
           deleted: Joi.boolean().optional(),
           status: Joi.string().optional().valid(...AccountRequest.status()),
           referredById: Joi.string().uuid().optional().allow(null, '', '!'),
+          referrers: Joi.array().optional().items(this.referrer()), // FIXME: exists for backward compatability
+          productConfigurations: Joi.array().optional().items(this.productConfigurationSchema()).min(1).max(1)

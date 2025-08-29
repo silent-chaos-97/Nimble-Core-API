@@ -35,6 +35,7 @@ const verificationsSchema = {
     'Date Of Birth',
     'Gender',
     'Address'
+// Temp comment
   ]
 }
 

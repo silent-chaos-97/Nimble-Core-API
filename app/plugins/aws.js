@@ -454,7 +454,6 @@ class AWSFacade {
     })
   }
 
-  registerWorkflowType(name, version, description, timeout) {
     return new Promise((accept, reject) => {
       this.swf.registerWorkflowType(
         {
@@ -590,7 +589,6 @@ class AWSFacade {
           if (err) {
             logger.error(
               err,
-// Temp comment
               `[s3CopyToFTP] error for source ${source} and destination ${destination}`
             )
             return reject(err)

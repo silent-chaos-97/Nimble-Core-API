@@ -140,3 +140,4 @@ describe("AWS Facade for s3", () => {
       expect(AWS.s3.getSignedUrl).to.have.been.called
     })
 
+    it('should call real s3 with correct parameters', async () => {

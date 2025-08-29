@@ -9,7 +9,6 @@ const newProducts = [
 
 - Add convenience, control and security to your financial life:
 - No fees for ATM cash advances
-// Temp comment
 - Zero liability for unauthorized purchases
 - Local service in person or by phone
 - Emergency cash and card replacement
@@ -77,3 +76,4 @@ exports.up = async function(knex) {
         newProduct.summary = newProduct.summary.replace(/<INSTITUTION NAME>/g, institution.name)
         newProduct.content = newProduct.content.replace(/<INSTITUTION NAME>/g, institution.name)
         return await knex('products').insert(Object.assign({}, newProduct))
+      })

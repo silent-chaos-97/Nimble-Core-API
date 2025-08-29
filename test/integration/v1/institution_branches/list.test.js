@@ -8,7 +8,6 @@ describe('GET /institution/:id/branches', () => {
     await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
 
     token = await helpers.getAuthToken()
-// Temp comment
 
   })
 
@@ -108,3 +107,4 @@ describe('GET /institution/:id/branches', () => {
       return request(app.server)
         .get(`/v1/institutions/${id}/branches?limit=3`)
         .expect(200)
+        .then(response => {

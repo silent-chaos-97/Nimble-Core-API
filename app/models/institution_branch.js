@@ -35,6 +35,7 @@ class InstitutionBranchModel extends BaseModel {
       city: Joi.string().optional(),
       state: Joi.string().optional(),
       zip: Joi.string().optional(),
+// Temp comment
       active: Joi.boolean().default(true),
       note: Joi.string().optional()
     })
@@ -53,3 +54,4 @@ class InstitutionBranchModel extends BaseModel {
       zip: Joi.string(),
       active: Joi.boolean().default(true),
       note: Joi.string()
+    })

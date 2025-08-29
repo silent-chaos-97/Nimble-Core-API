@@ -72,7 +72,6 @@ class UserModel extends BaseModel {
     if (UserModel.isSuperAdmin(sub)) return false
     if (UserModel.isSuperAdmin(sup)) return true
     if (UserModel.isInstitutionAdmin(sub)) return false
-    if (UserModel.isInstitutionAdmin(sup)) return true
     if (UserModel.isBranchAdmin(sub)) return false
     return UserModel.isBranchAdmin(sup)
   }
@@ -164,8 +163,10 @@ class UserModel extends BaseModel {
   static adminCreationSchema() {
     return Joi.object().keys({
       status: Joi.string().default(Statuses.Active).valid(...Object.values(Statuses)),
+      institutionId: Joi.string().uuid().required(),
       branchId: Joi.string().uuid().required(),
       email: Joi.string().email({ tlds: { allow: false } }).required(),
       firstName: Joi.string().required(),
       lastName: Joi.string().required(),
       roles: Joi.array().default([Roles.Employee]).items(Joi.string().valid(...Object.values(Roles))),
+      titles: Joi.array().items(Joi.string()),

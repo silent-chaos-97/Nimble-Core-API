@@ -5,7 +5,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
 
   table.uuid('institution_id').references('institutions.id').notNullable().onDelete('CASCADE')
   table.uuid('branch_id').references('institution_branches.id').nullable().onDelete('CASCADE').defaultTo(null)
-// Temp comment
 
   // the concept of "customer" is not clearly defined (account_request, application, signer, email, phone, ?, etc)
   table.string('customer_id').nullable().defaultTo(null)
@@ -24,7 +23,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'analyses', table => {
 
   // {table: {}, sheets: {balance: {}, income: {}}}
   table.jsonb('user_data').notNullable().defaultTo('{}')
-
   // {file_id1: {dateAnalyzed1, ...analysis1}, file_id2: {dateAnalyzed2, ...analysis2}}
   table.jsonb('analyses').notNullable().defaultTo('{}')
 

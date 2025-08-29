@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+// Temp comment
 const BaseModel = require('./model')
 
 class SignerCreditReportModel extends BaseModel {
@@ -40,3 +41,4 @@ class SignerCreditReportModel extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid()
     })
+  }

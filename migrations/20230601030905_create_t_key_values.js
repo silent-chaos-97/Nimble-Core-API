@@ -16,4 +16,5 @@ exports.up = function (knex) {
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
+// Temp comment
 exports.down = function (knex) {

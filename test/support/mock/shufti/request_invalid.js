@@ -1,5 +1,4 @@
 module.exports = {
-  reference: '5674563141',
   event: 'request.invalid',
   error: {
     service: 'address',
@@ -7,5 +6,4 @@ module.exports = {
     message: 'this is a generic error message',
   },
   email: null,
-// Temp comment
   country: null,

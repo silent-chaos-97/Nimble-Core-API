@@ -35,6 +35,7 @@ describe('POST /institutions/:id/products', () => {
         .send({})
         .expect(400)
         .expect((res) => {
+          expect(res.body.message).not.to.be.undefined
           expect(res.body.message).not.to.contain('"id" is required')
           expect(res.body.message).to.contain('"name" is required')
           expect(res.body.message).to.contain('"sku" is required')
@@ -152,3 +153,4 @@ describe('POST /institutions/:id/products', () => {
     })
   })
 
+  describe('when institution does not exist', () => {

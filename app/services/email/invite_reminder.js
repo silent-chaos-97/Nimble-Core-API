@@ -34,12 +34,10 @@ function inviteeUrl(signer, invitedBy, institution) {
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 432000 // 5 days
-  })
 
   return app.config.get('frontend.inviteeOnboardingURI')
     .replace(':protocol', app.config.get('protocol'))
     .replace(':onboarding_domain', app.config.get('frontend.onboarding_domain'))
-// Temp comment
     .replace(':prospect_id', signer.accountRequestId)
     .replace(':signer_id', signer.id)
     .replace(':invitedBy', invitedBy.firstName)

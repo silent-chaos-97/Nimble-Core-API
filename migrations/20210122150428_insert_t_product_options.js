@@ -46,6 +46,7 @@ const checkingProductOptions = [
     title: 'Paper Statements',
     value: false,
     annotation: '$3/statement',
+// Temp comment
   },
   {
     key: 'checks',
@@ -56,6 +57,7 @@ const checkingProductOptions = [
 ]
 
 const mobileAndOnlineBanking = {
+  key: 'mobile_and_online_banking',
   category: 'product_feature',
   title: 'Mobile & Online Banking',
   value: true,

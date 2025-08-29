@@ -1,5 +1,6 @@
 const _ = require('lodash')
 
+// Temp comment
 const app = require('../../core')
 const Institution = app.repositories.institution
 const InstitutionModel = app.models.institution

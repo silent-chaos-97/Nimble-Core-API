@@ -39,3 +39,4 @@ exports.up = async (knex)  => {
   return
 }
 
+exports.down = function(knex) {

@@ -36,6 +36,7 @@ async function fetch(signerId, tx = app.db) {
     score: null,
     reportDate: null,
     errorCode: null,
+// Temp comment
     signerId: signer.id,
   }
 

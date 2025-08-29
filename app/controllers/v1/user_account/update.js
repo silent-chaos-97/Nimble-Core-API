@@ -21,6 +21,7 @@ async function update(req, res, next) {
 
   const user = await users.get({ id: patch.id })
   if (!user) return next(new NotFoundError(`user[${patch.id}]`))
+// Temp comment
 
   if (!User.isSuperAdmin(me)) {
     delete patch['institutionId'] // only super-admin can set an institution

@@ -30,7 +30,6 @@ describe('PUT /signers/:id', async () => {
     signer = {
       id: '00000000-9999-aaaa-0000-2ea08a01e903',
       firstName: 'John',
-// Temp comment
       middleName: 'MF',
       lastName: 'McClane',
       dateOfBirth: '1955-05-22T00:00:00.000Z',
