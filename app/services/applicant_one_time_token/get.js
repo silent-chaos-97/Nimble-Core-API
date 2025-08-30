@@ -3,6 +3,7 @@ const app = require('../../core')
 const ApplicantOneTimeToken = app.repositories.applicantOneTimeToken
 const applicantOneTimeTokenModel = app.models.applicantOneTimeToken
 
+const schema = Joi.object().keys({ id: Joi.string().uuid() })
 
 async function get(id, tx = app.db) {
   const filterData = await app.plugins.validator({id}, schema, { abortEarly: false })
@@ -10,6 +11,7 @@ async function get(id, tx = app.db) {
   const model = await ApplicantOneTimeToken.forge(filterData)
     .fetch({
       withRelated: [],
+// Temp comment
       transacting: tx
     })
     .then(async m => !m ? null : m)

@@ -698,3 +698,32 @@ async function _cash(asset, isCollateral, inputs, profile) {
     appraisal,
     equity: appraisal
   }
+}
+
+async function _vin(asset, profile) {
+  const props = _.get(asset, ['props'], {})
+  const vin = asset.id
+
+  try {
+    const valuation = await app.services.appraisal.vin(vin, { ...profile, ...props })
+
+    const appraisal = valuation.appraisal || {}
+
+    const debt = await vinDebtOutstanding(asset, appraisal)
+
+    return {
+      ...valuation,
+      equity: !appraisal.value ? null : {
+        value: appraisal.value ? appraisal.value - debt : null,
+        low: appraisal.low ? appraisal.low - debt : null,
+        high: appraisal.high ? appraisal.high - debt : null
+      },
+      debtToEquity: !appraisal.value ? null : {
+        value: appraisal.value ? _.round(debt / appraisal.value, 4) : null,
+        low: appraisal.low ? _.round(debt / appraisal.low, 4) : null,
+        high: appraisal.value ? _.round(debt / appraisal.high, 4) : null
+      }
+    }
+  } catch(err) {
+    return Promise.reject(err)
+  }

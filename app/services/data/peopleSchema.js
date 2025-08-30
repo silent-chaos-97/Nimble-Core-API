@@ -1,13 +1,11 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const axios = require('axios')
 const InternalServerError = require('../../errors/internal_server')
 
 const logger = app.logger.getLogger('app.services.data.people.schema')
 
 async function peopleSchema() {
-  logger.info({ op: 'people.model', phase: 'started' })
 
   const endpoint = app.config.get('nimbleData.apiEndpoint')
   const apiUrl = endpoint + (endpoint.endsWith('/') ? '' : '/') + 'docs'

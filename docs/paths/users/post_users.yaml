@@ -28,3 +28,4 @@
       '409':
         description: A user with that email already exists
         content:
+          application/json:

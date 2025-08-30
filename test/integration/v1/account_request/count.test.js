@@ -55,6 +55,7 @@ describe('GET /account-requests/count', () => {
           expect(expected).to.have.own.property('count')
           expect(expected.count).to.be.an('number')
           done()
+        })
     })
 
     it('should return a count of account requests', done => {
@@ -89,3 +90,4 @@ describe('GET /account-requests/count', () => {
 
       it('should 400 on invalid status parameter', () => {
         return request(app.server)
+          .get(`/v1/account-requests/count?status=unexistent`)

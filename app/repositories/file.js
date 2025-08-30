@@ -5,3 +5,4 @@ const File = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true
 })
+

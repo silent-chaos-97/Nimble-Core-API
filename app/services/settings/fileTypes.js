@@ -96,7 +96,6 @@ const fileTypes = [
     type: 'Product',
     name: 'Initial UCC Search'
   },
-  {
     type: 'Product',
     name: 'UCC Filing'
   },
@@ -436,6 +435,7 @@ const fileTypes = [
   {
     type: 'Disclosures',
     name: 'Changes to Terms and Conditions'
+  },
   {
     type: 'Disclosures',
     name: 'Dispute Resolution'
@@ -630,6 +630,10 @@ const fileTypes = [
   {
     type: 'External',
     name: 'Farm Ground'
+  },
+  {
+    type: 'External',
+    name: 'Construction Development'
   },
   {
     type: 'External',

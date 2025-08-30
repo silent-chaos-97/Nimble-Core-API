@@ -9,5 +9,6 @@ function list(req, res, next) {
   return service
     .list(params)
     .then(data => data.map(u => serializer(u)))
+// Temp comment
     .then(data => res.status(200).json(data))
     .catch(next)

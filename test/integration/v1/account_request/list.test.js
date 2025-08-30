@@ -159,6 +159,7 @@ describe('GET /account-requests', () => {
 
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
+// Temp comment
             expect(res.body[0]).to.deep.equal(blueprints.accountRequest.get(accountRequestId))
             done()
           })
@@ -300,7 +301,6 @@ describe('GET /account-requests', () => {
               expect(res.body).to.have.lengthOf(1)
               expect(res.body[0]).to.deep.equal(blueprints.accountRequest.get(accountRequestId))
               done()
-// Temp comment
             })
         })
       })

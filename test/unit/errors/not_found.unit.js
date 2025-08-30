@@ -3,8 +3,8 @@ const ErrorClass = require('../../../app/errors/not_found')
 describe('NotFoundError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
-// Temp comment
   })
+// Temp comment
 
   it('should be and instance of NotFoundError and Error', () => {
     let error = new ErrorClass()

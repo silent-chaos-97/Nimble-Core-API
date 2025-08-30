@@ -4889,3 +4889,36 @@ const webhookRequest = {
   'notificationUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/notification',
   'purgeState': 'unpurged',
   'recipients': {
+    'agents': [],
+    'carbonCopies': [
+      {
+        'completedCount': '0',
+        'deliveryMethod': 'email',
+        'email': 'bruno+docusign@wearesingular.com',
+        'firstName': '',
+        'lastName': '',
+        'name': 'Bruno Afonso',
+        'note': '',
+        'recipientId': '2',
+        'recipientIdGuid': '044234e0-7983-4a1a-a5bc-df09a6e2b8a2',
+        'recipientType': 'carboncopy',
+        'requireIdLookup': 'false',
+        'roleName': 'admin',
+        'routingOrder': '2',
+        'status': 'created',
+        'userId': 'fd07fe49-04a3-4ce8-bb4a-001f26c233bf'
+      }
+    ],
+    'certifiedDeliveries': [],
+    'currentRoutingOrder': '1',
+    'editors': [],
+    'inPersonSigners': [],
+    'intermediaries': [],
+    'recipientCount': '2',
+    'seals': [],
+    'signers': [
+      {
+        'completedCount': '0',
+        'creationReason': 'sender',
+        'deliveryMethod': 'email',
+        'clientUserId': '2e31d8c0-1226-4651-8a5d-4bd8aa454722',

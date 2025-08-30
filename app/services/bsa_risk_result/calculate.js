@@ -8,7 +8,6 @@ const logger = app.logger.getLogger('app.services.bsa_risk_results.calculate')
 function schema() {
   return Joi.object().keys({
     accountRequestId: Joi.string().required().uuid()
-  })
 }
 
 const DEFAULT_THRESHOLDS = [
@@ -45,6 +44,7 @@ function calculateRisk(thresholds = DEFAULT_THRESHOLDS, score) {
     const predicate = OP_PREDICATES[op]
 
     if (predicate && predicate(score, threshold.val)) {
+      risk = threshold.risk
       return false // break
     }
   })
@@ -72,3 +72,15 @@ function calculateScore(answers) {
 
     return sum + (!_.isNaN(calculated) ? calculated : 0)
   }, 0)
+}
+
+async function calculate(params = {}, thresholds = DEFAULT_THRESHOLDS, tx = app.db) {
+  logger.debug(`[calculate] called for account request id ${params.accountRequestId}`)
+  const data = await validator(params, schema())
+
+  const answers = await app.services.bsaRiskResult.list(data, tx)
+
+  const score = calculateScore(answers)
+  const risk = calculateRisk(thresholds, score)
+
+  return { score, risk }

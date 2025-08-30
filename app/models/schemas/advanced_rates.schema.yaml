@@ -22,6 +22,5 @@ columns:
     type: positive-integer
 
   - data: analysis
-    title: Collateral Analysis
     type: numeric
     numericFormat:

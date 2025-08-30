@@ -109,7 +109,6 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(12)
-
           const first = res.body[0]
 
           expect(first).to.have.ownProperty('verification')
@@ -259,3 +258,5 @@ describe('GET /signers/:id/identity-verifications', async () => {
         updated_at: '2020-02-16T12:32:03.341Z'
       })
 
+      return request(app.server)
+        .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications`)

@@ -13,3 +13,4 @@ const Product = app.db.Model.extend({
     return this.hasMany('ProductOption', 'product_id')
   }
 })
+

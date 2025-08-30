@@ -105,3 +105,4 @@ class AnalysisModel extends BaseModel {
         status: Joi.string().default(Statuses.draft).valid(..._.values(AnalysisModel.statuses())),
         userData: Joi.object(),
         debtSchedule: Joi.object().keys({
+          rows: Joi.array().items(Joi.object()).min(0).default([])

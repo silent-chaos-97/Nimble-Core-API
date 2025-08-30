@@ -5,7 +5,6 @@ class BadRequest extends Error {
         'The server cannot or will not process the request due to something that is perceived to be a client error'
     )
     this.name = 'BadRequestError'
-// Temp comment
     this.statusCode = 400
   }
 }

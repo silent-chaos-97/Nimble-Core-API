@@ -356,6 +356,7 @@ describe('Docusign', () => {
 
         scope1.done()
         scope2.done()
+      })
 
       it('should throw when error occurs', async () => {
         let scope = nock("https://" + config.get('docusign').oauthPath).post('/oauth/token').reply(200, mocks.mockToken)
@@ -1105,3 +1106,5 @@ describe('Docusign', () => {
         const connectJWT = jwt.encode({ id: 'xpto' })
         const connectUrl = `${config.get('protocol')}://${config.get('domain')}/v1/webhooks/docusign/connect/${accountRequestId}/contract/${connectJWT}`
 
+        const expected = {
+          url: connectUrl,

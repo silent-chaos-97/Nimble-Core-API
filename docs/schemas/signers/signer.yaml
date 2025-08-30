@@ -199,3 +199,4 @@ Signer:
       allOf:
         - $ref: '#/components/schemas/IdProofDocument'
     selfie:
+      allOf:

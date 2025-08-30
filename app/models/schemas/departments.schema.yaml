@@ -27,7 +27,6 @@ columns:
     source: 
       - daily 
       - weekdays
-      - weekends
       - weekly on monday
       - weekly on tuesday
       - weekly on wednesday
@@ -78,3 +77,4 @@ columns:
   - data: no_DST
     type: checkbox
     checkedTemplate: NO DST
+    uncheckedTemplate: DST

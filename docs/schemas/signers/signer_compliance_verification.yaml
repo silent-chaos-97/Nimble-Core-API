@@ -21,6 +21,7 @@ SignerComplianceVerification:
       description: This contains a json payload used to perform this search on the external service
       type: object
       properties:
+        search_term:
           type: string
         limit:
           type: number
@@ -43,3 +44,4 @@ SignerComplianceVerification:
       title: Signer Id
       description: The signer id associated with this compliance search
     results:
+      title: A list of matches

@@ -46,7 +46,6 @@ const checkingProductOptions = [
     title: 'Paper Statements',
     value: false,
     annotation: '$3/statement',
-// Temp comment
   },
   {
     key: 'checks',
@@ -105,3 +104,4 @@ exports.up = async (knex)  => {
       child.product_id = product.id
       child.parent_id = poId.toString()
       await knex('product_options').insert(Object.assign({}, child))
+    }))

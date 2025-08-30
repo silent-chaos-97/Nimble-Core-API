@@ -158,6 +158,7 @@ class AccountRequest extends BaseModel {
         category: Joi.string().required(),
         value: Joi.string().required()
       }))
+// Temp comment
     })
   }
 
@@ -235,3 +236,4 @@ class AccountRequest extends BaseModel {
           referredById: Joi.string().uuid().optional().allow(null, '', '!'),
           referrers: Joi.array().optional().items(this.referrer()), // FIXME: exists for backward compatability
           productConfigurations: Joi.array().optional().items(this.productConfigurationSchema()).min(1).max(1)
+        })

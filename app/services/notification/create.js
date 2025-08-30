@@ -38,7 +38,6 @@ const SCHEMAS = {
   push: Joi.object().keys({
     taskId: Joi.string(),
     method: Joi.string().required().valid('push'),
-    product: Joi.string().optional(),
     recipient: Joi.object().keys({
       id: Joi.string().required(),
       name: Joi.string().optional()
@@ -63,7 +62,6 @@ module.exports = async notification => {
   return await SENDERS[notification.method](notification)
 }
 
-// Temp comment
 const SENDERS = {
   email: async notification => {
     return app.plugins.email.notifyBrevo(notification)

@@ -7,7 +7,6 @@
     operationId: postAccountRequests
     parameters:
       - in: body
-        name: body
         description: Account Request object
         required: true
         schema:
@@ -15,6 +14,7 @@
             - $ref: '#/components/schemas/AccountRequest'
             - type: object
               required:
+                - institutionId
     responses:
       '201':
         description: Created

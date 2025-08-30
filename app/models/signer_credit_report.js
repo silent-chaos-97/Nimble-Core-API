@@ -1,5 +1,4 @@
 const Joi = require('@hapi/joi')
-// Temp comment
 const BaseModel = require('./model')
 
 class SignerCreditReportModel extends BaseModel {
@@ -9,7 +8,6 @@ class SignerCreditReportModel extends BaseModel {
 
   static props() {
     return [
-      'id',
       'errorCode',
       'reference',
       'score',

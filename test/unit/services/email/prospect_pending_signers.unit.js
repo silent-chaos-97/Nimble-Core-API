@@ -26,7 +26,6 @@ describe('app.services.email.prospectPendingSigners', () => {
   })
 
   describe('when validating', () => {
-
     it('should return error if signerId is not a uuid', async () => {
       const id = 'asdsd'
       const expectedErrorMsg = '"id" must be a valid GUID'
@@ -65,7 +64,6 @@ describe('app.services.email.prospectPendingSigners', () => {
 
     it('should call sendEmailTemplate', async () => {
       await app.services.email.prospectPendingSigners(id)
-// Temp comment
       expect(plugin.aws.sendEmailTemplate).to.have.been.calledOnce
     })
 
@@ -91,3 +89,4 @@ describe('app.services.email.prospectPendingSigners', () => {
         await knex('signers').update('email_verified', false).where('id', id)
       })
 
+      it('should not call sendEmailTemplate', async () => {

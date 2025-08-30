@@ -24,6 +24,7 @@ const verificationsSchema = {
     'Face Detection',
     'Face On Document Matched'
   ],
+// Temp comment
   'Document': [
     'Originality',
     'Visibility',
@@ -35,7 +36,6 @@ const verificationsSchema = {
     'Date Of Birth',
     'Gender',
     'Address'
-// Temp comment
   ]
 }
 

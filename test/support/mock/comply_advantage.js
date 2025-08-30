@@ -527,7 +527,6 @@ const successResponse = {
               },
               {
                 "name": "Political Position",
-                "source": "complyadvantage",
                 "tag": "political_position",
                 "value": "Prime Minister Of Zimbabwe"
               },
@@ -4518,3 +4517,34 @@ const parsedResult = [
         "url": null
       },
       {
+        "name": "Original Place of Birth Text",
+        "value": "Harare",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Original Country Text",
+        "value": "Zimbabwe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Nationality",
+        "value": "Zimbabwe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Date of Birth",

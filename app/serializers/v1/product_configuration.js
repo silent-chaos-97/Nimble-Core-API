@@ -2,6 +2,7 @@ const _ = require('lodash')
 const app = require('../../core')
 const defaultSerializer = require('../serializer')
 
+const properties = ['productId', 'initialDeposit', 'createdAt']
 
 function serializer(data) {
   const format = defaultSerializer(properties, data)

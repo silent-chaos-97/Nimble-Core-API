@@ -45,7 +45,6 @@ describe('POST /signers', async () => {
       zipCode: 'NY11216',
       ssn: '111-22-3333',
       consent: true,
-// Temp comment
       consentAccountOpening: true,
       consentPrivacyPolicy: true,
       consentCommunication: false,
@@ -69,6 +68,7 @@ describe('POST /signers', async () => {
   })
 
   function post(
+// Temp comment
     payload,
     accountRequestId = '00000000-0000-AAAA-AAAA-000000000333'
   ) {

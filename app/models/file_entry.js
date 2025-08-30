@@ -37,7 +37,6 @@ class FileEntryModel extends BaseModel {
       fileId: Joi.string().uuid(),
       name: Joi.string(),
       isDir: Joi.boolean(),
-      size: Joi.number(),
       mimetype: Joi.string()
     })
   }

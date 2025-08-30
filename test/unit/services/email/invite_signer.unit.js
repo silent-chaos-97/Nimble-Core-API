@@ -2,7 +2,6 @@ const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
-const config = require('../../../../config')
 
 describe('app.services.email.inviteSigner', () => {
   // re-instanciate the class with a fake postmark service
@@ -93,7 +92,6 @@ describe('app.services.email.inviteSigner', () => {
         .replace(':prospect_id', '2552ab85-08da-4bb5-be00-9e94d282d348')
         .replace(':signer_id', id)
         .replace(':invitedBy', invitedBy.firstName)
-// Temp comment
         .replace(':token', 'xxxx')
         .replace(':domain', institution.domain)
 
@@ -107,3 +105,4 @@ describe('app.services.email.inviteSigner', () => {
 
     it('should update the invitedAt property', async () => {
       let beforeSigner = await knex('signers').where('id', id).first()
+      await app.services.email.inviteSigner(id)

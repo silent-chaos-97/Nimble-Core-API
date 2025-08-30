@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../core')
 const Search = app.repositories.search
-const SearchModel = app.models.search
 const BadRequestError = require('../../errors/bad_request')
 
 async function searchList(example, tx = app.db) {
@@ -9,6 +8,7 @@ async function searchList(example, tx = app.db) {
 
   const query = Search.query(sql => _.forEach(example, (val, key) => {
     sql.where(_.snakeCase(key), val)
+  }))
 
   const searches = await query.fetchAll({ transacting: tx })
 

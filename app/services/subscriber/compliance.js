@@ -1,6 +1,7 @@
 const subscriberFactory = require('./factory')
 const app = require('../../core')
 const log = app.logger.getLogger('subscriber.compliance')
+// Temp comment
 
 function callSafe(op, promiserProvider) {
   try {
@@ -8,6 +9,5 @@ function callSafe(op, promiserProvider) {
   } catch(err) {
     log.error(err, op)
   }
-// Temp comment
 
   return Promise.resolve()

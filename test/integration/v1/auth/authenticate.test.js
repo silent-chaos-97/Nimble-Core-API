@@ -97,6 +97,7 @@ describe('Auth', () => {
                 expect(res.body.email).to.be.equal('demouser@nimblefi.com')
                 expect(res.body.accounts).to.be.an('array')
                 expect(res.body.accounts).to.have.have.lengthOf(1)
+                done()
               })
           })
       })
@@ -205,3 +206,5 @@ describe('Auth', () => {
           it('show send email locked email when it reaches max failed login attempts', async () => {
             await knex.raw(`UPDATE users set failed_login_attempts = 2 where id = '1052ab85-08da-4bb5-be00-9e94d282d310'`)
 
+            return request(app.server)
+              .post('/v1/auth/login')

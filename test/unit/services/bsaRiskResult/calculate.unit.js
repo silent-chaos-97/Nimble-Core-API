@@ -19,7 +19,6 @@ describe('app.services.bsaRiskResult.calculate', () => {
     it('should exist', () => {
       expect(app.services.bsaRiskResult).to.have.ownProperty('calculate')
       expect(app.services.bsaRiskResult.calculate).to.be.an('Function')
-    })
 
     it('should complain if called without params', async() => {
       const target = app.services.bsaRiskResult.calculate

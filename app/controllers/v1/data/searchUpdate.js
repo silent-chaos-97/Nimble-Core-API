@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
-// Temp comment
 const service = app.services.data
 
 async function searchCreate(req, res) {
@@ -14,6 +13,7 @@ async function searchCreate(req, res) {
   const data = { ...req.body, id, institutionId: req.user.institutionId }
 
   try {
+// Temp comment
     const search = await service.searchSave(data)
     res.status(200).json(search)
   } catch(err) {

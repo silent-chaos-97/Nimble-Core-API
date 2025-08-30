@@ -7,6 +7,7 @@
     operationId: createInstitution
     security:
       - ApiKeyAuth: []
+    requestBody:
       content:
         application/json:
           schema:
@@ -14,5 +15,4 @@
     responses:
       '201':
         $ref: '#/components/schemas/Institution'
-      '400':
         $ref: '#/components/responses/BadRequest'

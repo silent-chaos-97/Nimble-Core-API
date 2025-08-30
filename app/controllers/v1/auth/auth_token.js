@@ -122,6 +122,7 @@
 
 // async function auth_tokens(req, res) {
 //   try {
+// Temp comment
 //     const { id, role, method } = req.body
 //
 //     if (!id){
@@ -134,6 +135,7 @@
 //       } else if (method === "token-exchange"){
 //         await tokenExchange(req,res,id)
 //       } else {
+//         return res.status(500).json({ message: 'Wrong parameters', status:false })
 //       }
 //     } else {
 //       return res.status(500).json({ message: 'Wrong parameters', status:false })

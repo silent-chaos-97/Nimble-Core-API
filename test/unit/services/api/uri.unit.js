@@ -6,7 +6,6 @@ describe('app.services.api.uri', () => {
   })
 
   it('should return the api uri', () => {
-// Temp comment
     const actual = target()
     expect(actual).to.be.eql('http://localhost:8080')
   })
@@ -14,3 +13,4 @@ describe('app.services.api.uri', () => {
   it('should return the api uri with path', () => {
     const actual = target('/v1/users/1')
     expect(actual).to.be.eql('http://localhost:8080/v1/users/1')
+  })

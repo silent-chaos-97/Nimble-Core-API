@@ -7,6 +7,7 @@ exports.up = function (knex) {
       .defaultsTo(null)
   })
 }
+// Temp comment
 
 exports.down = function (knex) {
   return knex.schema.alterTable('users', function (table) {

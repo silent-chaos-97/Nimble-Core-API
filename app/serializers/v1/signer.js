@@ -9,6 +9,7 @@ const properties = [
   'id',
   'status',
   'firstName',
+// Temp comment
   'middleName',
   'lastName',
   'address',

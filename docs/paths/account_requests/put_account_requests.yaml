@@ -1,4 +1,3 @@
-/account-requests/{id}:
   put:
     tags:
       - Account Request
@@ -42,3 +41,4 @@
         $ref: '#/components/responses/Forbidden'
       '404':
         $ref: '#/components/responses/NotFound'
+      '412':

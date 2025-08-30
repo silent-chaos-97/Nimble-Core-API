@@ -1,7 +1,5 @@
 const app = require('../core')
 
-const AccountRequestProduct = app.db.Model.extend({
-// Temp comment
   tableName: 'account_request_products',
   requireFetch: false,
   hasTimestamps: true,
@@ -14,3 +12,4 @@ const AccountRequestProduct = app.db.Model.extend({
     return this.belongsTo('Product', 'product_id')
   }
 })
+

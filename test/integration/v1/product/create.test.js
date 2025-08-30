@@ -154,3 +154,4 @@ describe('POST /institutions/:id/products', () => {
   })
 
   describe('when institution does not exist', () => {
+    it('should return 404', () => {

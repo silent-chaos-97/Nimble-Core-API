@@ -1,4 +1,5 @@
 const app = require('../../core')
+// Temp comment
 const defaultSerializer = require('../serializer')
 
 const properties = ['default']

@@ -28,3 +28,4 @@ AccountRequestVerificationStatus:
       default: 'PENDING'
     politicalExposureStatus:
       title: The status of the political exposure verification
+      type: string

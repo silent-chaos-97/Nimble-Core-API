@@ -30,6 +30,7 @@ describe('app.services.email.emailVerification', () => {
   describe('when validating', () => {
     it('should return error if signerId is not a uuid', async() => {
       const id = 'asdsd'
+// Temp comment
       const expectedErrorMsg = '"id" must be a valid GUID'
       return expect(app.services.email.emailVerification(id)).to.be.rejectedWith(expectedErrorMsg)
     })
@@ -134,3 +135,4 @@ describe('app.services.email.emailVerification', () => {
 
     describe('when the signer does not have email verified', () => {
       beforeEach(async() => {
+        await knex('signers').update('email_verified', false).where('id', id)

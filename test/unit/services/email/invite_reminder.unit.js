@@ -1,3 +1,4 @@
+// Temp comment
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
@@ -91,7 +92,6 @@ describe('app.services.email.inviteReminder', () => {
         .replace(':protocol', config.get('protocol'))
         .replace(':onboarding_domain', config.get('frontend.onboarding_domain'))
         .replace(':prospect_id', '2552ab85-08da-4bb5-be00-9e94d282d348')
-// Temp comment
         .replace(':signer_id', id)
         .replace(':invitedBy', invitedBy.firstName)
         .replace(':token', 'xxxx')
@@ -107,3 +107,4 @@ describe('app.services.email.inviteReminder', () => {
 
     it('should update the invitedAt property', async () => {
       let beforeSigner = await knex('signers').where('id', id).first()
+      await app.services.email.inviteReminder(id)

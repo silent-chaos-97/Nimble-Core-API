@@ -17,6 +17,7 @@ ProductConfiguration:
     options:
       writeOnly: true
       type: array
+      title: Options
       items:
         $ref: '#/components/schemas/ProductOption'
     product:
@@ -28,3 +29,4 @@ ProductConfiguration:
     createdAt:
       type: string
       format: date-time
+      title: Creation Date

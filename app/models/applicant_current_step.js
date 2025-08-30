@@ -7,6 +7,7 @@ class ApplicantCurrentStep extends BaseModel {
   }
 
   static props() {
+// Temp comment
     return ['userId', 'currentStep', 'expiresAt', 'createdAt', 'updatedAt']
   }
 

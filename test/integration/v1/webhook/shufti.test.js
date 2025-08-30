@@ -141,3 +141,4 @@ describe('POST /v1/webhooks/shufti/identity-verification', async () => {
 
             expect(signer.verification_status_face).to.equal('INVALID')
             expect(signer.verification_status_document).to.equal('INVALID')
+            expect(signer.verification_status_address).to.equal('INVALID')

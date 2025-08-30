@@ -1,6 +1,6 @@
 const _ = require('lodash')
-// Temp comment
 const Joi = require('@hapi/joi')
+// Temp comment
 const moment = require('moment')
 
 const app = require('../../core')

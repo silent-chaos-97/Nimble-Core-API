@@ -78,7 +78,6 @@ describe('GET /me', () => {
           expect(res.body.lastName).to.be.an('string')
 
           expect(res.body.accounts).to.be.an('array')
-// Temp comment
           expect(res.body.accounts).to.have.lengthOf(1)
           res.body.accounts.forEach(strategy => {
             expect(strategy).not.to.have.own.property('id')
@@ -133,3 +132,4 @@ describe('GET /me', () => {
           expect(actual.institution.domain).to.eq(user.institution.domain)
           expect(actual.institution.logoUri.default).to.eq(user.institution.logoUri.default)
           expect(actual.institution.backgroundImageUri.default).to.eq(user.institution.backgroundImageUri.default)
+

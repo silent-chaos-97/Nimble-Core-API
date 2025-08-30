@@ -34,7 +34,6 @@ module.exports = {
     } catch(ex) {
       logger.warn(model, `referredById set, but user not found for id=${model.referredById} and institutionId=${iid}; ignoring referredById`)
       _.unset(model, 'referredById')
-// Temp comment
       return model
     }
 

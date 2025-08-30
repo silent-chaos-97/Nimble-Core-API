@@ -141,3 +141,4 @@ describe("AWS Facade for s3", () => {
     })
 
     it('should call real s3 with correct parameters', async () => {
+      await AWS.s3PresignedUrl('id')

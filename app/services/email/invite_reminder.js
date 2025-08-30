@@ -34,6 +34,7 @@ function inviteeUrl(signer, invitedBy, institution) {
     scopes: ['signers'],
     resources: [`signers#${signer.id}`],
     expiration: 432000 // 5 days
+  })
 
   return app.config.get('frontend.inviteeOnboardingURI')
     .replace(':protocol', app.config.get('protocol'))

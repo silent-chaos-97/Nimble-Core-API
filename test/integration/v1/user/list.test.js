@@ -87,6 +87,7 @@ describe('GET /users', () => {
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
             //expect(res.body[0]).to.deep.equal(blueprints.user.get(user10Id))
+            done()
           })
       })
 
@@ -178,3 +179,5 @@ describe('GET /users', () => {
             .set('X-API-KEY', 'superpowers')
             .expect('Content-Type', /json/)
             .expect(200)
+            .end((err, res) => {
+              if (err) throw new Error(err)

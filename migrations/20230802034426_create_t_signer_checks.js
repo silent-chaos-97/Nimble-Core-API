@@ -11,6 +11,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'signer_checks', table => {
 
   table.jsonb('meta').notNullable().defaultTo('{}')
 
+  table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 
 }, () => knex.schema.alterTable('signer_checks', table => {

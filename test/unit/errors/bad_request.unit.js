@@ -26,6 +26,7 @@ describe('BadRequestError', () => {
     it('should have 400 as a statusCode', () => {
       let error = new ErrorClass()
       expect(error.statusCode).to.equal(400)
+    })
 
     it('should have default message', () => {
       let error = new ErrorClass()
@@ -35,5 +36,6 @@ describe('BadRequestError', () => {
     })
 
     it('should output custom message', () => {
+// Temp comment
       let error = new ErrorClass('custom error msg')
       expect(error.message).to.equal('custom error msg')

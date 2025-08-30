@@ -40,6 +40,7 @@ describe('app.plugins.xml', () => {
       const result = target.tag('tag', {}, 'value')
       expect(result).to.equal('<tag>value</tag>')
     })
+
     it('should parse tag with props and value', () => {
       const result = target.tag('tag', { a: 1, b: 2 }, 'value')
       expect(result).to.equal('<tag a="1" b="2">value</tag>')
@@ -123,3 +124,4 @@ describe('app.plugins.xml', () => {
   <tag>%3C%3C%3C%3C</tag>
   <tag>%3C/%3E%3C/%3E%3C/%3E</tag>
   <tag>%22;alert('XSS');//</tag>
+  <tag prop="should%20url%20encode%20this%20string" another="Jo%C3%A3o%20C%C3%A1rl%C3%B4s%20C%C3%AC%20A(ento"/>

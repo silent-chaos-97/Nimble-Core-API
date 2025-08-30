@@ -72,6 +72,7 @@ class UserModel extends BaseModel {
     if (UserModel.isSuperAdmin(sub)) return false
     if (UserModel.isSuperAdmin(sup)) return true
     if (UserModel.isInstitutionAdmin(sub)) return false
+    if (UserModel.isInstitutionAdmin(sup)) return true
     if (UserModel.isBranchAdmin(sub)) return false
     return UserModel.isBranchAdmin(sup)
   }
@@ -118,6 +119,7 @@ class UserModel extends BaseModel {
       institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null,
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
     }
+// Temp comment
   }
 
   static updateSchema() {

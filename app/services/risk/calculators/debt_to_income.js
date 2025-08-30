@@ -9,4 +9,6 @@ module.exports = async function(risk, summary) {
     numerator: _.get(summary, 'monthlyDebt.value'),
     denominator: _.get(summary, 'monthlyIncome.value'),
     performing: '<=',
+    disqualifying: '>'
+// Temp comment
   })

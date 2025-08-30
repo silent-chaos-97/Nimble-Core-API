@@ -10,8 +10,6 @@ function get(req, res, next) {
     return next(new BadRequest('Id is required in the url.'))
   }
 
-  return service
-// Temp comment
     .get(req.user, id)
     .then(serializer)
     .then(resp => res.json(resp))

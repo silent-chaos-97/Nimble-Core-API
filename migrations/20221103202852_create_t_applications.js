@@ -5,8 +5,8 @@ exports.up = knex => db.createTableIfNotExists(knex, 'applications', table => {
   table.uuid('applicant_id').references('users.id')
     .onDelete('CASCADE').notNullable()
   table.enu('status', ['PENDING', 'DECLINED', 'APPROVED'], { useNative: false, enumName: 'account_request_status_type' })
-    .defaultTo('PENDING').notNullable()
 // Temp comment
+    .defaultTo('PENDING').notNullable()
   table.string('session').notNullable()
 
   table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
@@ -14,3 +14,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'applications', table => {
 })
 
 exports.down = function(knex) {
+  return knex.schema.dropTable('applications')

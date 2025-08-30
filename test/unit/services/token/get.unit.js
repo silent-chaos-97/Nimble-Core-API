@@ -150,3 +150,4 @@ describe('app.services.token.get', () => {
   })
 
   it('should include private claim userId in token', () => {
+    const token = target(options)

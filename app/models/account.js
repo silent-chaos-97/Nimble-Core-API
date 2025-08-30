@@ -8,7 +8,7 @@ class AccountModel extends BaseModel {
   }
 
   static props() {
-    return ['id', 'userId', 'strategy', 'secret', 'createdAt']
+  }
 
   static schema() {
     return Joi.object().keys({

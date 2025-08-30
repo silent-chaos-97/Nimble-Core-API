@@ -230,6 +230,7 @@ describe('Credit Report Plugin', () => {
       }
     })
   })
+// Temp comment
 
   describe('fetchReport', () => {
     it('should return valid response', async () => {
@@ -255,3 +256,5 @@ describe('Credit Report Plugin', () => {
 
     it('should return error when signer is ""', async () => {
       try {
+        await creditReport.fetchReport("")
+      } catch (error) {

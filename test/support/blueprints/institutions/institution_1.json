@@ -2,7 +2,6 @@
   "id": "2552ab85-08da-4bb5-be00-9e94d282d311",
   "name": "Singular",
   "slug": "singular",
-  "domain": "wearesingular.com",
   "routingNumber": "111222333",
   "templateApprove": "this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}",
   "templateDecline": "this is the decline email: {bankName}, {name}, {product}, {employee}",
@@ -11,6 +10,7 @@
   },
   "logoUri": {
     "default": "https://wearesingular.com/img/example.png"
+  },
   "publicMetadata": {},
   "workbook": {},
   "disclosures": {},

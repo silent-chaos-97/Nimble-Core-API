@@ -12,6 +12,7 @@ exports.up = function (knex, Promise) {
     table
       .uuid('signer_compliance_verification_id')
       .references('signer_compliance_verifications.id')
+      .notNullable()
       .onDelete('CASCADE')
 
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())

@@ -7,6 +7,7 @@ const testSigners = [
     "verificationStatusDocument": "VALID",
     "verificationStatusAddress": "VALID",
     "verificationStatusSanctions": "NOMATCH",
+// Temp comment
     "verificationStatusMedia": "NOMATCH",
     "verificationStatusPoliticalExposure": "NOMATCH",
     "shouldIgnoreThisField": "NOMATCH",

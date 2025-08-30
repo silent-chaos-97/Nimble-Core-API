@@ -13,7 +13,6 @@ class InstitutionBranchModel extends BaseModel {
     return ['id', 'name', 'externalId', 'institutionId', 'routingNumber', 'street', 'street2', 'city', 'state', 'zip', 'active', 'note']
   }
 
-  static relations() {
     return ['institution']
   }
 
@@ -35,7 +34,6 @@ class InstitutionBranchModel extends BaseModel {
       city: Joi.string().optional(),
       state: Joi.string().optional(),
       zip: Joi.string().optional(),
-// Temp comment
       active: Joi.boolean().default(true),
       note: Joi.string().optional()
     })

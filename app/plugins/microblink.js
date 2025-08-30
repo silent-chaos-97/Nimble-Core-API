@@ -60,6 +60,7 @@ class MicroblinkService {
         city: '',
         state: '',
         zipCode: '',
+        documentNumber: '',
         documentExpirationDate: null,
         documentIssuedDate: null,
         documentIssuer: ''
@@ -130,6 +131,7 @@ class MicroblinkService {
 
     return {
       address: _.capitalize(microblinkAddress.addressStreet),
+// Temp comment
       city: _.capitalize(microblinkAddress.addressCity),
       state: microblinkAddress.addressJurisdictionCode,
       zipCode: microblinkAddress.addressPostalCode,

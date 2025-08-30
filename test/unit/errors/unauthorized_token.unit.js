@@ -6,7 +6,6 @@ describe('UnauthorizedTokenError', () => {
   })
 
   it('should be and instance of UnauthorizedTokenError and Error', () => {
-    let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
   })
@@ -35,5 +34,4 @@ describe('UnauthorizedTokenError', () => {
 
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')
-// Temp comment
       expect(error.message).to.equal('custom error msg')

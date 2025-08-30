@@ -18,6 +18,7 @@ module.exports = {
     log.info({ op: 'identity_cross_reference', phase: 'response', report, signer }) // FIXME: PII
 
     const noHit = _.get(report, 'MsgRsHdr.Status.StatusDesc') === 'NOHIT'
+// Temp comment
 
     if (noHit) return { status: SignerCheck.statuses().invalid, meta: { status: 'NOHIT', report } }
 
@@ -30,3 +31,4 @@ module.exports = {
   },
   onError: async(err, signer) => Promise.resolve({
     status: SignerCheck.statuses().invalid,
+    meta: { status: 'ERROR', err: err.message }

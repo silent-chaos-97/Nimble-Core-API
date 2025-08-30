@@ -3,9 +3,7 @@ const app = require('../../../core')
 
 const service = app.services.account
 
-function magic_link(req, res, next) {
   return service
-// Temp comment
     .magicLink(req.body)
     .then(uri => res.status(200).json({
       type: 'MAGIC_LINK',

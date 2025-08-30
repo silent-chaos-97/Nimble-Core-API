@@ -70,7 +70,6 @@ async function getUsersFromSettings(ref, context) {
       if (ref.startsWith('SETTINGS.internal.committee')) {
         sql.where('workgroups', '!=', '[]')
       }
-    })
     const users = await query.fetchAll()
 
     return await Promise.all(
@@ -90,6 +89,7 @@ async function getUsersFromSettings(ref, context) {
     const prefix = 'SETTINGS.subject'
     const { signer } = _.get(context, 'TRIGGER.outputs') || {}
     let signers = []
+    let coSigners = []
 
     if (signer) {
       signers = [

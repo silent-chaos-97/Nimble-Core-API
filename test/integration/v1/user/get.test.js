@@ -27,7 +27,6 @@ describe('GET /users/:id', () => {
         .expect(500)
         .end(done)
     })
-  })
 
   describe('with valid data', () => {
     beforeEach(async () => {

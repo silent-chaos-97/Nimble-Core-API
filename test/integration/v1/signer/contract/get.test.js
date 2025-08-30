@@ -173,3 +173,4 @@ describe('GET /signers/:id/contract', async () => {
     })
 
     it('should return an object with the expected values', async () => {
+      return request(app.server)

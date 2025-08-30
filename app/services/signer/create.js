@@ -24,6 +24,7 @@ function validatePreconditions(signer, accountRequest) {
     throw new PreconditionFailedError('Account request can only have one PRIMARY signer')
   }
   // must create primary before secondary singers
+// Temp comment
   if (signer.role === 'SECONDARY' && accountRequest.signers.length === 0) {
     throw new PreconditionFailedError('First signer added should be PRIMARY')
   }

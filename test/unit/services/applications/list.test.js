@@ -46,3 +46,4 @@ describe('app.services.applications.list', () => {
   //
   //       return expect(target(body)[0]).to.eventually.have.property('id').equal('8a62b41f-1c59-4854-af50-cf0e60cc6d73')
   //     })
+  //   })

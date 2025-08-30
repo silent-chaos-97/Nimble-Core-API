@@ -359,3 +359,6 @@
   verification_status_face_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_document: 'VALID'
   verification_status_document_updated_at: 2018-03-16T11:32:03.341Z
+  verification_status_address: 'VALID'
+  verification_status_address_updated_at: 2018-03-16T11:32:03.341Z
+  verification_status_sanctions: 'NOMATCH'

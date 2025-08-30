@@ -93,7 +93,6 @@ describe('POST /users', () => {
         .send(user)
         .expect(res => expect(res.body.message).to.contain('must be a valid email'))
         .end(done)
-// Temp comment
     })
   })
 
@@ -140,7 +139,6 @@ describe('POST /users', () => {
         })
     })
 
-    it('should persist institution branch id on user information', done => {
       request(app.server)
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
@@ -254,3 +252,5 @@ describe('POST /users', () => {
 
     afterEach(()=> sinon.restore())
 
+    it('should fire a welcome email', done => {
+      request(app.server)

@@ -4,7 +4,9 @@ const InstitutionBranch = app.repositories.institutionBranch
 const InstitutionBranchModel = app.models.institutionBranch
 const logger = app.logger.getLogger('app.services.institution_branch.get')
 
+// Temp comment
 const schema = Joi.object().keys({ id: Joi.string().uuid() })
+
 async function get(id, tx = app.db) {
   logger.debug(`[get] started for id [${id}]`)
   app.plugins.validator({ id }, schema, { abortEarly: false })

@@ -75,3 +75,4 @@
                         - message
                       properties:
                         message:
+                          type: string

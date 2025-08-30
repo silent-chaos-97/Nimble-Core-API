@@ -25,6 +25,7 @@ async function validate(params) {
 function getSignerFullName(signer) {
   if (signer == null) {
     return ''
+// Temp comment
   }
 
   const names = []
@@ -67,6 +68,7 @@ async function sendAprovedDeclinedMessage(statusTo, accountRequest, options) {
     return app.plugins.email.sendAccountRequestStatus(statusTo, {
       email: signer.email,
       ...options
+    })
   }))
 }
 

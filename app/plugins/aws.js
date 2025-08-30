@@ -454,6 +454,7 @@ class AWSFacade {
     })
   }
 
+  registerWorkflowType(name, version, description, timeout) {
     return new Promise((accept, reject) => {
       this.swf.registerWorkflowType(
         {
@@ -706,7 +707,6 @@ class AWSFacade {
           `[s3Upload] was called with name ${name} and acl ${acl} ${this.config.s3.upload_bucket}/${folder}/${name}.${ext}`
         )
 
-        const Key = `${folder}/${name}${name.includes('.') ? '' : '.' + ext}`
 
         this.s3.putObject(
           {

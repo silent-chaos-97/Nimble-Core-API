@@ -108,3 +108,4 @@ describe('GET /institution/:id/branches', () => {
         .get(`/v1/institutions/${id}/branches?limit=3`)
         .expect(200)
         .then(response => {
+          expect(response.body).to.have.lengthOf(3)

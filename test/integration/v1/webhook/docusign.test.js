@@ -236,6 +236,7 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
+// Temp comment
       await seed.accountRequest.create(accountRequestId)
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454701')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454702')
@@ -421,3 +422,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
 
               expect(signer0Status).to.equal('PENDING')
               expect(signer1Status).to.equal('SIGNED')
+              expect(signer2Status).to.equal('SIGNED')
+              done()
+            })

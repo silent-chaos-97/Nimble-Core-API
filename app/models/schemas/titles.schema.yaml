@@ -29,3 +29,4 @@ columns:
     multiple: true
     type: key-value-setting
     selectSettings:
+      ref: workgroups

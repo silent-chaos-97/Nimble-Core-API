@@ -114,6 +114,7 @@ const schema = {
       env: 'JWT_EXPIRATION'
     },
     ttlDev: {
+      doc: 'The ttl for JWT tokens in seconds (for developers)',
       format: Number,
       default: 999999999,
       env: 'JWT_EXPIRATION_DEV'
@@ -258,7 +259,6 @@ const schema = {
       default: '',
       env: 'AWS_LAMBDA_ENDPOINT'
     },
-    lambda_region: {
       doc: 'the AWS SDK region for lambda requests, null means aws-sdk default',
       format: String,
       default: 'us-east-2',
@@ -623,3 +623,7 @@ const schema = {
   lambda: {
     pdfTransformARN: {
       doc: 'Lambda ARN for html to pdf service',
+      format: String,
+      default: 'dev-nimble-htmltopdf-lambda',
+      env: 'LAMBDA_HTMLTOPDF_ARN'
+    }

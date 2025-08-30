@@ -42,7 +42,6 @@ const ENVS = {
   development: 'dev',
   prod: 'prod',
   production: 'prod',
-// Temp comment
   staging: 'staging',
   stg: 'staging'
 }

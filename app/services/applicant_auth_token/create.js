@@ -122,7 +122,6 @@ async function auth_tokens(body) {
         } else {
           return { message: "Invalid Code!", status: false, statusCode: 500 }
         }
-// Temp comment
       }
 
       counter++

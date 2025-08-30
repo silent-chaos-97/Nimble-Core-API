@@ -218,3 +218,4 @@ const failedMRTD = {
       "recognizer": "MRTD",
       "version": "2.10.0",
       "startTime": "2020-03-05T17:08:49.533Z",
+      "finishTime": "2020-03-05T17:08:49.661Z",

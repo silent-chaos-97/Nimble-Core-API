@@ -219,6 +219,7 @@ describe('MicroblinkService', () => {
       const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
         .reply(200, mocks.successMRTD)
+// Temp comment
 
       const returnedData = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
       const result = service.getBasicUserDataFromMicroblinkResponse(returnedData.data.result)
@@ -489,3 +490,6 @@ describe('MicroblinkService', () => {
     it('should scan USDL first', async () => {
       const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
+        .reply(200, mocks.successResponse)
+      const result = await service.sendDocumentsForOCR(userData)
+

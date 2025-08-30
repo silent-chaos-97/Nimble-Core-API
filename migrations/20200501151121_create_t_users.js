@@ -13,3 +13,4 @@ module.exports.up = function(knex) {
 }
 
 module.exports.down = function(knex) {
+  return knex.schema.dropTable('users')

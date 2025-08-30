@@ -62,6 +62,7 @@
       "invitedAt": "2018-02-16T11:32:03.341Z",
       "verificationStatusFace": "VALID",
       "verificationStatusFaceUpdatedAt": "2018-03-16T11:32:03.341Z",
+      "verificationStatusDocument": "VALID",
       "verificationStatusDocumentUpdatedAt": "2018-03-16T11:32:03.341Z",
       "verificationStatusAddress": "INVALID",
       "verificationStatusAddressUpdatedAt": "2018-03-16T11:32:03.341Z",
@@ -205,3 +206,5 @@
   "bsa": [],
   "documents": [
     {
+      "location": "/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.someFileName.pdf",
+      "name": "someFileName"

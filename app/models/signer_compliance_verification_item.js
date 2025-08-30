@@ -11,7 +11,6 @@ class SignerComplianceVerificationItemModel extends BaseModel {
   static props() {
     return [
       'id',
-// Temp comment
       'fullName',
       'nameAka',
       'dateOfBirth',
@@ -59,3 +58,4 @@ class SignerComplianceVerificationItemModel extends BaseModel {
 
     return Joi.object().keys({
       id: Joi.string().uuid()
+    })

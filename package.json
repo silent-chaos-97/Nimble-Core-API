@@ -137,3 +137,4 @@
     "text-cleaner": "^1.2.1",
     "twilio": "^3.75.1",
     "uuid": "^9.0.0",
+    "xml-formatter": "^2.4.0",

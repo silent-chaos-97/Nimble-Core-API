@@ -32,7 +32,6 @@ class Signer extends BaseModel {
       'address',
       'city',
       'state',
-      'zipCode',
       'phoneNumber',
       'ssn',
       'email',
@@ -186,6 +185,7 @@ class Signer extends BaseModel {
       }).optional(),
     })
 
+
     switch (operation) {
       case 'create':
         return baseSchema.keys({
@@ -295,3 +295,5 @@ class Signer extends BaseModel {
           phoneNumber: Joi.string().required(),
           ssn: Joi.string().required(),
           email: Joi.string().email({ tlds: { allow: false } }).required(),
+          employer: Joi.string().required(),
+          dateOfBirth: Joi.date().required(),

@@ -43,6 +43,7 @@ class InstitutionModel extends BaseModel {
   }
 
   static schema(operation = 'update') {
+    if (!['update', 'create'].includes(operation)) {
       throw new Error('Invalid schema operation.')
     }
 
@@ -106,3 +107,4 @@ class InstitutionModel extends BaseModel {
           default: Joi.string().optional(),
           score: Joi.object().optional(),
           dependsOn: Joi.object().optional(),
+          required: Joi.boolean().default(true).required()

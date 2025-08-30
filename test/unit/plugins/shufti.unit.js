@@ -147,3 +147,4 @@ describe('Service', () => {
         const scope = nock(config.get('shufti').baseUrl).post('/api/').reply(400, response)
 
         try {
+          await shufti.getUserVerification(userData)

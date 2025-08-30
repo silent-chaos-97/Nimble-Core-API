@@ -45,3 +45,4 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid(),
     })
+  }

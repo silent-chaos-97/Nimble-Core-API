@@ -39,7 +39,6 @@ AccountRequest:
           title: BSA Risk evaluation, null if not evaluated
           enum: ['High', 'Moderate', 'Low', null]
           example: Low
-        score:
           type: number
           title: BSA Score
           example: 2
@@ -109,3 +108,4 @@ AccountRequest:
       type: string
       format: date-time
       title: Status Update Date
+      description: The date and time the account record status changed from pending to either APPROVED or DENIED

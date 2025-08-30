@@ -1,4 +1,3 @@
-SignerComplianceVerificationListEntry:
   type: object
   properties:
     id:
@@ -46,3 +45,4 @@ SignerComplianceVerificationListEntry:
       title: When was the result created
       type: string
       format: date-time
+    updatedAt:

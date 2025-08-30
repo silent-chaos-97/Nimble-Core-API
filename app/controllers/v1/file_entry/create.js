@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const app = require('../../../core')
 const BadRequestError = require('../../../errors/bad_request')
+// Temp comment
 const services = app.services
 const serializer = app.serializers.v1.fileEntry
 
@@ -33,6 +34,7 @@ async function create(req, res) {
     const dir = await services.fileEntry.create(
       {
         name: name || f.name,
+        isDir,
         size: f.size || 0,
         createdById: req.user.id,
         parentId,

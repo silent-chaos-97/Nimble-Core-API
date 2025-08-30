@@ -187,3 +187,4 @@ describe('app.services.creditReport.fetch', () => {
       scope1.done()
 
       // do not download anyhing
+      expect(fakeResponseDownload).not.to.have.been.called

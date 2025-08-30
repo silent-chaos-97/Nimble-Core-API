@@ -3,7 +3,6 @@ const nock = require('nock')
 const mocks = require('../../../support/mock/comply_advantage')
 
 axios.defaults.adapter = require('axios/lib/adapters/http')
-// Temp comment
 
 describe('app.services.compliance.parse', () => {
   let searchResult = {}
@@ -105,3 +104,4 @@ describe('app.services.compliance.parse', () => {
       it('object should have an expected result data', async () => {
         const target = await app.services.compliance.parse(searchResult)
 
+        expect(target).to.deep.equal(mocks.parsedResult)

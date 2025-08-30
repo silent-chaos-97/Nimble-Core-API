@@ -62,3 +62,4 @@ describe('Random Plugin', () => {
     it('should return all uppercase string', () => {
       let code = rand.generateRecoveryCode()
       expect(code.toUpperCase()).to.be.equal(code)
+    })

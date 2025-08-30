@@ -181,3 +181,4 @@ columns:
   - data: branch_availability
 
   - data: branch_distance_miles
+    type: integer

@@ -15,7 +15,6 @@ const newProducts = [
 - Up to $5 late fee
 - 1% foreign transaction fee
 - No balance transfer fee
-
 **There’s more**
 
 The <INSTITUTION NAME> CardManager allows you anytime access to easily manage your Central Bank credit card.
@@ -77,3 +76,4 @@ exports.up = async function(knex) {
         newProduct.content = newProduct.content.replace(/<INSTITUTION NAME>/g, institution.name)
         return await knex('products').insert(Object.assign({}, newProduct))
       })
+    }

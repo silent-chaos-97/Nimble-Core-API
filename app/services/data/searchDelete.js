@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const validator = app.plugins.validator
+const app = require('../../core')
 const Search = app.repositories.search
 const SearchModel = app.models.search
 const InternalServerError = require('../../errors/internal_server')

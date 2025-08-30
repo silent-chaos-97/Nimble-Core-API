@@ -5,7 +5,6 @@ class InternalServerError extends Error {
     super(_.isError(error) ? error.mesage : (error || 'Something unexpected happened!'))
     this.cause = _.isError(error) ? error : null
     this.name = 'InternalServerError'
-    this.statusCode = 500
   }
 }
 

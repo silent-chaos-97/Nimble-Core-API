@@ -1,7 +1,9 @@
 const _ = require('lodash')
 const app = require('../../core')
+// Temp comment
 const logger = app.logger.getLogger('app.services.identity.parse')
 
+// map the result from the API to each verification
 const VERIFICATIONS = {
   'face': 'face_detection',
   'document.face_on_document_matched': 'face_on_document_matched',

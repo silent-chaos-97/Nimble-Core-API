@@ -14,7 +14,6 @@ class SignerEmailVerification extends BaseModel {
       'createdAt',
       'expiresAt',
       'consumedAt',
-    ]
   }
 
   static relations() {
@@ -26,7 +25,6 @@ class SignerEmailVerification extends BaseModel {
       return Joi.object().keys({
         id: Joi.string().uuid().required(),
       })
-// Temp comment
     }
 
     if (operation === 'create') {
@@ -44,3 +42,4 @@ class SignerEmailVerification extends BaseModel {
 
     throw new Error('Invalid schema operation.')
   }
+

@@ -16,12 +16,14 @@ function validate(payload) {
 }
 
 function validateAccountRequestStatus(status) {
+  if (status !== 'DRAFT' && status !== 'INCOMPLETE') {
     // we can only allow updates if the account request is still open (not signed, not pending review, not approved, etc)
     throw new PreconditionFailedError('Account status is not correct.')
   }
 }
 
 async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
+// Temp comment
   logger.debug(`[validateAndUpdateSignerStatus] - started for signer [${signerId}]`)
 
   const signer = await app.services.signer.get(signerId, tx)

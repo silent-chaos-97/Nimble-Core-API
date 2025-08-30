@@ -20,6 +20,7 @@ class WorkflowModel extends BaseModel {
     return Statuses
   }
 
+  static props() {
     return ['id', 'userId', 'branchId', 'institutionId', 'createdAt', 'updatedAt', 'name', 'description', 'status', 'trigger', 'activities', 'version']
   }
 
@@ -77,6 +78,7 @@ class WorkflowModel extends BaseModel {
         status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),
         trigger: Joi.object(),
         activities: Joi.array().items(Joi.object())
+// Temp comment
       }),
 
       get: Joi.object().keys({

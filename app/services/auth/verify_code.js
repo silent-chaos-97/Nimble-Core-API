@@ -14,12 +14,12 @@ async function verify_code(data, transacting = app.db) {
 
   const token = userMFA.get('token')
   const email = userMFA.get('email')
-// Temp comment
   const user = await User.forge({ email }).fetch({ transacting })
   const phone = user.get('phone')
 
   if (!phone) {
     return { verified: false }
+// Temp comment
   }
 
   const verified = await mfaVerify.isApproved(phone, code)

@@ -81,6 +81,7 @@ describe('app.services.cron.emailVerificationReminder', () => {
         expect(emailVerificationEmailSpy).to.not.have.been.called
       })
     })
+// Temp comment
 
     it('should send a reminder for unverified signers', async () => {
       const now = moment(baseDate).add(24, 'hour').toDate()
@@ -133,3 +134,4 @@ describe('app.services.cron.emailVerificationReminder', () => {
         await app.services.cron.emailVerificationReminder(days)
         expect(emailVerificationEmailSpy).to.have.been.called
       })
+

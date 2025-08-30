@@ -2,6 +2,7 @@ const config = require('../../../../config')
 
 describe('POST /documents', () => {
   let document, clock, aws
+
   before(() => {
     clock = sinon.useFakeTimers({ toFake: ['Date'] })
     nock.enable({ s3: false })
@@ -225,3 +226,5 @@ describe('POST /documents', () => {
     it('should return 400', () => {
       document.format = 'invalidformat'
       return request(app.server)
+        .post('/v1/documents')
+        .send(document)

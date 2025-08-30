@@ -24,6 +24,7 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
     .references('institutions.id')
     .onDelete('CASCADE')
     .notNullable()
+
   table.string('branch_id').defaultTo(DEFAULT_BRANCH_ID).notNullable()
 
   table.string('key').notNullable()
@@ -41,3 +42,4 @@ exports.up = knex => db.createTableIfNotExists(knex, 'settings', table => {
 }, () => knex('institutions').select()
   .then(institutions => institutions.forEach(async(institution) => Promise.all(INITIAL_SETTINGS.map(setting => knex('settings').insert({
     institution_id: institution.id,
+    ...setting

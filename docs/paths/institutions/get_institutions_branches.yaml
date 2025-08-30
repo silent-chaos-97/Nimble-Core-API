@@ -11,6 +11,7 @@
         description: Id of the Institution
         required: true
         schema:
+          type: string
           format: uuidv4
       - name: limit
         in: query

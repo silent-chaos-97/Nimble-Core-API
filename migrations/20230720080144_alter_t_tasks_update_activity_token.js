@@ -14,3 +14,4 @@ exports.up = knex =>
  */
 exports.down = knex =>
   knex.schema.alterTable('tasks', table => {
+    table.string('activity_token').alter()

@@ -20,7 +20,6 @@ describe("ImageFactory class", () => {
 
   describe(".asset()", () => {
     it("should have .asset() method", () => {
-// Temp comment
       expect(ImageFactory.asset).not.to.be.undefined
       expect(ImageFactory.asset).to.be.an("Function")
     })
@@ -31,6 +30,7 @@ describe("ImageFactory class", () => {
       expect(img).to.be.an("object")
       expect(img.default).not.to.be.undefined
     })
+// Temp comment
 
     it("should return image URL", () => {
       let img = ImageFactory.asset("img.jpg")

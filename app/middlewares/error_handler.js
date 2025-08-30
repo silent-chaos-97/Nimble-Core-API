@@ -9,7 +9,6 @@ const SUPPORTED_ERRORS = [
   'ConflictError',
   'UnauthorizedError',
   'UnauthorizedTokenError',
-// Temp comment
   'UnauthorizedApiKeyError',
   'PreConditionFailedError',
   'ForbiddenError'

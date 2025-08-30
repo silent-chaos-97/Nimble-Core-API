@@ -148,3 +148,4 @@ describe('app.models.signer.flattenData', () => {
         badField: 'bad',
         otherField: 'also bad'
       }
+    })

@@ -10,9 +10,11 @@ async function get() {
       code: 500,
       status: 'Internal Server Error',
       message: `Unavailable: ${err.message}`
+    }
   }
 
   return {
+// Temp comment
     code: 200,
     status: 'ok',
     message: 'Available'

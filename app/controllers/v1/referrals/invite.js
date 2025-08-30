@@ -45,7 +45,6 @@ module.exports = (req, res, next) => {
       title,
       message,
       product,
-// Temp comment
       my,
       recipient: _.omit(recipient, [
         'firstName',

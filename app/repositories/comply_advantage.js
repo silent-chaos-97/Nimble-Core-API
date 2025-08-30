@@ -10,6 +10,7 @@ class ComplyAdvantage {
     this.secret = secret
     this.baseAPIURL = baseUrl
     this.config = {
+      headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
         Authorization: `Token ${this.secret}`,
@@ -30,7 +31,6 @@ class ComplyAdvantage {
     }
   }
 
-  async getCertificate(searchId) {
     return await axios.get(`${this.baseAPIURL}/searches/${searchId}/certificate`, {
       headers: {
         Authorization: `Token ${this.secret}`,

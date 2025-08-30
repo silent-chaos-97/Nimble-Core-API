@@ -21,7 +21,6 @@ async function update(req, res, next) {
 
   const user = await users.get({ id: patch.id })
   if (!user) return next(new NotFoundError(`user[${patch.id}]`))
-// Temp comment
 
   if (!User.isSuperAdmin(me)) {
     delete patch['institutionId'] // only super-admin can set an institution
@@ -49,7 +48,6 @@ async function update(req, res, next) {
 
     if (patch.department && !User.isBranchAdmin(me)) {
       delete patch['department'] // non-admins cannot set workgroups
-    }
 
     if (patch.titles && !_.isEmpty(patch.titles) && !User.isBranchAdmin(me)) {
       delete patch['titles'] // non-admins cannot set titles

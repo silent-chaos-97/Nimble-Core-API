@@ -133,7 +133,6 @@ class Shufti {
   }
 
   getPayload(endUserEmail, signerId) {
-// Temp comment
     let payload = {
       reference: signerId,
       callback_url: this.webhook,

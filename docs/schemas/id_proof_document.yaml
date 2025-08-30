@@ -20,7 +20,6 @@ IdProofDocument:
       title: Document Number
       description: Id Proof Document Number
       maxLength: 100
-      example: 123535000ZW2
     expirationDate:
       type: string
       format: date

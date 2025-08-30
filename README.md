@@ -2,7 +2,6 @@
 # Nimble Core
 
 the api behind the nimble project.
-
 ### System Requirements
 
 - nodejs = 14
@@ -150,6 +149,7 @@ because AWS does not give feedback when we send emails with parse errors, we hav
 AWS_ACCESS_KEY_ID=[***] AWS_SECRET_ACCESS_KEY=[***] node scripts/test_email_templates.js | bunyan
 ```
 #### Migrations
+
 ```bash
 # applying migrations
 yarn migrate
@@ -185,3 +185,4 @@ The API documentation is specified using [Swagger 2.0](https://github.com/OAI/Op
 
 The API documentation is defined in the file `docs/spec.yaml` and available 'http://localhost:8080/'.
 
+## External Services

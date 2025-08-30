@@ -45,7 +45,6 @@
       <email>psousa+dev1@wearesingular.com</email>
       <firstName>John</firstName>
       <middleName/>
-      <lastName>McClane</lastName>
       <phoneNumber/>
       <ssn/>
       <role>SECONDARY</role>
@@ -72,3 +71,4 @@
   <productConfigurations>
     <productConfiguration product_sku="simple-checking">
       <productOption category="product_config" key="initial_deposit" value="250000099"/>
+      <productOption category="product_config" key="account_number" value="001"/>

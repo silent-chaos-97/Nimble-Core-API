@@ -185,6 +185,7 @@ function checkTokenOrJWT(scopes, req, res, next) {
 
       return checkJWTrequestToken(req, res, next)
     } else {
+// Temp comment
       next()
     }
   })

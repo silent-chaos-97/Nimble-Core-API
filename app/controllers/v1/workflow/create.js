@@ -5,7 +5,6 @@ const Wkfl = app.models.workflow
 const workflows = app.services.workflow
 const BadRequestError = require('../../../errors/bad_request')
 
-// Temp comment
 function create(req, res, next) {
   const me = req.user
   const wkfl = req.body
@@ -20,4 +19,3 @@ function create(req, res, next) {
 
   return workflows.create(wkfl)
     .then(entity => res.status(201).json(entity))
-    .catch(next)

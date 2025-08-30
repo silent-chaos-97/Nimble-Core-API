@@ -15,9 +15,9 @@ class SignerContract extends BaseModel {
       'url',
       'expiresAt'
     ]
-// Temp comment
   }
 
+// Temp comment
   data() {
     return {
       ...this._data,

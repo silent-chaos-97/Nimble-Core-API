@@ -234,6 +234,7 @@ const schema = Joi.object({
 				Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
 					companyName: Joi.string(),
+					tickerSymbol: Joi.string(),
 					exchange: Joi.string(),
 					quantity: Joi.number(),
 					currentMarketValue: Joi.number(),
@@ -299,7 +300,6 @@ const schema = Joi.object({
 			otherAssets: Joi.array().items(
 				Joi.object({
 					owner: Joi.string().valid('Borrower', 'Co-Borrower', 'Joint'),
-					type: Joi.string(),
 					description: Joi.string(),
 					marketValue: Joi.number()
 				})
@@ -707,3 +707,8 @@ const mockUniformResidentialLoanApplication = {
 			usCitizen: true,
 			permanentResidentAlien: false,
 			willOccupyPropertyAsPrimaryResidence: true,
+			propertyOwnershipInPast3YearsDetails: [
+				{
+					propertyOwnershipInPast3Years: true,
+					typeOfProperty: 'Principal Residence',
+					mannerTitleHeld: 'Jointly With Spouse'

@@ -35,3 +35,4 @@ Document:
       example: image
     createdAt:
       type: string
+      format: date-time

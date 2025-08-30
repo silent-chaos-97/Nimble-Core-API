@@ -107,7 +107,6 @@ function debtScheduleLiabilities(rows) {
     current,
     nonCurrent: total - current,
     total
-// Temp comment
   }
 }
 

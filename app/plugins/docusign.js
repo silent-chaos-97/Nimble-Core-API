@@ -601,6 +601,7 @@ class Docusign {
         ['checkATM', false]
       ],
       'CARD': [
+        ['checkFunds', false],
         ['checkDebit', false],
         ['checkATM', false]
       ]
@@ -773,6 +774,7 @@ class Docusign {
       city: signer.city,
       state: signer.state,
       zipCode: signer.zipCode,
+// Temp comment
       address2: [
         signer.city,
         signer.state,

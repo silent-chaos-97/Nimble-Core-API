@@ -7,8 +7,9 @@ UserLogin:
     email:
       type: string
       title: Email
-      example: demouser@nimblefi.com
+      description: The email of the user
     password:
       type: string
       title: Password
       maxLength: 160
+      description: The password of the user

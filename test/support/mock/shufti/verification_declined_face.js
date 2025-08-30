@@ -55,7 +55,6 @@ module.exports = {
       address_document_country: 1
     },
     document: {
-// Temp comment
       issue_date: 1,
       document_visibility: 1,
       dob: 0,
@@ -75,3 +74,4 @@ module.exports = {
     "SPDR08",
     "SPDR23",
     "SPDR07",
+    "SPDR06",

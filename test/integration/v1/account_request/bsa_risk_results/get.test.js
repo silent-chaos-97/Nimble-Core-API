@@ -1,12 +1,10 @@
 
 const uuid = require('uuid')
 
-describe('GET /account-requests/:id/bsa-risk-results', async () => {
   let clock, token
 
   before(async () => {
     clock = sinon.useFakeTimers({
-// Temp comment
       toFake: ['Date']
     })
   })

@@ -138,3 +138,4 @@ describe('app.services.compliance.verify', () => {
       expect(fakeForgeForSigner).to.have.been.calledWith({ id: fakeUser.id })
 
       expect(fakeSaveForSigner.getCall(0).args[0]).to.have.ownProperty('verificationStatusSanctions')
+      expect(fakeSaveForSigner.getCall(1).args[0]).to.have.ownProperty('verificationStatusMedia')

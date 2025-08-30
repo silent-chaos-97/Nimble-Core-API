@@ -73,6 +73,7 @@ async function acquireMFACacheToken(user, credentials) {
   const roles = user.get('roles')
   const isDeveloper = roles.includes('dev') || roles.includes('developer')
 
+  if (isDeveloper) return null // DANGER: devs do not need to re-verify (so says Mark)
 
   if (await mfaVerified(mfaCacheToken)) {
     // MFA has already been verified and not expired, no need to verify again.
