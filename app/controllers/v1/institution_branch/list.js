@@ -1,3 +1,4 @@
+const _ = require('lodash')
 
 const app = require('../../../core')
 const service = app.services.institutionBranch
@@ -14,3 +15,6 @@ function list(req, res, next) {
     .then(data => data.map(serializer))
     .then(data => res.status(200).json(data))
     .catch(next)
+}
+
+module.exports = list

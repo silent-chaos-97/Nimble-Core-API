@@ -17,3 +17,5 @@
         description: OK
       '400':
         $ref: '#/components/responses/BadRequest'
+      '404':
+        description: Could not find an user with that email.

@@ -12,6 +12,7 @@ module.exports = async(vin, opts) => {
   if (!vin) return null
 
   vin = vin.toUpperCase()
+
   opts = opts || {}
 
   try {
@@ -50,3 +51,7 @@ module.exports = async(vin, opts) => {
     }
 
     return { vin, appraisal, specs: normalize(_value.specs) }
+  } catch(err) {
+    return Promise.reject(err)
+  }
+}

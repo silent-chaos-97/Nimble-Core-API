@@ -18,3 +18,5 @@
           application/json:
             schema:
               $ref: '#/components/schemas/UserToken'
+      '401':
+        $ref: '#/components/responses/Unauthorized'

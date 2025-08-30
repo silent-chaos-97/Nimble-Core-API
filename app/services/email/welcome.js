@@ -15,6 +15,7 @@ const welcomeEmailSchema = Joi.object().keys({
   institution: Joi.string().required(),
   institutionUrl: Joi.string().required(),
 })
+
 const whitelist = ['userId']
 const entrySchema = Joi.object().keys({
   userId: Joi.string().uuid().required()
@@ -37,3 +38,33 @@ function welcomeUri(email, code, expiresAt) {
     .replace(':email', email)
     .replace(':code', code)
     .replace(':expiresAt', expiresAt)
+}
+
+async function welcome(userId) {
+  logger.debug(`[welcome] starting for user id ${userId}`)
+  await validate({ userId })
+
+  const user = await app.services.user.get({ id: userId })
+
+  if (!user) {
+    throw new NotFoundError('User is missing from send email')
+  }
+
+  const recoveryInfo = await app.services.accountRecovery.create(user.email)
+
+  const emailData = {
+    ..._.pick(user, 'email', 'firstName', 'lastName'),
+    statusEmailSubject: emailSubject(user.institution.name),
+    uri: welcomeUri(user.email, recoveryInfo.code, recoveryInfo.expiresAt),
+    institution: user.institution.name,
+    institutionUrl: user.institution.domain
+  }
+
+  // validate params for email
+  const emailParams = validator(emailData, welcomeEmailSchema, { abortEarly: false })
+
+  await app.plugins.email.awsSend('welcomeEmail', emailParams)
+  logger.debug(`[welcome] email sent for id ${userId}`)
+}
+
+module.exports = welcome

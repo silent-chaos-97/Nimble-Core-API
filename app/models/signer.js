@@ -32,6 +32,7 @@ class Signer extends BaseModel {
       'address',
       'city',
       'state',
+      'zipCode',
       'phoneNumber',
       'ssn',
       'email',
@@ -297,3 +298,21 @@ class Signer extends BaseModel {
           email: Joi.string().email({ tlds: { allow: false } }).required(),
           employer: Joi.string().required(),
           dateOfBirth: Joi.date().required(),
+          documentType: Joi.string().required().valid('USDL', 'USID', 'USLR', 'PASSPORT'),
+          documentNumber: Joi.string().required(),
+          documentIssuedDate: Joi.date().required(),
+          documentExpirationDate: Joi.date().required(),
+          documentIssuer: Joi.alternatives().conditional('documentType', {
+            is: 'USDL',
+            then: Joi.string().required().valid(...statesUSA),
+            otherwise: Joi.string().required().valid(...countries)
+          }).required(),
+        })
+      default:
+      case 'get':
+        return Joi.string().uuid()
+    }
+  }
+}
+
+module.exports = Signer

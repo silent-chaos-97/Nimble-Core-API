@@ -24,3 +24,5 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
  * @returns { Promise<void> }
  */
 exports.down = knex => knex('products').where({
+  sku: 'cd',
+}).del()

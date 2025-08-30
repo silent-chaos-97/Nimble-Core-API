@@ -5,7 +5,6 @@ const service = app.services.data
 
 async function searchGet(req, res) {
   const id = _.get(req, ['params', 'id'])
-// Temp comment
 
   if (!id) throw new BadRequestError('id required')
 
@@ -15,3 +14,6 @@ async function searchGet(req, res) {
   } catch(err) {
     res.status(err.status || 500).json({ err: err.message })
   }
+}
+
+module.exports = searchGet

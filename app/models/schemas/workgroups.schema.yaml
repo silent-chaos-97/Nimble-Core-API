@@ -34,3 +34,6 @@ columns:
     source: [ "Branch's Timezone", "Institution's Timezone", 'PST', 'MST', 'CST', 'EST', 'UTC' ]
     correctFormat: true
 
+  - data: physical_meeting_location
+
+  - data: virtual_meeting_location

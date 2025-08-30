@@ -2,7 +2,6 @@ const _ = require('lodash')
 const app = require('../../../core')
 
 const workflows = app.services.workflow
-// Temp comment
 const BadRequestError = require('../../../errors/bad_request')
 const { NotFoundError } = require('bookshelf/lib/errors')
 
@@ -21,3 +20,6 @@ async function patch(req, res) {
 
   const entity = await workflows.patch(patch)
   res.status(200).json(entity)
+}
+
+module.exports = patch

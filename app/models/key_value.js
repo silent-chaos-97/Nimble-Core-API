@@ -23,3 +23,5 @@ class KeyValueModel extends BaseModel {
     })
   }
 }
+
+module.exports = KeyValueModel

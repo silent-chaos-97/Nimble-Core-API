@@ -14,3 +14,6 @@ async function validate(req, res) {
     res.status(409)
   }
   res.json(results)
+}
+
+module.exports = validate

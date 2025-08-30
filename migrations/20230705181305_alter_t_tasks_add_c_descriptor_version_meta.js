@@ -6,3 +6,4 @@ exports.up = knex => db.alterTableIfColumnNotExists(knex, 'tasks', 'meta', table
   table.jsonb('meta').notNullable().defaultTo('{}')
 })
 
+exports.down = knex => knex.schema.alterTable('tasks', table => table.dropColumn('meta'))

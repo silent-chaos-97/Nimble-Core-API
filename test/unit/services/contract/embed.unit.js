@@ -70,3 +70,8 @@ describe('app.services.contract.embed', () => {
           expect(error.statusCode).to.equal(404)
           expect(error.message).to.equal("The requested resource couldn't be found")
         }
+      })
+    })
+
+  })
+})

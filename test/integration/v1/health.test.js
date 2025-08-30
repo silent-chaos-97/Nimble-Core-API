@@ -7,3 +7,4 @@ describe('Application', () => {
       .expect(200)
       .end(helpers.tantrum)
   })
+})

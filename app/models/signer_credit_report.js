@@ -8,6 +8,7 @@ class SignerCreditReportModel extends BaseModel {
 
   static props() {
     return [
+      'id',
       'errorCode',
       'reference',
       'score',
@@ -40,3 +41,6 @@ class SignerCreditReportModel extends BaseModel {
       id: Joi.string().uuid()
     })
   }
+}
+
+module.exports = SignerCreditReportModel

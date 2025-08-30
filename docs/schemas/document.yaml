@@ -36,3 +36,6 @@ Document:
     createdAt:
       type: string
       format: date-time
+      title: Creation Date
+      description: The date and time the document was created in the system
+      readOnly: true

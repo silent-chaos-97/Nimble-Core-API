@@ -15,3 +15,5 @@ provider "aws" {
     tags = {
       Owner       = "terraform"
     }
+  }
+}

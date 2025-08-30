@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const _ = require('lodash')
 const logger = app.logger.getLogger('app.services.risk.list')
 
@@ -41,3 +40,30 @@ function normalize(risk) {
     product: _.snakeCase(risk.product),
     indicator: _.snakeCase(risk.indicator)
   }
+}
+
+async function riskSettings(institutionId, productId, transacting = app.db) {
+  if (!productId) return null
+
+  const product = await productSetting(institutionId, productId, transacting)
+
+  if (!product) return Promise.reject(`ProductNotFound[${productId}]`)
+  if (!product.scope) return Promise.reject(`ProductScopeNotSet[${productId}]`)
+
+  let risks = await app.services.settings.getRecords({ key: 'risk_analysis', institutionId }, risk => {
+    if (!isValid(risk)) return false
+    if (_.snakeCase(product.scope) !== _.snakeCase(risk.scope)) return false // scope must always match
+    if (_.snakeCase(product.id) !== _.snakeCase(risk.product)) return false // produce must always match
+    return true // match
+  }, transacting)
+
+  if (!risks || _.isEmpty(risks)) return null
+
+  return _.reduce(risks, (acc, _risk) => {
+    const risk = normalize(_risk)
+    if (!risk) return acc
+    if (acc[risk.indicator]) logger.warn({ message: 'DuplicateRiskIndicator', risk1: acc[risk.indicator], risk2: risk })
+    acc[risk.indicator] = risk
+    return acc
+  }, { _: risks })
+}

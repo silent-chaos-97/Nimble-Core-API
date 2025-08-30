@@ -43,3 +43,6 @@ class Random {
 
     return id
   }
+}
+
+module.exports = new Random()

@@ -4,7 +4,6 @@ describe('NotFoundError', () => {
   it('should exist', () => {
     expect(ErrorClass).not.to.be.undefined
   })
-// Temp comment
 
   it('should be and instance of NotFoundError and Error', () => {
     let error = new ErrorClass()
@@ -37,3 +36,6 @@ describe('NotFoundError', () => {
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')
       expect(error.message).to.equal('custom error msg')
+    })
+  })
+})

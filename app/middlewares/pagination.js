@@ -13,3 +13,8 @@ function pagination(req, res, next) {
   }
 
   next()
+}
+
+module.exports = function paginationMiddleware() {
+  return pagination
+}

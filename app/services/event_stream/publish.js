@@ -32,3 +32,6 @@ async function publish(stream, event = { id: null, event: null, type: null, body
   return client.publish({ ...PublishReq, Message: JSON.stringify(Message) }).promise()
     .then(response => logger.debug({ message: '[publish] EventPublished', MessageId: response.MessageId, PubReq: PublishReq }))
     .catch(err => logger.error(err, { message: '[publish] FailedToPublishEvent', PubReq: PublishReq }))
+}
+
+module.exports = publish

@@ -17,3 +17,5 @@ app
   .catch(err => {
     // exit on error
     logger.error(err, '[load] ending subscribers with error')
+    process.exit(1) // eslint-disable-line no-process-exit
+  })

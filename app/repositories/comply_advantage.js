@@ -31,6 +31,7 @@ class ComplyAdvantage {
     }
   }
 
+  async getCertificate(searchId) {
     return await axios.get(`${this.baseAPIURL}/searches/${searchId}/certificate`, {
       headers: {
         Authorization: `Token ${this.secret}`,
@@ -38,3 +39,9 @@ class ComplyAdvantage {
       responseType: 'arraybuffer',
     })
   }
+}
+
+const secret = config.get('complyAdvantage').secret
+const baseUrl = config.get('complyAdvantage').baseUrl
+
+module.exports = new ComplyAdvantage(secret, baseUrl)

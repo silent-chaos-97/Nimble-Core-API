@@ -43,3 +43,6 @@ async function update(id, signerId, tx = app.db) {
   }, tx)
 
   return emailVerification
+}
+
+module.exports = update

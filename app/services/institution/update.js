@@ -39,3 +39,6 @@ async function update(institution) {
   })
 
   return app.services.institution.get({ id: patch.id })
+}
+
+module.exports = update

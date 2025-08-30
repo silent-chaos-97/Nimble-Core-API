@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const app = require('../../core')
 const validator = app.plugins.validator
 const Search = app.repositories.search
@@ -33,3 +34,6 @@ async function searchSave(search, tx = app.db) {
     logger.error(err, { phase: 'data.search.create.entity:fail', search })
     throw new InternalServerError(err.message)
   }
+}
+
+module.exports = searchSave

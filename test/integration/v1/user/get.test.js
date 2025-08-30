@@ -27,6 +27,7 @@ describe('GET /users/:id', () => {
         .expect(500)
         .end(done)
     })
+  })
 
   describe('with valid data', () => {
     beforeEach(async () => {
@@ -101,3 +102,10 @@ describe('GET /users/:id', () => {
     it('should return 404 if user does not exist', done => {
       request(app.server)
         .get('/v1/users/0052ab85-08da-4bb5-be00-9e94d282d399')
+        .set('X-API-KEY', 'superpowers')
+        .expect('Content-Type', /json/)
+        .expect(404)
+        .end(done)
+    })
+  })
+})

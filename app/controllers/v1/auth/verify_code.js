@@ -8,3 +8,6 @@ function verify_code(req, res, next) {
     .then(serializer)
     .then(data => res.status(200).json(data))
     .catch(next)
+}
+
+module.exports = verify_code

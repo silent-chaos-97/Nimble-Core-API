@@ -14,3 +14,6 @@ async function fetch(id) {
     logger.error(err, `[fetch] error fetching pdf from docusign for account request id [${id}]`)
     throw new InternalServerError('could not fetch PDF file for download')
   }
+}
+
+module.exports = fetch

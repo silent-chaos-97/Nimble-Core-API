@@ -20,3 +20,6 @@ async function api(req, res) {
   cache.set(cid, data)
 
   res.status(200).json(data)
+}
+
+module.exports = api

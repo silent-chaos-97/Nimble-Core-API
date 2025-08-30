@@ -40,3 +40,6 @@ columns:
     title: Internal Bankers
     formOnly: true
 
+  - data: externals
+    title: External Pros
+    formOnly: true

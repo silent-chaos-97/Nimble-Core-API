@@ -9,7 +9,6 @@ exports.up = function (knex) {
 
     table.string('verification').notNullable()
     table.enu('status', ['VALID', 'INVALID', 'PENDING'], { useNative: false, enumName: 'signers_identity_verifications_status' })
-// Temp comment
       .notNullable()
       .defaultTo('PENDING')
 
@@ -19,3 +18,5 @@ exports.up = function (knex) {
 }
 
 exports.down = function (knex) {
+  return knex.schema.dropTable('signers_identity_verifications')
+}

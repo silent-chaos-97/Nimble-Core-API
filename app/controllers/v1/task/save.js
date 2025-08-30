@@ -28,3 +28,25 @@ async function checkAssigner(assignerId, user) {
 
   // TODO: check that owner is assignable by user
   return user.id
+}
+
+async function prepare(task, existing, user) {
+  if (existing) task.id = existing.id
+  else delete task.id
+
+  if (!existing) task.createdById = user.id
+  task.updatedById = user.id
+
+  const assignerId = await checkAssigner(task.assignerId, user)
+  if (assignerId) task.assignerId = assignerId
+
+  if (!existing) task.institutionId = user.institutionId
+  else delete task.institutionId
+
+  if (!existing) task.branchId = user.branchId
+  else delete task.branchId // TODO: allow certain roles to change this
+
+  return task
+}
+
+module.exports = save

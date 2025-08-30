@@ -9,9 +9,10 @@ exports.up = function (knex, Promise) {
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
     table.timestamp('expires_at').notNullable().defaultTo(knex.fn.now())
-// Temp comment
     table.timestamp('consumed_at').nullable().defaultTo(null)
   })
 }
 
 exports.down = function (knex, Promise) {
+  return knex.schema.dropTable('signer_email_verifications')
+}

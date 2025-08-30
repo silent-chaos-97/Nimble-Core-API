@@ -17,3 +17,5 @@
         description: OK
         schema:
           $ref: '#/components/schemas/Institution'
+      '404':
+        $ref: '#/components/responses/NotFound'

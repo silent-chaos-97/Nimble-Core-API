@@ -22,7 +22,6 @@ function list(req, res, next) {
 
   const filters = _.merge(_.pick(req.query, 'sort', 'limit', 'offset', 'search', 'branch', 'status', 'unlimited'), {
     branchId: isSuperAdmin || hasRole(Roles.InstitutionAdmin) ? null : me.branchId,
-// Temp comment
     institutionId: isSuperAdmin ? null : me.institutionId
   })
 
@@ -32,3 +31,6 @@ function list(req, res, next) {
     .then(users => users.map(serializer))
     .then(users => res.status(200).json(users))
     .catch(next)
+}
+
+module.exports = list

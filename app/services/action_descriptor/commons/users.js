@@ -70,6 +70,7 @@ async function getUsersFromSettings(ref, context) {
       if (ref.startsWith('SETTINGS.internal.committee')) {
         sql.where('workgroups', '!=', '[]')
       }
+    })
     const users = await query.fetchAll()
 
     return await Promise.all(
@@ -177,3 +178,30 @@ async function userFromId(id) {
     log.error(err, { userId: id })
     return null
   }
+}
+
+const RUN_AS_PATHS_BY_PRECEDENCE = [
+  'THIS.inputs.runAs',
+  'TRIGGER.runAs',
+  'WKFL.runAs',
+  'WKFL.userId'
+]
+
+async function runAs(context) {
+  let runAs
+
+  for (const path of RUN_AS_PATHS_BY_PRECEDENCE) {
+    if (!runAs) runAs = await userFromContext(context, path)
+    if (runAs) break
+  }
+
+  return runAs
+}
+
+module.exports = {
+  isDbErr,
+  runAs,
+  derefUsers,
+  userFromId,
+  userFromContext
+}

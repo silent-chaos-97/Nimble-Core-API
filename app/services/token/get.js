@@ -16,6 +16,7 @@ function schema() {
   })
 }
 
+// public claims - https://tools.ietf.org/html/rfc7519#section-4.1
 function getTokenInfo(options) {
   const now = moment()
   const publicClaims = {
@@ -35,3 +36,21 @@ function validate(options) {
     throw new Error(data.error.details[0].message)
   }
   return data.value
+}
+
+/**
+ * Generates a access token for the specified resources and expiration
+ *
+ * @param {Object}    options
+ * @param {string}    options.userId user unique identifier
+ * @param {string[]}  options.scopes, defaults to everything using *
+ * @param {string[]}  options.resources, defaults to everything using *
+ * @param {number}    options.expiration in seconds, defaults to 15m
+ */
+function get(options) {
+  const data = validate(options)
+  const tokenData = getTokenInfo(data)
+  return jwt.encode(tokenData)
+}
+
+module.exports = get

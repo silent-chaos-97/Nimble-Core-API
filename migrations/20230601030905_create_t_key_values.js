@@ -17,3 +17,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
+  return knex.schema.dropTable('key_values')
+}

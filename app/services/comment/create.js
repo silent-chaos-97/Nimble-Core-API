@@ -17,3 +17,6 @@ async function create(data, tx = app.db) {
   } catch (err) {
     logger.error(err, { phase: 'comment.create.entity:fail', data })
   }
+}
+
+module.exports = create

@@ -22,3 +22,5 @@ exports.down = function (knex) {
     table.dropIndex('account_request_id')
     table.dropIndex('product_id')
   })
+  return knex.schema.dropTable('account_request_product_options')
+}

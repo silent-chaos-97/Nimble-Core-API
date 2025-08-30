@@ -38,3 +38,6 @@ global.knex = knex
 global.moment = moment
 global._ = _
 global.config = config
+
+nock.enable = helpers.enableNock
+global.nock = nock

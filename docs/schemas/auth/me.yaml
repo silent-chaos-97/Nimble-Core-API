@@ -46,3 +46,7 @@ Me:
       type: string
       format: uuidv4
       title: Institution branch unique id
+      description: Institution branch unique identifier
+      example: a74f9092-5889-430a-9c19-6712f9f68090
+    branch:
+      $ref: '#/components/schemas/InstitutionBranch'

@@ -26,3 +26,6 @@ async function update(req, res, next) {
     .update({ id, value: req.body })
     .then(data => res.status(200).json(data))
     .catch(next)
+}
+
+module.exports = update

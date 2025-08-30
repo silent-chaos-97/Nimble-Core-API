@@ -17,7 +17,6 @@ class SignerContract extends BaseModel {
     ]
   }
 
-// Temp comment
   data() {
     return {
       ...this._data,
@@ -25,3 +24,5 @@ class SignerContract extends BaseModel {
     }
   }
 }
+
+module.exports = SignerContract

@@ -13,3 +13,4 @@ exports.down = function (knex) {
     table.dropColumn('consent_privacy_policy')
     table.dropColumn('consent_communication')
   })
+};

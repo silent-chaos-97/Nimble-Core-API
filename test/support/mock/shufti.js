@@ -1,7 +1,6 @@
 module.exports = {
   // Invalid
   requestInvalid: require('./shufti/request_invalid'),
-// Temp comment
   requestPending: require('./shufti/request_pending'),
   // Accepted
   verificationAccepted: require('./shufti/verification_accepted'),
@@ -12,3 +11,4 @@ module.exports = {
   verificationDeclinedFaceOnDocument: require('./shufti/verification_declined_face_on_document'),
   verificationDeclinedDocumentType: require('./shufti/verification_declined_document_type'),
   verificationDeclinedNoReason: require('./shufti/verification_declined_noreason'),
+}

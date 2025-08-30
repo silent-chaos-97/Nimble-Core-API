@@ -109,6 +109,7 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
           expect(res.body).to.an('Array')
           expect(res.body).to.have.lengthOf(12)
+
           const first = res.body[0]
 
           expect(first).to.have.ownProperty('verification')
@@ -260,3 +261,19 @@ describe('GET /signers/:id/identity-verifications', async () => {
 
       return request(app.server)
         .get(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/identity-verifications`)
+        .expect('Content-Type', /json/)
+        .set('Authorization', 'Bearer ' + token)
+        .expect(200)
+        .expect(res => {
+          const face = res.body.find(item => item.verification === 'Face Detection')
+          const doc = res.body.find(item => item.verification === 'Issued Date')
+
+          expect(res.body).to.have.lengthOf(12)
+          expect(face.status).to.equal('PENDING')
+          expect(doc.status).to.equal('PENDING')
+          expect(face.date).to.equal('2020-02-16T12:32:03.341Z')
+          expect(doc.date).to.equal('2020-02-16T12:32:03.341Z')
+        })
+    })
+  })
+})

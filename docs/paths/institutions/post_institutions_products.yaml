@@ -23,3 +23,5 @@
         $ref: '#/components/responses/NotFound'
       '409':
         description: A product with that name already exists for this institution
+        schema:
+          $ref: '#/components/responses/Conflict'

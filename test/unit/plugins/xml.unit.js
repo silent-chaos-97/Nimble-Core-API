@@ -125,3 +125,11 @@ describe('app.plugins.xml', () => {
   <tag>%3C/%3E%3C/%3E%3C/%3E</tag>
   <tag>%22;alert('XSS');//</tag>
   <tag prop="should%20url%20encode%20this%20string" another="Jo%C3%A3o%20C%C3%A1rl%C3%B4s%20C%C3%AC%20A(ento"/>
+</result>`)
+
+    })
+  })
+
+})
+
+

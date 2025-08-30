@@ -40,3 +40,6 @@ async function execute(req, res) {
     successfulWkfls,
     failedWkfls
   })
+}
+
+module.exports = execute

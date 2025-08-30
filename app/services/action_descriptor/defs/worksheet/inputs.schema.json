@@ -1,6 +1,7 @@
 {
   "type": "object",
   "required": [
+    "document"
   ],
   "properties": {
     "fileType": {
@@ -9,3 +10,4 @@
       "stereotype": "fileType"
     }
   }
+}

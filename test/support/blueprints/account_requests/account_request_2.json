@@ -64,3 +64,8 @@
     "addressStatus": "PENDING",
     "sanctionsStatus": "PENDING",
     "mediaStatus": "PENDING",
+    "politicalExposure": "PENDING"
+  },
+  "referredBy": null,
+  "referrers": []
+}

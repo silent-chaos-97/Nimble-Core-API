@@ -108,3 +108,10 @@ class InstitutionModel extends BaseModel {
           score: Joi.object().optional(),
           dependsOn: Joi.object().optional(),
           required: Joi.boolean().default(true).required()
+        }))
+      })
+    })
+  }
+}
+
+module.exports = InstitutionModel

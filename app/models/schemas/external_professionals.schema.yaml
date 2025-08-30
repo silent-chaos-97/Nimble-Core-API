@@ -1,3 +1,4 @@
+collection: External Professionals
 element: External Professional
 group: organization
 kind: custom
@@ -25,3 +26,5 @@ columns:
     allowEmpty: false
 
   - data: company
+
+  - data: office_location

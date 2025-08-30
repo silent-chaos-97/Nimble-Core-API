@@ -61,3 +61,7 @@ describe('GET /institution/:domain', () => {
       .get('/v1/institutions/wearesingular.com')
       .set('Authorization', 'Bearer ' + token)
       .expect((res) => {
+        expect(_.omit(res.body,['branchesCount', 'publicMetadata'])).to.deep.equal(_.omit(blueprints.institution.get('2552ab85-08da-4bb5-be00-9e94d282d311'), 'publicMetadata'))
+      })
+  })
+})

@@ -20,9 +20,26 @@ async function _get(ref) {
   if (CACHE[id]) return CACHE[id]
 
   const file = await fs.promises.readFile(_path(id), 'utf-8')
-// Temp comment
   const json = yaml.load(file)
 
   CACHE[id] = json
 
   return json
+}
+
+function _getSync(ref) {
+  const id = _id(ref)
+
+  if (CACHE[id]) return CACHE[id]
+
+  const json = yaml.load(fs.readFileSync(_path(id), 'utf-8'))
+
+  CACHE[id] = json
+
+  return json
+}
+
+module.exports = {
+  get: _get,
+  getSync: _getSync
+}

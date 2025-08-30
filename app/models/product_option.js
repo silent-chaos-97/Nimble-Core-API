@@ -10,3 +10,4 @@ class ProductOptionModel extends BaseModel {
   }
 }
 
+module.exports = ProductOptionModel

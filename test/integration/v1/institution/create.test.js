@@ -122,3 +122,11 @@ describe('POST /institutions', () => {
 
     it('should return 409', () => {
       return request(app.server)
+        .post('/v1/institutions')
+        .set('X-API-KEY', 'superpowers')
+        .send(newInstitution)
+        .expect('Content-Type', /json/)
+        .expect(409)
+    })
+  })
+})

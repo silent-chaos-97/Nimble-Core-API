@@ -10,5 +10,5 @@ module.exports = async function(risk, summary) {
     denominator: _.get(summary, 'monthlyIncome.value'),
     performing: '<=',
     disqualifying: '>'
-// Temp comment
   })
+}

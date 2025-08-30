@@ -10,6 +10,7 @@ class AccountOneTimeTokenModel extends BaseModel {
     return ['userId', 'scopes', 'resources', 'expiration', "phone", 'createdAt']
   }
 
+  static schema() {
     return Joi.object().keys({
       userId: Joi.string().optional().default(null),
       scopes: Joi.array().items(Joi.string()).min(1).default(['*']),
@@ -19,3 +20,5 @@ class AccountOneTimeTokenModel extends BaseModel {
     })
   }
 }
+
+module.exports = AccountOneTimeTokenModel

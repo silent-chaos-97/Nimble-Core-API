@@ -174,3 +174,14 @@ describe('GET /signers/:id/contract', async () => {
 
     it('should return an object with the expected values', async () => {
       return request(app.server)
+        .get(`/v1/signers/00000000-9999-aaaa-0000-2ea08a01e901/contract`)
+        .set('Authorization', 'Bearer ' + token)
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .expect(res => {
+          expect(res.body.url).to.equal('http://contract.url')
+          expect(res.body.expiresAt).to.equal('1970-01-01T00:05:00.000Z') // now() + 5 minutes
+        })
+    })
+  })
+})

@@ -22,9 +22,12 @@ User:
       example: Specimen
     email:
       type: string
+      title: Email
       description: The email of the user
       example: demouser@nimblefi.com
     createdAt:
       type: string
       format: date-time
       title: Creation Date
+      description: The date and time this user record entered the system
+      readOnly: true

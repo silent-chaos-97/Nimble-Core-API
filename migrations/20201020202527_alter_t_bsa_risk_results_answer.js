@@ -13,3 +13,4 @@ exports.down = function (knex) {
   }).then(() => knex.schema.alterTable('bsa_risk_results', function (table) {
     table.string('answer')
   }))
+}

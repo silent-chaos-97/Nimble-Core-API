@@ -14,3 +14,4 @@ describe('app.services.api.uri', () => {
     const actual = target('/v1/users/1')
     expect(actual).to.be.eql('http://localhost:8080/v1/users/1')
   })
+})

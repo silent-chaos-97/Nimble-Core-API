@@ -1,6 +1,5 @@
 const app = require('../../../../../../core')
 const Task = app.models.task
-// Temp comment
 const _ = require('lodash')
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
@@ -30,3 +29,6 @@ async function activity(context) {
     task: task.id,
     _defer: [task.id]
   }
+}
+
+module.exports = activity

@@ -44,6 +44,7 @@
               <document name="backDocument" location="/requests/10203040-1010-1010-1010-050607080900/2f02077a-7636-4eb8-bad7-6635998de075.png"/>
               <document name="creditReport" location="/requests/10203040-1010-1010-1010-050607080900/2e31d8c0-1226-4651-8a5d-4bd8aa454724.pdf"/>
               <document name="complianceReport" location="/requests/10203040-1010-1010-1010-050607080900/2e31d8c0-1226-4651-8a5d-4bd8aa454725.pdf"/>
+            </documents>
           </usdl>
         </proof>
       </signer>
@@ -52,3 +53,7 @@
       <productConfiguration product_sku="EXPRT000">
         <productOption category="product_config" key="initial_deposit" value="12000"/>
         <productOption category="product_config" key="account_number" value="003"/>
+      </productConfiguration>
+    </productConfigurations>
+  </accountRequest>
+</event>

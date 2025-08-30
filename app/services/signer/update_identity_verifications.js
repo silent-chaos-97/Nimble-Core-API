@@ -43,6 +43,7 @@ async function updateIdentityVerifications(payload, tx = app.db) {
     }
 
     // any invalid? its all invalid
+    if (checks.find(vI => _.get(vI, 'status') === 'INVALID')) {
       return 'INVALID'
     }
 
@@ -71,3 +72,6 @@ async function updateIdentityVerifications(payload, tx = app.db) {
   })
 
   return data.signerId
+}
+
+module.exports = updateIdentityVerifications

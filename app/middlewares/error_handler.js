@@ -38,3 +38,8 @@ function errorHandler(err, req, res, next) {
   }
 
   next()
+}
+
+module.exports = function errorHandlerMiddleware() {
+  return errorHandler
+}

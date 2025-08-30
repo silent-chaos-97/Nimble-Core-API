@@ -185,7 +185,6 @@ function checkTokenOrJWT(scopes, req, res, next) {
 
       return checkJWTrequestToken(req, res, next)
     } else {
-// Temp comment
       next()
     }
   })
@@ -193,3 +192,25 @@ function checkTokenOrJWT(scopes, req, res, next) {
 
 function checkApiKeyOrJwt(req, res, next) {
   return checkApiKey(req, res, err => err ? checkJWTrequestToken(req, res, next) : next())
+}
+
+module.exports = function authMiddleware(strategy, options) {
+  strategy = _.toString(strategy)
+  const strategies = {
+    'none': (req, res, next) => next(),
+    'tokenOrJwt': _.partial(checkTokenOrJWT, options),
+    'token': _.partial(checkScopeToken, options),
+    'apiKey': checkApiKey,
+    '': checkJWTrequestToken,
+    'jwt': checkJWTrequestToken,
+    'apiKeyOrJwt': checkApiKeyOrJwt,
+    'roles': _.partial(checkRoles, options),
+    'memberships': _.partial(checkMemberships, options)
+  }
+
+  const fn = strategies[strategy]
+  if (!fn) {
+    throw Error('Invalid authentication strategy')
+  }
+  return fn
+}

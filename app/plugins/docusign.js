@@ -774,7 +774,6 @@ class Docusign {
       city: signer.city,
       state: signer.state,
       zipCode: signer.zipCode,
-// Temp comment
       address2: [
         signer.city,
         signer.state,
@@ -923,3 +922,6 @@ class Docusign {
     // this could posssibilty be fetched from the user but requires a extra call
     this.docusignApiService.setBasePath(basePath)
   }
+}
+
+module.exports = new Docusign()

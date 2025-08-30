@@ -10,3 +10,4 @@ const Product = app.db.Model.extend({
   },
 })
 
+module.exports = app.db.model('ProductOption', Product)

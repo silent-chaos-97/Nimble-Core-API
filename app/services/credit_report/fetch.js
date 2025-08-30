@@ -16,6 +16,7 @@ async function fetch(signerId, tx = app.db) {
   const signer = await app.services.signer.get(signerId, tx)
 
   if (signer.status === 'INVITED' || signer.status === 'INCOMPLETE') {
+    logger.info(`[fetch] aborting because signer [${signer.id}] is ${signer.status}`)
     return Promise.resolve()
   }
 
@@ -67,3 +68,6 @@ async function fetch(signerId, tx = app.db) {
 
   logger.info(`[fetch] completed for signer [${signer.id}]`)
   return Promise.resolve()
+}
+
+module.exports = fetch

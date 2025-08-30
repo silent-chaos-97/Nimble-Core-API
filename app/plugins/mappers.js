@@ -12,3 +12,23 @@ function mapDeep(any, keyMapper = null, valueMapper = null) {
   if (_.isArray(any)) return _.map(any, value => mapDeep(valueMapper(value, null), keyMapper, valueMapper))
 
   return any
+}
+
+function omitByDeep(any, predicate) {
+  if (_.isPlainObject(any)) {
+    return _.reduce(_.omitBy(any, predicate), (acc, value, key) => {
+      acc[key] = omitByDeep(value, predicate)
+      return acc
+    }, {})
+  }
+
+  if (_.isArray(any)) return _.map(any, value => omitByDeep(value, predicate))
+
+  return any
+}
+
+module.exports = {
+  mapDeep,
+  omitByDeep
+}
+

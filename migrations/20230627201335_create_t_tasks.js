@@ -32,7 +32,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.index('type', 'idx_tasks_type')
   table.index('status', 'idx_tasks_status')
   table.index('assignee_id', 'idx_tasks_assignee')
-// Temp comment
   table.index('assigner_id', 'idx_tasks_assigner')
   table.index('activity_id', 'idx_tasks_activity')
   table.index('created_by_id', 'idx_tasks_created_by')
@@ -40,3 +39,6 @@ exports.up = knex => db.createTableIfNotExists(knex, 'tasks', table => {
   table.index('created_at', 'idx_tasks_created_at')
   table.index('updated_at', 'idx_tasks_updated_at')
   table.index('expires_at', 'idx_tasks_expires_at')
+}))
+
+exports.down = knex => knex.schema.dropTable('tasks')

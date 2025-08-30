@@ -133,3 +133,6 @@ async function auth_tokens(body) {
   else {
     return { message: 'Wrong parameters', status:false, statusCode: 500 }
   }
+}
+
+module.exports = auth_tokens

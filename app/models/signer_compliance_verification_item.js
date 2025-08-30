@@ -59,3 +59,7 @@ class SignerComplianceVerificationItemModel extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid()
     })
+  }
+}
+
+module.exports = SignerComplianceVerificationItemModel

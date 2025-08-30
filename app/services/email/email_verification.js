@@ -43,3 +43,34 @@ function verificationUrl(signerId, emailVerificationId, domain) {
 
 function emailSubject() {
   return `Confirm your email address`
+}
+
+async function emailVerification(emailVerificationId, tx = app.db) {
+  logger.debug(`[emailVerification] starting for email verification id ${emailVerificationId}`)
+  await validate({ id: emailVerificationId })
+
+  // fetch the verification and associated signer
+  const emailVerification = await app.services.emailVerification.get(emailVerificationId, tx)
+  const institution = await app.services.institution.get({ id: emailVerification.signer.institutionId }, tx)
+
+  // build email required information
+  const emailData = {
+    email: emailVerification.signer.email,
+    signerEmail: emailVerification.signer.email,
+    signerFirstName: emailVerification.signer.firstName || emailVerification.signer.email.split('@').shift(),
+    verifyUrl: verificationUrl(emailVerification.signer.id, emailVerification.id, institution.domain),
+    institution: institution.name,
+    institutionUrl: institution.domain,
+    statusEmailSubject: emailSubject()
+  }
+
+  // // validate params for email
+  const emailParams = validator(emailData, verificationEmailSchema, { abortEarly: false })
+
+  const result = await app.plugins.email.brevoSend(18, emailParams)
+
+  logger.debug(`[emailVerification] sent for email verification id ${emailVerificationId}`)
+  return result
+}
+
+module.exports = emailVerification

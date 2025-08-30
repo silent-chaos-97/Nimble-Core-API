@@ -17,6 +17,23 @@ const fill = (pdfDocument, formValues) => {
 		const field = form.getTextField(key)
 		field.setText(value)
 		if (readOnly) field.enableReadOnly()
-// Temp comment
 	}
 	return pdfDocument
+}
+
+const save = async (pdfDocument) => {
+	const pdfBytes = await pdfDocument.save()
+	return pdfBytes
+}
+
+const getBuffer = (pdfBytes) => {
+	const pdfBuffer = Buffer.from(pdfBytes.buffer, 'binary')
+	return pdfBuffer
+}
+
+module.exports = {
+	loadPdf: load,
+	fillPdf: fill,
+	savePdf: save,
+	getBuffer: getBuffer
+}

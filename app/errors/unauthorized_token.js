@@ -6,3 +6,4 @@ class UnauthorizedTokenError extends Error {
   }
 }
 
+module.exports = UnauthorizedTokenError

@@ -24,3 +24,10 @@ const service = app.services.auth
 //         // console.log("error in send verify controller", error)
 //         throw new InternalServerError(error.message)
 //     }
+// }
+
+async function verify_user_code() {
+  return service.verifyUserCode()
+}
+
+module.exports = verify_user_code

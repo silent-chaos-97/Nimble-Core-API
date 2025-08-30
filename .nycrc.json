@@ -17,3 +17,5 @@
     "test/",
     "worker.js",
     "subscribers.js"
+  ]
+}

@@ -12,6 +12,7 @@ const STATUSES = {
 
 class SignerCheck extends BaseModel {
 
+  constructor(data) { super(SignerCheck.props(), SignerCheck.relations(), data) }
 
   static props() {
     return [
@@ -42,3 +43,6 @@ class SignerCheck extends BaseModel {
 
     return _.get(schemas, op || 'create', schemas.create)
   }
+}
+
+module.exports = SignerCheck

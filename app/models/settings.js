@@ -62,3 +62,8 @@ class SettingsModel extends BaseModel {
         branchId: Joi.string().optional(),
         key: Joi.string().required()
       })
+    }[op]
+  }
+}
+
+module.exports = SettingsModel

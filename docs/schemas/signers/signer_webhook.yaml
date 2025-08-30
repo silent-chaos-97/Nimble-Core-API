@@ -12,3 +12,4 @@ SignerWebhook:
     event:
       type: string
       title: shufti verification status
+      description: Shufti verification event status

@@ -57,3 +57,7 @@ const statesUSA = [
   'WA',
   'WV',
   'WI',
+  'WY'
+]
+
+module.exports = { statesUSA }

@@ -41,3 +41,6 @@ async function createProductConfigurations(accountRequestId, data, tx = app.db) 
       value: newAccountNumber
     }).save(null, { method: 'insert', transacting: tx })
   }
+}
+
+module.exports = createProductConfigurations

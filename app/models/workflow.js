@@ -78,10 +78,15 @@ class WorkflowModel extends BaseModel {
         status: Joi.string().default(Statuses.Draft).valid(...Object.values(Statuses)),
         trigger: Joi.object(),
         activities: Joi.array().items(Joi.object())
-// Temp comment
       }),
 
       get: Joi.object().keys({
         id: Joi.string().uuid().required(),
         branchId: Joi.string().uuid().optional(),
         institutionId: Joi.string().uuid().optional()
+      })
+    }[op]
+  }
+}
+
+module.exports = WorkflowModel

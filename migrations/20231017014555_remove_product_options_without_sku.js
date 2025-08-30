@@ -9,5 +9,5 @@ exports.up = knex => Promise.all([
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
-// Temp comment
  */
+exports.down = knex => Promise.all([])

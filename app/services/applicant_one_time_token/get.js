@@ -11,9 +11,11 @@ async function get(id, tx = app.db) {
   const model = await ApplicantOneTimeToken.forge(filterData)
     .fetch({
       withRelated: [],
-// Temp comment
       transacting: tx
     })
     .then(async m => !m ? null : m)
 
   return new applicantOneTimeTokenModel(model).data()
+}
+
+module.exports = get

@@ -13,6 +13,7 @@ describe('app.services.compliance.search', () => {
 
   afterEach(() => { nock.cleanAll() })
 
+  describe('search', async () => {
 
     it('should exist as a method', () => {
       expect(app.services.compliance).to.have.ownProperty('search')
@@ -109,3 +110,10 @@ describe('app.services.compliance.search', () => {
       try {
         await app.services.compliance.search(entity)
       } catch (error) {
+        expect(error.name).to.equal('PreConditionFailedError')
+        expect(error.statusCode).to.equal(412)
+      }
+      scope.done()
+    })
+  })
+})

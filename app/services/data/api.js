@@ -28,3 +28,6 @@ async function api(method, path, params, data) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
   }
+}
+
+module.exports = api

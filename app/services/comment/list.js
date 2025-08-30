@@ -10,3 +10,6 @@ async function list(fileEntryId, tx = app.db) {
   const data = await query.fetchAll({ withRelated: ['createdBy', 'attachment'], transacting: tx })
 
   return data.models.map(m => new CommentModel(m).data())
+}
+
+module.exports = list

@@ -15,3 +15,5 @@ const Comment = app.db.Model.extend({
     return this.belongsTo('File', 'attachment_id')
   }
 })
+
+module.exports = app.db.model('Comment', Comment)

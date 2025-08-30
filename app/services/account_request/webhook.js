@@ -68,3 +68,60 @@ async function uploadContract(accountRequestId, transacting = app.db) {
   } catch (err) {
     logger.error(err, `[uploadContract] error trying to upload contract for account request [${accountRequestId}]`)
   }
+}
+
+async function webhook(id, token) {
+  await validate({ id, token })
+  try {
+    let key = app.plugins.jwt.decode(token)
+    if (key.id != id) {
+      throw new Error()
+    }
+  } catch (err) {
+    logger.error(err, `[webhook] error accessing webhook, token is not valid [${token}]`)
+    throw new UnauthorizedTokenError()
+  }
+
+  let accountRequest = await app.services.accountRequest.get(id)
+  logger.info(`[webhook] started for account request [${id}]`)
+
+  try {
+    let envelope = await app.plugins.docusign.getEnvelopeById(accountRequest.contractDocumentEnvelopeId)
+    let status = envelope.status.toUpperCase()
+    let signers = _.get(envelope, 'recipients.signers', [])
+
+    return await app.db.transaction(async tx => {
+      // status changed
+      if (accountRequest.contractDocumentEnvelopeStatus != status) {
+        logger.info(`[webhook] updating account request [${id}] from ${accountRequest.contractDocumentEnvelopeStatus} to ${status}`)
+        await patchAccountRequest(id, status, tx)
+      }
+
+      // signer changes
+      for (let remoteSigner of signers) {
+        let dbSigner = accountRequest.signers.find(s => s.id === remoteSigner.clientUserId)
+        if (dbSigner && _.get(dbSigner, 'contractDocumentSignerStatus', '') !== remoteSigner.status.toUpperCase()) {
+          logger.info(`[webhook] updating signer [${dbSigner.id}] from contract status ${dbSigner.contractDocumentSignerStatus} to ${remoteSigner.status}`)
+          await patchSigner(dbSigner, id, remoteSigner.status, tx)
+        }
+      }
+
+      // everyone has signed
+      if (status === 'COMPLETED') {
+        logger.info(`[webhook] document is COMPLETED, updating account request [${id}] to 'SIGNED'`)
+        await app.services.accountRequest.update({ id: id, status: 'SIGNED' }, null, tx)
+      }
+
+      uploadContract(accountRequest.id)
+
+      logger.info(`[webhook] ended for account request [${id}]`)
+      return true
+    })
+
+  } catch (err) {
+    logger.error(err, `[webhook] error updating docusign data for account request [${id}]`)
+    throw new Error('Error while processing webhook from docusign.')
+  }
+}
+
+module.exports = webhook

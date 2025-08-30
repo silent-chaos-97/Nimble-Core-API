@@ -5,3 +5,5 @@ const ApplicantCurrentStep = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true
 })
+
+module.exports = app.db.model('ApplicantCurrentStepModel', ApplicantCurrentStep)

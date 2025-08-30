@@ -66,3 +66,6 @@ class FileModel extends BaseModel {
       })
     }[op]
   }
+}
+
+module.exports = FileModel

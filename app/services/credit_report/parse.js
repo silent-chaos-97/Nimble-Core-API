@@ -30,6 +30,7 @@ async function parse(consumerId) {
     // but other libs have too much dependencies
     const productsNode = _.find(report.children[0].children, ['name', 'Products'])
     const riskNode = _.find(productsNode.children[0].children, ['name', 'RiskModel'])
+    const scoreNode = _.find(riskNode.children, ['name', 'Score'])
     const score = creditReportAPI._getScore(_.find(scoreNode.children, ['type', 'Text']).content)
 
     logger.info(`[parse] finished for consumer id [${consumerId}]`)
@@ -39,3 +40,6 @@ async function parse(consumerId) {
     logger.error(err, '[parse] error parsing XML from Credit Bureau for consumer id %s', consumerId)
     throw new InternalServerError('Error parsing XML from Credit Bureau')
   }
+}
+
+module.exports = parse

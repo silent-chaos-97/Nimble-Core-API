@@ -11,6 +11,7 @@ if (INIT_SENTRY) {
     environment: app.config.get('env')
   })
 }
+
 module.exports = {
   requestHandler: function() {
     return !INIT_SENTRY ? null : Sentry.Handlers.requestHandler()
@@ -24,3 +25,5 @@ module.exports = {
         return !whitelist.includes(error.statusCode)
       }
     })
+  }
+}

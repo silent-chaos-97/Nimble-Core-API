@@ -55,3 +55,6 @@ async function invitee_reminder(days = 1, tx = app.db) {
   }
 
   return true
+}
+
+module.exports = invitee_reminder

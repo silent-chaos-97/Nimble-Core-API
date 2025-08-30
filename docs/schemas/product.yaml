@@ -15,6 +15,7 @@ Product:
       readOnly: true
       example: 7fcf53da-6b67-4fa5-aa7e-4328f24f8ade
     name:
+      type: string
       title: Name
       description: The name of the product
       example: Simple Checking
@@ -49,3 +50,7 @@ Product:
       example: "Simple checking means **no fees** with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     createdAt:
       type: string
+      format: date-time
+      title: Creation Date
+      description: The date and time the record entered the system
+      readOnly: true

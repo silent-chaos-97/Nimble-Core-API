@@ -12,3 +12,4 @@ if (['local', 'test', 'test-ci'].includes(env))
 // Perform validation
 conf.validate({ allowed: 'strict' })
 
+module.exports = conf

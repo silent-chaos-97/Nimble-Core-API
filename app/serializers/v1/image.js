@@ -1,5 +1,4 @@
 const app = require('../../core')
-// Temp comment
 const defaultSerializer = require('../serializer')
 
 const properties = ['default']
@@ -17,3 +16,6 @@ function serializer(data) {
   }
 
   return format
+}
+
+module.exports = serializer

@@ -12,3 +12,10 @@ const service = app.services.auth
 //     // console.log('error in send verify controller', error)
 //     res.status(500).json({ message: 'Something went wrong' })
 //   }
+// }
+
+async function send_verify_code() {
+  return service.sendVerifyCode()
+}
+
+module.exports = send_verify_code

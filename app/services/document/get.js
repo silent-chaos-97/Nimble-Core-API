@@ -16,3 +16,6 @@ async function get(filters, tx = app.db) {
   const model = await Document.forge(filters)
     .fetch({ transacting: tx })
   return new Model(model).data()
+}
+
+module.exports = get

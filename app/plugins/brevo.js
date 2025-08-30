@@ -76,3 +76,12 @@ class BrevoFacade {
       })
     })
   }
+}
+const brevoConfigVars = {
+  credentials: {
+    // TODO-SWF we need to give these credentials access to SWF
+    brevoKey: config.get('brevo.key')
+  },
+}
+
+module.exports = new BrevoFacade(brevoConfigVars)

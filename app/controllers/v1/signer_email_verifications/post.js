@@ -9,3 +9,6 @@ async function post(req, res, next) {
     .create(id)
     .then(() => res.status(204).end())
     .catch(next)
+}
+
+module.exports = post

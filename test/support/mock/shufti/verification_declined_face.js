@@ -75,3 +75,8 @@ module.exports = {
     "SPDR23",
     "SPDR07",
     "SPDR06",
+    "SPDR22",
+    "SPDR15",
+    "SPDR01"
+  ]
+}

@@ -17,3 +17,6 @@ async function get({ id } = {}, tx = app.db) {
   const keyValue = new KeyValueModel(model).data()
 
   return keyValue
+}
+
+module.exports = get

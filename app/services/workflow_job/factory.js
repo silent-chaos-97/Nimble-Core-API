@@ -22,6 +22,7 @@ const NOOP_DONE_CB = async() => {
  * }>
  * }
  */
+module.exports = async(job, tx) => {
   // validate JOB here
 
   return Promise.all([
@@ -30,3 +31,6 @@ const NOOP_DONE_CB = async() => {
     requireAsync(__dirname + `/actions/${job.action}/${job.phase}`) // handler
   ]).then(([wkfl, config, handler]) => {
     if (_.isFunction(handler)) handler = { handler, onDone: NOOP_DONE_CB }
+    return { wkfl, config, ...handler } // {wkfl, config, handler, onDone}
+  })
+}

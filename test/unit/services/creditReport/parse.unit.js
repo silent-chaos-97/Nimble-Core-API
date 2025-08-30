@@ -85,3 +85,9 @@ describe('app.services.creditReport.parse', () => {
 
       } catch (error) {
         expect(error.message).to.equal("Error parsing XML from Credit Bureau")
+        expect(error).to.be.an.instanceof(Error)
+      }
+      scope.done()
+    })
+  })
+})

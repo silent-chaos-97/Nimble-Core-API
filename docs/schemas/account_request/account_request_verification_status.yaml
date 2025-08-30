@@ -29,3 +29,5 @@ AccountRequestVerificationStatus:
     politicalExposureStatus:
       title: The status of the political exposure verification
       type: string
+      enum: ['MATCH', 'NOMATCH', 'PENDING']
+      default: 'PENDING'

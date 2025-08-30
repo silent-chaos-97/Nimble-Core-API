@@ -33,3 +33,6 @@ columns:
   - data: state
     allowEmpty: true
 
+  - data: zip
+    allowEmpty: true
+

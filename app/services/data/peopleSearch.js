@@ -8,6 +8,7 @@ const logger = app.logger.getLogger('app.services.data.people.search')
 async function peopleSearch(query) {
   logger.info({ op: 'people.search', phase: 'started', query })
 
+  if (!_.isObject(query) || _.isEmpty(query)) throw new Error('query required but not provided')
 
   const reqApiKey = query._api_key
   const endpoint = app.config.get('nimbleData.apiEndpoint')
@@ -24,3 +25,6 @@ async function peopleSearch(query) {
     logger.error(err, _.get(err, ['response', 'data']) || `failed without response from ${apiUrl}`)
     throw new InternalServerError(err.message)
   }
+}
+
+module.exports = peopleSearch

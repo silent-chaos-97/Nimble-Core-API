@@ -23,3 +23,5 @@ module.exports = async function(risk, summary) {
 
   if (score.performing) score.relativePerformance = (score - performingScore) / (highPerformingScore - performingScore)
 
+  return calculated
+}

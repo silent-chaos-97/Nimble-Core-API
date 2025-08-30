@@ -28,3 +28,6 @@ async function download(req, res) {
   stream.on('error', err => {
     log.error(err)
   })
+}
+
+module.exports = download

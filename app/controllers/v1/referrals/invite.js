@@ -51,3 +51,7 @@ module.exports = (req, res, next) => {
         'lastName',
         method === 'email' ? 'mobile' : 'email'
       ]),
+    })
+      .then(notification => res.status(204).json(notification))
+  }).catch(next)
+}

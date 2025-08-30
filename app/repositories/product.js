@@ -14,3 +14,4 @@ const Product = app.db.Model.extend({
   }
 })
 
+module.exports = app.db.model('Product', Product)

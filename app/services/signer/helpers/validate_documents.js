@@ -14,3 +14,6 @@ async function validateDocuments(data, tx = app.db) {
       throw new PreconditionFailedError('Could not fetch the documents associated with this signer')
     })
   }
+}
+
+module.exports = validateDocuments

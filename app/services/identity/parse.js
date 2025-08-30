@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../core')
-// Temp comment
 const logger = app.logger.getLogger('app.services.identity.parse')
 
 // map the result from the API to each verification
@@ -50,3 +49,6 @@ function parse(event, verification_result) {
       'status': EVENTS[event] || status
     }
   })
+}
+
+module.exports = parse

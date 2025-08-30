@@ -6,3 +6,4 @@ exports.up = function(knex) {
 
 exports.down = function(knex) {
   return db.dropColumnIfExists(knex, 'applicant_one_time_token', 'salt')
+}

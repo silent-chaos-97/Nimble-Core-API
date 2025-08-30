@@ -6,3 +6,6 @@ function get(req, res, next) {
     .get(req.user.id)
     .then(data => res.json(data))
     .catch(next)
+}
+
+module.exports = get

@@ -24,3 +24,5 @@ exports.up = function (knex, Promise) {
 }
 
 exports.down = function (knex, Promise) {
+  return knex.schema.dropTable('signer_compliance_verification_list_entries')
+}

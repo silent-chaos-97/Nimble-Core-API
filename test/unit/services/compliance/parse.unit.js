@@ -105,3 +105,10 @@ describe('app.services.compliance.parse', () => {
         const target = await app.services.compliance.parse(searchResult)
 
         expect(target).to.deep.equal(mocks.parsedResult)
+      })
+
+
+    })
+
+  })
+})

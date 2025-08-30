@@ -35,3 +35,6 @@ async function update(req, res, next) {
     .then(serializer)
     .then(branch => res.status(200).json(branch))
     .catch(next)
+}
+
+module.exports = update

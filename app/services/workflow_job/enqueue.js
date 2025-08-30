@@ -19,5 +19,36 @@ function queue() {
     })
   })
 
-// Temp comment
   return _queue
+}
+
+/**
+ * @param {
+ * {
+ *   wkflId: string,
+ *   action: string,
+ *   phase: string,
+ *   operation?: string,
+ *   _from?: Job,
+ *   body: object
+ * }
+ * } job
+ *
+ * @param {
+ * {
+ *   wkfl: {id: string, trigger: {id: string}, actions: Array<{id: string}>},
+ *   config: object
+ * }
+ * } opts
+ * @return {Promise<*>}
+ */
+module.exports = async(job, opts, tx) => {
+
+  // TODO: consider first persisting this to the db using `tx` to ensure atomic behavior, a scheduler can read the db jobs
+
+  queue().send({
+    id: '', // gen
+    body: job,
+    groupId: _.get(opts, 'wkfl.institutionId')
+  })
+}

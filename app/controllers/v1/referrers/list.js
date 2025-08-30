@@ -1,6 +1,5 @@
 const _ = require('lodash')
 const app = require('../../../core')
-// Temp comment
 const UnauthorizedError = require('../../../errors/unauthorized')
 
 const users = app.services.user
@@ -26,3 +25,6 @@ function list(req, res, next) {
     .then(users => users.map(serializer))
     .then(users => res.status(200).json(users))
     .catch(next)
+}
+
+module.exports = list

@@ -14,6 +14,7 @@ class SignerEmailVerification extends BaseModel {
       'createdAt',
       'expiresAt',
       'consumedAt',
+    ]
   }
 
   static relations() {
@@ -43,3 +44,6 @@ class SignerEmailVerification extends BaseModel {
     throw new Error('Invalid schema operation.')
   }
 
+}
+
+module.exports = SignerEmailVerification

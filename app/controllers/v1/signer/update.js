@@ -12,3 +12,6 @@ async function update(req, res) {
 
   const signer = await service.update(data)
   res.json(serializer(signer))
+}
+
+module.exports = update

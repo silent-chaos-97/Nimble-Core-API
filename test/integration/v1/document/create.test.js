@@ -228,3 +228,17 @@ describe('POST /documents', () => {
       return request(app.server)
         .post('/v1/documents')
         .send(document)
+        .expect(400)
+    })
+
+    it('should return a error message', () => {
+      document.format = 'invalidformat'
+      return request(app.server)
+        .post('/v1/documents')
+        .send(document)
+        .expect((res) => {
+          expect(res.body.message).to.contain('"format" must be one of [image, pdf]')
+        })
+    })
+  })
+})

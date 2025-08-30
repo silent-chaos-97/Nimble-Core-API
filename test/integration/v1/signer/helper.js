@@ -168,3 +168,34 @@ function disableNet() {
 
 function removeInterceptors() {
   nock.cleanAll()
+}
+
+async function createSigner(data) {
+  data = data || {}
+  const ar = await insert('account_requests',
+    {..._.omit(data, 'step'), status: "PENDING"}
+  )
+
+  const signerData = {
+    account_request_id: ar.id,
+    consent: true,
+    role: 'PRIMARY',
+    email: 'somedude@wearesingular.com',
+  }
+
+  return await insert('signers', {...signerData, ...data})
+}
+
+module.exports = {
+  get,
+  post,
+  put,
+  withDocusign,
+  withMicroblink,
+  withInvalidDocusign,
+  mockExternalServices,
+  signerById,
+  disableNet,
+  removeInterceptors,
+  insert,
+  createSigner}

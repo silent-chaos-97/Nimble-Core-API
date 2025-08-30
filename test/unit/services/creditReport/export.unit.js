@@ -96,3 +96,9 @@ describe('app.services.creditReport.export', () => {
       try {
         await app.services.creditReport.export(url, institutionId)
       } catch (error) {
+        expect(error.message).to.equal("Error: Request failed with status code 400")
+        expect(error).to.be.an.instanceof(Error)
+      }
+    })
+  })
+})

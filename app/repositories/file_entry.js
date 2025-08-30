@@ -15,3 +15,5 @@ const FileEntry = app.db.Model.extend({
     return this.belongsTo('File', 'file_id')
   }
 })
+
+module.exports = app.db.model('FileEntry', FileEntry)

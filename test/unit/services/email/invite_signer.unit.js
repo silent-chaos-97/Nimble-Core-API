@@ -2,6 +2,7 @@ const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
 const { v4: uuid } = require('uuid')
+const config = require('../../../../config')
 
 describe('app.services.email.inviteSigner', () => {
   // re-instanciate the class with a fake postmark service
@@ -106,3 +107,10 @@ describe('app.services.email.inviteSigner', () => {
     it('should update the invitedAt property', async () => {
       let beforeSigner = await knex('signers').where('id', id).first()
       await app.services.email.inviteSigner(id)
+      let afterSigner = await knex('signers').where('id', id).first()
+
+      expect(afterSigner.invited_at.toISOString()).not.to.equal(beforeSigner.invited_at.toISOString())
+      expect(afterSigner.invited_at.toISOString()).to.equal('1970-01-01T00:00:00.000Z')
+    })
+  })
+})

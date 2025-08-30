@@ -18,3 +18,5 @@ class ApplicantOneTimeToken extends BaseModel {
     })
   }
 }
+
+module.exports = ApplicantOneTimeToken

@@ -40,3 +40,5 @@ function serializer(data) {
       .map(item => app.serializers.v1.signerComplianceVerificationListEntry(item))
   }
   return format
+}
+module.exports = serializer

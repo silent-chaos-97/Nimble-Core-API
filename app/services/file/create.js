@@ -46,3 +46,6 @@ async function create(data, tx = app.db) {
     logger.error(err, { phase: 'file.create.entity:fail', data })
     await app.plugins.aws.deleteFile(data).catch(logger.error)
   }
+}
+
+module.exports = create

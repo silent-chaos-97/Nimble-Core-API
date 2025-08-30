@@ -727,3 +727,11 @@ async function _vin(asset, profile) {
   } catch(err) {
     return Promise.reject(err)
   }
+}
+
+async function vinDebtOutstanding(asset, appraisal) {
+  const debtOutstanding = numbers.toNumber(asset.debtOutstanding || 0)
+
+  // TODO: extract from credit report
+  return _.isFinite(debtOutstanding) ? debtOutstanding : 0
+}

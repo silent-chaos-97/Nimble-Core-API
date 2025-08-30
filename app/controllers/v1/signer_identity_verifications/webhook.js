@@ -9,3 +9,6 @@ async function webhook(req, res, next) {
     .webhook(payload)
     .then(data => res.status(200).json(data))
     .catch(next)
+}
+
+module.exports = webhook

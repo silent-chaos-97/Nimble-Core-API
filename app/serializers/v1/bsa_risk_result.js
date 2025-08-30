@@ -2,7 +2,6 @@ const _ = require('lodash')
 const defaultSerializer = require('../serializer')
 
 const properties = ['position', 'questionId', 'answer', 'context']
-// Temp comment
 
 function serializer(data = {}) {
   const marshalled = defaultSerializer(properties, data)
@@ -15,3 +14,6 @@ function serializer(data = {}) {
   delete marshalled.context
 
   return marshalled
+}
+
+module.exports = serializer

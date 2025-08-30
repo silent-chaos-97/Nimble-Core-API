@@ -21,3 +21,5 @@ ADD . /app
 
 RUN ls
 
+EXPOSE 8080
+CMD ["yarn", "forever-monolith"]

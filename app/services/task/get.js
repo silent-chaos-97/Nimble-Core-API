@@ -21,3 +21,6 @@ async function get(where, tx = app.db) {
     .fetchAll({ transacting: tx })
     .then(data => _.get(data, 'models.[0]'))
     .then(entity => (entity ? new Task(entity).data() : null))
+}
+
+module.exports = get

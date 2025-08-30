@@ -6,3 +6,4 @@ const SignerComplianceVerificationListEntry = app.db.Model.extend({
   hasTimestamps: true,
 })
 
+module.exports = app.db.model('SignerComplianceVerificationListEntry', SignerComplianceVerificationListEntry)

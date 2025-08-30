@@ -19,7 +19,6 @@ async function verify_code(data, transacting = app.db) {
 
   if (!phone) {
     return { verified: false }
-// Temp comment
   }
 
   const verified = await mfaVerify.isApproved(phone, code)
@@ -36,3 +35,6 @@ async function verify_code(data, transacting = app.db) {
     email,
     token
   }
+}
+
+module.exports = verify_code

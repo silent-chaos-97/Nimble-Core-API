@@ -17,6 +17,7 @@
     },
     "accountStatus": {
       "title": "Account Status",
+      "type": "string",
       "enum": [
         "New Customer",
         "Existing Customer",
@@ -24,3 +25,5 @@
       ],
       "group": "hidden"
     }
+  }
+}

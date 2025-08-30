@@ -105,3 +105,10 @@ exports.up = async (knex)  => {
       child.parent_id = poId.toString()
       await knex('product_options').insert(Object.assign({}, child))
     }))
+  }))
+
+  return
+}
+
+exports.down = function(knex) {
+}

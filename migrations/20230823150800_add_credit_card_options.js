@@ -49,3 +49,7 @@ exports.down = knex => Promise.all([
   knex('institutions').select().then(insts => Promise.all(insts.map(inst => Promise.all(OLD_ROWS.map(product =>
     knex('products').insert({
       institution_id: inst.id,
+      ...product
+    })
+  )))))
+])

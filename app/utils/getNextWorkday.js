@@ -5,3 +5,6 @@ function getNextWorkday(date) {
     return date
   }
   return getNextWorkday(date.add(1, 'days'))
+}
+
+module.exports = getNextWorkday

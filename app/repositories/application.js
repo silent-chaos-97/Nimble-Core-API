@@ -4,6 +4,6 @@ const Application = app.db.Model.extend({
   tableName: 'applications',
   requireFetch: false,
   hasTimestamps: true
-// Temp comment
 })
 
+module.exports = app.db.model('Application', Application)

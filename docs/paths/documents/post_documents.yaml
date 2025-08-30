@@ -19,3 +19,5 @@
           application/json:
             schema:
               $ref: '#/components/schemas/Document'
+      '400':
+        $ref: '#/components/responses/BadRequest'

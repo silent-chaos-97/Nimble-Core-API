@@ -19,3 +19,7 @@ function create(req, res, next) {
 
   return workflows.create(wkfl)
     .then(entity => res.status(201).json(entity))
+    .catch(next)
+}
+
+module.exports = create

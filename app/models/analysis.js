@@ -106,3 +106,10 @@ class AnalysisModel extends BaseModel {
         userData: Joi.object(),
         debtSchedule: Joi.object().keys({
           rows: Joi.array().items(Joi.object()).min(0).default([])
+        })
+      })
+    }, state, SCHEMA)
+  }
+}
+
+module.exports = AnalysisModel

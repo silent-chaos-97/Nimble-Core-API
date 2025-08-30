@@ -31,6 +31,7 @@ async function analysis(req, res) {
 
     if (!access) throw new UnauthorizedError(`file[${id}]`)
   }
+
   const analysis = await files.analysis(file, _.get(req, 'query.processor') || 'table/financial-statement', {group: me.institutionId}, tx)
 
   res.status(200)
@@ -40,3 +41,10 @@ async function analysis(req, res) {
   if (/^([tT][eE][xX][tT]\/)?[cC][sS][vV]$/.test(ext)) return res.type('text/csv').send(csv(analysis))
 
   res.status(200).json(analysis)
+}
+
+function csv(analysis) {
+  throw new BadRequestError(`text/csv not implemented ${JSON.stringify(analysis)}`)
+}
+
+module.exports = analysis

@@ -45,3 +45,6 @@ SignerComplianceVerification:
       description: The signer id associated with this compliance search
     results:
       title: A list of matches
+      type: array
+      items:
+        $ref: '#/components/schemas/SignerComplianceVerificationItem'

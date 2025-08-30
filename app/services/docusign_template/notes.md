@@ -162,3 +162,13 @@ So we can use this URL and the parameters to know if a user finished signing a d
 
 Possible event parameter values include:
 
+- access_code_failed: Recipient used incorrect access code.
+- cancel: Recipient canceled the signing operation, possibly by using the Finish Later option.
+- decline: Recipient declined to sign.
+- exception: A system error occurred during the signing process.
+- fax_pending: Recipient has a fax pending.
+- id_check_failed: Recipient failed an ID check.
+- session_timeout: The session timed out. An account can control this timeout by using the igner Session Timeout option.
+- signing_complete: The recipient completed the signing ceremony.
+- ttl_expired: The Time To Live token for the envelope has expired. After being successfully invoked, these tokens expire after 5 minutes or if the envelope is voided.
+- viewing_complete: The recipient completed viewing an envelope that is in a read-only/terminal state, such as completed, declined, or voided.

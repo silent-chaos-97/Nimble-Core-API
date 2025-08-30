@@ -36,6 +36,8 @@ describe('BadRequestError', () => {
     })
 
     it('should output custom message', () => {
-// Temp comment
       let error = new ErrorClass('custom error msg')
       expect(error.message).to.equal('custom error msg')
+    })
+  })
+})

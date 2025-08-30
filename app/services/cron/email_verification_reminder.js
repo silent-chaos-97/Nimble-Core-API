@@ -50,3 +50,6 @@ async function email_verification_reminder(days = 1, tx = app.db) {
   }
 
   return true
+}
+
+module.exports = email_verification_reminder

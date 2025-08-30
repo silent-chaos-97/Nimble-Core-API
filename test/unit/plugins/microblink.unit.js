@@ -219,7 +219,6 @@ describe('MicroblinkService', () => {
       const scope = nock(config.get('microblink').baseUrl)
         .post('/recognize/execute')
         .reply(200, mocks.successMRTD)
-// Temp comment
 
       const returnedData = await service.sendDocumentToMicroblink(userData.frontIdProofDocument)
       const result = service.getBasicUserDataFromMicroblinkResponse(returnedData.data.result)
@@ -493,3 +492,33 @@ describe('MicroblinkService', () => {
         .reply(200, mocks.successResponse)
       const result = await service.sendDocumentsForOCR(userData)
 
+      expect(result).to.have.deep.property('code', 'OK')
+      expect(result.data).to.have.deep.property('recognizer', 'BLINK_ID')
+      expect(result.data.result).to.have.deep.property('lastName', 'SPECIMEN')
+
+      scope.done()
+    })
+
+    it('should scan BLINK_ID last', async () => {
+      const scopeA = nock(config.get('microblink').baseUrl)
+        .post('/recognize/execute')
+        .once()
+        .reply(200, mocks.failedMRTD)
+
+      const scopeB = nock(config.get('microblink').baseUrl)
+        .post('/recognize/execute')
+        .once()
+        .reply(200, mocks.successResponse)
+
+      const result = await service.sendDocumentsForOCR(userData)
+
+      expect(result).to.have.deep.property('code', 'OK')
+      expect(result.data).to.have.deep.property('recognizer', 'BLINK_ID')
+      expect(result.data.result).to.have.deep.property('lastName', 'SPECIMEN')
+
+      scopeA.done()
+      scopeB.done()
+    })
+  })
+
+})

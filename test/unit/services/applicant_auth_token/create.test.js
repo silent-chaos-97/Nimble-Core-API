@@ -104,5 +104,13 @@ describe('app.services.applicantOneTimeToken.create', () => {
         })
       })
 
+      // describe('body properties have valid data', () => {
       //   it('should return data', () => {
       //     return Promise.all([
+      //       expect(target({...body})).to.eventually.have.property('id').equal(body.id)
+      //     ])
+      //   })
+      // })
+    })
+  })
+})

@@ -24,6 +24,7 @@ describe('UnauthorizedError', () => {
     })
 
     it('should have 401 as a statusCode', () => {
+      let error = new ErrorClass()
       expect(error.statusCode).to.equal(401)
     })
 
@@ -35,3 +36,6 @@ describe('UnauthorizedError', () => {
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')
       expect(error.message).to.equal('custom error msg')
+    })
+  })
+})

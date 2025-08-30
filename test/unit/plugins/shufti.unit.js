@@ -148,3 +148,13 @@ describe('Service', () => {
 
         try {
           await shufti.getUserVerification(userData)
+        } catch (error) {
+          expect(error).to.be.an.instanceof(Error)
+          expect(error.response).to.have.property('status', 400)
+          expect(error.response.data).to.have.deep.property('error', response.error)
+        }
+        scope.done()
+      })
+    })
+  })
+})

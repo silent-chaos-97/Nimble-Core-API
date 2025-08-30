@@ -27,3 +27,6 @@ async function get(params, tx = app.db) {
   const data = await app.plugins.microblink.getIdentity(payload)
   logger.debug(`[get] ended with document number [${data.documentNumber}]`)
   return new Model(data).data()
+}
+
+module.exports = get

@@ -27,6 +27,7 @@
         <state/>
         <zipCode/>
       </address>
+      <proof documentType="USDL">
         <usdl>
           <number>1112221112</number>
           <expirationDate>2022-02-16</expirationDate>
@@ -74,3 +75,8 @@
     <productConfiguration product_sku="simple-checking">
       <productOption category="product_config" key="initial_deposit" value="250000099"/>
       <productOption category="product_config" key="account_number" value="001"/>
+      <productOption category="another-choice" key="optionB" value="B"/>
+      <productOption category="some-choice" key="optionA" value="A"/>
+    </productConfiguration>
+  </productConfigurations>
+</accountRequest>

@@ -8,3 +8,6 @@ async function update(req, res, next) {
     key: req.params.key, data: req.body
   }).then(settings => res.status(200).json(settings))
     .catch(next)
+}
+
+module.exports = update

@@ -20,6 +20,7 @@ IdProofDocument:
       title: Document Number
       description: Id Proof Document Number
       maxLength: 100
+      example: 123535000ZW2
     expirationDate:
       type: string
       format: date
@@ -53,6 +54,10 @@ IdProofDocument:
       description: Document id associated with back of the id proof document
       example: a74f9092-5889-430a-9c19-6712f9f68091
     frontDocument:
+      allOf:
+        - $ref: '#/components/schemas/Image'
+        - readOnly: true
+    backDocument:
       allOf:
         - $ref: '#/components/schemas/Image'
         - readOnly: true

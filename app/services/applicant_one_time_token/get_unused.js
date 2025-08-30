@@ -11,3 +11,6 @@ async function getUnused(phone, tx = app.db) {
     withRelated: [],
     transacting: tx
   })
+}
+
+module.exports = getUnused

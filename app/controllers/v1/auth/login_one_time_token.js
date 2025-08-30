@@ -9,3 +9,6 @@ function login_one_time_token(req, res, next) {
     .then(serializer)
     .then(data => res.status(200).json(data))
     .catch(next)
+}
+
+module.exports = login_one_time_token

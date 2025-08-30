@@ -27,3 +27,5 @@
           application/json:
             schema:
               $ref: '#/components/schemas/Identity'
+      '404':
+        $ref: '#/components/responses/NotFound'

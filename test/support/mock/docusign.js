@@ -4922,3 +4922,299 @@ const webhookRequest = {
         'creationReason': 'sender',
         'deliveryMethod': 'email',
         'clientUserId': '2e31d8c0-1226-4651-8a5d-4bd8aa454722',
+        'email': 'example@nimblefi.com',
+        'firstName': '',
+        'isBulkRecipient': 'false',
+        'lastName': '',
+        'name': 'Jonathan Edouard Tavares',
+        'note': '',
+        'recipientId': '1',
+        'recipientIdGuid': '146e40aa-0dab-4a40-b10b-93b4d2b0b690',
+        'recipientType': 'signer',
+        'requireIdLookup': 'false',
+        'requireUploadSignature': 'false',
+        'roleName': 'signer',
+        'routingOrder': '1',
+        'status': 'declined',
+        'userId': 'af0be3ed-6694-4f0d-8e5e-5d307599d4cb'
+      },
+      {
+        'completedCount': '0',
+        'creationReason': 'sender',
+        'deliveryMethod': 'email',
+        'clientUserId': '2e31d8c0-1226-4651-8a5d-4bd8aa454721',
+        'email': 'psousa+dev1@wearesingular.com',
+        'firstName': '',
+        'isBulkRecipient': 'false',
+        'lastName': '',
+        'name': 'Pedro Sousa',
+        'note': '',
+        'recipientId': '1',
+        'recipientIdGuid': '146e40aa-0dab-4a40-b10b-93b4d2b0b690',
+        'recipientType': 'signer',
+        'requireIdLookup': 'false',
+        'requireUploadSignature': 'false',
+        'roleName': 'signer',
+        'routingOrder': '1',
+        'status': 'completed',
+        'userId': 'af0be3ed-6694-4f0d-8e5e-5d307599d4cb'
+      }
+    ],
+    'witnesses': []
+  },
+  'recipientsUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/recipients',
+  'sender': {
+    'accountId': '8200fc60-fa3d-4a5d-a7d4-3735a18688ba',
+    'email': 'jeff@nimblefi.com',
+    'userId': 'f5c1a3fc-f745-4bc1-a947-69c60909be8e',
+    'userName': 'NimbleFI Team'
+  },
+  'sentDateTime': '2020-04-07T13:14:41.2800000Z',
+  'signerCanSignOnMobile': 'true',
+  'signingLocation': 'online',
+  'status': 'completed',
+  'statusChangedDateTime': '2020-04-07T13:14:41.2800000Z',
+  'templatesUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/templates'
+}
+
+const webhookRequestMultiple = {
+  'allowComments': 'true',
+  'allowMarkup': 'false',
+  'allowReassign': 'true',
+  'allowViewHistory': 'true',
+  'anySigner': 'null',
+  'attachmentsUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/attachments',
+  'autoNavigation': 'true',
+  'certificateUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/certificate',
+  'createdDateTime': '2020-04-07T13:14:38.8730000Z',
+  'customFieldsUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/custom_fields',
+  'disableResponsiveDocument': 'false',
+  'documentsCombinedUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents/combined',
+  'documentsUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/documents',
+  'emailSubject': 'Please sign these documents from Nimble',
+  'enableWetSign': 'true',
+  'envelopeId': '5d715751-e027-45e4-884b-99bb85c357dc',
+  'envelopeIdStamping': 'true',
+  'envelopeLocation': 'current_site',
+  'envelopeMetadata': {
+    'allowAdvancedCorrect': 'true',
+    'allowCorrect': 'true',
+    'enableSignWithNotary': 'false'
+  },
+  'envelopeUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc',
+  'expireAfter': '119',
+  'expireDateTime': '2020-08-05T13:14:41.2800000Z',
+  'expireEnabled': 'true',
+  'hasComments': 'false',
+  'hasFormDataChanged': 'false',
+  'initialSentDateTime': '2020-04-07T13:14:41.2800000Z',
+  'is21CFRPart11': 'false',
+  'isDynamicEnvelope': 'false',
+  'isSignatureProviderEnvelope': 'false',
+  'lastModifiedDateTime': '2020-04-07T13:14:38.8730000Z',
+  'notificationUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/notification',
+  'purgeState': 'unpurged',
+  'recipients': {
+    'agents': [],
+    'carbonCopies': [
+      {
+        'completedCount': '0',
+        'deliveryMethod': 'email',
+        'email': 'bruno+docusign@wearesingular.com',
+        'firstName': '',
+        'lastName': '',
+        'name': 'Bruno Afonso',
+        'note': '',
+        'recipientId': '2',
+        'recipientIdGuid': '044234e0-7983-4a1a-a5bc-df09a6e2b8a2',
+        'recipientType': 'carboncopy',
+        'requireIdLookup': 'false',
+        'roleName': 'admin',
+        'routingOrder': '2',
+        'status': 'created',
+        'userId': 'fd07fe49-04a3-4ce8-bb4a-001f26c233bf'
+      }
+    ],
+    'certifiedDeliveries': [],
+    'currentRoutingOrder': '1',
+    'editors': [],
+    'inPersonSigners': [],
+    'intermediaries': [],
+    'recipientCount': '2',
+    'seals': [],
+    'signers': [
+      {
+        'completedCount': '0',
+        'creationReason': 'sender',
+        'deliveryMethod': 'email',
+        'clientUserId': '2e31d8c0-1226-4651-8a5d-4bd8aa454701',
+        'email': 'example@nimblefi.com',
+        'firstName': '',
+        'isBulkRecipient': 'false',
+        'lastName': '',
+        'name': 'Jonathan Edouard Tavares',
+        'note': '',
+        'recipientId': '1',
+        'recipientIdGuid': '146e40aa-0dab-4a40-b10b-93b4d2b0b690',
+        'recipientType': 'signer',
+        'requireIdLookup': 'false',
+        'requireUploadSignature': 'false',
+        'roleName': 'signer',
+        'routingOrder': '1',
+        'status': 'declined',
+        'userId': 'af0be3ed-6694-4f0d-8e5e-5d307599d4cb'
+      },
+      {
+        'completedCount': '0',
+        'creationReason': 'sender',
+        'deliveryMethod': 'email',
+        'clientUserId': '2e31d8c0-1226-4651-8a5d-4bd8aa454702',
+        'email': 'psousa+dev1@wearesingular.com',
+        'firstName': '',
+        'isBulkRecipient': 'false',
+        'lastName': '',
+        'name': 'Pedro Sousa',
+        'note': '',
+        'recipientId': '1',
+        'recipientIdGuid': '146e40aa-0dab-4a40-b10b-93b4d2b0b690',
+        'recipientType': 'signer',
+        'requireIdLookup': 'false',
+        'requireUploadSignature': 'false',
+        'roleName': 'signer',
+        'routingOrder': '1',
+        'status': 'completed',
+        'userId': 'af0be3ed-6694-4f0d-8e5e-5d307599d4cb'
+      },
+      {
+        'completedCount': '0',
+        'creationReason': 'sender',
+        'deliveryMethod': 'email',
+        'clientUserId': '2e31d8c0-1226-4651-8a5d-4bd8aa454703',
+        'email': 'psousa+dev1@wearesingular.com',
+        'firstName': '',
+        'isBulkRecipient': 'false',
+        'lastName': '',
+        'name': 'Pedro Sousa',
+        'note': '',
+        'recipientId': '1',
+        'recipientIdGuid': '146e40aa-0dab-4a40-b10b-93b4d2b0b690',
+        'recipientType': 'signer',
+        'requireIdLookup': 'false',
+        'requireUploadSignature': 'false',
+        'roleName': 'signer',
+        'routingOrder': '1',
+        'status': 'completed',
+        'userId': 'af0be3ed-6694-4f0d-8e5e-5d307599d4cb'
+      }
+    ],
+    'witnesses': []
+  },
+  'recipientsUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/recipients',
+  'sender': {
+    'accountId': '8200fc60-fa3d-4a5d-a7d4-3735a18688ba',
+    'email': 'jeff@nimblefi.com',
+    'userId': 'f5c1a3fc-f745-4bc1-a947-69c60909be8e',
+    'userName': 'NimbleFI Team'
+  },
+  'sentDateTime': '2020-04-07T13:14:41.2800000Z',
+  'signerCanSignOnMobile': 'true',
+  'signingLocation': 'online',
+  'status': 'completed',
+  'statusChangedDateTime': '2020-04-07T13:14:41.2800000Z',
+  'templatesUri': '/envelopes/5d715751-e027-45e4-884b-99bb85c357dc/templates'
+}
+
+const docusignSignersList = [
+  {
+    clientUserId: '2e31d8c0-1226-4651-8a5d-4bd8aa454721',
+    email: 'psousa+1@wearesingular.com',
+    name: 'George Constanza',
+    recipientId: '1',
+    roleName: 'signer',
+    tabs: {
+      textTabs: [
+        {
+          locked: 'true',
+          tabLabel: '\\*ssn',
+          value: '222-333-444'
+        },
+        {
+          locked: 'true',
+          tabLabel: '\\*fullName',
+          value: 'George Constanza'
+        },
+        {
+          locked: 'true',
+          tabLabel: '\\*phone',
+          value: '9994445566'
+        }
+      ]
+    }
+  },
+  {
+    email: 'john+1@wearesingular.com',
+    name: 'John Wayne',
+    recipientId: '2',
+    roleName: 'signer2',
+    tabs: {
+      textTabs: [
+        {
+          locked: 'true',
+          tabLabel: '\\*ssn#2',
+          value: '444-555-666'
+        },
+        {
+          locked: 'true',
+          tabLabel: '\\*fullName#2',
+          value: 'John Wayne'
+        },
+        {
+          locked: 'true',
+          tabLabel: '\\*phone#2',
+          value: '99944455'
+        }
+      ]
+    }
+  }
+]
+
+const mockSendContractArgs = {
+  signerData: [{
+    id: '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
+  }, {
+    id: '2e31d8c0-1226-4651-8a5d-4bd8aa454721'
+  }],
+  accountOptions: {
+    institutionName: 'Singular',
+    openingAmount: 250000099,
+    ownership: 'joint_survivor',
+    productName: 'Simple Checking',
+    createRecipientView: false,
+    productConfigurations: [
+      {
+        'accountRequestId': '2552ab85-08da-4bb5-be00-9e94d282d348',
+        'initialDeposit': 250000099,
+        'product': {
+          'category': 'CHECKING',
+          'name': 'Simple Checking',
+          'sku': 'simple-checking',
+          'options': [],
+          'active': true
+        },
+        'productId': '3552ab85-08da-4bb5-be00-9e94d282d310'
+      }
+    ]
+  },
+  cc: { fullName: 'Singular', email: 'test@wearesingular.com' }
+}
+
+const mockCreateRecipientViewSuccess = {
+  url: 'https://demo.docusign.net/Signing/MTRedeem/v1/fe36d81e-1e10-48b9-ac55-d6962c2c02f6?slt=eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkI '
+}
+
+const mockCreateRecipientViewError = {
+  errorCode: 'ENVELOPE_DOES_NOT_EXIST',
+  message: 'The envelope specified either does not exist or you have no rights to it.'
+}
+
+module.exports = { mockCreateEnvelope, mockDocumentTabs, mockCompositeTemplate, mockToken, validMapping, validUser, webhookRequest, webhookRequestMultiple, docusignSignersList, mockSendContractArgs, accountOptions, mockCreateRecipientViewSuccess, mockCreateRecipientViewError, mockUpdateTabs, mockTemplateTabs, mockUpdateRecipients }

@@ -16,7 +16,6 @@ async function embed(signerId, tx = app.db) {
     const url = await app.plugins.docusign.createRecipientView(
       accountRequest.contractDocumentEnvelopeId,
       signer,
-// Temp comment
       institution.domain
     )
 
@@ -28,3 +27,6 @@ async function embed(signerId, tx = app.db) {
     logger.error(err, `[embed] error fetching embed url from docusign for signer id [${signerId}]`)
     throw new InternalServerError('Could not embed url from docusign')
   }
+}
+
+module.exports = embed

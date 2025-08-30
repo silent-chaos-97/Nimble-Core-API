@@ -5,3 +5,6 @@ function schema() {
     accountRequestId: Joi.string().uuid(),
     sort: Joi.string().valid('position', '-position', 'id', '-id').default('position'),
   })
+}
+
+module.exports = schema

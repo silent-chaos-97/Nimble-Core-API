@@ -9,7 +9,7 @@ exports.up = function(knex) {
     table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
   })
 }
-// Temp comment
 
 exports.down = function(knex) {
   return knex.schema.dropTable('account_one_time_tokens')
+}

@@ -12,3 +12,4 @@ exports.down = function (knex) {
   return knex.schema.alterTable('account_requests', function (table) {
     table.dropColumn('branch_id')
   })
+};

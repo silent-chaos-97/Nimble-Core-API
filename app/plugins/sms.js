@@ -28,3 +28,5 @@ module.exports = {
     if (!twilio) twilio = require('twilio')(config.get('twilio.accountSid'), config.get('twilio.authToken'))
 
     return twilio.messages.create(message)
+  }
+}

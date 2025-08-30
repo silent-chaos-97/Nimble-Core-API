@@ -49,3 +49,7 @@ ProductOption:
       type: string
       format: uuidv4
       title: Parent Product Option
+      description: The unique identifier of the product option parent
+      readOnly: true
+      nullable: true
+      example: 2552ab85-08da-4bb5-be00-9e94d282d311

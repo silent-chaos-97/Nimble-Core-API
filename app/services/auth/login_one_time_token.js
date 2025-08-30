@@ -102,3 +102,63 @@ async function acquireMFACacheToken(user, credentials) {
   }
 
   return mfaCacheToken
+}
+
+async function login_one_time_token(credentials, transacting = app.db) {
+  const email = emailNormalizer(credentials.email)
+  if (_.isEmpty(email)) throw new BadRequestError('EmailRequired')
+
+  const oneTimeToken = credentials.token
+  if (_.isEmpty(oneTimeToken)) throw new BadRequestError('TokenRequired')
+
+  const maskedToken = hash('sha256', oneTimeToken)
+
+  const accountOneTimeToken = await AccountOneTimeToken
+    .forge({ token: maskedToken, consumedAt: null })
+    .where('expires_at', '>=', knex.raw('NOW()'))
+    .fetch({ withRelated: 'account', transacting })
+
+  if (!accountOneTimeToken) throw new UnauthorizedError()
+
+  const userId = accountOneTimeToken.related('account').get('userId').toString()
+
+  const user = await User.forge({ id: userId, status: 'ACTIVE' }).fetch({ transacting })
+
+  if (!user) throw new UnauthorizedError('who?')
+
+  if (_.toLower(user.get('email')) !== _.toLower(email)) throw new UnauthorizedError('which?')
+
+  const mfaCacheToken = await acquireMFACacheToken(user, credentials)
+  if (mfaCacheToken) {
+    return {
+      mfaCacheToken: mfaCacheToken,
+      mfaMaskedPhone: `+1${user.get('phone').replace(/\d(?=\d{3})/g, '*')}`
+    }
+  }
+
+  const now = moment()
+
+  await AccountOneTimeToken
+    .forge({ id: accountOneTimeToken.get('id') })
+    .save({ consumedAt: now }, { method: 'update', patch: true })
+
+  user.save({ lastLoginAt: now }, { method: 'update', patch: true })
+
+  const roles = user.get('roles')
+  const isDeveloper = roles.includes('dev') || roles.includes('developer')
+  const expiration = isDeveloper ? app.config.get('auth.ttlDev') || 3600 : app.config.get('auth.ttl').ttl || 3600
+
+  const logEntry = { op: 'login', userId, isDeveloper, ttl: expiration }
+  if (expiration > app.config.get('auth.ttl')) logger.warn(logEntry)
+  else logger.info(logEntry)
+
+  const bearerOpts = {
+    userId,
+    expiration
+  }
+  const token = app.services.token.get(bearerOpts)
+
+  return { token }
+}
+
+module.exports = login_one_time_token

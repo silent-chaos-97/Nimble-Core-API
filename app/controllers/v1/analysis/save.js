@@ -33,3 +33,32 @@ async function checkOwner(ownerId, user) {
 
   // TODO: check that owner is assignable by user
   return user.id
+}
+
+async function prepare(analysis, existing, user) {
+  if (existing) analysis.id = existing.id
+  else delete analysis.id
+
+  if (!existing) analysis.createdById = user.id
+  analysis.updatedById = user.id
+
+  const ownerId = await checkOwner(analysis.ownerId, user)
+  if (ownerId) analysis.ownerId = ownerId
+  if (!analysis.ownerId && !existing) analysis.ownerId = user.id
+
+  if (!existing) analysis.institutionId = user.institutionId
+  else delete analysis.institutionId
+
+  if (!existing) analysis.branchId = user.branchId
+  else delete analysis.branchId // TODO: allow certain roles to change this
+
+  if (analysis.files) analysis.fileIds = _.isString(analysis.files)
+    ? [analysis.files]
+    : _.map(analysis.files, file => _.isString(file) ? file : file.id).filter(id => !_.isNil(id))
+
+  if (existing && analysis.userData) analysis.userData = _.merge(existing.userData || {}, analysis.userData)
+
+  return analysis
+}
+
+module.exports = save

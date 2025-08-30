@@ -30,3 +30,5 @@ columns:
     type: key-value-setting
     selectSettings:
       ref: workgroups
+      value: id
+      title: name

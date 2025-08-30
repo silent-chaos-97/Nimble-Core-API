@@ -22,3 +22,5 @@
     "response_expired": {
       "type": "boolean"
     }
+  }
+}

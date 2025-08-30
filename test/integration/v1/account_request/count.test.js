@@ -91,3 +91,10 @@ describe('GET /account-requests/count', () => {
       it('should 400 on invalid status parameter', () => {
         return request(app.server)
           .get(`/v1/account-requests/count?status=unexistent`)
+          .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)
+          .expect(400)
+      })
+    })
+  })
+})

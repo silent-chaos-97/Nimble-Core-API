@@ -155,3 +155,13 @@ describe('POST /institutions/:id/products', () => {
 
   describe('when institution does not exist', () => {
     it('should return 404', () => {
+      const fakeId = 'ffffffff-aaaa-bbbb-b000-999999999999' // non-existent id
+      return request(app.server)
+        .post(`/v1/institutions/${fakeId}/products`)
+        .set('X-API-KEY', 'superpowers')
+        .send(product)
+        .expect('Content-Type', /json/)
+        .expect(404)
+    })
+  })
+})

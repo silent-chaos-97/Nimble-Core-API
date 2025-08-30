@@ -24,3 +24,8 @@ function contentTypeSupport(req, res, next) {
   }
 
   next()
+}
+
+module.exports = function contentTypeSupportMiddleware() {
+  return contentTypeSupport
+}

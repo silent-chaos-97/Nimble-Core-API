@@ -14,3 +14,4 @@ exports.up = (knex) => knex.schema.alterTable('bsa_risk_results', table => table
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,mobileOrATMDeposit}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='mobileDeposit'`))
   .then(() => knex.schema.raw(`UPDATE bsa_risk_results as b SET context=(SELECT i.public_metadata #> '{bsa,mobileOrATMDeposit}' FROM institutions as i WHERE i.id=b.institution_id) WHERE b.question_id='mobileOrATMDeposit'`))
 
+exports.down = (knex) => knex.schema.alterTable('bsa_risk_results', table => table.dropColumn('display'))

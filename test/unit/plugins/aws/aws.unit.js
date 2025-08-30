@@ -61,7 +61,13 @@ describe('AWS Facade class', () => {
     it('should expose putObject method as s3ImgUpload()', () => {
       expect(AWS.s3ImgUpload).not.to.be.undefined
       expect(AWS.s3ImgUpload).to.be.an('function')
+    })
   })
 
   describe('SES Facade', () => {
     it('should expose aws.SES.sendTemplatedEmail method as sendEmailTemplate()', () => {
+      expect(AWS.sendEmailTemplate).not.to.be.undefined
+      expect(AWS.sendEmailTemplate).to.be.an('function')
+    })
+  })
+})

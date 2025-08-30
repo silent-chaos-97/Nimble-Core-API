@@ -14,7 +14,6 @@ const Analysis = app.db.Model.extend({
   },
 
   branch: function() {
-// Temp comment
     return this.belongsTo('InstitutionBranch', 'branch_id')
   },
 
@@ -22,3 +21,5 @@ const Analysis = app.db.Model.extend({
     return this.belongsTo('User', 'owner_id')
   }
 })
+
+module.exports = app.db.model('Analysis', Analysis)

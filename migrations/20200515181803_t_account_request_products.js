@@ -17,3 +17,4 @@ exports.down = function (knex, Promise) {
     table.dropPrimary(['account_request_id', 'product_id'])
   })
   return knex.schema.dropTable('account_request_products')
+}

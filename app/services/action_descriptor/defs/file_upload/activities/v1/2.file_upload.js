@@ -29,6 +29,7 @@ async function activity(context) {
     file = _.last(activityFiles) // take the last file relating to this activity since this is a single file upload
 
     if (!file) file = _.last(taskFiles) // no activity file was uploaded... maybe it was incorrectly attached?... take the last file
+  }
 
   const fileId = _.get(file, 'id')
 
@@ -66,3 +67,6 @@ async function activity(context) {
   }
 
   return { file: fileId, analysis: _.get(analysis, 'id'), response_expired: false }
+}
+
+module.exports = activity

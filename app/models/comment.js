@@ -38,3 +38,6 @@ class CommentModel extends BaseModel {
       text: Joi.string()
     })
   }
+}
+
+module.exports = CommentModel

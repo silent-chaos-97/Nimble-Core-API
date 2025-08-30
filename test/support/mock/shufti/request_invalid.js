@@ -8,3 +8,4 @@ module.exports = {
   },
   email: null,
   country: null,
+}

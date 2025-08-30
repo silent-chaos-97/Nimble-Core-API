@@ -20,3 +20,5 @@ module.exports = data => {
 
   file.src = app.services.api.uri(`/v1/files/${file.id}/raw?token=${token}`)
 
+  return file
+}

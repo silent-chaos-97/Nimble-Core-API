@@ -109,3 +109,10 @@ describe('GET /institution/:id/branches', () => {
         .expect(200)
         .then(response => {
           expect(response.body).to.have.lengthOf(3)
+          expect(response.body.shift().id).to.equal('2552ab85-0000-0000-0000-000000000001')
+          expect(response.body.shift().id).to.equal('2552ab85-0000-0000-0000-000000000002')
+          expect(response.body.shift().id).to.equal('2552ab85-0000-0000-0000-000000000003')
+        })
+    })
+  })
+})

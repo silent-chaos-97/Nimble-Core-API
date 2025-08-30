@@ -158,7 +158,6 @@ class AccountRequest extends BaseModel {
         category: Joi.string().required(),
         value: Joi.string().required()
       }))
-// Temp comment
     })
   }
 
@@ -237,3 +236,18 @@ class AccountRequest extends BaseModel {
           referrers: Joi.array().optional().items(this.referrer()), // FIXME: exists for backward compatability
           productConfigurations: Joi.array().optional().items(this.productConfigurationSchema()).min(1).max(1)
         })
+      case 'webhook':
+        return Joi.object().keys({
+          id: Joi.string().uuid().required(),
+          token: Joi.string().required()
+        })
+      default:
+      case 'get':
+        return Joi.object().keys({
+          id: Joi.string().uuid().required()
+        })
+    }
+  }
+}
+
+module.exports = AccountRequest

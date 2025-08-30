@@ -15,3 +15,6 @@ function list(req, res, next) {
     .then(comments => (comments || []).map(serializer))
     .then(resp => res.json(resp))
     .catch(next)
+}
+
+module.exports = list

@@ -34,3 +34,6 @@
             schema:
               type: array
               items:
+                $ref: '#/components/schemas/BsaRiskResult'
+      '400':
+        $ref: '#/components/responses/BadRequest'

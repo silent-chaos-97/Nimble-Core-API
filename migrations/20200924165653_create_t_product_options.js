@@ -8,7 +8,6 @@ exports.up = function (knex) {
       .notNullable()
       .onDelete('CASCADE')
 
-// Temp comment
     table.string('category').notNullable()
     table.string('key').notNullable()
     table.string('title')
@@ -20,3 +19,5 @@ exports.up = function (knex) {
 }
 
 exports.down = function (knex) {
+  return knex.schema.dropTable('product_options')
+}

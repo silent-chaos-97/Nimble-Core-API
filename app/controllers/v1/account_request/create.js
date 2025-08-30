@@ -15,3 +15,6 @@ async function create(req, res) {
     .status(201)
     .set('x-nimble-token', token)
     .json(serializer(data))
+}
+
+module.exports = create

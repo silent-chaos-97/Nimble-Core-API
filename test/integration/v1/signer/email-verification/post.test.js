@@ -150,6 +150,7 @@ describe('POST /signers/:id/email-verifications', async () => {
         return request(app.server)
           .post('/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications?token=bad')
           .expect('Content-Type', /json/)
+          .expect(401)
       })
     })
 
@@ -184,3 +185,15 @@ describe('POST /signers/:id/email-verifications', async () => {
         .post(`/v1/signers/2e31d8c0-1226-4651-8a5d-4bd8aa454722/email-verifications?token=${urlToken}`)
         .expect(204)
         .then(async () => {
+          // fetch the signer verification status directly via signer row
+          const result = await knex.raw("SELECT * FROM signers WHERE id='2e31d8c0-1226-4651-8a5d-4bd8aa454722'")
+          const signer = result.rows[0]
+
+          expect(signer.email_verified).to.equal(false)
+          expect(signer.email_verified_at).to.equal(null)
+        })
+    })
+
+  })
+
+})

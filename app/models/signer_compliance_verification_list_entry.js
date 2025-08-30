@@ -46,3 +46,6 @@ class SignerComplianceVerificationListEntryModel extends BaseModel {
       id: Joi.string().uuid(),
     })
   }
+}
+
+module.exports = SignerComplianceVerificationListEntryModel

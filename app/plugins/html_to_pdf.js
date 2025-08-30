@@ -16,7 +16,6 @@ class HTMLToPDF {
     const result = await aws.invokeLambda({
       FunctionName: this.lambdaARN,
       Payload: JSON.stringify({ html: htmlContent })
-// Temp comment
     })
 
     // note: data inside Payload is already base64
@@ -27,3 +26,8 @@ class HTMLToPDF {
     logger.debug('[HTMLToPDF] - problem invoking lambda ', result.FunctionError)
     return null
   }
+}
+
+const lambdaARN = config.get('lambda').pdfTransformARN
+
+module.exports = new HTMLToPDF(lambdaARN)

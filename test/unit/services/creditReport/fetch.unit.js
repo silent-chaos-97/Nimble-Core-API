@@ -188,3 +188,15 @@ describe('app.services.creditReport.fetch', () => {
 
       // do not download anyhing
       expect(fakeResponseDownload).not.to.have.been.called
+      expect(fakeAwsS3uploadFn).not.to.have.been.called
+
+      const result = await knex.raw(`SELECT * FROM signer_credit_reports order by created_at DESC`)
+
+      expect(result.rows[0].score).to.equal(null)
+      expect(result.rows[0].document_id).to.equal(null)
+      expect(result.rows[0].error_code).to.equal('generic_error')
+      expect(result.rows[0].signer_id).to.equal(signerId)
+    })
+
+  })
+})

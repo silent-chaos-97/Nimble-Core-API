@@ -15,3 +15,14 @@ function processError(error) {
   }
 
   throw error
+}
+
+function validator(payload, schema, options) {
+  const {error, value} = schema.validate(payload, options || {})
+  if(error) {
+    processError(error)
+  }
+  return value
+}
+
+module.exports = validator

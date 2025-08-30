@@ -208,3 +208,16 @@ describe('Auth', () => {
 
             return request(app.server)
               .post('/v1/auth/login')
+              .send({ email: 'demouser@nimblefi.com', password: 'wrongpass' })
+              .expect('Content-Type', /json/)
+              .expect(401)
+              .expect(() => {
+                expect(emailSpy).to.have.been.calledOnce
+                expect(emailSpy).to.have.been.calledWith('1052ab85-08da-4bb5-be00-9e94d282d310')
+              })
+          })
+        })
+      })
+    })
+  })
+})

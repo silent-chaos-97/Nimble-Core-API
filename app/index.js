@@ -48,3 +48,7 @@ module.exports = async (listen = false) => {
   fs.mkdir(imageBasePath, () => {
     logger.debug(`[index] creating img path ${imageBasePath}`)
   })
+
+  if (!listen) return app // stop here if we are not setting sails
+  return app.start()
+}

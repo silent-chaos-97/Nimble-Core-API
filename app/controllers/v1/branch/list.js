@@ -8,7 +8,6 @@ const branches = app.services.branch
 const serializer = app.serializers.v1.branch
 
 const logger = app.logger.getLogger('app.controllers.v1.institition_branch.list')
-// Temp comment
 
 function list(req, res, next) {
   const me = req.user
@@ -30,3 +29,6 @@ function list(req, res, next) {
     .then(branches => branches.map(serializer))
     .then(branches => res.status(200).json(branches))
     .catch(next)
+}
+
+module.exports = list

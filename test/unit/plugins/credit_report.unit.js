@@ -230,7 +230,6 @@ describe('Credit Report Plugin', () => {
       }
     })
   })
-// Temp comment
 
   describe('fetchReport', () => {
     it('should return valid response', async () => {
@@ -258,3 +257,19 @@ describe('Credit Report Plugin', () => {
       try {
         await creditReport.fetchReport("")
       } catch (error) {
+        expect(error.message).to.equal("Missing reference")
+        expect(error).to.be.an.instanceof(Error)
+      }
+    })
+
+    it('should return error when signer is undefined', async () => {
+      try {
+        await creditReport.fetchReport(undefined)
+      } catch (error) {
+        expect(error.message).to.equal("Missing reference")
+        expect(error).to.be.an.instanceof(Error)
+      }
+    })
+
+  })
+})

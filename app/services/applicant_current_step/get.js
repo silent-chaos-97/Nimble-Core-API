@@ -25,3 +25,6 @@ async function get(userId, tx = app.db) {
 
     throw error
   }
+}
+
+module.exports = get

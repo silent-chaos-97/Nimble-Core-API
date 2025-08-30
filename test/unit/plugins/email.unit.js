@@ -164,3 +164,13 @@ describe('Email Plugin', () => {
 
       it('should call send with correct declined data', () => {
         plugin.sendAccountRequestStatus('DECLINED', { email: 'welcome@test.com', cc: 'admin@test.com' })
+        expect(plugin.aws.sendEmailTemplate).to.have.been.calledWith('AccountRequestDeclined', 'welcome@test.com', 'admin@test.com', sinon.match.object)
+      })
+    })
+
+    it('non existing status', () => {
+      plugin.sendAccountRequestStatus('MAYBE', { email: 'welcome@test.com' })
+      expect(plugin.aws.sendEmailTemplate).not.to.have.been.called
+    })
+  })
+})

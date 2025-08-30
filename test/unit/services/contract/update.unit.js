@@ -129,3 +129,11 @@ describe('app.services.contract.update', () => {
         const result = await app.services.contract.update('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
         expect(result).not.to.be.undefined
         expect(result).to.equal(true)
+
+        scope1.done()
+        scope2.done()
+        scope3.done()
+      })
+    })
+  })
+})

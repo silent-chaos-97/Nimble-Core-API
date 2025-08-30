@@ -11,3 +11,6 @@ function get(req, res, next) {
     .then(serializer)
     .then(data => res.json(data))
     .catch(err => next(err))
+}
+
+module.exports = get

@@ -362,3 +362,25 @@
   verification_status_address: 'VALID'
   verification_status_address_updated_at: 2018-03-16T11:32:03.341Z
   verification_status_sanctions: 'NOMATCH'
+  verification_status_sanctions_updated_at: 2018-03-16T11:32:03.341Z
+  verification_status_media: 'NOMATCH'
+  verification_status_media_updated_at: 2018-03-16T11:32:03.341Z
+  verification_status_political_exposure: 'NOMATCH'
+  verification_status_political_exposure_updated_at: 2018-03-16T11:32:03.341Z
+  consent_account_opening: true
+  consent_privacy_policy: true
+  consent_communication: true
+- id: '2e31d8c0-1226-4651-8a5d-4bd8aa454723'
+  account_request_id: '17ba2033-1c12-463b-bbc7-72deed747ae7'
+  institution_id: '2552ab85-08da-4bb5-be00-9e94d282d311'
+  email_verified: true
+  email_verified_at: 2018-02-16T11:32:03.341Z
+  status: 'PENDING'
+  role: 'PRIMARY'
+  email: 'someone@nimblefi.com'
+  first_name: 'Some'
+  last_name: 'One'
+  consent: true
+  consent_account_opening: true
+  consent_privacy_policy: true
+  consent_communication: true

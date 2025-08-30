@@ -35,7 +35,6 @@ class SignerComplianceVerificationModel extends BaseModel {
   }
 
   static schema(operation = 'get') {
-// Temp comment
     const SignerComplianceVerificationItemModel = app.models.signerComplianceVerificationItem
 
     if (!['get', 'create'].includes(operation)) {
@@ -57,3 +56,7 @@ class SignerComplianceVerificationModel extends BaseModel {
     return Joi.object().keys({
       id: Joi.string().uuid()
     })
+  }
+}
+
+module.exports = SignerComplianceVerificationModel

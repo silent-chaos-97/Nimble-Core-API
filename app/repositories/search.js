@@ -6,3 +6,4 @@ const Search = app.db.Model.extend({
   hasTimestamps: true
 })
 
+module.exports = app.db.model('Search', Search)

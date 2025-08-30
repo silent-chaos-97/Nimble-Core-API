@@ -159,7 +159,6 @@ describe('GET /account-requests', () => {
 
             expect(res.body).to.be.an('array')
             expect(res.body).to.have.lengthOf(1)
-// Temp comment
             expect(res.body[0]).to.deep.equal(blueprints.accountRequest.get(accountRequestId))
             done()
           })
@@ -321,3 +320,91 @@ describe('GET /account-requests', () => {
               })
               done()
             })
+        }
+
+        it('should 400 on invalid sort parameter', done => {
+          request(app.server)
+            .get(`/v1/account-requests?limit=1&sort=unexistent`)
+            .set('Authorization', 'Bearer ' + token)
+            .expect('Content-Type', /json/)
+            .expect(400)
+            .end(err => {
+              if (err) throw new Error(err)
+              done()
+            })
+        })
+
+        it('should sort by creation date DESC by default', done => {
+          const expected_ids = [
+            '2552ab85-08da-4bb5-be00-9e94d282d348',
+            '2552ab85-08da-4bb5-be00-9e94d282d347',
+            '17ba2033-1c12-463b-bbc7-72deed747ae7',
+            '17ba2033-1c12-463b-bbc7-72deed747ae8',
+            '00000000-0000-aaaa-aaaa-000000000444',
+            '00000000-0000-aaaa-aaaa-000000000333',
+            '00000000-0000-aaaa-aaaa-000000000222',
+            '00000000-0000-aaaa-aaaa-000000000111'
+          ]
+
+          doSortAndExpect('', expected_ids, done)
+        })
+
+        it('should sort by creation date DESC', done => {
+          const expected_ids = [
+            '2552ab85-08da-4bb5-be00-9e94d282d348',
+            '2552ab85-08da-4bb5-be00-9e94d282d347',
+            '17ba2033-1c12-463b-bbc7-72deed747ae7',
+            '17ba2033-1c12-463b-bbc7-72deed747ae8',
+            '00000000-0000-aaaa-aaaa-000000000444',
+            '00000000-0000-aaaa-aaaa-000000000333',
+            '00000000-0000-aaaa-aaaa-000000000222',
+            '00000000-0000-aaaa-aaaa-000000000111'
+          ]
+          doSortAndExpect('sort=-createdAt', expected_ids, done)
+        })
+
+        it('should sort by creation date ASC', done => {
+          const expected_ids = [
+            '00000000-0000-aaaa-aaaa-000000000111',
+            '00000000-0000-aaaa-aaaa-000000000222',
+            '00000000-0000-aaaa-aaaa-000000000333',
+            '00000000-0000-aaaa-aaaa-000000000444',
+            '17ba2033-1c12-463b-bbc7-72deed747ae8',
+            '17ba2033-1c12-463b-bbc7-72deed747ae7',
+            '2552ab85-08da-4bb5-be00-9e94d282d347',
+            '2552ab85-08da-4bb5-be00-9e94d282d348'
+          ]
+          doSortAndExpect('sort=createdAt', expected_ids, done)
+        })
+
+        it('should sort by status ASC', done => {
+          const expected_ids = [
+            '2552ab85-08da-4bb5-be00-9e94d282d348', // APPROVED
+            '2552ab85-08da-4bb5-be00-9e94d282d347', // APPROVED
+            '00000000-0000-aaaa-aaaa-000000000444', // APPROVED
+            '00000000-0000-aaaa-aaaa-000000000222', // APPROVED
+            '00000000-0000-aaaa-aaaa-000000000333', // INCOMPLETE
+            '17ba2033-1c12-463b-bbc7-72deed747ae7', // PENDING
+            '17ba2033-1c12-463b-bbc7-72deed747ae8', // PENDING
+            '00000000-0000-aaaa-aaaa-000000000111'  // PENDING
+          ]
+          doSortAndExpect('sort=status', expected_ids, done)
+        })
+
+        it('should sort by status DESC', done => {
+          const expected_ids = [
+            '17ba2033-1c12-463b-bbc7-72deed747ae7', // PENDING
+            '17ba2033-1c12-463b-bbc7-72deed747ae8', // PENDING
+            '00000000-0000-aaaa-aaaa-000000000111', // PENDING
+            '00000000-0000-aaaa-aaaa-000000000333', // INCOMPLETE
+            '2552ab85-08da-4bb5-be00-9e94d282d348', // APPROVED
+            '2552ab85-08da-4bb5-be00-9e94d282d347', // APPROVED
+            '00000000-0000-aaaa-aaaa-000000000444', // APPROVED
+            '00000000-0000-aaaa-aaaa-000000000222'  // APPROVED
+          ]
+          doSortAndExpect('sort=-status', expected_ids, done)
+        })
+      })
+    })
+  })
+})

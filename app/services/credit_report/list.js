@@ -24,7 +24,29 @@ const sortBy = {
 async function validate(params) {
   return validator(params, listSchema, { abortEarly: false })
 }
-// Temp comment
 
 function getSqlSort(sort) {
   return _.get(sortBy, sort, sortBy['-updated_at'])
+}
+
+async function list(params = {}, tx = app.db) {
+  logger.debug(params, '[list] called with params')
+  const filters = await validate(params)
+  const { limit, offset } = getPagination(filters)
+  // fetch the signer
+  await app.services.signer.get(filters.signerId, tx)
+
+  const query = SignerCreditReport.query((q) => {
+    q.limit(limit).offset(offset)
+    q.orderByRaw(getSqlSort(filters.sort))
+    q.where('signer_id', filters.signerId)
+  })
+
+  const data = await query.fetchAll({
+    transacting: tx
+  })
+
+  return data.models.map((m) => new SignerCreditReportModel(m).data())
+}
+
+module.exports = list

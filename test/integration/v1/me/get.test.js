@@ -133,3 +133,12 @@ describe('GET /me', () => {
           expect(actual.institution.logoUri.default).to.eq(user.institution.logoUri.default)
           expect(actual.institution.backgroundImageUri.default).to.eq(user.institution.backgroundImageUri.default)
 
+          const account = user.accounts.filter(a => a.strategy === 'local').pop()
+
+          expect(account).not.to.be.undefined
+          expect(account.secret).to.be.undefined
+          expect(account.createdAt).to.equal('2018-02-16T12:32:03.341Z')
+        })
+      })
+  })
+})

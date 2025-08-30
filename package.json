@@ -138,3 +138,12 @@
     "twilio": "^3.75.1",
     "uuid": "^9.0.0",
     "xml-formatter": "^2.4.0",
+    "xml-parser-xo": "^3.1.1",
+    "yamljs": "^0.3.0",
+    "yarn-audit-fix": "^9.3.3",
+    "zipson": "^0.2.12"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}

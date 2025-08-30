@@ -26,3 +26,5 @@ module.exports = {
    * } opts
    * @return {Promise<void>}
    */
+  onDone: async(opts) => {}
+}

@@ -13,3 +13,6 @@ function update(req, res, next) {
     .then(data => serializer(data, true))
     .then(data => res.json(data))
     .catch(next)
+}
+
+module.exports = update

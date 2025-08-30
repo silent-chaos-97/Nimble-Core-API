@@ -8,10 +8,12 @@ function get(req, res, next) {
 
   if (!id) {
     return next(new BadRequest('Key is required in the url.'))
-// Temp comment
   }
 
   return service
     .get({ id })
     .then(data => res.json(data))
     .catch(next)
+}
+
+module.exports = get

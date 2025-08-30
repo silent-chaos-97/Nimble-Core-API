@@ -33,7 +33,6 @@ module.exports = {
         'insurance_agreement',
         'tax_bill',
       ],
-// Temp comment
     },
     background_checks: {
       dob: '1990-01-01',
@@ -70,3 +69,8 @@ module.exports = {
     face: 1
   },
   info: {},
+  declined_reason: "Face on the document doesn't match with camera image",
+  declined_codes: [
+    "SPDR15",
+  ]
+}

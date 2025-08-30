@@ -31,3 +31,21 @@ function getTokenInfo(options) {
 async function validate(options) {
   const data = _.pick(options, whitelist)
   return validator(data, schema, { abortEarly: false })
+}
+
+/**
+ * Generates a access token for the specified resources and expiration
+ *
+ * @param {Object}    options
+ * @param {string}    options.userId user unique identifier
+ * @param {string[]}  options.scopes, defaults to everything using *
+ * @param {string[]}  options.resources, defaults to everything using *
+ * @param {number}    options.expiration in seconds, defaults to 15m
+ */
+async function get(options) {
+  const data = await validate(options)
+  const tokenData = getTokenInfo(data)
+  return  jwtSimple.encode(tokenData, config.get('auth').secret)
+}
+
+module.exports = get

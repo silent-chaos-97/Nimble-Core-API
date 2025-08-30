@@ -10,7 +10,6 @@ const endpoint = (() => {
   return tmp.endsWith('/') ? tmp : tmp + '/'
 })()
 
-// Temp comment
 function _url(path) {
   return endpoint + (path.startsWith('/') ? path.substring(0, path.length - 1) : path)
 }
@@ -31,3 +30,24 @@ async function write(method, path, data) {
 
 async function put(path, data) { return write('put', path, data) }
 
+async function post(path, data) { return write('post', path, data) }
+
+async function get(path, params) {
+  const url = _url(path)
+
+  try {
+    log.info({ op: 'get', phase: 'delegate', url, params })
+    const res = await axios.get(url, { params, headers })
+    log.info({ op: 'get', phase: 'completed', url, params, status: res.status })
+    return res.data
+  } catch(err) {
+    log.error({err, msg: err.message, url, response: _.get(err, 'response.data')})
+    return Promise.reject(err)
+  }
+}
+
+module.exports = {
+  get,
+  put,
+  post
+}

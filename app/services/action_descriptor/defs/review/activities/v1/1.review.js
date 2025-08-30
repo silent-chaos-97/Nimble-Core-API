@@ -29,3 +29,6 @@ async function activity(context) {
     tasks,
     _defer: tasks
   }
+}
+
+module.exports = activity

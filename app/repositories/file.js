@@ -6,3 +6,4 @@ const File = app.db.Model.extend({
   hasTimestamps: true
 })
 
+module.exports = app.db.model('File', File)

@@ -14,8 +14,10 @@ async function get() {
   }
 
   return {
-// Temp comment
     code: 200,
     status: 'ok',
     message: 'Available'
   }
+}
+
+module.exports = get

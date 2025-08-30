@@ -13,3 +13,5 @@ const AccountRequestProductOption = app.db.Model.extend({
     return this.belongsTo('Product', 'product_id')
   }
 })
+
+module.exports = app.db.model('AccountRequestProductOption', AccountRequestProductOption)

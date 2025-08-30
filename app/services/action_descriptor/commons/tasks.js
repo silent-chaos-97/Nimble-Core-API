@@ -64,3 +64,8 @@ function wkflTask({
   if (version) task.version = `${version}`
 
   return task
+}
+
+module.exports = {
+  wkflTask
+}

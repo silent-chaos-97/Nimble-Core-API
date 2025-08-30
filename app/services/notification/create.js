@@ -38,6 +38,7 @@ const SCHEMAS = {
   push: Joi.object().keys({
     taskId: Joi.string(),
     method: Joi.string().required().valid('push'),
+    product: Joi.string().optional(),
     recipient: Joi.object().keys({
       id: Joi.string().required(),
       name: Joi.string().optional()
@@ -68,3 +69,8 @@ const SENDERS = {
   },
   sms: async notification => {
     return app.plugins.sms.notify(notification)
+  },
+  push: notification => {
+    throw new NotImplementedError(`NotImplemented: notification.push(${notification})`)
+  }
+}

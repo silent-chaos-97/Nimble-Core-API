@@ -1,4 +1,5 @@
 const ROWS = [
+  {
     name: 'Credit Card',
     sku: 'credit-card',
     category: 'CARD',
@@ -23,3 +24,5 @@ exports.up = knex => knex('institutions').select().then(insts => Promise.all(ins
  * @returns { Promise<void> }
  */
 exports.down = knex => knex('products').where({
+  sku: 'credit-card',
+}).del()

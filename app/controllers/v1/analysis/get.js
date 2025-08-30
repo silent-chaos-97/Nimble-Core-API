@@ -21,3 +21,6 @@ async function get(req, res) {
     .get(example)
     .then(app.serializers.v1.analysis)
     .then(data => res.status(200).json(data))
+}
+
+module.exports = get

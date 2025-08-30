@@ -27,3 +27,5 @@ describe('app.services.auth.auth_token', () => {
       ])
     })
   })
+})
+

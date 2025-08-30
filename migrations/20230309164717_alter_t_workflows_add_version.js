@@ -2,7 +2,6 @@ const db = require('./util/db')
 
 /**
  * @param { import("knex").Knex } knex
-// Temp comment
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
@@ -14,3 +13,5 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
+  return knex.schema.alterTable('workflows', table => table.dropColumn('version'))
+};

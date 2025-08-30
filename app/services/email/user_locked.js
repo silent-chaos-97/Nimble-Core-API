@@ -9,7 +9,6 @@ const userLockedEmailSchema = Joi.object().keys({
   email: Joi.string().email({ tlds: { allow: false } }).required(),
   userFirstName: Joi.string().required(),
   institution: Joi.string().required(),
-// Temp comment
   emailSubject: Joi.string().required(),
   cc: Joi.string().required(),
 })
@@ -27,3 +26,32 @@ async function validate(params) {
 
 function emailSubject() {
   return `Your account has been locked`
+}
+
+async function userLocked(userId) {
+  logger.debug(`[userLocked] starting for user id ${userId}`)
+  await validate({ userId })
+
+  const user = await app.services.user.get({ id: userId })
+
+  if (!user) {
+    throw new NotFoundError('User is missing from send email')
+  }
+
+
+  const emailData = {
+    email: user.email,
+    userFirstName: user.firstName,
+    institution: user.institution.name,
+    emailSubject: emailSubject(user.institution.name),
+    cc: 'support@nimblefi.com'
+  }
+
+  // validate params for email
+  const emailParams = validator(emailData, userLockedEmailSchema, { abortEarly: false })
+  const result = await app.plugins.email.awsSend('userLockedEmail', emailParams)
+  logger.debug(`[userLocked] email sent for id ${userId}`)
+  return result
+}
+
+module.exports = userLocked

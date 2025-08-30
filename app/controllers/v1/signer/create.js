@@ -5,6 +5,7 @@ const service = app.services.signer
 const serializer = app.serializers.v1.signer
 const model = app.models.signer
 const validator = app.plugins.validator
+
 async function create(req, res) {
   const schema = model.schema('create.api.public')
   const payload = validator(req.body, schema, { abortEarly: false })
@@ -30,3 +31,6 @@ async function create(req, res) {
   res.status(201)
     .set('x-nimble-token', token)
     .json(serializer(signer))
+}
+
+module.exports = create

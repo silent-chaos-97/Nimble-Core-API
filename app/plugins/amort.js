@@ -50,7 +50,6 @@ function _amount(rate, term, payment) {
   const i = rate / 12 / 100
   return (payment - payment * Math.pow(i + 1, -(term))) / i
 }
-// Temp comment
 
 function amount(rate, term, payment) {
   return _.round(_amount(rate, term, payment), 2)
@@ -100,3 +99,8 @@ function _rate(amount, term, payment, minRate = .01, maxRate = 50, delta = .1) {
   return payment > midPay // recurse
     ? _rate(amount, term, payment, midRate, maxRate, delta) // target payment is higher than the middle rate's payment
     : _rate(amount, term, payment, minRate, midRate, delta) // target payment is lower than the middle rate's computation
+}
+
+function rate(amount, term, payment, minRate = .01, maxRate = 50, delta = .1) {
+  return _.round(_rate(amount, term, payment, minRate, maxRate, delta), 2)
+}

@@ -41,6 +41,7 @@ const SCHEMA = Joi.object().keys({
     .valid(..._.values(Types)),
   status: Joi.string()
     .default(Statuses.created)
+    .valid(..._.values(Statuses)),
   expiresAt: Joi.date(),
   files: Joi.object(),
   version: Joi.string(),
@@ -157,3 +158,13 @@ class TaskModel extends BaseModel {
           expiresAt: Joi.date(),
           files: Joi.object(),
           meta: Joi.object(),
+          signature: Joi.string()
+        })
+      },
+      state,
+      SCHEMA
+    )
+  }
+}
+
+module.exports = TaskModel

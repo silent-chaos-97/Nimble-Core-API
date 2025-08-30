@@ -8,3 +8,4 @@ module.exports = {
   decode: token => {
     return jwtSimple.decode(token, config.get('auth').secret, false, 'HS512')
   }
+}

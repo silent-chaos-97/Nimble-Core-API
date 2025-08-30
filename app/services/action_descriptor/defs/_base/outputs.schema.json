@@ -3,3 +3,5 @@
   "required": ["passed"],
   "properties": {
     "passed": {"type": "boolean"}
+  }
+}

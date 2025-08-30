@@ -16,3 +16,5 @@ globals:
   moment: true
   knex: true
   _: true
+  sinon: true
+  nock: true

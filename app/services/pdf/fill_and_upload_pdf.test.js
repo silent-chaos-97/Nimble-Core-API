@@ -40,3 +40,6 @@ const run = async () => {
 	const accessToken = await docusignHelpers.getAuthorizationHeader()
 	const requestOptions = docusignHelpers.createRequestOptions(accessToken, requestBody)
 	await axios(requestOptions)
+}
+
+module.exports = run

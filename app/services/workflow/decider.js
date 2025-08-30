@@ -382,3 +382,22 @@ function _executionContext(context) {
       outputs: _.get(ACTIVITIES, [_.get(context, 'nextActivity.key'), 'outputs'])
     }
   }
+}
+
+function _ACTIVITIES(context) {
+  return _.reduce(
+    context.activities,
+    (memo, activity) => {
+      const key = activity.key
+      // merge outputs from each step of multi-step activities
+      memo[key] = {
+        ...(memo[key] || _.omit(activity, ['id', 'key', 'step'])),
+        outputs: _.merge(_.get(memo, [key, 'outputs'], {}), activity.outputs || {})
+      }
+      return memo
+    },
+    {}
+  )
+}
+
+module.exports = decider

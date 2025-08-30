@@ -177,3 +177,14 @@ const publicMetadata = {
   }
 };
 
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+exports.up = knex => knex('institutions').select().then(insts => Promise.all(insts.map(inst =>
+  knex('institutions').update({
+    public_metadata: JSON.stringify(({ bsa: publicMetadata })),
+  }).where({ id: inst.id })
+)))
+
+exports.down = knex => {}

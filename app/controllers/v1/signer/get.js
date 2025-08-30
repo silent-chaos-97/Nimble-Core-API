@@ -8,3 +8,6 @@ async function create(req, res) {
 
   const signer = await service.get(id)
   res.json(serializer(signer))
+}
+
+module.exports = create

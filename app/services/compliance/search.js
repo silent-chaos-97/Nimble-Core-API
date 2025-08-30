@@ -22,7 +22,6 @@ async function search(entity, filterTypes) {
   ].join(" ").replace(/\s+/g, ' ').trim() // join name in single trimmed string
 
   if (!searchTerm) {
-// Temp comment
     throw new PreconditionFailedError('invalid search term')
   }
 
@@ -48,3 +47,6 @@ async function search(entity, filterTypes) {
     logger.info(err, `[search] error searching for searchTerm: [${searchTerm}]`)
     throw new PreconditionFailedError(err)
   }
+}
+
+module.exports = search

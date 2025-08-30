@@ -34,3 +34,6 @@ async function create(entity, options = {}) {
   })
 
   return app.services.document.get({ id })
+}
+
+module.exports = create

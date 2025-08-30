@@ -35,3 +35,29 @@ function sanitize(str) {
     .replace(/\-\-\>/g, '')
     .replace(/\/\*/g, '')
   return result
+}
+
+
+// simple and custom xml tag  builer. might explode
+function tag(name, props = {}, children = []) {
+  // self close tag
+  if ((_.isArray(children) && _.isEmpty(children))
+    || (_.isString(children) && _.isEmpty(children))
+    || (children === null)) {
+    return `<${name}${inlineProps(props)}/>`
+  }
+
+  // force children iteratable
+  if (!_.isArray(children)) {
+    children = [sanitize(children)]
+  }
+
+  // complex tag (props and children, assuming children are already either results of tag() or string)
+  return `<${name}${inlineProps(props)}>${children.map(s => new String(s)).join('\n')}</${name}>`
+}
+
+module.exports = {
+  tag,
+  sanitize,
+  format: formaterFacade
+}

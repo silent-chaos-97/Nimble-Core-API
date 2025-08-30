@@ -10,3 +10,6 @@ async function update(req, res, next) {
     .update(id, signerId)
     .then(() => res.status(204).end())
     .catch(next)
+}
+
+module.exports = update

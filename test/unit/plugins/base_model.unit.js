@@ -1,5 +1,6 @@
 const Joi = require('@hapi/joi')
 const BaseModel = require('../../../app/models/model')
+
 describe('BaseModel class', () => {
   it('should exist', () => {
     expect(BaseModel).not.to.be.undefined
@@ -78,3 +79,8 @@ describe('BaseModel class', () => {
         return { b: 2 }
       }
     }
+    let model = new BaseModel(['a', 'b'], [], data)
+    expect(model.data().a).to.be.undefined
+    expect(model.data().b).to.equal(2)
+  })
+})

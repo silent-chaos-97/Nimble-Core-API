@@ -23,3 +23,5 @@
               type: array
               items:
                 $ref: '#/components/schemas/SignerComplianceVerification'
+      '400':
+        $ref: '#/components/responses/BadRequest'

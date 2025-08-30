@@ -8,3 +8,6 @@ function change_password(req, res, next) {
     .updatePassword(payload)
     .then(() => res.sendStatus(204))
     .catch(err => next(err))
+}
+
+module.exports = change_password

@@ -259,6 +259,7 @@ const schema = {
       default: '',
       env: 'AWS_LAMBDA_ENDPOINT'
     },
+    lambda_region: {
       doc: 'the AWS SDK region for lambda requests, null means aws-sdk default',
       format: String,
       default: 'us-east-2',
@@ -627,3 +628,41 @@ const schema = {
       default: 'dev-nimble-htmltopdf-lambda',
       env: 'LAMBDA_HTMLTOPDF_ARN'
     }
+  },
+  twilio: {
+    accountSid: {
+      doc: 'Twilio account SID',
+      format: String,
+      default: '',
+      env: 'TWILIO_ACCOUNT_SID'
+    },
+    serviceSid: {
+      doc: 'Twilio MFA service SID',
+      format: String,
+      default: '',
+      env: 'TWILIO_SERVICE_SID'
+    },
+    messagingSvcSid: {
+      doc: 'Twilio messaging service SID',
+      format: String,
+      default: '',
+      env: 'TWILIO_MESSAGING_SERVICE_SID'
+    },
+    authToken: {
+      doc: 'Twilio authentication token',
+      format: String,
+      default: '',
+      env: 'TWILIO_AUTH_TOKEN'
+    }
+  },
+  fa: {
+    globalSheetId: {
+      doc: 'The google global sheet to update/squash for FA demos',
+      format: String,
+      default: '1HsYvwR8fi0HHECBLW8y3tIdUk0Spb_oMlBewts5RQsc',
+      env: 'GLOBAL_SHEET_ID'
+    }
+  }
+}
+
+module.exports = schema

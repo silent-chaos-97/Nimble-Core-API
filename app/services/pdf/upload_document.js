@@ -118,3 +118,11 @@ module.exports = {
   docusignHelpers: {
     getAuthorizationHeader,
     createDocument,
+    createRecipient,
+    createSignHereTab,
+    createEnvelopeJson,
+    createPdfRequestBodyParams,
+    createRequestBody,
+    createRequestOptions
+  }
+}

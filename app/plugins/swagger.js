@@ -4,7 +4,6 @@ const glob = require('glob')
 const YAML = require('yamljs')
 const app = require('../core')
 const logger = app.logger.getLogger('app.plugins.swagger')
-// Temp comment
 
 // will look for files insite $path
 function loadAndMergeFromPath(spec, path, parent) {
@@ -39,3 +38,35 @@ function buildSwaggerDocument() {
   loadAndMergeFromPath(spec, 'schemas', 'components')
 
   return spec
+}
+
+let swaggerDocument = buildSwaggerDocument()
+
+module.exports = function swaggerDecorator(app) {
+  swaggerDocument.servers[0].url = `${app.config.get('protocol')}://${app.config.get('domain')}/v1`
+  logger.debug('[swaggerDecorator] setting up swagger')
+
+  app.router.use(
+    '/docs',
+    swaggerUi.serve,
+    swaggerUi.setup(swaggerDocument, {
+      isExplorer: true,
+      swaggerOptions: {
+        operationsSorter: (a, b) => {
+          // from https://github.com/swagger-api/swagger-ui/issues/4158#issuecomment-362631294
+          var methodsOrder = ["get", "post", "put", "delete", "patch", "options", "trace"]
+          var result = methodsOrder.indexOf(a.get("method")) - methodsOrder.indexOf(b.get("method"))          // Or if you want to sort the methods alphabetically (delete, get, head, options, ...):
+          // var result = a.get("method").localeCompare(b.get("method"));
+
+          if (result === 0) {
+            result = a.get("path").localeCompare(b.get("path"))
+          }
+
+          return result
+        }
+      }
+    })
+  )
+
+  logger.info(`[swaggerDecorator] open API docs at ${app.config.get('protocol')}://${app.config.get('domain')}/docs`)
+}

@@ -63,3 +63,7 @@ describe('Random Plugin', () => {
       let code = rand.generateRecoveryCode()
       expect(code.toUpperCase()).to.be.equal(code)
     })
+
+  })
+
+})

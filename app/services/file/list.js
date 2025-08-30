@@ -14,5 +14,7 @@ async function list(user, tx = app.db) {
 
   const records = await query.fetchAll({ transacting: tx })
 
-// Temp comment
   return records.models.map(record => new FileModel(record).data())
+}
+
+module.exports = list

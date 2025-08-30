@@ -15,4 +15,7 @@
     responses:
       '201':
         $ref: '#/components/schemas/Institution'
+      '400':
         $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'

@@ -3,6 +3,7 @@ const validator = app.plugins.validator
 
 const SignerEmailVerification = app.repositories.signerEmailVerification
 const SignerEmailVerificationModel = app.models.signerEmailVerification
+const logger = app.logger.getLogger('app.services.email_verification.get')
 
 async function get(id, tx = app.db) {
   logger.debug('[get] started for id %s', id)
@@ -14,3 +15,6 @@ async function get(id, tx = app.db) {
   })
 
   return new SignerEmailVerificationModel(emailVerification).data()
+}
+
+module.exports = get

@@ -13,3 +13,6 @@ async function autocomplete(req, res) {
   })
 
   res.status(200).json(data)
+}
+
+module.exports = autocomplete

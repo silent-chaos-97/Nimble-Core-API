@@ -7,3 +7,6 @@ function schema() {
     limit: Joi.number().positive(),
     offset: Joi.number().positive().allow(0),
   })
+}
+
+module.exports = schema

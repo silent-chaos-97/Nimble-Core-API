@@ -1108,3 +1108,30 @@ describe('Docusign', () => {
 
         const expected = {
           url: connectUrl,
+          loggingEnabled: "true",
+          includeCertificateOfCompletion: "false",
+          includeDocuments: "false",
+          includeDocumentFields: "false",
+          requireAcknowledgment: "false",
+          envelopeEvents: [
+            { envelopeEventStatusCode: "sent" },
+            { envelopeEventStatusCode: "delivered" },
+            { envelopeEventStatusCode: "completed" },
+            { envelopeEventStatusCode: "declined" },
+            { envelopeEventStatusCode: "voided" },
+          ],
+          recipientEvents: [
+            { recipientEventStatusCode: "sent" },
+            { recipientEventStatusCode: "delivered" },
+            { recipientEventStatusCode: "completed" },
+            { recipientEventStatusCode: "declined" },
+          ]
+        }
+
+        const result = docusign._buildEventNotification('xpto')
+        expect(result).not.to.be.undefined
+        expect(result).to.deep.equal(expected)
+      })
+    })
+  })
+})

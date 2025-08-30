@@ -31,3 +31,6 @@ services:
       AWS_ACCESS_KEY_ID: FAKE_ID
       AWS_SECRET_ACCESS_KEY: FAKE_SECRET
     volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    healthcheck:
+      test: [ 'CMD', 'curl', 'http://localhost:4566/health?reload' ]

@@ -8,3 +8,8 @@ function getLogger(name) {
     name: name ? name : pjson.name,
     level: level
   })
+}
+
+module.exports = {
+  getLogger: getLogger
+}

@@ -527,6 +527,7 @@ const successResponse = {
               },
               {
                 "name": "Political Position",
+                "source": "complyadvantage",
                 "tag": "political_position",
                 "value": "Prime Minister Of Zimbabwe"
               },
@@ -4548,3 +4549,276 @@ const parsedResult = [
       },
       {
         "name": "Date of Birth",
+        "value": "1924",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Date of Birth",
+        "value": "1924-02-21",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Chairmen",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Chairperson Of The African Union",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Chairperson Of The Organisation Of African Unity",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Former President of Republic of Zimbabwe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Politician",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Pres.",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "President",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "President Of Zimbabwe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Presidents",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Prime Minister Of Zimbabwe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Secretary General Of The Non-aligned Movement",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "Spouse of Grace Mugabe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Position",
+        "value": "former President of Zimbabwe",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Gender",
+        "value": "male",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Chamber",
+        "value": "African Union",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Party",
+        "value": "Zimbabwe African National Union",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Political Party",
+        "value": "ZANU-PF",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Region",
+        "value": "Rhodesia",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Related URL",
+        "value": "http://www.au.int/",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Active Start Date",
+        "value": "1987-12-31",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Active End Date",
+        "value": "2017-11-21",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Active Start Date",
+        "value": "1997-06-02",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Active End Date",
+        "value": "1998-06-08",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Related Url",
+        "value": "http://www.au.int/en/cpau",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      },
+      {
+        "name": "Related Url",
+        "value": "http://www.theodora.com/wfbcurrent/zimbabwe/zimbabwe_chiefs.html",
+        "source": "ComplyAdvantage PEP Data",
+        "subtype": "pep-class-1",
+        "countryCodes": [],
+        "date": null,
+        "deletedDate": null,
+        "url": null
+      }
+    ]
+  }
+]
+
+module.exports = { successResponse, badRequestResponse, parsedResult }

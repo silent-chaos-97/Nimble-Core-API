@@ -101,3 +101,6 @@ function serializer(data) {
       return tag('productConfiguration', { product_sku: pConfig.product.sku }, productOptionsArray)
     }))
   ]))
+}
+
+module.exports = serializer

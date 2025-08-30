@@ -171,6 +171,7 @@ class CreditReport {
 
   /**
    * Parse score from API to a number. Example '8009' to 8000 and '0780' to 780
+   *
    * @param {string} textScore
    */
   _getScore(textScore) {
@@ -262,3 +263,12 @@ class CreditReport {
     logger.debug('[fetchReport] finished for consumer %s', reference)
     return response.data
   }
+}
+
+const username  = config.get('creditBureau').username
+const password  = config.get('creditBureau').password
+const groupCode = config.get('creditBureau').groupCode
+const lenderId  = config.get('creditBureau').lenderId
+const baseURL   = config.get('creditBureau').baseUrl
+
+module.exports = new CreditReport(username, password, groupCode, lenderId, baseURL)

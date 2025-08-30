@@ -9,6 +9,7 @@ UserAuth:
     email:
       type: string
       title: Email
+      description: The email of the user
     firstName:
       type: string
       title: First Name
@@ -20,3 +21,5 @@ UserAuth:
     institutionId:
       type: string
       format: uuidv4
+      title: Institution Id
+      description: The institution id

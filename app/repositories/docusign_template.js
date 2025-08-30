@@ -10,3 +10,4 @@ const DocusignTemplate = app.db.Model.extend({
   },
 })
 
+module.exports = app.db.model('DocusignTemplate', DocusignTemplate)

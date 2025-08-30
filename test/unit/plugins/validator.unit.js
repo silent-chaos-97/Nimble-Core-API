@@ -30,3 +30,5 @@ describe('plugins/validator', () => {
       validData = validator(data, schema)
     }).not.to.throw(BadRequestError)
     expect(validData).to.deep.equal(data)
+  })
+})

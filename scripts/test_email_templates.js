@@ -101,3 +101,10 @@ app.load().then(async () => {
 
 }).catch(err => {
   // exit on error
+  logger.error(err, 'Ending worker with error')
+  process.exit(0) // eslint-disable-line no-process-exit
+}).then(() => {
+  // exit on done
+  logger.info('[load] ending worker')
+  process.exit(0) // eslint-disable-line no-process-exit
+})

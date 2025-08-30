@@ -22,3 +22,5 @@ module.exports = async function (data, tx = app.db) {
   } catch (err) {
     logger.error(err, { data })
     throw new InternalServerError(err.message)
+  }
+}

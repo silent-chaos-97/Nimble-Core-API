@@ -10,6 +10,7 @@
       "title": "Recipients",
       "type": "string",
       "stereotype": "users"
+    },
     "subject": {
       "title": "Subject",
       "type": "string",
@@ -20,3 +21,5 @@
       "type": "string",
       "group": "back"
     }
+  }
+}

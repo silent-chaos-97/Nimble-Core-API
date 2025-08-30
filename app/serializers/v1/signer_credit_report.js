@@ -18,3 +18,6 @@ function serializer(data) {
   format.report = downloadableSerializer({ id: data.documentId })
 
   return format
+}
+
+module.exports = serializer

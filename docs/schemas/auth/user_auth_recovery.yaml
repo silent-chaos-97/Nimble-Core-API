@@ -11,5 +11,8 @@ UserAuthRecovery:
       maxLength: 160
       description: The new password for that User
       example: safe-password
+    code:
       type: string
       title: Code
+      description: The recovery code requested by the User
+      example: ABTEGDPSGQ

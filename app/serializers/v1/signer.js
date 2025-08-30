@@ -9,7 +9,6 @@ const properties = [
   'id',
   'status',
   'firstName',
-// Temp comment
   'middleName',
   'lastName',
   'address',
@@ -93,3 +92,6 @@ function serializer(data) {
   }
 
   return format
+}
+
+module.exports = serializer

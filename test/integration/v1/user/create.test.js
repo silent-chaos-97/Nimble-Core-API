@@ -139,6 +139,7 @@ describe('POST /users', () => {
         })
     })
 
+    it('should persist institution branch id on user information', done => {
       request(app.server)
         .post('/v1/users')
         .set('X-API-KEY', 'superpowers')
@@ -254,3 +255,19 @@ describe('POST /users', () => {
 
     it('should fire a welcome email', done => {
       request(app.server)
+        .post('/v1/users')
+        .set('X-API-KEY', 'superpowers')
+        .send(user)
+        .expect('Content-Type', /json/)
+        .expect(201)
+        .end((err, res) => {
+          if (err) throw new Error(err)
+
+          expect(emailSpy).to.have.been.calledOnce
+          expect(emailSpy).to.have.been.calledWith(res.body.id)
+          // we have to wait a bit for async stuff before finishing the test or else de database clears
+          setTimeout(done, 10)
+        })
+    })
+  })
+})

@@ -11,3 +11,6 @@ async function publish(req, res) {
 
   const entity = await workflows.publish(wkflId)
   res.status(200).json(entity)
+}
+
+module.exports = publish

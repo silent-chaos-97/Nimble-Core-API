@@ -21,3 +21,5 @@
     "type": "string",
     "subtype": "enum",
     "text": "Are all account owners US citizens?"
+  }
+]

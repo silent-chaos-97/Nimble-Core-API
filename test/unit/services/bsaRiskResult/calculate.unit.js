@@ -19,6 +19,7 @@ describe('app.services.bsaRiskResult.calculate', () => {
     it('should exist', () => {
       expect(app.services.bsaRiskResult).to.have.ownProperty('calculate')
       expect(app.services.bsaRiskResult.calculate).to.be.an('Function')
+    })
 
     it('should complain if called without params', async() => {
       const target = app.services.bsaRiskResult.calculate
@@ -71,3 +72,8 @@ describe('app.services.bsaRiskResult.calculate', () => {
       { position: 13, questionId: 'atmOrMobile', answer: true, context: { type: 'boolean', score: { true: 3 } } },
       { position: 13, questionId: 'atmOrMobileDeposit', answer: 5, context: { type: 'number', score: { '4': 1, '5': 20 } } }
     ]))
+
+    const target = await app.services.bsaRiskResult.calculate({ accountRequestId: uuid.v4() }, THRESHOLDS)
+    expect(target).to.deep.equal({ score: 31, risk: 'High' })
+  })
+})

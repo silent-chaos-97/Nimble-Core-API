@@ -4,6 +4,7 @@ SignerCreditReport:
     id:
       type: string
       format: uuidv4
+      title: uuid
       readOnly: true
       description: CreditReport identifier
       example: '2552ab85-08da-4bb5-be00-9e94d282d311'
@@ -47,3 +48,7 @@ SignerCreditReport:
     signerId:
       type: string
       format: uuidv4
+      title: Signer Id
+      description: The signer id associated with this credit report
+      example: '2e31d8c0-1226-4651-8a5d-4bd8aa454722'
+      readOnly: true

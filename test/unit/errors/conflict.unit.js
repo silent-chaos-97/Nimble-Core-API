@@ -5,6 +5,7 @@ describe('ConflictError', () => {
     expect(ErrorClass).not.to.be.undefined
   })
 
+  it('should be and instance of ConflictError and Error', () => {
     let error = new ErrorClass()
     expect(error).to.be.instanceOf(ErrorClass)
     expect(error).to.be.instanceOf(Error)
@@ -37,3 +38,6 @@ describe('ConflictError', () => {
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')
       expect(error.message).to.equal('custom error msg')
+    })
+  })
+})

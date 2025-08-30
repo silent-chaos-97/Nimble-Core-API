@@ -15,3 +15,5 @@ exports.down = function (knex) {
   }).then(() => knex.schema.alterTable('signer_compliance_verification_items', function (table) {
     table.date('date_of_birth')
     table.date('date_of_death')
+  }))
+};

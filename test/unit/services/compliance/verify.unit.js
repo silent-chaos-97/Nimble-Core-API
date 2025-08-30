@@ -139,3 +139,12 @@ describe('app.services.compliance.verify', () => {
 
       expect(fakeSaveForSigner.getCall(0).args[0]).to.have.ownProperty('verificationStatusSanctions')
       expect(fakeSaveForSigner.getCall(1).args[0]).to.have.ownProperty('verificationStatusMedia')
+      expect(fakeSaveForSigner.getCall(2).args[0]).to.have.ownProperty('verificationStatusPoliticalExposure')
+
+      expect(fakeSaveForSigner.getCall(0).args[0].verificationStatusSanctions).to.equal('MATCH')
+      expect(fakeSaveForSigner.getCall(1).args[0].verificationStatusMedia).to.equal('MATCH')
+      expect(fakeSaveForSigner.getCall(2).args[0].verificationStatusPoliticalExposure).to.equal('MATCH')
+    })
+
+  })
+})

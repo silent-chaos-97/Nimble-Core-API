@@ -11,3 +11,4 @@ const InstitutionBranch = app.db.Model.extend({
 
 })
 
+module.exports = app.db.model('InstitutionBranch', InstitutionBranch)

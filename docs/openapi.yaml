@@ -168,3 +168,14 @@ components:
     NotFound:
       description: Resource Not Found
     TokenExpired:
+      description: Token expired
+    InternalError:
+      description: Internal server error
+    Unauthorized:
+      description: Authentication information is missing or invalid
+    Forbidden:
+      description: The server understood the request but refuses to authorize it
+    Conflict:
+      description: Duplicated keys
+    NoContent:
+      description: The request was successfully fulfilled

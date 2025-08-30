@@ -24,3 +24,5 @@
   },
   "terminate_after": {
     "ui:widget": "selectDuration"
+  }
+}

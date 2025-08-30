@@ -26,3 +26,5 @@
         $ref: '#/components/responses/Unauthorized'
       '400':
         $ref: '#/components/responses/BadRequest'
+      '404':
+        $ref: '#/components/responses/NotFound'

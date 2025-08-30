@@ -18,3 +18,5 @@ module.exports = function() {
       }
     },
     queueUrl: app.config.get('sqs.eventQueue')
+  })
+}

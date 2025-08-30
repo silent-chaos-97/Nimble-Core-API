@@ -8,3 +8,4 @@ This task allow's the unlock of a user and trigger a reset password workflow for
 
     NODE_ENV=development npm run task/unlock-user -- --e <email>
 
+    - email is the email of the user to unlock

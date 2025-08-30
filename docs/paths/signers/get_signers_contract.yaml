@@ -30,3 +30,5 @@
         $ref: '#/components/responses/Forbidden'
       '404':
         $ref: '#/components/responses/NotFound'
+      '412':
+        $ref: '#/components/responses/PreCondition'

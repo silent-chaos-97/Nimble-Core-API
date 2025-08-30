@@ -149,3 +149,13 @@ describe('app.models.signer.flattenData', () => {
         otherField: 'also bad'
       }
     })
+
+    expect(result).to.be.an('object')
+    expect(result).to.deep.equal({
+      'somethingA': 'somethingA',
+      'somethingB': 'somethingB',
+      'documentNumber': 'number',
+    })
+  })
+
+})

@@ -80,3 +80,8 @@ describe('app.services.docusignTemplate.fetch', () => {
         "TIS Money Market": "517cd5c7-be62-4d78-93df-b379b99d4d05",
         "TIS Platinum Money Market": "ecd5df78-d3e4-4234-b643-3a711b4cc09c",
         "Disclosure": "dbd0e2d3-91ef-49fc-997c-a3b8b974d17c",
+      }
+      expect(target).to.deep.equal(expectation)
+    })
+  })
+})

@@ -11,3 +11,6 @@ function serializer(data = {}) {
     content: marked(content),
     options: options.map(row => app.serializers.v1.productOption(row))
   }
+}
+
+module.exports = serializer

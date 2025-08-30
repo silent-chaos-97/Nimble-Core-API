@@ -25,3 +25,5 @@ class AccountRequestProduct extends BaseModel {
     }
   }
 }
+
+module.exports = AccountRequestProduct

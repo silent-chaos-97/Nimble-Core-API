@@ -70,3 +70,8 @@ module.exports = {
   },
   info: {},
   declined_reason: 'Document originality could not be verified',
+  declined_codes: [
+    'SPDR17',
+    'SPDR06',
+  ],
+}

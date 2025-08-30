@@ -1,4 +1,3 @@
-// Temp comment
 const sinon = require('sinon')
 const fakePostmark = require('../../../support/mock/postmark')
 const emailPlugin = require('../../../../app/plugins/email')
@@ -108,3 +107,10 @@ describe('app.services.email.inviteReminder', () => {
     it('should update the invitedAt property', async () => {
       let beforeSigner = await knex('signers').where('id', id).first()
       await app.services.email.inviteReminder(id)
+      let afterSigner = await knex('signers').where('id', id).first()
+
+      expect(afterSigner.invited_at.toISOString()).not.to.equal(beforeSigner.invited_at.toISOString())
+      expect(afterSigner.invited_at.toISOString()).to.equal('1970-01-01T00:00:00.000Z')
+    })
+  })
+})

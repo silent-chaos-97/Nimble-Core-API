@@ -30,3 +30,8 @@ function toNumber(any, ifNotNumber = null) {
   return numeric === 0 // coerce
     ? 0 // handle near-zero and non-negated zeros
     : (negative ? -1 : 1) * numeric
+}
+
+module.exports = {
+  toNumber
+}

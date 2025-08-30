@@ -13,3 +13,4 @@ exports.up = (knex) => knex.schema.createTableIfNotExists('files', table => {
   table.timestamp('updated_at').notNullable().defaultTo(knex.fn.now())
 })
 
+exports.down = (knex) => knex.schema.dropTable('files')

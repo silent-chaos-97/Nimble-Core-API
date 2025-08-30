@@ -21,3 +21,5 @@ const Institution = app.db.Model.extend({
     return this.hasMany('InstitutionBranch', 'institution_id')
   },
 })
+
+module.exports = app.db.model('Institution', Institution)

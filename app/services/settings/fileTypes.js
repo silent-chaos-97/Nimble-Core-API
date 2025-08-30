@@ -96,6 +96,7 @@ const fileTypes = [
     type: 'Product',
     name: 'Initial UCC Search'
   },
+  {
     type: 'Product',
     name: 'UCC Filing'
   },
@@ -637,3 +638,42 @@ const fileTypes = [
   },
   {
     type: 'External',
+    name: 'Bareground'
+  },
+  {
+    type: 'External',
+    name: 'Automobile'
+  },
+  {
+    type: 'External',
+    name: 'Fleet Vehicles'
+  },
+  {
+    type: 'External',
+    name: 'Semi Truck'
+  },
+  {
+    type: 'External',
+    name: 'Business Valuation/Stock'
+  },
+  {
+    type: 'External',
+    name: 'Goodwill'
+  },
+  {
+    type: 'External',
+    name: 'Other'
+  }
+]
+
+const fileTypesWithId = {
+  data: fileTypes.map(ft => ({
+    ...ft,
+    id: slugify(ft.name, {
+      replacement: '_',
+      lower: true
+    })
+  }))
+}
+
+module.exports = fileTypesWithId

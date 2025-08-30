@@ -83,3 +83,9 @@ class SearchModel extends BaseModel {
     }[op]
   }
 
+  static prePersist(search) {
+    return !search ? null : _.merge(search, search.filters ? { filters: JSON.stringify(search.filters) } : {})
+  }
+}
+
+module.exports = SearchModel

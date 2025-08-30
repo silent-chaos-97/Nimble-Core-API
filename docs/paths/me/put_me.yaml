@@ -41,3 +41,6 @@
       '404':
         $ref: '#/components/responses/NotFound'
       '409':
+        description: A user with that email already exists
+        schema:
+          $ref: '#/components/responses/Conflict'

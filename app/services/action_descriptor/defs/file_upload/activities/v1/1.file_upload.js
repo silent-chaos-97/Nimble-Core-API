@@ -3,6 +3,7 @@ const _ = require('lodash')
 const moment = require('moment')
 const { wkflTask } = require('../../../../commons/tasks')
 const { derefUsers } = require('../../../../commons/users')
+
 const log = app.logger.getLogger('action.file_upload.1')
 
 const version = 1
@@ -74,3 +75,6 @@ async function activity(context) {
     task: task.id,
     _defer: [task.id]
   }
+}
+
+module.exports = activity

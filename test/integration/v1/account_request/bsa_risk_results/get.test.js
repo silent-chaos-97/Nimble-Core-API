@@ -1,6 +1,7 @@
 
 const uuid = require('uuid')
 
+describe('GET /account-requests/:id/bsa-risk-results', async () => {
   let clock, token
 
   before(async () => {
@@ -158,3 +159,40 @@ const uuid = require('uuid')
             })
             done()
           })
+      }
+
+      it('should 400 on invalid sort parameter', done => {
+        request(app.server)
+          .get(`/v1/account-requests/2552ab85-08da-4bb5-be00-9e94d282d348/bsa-risk-results?sort=unexistent`)
+          .set('Authorization', 'Bearer ' + token)
+          .expect('Content-Type', /json/)
+          .expect(400)
+          .end(err => {
+            if (err) throw new Error(err)
+            done()
+          })
+      })
+
+      it('should sort by position ASC by default', done => {
+        const expected = [
+          0,
+          1,
+          2,
+        ]
+
+        doSortAndExpect('', expected, done)
+      })
+
+      it('should sort by position DESC', done => {
+        const expected = [
+          2,
+          1,
+          0,
+        ]
+        doSortAndExpect('sort=-position', expected, done)
+      })
+
+    })
+
+  })
+})

@@ -14,3 +14,5 @@ rules:
   "node/no-unpublished-bin": "error"
   "node/process-exit-as-throw": "error"
   "node/no-unpublished-require": ["error", { "allowModules": ["bluebird"] }]
+  "mocha/no-exclusive-tests": "error"
+  'no-console': 'error'

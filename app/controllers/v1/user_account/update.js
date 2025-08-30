@@ -48,6 +48,7 @@ async function update(req, res, next) {
 
     if (patch.department && !User.isBranchAdmin(me)) {
       delete patch['department'] // non-admins cannot set workgroups
+    }
 
     if (patch.titles && !_.isEmpty(patch.titles) && !User.isBranchAdmin(me)) {
       delete patch['titles'] // non-admins cannot set titles
@@ -64,3 +65,6 @@ async function update(req, res, next) {
     .then(serializer)
     .then(user => res.status(200).json(user))
     .catch(next)
+}
+
+module.exports = update

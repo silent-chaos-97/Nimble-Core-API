@@ -8,3 +8,6 @@ function get(req, res, next) {
     .then(data => serializer(data))
     .then(data => res.json(data))
     .catch(next)
+}
+
+module.exports = get

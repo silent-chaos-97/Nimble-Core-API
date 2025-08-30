@@ -27,7 +27,6 @@ const RESOURCES = {
   }
 }
 
-// Temp comment
 function acl(resource, param) {
 
   // generate acl middleware
@@ -71,3 +70,6 @@ function acl(resource, param) {
         return next(new NotFoundError())
       }).catch(next)
   }
+}
+
+module.exports = acl

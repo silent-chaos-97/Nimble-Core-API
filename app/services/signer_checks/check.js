@@ -98,3 +98,6 @@ async function check(signerId, tx = app.db) {
     log.error(err, `GeneralSignerCheckError[${signerId}]`)
     return Promise.resolve()
   }
+}
+
+module.exports = check

@@ -27,6 +27,7 @@ columns:
     source: 
       - daily 
       - weekdays
+      - weekends
       - weekly on monday
       - weekly on tuesday
       - weekly on wednesday
@@ -78,3 +79,8 @@ columns:
     type: checkbox
     checkedTemplate: NO DST
     uncheckedTemplate: DST
+
+  - data: meeting_time
+    type: time
+    timeFormat: h:mm a
+    correctFormat: true

@@ -89,3 +89,31 @@ async function _defaultNotifications(event) {
     log.error({ err, op: 'taskCreatedNotification', phase: 'FAIL' })
     return []
   }
+}
+
+async function notify(event) {
+  const taskId = _.get(event, 'body.current.id')
+
+  const delegate = _delegate(event)
+
+  const notifications =
+    delegate && _.isFunction(delegate.notifications)
+      ? await delegate.notifications(event)
+      : await _defaultNotifications(event)
+
+  if (!notifications || _.isEmpty(notifications)) return []
+
+  return Promise.all(
+    notifications.map(notification => {
+      try {
+        return app.services.notification.create({ ...notification, taskId })
+      } catch (err) {
+        log.error(err)
+      }
+    })
+  )
+}
+
+module.exports = {
+  notify
+}

@@ -12,6 +12,7 @@ const TYPES = {
   ],
   politicalExposure: [
     "pep",
+    "pep-class-1",
     "pep-class-2",
     "pep-class-3",
     "pep-class-4",
@@ -122,3 +123,13 @@ async function parseHitDocument(hit) {
   }
 
   return schema
+}
+
+async function parse(searchResult) {
+  const hits = _.get(searchResult, 'hits', [])
+  return Promise.all(hits.map(hit => parseHitDocument(hit)))
+}
+
+
+
+module.exports = parse

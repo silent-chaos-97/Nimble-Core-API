@@ -10,3 +10,6 @@ async function compute(req, res) {
 
   return app.services.analysis.compute(op, req.body)
     .then(data => res.status(200).json(data))
+}
+
+module.exports = compute

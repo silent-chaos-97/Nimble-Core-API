@@ -3,3 +3,4 @@
 /migrations/**
 /seeds/**
 /public/**
+/app/services/workflow_job/**

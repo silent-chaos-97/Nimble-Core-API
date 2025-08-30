@@ -65,3 +65,6 @@ function serializer(data) {
   if (data.referrers) format.referrers = data.referrers.map(ref => _.pick(ref, ['id', 'email', 'name']))
 
   return format
+}
+
+module.exports = serializer

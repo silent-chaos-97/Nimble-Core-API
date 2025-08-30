@@ -236,7 +236,6 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
       await seed.user.create('1052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.account.create('0052ab85-08da-4bb5-be00-9e94d282d310')
       await seed.document.create()
-// Temp comment
       await seed.accountRequest.create(accountRequestId)
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454701')
       await seed.signer.create('2e31d8c0-1226-4651-8a5d-4bd8aa454702')
@@ -425,3 +424,29 @@ describe('GET /webhooks/docusign/connect/:id/contract/:token', () => {
               expect(signer2Status).to.equal('SIGNED')
               done()
             })
+        })
+    })
+
+    it('should not touch a signer that did not change or does not exist', done => {
+      request(app.server)
+        .post(`/v1/webhooks/docusign/connect/${accountRequestId}/contract/${goodToken}`)
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end((err) => {
+          if (err) return done(err)
+
+          request(app.server)
+            .get(`/v1/account-requests/${accountRequestId}`)
+            .set('Authorization', 'Bearer ' + token)
+            .expect(200)
+            .end(async (err, res) => {
+              if (err) return done(err)
+              expect(res.body.signers[3].contractDocumentSignerStatus).to.equal('SENT')
+              await sleep(30)
+              downloadScope.done()
+              done()
+            })
+        })
+    })
+  })
+})

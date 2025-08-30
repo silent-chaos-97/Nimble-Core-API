@@ -219,3 +219,17 @@ const failedMRTD = {
       "version": "2.10.0",
       "startTime": "2020-03-05T17:08:49.533Z",
       "finishTime": "2020-03-05T17:08:49.661Z",
+      "durationTimeInSeconds": 0.128,
+      "taskId": 299,
+      "workerId": 1,
+      "result": null
+    }
+  ]
+}
+
+const invalidImageResponse = {
+  code: 'IMAGE_IS_NOT_VALID_BASE64_STRING',
+  summary: 'Error, imageBase64 is not able to decode!',
+}
+
+module.exports = {successResponse, successMRTD, invalidImageResponse, failedMRTD, successUSDLAAMVABack}

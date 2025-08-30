@@ -8,6 +8,7 @@ const properties = [
   'templateApprove',
   'templateDecline',
   'routingNumber',
+  'logoUri',
   'backgroundImageUri',
   'publicMetadata',
   'branchesCount',
@@ -19,3 +20,6 @@ const properties = [
 
 function serializer(data) {
   return defaultSerializer(properties, data)
+}
+
+module.exports = serializer

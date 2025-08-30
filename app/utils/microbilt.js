@@ -67,3 +67,8 @@ function signerPersonInfo(signer) {
   }
 
   return { PersonInfo }
+}
+
+module.exports = {
+  signerPersonInfo
+}

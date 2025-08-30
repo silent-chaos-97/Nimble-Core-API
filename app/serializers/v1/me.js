@@ -20,3 +20,6 @@ function serializer(data) {
   }
 
   return format
+}
+
+module.exports = serializer

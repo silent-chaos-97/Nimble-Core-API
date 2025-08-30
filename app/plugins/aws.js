@@ -707,6 +707,7 @@ class AWSFacade {
           `[s3Upload] was called with name ${name} and acl ${acl} ${this.config.s3.upload_bucket}/${folder}/${name}.${ext}`
         )
 
+        const Key = `${folder}/${name}${name.includes('.') ? '' : '.' + ext}`
 
         this.s3.putObject(
           {
@@ -802,3 +803,56 @@ class AWSFacade {
     logger.debug(`[getContent] finished for id ${id}`)
     return response.Body.toString('base64')
   }
+}
+
+const s3 = _.trim(config.get('aws.s3_endpoint'))
+const up = _.trim(config.get('aws.s3_upload_bucket'))
+const up_cdn = _.trim(config.get('image.uploads_cdn'))
+
+const awsConfigVars = {
+  credentials: {
+    // TODO-SWF we need to give these credentials access to SWF
+    accessKeyId: config.get('aws.key'),
+    secretAccessKey: config.get('aws.secret')
+  },
+  endpoint: config.get('aws.endpoint'),
+  cdn: up_cdn
+    ? `${config.get('protocol')}://${up_cdn}`
+    : s3.startsWith('http')
+      ? (s3.endsWith('/') ? s3 : s3 + '/') + up
+      : `${config.get('protocol')}://${up}.${s3}`,
+  s3: {
+    ftp_bucket: config.get('aws.s3_ftp_bucket'),
+    upload_bucket: up,
+    endpoint: s3,
+    region: config.get('aws.ses_region') || config.get('aws.region'),
+    signatureVersion: config.get('aws.s3_signature_version') || 'v4',
+    PresignedUrlExpires: 60
+  },
+  ses: {
+    endpoint: config.get('aws.ses_endpoint'),
+    region: config.get('aws.ses_region') || config.get('aws.region'),
+    from: config.get('aws.ses_email_from'),
+    version: config.get('aws.ses_email_version') || 'latest'
+  },
+  lambda: {
+    endpoint: config.get('aws.lambda_endpoint'),
+    region: config.get('aws.lambda_region') || config.get('aws.region')
+  },
+  sns: {
+    region: config.get('aws.sns_region') || config.get('aws.region'),
+    apiVersion: config.get('aws.sns_version') || '2010-03-31'
+  },
+  sms: {
+    senderId: config.get('aws.sms_sender_id') || 'NimbleFi',
+    originationNumbers: (config.get('aws.sms_origination_numbers') || '').split(',')
+  },
+  swf: {
+    endpoint: config.get('aws.swf_endpoint'),
+    apiVersion: config.get('aws.swf_version'),
+    region: config.get('aws.swf_region') || config.get('aws.region'),
+    domain: config.get('aws.swf_domain')
+  }
+}
+
+module.exports = new AWSFacade(awsConfigVars)

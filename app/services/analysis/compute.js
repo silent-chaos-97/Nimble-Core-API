@@ -18,3 +18,25 @@ async function compute(operation, opts, tx = app.db) {
   if (!computer) return Promise.reject(new Error(`OperationNotSupported[${operation}]`))
 
   return computer(opts)
+}
+
+async function write_global_google_sheet(opts) {
+  if (!opts.rows) return Promise.reject(new Error('body.rows required'))
+
+  // NOTE: don't take sheet id from opts so as not to expose security hole
+  const spreadsheetId = app.config.get('fa.globalSheetId') || '1HsYvwR8fi0HHECBLW8y3tIdUk0Spb_oMlBewts5RQsc'
+
+  const sheets = await google.sheets.client()
+
+  return sheets.spreadsheets.values.update({
+    range: "'input'!D2",
+    valueInputOption: 'USER_ENTERED',
+    spreadsheetId,
+    requestBody:{
+      majorDimension: 'ROWS',
+      values: opts.rows
+    }
+  })
+}
+
+module.exports = compute

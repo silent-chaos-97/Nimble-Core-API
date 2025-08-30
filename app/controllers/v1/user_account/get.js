@@ -19,6 +19,7 @@ function get(req, res, next) {
 
   const isSuperAdmin = hasRole(Roles.SuperAdmin)
 
+  if (!user.branchId && !isSuperAdmin) return next(new UnauthorizedError('BranchRequired'))
   if (!user.institutionId && !isSuperAdmin) return next(new UnauthorizedError('InstitutionRequired'))
 
   const example = {
@@ -33,3 +34,6 @@ function get(req, res, next) {
     .then(serializer)
     .then(user => res.status(200).json(user))
     .catch(next)
+}
+
+module.exports = get

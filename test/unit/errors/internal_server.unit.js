@@ -37,3 +37,6 @@ describe('InternalServerError', () => {
     it('should output custom message', () => {
       let error = new ErrorClass('custom error msg')
       expect(error.message).to.equal('custom error msg')
+    })
+  })
+})

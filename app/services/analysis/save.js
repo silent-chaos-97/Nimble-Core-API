@@ -152,3 +152,15 @@ function computeDebtScheduleRow(row) {
 
 function debtRemaining(opts) {
   return opts.paymentAtCalc ? _.round(opts.paymentAtCalc.principalBalance) : null
+}
+
+function cpltd(opts) {
+  if (!opts.paymentAtCalc) return null
+
+  const currentPayment = _.get(opts, ['schedule', opts.numPaymentsToCalc + 12])
+  if (!currentPayment) return null
+
+  return _.min([_.round(opts.paymentAtCalc.principalBalance - currentPayment.principalBalance), opts.row.debtRemaining])
+}
+
+module.exports = save

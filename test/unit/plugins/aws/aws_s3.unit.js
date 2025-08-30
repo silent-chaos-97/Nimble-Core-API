@@ -142,3 +142,12 @@ describe("AWS Facade for s3", () => {
 
     it('should call real s3 with correct parameters', async () => {
       await AWS.s3PresignedUrl('id')
+      let expectedCall = {
+        Bucket: AWS.config.s3.upload_bucket,
+        Key: 'id',
+        Expires: 60
+      }
+      expect(AWS.s3.getSignedUrl).to.have.been.calledWith('getObject', expectedCall)
+    })
+  })
+})

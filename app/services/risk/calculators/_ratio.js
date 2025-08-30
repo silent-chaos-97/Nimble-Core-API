@@ -85,3 +85,4 @@ function relativePerformance(performing, ratio, std, high) {
   return (high > std)
     ? (ratio - std) / (high - std)
     : (std - ratio) / (std - high)
+}

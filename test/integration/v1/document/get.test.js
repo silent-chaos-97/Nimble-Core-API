@@ -46,6 +46,7 @@ describe('GET /documents/:id', () => {
 
   describe('when authentication token does not have valid scope', () => {
     it('should return 403 when token scope is not documents', async () => {
+      const data = { scopes: ['users'] }
       token = await helpers.getScopedAuthToken(data)
 
       return request(app.server)
@@ -91,3 +92,9 @@ describe('GET /documents/:id', () => {
 
     it('should return the aws location with presigned uri', async () => {
       const expected = /.*X-Amz-Signature=.*/g
+      return request(app.server)
+        .get(`/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=${token}`)
+        .expect('Location', expected)
+    })
+  })
+})

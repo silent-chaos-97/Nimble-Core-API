@@ -34,3 +34,6 @@ npm run dev
 
 The blueprints are used to mock expected results returned from API.
 
+Example:
+
+  blueprints.institution.get('singular')

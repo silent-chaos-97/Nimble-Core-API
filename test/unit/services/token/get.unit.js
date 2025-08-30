@@ -151,3 +151,13 @@ describe('app.services.token.get', () => {
 
   it('should include private claim userId in token', () => {
     const token = target(options)
+    const actual = decode(token)
+    expect(actual).to.have.deep.property('userId', '123')
+  })
+
+  it('should not include other private claims', () => {
+    const token = target(options)
+    const actual = decode(token)
+    expect(actual).not.to.have.deep.property('expiration', 10)
+  })
+})

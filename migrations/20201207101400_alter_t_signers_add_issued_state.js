@@ -12,3 +12,4 @@ exports.down = function(knex, Promise) {
   return knex.schema.alterTable('signers', function (table) {
     table.dropColumn('document_issued_state')
   })
+};

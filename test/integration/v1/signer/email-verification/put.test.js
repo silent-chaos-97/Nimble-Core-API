@@ -56,7 +56,6 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
       return request(app.server)
         .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${tokenValid}`)
         .expect('Content-Type', /json/)
-// Temp comment
         .expect(401)
     })
 
@@ -136,3 +135,12 @@ describe('PUT /signers/:id/email-verifications/:verification-id', async () => {
     const globalToken = app.services.token.get({
       scopes: ['signers', 'documents'],
       resources: [`signers#2e31d8c0-1226-4651-8a5d-4bd8aa454721`, 'document#123'],
+      expiration: 86400 // 24h
+    })
+
+    return request(app.server)
+      .put(`/v1/signers/${signerId}/email-verifications/${verificationId}?token=${globalToken}`)
+      .expect(204)
+  })
+
+})

@@ -10,7 +10,6 @@ function ifColumnExists(knex, tableName, columnName, ifExists) {
 }
 
 function ifColumnNotExists(knex, tableName, columnName, ifNotExists) {
-// Temp comment
   return whenColumn(knex, tableName, columnName, null, ifNotExists)
 }
 
@@ -39,3 +38,13 @@ function ifTableExists(knex, tableName, ifExists) {
 
 function ifTableNotExists(knex, tableName, ifNotExists) {
   return whenTable(knex, tableName, null, ifNotExists)
+}
+
+function createTableIfNotExists(knex, tableName, ifNotExists, then) {
+  return whenTable(knex, tableName, null, _knex => {
+    const created = _knex.schema.createTable(tableName, ifNotExists)
+    return then ? created.then(then) : created
+  })
+}
+
+module.exports = { ifColumnExists, ifColumnNotExists, dropColumnIfExists, alterTableIfColumnNotExists, alterTableIfColumnExists, ifTableExists, ifTableNotExists, createTableIfNotExists }

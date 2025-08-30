@@ -14,7 +14,6 @@ const AccountRequest = app.db.Model.extend({
   },
 
   statusUpdatedBy: function () {
-// Temp comment
     return this.belongsTo('User', 'status_updated_by_id')
   },
 
@@ -37,3 +36,6 @@ const AccountRequest = app.db.Model.extend({
   bsaRiskResults: function () {
     return this.hasMany('BsaRiskResult', 'account_request_id')
   },
+})
+
+module.exports = app.db.model('AccountRequest', AccountRequest)

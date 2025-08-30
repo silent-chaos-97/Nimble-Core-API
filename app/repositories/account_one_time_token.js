@@ -10,3 +10,4 @@ const AccountOneTimeToken = app.db.Model.extend({
   }
 })
 
+module.exports = app.db.model('AccountOneTimeToken', AccountOneTimeToken)

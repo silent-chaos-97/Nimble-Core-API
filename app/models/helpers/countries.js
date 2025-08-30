@@ -235,3 +235,18 @@ const countries = [
   'USA',
   'UZB',
   'VAT',
+  'VCT',
+  'VEN',
+  'VGB',
+  'VIR',
+  'VNM',
+  'VUT',
+  'WLF',
+  'WSM',
+  'YEM',
+  'ZAF',
+  'ZMB',
+  'ZWE'
+]
+
+module.exports = { countries }

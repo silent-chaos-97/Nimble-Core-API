@@ -56,3 +56,7 @@ SignerComplianceVerificationItem:
       title: When was the result created
       type: string
       format: date-time
+    updatedAt:
+      title: When was the result last updated
+      type: string
+      format: date-time

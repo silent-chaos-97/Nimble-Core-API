@@ -21,3 +21,6 @@ async function get(user, fileEntryId, tx = app.db) {
   }
 
   return data
+}
+
+module.exports = get

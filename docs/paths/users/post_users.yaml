@@ -29,3 +29,5 @@
         description: A user with that email already exists
         content:
           application/json:
+            schema:
+              $ref: '#/components/responses/Conflict'

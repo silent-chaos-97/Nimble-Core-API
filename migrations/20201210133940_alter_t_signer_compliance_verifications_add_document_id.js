@@ -11,3 +11,4 @@ exports.down = function (knex) {
     table.dropColumn('document_id')
     table.dropColumn('search_id')
   })
+};

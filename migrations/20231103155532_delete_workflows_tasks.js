@@ -6,9 +6,9 @@ exports.up = knex =>
   knex('tasks')
     .delete()
     .then(() => knex('workflows').delete())
-// Temp comment
 
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
+exports.down = knex => {}

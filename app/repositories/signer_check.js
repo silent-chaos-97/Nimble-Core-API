@@ -5,7 +5,9 @@ const SignerCheck = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
+  signer: function() {
     return this.belongsTo('Signer', 'signer_id')
   }
 })
 
+module.exports = app.db.model('SignerCheck', SignerCheck)

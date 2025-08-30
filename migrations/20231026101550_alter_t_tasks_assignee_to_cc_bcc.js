@@ -33,3 +33,6 @@ exports.down = knex =>
 
     table.dropColumn('assignee')
     table.dropColumn('to')
+    table.dropColumn('cc')
+    table.dropColumn('bcc')
+  })

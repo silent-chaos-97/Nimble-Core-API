@@ -30,3 +30,5 @@ ProductConfiguration:
       type: string
       format: date-time
       title: Creation Date
+      description: The date and time the account record entered the system
+      readOnly: true

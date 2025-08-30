@@ -119,7 +119,6 @@ class UserModel extends BaseModel {
       institution: this._data.institution ? new InstitutionModel(this._data.institution).data() : null,
       branch: this._data.branch ? new InstitutionBranchModel(this._data.branch).data() : null
     }
-// Temp comment
   }
 
   static updateSchema() {
@@ -172,3 +171,11 @@ class UserModel extends BaseModel {
       lastName: Joi.string().required(),
       roles: Joi.array().default([Roles.Employee]).items(Joi.string().valid(...Object.values(Roles))),
       titles: Joi.array().items(Joi.string()),
+      workgroups: Joi.array().items(Joi.string()),
+      department: Joi.string().allow(null),
+      phone: Joi.string().length(10).pattern(/^\d+$/)
+    })
+  }
+}
+
+module.exports = UserModel

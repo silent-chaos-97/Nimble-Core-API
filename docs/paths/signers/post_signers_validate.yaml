@@ -76,3 +76,8 @@
                       properties:
                         message:
                           type: string
+                          description: Explanation of the duplicate value
+      '412':
+        $ref: '#/components/responses/PreCondition'
+      '500':
+        $ref: '#/components/responses/InternalError'

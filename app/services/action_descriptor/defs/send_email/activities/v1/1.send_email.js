@@ -52,3 +52,6 @@ async function activity(context) {
     logger.error(error)
     return Promise.reject(error)
   }
+}
+
+module.exports = activity

@@ -23,7 +23,6 @@ function validateAccountRequestStatus(status) {
 }
 
 async function validateAndUpdateSignerStatus(signerId, tx = app.db) {
-// Temp comment
   logger.debug(`[validateAndUpdateSignerStatus] - started for signer [${signerId}]`)
 
   const signer = await app.services.signer.get(signerId, tx)
@@ -88,3 +87,69 @@ function intentsToModify(before, after, params = []) {
   }
 
   return false
+}
+
+
+async function update(payload, tx = app.db) {
+  let triggerUpdateEvent = false
+  let data = await validate(payload)
+  logger.debug(`[update] - started for signer [${data.id}]`)
+
+  // load models
+  const signer = await app.services.signer.get(data.id, tx)
+  const accountRequest = await app.services.accountRequest.get(signer.accountRequestId, tx)
+
+  /** NOTE:
+   * we use _.pick() to only update parameters we are feeding this function
+   * or else JOI defaults will also be updated and we don't want that
+   */
+  const signerData = _.pick(data, Object.keys(payload))
+
+  // check if the signer documents are ok
+  await validateDocuments(signerData, tx)
+
+  // update signer
+  await updateSigner(signer.id, signerData, tx)
+
+  // run post update checks
+  // thrown Exceptions here will rollback the update
+  if (intentsToModify(signer, signerData, SignerModel.completeStatusProps())) {
+    triggerUpdateEvent = true
+
+    // check if the account request can be updated
+    validateAccountRequestStatus(accountRequest.status)
+
+    // check if all data is OK, and update the status
+    await validateAndUpdateSignerStatus(signer.id, tx)
+
+    // update contract in docusign with new signer information
+    try {
+      await app.services.contract.update(signer.id, tx)
+    } catch (err) {
+      logger.debug(`[update] - could not execute app.services.contract.update for [${signer.id}]`)
+    }
+
+  }
+
+  if (intentsToModify(signer, signerData, ['email'])) {
+    // trigger email verification
+    await app.services.emailVerification.create(signer.id, tx)
+  }
+
+
+  // update account request status
+  await updateAccountRequestStatus(accountRequest.id, tx)
+
+  if (triggerUpdateEvent) { // only trigger event, if personal data changed
+    await app.services.eventStream.publish('topicSigner', {
+      id: signer.id,
+      type: EVENT_TYPE_UPDATED,
+      body: signer
+    })
+  }
+
+  logger.debug(`[update] - finished for signer [${signer.id}]`)
+  return await app.services.signer.get(signer.id, tx)
+}
+
+module.exports = update

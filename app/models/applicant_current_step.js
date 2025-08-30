@@ -7,7 +7,6 @@ class ApplicantCurrentStep extends BaseModel {
   }
 
   static props() {
-// Temp comment
     return ['userId', 'currentStep', 'expiresAt', 'createdAt', 'updatedAt']
   }
 
@@ -18,3 +17,5 @@ class ApplicantCurrentStep extends BaseModel {
     })
   }
 }
+
+module.exports = ApplicantCurrentStep

@@ -182,3 +182,15 @@ columns:
 
   - data: branch_distance_miles
     type: integer
+
+
+  #      - Inflation indexed 10
+  #      - 5-year
+  #      - 7-year
+  #      - 10-year
+  #      - 20-year
+  #      - 30-year
+  #      - Inflation-indexed long-term average 11
+
+
+  # ase Rate	Rate Consideration	Effective Rate (today)	Rate Type 	Update Frequency (if variable)	Reprice (base rate)	Reprice (consideration)	Availability (select branch locations)	Distance Radius From Branch Locations

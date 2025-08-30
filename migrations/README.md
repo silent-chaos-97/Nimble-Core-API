@@ -27,3 +27,5 @@ Example:
     knex migrate:make alter_t_users_add_name
     # To drop a column
     knex migrate:make alter_t_users_drop_name
+    # To execute several generic changes 
+    knex migrate:make alter_t_users

@@ -66,3 +66,25 @@ async function analysis(file, processor = 'auto', opts, tx = app.db) {
     log.error(err, { op: 'analysis', phase: 'failure', document, processor, opts })
     return Promise.reject(err)
   }
+}
+
+async function irsPdf(file, opts) {
+  //const FunctionName = `nimble-data-api-analyzers-${app.env || 'dev'}-analyze`
+  // FIXME: currently we use the dev environment for experimental data services
+  const FunctionName = `nimble-data-api-analyzers-${'dev'}-analyze`
+
+  const request = {
+    FunctionName,
+    Payload: JSON.stringify({ body: { ...file } })
+  }
+
+  log.info({ op: 'analysis', processor: FunctionName, opts, request })
+
+  return app.plugins.aws.invokeLambda(request)
+    .then(res => _.get(res, 'Payload'))
+    .then(Payload => app.plugins.codec.fromJsonAsync(Payload))
+    .then(Payload => _.get(Payload, 'body'))
+    .then(body => app.plugins.codec.fromJsonAsync(body))
+}
+
+module.exports = analysis

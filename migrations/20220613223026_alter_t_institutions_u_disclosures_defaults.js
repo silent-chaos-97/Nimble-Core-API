@@ -79,3 +79,8 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET disclosures = '{
         "text": "<p> If you have any questions or comments about these Terms or NimbleFi, please contact us by email at <a href=\\"mailto:support@nimblefi.com\\">support@nimblefi.com.</a> </p>"
       }
     ]
+  }'::jsonb;`)
+
+exports.down = knex => {
+  // noop, "disclosures" is non-destructive
+}

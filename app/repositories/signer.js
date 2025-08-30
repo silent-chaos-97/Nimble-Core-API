@@ -4,7 +4,6 @@ const Signer = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 
-// Temp comment
   institution: function () {
     return this.belongsTo('Institution', 'institution_id')
   },
@@ -17,3 +16,5 @@ const Signer = app.db.Model.extend({
     return this.hasMany('SignerCheck', 'signer_id')
   },
 })
+
+module.exports = app.db.model('Signer', Signer)

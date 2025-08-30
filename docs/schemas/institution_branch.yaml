@@ -6,6 +6,7 @@ InstitutionBranch:
       type: string
       format: uuidv4
       title: Institution Branch ID
+      description: The unique identifier of the Institution Branch
       readOnly: true
       example: 9552ab85-08da-4bb5-be00-9e94d282d311
     name:
@@ -16,3 +17,5 @@ InstitutionBranch:
     externalId:
       type: string
       title: External ID
+      description: An id that links to an external resource
+      example: central-bank-sesame-street-123

@@ -1,4 +1,5 @@
 module.exports = {
+  reference: '5674563147',
   event: 'verification.accepted',
   email: 'john@wearesingular.com',
   country: 'US',
@@ -64,3 +65,8 @@ module.exports = {
       document_proof: 1,
       document_must_not_be_expired: 1,
       document_country: 1
+    },
+    face: 1
+  },
+  info: {},
+}

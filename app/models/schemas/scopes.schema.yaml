@@ -19,3 +19,5 @@ defaults:
   - name: Personal
   - name: Business
   - name: Business / Sole Prop
+  - name: Business / Partnership
+  - name: Business / LLC

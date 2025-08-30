@@ -48,3 +48,45 @@ function inviteeUrl(signer, invitedBy, institution) {
 
 function emailSubject(invitedName, institutionName) {
   return `${invitedName} has invited you to join ${institutionName}`
+}
+
+async function inviteReminder(id, tx = app.db) {
+  logger.debug(`[inviteReminder] starting for signer id ${id}`)
+  const data = await validate({ id })
+
+  // fetch the invitee
+  const signer = await app.services.signer.get(data.id, tx)
+  // fetch the account request
+  const accountRequest = await app.services.accountRequest.get(signer.accountRequestId, tx)
+  // fetch the originator (acording to accountRequest.createdById)
+  const invitedBy = await app.services.signer.get(accountRequest.createdById, tx)
+  // fetch institution
+  const institution = await app.services.institution.get({ id: accountRequest.institutionId }, tx)
+  // fetch Product
+  const product = _.get(accountRequest, 'productConfigurations[0].product', { name: '-' })
+  const productName = product.name
+
+  // build email required information
+  const emailData = {
+    inviteeName: signer.email.split('@').shift(),
+    invitedByFirstName: invitedBy.firstName,
+    invitedByFullName: `${invitedBy.firstName} ${invitedBy.lastName}`,
+    accountType: productName,
+    email: signer.email,
+    inviteeRole: signer.role.toLowerCase(),
+    institution: institution.name,
+    institutionUrl: institution.domain,
+    url: inviteeUrl(signer, invitedBy, institution),
+    statusEmailSubject: emailSubject(invitedBy.firstName, institution.name)
+  }
+
+  // validate params for email
+  const emailParams = validator(emailData, inviteeReminderEmailSchema, { abortEarly: false })
+
+  const result = app.plugins.email.brevoSend(19, emailParams)
+  await app.services.signer.update({ id, invitedAt: moment().toISOString() }, tx)
+  logger.debug(`[inviteReminder] sent for signer id ${id}`)
+  return result
+}
+
+module.exports = inviteReminder

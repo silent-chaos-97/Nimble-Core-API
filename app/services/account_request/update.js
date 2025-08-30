@@ -25,7 +25,6 @@ async function validate(params) {
 function getSignerFullName(signer) {
   if (signer == null) {
     return ''
-// Temp comment
   }
 
   const names = []
@@ -125,3 +124,103 @@ async function stateTransition(payload, tx = app.db) {
   }
 
   return !_.isEmpty(fns) ? Promise.all(fns) : Promise.resolve()
+}
+
+async function update(params, statusUpdatedById, tx = app.db) {
+  // simple update, not changing statusUpdatedById
+  if (!statusUpdatedById) {
+    const data = await validate(params)
+    const accountRequest = await app.services.accountRequest.get(data.id, tx)
+
+    if (_.has(data, 'status')) {
+      // when moving to INCOMPLETE signer creation is closed
+      if (data.status === 'INCOMPLETE' && accountRequest.status !== 'DRAFT') {
+        throw new PreconditionFailedError('Status can only be changed to INCOMPLETE if it was previously DRAFT')
+      }
+      // when moving to PENDING all signers have all personal data
+      if (data.status === 'PENDING' && accountRequest.status !== 'INCOMPLETE') {
+        throw new PreconditionFailedError('Status can only be changed to PENDING if it was previously INCOMPLETE')
+      }
+
+      await stateTransition(
+        { from: accountRequest.status, to: data.status, accountRequest: accountRequest, options: null },
+        tx
+      )
+    }
+
+    if (_.has(data, 'productConfigurations')) {
+      if (accountRequest.status !== 'DRAFT' && accountRequest.status !== 'INCOMPLETE') {
+        throw new PreconditionFailedError('Can only update product configurations on status DRAFT or INCOMPLETE')
+      }
+
+      if (accountRequest.productConfigurations.length != 0) {
+        // Delete previous products configuration
+        const payload = { account_request_id: accountRequest.id }
+        await AccountRequestProduct.where(payload).destroy({ require: false, transacting: tx })
+        await AccountRequestProductOption.where(payload).destroy({ require: false, transacting: tx })
+      }
+
+      await createProductConfigurations(accountRequest.id, data, tx)
+    }
+
+    await referrers.normalizeReferredById(data, accountRequest.institutionId, tx) // mutates data.referredById
+
+    // account request update
+    await AccountRequest.forge({ id: data.id })
+      .save({ ..._.omit(data, AccountRequestModel.relations()) }, {
+        method: 'update',
+        transacting: tx
+      })
+
+    return await app.services.accountRequest.get(accountRequest.id, tx)
+  }
+
+  // complex update, changing statusUpdatedById
+  const data = await validate({
+    ...params,
+    statusUpdatedById,
+    statusUpdatedAt: new Date()
+  })
+
+  const user = await app.services.user.get({ id: statusUpdatedById }, tx)
+  const id = await tx.transaction(async tx => {
+    // fetch
+    const accountRequest = await app.services.accountRequest.get(data.id, tx)
+
+    if (_.has(data, 'status')) {
+      if (accountRequest.status === 'APPROVED' || accountRequest.status === 'DECLINED')
+        return Promise.reject(new PreconditionFailedError('Status can not be changed if it was previously ' + accountRequest.status))
+
+      if (accountRequest.status !== 'SIGNED' && data.status === 'APPROVED')
+        return Promise.reject(new PreconditionFailedError('Status can only be changed to APROVED if it was previously SIGNED'))
+
+      try {
+        await stateTransition({
+          from: accountRequest.status,
+          to: data.status,
+          accountRequest: accountRequest,
+          options: {
+            cc: user.email,
+            statusEmailSubject: data.statusEmailSubject,
+            statusEmailBody: data.statusEmailBody.replace(/\n/g, '<br/>')
+          }
+        }, tx)
+      } catch(err) {
+        logger.error(err)
+        return Promise.reject(err)
+      }
+    }
+
+    // update
+    const updatedAccountRequest = await AccountRequest.forge({ id: data.id }).save(data, {
+      method: 'update',
+      transacting: tx
+    })
+
+    return updatedAccountRequest.get('id')
+  })
+
+  return app.services.accountRequest.get(id, tx)
+}
+
+module.exports = update

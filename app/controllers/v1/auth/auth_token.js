@@ -122,7 +122,6 @@
 
 // async function auth_tokens(req, res) {
 //   try {
-// Temp comment
 //     const { id, role, method } = req.body
 //
 //     if (!id){
@@ -147,3 +146,13 @@
 //       return res.status(500).json({ message: 'Something went wrong', status:false })
 //     }
 //   }
+// }
+
+const app = require('../../../core')
+const service = app.services.auth
+
+async function auth_tokens() {
+  return service.authToken()
+}
+
+module.exports = auth_tokens

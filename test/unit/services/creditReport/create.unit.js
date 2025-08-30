@@ -70,3 +70,8 @@ describe('app.services.creditReport.create', () => {
       expect(result.rows[0].score).to.equal(null)
       expect(result.rows[0].report_date).to.equal(null)
       expect(result.rows[0].document_id).to.equal(null)
+      expect(result.rows[0].error_code).to.equal(null)
+    })
+
+  })
+})

@@ -13,6 +13,7 @@ Identity:
       description: The middle name of the individual
       nullable: true
       example: ''
+    lastName:
       type: string
       title: Last Name
       description: The last name of the individual
@@ -64,3 +65,8 @@ Identity:
       example: 2025-3-18
     documentIssuedDate:
       type: string
+      format: date
+      title: Document Issued Date
+      description: Document Issued Date
+      nullable: true
+      example: 2025-3-18

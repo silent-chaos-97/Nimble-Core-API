@@ -132,3 +132,12 @@ exports.up = knex => knex.schema.raw(`UPDATE institutions SET public_metadata = 
         "enum": ["yes", "no"],
         "score": {"yes": 1},
         "required": true,
+        "default": ""
+      }
+    }
+  }'::jsonb
+);`)
+
+exports.down = knex => {
+  // noop, "bsa" is non-destructive
+}

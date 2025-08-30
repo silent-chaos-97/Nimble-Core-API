@@ -75,3 +75,8 @@ describe('POST /signers/:id/invites', async () => {
       .expect('Content-Type', /json/)
       .set('Authorization', 'Bearer ' + token)
       .expect(201)
+      .then(() => {
+        expect(inviteSignerEmailSpy).to.have.been.calledWith('2e31d8c0-1226-4651-8a5d-4bd8aa454722')
+      })
+  })
+})

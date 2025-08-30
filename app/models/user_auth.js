@@ -35,3 +35,6 @@ class UserAuthModel extends BaseModel {
         .limit(1)
     }).fetch({ transacting: tx })
   }
+}
+
+module.exports = UserAuthModel

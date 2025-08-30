@@ -1,3 +1,4 @@
+/account-requests/{id}:
   put:
     tags:
       - Account Request
@@ -42,3 +43,6 @@
       '404':
         $ref: '#/components/responses/NotFound'
       '412':
+        description: Account Request Must be "PENDING" for it state to be changed
+        schema:
+          $ref: '#/components/responses/PreCondition'

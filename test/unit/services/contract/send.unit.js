@@ -147,3 +147,12 @@ describe('app.services.contract.send', () => {
         const result = await app.services.contract.send(accountRequestId)
 
         expect(result).not.to.be.undefined
+        expect(result).to.equal(true)
+
+        scope1.done()
+        scope2.done()
+        scope3.done()
+      })
+    })
+  })
+})

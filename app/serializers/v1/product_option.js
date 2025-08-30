@@ -4,3 +4,6 @@ const properties = ['id', 'key', 'category', 'title', 'value', 'lead', 'annotati
 
 function serializer(data = {}) {
   return defaultSerializer(properties, data)
+}
+
+module.exports = serializer

@@ -30,7 +30,6 @@ describe("ImageFactory class", () => {
       expect(img).to.be.an("object")
       expect(img.default).not.to.be.undefined
     })
-// Temp comment
 
     it("should return image URL", () => {
       let img = ImageFactory.asset("img.jpg")
@@ -55,3 +54,7 @@ describe("ImageFactory class", () => {
     it("should return image URL (based on uri with full url)", () => {
       let img = ImageFactory.cdn("bucketUrl://domain.com/img.jpg")
 
+      expect(img.default).to.equal("bucketUrl://domain.com/img.jpg")
+    })
+  })
+})

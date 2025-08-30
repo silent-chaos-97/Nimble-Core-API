@@ -2,6 +2,7 @@
 # Nimble Core
 
 the api behind the nimble project.
+
 ### System Requirements
 
 - nodejs = 14
@@ -186,3 +187,15 @@ The API documentation is specified using [Swagger 2.0](https://github.com/OAI/Op
 The API documentation is defined in the file `docs/spec.yaml` and available 'http://localhost:8080/'.
 
 ## External Services
+
+- Docusign: Refer to /services/docusign_template/notes.md
+- Credit Bureau: Refer to /services/credit_report/notes.md
+
+## Converting HTML to PDF
+
+we are using a lambda function to convert html to pdf (https://github.com/zeplin/zeplin-html-to-pdf). this function is running for each env.
+to Update/create new lambdas follow the steps bellow:
+1) create a new function, with at least 30 secs timeout and 1024 RAM
+2) Add the following env var: `FONTCONFIG_PATH=/var/task/fonts`
+3) pull from https://github.com/zeplin/zeplin-html-to-pdf
+4) run `$ npm run pack && aws lambda update-function-code --region us-east-2 --function-name [FUNCTION_NAME_HERE] --zip-file fileb://`pwd`/package.zip`

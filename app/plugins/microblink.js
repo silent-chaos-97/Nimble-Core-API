@@ -131,7 +131,6 @@ class MicroblinkService {
 
     return {
       address: _.capitalize(microblinkAddress.addressStreet),
-// Temp comment
       city: _.capitalize(microblinkAddress.addressCity),
       state: microblinkAddress.addressJurisdictionCode,
       zipCode: microblinkAddress.addressPostalCode,
@@ -279,3 +278,9 @@ class MicroblinkService {
       throw err
     }
   }
+}
+
+const secret = config.get('microblink').secret
+const baseUrl = config.get('microblink').baseUrl
+
+module.exports = new MicroblinkService(baseUrl, secret)

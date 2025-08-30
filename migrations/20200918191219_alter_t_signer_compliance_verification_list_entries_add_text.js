@@ -24,3 +24,5 @@ exports.down = function (knex) {
     table.string('value').notNullable()
     table.string('source')
     table.string('url')
+  }))
+};

@@ -149,3 +149,13 @@ class Shufti {
 
     return payload
   }
+}
+
+const baseUrl = config.get('shufti.baseUrl')
+const secret = config.get('shufti.secret')
+const clientId = config.get('shufti.clientId')
+const webhook = config.get('shufti.webhook')
+  .replace(':protocol', config.get('protocol'))
+  .replace(':api_domain', config.get('domain'))
+
+module.exports = new Shufti(baseUrl, webhook, clientId, secret)

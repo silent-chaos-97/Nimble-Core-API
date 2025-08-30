@@ -5,5 +5,5 @@ const Account = app.db.Model.extend({
   requireFetch: false,
   hasTimestamps: true,
 })
-// Temp comment
 
+module.exports = app.db.model('Account', Account)

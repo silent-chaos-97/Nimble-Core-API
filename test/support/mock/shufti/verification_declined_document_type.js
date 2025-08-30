@@ -69,3 +69,8 @@ module.exports = {
     face: 1
   },
   info: {},
+  declined_reason: 'Document doesn\'t match the provided options',
+  declined_codes: [
+    'SPDR13',
+  ],
+}

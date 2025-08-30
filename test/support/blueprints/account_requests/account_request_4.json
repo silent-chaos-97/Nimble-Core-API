@@ -208,3 +208,16 @@
     {
       "location": "/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.someFileName.pdf",
       "name": "someFileName"
+    },
+    {
+      "location": "/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.anotherFileName.pdf",
+      "name": "anotherFileName"
+    },
+    {
+      "location": "/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.thirdFileName.pdf",
+      "name": "thirdFileName"
+    }
+  ],
+  "referredBy": null,
+  "referrers": []
+}

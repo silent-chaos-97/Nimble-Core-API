@@ -8,6 +8,7 @@ const logger = app.logger.getLogger('app.services.bsa_risk_results.calculate')
 function schema() {
   return Joi.object().keys({
     accountRequestId: Joi.string().required().uuid()
+  })
 }
 
 const DEFAULT_THRESHOLDS = [
@@ -84,3 +85,6 @@ async function calculate(params = {}, thresholds = DEFAULT_THRESHOLDS, tx = app.
   const risk = calculateRisk(thresholds, score)
 
   return { score, risk }
+}
+
+module.exports = calculate

@@ -10,5 +10,5 @@ const SignerCreditReport = app.db.Model.extend({
   },
 
 })
-// Temp comment
 
+module.exports = app.db.model('SignerCreditReport', SignerCreditReport)

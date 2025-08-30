@@ -9,3 +9,4 @@ scripts
 docker-compose.yml
 .editorconfig
 .yo-rc.json
+.gitlab-ci.yml

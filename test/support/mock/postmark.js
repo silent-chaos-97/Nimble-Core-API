@@ -11,3 +11,9 @@ class mockConstructor {
   constructor() {
     return postmarkClientMock
   }
+}
+
+
+module.exports = {
+  ServerClient: mockConstructor
+}

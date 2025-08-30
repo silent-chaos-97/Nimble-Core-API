@@ -40,3 +40,6 @@ async function __export(contractURL, institutionId) {
     logger.info(err, `[__export] error for ${contractURL}`)
     throw new PreconditionFailedError(err)
   }
+}
+
+module.exports = __export

@@ -13,3 +13,29 @@ const sortBy = {
 
 function getSqlSort(sort) {
   return _.get(sortBy, sort, sortBy['position'])
+}
+
+async function list(filters = {}, tx = app.db) {
+  logger.debug(`[list] called for account request id ${filters.accountRequestId}`)
+  filters = await validator(filters, schema())
+
+  if (filters.accountRequestId) {
+    await app.services.accountRequest.get(filters.accountRequestId, tx)
+  }
+
+  const qb = BsaRiskResult.query((q) => {
+    q.orderByRaw(getSqlSort(filters.sort))
+
+    if (filters.accountRequestId) {
+      q.where('bsa_risk_results.account_request_id', filters.accountRequestId)
+    }
+  })
+
+  const data = await qb.fetchAll({
+    transacting: tx
+  })
+
+  return data.models.map((m) => new BsaRiskResultModel(m).data())
+}
+
+module.exports = list

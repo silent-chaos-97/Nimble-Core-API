@@ -15,3 +15,5 @@ columns:
   - data: questions
     title: Questions
 
+  - data: rules
+    title: Rules

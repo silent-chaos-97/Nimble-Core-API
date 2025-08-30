@@ -48,3 +48,7 @@ class ProductModel extends BaseModel {
     }
 
     throw new Error('Invalid schema operation.')
+  }
+}
+
+module.exports = ProductModel

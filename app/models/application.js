@@ -19,3 +19,5 @@ class Application extends BaseModel {
     })
   }
 }
+
+module.exports = Application

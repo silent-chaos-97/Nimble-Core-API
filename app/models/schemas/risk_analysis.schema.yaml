@@ -35,3 +35,6 @@ columns:
 
   - data: weight
     type: positive-integer
+
+  - data: disqualifying_metric
+    type: numeric
